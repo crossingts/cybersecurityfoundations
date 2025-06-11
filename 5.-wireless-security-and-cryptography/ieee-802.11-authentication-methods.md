@@ -62,5 +62,55 @@ MICs can be used to protect data in a variety of ways. For example, they can be 
 * Protect data that is being transmitted over a network.
 * Prevent unauthorized access to data.
 
-#### &#x20;IEEE 802.11 authentication methods
+#### IEEE 802.11 authentication methods
+
+IEEE 802.11 (Wi-Fi) authentication methods can be categorized into **Open System Authentication**, **Shared Key Authentication**, and more advanced methods used in **WPA/WPA2/WPA3**. Below is a list of IEEE 802.11 authentication methods in chronological order.
+
+#### **1. Open System Authentication (1997 – 802.11 original standard)**
+
+* No real authentication; any client can connect.
+* **Most common in public hotspots** (e.g., cafes, airports).
+* Often paired with **captive portals** (web-based login).
+
+#### **2. Shared Key Authentication (WEP – 1997, deprecated)**
+
+* Used a static 40/104-bit WEP key (easily crackable).
+* Easily crackable; deprecated by early 2000s.
+
+#### **3. WPA-Personal/WPA-Enterprise (2003 – Wi-Fi Alliance interim fix)**
+
+* Introduced **TKIP** (Temporal Key Integrity Protocol) as a WEP replacement.
+* **WPA-PSK (Pre-Shared Key)** for home users.
+* **WPA-Enterprise (802.1X/EAP)** for businesses.
+
+#### **4. WPA2-Personal/WPA2-Enterprise (2004 – 802.11i standard)**
+
+* Replaced TKIP with **AES-CCMP** (stronger encryption).
+* **WPA2-PSK** became the dominant Wi-Fi security method.
+* **WPA2-Enterprise** with EAP methods (e.g., PEAP, EAP-TLS) for corporations.
+
+#### **5. Wi-Fi Protected Setup (WPS – 2006)**
+
+* Simplified device onboarding (Push Button/PIN).
+* Later found vulnerable to brute-force attacks.
+
+#### **6. WPA3-Personal (2018 – Wi-Fi Alliance)**
+
+* Introduced **Simultaneous Authentication of Equals (SAE)** to replace PSK.
+* Protects against offline dictionary attacks.
+
+#### **7. WPA3-Enterprise (2018)**
+
+* Added **192-bit cryptographic suite** for higher-security environments.
+* Mandates use of **AES-GCMP** instead of TKIP.
+
+#### **8. WPA3-Enhanced Open (OWE – 2018)**
+
+* Replaced **Open Authentication** with encryption (no passwords).
+* Protects against passive eavesdropping in public Wi-Fi.
+
+#### **9. WPA3 Version 2 (2022–2023 updates)**
+
+* Further refinements in SAE and enterprise security.
+* Phasing out legacy protocols (e.g., WPA2 transition guidance).
 

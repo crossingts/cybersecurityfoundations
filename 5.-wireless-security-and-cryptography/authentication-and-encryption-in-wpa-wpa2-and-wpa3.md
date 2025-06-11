@@ -10,6 +10,12 @@ Compare WPA, WPA2, and WPA3 protocols for authentication and encryption.
 
 Describe wireless security protocols (WPA, WPA2, and WPA3).
 
+Wi-Fi Protected Access (WPA) is a suite of security certifications for wireless networks, developed and maintained by the Wi-Fi Alliance (a nonprofit industry association that promotes Wi-Fi technology and interoperability). These certifications define security protocols to protect data transmitted over Wi-Fi. A wireless client device and an AP and its associated WLC certified by the Wi-Fi Alliance for the same WPA version are compatible and offer the same security components.
+
+Table 28-2 Comparing WPA, WPA2, and WPA3 (Odom, 2020, p. 716)
+
+<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/2b141-comparing-wpa-wpa2-wpa3-5.webp?w=1201" alt="Comparing-WPA-WPA2-WPA3" height="395" width="1201"><figcaption><p>Table 28-2 Comparing WPA, WPA2, and WPA3 (Odom, 2020, p. 716)</p></figcaption></figure>
+
 **Personal mode**
 
 #### **Summary Table: WPA, WPA2, WPA3 (Personal Mode)**
@@ -73,4 +79,12 @@ Here’s a summary table for **WPA, WPA2, and WPA3 in Enterprise mode**, which r
 | **Key Security**   | Per-user, dynamic      | Shared key (PSK)           |
 | **Best for**       | Businesses, large orgs | Home/SOHO                  |
 
+**Final review**
+
+Table 28-3 Review of Wireless Security Mechanisms and Options (Odom, 2020, p. 718)
+
+<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/0f424-wireless-security-mechanisms-7.webp?w=849" alt="Wireless-Security-Mechanisms" height="675" width="849"><figcaption><p>Table 28-3 Review of Wireless Security Mechanisms and Options (Odom, 2020, p. 718)</p></figcaption></figure>
+
 ### References
+
+Odom, W. (2020). Chapter 28. Securing Wireless Networks, _CCNA 200-301 Official Cert Guide_ (pp. 704-719), Volume 1. Cisco Press.

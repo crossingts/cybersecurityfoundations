@@ -173,3 +173,7 @@ IEEE 802.1X (Port-Based Network Access Control) and EAP (Extensible Authenticati
   * **WPA3-Enterprise** (2018)
 * **EAP methods evolved** from weak (LEAP, EAP-MD5) to robust (EAP-TLS, PEAP).
 * **Still the most secure Wi-Fi auth method** when properly configured (e.g., with certificates).
+
+### References
+
+Odom, W. (2020). Chapter 28. Securing Wireless Networks, _CCNA 200-301 Official Cert Guide_ (pp. 704-719), Volume 1. Cisco Press.

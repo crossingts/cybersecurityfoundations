@@ -46,7 +46,6 @@
 ## 5. Wireless security and cryptography
 
 * [Introduction - Wireless security and cryptography](5.-wireless-security-and-cryptography/introduction-wireless-security-and-cryptography.md)
-* [Wireless network security](https://itnetworkingskills.wordpress.com/2023/05/30/wireless-network-security/)
 * [Hashing algorithms and message integrity](5.-wireless-security-and-cryptography/hashing-algorithms-and-message-integrity.md)
 * [Cryptographic encryption and confidentiality](5.-wireless-security-and-cryptography/cryptographic-encryption-and-confidentiality.md)
 * [The SSL/TLS handshake](5.-wireless-security-and-cryptography/the-ssl-tls-handshake.md)

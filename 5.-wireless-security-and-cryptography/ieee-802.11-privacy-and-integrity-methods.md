@@ -61,3 +61,7 @@ GCMP is an authenticated encryption suite that is more secure and more efficient
 ■ Galois Message Authentication Code (GMAC) used as a message integrity check (MIC).&#x20;
 
 GCMP is used in WPA3.
+
+### References
+
+Odom, W. (2020). Chapter 28. Securing Wireless Networks, _CCNA 200-301 Official Cert Guide_ (pp. 704-719), Volume 1. Cisco Press.

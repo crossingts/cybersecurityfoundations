@@ -114,3 +114,62 @@ IEEE 802.11 (Wi-Fi) authentication methods can be categorized into **Open System
 * Further refinements in SAE and enterprise security.
 * Phasing out legacy protocols (e.g., WPA2 transition guidance).
 
+#### IEEE 802.11 authentication methods in order of popularity
+
+1. **WPA2/WPA3-Personal (PSK)** (Most common for home/small office).
+2. **Open System + Captive Portal** (Public Wi-Fi).
+3. **WPA2/WPA3-Enterprise (802.1X/EAP)** (Corporate/education).
+4. **WPA3-Enhanced Open (OWE)** (Emerging for public networks).
+5. **WEP/Shared Key** (Legacy, highly insecure).
+6. **WPS** (Convenient but insecure).
+
+#### IEEE 802.1x/EAP (Extensible Authentication Protocol)
+
+IEEE 802.1X (Port-Based Network Access Control) and EAP (Extensible Authentication Protocol) are not tied to a single Wi-Fi security generation but have evolved alongside Wi-Fi authentication methods. Here's how they fit chronologically and their role in Wi-Fi security:
+
+#### **1. Initial Introduction (2001 – IEEE 802.1X standard)**
+
+* **802.1X** was originally designed for wired networks (Ethernet) but was quickly adopted for Wi-Fi security.
+* **EAP** (RFC 2284, 1998) was integrated into 802.1X to provide a flexible authentication framework.
+* Used in **early enterprise Wi-Fi networks** even before WPA/WPA2.
+
+#### **2. Formal Wi-Fi Adoption (2003 – WPA-Enterprise)**
+
+* When **WPA** was introduced (as a stopgap before WPA2), **802.1X/EAP** became the backbone of **WPA-Enterprise**.
+* Replaced **WEP’s weak authentication** with dynamic key generation via RADIUS servers.
+* Common EAP methods at the time:
+  * **EAP-TLS** (certificate-based, most secure but complex).
+  * **EAP-MD5** (deprecated, no encryption).
+  * **LEAP** (Cisco-proprietary, later found insecure).
+
+#### **3. WPA2-Enterprise (2004 – 802.11i)**
+
+* **802.1X/EAP** became the **gold standard for enterprise Wi-Fi** under WPA2.
+* Newer EAP methods emerged:
+  * **PEAP** (Protected EAP, e.g., PEAP-MSCHAPv2 for username/password).
+  * **EAP-TTLS** (similar to PEAP but more flexible).
+  * **EAP-FAST** (Cisco’s replacement for LEAP).
+
+#### **4. WPA3-Enterprise (2018)**
+
+* Still relies on **802.1X/EAP** but with stricter security:
+  * Mandates **AES-256-GCMP** encryption (vs. AES-CCMP in WPA2).
+  * Introduces **192-bit security mode** (for governments/enterprises).
+* **EAP-TLS remains the most secure method** (certificate-based).
+
+#### **5. Modern Usage (2020s)**
+
+* **802.1X/EAP is still dominant in enterprises**, universities, and large orgs.
+* **Cloud RADIUS services** (e.g., Azure AD, Okta) now integrate with 802.1X.
+* **EAP-TLS is growing** due to zero-trust security trends.
+
+***
+
+#### **Key Takeaways:**
+
+* **802.1X/EAP is not a Wi-Fi authentication method itself** but a framework used by:
+  * **WPA-Enterprise** (2003)
+  * **WPA2-Enterprise** (2004)
+  * **WPA3-Enterprise** (2018)
+* **EAP methods evolved** from weak (LEAP, EAP-MD5) to robust (EAP-TLS, PEAP).
+* **Still the most secure Wi-Fi auth method** when properly configured (e.g., with certificates).

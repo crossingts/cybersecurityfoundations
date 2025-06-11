@@ -19,10 +19,6 @@ A comprehensive approach to securing a wireless network involves:
 
 Endpoint identification ensures only authorized devices connect, while user authentication verifies legitimate users. Together, these measures strengthen access control, while encryption and integrity checks safeguard data in transit.
 
-* **Wireless security framework**
-  * **Authentication**
-  * **Message privacy**
-  * **Message integrity**
 * **Wireless client authentication methods**
   * **Open authentication**
   * **WEP (Wired Equivalent Privacy)**
@@ -47,4 +43,24 @@ There are several methods of wireless authentication. One common method is to us
 
 To protect data privacy on a wireless network, the data must be encrypted while it is traveling between clients and APs. This is done by encrypting the data payload in each wireless frame just before it is transmitted, and then decrypting it as it is received. The encryption method must be one that the transmitter and receiver share, so that the data can be encrypted and decrypted successfully.
 
+In WPA/WPA2-Personal, the PSK (your Wi-Fi password) is used to derive encryption keys. In WPA3-Personal, PSK is replaced by SAE, a more secure method for key exchange.
+
+For encryption, WPA uses TKIP (AES optional), and WPA2 uses AES-CCMP (default), TKIP (fallback).
+
+**Data integrity**
+
+A message integrity check (MIC) is a security tool that can protect against data tampering. A MIC is a value that is calculated from the data in a message using a cryptographic algorithm. The MIC is then sent along with the message. When the message is received, the MIC is recalculated and compared to the value that was sent. If the two values do not match, then the message has been tampered with.&#x20;
+
+There are two main types of MICs:
+
+* Hash functions: these calculate a value that is a fixed size, regardless of the size of the data that is hashed.&#x20;
+* Message authentication codes (MACs): these calculate a value that is the same size as the data that is being protected.
+
+MICs can be used to protect data in a variety of ways. For example, they can be used to:
+
+* Verify the integrity of files that are downloaded from the internet.
+* Protect data that is being transmitted over a network.
+* Prevent unauthorized access to data.
+
 #### &#x20;IEEE 802.11 authentication methods
+

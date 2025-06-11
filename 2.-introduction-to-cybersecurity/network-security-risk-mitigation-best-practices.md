@@ -1,0 +1,197 @@
+---
+description: >-
+  This section discusses network security risk mitigation best practices,
+  including least privilege access control, network monitoring, incident
+  response management, and layered security
+---
+
+# Network security risk mitigation best practices
+
+## Learning objectives
+
+• Point 1\
+• Point 2 \
+• Point 3\
+• Point 4 \
+• Point 5
+
+Network security risk mitigation best practices, including least privilege access control, on time software patching, multi-factor authentication, network monitoring, incident response and disaster recovery, and layered security (defense in depth).
+
+## Topics covered in this section
+
+* **Least privilege access control**
+* **On time software patching**&#x20;
+* **Multi-factor authentication**
+* **Network monitoring**&#x20;
+* **Incident response and disaster recovery**
+* **Layered security (defense in depth)**
+* **Quality assurance**
+
+### Least privilege access control
+
+\<In order to properly secure data, an organization should develop clear and precise standards of data classification. Usually data access is governed via a data-access control scheme. A simple and sound way to develop one is using **role-based access control (RBAC)**.>
+
+\<Organizations should limit access only to those employees who are approved by management on a need-to-know basis. In addition, procedures should be set up to ensure immediate permission removal in the case of termination or role change for an employee.>
+
+### On time software patching
+
+### Multi-factor authentication
+
+### Network monitoring
+
+Network security monitoring is a broad term that encompasses various techniques and tools for detecting and responding to security threats. A robust network security monitoring strategy often combines IDS/IPS (Intrusion Detection System/Intrusion Prevention System) to detect/block known malicious traffic, SIEM (Security Information and Event Management) to correlate alerts from IDS, firewalls, endpoints, etc., EDR/XDR (Endpoint Detection and Response/Extended Detection and Response) to detect advanced endpoint threats, and NTA (Network Traffic Analysis) to detect unusual lateral movement.
+
+#### Intrusion Detection Systems (IDS)
+
+An IDS is a device or software application that monitors a network or systems for malicious activity or policy violations. Any intrusion activity or violation is typically either reported to an administrator or collected centrally using a security information and event management (SIEM) system. A SIEM system combines outputs from multiple sources and uses alarm filtering techniques to distinguish malicious activity from false alarms. (Wikipedia)
+
+IDS types range in scope from single computers to large networks. The most common classifications are network intrusion detection systems (NIDS) and host-based intrusion detection systems (HIDS). (Wikipedia)
+
+A **Network Intrusion Detection System (NIDS)** is a security mechanism that monitors network traffic for malicious activity or policy violations by analyzing packet headers and payloads, using signature-based detection (known threats) or anomaly-based detection (deviations from baseline behavior). It operates in passive mode, alerting administrators without directly blocking traffic (unlike an IPS). A NIDS can be deployed inline (span port) or via network taps, leveraging protocols like Deep Packet Inspection (DPI) for enhanced threat detection. By comparison, a **Host-Based Intrusion Detection System (HIDS)** monitors important operating system files. An HIDS is capable of monitoring and analyzing the internals of a computing system as well as the network packets on its network interfaces.
+
+**Network Intrusion Detection System (NIDS)**
+
+NIDS can be classified based on their detection approach. The most well-known variants are signature-based detection (recognizing bad patterns, such as exploitation attempts) and anomaly-based detection (detecting deviations from a model of "good" traffic, which often relies on machine learning). Another common variant is reputation-based detection (recognizing the potential threat according to the reputation scores). (Wikipedia)
+
+**A. Signature-Based Detection (IDS/IPS)**
+
+* **Example Tools:** Snort, Suricata, Cisco Firepower
+* **How it works:**
+  * Compares network traffic or system activity against known attack patterns (signatures).
+  * **IDS (Intrusion Detection System):** Passive monitoring and alerting.
+  * **IPS (Intrusion Prevention System):** Actively blocks malicious traffic.
+* **Strengths:** Effective against known threats, low false positives for well-defined attacks.
+* **Limitations:** Struggles with zero-day attacks and advanced threats that evade signatures.
+
+**B. Anomaly-Based Detection (Network Behavior Analysis)**
+
+* **Example Tools:** Darktrace, Cisco Stealthwatch
+* **How it works:**
+  * Uses machine learning or statistical baselining to detect unusual behavior.
+  * Can identify novel attacks but may have higher false positives.
+* **Best for:** Detecting insider threats, lateral movement, and unknown attacks.
+
+#### SIEM (Security Information and Event Management)
+
+* **Example Tools:** Wazuh, Splunk, IBM QRadar, Elastic SIEM
+* **How it works:**
+  * **Aggregates logs** from multiple sources (e.g., network devices, cloud services, IDS, servers, firewalls, and endpoints).
+  * **Correlates events** to detect complex attack patterns (e.g., multiple failed logins followed by a successful one).
+  * Provides **real-time alerting**, historical analysis, and compliance reporting.
+* **Strengths:**
+  * Holistic visibility across the environment.
+  * Helps with **incident response** and **forensics**.
+* **Limitations:**
+  * Requires fine-tuning to reduce noise.
+  * Not a direct replacement for IDS/IPS but complements them.
+
+\<Access to data and modification of data has to be logged and recorded in the central (Security Information and Event Management) system. A **SIEM** system is important for data security, since it consumes multiple logs and allows those handling security to connect the dots and create a big picture that gives insight into multiple events. For example, it can draw attention to a user who sends abnormal amounts of data outbound, or one who connects to an unusual amount of servers. To utilize a SIEM system properly, its dashboards and metrics need to be set up to measure organization-specific data access activity.
+
+\<It is critical to **identify incidents** as early as possible to significantly reduce any damage that might be done by bad actors. For swift identification, **security information and event management (SIEM) technology** should be used. SIEM can integrate and correlate distributed events and alert on hostile or abnormal behavior. A best practice for incident investigation is to enrich your SIEM solution with external threat data. That external threat data can highlight known threat activity in your organization.
+
+#### Endpoint Detection and Response/Extended Detection and Response (EDR/XDR)
+
+* **Example Tools:** CrowdStrike, SentinelOne, Microsoft Defender for Endpoint
+* **How it works:**
+  * Monitors **endpoint behavior** (processes, file changes, registry edits).
+  * Uses behavioral analysis to detect malware and suspicious activity.
+* **Best for:** Detecting advanced threats on endpoints/workstations/servers.
+
+#### **Network Traffic Analysis (NTA)**
+
+**NTA** (also called **Network Detection and Response, NDR**) focuses on **analyzing raw network traffic** to detect suspicious behavior that evades traditional tools.
+
+**Key Technologies & Tools:**
+
+* **Zeek (formerly Bro)** → Generates high-level network logs (e.g., HTTP requests, DNS queries).
+* **Suricata (in NTA mode)** → Analyzes traffic for anomalies beyond just signatures.
+* **Darktrace, Cisco Stealthwatch** → AI-driven anomaly detection (e.g., unusual data exfiltration).
+* **Moloch, Arkime** → Packet capture (PCAP) analysis for forensic investigations.
+
+**How NTA Complements Other Tools:**
+
+| Scenario                                               | SIEM                                     | IDS/IPS                         | Firewall                     | NTA                                     |
+| ------------------------------------------------------ | ---------------------------------------- | ------------------------------- | ---------------------------- | --------------------------------------- |
+| **A hacker slowly exfiltrates data via DNS**           | Might miss it (unless logs are detailed) | Likely misses it (no signature) | Allows it (DNS is permitted) | **Detects unusual DNS query patterns**  |
+| **Lateral movement via RDP (Remote Desktop Protocol)** | Logs the event (if logging is enabled)   | May detect brute-forcing        | Blocks if port is closed     | **Flags abnormal internal connections** |
+
+**NTA’s Strengths:**
+
+* Detects **low-and-slow attacks** (e.g., data exfiltration, C2 beaconing).
+* Helps with **post-breach investigations** (e.g., reconstructing attacker movements).
+* Works well with **encrypted traffic analysis** (via JA3 fingerprints, TLS metadata).
+
+**Limitations:**
+
+* Requires **high storage** for full packet capture (PCAP).
+* Can be **noisy** without proper tuning.
+
+### Incident response and disaster recovery&#x20;
+
+One of the biggest challenges facing today's IT professionals is planning and preparing for the almost inevitable security incident.
+
+Preparation, Incident identification, Containment, Eradication, Recovery
+
+The first consideration in an incident response plan is **preparation**. There should be a manifesto or playbook outlining a structured approach to managing security incidents. Typically an organization should have a security incident response team (SIRT), which will investigate and document incidents. The team can be cross functional assembled from various IT related departments or units, and it can be part of or an extension of a SOC team.
+
+The playbook will provision responses commensurate with established risk levels to data assets. For instance, it is important to rank incidents by severity level. It is critical to differentiate between security events (less serious) and security incidents (serious and requiring immediate action). A security event, like a virus on endpoint, might escalate to incident level, but typically it can be addressed via standard procedures or even automation.&#x20;
+
+\<It is critical to **identify incidents** as early as possible to significantly reduce any damage that might be done by bad actors. For swift identification, **security information and event management (SIEM) technology** should be used.
+
+\<Another key factor in incident identification is a good data-analysis capability. It is vital that an organization’s SIRT measures baselines, and investigates deviation from those baselines. When doing so, it is critical to include logs from all the important systems in the organization. It is important to remember that any security incident might just be just a deception designed to distract from another, more sophisticated, breach attempt.>
+
+\<IT and security should take swift action in order to limit an incident’s impact. When an incident is identified and verified, indicators of compromise should be documented and a high-priority ticket opened. Information should be gathered to determine all the servers, endpoints, and users involved. IT should limit involved users’ permissions, or even disable the users. IT should also limit affected systems’ network connectivity to prevent any communication between infected machines and healthy ones in the corporate LAN. The top goal of the SIRT during **the containment phase** is to protect critical systems and limit bad actors’ ability to move inside the network. Each step should be properly documented with sufficient details regarding why, how, by whom, and where containment actions were performed.>
+
+\<After compromised systems are contained, SIRT should return breached systems to working order. This would be done using restore from backup, maintaining original storage as evidence. Disks of the breached sever can be later used for forensic investigation ... Only healthy and verified backups should be used during the **incident-eradication stage**. If backup of the infected servers is vulnerable to a known exploit, it has to be patched before you connect it to the corporate network, to reduce the risk of additional breach.>
+
+<**Recovery** is about restoring the service that got breached. During this stage, it is important to verify that service is fully available again, including data and previous customizations. Infected systems’ owners should verify that restored systems function properly. Monitoring and verification of restored systems is of extreme importance to prevent any additional breach attempts. Attackers might use new tactics against previously breached systems; therefore comprehensive monitoring techniques should be used.>
+
+\<The [Incident Response Handler’s Handbook ](https://www.sans.org/reading-room/whitepapers/incident/incident-handlers-handbook-33901)is must-read material, as it lays out the methodology of the incident response process.>
+
+\<In the case of data damage, the organization may want to be able to restore older data. The timeframe within which data has to be fully restorable and usable should be aligned with an organization’s business goals and (Service Level Agreement) policies. In some cases, highly critical data should be backed up in numerous places to ensure high data resiliency and the ability to carry out a successful restoration under a range of circumstances.
+
+Organizations should schedule data backups in order to guarantee business continuity in the case of a security incident or disaster. Backups should be created on a yearly, monthly, and weekly basis, and stored in an offsite location. It is critical to encrypt backup data in order to prevent untrusted access to it.
+
+### Layered security (defense in depth)
+
+Defense in depth is a **strategy** for the protection of information assets that uses multiple layers\
+and different types of controls (managerial, operational, and technical) to provide optimal\
+protection.
+
+* **Defense in depth: the broader, more established term** (originating from military strategy) and is widely recognized in cybersecurity as a comprehensive approach combining multiple security layers (technical, administrative, and physical controls).
+* **Layered security: a subset of defense in depth**, often referring specifically to the **technical controls** (firewalls, encryption, endpoint protection, etc.) rather than the full strategy.
+
+Mitigation techniques also include preventing unauthorized persons from gaining physical access to the devices, for example, by keeping them in a secure rack behind a secure door.
+
+### Quality assurance
+
+**• Information assurance as a holistic approach to information security management**
+
+Implementing quality assurance (QA) in enterprise information security risk management involves systematically evaluating processes, controls, and policies to ensure they meet defined security standards and effectively mitigate risks. QA aligns with established frameworks like NIST SP 800-37 (Risk Management Framework), NIST CSF (Cybersecurity Framework), and ISO/IEC 27001 by incorporating continuous monitoring, audits, and compliance checks to validate that security controls are functioning as intended. For example, NIST SP 800-37 emphasizes ongoing assessment and authorization, while ISO 27001 requires regular internal audits and management reviews to maintain certification. By integrating QA practices—such as control testing, gap analysis, and corrective action plans—organizations can proactively identify weaknesses, improve security postures, and ensure adherence to regulatory requirements. This structured approach not only enhances risk management maturity but also fosters a culture of continuous improvement, reducing vulnerabilities and strengthening overall information assurance.
+
+**• Security testing as skills in quality assurance**
+
+\*Software Development Lifecycle (SDLC)
+
+SDLC models: Waterfall, Lean, and Agile.
+
+ISO/IEC 12207: The international standard for software lifecycle processes.
+
+\*Test-driven development and unit testing
+
+Unit Testing: A structured and automated testing methodology to ensure resilient software.
+
+Example: Using the internal Python module unittest to automate Python code testing.
+
+### Key takeaways
+
+• Point 1\
+• Point 2\
+• Point 3 \
+• Point 4 &#x20;
+
+### References
+
+Whitman, M. E., & Mattord, H. J. (2014). Principles of information security (p. 656). Boston, MA: Thomson Course Technology.
+
+Yuri Livshitz. (2016). How to respond to a security incident (Ch. 9). In _Beginner’s Guide To Information Security_ (pp. 42-45). Peerlyst. Retrieved from https://www.peerlyst.com/posts/peerlyst-announcing-its-first-community-ebook-the-beginner-s-guide-to-information-security-limor-elbaz

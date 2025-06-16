@@ -9,6 +9,32 @@ In addition to the CIA triad, other fundamental information security concepts in
 * A threat is the potential of a vulnerability to be exploited. The threat of house burglary is the likelihood a burglar will exploit the glass window vulnerability using a rock (or other exploits) to gain entry into a house.&#x20;
 * A mitigation technique is something that can protect against threats. Appropriate mitigation techniques should be implemented everywhere a vulnerability can be exploited, for example, client devices, servers, switches, and routers.
 
+### Risk = threat, vulnerability, and mitigation
+
+The concept of risk is intimately tied to the concepts of threat, vulnerability, and mitigation.
+
+Risk is a threat that exploits a vulnerability.
+
+#### Vulnerabilities
+
+Vulnerabilities can be understood as security flaws or holes.
+
+We can think of security flaws in the context of people, process, and technology.
+
+Vulnerabilities can be/stem from:
+
+• The software infrastructure, including software programs/applications, and OS
+
+• The network infrastructure
+
+• The hardware involved
+
+• Organizational policies/procedures which could lead eventually to a security hole
+
+• Human vulnerabilities to social hacking techniques/lack of security awareness
+
+• Device configuration mistakes
+
 ### Cybersecurity risk management concepts and practices
 
 Pragmatically, organizations approach information security in terms of risk, threat, vulnerability, and mitigation. Organizations take a risk-based approach to information security management.

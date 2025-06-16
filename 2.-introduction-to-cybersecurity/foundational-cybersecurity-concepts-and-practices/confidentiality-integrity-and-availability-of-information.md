@@ -1,10 +1,10 @@
 # Confidentiality, integrity, and availability of information
 
-The most concrete (least abstract) and tactical (as opposed to strategic) goal of information security is the protection of the confidentiality, integrity, and availability of information assets. The principles of the CIA triad form the foundation of security.&#x20;
+The most concrete (least abstract) and tactical (as opposed to strategic) goal of information security is the protection of the confidentiality, integrity, and availability of information assets. The principles of the CIA triad form the foundation of security. These three principles help ensure that data is protected, accurate, and accessible when needed.
 
 * Confidentiality denotes an imperative that only authorized users should be able to access privileged/private data.
 * Integrity denotes an imperative that data should not be changed or modified by unauthorized users. Data should be correct and authentic.
-* Availability denotes an imperative that an enterprise information system should be operational and accessible to authorized users. For example, staff should be able to access the internal resources they need to perform their duties, and the company’s website should be up and running and available to customers.
+* Availability denotes an imperative that an information system should be operational and accessible to authorized users. For example, staff should be able to access the internal resources they need to perform their duties, and the company’s website should be up and running and available to customers.
 
 ### Confidentiality
 

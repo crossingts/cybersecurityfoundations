@@ -58,6 +58,20 @@ Vulnerable protocols that transmit data in plaintext (e.g., FTP, SNMP v1/v2c com
 
 Network Address Translation (NAT): Hiding internal IP addresses from the public Internet by translating them to a public IP address.
 
+**Network security protocols**
+
+Network security protocols are essentially the security guards of your data traveling across a network. These protocols act as a set of rules that ensure the data gets from point A to B safely, without unauthorized access or alteration. There are different types of security protocols, each focusing on a specific aspect of data protection. Here's a quick breakdown:
+
+• Encryption protocols: These scramble data using algorithms, making it unreadable to anyone without the decryption key. Examples include SSL/TLS, which secures communication on websites (like the padlock symbol you see in the address bar).
+
+• Authentication protocols: These verify the identity of users or devices trying to access a network resource. Imagine them checking IDs at the entrance. Common examples include username/password logins or multi-factor authentication.
+
+• Integrity protocols: These make sure data hasn't been tampered with during transmission. They act like checksums, ensuring the data received is exactly what was sent.
+
+• Tunneling protocols: Imagine wrapping a message in another secure package. Tunneling protocols create a secure connection within another network, like a VPN (Virtual Private Network) securing your data over public Wi-Fi.
+
+• Wireless network security protocols such as WPA or WPA2 are considered more secure than WEP.
+
 ### Organizational policies&#x20;
 
 Usage policy, Security policy, Privacy policy

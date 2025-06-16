@@ -15,7 +15,7 @@ Information security,
 * ensures that “only authorized users (confidentiality) have access to accurate and complete information (integrity) when required (availability)” (ISACA, 2008);
 * is concerned with both the protection of information as well as the of technological infrastructure or information systems (Cherdantseva & Hilton, 2013; CNSS, 2010);
 * is concerned with access to information (CNSS, 201; ISACA, 2008); and
-* aims to provide assurance “that information risks and controls are in balance” (Anderson, J., 2003);
+* aims to provide assurance “that information risks and controls are in balance” (Anderson, J., 2003).
 
 Key information security concepts include privacy, authenticity and trustworthiness, non-repudiation, accountability and auditability, and reliability (Cherdantseva & Hilton, 2013; ISO/IEC 27000:2009).&#x20;
 

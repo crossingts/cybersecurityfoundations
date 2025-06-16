@@ -13,6 +13,26 @@ Appropriate mitigation techniques should be implemented everywhere a vulnerabili
 
 (CCNA security fundamentals - up until Common attacks)
 
+Cybersecurity risk management concepts and practices
+
+**How cybersecurity is practiced within organizations**
+
+Organizations take a risk-based approach to information security management.
+
+**Understanding enterprise cybersecurity in terms of risk, threat, vulnerability, and mitigation**
+
+\<In order to simplify data governance, information **should be segregated by levels of importance and risk**, since it is very complicated to safeguard all the data in organization using the same standards … sensitive data has to be protected by more security measures in order to safeguard it. In some cases, in order to archive “defense in depth,” multiple security devices from different vendors are recommended.
+
+**Acceptable risk**
+
+After risk assessment, risks may be accepted, mitigated, or transferred (e.g., to another department or third party better equipped to manage them).
+
+Systems can be more secure or less secure, but there is no absolute security. For example, you can implement malware detection on your network firewall and have the best antivirus software on client PCs, but the chance of the PCs getting infected with malware is never zero.&#x20;
+
+**Security vs functionality**
+
+Yes, data that isn’t accessible to anyone may be perfectly secure, but it’s worthless to the enterprise if it can’t be seen and used.
+
 ### References
 
 Reference

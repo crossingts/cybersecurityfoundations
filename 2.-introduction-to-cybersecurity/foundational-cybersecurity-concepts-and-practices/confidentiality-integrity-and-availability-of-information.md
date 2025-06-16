@@ -1,5 +1,7 @@
 # Confidentiality, integrity, and availability of information
 
+The most concrete (least abstract) and tactical (as opposed to strategic) goal of information security is the protection of the confidentiality, integrity, and availability of information assets.
+
 A fundamental goal of security in an enterprise is to protect the confidentiality, integrity, and availability (CIA) of information assets. The principles of the CIA triad form the foundation of security.&#x20;
 
 * Confidentiality: only authorized users should be able to access privileged/private data.
@@ -7,6 +9,24 @@ A fundamental goal of security in an enterprise is to protect the confidentialit
 * Availability: the enterprise network and systems should be operational and accessible to authorized users. For example, staff should be able to access the internal resources they need to perform their duties, and the company’s website should be up and running and available to customers.
 
 (CCNA security fundamentals)
+
+### Confidentiality
+
+\<A key **technology** for data confidentiality is data leakage prevention (DLP), a system that tracks specific sets of sensitive data. For example, DLP can issue alerts when sensitive files are copied to a USB, or credit-card numbers are shared. DLP is a great tool, but it requires precise, organization specific data classification and alert creation in order to be effective.>
+
+### Integrity
+
+**Technologies**: encryption, backups, AAA accounting (data access), SVN/Git (data modification), SIEM
+
+\<To protect data integrity, regular audits of information access and change are required. Data access has to be centrally logged, in case a bad actor manages to damage log data at the endpoint. Any employee who modifies sensitive data should do so using his or her personal user name. This allows non-repudiation, which means that an employee who modified data can’t deny his or her action.&#x20;
+
+\<To truly safeguard information integrity, you’ll want to incorporate change management technology. Change management basically tracks changes to data, requires management approval of changes, or prevents changes forbidden by policy. Change management usually stores snapshot of data and tracks changes that are performed on it. Those changes are compared with system policy, and carried out only when they are in compliance with the policy. There are numerous change management products that can apply granular policies to track and prevent unwanted changes on almost any device, from storage filers to firewalls. One of best-known systems for change management is free SVN, which allows the detailed tracking of data inside a file, as well as granular permission control.
+
+### Availability
+
+Data can become unavailable due to being damaged or destroyed, or due to ransomeware.
+
+You should also be aware that your data could be damaged by malware that remains dormant for long period of time.&#x20;
 
 ### Techniques of CIA attacks
 

@@ -30,11 +30,11 @@ Risk mitigation methods spanning **technologies** (firewalls, IDS/IPS, encryptio
 
 ### Risk mitigation technologies
 
-Firewalls, IDS/IPS, Next-Gen Firewalls, Encryption, VPN, SIEM, EDR/XDR
+Firewalls, IDS/IPS, Next-Gen Firewalls, Encryption, VPN, SIEM, EDR/XDR, Web Proxies, Network Access Control, Anti-Virus
 
 ### Risk mitigation via (re)design
 
-Segmentation, DMZ, Honeypots
+Segmentation, DMZ, Honeypots, Defense in Depth
 
 ### Networking protocols&#x20;
 

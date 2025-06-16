@@ -1,17 +1,22 @@
-# Other cybersecurity concepts and practices
+# Other information security concepts and practices
 
-**The AAA framework**&#x20;
+### The AAA framework&#x20;
 
-AAA stands for Authentication, Authorization, and Accounting. It’s a framework for controlling and monitoring users of a computer system, such as a network.
+AAA stands for Authentication, Authorization, and Accounting. It’s a framework for controlling and monitoring users of a computer system such as a network.
 
-**The primary goals of cryptography**
+### Foundational cryptography concepts
+
+#### The primary goals of cryptography
 
 The primary goals of cryptography are confidentiality, authentication, data integrity, and non-repudiation.
 
-• Confidentiality is the property that keeps information secret/non-available to unauthorized parties. \
-• Authentication relates to the identification of a user and data; in other words, it is a process of confirming that the data and user are genuine. \
-• Data integrity is related to ensuring that information is not changed or manipulated by unauthorized parties. The focus in on verifying that that the data or message that you’ve received is genuine and hasn’t been altered by an unauthorized third party.\
-• Non-repudiation prevents a user from denying authorship of actions and information they’ve made. For instance, a friend of yours may promise to join your team in Pokémon Go, then refuse to admit they’d made that promise. To resolve that type of situation, there should be a trusted third party (say, some mutual friend) who will keep track of everybody’s commitments.>
+• Confidentiality protects information from unauthorized access.
+
+• Authentication verifies the identity of users and the authenticity of data.
+
+• Data integrity guarantees that information remains unaltered by unauthorized parties, ensuring its accuracy.
+
+• Non-repudiation ensures that a party cannot later deny having performed an action (such as sending a message or approving a transaction). It provides irrefutable proof—through digital signatures, timestamps, or audit logs—that a specific user took a particular action, preventing false denials and holding parties accountable.
 
 #### Essential cryptography terms&#x20;
 

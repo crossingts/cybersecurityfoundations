@@ -165,7 +165,9 @@ protection.
 
 Mitigation techniques also include preventing unauthorized persons from gaining physical access to the devices, for example, by keeping them in a secure rack behind a secure door.
 
-Layers of Defense, e.g., firewall > IDS/IPS > SIEM
+By working together, risk mitigation methods create a layered security approach to safeguard information assets and maintain network integrity.
+
+Layers of Defense example: firewall > IDS/IPS > SIEM
 
 ### Quality assurance
 

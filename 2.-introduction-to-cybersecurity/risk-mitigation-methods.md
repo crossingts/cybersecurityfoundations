@@ -15,6 +15,8 @@ description: >-
 • Point 4 \
 • Point 5
 
+Risk mitigation methods reduce the risk of a security breach or minimize the impact of an attack if it occurs.
+
 Risk mitigation methods spanning **technologies** (firewalls, IDS/IPS, encryption, VPN), **network design** (segmentation, DMZ, and honeypots), **networking protocols** (don't use DTP/VTP; use encryption protocols), **organizational policies** (e.g., usage policy, security policy, privacy policy), **compliance frameworks, risk assessment/security testing, professional conduct, and security training.**
 
 ## Topics covered in this section
@@ -32,6 +34,18 @@ Risk mitigation methods spanning **technologies** (firewalls, IDS/IPS, encryptio
 
 Firewalls, IDS/IPS, Next-Gen Firewalls, Encryption, VPN, SIEM, EDR/XDR, Web Proxies, Network Access Control, Anti-Virus
 
+Common mitigation techniques include:
+
+• Firewalls: Network security systems that control incoming and outgoing network traffic based on predetermined security rules.
+
+• Access Control Lists (ACLs): Configuring network devices to only allow specific traffic to pass through based on source and destination IP addresses, ports, and protocols.
+
+• Intrusion Detection Systems (IDS): Network-based systems that monitor network traffic for signs of unauthorized access or malicious activity.
+
+• Encryption: Converting plaintext data into unreadable ciphertext to protect it from unauthorized access.
+
+• Virtual Private Networks (VPNs): Creating a secure, encrypted connection between two or more networks over the Internet.
+
 ### Risk mitigation via (re)design
 
 Segmentation, DMZ, Honeypots, Defense in Depth
@@ -41,6 +55,8 @@ Segmentation, DMZ, Honeypots, Defense in Depth
 IPsec/GRE over IPsec, Encryption protocols/IEEE 802.11, DTP/VTP
 
 Vulnerable protocols that transmit data in plaintext (e.g., FTP, SNMP v1/v2c community strings, Telnet passwords). Credentials and configuration data can be exposed to anyone on the network.
+
+Network Address Translation (NAT): Hiding internal IP addresses from the public Internet by translating them to a public IP address.
 
 ### Organizational policies&#x20;
 

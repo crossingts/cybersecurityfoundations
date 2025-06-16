@@ -4,6 +4,8 @@
 
 AAA stands for Authentication, Authorization, and Accounting. It’s a framework for controlling and monitoring users of a computer system such as a network.
 
+Authentication is how you control access to your network and prevent intrusions, data loss, and unauthorized users.
+
 ### Foundational cryptography concepts
 
 #### The primary goals of cryptography

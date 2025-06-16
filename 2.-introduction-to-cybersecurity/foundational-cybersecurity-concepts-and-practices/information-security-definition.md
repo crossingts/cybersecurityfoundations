@@ -4,9 +4,11 @@
 
 The terms information security, cybersecurity, Internet security, computer security, and network security have intersecting and evolving meanings, but generally refer to processes of implementing security controls including IA/IT governance frameworks to protect the confidentiality, integrity, and availability of privileged information as well as the technological infrastructure of a computer network or system against unauthorized access or manipulation (Anderson, 2003; Blakley, McDermott & Geer, 2001; Cherdantseva & Hilton, 2013; CNSS, 2010; ISACA, 2008; ISO/IEC 27000:2009; Venter & Eloff, 2003).
 
-Sensitive data should be protected based on the potential impact of a loss of confidentiality, integrity, or availability. Confidentiality “refers to protecting information from being accessed by unauthorized parties.” Integrity “refers to ensuring the authenticity of information—that information is not altered, and that the source of the information is genuine.” Availability of information means that information is accessible by authorized users. Protection measures (security controls) tend to focus on two key areas: Mitigating known vulnerabilities and implementing the principle of least privilege whereby only the required functionality for each authorized user is granted.&#x20;
+Sensitive data should be protected based on the potential impact of a loss of confidentiality, integrity, or availability. Confidentiality “refers to protecting information from being accessed by unauthorized parties.” Integrity “refers to ensuring the authenticity of information—that information is not altered, and that the source of the information is genuine.” Availability of information means that information is accessible by authorized users.
 
-Information security is “a risk management discipline, whose job is to manage the cost of information risk to the business” (Blakley et al., 2001). Information security,
+Information security is “a risk management discipline" (Blakley et al., 2001) focused on identifying information assets, associated risk levels, and suitable (pragmatic) mitigation methods.
+
+Information security,
 
 * “preserves the confidentiality, integrity and availability of information” (ISO/IEC 27000:2009);
 * is concerned with “authenticity, accountability, non-repudiation and reliability” (ISO/IEC 27000:2009 sees CIA as properties of information);
@@ -15,7 +17,7 @@ Information security is “a risk management discipline, whose job is to manage 
 * is concerned with access to information (CNSS, 201; ISACA, 2008); and
 * aims to provide assurance “that information risks and controls are in balance” (Anderson, J., 2003);
 
-Other key information security concepts include privacy, authenticity and trustworthiness, non-repudiation, accountability and auditability, and reliability (Cherdantseva & Hilton, 2013; ISO/IEC 27000:2009).&#x20;
+Key information security concepts include privacy, authenticity and trustworthiness, non-repudiation, accountability and auditability, and reliability (Cherdantseva & Hilton, 2013; ISO/IEC 27000:2009).&#x20;
 
 The broad pragmatic goal of information security management is to reduce the probability of unauthorized access or damage to valued information assets to an acceptable risk level through risk mitigation strategies that involve management controls (e.g., security policies), technical controls (e.g., intrusion detection techniques), and operational controls (best practices/standard operating procedures).
 

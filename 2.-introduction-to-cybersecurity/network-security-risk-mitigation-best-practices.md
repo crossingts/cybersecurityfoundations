@@ -29,6 +29,8 @@ Network security risk mitigation best practices, including least privilege acces
 
 ### Least privilege access control
 
+The principle of least privilege: only the required functionality is granted for each authorized user group.&#x20;
+
 \<In order to properly secure data, an organization should develop clear and precise standards of data classification. Usually data access is governed via a data-access control scheme. A simple and sound way to develop one is using **role-based access control (RBAC)**.>
 
 \<Organizations should limit access only to those employees who are approved by management on a need-to-know basis. In addition, procedures should be set up to ensure immediate permission removal in the case of termination or role change for an employee.>

@@ -20,16 +20,16 @@ This section introduces core and foundational cybersecurity concepts and practic
 
 * **Information security definition**
 * **Confidentiality, integrity, and availability of information**
-* **Cybersecurity risk management**
-* **Other cybersecurity concepts and practices**
+* **Information security risk management**
+* **Other information security concepts and practices**
 
 ### Information security definition
 
 ### Confidentiality, integrity, and availability of information
 
-### Cybersecurity risk management
+### Information security risk management
 
-### Other cybersecurity concepts and practices
+### Other information security concepts and practices
 
 ### Key takeaways
 

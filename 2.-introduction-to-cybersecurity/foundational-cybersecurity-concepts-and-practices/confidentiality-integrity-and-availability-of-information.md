@@ -1,14 +1,10 @@
 # Confidentiality, integrity, and availability of information
 
-The most concrete (least abstract) and tactical (as opposed to strategic) goal of information security is the protection of the confidentiality, integrity, and availability of information assets.
+The most concrete (least abstract) and tactical (as opposed to strategic) goal of information security is the protection of the confidentiality, integrity, and availability of information assets. The principles of the CIA triad form the foundation of security.&#x20;
 
-A fundamental goal of security in an enterprise is to protect the confidentiality, integrity, and availability (CIA) of information assets. The principles of the CIA triad form the foundation of security.&#x20;
-
-* Confidentiality: only authorized users should be able to access privileged/private data.
-* Integrity: data should not be changed or modified by unauthorized users. Data should be correct and authentic.
-* Availability: the enterprise network and systems should be operational and accessible to authorized users. For example, staff should be able to access the internal resources they need to perform their duties, and the company’s website should be up and running and available to customers.
-
-(CCNA security fundamentals)
+* Confidentiality denotes an imperative that only authorized users should be able to access privileged/private data.
+* Integrity denotes an imperative that data should not be changed or modified by unauthorized users. Data should be correct and authentic.
+* Availability denotes an imperative that an enterprise information system should be operational and accessible to authorized users. For example, staff should be able to access the internal resources they need to perform their duties, and the company’s website should be up and running and available to customers.
 
 ### Confidentiality
 
@@ -24,9 +20,11 @@ A fundamental goal of security in an enterprise is to protect the confidentialit
 
 ### Availability
 
-Data can become unavailable due to being damaged or destroyed, or due to ransomeware.
+**Technologies**: backups, AAA accounting (data access)/Identity and Access Management, SVN/Git, SIEM, high availability/network redundancy
 
-You should also be aware that your data could be damaged by malware that remains dormant for long period of time.&#x20;
+Data can become unavailable due to being damaged or destroyed, or due to ransomeware or dormant malware.&#x20;
+
+Unlike confidentiality or integrity attacks, availability attacks aim primarily to disrupt service rather than steal or alter data. Mitigation strategies include rate limiting, traffic filtering, and cloud-based DDoS protection services (e.g., AWS Shield, Cloudflare).
 
 ### Techniques of CIA attacks
 
@@ -70,10 +68,6 @@ An information availability attack aims to disrupt access to data, systems, or s
    * Example: The Mirai botnet attack (2016) exploited IoT devices to take down major websites like Twitter and Netflix.
 4. **Ransomware attack:** Encrypting critical data and demanding payment to restore access.
 5. **Physical infrastructure sabotage:** Cutting network cables or destroying servers to halt operations.
-
-Unlike confidentiality or integrity attacks, availability attacks aim primarily to disrupt service rather than steal or alter data. Mitigation strategies include rate limiting, traffic filtering, and cloud-based DDoS protection services (e.g., AWS Shield, Cloudflare).
-
-(Professional ethical hacking body of knowledge/Network security basics)
 
 ### References
 

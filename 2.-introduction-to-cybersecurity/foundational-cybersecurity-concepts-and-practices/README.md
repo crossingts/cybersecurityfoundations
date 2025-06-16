@@ -18,18 +18,18 @@ This section introduces core and foundational cybersecurity concepts and practic
 
 ## Topics covered in this section
 
-* **Definitions of information security and cybersecurity**
-* **The goals of cybersecurity (the CIA triad)**
-* **Cybersecurity risk management concepts**
-* **Other foundational cybersecurity concepts and practices**
+* **Information security definition**
+* **Confidentiality, integrity, and availability of information**
+* **Cybersecurity risk management**
+* **Other cybersecurity concepts and practices**
 
-### Definitions of information security and cybersecurity
+### Information security definition
 
 Definitions of information security
 
 Definitions of cybersecurity
 
-### The goals of cybersecurity (the CIA triad)
+### Confidentiality, integrity, and availability of information
 
 The main goals of cybersecurity are confidentiality, integrity, and availability of information (the CIA triad).
 
@@ -51,7 +51,9 @@ Data can become unavailable due to being damaged or destroyed, or due to ransome
 
 You should also be aware that your data could be damaged by malware that remains dormant for long period of time.&#x20;
 
-### Cybersecurity risk management concepts
+### Cybersecurity risk management
+
+Cybersecurity risk management concepts and practices
 
 **How cybersecurity is practiced within organizations**
 
@@ -71,7 +73,7 @@ Systems can be more secure or less secure, but there is no absolute security. Fo
 
 Yes, data that isn’t accessible to anyone may be perfectly secure, but it’s worthless to the enterprise if it can’t be seen and used.
 
-### Other foundational cybersecurity concepts and practices
+### Other cybersecurity concepts and practices
 
 **The AAA framework**&#x20;
 

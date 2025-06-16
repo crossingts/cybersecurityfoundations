@@ -1,4 +1,6 @@
-# Risk, threat, vulnerability
+# Cybersecurity risk management
+
+Risk, threat, vulnerability&#x20;
 
 In addition to the CIA triad, there are some other fundamental security concepts to know.&#x20;
 

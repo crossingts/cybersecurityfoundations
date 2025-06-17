@@ -8,13 +8,12 @@ description: >-
 
 ## Learning objectives
 
-• Point 1\
-• Point 2 \
-• Point 3\
-• Point 4 \
-• Point 5
+• Become familiar with key cybersecurity concepts and practices\
+• Learn key cybersecurity definitions \
+• Describe where cybersecurity fits within corporate organizational structures \
+• Understand how cybersecurity is practiced within organizations
 
-This section introduces core and foundational cybersecurity concepts and practices to help learners develop a practical understanding of the goals of cybersecurity and how it is defined and practiced within organizations. This section covers definitions of information security, the CIA triad, risk, threat, vulnerability, mitigation, and the AAA framework (Authentication, Authorization, and Accounting).
+This section introduces cybersecurity concepts and practices germane to any instruction aiming to establish a practical understanding of the goals of cybersecurity and how it is practiced within organizations. This section covers definitions of information security, the CIA triad, risk, threat, vulnerability, mitigation, and the AAA framework (Authentication, Authorization, and Accounting).
 
 ## Topics covered in this section
 
@@ -33,10 +32,10 @@ This section introduces core and foundational cybersecurity concepts and practic
 
 ### Key takeaways
 
-• Point 1\
-• Point 2\
-• Point 3 \
-• Point 4 &#x20;
+• Tactically, cybersecurity is about protecting the CIA of information assets \
+• Strategically, cybersecurity is about compliance with rules \
+• Cybersecurity and information security can be synonymous \
+• Organizations take a risk-based approach to cybersecurity management
 
 ### References
 

@@ -39,6 +39,4 @@ This section introduces cybersecurity concepts and practices germane to any inst
 
 ### References
 
-Shamil Alifov. (2016). How to get started in cryptography (Ch. 5). In _Beginner’s Guide To Information Security_ (pp. 27-31). Peerlyst. Retrieved from https://www.peerlyst.com/posts/peerlyst-announcing-its-first-community-ebook-the-beginner-s-guide-to-information-security-limor-elbaz
-
 Yuri Livshitz. (2016). How to secure your data (Ch. 6). In Beginner’s Guide To Information Security (pp. 32-35). Peerlyst. Retrieved from https://www.peerlyst.com/posts/peerlyst-announcing-its-first-community-ebook-the-beginner-s-guide-to-information-security-limor-elbaz

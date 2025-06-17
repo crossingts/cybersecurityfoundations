@@ -26,7 +26,7 @@ Through an exploration of key concepts and practices, this chapter will help stu
 
 ## Topics covered in this chapter
 
-[Foundational cybersecurity concepts and practices](foundational-cybersecurity-concepts-and-practices/)
+[Foundational cybersecurity concepts and practices](foundational-cybersecurity-concepts-and-practices.md)
 
 [The cybersecurity threat landscape](the-cybersecurity-threat-landscape.md)
 

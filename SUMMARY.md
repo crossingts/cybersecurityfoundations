@@ -16,9 +16,7 @@
 ## 2. Introduction to cybersecurity
 
 * [Introduction - Introduction to cybersecurity](2.-introduction-to-cybersecurity/introduction-introduction-to-cybersecurity.md)
-* [Foundational cybersecurity concepts and practices](2.-introduction-to-cybersecurity/foundational-cybersecurity-concepts-and-practices/README.md)
-  * [Information security risk management](2.-introduction-to-cybersecurity/foundational-cybersecurity-concepts-and-practices/information-security-risk-management.md)
-  * [Other information security concepts and practices](2.-introduction-to-cybersecurity/foundational-cybersecurity-concepts-and-practices/other-information-security-concepts-and-practices.md)
+* [Foundational cybersecurity concepts and practices](2.-introduction-to-cybersecurity/foundational-cybersecurity-concepts-and-practices.md)
 * [The cybersecurity threat landscape](2.-introduction-to-cybersecurity/the-cybersecurity-threat-landscape.md)
 * [Common cyber attacks](2.-introduction-to-cybersecurity/common-cyber-attacks.md)
 * [Risk mitigation methods](2.-introduction-to-cybersecurity/risk-mitigation-methods.md)

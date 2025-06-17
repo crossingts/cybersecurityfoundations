@@ -14,9 +14,7 @@ description: >-
 • Point 4 \
 • Point 5
 
-Understand the changing cybersecurity threat landscape and key technological and sociopolitical factors shaping it.
-
-Cybersecurity threats at the individual, business, and societal levels - and underlying technological and sociopolitical factors.
+This section explores cybersecurity threats at the individual, business, and societal levels and key underlying technological and sociopolitical factors.
 
 ## Topics covered in this section
 

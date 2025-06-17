@@ -17,7 +17,6 @@
 
 * [Introduction - Introduction to cybersecurity](2.-introduction-to-cybersecurity/introduction-introduction-to-cybersecurity.md)
 * [Foundational cybersecurity concepts and practices](2.-introduction-to-cybersecurity/foundational-cybersecurity-concepts-and-practices/README.md)
-  * [Information security definition](2.-introduction-to-cybersecurity/foundational-cybersecurity-concepts-and-practices/information-security-definition.md)
   * [Confidentiality, integrity, and availability of information](2.-introduction-to-cybersecurity/foundational-cybersecurity-concepts-and-practices/confidentiality-integrity-and-availability-of-information.md)
   * [Information security risk management](2.-introduction-to-cybersecurity/foundational-cybersecurity-concepts-and-practices/information-security-risk-management.md)
   * [Other information security concepts and practices](2.-introduction-to-cybersecurity/foundational-cybersecurity-concepts-and-practices/other-information-security-concepts-and-practices.md)

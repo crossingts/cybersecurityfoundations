@@ -84,23 +84,15 @@ Information Security Risk in Higher Education (Adapted from EDUCAUSE, 2019)
 
 ### Technological drivers of change
 
-• Digital convergence of communications and telecommunication/broadcast industries
+• Social digitization
+
+• Digital convergence of personal, business, and government communications channels and the telecommunication/broadcast industries
 
 • AI/ML
 
 • Internet of things (IoT)
 
 • A growing spyware industry
-
-### Sociopolitical drivers of change
-
-• Social digitization
-
-• U.S. - China competition for technological and geopolitical dominance
-
-• Concentration of media ownership (privacy vs innovation)
-
-• Expansion of the military-industrial complex (collusion between Western governments and the dominant media companies)
 
 #### Social digitization
 
@@ -121,6 +113,14 @@ Kool et al. (2017) see “a return to the so-called ‘cybernetic thinking’ th
 Kool et al. (2017) argue that while initially digitization processes consisted of “the large-scale collection of data on the physical, biological and social world,” a new wave of digitization characterized by continuous, cybernetic, feedback loops is focused on the large-scale analysis and application of that data. Nowadays “we can analyse this data on a large scale and apply the acquired knowledge directly in the real world” (p. 43). On one hand, real-time intervention and cybernetic (re)directing can be beneficial to society in various sectors--e.g., self-driving cars that update their digital maps through experience (learning). On the other hand, “Take for example social media users’ newsfeeds, which social media companies are now ‘customizing’ based on their monitoring and analysis of these same users’ surfing behaviour” (Kool et al., 2017, p. 25). Surveillance capitalism “commodifies personal clicking behavior” -- “it unilaterally claims private human experience as a free source of raw material” (Thompson, 2019). Social media sites are “calibrated” for user engagement and interaction. Surveillance can influence user behavior in complex ways, including unconsciously--hitting either the information security or the political autonomy of citizens. Data surveillance “can unconsciously influence a user’s identity, and lead to ‘filter bubbles’, in which the system only suggests news, information and contacts that match the user’s previous behaviour, choices and interests” (Kool et al., 2017, p. 10).
 
 Kool et al. (2017) conclude that “the far-reaching digitization of society is raising fundamental ethical and societal issues.” Government and society “are not adequately equipped to deal with these issues” (p. 26). The governance system “needs to be upgraded if it is to “safeguard our public values and fundamental rights in the digital age now and in the future.” This upgrading “requires that all parties – government, business and civil society – take action to keep digitization on the right track” (p. 26).
+
+### Sociopolitical drivers of change
+
+• U.S. - China competition for technological and geopolitical dominance
+
+• Concentration of media ownership and audience fragmentation
+
+• Expansion of the military-industrial complex (collusion between Western governments and the dominant media companies)
 
 ### Key takeaways
 

@@ -110,49 +110,17 @@ The analysis investigated the ethical and social issues that arise in the materi
 
 <figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>Table 2: Technology Areas in The Four Worlds (Kool et al., 2017, p. 45)</p></figcaption></figure>
 
-Although “digitization has been going on for decades,” recently it has become “easier to\
-intervene real time in the physical world at an increasingly detailed level.” This “ushered in a\
-new phase in the development of the digital society; a phase in which a cybernetic loop exists\
-between the physical and the digital world” (p. 44). This means,&#x20;
+Although “digitization has been going on for decades,” recently it has become “easier to intervene real time in the physical world at an increasingly detailed level.” This “ushered in a new phase in the development of the digital society; a phase in which a cybernetic loop exists between the physical and the digital world” (p. 44). This means,
 
 _processes in the physical world are measured, the resulting data is analysed, and then real time intervention takes place based on that data analysis. The impact of the intervention can subsequently be measured, analysed and adjusted, before rejoining the following cybernetic loop cycle. (p. 44)_
 
-Kool et al. (2017) see “a return to the so-called ‘cybernetic thinking’ that attracted\
-interest in the 1950s and 1960s.” In cybernetics “biological, social and cognitive processes can\
-be understood in terms of information processes and systems, and thus digitally programmed and\
-controlled” (p. 44). Based on the various phases in the cybernetic loop--collection, analysis, and\
-application--the authors “see various ethical and social issues emerging” related to the\
-development of technology that require attention in the coming years. The new wave of\
-digitization is “leading to a world in which continuous feedback and realtime management and\
-control are increasingly important principles for a range of services.” This exerts “a strain on\
-important public values” such as privacy, equity and equality, autonomy and human dignity.\
-These values are clustered into seven topics (see Table 3: Overview of Ethical and Societal Issues Related to Digitization). Analysis of the scientific literature on technologies revealed\
-several recurring themes – “privacy, autonomy, security, controlling technology, human dignity,\
-equity and inequality, and power relations” (Kool et al., 2017, p. 47).
+Kool et al. (2017) see “a return to the so-called ‘cybernetic thinking’ that attracted interest in the 1950s and 1960s.” In cybernetics “biological, social and cognitive processes can be understood in terms of information processes and systems, and thus digitally programmed and controlled” (p. 44). Based on the various phases in the cybernetic loop--collection, analysis, and application--the authors “see various ethical and social issues emerging” related to the development of technology that require attention in the coming years. The new wave of digitization is “leading to a world in which continuous feedback and realtime management and control are increasingly important principles for a range of services.” This exerts “a strain on important public values” such as privacy, equity and equality, autonomy and human dignity. These values are clustered into seven topics (see Table 3: Overview of Ethical and Societal Issues Related to Digitization). Analysis of the scientific literature on technologies revealed several recurring themes – “privacy, autonomy, security, controlling technology, human dignity, equity and inequality, and power relations” (Kool et al., 2017, p. 47).
 
 <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Table 3: Overview of Ethical and Societal Issues Related to Digitization (Kool et al., 2017, p. 8)</p></figcaption></figure>
 
-Kool et al. (2017) argue that while initially digitization processes consisted of “the large-\
-scale collection of data on the physical, biological and social world,” a new wave of digitization\
-characterized by continuous, cybernetic, feedback loops is focused on the large-scale analysis\
-and application of that data. Nowadays “we can analyse this data on a large scale and apply the\
-acquired knowledge directly in the real world” (p. 43). On one hand, real-time intervention and\
-cybernetic (re)directing can be beneficial to society in various sectors--e.g., self-driving cars that\
-update their digital maps through experience (learning). On the other hand, “Take for example\
-social media users’ newsfeeds, which social media companies are now ‘customizing’ based on\
-their monitoring and analysis of these same users’ surfing behaviour” (Kool et al., 2017, p. 25).\
-Surveillance capitalism “commodifies personal clicking behavior” -- “it unilaterally claims private human experience as a free source of raw material” (Thompson, 2019). Social media sites\
-are “calibrated” for user engagement and interaction. Surveillance can influence user behavior in\
-complex ways, including unconsciously--hitting either the information security or the political\
-autonomy of citizens. Data surveillance “can unconsciously influence a user’s identity, and lead\
-to ‘filter bubbles’, in which the system only suggests news, information and contacts that match\
-the user’s previous behaviour, choices and interests” (Kool et al., 2017, p. 10).
+Kool et al. (2017) argue that while initially digitization processes consisted of “the large-scale collection of data on the physical, biological and social world,” a new wave of digitization characterized by continuous, cybernetic, feedback loops is focused on the large-scale analysis and application of that data. Nowadays “we can analyse this data on a large scale and apply the acquired knowledge directly in the real world” (p. 43). On one hand, real-time intervention and cybernetic (re)directing can be beneficial to society in various sectors--e.g., self-driving cars that update their digital maps through experience (learning). On the other hand, “Take for example social media users’ newsfeeds, which social media companies are now ‘customizing’ based on their monitoring and analysis of these same users’ surfing behaviour” (Kool et al., 2017, p. 25). Surveillance capitalism “commodifies personal clicking behavior” -- “it unilaterally claims private human experience as a free source of raw material” (Thompson, 2019). Social media sites are “calibrated” for user engagement and interaction. Surveillance can influence user behavior in complex ways, including unconsciously--hitting either the information security or the political autonomy of citizens. Data surveillance “can unconsciously influence a user’s identity, and lead to ‘filter bubbles’, in which the system only suggests news, information and contacts that match the user’s previous behaviour, choices and interests” (Kool et al., 2017, p. 10).
 
-Kool et al. (2017) conclude that “the far-reaching digitization of society is raising fundamental ethical and societal issues.” Government and society “are not adequately equipped\
-to deal with these issues” (p. 26). The governance system “needs to be upgraded if it is to\
-“safeguard our public values and fundamental rights in the digital age now and in the future.”\
-This upgrading “requires that all parties – government, business and civil society – take action to\
-keep digitization on the right track” (p. 26).
+Kool et al. (2017) conclude that “the far-reaching digitization of society is raising fundamental ethical and societal issues.” Government and society “are not adequately equipped to deal with these issues” (p. 26). The governance system “needs to be upgraded if it is to “safeguard our public values and fundamental rights in the digital age now and in the future.” This upgrading “requires that all parties – government, business and civil society – take action to keep digitization on the right track” (p. 26).
 
 ### Key takeaways
 

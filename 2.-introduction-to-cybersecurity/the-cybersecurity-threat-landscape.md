@@ -86,7 +86,7 @@ Information Security Risk in Higher Education (Adapted from EDUCAUSE, 2019)
 
 • Social digitization
 
-• Digital convergence of personal, business, and government communications channels and the telecommunication/broadcast industries
+• Digital convergence of communications industries
 
 • AI/ML
 
@@ -114,6 +114,12 @@ Kool et al. (2017) argue that while initially digitization processes consisted o
 
 Kool et al. (2017) conclude that “the far-reaching digitization of society is raising fundamental ethical and societal issues.” Government and society “are not adequately equipped to deal with these issues” (p. 26). The governance system “needs to be upgraded if it is to “safeguard our public values and fundamental rights in the digital age now and in the future.” This upgrading “requires that all parties – government, business and civil society – take action to keep digitization on the right track” (p. 26).
 
+#### Digital convergence of communications industries
+
+The increasing digitization and convergence of communications channels—spanning personal, business, and government domains—with telecommunications and broadcast industries have significantly expanded the cybersecurity threat landscape. As these traditionally separate sectors migrate toward IP-based networks and cloud platforms, previously isolated systems now interconnect, creating new vulnerabilities (ENISA, 2023). Cyber adversaries exploit this convergence, using weaknesses in one sector (e.g., telecom infrastructure) to attack others (e.g., enterprise VoIP systems or emergency broadcast networks). Threats like SS7/Diameter protocol exploits, large-scale DDoS attacks, and supply chain compromises now propagate more easily across converged digital ecosystems (Kshetri, 2023).
+
+The shift to digital broadcasting and IP-based services has further introduced novel risks, including deepfake-driven disinformation and ransomware attacks targeting live media streams (NIST, 2022). Meanwhile, telecom providers—now acting as hybrid IT and communications operators—face heightened targeting by nation-state actors seeking to disrupt critical services or intercept sensitive data. Legacy systems, such as traditional PSTN networks, remain operational alongside modern 5G and IoT infrastructures, creating security gaps that attackers actively exploit (Lewis, 2023). Addressing these challenges requires adaptive policies, cross-sector collaboration, and updated regulatory frameworks to secure increasingly interconnected digital environments.
+
 ### Sociopolitical drivers of change
 
 • U.S. - China competition for technological and geopolitical dominance
@@ -131,4 +137,12 @@ Kool et al. (2017) conclude that “the far-reaching digitization of society is 
 
 ### References
 
+ENISA. (2023). Threat Landscape for Converged Communications Networks.
+
 Kool, L., Timmer, J., Royakkers, L. M. M., & van Est, Q. C. (2017). Urgent upgrade: Protect public values in our digitized society. The Hague, Rathenau Instituut.
+
+Kshetri, N. (2023). Cyberthreats in Digital Convergence: Risks and Responses.
+
+Lewis, J. A. (2023). The Geopolitics of Converged Telecommunications.
+
+NIST. (2022). Security Challenges in Digital Broadcasting.

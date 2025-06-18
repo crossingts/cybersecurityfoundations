@@ -12,7 +12,7 @@ Learning objectives
 • Point 4 \
 • Point 5
 
-Common cyber attacks (DoS, spoofing, reflection/amplification, MITM, reconnaissance, social engineering, and password attacks) and malware types (viruses, worms, ransomware, spyware).
+This section looks at common cyber attacks (DoS, spoofing, reflection/amplification, MITM, reconnaissance, social engineering, and password attacks) and malware types (viruses, worms, ransomware, spyware).
 
 ## Topics covered in this section
 

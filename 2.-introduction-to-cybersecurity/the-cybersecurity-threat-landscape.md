@@ -118,6 +118,8 @@ The increasing digitization and convergence of communications channels—spannin
 
 The shift to digital broadcasting and IP-based services has further introduced novel risks, including deepfake-driven disinformation and ransomware attacks targeting live media streams (NIST, 2022). Meanwhile, telecom providers—now acting as hybrid IT and communications operators—face heightened targeting by nation-state actors seeking to disrupt critical services or intercept sensitive data. Legacy systems, such as traditional PSTN networks, remain operational alongside modern 5G and IoT infrastructures, creating security gaps that attackers actively exploit (Lewis, 2023). Addressing these challenges requires adaptive policies, cross-sector collaboration, and updated regulatory frameworks to secure increasingly interconnected digital environments.
 
+Related: Concentration of media ownership.
+
 #### AI/ML
 
 The integration of artificial intelligence (AI) and machine learning (ML) into cybersecurity has significantly altered the threat landscape, introducing both defensive advancements and sophisticated offensive capabilities. On the defensive side, AI/ML enhances threat detection by analyzing vast datasets to identify anomalies, predict attacks, and automate responses (Buczak & Guven, 2016). For instance, ML algorithms can detect previously unknown malware by recognizing behavioral patterns rather than relying on signature-based methods (Yadav & Rao, 2015). However, adversaries have also leveraged AI to develop more evasive threats, such as polymorphic malware that adapts to bypass traditional security measures (Miller et al., 2020). This dual-use nature of AI/ML has created an ongoing arms race between cyber defenders and attackers.
@@ -130,16 +132,15 @@ Despite these challenges, AI/ML also offers promising solutions to enhance cyber
 
 • U.S. - China competition for technological and geopolitical dominance
 
-• Concentration of media ownership and audience fragmentation
-
 • Expansion of the military-industrial complex (collusion between Western governments and the dominant media companies)
 
 ### Key takeaways
 
 • Cybersecurity threats at the societal level include cyberattacks on critical infrastructure\
-• cybercrime, especially identity theft\
-• Point 3 \
-• Point 4&#x20;
+• Cybersecurity threats at the individual level include identity theft\
+• Cybersecurity threats at the business level include data breaches \
+• Technological drivers of change include social digitization, digital convergence, and AI/ML\
+•  Sociopolitical drivers of change include U.S.-China rivalry and collusion between Western intelligence agencies and dominant media companies&#x20;
 
 ### References
 

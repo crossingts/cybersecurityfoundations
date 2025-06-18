@@ -104,33 +104,11 @@ Information Security Risk in Higher Education (Adapted from EDUCAUSE, 2019)
 
 #### Social digitization
 
-Kool, Timmer, Royakkers, and van Est (2017) of the Dutch Rathenau Instituut argue that\
-the digitization of society has entered a cybernetic phase, thanks to a host of emergent\
-technological innovations in computing and communications together generating a new wave of\
-digitization. The concept of digitization refers to a large cluster of digital technologies such as\
-robotics, the Internet of Things, artificial intelligence and algorithms, and big data. Artificial\
-intelligence is becoming ubiquitous, increasingly finding its way into more and more software\
-applications, and involves giving computer systems a form of intelligence, such as learning and\
-autonomous decision making, and thus supports a myriad of emerging and disruptive\
-technological innovations (e.g., smart environments, robotics, and network monitoring). “Urgent\
-Upgrade: Protect Public Values in Our Digitized Society” explores the ethical and societal\
-challenges of digitization and the challenges of the governance landscape in the Netherlands.\
-“We investigated which technologies are expected to shape digital society in the coming years,\
-and which social and ethical challenges they will bring” (p. 116). The analysis involved an\
-examination of the role of the scientific community and knowledge institutions, institutions\
-responsible for protecting human rights, civil society, and “the roles of policy makers and\
-politicians in agenda setting, in political decision making, and in the implementation of policy”\
-(p. 11).
+Kool, Timmer, Royakkers, and van Est (2017) of the Dutch Rathenau Instituut argue that the digitization of society has entered a cybernetic phase, thanks to a host of emergent technological innovations in computing and communications together generating a new wave of digitization. The concept of digitization refers to a large cluster of digital technologies such as robotics, the Internet of Things, artificial intelligence and algorithms, and big data. Artificial intelligence is becoming ubiquitous, increasingly finding its way into more and more software applications, and involves giving computer systems a form of intelligence, such as learning and autonomous decision making, and thus supports a myriad of emerging and disruptive technological innovations (e.g., smart environments, robotics, and network monitoring). “Urgent Upgrade: Protect Public Values in Our Digitized Society” explores the ethical and societal challenges of digitization and the challenges of the governance landscape in the Netherlands. “We investigated which technologies are expected to shape digital society in the coming years, and which social and ethical challenges they will bring” (p. 116). The analysis involved an examination of the role of the scientific community and knowledge institutions, institutions responsible for protecting human rights, civil society, and “the roles of policy makers and politicians in agenda setting, in political decision making, and in the implementation of policy” (p. 11).
 
-The analysis investigated the ethical and social issues that arise in the material,\
-biological, socio-cultural and digital worlds and focused on eight technology areas that “best\
-illustrate a wide range of the impact of the new wave of digitization” (p. 23)--that is, IoT and\
-robotics; biometrics and persuasive technology; digital platforms, augmented reality, virtual\
-reality and social media; and artificial intelligence, algorithms and big data (see Table 2).
+The analysis investigated the ethical and social issues that arise in the material, biological, socio-cultural and digital worlds and focused on eight technology areas that “best illustrate a wide range of the impact of the new wave of digitization” (p. 23)--that is, IoT and robotics; biometrics and persuasive technology; digital platforms, augmented reality, virtual reality and social media; and artificial intelligence, algorithms and big data (see Table 2).
 
-Table 2: Technology Areas in The Four Worlds (Kool et al., 2017, p. 45)
-
-
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>Table 2: Technology Areas in The Four Worlds (Kool et al., 2017, p. 45)</p></figcaption></figure>
 
 Although “digitization has been going on for decades,” recently it has become “easier to\
 intervene real time in the physical world at an increasingly detailed level.” This “ushered in a\
@@ -152,9 +130,7 @@ These values are clustered into seven topics (see Table 3: Overview of Ethical a
 several recurring themes – “privacy, autonomy, security, controlling technology, human dignity,\
 equity and inequality, and power relations” (Kool et al., 2017, p. 47).
 
-Table 3: Overview of Ethical and Societal Issues Related to Digitization (Kool et al., 2017, p. 8)
-
-
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Table 3: Overview of Ethical and Societal Issues Related to Digitization (Kool et al., 2017, p. 8)</p></figcaption></figure>
 
 Kool et al. (2017) argue that while initially digitization processes consisted of “the large-\
 scale collection of data on the physical, biological and social world,” a new wave of digitization\

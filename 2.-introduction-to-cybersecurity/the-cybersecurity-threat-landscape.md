@@ -33,12 +33,13 @@ Cyberwarfare/cyberattacks on public institutions and sensitive information: Cybe
 
 Cyberwarfare: Targeted propaganda/misinformation/disinformation via social media platforms (e.g., to foment unrest/public discord against authorities/government).&#x20;
 
-**Individual level threats**\
-Canadians face a rising cyber risk of falling victim to cybercrime, especially identity theft.\
-State and business surveillance\
-Political interference -malicious online influence activity
+**Individual level threats**
 
+Cybercrime (personal information/identity theft): Canadians face a rising cyber risk of falling victim to cybercrime, especially identity theft. Theft of personal and financial information is lucrative for cybercriminals and is very likely to increase (CSE, 2018). Cybercriminals profit "by obtaining account login credentials, credit card details, and other personal information. They exploit this information to directly steal money, to resell information on cybercrime marketplaces, to commit fraud, or for extortion" (CSE, 2018, p. 11).
 
+Political interference/cyber warfare (malicious online influence activity): Cyber threat actors can amplify or suppress social media content using botnets, which automate online interactions and share content with unsuspecting users (CSE, 2018). By spreading their preferred content among large numbers of paid and legitimate users, cyber threat actors can promote their specific point of view and potentially influence Canadians. (CSE, 2018, p. 15)
+
+State and business surveillance: Cases in point are NSA's dragnet surveillance program, and Facebook’s Cambridge-Analytica data scandal.
 
 **Threat landscape in Canada**
 

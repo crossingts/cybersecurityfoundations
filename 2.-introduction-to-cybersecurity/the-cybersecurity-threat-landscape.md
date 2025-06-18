@@ -84,21 +84,99 @@ Information Security Risk in Higher Education (Adapted from EDUCAUSE, 2019)
 
 ### Technological drivers of change
 
-Digital convergence of communications and telecom/broadcast/IoT
+• Digital convergence of communications and telecommunication/broadcast industries
 
-AI/ML
+• AI/ML
 
-A growing spyware industry
+• Internet of things (IoT)
+
+• A growing spyware industry
 
 ### Sociopolitical drivers of change
 
-Social digitization
+• Social digitization
 
-U.S. - China competition for technological and geopolitical dominance
+• U.S. - China competition for technological and geopolitical dominance
 
-Concentration of media ownership - privacy vs innovation
+• Concentration of media ownership (privacy vs innovation)
 
-Expansion of the military-industrial complex (collusion between Western governments and the dominant media companies)
+• Expansion of the military-industrial complex (collusion between Western governments and the dominant media companies)
+
+#### Social digitization
+
+Kool, Timmer, Royakkers, and van Est (2017) of the Dutch Rathenau Instituut argue that\
+the digitization of society has entered a cybernetic phase, thanks to a host of emergent\
+technological innovations in computing and communications together generating a new wave of\
+digitization. The concept of digitization refers to a large cluster of digital technologies such as\
+robotics, the Internet of Things, artificial intelligence and algorithms, and big data. Artificial\
+intelligence is becoming ubiquitous, increasingly finding its way into more and more software\
+applications, and involves giving computer systems a form of intelligence, such as learning and\
+autonomous decision making, and thus supports a myriad of emerging and disruptive\
+technological innovations (e.g., smart environments, robotics, and network monitoring). “Urgent\
+Upgrade: Protect Public Values in Our Digitized Society” explores the ethical and societal\
+challenges of digitization and the challenges of the governance landscape in the Netherlands.\
+“We investigated which technologies are expected to shape digital society in the coming years,\
+and which social and ethical challenges they will bring” (p. 116). The analysis involved an\
+examination of the role of the scientific community and knowledge institutions, institutions\
+responsible for protecting human rights, civil society, and “the roles of policy makers and\
+politicians in agenda setting, in political decision making, and in the implementation of policy”\
+(p. 11).
+
+The analysis investigated the ethical and social issues that arise in the material,\
+biological, socio-cultural and digital worlds and focused on eight technology areas that “best\
+illustrate a wide range of the impact of the new wave of digitization” (p. 23)--that is, IoT and\
+robotics; biometrics and persuasive technology; digital platforms, augmented reality, virtual\
+reality and social media; and artificial intelligence, algorithms and big data (see Table 2).
+
+Table 2: Technology Areas in The Four Worlds (Kool et al., 2017, p. 45)
+
+
+
+Although “digitization has been going on for decades,” recently it has become “easier to\
+intervene real time in the physical world at an increasingly detailed level.” This “ushered in a\
+new phase in the development of the digital society; a phase in which a cybernetic loop exists\
+between the physical and the digital world” (p. 44). This means,&#x20;
+
+_processes in the physical world are measured, the resulting data is analysed, and then real time intervention takes place based on that data analysis. The impact of the intervention can subsequently be measured, analysed and adjusted, before rejoining the following cybernetic loop cycle. (p. 44)_
+
+Kool et al. (2017) see “a return to the so-called ‘cybernetic thinking’ that attracted\
+interest in the 1950s and 1960s.” In cybernetics “biological, social and cognitive processes can\
+be understood in terms of information processes and systems, and thus digitally programmed and\
+controlled” (p. 44). Based on the various phases in the cybernetic loop--collection, analysis, and\
+application--the authors “see various ethical and social issues emerging” related to the\
+development of technology that require attention in the coming years. The new wave of\
+digitization is “leading to a world in which continuous feedback and realtime management and\
+control are increasingly important principles for a range of services.” This exerts “a strain on\
+important public values” such as privacy, equity and equality, autonomy and human dignity.\
+These values are clustered into seven topics (see Table 3: Overview of Ethical and Societal Issues Related to Digitization). Analysis of the scientific literature on technologies revealed\
+several recurring themes – “privacy, autonomy, security, controlling technology, human dignity,\
+equity and inequality, and power relations” (Kool et al., 2017, p. 47).
+
+Table 3: Overview of Ethical and Societal Issues Related to Digitization (Kool et al., 2017, p. 8)
+
+
+
+Kool et al. (2017) argue that while initially digitization processes consisted of “the large-\
+scale collection of data on the physical, biological and social world,” a new wave of digitization\
+characterized by continuous, cybernetic, feedback loops is focused on the large-scale analysis\
+and application of that data. Nowadays “we can analyse this data on a large scale and apply the\
+acquired knowledge directly in the real world” (p. 43). On one hand, real-time intervention and\
+cybernetic (re)directing can be beneficial to society in various sectors--e.g., self-driving cars that\
+update their digital maps through experience (learning). On the other hand, “Take for example\
+social media users’ newsfeeds, which social media companies are now ‘customizing’ based on\
+their monitoring and analysis of these same users’ surfing behaviour” (Kool et al., 2017, p. 25).\
+Surveillance capitalism “commodifies personal clicking behavior” -- “it unilaterally claims private human experience as a free source of raw material” (Thompson, 2019). Social media sites\
+are “calibrated” for user engagement and interaction. Surveillance can influence user behavior in\
+complex ways, including unconsciously--hitting either the information security or the political\
+autonomy of citizens. Data surveillance “can unconsciously influence a user’s identity, and lead\
+to ‘filter bubbles’, in which the system only suggests news, information and contacts that match\
+the user’s previous behaviour, choices and interests” (Kool et al., 2017, p. 10).
+
+Kool et al. (2017) conclude that “the far-reaching digitization of society is raising fundamental ethical and societal issues.” Government and society “are not adequately equipped\
+to deal with these issues” (p. 26). The governance system “needs to be upgraded if it is to\
+“safeguard our public values and fundamental rights in the digital age now and in the future.”\
+This upgrading “requires that all parties – government, business and civil society – take action to\
+keep digitization on the right track” (p. 26).
 
 ### Key takeaways
 

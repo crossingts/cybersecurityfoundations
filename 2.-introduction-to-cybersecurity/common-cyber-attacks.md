@@ -99,14 +99,25 @@ For mitigation of TCP SYN flood attacks, you would need techniques that focus on
 
 DHCP exhaustion attack, also known as a DHCP starvation attack, is similar to the TCP SYN flood attack. An attacker uses spoofed MAC addresses to flood a DHCP server with DHCP Discover messages. Attackers send DHCP Discover messages with fake source MAC addresses at a very quick pace. The target server’s DHCP pool becomes full, resulting in a denial-of-service to other devices which are no longer able to get an IP address. Mitigation: DHCP snooping, Switch Port Security.
 
-Two types of attacks DHCP snooping can help defeat (spoofing attacks)\
-[https://docs.google.com/document/d/e/2PACX-1vSl\_p7eJbMA3IupZVa4GhGdLukXcU1b\_uIfTA1LndgIoCQEP7OTULScySTh8LWmIBNe-8F-5xo1GPET/pub](https://docs.google.com/document/d/e/2PACX-1vSl_p7eJbMA3IupZVa4GhGdLukXcU1b_uIfTA1LndgIoCQEP7OTULScySTh8LWmIBNe-8F-5xo1GPET/pub)
+In this attack, malicious actors flood the network with DHCP requests, overwhelming the real DHCP server and preventing legitimate clients from obtaining IP addresses. DHCP snooping can limit the rate of DHCP messages and filter suspicious DHCP messages, mitigating such denial-of-service attacks.
 
-UDP flood: UDP floods simply bombard the target with UDP packets, consuming bandwidth and making it difficult for legitimate traffic to get through.
+A DHCP starvation attack is similar to the TCP SYN flood attack. An attacker uses spoofed MAC addresses to flood DHCP Discover messages. The target server’s DHCP pool becomes full, resulting in a denial-of-service to other devices which are no longer able to get an IP address.
 
-HTTP flood: This attack targets web servers by sending a huge number of HTTP requests, overloading the server's capacity to process them.
+The goal of a DHCP starvation attack is to overwhelm the DHCP server with a flood of bogus DHCP requests, exhausting the pool of available IP addresses. This prevents legitimate clients from obtaining an IP address and essentially denies them access to the network.
 
-Ping of death: This attack sends a malformed packet that's larger than the intended size, causing the target system to crash or reboot.
+DHCP snooping helps mitigate DoS attacks by limiting the rate of DHCP messages and filtering out suspicious traffic (DHCP messages received on an untrusted port, as normally sent by a DHCP client, may be filtered if they appear to be part of an attack). This makes it more difficult for attackers to flood the server and disrupt network operations.
+
+**UDP flood**
+
+UDP floods simply bombard the target with UDP packets, consuming bandwidth and making it difficult for legitimate traffic to get through.
+
+**HTTP flood**
+
+This attack targets web servers by sending a huge number of HTTP requests, overloading the server's capacity to process them.
+
+**Ping of death**
+
+This attack sends a malformed packet that's larger than the intended size, causing the target system to crash or reboot.
 
 #### Reflection and amplification
 
@@ -114,13 +125,22 @@ In a reflection attack, the attacker sends traffic to a reflector such as a DNS 
 
 #### Man in the middle (MITM)&#x20;
 
-DHCP poisoning: In this attack a malicious device impersonates a legitimate DHCP server and offers IP addresses to clients. Once a client accepts the attacker's offer, their communication gets routed through the attacker's device, allowing them to potentially eavesdrop on traffic, steal data, redirect the user to malicious websites, or tamper with (damage) or alter the captured traffic. Mitigation: DHCP snooping.
+**DHCP poisoning**
+
+In a DHCP poisoning attack a malicious device impersonates a legitimate DHCP server and offers IP addresses to clients. Once a client accepts the attacker's offer, their communication gets routed through the attacker's device, allowing them to potentially eavesdrop on traffic, steal data, redirect the user to malicious websites, or tamper with (damage) or alter the captured traffic. Mitigation: DHCP snooping.
 
 A spurious DHCP server and a malicious MITM < DHCP snooping configuration and verification\
 [https://itnetworkingskills.wordpress.com/2023/05/14/dhcp-snooping-configuration-verification/](https://itnetworkingskills.wordpress.com/2023/05/14/dhcp-snooping-configuration-verification/)
 
-Two types of attacks DHCP snooping can help defeat (spoofing attacks)\
-[https://docs.google.com/document/d/e/2PACX-1vSl\_p7eJbMA3IupZVa4GhGdLukXcU1b\_uIfTA1LndgIoCQEP7OTULScySTh8LWmIBNe-8F-5xo1GPET/pub](https://docs.google.com/document/d/e/2PACX-1vSl_p7eJbMA3IupZVa4GhGdLukXcU1b_uIfTA1LndgIoCQEP7OTULScySTh8LWmIBNe-8F-5xo1GPET/pub)
+DHCP snooping is a security feature that helps to prevent unauthorized DHCP servers from providing IP addresses to devices on a network. It does this by classifying ports on a switch as either trusted or untrusted. Untrusted ports are only allowed to forward DHCP discover messages.
+
+A DHCP server can only send DHCP offers and acknowledgements to ports that are trusted. If a DHCP server tries to send a DHCP offer or acknowledgement to an untrusted port, the switch will drop the packet. This helps to prevent unauthorized DHCP servers from providing IP addresses to devices on the network.
+
+DHCP snooping helps prevent MITM attacks by identifying and discarding unauthorized DHCP messages, thereby stopping the attacker from establishing themselves as a fake server.
+
+DHCP snooping prevents attackers from spoofing a legitimate DHCP server and intercepting communication between clients and the real server.
+
+**ARP spoofing**
 
 ARP spoofing, also known as ARP poisoning: A MITM attack that allows attackers to intercept communication between network devices. The attacker spoofs the MAC address of the target device as their own (using **gratuitous ARP**) to direct traffic to himself. Alternatively, you can say the attacker spoofs the source IP address of the target device as their own (impersonates a legitimate IP address such as a router’s IP). Mitigation: DAI.
 

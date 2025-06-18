@@ -83,17 +83,13 @@ Most enterprises will enforce rules like these on their employees, but it’s al
 
 #### Denial of service (DoS)
 
-DoS and DDoS attacks threaten the availability of a system.
+There are many types of DoS attacks, such as TCP SYN flood, UDP flood, HTTP flood, Ping of death, and DHCP starvation attack. DoS and DDoS attacks threaten the availability of information systems. A prime mitigation method for DoS attacks is network segmentation.
 
-There are many types of DoS attacks, such as TCP SYN flood, UDP flood, HTTP flood, Ping of death, and DHCP starvation attack. **Mitigation**: Network segmentation.
-
-TCP SYN flood (IP spoofing attack).
-
-DHCP exhaustion attack (MAC address spoofing). **Mitigation**: DHCP snooping, Switch Port Security.
+**TCP SYN flood**
 
 • The TCP SYN flood is a common type of DoS attack (often directed against ISPs) which exploits the TCP three-way handshake process used by TCP connections. The attacker likely spoofs their IP address, meaning the attacker uses a fake IP address, making this a spoofing attack. By spoofing the source IP address in the SYN, the malicious client causes the server to send the SYN-ACK to a falsified IP address – which will not send an ACK because it knows that it never sent a SYN. Or the malicious client can simply not send the expected ACK.
 
-For mitigation of TCP SYN flood attacks, you'd need techniques that focus on managing the connection setup process itself. A layered approach combining these methods is most effective in mitigating TCP SYN flood attacks. Here are some common mitigation methods:
+For mitigation of TCP SYN flood attacks, you would need techniques that focus on managing the connection setup process itself. A layered approach combining these methods is most effective in mitigating TCP SYN flood attacks. Here are some common mitigation methods:
 
 1. Rate limiting: This limits the number of incoming SYN requests to a manageable rate, preventing the attacker from overwhelming your system.
 2. SYN cookies: This is a technique where the server generates a temporary challenge instead of allocating resources for a full connection handshake in case of a suspected SYN flood.
@@ -105,7 +101,11 @@ For mitigation of TCP SYN flood attacks, you'd need techniques that focus on man
 
 • Ping of death: This attack sends a malformed packet that's larger than the intended size, causing the target system to crash or reboot.
 
+**DHCP exhaustion attack**
+
 • DHCP exhaustion attack, also known as a DHCP starvation attack, is similar to the TCP SYN flood attack. An attacker uses spoofed MAC addresses to flood a DHCP server with DHCP Discover messages. Attackers send DHCP Discover messages with fake source MAC addresses at a very quick pace. The target server’s DHCP pool becomes full, resulting in a denial-of-service to other devices which are no longer able to get an IP address.
+
+Mitigation: DHCP snooping, Switch Port Security.
 
 Two types of attacks DHCP snooping can help defeat (spoofing attacks)
 
@@ -159,7 +159,7 @@ ARP spoofing, also known as ARP poisoning
 
 DHCP exhaustion attack (MAC address spoofing). Mitigation: DHCP snooping, Switch Port Security.
 
-Other:
+Other:&#x20;
 
 TCP/IP Hijacking: Attackers can intercept ongoing TCP connections and take control of the session, potentially leading to unauthorized data access or manipulation.
 

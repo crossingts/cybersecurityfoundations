@@ -47,19 +47,9 @@ State and business surveillance: Cases in point are NSA's dragnet surveillance p
 
 ### Cybersecurity threats to business/industry
 
-Businesses face an increasing risk of cybercrime, especially data breaches from commercial espionage, commercial data theft, and social engineering schemes.
+Businesses face an increasing risk of cybercrime, especially data breaches from commercial espionage, commercial data theft, and social engineering schemes (social engineering often combined with malware/ransomeware or phishing attacks).
 
-Business-level threats: businesses face an increasing risk of cybercrime, especially data breaches from commercial espionage, commercial data theft, and social engineering schemes.
-
-Key information security threats to businesses:&#x20;
-
-• DoS and other network attack techniques against information confidentiality, integrity, and availability.&#x20;
-
-• A combination of social engineering and malware, especially ransomware.&#x20;
-
-• Identity theft through social engineering and phishing schemes.
-
-### Risk in higher education (industry in focus)
+#### Risk in higher education (industry in focus)
 
 According to EDUCAUSE, a U.S. based nonprofit association that helps higher education elevate the impact of IT, with community of over 100,000 members spanning 45 countries, information security was the number one IT governance issue in 2016. The top higher education information security **risks** that were a priority for IT in 2016 were 1) phishing and social engineering; 2) end-user awareness, training, and education; 3) limited resources for the information security program (i.e., too much work and not enough time or people); and 4) addressing regulatory requirements (Grama & Vogel, 2017).
 

@@ -25,14 +25,20 @@ This section explores cybersecurity threats at the individual, business, and soc
 
 ### Cybersecurity threats at the social and individual levels
 
-**Societal level threats**\
-Cyberwarfare/cyberattacks on critical infrastructure\
-Cyberwarfare/cyberattacks on public service institutions – on essential services and sensitive information
+**Societal level threats**
+
+Cyberwarfare/cyberattacks on critical infrastructure such as the power grid, defence facilities, and health services: “As the number and variety of devices used to support, monitor, and control critical infrastructure become more interconnected, the likelihood of cyber threat actors disrupting critical infrastructure has increased” (CSE, 2018, p. 23).
+
+Cyberwarfare/cyberattacks on public institutions and sensitive information: Cyber threat activity “against public institutions—such as government departments, universities, and hospitals—is likely to persist because of the essential nature of the services and the sensitivity of the information they manage” (CSE, 2018, p. 26).
+
+Cyberwarfare: Targeted propaganda/misinformation/disinformation via social media platforms (e.g., to foment unrest/public discord against authorities/government).&#x20;
 
 **Individual level threats**\
 Canadians face a rising cyber risk of falling victim to cybercrime, especially identity theft.\
 State and business surveillance\
 Political interference -malicious online influence activity
+
+
 
 **Threat landscape in Canada**
 

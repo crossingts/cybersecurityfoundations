@@ -8,22 +8,20 @@ description: >-
 
 ## Learning objectives
 
-• Point 1\
-• Point 2 \
-• Point 3\
-• Point 4 \
-• Point 5
+• Describe the changing cybersecurity threat landscape\
+• Describe technological and sociopolitical drivers of the change\
+
 
 This section explores cybersecurity threats at the individual, business, and societal levels and key underlying technological and sociopolitical factors.
 
 ## Topics covered in this section
 
-* **Cybersecurity threats at the social and individual levels**
+* **Cybersecurity threats at the societal and individual levels**
 * **Cybersecurity threats to business/industry**
 * **Technological drivers of change**
 * **Sociopolitical drivers of change**
 
-### Cybersecurity threats at the social and individual levels
+### Cybersecurity threats at the societal and individual levels
 
 **Societal level threats**
 
@@ -138,8 +136,8 @@ Despite these challenges, AI/ML also offers promising solutions to enhance cyber
 
 ### Key takeaways
 
-• Point 1\
-• Point 2\
+• Cybersecurity threats at the societal level include cyberattacks on critical infrastructure\
+• cybercrime, especially identity theft\
 • Point 3 \
 • Point 4&#x20;
 

@@ -61,7 +61,7 @@ Cyber warfare can involve sabotage (e.g., Stuxnet attributed to the United State
 
 **Surveillance**
 
-Business surveillance: Innovation vs Privacy (the "duet of century").
+Business surveillance: Innovation vs Privacy (the "duet of century"). The ability to extract value from surveillance data has made privacy and innovation “the duet of the century” (Bains, 2019).
 
 Espionage/information theft: Cyber campaigns launched by hackers from one country targeting firms of another country resulting in the theft of business information “such as bid prices, contracts and information related to mergers and acquisitions” (Onag, 2018).
 
@@ -131,4 +131,4 @@ Kool et al. (2017) conclude that “the far-reaching digitization of society is 
 
 ### References
 
-Reference
+Kool, L., Timmer, J., Royakkers, L. M. M., & van Est, Q. C. (2017). Urgent upgrade: Protect public values in our digitized society. The Hague, Rathenau Instituut.

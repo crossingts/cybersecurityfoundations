@@ -107,6 +107,10 @@ For mitigation of TCP SYN flood attacks, you'd need techniques that focus on man
 
 • DHCP exhaustion attack, also known as a DHCP starvation attack, is similar to the TCP SYN flood attack. An attacker uses spoofed MAC addresses to flood a DHCP server with DHCP Discover messages. Attackers send DHCP Discover messages with fake source MAC addresses at a very quick pace. The target server’s DHCP pool becomes full, resulting in a denial-of-service to other devices which are no longer able to get an IP address.
 
+Two types of attacks DHCP snooping can help defeat (spoofing attacks)
+
+[https://docs.google.com/document/d/e/2PACX-1vSl\_p7eJbMA3IupZVa4GhGdLukXcU1b\_uIfTA1LndgIoCQEP7OTULScySTh8LWmIBNe-8F-5xo1GPET/pub](https://docs.google.com/document/d/e/2PACX-1vSl_p7eJbMA3IupZVa4GhGdLukXcU1b_uIfTA1LndgIoCQEP7OTULScySTh8LWmIBNe-8F-5xo1GPET/pub)
+
 #### Reflection and amplification
 
 In a reflection attack, the attacker sends traffic to a reflector such as a DNS server and spoofs the source address of the sent packets using the target’s IP address. Then the reflector sends the reply to the target’s IP address. If the amount of traffic is large enough this can result in a DoS to the target.&#x20;
@@ -118,6 +122,10 @@ DHCP poisoning: In this attack a malicious device impersonates a legitimate DHCP
 A spurious DHCP server and a malicious MITM < DHCP snooping configuration and verification
 
 [https://itnetworkingskills.wordpress.com/2023/05/14/dhcp-snooping-configuration-verification/](https://itnetworkingskills.wordpress.com/2023/05/14/dhcp-snooping-configuration-verification/)
+
+Two types of attacks DHCP snooping can help defeat (spoofing attacks)
+
+[https://docs.google.com/document/d/e/2PACX-1vSl\_p7eJbMA3IupZVa4GhGdLukXcU1b\_uIfTA1LndgIoCQEP7OTULScySTh8LWmIBNe-8F-5xo1GPET/pub](https://docs.google.com/document/d/e/2PACX-1vSl_p7eJbMA3IupZVa4GhGdLukXcU1b_uIfTA1LndgIoCQEP7OTULScySTh8LWmIBNe-8F-5xo1GPET/pub)
 
 ARP spoofing, also known as ARP poisoning: A MITM attack that allows attackers to intercept communication between network devices. The attacker spoofs the MAC address of the target device as their own (using **gratuitous ARP**) to direct traffic to himself. Alternatively, you can say the attacker spoofs the source IP address of the target device as their own (impersonates a legitimate IP address such as a router’s IP). Mitigation: DAI.
 
@@ -161,6 +169,16 @@ Session Hijacking: Attackers can take over an existing session, posing as legiti
 
 Malware, malicious software, refers to a variety of harmful programs that can infect a computer. There are many types of malware. Here are a few types.
 
+\*Viruses are malware that infects other software, called a host program. The virus spreads as the software is shared by users or downloaded from malicious websites. Once the virus has infected a device it can corrupt or modify files on the target computer.
+
+\*Worms are different from viruses in that they don’t require a host program. They are standalone malware and are also able to spread on their own, without user interaction. The spread of worms from device to device can congest the network, but in addition to that if the worm has a payload, other malicious code within the worm, it can cause additional harm to target devices.
+
+\*A Trojan horse is harmful software disguised as legitimate software. Trojan horses spread through user interaction such as opening email attachments or downloading a file from the Internet.
+
+These types of malware are defined by how the malware infects a system and how it spreads, not the attacks they carry out after infecting the system.
+
+The above malware types can exploit various vulnerabilities to threaten any of the CIA triad aspects of the target device.
+
 ### Key takeaways
 
 • Point 1\
@@ -173,7 +191,3 @@ Malware, malicious software, refers to a variety of harmful programs that can in
 Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 2. Cisco Press.
 
 Odom, W. (2020). Chapter 4. Security Architectures, CCNA 200-301 Official Cert Guide (pp. 68-85), Volume 2. Cisco Press.
-
-Two types of attacks DHCP snooping can help defeat (spoofing attacks)
-
-[https://docs.google.com/document/d/e/2PACX-1vSl\_p7eJbMA3IupZVa4GhGdLukXcU1b\_uIfTA1LndgIoCQEP7OTULScySTh8LWmIBNe-8F-5xo1GPET/pub](https://docs.google.com/document/d/e/2PACX-1vSl_p7eJbMA3IupZVa4GhGdLukXcU1b_uIfTA1LndgIoCQEP7OTULScySTh8LWmIBNe-8F-5xo1GPET/pub)

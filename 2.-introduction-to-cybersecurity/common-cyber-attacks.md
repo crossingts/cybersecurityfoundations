@@ -20,9 +20,9 @@ This section looks at common cyber attacks (DoS, spoofing, reflection/amplificat
   * **Reconnaissance**
   * **Social engineering**
   * **Password attacks**
-  * **Denial of service (DoS) attacks**
-  * **Reflection and amplification attacks**
-  * **Man in the middle (MITM) attacks**
+  * **Denial of service (DoS)**
+  * **Reflection and amplification**
+  * **Man in the middle (MITM)**
   * **Spoofing attacks**
 * **Malware types**
   * **Viruses and worms**
@@ -30,6 +30,8 @@ This section looks at common cyber attacks (DoS, spoofing, reflection/amplificat
   * **Spyware**
 
 ### Common cyber attacks
+
+Attack types are threats which can potentially exploit vulnerabilities to compromise the CIA of an enterprise’s information assets and network system. We explore how attackers can threaten the CIA of enterprise systems and information by looking at the following common types of attacks: Reconnaissance, Social engineering, Password attacks, Denial of service (DoS), Reflection and amplification, MITM, and spoofing attacks. There are many more potential attacks than these, but these are some of the main attack categories.
 
 #### Reconnaissance
 

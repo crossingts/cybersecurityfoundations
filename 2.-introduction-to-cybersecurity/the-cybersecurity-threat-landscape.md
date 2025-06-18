@@ -49,49 +49,27 @@ State and business surveillance: Cases in point are NSA's dragnet surveillance p
 
 Businesses face an increasing risk of cybercrime, especially data breaches from commercial espionage, commercial data theft, and social engineering schemes (social engineering often combined with malware/ransomeware or phishing attacks).
 
-**Cybercrime**
-
-Data Breaches (CSE, 2018):
-
-Data breaches
-
-Commercial espionage/commercial data theft
-
-Whaling/social engineering
+**Cybercrime (data breaches)**
 
 “Canadian businesses, especially those active in strategic sectors of the economy, are subject to cyber espionage aimed at stealing intellectual property and other commercially sensitive information.” This cyber threat activity “can harm Canada’s competitive business advantage and undermine our strategic position in global markets” (CSE, 2018, p. 19).
 
 “Foreign and domestic adversaries target higher education institutions that have military and government contracts” (McNamara March 15, 2019).
 
-The top higher education information security risks in Canada and the U.S. that are a priority for IT in 2016 (Grama & Vogel, 2017):
-
-(1) phishing and social engineering;
-
-(2) end-user awareness, training, and education;
-
-(3) limited resources for the information security program (i.e., too much work and not enough time or people); and
-
-(4) addressing regulatory requirements.
-
 **Political interference/cyberwarfare**
 
-Cyber warfare can involve sabotage (e.g., Stuxnet); Malware attacks on financial institutions (e.g., WannaCry and Petya ransomware attributed to North Korea).
+Cyber warfare can involve sabotage (e.g., Stuxnet attributed to the United States and Israel); Malware attacks on financial institutions (e.g., WannaCry and Petya ransomware attributed to North Korea).
 
 **Surveillance**
 
-Innovation vs Privacy (duet of century)
+Business surveillance: Innovation vs Privacy (the "duet of century").
 
-Espionage
-
-Information theft/crime
-
-Sabotage
-
-Cyber campaigns launched by hackers from one country targeting firms of another country resulting in the theft of business information “such as bid prices, contracts and information related to mergers and acquisitions” (Onag, 2018).
+Espionage/information theft: Cyber campaigns launched by hackers from one country targeting firms of another country resulting in the theft of business information “such as bid prices, contracts and information related to mergers and acquisitions” (Onag, 2018).
 
 #### Risk in higher education (industry in focus)
 
 According to EDUCAUSE, a U.S. based nonprofit association that helps higher education elevate the impact of IT, with community of over 100,000 members spanning 45 countries, information security was the number one IT governance issue in 2016. The top higher education information security **risks** that were a priority for IT in 2016 were 1) phishing and social engineering; 2) end-user awareness, training, and education; 3) limited resources for the information security program (i.e., too much work and not enough time or people); and 4) addressing regulatory requirements (Grama & Vogel, 2017).
+
+The top higher education information security risks in the U.S. and Canada that are a priority for IT in 2016 (Grama & Vogel, 2017) are summarized as follows.
 
 **Information Security Risk in Higher Education (Adapted from EDUCAUSE, 2019)**
 

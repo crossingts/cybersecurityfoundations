@@ -86,7 +86,7 @@ Information Security Risk in Higher Education (Adapted from EDUCAUSE, 2019)
 
 • Social digitization
 
-• Digital convergence of communications industries
+• Digital convergence of communications channels
 
 • AI/ML
 
@@ -114,11 +114,19 @@ Kool et al. (2017) argue that while initially digitization processes consisted o
 
 Kool et al. (2017) conclude that “the far-reaching digitization of society is raising fundamental ethical and societal issues.” Government and society “are not adequately equipped to deal with these issues” (p. 26). The governance system “needs to be upgraded if it is to “safeguard our public values and fundamental rights in the digital age now and in the future.” This upgrading “requires that all parties – government, business and civil society – take action to keep digitization on the right track” (p. 26).
 
-#### Digital convergence of communications industries
+#### Digital convergence of communications channels
 
 The increasing digitization and convergence of communications channels—spanning personal, business, and government domains—with telecommunications and broadcast industries have significantly expanded the cybersecurity threat landscape. As these traditionally separate sectors migrate toward IP-based networks and cloud platforms, previously isolated systems now interconnect, creating new vulnerabilities (ENISA, 2023). Cyber adversaries exploit this convergence, using weaknesses in one sector (e.g., telecom infrastructure) to attack others (e.g., enterprise VoIP systems or emergency broadcast networks). Threats like SS7/Diameter protocol exploits, large-scale DDoS attacks, and supply chain compromises now propagate more easily across converged digital ecosystems (Kshetri, 2023).
 
 The shift to digital broadcasting and IP-based services has further introduced novel risks, including deepfake-driven disinformation and ransomware attacks targeting live media streams (NIST, 2022). Meanwhile, telecom providers—now acting as hybrid IT and communications operators—face heightened targeting by nation-state actors seeking to disrupt critical services or intercept sensitive data. Legacy systems, such as traditional PSTN networks, remain operational alongside modern 5G and IoT infrastructures, creating security gaps that attackers actively exploit (Lewis, 2023). Addressing these challenges requires adaptive policies, cross-sector collaboration, and updated regulatory frameworks to secure increasingly interconnected digital environments.
+
+#### AI/ML
+
+The integration of artificial intelligence (AI) and machine learning (ML) into cybersecurity has significantly altered the threat landscape, introducing both defensive advancements and sophisticated offensive capabilities. On the defensive side, AI/ML enhances threat detection by analyzing vast datasets to identify anomalies, predict attacks, and automate responses (Buczak & Guven, 2016). For instance, ML algorithms can detect previously unknown malware by recognizing behavioral patterns rather than relying on signature-based methods (Yadav & Rao, 2015). However, adversaries have also leveraged AI to develop more evasive threats, such as polymorphic malware that adapts to bypass traditional security measures (Miller et al., 2020). This dual-use nature of AI/ML has created an ongoing arms race between cyber defenders and attackers.
+
+One of the most concerning developments is the use of AI-driven social engineering attacks, such as deepfake phishing and automated spear-phishing campaigns. Attackers employ natural language processing (NLP) to craft highly personalized messages, increasing the success rate of deception (Aburaddad et al., 2021). Additionally, adversarial machine learning techniques enable attackers to manipulate AI systems by injecting malicious data or exploiting model biases (Biggio & Roli, 2018). For example, evasion attacks can fool ML-based intrusion detection systems by subtly altering input data to avoid classification as malicious (Papernot et al., 2016). These advancements underscore the need for robust, adaptive security frameworks that account for AI-augmented threats.
+
+Despite these challenges, AI/ML also offers promising solutions to enhance cybersecurity resilience. Autonomous response systems powered by reinforcement learning can mitigate attacks in real time, reducing the window of vulnerability (Sarker et al., 2020). Furthermore, AI-driven threat intelligence platforms improve situational awareness by correlating global attack patterns and predicting emerging threats (Mohammed et al., 2021). However, the effectiveness of these defenses depends on continuous model retraining and adversarial testing to prevent exploitation (Carlini & Wagner, 2017). As AI/ML continues to evolve, policymakers and security professionals must prioritize ethical guidelines and collaborative frameworks to mitigate risks while harnessing its defensive potential.
 
 ### Sociopolitical drivers of change
 
@@ -133,16 +141,34 @@ The shift to digital broadcasting and IP-based services has further introduced n
 • Point 1\
 • Point 2\
 • Point 3 \
-• Point 4 &#x20;
+• Point 4&#x20;
 
 ### References
 
-ENISA. (2023). Threat Landscape for Converged Communications Networks.
+Aburaddad, J., et al. (2021). AI-powered cyber threats: A review of offensive AI in cybersecurity. Computers & Security, 102, 102152.
+
+Biggio, B., & Roli, F. (2018). Wild patterns: Ten years after the rise of adversarial machine learning. Pattern Recognition, 84, 317-331.
+
+Buczak, A. L., & Guven, E. (2016). A survey of data mining and machine learning methods for cybersecurity intrusion detection. IEEE Communications Surveys & Tutorials, 18(2), 1153-1176.
+
+Carlini, N., & Wagner, D. (2017). Towards evaluating the robustness of neural networks. IEEE Symposium on Security and Privacy.
+
+ENISA. (2023). Threat landscape for converged communications networks. European Union Agency for Cybersecurity. https://www.enisa.europa.eu/publications/threat-landscape-for-converged-communications-networks
 
 Kool, L., Timmer, J., Royakkers, L. M. M., & van Est, Q. C. (2017). Urgent upgrade: Protect public values in our digitized society. The Hague, Rathenau Instituut.
 
-Kshetri, N. (2023). Cyberthreats in Digital Convergence: Risks and Responses.
+Kshetri, N. (2023). Cyberthreats in digital convergence: Risks and responses. Telecommunications Policy, 47(4), 102476. https://doi.org/10.1016/j.telpol.2023.102476
 
-Lewis, J. A. (2023). The Geopolitics of Converged Telecommunications.
+Lewis, J. A. (2023). The geopolitics of converged telecommunications. Center for Strategic and International Studies (CSIS). https://www.csis.org/analysis/geopolitics-converged-telecommunications
 
-NIST. (2022). Security Challenges in Digital Broadcasting.
+Miller, B., Kantchelian, A., Afroz, S., Bachwani, R., Dauber, E., Huang, L., ... & Goldberg, A. (2020). Adversarial active learning. USENIX Security Symposium.
+
+Mohammed, N., et al. (2021). AI-based threat intelligence: A systematic review. Computers & Security, 105, 102258.
+
+NIST. (2022). Security challenges in digital broadcasting (NIST Special Publication 1800-32). National Institute of Standards and Technology. https://doi.org/10.6028/NIST.SP.1800-32
+
+Papernot, N., McDaniel, P., Jha, S., Fredrikson, M., Celik, Z. B., & Swami, A. (2016). The limitations of deep learning in adversarial settings. IEEE Symposium on Security and Privacy.
+
+Sarker, I. H., et al. (2020). Cybersecurity data science: An overview from machine learning perspective. Journal of Big Data, 7(1), 1-29.
+
+Yadav, T., & Rao, A. M. (2015). Technical aspects of cyber kill chain. International Journal of Computer Science and Engineering, 3(5), 81-85.

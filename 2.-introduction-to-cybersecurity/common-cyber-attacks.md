@@ -35,11 +35,53 @@ Attack types are threats which can potentially exploit vulnerabilities to compro
 
 #### Reconnaissance
 
+Reconnaissance “attacks” are used to gather information about a target. The information gathered in the initial stage at least is often publicly available information.
+
+For example, you can perform an NSLOOKUP to learn the IP address of a site. From there, you can probe for open ports which are potential vulnerabilities. You could also perform a WHOIS query to learn email addresses, phone numbers, physical addresses, etc. at this website: https://lookup.icann.org/en
+
+The information gathered in this stage can be used to launch a targeted social engineering attack.
+
 #### Social engineering
+
+Social engineering attacks do not directly exploit a company’s IT systems, instead they exploit the employees. No matter how many security features you configure on your routers, switches, firewalls, servers, PCs, etc., people are always a vulnerability that can be exploited.
+
+Social engineering attacks involve psychological manipulation to make the target reveal confidential information or perform some action the attacker wants the target to do. As with the previous attack types, there are various kinds of social engineering attacks. Here are a few common ones.
+
+\*Phishing involves fraudulent emails that appear to come from a legitimate business, such as your bank or your credit card company. These emails contain links to a fraudulent website that seems legitimate. The website may look identical to the real login page of your bank’s website, for example. Users are told to login to the fake website, therefore providing their login credentials to the attacker.
+
+Spear phishing is a type of phishing that is more targeted. This can take the form of personalized emails sent to employees of a specific company.
+
+Whaling is another kind of phishing targeted at high-profile individuals, for example a company president.
+
+Vishing, voice phishing, is phishing performed over the phone. The attacker could pretend to be from the target’s bank or from the IT department in the company. For example, an attacker may impersonate an IT department employee who says they need to know the password to reset it.
+
+Mishing, SMS phishing, which is phishing performed using SMS text messages to the target’s cell phone.
+
+\*Watering hole attacks compromise sites that the target victim frequently visits. If a malicious link is placed on a website the target trusts, they might not hesitate to click it. So, this kind of attack is taking advantage of the user’s trust in the website they frequently visit.
+
+\*Tailgating attacks involve entering restricted, secure areas by simply walking in behind an authorized person as they enter. Any company that has restricted areas will have rules against this, but often the target will hold the door open for the attacker to be polite, assuming the attacker is also authorized to enter.
 
 #### Password attacks
 
-#### Denial of service (DoS) attacks
+Most systems use a username and password combination to authenticate users. The username itself is often simple and easy to guess, for example the user’s email address. So, often, the strength and secrecy of the password is relied on to provide the necessary security.
+
+However, attackers can learn a user’s password through multiple methods.
+
+First, they could guess the password. A dictionary attack can also be used, in which a program runs through a dictionary, which is a list of common words and passwords, to guess the target’s password. The program tries each word, hoping to find the correct password.
+
+A brute force attack involves trying every possible combination of letters, numbers, and special characters to find the target’s password. This requires a very powerful computer, and if the password is sufficiently strong, the chances of it working are very low, because it takes so much time.
+
+A strong password should contain at least 8 characters, preferably more than 8. The more characters, the harder it is to brute force attack the password.
+
+A strong password should have a mix of uppercase and lowercase letters and a mix of letters and numbers.
+
+It should also have one or more special characters such as question marks, exclamation points, etc.
+
+Finally it should be changed regularly.
+
+Most enterprises will enforce rules like these on their employees, but it’s also recommended that you follow rules like these when making your own personal passwords.
+
+#### Denial of service (DoS)
 
 DoS and DDoS attacks threaten the availability of a system.
 
@@ -65,11 +107,11 @@ For mitigation of TCP SYN flood attacks, you'd need techniques that focus on man
 
 • DHCP exhaustion attack, also known as a DHCP starvation attack, is similar to the TCP SYN flood attack. An attacker uses spoofed MAC addresses to flood a DHCP server with DHCP Discover messages. Attackers send DHCP Discover messages with fake source MAC addresses at a very quick pace. The target server’s DHCP pool becomes full, resulting in a denial-of-service to other devices which are no longer able to get an IP address.
 
-#### Reflection and amplification attacks
+#### Reflection and amplification
 
 In a reflection attack, the attacker sends traffic to a reflector such as a DNS server and spoofs the source address of the sent packets using the target’s IP address. Then the reflector sends the reply to the target’s IP address. If the amount of traffic is large enough this can result in a DoS to the target.&#x20;
 
-#### Man in the middle (MITM) attacks
+#### Man in the middle (MITM)&#x20;
 
 DHCP poisoning: In this attack a malicious device impersonates a legitimate DHCP server and offers IP addresses to clients. Once a client accepts the attacker's offer, their communication gets routed through the attacker's device, allowing them to potentially eavesdrop on traffic, steal data, redirect the user to malicious websites, or tamper with (damage) or alter the captured traffic. Mitigation: DHCP snooping.
 

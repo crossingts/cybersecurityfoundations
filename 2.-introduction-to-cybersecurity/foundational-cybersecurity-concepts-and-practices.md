@@ -190,6 +190,16 @@ AAA stands for Authentication, Authorization, and Accounting. It’s a framework
 
 Authentication is how you control access to your network and prevent intrusions, data loss, and unauthorized users.
 
+AAA stands for Authentication, Authorization, and Accounting. It’s a framework for controlling and monitoring users of a computer system, such as a network.
+
+\*Authentication is the process of verifying a user’s identity. When a user logs in, ideally using multi-factor authentication, that’s authentication.
+
+\*Authorization is the process of granting the user the appropriate access and permissions. So, granting the user access to some files and services, but restricting access to other files and services, is authorization.&#x20;
+
+\*Accounting is the process of recording the user’s activities on the system. For example, logging when a user makes a change to a file, or recording when a user logs in or logs out, is accounting.&#x20;
+
+Enterprises typically use an AAA server to provide AAA services. ISE (Identity Services Engine) is Cisco’s AAA server. AAA (network access control) servers typically support the following two AAA protocols: 1) RADIUS (Remote Authentication Dial-In User System), which is an open standard protocol and uses UDP ports 1812 and 1813; and 2) TACACS+ (Terminal Access Controller Access-Control System Plus), which is also an open standard (that was developed by Cisco) and uses TCP port 49.
+
 #### Foundational cryptography concepts
 
 The primary goals of cryptography are confidentiality, authentication, data integrity, and non-repudiation.

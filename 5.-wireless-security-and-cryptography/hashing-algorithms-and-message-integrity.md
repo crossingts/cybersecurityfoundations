@@ -19,13 +19,13 @@ Hashing algorithms are used in a variety of applications, including data integri
 
 A basic hashing algorithm can be converting letters to numbers (a = 1, b = 2, c = 3, etc.):
 
-hello (message) -–— hashing algorithm (8+5+12+12+15) → 52 (digest)
+hello (message) –— hashing algorithm (8+5+12+12+15) → 52 (message digest)
 
 The result of a hashing algorithm is called a message digest (or sometimes checksum, or fingerprint).
 
 If someone changed the h (in hello) to c,
 
-cello → 47 (digest)
+cello → 47 (message digest)
 
 Comparing the message digests shows the original message has changed.
 

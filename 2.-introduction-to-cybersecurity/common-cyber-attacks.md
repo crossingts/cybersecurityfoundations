@@ -4,13 +4,10 @@ description: This section explores common cyber attacks and malware types
 
 # Common cyber attacks
 
-Learning objectives
+## Learning objectives
 
-• Point 1\
-• Point 2 \
-• Point 3\
-• Point 4 \
-• Point 5
+• Become familiar with common cyber attacks\
+• Become familiar with common malware types
 
 This section looks at common cyber attacks (DoS, spoofing, reflection/amplification, MITM, reconnaissance, social engineering, and password attacks) and malware types (viruses, worms, ransomware, spyware).
 
@@ -240,10 +237,8 @@ The above malware types can exploit various vulnerabilities to threaten any of t
 
 ### Key takeaways
 
-• Point 1\
-• Point 2\
-• Point 3 \
-• Point 4 &#x20;
+• Common cyber attacks include social engineering, password, and spoofing attacks\
+• Common malware types include viruses, worms, and ransomeware&#x20;
 
 ### References
 

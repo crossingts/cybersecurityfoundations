@@ -72,7 +72,7 @@ When exchanging messages between a client (sender) and a server (receiver), **ha
 * The sender calculates a **hash digest** of the original message (e.g., using SHA-256).
 * The sender transmits both the **message** and the **hash digest** to the receiver.
 * Upon receiving the message, the receiver independently **recomputes the hash** and compares it to the received digest.
-* If they match, the message **has not been accidentally corrupted**.
+* If they match, the message **has not been altered or corrupted.**
 
 **Problem:** This method alone is **vulnerable to active attacks**. If a **man-in-the-middle (MITM) intercepts** the message, they could:
 
@@ -83,7 +83,7 @@ When exchanging messages between a client (sender) and a server (receiver), **ha
 
 **2. Strengthening Security with a Secret Key (HMAC)**
 
-To prevent tampering, we introduce a **secret key** known only to the sender and receiver. Instead of just hashing the message, they compute a **Message Authentication Code (MAC)**, which ensures:
+To prevent tampering, the sender and receiver share a **secret key**. Instead of just hashing the message, the sender computes a **Message Authentication Code (MAC)** over the message using this key, which ensures:
 
 * **Integrity** – The message was not altered.
 * **Authenticity** – The sender possesses the secret key.
@@ -104,8 +104,8 @@ The most widely used MAC is **HMAC (Hash-based Message Authentication Code)**, w
 
 **Why HMAC is Secure (Not Just Key Concatenation):**
 
-* Unlike naively appending a key to a message before hashing (which can be vulnerable to attacks like **length-extension**), HMAC applies the key in **two cryptographic steps (inner and outer hashing)** for stronger security.
-* It works with **cryptographic hash functions** like SHA-256, SHA-3, etc.
+* Simply appending a key to a message before hashing can be vulnerable to attacks like **length-extension.** HMAC applies the key in **two cryptographic steps (inner and outer hashing)** for stronger security.
+* HMAC works with **cryptographic hash functions** like SHA-256, SHA-3, etc.
 
 **3. Alternatives to HMAC**
 

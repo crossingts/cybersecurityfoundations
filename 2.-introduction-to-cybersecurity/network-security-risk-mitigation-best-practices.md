@@ -39,6 +39,16 @@ The principle of least privilege: only the required functionality is granted for
 
 ### Multi-factor authentication
 
+No matter how secure the password, there is still a chance it gets into the hands of an attacker. That’s why multi-factor authentication is becoming more and more wide-spread.
+
+Multi-factor authentication involves using at least two authentication methods from at least two of the following categories to prove your identity.
+
+First is something you know, for example a username and password combination.
+
+Next is something you have, for example pressing a notification that appears on your phone using an authenticator app, or using a badge that is scanned.
+
+The third is something you are, these are unique characteristics about you. For example, biometrics such as a face scan, palm scan, fingerprint scan, retina scan, etc.&#x20;
+
 ### Network monitoring
 
 Network security monitoring is a broad term that encompasses various techniques and tools for detecting and responding to security threats. A robust network security monitoring strategy often combines IDS/IPS (Intrusion Detection System/Intrusion Prevention System) to detect/block known malicious traffic, SIEM (Security Information and Event Management) to correlate alerts from IDS, firewalls, endpoints, etc., EDR/XDR (Endpoint Detection and Response/Extended Detection and Response) to detect advanced endpoint threats, and NTA (Network Traffic Analysis) to detect unusual lateral movement.

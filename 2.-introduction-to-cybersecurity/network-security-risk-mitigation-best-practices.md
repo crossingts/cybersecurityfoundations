@@ -20,12 +20,12 @@ Network security risk mitigation best practices, including least privilege acces
 ## Topics covered in this section
 
 * **Least privilege access control**
-* **On time software patching**&#x20;
 * **Multi-factor authentication**
 * **Network monitoring**&#x20;
 * **Incident response and disaster recovery**
 * **Layered security (defense in depth)**
 * **Quality assurance**
+* **On time software patching**&#x20;
 
 ### Least privilege access control
 
@@ -35,7 +35,16 @@ The principle of least privilege: only the required functionality is granted for
 
 \<Organizations should limit access only to those employees who are approved by management on a need-to-know basis. In addition, procedures should be set up to ensure immediate permission removal in the case of termination or role change for an employee.>
 
-### On time software patching
+#### Implementing Robust Access Controls
+
+A critical aspect of network (re)design is enforcing strict access controls to prevent unauthorized entry. Role-based access control (RBAC) ensures that users and devices only have permissions necessary for their functions, minimizing insider threats and credential misuse. Multi-factor authentication (MFA) adds an extra layer of security, requiring additional verification beyond passwords. Additionally, network administrators should regularly audit access logs and revoke unnecessary privileges to maintain a least-privilege environment.
+
+Best practices for access control in network design:
+
+* **Least Privilege Principle**: Granting minimal access required for users to perform their duties.
+* **Multi-Factor Authentication (MFA)**: Mandating multiple verification steps for sensitive systems.
+* **Continuous Monitoring**: Using SIEM (Security Information and Event Management) tools to detect anomalies.
+* **Automated Policy Enforcement**: Deploying solutions like NAC (Network Access Control) to validate device compliance before granting access.
 
 ### Multi-factor authentication
 
@@ -198,6 +207,8 @@ ISO/IEC 12207: The international standard for software lifecycle processes.
 Unit Testing: A structured and automated testing methodology to ensure resilient software.
 
 Example: Using the internal Python module unittest to automate Python code testing.
+
+### On time software patching
 
 ### Key takeaways
 

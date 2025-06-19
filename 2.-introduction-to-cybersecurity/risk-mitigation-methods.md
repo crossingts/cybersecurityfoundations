@@ -119,6 +119,17 @@ Key strategies for secure network (re)design include:
 * **Micro-Segmentation**: Applying granular security policies to individual workloads or applications for enhanced protection.
 * **Defense-in-Depth**: Layering security controls (firewalls, IDS/IPS, encryption) to provide multiple barriers against attacks.
 
+#### Enhancing Visibility and Threat Detection
+
+A secure network design must incorporate robust monitoring to detect and respond to threats in real time. Deploying intrusion detection and prevention systems (IDS/IPS) helps identify malicious activity, while endpoint detection and response (EDR) solutions track suspicious behavior across devices. Network traffic analysis (NTA) tools provide visibility into data flows, helping detect lateral movement by attackers. By integrating these technologies, organizations can proactively identify vulnerabilities and mitigate risks before they escalate.
+
+Essential tools for improved network visibility:
+
+* **Intrusion Detection/Prevention Systems (IDS/IPS)**: Monitoring for and blocking malicious traffic.
+* **Endpoint Detection and Response (EDR)**: Analyzing endpoint activities for signs of compromise.
+* **Network Traffic Analysis (NTA)**: Identifying unusual patterns that may indicate an attack.
+* **SIEM Solutions**: Aggregating and correlating logs for centralized threat detection.
+
 ### Networking protocols
 
 IPsec/GRE over IPsec, Encryption protocols/IEEE 802.11, DTP/VTP

@@ -31,7 +31,13 @@ Comparing the message digests shows the original message has changed.
 
 But this hashing algorithm is terrible. If the original message was changed to celt, running the message through the hashing algorithm would produce the same hash value of 52.
 
-A hashing algorithm must maintain four qualities before it is approved for industry usage:
+#### Note
+
+• The message digest (52 for "hello") is technically a hash or checksum in this case, but calling it a digest is fine for illustration.
+
+• See [Understanding hash, digest, checksum, and fingerprint](understanding-hash-digest-checksum-and-fingerprint.md)
+
+**A hashing algorithm must maintain four qualities before it is approved for industry usage:**
 
 1\. It is mathematically impossible to extract the original message from the digest. You should not be able to reverse engineer the hashing algorithm to know the original message by just inspecting the hash value. Hashing is a one-way function, meaning that it is computationally infeasible to reverse the hash function to find the original input. Hashing is sometimes referred to as one-way encryption – you can only encrypt the message but not decrypt it.
 

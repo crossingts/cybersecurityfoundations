@@ -27,7 +27,7 @@ This chapter covers how SSL/TLS uses cryptographic tools (symmetric encryption, 
 
 ## Topics covered in this chapter
 
-[Hashing algorithms and message integrity](hashing-algorithms-and-message-integrity.md)
+[Hashing algorithms and message integrity](hashing-algorithms-and-message-integrity/)
 
 [Cryptographic encryption and confidentiality](cryptographic-encryption-and-confidentiality.md)
 

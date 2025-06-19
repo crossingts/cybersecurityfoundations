@@ -30,7 +30,7 @@ This section reviews main risk mitigation methods used to reduce the risk of a s
 
 ### Risk mitigation technologies
 
-Common risk mitigation technologies include: Firewalls, IDS/IPS, Next-Gen Firewalls, Encryption, VPN, SIEM, EDR/XDR, Web Proxies, Network Access Control, Anti-Virus.
+Common risk mitigation technologies include: Firewalls, IDS/IPS, Next-Generation IPS, Next-Generation Firewalls, Web Proxies, VPN, Encryption, SIEM, EDR/XDR, Network Access Control, Anti-Virus.
 
 #### Firewalls
 
@@ -100,13 +100,24 @@ Reverse proxies like Nginx or Traefik are crucial for modern web architectures. 
 
 The choice between forward and reverse proxies depends on the use case. Forward proxies are ideal for user privacy and bypassing restrictions, while reverse proxies excel in optimizing server performance and security. For instance, a company might use a forward proxy to monitor employee internet traffic, while a high-traffic website would deploy a reverse proxy like Nginx to balance loads between servers. Both types can coexist—Cloudflare, for example, acts as a reverse proxy for websites while also offering forward proxy-like features (e.g., WARP VPN). Understanding these distinctions helps in designing scalable, secure, and efficient network infrastructures.
 
-• **Encryption**: Converting plaintext data into unreadable ciphertext to protect it from unauthorized access.
-
 • **Virtual Private Networks (VPNs)**: Creating a secure, encrypted connection between two or more networks over the Internet.
+
+• **Encryption**: Converting plaintext data into unreadable ciphertext to protect it from unauthorized access.
 
 ### Risk mitigation via (re)design
 
 Segmentation, DMZ, Honeypots, Defense in Depth
+
+#### Cybersecurity Risk Mitigation via Network (Re)Design
+
+Effective cybersecurity risk mitigation begins with a well-designed network architecture that prioritizes security at every layer. By strategically segmenting networks, organizations can limit the spread of malware and unauthorized access, ensuring that breaches in one area do not compromise the entire system. A zero-trust model, which requires continuous authentication and authorization for all users and devices, further enhances security by eliminating implicit trust. Designing networks with these principles in mind reduces attack surfaces and improves overall resilience against cyber threats.
+
+Key strategies for secure network (re)design include:
+
+* **Network Segmentation**: Dividing the network into smaller, isolated zones (e.g., VLANs, subnets) to contain breaches.
+* **Zero-Trust Architecture (ZTA)**: Enforcing strict access controls and verifying every request before granting access.
+* **Micro-Segmentation**: Applying granular security policies to individual workloads or applications for enhanced protection.
+* **Defense-in-Depth**: Layering security controls (firewalls, IDS/IPS, encryption) to provide multiple barriers against attacks.
 
 ### Networking protocols
 

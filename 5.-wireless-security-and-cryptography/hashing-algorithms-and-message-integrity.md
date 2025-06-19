@@ -69,9 +69,9 @@ This problem can be solved by using a secret key. The secret key can be any seri
 
 The sender first adds a secret key known only to the sender and the receiver to the message, and calculates the hash of the message combined with the secret key. The sender then sends the resulting digest with the original message to the receiver.
 
-When the receiver receives the message, the receiver calculates the hash on the message with their copy of the secret key. If the resulting digest matches the one sent with the message, then the receiver knows: 1) the message was not altered in transit, and 2) the message was sent by someone who had the secret key.
+When the receiver receives the message, the receiver calculates the hash on the message with their copy of the secret key. If the resulting digest matches the one sent with the message, then the receiver knows: 1) the message was not altered in transit, and 2) the message was sent by someone who had the secret key (which is a form of **authentication**).
 
-A secret key used in conjunction with a message produces a digest known as the Message Authentication Code (MAC). There are many different methods for creating a MAC, each combining the secret key with the message in different ways. The most prevalent MAC in use today is known as an Hash-based Message Authentication Code (HMAC).
+A secret key used in conjunction with a message produces a digest known as the Message Authentication Code (MAC) used as a message integrity check (MIC or "Michael"). There are many different methods for creating a MAC, each combining the secret key with the message in different ways. The most prevalent MAC in use today is known as an Hash-based Message Authentication Code (HMAC).
 
 Hashing Demonstration with Linux: [Run a hashing algorithm (md5sum or sha1sum) on a string of text in a Linux terminal.](https://www.practicalnetworking.net/series/cryptography/hashing-algorithm/)
 

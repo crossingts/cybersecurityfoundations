@@ -15,9 +15,7 @@ description: >-
 • Point 4 \
 • Point 5
 
-Risk mitigation methods reduce the risk of a security breach or minimize the impact of an attack if it occurs.
-
-Risk mitigation methods spanning **technologies** (firewalls, IDS/IPS, encryption, VPN), **network design** (segmentation, DMZ, and honeypots), **networking protocols** (don't use DTP/VTP; use encryption protocols), **organizational policies** (e.g., usage policy, security policy, privacy policy), **compliance frameworks, risk assessment/security testing, professional conduct, and security training.**
+This section reviews main risk mitigation methods used to reduce the risk of a security breach or minimize the impact of an attack if it occurs. Risk mitigation methods explored span technologies, network design, networking protocols, organizational policies, compliance frameworks, risk assessment/security testing, professional conduct, and security training.
 
 ## Topics covered in this section
 
@@ -88,15 +86,29 @@ The following list summarizes a few key features of an NGFW (pp. 101-102):
 
 ■ NGIPS: The Cisco NGFW products can also run their NGIPS feature along with the firewall.
 
-• Encryption: Converting plaintext data into unreadable ciphertext to protect it from unauthorized access.
+#### Web Proxies
 
-• Virtual Private Networks (VPNs): Creating a secure, encrypted connection between two or more networks over the Internet.
+**Understanding Proxies: Forward vs. Reverse**
+
+Proxies act as intermediaries between clients and servers, but their roles differ significantly. A **forward proxy** sits in front of clients (e.g., users on a corporate network) and forwards their requests to the internet while masking their IP addresses—common in VPNs or censorship bypassing. In contrast, a **reverse proxy** sits in front of servers, receiving client requests and routing them to the appropriate backend (e.g., Apache, Node.js). This setup improves security by hiding server infrastructure and enhances performance through load balancing, SSL termination, and caching. For example, Nginx is often used as a reverse proxy to distribute traffic across multiple Apache servers while handling HTTPS encryption.
+
+**How Reverse Proxies Optimize Web Servers**
+
+Reverse proxies like Nginx or Traefik are crucial for modern web architectures. They efficiently manage traffic by directing requests based on paths (e.g., `/api` to a backend service, `/static` to cached files) and offloading heavy tasks like SSL decryption. This allows backend servers (such as Apache) to focus on processing dynamic content without exposure to direct internet traffic. Additionally, reverse proxies provide security benefits—blocking malicious requests, mitigating DDoS attacks, and acting as a shield for vulnerable applications. A typical setup might involve Nginx serving static content at high speed while proxying PHP requests to Apache for processing.
+
+**Choosing the Right Proxy for Your Needs**
+
+The choice between forward and reverse proxies depends on the use case. Forward proxies are ideal for user privacy and bypassing restrictions, while reverse proxies excel in optimizing server performance and security. For instance, a company might use a forward proxy to monitor employee internet traffic, while a high-traffic website would deploy a reverse proxy like Nginx to balance loads between servers. Both types can coexist—Cloudflare, for example, acts as a reverse proxy for websites while also offering forward proxy-like features (e.g., WARP VPN). Understanding these distinctions helps in designing scalable, secure, and efficient network infrastructures.
+
+• **Encryption**: Converting plaintext data into unreadable ciphertext to protect it from unauthorized access.
+
+• **Virtual Private Networks (VPNs)**: Creating a secure, encrypted connection between two or more networks over the Internet.
 
 ### Risk mitigation via (re)design
 
 Segmentation, DMZ, Honeypots, Defense in Depth
 
-### Networking protocols&#x20;
+### Networking protocols
 
 IPsec/GRE over IPsec, Encryption protocols/IEEE 802.11, DTP/VTP
 
@@ -118,7 +130,7 @@ Network security protocols are essentially the security guards of your data trav
 
 • Wireless network security protocols such as WPA or WPA2 are considered more secure than WEP.
 
-### Organizational policies&#x20;
+### Organizational policies
 
 Usage policy, Security policy, Privacy policy
 
@@ -176,15 +188,11 @@ As technology evolves, so do the tactics of attackers, making continuous learnin
 
 In order to have great data security, it is important to maintain security awareness among employees. Good security awareness among IT personnel and other employees will allow your enterprise’s technical controls to work effectively. Employees should receive continuous security education.
 
-**Security awareness training**
+**Security awareness training/security program (formal security training)**
 
-**Security program elements (formal security training)**
+A security program is an enterprise’s set of security policies and procedures.&#x20;
 
-A security program is an enterprise’s set of security policies and procedures. For the CCNA, there are a few elements we need to be aware of.
-
-User awareness programs are designed to make employees aware of potential security threats and risks. User awareness programs will help make employees aware of all of the cyber threats the company is facing.
-
-For example, a company might send out false phishing emails to make employees click a link and sign in with their login credentials. Employees who are tricked by the false emails will be informed that it is part of a user awareness program, and they should be more careful about phishing emails.
+User awareness programs are designed to make employees aware of potential security threats and risks. User awareness programs will help make employees aware of all of the cyber threats the company is facing. For example, a company might send out false phishing emails to make employees click a link and sign in with their login credentials. Employees who are tricked by the false emails will be informed that it is part of a user awareness program, and they should be more careful about phishing emails.
 
 User training programs are more formal than user awareness programs. For example, dedicated training sessions which educate users on the corporate security policies, how to create strong passwords, and how to avoid potential threats. These should happen when employees enter the company, and also at regular intervals during the year.
 

@@ -130,9 +130,21 @@ As technology evolves, so do the tactics of attackers, making continuous learnin
 
 In order to have great data security, it is important to maintain security awareness among employees. Good security awareness among IT personnel and other employees will allow your enterprise’s technical controls to work effectively. Employees should receive continuous security education.
 
-Security awareness training
+**Security awareness training**
 
-Security program elements (formal security training)
+**Security program elements (formal security training)**
+
+A security program is an enterprise’s set of security policies and procedures. For the CCNA, there are a few elements we need to be aware of.
+
+User awareness programs are designed to make employees aware of potential security threats and risks. User awareness programs will help make employees aware of all of the cyber threats the company is facing.
+
+For example, a company might send out false phishing emails to make employees click a link and sign in with their login credentials. Employees who are tricked by the false emails will be informed that it is part of a user awareness program, and they should be more careful about phishing emails.
+
+User training programs are more formal than user awareness programs. For example, dedicated training sessions which educate users on the corporate security policies, how to create strong passwords, and how to avoid potential threats. These should happen when employees enter the company, and also at regular intervals during the year.
+
+Physical access control, which protects equipment and data from potential attackers by only allowing authorized users into protected areas such as network closets or data center floors. This is not just to prevent people outside of the organization from gaining access to these areas. Even within the company, access to these areas should be limited to those who need access.
+
+Multifactor locks can protect access to these restricted areas. For example, a door that requires users to swipe a badge and scan their fingerprint to enter. That’s something you have, a badge, and something you are, your fingerprint. Badge systems are very flexible, and permissions granted to a badge can easily be changed. This allows for strict, centralized control of who is authorized to enter where.
 
 ### Key takeaways
 

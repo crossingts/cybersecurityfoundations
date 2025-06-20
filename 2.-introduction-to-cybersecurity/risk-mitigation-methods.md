@@ -9,13 +9,11 @@ description: >-
 
 ## Learning objectives
 
-• Point 1\
-• Point 2 \
-• Point 3\
-• Point 4 \
-• Point 5
+• List and describe key cybersecurity risk mitigation methods\
+• Develop an appreciation for the conceptual overlap between risk mitigation approaches\
+• Identify the need for a system's view of cybersecurity management&#x20;
 
-This section reviews main risk mitigation methods used to reduce the risk of a security breach or minimize the impact of an attack if it occurs. Risk mitigation methods explored span technologies, network design, networking protocols, organizational policies, compliance frameworks, risk assessment/security testing, professional conduct, and security training.
+This section reviews the main risk mitigation methods used to reduce the risk of a security breach or minimize the impact of an attack if it occurs. Risk mitigation methods explored span technologies, network design, networking protocols, organizational policies, compliance frameworks, risk assessment/security testing, professional conduct, and security training.
 
 ## Topics covered in this section
 
@@ -23,7 +21,6 @@ This section reviews main risk mitigation methods used to reduce the risk of a s
 * **Risk mitigation via (re)design**
 * **Networking protocols**
 * **Organizational policies**
-* **Compliance frameworks**
 * **Risk assessment/security testing**
 * **Security training**
 
@@ -318,11 +315,9 @@ Usage policy, Security policy, Privacy policy
 
 An organization’s information security policy has to be clear—and regularly updated. Employee’s knowledge of and adherence to information security policy are critical to robust data security.
 
-### Compliance frameworks
-
 ### Risk assessment/security testing
 
-Information security testing is performed in risk assessments and compliance audits. In fact, it is an essential part of both processes.
+Information security testing is performed in risk assessments and **compliance audits**. In fact, it is an essential part of both processes.
 
 • Risk assessment: Information security testing is used to identify and assess the risks to an organization's information assets. This information is then used to develop and implement security controls to mitigate those risks.&#x20;
 
@@ -372,10 +367,7 @@ Multifactor locks can protect access to these restricted areas. For example, a d
 
 ### Key takeaways
 
-• Point 1\
-• Point 2\
-• Point 3 \
-• Point 4 &#x20;
+• Key industry cybersecurity risk mitigation methods span technologies, system/network design, and organizational and network policies&#x20;
 
 ### References
 

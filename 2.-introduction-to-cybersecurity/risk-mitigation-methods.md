@@ -191,6 +191,68 @@ When segmenting networks for security, both **subnets** and **VLANs** can be use
 * **For cloud/virtual networks:** Use subnets with security groups/NACLs.
 * **For maximum security:** Use both with strict firewall rules between them.
 
+#### Security zones using VLANs
+
+VLANs can be used to define security zones to regulate traffic flow within and between network segments.&#x20;
+
+* **Traffic Management and Access Control**:\
+  While security zones primarily focus on internal traffic, it’s crucial to plan for how external devices or traffic will integrate into the network. For example:
+  * Most external traffic (e.g., HTTP, mail) remains confined to the DMZ.
+  * Remote users requiring internal access can be granted permissions based on MAC/IP addresses, enforced via network security controls.
+  * Access rules are dictated by organizational policies, compliance requirements, and security protocols, which we’ll explore next.
+* **Implementation and Enforcement**:\
+  Security zones and access controls dictate traffic routing, but authorization decisions rely on:
+  * Company security policies.
+  * Compliance standards.
+  * Technical controls (e.g., firewalls, NAC).
+
+The next step is applying these principles to practical VLAN deployment and policy enforcement. Follows is a summary table of commonly standardized security zones.&#x20;
+
+#### Security Zones
+
+| Zone           | Explanation                                                         | Examples                                  |
+| -------------- | ------------------------------------------------------------------- | ----------------------------------------- |
+| **External**   | Devices and entities outside the organization’s network or control. | Devices connecting to a web server        |
+| **DMZ**        | Isolates untrusted networks/devices from internal resources.        | BYOD, remote users/guests, public servers |
+| **Trusted**    | Internal networks/devices without sensitive data.                   | Workstations, B2B                         |
+| **Restricted** | High-risk servers or databases.                                     | Domain controllers, client information    |
+| **Management** | Dedicated to network/device management (often grouped with Audit).  | Virtualization management, backup servers |
+| **Audit**      | Dedicated to security monitoring (often grouped with Management).   | SIEM, telemetry                           |
+
+* **Network Security Policies and Controls**
+
+Now that we’ve discussed segmentation and secure architecture design (security zones), enforcement becomes critical. Key considerations include:
+
+* **Routing Between VLANs**: If VLANs are meant to be isolated, how is access restricted or granted?
+* **Policy-Based Control**: Network traffic policies dictate routing behavior before standard protocols take effect.
+* **Standards & Vendor Practices**:
+  * IEEE provides standardized policies like **QoS (802.11e)** for traffic prioritization.
+  * Many other routing and traffic policies, though not IEEE-standardized, are widely adopted by vendors for consistency.
+
+This section focuses on **traffic filtering** and introduces core network policy concepts.
+
+**Traffic Filtering**
+
+A fundamental method for enforcing access is through **ACLs (Access Control Lists)**:
+
+* **ACLs** serve as rule sets for filtering traffic across different implementations.
+* Each ACL contains **ACEs (Access Control Entries)**, which define rules based on criteria like:
+  * Source/destination IP addresses.
+  * Port numbers.
+  * Protocol types.
+* **Use Cases**:
+  * **Cisco**: Applies ACLs for traffic filtering, queuing, and dynamic access control.
+  * **VyOS**: Uses ACLs or prefix lists in its basic filtering policy.
+
+**Formally, traffic filtering ensures security, validation, and segmentation by allowing or blocking traffic based on predefined rules.**
+
+**Practice**
+
+Explore **practical ACL implementation** in traffic filtering and access control policies:
+
+**How to configure standard ACLs on Cisco routers**\
+[**https://itnetworkingskills.wordpress.com/2023/04/11/how-configure-standard-acls-cisco-routers/**](https://itnetworkingskills.wordpress.com/2023/04/11/how-configure-standard-acls-cisco-routers/)
+
 #### Prioritize network traffic using QoS
 
 Set up QoS (Quality of Service) policies on routers, switches, and firewalls to shape and prioritize traffic.&#x20;

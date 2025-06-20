@@ -39,7 +39,11 @@ Reduce user access privileges to necessities. It is easier to stay secure by ena
 
 #### Implementing Robust Access Controls
 
-A critical aspect of network (re)design is enforcing strict access controls to prevent unauthorized entry. Role-based access control (RBAC) ensures that users and devices only have permissions necessary for their functions, minimizing insider threats and credential misuse. Multi-factor authentication (MFA) adds an extra layer of security, requiring additional verification beyond passwords. Additionally, network administrators should regularly audit access logs and revoke unnecessary privileges to maintain a least-privilege environment.
+**Identity and Access Management**
+
+Identification, authentication, authorization, accounting, and identity management.
+
+A critical aspect of network (re)design is enforcing strict access controls to prevent unauthorized entry. Role-based access control (**RBAC**) ensures that users and devices only have permissions necessary for their functions, minimizing insider threats and credential misuse. Multi-factor authentication (MFA) adds an extra layer of security, requiring additional verification beyond passwords. Additionally, network administrators should regularly audit access logs and revoke unnecessary privileges to maintain a least-privilege environment.
 
 Best practices for access control in network design:
 

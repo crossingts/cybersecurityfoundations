@@ -152,9 +152,9 @@ Vulnerabilities can stem from:
 • The software infrastructure, including software programs/applications, and OS\
 • The network infrastructure\
 • The hardware involved\
-• Organizational policies/procedures which could lead eventually to a security hole\
+• Organizational/network policies/procedures which could lead eventually to a security hole\
 • Human vulnerabilities to social hacking techniques/lack of security awareness\
-• Device configuration mistakes
+• Device configuration mistakes (e.g., unsecured endpoints)
 
 #### Information security in practice
 

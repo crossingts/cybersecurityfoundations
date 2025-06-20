@@ -118,6 +118,14 @@ Key strategies for secure network (re)design include:
 * **Micro-Segmentation**: Applying granular security policies to individual workloads or applications for enhanced protection.
 * **Defense-in-Depth**: Layering security controls (firewalls, IDS/IPS, encryption) to provide multiple barriers against attacks.
 
+The Preventive Measure: It's important that any internet-connected network have a local router in operation with NAT and DHCP, both for security reasons and to prevent IP address exhaustion. The router needs to be the only device connected to the modem, with all other devices connecting through the router.
+
+#### Prioritize network traffic using QoS
+
+Set up QoS (Quality of Service) policies on routers, switches, and firewalls to shape and prioritize traffic.&#x20;
+
+QoS settings are vital in managing network traffic, ensuring priority is given to critical applications. Load balancing and bandwidth management further help in evenly distributing network traffic, preventing any single resource from becoming a bottleneck.
+
 #### Enhancing Visibility and Threat Detection
 
 A secure network design must incorporate robust monitoring to detect and respond to threats in real time. Deploying intrusion detection and prevention systems (IDS/IPS) helps identify malicious activity, while endpoint detection and response (EDR) solutions track suspicious behavior across devices. Network traffic analysis (NTA) tools provide visibility into data flows, helping detect lateral movement by attackers. By integrating these technologies, organizations can proactively identify vulnerabilities and mitigate risks before they escalate.
@@ -140,6 +148,10 @@ IPsec/GRE over IPsec, Encryption protocols/IEEE 802.11, DTP/VTP
 Vulnerable protocols that transmit data in plaintext (e.g., FTP, SNMP v1/v2c community strings, Telnet passwords). Credentials and configuration data can be exposed to anyone on the network.
 
 Network Address Translation (NAT): Hiding internal IP addresses from the public Internet by translating them to a public IP address.
+
+Secure DNS services like Cloudflare’s offer enhanced privacy and security by encrypting DNS queries, which can protect against DNS eavesdropping and spoofing attacks, often providing faster response times and improved reliability compared to standard DNS services.
+
+Configure and enforce strong encryption standards using IPsec or SSL/TLS for network communications.
 
 **Network security protocols**
 
@@ -204,6 +216,8 @@ Some of the benefits of information security testing include:
 • It helps to identify and fix security vulnerabilities before they are exploited by attackers.&#x20;
 
 • It helps to improve an organization's overall security posture.
+
+Conduct security audits: Perform penetration testing and vulnerability scanning using tools like Wireshark, Nmap, Nessus, or OpenVAS.
 
 ### Security training
 

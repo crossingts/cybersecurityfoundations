@@ -8,6 +8,12 @@ description: >-
 
 • Describe common defensive security technologies such as packet analyzers (e.g., Wireshark), IDS/IPS (e.g., Suricata and Snort), network security monitoring/SIEM (e.g., Wazuh), and host/network firewalls (e.g., OPNsense, pfilter, and nftables).
 
+#### nftables firewall to optimize traffic flow
+
+• Default to connection denial for inbound traffic
+
+• Limit accessible ports and hosts with an allow list
+
 #### Wazuh (SIEM) as a network security monitoring tool
 
 Wazuh is primarily a SIEM and HIDS tool with log analysis and file integrity monitoring capabilities, great for centralized visibility and incident response.

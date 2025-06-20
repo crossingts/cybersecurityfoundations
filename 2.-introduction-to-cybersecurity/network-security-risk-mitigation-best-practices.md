@@ -15,7 +15,7 @@ description: >-
 • Point 4 \
 • Point 5
 
-Network security risk mitigation best practices, including least privilege access control, on time software patching, multi-factor authentication, network monitoring, incident response and disaster recovery, and layered security (defense in depth).
+This section reviews common network security risk mitigation best practices, including least privilege access control, on time software patching, multi-factor authentication, network monitoring, incident response and disaster recovery, and layered security (defense in depth).
 
 ## Topics covered in this section
 
@@ -215,6 +215,23 @@ Unit Testing: A structured and automated testing methodology to ensure resilient
 Example: Using the internal Python module unittest to automate Python code testing.
 
 ### On time software patching
+
+**The Necessity of On-Time Software Patching for a Secure Network**
+
+Timely software patching is critical for maintaining a secure network, as unpatched systems are prime targets for cyberattacks. Vulnerabilities in software, whether in operating systems, applications, or firmware, are frequently exploited by threat actors to gain unauthorized access, deploy malware, or exfiltrate data. For example, zero-day vulnerabilities—flaws unknown to vendors until exploited—require immediate patching to mitigate risks. Additionally, compliance frameworks such as NIST, CIS, and ISO 27001 mandate regular patch management to meet security standards. Delayed patching can lead to:
+
+* **Increased attack surface**: Unpatched systems expose networks to known exploits.
+* **Regulatory penalties**: Non-compliance with security standards may result in fines.
+* **Operational disruptions**: Exploits like ransomware can cripple business continuity.
+
+**How Automation Enhances Consistency and Compliance in Patching**
+
+Automation is a game-changer in patch management, ensuring patches are deployed promptly and uniformly across an organization’s infrastructure. Manual patching is error-prone and often inconsistent, especially in large or hybrid environments. Automated patch management tools (e.g., WSUS, SCCM, or third-party solutions like Qualys or Tanium) streamline the process by:
+
+* **Scheduling and deploying patches** during maintenance windows to minimize downtime.
+* **Prioritizing critical updates** based on CVSS scores or vendor advisories.
+* **Generating audit logs** for compliance reporting, proving adherence to regulatory requirements.\
+  Automation also enables **continuous monitoring** for missing patches and **rollback capabilities** if updates cause instability. By integrating with SIEM or IT service management (ITSM) platforms, automated patching systems can trigger alerts for failed deployments, ensuring no asset is left unprotected. In essence, automation reduces human error, enforces policy adherence, and strengthens overall security posture.
 
 ### Key takeaways
 

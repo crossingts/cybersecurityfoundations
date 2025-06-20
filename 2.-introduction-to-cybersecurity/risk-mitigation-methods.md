@@ -25,7 +25,6 @@ This section reviews main risk mitigation methods used to reduce the risk of a s
 * **Organizational policies**
 * **Compliance frameworks**
 * **Risk assessment/security testing**
-* **Professional conduct**
 * **Security training**
 
 ### Risk mitigation technologies
@@ -106,7 +105,7 @@ The choice between forward and reverse proxies depends on the use case. Forward 
 
 ### Risk mitigation via (re)design
 
-Segmentation, DMZ, Honeypots, Defense in Depth
+Segmentation, DMZ, Honeypots, Defense in Depth, Network Automation
 
 #### Cybersecurity Risk Mitigation via Network (Re)Design
 
@@ -129,6 +128,10 @@ Essential tools for improved network visibility:
 * **Endpoint Detection and Response (EDR)**: Analyzing endpoint activities for signs of compromise.
 * **Network Traffic Analysis (NTA)**: Identifying unusual patterns that may indicate an attack.
 * **SIEM Solutions**: Aggregating and correlating logs for centralized threat detection.
+
+#### Network Automation
+
+Adopting software-defined networking (SDN) allows for dynamic security policy adjustments in response to emerging threats. For example, Cisco DNA Center is a software-based network management and automation platform that helps organizations simplify, automate, and secure their networks. DNA Center is an SDN controller in SD-Access architecture, but it can also be used as a general network management tool even in networks that do not use SD-Access. DNA Center has two main roles. First, it is the SDN controller used in SD-Access. Second, it can be a network manager in a traditional network that is not using SD-Access. In this case, it acts as a central point to monitor, analyze, and configure the network.
 
 ### Networking protocols
 
@@ -201,8 +204,6 @@ Some of the benefits of information security testing include:
 • It helps to identify and fix security vulnerabilities before they are exploited by attackers.&#x20;
 
 • It helps to improve an organization's overall security posture.
-
-### Professional conduct
 
 ### Security training
 

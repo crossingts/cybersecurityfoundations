@@ -107,6 +107,8 @@ The choice between forward and reverse proxies depends on the use case. Forward 
 
 Segmentation, DMZ, Honeypots, Defense in Depth, Network Automation
 
+A well designed network supports efficient Internet usage and device communication as well as redundancy, optimization, and security.
+
 #### Cybersecurity Risk Mitigation via Network (Re)Design
 
 Effective cybersecurity risk mitigation begins with a well-designed network architecture that prioritizes security at every layer. By strategically segmenting networks, organizations can limit the spread of malware and unauthorized access, ensuring that breaches in one area do not compromise the entire system. A zero-trust model, which requires continuous authentication and authorization for all users and devices, further enhances security by eliminating implicit trust. Designing networks with these principles in mind reduces attack surfaces and improves overall resilience against cyber threats.
@@ -114,11 +116,80 @@ Effective cybersecurity risk mitigation begins with a well-designed network arch
 Key strategies for secure network (re)design include:
 
 * **Network Segmentation**: Dividing the network into smaller, isolated zones (e.g., VLANs, subnets) to contain breaches.
-* **Zero-Trust Architecture (ZTA)**: Enforcing strict access controls and verifying every request before granting access.
-* **Micro-Segmentation**: Applying granular security policies to individual workloads or applications for enhanced protection.
+* **Zero-Trust Architecture (ZTA)**: Enforcing strict **access controls** and verifying every request before granting access.
+* **Micro-Segmentation**: Applying granular **security policies** to individual workloads or applications for enhanced protection.
 * **Defense-in-Depth**: Layering security controls (firewalls, IDS/IPS, encryption) to provide multiple barriers against attacks.
 
 The Preventive Measure: It's important that any internet-connected network have a local router in operation with NAT and DHCP, both for security reasons and to prevent IP address exhaustion. The router needs to be the only device connected to the modem, with all other devices connecting through the router.
+
+#### VLANs&#x20;
+
+VLANs (Virtual LAN) are used to **segment** portions of a network at layer two and differentiate devices.
+
+VLANs are configured on a switch by adding a tag to a frame. The 802.1q or dot1q tag designates the VLAN that the traffic originates from.
+
+When segmenting networks for security, both **subnets** and **VLANs** can be used, but they serve different purposes and operate at different layers of the network. Here’s when to use each:
+
+#### **1. VLANs (Virtual LANs) – Layer 2 Segmentation**
+
+* **Use VLANs when:**
+  * You need to **isolate broadcast domains** at Layer 2 (switch level).
+  * You want to **logically separate devices** (e.g., departments, IoT, guests) without requiring physical switches.
+  * You need **traffic isolation** (devices in different VLANs cannot communicate without a router/firewall).
+  * You want to **reduce attack surfaces** (e.g., preventing ARP spoofing, Layer 2 attacks between groups).
+  * You’re working in a **single physical network** but need multiple logical networks (e.g., one switch handling multiple secure zones).
+* **Example Use Cases:**
+  * Separating **HR, Finance, and Engineering** departments.
+  * Isolating **IoT devices** from the main corporate network.
+  * Creating a **guest Wi-Fi network** that can’t access internal resources.
+
+#### **2. Subnets – Layer 3 Segmentation**
+
+* **Use Subnets when:**
+  * You need **IP-based segmentation** (routed networks).
+  * You want to **apply firewall rules between networks** (e.g., blocking traffic from Sales to IT).
+  * You need **better traffic management** (e.g., QoS, routing policies).
+  * Your network is **large and requires hierarchical addressing** (e.g., different offices, cloud networks).
+  * You’re using **cloud environments** (AWS/Azure subnets for security groups & NACLs).
+* **Example Use Cases:**
+  * Separating **branch offices** with different IP ranges.
+  * Creating **DMZ subnets** for public-facing servers.
+  * Enforcing **microsegmentation** in data centers (e.g., PCI-compliant networks).
+
+#### **When to Use Both VLANs + Subnets Together**
+
+* For **stronger security**, combine both:
+  * **VLANs** for Layer 2 isolation (prevents direct device-to-device attacks).
+  * **Subnets** for Layer 3 segmentation (enables firewall filtering between groups).
+* Example:
+  * VLAN 10 → Subnet `192.168.1.0/24` (Corporate)
+  * VLAN 20 → Subnet `192.168.2.0/24` (Guests)
+  * VLAN 30 → Subnet `10.0.30.0/24` (IoT)
+  * **Firewall rules** block IoT from accessing Corporate.
+
+#### **Key Differences for Security**
+
+| Feature                | VLANs (Layer 2)                                       | Subnets (Layer 3)                 |
+| ---------------------- | ----------------------------------------------------- | --------------------------------- |
+| **Segmentation Level** | MAC-based (switch ports)                              | IP-based (routing)                |
+| **Traffic Control**    | Limited (broadcast domains)                           | Granular (firewall rules)         |
+| **Attack Surface**     | Protects against Layer 2 attacks (e.g., ARP spoofing) | Protects against IP-based attacks |
+| **Scalability**        | Good for single-site networks                         | Better for large, routed networks |
+| **Cloud Usage**        | Rare (mostly on-prem)                                 | Common (AWS/Azure subnets)        |
+
+#### **Best Practices for Security**
+
+✔ **Use VLANs** for **internal segmentation** (switch-level isolation).\
+✔ **Use Subnets** for **inter-VLAN routing & firewall policies**.\
+✔ **Combine both** for **defense-in-depth** (e.g., VLANs + Subnets + ACLs).\
+✔ **Avoid VLAN hopping** by securing trunk ports and using private VLANs where needed.\
+✔ **Prefer Subnets in cloud** (cloud networks rely on IP-based segmentation).
+
+#### **Final Recommendation**
+
+* **For physical networks:** Start with VLANs, then assign subnets for routing.
+* **For cloud/virtual networks:** Use subnets with security groups/NACLs.
+* **For maximum security:** Use both with strict firewall rules between them.
 
 #### Prioritize network traffic using QoS
 

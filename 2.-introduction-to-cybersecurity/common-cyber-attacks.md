@@ -24,7 +24,6 @@ This section looks at common cyber attacks (DoS, spoofing, reflection/amplificat
 * **Malware types**
   * **Viruses and worms**
   * **Ransomeware**
-  * **Spyware**
 
 ### Common cyber attacks
 

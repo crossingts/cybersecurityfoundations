@@ -6,7 +6,7 @@ description: >-
 
 # Cryptographic encryption and confidentiality
 
-This section discusses cryptographic encryption and confidentiality. This discussion sheds light on how cryptographic encryption can be used to achieve data confidentiality. This discussion looks at how symmetric encryption and asymmetric encryption work—how scrambling plain text according to some mathematical logic encrypts text into cipher.
+This section sheds light on how cryptographic encryption can be used to achieve data confidentiality. This discussion looks at how symmetric encryption and asymmetric encryption work—how scrambling plain text according to some mathematical logic encrypts text into cipher.
 
 * **Confidentiality**
 * **Symmetric encryption**
@@ -15,15 +15,15 @@ This section discusses cryptographic encryption and confidentiality. This discus
 
 ### Confidentiality
 
-Confidentiality refers to the idea of keeping data private and viewable only by authorized users. Encryption is commonly used to enforce data confidentiality. Plain text or clear text is data before it is encrypted. Encrypted data is called cipher text.
+Confidentiality refers to the idea of keeping data private and viewable by authorized users only. Encryption is commonly used to enforce data confidentiality.&#x20;
 
-Plain text is converted to cipher text using encryption algorithms.
+Plain text or clear text is data before it is encrypted. Encrypted data is called cipher text. Plain text is converted to cipher text using encryption algorithms.
 
-hello —encryption algorithm→lohel (cipher text)
+hello –— encryption algorithm → lohel (cipher text)
 
 In this example the encryption algorithm shifted the letters forward twice.
 
-hello →ohell →lohel
+hello → ohell → lohel
 
 This type of encryption works by scrambling the text cipher according to some mathematical function – e.g., shifting the letters forward.
 
@@ -32,21 +32,17 @@ In cryptographic encryption you need both an algorithm and a key.
 * Algorithms provide the instructions and mathematical operations used to transform plain text into cipher text (the scrambled form). Different algorithms offer varying levels of security and are suited for different purposes. Some popular examples include AES and RSA.
 * Keys act as the secret ingredients that personalize the encryption process. The algorithm uses the key to manipulate the data in a specific way, making it unreadable without the same key. Strong keys with sufficient length and randomness are crucial for resisting brute-force attacks.
 
-Note, hash functions are algorithms used to generate a unique “fingerprint” of a piece of data. While they scramble the data like encryption, they do not use a key for decryption. Their primary purpose is to verify data integrity, not confidentiality.
+In this overly simplified example (hello → lohel), “shifting the letters forward” represents the algorithm and “twice” or “two” represents the key used for that particular transformation.
 
-The cipher text should be completely opaque and should not provide any clues about the plain text. Only authorized/intended recipients who have the right key should have the ability to decrypt the cipher text and retrieve the original text.
+A publicly known encryption algorithm (e.g., AES and RSA) is combined with a secret key to ensure strong encryption. Publicly known encryption algorithms, such as AES and RSA, are used because they have stood the test of time in terms of strength and usability. The secret key can be a randomly generated set of characters.
 
-To return to our overly simplified example (hello →lohel), “shifting the letters forward” represents the algorithm and “twice” or “two” represents the key used for that particular transformation.
+Industry grade encryption algorithms must be unbreakable, even with the most powerful computers. The cipher text should be completely opaque and should not provide any clues about the plain text. Only authorized/intended recipients who have the right key should have the ability to decrypt the cipher text and retrieve the original text.
 
-Industry grade encryption algorithms must be unbreakable, even with the most powerful computers. A publicly known encryption algorithm is combined with a secret key to ensure strong encryption.
+Hash functions are algorithms used to generate a unique “fingerprint” of a block of data. While they scramble the data like encryption, they do not use a key for decryption. Their primary purpose is to verify data integrity, not confidentiality.
 
-Publicly known encryption algorithms, such as AES and RSA, are used because they have stood the test of time in terms of strength and usability. The secret key can be a randomly generated set of characters.
+There are two types of cryptographic encryption, symmetric encryption and asymmetric encryption. Symmetric encryption uses a single shared key for both encryption and decryption. Both message sender and receiver must securely keep this key secret.
 
-There are two types of cryptographic encryption, symmetric encryption and asymmetric encryption.
-
-Symmetric encryption uses a single shared key for both encryption and decryption. Both message sender and receiver must securely keep this key secret.
-
-Asymmetric encryption uses two different keys for the encryption and decryption of data. Asymmetric encryption uses a pair of keys – a public key and a private key. The public key, like a lock on a mailbox, anyone can use to encrypt data. However, only the private key, like the corresponding mailbox key, can decrypt it. This offers enhanced security as the private key remains confidential.
+Asymmetric encryption uses two different keys for the encryption and decryption of data. Asymmetric encryption uses a pair of keys – a public key and a private key. Anyone can use the public key to encrypt data. However, only the private key can decrypt it. This offers enhanced security as the private key remains confidential.
 
 Encryption finds its application in various scenarios, ensuring data confidentiality:
 
@@ -55,7 +51,7 @@ Encryption finds its application in various scenarios, ensuring data confidentia
 * **Email and messaging:** Secure email and messaging services encrypt messages during transmission and storage, guaranteeing confidentiality even if intercepted.
 * **Cloud storage:** Cloud storage providers often offer encryption options to protect data uploaded to their servers.
 
-**Benefits of data confidentiality through encryption:**
+Benefits of data confidentiality through encryption:
 
 * **Prevents unauthorized access:** Only authorized individuals with the key can decrypt and access the data, mitigating unauthorized data breaches and leaks.
 * **Improves data privacy:** Encrypted data remains private even if exposed, protecting sensitive information from prying eyes.
@@ -67,7 +63,7 @@ Symmetric encryption is an encryption scheme that encrypts and decrypts using th
 
 Here is a simple example of symmetric encryption.
 
-hello →khoor
+hello → khoor
 
 Using a rudimentary symmetric encryption algorithm of “pushing letters forward” and a secret key of 3, we converted the plain text hello to the cipher text khoor.
 
@@ -75,7 +71,7 @@ If we know the encryption algorithm and secret key used in the encryption proces
 
 Here is another example.
 
-66 →462 (66 x 7)
+66 → 462 (66 x 7)
 
 Here, a symmetric encryption algorithm of multiplication and a secret key of 7 were used. To decipher the text, we inverse the operation. We divide 462 by 7.
 
@@ -101,13 +97,13 @@ Asymmetric encryption uses different keys to encrypt and decrypt data.
 
 Here is a simple example.
 
-hello —asymmetric encryption (key = 5) →mjqqt
+hello –— asymmetric encryption (key = 5) → mjqqt
 
 The plain text hello was encrypted with an asymmetric encryption algorithm of pushing letters forward and a secret key of 5.
 
 To decrypt mjqqt, we push the letters forward 21 more times (let’s pretend there are only lower case letters in the alphabet, for a total of 26 possible characters).
 
-mjqqt —asymmetric decryption (key = 21) →hello
+mjqqt –— asymmetric decryption (key = 21) → hello
 
 This just demonstrates the basic idea of asymmetric encryption, that two different keys are used in encryption and decryption. In this example, moving letters backwards by 5 would decrypt the message, but in real asymmetric encryption attempting to reuse the secret key (applying it backward or forward) would only further scramble the message.
 

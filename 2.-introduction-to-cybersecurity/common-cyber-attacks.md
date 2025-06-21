@@ -208,11 +208,11 @@ Reflection and amplification attacks
 
 DHCP poisoning/MITM
 
-ARP spoofing, also known as ARP poisoning
-
 \*MAC spoofing
 
 DHCP exhaustion attack (MAC address spoofing). Mitigation: DHCP snooping, Switch Port Security.
+
+ARP spoofing, also known as ARP poisoning
 
 Other:&#x20;
 

@@ -69,17 +69,19 @@ Using a rudimentary symmetric encryption algorithm of “pushing letters forward
 
 If we know the encryption algorithm and secret key used in the encryption process, we can apply them in reverse to decrypt khoor back to hello.
 
+khoor → hello
+
 Here is another example.
 
 66 → 462 (66 x 7)
 
 Here, a symmetric encryption algorithm of multiplication and a secret key of 7 were used. To decipher the text, we inverse the operation. We divide 462 by 7.
 
-The key point here is that we used the same secret key to encrypt and decrypt the text or data.
+The key point here is that we used the same secret key to encrypt and decrypt the text.
 
-The encryption algorithm is typically and ideally publicly known. So the strength of the encryption rests on the strength of the secret key. Longer and more random keys are considered more secure.
+The encryption algorithm is typically and ideally publicly known. So the strength of the encryption practically rests on the strength of the secret key. Longer and more random keys are considered more secure.
 
-Here is a table of common symmetric encryption algorithms:
+Common symmetric encryption algorithms:
 
 | **Algorithm** | **Key size** |
 | ------------- | ------------ |
@@ -109,22 +111,18 @@ This just demonstrates the basic idea of asymmetric encryption, that two differe
 
 That said, our example demonstrates an important concept in asymmetric encryption: asymmetric keys are mathematically linked. What one key encrypts, only the other key can decrypt. In our example, if we used key 21 to encrypt hello, we can decrypt the cipher with a key of 5.
 
-One of the key pair is private, never shared with anyone else. This is the private key. The other key is the public key, and it is public.
-
-Every participant in asymmetric encryption has their own unique key pair. Each key can be used in different ways to achieve different security features.
+One of the key pair is private, never shared with anyone else. This is the private key. The other key is the public key, and it is public. Every participant in asymmetric encryption has their own unique key pair. Each key can be used in different ways to achieve different security features.
 
 ### Symmetric encryption vs asymmetric encryption
 
-Why symmetric encryption is an ideal/a preferred choice for bulk data encryption:
+Why symmetric encryption is a preferred choice for bulk data encryption:
 
 * In symmetric encryption, the cipher text is the same size as the plain text (original data).
 * The math involved in symmetric encryption is relatively simpler and less CPU resource intensive. So more data can be encrypted in less time with less CPU usage.
 
 On the downside, symmetric encryption presents a “key exchange problem”, as the secret key must exist in two places, with the sender and with the receiver. Several solutions exist to the key exchange problem (how do we get the key securely from one party to the other?).
 
-In the same vein, symmetric encryption is sometimes considered less secure than asymmetric encryption because of a higher exposure risk or higher attack surface.
-
-The most significant benefit to using asymmetric encryption is that the private key never needs to be shared. Hence asymmetric encryption is regarded as more secure than symmetric encryption.
+Symmetric encryption is sometimes considered less secure than asymmetric encryption because of a higher exposure risk. The most significant benefit to using asymmetric encryption is that the private key never needs to be shared. Hence asymmetric encryption is regarded as more secure than symmetric encryption.
 
 ### References
 

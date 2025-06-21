@@ -9,7 +9,7 @@ description: This section explores common cyber attacks and malware types
 • Become familiar with common cyber attacks\
 • Become familiar with common malware types
 
-This section looks at common cyber attacks (DoS, spoofing, reflection/amplification, MITM, reconnaissance, social engineering, and password attacks) and malware types (viruses, worms, ransomware, spyware).
+This section looks at common cyber attacks (DoS, spoofing, reflection/amplification, MITM, reconnaissance, social engineering, and password attacks) and malware types (viruses, worms, and ransomware).
 
 ## Topics covered in this section
 

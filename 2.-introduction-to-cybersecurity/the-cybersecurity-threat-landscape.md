@@ -128,6 +128,10 @@ One of the most concerning developments is the use of AI-driven social engineeri
 
 Despite these challenges, AI/ML also offers promising solutions to enhance cybersecurity resilience. Autonomous response systems powered by reinforcement learning can mitigate attacks in real time, reducing the window of vulnerability (Sarker et al., 2020). Furthermore, AI-driven threat intelligence platforms improve situational awareness by correlating global attack patterns and predicting emerging threats (Mohammed et al., 2021). However, the effectiveness of these defenses depends on continuous model retraining and adversarial testing to prevent exploitation (Carlini & Wagner, 2017). As AI/ML continues to evolve, policymakers and security professionals must prioritize ethical guidelines and collaborative frameworks to mitigate risks while harnessing its defensive potential.
 
+#### A growing spyware industry
+
+Spyware mercenary spyware firms such as Paragon and NSO Group.
+
 ### Sociopolitical drivers of change
 
 • U.S. - China competition for technological and geopolitical dominance

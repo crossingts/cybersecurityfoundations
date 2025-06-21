@@ -128,13 +128,17 @@ One of the most concerning developments is the use of AI-driven social engineeri
 
 Despite these challenges, AI/ML also offers promising solutions to enhance cybersecurity resilience. Autonomous response systems powered by reinforcement learning can mitigate attacks in real time, reducing the window of vulnerability (Sarker et al., 2020). Furthermore, AI-driven threat intelligence platforms improve situational awareness by correlating global attack patterns and predicting emerging threats (Mohammed et al., 2021). However, the effectiveness of these defenses depends on continuous model retraining and adversarial testing to prevent exploitation (Carlini & Wagner, 2017). As AI/ML continues to evolve, policymakers and security professionals must prioritize ethical guidelines and collaborative frameworks to mitigate risks while harnessing its defensive potential.
 
+#### Internet of things (IoT)
+
+The Internet of Things (IoT) has significantly expanded the cybersecurity threat landscape by introducing a vast array of interconnected devices, many of which lack robust security measures. Unlike traditional computing systems, IoT devices often prioritize functionality and cost-efficiency over security, making them vulnerable to exploitation (Kolias et al., 2017). Attack surfaces have grown exponentially as IoT deployments span critical sectors such as healthcare, smart cities, and industrial control systems, providing adversaries with new entry points for breaches, data theft, and large-scale attacks like Distributed Denial-of-Service (DDoS) (Antonakakis et al., 2017). Furthermore, the heterogeneity of IoT ecosystems complicates security standardization, leaving gaps that cybercriminals can exploit.
+
+The proliferation of IoT has also amplified the scale and sophistication of cyber threats. Compromised IoT devices are frequently weaponized in botnets, enabling attacks that disrupt critical infrastructure—exemplified by the Mirai botnet, which harnessed vulnerable IoT devices to launch devastating DDoS attacks (Antonakakis et al., 2017). Additionally, the convergence of IoT with emerging technologies like 5G and edge computing introduces new attack vectors, such as man-in-the-middle attacks and firmware exploits (Kolias et al., 2017). As IoT adoption continues, organizations must prioritize security-by-design principles, threat monitoring, and regulatory frameworks to mitigate these evolving risks.
+
 #### A growing spyware industry
 
 Spyware is software designed to **secretly monitor, collect, and transmit** a user’s activities, personal data, or sensitive information to a third party—often without consent. While commonly associated with cybercriminals, spyware can also be **commercially developed and sold** for surveillance purposes, blurring the line between malicious hacking and lawful monitoring.
 
-***
-
-#### **Types of Spyware**
+**Types of Spyware**
 
 **1. Malicious Spyware (Illegitimate Use)**
 
@@ -156,9 +160,7 @@ Developed by private firms and sold to governments, law enforcement, or private 
 * **Paragon (Israel)** – Sells **Graphite**, a spyware tool targeting iOS and Android.
   * _Controversy:_ Allegedly used for unauthorized surveillance.
 
-***
-
-#### **How Spyware Infects Your Computer**
+**How Spyware Infects Your Computer**
 
 1. **Pirated Software/Cracks** – Fake downloads bundle spyware.
 2. **Malicious Ads/Pop-ups** – Redirects to infected sites.
@@ -167,7 +169,7 @@ Developed by private firms and sold to governments, law enforcement, or private 
 5. **Bundled Freeware** – Installs spyware if "Advanced" settings are skipped.
 6. **Zero-Click Exploits** (Advanced Spyware like Pegasus) – No user interaction needed.
 
-#### **Signs Your Device Has Spyware**
+**Signs Your Device Has Spyware**
 
 * Slow performance, frequent crashes
 * Unusual pop-ups & browser redirects
@@ -175,9 +177,7 @@ Developed by private firms and sold to governments, law enforcement, or private 
 * Unknown programs in Task Manager
 * Antivirus suddenly disabled
 
-***
-
-#### **The Legal & Ethical Debate on Commercial Spyware**
+**The Legal & Ethical Debate on Commercial Spyware**
 
 **Defenders Argue:**
 
@@ -194,7 +194,7 @@ Spyware is evolving—from **criminal hacking tools** to **government-grade surv
 
 **Mercenary spyware**
 
-**Paragon’s Stealthy Business Model & "No Trace" Claims**
+1. **Paragon’s Stealthy Business Model & "No Trace" Claims**
 
 * **Ghost Infrastructure:** Paragon allegedly uses **front companies** (e.g., "Itervest") to obscure its sales, making accountability difficult.
 * **"Forensic Disappearance" Feature:** Its **Graphite** spyware reportedly self-destructs if detected, leaving minimal traces—a selling point for clients avoiding exposure.
@@ -205,7 +205,7 @@ Spyware is evolving—from **criminal hacking tools** to **government-grade surv
 * How do shell companies complicate spyware regulation?
 * Should "self-destructing" spyware be banned to preserve digital evidence?
 
-#### **NSO Group’s Legal Survival Tactics & Rebranding Efforts**
+2. **NSO Group’s Legal Survival Tactics & Rebranding Efforts**
 
 * **Bankruptcy & Reinvention:** After U.S. sanctions, NSO Group **shifted ownership** (backed by U.K. firm) and rebranded as "Dream Security" (2024), claiming a focus on "defensive cybersecurity."
 * **Lobbying & PR:** Hired ex-NSA officials to lobby Western governments, arguing spyware is "essential" against encrypted apps (e.g., WhatsApp, Signal).
@@ -234,7 +234,9 @@ Spyware is evolving—from **criminal hacking tools** to **government-grade surv
 
 ### References
 
-Aburaddad, J., et al. (2021). AI-powered cyber threats: A review of offensive AI in cybersecurity. Computers & Security, 102, 102152.
+Aburaddad, J., et al. (2021). AI-powered cyber threats: A review of offensive AI in cybersecurity.&#x20;
+
+Antonakakis, M., et al. (2017). "Understanding the Mirai Botnet." USENIX Security Symposium.Computers & Security, 102, 102152.
 
 Biggio, B., & Roli, F. (2018). Wild patterns: Ten years after the rise of adversarial machine learning. Pattern Recognition, 84, 317-331.
 
@@ -243,6 +245,8 @@ Buczak, A. L., & Guven, E. (2016). A survey of data mining and machine learning 
 Carlini, N., & Wagner, D. (2017). Towards evaluating the robustness of neural networks. IEEE Symposium on Security and Privacy.
 
 ENISA. (2023). Threat landscape for converged communications networks. European Union Agency for Cybersecurity. https://www.enisa.europa.eu/publications/threat-landscape-for-converged-communications-networks
+
+Kolias, C., et al. (2017). "DDoS in the IoT: Mirai and Other Botnets." IEEE Computer Society.
 
 Kool, L., Timmer, J., Royakkers, L. M. M., & van Est, Q. C. (2017). Urgent upgrade: Protect public values in our digitized society. The Hague, Rathenau Instituut.
 

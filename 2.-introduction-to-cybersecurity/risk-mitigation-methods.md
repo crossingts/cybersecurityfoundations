@@ -89,6 +89,29 @@ The following list summarizes a few key features of an NGFW (pp. 101-102):
 
 Proxies act as intermediaries between clients and servers, but their roles differ significantly. A **forward proxy** sits in front of clients (e.g., users on a corporate network) and forwards their requests to the internet while masking their IP addresses—common in VPNs or censorship bypassing. In contrast, a **reverse proxy** sits in front of servers, receiving client requests and routing them to the appropriate backend (e.g., Apache, Node.js). This setup improves security by hiding server infrastructure and enhances performance through load balancing, SSL termination, and caching. For example, Nginx is often used as a reverse proxy to distribute traffic across multiple Apache servers while handling HTTPS encryption.
 
+Unlike a **forward proxy** (which hides clients from servers, e.g., VPNs), a **reverse proxy** hides servers from clients, improving security, performance, and scalability.
+
+***
+
+**Key Functions of a Reverse Proxy**
+
+1. **Load Balancing**
+   * Distributes incoming traffic across multiple backend servers to prevent overload.
+   * Example: Nginx can route requests to 3 different web servers running the same site.
+2. **SSL/TLS Termination**
+   * Handles HTTPS encryption/decryption, offloading the work from backend servers.
+   * Example: Nginx manages SSL certificates, while Apache serves plain HTTP internally.
+3. **Caching**
+   * Stores static content (images, CSS, JS) to reduce load on backend servers.
+   * Example: Nginx caches a blog’s homepage for faster delivery.
+4. **Security & Anonymity**
+   * Hides backend servers (e.g., Apache, Node.js) from direct exposure to the internet.
+   * Can block malicious traffic (DDoS, SQLi) before it reaches the app.
+5. **URL Rewriting & Routing**
+   * Redirects requests based on paths (e.g., `/blog` → a WordPress server, `/api` → a Node.js app).
+
+***
+
 **How Reverse Proxies Optimize Web Servers**
 
 Reverse proxies like Nginx or Traefik are crucial for modern web architectures. They efficiently manage traffic by directing requests based on paths (e.g., `/api` to a backend service, `/static` to cached files) and offloading heavy tasks like SSL decryption. This allows backend servers (such as Apache) to focus on processing dynamic content without exposure to direct internet traffic. Additionally, reverse proxies provide security benefits—blocking malicious requests, mitigating DDoS attacks, and acting as a shield for vulnerable applications. A typical setup might involve Nginx serving static content at high speed while proxying PHP requests to Apache for processing.

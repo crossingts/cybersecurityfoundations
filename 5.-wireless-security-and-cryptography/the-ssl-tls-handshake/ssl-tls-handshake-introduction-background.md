@@ -65,6 +65,8 @@ A simplified **TLS 1.3 handshake** (modern standard):
 
 Below is a step-by-step breakdown of the TLS 1.3 handshake with a **simplified workflow**.
 
+SSL/TLS secures web traffic between a client and a server through a process called the TLS handshake. Here’s a breakdown of the key steps in TLS 1.3:
+
 ***
 
 #### **Step-by-Step TLS 1.3 Handshake**

@@ -10,7 +10,7 @@ This chapter introduces students to emerging IT and cybersecurity career paths a
 
 This chapter introduces students to emerging IT and cybersecurity career paths and job roles. Further, this chapter will help students strategize for and organize their job search and career development activities.
 
-### Chapter 2:  Introduction to cybersecurity
+### Chapter 2: Introduction to cybersecurity
 
 This chapter introduces students to the goals of cybersecurity and how it is defined and practiced within organizations
 
@@ -33,3 +33,7 @@ Information security,
 Organizations take a risk-based approach to managing cybersecurity risk.&#x20;
 
 An organization's information security goals and how to achieve them are typically articulated in a policy document that can be framed as an action plan. Achieving the goals are typically understood in terms of compliance requirements. Defensive and defensive practices are implemented to achieve compliance.
+
+### Chapter 5: Wireless security and cryptography
+
+SSL/TLS Encryption: This protocol uses the public key from the digital certificate to encrypt data sent between the website and visitors’ browsers. This ensures confidentiality and integrity of the information exchanged.

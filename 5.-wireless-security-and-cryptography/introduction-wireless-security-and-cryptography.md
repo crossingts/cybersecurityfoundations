@@ -35,7 +35,7 @@ This chapter covers how SSL/TLS uses cryptographic tools (symmetric encryption, 
 
 [Message signing using asymmetric keys](message-signing-using-asymmetric-keys.md)
 
-[Authentication methods](authentication-methods/)
+[Authentication methods](authentication-methods.md)
 
 [Replay attacks and anti-replay methods](replay-attacks-and-anti-replay-methods.md)
 

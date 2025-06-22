@@ -82,6 +82,10 @@ HTTPS websites use SSL/TLS protocols to secure browsing sessions, and these prot
 
 When you visit a website that uses HTTPS, your browser will first verify the identity of the website by checking the digital certificate that is presented by the website. If the certificate is valid, your browser will then encrypt all of the communications between your computer and the website. This ensures that your communications are secure and that they cannot be intercepted by an attacker.
 
+Digital certificates are mainly, but not exclusively, used for websites to verify that the website being accessed is legitimate. A digital certificate is a file that contains information about the website’s identity and a public key used to encrypt communication. The digital certificate is issued by a trusted Certificate Authority (CA) after verifying ownership of the domain.
+
+While digital certificates are primarily used for websites, they also authenticate email senders (S/MIME), software publishers (code signing), and users (client certificates).
+
 Here are some of the benefits of using digital certificates:
 
 * They provide a secure way to verify the identity of a website or server.

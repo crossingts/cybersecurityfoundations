@@ -13,11 +13,13 @@ This section discusses [replay attacks and anti-replay methods](https://www.bael
 
 ### Replay attacks
 
-A replay attack is a type of cyberattack in which an attacker captures and then retransmits a valid data transmission. This may be done to impersonate a valid user, to disrupt a legitimate connection, or to gain unauthorized access to data. For example, an attacker may try to intercept a financial transaction approval and replay it to withdraw funds multiple times.
+A replay attack is a type of cyberattack in which an attacker intercepts and retransmits valid data transmissions to impersonate legitimate users, disrupt services, or gain unauthorized access. For example, an attacker could capture a financial transaction approval and replay it to fraudulently withdraw funds multiple times. These attacks pose a critical threat to network security, compromising systems like online banking, authentication protocols, and encrypted communications (e.g., VPNs, TLS, and SSH). Without proper protections—such as sequence numbers, cryptographic hashes, and key rotation—attackers could hijack sessions, bypass authentication, or replay old transactions, leading to financial losses, data breaches, and system compromises. Anti-replay methods are therefore essential for maintaining data integrity and preventing unauthorized retransmissions.
 
 Suppose we have some packets we want to securely transmit over the wire. We start sending the packets to their destination over the wire. The packets use a 16 bit sequence number field, allowing for sequence number range of 1 – 65536.
 
 A malicious hacker manages to capture some packets from our transmission with the sequence numbers 10,000-10,099. The malicious hacker can wait for the sequence number to loop past 65536 and restart at 0, count 9,999 packets, and then inject the replayed packets with the sequence numbers 10,000-10,099. Since the replayed packets would have arrived at the right time, they would have been accepted by the receiver.
+
+Sequence number looping vulnerability: Modern protocols (like IPSec and TLS) use larger sequence numbers (e.g., IPSec uses 32-bit), reducing rollover risk.
 
 ### Anti-replay methods
 
@@ -47,6 +49,8 @@ The sender includes a random number (nonce) in each packet. The receiver keeps t
 
 **4. Cryptographic hashes:**
 
+Cryptographic hashes are typically Message Authentication Codes (MACs) or HMACs, ensuring both integrity and authenticity.
+
 The sender includes a cryptographic hash of the packet’s contents (message authentication code or MAC). The receiver verifies the hash to ensure the packet has not been modified in transit.
 
 The sequence number, along with the data, can be protected by a hashing algorithm to prevent a malicious user from tampering with the numbers in order to send a replayed packet. The message, the secret key, and the sequence number together are run through a hashing algorithm. In this way, any illicit modification of any of these fields will be detected.
@@ -58,6 +62,8 @@ The receiver only accepts packets within a certain window of sequence numbers, d
 The size of the anti-replay window is the number of packets that are kept track of by the receiving end of the connection. The larger the window size, the more packets that can be protected from replay attacks. However, a larger window size also means that more memory is required to keep track of the sequence numbers. The default anti-replay window size is 64 packets. This is a good balance between security and performance. For more demanding applications, the window size can be increased.
 
 **6. Rotating the secret keys**:
+
+Keys should be rotated before sequence number exhaustion to prevent replay attacks during the reset.
 
 Rotating the secret keys used in the hashing algorithms is a way to prevent replayed packets. When the secret keys are rotated, the hash values of the packets will also change. This is because the secret keys are used to encrypt the data before it is hashed. If an attacker tries to replay a packet that was encrypted with the expired secret keys, the hash value of the packet will not match the hash value that is expected by the receiver.
 

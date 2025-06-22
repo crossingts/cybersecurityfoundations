@@ -1,14 +1,12 @@
 ---
 description: >-
-  This section explains how the SSL/TLS handshake establishes a secure
-  communication channel between two endpoints
+  This section sheds light on how the SSL/TLS handshake enables secure,
+  encrypted communication
 ---
 
 # The SSL/TLS handshake
 
-This section sheds light on how the SSL/TLS handshake enables secure, encrypted communication.
-
-We will focus on how the SSL/TLS handshake establishes a secure communication channel between two endpoints:
+This section explains how the SSL/TLS handshake establishes a secure communication channel between two endpoints:
 
 #### **1) Typical case: Client and server**
 
@@ -22,7 +20,7 @@ We will focus on how the SSL/TLS handshake establishes a secure communication ch
 
 For convenience, we will think of the two endpoints as client and server.&#x20;
 
-The handshake establishes a secure session by:
+The TLS handshake establishes a secure session by:
 
 * Authenticating the server (and optionally the client).
 * Negotiating encryption algorithms (e.g., AES for symmetric encryption).
@@ -30,7 +28,7 @@ The handshake establishes a secure session by:
 
 The ultimate goal of the TLS handshake is to derive session keys which will encrypt and secure the data transfer between the client and the server.
 
-The handshake ensures:
+The TLS handshake ensures:
 
 1. **Confidentiality** – Data is encrypted (e.g., using AES).
 2. **Integrity** – Data isn’t tampered with (via hashes/MACs).

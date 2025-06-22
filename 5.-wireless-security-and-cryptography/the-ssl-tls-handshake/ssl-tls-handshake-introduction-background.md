@@ -1,22 +1,13 @@
 # SSL/TLS handshake introduction/background
 
-#### **"SSL/TLS Handshake" vs "TLS Handshake" - Are They Synonyms?**
-
-Yes, in most modern contexts, they refer to the same process. However, there are historical and technical distinctions:
+While "SSL/TLS handshake" and "TLS handshake" in modern contexts refer to the same process, there are historical and technical distinctions:
 
 * **SSL (Secure Sockets Layer)** was the original protocol developed by Netscape in the 1990s (SSL 1.0, 2.0, 3.0).
 * **TLS (Transport Layer Security)** is the standardized, more secure successor (TLS 1.0, 1.1, 1.2, 1.3).
 * Today, **TLS is the actual protocol in use**, but due to SSL's historical dominance, people still say **"SSL/TLS"** out of habit.
 
-#### **Why Are They Often Coupled as "SSL/TLS"?**
-
-1. **Branding & Familiarity** – "SSL" became a household term (e.g., "SSL certificates"), even though TLS replaced it.
-2. **Backward Compatibility** – Some systems/interfaces still refer to SSL for legacy support (though TLS is enforced).
-3. **Marketing & Documentation** – Many vendors and guides use "SSL/TLS" to avoid confusion, even when discussing modern TLS.
-
 #### **What is SSL?**
 
-* Developed by Netscape in the mid-1990s.
 * Versions: **SSL 1.0** (unreleased, flawed), **SSL 2.0** (broken), **SSL 3.0** (deprecated in 2015 due to POODLE attack).
 * Provided basic encryption but had security weaknesses.
 
@@ -36,40 +27,17 @@ Yes, in most modern contexts, they refer to the same process. However, there are
 | **Cipher Suites** | Weak (RC4, MD5)                                       | Modern (SHA-256, AEAD)              |
 | **Certificates**  | Same X.509 format, but TLS enforces better validation |                                     |
 
-#### **Should You Say "SSL" or "TLS"?**
+**For security**: Disable SSL entirely and enforce **TLS 1.2+**.
 
-* **Technically**: Use "TLS" (since SSL is obsolete).
-* **Practically**: "SSL/TLS" is fine for broad discussions (e.g., certificates, libraries like OpenSSL).
-* **For security**: Disable SSL entirely and enforce **TLS 1.2+**.
-
-#### **The Handshake (TLS Example)**
-
-A simplified **TLS 1.3 handshake** (modern standard):
-
-1. **Client Hello** → Supported cipher suites, TLS version.
-2. **Server Hello** → Chooses cipher, sends certificate.
-3. **Key Exchange** → Ephemeral keys (ECDHE, etc.).
-4. **Finished** → Encrypted communication begins.
-
-(SSL handshakes were similar but less efficient and secure.)
-
-#### **Conclusion**
-
-* **TLS is the current protocol**; SSL is deprecated.
-* **"SSL/TLS" persists due to legacy terminology**, but always aim for **TLS 1.2 or 1.3** in practice.
-* When discussing handshakes, **"TLS handshake" is more accurate**, but "SSL/TLS handshake" is widely understood.
+When discussing handshakes, "TLS handshake" is more accurate, but "SSL/TLS handshake" is widely understood.
 
 ***
 
-#### **TLS 1.3 Handshake Explained (Simplified & Secure)**
+**TLS 1.3 Handshake Explained (Simplified & Secure)**
 
 Below is a step-by-step breakdown of the TLS 1.3 handshake with a **simplified workflow**.
 
-SSL/TLS secures web traffic between a client and a server through a process called the TLS handshake. Here’s a breakdown of the key steps in TLS 1.3:
-
-***
-
-#### **Step-by-Step TLS 1.3 Handshake**
+**Step-by-Step TLS 1.3 Handshake**
 
 **1. Client Hello**
 

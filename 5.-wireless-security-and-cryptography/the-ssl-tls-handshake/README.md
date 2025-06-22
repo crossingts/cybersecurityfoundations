@@ -53,11 +53,11 @@ Certificate Validation ensures the server is trusted, so its public key can be s
 **Why this matters for key negotiation**:\
 The client must trust the server’s public key (from the certificate) to securely establish session keys.
 
-#### **Secure session key negotiation**
+**Secure session key negotiation**
 
 After certificate validation, the client and server negotiate a symmetric session key (used for encrypting data). Two primary methods:
 
-**A. RSA Key Exchange (older, now discouraged)**
+**A. RSA Key Exchange (older, used in TLS 1.2, now discouraged)**
 
 1. The client generates a **premaster secret**, encrypts it with the server’s public key (from the certificate), and sends it.
 2. The server decrypts it with its private key.
@@ -65,7 +65,7 @@ After certificate validation, the client and server negotiate a symmetric sessio
 
 **Weakness**: If the server’s private key is compromised later, past communications can be decrypted (no **forward secrecy**).
 
-**B. (EC)DHE Key Exchange (modern, preferred)**
+**B. (EC)DHE Key Exchange (modern, used in TLS 1.3, preferred)**
 
 1. The server’s certificate is still validated, but its public key is only used for authentication.
 2. The client and server perform a **Diffie-Hellman (DH) or Elliptic Curve DH (ECDH)** exchange:

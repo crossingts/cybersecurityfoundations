@@ -6,7 +6,7 @@ description: >-
 
 # Generating and applying an RSA key
 
-This section presents a [working example of RSA’s key generation](https://www.youtube.com/watch?v=Pq8gNbvfaoM), encryption, and signing capabilities. The discussion covers the steps involved in generating an RSA key, and then applies the key to a plain text to see how RSA encryption works.
+This section presents a [working example of RSA’s key generation](https://www.youtube.com/watch?v=Pq8gNbvfaoM), encryption, and signing capabilities. This section explores the math behind the RSA algorithm. The discussion covers the steps involved in generating an RSA key, and then applies the key to a plain text to see how RSA encryption works.
 
 * **Rivest–Shamir–Adleman (RSA) introduction**
 * **Four key concepts**

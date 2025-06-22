@@ -6,19 +6,12 @@ description: >-
 
 # The SSL/TLS handshake
 
-This section explains how the SSL/TLS handshake establishes a secure communication channel between two endpoints:
+This section explains how the SSL/TLS handshake establishes a secure communication channel between two endpoints: Typically, client (e.g., web browser, mobile app) and server (e.g., website, API). For example, when you visit `https://example.com`, your browser (client) performs a TLS handshake with `example.com`'s server to encrypt all traffic.
 
-#### **1) Typical case: Client and server**
-
-* Between a client (e.g., web browser, mobile app) and a server (e.g., website, API).
-* Example: When you visit `https://example.com`, your browser (client) performs a TLS handshake with `example.com`'s server to encrypt all traffic.
-
-#### **2) Other scenarios**
+**Other scenarios**
 
 * Server-to-server communication (e.g., microservices, API gateways).
 * Peer-to-peer (P2P) applications where both sides authenticate (less common but possible with mutual TLS/mTLS).
-
-For convenience, we will think of the two endpoints as client and server.&#x20;
 
 The TLS handshake establishes a secure session by:
 
@@ -26,16 +19,9 @@ The TLS handshake establishes a secure session by:
 * Negotiating encryption algorithms (e.g., AES for symmetric encryption).
 * Generating and exchanging symmetric session keys securely (using asymmetric encryption like RSA or ECC initially, then switching to symmetric encryption for efficiency).
 
-The ultimate goal of the TLS handshake is to derive session keys which will encrypt and secure the data transfer between the client and the server.
+The ultimate goal of the TLS handshake is to derive session keys which will encrypt and secure the data transfer between the client and the server. The client must trust the server’s public key (from the certificate) to securely establish session keys.
 
-The TLS handshake ensures:
-
-1. **Confidentiality** – Data is encrypted (e.g., using AES).
-2. **Integrity** – Data isn’t tampered with (via hashes/MACs).
-3. **Authentication** – The server (and optionally client) proves identity (via certificates).
-4. **Forward Secrecy** (if using ephemeral keys) – Past sessions can’t be decrypted even if the private key is later compromised.
-
-#### **Certificate validation**
+**Certificate validation**
 
 Before key exchange, the server proves its identity using a **digital certificate**:
 
@@ -46,14 +32,7 @@ Before key exchange, the server proves its identity using a **digital certificat
   * Confirming the certificate hasn’t expired or been revoked (via CRL/OCSP).
   * Ensuring the server’s domain matches the certificate’s **Subject Alternative Name (SAN)** or **Common Name (CN)**.
 
-The SSL/TLS handshake uses certificate validation to authenticate the server’s identity, ensuring that the subsequent key exchange (for symmetric session keys) happens securely with a trusted party.
-
-Certificate Validation ensures the server is trusted, so its public key can be safely used for key exchange.
-
-**Why this matters for key negotiation**:\
-The client must trust the server’s public key (from the certificate) to securely establish session keys.
-
-**Secure session key negotiation**
+#### Secure session key negotiation
 
 After certificate validation, the client and server negotiate a symmetric session key (used for encrypting data). Two primary methods:
 
@@ -75,8 +54,15 @@ After certificate validation, the client and server negotiate a symmetric sessio
 
 **Role of Certificate**: Ensures the DH parameters come from the authenticated server, not an impostor.
 
-#### **Final steps**
+**Final steps**
 
 * Both parties derive the same **session keys** (for encryption/MAC).
 * They exchange **"Finished" messages** (encrypted with the new keys) to confirm the handshake succeeded.
 * All further communication uses the symmetric session keys for efficiency.
+
+The TLS handshake ensures:
+
+1. **Confidentiality** – Data is encrypted (e.g., using AES).
+2. **Integrity** – Data isn’t tampered with (via hashes/MACs).
+3. **Authentication** – The server (and optionally client) proves identity (via certificates).
+4. **Forward Secrecy** (if using ephemeral keys) – Past sessions can’t be decrypted even if the private key is later compromised.

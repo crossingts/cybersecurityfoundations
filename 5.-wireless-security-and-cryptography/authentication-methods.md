@@ -53,11 +53,17 @@ Once the two parties have shared the PSK, they can use it to encrypt and decrypt
 
 PSKs are a simple and effective way to authenticate two parties. However, they have some drawbacks. One drawback is that the PSK must be kept secret. If the PSK is compromised, then the two parties’ communications can be decrypted by an attacker.
 
-Instead/for better security, the PSK can be used in short-lived authentication sessions (between a client and a server), so that the hash of the PSK is only good for one session. The PSK is combined with values that are tied to a particular authentication session.
+For better security, the PSK can be used to authenticate short-lived sessions between a client and a server, ensuring that derived session keys are unique and cannot be reused. Instead of using the PSK directly, it is combined with dynamic session-specific values (e.g., random nonces) to generate temporary authentication tokens. This prevents replay attacks, as intercepted session data cannot be reused.
 
-In IPsec, both parties each generate and publicly exchange a random number. The PSK is then hashed together with both random numbers, and the resulting digest is shared. If both parties can generate the same digest, then they must have had the correct PSK. In other words, each party generates a random number and they exchange the numbers. The PSK is used to hash the combination of the two shared random numbers.
+In IPsec, for example, both parties generate random nonces and exchange them during the handshake. Each party then independently computes a cryptographic hash (or key derivation function) using:
 
-Future sessions will have different random numbers used, so even if an attacker intercepted traffic between the two parties and captured the digest, the digest would be useless (e.g., in spoofing an identity) in any future session which will have different random numbers.
+1. The pre-shared key (PSK),
+2. Their own nonce, and
+3. The peer’s nonce.
+
+Since both parties use the same inputs (PSK + nonce₁ + nonce₂), they will compute identical session tokens. This allows mutual authentication—if the server’s derived token matches the client’s, both parties confirm they share the same PSK without ever transmitting it directly.
+
+Because each session uses fresh nonces, an attacker who intercepts a token cannot reuse it in future sessions. Even with a captured token, they cannot reverse-engineer the PSK or spoof authentication without the original secret.
 
 ### Digital certificates
 

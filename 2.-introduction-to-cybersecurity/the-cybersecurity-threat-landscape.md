@@ -194,29 +194,26 @@ Spyware is evolving—from **criminal hacking tools** to **government-grade surv
 
 **Mercenary spyware**
 
-1. **Paragon’s Stealthy Business Model & "No Trace" Claims**
+Several companies, often referred to as "cyber-mercenaries" or "private-sector offensive actors" (PSOAs), specialize in developing and selling advanced spyware to governments, law enforcement, and private entities. Many operate in legal gray areas, facing criticism for enabling surveillance abuses.&#x20;
 
-* **Ghost Infrastructure:** Paragon allegedly uses **front companies** (e.g., "Itervest") to obscure its sales, making accountability difficult.
-* **"Forensic Disappearance" Feature:** Its **Graphite** spyware reportedly self-destructs if detected, leaving minimal traces—a selling point for clients avoiding exposure.
-* **Controversy:** Despite claims of "vetted government clients," leaks suggest deployments in **Kazakhstan** and **Mexico**, where spyware targeted opposition figures.
+Notable firms include NSO Group (Israel), Paragon (Israel), Candiru (Israel), Circles (Israel), Intellexa (Greece/Cyprus), Cytrox (North Macedonia, part of Intellexa), FinFisher (Gamma Group, UK/Germany), Wintego (Spain), RCS Labs (Italy, now part of Cy4Gate), BellTroX (India), Zerodium (France/US), and DarkMatter (UAE).
 
-**Classroom Discussion:**
+**NSO Group’s Legal Survival Tactics & Rebranding Efforts**
 
-* How do shell companies complicate spyware regulation?
-* Should "self-destructing" spyware be banned to preserve digital evidence?
-
-2. **NSO Group’s Legal Survival Tactics & Rebranding Efforts**
-
+* Known for Pegasus spyware, which infects smartphones, extracts messages, calls, and even activates cameras/microphones.
+  * Criticism: Used against journalists, activists, and dissidents.
+  * Sanctions: Added to U.S. export blacklist in 2021.
 * **Bankruptcy & Reinvention:** After U.S. sanctions, NSO Group **shifted ownership** (backed by U.K. firm) and rebranded as "Dream Security" (2024), claiming a focus on "defensive cybersecurity."
 * **Lobbying & PR:** Hired ex-NSA officials to lobby Western governments, arguing spyware is "essential" against encrypted apps (e.g., WhatsApp, Signal).
 * **Ongoing Lawsuits:**
   * **Apple’s Lawsuit (2023):** Accused NSO of violating U.S. laws by targeting iPhone users.
   * **Meta (WhatsApp) Lawsuit:** Settled in 2024 after NSO allegedly hacked 1,400 phones via WhatsApp calls.
 
-**Classroom Discussion:**
+**Paragon’s Stealthy Business Model & "No Trace" Claims**
 
-* Can a spyware firm credibly pivot to "ethical" cybersecurity?
-* Should governments enforce "spyware liability" for companies whose tools are abused?
+* **Ghost Infrastructure:** Paragon allegedly uses **front companies** (e.g., "Itervest") to obscure its sales, making accountability difficult.
+* **"Forensic Disappearance" Feature:** Its **Graphite** spyware, a spyware tool targeting iOS and Android, reportedly self-destructs if detected, leaving minimal traces—a selling point for clients avoiding exposure.
+* **Controversy:** Despite claims of "vetted government clients," leaks suggest deployments in **Kazakhstan** and **Mexico**, where spyware targeted opposition figures.
 
 ### Sociopolitical drivers of change
 

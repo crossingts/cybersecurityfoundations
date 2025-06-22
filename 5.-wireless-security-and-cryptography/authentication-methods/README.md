@@ -67,7 +67,7 @@ Because each session uses fresh nonces, an attacker who intercepts a token canno
 
 ### Digital certificates
 
-Digital certificates is the primary method of identification in use on the Internet. A digital certificate is an electronic document that binds a public key to an identity, such as a person or server. A digital certificate is used to verify the identity of the holder of the public key and to encrypt communications.
+Digital certificates are the primary method of identification in use on the Internet. A digital certificate is an electronic document that binds a public key to an identity, such as a person or server. A digital certificate is used to verify the identity of the holder of the public key and to encrypt communications.
 
 Digital certificates are used in a variety of applications, including:
 

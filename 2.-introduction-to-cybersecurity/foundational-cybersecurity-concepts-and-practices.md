@@ -219,11 +219,14 @@ In addition to the CIA triad, other foundational information security concepts i
 * A vulnerability is any potential weakness that can compromise the CIA of information assets. A window in a house is a vulnerability burglars can exploit to enter the house.&#x20;
 * An exploit is something that can potentially be used to exploit the vulnerability. A rock can exploit the weakness of glass windows and may be used to enter a house.
 * A threat is the potential of a vulnerability to be exploited. The threat of house burglary is the likelihood a burglar will exploit the glass window vulnerability using a rock (or other exploits) to gain entry into a house.&#x20;
-* A mitigation technique is something that can protect against threats. Appropriate mitigation techniques should be implemented everywhere a vulnerability can be exploited, for example, client devices, servers, switches, and routers.
+* A threat vector is a means or method a threat actor can use or follow to exploit a vulnerability. A glass window a burglar can use to gain entery into a house to rob can be considered a threat vector.
+* A mitigation technique is something that can protect against threats. Appropriate mitigation techniques should be implemented everywhere a vulnerability can be exploited, for example, client devices, servers, switches, and routers. In our window example, adding welded metallic bars would be a mitigation technique.
 
 #### Risk = threat, vulnerability, and mitigation
 
-The concept of risk is intimately tied to the concepts of threat, vulnerability, and mitigation. Risk is a threat that exploits a vulnerability.
+The concept of risk is intimately tied to the concepts of threat, vulnerability, and mitigation. Two other closely related concepts are exploit and threat vector.&#x20;
+
+Risk is a threat that exploits a vulnerability.
 
 **Vulnerabilities**
 
@@ -276,11 +279,9 @@ Authentication is how you control access to your network and prevent intrusions,
 
 AAA stands for Authentication, Authorization, and Accounting. It’s a framework for controlling and monitoring users of a computer system, such as a network.
 
-\*Authentication is the process of verifying a user’s identity. When a user logs in, ideally using multi-factor authentication, that’s authentication.
-
-\*Authorization is the process of granting the user the appropriate access and permissions. So, granting the user access to some files and services, but restricting access to other files and services, is authorization.&#x20;
-
-\*Accounting is the process of recording the user’s activities on the system. For example, logging when a user makes a change to a file, or recording when a user logs in or logs out, is accounting.&#x20;
+* Authentication is the process of verifying a user’s identity. When a user logs in, ideally using multi-factor authentication, that’s authentication.
+* Authorization is the process of granting the user the appropriate access and permissions. So, granting the user access to some files and services, but restricting access to other files and services, is authorization.&#x20;
+* Accounting is the process of recording the user’s activities on the system. For example, logging when a user makes a change to a file, or recording when a user logs in or logs out, is accounting.&#x20;
 
 Enterprises typically use an AAA server to provide AAA services. ISE (Identity Services Engine) is Cisco’s AAA server. AAA (network access control) servers typically support the following two AAA protocols: 1) RADIUS (Remote Authentication Dial-In User System), which is an open standard protocol and uses UDP ports 1812 and 1813; and 2) TACACS+ (Terminal Access Controller Access-Control System Plus), which is also an open standard (that was developed by Cisco) and uses TCP port 49.
 

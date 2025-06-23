@@ -178,9 +178,9 @@ An information availability attack aims to disrupt access to data, systems, or s
 | **Integrity**          | <p>Hashing (SHA-256, HMAC)</p><p><br>Digital Signatures</p><p><br>Version Control (Git, SVN)</p><p><br>SIEM + Centralized Logging</p><p><br>Access Controls (audit logs track changes)</p><p><br>Backups (ensure clean restore points)</p>                                     | Ensures data accuracy and prevents tampering     | Access controls support integrity through audit trails       |
 | **Availability**       | <p>DDoS Protection (Cloudflare, AWS Shield)</p><p></p><p>Backups (recovery, 3-2-1 Rule, immutable backups)</p><p><br>Load Balancers (Nginx, F5)</p><p><br>High Availability systems</p><p><br>SIEM </p><p><br>Access Controls (MFA)</p><p><br>Rate Limiting (secures APIs)</p> | Maintains system uptime and access               | Rate limiting protects both availability and confidentiality |
 
-#### Confidentiality
+#### Confidentiality mitigation technology in focus: Data Loss Prevention (DLP)
 
-A key **technology** for ensuring data confidentiality is Data Loss Prevention (**DLP**), which monitors and protects sensitive information by detecting and blocking unauthorized transfers. For instance, DLP can trigger alerts if confidential files are copied to removable drives or if payment card data is shared improperly. While highly effective, DLP requires careful configuration—including accurate data classification and tailored alert rules—to maximize its security value.
+A key technology for ensuring data confidentiality is Data Loss Prevention (DLP), which monitors and protects sensitive information by detecting and blocking unauthorized transfers. For instance, DLP can trigger alerts if confidential files are copied to removable drives or if payment card data is shared improperly. While highly effective, DLP requires careful configuration—including accurate data classification and tailored alert rules—to maximize its security value.
 
 **How DLP Monitors and Blocks Unauthorized Data Transfers**
 
@@ -236,13 +236,7 @@ DLP operates at the _data layer_—understanding content, not just traffic or be
 * **AWS Macie** (ML-based S3 data classification)
 * **Nightfall.ai** (API-driven DLP for SaaS apps)
 
-#### Integrity
-
-**Technologies**: encryption, backups, AAA accounting (data access), SVN/Git (data modification), SIEM
-
-To safeguard information integrity, incorporating a change management technology can be very helpful. Version control systems like SVN and Git ensure data integrity by tracking every change along with the identity of the user who made it. This creates an auditable history of modifications, preventing unauthorized edits and enabling accountability. By requiring authentication for each change and maintaining detailed version histories, these systems help enforce security policies and simplify audits.
-
-Centralized logging and access controls further safeguard against tampering while ensuring compliance.
+#### Integrity mitigation technology in focus: Centralized logging
 
 Several centralized logging technologies can enhance security and compliance by aggregating logs from multiple sources for monitoring, analysis, and auditing. Some key solutions include:
 
@@ -253,38 +247,36 @@ Several centralized logging technologies can enhance security and compliance by 
 * **Microsoft Sentinel** – Cloud-native SIEM with AI-driven threat detection.
 * **Elastic SIEM (Elastic Stack / ELK Stack)** – Open-source option using **Elasticsearch, Logstash, and Kibana (ELK)** for log parsing and visualization.
 
-#### **2. Log Management & Analytics Platforms**
+**2. Log Management & Analytics Platforms**
 
 * **Graylog** – Open-source log aggregation with alerting and dashboards.
 * **Datadog** – Cloud-based monitoring with log correlation and APM.
 * **Sumo Logic** – SaaS-based log analytics with machine learning insights.
 * **Fluentd / Fluent Bit** – Lightweight log collectors that integrate with other tools.
 
-#### **3. Cloud-Native & Enterprise Solutions**
+**3. Cloud-Native & Enterprise Solutions**
 
 * **AWS CloudTrail + Amazon CloudWatch Logs** – For AWS environments.
 * **Google Cloud Logging** – Centralized logging for GCP services.
 * **Azure Monitor Logs** – Log analytics for Microsoft Azure.
 * **Syslog-ng / Rsyslog** – Traditional Unix-based log forwarders.
 
-#### **Key Features to Look For:**
+**Key Features to Look For:**
 
 * **Real-time log aggregation** (from servers, applications, network devices).
 * **Retention & compliance** (long-term storage for audits).
 * **Search & analytics** (to detect anomalies or breaches).
 * **Alerting & automation** (trigger responses to suspicious activity).
 
-#### Availability
+#### Availability mitigation technology in focus: DDoS protection services (e.g., AWS Shield, Cloudflare)
 
-**Technologies**: backups, AAA accounting (data access)/Identity and Access Management, SVN/Git, SIEM, high availability/network redundancy
+Data can become unavailable due to being damaged or destroyed, or due to ransomeware or dormant malware. Unlike confidentiality or integrity attacks, availability attacks aim primarily to disrupt service rather than steal or alter data. Mitigation strategies include rate limiting, traffic filtering, and cloud-based DDoS protection services (e.g., AWS Shield, Cloudflare).
 
-Data can become unavailable due to being damaged or destroyed, or due to ransomeware or dormant malware.&#x20;
-
-Unlike confidentiality or integrity attacks, availability attacks aim primarily to disrupt service rather than steal or alter data. Mitigation strategies include rate limiting, traffic filtering, and cloud-based DDoS protection services (e.g., AWS Shield, Cloudflare).
+Availability attacks, such as Distributed Denial of Service (DDoS) attacks, aim to disrupt services by overwhelming systems with malicious traffic, rendering data or applications inaccessible. To counter these threats, organizations leverage cloud-based DDoS protection services like **AWS Shield** and **Cloudflare**, which employ advanced mitigation techniques such as traffic filtering, rate limiting, and anomaly detection. AWS Shield provides automatic protection for AWS resources, defending against common network-layer attacks, while Cloudflare’s global Anycast network absorbs and disperses malicious traffic before it reaches the target. These services ensure high availability by continuously monitoring and mitigating attack traffic, allowing legitimate requests to proceed uninterrupted. By integrating such solutions, businesses can maintain operational resilience against increasingly sophisticated DDoS campaigns.
 
 ### Other information security concepts and practices
 
-#### The AAA framework&#x20;
+#### The AAA framework
 
 AAA stands for Authentication, Authorization, and Accounting. It’s a framework for controlling and monitoring users of a computer system such as a network.
 

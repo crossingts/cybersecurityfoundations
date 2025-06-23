@@ -67,15 +67,45 @@ The most concrete (least abstract) and tactical (as opposed to strategic) goal o
 
 #### Confidentiality
 
-\<A key **technology** for data confidentiality is data leakage prevention (DLP), a system that tracks specific sets of sensitive data. For example, DLP can issue alerts when sensitive files are copied to a USB, or credit-card numbers are shared. DLP is a great tool, but it requires precise, organization specific data classification and alert creation in order to be effective.>
+A key technology for ensuring data confidentiality is Data Loss Prevention (DLP), which monitors and protects sensitive information by detecting and blocking unauthorized transfers. For instance, DLP can trigger alerts if confidential files are copied to removable drives or if payment card data is shared improperly. While highly effective, DLP requires careful configuration—including accurate data classification and tailored alert rules—to maximize its security value.
 
 #### Integrity
 
 **Technologies**: encryption, backups, AAA accounting (data access), SVN/Git (data modification), SIEM
 
-\<To protect data integrity, regular audits of information access and change are required. Data access has to be centrally logged, in case a bad actor manages to damage log data at the endpoint. Any employee who modifies sensitive data should do so using his or her personal user name. This allows non-repudiation, which means that an employee who modified data can’t deny his or her action.&#x20;
+To safeguard information integrity, incorporating a change management technology can be very helpful. Version control systems like SVN and Git ensure data integrity by tracking every change along with the identity of the user who made it. This creates an auditable history of modifications, preventing unauthorized edits and enabling accountability. By requiring authentication for each change and maintaining detailed version histories, these systems help enforce security policies and simplify audits.
 
-\<To truly safeguard information integrity, you’ll want to incorporate change management technology. Change management basically tracks changes to data, requires management approval of changes, or prevents changes forbidden by policy. Change management usually stores snapshot of data and tracks changes that are performed on it. Those changes are compared with system policy, and carried out only when they are in compliance with the policy. There are numerous change management products that can apply granular policies to track and prevent unwanted changes on almost any device, from storage filers to firewalls. One of best-known systems for change management is free SVN, which allows the detailed tracking of data inside a file, as well as granular permission control.
+Centralized logging and access controls further safeguard against tampering while ensuring compliance.
+
+Several centralized logging technologies can enhance security and compliance by aggregating logs from multiple sources for monitoring, analysis, and auditing. Some key solutions include:
+
+#### **1. SIEM (Security Information and Event Management) Systems**
+
+* **Splunk** – Powerful log aggregation, real-time analysis, and alerting.
+* **IBM QRadar** – Combines logs with threat intelligence for security monitoring.
+* **Microsoft Sentinel** – Cloud-native SIEM with AI-driven threat detection.
+* **Elastic SIEM (Elastic Stack / ELK Stack)** – Open-source option using **Elasticsearch, Logstash, and Kibana (ELK)** for log parsing and visualization.
+
+#### **2. Log Management & Analytics Platforms**
+
+* **Graylog** – Open-source log aggregation with alerting and dashboards.
+* **Datadog** – Cloud-based monitoring with log correlation and APM.
+* **Sumo Logic** – SaaS-based log analytics with machine learning insights.
+* **Fluentd / Fluent Bit** – Lightweight log collectors that integrate with other tools.
+
+#### **3. Cloud-Native & Enterprise Solutions**
+
+* **AWS CloudTrail + Amazon CloudWatch Logs** – For AWS environments.
+* **Google Cloud Logging** – Centralized logging for GCP services.
+* **Azure Monitor Logs** – Log analytics for Microsoft Azure.
+* **Syslog-ng / Rsyslog** – Traditional Unix-based log forwarders.
+
+#### **Key Features to Look For:**
+
+* **Real-time log aggregation** (from servers, applications, network devices).
+* **Retention & compliance** (long-term storage for audits).
+* **Search & analytics** (to detect anomalies or breaches).
+* **Alerting & automation** (trigger responses to suspicious activity).
 
 #### Availability
 

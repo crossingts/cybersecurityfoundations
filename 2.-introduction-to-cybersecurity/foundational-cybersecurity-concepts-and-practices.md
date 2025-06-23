@@ -67,7 +67,7 @@ The most concrete (least abstract) and tactical (as opposed to strategic) goal o
 
 #### Confidentiality
 
-A key **technology** for ensuring data confidentiality is Data Loss Prevention (DLP), which monitors and protects sensitive information by detecting and blocking unauthorized transfers. For instance, DLP can trigger alerts if confidential files are copied to removable drives or if payment card data is shared improperly. While highly effective, DLP requires careful configuration—including accurate data classification and tailored alert rules—to maximize its security value.
+A key **technology** for ensuring data confidentiality is Data Loss Prevention (**DLP**), which monitors and protects sensitive information by detecting and blocking unauthorized transfers. For instance, DLP can trigger alerts if confidential files are copied to removable drives or if payment card data is shared improperly. While highly effective, DLP requires careful configuration—including accurate data classification and tailored alert rules—to maximize its security value.
 
 **How DLP Monitors and Blocks Unauthorized Data Transfers**
 
@@ -86,9 +86,7 @@ A key **technology** for ensuring data confidentiality is Data Loss Prevention (
    * Feed into broader security systems (e.g., SIEMs for correlation).
    * Trigger automated workflows (e.g., notifying compliance teams).
 
-**Key Advantage**: DLP operates at the _data layer_—understanding content, not just traffic or behavior—making it uniquely effective against insider threats and accidental leaks.
-
-***
+DLP operates at the _data layer_—understanding content, not just traffic or behavior—making it uniquely effective against insider threats and accidental leaks.
 
 **Commercial DLP Solutions**
 
@@ -108,8 +106,6 @@ A key **technology** for ensuring data confidentiality is Data Loss Prevention (
 6. **Check Point Harmony Email & Office DLP**
    * Specialized for email (e.g., blocks PII leaks via Outlook/Gmail).
 
-***
-
 **Open-Source & Freemium DLP Tools**
 
 1. **MyDLP** (Community Edition)
@@ -120,8 +116,6 @@ A key **technology** for ensuring data confidentiality is Data Loss Prevention (
    * Open-source runtime monitoring for data exfiltration.
 4. **Apache Nifi** + **Regex Policies**
    * Custom DIY DLP using workflows to filter sensitive data in transit.
-
-***
 
 **Cloud-Native & Integrated Tools**
 
@@ -139,7 +133,7 @@ Centralized logging and access controls further safeguard against tampering whil
 
 Several centralized logging technologies can enhance security and compliance by aggregating logs from multiple sources for monitoring, analysis, and auditing. Some key solutions include:
 
-#### **1. SIEM (Security Information and Event Management) Systems**
+**1. SIEM (Security Information and Event Management) Systems**
 
 * **Splunk** – Powerful log aggregation, real-time analysis, and alerting.
 * **IBM QRadar** – Combines logs with threat intelligence for security monitoring.
@@ -294,13 +288,10 @@ Enterprises typically use an AAA server to provide AAA services. ISE (Identity S
 
 The primary goals of cryptography are confidentiality, authentication, data integrity, and non-repudiation.
 
-• Confidentiality protects information from unauthorized access.
-
-• Authentication verifies the identity of users and the authenticity of data.
-
-• Data integrity guarantees that information remains unaltered by unauthorized parties, ensuring its accuracy.
-
-• Non-repudiation ensures that a party cannot later deny having performed an action (such as sending a message or approving a transaction). It provides irrefutable proof—through digital signatures, timestamps, or audit logs—that a specific user took a particular action, preventing false denials and holding parties accountable.
+* Confidentiality protects information from unauthorized access.
+* Authentication verifies the identity of users and the authenticity of data.
+* Data integrity guarantees that information remains unaltered by unauthorized parties, ensuring its accuracy.
+* Non-repudiation ensures that a party cannot later deny having performed an action (such as sending a message or approving a transaction). It provides irrefutable proof—through digital signatures, timestamps, or audit logs—that a specific user took a particular action, preventing false denials and holding parties accountable.
 
 ### Key takeaways
 
@@ -312,5 +303,3 @@ The primary goals of cryptography are confidentiality, authentication, data inte
 ### References
 
 Blakley, B., McDermott, E., & Geer, D. (2001, September). Information security is information risk management. In Proceedings of the 2001 workshop on New security paradigms (pp. 97-104). ACM.
-
-Shamil Alifov. (2016). How to get started in cryptography (Ch. 5). In _Beginner’s Guide To Information Security_ (pp. 27-31). Peerlyst. Retrieved from https://www.peerlyst.com/posts/peerlyst-announcing-its-first-community-ebook-the-beginner-s-guide-to-information-security-limor-elbaz

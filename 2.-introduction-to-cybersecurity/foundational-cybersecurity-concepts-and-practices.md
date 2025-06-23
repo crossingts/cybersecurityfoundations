@@ -19,9 +19,10 @@ This section introduces cybersecurity concepts and practices germane to any inst
 
 * **Information security definition**
 * **The place of information security in enterprise IT governance**
-* **Confidentiality, integrity, and availability of information**
-* **Techniques of CIA attacks**
+* **Confidentiality, Integrity, and Availability (CIA) of information**
 * **Information security risk management**
+* **Techniques of CIA attacks**
+* **CIA mitigation technologies**
 * **Other information security concepts and practices**
 
 ### Information security definition

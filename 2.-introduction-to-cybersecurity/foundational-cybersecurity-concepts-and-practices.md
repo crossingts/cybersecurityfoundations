@@ -67,7 +67,67 @@ The most concrete (least abstract) and tactical (as opposed to strategic) goal o
 
 #### Confidentiality
 
-A key technology for ensuring data confidentiality is Data Loss Prevention (DLP), which monitors and protects sensitive information by detecting and blocking unauthorized transfers. For instance, DLP can trigger alerts if confidential files are copied to removable drives or if payment card data is shared improperly. While highly effective, DLP requires careful configuration—including accurate data classification and tailored alert rules—to maximize its security value.
+A key **technology** for ensuring data confidentiality is Data Loss Prevention (DLP), which monitors and protects sensitive information by detecting and blocking unauthorized transfers. For instance, DLP can trigger alerts if confidential files are copied to removable drives or if payment card data is shared improperly. While highly effective, DLP requires careful configuration—including accurate data classification and tailored alert rules—to maximize its security value.
+
+**How DLP Monitors and Blocks Unauthorized Data Transfers**
+
+1. **Content-Centric Detection**\
+   DLP systems scan data **at rest** (e.g., databases), **in use** (e.g., open files), and **in motion** (e.g., emails, cloud uploads) for sensitive content. Unlike generic security tools, they use techniques like:
+   * **Pattern matching** (e.g., credit card/PII regex).
+   * **File fingerprinting** (e.g., exact matches of proprietary designs).
+   * **Machine learning** (e.g., identifying confidential documents by context).
+2. **Policy-Driven Blocking**\
+   When DLP detects policy violations (e.g., an employee attaching customer data to an external email), it can:
+   * **Block** the action outright (like preventing file copies to USB).
+   * **Quarantine** the data for review.
+   * **Encrypt** sensitive content mid-transfer.
+3. **Targeted Alerting**\
+   DLP generates specific alerts for policy breaches (e.g., "Unauthorized SharePoint export of HR records"). These alerts can:
+   * Feed into broader security systems (e.g., SIEMs for correlation).
+   * Trigger automated workflows (e.g., notifying compliance teams).
+
+**Key Advantage**: DLP operates at the _data layer_—understanding content, not just traffic or behavior—making it uniquely effective against insider threats and accidental leaks.
+
+***
+
+**Commercial DLP Solutions**
+
+1. **Symantec Data Loss Prevention (Broadcom)**
+   * Comprehensive coverage (network, endpoint, cloud).
+   * Strong regulatory compliance (GDPR, HIPAA, PCI-DSS).
+2. **Microsoft Purview Data Loss Prevention**
+   * Native integration with M365, Azure, and Windows endpoints.
+   * Uses AI for content classification (e.g., sensitive docs in SharePoint).
+3. **Forcepoint DLP**
+   * Focuses on behavioral analytics (e.g., detects risky user actions).
+   * Supports hybrid cloud/on-prem deployments.
+4. **Digital Guardian**
+   * Endpoint-centric with advanced threat response (blocks USB/exfiltration).
+5. **McAfee DLP (Trellix)**
+   * Combines DLP with encryption and device control.
+6. **Check Point Harmony Email & Office DLP**
+   * Specialized for email (e.g., blocks PII leaks via Outlook/Gmail).
+
+***
+
+**Open-Source & Freemium DLP Tools**
+
+1. **MyDLP** (Community Edition)
+   * Network/email DLP with basic policies (e.g., credit card detection).
+2. **OpenDLP**
+   * Scans endpoints for sensitive files (no real-time blocking).
+3. **Spyderbat** (Behavioral DLP)
+   * Open-source runtime monitoring for data exfiltration.
+4. **Apache Nifi** + **Regex Policies**
+   * Custom DIY DLP using workflows to filter sensitive data in transit.
+
+***
+
+**Cloud-Native & Integrated Tools**
+
+* **Google Workspace DLP** (for Gmail/Drive)
+* **AWS Macie** (ML-based S3 data classification)
+* **Nightfall.ai** (API-driven DLP for SaaS apps)
 
 #### Integrity
 

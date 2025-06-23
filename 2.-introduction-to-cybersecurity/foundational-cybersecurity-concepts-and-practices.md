@@ -58,7 +58,7 @@ IT security is a stakeholder level concern within enterprises and is concerned w
 
 Areas for which central IT most commonly has primary responsibility in higher education are Network security (94%), Monitoring (88%), Communications security (86%), and Identity management (83%) (EDUCAUSE Information Security Almanac, April 2019).
 
-### Confidentiality, integrity, and availability of information
+### Confidentiality, Integrity, and Availability (CIA) of information
 
 The most concrete (least abstract) and tactical (as opposed to strategic) goal of information security is the protection of the confidentiality, integrity, and availability of information assets. The principles of the CIA triad form the foundation of security. These three principles help ensure that data is protected, accurate, and accessible when needed.
 
@@ -168,7 +168,7 @@ An information availability attack aims to disrupt access to data, systems, or s
 4. **Ransomware attack:** Encrypting critical data and demanding payment to restore access.
 5. **Physical infrastructure sabotage:** Cutting network cables or destroying servers to halt operations.
 
-### Confidentiality, integrity, and availability mitigation technologies
+### CIA mitigation technologies
 
 #### Confidentiality
 

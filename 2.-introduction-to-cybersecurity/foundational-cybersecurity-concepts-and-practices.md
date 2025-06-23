@@ -170,6 +170,16 @@ An information availability attack aims to disrupt access to data, systems, or s
 
 ### CIA mitigation technologies
 
+#### **Technologies for Confidentiality, Integrity, and Availability**
+
+| **Security Objective** | **Key Technologies**                                                                                                                                                                                                                     | **Purpose**                                      | **Notes**                                                    |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------ |
+| **Confidentiality**    | <p>Data Loss Prevention (DLP)</p><p><br>Encryption (AES, TLS, PGP)</p><p><br>Access Controls (IAM, RBAC, AAA)</p><p><br>Tokenization</p><p><br>SIEM </p><p><br>Backups</p>                                                               | Protects data from unauthorized access and leaks | SIEM provides monitoring for all three pillars               |
+| **Integrity**          | <p>Hashing (SHA-256, HMAC)</p><p><br>Digital Signatures</p><p><br>Version Control (Git, SVN)</p><p><br>SIEM</p><p><br>Access Controls</p><p><br>Backups</p>                                                                              | Ensures data accuracy and prevents tampering     | Access controls support integrity through audit trails       |
+| **Availability**       | <p>DDoS Protection (Cloudflare, AWS Shield)</p><p><br>Backups (3-2-1 Rule)</p><p><br>Load Balancers</p><p><br>High Availability systems</p><p><br>SIEM </p><p><br>Access Controls</p><p><br>Rate Limiting (overlaps Confidentiality)</p> | Maintains system uptime and access               | Rate limiting protects both availability and confidentiality |
+
+
+
 #### Confidentiality
 
 A key **technology** for ensuring data confidentiality is Data Loss Prevention (**DLP**), which monitors and protects sensitive information by detecting and blocking unauthorized transfers. For instance, DLP can trigger alerts if confidential files are copied to removable drives or if payment card data is shared improperly. While highly effective, DLP requires careful configuration—including accurate data classification and tailored alert rules—to maximize its security value.

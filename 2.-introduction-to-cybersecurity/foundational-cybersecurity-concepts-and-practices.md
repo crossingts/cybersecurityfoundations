@@ -65,6 +65,16 @@ The most concrete (least abstract) and tactical (as opposed to strategic) goal o
 * Integrity denotes an imperative that data should not be changed or modified by unauthorized users. Data should be correct and authentic.
 * Availability denotes an imperative that an information system should be operational and accessible to authorized users. For example, staff should be able to access the internal resources they need to perform their duties, and the company’s website should be up and running and available to customers.
 
+In addition to the CIA triad, closely related and foundational information security concepts include:&#x20;
+
+* A vulnerability is any potential weakness that can compromise the CIA of information assets. A window in a house is a vulnerability burglars can exploit to enter the house.&#x20;
+* An exploit is something that can potentially be used to exploit the vulnerability. A rock can exploit the weakness of glass windows and may be used to enter a house.
+* A threat is the potential of a vulnerability to be exploited. The threat of house burglary is the likelihood a burglar will exploit the glass window vulnerability using a rock (or other exploits) to gain entry into a house.&#x20;
+* A threat vector is a means or method a threat actor can use or follow to exploit a vulnerability. A glass window a burglar can use to gain entry into a house can be considered a threat vector.
+* A mitigation technique is something that can protect against threats. Appropriate mitigation techniques should be implemented everywhere a vulnerability can be exploited, for example, devices, servers, switches, and routers. In our window example, adding welded metallic bars would be a mitigation technique.
+
+
+
 #### Confidentiality
 
 A key **technology** for ensuring data confidentiality is Data Loss Prevention (**DLP**), which monitors and protects sensitive information by detecting and blocking unauthorized transfers. For instance, DLP can trigger alerts if confidential files are copied to removable drives or if payment card data is shared improperly. While highly effective, DLP requires careful configuration—including accurate data classification and tailored alert rules—to maximize its security value.
@@ -169,6 +179,8 @@ Data can become unavailable due to being damaged or destroyed, or due to ransome
 
 Unlike confidentiality or integrity attacks, availability attacks aim primarily to disrupt service rather than steal or alter data. Mitigation strategies include rate limiting, traffic filtering, and cloud-based DDoS protection services (e.g., AWS Shield, Cloudflare).
 
+
+
 ### Techniques of CIA attacks
 
 #### Confidentiality attacks
@@ -212,36 +224,32 @@ An information availability attack aims to disrupt access to data, systems, or s
 4. **Ransomware attack:** Encrypting critical data and demanding payment to restore access.
 5. **Physical infrastructure sabotage:** Cutting network cables or destroying servers to halt operations.
 
+
+
 ### Information security risk management
 
-In addition to the CIA triad, other foundational information security concepts include:&#x20;
+Risk management requires understanding **threats, vulnerabilities, and mitigation** strategies.
 
-* A vulnerability is any potential weakness that can compromise the CIA of information assets. A window in a house is a vulnerability burglars can exploit to enter the house.&#x20;
-* An exploit is something that can potentially be used to exploit the vulnerability. A rock can exploit the weakness of glass windows and may be used to enter a house.
-* A threat is the potential of a vulnerability to be exploited. The threat of house burglary is the likelihood a burglar will exploit the glass window vulnerability using a rock (or other exploits) to gain entry into a house.&#x20;
-* A threat vector is a means or method a threat actor can use or follow to exploit a vulnerability. A glass window a burglar can use to gain entery into a house to rob can be considered a threat vector.
-* A mitigation technique is something that can protect against threats. Appropriate mitigation techniques should be implemented everywhere a vulnerability can be exploited, for example, client devices, servers, switches, and routers. In our window example, adding welded metallic bars would be a mitigation technique.
+* **Risk = Threat × Vulnerability (with consideration of mitigation)**
+* A risk arises when a threat exploits a vulnerability.
+* Related concepts: **exploit** (how the attack happens) and **threat vector** (the pathway of the attack).
 
-#### Risk = threat, vulnerability, and mitigation
+**Sources of Vulnerabilities**
 
-The concept of risk is intimately tied to the concepts of threat, vulnerability, and mitigation. Two other closely related concepts are exploit and threat vector.&#x20;
+Vulnerabilities can be categorized based on their origin:
 
-Risk is a threat that exploits a vulnerability.
-
-**Vulnerabilities**
-
-Vulnerabilities can be understood as security flaws or holes.
-
-We can think of security flaws in the context of people, process, and technology.
-
-Vulnerabilities can stem from:
-
-• The software infrastructure, including software programs/applications, and OS\
-• The network infrastructure\
-• The hardware involved\
-• Organizational/network policies/procedures which could lead eventually to a security hole\
-• Human vulnerabilities to social hacking techniques/lack of security awareness\
-• Device configuration mistakes (e.g., unsecured endpoints)
+* **Software Infrastructure**
+  * Flaws in applications, operating systems, or firmware.
+* **Network Infrastructure**
+  * Weaknesses in network devices, protocols, or configurations.
+* **Hardware**
+  * Physical security flaws or insecure device designs.
+* **Organizational and Network Policies**
+  * Poorly defined security policies that create security gaps.
+* **Human Factors**
+  * Susceptibility to social engineering or lack of security awareness.
+* **Configuration Mistakes**
+  * Unsecured endpoints, default passwords, or misconfigured devices.
 
 #### Information security in practice
 

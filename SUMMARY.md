@@ -78,6 +78,7 @@
 
 * [Introduction - Conclusion](7.-conclusion/introduction-conclusion.md)
 * [Final words](7.-conclusion/final-words.md)
+* [Appendices](7.-conclusion/appendices.md)
 
 ## 8. Special topics
 

@@ -17,6 +17,10 @@ description: >-
 
 There is only one category of ethical hacking, i.e., professional ethical hacking. In this classification, white hat hacking is synonymous with ethical hacking. Ethical hacking is legal and contract based.
 
+• Professional ethical hacking is legal
+
+• Ethical hackers are trustworthy
+
 #### Gray hat hacking
 
 Gray hat hacking is unauthorized hacking, but is essentially apolitical.

@@ -9,7 +9,11 @@ description: >-
 
 • Become familiar with defensive security and offensive security approaches, including SIRT/CSIRT (Security Incident Response Team/Computer Security Incident Response Team), SOC (Security Operations Center), red teaming, and ethical hacking.
 
-How red teaming and ethical hacking differ and overlap:
+**Two key cybersecurity paradigms**
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p><strong>Two key cybersecurity paradigms</strong></p></figcaption></figure>
+
+#### How red teaming and ethical hacking differ and overlap
 
 #### **Similarities:**
 

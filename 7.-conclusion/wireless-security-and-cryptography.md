@@ -1,6 +1,12 @@
 # Wireless security and cryptography
 
-### Chapter 5: Wireless security and cryptography
+## Chapter 5: Wireless security and cryptography <a href="#chapter-5-wireless-security-and-cryptography" id="chapter-5-wireless-security-and-cryptography"></a>
+
+This chapter covers how SSL/TLS uses cryptographic tools to secure data, and how the IEEE 802.11 wireless standard enforces security through authentication, encryption, and integrity mechanisms
+
+This chapter covers how SSL/TLS uses cryptographic tools (symmetric encryption, asymmetric encryption, and hashing) to secure data over the Internet, and how the IEEE 802.11 wireless standard enforces security through authentication, encryption, and integrity mechanisms.
+
+***
 
 SSL/TLS secures web traffic between a client and a server through a process called the TLS handshake. Here’s a breakdown of the key steps in TLS 1.3:
 

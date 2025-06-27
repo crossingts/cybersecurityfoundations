@@ -1,6 +1,6 @@
 # IT career planning
 
-### Chapter 1: IT career planning
+## Chapter 1: IT career planning
 
 This chapter introduces students to emerging IT and cybersecurity career paths and job roles. Further, this chapter will help students plan for a rewarding career in IT
 

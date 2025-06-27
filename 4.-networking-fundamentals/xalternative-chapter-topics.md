@@ -2,7 +2,7 @@
 hidden: true
 ---
 
-# xAlternative chapter topics
+# Alternative chapter topics\_master
 
 Network devices and their functions
 

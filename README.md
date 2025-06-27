@@ -77,4 +77,4 @@ This chapter covers ethical hacking and penetration testing - definitions, techn
 
 7. Chapter 7: Conclusion
 
-All good things must come to an end...
+This chapter sheds light on and summarizes salient topics and concepts covered in each chapter.

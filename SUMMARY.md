@@ -31,7 +31,6 @@
 
 * [Introduction - Networking fundamentals](4.-networking-fundamentals/introduction-networking-fundamentals.md)
 * [How data flow through the Internet](4.-networking-fundamentals/how-data-flow-through-the-internet.md)
-* [Alternative chapter topics\_master](4.-networking-fundamentals/xalternative-chapter-topics.md)
 * [Alternative chapter topics](4.-networking-fundamentals/alternative-chapter-topics.md)
 * [Network devices and their functions](4.-networking-fundamentals/network-devices-and-their-functions.md)
 * [The Open Systems Interconnection (OSI) model](4.-networking-fundamentals/the-open-systems-interconnection-osi-model.md)
@@ -79,7 +78,12 @@
 ## 7. Conclusion
 
 * [Introduction - Conclusion](7.-conclusion/introduction-conclusion.md)
-* [Final words](7.-conclusion/final-words.md)
+* [IT career planning](7.-conclusion/it-career-planning.md)
+* [Introduction to cybersecurity](7.-conclusion/introduction-to-cybersecurity.md)
+* [Cybersecurity GRC](7.-conclusion/cybersecurity-grc.md)
+* [Networking fundamentals](7.-conclusion/networking-fundamentals.md)
+* [Wireless security and cryptography](7.-conclusion/wireless-security-and-cryptography.md)
+* [Practical foundations in ethical hacking](7.-conclusion/practical-foundations-in-ethical-hacking.md)
 * [Appendices](7.-conclusion/appendices.md)
 
 ## 8. Special topics

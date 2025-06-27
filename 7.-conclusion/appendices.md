@@ -1,6 +1,6 @@
 # Appendices
 
-#### Essential cryptography terms&#x20;
+### Essential cryptography terms
 
 **Encryption** is a process of transforming simple text/data, called plaintext, into unintelligible form, named as ciphertext. Decryption is the inverse process of encryption.&#x20;
 

@@ -31,6 +31,7 @@
 
 * [Introduction - Networking fundamentals](4.-networking-fundamentals/introduction-networking-fundamentals.md)
 * [How data flow through the Internet](4.-networking-fundamentals/how-data-flow-through-the-internet.md)
+* [Alternative chapter topics](4.-networking-fundamentals/alternative-chapter-topics.md)
 * [Network devices and their functions](4.-networking-fundamentals/network-devices-and-their-functions.md)
 * [The Open Systems Interconnection (OSI) model](4.-networking-fundamentals/the-open-systems-interconnection-osi-model.md)
 * [Host to host communication in networking](4.-networking-fundamentals/host-to-host-communication-in-networking.md)

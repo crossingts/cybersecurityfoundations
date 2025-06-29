@@ -23,11 +23,11 @@ This chapter explores how organizations integrate cybersecurity into enterprise 
 
 • Identify key cybersecurity regulations (e.g., GDPR and HIPAA) and industry standards (e.g., PCI DSS).
 
-• Understand information security risk assessment and management phases and terminology.
+• Understand information security risk assessment phases and terminology.
 
 ## Topics covered in this chapter
 
-GRC terminology (governance, risk, compliance, controls, due diligence, policies, audits, reporting).
+Foundational GRC concepts and terminology (governance, risk, compliance, controls, due diligence, policies, audits, reporting).
 
 Salient cybersecurity regulations, such as GDPR (privacy), HIPAA (healthcare), and SOX (financial).
 

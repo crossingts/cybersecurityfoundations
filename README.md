@@ -23,7 +23,7 @@ The global demand for skilled cybersecurity professionals has never been higher.
 
 • Describe common cyber attacks and malware types.
 
-• Describe risk mitigation methods.
+• Describe cybersecurity risk mitigation methods.
 
 • Describe network security risk mitigation best practices.
 

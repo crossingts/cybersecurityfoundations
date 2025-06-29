@@ -6,9 +6,18 @@ description: >-
 
 # The Open Systems Interconnection (OSI) model
 
+## Learning objectives <a href="#learning-objectives" id="learning-objectives"></a>
+
+• Understand what is the OSI model\
+• List the layers of the OSI model and describe their functions\
+• Understand the types of network devices that operate at each layer of the model\
+• Know what protocols operate at each layer of the model\
+• Understand the addressing schemes of layers 2, 3, and 4
+
 This section discusses the [Open Systems Interconnection (OSI) model](https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/) layers and their role in data flow. Key concepts discussed in this section include the OSI model Physical layer, Data Link layer, Network layer, Transport layer, Session layer, Presentation layer, Application layer, and data encapsulation/de-encapsulation.
 
-* **Learning objectives**
+## Topics covered in this section
+
 * **The Open Systems Interconnection (OSI) Model**
 * **Layer 1: Physical layer (the wire) – transporting bits**
 * **Layer 2: Data Link layer – hop to hop delivery**
@@ -16,14 +25,6 @@ This section discusses the [Open Systems Interconnection (OSI) model](https://ww
 * **Layer 4: Transport layer – service to service delivery**
 * **Layers 5, 6, 7 – Session, Presentation, Application**
 * **Data encapsulation/de-encapsulation**
-
-### Learning objectives
-
-* Understand what is the OSI model
-* List the layers of the OSI model and describe their functions
-* Understand the types of network devices that operate at each layer of the model
-* Know what protocols operate at each layer of the model
-* Understand the addressing schemes of layers 2, 3, and 4
 
 ### [The Open Systems Interconnection (OSI) Model](https://en.wikipedia.org/wiki/OSI_model)
 

@@ -6,7 +6,15 @@ description: >-
 
 # Network devices and their functions
 
+## Learning objectives
+
+• Develop a basic understanding of the concepts of host, client, server, IP address, and network\
+• Learn how to define network devices\
+• Become familiar with major network devices and their role in network operations
+
 This discussion introduces foundational concepts in computer networking and explains the functions of key networking components and devices. Key concepts discussed in this section include hosts, IP addresses, networks, repeaters, hubs, bridges, switches, and routers.
+
+## Topics covered in this section
 
 * **Host, client, server, IP address, network**
 * **Network devices definition**

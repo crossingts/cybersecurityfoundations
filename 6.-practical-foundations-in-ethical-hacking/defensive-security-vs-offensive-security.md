@@ -11,7 +11,18 @@ description: >-
 
 **Two key cybersecurity paradigms**
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p><strong>Two key cybersecurity paradigms</strong></p></figcaption></figure>
+| **Strategy**              | **Offensive Security**                                                                                               | **Defensive Security**                                                                                   |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| **Approach**              | Ethical hacking, “hacker powered security” (e.g., HackerOne and Bugcrowd)                                            | Diligence, SDLC/agile security, DevSecOps/security-by-design, best practices, IA (Information Assurance) |
+| **Mindset**               | Attacker, adversarial, damage, break, deceive, trick                                                                 | Defender, ally, protect, prevent, mitigate                                                               |
+| **Skillsets**             | How to penetrate an information system                                                                               | How to protect an information system (risk assessment/governance skills)                                 |
+| **Conflict of Interests** | Less conflict of interests (hired external ethical hackers)                                                          | Conflict of interests (hackers are typically employees)                                                  |
+| **Related Paradigms**     | Red teaming                                                                                                          | Hygiene culture, Security culture, blue teaming                                                          |
+| **Permission of Owner**   | Authorized, legal                                                                                                    | Authorized, legal                                                                                        |
+| **Testing Approaches**    | <p>Blackbox testing, Black hat hacking </p><p></p><p>Third party audit/auditor perspective of infosec governance</p> | Whitebox testing, White hat hacking                                                                      |
+| **Authentication**        | Unauthenticated scan (outsider attack)                                                                               | Authenticated scan (simulation of insider attack)                                                        |
+
+***
 
 #### How red teaming and ethical hacking differ and overlap
 

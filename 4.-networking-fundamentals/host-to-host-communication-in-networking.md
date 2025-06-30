@@ -6,18 +6,19 @@ description: >-
 
 # Host to host communication in networking
 
+## Learning objectives <a href="#learning-objectives" id="learning-objectives"></a>
+
+• Understand how ARP resolves IP addresses to MAC addresses\
+• Understand how hosts in the same network send and receive data\
+• Understand how hosts in different networks communicate over the wire
+
 This section discusses [host to host communication in networking](https://ine.com/blog/2009-03-01-ccent-host-to-host-network-addressing-example). This discussion covers everything hosts do to send and receive data on the wire. Key concepts discussed in this section include the Address Resolution Protocol (ARP), how hosts in the same network communicate, and how hosts in different networks communicate.
 
-* **Learning objectives**
+## Topics covered in this section
+
 * **Host to host communication in networking**
 * **Hosts connected directly to each other**
 * **Hosts connected through a router**
-
-### Learning objectives
-
-* Understand how ARP resolves IP addresses to MAC addresses
-* Understand how hosts in the same network send and receive data
-* Understand how hosts in different networks communicate over the wire
 
 ### [Host to host communication in networking](https://www.learncisco.net/courses/icnd-1/building-a-network/host-to-host-communications.html)
 

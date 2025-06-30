@@ -26,6 +26,7 @@
 
 * [Introduction - Cybersecurity GRC](3.-cybersecurity-grc/introduction-cybersecurity-grc.md)
 * [Cybersecurity GRC](https://dti-techs.gitbook.io/cybersecurity-grc)
+* [Salient cybersecurity regulations](3.-cybersecurity-grc/salient-cybersecurity-regulations.md)
 
 ## 4. Networking fundamentals
 

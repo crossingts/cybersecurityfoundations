@@ -17,7 +17,7 @@ This chapter explores how organizations integrate cybersecurity into enterprise 
 
 • Define the concepts of Governance, Risk, and Compliance, and explain their role in IT governance.
 
-• Identify key cybersecurity regulations (e.g., GDPR and HIPAA) and industry standards (e.g., PCI DSS).
+• Identify key cybersecurity regulations (e.g., GGDPR, HIPAA, and SOX) and industry standards (e.g., PCI DSS).
 
 • Become familiar with popular information security RMFs, including NIST SP 800-37, NIST CSF, and ISO/IEC 27001, and how they can be combined.
 
@@ -29,7 +29,7 @@ This chapter explores how organizations integrate cybersecurity into enterprise 
 
 Foundational GRC concepts and terminology (governance, risk, compliance, controls, due diligence, policies, audits, reporting).
 
-Salient cybersecurity regulations, such as GDPR (privacy), HIPAA (healthcare), and SOX (financial).
+Salient cybersecurity regulations
 
 Key features of salient cybersecurity industry standards, such as PCI DSS (payment security), and SOC 2 (service providers).
 

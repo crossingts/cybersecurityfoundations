@@ -170,19 +170,23 @@ DHCP snooping prevents attackers from spoofing a legitimate DHCP server and inte
 
 **ARP spoofing**
 
-ARP spoofing, also known as ARP poisoning: A MITM attack that allows attackers to intercept communication between network devices. The attacker spoofs the MAC address of the target device as their own (using **gratuitous ARP**) to direct traffic to himself. Alternatively, you can say the attacker spoofs the source IP address of the target device as their own (impersonates a legitimate IP address such as a router’s IP). Mitigation: DAI.
+ARP spoofing, also known as ARP poisoning: A MITM attack that allows attackers to intercept communication between network devices. In this kind of attack the attacker places himself between the source and destination to eavesdrop on communications or to modify traffic before it reaches the destination.&#x20;
 
-In this kind of attack the attacker places himself between the source and destination to eavesdrop on communications or to modify traffic before it reaches the destination. A common example is ARP spoofing, also known as ARP poisoning. This is another kind of spoofing attack.
+The attacker sends fake ARP replies (gratuitous ARP) to associate their own MAC address with someone else’s IP address (e.g., the gateway’s IP). The attacker spoofs the source IP address of the target device as their own (impersonates a legitimate IP address). This tricks other devices into sending traffic intended for the victim’s IP to the attacker’s MAC instead.
 
-In an ARP spoofing attack, a host sends an ARP request asking for the MAC address of another device.
-
-PC1 is asking for the MAC address of host 10.0.0.1, which is SRV1. Because ARP request messages are broadcast, the switch floods the frame, so both SRV1 and the attacker receive it. SRV1 sends an ARP reply to PC1.&#x20;
+In an ARP spoofing attack, a host sends an ARP request asking for the MAC address of another device. PC1 is asking for the MAC address of host 10.0.0.1, which is SRV1. Because ARP request messages are broadcast, the switch floods the frame, so both SRV1 and the attacker receive it. SRV1 sends an ARP reply to PC1.&#x20;
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/3e6ba-man-middle-attack-3.webp?w=1201" alt="man-middle-attack" height="339" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Security Fundamentals | Day 48)</p></figcaption></figure>
 
-The attacker waits briefly and then sends another ARP reply after the legitimate reply. If the attacker’s ARP reply arrives last, it will overwrite the legitimate ARP entry in PC1’s ARP table.&#x20;
+The attacker waits briefly and then sends another ARP reply (called **gratuitous ARP**) after the legitimate reply. If the attacker’s ARP reply arrives last, it will overwrite the legitimate ARP entry in PC1’s ARP table.&#x20;
 
 Now in PC1’s ARP table, the entry for 10.0.0.1 will have the attacker’s MAC address, not the MAC address of the real 10.0.0.1, SRV1. So when PC1 tries to send traffic to SRV1, traffic will be forwarded to the attacker instead. Then, the attacker can inspect the messages, read their contents and then forward them to SRV1. Or the attacker can modify the messages before forwarding them to SRV1.
+
+**Mitigation**
+
+DAI (Dynamic ARP Inspection) validates ARP packets by checking them against a trusted DHCP snooping binding table or a manually configured ARP ACL. DAI ensures that the IP-to-MAC mappings in ARP replies are correct, stopping attackers from spoofing another host's IP address (a key technique in ARP poisoning attacks).
+
+Since DAI verifies that an ARP reply matches a legitimate IP-MAC binding, it prevents a malicious host from falsely claiming a MAC address that does not belong to it (thus indirectly helping to prevent MAC spoofing).
 
 Man in the middle attacks < CCNA security fundamentals\
 [https://itnetworkingskills.wordpress.com/2023/05/06/ccna-security-fundamentals/](https://itnetworkingskills.wordpress.com/2023/05/06/ccna-security-fundamentals/)
@@ -198,7 +202,7 @@ Denial-of-Service Attacks\
 Reflection and Amplification Attacks\
 Man-in-the-Middle Attacks
 
-\*IP spoofing
+\*IP spoofing attacks
 
 In an IP spoofing attack, an attacker falsifies the source IP address in network packets to impersonate another device and gain unauthorized access to the network.
 
@@ -208,11 +212,11 @@ Reflection and amplification attacks
 
 DHCP poisoning/MITM
 
-\*MAC spoofing
+ARP spoofing, also known as ARP poisoning
+
+\*MAC spoofing attacks
 
 DHCP exhaustion attack (MAC address spoofing). Mitigation: DHCP snooping, Switch Port Security.
-
-ARP spoofing, also known as ARP poisoning
 
 Other:&#x20;
 

@@ -200,7 +200,7 @@ Man-in-the-Middle Attacks
 
 \*IP spoofing
 
-IP Spoofing: Attackers can manipulate IP addresses to deceive network routers and gain unauthorized access to networks.
+In an IP spoofing attack, an attacker falsifies the source IP address in network packets to impersonate another device and gain unauthorized access to the network.
 
 TCP SYN flood (IP spoofing attack)
 

@@ -6,21 +6,22 @@ description: >-
 
 # Network protocols and their functions
 
+## Learning objectives
+
+• Understand what are network protocols\
+• Understand how the TCP/IP model maps to the OSI model\
+• List and describe the four parameters every host needs to achieve Internet connectivity\
+• Understand the roles of the DHCP protocol and the DNS protocol in Internet communication\
+• Describe the functions of the network protocols ARP, FTP, SMTP, HTTP, SSL, TLS, and HTTPS
+
 This section discusses several important [network protocols and their functions](https://www.comptia.org/content/guides/what-is-a-network-protocol). Key concepts discussed in this section include the TCP/IP model, and the functions of the network protocols ARP, FTP, SMTP, HTTP, SSL, TLS, HTTPS, DHCP, and DNS.
 
-* **Learning objectives**
+## Topics covered in this section
+
 * **What are network protocols?**
 * **The DHCP protocol**
 * **Network protocols ARP, FTP, SMTP, HTTP, SSL, TLS, and HTTPS**
 * **The DNS protocol**
-
-### Learning objectives
-
-* Understand what are network protocols
-* Understand how the TCP/IP model maps to the OSI model
-* List and describe the four parameters every host needs to achieve Internet connectivity
-* Understand the roles of the DHCP protocol and the DNS protocol in Internet communication
-* Describe the functions of the network protocols ARP, FTP, SMTP, HTTP, SSL, TLS, and HTTPS
 
 ### What are network protocols?
 

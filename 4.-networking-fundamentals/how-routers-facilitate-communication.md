@@ -6,9 +6,17 @@ description: >-
 
 # How routers facilitate communication
 
+## Learning objectives
+
+• Understand the difference between a router and a host\
+• Understand how a routing table can be populated with routes\
+• Understand how routers use their routing tables and ARP tables to move packets across the Internet\
+• Understand why you would want to deploy your routers in a hierarchy
+
 This section discusses [how routers facilitate communication between networks](https://www.ibm.com/topics/networking). This discussion looks at everything routers do to facilitate communication between networks. Key concepts discussed in this section include the difference between a router and a host, the routing table, the ARP table, and hierarchical network topology.
 
-* **Learning objectives**
+## Topics covered in this section
+
 * **How routers facilitate communication between networks**
 * **Routers have an IP and a MAC for each network they interface with**
 * **The difference between a router and a host**
@@ -22,13 +30,6 @@ This section discusses [how routers facilitate communication between networks](h
   * **Routers in a hierarchy are easier to scale**
   * **Routers in a hierarchy provide a more consistent connectivity**
   * **Route summarization**
-
-### Learning objectives
-
-* Understand the difference between a router and a host
-* Understand how a routing table can be populated with routes
-* Understand how routers use their routing tables and ARP tables to move packets across the Internet
-* Understand why you would want to deploy your routers in a hierarchy
 
 ### [How routers facilitate communication between networks](https://www.cisco.com/c/en_ca/solutions/small-business/resource-center/networking/how-does-a-router-work.html)
 

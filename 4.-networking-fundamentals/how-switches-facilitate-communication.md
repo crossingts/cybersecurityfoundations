@@ -6,23 +6,24 @@ description: >-
 
 # How switches facilitate communication
 
+## Learning objectives
+
+• Understand how switches use the MAC address table\
+• Understand how switches perform their functions\
+• Understand how unicast flooding is different from a broadcast\
+• Understand what are VLANs\
+• Understand how switches operate when there are multiple switches involved
+
 This section discusses [how switches facilitate communication within a network](https://www.networkworld.com/article/3584876/what-is-a-network-switch-and-how-does-it-work.html). This discussion looks at everything switches do to facilitate communication within a network. Key concepts discussed in this section include the MAC address table, the four functions of switches (learning, flooding, forwarding, and filtering), unicast vs broadcast frames, and daisy chain switch typology.
 
-* **Learning objectives**
+## Topics covered in this section
+
 * **How switches facilitate communication within a network**
 * **The MAC address table**
 * **The four switch functions**
 * **Unicast flooding vs broadcast**
 * **VLANs – Virtual Local Area Networks**
 * **Multiple switches**
-
-### Learning objectives
-
-* Understand how switches use the MAC address table
-* Understand how switches perform their functions
-* Understand how unicast flooding is different from a broadcast
-* Understand what are VLANs
-* Understand how switches operate when there are multiple switches involved
 
 ### [How switches facilitate communication within a network](https://techgenix.com/network-switch-guide/)
 

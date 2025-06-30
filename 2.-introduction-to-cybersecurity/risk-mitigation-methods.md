@@ -291,6 +291,39 @@ Essential tools for improved network visibility:
 * **Network Traffic Analysis (NTA)**: Identifying unusual patterns that may indicate an attack.
 * **SIEM Solutions**: Aggregating and correlating logs for centralized threat detection.
 
+#### Honeypots
+
+A honeypot is a security mechanism designed to detect, deflect, or study unauthorized access attempts in a network. It acts as a decoy system, appearing to be a legitimate target (e.g., a server, database, or IoT device) but is actually isolated and monitored to gather information about attackers. When properly deployed, honeypots enhance threat detection and incident response capabilities.
+
+### **Types of Honeypots**
+
+1. **Based on Interaction Level:**
+   * **Low-Interaction Honeypots**
+     * Simulate only limited services (e.g., fake SSH or HTTP ports).
+     * Low risk, easy to deploy (e.g., **Honeyd**, **Kippo**).
+     * Used for basic threat detection.
+   * **High-Interaction Honeypots**
+     * Fully functional systems that allow deep attacker interaction.
+     * Capture detailed attack methods but are riskier (e.g., **Honeynets**, **Cowrie**).
+2. **Based on Purpose:**
+   * **Research Honeypots**
+     * Used by cybersecurity researchers to study attack techniques.
+     * Example: **Dionaea** (malware analysis).
+   * **Production Honeypots**
+     * Deployed in corporate networks to detect intrusions.
+     * Example: **Canary Tokens** (tripwires for attackers).
+3. **Specialized Honeypots:**
+   * **Spam Honeypots** – Trap email harvesters (e.g., **Spamhole**).
+   * **Database Honeypots** – Fake databases to detect SQLi attacks (e.g., **HoneyDB**).
+   * **IoT Honeypots** – Mimic vulnerable IoT devices (e.g., **IoTPOT**).
+
+### **How Honeypots Enhance Security**
+
+* **Attack Detection:** Identify malicious activity without false positives.
+* **Threat Intelligence:** Gather data on attacker behavior (TTPs).
+* **Distraction:** Keep attackers away from real systems.
+* **Incident Response:** Help analyze breaches and improve defenses.
+
 #### Network Automation
 
 Adopting software-defined networking (SDN) allows for dynamic security policy adjustments in response to emerging threats. For example, Cisco DNA Center is a software-based network management and automation platform that helps organizations simplify, automate, and secure their networks. DNA Center is an SDN controller in SD-Access architecture, but it can also be used as a general network management tool even in networks that do not use SD-Access. DNA Center has two main roles. First, it is the SDN controller used in SD-Access. Second, it can be a network manager in a traditional network that is not using SD-Access. In this case, it acts as a central point to monitor, analyze, and configure the network.

@@ -218,12 +218,6 @@ ARP spoofing, also known as ARP poisoning
 
 DHCP exhaustion attack (MAC address spoofing). Mitigation: DHCP snooping, Switch Port Security.
 
-Other:&#x20;
-
-TCP/IP Hijacking: Attackers can intercept ongoing TCP connections and take control of the session, potentially leading to unauthorized data access or manipulation.
-
-Session Hijacking: Attackers can take over an existing session, posing as legitimate users and potentially gaining unauthorized access to sensitive data.
-
 ### Malware types
 
 Malware, malicious software, refers to a variety of harmful programs that can infect a computer. There are many types of malware. Here are a few types.

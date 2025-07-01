@@ -8,21 +8,19 @@ description: >-
 
 Network layers within the OSI model in the context of vulnerability and mitigation (e.g., L1 sniffing, L2 ARP spoofing MITM, L3 ICMP flooding, L4 TCP SYN flooding, L5 session hijacking, L6 phishing, and L7 DNS spoofing).
 
-Here’s a structured **comparison table** categorizing the examples as **attacks/threats** vs. **attack/threat vectors**, along with their **OSI layer context**, **vulnerabilities exploited**, and **mitigations**:
+**Common Attack Types And Attack Techniques By OSI Layer**
 
-| **Attack Type/Threat**  | **Attack Technique**                              | **OSI Layer**     | **Vulnerability Exploited**      | **Mitigation**                          |
-| ----------------------- | ------------------------------------------------- | ----------------- | -------------------------------- | --------------------------------------- |
-| **Sniffing**            | Passive interception of unencrypted traffic       | L1 (Physical)     | Unencrypted transmissions        | Encryption (e.g., WPA3, MACsec)         |
-| **ARP Spoofing (MITM)** | Actively poisoning ARP tables to redirect traffic | L2 (Data Link)    | Lack of ARP authentication       | Dynamic ARP Inspection (DAI), VPNs      |
-| **ICMP Flooding**       | Overwhelming a target with ping requests (DDoS)   | L3 (Network)      | No rate limiting on ICMP replies | ICMP rate limiting, Network filtering   |
-| **TCP SYN Flooding**    | Exploiting TCP handshake to exhaust resources     | L4 (Transport)    | TCP handshake design flaw        | SYN cookies, Firewall rules             |
-| **Session Hijacking**   | Stealing valid session tokens                     | L5 (Session)      | Weak session tokens/timeouts     | HTTPS, Secure cookies, MFA              |
-| **Phishing**            | Social engineering to steal credentials           | L6 (Presentation) | Human trust, lack of training    | User education, Email filtering (DMARC) |
-| **DNS Spoofing**        | Corrupting DNS cache to redirect users            | L7 (Application)  | Unvalidated DNS responses        | DNSSEC, DoH/DoT (DNS over HTTPS/TLS)    |
+| **OSI Layer**         | **Attack Type/Threat** | **Attack Technique**                              | **Vulnerability Exploited**      | **Mitigation**                          |
+| --------------------- | ---------------------- | ------------------------------------------------- | -------------------------------- | --------------------------------------- |
+| **L1 (Physical)**     | Sniffing               | Passive interception of unencrypted traffic       | Unencrypted transmissions        | Encryption (e.g., WPA3, MACsec)         |
+| **L2 (Data Link)**    | ARP Spoofing (MITM)    | Actively poisoning ARP tables to redirect traffic | Lack of ARP authentication       | Dynamic ARP Inspection (DAI), VPNs      |
+| **L3 (Network)**      | ICMP Flooding          | Overwhelming a target with ping requests (DDoS)   | No rate limiting on ICMP replies | ICMP rate limiting, Network filtering   |
+| **L4 (Transport)**    | TCP SYN Flooding       | Exploiting TCP handshake to exhaust resources     | TCP handshake design flaw        | SYN cookies, Firewall rules             |
+| **L5 (Session)**      | Session Hijacking      | Stealing valid session tokens                     | Weak session tokens/timeouts     | HTTPS, Secure cookies, MFA              |
+| **L6 (Presentation)** | Phishing               | Social engineering to steal credentials           | Human trust, lack of training    | User education, Email filtering (DMARC) |
+| **L7 (Application)**  | DNS Spoofing           | Corrupting DNS cache to redirect users            | Unvalidated DNS responses        | DNSSEC, DoH/DoT (DNS over HTTPS/TLS)    |
 
-***
-
-#### **Key Clarifications**
+**Key Clarifications**
 
 1. **Attacks vs. Threat Vectors**:
    * **Attack**: A specific malicious action (e.g., ICMP flooding).
@@ -39,30 +37,26 @@ Here’s a structured **comparison table** categorizing the examples as **attack
 
 How each attack type translates into a broader threat category, along with real-world implications and risk scenarios:
 
-***
+**Threats by OSI Layer**
 
-#### **Threats by OSI Layer**
+| **OSI Layer**         | **Attack Type**        | **Threat Classification**    | **Threat Impact & Scenario**                                                                            |
+| --------------------- | ---------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------- |
+| **L1 (Physical)**     | Sniffing               | Eavesdropping Threat         | Unauthorized data capture via exposed cables/Wi-Fi (e.g., stealing credentials from cleartext traffic). |
+|                       | Cable Tapping          | Physical Intrusion Threat    | Attacker physically taps fiber/copper lines to intercept data (common in espionage).                    |
+| **L2 (Data Link)**    | ARP Spoofing (MITM)    | LAN Integrity Threat         | Attackers redirect or monitor traffic within a local network (e.g., stealing session cookies).          |
+|                       | MAC Flooding           | Switch Saturation Threat     | Overwhelms switches to force open ports, enabling sniffing (e.g., CAM table overflow attacks).          |
+| **L3 (Network)**      | ICMP Flooding          | Network Availability Threat  | DDoS attacks overwhelm bandwidth/resources (e.g., Smurf attacks using amplified ICMP replies).          |
+|                       | IP Spoofing            | Source Identity Threat       | Masquerading as trusted IPs to bypass ACLs or launch reflected attacks (e.g., NTP amplification).       |
+| **L4 (Transport)**    | TCP SYN Flooding       | Connection Resource Threat   | Exhausts server TCP pools, causing service outages (e.g., volumetric DDoS).                             |
+|                       | UDP Flooding           | Unfiltered Protocol Threat   | Exploits stateless UDP to flood services (e.g., DNS/QUIC protocol abuse).                               |
+| **L5 (Session)**      | Session Hijacking      | Authentication Bypass Threat | Steals active sessions to impersonate users (e.g., stealing cookies via XSS or MITM).                   |
+|                       | SSL Stripping          | Downgrade Attack Threat      | Forces HTTPS→HTTP to intercept plaintext data (e.g., evil-twin Wi-Fi attacks).                          |
+| **L6 (Presentation)** | Phishing               | Human Manipulation Threat    | Tricks users into revealing credentials (e.g., fake login pages or malicious attachments).              |
+|                       | Malicious File Uploads | Data Integrity Threat        | Uploads malware disguised as documents (e.g., PDFs with embedded exploits).                             |
+| **L7 (Application)**  | DNS Spoofing           | Trust Manipulation Threat    | Redirects users to malicious sites (e.g., fake banking portals).                                        |
+|                       | SQL Injection          | Application Logic Threat     | Bypasses authentication or exfiltrates DB data (e.g., `' OR 1=1 --` attacks).                           |
 
-| **OSI Layer**         | **Attack Type**        | **Threat Classification**        | **Threat Impact & Scenario**                                                                            |
-| --------------------- | ---------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| **L1 (Physical)**     | Sniffing               | **Eavesdropping Threat**         | Unauthorized data capture via exposed cables/Wi-Fi (e.g., stealing credentials from cleartext traffic). |
-|                       | Cable Tapping          | **Physical Intrusion Threat**    | Attacker physically taps fiber/copper lines to intercept data (common in espionage).                    |
-| **L2 (Data Link)**    | ARP Spoofing (MITM)    | **LAN Integrity Threat**         | Attackers redirect or monitor traffic within a local network (e.g., stealing session cookies).          |
-|                       | MAC Flooding           | **Switch Saturation Threat**     | Overwhelms switches to force open ports, enabling sniffing (e.g., CAM table overflow attacks).          |
-| **L3 (Network)**      | ICMP Flooding          | **Network Availability Threat**  | DDoS attacks overwhelm bandwidth/resources (e.g., Smurf attacks using amplified ICMP replies).          |
-|                       | IP Spoofing            | **Source Identity Threat**       | Masquerading as trusted IPs to bypass ACLs or launch reflected attacks (e.g., NTP amplification).       |
-| **L4 (Transport)**    | TCP SYN Flooding       | **Connection Resource Threat**   | Exhausts server TCP pools, causing service outages (e.g., volumetric DDoS).                             |
-|                       | UDP Flooding           | **Unfiltered Protocol Threat**   | Exploits stateless UDP to flood services (e.g., DNS/QUIC protocol abuse).                               |
-| **L5 (Session)**      | Session Hijacking      | **Authentication Bypass Threat** | Steals active sessions to impersonate users (e.g., stealing cookies via XSS or MITM).                   |
-|                       | SSL Stripping          | **Downgrade Attack Threat**      | Forces HTTPS→HTTP to intercept plaintext data (e.g., evil-twin Wi-Fi attacks).                          |
-| **L6 (Presentation)** | Phishing               | **Human Manipulation Threat**    | Tricks users into revealing credentials (e.g., fake login pages or malicious attachments).              |
-|                       | Malicious File Uploads | **Data Integrity Threat**        | Uploads malware disguised as documents (e.g., PDFs with embedded exploits).                             |
-| **L7 (Application)**  | DNS Spoofing           | **Trust Manipulation Threat**    | Redirects users to malicious sites (e.g., fake banking portals).                                        |
-|                       | SQL Injection          | **Application Logic Threat**     | Bypasses authentication or exfiltrates DB data (e.g., `' OR 1=1 --` attacks).                           |
-
-***
-
-#### **Key Threat Characteristics**
+**Key Threat Characteristics**
 
 1. **L1–L4 Threats**: Focus on **infrastructure disruption** (DDoS, MITM) and **data interception**.
    * _Example_: ICMP flooding threatens uptime (L3), while ARP spoofing threatens confidentiality (L2).
@@ -74,7 +68,7 @@ How each attack type translates into a broader threat category, along with real-
 
 ***
 
-#### **Mitigation Mapping**
+**Mitigation Mapping**
 
 | **Threat Category**        | **Mitigation Strategies**                              |
 | -------------------------- | ------------------------------------------------------ |
@@ -86,28 +80,28 @@ How each attack type translates into a broader threat category, along with real-
 
 ***
 
-#### **Real-World Threat Examples**
+**Real-World Threat Examples**
 
 * **L2 Threat**: An attacker uses ARP spoofing in a coffee shop Wi-Fi to steal unencrypted emails.
 * **L7 Threat**: DNS spoofing redirects victims to a fake PayPal site, harvesting credentials.
 
 ***
 
-#### **Expanded OSI Attack Examples**
+**Expanded OSI Attack Examples**
 
-| **OSI Layer** | **Common Attacks/Threats**         | **Vulnerability**            | **Mitigation**                           |
-| ------------- | ---------------------------------- | ---------------------------- | ---------------------------------------- |
-| **L1**        | Cable tapping, RFID cloning        | Physical access to media     | Physical security, encryption            |
-| **L2**        | MAC flooding, VLAN hopping         | Switch misconfigurations     | Port security, VLAN segregation          |
-| **L3**        | IP spoofing, Smurf attack          | No source IP validation      | Ingress filtering (BCP38)                |
-| **L4**        | UDP flooding, Port scanning        | Open ports, no rate limiting | IDS/IPS, stateful inspection             |
-| **L5**        | SSL stripping, Man-in-the-Browser  | Weak TLS implementation      | HSTS, Certificate pinning                |
-| **L6**        | Malicious file uploads (e.g., PDF) | Improper file validation     | File type restrictions, sandboxing       |
-| **L7**        | API abuse, Zero-day exploits       | Logic flaws in apps          | WAFs, Input validation, Patch management |
+| **OSI Layer**         | **Common Attacks/Threats**         | **Vulnerability**            | **Mitigation**                           |
+| --------------------- | ---------------------------------- | ---------------------------- | ---------------------------------------- |
+| **L1 (Physical)**     | Cable tapping, RFID cloning        | Physical access to media     | Physical security, encryption            |
+| **L2 (Data Link)**    | MAC flooding, VLAN hopping         | Switch misconfigurations     | Port security, VLAN segregation          |
+| **L3 (Network)**      | IP spoofing, Smurf attack          | No source IP validation      | Ingress filtering (BCP38)                |
+| **L4 (Transport)**    | UDP flooding, Port scanning        | Open ports, no rate limiting | IDS/IPS, stateful inspection             |
+| **L5 (Session)**      | SSL stripping, Man-in-the-Browser  | Weak TLS implementation      | HSTS, Certificate pinning                |
+| **L6 (Presentation)** | Malicious file uploads (e.g., PDF) | Improper file validation     | File type restrictions, sandboxing       |
+| **L7 (Application)**  | API abuse, Zero-day exploits       | Logic flaws in apps          | WAFs, Input validation, Patch management |
 
 ***
 
-#### **Takeaways**
+**Takeaways**
 
 * **NIST Alignment**: L1–L4 attacks often exploit misconfigurations (e.g., ARP spoofing), while L5–L7 involve logic flaws (e.g., phishing).
 * **Threat Actors**: Lower-layer attacks (L1–L4) are common in network pentests; upper layers (L5–L7) target apps/users.

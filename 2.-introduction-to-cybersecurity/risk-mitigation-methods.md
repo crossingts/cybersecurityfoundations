@@ -332,7 +332,7 @@ Adopting software-defined networking (SDN) allows for dynamic security policy ad
 
 IPsec/GRE over IPsec, Encryption protocols/IEEE 802.11, DTP/VTP
 
-Vulnerable protocols that transmit data in plaintext (e.g., FTP, SNMP v1/v2c community strings, Telnet passwords). Credentials and configuration data can be exposed to anyone on the network.
+Vulnerable protocols that transmit data in plaintext (e.g., FTP, SNMP v1/v2c community strings, Telnet passwords). Credentials and configuration data can be exposed to anyone on the network. Organizations should assume attackers can see their unencrypted traffic and eliminate cleartext protocols wherever possible.
 
 Network Address Translation (NAT): Hiding internal IP addresses from the public Internet by translating them to a public IP address.
 

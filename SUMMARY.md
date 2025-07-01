@@ -65,6 +65,7 @@
 * [Defensive security vs offensive security](6.-practical-foundations-in-ethical-hacking/defensive-security-vs-offensive-security.md)
 * [Defensive cybersecurity technologies](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md)
   * [Using Wireshark to identify non-secure network traffic](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/using-wireshark-to-identify-non-secure-network-traffic.md)
+  * [How to get started with Wireshark](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/how-to-get-started-with-wireshark.md)
 * [Phases of the penetration testing process](6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process.md)
 * [Types of penetration testing](6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing.md)
 * [Pentesting methodologies, frameworks, and technologies](6.-practical-foundations-in-ethical-hacking/pentesting-methodologies-frameworks-and-technologies.md)

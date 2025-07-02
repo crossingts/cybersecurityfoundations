@@ -7,21 +7,21 @@ hidden: true
 
 # Threats by OSI layer
 
-This section discusses network layers within the OSI model in the context of threats, vulnerabilities, and mitigation. The discussion focuses on the following attack types:
+This section discusses network layers within the OSI model in the context of threats, vulnerabilities, and mitigation. The discussion focuses on the following network attack types:
 
-L1 sniffing + moves data on the physical medium
+L1 sniffing + specifies the physical characteristics of the medium used to transfer data between devices
 
-L2 ARP spoofing MITM + provides error checking and transfer of data frames
+L2 ARP spoofing MITM + provides node-to-node error-free transfer of data frames
 
 L3 ICMP flooding + performs packet routing
 
 L4 TCP SYN flooding + ensures error-free delivery of data segments
 
-L5 session hijacking + establishes sessions between processes running on different stations&#x20;
+L5 session hijacking + establishes and manages sessions between processes running on different stations&#x20;
 
-L6 phishing + formats data presented to L7
+L6 phishing + formats data to be presented to L7
 
-L7 DNS spoofing + allows application processes access network services
+L7 DNS spoofing + allows application processes to access network services
 
 **OSI model layers and security threats**
 

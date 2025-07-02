@@ -11,11 +11,11 @@ This section discusses network layers within the OSI model in the context of thr
 
 L1 sniffing + specifies the physical characteristics of the medium used to transfer data between devices
 
-L2 ARP spoofing MITM + provides node-to-node error-free transfer of data frames
+L2 ARP spoofing MITM + provides node-to-node error-free data transfer (physical addressing)
 
-L3 ICMP flooding + performs packet routing
+L3 ICMP flooding + performs packet routing (logical addressing)
 
-L4 TCP SYN flooding + ensures error-free delivery of data segments
+L4 TCP SYN flooding + ensures end-to-end error-free data delivery
 
 L5 session hijacking + establishes and manages sessions between processes running on different stations&#x20;
 

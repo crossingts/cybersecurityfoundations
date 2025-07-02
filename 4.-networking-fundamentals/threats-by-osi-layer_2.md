@@ -23,13 +23,7 @@ L6 phishing&#x20;
 
 L7 DNS spoofing
 
-**OSI model layers and security threats**
-
-For the protocols associated with each OSI layer:
-
-[Mapping of the TCP/IP model to the OSI Model](network-protocols-and-their-functions.md)
-
-**Common Attack Types And Attack Techniques By OSI Layer**
+**Common Attack Types by OSI Layer**
 
 | **OSI Layer**         | **Function**                                                                               | **Attack Type/Threat**            |
 | --------------------- | ------------------------------------------------------------------------------------------ | --------------------------------- |
@@ -69,9 +63,19 @@ L7 DNS spoofing
 
 L7 SQL Injection
 
-**Threats by OSI Layer**
+\--
 
-<table data-header-hidden><thead><tr><th width="73.265625"></th><th width="120.29296875"></th><th width="130.94921875"></th><th></th><th></th><th></th></tr></thead><tbody><tr><td><strong>OSI Layer</strong></td><td><strong>Attack Type/Threat</strong></td><td><strong>Attack Technique</strong></td><td><strong>Vulnerability Exploited</strong></td><td><strong>Risk Scenario</strong></td><td><strong>Mitigation</strong></td></tr><tr><td><strong>L7</strong></td><td>DNS Spoofing</td><td>Corrupting DNS cache to redirect users</td><td>Unvalidated DNS responses</td><td>Redirects users to malicious sites (e.g., fake banking portals)</td><td>DNSSEC, DoH/DoT (DNS over HTTPS/TLS)</td></tr><tr><td></td><td>SQL Injection</td><td></td><td></td><td>Bypasses authentication or exfiltrates DB data (e.g., <code>' OR 1=1 --</code> attacks)</td><td></td></tr><tr><td><strong>L6</strong></td><td>Phishing</td><td>Social engineering to steal credentials</td><td>Human trust, lack of training</td><td>Tricks users into revealing credentials (e.g., fake login pages or malicious attachments)</td><td>User education, Email filtering (DMARC)</td></tr><tr><td></td><td>Malicious File Uploads</td><td></td><td></td><td>Uploads malware disguised as documents (e.g., PDFs with embedded exploits)</td><td></td></tr><tr><td><strong>L5</strong></td><td>Session Hijacking</td><td>Stealing valid session tokens</td><td>Weak session tokens, timeouts</td><td>Steals active sessions to impersonate users (e.g., stealing cookies via XSS or MITM)</td><td>HTTPS, Secure cookies, MFA</td></tr><tr><td></td><td>SSL Stripping</td><td></td><td></td><td>Forces HTTPS→HTTP to intercept plaintext data (e.g., evil-twin Wi-Fi attacks)</td><td></td></tr><tr><td><strong>L4</strong></td><td>TCP SYN Flooding</td><td>Exploiting TCP handshake to exhaust resources</td><td>TCP handshake design flaw</td><td>Exhausts server TCP pools, causing service outages (e.g., volumetric DDoS)</td><td>SYN cookies, Firewall rules</td></tr><tr><td></td><td>UDP Flooding</td><td></td><td></td><td>Exploits stateless UDP to flood services (e.g., DNS/QUIC protocol abuse)</td><td></td></tr><tr><td><strong>L3</strong></td><td>ICMP Flooding</td><td>Overwhelming a target with ping requests (DDoS)</td><td>No rate limiting on ICMP replies</td><td>DDoS attacks overwhelm bandwidth/resources (e.g., Smurf attacks using amplified ICMP replies)</td><td>ICMP rate limiting, Network filtering</td></tr><tr><td></td><td>IP Spoofing</td><td></td><td></td><td>Masquerading as trusted IPs to bypass ACLs or launch reflected attacks (e.g., NTP amplification)</td><td></td></tr><tr><td><strong>L2</strong></td><td>ARP Spoofing (MITM)</td><td>Actively poisoning ARP tables to redirect traffic</td><td>Lack of ARP authentication</td><td>Attackers redirect or monitor traffic within a local network (e.g., stealing session cookies)</td><td>Dynamic ARP Inspection (DAI), VPNs</td></tr><tr><td></td><td>MAC Flooding</td><td></td><td></td><td>Overwhelms switches to force open ports, enabling sniffing (e.g., CAM table overflow attacks)</td><td></td></tr><tr><td><strong>L1</strong></td><td>Sniffing</td><td>Passive interception of unencrypted traffic</td><td>Unencrypted transmissions</td><td>Unauthorized data capture via exposed cables/Wi-Fi (e.g., stealing credentials from cleartext traffic)</td><td>Encryption (e.g., WPA3, MACsec)</td></tr><tr><td></td><td>Cable Tapping</td><td></td><td></td><td>Attacker physically taps fiber/copper lines to intercept data (common in espionage)</td><td></td></tr></tbody></table>
+Here is&#x20;
+
+
+
+#### Comments on the Table:
+
+\--
+
+**Common Attack Types and Mitigation by OSI Layer**
+
+<table data-header-hidden><thead><tr><th width="73.265625"></th><th width="120.29296875"></th><th width="130.94921875"></th><th></th><th></th><th></th></tr></thead><tbody><tr><td><strong>OSI Layer</strong></td><td><strong>Attack Type/Threat</strong></td><td><strong>Attack Technique</strong></td><td><strong>Vulnerability Exploited</strong></td><td><strong>Risk Scenario</strong></td><td><strong>Mitigation</strong></td></tr><tr><td><strong>L7</strong></td><td>DNS Spoofing</td><td>Corrupting DNS cache to redirect users</td><td>Unvalidated DNS responses</td><td>Redirects users to malicious sites (e.g., fake banking portals)</td><td>DNSSEC, DoH/DoT (DNS over HTTPS/TLS)</td></tr><tr><td></td><td>SQL Injection</td><td>Injecting malicious SQL queries into input fields</td><td>Poor input validation, lack of parameterized queries</td><td>Bypasses authentication or exfiltrates DB data (e.g., <code>' OR 1=1 --</code> attacks)</td><td>Input validation, prepared statements, WAF (Web Application Firewall)</td></tr><tr><td><strong>L6</strong></td><td>Phishing</td><td>Social engineering to steal credentials</td><td>Human trust, lack of training</td><td>Tricks users into revealing credentials (e.g., fake login pages or malicious attachments)</td><td>User education, Email filtering (DMARC)</td></tr><tr><td></td><td>Malicious File Uploads</td><td>Uploading files with hidden exploits</td><td>Insufficient file type verification, lack of sandboxing</td><td>Uploads malware disguised as documents (e.g., PDFs with embedded exploits)</td><td>File type verification, malware scanning, sandboxing</td></tr><tr><td><strong>L5</strong></td><td>Session Hijacking</td><td>Stealing valid session tokens</td><td>Weak session tokens, timeouts</td><td>Steals active sessions to impersonate users (e.g., stealing cookies via XSS or MITM)</td><td>HTTPS, Secure cookies, MFA</td></tr><tr><td></td><td>SSL Stripping</td><td></td><td></td><td>Forces HTTPS→HTTP to intercept plaintext data (e.g., evil-twin Wi-Fi attacks)</td><td></td></tr><tr><td><strong>L4</strong></td><td>TCP SYN Flooding</td><td>Exploiting TCP handshake to exhaust resources</td><td>TCP handshake design flaw</td><td>Exhausts server TCP pools, causing service outages (e.g., volumetric DDoS)</td><td>SYN cookies, Firewall rules</td></tr><tr><td></td><td>UDP Flooding</td><td></td><td></td><td>Exploits stateless UDP to flood services (e.g., DNS/QUIC protocol abuse)</td><td></td></tr><tr><td><strong>L3</strong></td><td>ICMP Flooding</td><td>Overwhelming a target with ping requests (DDoS)</td><td>No rate limiting on ICMP replies</td><td>DDoS attacks overwhelm bandwidth/resources (e.g., Smurf attacks using amplified ICMP replies)</td><td>ICMP rate limiting, Network filtering</td></tr><tr><td></td><td>IP Spoofing</td><td></td><td></td><td>Masquerading as trusted IPs to bypass ACLs or launch reflected attacks (e.g., NTP amplification)</td><td></td></tr><tr><td><strong>L2</strong></td><td>ARP Spoofing (MITM)</td><td>Actively poisoning ARP tables to redirect traffic</td><td>Lack of ARP authentication</td><td>Attackers redirect or monitor traffic within a local network (e.g., stealing session cookies)</td><td>Dynamic ARP Inspection (DAI), VPNs</td></tr><tr><td></td><td>MAC Flooding</td><td></td><td></td><td>Overwhelms switches to force open ports, enabling sniffing (e.g., CAM table overflow attacks)</td><td></td></tr><tr><td><strong>L1</strong></td><td>Sniffing</td><td>Passive interception of unencrypted traffic</td><td>Unencrypted transmissions</td><td>Unauthorized data capture via exposed cables/Wi-Fi (e.g., stealing credentials from cleartext traffic)</td><td>Encryption (e.g., WPA3, MACsec)</td></tr><tr><td></td><td>Cable Tapping</td><td></td><td></td><td>Attacker physically taps fiber/copper lines to intercept data (common in espionage)</td><td></td></tr></tbody></table>
 
 **Key Threat Characteristics**
 
@@ -83,14 +87,10 @@ L7 SQL Injection
    * **Spoofing**: ARP (L2), IP (L3), DNS (L7).
    * **Flooding**: ICMP (L3), TCP/UDP (L4).
 
-**Key Clarifications**
+**Mitigation Strategies**:
 
-1. **OSI Layer Context**:
-   * **L1–L4**: Primarily infrastructure attacks (e.g., DDoS, MITM).
-   * **L5–L7**: Focused on sessions, data manipulation, and human factors.
-2. **Mitigation Strategies**:
-   * **Lower layers (L1–L4)**: Encryption, network hardening (e.g., firewall rules).
-   * **Upper layers (L5–L7)**: Behavioral controls (e.g., MFA, training).
+* **Lower layers (L1–L4)**: Encryption, network hardening (e.g., firewall rules).
+* **Upper layers (L5–L7)**: Behavioral controls (e.g., MFA, training).
 
 **Mitigation Mapping**
 
@@ -101,11 +101,6 @@ L7 SQL Injection
 | **Session Hijacking (L5)** | MFA, short-lived tokens, HSTS.                         |
 | **DDoS (L3/L4)**           | Rate limiting, BCP38 filtering, cloud-based scrubbing. |
 | **Eavesdropping (L1/L2)**  | Encryption (WPA3, MACsec), physical access controls.   |
-
-**Real-World Threat Examples**
-
-* **L2 Threat**: An attacker uses ARP spoofing in a coffee shop Wi-Fi to steal unencrypted emails.
-* **L7 Threat**: DNS spoofing redirects victims to a fake PayPal site, harvesting credentials.
 
 **Expanded OSI Attack Examples**
 

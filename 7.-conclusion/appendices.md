@@ -1,5 +1,13 @@
 # Appendices
 
+### Key network security terms
+
+**Attacks vs. Threat Vectors**:
+
+* **Attack**: A specific malicious action (e.g., ICMP flooding).
+* **Threat Vector**: The _method_ used to deliver the attack (e.g., phishing emails for credential theft).
+* _Overlap_: Some terms (e.g., DNS spoofing) describe both an attack and a vector.
+
 ### Essential cryptography terms
 
 **Encryption** is a process of transforming simple text/data, called plaintext, into unintelligible form, named as ciphertext. Decryption is the inverse process of encryption.&#x20;

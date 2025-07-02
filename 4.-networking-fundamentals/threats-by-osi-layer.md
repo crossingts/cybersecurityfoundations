@@ -5,37 +5,9 @@ description: >-
 hidden: true
 ---
 
-# Threats by OSI layer\_2
+# Threats by OSI layer
 
 This section discusses network layers within the OSI model in the context of threats, vulnerabilities, and mitigation. The discussion focuses on the following network attack types:
-
-L1 sniffing
-
-L2 ARP spoofing MITM
-
-L3 ICMP flooding
-
-L4 TCP SYN flooding
-
-L5 session hijacking
-
-L6 phishing&#x20;
-
-L7 DNS spoofing
-
-**Common Attack Types by OSI Layer**
-
-| **OSI Layer**         | **Function**                                                                               | **Attack Type/Threat**            |
-| --------------------- | ------------------------------------------------------------------------------------------ | --------------------------------- |
-| **L7 (Application)**  | Allows application processes to access network services                                    | DNS Spoofing, SQL Injection       |
-| **L6 (Presentation)** | Formats data to be presented to L7                                                         | Phishing, Malicious File Uploads  |
-| **L5 (Session)**      | Establishes and manages sessions between processes running on different stations           | Session Hijacking, SSL Stripping  |
-| **L4 (Transport)**    | Ensures end-to-end error-free data delivery                                                | TCP SYN Flooding, UDP Flooding    |
-| **L3 (Network)**      | Performs packet routing (logical addressing)                                               | ICMP Flooding, IP Spoofing        |
-| **L2 (Data Link)**    | Provides node-to-node error-free data transfer (physical addressing)                       | ARP Spoofing (MITM), MAC Flooding |
-| **L1 (Physical)**     | Specifies the physical characteristics of the medium used to transfer data between devices | Sniffing, Cable Tapping           |
-
-\--
 
 L1 sniffing (Eavesdropping Threat)
 
@@ -65,7 +37,17 @@ L7 DNS spoofing
 
 L7 SQL Injection
 
-\--
+**Common Attack Types by OSI Layer**
+
+| **OSI Layer**         | **Function**                                                                               | **Attack Type/Threat**            |
+| --------------------- | ------------------------------------------------------------------------------------------ | --------------------------------- |
+| **L7 (Application)**  | Allows application processes to access network services                                    | DNS Spoofing, SQL Injection       |
+| **L6 (Presentation)** | Formats data to be presented to L7                                                         | Phishing, Malicious File Uploads  |
+| **L5 (Session)**      | Establishes and manages sessions between processes running on different stations           | Session Hijacking, SSL Stripping  |
+| **L4 (Transport)**    | Ensures end-to-end error-free data delivery                                                | TCP SYN Flooding, UDP Flooding    |
+| **L3 (Network)**      | Performs packet routing (logical addressing)                                               | ICMP Flooding, IP Spoofing        |
+| **L2 (Data Link)**    | Provides node-to-node error-free data transfer (physical addressing)                       | ARP Spoofing (MITM), MAC Flooding |
+| **L1 (Physical)**     | Specifies the physical characteristics of the medium used to transfer data between devices | Sniffing, Cable Tapping           |
 
 **Common Attack Types and Mitigation by OSI Layer**
 

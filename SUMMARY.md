@@ -41,8 +41,7 @@
 * [Network protocols and their functions](4.-networking-fundamentals/network-protocols-and-their-functions.md)
 * [Typing www.google.com into a web browser](4.-networking-fundamentals/typing-www.google.com-into-a-web-browser.md)
 * [OSI model layers and security threats](4.-networking-fundamentals/osi-model-layers-and-security-threats.md)
-* [Threats by OSI layer\_1](4.-networking-fundamentals/threats-by-osi-layer_1.md)
-* [Threats by OSI layer\_2](4.-networking-fundamentals/threats-by-osi-layer_2.md)
+* [Threats by OSI layer](4.-networking-fundamentals/threats-by-osi-layer.md)
 
 ## 5. Wireless security and cryptography
 

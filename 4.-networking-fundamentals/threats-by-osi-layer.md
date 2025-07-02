@@ -9,19 +9,19 @@ hidden: true
 
 This section discusses network layers within the OSI model in the context of threats, vulnerabilities, and mitigation. The discussion focuses on the following network attack types:
 
-L1 sniffing + specifies the physical characteristics of the medium used to transfer data between devices
+L1 sniffing
 
-L2 ARP spoofing MITM + provides node-to-node error-free data transfer (physical addressing)
+L2 ARP spoofing MITM
 
-L3 ICMP flooding + performs packet routing (logical addressing)
+L3 ICMP flooding
 
-L4 TCP SYN flooding + ensures end-to-end error-free data delivery
+L4 TCP SYN flooding
 
-L5 session hijacking + establishes and manages sessions between processes running on different stations&#x20;
+L5 session hijacking
 
-L6 phishing + formats data to be presented to L7
+L6 phishing&#x20;
 
-L7 DNS spoofing + allows application processes to access network services
+L7 DNS spoofing
 
 **OSI model layers and security threats**
 
@@ -31,15 +31,15 @@ For the protocols associated with each OSI layer:
 
 **Common Attack Types And Attack Techniques By OSI Layer**
 
-| **OSI Layer**         | **Attack Type/Threat** | **Attack Technique**                              | **Vulnerability Exploited**      | **Mitigation**                          |
-| --------------------- | ---------------------- | ------------------------------------------------- | -------------------------------- | --------------------------------------- |
-| **L7 (Application)**  | DNS Spoofing           | Corrupting DNS cache to redirect users            | Unvalidated DNS responses        | DNSSEC, DoH/DoT (DNS over HTTPS/TLS)    |
-| **L6 (Presentation)** | Phishing               | Social engineering to steal credentials           | Human trust, lack of training    | User education, Email filtering (DMARC) |
-| **L5 (Session)**      | Session Hijacking      | Stealing valid session tokens                     | Weak session tokens/timeouts     | HTTPS, Secure cookies, MFA              |
-| **L4 (Transport)**    | TCP SYN Flooding       | Exploiting TCP handshake to exhaust resources     | TCP handshake design flaw        | SYN cookies, Firewall rules             |
-| **L3 (Network)**      | ICMP Flooding          | Overwhelming a target with ping requests (DDoS)   | No rate limiting on ICMP replies | ICMP rate limiting, Network filtering   |
-| **L2 (Data Link)**    | ARP Spoofing (MITM)    | Actively poisoning ARP tables to redirect traffic | Lack of ARP authentication       | Dynamic ARP Inspection (DAI), VPNs      |
-| **L1 (Physical)**     | Sniffing               | Passive interception of unencrypted traffic       | Unencrypted transmissions        | Encryption (e.g., WPA3, MACsec)         |
+| **OSI Layer**         | **Function**                                                                               | **Attack Type**     | **Attack Technique**                              | **Vulnerability Exploited**      | **Mitigation**                          |
+| --------------------- | ------------------------------------------------------------------------------------------ | ------------------- | ------------------------------------------------- | -------------------------------- | --------------------------------------- |
+| **L7 (Application)**  | Allows application processes to access network services                                    | DNS Spoofing        | Corrupting DNS cache to redirect users            | Unvalidated DNS responses        | DNSSEC, DoH/DoT (DNS over HTTPS/TLS)    |
+| **L6 (Presentation)** | Formats data to be presented to L7                                                         | Phishing            | Social engineering to steal credentials           | Human trust, lack of training    | User education, Email filtering (DMARC) |
+| **L5 (Session)**      | Establishes and manages sessions between processes running on different stations           | Session Hijacking   | Stealing valid session tokens                     | Weak session tokens/timeouts     | HTTPS, Secure cookies, MFA              |
+| **L4 (Transport)**    | Ensures end-to-end error-free data delivery                                                | TCP SYN Flooding    | Exploiting TCP handshake to exhaust resources     | TCP handshake design flaw        | SYN cookies, Firewall rules             |
+| **L3 (Network)**      | Performs packet routing (logical addressing)                                               | ICMP Flooding       | Overwhelming a target with ping requests (DDoS)   | No rate limiting on ICMP replies | ICMP rate limiting, Network filtering   |
+| **L2 (Data Link)**    | Provides node-to-node error-free data transfer (physical addressing)                       | ARP Spoofing (MITM) | Actively poisoning ARP tables to redirect traffic | Lack of ARP authentication       | Dynamic ARP Inspection (DAI), VPNs      |
+| **L1 (Physical)**     | Specifies the physical characteristics of the medium used to transfer data between devices | Sniffing            | Passive interception of unencrypted traffic       | Unencrypted transmissions        | Encryption (e.g., WPA3, MACsec)         |
 
 **Key Clarifications**
 

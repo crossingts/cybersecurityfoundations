@@ -31,15 +31,15 @@ For the protocols associated with each OSI layer:
 
 **Common Attack Types And Attack Techniques By OSI Layer**
 
-| **OSI Layer**         | **Function**                                                                               | **Attack Type**     | **Attack Technique**                              | **Vulnerability Exploited**      | **Mitigation**                          |
-| --------------------- | ------------------------------------------------------------------------------------------ | ------------------- | ------------------------------------------------- | -------------------------------- | --------------------------------------- |
-| **L7 (Application)**  | Allows application processes to access network services                                    | DNS Spoofing        | Corrupting DNS cache to redirect users            | Unvalidated DNS responses        | DNSSEC, DoH/DoT (DNS over HTTPS/TLS)    |
-| **L6 (Presentation)** | Formats data to be presented to L7                                                         | Phishing            | Social engineering to steal credentials           | Human trust, lack of training    | User education, Email filtering (DMARC) |
-| **L5 (Session)**      | Establishes and manages sessions between processes running on different stations           | Session Hijacking   | Stealing valid session tokens                     | Weak session tokens/timeouts     | HTTPS, Secure cookies, MFA              |
-| **L4 (Transport)**    | Ensures end-to-end error-free data delivery                                                | TCP SYN Flooding    | Exploiting TCP handshake to exhaust resources     | TCP handshake design flaw        | SYN cookies, Firewall rules             |
-| **L3 (Network)**      | Performs packet routing (logical addressing)                                               | ICMP Flooding       | Overwhelming a target with ping requests (DDoS)   | No rate limiting on ICMP replies | ICMP rate limiting, Network filtering   |
-| **L2 (Data Link)**    | Provides node-to-node error-free data transfer (physical addressing)                       | ARP Spoofing (MITM) | Actively poisoning ARP tables to redirect traffic | Lack of ARP authentication       | Dynamic ARP Inspection (DAI), VPNs      |
-| **L1 (Physical)**     | Specifies the physical characteristics of the medium used to transfer data between devices | Sniffing            | Passive interception of unencrypted traffic       | Unencrypted transmissions        | Encryption (e.g., WPA3, MACsec)         |
+| **OSI Layer**         | **Function**                                                                               | **Attack Type/Threat** | **Attack Technique**                              | **Vulnerability Exploited**      | **Mitigation**                          |
+| --------------------- | ------------------------------------------------------------------------------------------ | ---------------------- | ------------------------------------------------- | -------------------------------- | --------------------------------------- |
+| **L7 (Application)**  | Allows application processes to access network services                                    | DNS Spoofing           | Corrupting DNS cache to redirect users            | Unvalidated DNS responses        | DNSSEC, DoH/DoT (DNS over HTTPS/TLS)    |
+| **L6 (Presentation)** | Formats data to be presented to L7                                                         | Phishing               | Social engineering to steal credentials           | Human trust, lack of training    | User education, Email filtering (DMARC) |
+| **L5 (Session)**      | Establishes and manages sessions between processes running on different stations           | Session Hijacking      | Stealing valid session tokens                     | Weak session tokens/timeouts     | HTTPS, Secure cookies, MFA              |
+| **L4 (Transport)**    | Ensures end-to-end error-free data delivery                                                | TCP SYN Flooding       | Exploiting TCP handshake to exhaust resources     | TCP handshake design flaw        | SYN cookies, Firewall rules             |
+| **L3 (Network)**      | Performs packet routing (logical addressing)                                               | ICMP Flooding          | Overwhelming a target with ping requests (DDoS)   | No rate limiting on ICMP replies | ICMP rate limiting, Network filtering   |
+| **L2 (Data Link)**    | Provides node-to-node error-free data transfer (physical addressing)                       | ARP Spoofing (MITM)    | Actively poisoning ARP tables to redirect traffic | Lack of ARP authentication       | Dynamic ARP Inspection (DAI), VPNs      |
+| **L1 (Physical)**     | Specifies the physical characteristics of the medium used to transfer data between devices | Sniffing               | Passive interception of unencrypted traffic       | Unencrypted transmissions        | Encryption (e.g., WPA3, MACsec)         |
 
 **Key Clarifications**
 
@@ -60,7 +60,7 @@ How each attack type translates into a broader threat category, along with real-
 
 **Threats by OSI Layer**
 
-| **OSI Layer**         | **Attack Type**        | **Threat Classification**    | **Threat Impact & Scenario**                                                                            |
+| **OSI Layer**         | **Attack Type/Threat** | **Threat Classification**    | **Threat Impact & Scenario**                                                                            |
 | --------------------- | ---------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------- |
 | **L7 (Application)**  | DNS Spoofing           | Trust Manipulation Threat    | Redirects users to malicious sites (e.g., fake banking portals).                                        |
 |                       | SQL Injection          | Application Logic Threat     | Bypasses authentication or exfiltrates DB data (e.g., `' OR 1=1 --` attacks).                           |
@@ -110,15 +110,15 @@ How each attack type translates into a broader threat category, along with real-
 
 **Expanded OSI Attack Examples**
 
-| **OSI Layer**         | **Common Attacks/Threats**         | **Vulnerability**            | **Mitigation**                           |
-| --------------------- | ---------------------------------- | ---------------------------- | ---------------------------------------- |
-| **L7 (Application)**  | API abuse, Zero-day exploits       | Logic flaws in apps          | WAFs, Input validation, Patch management |
-| **L6 (Presentation)** | Malicious file uploads (e.g., PDF) | Improper file validation     | File type restrictions, sandboxing       |
-| **L5 (Session)**      | SSL stripping, Man-in-the-Browser  | Weak TLS implementation      | HSTS, Certificate pinning                |
-| **L4 (Transport)**    | UDP flooding, Port scanning        | Open ports, no rate limiting | IDS/IPS, stateful inspection             |
-| **L3 (Network)**      | IP spoofing, Smurf attack          | No source IP validation      | Ingress filtering (BCP38)                |
-| **L2 (Data Link)**    | MAC flooding, VLAN hopping         | Switch misconfigurations     | Port security, VLAN segregation          |
-| **L1 (Physical)**     | Cable tapping, RFID cloning        | Physical access to media     | Physical security, encryption            |
+| **OSI Layer**         | **Attacks/Threats**                                                                     | **Vulnerability**            | **Mitigation**                           |
+| --------------------- | --------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------- |
+| **L7 (Application)**  | API abuse, Zero-day exploits                                                            | Logic flaws in apps          | WAFs, Input validation, Patch management |
+| **L6 (Presentation)** | Malicious file uploads (e.g., PDF)                                                      | Improper file validation     | File type restrictions, sandboxing       |
+| **L5 (Session)**      | SSL stripping, Man-in-the-Browser                                                       | Weak TLS implementation      | HSTS, Certificate pinning                |
+| **L4 (Transport)**    | UDP flooding, Port scanning                                                             | Open ports, no rate limiting | IDS/IPS, stateful inspection             |
+| **L3 (Network)**      | IP spoofing, Smurf attack                                                               | No source IP validation      | Ingress filtering (BCP38)                |
+| **L2 (Data Link)**    | MAC flooding, VLAN hopping                                                              | Switch misconfigurations     | Port security, VLAN segregation          |
+| **L1 (Physical)**     | <p>Physical tampering, Cable tapping, RFID cloning, Electromagnetic<br>Interference</p> | Physical access to media     | Physical security, encryption            |
 
 ***
 

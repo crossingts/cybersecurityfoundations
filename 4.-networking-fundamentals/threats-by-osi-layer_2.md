@@ -119,7 +119,7 @@ L7 SQL Injection
 | **L2 (Data Link)**    | MAC flooding, VLAN hopping                                                              | Switch misconfigurations     | Port security, VLAN segregation          |
 | **L1 (Physical)**     | <p>Physical tampering, Cable tapping, RFID cloning, Electromagnetic<br>Interference</p> | Physical access to media     | Physical security, encryption            |
 
-**Takeaways**
+### Key takeaways
 
-* **NIST Alignment**: L1–L4 attacks often exploit misconfigurations (e.g., ARP spoofing), while L5–L7 involve logic flaws (e.g., phishing).
-* **Threat Actors**: Lower-layer attacks (L1–L4) are common in network pentests; upper layers (L5–L7) target apps/users.
+• Point 1\
+• Point 2

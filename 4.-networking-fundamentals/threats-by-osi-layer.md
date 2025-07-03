@@ -149,10 +149,59 @@ cursor.execute("SELECT * FROM users WHERE username = ? AND password = ?", (usern
 
 ***
 
-**Layer 6 (Presentation Layer)**:
+**Phishing (L6)**
 
-* Phishing exploits human vulnerabilities, so education is key.
-* Malicious File Uploads require technical controls like scanning and sandboxing to detect hidden threats. Emotet is a banking Trojan often delivered via malicious email attachments (e.g., Word or Excel files with macros). Once executed, it steals sensitive data, spreads laterally, and can drop additional malware like ransomware. Locky Ransomware is typically distributed through phishing emails with malicious JavaScript or Office documents. When opened, it encrypts files on the victim’s system and demands payment for decryption.
+Phishing is a cyberattack where attackers **impersonate trusted entities** (e.g., banks, companies, colleagues) to trick victims into:
+
+* **Revealing credentials** (via fake login pages).
+* **Downloading malware** (through malicious attachments/links).
+* **Sending sensitive data** (e.g., "urgent" payment requests).
+
+**Example Attack Flow:**
+
+1. Victim receives a **fake "Password Reset" email** from "Microsoft Support."
+2. Email contains a link to a **lookalike login page** (e.g., `microsoft-security.com`).
+3. Victim enters credentials → Hacker steals them.
+
+**Mitigation**
+
+**1. User Education (Most Critical Defense)**
+
+* Train users to:
+  * **Check sender addresses** (e.g., `support@micr0soft.com` ≠ legit).
+  * **Hover over links** before clicking (reveals real URL).
+  * **Verify unusual requests** (e.g., call the sender if asked for money/data).
+* Conduct **simulated phishing tests** to reinforce awareness.
+
+**2. Email Filtering (DMARC, DKIM, SPF)**
+
+* **DMARC** prevents email spoofing by verifying sender domains.
+* **DKIM/SPF** ensure emails aren’t forged in transit.
+* Example: Blocks emails pretending to be from `yourcompany.com`.
+
+**3. Technical Controls**
+
+* **Multi-Factor Authentication (MFA):** Even if credentials are stolen, MFA blocks access.
+* **Browser Warnings:** Flags known phishing sites.
+* **Attachment Sandboxing:** Scans email attachments in isolation before delivery.
+
+
+
+**Malicious File Uploads (L6)**
+
+
+
+Emotet is a banking Trojan often delivered via malicious email attachments (e.g., Word or Excel files with macros). Once executed, it steals sensitive data, spreads laterally, and can drop additional malware like ransomware.&#x20;
+
+Locky Ransomware is typically distributed through phishing emails with malicious JavaScript or Office documents. When opened, it encrypts files on the victim’s system and demands payment for decryption.
+
+
+
+**Mitigation**
+
+Malicious File Uploads require technical controls like scanning and sandboxing to detect hidden threats.&#x20;
+
+
 
 ***
 

@@ -7,37 +7,21 @@ hidden: true
 
 # Threats by OSI layer
 
-This section discusses network layers within the OSI model in the context of threats, vulnerabilities, and mitigation. The discussion focuses on the following network attack types:
+## Learning objectives
 
-L1 sniffing (Eavesdropping Threat)
+• Identify and list common network attack types associated with each OSI layer\
+• Become familiar with how each attack type can compromise the network\
+•&#x20;
 
-L1 Cable Tapping
+This section discusses network layers within the OSI model in the context of threats, vulnerabilities, and mitigation. The discussion focuses on the network attack types listed in the Common Attack Types by OSI Layer Summary Table.
 
-L2 ARP spoofing MITM
+## Topics covered in this section
 
-L2 MAC Flooding (Switch Saturation Threat)
+* **What**
 
-L3 ICMP flooding
 
-L3 IP Spoofing (Source Identity Threat)
 
-L4 TCP SYN flooding
-
-L4 UDP Flooding
-
-L5 session hijacking
-
-L5 SSL Stripping (Downgrade Attack Threat)
-
-L6 phishing&#x20;
-
-L6 Malicious File Uploads
-
-L7 DNS spoofing
-
-L7 SQL Injection
-
-**Common Attack Types by OSI Layer**
+**Common Attack Types by OSI Layer Summary Table**
 
 | **OSI Layer**         | **Function**                                                                               | **Attack Type/Threat**            |
 | --------------------- | ------------------------------------------------------------------------------------------ | --------------------------------- |
@@ -57,8 +41,10 @@ L7 SQL Injection
 
 **Layer 7 (Application Layer)**:
 
-* SQL Injection is a critical threat at this layer, exploiting poor input validation. Mitigation includes coding best practices and WAFs.
 * DNS Spoofing is well-mitigated by DNSSEC and encrypted DNS protocols (DoH/DoT).
+* SQL Injection is a critical threat at this layer, exploiting poor input validation. Mitigation includes coding best practices and WAFs.
+
+
 
 **Layer 6 (Presentation Layer)**:
 
@@ -100,7 +86,7 @@ L7 SQL Injection
    * **Spoofing**: ARP (L2), IP (L3), DNS (L7).
    * **Flooding**: ICMP (L3), TCP/UDP (L4).
 
-**Mitigation Strategies**:
+### **Mitigation Strategies**
 
 * **Lower layers (L1–L4)**: Encryption, network hardening (e.g., firewall rules).
 * **Upper layers (L5–L7)**: Behavioral controls (e.g., MFA, training).

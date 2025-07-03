@@ -173,19 +173,16 @@ Phishing is a cyberattack where attackers **impersonate trusted entities** (e.g.
   * **Verify unusual requests** (e.g., call the sender if asked for money/data).
 * Conduct **simulated phishing tests** to reinforce awareness.
 
-**2. Email Filtering (DMARC, DKIM, SPF)**
+**2. Email Filtering:** DMARC (Domain-based Message Authentication, Reporting & Conformance), DKIM (DomainKeys Identified Mail), SPF (Sender Policy Framework)
 
-* **DMARC** prevents email spoofing by verifying sender domains.
-* **DKIM/SPF** ensure emails aren’t forged in transit.
-* Example: Blocks emails pretending to be from `yourcompany.com`.
+* **DKIM/SPF** ensure emails are not forged in transit. SPF establishes a list of approved email servers in DNS (e.g., "Only emails from mail.yourcompany.com are legit"). If a scammer sends from evil-server.com pretending to be you@yourcompany.com, SPF fails and the email gets flagged/rejected. DKIM adds a digital signature to outgoing emails using a private key. Receivers check your public DNS record to verify the signature. If altered in transit (e.g., by a hacker), DKIM fails and the email is marked as tampered.
+* **DMARC** prevents email spoofing by verifying sender domains. It decides course of action if SPF/DKIM fail (e.g., "Reject all fakes") and provides reports on phishing attempts.
 
 **3. Technical Controls**
 
 * **Multi-Factor Authentication (MFA):** Even if credentials are stolen, MFA blocks access.
 * **Browser Warnings:** Flags known phishing sites.
 * **Attachment Sandboxing:** Scans email attachments in isolation before delivery.
-
-
 
 **Malicious File Uploads (L6)**
 

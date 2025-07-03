@@ -129,17 +129,19 @@ The goal of a DHCP starvation attack is to overwhelm the DHCP server with a floo
 
 DHCP snooping helps mitigate DoS attacks by limiting the rate of DHCP messages and filtering out suspicious traffic (DHCP messages received on an untrusted port, as normally sent by a DHCP client, may be filtered if they appear to be part of an attack). This makes it more difficult for attackers to flood the server and disrupt network operations.
 
-**UDP flood**
+**UDP flooding**
 
-UDP floods simply bombard the target with UDP packets, consuming bandwidth and making it difficult for legitimate traffic to get through.
+In a direct UDP flooding attack, the **attacker directly targets a victim’s server or host** by flooding it with a high volume of UDP packets. Since UDP is connectionless, the target must process each incoming packet, consuming bandwidth, CPU, and memory. Attackers often **spoof the source IP address** to hide their identity and make mitigation harder. The goal is to exhaust the victim’s resources, causing slowdowns or a complete denial of service (DoS). Mitigation strategies include rate limiting UDP traffic, deploying firewalls to filter malicious packets, and using intrusion detection/prevention systems (IDS/IPS) to identify and block suspicious activity. Cloud-based DDoS protection services can also help absorb and disperse the attack traffic before it reaches the target.
 
-**HTTP flood**
+In a UDP Reflection/Amplification attack, the **attacker does not target the victim directly**. Instead, they send small, spoofed UDP requests (e.g., DNS or NTP queries) to **publicly accessible servers**, forging the victim’s IP as the source. These servers then respond with much larger replies, **"reflecting" and amplifying** the attack traffic toward the victim. The attacker leverages misconfigured servers as unwitting "proxies" to multiply the attack’s impact, potentially achieving **10x–100x amplification** with minimal effort. Mitigation strategies include disabling open DNS/NTP resolvers, implementing source IP validation (BCP38), and using cloud-based scrubbing.
 
-This attack targets web servers by sending a huge number of HTTP requests, overloading the server's capacity to process them.
+**HTTP flooding**
+
+A layer 7 DoS attack where bots send massive HTTP requests (GET/POST) to a web server, exhausting its resources. Unlike brute-force attacks, these look like legitimate traffic, making them harder to block.
 
 **Ping of death**
 
-This attack sends a malformed packet that's larger than the intended size, causing the target system to crash or reboot.
+A layer 3 DoS attack where an attacker sends oversized or malformed ICMP ping packets to a target host, crashing systems that fail to handle them properly. Modern systems now block such packets, but legacy devices may still be vulnerable.
 
 #### Reflection and amplification
 

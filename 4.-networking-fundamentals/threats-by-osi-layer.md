@@ -48,11 +48,17 @@ Words
 
 ### Explanation of threat scenarios
 
-**Layer 7 (Application Layer)**:
+**Layer 7 (Application Layer): DNS Spoofing**
 
-* DNS Spoofing (DNS Cache Poisoning): An attack where a hacker corrupts a DNS server’s cache with fake entries, redirecting users to malicious sites (e.g., phishing pages) instead of the legitimate ones.
-* DNS Spoofing is well-mitigated by DNSSEC and encrypted DNS protocols (DoH/DoT).
-* SQL Injection is a critical threat at this layer, exploiting poor input validation. Mitigation includes coding best practices and WAFs.
+DNS Spoofing (or DNS Cache Poisoning) occurs when an attacker exploits vulnerabilities in the DNS system to inject fraudulent IP address mappings into a DNS server's cache. When a DNS server requests an IP address for a domain, the attacker sends a forged response before the legitimate one arrives. If the DNS server accepts the fake response, it stores the incorrect IP in its cache. Subsequent queries for that domain are answered with the poisoned entry, redirecting users to a malicious site (e.g., a phishing page) instead of the real one.
+
+DNS Spoofing is well-mitigated by DNSSEC (DNS Security Extensions) and encrypted DNS protocols (DNS over HTTPS/DNS over TLS). DNSSEC is a security protocol that adds digital signatures to DNS records, ensuring responses are authentic and unmodified. Prevents spoofing but does not encrypt queries. DoH encrypts DNS traffic inside HTTPS (port 443), hiding queries from snoopers. Used by browsers like Firefox. DoT encrypts DNS traffic using TLS (port 853), preventing tampering. Common in enterprise networks. DNSSEC verifies DNS data integrity (no encryption). DoH/DoT encrypts DNS traffic (privacy-focused).
+
+**Layer 7 (Application Layer): SQL Injection**
+
+SQL Injection is a critical threat that involves exploiting poor input validation.&#x20;
+
+SQL Injection mitigation includes coding best practices and WAFs.
 
 
 

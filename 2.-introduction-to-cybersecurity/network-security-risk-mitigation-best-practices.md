@@ -28,13 +28,13 @@ This section reviews common network security risk mitigation best practices, inc
 
 ### Least privilege access control
 
-The principle of least privilege: only the required functionality is granted for each authorized user group.
+The principle of least privilege rules that only the required functionality is granted for each authorized user group.
 
 Reduce user access privileges to necessities. It is easier to stay secure by enabling access when needed than to revoke and mitigate damage after an incident.&#x20;
 
 \<In order to properly secure data, an organization should develop clear and precise standards of data classification. Usually data access is governed via a data-access control scheme. A simple and sound way to develop one is using **role-based access control (RBAC)**.>
 
-\<Organizations should limit access only to those employees who are approved by management on a need-to-know basis. In addition, procedures should be set up to ensure immediate permission removal in the case of termination or role change for an employee.>
+Employee access to data should be on a need-to-know basis. In addition, procedures should be set up to ensure immediate permission removal in the case of termination or role change for an employee.
 
 #### Implementing Robust Access Controls
 
@@ -99,7 +99,7 @@ NIDS can be classified based on their detection approach. The most well-known va
 
 #### SIEM (Security Information and Event Management)
 
-SIEM can integrate and correlate distributed events and alert on hostile or abnormal behavior. To utilize a SIEM system properly, its dashboards and metrics need to be set up to measure organization-specific data access activity.
+SIEM can integrate and correlate distributed events and alert on hostile or abnormal behavior.
 
 * **Example Tools:** Wazuh, Splunk, IBM QRadar, Elastic SIEM
 * **How it works:**

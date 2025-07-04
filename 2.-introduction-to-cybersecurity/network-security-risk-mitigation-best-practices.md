@@ -48,7 +48,7 @@ Best practices for access control in network design:
 
 * **Least Privilege Principle**: Granting minimal access required for users to perform their duties.
 * **Multi-Factor Authentication (MFA)**: Mandating multiple verification steps for sensitive systems.
-* **Continuous Monitoring**: Using SIEM (Security Information and Event Management) tools to detect anomalies.
+* **Continuous Monitoring**: Using SIEM (Security Information and Event Management) tools to detect anomalies. Access to data and modification of data has to be logged and recorded in the central SIEM system. A SIEM system consumes multiple logs and allows those handling security to connect the dots and create a big picture that gives insight into multiple events. For example, it can draw attention to a user who sends abnormal amounts of data outbound, or one who connects to an unusual amount of servers.
 * **Automated Policy Enforcement**: Deploying solutions like NAC (Network Access Control) to validate device compliance before granting access.
 
 ### Multi-factor authentication
@@ -99,6 +99,8 @@ NIDS can be classified based on their detection approach. The most well-known va
 
 #### SIEM (Security Information and Event Management)
 
+SIEM can integrate and correlate distributed events and alert on hostile or abnormal behavior. To utilize a SIEM system properly, its dashboards and metrics need to be set up to measure organization-specific data access activity.
+
 * **Example Tools:** Wazuh, Splunk, IBM QRadar, Elastic SIEM
 * **How it works:**
   * **Aggregates logs** from multiple sources (e.g., network devices, cloud services, IDS, servers, firewalls, and endpoints).
@@ -110,10 +112,6 @@ NIDS can be classified based on their detection approach. The most well-known va
 * **Limitations:**
   * Requires fine-tuning to reduce noise.
   * Not a direct replacement for IDS/IPS but complements them.
-
-\<Access to data and modification of data has to be logged and recorded in the central (Security Information and Event Management) system. A **SIEM** system is important for data security, since it consumes multiple logs and allows those handling security to connect the dots and create a big picture that gives insight into multiple events. For example, it can draw attention to a user who sends abnormal amounts of data outbound, or one who connects to an unusual amount of servers. To utilize a SIEM system properly, its dashboards and metrics need to be set up to measure organization-specific data access activity.
-
-\<It is critical to **identify incidents** as early as possible to significantly reduce any damage that might be done by bad actors. For swift identification, **security information and event management (SIEM) technology** should be used. SIEM can integrate and correlate distributed events and alert on hostile or abnormal behavior. A best practice for incident investigation is to enrich your SIEM solution with external threat data. That external threat data can highlight known threat activity in your organization.
 
 #### Endpoint Detection and Response/Extended Detection and Response (EDR/XDR)
 
@@ -136,10 +134,10 @@ NIDS can be classified based on their detection approach. The most well-known va
 
 **How NTA Complements Other Tools:**
 
-| Scenario                                               | SIEM                                     | IDS/IPS                         | Firewall                     | NTA                                     |
-| ------------------------------------------------------ | ---------------------------------------- | ------------------------------- | ---------------------------- | --------------------------------------- |
-| **A hacker slowly exfiltrates data via DNS**           | Might miss it (unless logs are detailed) | Likely misses it (no signature) | Allows it (DNS is permitted) | **Detects unusual DNS query patterns**  |
-| **Lateral movement via RDP (Remote Desktop Protocol)** | Logs the event (if logging is enabled)   | May detect brute-forcing        | Blocks if port is closed     | **Flags abnormal internal connections** |
+| Scenario                                               | SIEM                                     | IDS/IPS                         | Firewall                     | NTA                                 |
+| ------------------------------------------------------ | ---------------------------------------- | ------------------------------- | ---------------------------- | ----------------------------------- |
+| **A hacker slowly exfiltrates data via DNS**           | Might miss it (unless logs are detailed) | Likely misses it (no signature) | Allows it (DNS is permitted) | Detects unusual DNS query patterns  |
+| **Lateral movement via RDP (Remote Desktop Protocol)** | Logs the event (if logging is enabled)   | May detect brute-forcing        | Blocks if port is closed     | Flags abnormal internal connections |
 
 **NTA’s Strengths:**
 

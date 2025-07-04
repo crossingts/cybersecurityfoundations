@@ -2,7 +2,7 @@
 
 Wireshark is often used to identify non-secure network traffic, for both defensive and offensive security purposes. Here is a breakdown of how this information could be used in each context:
 
-#### **1. Defensive Security (Blue Team / Security Analysts)**
+#### 1. Defensive Security (Blue Team / Security Analysts)
 
 If non-secure traffic is detected, defenders can use this information to:
 
@@ -21,7 +21,7 @@ If non-secure traffic is detected, defenders can use this information to:
 
 ***
 
-**2. Offensive Security (Red Team / Penetration Testers / Attackers)**
+#### 2. Offensive Security (Red Team / Penetration Testers / Attackers)
 
 Attackers can exploit non-secure traffic to:
 
@@ -52,7 +52,7 @@ Attackers can exploit non-secure traffic to:
 * **For defense**, detecting non-secure traffic is critical for improving security and preventing breaches.
 * **For offense**, the same information is valuable for exploitation and to simulate attacks.
 
-### Steps to Identify Non-Secure Traffic with Wireshark
+#### Steps to Identify Non-Secure Traffic with Wireshark
 
 1. **Capture Traffic**:
    * Start Wireshark and select the appropriate network interface.

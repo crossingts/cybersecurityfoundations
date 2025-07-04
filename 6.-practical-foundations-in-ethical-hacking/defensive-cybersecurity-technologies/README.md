@@ -65,16 +65,16 @@ The Wazuh Security Information and Event Management (SIEM) solution is a central
 
 The Wazuh Extended Detection and Response (XDR) platform provides a comprehensive security solution that detects, analyzes, and responds to threats across multiple IT infrastructure layers. Wazuh collects telemetry from endpoints, network devices, cloud workloads, third-party APIs, and other sources for unified security monitoring and protection. (wazuh.com)
 
-#### **Comparison Table: SIEM vs. IDS/IPS vs. Firewalls vs. EDR**
+**Comparison Table: SIEM vs. IDS/IPS vs. Firewalls vs. EDR**
 
-| Feature                   | **SIEM (Wazuh, Splunk)**              | **IDS/IPS (Snort, Suricata)**           | **Firewall (nftables, iptables, pfSense)** | **EDR (CrowdStrike, Wazuh EDR)**             |
-| ------------------------- | ------------------------------------- | --------------------------------------- | ------------------------------------------ | -------------------------------------------- |
-| **Primary Role**          | Log correlation, alerting, compliance | Detect/block malicious traffic          | Filter traffic based on rules              | Detect/respond to endpoint threats           |
-| **Detection Method**      | Rule-based + anomaly (if configured)  | Signature + anomaly detection           | Rule-based (allow/deny)                    | Behavioral analysis + threat intelligence    |
-| **Prevention Capability** | No (alerting only)                    | **IPS can block**, IDS alerts           | **Blocks traffic** based on rules          | **Can block processes**, isolate hosts       |
-| **Data Source**           | Logs (network, endpoints, apps)       | Network traffic (packet **inspection**) | Network traffic (L3/L4 **filtering**)      | Endpoint processes, memory, files            |
-| **Scope**                 | Broad (entire infrastructure)         | Network-focused                         | Network perimeter/internal segmentation    | Endpoint-focused (workstations, servers)     |
-| **Best For**              | Incident investigation, compliance    | Real-time threat blocking               | Access control, network segmentation       | Advanced malware, lateral movement detection |
+| Feature                   | **SIEM (Wazuh, Splunk)**              | **IDS/IPS (Snort, Suricata)**       | **Firewall (nftables, iptables, pfSense)** | **EDR (CrowdStrike, Wazuh EDR)**             |
+| ------------------------- | ------------------------------------- | ----------------------------------- | ------------------------------------------ | -------------------------------------------- |
+| **Primary Role**          | Log correlation, alerting, compliance | Detect/block malicious traffic      | Filter traffic based on rules              | Detect/respond to endpoint threats           |
+| **Detection Method**      | Rule-based + anomaly (if configured)  | Signature + anomaly detection       | Rule-based (allow/deny)                    | Behavioral analysis + threat intelligence    |
+| **Prevention Capability** | No (alerting only)                    | IPS can block, IDS alerts           | Blocks traffic based on rules              | Can block processes, isolate hosts           |
+| **Data Source**           | Logs (network, endpoints, apps)       | Network traffic (packet inspection) | Network traffic (L3/L4 filtering)          | Endpoint processes, memory, files            |
+| **Scope**                 | Broad (entire infrastructure)         | Network-focused                     | Network perimeter/internal segmentation    | Endpoint-focused (workstations, servers)     |
+| **Best For**              | Incident investigation, compliance    | Real-time threat blocking           | Access control, network segmentation       | Advanced malware, lateral movement detection |
 
 A mature security stack combines:
 

@@ -40,4 +40,4 @@ This chapter covers networking fundamentals by way of tracing the movement of a 
 
 [Typing www.google.com into a web browser](typing-www.google.com-into-a-web-browser.md)
 
-[OSI model layers and security threats](broken-reference)
+[OSI model layers and security threats](osi-model-layers-and-security-threats.md)

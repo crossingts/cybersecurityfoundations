@@ -62,7 +62,7 @@ The Wazuh Extended Detection and Response (XDR) platform provides a comprehensiv
 Wazuh is an open-source security monitoring platform that provides SIEM (log analysis) and EDR (endpoint monitoring and response) functionalities, enabling centralized visibility, threat detection, compliance monitoring, and automated mitigation.
 
 1. **SIEM (Security Information and Event Management)**\
-   Wazuh provides log collection, analysis, and correlation, which are core SIEM functionalities. It can aggregate logs from various sources (network devices, endpoints, and cloud environments) and apply rules to detect threats.
+   Wazuh provides log collection, analysis, and correlation, which are core SIEM functionalities. It can aggregate logs from various sources (network devices, endpoints, and cloud services) and apply rules to detect threats.
 2. **EDR (Endpoint Detection and Response)** \
    Wazuh provides EDR capabilities (file integrity monitoring, process monitoring, behavioral analysis, and automated responses).
 3. **Centralized Visibility & Threat Mitigation**\
@@ -73,7 +73,7 @@ Wazuh is an open-source security monitoring platform that provides SIEM (log ana
 1. **Log Collection**
    * Wazuh collects logs from various sources, including:
      * **Network devices** (firewalls, routers, switches via syslog, SNMP, etc.).
-     * **Endpoints** (servers, workstations, cloud instances) using the Wazuh agent.
+     * **Endpoints** (servers, workstations, cloud instances using the Wazuh agent).
      * **Third-party APIs** (cloud services like AWS, Azure, Office 365, etc.).
      * **Security tools** (IDS/IPS, antivirus, vulnerability scanners).
 2. **Log Analysis & Correlation**

@@ -103,7 +103,7 @@ SIEM can integrate and correlate distributed events and alert on hostile or abno
 
 * **Example Tools:** Wazuh, Splunk, IBM QRadar, Elastic SIEM
 * **How it works:**
-  * **Aggregates logs** from multiple sources (e.g., network devices, cloud services, IDS, servers, firewalls, and endpoints).
+  * **Aggregates logs** from multiple sources (e.g., network devices, cloud services, IDS, servers).
   * **Correlates events** to detect complex attack patterns (e.g., multiple failed logins followed by a successful one).
   * Provides **real-time alerting**, historical analysis, and compliance reporting.
 * **Strengths:**

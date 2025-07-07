@@ -134,10 +134,10 @@ SIEM can integrate and correlate distributed events and alert on hostile or abno
 
 **How NTA Complements Other Tools:**
 
-| Scenario                                               | SIEM                                     | IDS/IPS                         | Firewall                     | NTA                                 |
-| ------------------------------------------------------ | ---------------------------------------- | ------------------------------- | ---------------------------- | ----------------------------------- |
-| **A hacker slowly exfiltrates data via DNS**           | Might miss it (unless logs are detailed) | Likely misses it (no signature) | Allows it (DNS is permitted) | Detects unusual DNS query patterns  |
-| **Lateral movement via RDP (Remote Desktop Protocol)** | Logs the event (if logging is enabled)   | May detect brute-forcing        | Blocks if port is closed     | Flags abnormal internal connections |
+| Scenario                                               | Firewall                     | IDS/IPS                         | SIEM                                     | NTA                                 |
+| ------------------------------------------------------ | ---------------------------- | ------------------------------- | ---------------------------------------- | ----------------------------------- |
+| **A hacker slowly exfiltrates data via DNS**           | Allows it (DNS is permitted) | Likely misses it (no signature) | Might miss it (unless logs are detailed) | Detects unusual DNS query patterns  |
+| **Lateral movement via RDP (Remote Desktop Protocol)** | Blocks if port is closed     | May detect brute-forcing        | Logs the event (if logging is enabled)   | Flags abnormal internal connections |
 
 **NTA’s Strengths:**
 

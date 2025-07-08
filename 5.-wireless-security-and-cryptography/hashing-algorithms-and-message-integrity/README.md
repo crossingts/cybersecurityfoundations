@@ -15,7 +15,7 @@ This section discusses [hashing algorithms and message integrity](https://builti
 
 A hashing algorithm is a mathematical function that takes an input (data) of arbitrary size and produces a fixed-size output, a representational sample of the original data called a hash value or hash.
 
-Hashing algorithms are used in a variety of applications, including data integrity, password hashing, file indexing, and data duplication.
+Hashing algorithms are used in a variety of applications, including data integrity, password hashing, file indexing, identifying duplicate files/data, and digital signatures.
 
 A basic hashing algorithm can be converting letters to numbers (a = 1, b = 2, c = 3, etc.):
 
@@ -47,19 +47,21 @@ But this hashing algorithm is terrible. If the original message was changed to c
 
 4\. It is infeasible to construct a message which generates a given digest. In our example, it would not be overly difficult to generate a list of words that can produce a digest of 52 (one of which might have been the original message). In a proper hashing algorithm, this should be infeasible.
 
-There are many different hashing algorithms available, each with its own strengths and weaknesses. Hashing algorithms examples include MD5, SHA-1, and SHA-2.
+There are many different hashing algorithms available, each with its own strengths and weaknesses. Hashing algorithms examples include MD5, SHA-1, and SHA-256.
 
-Digest lengths of some common hashing algorithms:
+**Common Hashing Algorithms in SSL/TLS (showing digest lengths)**
 
-MD5 – 128 Bits
+| Algorithm                           | Use Case in SSL/TLS                                          |
+| ----------------------------------- | ------------------------------------------------------------ |
+| **SHA-256 (256 Bits)**              | Default for certificates (replacing SHA-1, which is broken). |
+| **SHA-384 (384 Bits)**              | Used in higher-security contexts (e.g., banking).            |
+| **SHA-3**                           | Emerging, but not yet widely adopted in TLS.                 |
+| **MD5 (128 Bits)/SHA-1 (160 Bits)** | **Deprecated** due to collision vulnerabilities.             |
 
-SHA or SHA1 – 160 Bits
+**Security Considerations**
 
-SHA384 – 384 Bits
-
-SHA256 – 256 Bits
-
-A longer digest tends to be regarded as more secure.
+* Collision Resistance: A hash function must make it nearly impossible for two different inputs to produce the same hash (SHA-256 is secure; MD5/SHA-1 are broken).
+* A longer digest tends to be regarded as more secure.
 
 ### Message integrity
 

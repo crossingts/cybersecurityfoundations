@@ -67,7 +67,7 @@ This chapter covers Governance, Risk, and Compliance as a risk management framew
 
 This chapter covers host to host communication across networks (how data flows through the network).
 
-5. [Chapter 5: Wireless security and cryptography](5.-wireless-security-and-cryptography/introduction-wireless-security-and-cryptography.md)
+5. [Chapter 5: Wireless security and cryptography](5.-wireless-security-and-cryptography/introduction-wireless-security-and-cryptography/)
 
 This chapter covers how SSL/TLS secures data in transit, and the IEEE 802.11 wireless standard (WPA, WPA2, and WPA3 wireless protocols).
 

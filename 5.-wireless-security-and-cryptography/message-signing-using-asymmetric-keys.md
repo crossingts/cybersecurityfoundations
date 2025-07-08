@@ -4,10 +4,9 @@ description: This section looks at how asymmetric keys can be used for message s
 
 # Message signing using asymmetric keys
 
-This section discusses [how asymmetric keys are used](https://en.wikipedia.org/wiki/Public-key_cryptography) to perform two separate cryptographic operations: message confidentiality and message signing. We look at two real world applications involving the asymmetric key pair: real world encryption and real world signatures.
+This section discusses how asymmetric keys can be used to perform message signing. We look at how the asymmetric key pair can be used to perform real world signatures.&#x20;
 
 * **Message signing**
-* **Real world encryption**
 * **Real world signatures**
 
 ### Message signing

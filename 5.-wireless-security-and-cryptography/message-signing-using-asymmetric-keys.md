@@ -11,14 +11,6 @@ This section discusses [how asymmetric keys are used](https://en.wikipedia.org/w
 * **Real world encryption**
 * **Real world signatures**
 
-### Confidentiality via asymmetric encryption
-
-In asymmetric encryption, you use the recipient’s public key to encrypt a message to them. Anyone can encrypt with a public key. Only the recipient’s private key can decrypt the message. This ensures that only the intended recipient can read the message.
-
-Bob wants to send an encrypted message to Alice. Bob uses Alice’s public key to encrypt the message. Bob sends the message to Alice. And Alice uses her private key to decrypt the message.
-
-This exchange establishes confidentiality: the only possible key that could extract the message is Alice’s private key. And since Alice never shared her key (the private key is never shared), Bob knows that only Alice was able to read the message.
-
 ### Message signing
 
 Alice wants to send a message to Bob. Alice wants Bob to know beyond a shadow of a doubt that it was her that sent the message.

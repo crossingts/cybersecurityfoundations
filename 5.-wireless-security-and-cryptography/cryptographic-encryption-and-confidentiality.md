@@ -113,6 +113,14 @@ That said, our example invokes an important concept in asymmetric encryption: as
 
 One of the key pair is private, never shared with anyone else. This is the private key. The other key is the public key, and it is public. Every participant in asymmetric encryption has their own unique key pair. Each key can be used in different ways to achieve different security features.
 
+#### Confidentiality via asymmetric encryption
+
+In asymmetric encryption, you use the recipient’s public key to encrypt a message to them. Anyone can encrypt with a public key. Only the recipient’s private key can decrypt the message. This ensures that only the intended recipient can read the message.
+
+Bob wants to send an encrypted message to Alice. Bob uses Alice’s public key to encrypt the message. Bob sends the message to Alice. And Alice uses her private key to decrypt the message.
+
+This exchange establishes confidentiality: the only possible key that could extract the message is Alice’s private key. And since Alice never shared her key (the private key is never shared), Bob knows that only Alice was able to read the message.
+
 ### Symmetric encryption vs asymmetric encryption
 
 Why symmetric encryption is a preferred choice for bulk data encryption:

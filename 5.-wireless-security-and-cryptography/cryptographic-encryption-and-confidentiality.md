@@ -132,6 +132,18 @@ On the downside, symmetric encryption presents a “key exchange problem”, as 
 
 Symmetric encryption is sometimes considered less secure than asymmetric encryption because of a higher exposure risk. The most significant benefit to using asymmetric encryption is that the private key never needs to be shared. Hence asymmetric encryption can be regarded as more secure than symmetric encryption.
 
+#### Real world encryption
+
+As noted, asymmetric encryption is not ideal for bulk encryption. Symmetric encryption is more suited for bulk encryption but we have to find a solution to the key exchange problem.
+
+**Hybrid encryption** is a solution to the **key exchange problem** that entails combining the strengths of both symmetric and asymmetric encryption while avoiding all their weaknesses.
+
+Bob wants to send an encrypted message to Alice. Bob starts by randomly generating a symmetric secret key. Bob then uses Alice’s public key to encrypt the symmetric secret key. This encrypted symmetric key is sent across the wire to Alice.
+
+Alice then uses her private key to extract the symmetric secret key that Bob sent. At this point, both Bob and Alice have an identical symmetric secret key that can be used to symmetrically encrypt as much data as they need.
+
+Thus Bob and Alice are benefiting from the security of asymmetric encryption, with the speed and efficiency of symmetric encryption.
+
 ### References
 
 [Ed Harmoush. (October 12, 2021). Confidentiality. Practical Networking.](https://www.practicalnetworking.net/series/cryptography/confidentiality/)

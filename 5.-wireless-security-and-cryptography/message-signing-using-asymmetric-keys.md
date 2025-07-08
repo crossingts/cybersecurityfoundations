@@ -6,7 +6,6 @@ description: This section looks at how asymmetric keys can be used for message s
 
 This section discusses [how asymmetric keys are used](https://en.wikipedia.org/wiki/Public-key_cryptography) to perform two separate cryptographic operations: message confidentiality and message signing. We look at two real world applications involving the asymmetric key pair: real world encryption and real world signatures.
 
-* **Confidentiality via asymmetric encryption**
 * **Message signing**
 * **Real world encryption**
 * **Real world signatures**
@@ -37,7 +36,7 @@ This process, called **message signing**, provides **non-repudiation**, meaning 
 #### Verification by Bob:
 
 1. Bob uses Alice’s _public key_ to "decrypt" the signature, revealing the original hash.
-2. He independently hashes the received message.
+2. Bob independently hashes the received message.
 3. If the hashes match, the message is authentic and untampered.
 
 #### Why "Encrypting" is a Misleading Term:
@@ -45,18 +44,6 @@ This process, called **message signing**, provides **non-repudiation**, meaning 
 * Technically, this step isn’t _encryption_ (which implies secrecy).
 * It’s a **one-way transformation** using the private key to prove ownership.
 * Only the matching public key can "reverse" it (during verification).
-
-### Real world encryption
-
-As explained in Cryptographic encryption and confidentiality (section 2 of this chapter), asymmetric encryption is not ideal for bulk encryption. Symmetric encryption is more suited for bulk encryption but we have to find a solution to the key exchange problem.
-
-**Hybrid encryption** is a solution to the **key exchange problem** that entails combining the strengths of both symmetric and asymmetric encryption while avoiding all their weaknesses.
-
-Bob wants to send an encrypted message to Alice. Bob starts by randomly generating a symmetric secret key. Bob then uses Alice’s public key to encrypt the symmetric secret key. This encrypted symmetric key is sent across the wire to Alice.
-
-Alice then uses her private key to extract the symmetric secret key that Bob sent. At this point, both Bob and Alice have an identical symmetric secret key that can be used to symmetrically encrypt as much data as they need.
-
-Thus Bob and Alice are benefiting from the security of asymmetric encryption, with the speed and efficiency of symmetric encryption.
 
 ### Real world signatures
 

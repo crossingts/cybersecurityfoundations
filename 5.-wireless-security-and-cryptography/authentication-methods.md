@@ -26,7 +26,7 @@ Commonly, a username and password are used to authenticate a user to a server. A
 
 The password can be scrambled (hashed) either on the users’ device or on the server they are connecting to. The hashing process can happen in two places: on the client (e.g., a smartphone) or on a server (e.g., an Amazon AWS server).
 
-The process of hashing on a server entails:
+The process of password hashing on a server entails:
 
 * The user enters their username and password into the website’s login form.
 * The website sends the username and password to the server.
@@ -36,6 +36,16 @@ The process of hashing on a server entails:
 * The server hashes the password that the user entered and compares it to the hash that is stored in its database. If the hashes match, the user is logged in.
 
 This process ensures that the server never knows the user’s plain text password. Even if an attacker were to steal the database, they would not be able to use the passwords. The password itself is never stored, only the digest of the password, which is impossible to decrypt.
+
+The process of password hashing on the client side entails:
+
+* User Input – The user enters their password on the device (e.g., smartphone, laptop).
+* Client-Side Hashing – The device hashes the password using a secure algorithm (e.g., bcrypt, Argon2, SHA-256).
+* Salt Addition (Optional) – A unique salt may be added to the password before hashing to prevent rainbow table attacks.
+* Transmission – The hashed password (not the plaintext) is sent over a secure connection (HTTPS) to the server.
+* Server Storage – The server stores the hashed password (or may perform additional hashing if needed).
+
+This way of hashing ensures the plaintext password never leaves the device, which reduces the risk of exposure in transit or server breaches. Note that the server may still perform additional hashing for extra security.
 
 **Two-factor authentication (2FA)**
 

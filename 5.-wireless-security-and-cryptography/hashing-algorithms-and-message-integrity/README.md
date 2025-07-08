@@ -33,7 +33,7 @@ But this hashing algorithm is terrible. If the original message was changed to c
 
 #### Note
 
-• The message digest (52 for "hello") is technically a hash or checksum in this case, but calling it a digest is fine for illustration.
+• The message digest (52 for "hello") is more technically a hash or checksum in this case, but calling it a digest is fine for illustration.
 
 • See [Understanding hash, digest, checksum, and fingerprint](understanding-hash-digest-checksum-and-fingerprint.md)
 
@@ -90,7 +90,7 @@ To prevent tampering, the sender and receiver share a **secret key**. Instead of
 * **Integrity** – The message was not altered.
 * **Authenticity** – The sender possesses the secret key.
 
-The most widely used MAC is **HMAC (Hash-based Message Authentication Code)**, which securely combines the key and message.
+The most widely used MAC is **HMAC (Hash-Based Message Authentication Code)**, which securely combines the key and message.
 
 **How HMAC Works:**
 
@@ -104,15 +104,10 @@ The most widely used MAC is **HMAC (Hash-based Message Authentication Code)**, w
      * **Untampered (integrity preserved).**
      * **Authentic (sent by someone with the key).**
 
-**Why HMAC is Secure (Not Just Key Concatenation):**
-
-* Simply appending a key to a message before hashing can be vulnerable to attacks like **length-extension.** HMAC applies the key in **two cryptographic steps (inner and outer hashing)** for stronger security.
-* HMAC works with **cryptographic hash functions** like SHA-256, SHA-3, etc.
-
 **3. Alternatives to HMAC**
 
 * **Digital Signatures** (e.g., RSA, ECDSA) can also ensure integrity and authenticity but use **asymmetric cryptography** (public/private keys) instead of a shared secret.
-* **Encryption (e.g., AES-GCM)** can provide integrity + confidentiality, but HMAC is often used when encryption isn’t required.
+* **Encryption (e.g., AES-GCM)** can provide integrity + confidentiality, but HMAC is often used when encryption is not required.
 
 **Key Takeaways:**
 

@@ -6,7 +6,7 @@ description: >-
 
 # Authentication methods
 
-This section discusses [cryptographic authentication methods](https://www.bu.edu/tech/about/security-resources/bestpractice/auth/). We look at three common methods of authentication: username and password, Pre-Shared Keys (PSKs), and digital certificates.
+This section discusses three common methods of authentication: username and password, and two other common [cryptographic authentication methods](https://www.bu.edu/tech/about/security-resources/bestpractice/auth/), Pre-Shared Keys (PSKs) and digital certificates.
 
 * **Username and password**
 * **Pre-Shared Key (PSK)**
@@ -16,11 +16,9 @@ This section discusses [cryptographic authentication methods](https://www.bu.edu
 
 Authentication refers to the idea of verifying an identity. You can authenticate an identity with:
 
-1\) Something you know, for example, a password/user name.
+1\) Something you know, for example, a password/user name combination.
 
-2\) Something you have, for example, an ATM card or an employee badge. For example, many websites send a random code to your phone via SMS when you are trying to log in, forcing you to have possession of your phone to log in.
-
-This is also the same concept behind the various authentication tokens. If you can provide the code the server is expecting, then you must have had the token.
+2\) Something you have, for example, an ATM card or an employee badge. For example, many websites send a random code to your phone via SMS when you are trying to log in, forcing you to have possession of your phone to log in. This is also the same concept behind the various authentication tokens. If you can provide the code the server is expecting, then you must have had the token.
 
 3\) Something you are. This category refers to various types of bio-metric identification technologies, such as fingerprint scanners, retina scanners, hand-print scanners, facial recognition, and voice recognition technologies.
 
@@ -41,7 +39,7 @@ This process ensures that the server never knows the user’s plain text passwor
 
 **Two-factor authentication (2FA)**
 
-The user is identified using (combining) two authentication methods from the noted three methods (something you know, something you have, and something you are). A common 2FA combination is a password and an authentication code via SMS.
+The user is identified by using (combining) two authentication methods from the noted three methods (something you know, something you have, and something you are). A common 2FA combination is a password and an authentication code via SMS.
 
 ### Pre-Shared Key (PSK)
 

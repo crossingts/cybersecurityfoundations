@@ -4,10 +4,9 @@ description: This section looks at how asymmetric keys can be used for message s
 
 # Message signing using asymmetric keys
 
-This section discusses how asymmetric keys can be used to perform message signing. We look at how the asymmetric key pair can be used to perform real world signatures.&#x20;
+This section discusses how the asymmetric key pair can be used to perform real world message signing.
 
 * **Message signing**
-* **Real world signatures**
 
 ### Message signing
 
@@ -29,8 +28,9 @@ This process, called **message signing**, provides **non-repudiation**, meaning 
 * For ECC (Elliptic Curve), it’s a more complex signing algorithm (ECDSA).
 * This step is sometimes called "signing," but technically, it’s _asymmetrically encrypting the hash (with Alice's private key)_.
 
-1. **Result = Digital Signature**:
-   * The output is the **signature**, which is tied to both the message _and_ Alice’s private key.
+**Result = Digital Signature**:
+
+* The output is the **signature**, which is tied to both the message _and_ Alice’s private key.
 
 #### Verification by Bob:
 
@@ -38,21 +38,19 @@ This process, called **message signing**, provides **non-repudiation**, meaning 
 2. Bob independently hashes the received message.
 3. If the hashes match, the message is authentic and untampered.
 
-#### Why "Encrypting" is a Misleading Term:
-
-* Technically, this step isn’t _encryption_ (which implies secrecy).
-* It’s a **one-way transformation** using the private key to prove ownership.
-* Only the matching public key can "reverse" it (during verification).
-
-### Real world signatures
-
-A hashing algorithm can be used to reduce a message of variable length to a constant, more manageable representational value.
+**In other words:**
 
 Alice wants to sign a message to Bob. Alice runs her message through a hashing algorithm, and then encrypts the resulting digest with her own private key. Alice then sends the encrypted digest to Bob, along with the original message.
 
 Bob then uses Alice’s public key to decrypt the digest, then he independently calculates the hash of the original message using the same hashing algorithm that Alice used to encrypt the message. Bob then compares the digests.
 
 If they match, Bob knows that Alice must have sent the original message (for authenticity). Bob also knows that the message has not changed (message integrity was preserved).
+
+#### Why "Encrypting" is a Misleading Term:
+
+* Technically, this step isn’t _encryption_ (which implies secrecy).
+* It’s a **one-way transformation** using the private key to prove ownership.
+* Only the matching public key can "reverse" it (during verification).
 
 #### **Key Takeaway**
 

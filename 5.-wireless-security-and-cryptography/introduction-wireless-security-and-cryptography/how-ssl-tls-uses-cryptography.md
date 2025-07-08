@@ -78,7 +78,7 @@ In **SSL/TLS** (used for HTTPS), digital signatures are used for:
 
 ### 2. Symmetric Encryption
 
-
+**Data transmission:** When sending confidential information over unsecure networks like the Internet, encryption protects it from eavesdropping. For example, HTTPS protocol uses encryption to secure online transactions and communication.
 
 ***
 

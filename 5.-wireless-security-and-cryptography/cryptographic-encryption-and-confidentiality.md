@@ -40,15 +40,15 @@ Industry grade encryption algorithms must be unbreakable, even with the most pow
 
 Hash functions are algorithms used to generate a unique “fingerprint” of a block of data. While they scramble the data like encryption, they do not use a key for decryption. Their primary purpose is to verify data integrity, not confidentiality.
 
-There are two types of cryptographic encryption, symmetric encryption and asymmetric encryption. Symmetric encryption uses a single shared key for both encryption and decryption. Both message sender and receiver must securely keep this key secret.
+There are two types of cryptographic encryption: symmetric encryption and asymmetric encryption. Symmetric encryption uses a single shared key for both encryption and decryption. Both message sender and receiver must securely keep this key secret.
 
-Asymmetric encryption uses two different keys for the encryption and decryption of data. Asymmetric encryption uses a pair of keys – a public key and a private key. Anyone can use the public key to encrypt data. However, only the private key can decrypt it. This offers enhanced security as the private key remains confidential.
+Asymmetric encryption uses two different keys for the encryption and decryption of data: a public key and a private key. Anyone can use the public key to encrypt data. However, only the private key can decrypt it. This offers enhanced security as the private key remains confidential.
 
 Encryption finds its application in various scenarios, ensuring data confidentiality:
 
 * **Data storage:** Sensitive data like financial records and medical information are often stored encrypted on personal devices and servers. Even if attackers access storage, they’ll only see scrambled gibberish without the decryption key.
 * **Data transmission:** When sending confidential information over unsecure networks like the Internet, encryption protects it from eavesdropping. For example, HTTPS protocol uses encryption to secure online transactions and communication.
-* **Email and messaging:** Secure email and messaging services encrypt messages during transmission and storage, guaranteeing confidentiality even if intercepted.
+* **Email and messaging:** Secure email and messaging services encrypt messages during transmission (and sometimes during storage), guaranteeing confidentiality even if intercepted.
 * **Cloud storage:** Cloud storage providers often offer encryption options to protect data uploaded to their servers.
 
 Benefits of data confidentiality through encryption:
@@ -81,7 +81,7 @@ The key point here is that we used the same secret key to encrypt and decrypt th
 
 The encryption algorithm is typically and ideally publicly known. So the strength of the encryption practically rests on the strength of the secret key. Longer and more random keys are considered more secure.
 
-Common symmetric encryption algorithms:
+**Common symmetric encryption algorithms:**
 
 | **Algorithm** | **Key size** |
 | ------------- | ------------ |
@@ -109,7 +109,7 @@ mjqqt –— asymmetric decryption (key = 21) → hello
 
 This just demonstrates the basic idea of asymmetric encryption, that two different keys are used in encryption and decryption. In this example, moving letters backwards by 5 would decrypt the message, but in real asymmetric encryption attempting to reuse the secret key (applying it backward or forward) would only further scramble the message.
 
-That said, our example demonstrates an important concept in asymmetric encryption: asymmetric keys are mathematically linked. What one key encrypts, only the other key can decrypt. In our example, if we used key 21 to encrypt hello, we can decrypt the cipher with a key of 5.
+That said, our example invokes an important concept in asymmetric encryption: asymmetric keys are mathematically linked. What one key encrypts, only the other key can decrypt. In our example, if we used key 21 to encrypt hello, we can decrypt the cipher with a key of 5.
 
 One of the key pair is private, never shared with anyone else. This is the private key. The other key is the public key, and it is public. Every participant in asymmetric encryption has their own unique key pair. Each key can be used in different ways to achieve different security features.
 
@@ -122,7 +122,7 @@ Why symmetric encryption is a preferred choice for bulk data encryption:
 
 On the downside, symmetric encryption presents a “key exchange problem”, as the secret key must exist in two places, with the sender and with the receiver. Several solutions exist to the key exchange problem (how do we get the key securely from one party to the other?).
 
-Symmetric encryption is sometimes considered less secure than asymmetric encryption because of a higher exposure risk. The most significant benefit to using asymmetric encryption is that the private key never needs to be shared. Hence asymmetric encryption is regarded as more secure than symmetric encryption.
+Symmetric encryption is sometimes considered less secure than asymmetric encryption because of a higher exposure risk. The most significant benefit to using asymmetric encryption is that the private key never needs to be shared. Hence asymmetric encryption can be regarded as more secure than symmetric encryption.
 
 ### References
 

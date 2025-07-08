@@ -6,13 +6,25 @@ hidden: true
 
 This section explains how cryptographic tools (symmetric/asymmetric encryption, and hashing) secure Internet communications via SSL/TLS.
 
+• Why hashing acts as a foundational layer for securing web traffic
+
+• In SSL/TLS, a combination of hashing and asymmetric encryption secures websites, APIs, and online transactions
+
 <figure><img src="../../.gitbook/assets/ssl-crypto.png" alt="ssl-tls-cryptography"><figcaption><p>How SSL/TLS uses cryptographic tools to secure data transmission (image courtesy of Ed Harmoush, Practical Networking)</p></figcaption></figure>
+
+### 1. Hashing
 
 **Hashing Algorithms in Digital Signatures (SSL/TLS)**
 
 Hashing is essential in SSL/TLS because it ensures **data integrity, authentication, and non-repudiation** in encrypted communications.&#x20;
 
-When a website presents an SSL certificate, a cryptographic hash (like SHA-256) creates a unique **fingerprint** of the certificate data, which is then **signed** by a trusted Certificate Authority (CA) using asymmetric encryption. This allows browsers to **verify** that the certificate hasn’t been tampered with. Additionally, during the TLS handshake, hashing is used in **digital signatures** (e.g., RSA or ECDSA) to **authenticate** the server and in **HMAC** (Hash-based Message Authentication Code) to verify that transmitted data remains unaltered. Without hashing, attackers could forge certificates, manipulate encrypted sessions, or execute man-in-the-middle attacks, breaking the trust model of HTTPS. Thus, hashing acts as a foundational layer for securing web traffic.
+Fingerprint → Digital signature
+
+Verify SSL certificate authenticity:&#x20;
+
+When a website presents an SSL certificate, a cryptographic hash (like SHA-256) creates a unique **fingerprint** of the certificate data, which is then **signed** by a trusted Certificate Authority (CA) using asymmetric encryption. This allows browsers to **verify** that the certificate hasn’t been tampered with.
+
+Additionally, during the TLS handshake, hashing is used in **digital signatures** (e.g., RSA or ECDSA) to **authenticate** the server and in **HMAC** (Hash-based Message Authentication Code) to verify that **transmitted data remains unaltered**. Without hashing, attackers could forge certificates, manipulate encrypted sessions, or execute man-in-the-middle attacks, breaking the trust model of HTTPS. Thus, hashing acts as a foundational layer for securing web traffic.
 
 Hashing ensures **data integrity** in digital signatures, while asymmetric encryption (RSA/ECDSA) provides **authentication**. In SSL/TLS, this combination secures websites, APIs, and online transactions.
 
@@ -40,9 +52,7 @@ A digital signature is created using a combination of **hashing + asymmetric enc
 * They independently compute the hash of the received data.
 * If the two hashes match, the data is **authentic and unaltered**.
 
-***
-
-#### **2. Why Hashing is Essential in SSL/TLS**
+**2. Why Hashing is Essential in SSL/TLS**
 
 In **SSL/TLS** (used for HTTPS), digital signatures are used for:
 
@@ -63,6 +73,18 @@ In **SSL/TLS** (used for HTTPS), digital signatures are used for:
 
 * **HMAC** (Hash-based Message Authentication Code) ensures that TLS records aren’t tampered with in transit.
 * Uses hashes (SHA-256, SHA-384) combined with a secret key.
+
+***
+
+### 2. Symmetric Encryption
+
+
+
+***
+
+### 3. Asymmetric Encryption
+
+
 
 ### References
 

@@ -96,7 +96,9 @@ The **TLS handshake** is a process that establishes a secure, encrypted connecti
 3. **Cipher Suite Agreement** – Determines the encryption algorithms (e.g., AES, ChaCha20) and hash functions (e.g., SHA-256) to be used.
 4. **Secure Session Establishment** – Ensures all further communication is encrypted and tamper-proof.
 
-### **Simplified Steps in a TLS Handshake**
+After the handshake, both the client and server use the derived symmetric session key to encrypt all transmitted data and to verify integrity (using HMAC or AEAD modes like AES-GCMP).
+
+### Simplified Steps in a TLS Handshake
 
 1. **Client Hello** – The client sends supported TLS versions, cipher suites, and a random number (nonce).
 2. **Server Hello** – The server responds with its chosen cipher suite, a random number (nonce), and its **digital certificate** (containing its public key).
@@ -105,6 +107,26 @@ The **TLS handshake** is a process that establishes a secure, encrypted connecti
 5. **Secure Communication** – All further data is encrypted with the shared/computed session key.
 
 In the PSK handshake, instead of a PMS, the client and server start with a pre-shared secret.
+
+#### **Key Exchange (Establishing a Session Key) in the TLS Handshake**
+
+The public key in the certificate is used in one of two ways, depending on the **key exchange algorithm**:
+
+**A. RSA Key Exchange (Older, no forward secrecy)**
+
+1. The client generates a **pre-master secret** (a random symmetric key).
+2. The client encrypts it with the **server’s public key** (from the certificate).
+3. The server decrypts it using its **private key** (only the server has this).
+4. Both sides derive the same **session key** from the pre-master secret.
+
+**B. Ephemeral Diffie-Hellman (Modern: ECDHE or DHE)**
+
+1. The server’s certificate is still used to **authenticate** the server.
+2. Instead of encrypting the pre-master secret directly, **Diffie-Hellman (DH)** is used:
+   * The server sends its **DH parameters** (signed by its private key for authenticity).
+   * The client and server exchange **ephemeral (temporary) DH keys**.
+   * They compute the same **shared secret** independently (never transmitted).
+3. This provides **forward secrecy** (even if the server’s private key is later compromised, past sessions remain secure).
 
 #### **Why the TLS Handshake Matters**
 

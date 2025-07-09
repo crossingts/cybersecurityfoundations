@@ -70,7 +70,7 @@ Because each session uses fresh nonces, an attacker who intercepts a token canno
 
 ### Digital certificates
 
-Digital certificates are a critical security technology that is used to protect communications over the Internet. Digital certificates are the primary method of identification in use on the Internet. A digital certificate is an electronic document that binds a public key to an identity, such as a company or server. A digital certificate is used to verify the identity of the holder of the public key and to encrypt communications.
+Digital certificates are a critical security technology that is used to protect communications over the Internet. Digital certificates are the primary method of identification on the Internet. A digital certificate is an electronic document that binds a public key to an identity, such as a company or a server. A digital certificate is used to verify the identity of the holder of the public key (e.g., a server) and optionally the client, to encrypt communications by facilitating secure key exchange (e.g., via the TLS handshake), and to ensure data integrity (through digital signatures).
 
 Digital certificates are used in a variety of applications, including:
 
@@ -101,7 +101,7 @@ The **TLS handshake** is a process that establishes a secure, encrypted connecti
 
 1. **Client Hello** – The client sends supported TLS versions, cipher suites, and a random number.
 2. **Server Hello** – The server responds with its chosen cipher suite, a random number, and its **digital certificate**.
-3. **Key Exchange** – The client verifies the certificate against trusted CAs., then generates a **pre-master secret** (encrypted with the server’s public key).
+3. **Key Exchange** – The client verifies the certificate against trusted CAs, then generates a **pre-master secret** (encrypted with the server’s public key).
 4. **Session Key Generation** – Both sides compute the same **symmetric session key** using the random numbers and pre-master secret.
 5. **Secure Communication** – All further data is encrypted with the session key.
 

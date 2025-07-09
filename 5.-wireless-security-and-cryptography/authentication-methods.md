@@ -123,11 +123,9 @@ When you visit a website that uses HTTPS, your browser will first verify the ide
 * Examples: DigiCert, Let’s Encrypt, Sectigo.
 * Browsers and operating systems maintain a **list of trusted CAs**.
 
-\--
+**Role of Digital Certificates in the SSL/TLS Handshake**
 
-**Role of Digital Certificates in SSL/TLS**
-
-Digital certificates are a **critical part** of the SSL/TLS handshake process, serving three main purposes:
+Digital certificates serve three main purposes in the SSL/TLS handshake process:
 
 **A. Authentication (Identity Verification)**
 
@@ -149,14 +147,14 @@ Digital certificates are a **critical part** of the SSL/TLS handshake process, s
 * Browsers and operating systems come with a **pre-installed list of trusted root certificates**.
 * If the certificate is valid and trusted, the SSL/TLS connection proceeds securely.
 
-#### **3. Types of SSL/TLS Certificates**
+#### **Types of SSL/TLS Certificates**
 
 * **Domain Validated (DV)** – Basic encryption, checks domain ownership.
 * **Organization Validated (OV)** – Verifies business identity.
 * **Extended Validation (EV)** – Highest trust, shows company name in the browser.
 * **Wildcard & Multi-Domain** – Covers multiple subdomains or domains.
 
-#### **4. How SSL/TLS Uses Certificates**
+#### **How SSL/TLS Uses Digital Certificates**
 
 1. **Handshake Phase**:
    * Client sends a `ClientHello`.
@@ -168,22 +166,12 @@ Digital certificates are a **critical part** of the SSL/TLS handshake process, s
 3. **Secure Session**:
    * Symmetric encryption (AES) is used for fast, secure data transfer.
 
-#### **5. Without a Certificate?**
+**Without a Certificate?**
 
 * No authentication → Risk of **man-in-the-middle (MITM) attacks**.
 * Browsers show **"Not Secure"** warnings (e.g., self-signed certs).
 
-#### **Summary**
-
-* **SSL/TLS** provides the encryption framework.
-* **Digital certificates** enable trust by verifying server identity and facilitating secure key exchange.
-* Together, they ensure **confidentiality, integrity, and authenticity** in online communications (HTTPS, VPNs, email, etc.).
-
-
-
-\--
-
-Digital certificates are mainly, but not exclusively, used for websites to verify that the website being accessed is legitimate.&#x20;
+**The mechanisms of action of authentication methods**
 
 A digital certificate can only be considered proof of someone’s identity if they can provide the matching private key. There are two ways this can be verified.
 

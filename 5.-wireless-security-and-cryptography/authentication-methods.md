@@ -2,7 +2,6 @@
 description: >-
   This section discusses three common methods of authentication: username and
   password, Pre-Shared Keys (PSKs), and digital certificates
-hidden: true
 ---
 
 # Authentication methods
@@ -99,11 +98,13 @@ The **TLS handshake** is a process that establishes a secure, encrypted connecti
 
 ### **Simplified Steps in a TLS Handshake**
 
-1. **Client Hello** – The client sends supported TLS versions, cipher suites, and a random number.
-2. **Server Hello** – The server responds with its chosen cipher suite, a random number, and its **digital certificate**.
-3. **Key Exchange** – The client verifies the certificate against trusted CAs, then generates a **pre-master secret** (encrypted with the server’s public key).
+1. **Client Hello** – The client sends supported TLS versions, cipher suites, and a random number (nonce).
+2. **Server Hello** – The server responds with its chosen cipher suite, a random number (nonce), and its **digital certificate** (containing its public key).
+3. **Key Exchange** – The client verifies the certificate against trusted CAs, then generates a **pre-master secret (PMS)**. The client computes a symmetric key using the pre-master secret, its random number, and the server's random number. The client sends the server the pre-master secret encrypted with the server’s public key
 4. **Session Key Generation** – Both sides compute the same **symmetric session key** using the random numbers and pre-master secret.
-5. **Secure Communication** – All further data is encrypted with the session key.
+5. **Secure Communication** – All further data is encrypted with the shared/computed session key.
+
+In the PSK handshake, instead of a PMS, the client and server start with a pre-shared secret.
 
 #### **Why the TLS Handshake Matters**
 

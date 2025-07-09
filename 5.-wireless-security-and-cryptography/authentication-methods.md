@@ -83,13 +83,9 @@ Digital certificates are used in a variety of applications, including:
 
 
 
+Digital certificates are mainly, but not exclusively, used for websites to verify that the website being accessed is legitimate.&#x20;
 
-
-SSL and TLS use digital certificates to authenticate the server and to encrypt the communications.
-
-When you visit a website that uses HTTPS, your browser will first verify the identity of the website by checking the digital certificate that is presented by the website. If the certificate is valid, your browser will then encrypt all of the communications between your computer and the website. This ensures that your communications are secure and that they cannot be intercepted by an attacker.
-
-Digital certificates are mainly, but not exclusively, used for websites to verify that the website being accessed is legitimate. A digital certificate is a file that contains information about the website’s identity and a public key used to encrypt communication. The digital certificate is issued by a trusted Certificate Authority (CA) after verifying ownership of the domain.
+A digital certificate is a file that contains information about the website’s identity and a public key used to encrypt communication. The digital certificate is issued by a trusted Certificate Authority (CA) after verifying ownership of the domain.
 
 While digital certificates are primarily used for websites, they also authenticate email senders (S/MIME), software publishers (code signing), and users (client certificates).
 
@@ -102,7 +98,13 @@ Here are some of the benefits of using digital certificates:
 
 Inside a digital certificate is a public key of an asymmetric key pair. This key is used to verify that the entity which presents the certificate is the true owner of the certificate.
 
+
+
 \--
+
+Key use of digital certs:
+
+## The TLS handshake and its purposes
 
 The **TLS handshake** is a process that establishes a secure, encrypted connection between a client (e.g., a web browser) and a server (e.g., a website). Its primary purposes are:
 
@@ -110,6 +112,8 @@ The **TLS handshake** is a process that establishes a secure, encrypted connecti
 2. **Key Exchange** – Securely negotiates a **shared session key** for symmetric encryption (faster than asymmetric encryption).
 3. **Cipher Suite Agreement** – Determines the encryption algorithms (e.g., AES, ChaCha20) and hash functions (e.g., SHA-256) to be used.
 4. **Secure Session Establishment** – Ensures all further communication is encrypted and tamper-proof.
+
+SSL and TLS use digital certificates to authenticate the server and to encrypt the communications.
 
 #### **Simplified Steps in a TLS Handshake**
 
@@ -126,6 +130,10 @@ The **TLS handshake** is a process that establishes a secure, encrypted connecti
 * Ensures **data integrity** (no tampering in transit).
 
 **Example:** When you visit `https://example.com`, the TLS handshake happens before any data is sent, securing your login or payment details.
+
+HTTPS websites use SSL/TLS protocols to secure browsing sessions, and these protocols make heavy use of digital certificates.&#x20;
+
+When you visit a website that uses HTTPS, your browser will first verify the identity of the website by checking the digital certificate that is presented by the website. If the certificate is valid, your browser will then encrypt all of the communications between your computer and the website. This ensures that your communications are secure and that they cannot be intercepted by an attacker.
 
 \--
 

@@ -4,13 +4,29 @@ hidden: true
 
 # How SSL/TLS uses Cryptography
 
-This section explains how cryptographic tools (symmetric/asymmetric encryption, and hashing) secure Internet communications via SSL/TLS.
+## Learning objectives
 
-• Why hashing acts as a foundational layer for securing web traffic
-
+• Why hashing acts as a foundational layer for securing web traffic\
 • In SSL/TLS, a combination of hashing and asymmetric encryption secures websites, APIs, and online transactions
 
-<figure><img src="../../.gitbook/assets/ssl-crypto.png" alt="ssl-tls-cryptography"><figcaption><p>How SSL/TLS uses cryptographic tools to secure data transmission (image courtesy of Ed Harmoush, Practical Networking)</p></figcaption></figure>
+SSL/TLS are cryptographic protocols that provide encryption, authentication, and data integrity for secure communication over a network.
+
+This section explains how cryptographic tools (symmetric/asymmetric encryption, and hashing) secure Internet communications via SSL/TLS.
+
+## Topics covered in this section
+
+* **Point 1**
+*
+
+### Point 1
+
+SSL/TLS is widely used for securing various types of network communications, including websites using HTTPS, email communication using email protocols (SMTPS, IMAPS, POP3S), traffic between the client and server using VPNs, file transfers using FTPS, database queries (MySQL with SSL/TLS), client-server communication (PostgreSQL with SSL/TLS), directory service queries (e.g., Active Directory) using (LDAP over SSL/TLS), and the list is very long.
+
+SSL/TLS is used almost anywhere secure communication is needed—not just for websites. If an application transmits sensitive data over a network, there’s a good chance TLS is involved.
+
+**How SSL/TLS uses Cryptography**
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt="How-SSL-TLS-uses-Cryptography"><figcaption><p>How SSL/TLS uses cryptographic tools to secure data transmission (image courtesy of Ed Harmoush, Practical Networking)</p></figcaption></figure>
 
 ### 1. Hashing
 
@@ -46,8 +62,6 @@ A digital signature is created using a combination of **hashing + asymmetric enc
 
 **Step 3: Verification by the Receiver**
 
-**Step 3: Verification by the Receiver**
-
 * The receiver decrypts the signature using the sender’s **public key**, retrieving the original hash.
 * They independently compute the hash of the received data.
 * If the two hashes match, the data is **authentic and unaltered**.
@@ -61,8 +75,6 @@ In **SSL/TLS** (used for HTTPS), digital signatures are used for:
 * Websites present an **SSL certificate** signed by a Certificate Authority (CA).
 * The CA signs the certificate’s hash with its private key.
 * Your browser verifies it by checking the signature against the CA’s public key.
-
-**B. Key Exchange (TLS Handshake)**
 
 **B. Key Exchange (TLS Handshake)**
 
@@ -85,6 +97,13 @@ In **SSL/TLS** (used for HTTPS), digital signatures are used for:
 ### 3. Asymmetric Encryption
 
 
+
+
+
+### Key takeaways <a href="#key-takeaways" id="key-takeaways"></a>
+
+• Why hashing acts as a foundational layer for securing web traffic\
+• In SSL/TLS, a combination of hashing and asymmetric encryption secures websites, APIs, and online transactions
 
 ### References
 

@@ -10,7 +10,7 @@ Although there is a lot you can learn about Wireshark, it’s quite easy to get 
 
 Up here you can see the packets as they are sent or received by the network interface you are capturing traffic from:
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 If you click on a packet you can see more details.
 
@@ -26,7 +26,7 @@ As you can see here, the entire frame is indeed captured.
 
 \>Transmission Control Protocol (TCP) is the Layer 4 segment
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 At the end of this demonstration you will be asked to do a few basic tasks to try out in Wireshark, so you will need to download Wireshark if you want to do them.
 
@@ -46,7 +46,7 @@ When the capture starts you will see there is already a lot of network traffic g
 
 In fact, a lot of traffic went passing by when the video was played. Let’s analyze some of it.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Note that in Wireshark you are able to filter output. There are many ways you can do so.
 

@@ -6,10 +6,8 @@ hidden: true
 
 ## Learning objectives
 
-• Why hashing acts as a foundational layer for securing web traffic\
+• Understand why hashing acts as a foundational layer for securing web traffic\
 • In SSL/TLS, a combination of hashing and asymmetric encryption secures websites, APIs, and online transactions
-
-SSL/TLS are cryptographic protocols that provide encryption, authentication, and data integrity for secure communication over a network.
 
 This section explains how cryptographic tools (symmetric/asymmetric encryption, and hashing) secure Internet communications via SSL/TLS.
 
@@ -20,9 +18,21 @@ This section explains how cryptographic tools (symmetric/asymmetric encryption, 
 
 ### Point 1
 
-SSL/TLS is widely used for securing various types of network communications, including websites using HTTPS, email communication using email protocols (SMTPS, IMAPS, POP3S), traffic between the client and server using VPNs, file transfers using FTPS, database queries (MySQL with SSL/TLS), client-server communication (PostgreSQL with SSL/TLS), directory service queries (e.g., Active Directory) using (LDAP over SSL/TLS), and the list is very long.
+SSL/TLS are cryptographic protocols that provide **encryption, authentication, and data integrity** for secure communication over a network. For example, HTTPS ensures that data exchanged between a client (e.g., a web browser) and a server (e.g., a website) is private and tamper-proof.
 
-SSL/TLS is used almost anywhere secure communication is needed—not just for websites. If an application transmits sensitive data over a network, there’s a good chance TLS is involved.
+While commonly associated with **HTTPS** (securing web traffic), SSL/TLS is widely used in many other applications, including:
+
+* **Email (SMTPS, IMAPS, POP3S)** – Secures email transmission (sending/receiving) and prevents eavesdropping.
+* **VPNs (e.g., OpenVPN)** – Encrypts all traffic between a client and a private network.
+* **File transfers (FTPS)** – Protects file transfers (different from SFTP, which uses SSH).
+* **Databases (MySQL, PostgreSQL, MongoDB with TLS)** – Encrypts queries and prevents unauthorized access to sensitive data.
+* **Directory services (LDAPS)** – Secures authentication and queries in systems like Active Directory.
+* **VoIP & messaging (SIP over TLS, XMPP)** – Encrypts call setup (VoIP) and instant messages.
+* **IoT & APIs** – Ensures secure firmware updates and encrypted API communications (e.g., payment processing).
+* **DNS security (DNS over TLS)** – Prevents tampering or spying on domain name lookups.
+* **Remote desktop (RDP with TLS)** – Secures remote access to workstations/servers.
+
+SSL/TLS is the backbone of secure communications. SSL/TLS is used almost anywhere secure communication is needed—not just for websites. If an application transmits sensitive data over a network, there’s a good chance TLS is involved.
 
 **How SSL/TLS uses Cryptography**
 
@@ -102,7 +112,7 @@ In **SSL/TLS** (used for HTTPS), digital signatures are used for:
 
 ### Key takeaways <a href="#key-takeaways" id="key-takeaways"></a>
 
-• Why hashing acts as a foundational layer for securing web traffic\
+• Understand why hashing acts as a foundational layer for securing web traffic\
 • In SSL/TLS, a combination of hashing and asymmetric encryption secures websites, APIs, and online transactions
 
 ### References

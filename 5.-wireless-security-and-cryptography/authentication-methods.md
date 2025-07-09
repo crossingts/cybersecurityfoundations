@@ -2,6 +2,7 @@
 description: >-
   This section discusses three common methods of authentication: username and
   password, Pre-Shared Keys (PSKs), and digital certificates
+hidden: true
 ---
 
 # Authentication methods
@@ -69,18 +70,22 @@ Because each session uses fresh nonces, an attacker who intercepts a token canno
 
 ### Digital certificates
 
-Digital certificates are the primary method of identification in use on the Internet. A digital certificate is an electronic document that binds a public key to an identity, such as a person or server. A digital certificate is used to verify the identity of the holder of the public key and to encrypt communications.
+Digital certificates are a critical security technology that is used to protect communications over the Internet.&#x20;
+
+Digital certificates are the primary method of identification in use on the Internet. A digital certificate is an electronic document that binds a public key to an identity, such as a company or server. A digital certificate is used to verify the identity of the holder of the public key and to encrypt communications.
 
 Digital certificates are used in a variety of applications, including:
 
-* Secure sockets layer (SSL) and transport layer security (TLS): These protocols are used to secure communications over the Internet.
+* Secure sockets layer (SSL) and transport layer security (TLS): Digital certificates are used in the TLS handshake.
 * Email: Digital certificates can be used to authenticate email senders and to encrypt email messages.
 * File encryption: Digital certificates can be used to encrypt files and to verify the integrity of files.
 * Software distribution: Digital certificates can be used to verify the authenticity of software downloads.
 
-Digital certificates are a critical security technology that is used to protect communications over the Internet. Digital certificates are a key component of HTTPS and other security protocols.
 
-HTTPS websites use SSL/TLS protocols to secure browsing sessions, and these protocols make heavy use of digital certificates. SSL and TLS use digital certificates to authenticate the server and to encrypt the communications.
+
+
+
+SSL and TLS use digital certificates to authenticate the server and to encrypt the communications.
 
 When you visit a website that uses HTTPS, your browser will first verify the identity of the website by checking the digital certificate that is presented by the website. If the certificate is valid, your browser will then encrypt all of the communications between your computer and the website. This ensures that your communications are secure and that they cannot be intercepted by an attacker.
 
@@ -96,6 +101,91 @@ Here are some of the benefits of using digital certificates:
 * They can be used to authenticate users, such as when logging into a website or application.
 
 Inside a digital certificate is a public key of an asymmetric key pair. This key is used to verify that the entity which presents the certificate is the true owner of the certificate.
+
+\--
+
+The **TLS handshake** is a process that establishes a secure, encrypted connection between a client (e.g., a web browser) and a server (e.g., a website). Its primary purposes are:
+
+1. **Authentication** – Verifies the server’s identity (and optionally the client’s) using **digital certificates**.
+2. **Key Exchange** – Securely negotiates a **shared session key** for symmetric encryption (faster than asymmetric encryption).
+3. **Cipher Suite Agreement** – Determines the encryption algorithms (e.g., AES, ChaCha20) and hash functions (e.g., SHA-256) to be used.
+4. **Secure Session Establishment** – Ensures all further communication is encrypted and tamper-proof.
+
+#### **Simplified Steps in a TLS Handshake**
+
+1. **Client Hello** – The client sends supported TLS versions, cipher suites, and a random number.
+2. **Server Hello** – The server responds with its chosen cipher suite, a random number, and its **digital certificate**.
+3. **Key Exchange** – The client verifies the certificate, then generates a **pre-master secret** (encrypted with the server’s public key).
+4. **Session Key Generation** – Both sides compute the same **symmetric session key** using the random numbers and pre-master secret.
+5. **Secure Communication** – All further data is encrypted with the session key.
+
+#### **Why the TLS Handshake Matters**
+
+* Prevents **eavesdropping** (via encryption).
+* Stops **man-in-the-middle (MITM) attacks** (via certificate verification).
+* Ensures **data integrity** (no tampering in transit).
+
+**Example:** When you visit `https://example.com`, the TLS handshake happens before any data is sent, securing your login or payment details.
+
+\--
+
+**Role of Digital Certificates in SSL/TLS**
+
+Digital certificates are a **critical part** of the SSL/TLS handshake process, serving three main purposes:
+
+**A. Authentication (Identity Verification)**
+
+* A digital certificate (also called an **SSL/TLS certificate**) is issued by a trusted **Certificate Authority (CA)** (e.g., DigiCert, Let’s Encrypt).
+* It binds a **public key** to an entity (e.g., a domain name, company, or server), proving that the server is legitimate.
+* When a client connects to a server, the server presents its certificate, and the client verifies it against trusted CAs.
+
+**B. Key Exchange (Secure Encryption Setup)**
+
+* The certificate contains a **public key** used in the **TLS handshake** to establish an encrypted session.
+* The client uses this public key to:
+  * Encrypt a **pre-master secret** (in RSA-based key exchange).
+  * Verify the server’s identity (in **ECDHE** key exchange).
+* This ensures that only the legitimate server (with the matching private key) can decrypt the data.
+
+**C. Trust Establishment**
+
+* Certificates are signed by CAs, which act as **trusted third parties**.
+* Browsers and operating systems come with a **pre-installed list of trusted root certificates**.
+* If the certificate is valid and trusted, the SSL/TLS connection proceeds securely.
+
+#### **3. Types of SSL/TLS Certificates**
+
+* **Domain Validated (DV)** – Basic encryption, checks domain ownership.
+* **Organization Validated (OV)** – Verifies business identity.
+* **Extended Validation (EV)** – Highest trust, shows company name in the browser.
+* **Wildcard & Multi-Domain** – Covers multiple subdomains or domains.
+
+#### **4. How SSL/TLS Uses Certificates**
+
+1. **Handshake Phase**:
+   * Client sends a `ClientHello`.
+   * Server responds with its **digital certificate** + public key.
+   * Client verifies the certificate (checks CA, expiry, domain match).
+2. **Key Exchange**:
+   * Client generates a session key, encrypts it with the server’s public key.
+   * Server decrypts it with its **private key** (only the server has this).
+3. **Secure Session**:
+   * Symmetric encryption (AES) is used for fast, secure data transfer.
+
+#### **5. Without a Certificate?**
+
+* No authentication → Risk of **man-in-the-middle (MITM) attacks**.
+* Browsers show **"Not Secure"** warnings (e.g., self-signed certs).
+
+#### **Summary**
+
+* **SSL/TLS** provides the encryption framework.
+* **Digital certificates** enable trust by verifying server identity and facilitating secure key exchange.
+* Together, they ensure **confidentiality, integrity, and authenticity** in online communications (HTTPS, VPNs, email, etc.).
+
+
+
+\--
 
 A digital certificate can only be considered proof of someone’s identity if they can provide the matching private key. There are two ways this can be verified.
 

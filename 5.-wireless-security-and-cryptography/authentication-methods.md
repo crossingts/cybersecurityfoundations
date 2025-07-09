@@ -70,33 +70,23 @@ Because each session uses fresh nonces, an attacker who intercepts a token canno
 
 ### Digital certificates
 
-Digital certificates are a critical security technology that is used to protect communications over the Internet.&#x20;
-
-Digital certificates are the primary method of identification in use on the Internet. A digital certificate is an electronic document that binds a public key to an identity, such as a company or server. A digital certificate is used to verify the identity of the holder of the public key and to encrypt communications.
+Digital certificates are a critical security technology that is used to protect communications over the Internet. Digital certificates are the primary method of identification in use on the Internet. A digital certificate is an electronic document that binds a public key to an identity, such as a company or server. A digital certificate is used to verify the identity of the holder of the public key and to encrypt communications.
 
 Digital certificates are used in a variety of applications, including:
 
-* Secure sockets layer (SSL) and transport layer security (TLS): Digital certificates are used in the TLS handshake.
-* Email: Digital certificates can be used to authenticate email senders and to encrypt email messages.
-* File encryption: Digital certificates can be used to encrypt files and to verify the integrity of files.
+* Secure sockets layer (SSL) and transport layer security (TLS): Digital certificates are used in the TLS handshake, helping to secure web traffic by authenticating servers, encrypting data, and protecting data integrity.
+* User Authentication: Client certificates authenticate users (e.g., logging into secure systems).
+* Email Security (S/MIME): Digital certificates can be used to authenticate email senders and to encrypt email messages.
+* File encryption: Digital certificates can be used to encrypt files and to sign digital documents, ensuring their authenticity and integrity.
 * Software distribution: Digital certificates can be used to verify the authenticity of software downloads.
 
+**Benefits of using digital certificates:**
 
+* **Authentication/Trust**: Confirms the identity of websites, software, or users.
+* **Encryption**: Protects data in transit (e.g., HTTPS, email).
+* **Integrity**: Ensures files or messages are unaltered (via digital signatures).
 
-Digital certificates are mainly, but not exclusively, used for websites to verify that the website being accessed is legitimate.&#x20;
-
-A digital certificate is a file that contains information about the website’s identity and a public key used to encrypt communication. The digital certificate is issued by a trusted Certificate Authority (CA) after verifying ownership of the domain.
-
-While digital certificates are primarily used for websites, they also authenticate email senders (S/MIME), software publishers (code signing), and users (client certificates).
-
-Here are some of the benefits of using digital certificates:
-
-* They provide a secure way to verify the identity of a website or server.
-* They encrypt communications, making them secure from eavesdropping.
-* They can be used to sign digital documents, ensuring their authenticity and integrity.
-* They can be used to authenticate users, such as when logging into a website or application.
-
-Inside a digital certificate is a public key of an asymmetric key pair. This key is used to verify that the entity which presents the certificate is the true owner of the certificate.
+The digital certificate is issued by a trusted Certificate Authority (CA) after verifying ownership of the domain. A digital certificate is a file that contains information about the website’s identity (e.g., domain name, organization), a public key of an asymmetric key pair (for encryption and to verify that the entity which presents the certificate is the true owner of the certificate), and a digital signature (from the CA to prove authenticity). A digital certificate also contains information about its validity period (expiration date).
 
 
 
@@ -134,6 +124,20 @@ SSL and TLS use digital certificates to authenticate the server and to encrypt t
 HTTPS websites use SSL/TLS protocols to secure browsing sessions, and these protocols make heavy use of digital certificates.&#x20;
 
 When you visit a website that uses HTTPS, your browser will first verify the identity of the website by checking the digital certificate that is presented by the website. If the certificate is valid, your browser will then encrypt all of the communications between your computer and the website. This ensures that your communications are secure and that they cannot be intercepted by an attacker.
+
+**How Digital Certificates Work in HTTPS**
+
+When visiting an **HTTPS website**:
+
+1. The **server presents its digital certificate** to the browser.
+2. The **browser checks** if a trusted **Certificate Authority (CA)** issued it.
+3. If valid, the browser uses the **public key** in the certificate to establish an encrypted connection.
+
+**Role of Certificate Authorities (CAs)**
+
+* CAs verify domain ownership before issuing certificates.
+* Examples: DigiCert, Let’s Encrypt, Sectigo.
+* Browsers and operating systems maintain a **list of trusted CAs**.
 
 \--
 
@@ -194,6 +198,8 @@ Digital certificates are a **critical part** of the SSL/TLS handshake process, s
 
 
 \--
+
+Digital certificates are mainly, but not exclusively, used for websites to verify that the website being accessed is legitimate.&#x20;
 
 A digital certificate can only be considered proof of someone’s identity if they can provide the matching private key. There are two ways this can be verified.
 

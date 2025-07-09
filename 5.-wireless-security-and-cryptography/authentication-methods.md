@@ -87,7 +87,7 @@ Digital certificates are used in a variety of applications, including:
 
 The digital certificate is issued by a trusted Certificate Authority (CA) after verifying ownership of the domain. A digital certificate is a file that contains information about the website’s identity (e.g., domain name, organization), a public key of an asymmetric key pair (for encryption and to verify that the entity which presents the certificate is the true owner of the certificate), and a digital signature (from the CA to prove authenticity). A digital certificate also contains information about its validity period (expiration date).
 
-### The TLS handshake and its purposes
+#### The TLS handshake and its purposes
 
 The **TLS handshake** is a process that establishes a secure, encrypted connection between a client (e.g., a web browser) and a server (e.g., a website). Its primary purposes are:
 
@@ -98,7 +98,7 @@ The **TLS handshake** is a process that establishes a secure, encrypted connecti
 
 After the handshake, both the client and server use the derived symmetric session key to encrypt all transmitted data and to verify integrity (using HMAC or AEAD modes like AES-GCMP).
 
-### Simplified Steps in a TLS Handshake
+#### Simplified Steps in a TLS Handshake
 
 1. **Client Hello** – The client sends supported TLS versions, cipher suites, and a random number (nonce).
 2. **Server Hello** – The server responds with its chosen cipher suite, a random number (nonce), and its **digital certificate** (containing its public key).

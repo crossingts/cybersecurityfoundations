@@ -41,8 +41,6 @@ While "SSL/TLS handshake" and "TLS handshake" in modern contexts refer to the sa
 
 When discussing handshakes, "TLS handshake" is more accurate, but "SSL/TLS handshake" is widely understood.
 
-***
-
 The TLS handshake establishes a secure session by:
 
 * Authenticating the server (and optionally the client).
@@ -62,7 +60,7 @@ Before key exchange, the server proves its identity using a **digital certificat
   * Confirming the certificate hasn’t expired or been revoked (via CRL/OCSP).
   * Ensuring the server’s domain matches the certificate’s **Subject Alternative Name (SAN)** or **Common Name (CN)**.
 
-#### Secure session key negotiation
+### TLS Handshake Secure Session Key Negotiation&#x20;
 
 After certificate validation, the client and server negotiate a symmetric session key (used for encrypting data). Two primary methods:
 
@@ -97,9 +95,7 @@ The TLS handshake ensures:
 3. **Authentication** – The server (and optionally client) proves identity (via certificates).
 4. **Forward Secrecy** (if using ephemeral keys) – Past sessions can’t be decrypted even if the private key is later compromised.
 
-***
-
-**TLS 1.3 Handshake Explained (Simplified & Secure)**
+### TLS 1.3 Handshake Explained (Simplified & Secure)
 
 Below is a step-by-step breakdown of the TLS 1.3 handshake with a simplified workflow.
 

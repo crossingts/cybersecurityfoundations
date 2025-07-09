@@ -88,28 +88,20 @@ Digital certificates are used in a variety of applications, including:
 
 The digital certificate is issued by a trusted Certificate Authority (CA) after verifying ownership of the domain. A digital certificate is a file that contains information about the website’s identity (e.g., domain name, organization), a public key of an asymmetric key pair (for encryption and to verify that the entity which presents the certificate is the true owner of the certificate), and a digital signature (from the CA to prove authenticity). A digital certificate also contains information about its validity period (expiration date).
 
-
-
-\--
-
-Key use of digital certs:
-
-## The TLS handshake and its purposes
+### The TLS handshake and its purposes
 
 The **TLS handshake** is a process that establishes a secure, encrypted connection between a client (e.g., a web browser) and a server (e.g., a website). Its primary purposes are:
 
 1. **Authentication** – Verifies the server’s identity (and optionally the client’s) using **digital certificates**.
-2. **Key Exchange** – Securely negotiates a **shared session key** for symmetric encryption (faster than asymmetric encryption).
+2. **Key Exchange** – Securely negotiates a **shared session key** for symmetric encryption of communications using **digital certificates**.
 3. **Cipher Suite Agreement** – Determines the encryption algorithms (e.g., AES, ChaCha20) and hash functions (e.g., SHA-256) to be used.
 4. **Secure Session Establishment** – Ensures all further communication is encrypted and tamper-proof.
 
-SSL and TLS use digital certificates to authenticate the server and to encrypt the communications.
-
-#### **Simplified Steps in a TLS Handshake**
+### **Simplified Steps in a TLS Handshake**
 
 1. **Client Hello** – The client sends supported TLS versions, cipher suites, and a random number.
 2. **Server Hello** – The server responds with its chosen cipher suite, a random number, and its **digital certificate**.
-3. **Key Exchange** – The client verifies the certificate, then generates a **pre-master secret** (encrypted with the server’s public key).
+3. **Key Exchange** – The client verifies the certificate against trusted CAs., then generates a **pre-master secret** (encrypted with the server’s public key).
 4. **Session Key Generation** – Both sides compute the same **symmetric session key** using the random numbers and pre-master secret.
 5. **Secure Communication** – All further data is encrypted with the session key.
 
@@ -119,19 +111,11 @@ SSL and TLS use digital certificates to authenticate the server and to encrypt t
 * Stops **man-in-the-middle (MITM) attacks** (via certificate verification).
 * Ensures **data integrity** (no tampering in transit).
 
-**Example:** When you visit `https://example.com`, the TLS handshake happens before any data is sent, securing your login or payment details.
-
-HTTPS websites use SSL/TLS protocols to secure browsing sessions, and these protocols make heavy use of digital certificates.&#x20;
-
-When you visit a website that uses HTTPS, your browser will first verify the identity of the website by checking the digital certificate that is presented by the website. If the certificate is valid, your browser will then encrypt all of the communications between your computer and the website. This ensures that your communications are secure and that they cannot be intercepted by an attacker.
-
 **How Digital Certificates Work in HTTPS**
 
-When visiting an **HTTPS website**:
+HTTPS uses SSL/TLS protocols to secure browsing sessions. When you visit `https://example.com`, the TLS handshake happens before any data is sent, securing your login or payment details.
 
-1. The **server presents its digital certificate** to the browser.
-2. The **browser checks** if a trusted **Certificate Authority (CA)** issued it.
-3. If valid, the browser uses the **public key** in the certificate to establish an encrypted connection.
+When you visit a website that uses HTTPS, your browser will first verify the identity of the website by checking the digital certificate that is presented by the website server. If the certificate is valid, if a trusted Certificate Authority (CA) issued it, your browser will use the **public key** in the certificate to establish an encrypted connection to encrypt all of the communications between your computer and the website.&#x20;
 
 **Role of Certificate Authorities (CAs)**
 

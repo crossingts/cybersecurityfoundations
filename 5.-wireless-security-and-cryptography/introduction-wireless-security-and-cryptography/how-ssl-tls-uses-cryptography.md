@@ -40,21 +40,36 @@ SSL/TLS is the backbone of secure communications. SSL/TLS is used almost anywher
 
 ### 1. Hashing
 
-**Hashing Algorithms in Digital Signatures (SSL/TLS)**
+TLS uses hashing for fingerprint verification, message Authentication Codes (MAC), and digital signatures, thus ensuring **data integrity, authentication, and non-repudiation** in encrypted communications.&#x20;
 
-Hashing is essential in SSL/TLS because it ensures **data integrity, authentication, and non-repudiation** in encrypted communications.&#x20;
+Here’s a table correlating data integrity, authentication, and non-repudiation with how TLS uses hashing for fingerprint verification, MACs, and digital signatures:
 
-Fingerprint → Digital signature
+| **TLS Hashing Application**            | **Security Parameter** | **Explanation**                                                                                                                                                            |
+| -------------------------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Fingerprint Verification**           | **Authentication**     | Public key certificates (e.g., server’s cert) are hashed to produce fingerprints. Clients verify these against trusted stores to authenticate the server.                  |
+| **Message Authentication Codes (MAC)** | **Data Integrity**     | TLS uses hash-based MACs (HMAC) or authenticated encryption (AEAD) to ensure transmitted data is unaltered. The hash ensures any tampering is detectable.                  |
+| **Digital Signatures**                 | **Non-Repudiation**    | TLS uses hashing (e.g., SHA-256) in digital signatures (e.g., RSA/ECDSA). The sender signs a hash of the message, proving their identity and preventing denial of sending. |
 
-Verify SSL certificate authenticity:&#x20;
+#### **Clarifying Comments:**
 
-When a website presents an SSL certificate, a cryptographic hash (like SHA-256) creates a unique **fingerprint** of the certificate data, which is then **signed** by a trusted Certificate Authority (CA) using asymmetric encryption. This allows browsers to **verify** that the certificate hasn’t been tampered with.
+1. **Fingerprint Verification**
+   * Digital certificates, which are issued by a Certificate Authority (CA), are hashed (e.g., using SHA-256) to produce a digest (fingerprint). Clients compare the fingerprint with trusted values to ensure they’re connecting to the legitimate server.
+   * Example: Browser checks a cert’s fingerprint against Certificate Authorities (CAs).
+2. **Message Authentication Codes (MAC)**
+   * TLS 1.2 uses HMAC (Hash-based MAC) to verify message integrity. The sender and receiver compute a hash of the data + shared secret; mismatches indicate tampering.
+   * TLS 1.3 replaces HMAC with **AEAD** (e.g., AES-GCM), which integrates encryption + integrity checks.
+3. **Digital Signatures**
+   * Used in TLS handshakes (e.g., server’s CertificateVerify message). The sender hashes the handshake messages, then signs the hash with their private key.
+   * Ensures **non-repudiation**: The sender cannot later deny sending the message, as only they possess the private key.
 
-Additionally, during the TLS handshake, hashing is used in **digital signatures** (e.g., RSA or ECDSA) to **authenticate** the server and in **HMAC** (Hash-based Message Authentication Code) to verify that **transmitted data remains unaltered**. Without hashing, attackers could forge certificates, manipulate encrypted sessions, or execute man-in-the-middle attacks, breaking the trust model of HTTPS. Thus, hashing acts as a foundational layer for securing web traffic.
+#### **Summary:**
 
-Hashing ensures **data integrity** in digital signatures, while asymmetric encryption (RSA/ECDSA) provides **authentication**. In SSL/TLS, this combination secures websites, APIs, and online transactions.
+* **Hashing** underpins all three mechanisms:
+  * **Fingerprints** (authentication) rely on irreversible hashes of certificates.
+  * **MACs** (integrity) use hashing (+ secret keys) to detect tampering.
+  * **Digital signatures** (non-repudiation) sign hashes to bind messages to identities.
 
-Digital signatures rely heavily on cryptographic hashing to ensure authentication, integrity, and non-repudiation in secure communications like SSL/TLS. Here's how it works:
+
 
 #### **1. Role of Hashing in Digital Signatures**
 

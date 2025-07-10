@@ -85,7 +85,9 @@ Digital certificates are used in a variety of applications, including:
 * **Encryption**: Protects data in transit (e.g., HTTPS, email).
 * **Integrity**: Ensures files or messages are unaltered (via digital signatures).
 
-The digital certificate is issued by a trusted Certificate Authority (CA) after verifying ownership of the domain. A digital certificate is a file that contains information about the website’s identity (e.g., domain name, organization), a public key of an asymmetric key pair (for encryption and to verify that the entity which presents the certificate is the true owner of the certificate), and a digital signature (from the CA to prove authenticity). A digital certificate also contains information about its validity period (expiration date).
+The digital certificate is issued by a trusted Certificate Authority (CA) after verifying ownership of a domain. A digital certificate is a file that contains information about the website’s identity (e.g., domain name, and optionally organization details), a public key of an asymmetric key pair (used for encryption, e.g., in key exchange, and for verifying signatures, to prove the holder controls the corresponding private key), the CA’s digital signature (created by hashing the certificate data and encrypting the hash with the CA’s private key), and a validity period (expiration date).
+
+When a website presents its certificate, the browser checks the CA’s signature to ensure authenticity. During a secure connection (e.g., TLS), the website proves ownership of the private key by signing a message, which the browser verifies using the public key in the certificate.
 
 #### The TLS handshake and its purposes
 

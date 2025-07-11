@@ -44,21 +44,21 @@ TLS uses hashing for fingerprint verification, message Authentication Codes (MAC
 
 **Hashing role in TLS handshake:**
 
-1. **Digital Signatures (asymmetric encryption + hashing): Authenticates server identity (ensures the server is trusted, preventing MITM attacks). Example Algorithms: RSA + SHA, ECDSA.**
-
-**Digital Signatures (e.g., RSA + SHA, ECDSA)**
+1. **Digital Signatures (asymmetric encryption + hashing): Authenticates server identity (ensures the server is trusted, preventing MITM attacks). Example Algorithms: RSA + SHA-256, ECDSA.**
 
 * **When does this occur?**
   * **During the handshake**, in two distinct phases:
     1. **Certificate Verification**:
-       * The server sends its **certificate** (signed by a CA using RSA+SHA256 or ECDSA).
+       * The server sends its **certificate** (signed by a CA using RSA+SHA-256 or ECDSA).
        * The client verifies the CA's signature on the certificate to authenticate the server's identity (preventing MITM).
-       * Hashing is used for signing handshake messages (e.g., SHA-256 in RSA/ECDSA signatures). SHA-256 hashes are used in signing the handshake messages (e.g., ServerKeyExchange in TLS 1.2).
+       * Hashing role: The CA’s signature includes a hash (e.g., SHA-256) of the certificate data.
        * _This happens **before** key exchange._
     2. **Key Exchange (e.g., RSA or ECDHE)**:
-       * In RSA key exchange (now deprecated in TLS 1.3), the client encrypts the "pre-master secret" with the server's public key.
-       * In **ECDHE**, the server signs its ephemeral public key (using ECDSA/RSA) to prove it owns the certificate.
-       * The "pre-master secret" (from RSA or ECDHE) is then combined with nonces to derive the "master secret" (session key). Hashing is used for PRF (Pseudo-Random Function) to derive keys (e.g., combining pre-master secret + nonces). Hashing is used to derive master secret (session key) using nonces + PRF (SHA-256).
+       * **In RSA** key exchange (deprecated in TLS 1.3), the client encrypts the "pre-master secret" with the server's public key.
+       * **Server authentication (optional):** In TLS 1.2, the server may send a `CertificateVerify` message (signed with RSA+hash) to prove it owns the private key.
+       * The "pre-master secret" is combined with nonces to derive the "master secret" (session key). Hashing role: SHA-256 is used in the PRF (Pseudo-Random Function) to derive master secret (e.g., combining pre-master secret + nonces).&#x20;
+       * **In ECDHE**, the server signs its ephemeral public key (e.g., using ECDSA+SHA-256 or RSA-PSS+SHA-256) to prove it owns the certificate. Hashing role: The signature includes a hash (e.g., SHA-256) of the handshake messages (for integrity).
+       * The "pre-master secret" is combined with nonces to derive the "master secret" (session key). Hashing role: SHA-256 is used in the PRF (Pseudo-Random Function) to derive master secret (e.g., combining pre-master secret + nonces).&#x20;
 
 2. **Integrity Checks: Verifies data integrity (prevents data alteration in transit). Example Algorithms: SHA-256, HMAC.**
 
@@ -66,6 +66,15 @@ TLS uses hashing for fingerprint verification, message Authentication Codes (MAC
 
 * **After symmetric key negotiation.** Once the TLS handshake establishes a shared session key (the "master secret"), hashing (often via HMAC or AEAD ciphers like AES-GCM) is used to verify message integrity **during the encrypted application data exchange** (not during the handshake itself).
 * **Example:** In TLS 1.2, HMAC-SHA256 is used with the session key to generate MACs for each encrypted record. In TLS 1.3, AEAD (e.g., AES-GCM) combines encryption and integrity checks.
+
+#### **Summary: When Hashing is Used**
+
+| **Key Exchange Type**   | **Hashing in Key Exchange?**    | **Where Hashing&#x20;**_**Is**_**&#x20;Used**                                     |
+| ----------------------- | ------------------------------- | --------------------------------------------------------------------------------- |
+| **RSA** (TLS 1.2)       | ❌ No (encryption is raw RSA)    | ✔️ Certificate signatures, `CertificateVerify` (if used), PRF for key derivation. |
+| **ECDHE** (TLS 1.2/1.3) | ✔️ Yes (signing ephemeral keys) | ✔️ Server’s ECDHE signature, PRF for key derivation.                              |
+
+Hashing is used for signing handshake messages (e.g., SHA-256 in RSA/ECDSA signatures). SHA-256 hashes are used in signing the handshake messages (e.g., ServerKeyExchange in TLS 1.2).
 
 Here’s a table correlating data integrity, authentication, and non-repudiation with how TLS uses hashing for fingerprint verification, MACs, and digital signatures:
 

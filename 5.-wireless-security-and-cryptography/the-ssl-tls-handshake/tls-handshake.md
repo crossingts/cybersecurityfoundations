@@ -152,8 +152,6 @@ This process achieves:\
 ✅ **Integrity** (HMAC)\
 ✅ **Authentication** (Server’s certificate)
 
-Let me know if you'd like a more detailed breakdown (e.g., for Diffie-Hellman or TLS 1.3)!
-
 \--
 
 When both sides calculate the master secret (each have the same master secret at this point), how do they both derive the same symmetric session key?

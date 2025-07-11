@@ -18,7 +18,7 @@ This section explains how cryptographic tools (symmetric/asymmetric encryption, 
 
 ### Introduction
 
-SSL/TLS are cryptographic protocols that provide **encryption, authentication, and data integrity** for secure communication over a network. For example, HTTPS ensures that data exchanged between a client (e.g., a web browser) and a server (e.g., a website) is private and tamper-proof.
+SSL/TLS are cryptographic protocols that provide **encryption, authentication, and data integrity** for secure communication over a network. For example, the HTTPS protocol ensures that data exchanged between a client (e.g., a web browser) and a server (e.g., a website) is private and tamper-proof.
 
 While commonly associated with **HTTPS** (securing web traffic), SSL/TLS is widely used in many other applications, including:
 
@@ -75,13 +75,45 @@ Here’s a table correlating data integrity, authentication, and non-repudiation
 
 ### 2. Symmetric Encryption
 
-**Data transmission:** When sending confidential information over unsecure networks like the Internet, encryption protects it from eavesdropping. For example, HTTPS protocol uses encryption to secure online transactions and communication.
+#### Symmetric Encryption
+
+* Purpose: Confidentiality of bulk data
+* Common algorithms: AES (128/256-bit), ChaCha20
+* **How TLS Uses Symmetric Encryption**:
+  1. **Bulk Data Encryption**:
+     * Encrypts all application data (web pages, files, etc.) after the handshake
+     * Processes millions of bits efficiently with minimal overhead
+  2. **Session Keys**:
+     * Unique keys generated for each session via the handshake
+     * Typically 128-256 bit keys (e.g., AES-256-GCM in TLS 1.3)
+  3. **Performance Advantage**:
+     * 100-1,000x faster than asymmetric crypto for data transfer
+     * Enables high-speed secure communication (e.g., video streaming, large downloads)
+  4. **Cipher Modes**:
+     * Authenticated Encryption (AEAD): Combines encryption + integrity (e.g., AES-GCM)
+     * CBC mode (older TLS versions) with HMAC for integrity
+* Why symmetric encryption is used for data transmission
+* Key characteristics:
+  * Fast processing (optimized for hardware/software)
+  * Suitable for large amounts of data
+  * Minimal latency impact on user experience
+  * Perfect for protecting the actual content of communications
+
+
 
 ***
 
 ### 3. Asymmetric Encryption
 
+#### Asymmetric Encryption
 
+* Purpose: Secure key exchange and authentication
+* Common algorithms (RSA, ECC, DH)
+* How TLS uses asymmetric crypto for:
+  * Initial handshake
+  * Key exchange
+  * Digital signatures
+  * Server authentication
 
 
 

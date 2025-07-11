@@ -37,7 +37,7 @@ While "SSL/TLS handshake" and "TLS handshake" in modern contexts refer to the sa
 | **Cipher Suites** | Weak (RC4, MD5)                                       | Modern (SHA-256, AEAD)              |
 | **Certificates**  | Same X.509 format, but TLS enforces better validation |                                     |
 
-**For security**: Disable SSL entirely and enforce **TLS 1.2+**.
+TLS 1.2+ handshakes are more efficient and secure than SSL handshakes. For security, disable SSL entirely and enforce TLS 1.2+.
 
 When discussing handshakes, "TLS handshake" is more accurate, but "SSL/TLS handshake" is widely understood.
 

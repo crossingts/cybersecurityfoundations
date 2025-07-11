@@ -52,7 +52,7 @@
 * [Message signing using asymmetric keys](5.-wireless-security-and-cryptography/message-signing-using-asymmetric-keys.md)
 * [Authentication methods](5.-wireless-security-and-cryptography/authentication-methods.md)
 * [The SSL/TLS handshake](5.-wireless-security-and-cryptography/the-ssl-tls-handshake/README.md)
-  * [TLS handshake](5.-wireless-security-and-cryptography/the-ssl-tls-handshake/tls-handshake.md)
+  * [The TLS handshake](5.-wireless-security-and-cryptography/the-ssl-tls-handshake/the-tls-handshake.md)
 * [Replay attacks and anti-replay methods](5.-wireless-security-and-cryptography/replay-attacks-and-anti-replay-methods.md)
 * [Generating and applying an RSA key](5.-wireless-security-and-cryptography/generating-and-applying-an-rsa-key.md)
 * [IEEE 802.11 authentication methods](5.-wireless-security-and-cryptography/ieee-802.11-authentication-methods.md)

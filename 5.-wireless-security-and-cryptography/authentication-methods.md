@@ -98,7 +98,7 @@ The **TLS handshake** is a process that establishes a secure, encrypted connecti
 3. **Cipher Suite Agreement** – Determines the encryption algorithms (e.g., AES, ChaCha20) and hash functions (e.g., SHA-256) to be used.
 4. **Secure Session Establishment** – Ensures all further communication is encrypted and tamper-proof.
 
-After the handshake, both the client and server use the derived symmetric session key to encrypt all transmitted data and to verify integrity (using HMAC or AEAD modes like AES-GCMP).
+After the handshake, both the client and server use the derived symmetric session key to encrypt all transmitted data and to verify integrity using HMAC or AEAD modes like AES-GCMP.
 
 #### Simplified Steps in a TLS Handshake
 
@@ -108,7 +108,9 @@ After the handshake, both the client and server use the derived symmetric sessio
 4. **Session Key Generation** – Both sides compute the same **symmetric session key** using the random numbers and pre-master secret.
 5. **Secure Communication** – All further data is encrypted with the shared/computed session key.
 
-In the PSK handshake, instead of a PMS, the client and server start with a pre-shared secret.
+The symmetric session key (derived during the handshake) is used alongside a symmetric encryption algorithm (e.g., AES-256, ChaCha20) to encrypt the actual application data (e.g., HTTP requests, form submissions).
+
+In the PSK handshake, instead of a PMS, the client and server start with a pre-shared key.
 
 #### **Key Exchange (Establishing a Session Key) in the TLS Handshake**
 

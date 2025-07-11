@@ -41,6 +41,23 @@ While "SSL/TLS handshake" and "TLS handshake" in modern contexts refer to the sa
 
 When discussing handshakes, "TLS handshake" is more accurate, but "SSL/TLS handshake" is widely understood.
 
+#### The SSL/TLS Handshake Process
+
+1. ClientHello and ServerHello
+2.  Certificate validation (asymmetric crypto)&#x20;
+
+    Before key exchange, the server proves its identity using a **digital certificate**:
+
+    * The server sends its certificate (containing its public key and identity) to the client.
+    * The client validates the certificate by:
+      * Checking if it’s issued by a trusted **Certificate Authority (CA)**.
+      * Verifying the certificate’s digital signature (to ensure it wasn’t forged).
+      * Confirming the certificate hasn’t expired or been revoked (via CRL/OCSP).
+      * Ensuring the server’s domain matches the certificate’s **Subject Alternative Name (SAN)** or **Common Name (CN)**.
+3. Key exchange (Diffie-Hellman or RSA)
+4. Session key generation (symmetric crypto)
+5. Secure data transmission begins
+
 The TLS handshake establishes a secure session by:
 
 * Authenticating the server (and optionally the client).
@@ -48,17 +65,6 @@ The TLS handshake establishes a secure session by:
 * Generating and exchanging symmetric session keys securely (using asymmetric encryption like RSA or ECC initially, then switching to symmetric encryption for efficiency).
 
 The ultimate goal of the TLS handshake is to derive session keys which will encrypt and secure the data transfer between the client and the server. The client must trust the server’s public key (from the certificate) to securely establish session keys.
-
-**Certificate validation**
-
-Before key exchange, the server proves its identity using a **digital certificate**:
-
-* The server sends its certificate (containing its public key and identity) to the client.
-* The client validates the certificate by:
-  * Checking if it’s issued by a trusted **Certificate Authority (CA)**.
-  * Verifying the certificate’s digital signature (to ensure it wasn’t forged).
-  * Confirming the certificate hasn’t expired or been revoked (via CRL/OCSP).
-  * Ensuring the server’s domain matches the certificate’s **Subject Alternative Name (SAN)** or **Common Name (CN)**.
 
 ### TLS Handshake Secure Session Key Negotiation&#x20;
 
@@ -137,8 +143,6 @@ Below is a step-by-step breakdown of the TLS 1.3 handshake with a simplified wor
 * Both sides now have:
   * **Same session keys** (for AES-GCM/ChaCha20 encryption).
   * **Encrypted communication begins**.
-
-***
 
 **TLS 1.3 vs. TLS 1.2 Key Differences**
 

@@ -42,6 +42,12 @@ SSL/TLS is the backbone of secure communications. SSL/TLS is used almost anywher
 
 TLS uses hashing for fingerprint verification, message Authentication Codes (MAC), and digital signatures, thus ensuring **data integrity, authentication, and non-repudiation** in encrypted communications.&#x20;
 
+Hashing role in TLS handshake:
+
+• Integrity Checks: Verifies data integrity (prevents data alteration in transit). Example Algorithms: SHA-256, HMAC.
+
+• Digital Signatures (Asymmetric + Hashing): Authenticates server identity (ensures the server is trusted, preventing MITM attacks). Example Algorithms: RSA + SHA, ECDSA.
+
 Here’s a table correlating data integrity, authentication, and non-repudiation with how TLS uses hashing for fingerprint verification, MACs, and digital signatures:
 
 | **TLS Hashing Application**            | **Security Parameter** | **Explanation**                                                                                                                                                            |
@@ -74,6 +80,21 @@ Here’s a table correlating data integrity, authentication, and non-repudiation
 ***
 
 ### 2. Symmetric Encryption
+
+#### **Role of Symmetric Encryption in SSL/TLS**
+
+Symmetric encryption plays a crucial role in SSL/TLS by ensuring **data confidentiality** during secure communication. It is used to encrypt the actual data transmitted between a client (e.g., a web browser) and a server (e.g., a website).
+
+**Why Symmetric Encryption is Essential:**
+
+* **Efficiency**: Symmetric encryption (e.g., AES, 3DES, ChaCha20) is much faster than asymmetric encryption, making it ideal for encrypting large volumes of data.
+* **Confidentiality**: Only the sender and receiver share the same secret key, preventing unauthorized parties from decrypting the data.
+
+**How It Works in SSL/TLS:**
+
+
+
+
 
 #### Symmetric Encryption
 

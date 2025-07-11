@@ -31,7 +31,7 @@ This chapter covers how SSL/TLS uses cryptographic tools (symmetric encryption, 
 
 [Cryptographic encryption and confidentiality](../cryptographic-encryption-and-confidentiality.md)
 
-[The SSL/TLS handshake](../the-ssl-tls-handshake.md)
+[The SSL/TLS handshake](../the-ssl-tls-handshake/)
 
 [Message signing using asymmetric keys](../message-signing-using-asymmetric-keys.md)
 

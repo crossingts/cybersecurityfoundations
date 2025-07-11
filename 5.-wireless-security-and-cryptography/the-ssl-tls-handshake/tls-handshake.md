@@ -4,32 +4,16 @@ hidden: true
 
 # TLS handshake
 
-**Key Exchange** – The client verifies the certificate against trusted CAs, then generates a **pre-master secret (PMS)**. The client computes a symmetric key using the pre-master secret, its random number, and the server's random number. The client sends the server the pre-master secret encrypted with the server’s public key
-
-**Session Key Generation** – Both sides compute the same **symmetric session key** using the random numbers and pre-master secret.
-
-1. **Key Exchange (Asymmetric Encryption)**:
-   * The client and server use asymmetric encryption (e.g., RSA, ECC) to securely exchange a **pre-master secret**.
-   * This ensures that even if an attacker intercepts the key exchange, they cannot derive the symmetric key.
-2. **Key Derivation (Hashing)**:
-   * The pre-master secret is hashed (using algorithms like SHA-256) along with random values to generate a **master secret**.
-   * The master secret is then used to derive symmetric session keys (for encryption and integrity checks).
-3. **Data Transmission (Symmetric Encryption)**:
-   * The actual application data (e.g., HTTP traffic) is encrypted using symmetric encryption (e.g., AES-256).
-   * Hashing (via HMAC) ensures **data integrity**, preventing tampering during transit.
-
 #### **The Key Derivation Process**
 
-Both explanations are correct but describe slightly different perspectives. Here’s the unified step-by-step process:
-
-**1. Handshake Phase (Asymmetric Encryption)**
+1. **Key Exchange (Asymmetric Encryption):** The client and server use asymmetric encryption (e.g., RSA, ECC, DH/ECDH) to securely exchange a pre-master secret. This ensures that even if an attacker intercepts the key exchange, they cannot derive the symmetric key.
 
 * The client generates a **pre-master secret (PMS)** (a random 48-byte value in TLS 1.2).
 * The client encrypts the PMS with the **server’s public key** (RSA) or computes it via **Diffie-Hellman (DH/ECDH)**.
 * The encrypted PMS is sent to the server, which decrypts it using its **private key**.
 * **Now, both client and server have the same PMS.**
 
-**2. Key Derivation (Hashing the PMS with Nonces)**
+2. **Key Derivation (Hashing the PMS with Nonces):** The pre-master secret is hashed (using algorithms like SHA-256) along with random values to generate a **master secret**. The master secret is then used to derive symmetric session keys (for encryption and integrity checks).
 
 * The PMS alone is **not used directly** as the session key. Instead, it is **hashed** along with:
   * **Client random** (nonce sent in `ClientHello`)
@@ -39,53 +23,47 @@ Both explanations are correct but describe slightly different perspectives. Here
   * **Symmetric session keys** (e.g., AES-256 key for encryption)
   * **MAC keys** (for integrity, e.g., HMAC-SHA256)
   * **IVs** (if required by the cipher)
-
-**3. Who Does the Hashing?**
-
-* **Both the client and server independently** compute the same keys using:
+* **Both the client and server independently** compute the same symmetric session keys using:
   * The shared PMS
   * The exchanged `ClientRandom` and `ServerRandom`
   * The agreed PRF (e.g., HMAC-SHA256)
-* This ensures they derive **identical session keys** without transmitting them.
+
+3. **Data Transmission (Symmetric Encryption)**:
+
+* The symmetric session key (derived during the handshake) is used alongside a symmetric encryption algorithm (e.g., AES-256, ChaCha20) to encrypt the actual application data (e.g., HTTP requests, form submissions).
+* Hashing (via HMAC) ensures **data integrity**, preventing tampering during transit.
 
 ***
 
-#### **Reconciled Step-by-Step Flow**
+**Step-by-Step Flow**
 
-| **Step**                    | **Client Action**                                                                                | **Server Action**                                  | **Purpose**                                      |
-| --------------------------- | ------------------------------------------------------------------------------------------------ | -------------------------------------------------- | ------------------------------------------------ |
-| **1. Key Exchange**         | Generates PMS → Encrypts with server’s public key → Sends to server                              | Receives encrypted PMS → Decrypts with private key | Securely shares PMS without exposure             |
-| **2. Nonce Exchange**       | Sends `ClientHello` with `ClientRandom`                                                          | Responds with `ServerHello` and `ServerRandom`     | Ensures freshness (prevents replay attacks)      |
-| **3. Key Derivation**       | Uses PMS + `ClientRandom` + `ServerRandom` → Hashes (PRF) → Master Secret → Derives session keys | Does the same computation                          | Both sides independently generate identical keys |
-| **4. Secure Communication** | Encrypts data using symmetric key (AES) + MAC (HMAC)                                             | Decrypts using same symmetric key + verifies MAC   | Confidentiality + integrity                      |
+| **Step**                    | **Client Action**                                                                                | **Server Action**                                  | **Purpose**                                                        |
+| --------------------------- | ------------------------------------------------------------------------------------------------ | -------------------------------------------------- | ------------------------------------------------------------------ |
+| **1. Key Exchange**         | Generates PMS → Encrypts with server’s public key → Sends to server                              | Receives encrypted PMS → Decrypts with private key | Securely shares PMS without exposure                               |
+| **2. Nonce Exchange**       | Sends `ClientHello` with `ClientRandom`                                                          | Responds with `ServerHello` and `ServerRandom`     | Ensures freshness (prevents replay attacks)                        |
+| **3. Key Derivation**       | Uses PMS + `ClientRandom` + `ServerRandom` → Hashes (PRF) → Master Secret → Derives session keys | Does the same computation                          | Both sides independently generate identical symmetric session keys |
+| **4. Secure Communication** | Encrypts data using symmetric key (AES) + MAC (HMAC)                                             | Decrypts using same symmetric key + verifies MAC   | Confidentiality + integrity                                        |
 
-***
-
-#### **Why Hashing is Necessary**
+**Why Hashing is Necessary**
 
 * **Prevents key reuse**: Even if the same PMS is used in another session, different `ClientRandom` and `ServerRandom` values ensure unique keys.
 * **Strengthens security**: A direct PMS → session key mapping would be weaker; hashing adds entropy.
 * **Supports forward secrecy**: In (EC)DHE key exchange, the PMS is ephemeral, and hashing ensures session keys can’t be retroactively computed.
 
-#### **Final Answer**
+This ensures **confidentiality (AES)**, **integrity (HMAC)**, and **authentication (PKI)** in SSL/TLS. **PKI (Public Key Infrastructure)** is a framework that enables **authentication** by verifying the identity of entities (such as servers or clients) using digital certificates and asymmetric cryptography.
 
-* Your understanding is correct: The PMS is combined with nonces (`ClientRandom` + `ServerRandom`) to derive keys.
-* My explanation adds that this is done via **hashing (PRF)**, performed independently by both client and server.
-* **Result**: Both sides compute the same symmetric keys without ever transmitting them directly.
+This process achieves:\
+✅ **Confidentiality** (AES)\
+✅ **Integrity** (HMAC)\
+✅ **Authentication** (Server’s certificate)
 
-This ensures **confidentiality (AES)**, **integrity (HMAC)**, and **authentication (PKI)** in SSL/TLS.
-
-\--
+### The SSL/TLS key exchange and derivation process
 
 Here’s a **simplified diagram** of the SSL/TLS key exchange and derivation process to visualize how symmetric keys are securely established:
 
-***
-
-#### **SSL/TLS Key Exchange & Derivation Flow**
+**SSL/TLS Key Exchange & Derivation Flow**
 
 _(Simplified for RSA Key Exchange, TLS 1.2)_
-
-plaintext
 
 ```
 +-------------------+                       +-------------------+
@@ -125,7 +103,7 @@ plaintext
 
 ***
 
-#### **Key Steps Explained Visually**
+**Key Steps Explained Visually**
 
 1. **Handshake Initiation**
    * Client sends `ClientHello` with a random nonce (`ClientRandom`).
@@ -139,30 +117,19 @@ plaintext
 4. **Secure Communication**
    * All further data is encrypted with the derived **symmetric keys**.
 
-***
-
-#### **Why This Matters**
+**Why This Matters**
 
 * **Asymmetric Encryption (RSA/ECC)**: Securely exchanges the PMS _once_.
 * **Symmetric Encryption (AES)**: Efficiently encrypts all subsequent data.
 * **Hashing (PRF)**: Ensures keys are unique per session and tamper-proof.
 
-This process achieves:\
-✅ **Confidentiality** (AES)\
-✅ **Integrity** (HMAC)\
-✅ **Authentication** (Server’s certificate)
-
-\--
+#### **How Both Client and Server Derive the Same Symmetric Session Key from the Master Secret**
 
 When both sides calculate the master secret (each have the same master secret at this point), how do they both derive the same symmetric session key?
 
-#### **How Both Client and Server Derive the Same Symmetric Session Key from the Master Secret**
-
 Once the **master secret** is computed (using `PMS + ClientRandom + ServerRandom`), **both the client and server independently derive the same symmetric session keys** using a **deterministic key derivation process**. Here’s how it works:
 
-***
-
-#### **Step-by-Step Key Derivation Process**
+**Step-by-Step Key Derivation Process**
 
 1. **Inputs for Key Expansion**\
    Both parties now have:
@@ -202,17 +169,13 @@ Once the **master secret** is computed (using `PMS + ClientRandom + ServerRandom
      * The client’s **"write" key** = the server’s **"read" key**.
      * The server’s **"write" key** = the client’s **"read" key**.
 
-***
-
-#### **Why Does This Work?**
+**Why Does This Work?**
 
 * **Same Inputs → Same Outputs**: Both sides use identical inputs (`MasterSecret`, `ClientRandom`, `ServerRandom`).
 * **PRF Guarantees Consistency**: The PRF (e.g., HMAC-SHA256) always produces the same output for the same input.
 * **No Key Transmission Needed**: The keys are **derived locally**, never sent over the network.
 
-***
-
-#### **Example in TLS 1.2 (AES-256-CBC-SHA256)**
+**Example in TLS 1.2 (AES-256-CBC-SHA256)**
 
 | **Key Material**   | **Size (Bytes)** | **Purpose**                           |
 | ------------------ | ---------------- | ------------------------------------- |
@@ -225,9 +188,7 @@ Once the **master secret** is computed (using `PMS + ClientRandom + ServerRandom
 
 Both sides derive **the same 6 keys** from the `key_block`, ensuring secure bidirectional communication.
 
-***
-
-#### **Summary**
+**Summary**
 
 1. **Master Secret** → Generated identically on both sides (PMS + nonces).
 2. **PRF Expansion** → `key_block` = PRF(MasterSecret, "key expansion", nonces).
@@ -235,5 +196,3 @@ Both sides derive **the same 6 keys** from the `key_block`, ensuring secure bidi
 4. **Secure Communication** → Symmetric encryption (AES) + integrity (HMAC) with synchronized keys.
 
 This ensures **no key mismatch** while keeping keys **confidential** (never transmitted).
-
-Would you like a pseudocode example of the PRF-based key derivation?

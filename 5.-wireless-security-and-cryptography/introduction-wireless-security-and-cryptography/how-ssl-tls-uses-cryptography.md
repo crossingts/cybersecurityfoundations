@@ -7,14 +7,16 @@ hidden: true
 ## Learning objectives
 
 • Understand why hashing acts as a foundational layer for securing web traffic\
-• How in SSL/TLS a combination of hashing and asymmetric encryption secures websites, APIs, and online transactions
+• Understand how in SSL/TLS a combination of hashing and asymmetric encryption secures websites and online transactions
 
 This section explains how cryptographic tools (symmetric/asymmetric encryption, and hashing) secure Internet communications via SSL/TLS.
 
 ## Topics covered in this section
 
 * **Introduction**
-*
+* **Hashing**
+* **Symmetric encryption**
+* **Asymmetric encryption**
 
 ### Introduction
 
@@ -67,9 +69,7 @@ TLS uses hashing for fingerprint verification, message Authentication Codes (MAC
 * **After symmetric key negotiation.** Once the TLS handshake establishes a shared session key (the "master secret"), hashing (often via HMAC or AEAD ciphers like AES-GCM) is used to verify message integrity **during the encrypted application data exchange** (not during the handshake itself).
 * **Example:** In TLS 1.2, HMAC-SHA256 is used with the session key to generate MACs for each encrypted record. In TLS 1.3, AEAD (e.g., AES-GCM) combines encryption and integrity checks.
 
-**Note-**
-
-In RSA (TLS 1.2) , the `CertificateVerify` message (sent after the server's certificate) is used to prove ownership of the private key by signing a hash of the handshake messages. In RSA (TLS 1.2) the server may send the client a `CertificateVerify` message which is a **signed hash of the handshake messages** (up to that point) using the private key of the server, proving (to the client) the server’s ownership of the private key (**authentication**).
+**Note -** In RSA (TLS 1.2) , the `CertificateVerify` message (sent after the server's certificate) is used to prove ownership of the private key by signing a hash of the handshake messages. In RSA (TLS 1.2) the server may send the client a `CertificateVerify` message which is a **signed hash of the handshake messages** (up to that point) using the private key of the server, proving (to the client) the server’s ownership of the private key (**authentication**).
 
 * The server computes a hash (e.g., SHA-256) of all previous handshake messages.
 * It signs this hash with its **private RSA key** (e.g., using `RSA-PSS` or `RSA-PKCS#1`).
@@ -163,7 +163,7 @@ Finished (encrypted)
 
 ***
 
-**ok-TLS 1.2 vs. TLS 1.3: Key Differences in Hashing and Handshake Signing (**&#x43;omparing handshake message signing, key exchange, and integrity mechanisms):
+**TLS 1.2 vs. TLS 1.3: Key Differences in Hashing and Handshake Signing (**&#x43;omparing handshake message signing, key exchange, and integrity mechanisms):
 
 | **Step**              | **TLS 1.2**                                       | **TLS 1.3**                          |
 | --------------------- | ------------------------------------------------- | ------------------------------------ |
@@ -171,9 +171,7 @@ Finished (encrypted)
 | **Handshake Signing** | ECDHE signs in `ServerKeyExchange`                | Always signs in `CertificateVerify`  |
 | **Integrity Check**   | HMAC-SHA-256 in `Finished`                        | AEAD (e.g., AES-GCM) in all messages |
 
-\--
-
-**ok-All hashing roles (signing, PRF, integrity) for both versions**&#x20;
+**All hashing roles (signing, PRF, integrity) for both versions**&#x20;
 
 | **Action**                                 | **TLS 1.2**                                                                                                                                                                                                            | **TLS 1.3**                                                                    |
 | ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
@@ -181,9 +179,7 @@ Finished (encrypted)
 | **Hashing for Key Derivation (PRF)**       | ✔️ SHA-256 (or negotiated hash) for deriving `master_secret`.                                                                                                                                                          | ✔️ SHA-256 (or HKDF) for deriving `master_secret`.                             |
 | **Hashing for Data Integrity**             | ✔️ HMAC-SHA-256 (for cipher suites without AEAD).                                                                                                                                                                      | ✔️ AEAD (e.g., AES-GCM) handles integrity **without explicit hashing**.        |
 
-\--
-
-Here’s a table correlating data integrity, authentication, and non-repudiation with how TLS uses hashing for fingerprint verification, MACs, and digital signatures:
+**How TLS uses hashing for fingerprint verification, MACs, and digital signatures (providing integrity, authentication, and non-repudiation):**
 
 | **TLS Hashing Application**            | **Security Parameter** | **Explanation**                                                                                                                                                            |
 | -------------------------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -239,132 +235,6 @@ Example Flow:
 
 This ensures the client is communicating with the genuine server (not an impostor) before establishing encrypted communication.
 
-
-
-reword:
-
-#### II. Message Authentication Codes (MAC)
-
-* TLS 1.2 uses HMAC (Hash-based MAC) to verify message integrity. The sender and receiver compute a hash of the data + shared secret; mismatches indicate tampering.
-* TLS 1.3 replaces HMAC with **AEAD** (e.g., AES-GCM), which integrates encryption + integrity checks.
-* HMAC uses hashes (SHA-256, SHA-384) combined with a secret key.
-
-Both explanations are correct but focus on different aspects of integrity protection in TLS. Here’s a unified and improved breakdown:
-
-***
-
-#### **1. Integrity Protection in TLS: Two Layers**
-
-TLS ensures message integrity at **two different stages** with different mechanisms:
-
-**A. During the Handshake (Authentication & Key Exchange)**
-
-* **Mechanism:** Digital signatures (e.g., RSA, ECDSA)
-* **Purpose:** Verify the server’s identity and ensure handshake messages are untampered.
-* **How it works:**
-  * The server’s certificate is signed by a CA (as previously explained).
-  * The `ServerKeyExchange` (in some cipher suites) and `CertificateVerify` (in TLS 1.3) messages are also signed to prove possession of the private key.
-  * **Not HMAC or AEAD yet**—these are only used **after** the handshake.
-
-**B. During Encrypted Data Exchange (Record Layer Integrity)**
-
-* **Mechanism:**
-  * **TLS 1.2:** HMAC (Hash-based MAC)
-  * **TLS 1.3:** AEAD (Authenticated Encryption with Associated Data, e.g., AES-GCM, ChaCha20-Poly1305)
-* **Purpose:** Ensure that encrypted application data (HTTP, etc.) is not modified in transit.
-
-***
-
-#### **2. HMAC in TLS 1.2 (Legacy Approach)**
-
-* **How it works:**
-  * After the handshake, both client and server derive **session keys** (e.g., `client_write_MAC_key`, `server_write_MAC_key`).
-  * For each encrypted record (e.g., an HTTPS request), the sender:
-    1. Computes `HMAC(message, MAC_key)` using SHA-256/SHA-384.
-    2. Appends the MAC to the encrypted data.
-  * The receiver recomputes the HMAC and checks for a match.
-* **Why HMAC?**
-  * Prevents tampering even if encryption is broken (e.g., if an attacker flips ciphertext bits, the HMAC won’t match).
-
-**Example (TLS 1.2):**
-
-text
-
-```
-Encrypted_Record = AES-CBC(plaintext) + HMAC-SHA256(plaintext, MAC_key)
-```
-
-***
-
-#### **3. AEAD in TLS 1.3 (Modern Approach)**
-
-* **How it works:**
-  * AEAD (e.g., AES-GCM, ChaCha20-Poly1305) **combines encryption + integrity** in one step.
-  * Instead of HMAC, the cipher itself generates an **authentication tag** (like a built-in MAC).
-  * The receiver decrypts and checks the tag in a single operation.
-* **Why AEAD?**
-  * More efficient (no separate MAC computation).
-  * Stronger security (resistant to certain attacks like padding oracle exploits).
-
-**Example (TLS 1.3):**
-
-text
-
-```
-Encrypted_Record = AES-GCM(plaintext)  # Includes auth tag
-```
-
-***
-
-#### **4. Key Differences Summarized**
-
-| Feature                 | TLS 1.2 (HMAC)                              | TLS 1.3 (AEAD)                                    |
-| ----------------------- | ------------------------------------------- | ------------------------------------------------- |
-| **Integrity Mechanism** | HMAC (SHA-256, etc.) appended to ciphertext | Built-in authentication tag (e.g., GCM tag)       |
-| **Encryption**          | Separate (e.g., AES-CBC) + HMAC             | Combined (e.g., AES-GCM encrypts + authenticates) |
-| **Performance**         | Slightly slower (extra MAC step)            | Faster (single crypto operation)                  |
-| **Security**            | Good, but vulnerable to padding attacks     | Stronger (resists more attacks)                   |
-
-***
-
-#### **5. Why Both Explanations Are Correct (But Incomplete Alone)**
-
-* The **first explanation** focuses on **handshake authentication** (digital signatures, not HMAC/AEAD).
-* The **second explanation** focuses on **post-handshake data integrity** (HMAC/AEAD).
-* **Reconciliation:**
-  * **Before session keys:** Integrity is checked via digital signatures (handshake).
-  * **After session keys:** Integrity is checked via HMAC (TLS 1.2) or AEAD (TLS 1.3).
-
-***
-
-#### **Final Answer (Unified Explanation)**
-
-TLS ensures message integrity **in two phases**:
-
-1. **Handshake Phase:**
-   * The server’s certificate is verified using CA signatures.
-   * Handshake messages may be signed (e.g., `CertificateVerify` in TLS 1.3).
-   * **Not HMAC/AEAD yet**—these are for encrypted data only.
-2. **Encrypted Data Phase:**
-   * **TLS 1.2:** Uses HMAC (e.g., HMAC-SHA256) to verify each encrypted record.
-   * **TLS 1.3:** Uses AEAD (e.g., AES-GCM) for built-in encryption + integrity.
-
-This ensures **both the handshake and application data** are protected against tampering.
-
-
-
-#### III. Digital Signatures
-
-* Used in TLS handshakes (e.g., server’s CertificateVerify message). The sender hashes the handshake messages, then signs the hash with their private key.
-* Ensures **non-repudiation**: The sender cannot later deny sending the message, as only they possess the private key.
-
-#### **Summary:**
-
-* **Hashing** underpins all three mechanisms:
-  * **Fingerprints** (authentication) rely on irreversible hashes of certificates.
-  * **MACs** (integrity) use hashing (+ secret keys) to detect tampering.
-  * **Digital signatures** (non-repudiation) sign hashes to bind messages to identities.
-
 #### **How Fingerprints Are Generated (Example)**
 
 *   A command like OpenSSL can generate a cert’s fingerprint:
@@ -390,12 +260,89 @@ This ensures **both the handshake and application data** are protected against t
 * **Tamper detection**: Any change in the cert alters the fingerprint drastically.
 * **Efficiency**: Comparing hashes is faster than comparing entire certs.
 
-#### **Key Clarifications**
+#### II. Message Authentication Codes (MAC)
 
-* The **CA doesn’t explicitly create the fingerprint**—it’s derived from the cert’s data by whoever checks it.
-* **Digital signatures ≠ fingerprints**:
-  * A **signature** is the CA’s encrypted hash (for validation).
-  * A **fingerprint** is just a hash of the cert (for quick identification).
+During encrypted data exchange:
+
+* TLS 1.2 uses HMAC (Hash-based MAC) to verify message integrity. The sender and receiver compute a hash of the data + shared secret. Mismatches indicate tampering.
+* TLS 1.3 replaces HMAC with **AEAD** (e.g., AES-GCM), which integrates encryption + integrity checks.
+* HMAC uses hashes (SHA-256, SHA-384) combined with a secret key.
+
+Recall, integrity protection in TLS happens at two layers, during the TLS handshake (authentication & key exchange), and during encrypted data exchange.
+
+**Integrity Protection in TLS: Two Layers**
+
+TLS ensures message integrity at **two different stages** with different mechanisms:
+
+**A. During the Handshake (Authentication & Key Exchange)**
+
+* **Mechanism:** Digital signatures (e.g., RSA, ECDSA)
+* **Purpose:** Verify the server’s identity and ensure handshake messages are untampered Handshake Phase (authentication and integrity).
+* **How it works:**
+  * The server’s certificate is signed by a CA (as previously explained).
+  * The `ServerKeyExchange` (in some cipher suites) and `CertificateVerify` (in TLS 1.3) messages are also signed to prove possession of the private key.
+  * **Not HMAC or AEAD yet**—these are only used **after** the handshake.
+
+**B. During Encrypted Data Exchange (Record Layer Integrity)**
+
+* **Mechanism:**
+  * **TLS 1.2:** HMAC (Hash-based MAC)
+  * **TLS 1.3:** AEAD (Authenticated Encryption with Associated Data, e.g., AES-GCM, ChaCha20-Poly1305)
+* **Purpose:** Ensure that encrypted application data (HTTP, etc.) is not modified in transit.
+
+**HMAC in TLS 1.2 (Legacy Approach)**
+
+* **How it works:**
+  * After the handshake, both client and server derive **session keys** (e.g., `client_write_MAC_key`, `server_write_MAC_key`).
+  * For each encrypted record (e.g., an HTTPS request), the sender:
+    1. Computes `HMAC(message, MAC_key)` using SHA-256/SHA-384.
+    2. Appends the MAC to the encrypted data.
+  * The receiver recomputes the HMAC and checks for a match.
+* **Why HMAC?**
+  * Prevents tampering even if encryption is broken (e.g., if an attacker flips ciphertext bits, the HMAC won’t match).
+
+**Example (TLS 1.2):**
+
+```
+Encrypted_Record = AES-CBC(plaintext) + HMAC-SHA256(plaintext, MAC_key)
+```
+
+**AEAD in TLS 1.3 (Modern Approach)**
+
+* **How it works:**
+  * AEAD (e.g., AES-GCM, ChaCha20-Poly1305) **combines encryption + integrity** in one step.
+  * Instead of HMAC, the cipher itself generates an **authentication tag** (like a built-in MAC).
+  * The receiver decrypts and checks the tag in a single operation.
+* **Why AEAD?**
+  * More efficient (no separate MAC computation).
+  * Stronger security (resistant to certain attacks like padding oracle exploits).
+
+**Example (TLS 1.3):**
+
+```
+Encrypted_Record = AES-GCM(plaintext)  # Includes auth tag
+```
+
+**Key Differences Summarized**
+
+| Feature                 | TLS 1.2 (HMAC)                              | TLS 1.3 (AEAD)                                    |
+| ----------------------- | ------------------------------------------- | ------------------------------------------------- |
+| **Integrity Mechanism** | HMAC (SHA-256, etc.) appended to ciphertext | Built-in authentication tag (e.g., GCM tag)       |
+| **Encryption**          | Separate (e.g., AES-CBC) + HMAC             | Combined (e.g., AES-GCM encrypts + authenticates) |
+| **Performance**         | Slightly slower (extra MAC step)            | Faster (single crypto operation)                  |
+| **Security**            | Good, but vulnerable to padding attacks     | Stronger (resists more attacks)                   |
+
+#### III. Digital Signatures
+
+* Used in TLS handshakes (e.g., server’s CertificateVerify message). The sender hashes the handshake messages, then signs the hash with their private key. This provided integrity and authentication checks.
+* Ensures **non-repudiation**: The sender cannot later deny sending the message, as only they possess the private key.
+
+#### **Summary:**
+
+* **Hashing** underpins all three mechanisms:
+  * **Fingerprints** (authentication) rely on irreversible hashes of certificates.
+  * **MACs** (integrity) use hashing (+ secret keys) to detect tampering.
+  * **Digital signatures** (non-repudiation) sign hashes to bind messages to identities.
 
 ***
 
@@ -448,7 +395,7 @@ Symmetric encryption plays a crucial role in SSL/TLS by ensuring **data confiden
 ### Key takeaways <a href="#key-takeaways" id="key-takeaways"></a>
 
 • Understand why hashing acts as a foundational layer for securing web traffic\
-• In SSL/TLS, a combination of hashing and asymmetric encryption secures websites, APIs, and online transactions
+• Understand how in SSL/TLS a combination of hashing and asymmetric encryption secures websites and online transactions
 
 ### References
 

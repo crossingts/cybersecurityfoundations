@@ -65,3 +65,24 @@ A simplified **TLS 1.3 handshake** (modern standard):
 2. **Server Hello** → Chooses cipher, sends certificate.
 3. **Key Exchange** → Ephemeral keys (ECDHE, etc.).
 4. **Finished** → Encrypted communication begins.
+
+### Integrity in SSL
+
+**TLS ensures message integrity in two phases:**
+
+* **Before session keys:** Integrity is checked via digital signatures (handshake).
+* **After session keys:** Integrity is checked via HMAC (TLS 1.2) or AEAD (TLS 1.3).
+
+1. **Handshake Phase (handshake integrity and authentication):**
+   * The server’s certificate is verified using CA signatures.
+   * Hashed handshake messages may be signed (e.g., `CertificateVerify` in TLS 1.3).
+   * **Not HMAC/AEAD yet**—these are for encrypted data only.
+2. **Encrypted Data Phase (post-handshake data integrity):**
+   * **TLS 1.2:** Uses HMAC (e.g., HMAC-SHA256) to verify each encrypted record.
+   * **TLS 1.3:** Uses AEAD (e.g., AES-GCM) for built-in encryption + integrity.
+
+This ensures **both the handshake and application data** are protected against tampering.
+
+### Authentication in SSL
+
+### Privacy in SSL

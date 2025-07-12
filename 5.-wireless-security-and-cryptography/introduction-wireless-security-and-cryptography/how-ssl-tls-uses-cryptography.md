@@ -67,12 +67,19 @@ TLS uses hashing for fingerprint verification, message Authentication Codes (MAC
 * **After symmetric key negotiation.** Once the TLS handshake establishes a shared session key (the "master secret"), hashing (often via HMAC or AEAD ciphers like AES-GCM) is used to verify message integrity **during the encrypted application data exchange** (not during the handshake itself).
 * **Example:** In TLS 1.2, HMAC-SHA256 is used with the session key to generate MACs for each encrypted record. In TLS 1.3, AEAD (e.g., AES-GCM) combines encryption and integrity checks.
 
-#### **Summary: When Hashing is Used**
+**Note-**
 
-| **Key Exchange Type**   | **Hashing in Key Exchange?**    | **Where Hashing&#x20;**_**Is**_**&#x20;Used**                                     |
-| ----------------------- | ------------------------------- | --------------------------------------------------------------------------------- |
-| **RSA** (TLS 1.2)       | ❌ No (encryption is raw RSA)    | ✔️ Certificate signatures, `CertificateVerify` (if used), PRF for key derivation. |
-| **ECDHE** (TLS 1.2/1.3) | ✔️ Yes (signing ephemeral keys) | ✔️ Server’s ECDHE signature, PRF for key derivation.                              |
+In RSA (TLS 1.2) , the `CertificateVerify` message (sent after the server's certificate) is used to prove ownership of the private key by signing a hash of the handshake messages.&#x20;
+
+In RSA (TLS 1.2) the server may send the client a `CertificateVerify` message which is a **signed hash of the handshake messages** (up to that point) using the private key of the server, proving (to the client) the server’s ownership of the private key (authentication).
+
+* The server computes a hash (e.g., SHA-256) of all previous handshake messages.
+* It signs this hash with its **private RSA key** (e.g., using `RSA-PSS` or `RSA-PKCS#1`).
+* The client verifies the signature using the server’s **public key** (from the certificate).
+
+#### **When Hashing is Used in the TLS protocol**
+
+<table data-header-hidden><thead><tr><th width="165.58941650390625"></th><th width="186.0572509765625"></th><th></th><th></th></tr></thead><tbody><tr><td><strong>Key Exchange Type</strong></td><td><strong>Hashing in Key Exchange Itself?</strong></td><td><strong>Where Hashing is Used</strong></td><td><strong>Explicit Authentication (CertificateVerify)?</strong></td></tr><tr><td><strong>RSA</strong> (TLS 1.2)</td><td>✗ No (raw RSA encryption for key transport)</td><td>✔ <strong>Certificate signatures</strong> (e.g., SHA-256).<br>✔ <strong>PRF</strong> (HMAC-SHA256 for key derivation).</td><td><strong>Optional but recommended</strong>:<br>Server sends <code>CertificateVerify</code> (signed hash of handshake) to prove private key ownership.</td></tr><tr><td><strong>ECDHE</strong> (TLS 1.2/1.3)</td><td>✔ Yes (hash used to sign ephemeral ECDHE public key)</td><td>✔ <strong>ServerKeyExchange signature in TLS 1.2</strong> (e.g., ECDSA-SHA256) or <strong>ServerHello signature in TLS 1.3</strong>.<br>✔ <strong>PRF</strong> (HMAC-SHA256) for key derivation.</td><td><strong>Not needed</strong>:<br>Authentication is implicit in the ECDHE signature (no <code>CertificateVerify</code> required).</td></tr></tbody></table>
 
 **Hashing for signing handshake messages happens in both TLS 1.2 and 1.3.**
 

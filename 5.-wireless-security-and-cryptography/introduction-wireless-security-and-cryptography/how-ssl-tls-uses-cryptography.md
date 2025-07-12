@@ -77,9 +77,13 @@ In RSA (TLS 1.2) the server may send the client a `CertificateVerify` message wh
 * It signs this hash with its **private RSA key** (e.g., using `RSA-PSS` or `RSA-PKCS#1`).
 * The client verifies the signature using the server’s **public key** (from the certificate).
 
-#### **When Hashing is Used in the TLS protocol**
+#### **When Hashing is Used in the TLS protocol (TLS Key Exchange and Hashing)**
 
-<table data-header-hidden><thead><tr><th width="165.58941650390625"></th><th width="186.0572509765625"></th><th></th><th></th></tr></thead><tbody><tr><td><strong>Key Exchange Type</strong></td><td><strong>Hashing in Key Exchange Itself?</strong></td><td><strong>Where Hashing is Used</strong></td><td><strong>Explicit Authentication (CertificateVerify)?</strong></td></tr><tr><td><strong>RSA</strong> (TLS 1.2)</td><td>✗ No (raw RSA encryption for key transport)</td><td>✔ <strong>Certificate signatures</strong> (e.g., SHA-256).<br>✔ <strong>PRF</strong> (HMAC-SHA256 for key derivation).</td><td><strong>Optional but recommended</strong>:<br>Server sends <code>CertificateVerify</code> (signed hash of handshake) to prove private key ownership.</td></tr><tr><td><strong>ECDHE</strong> (TLS 1.2/1.3)</td><td>✔ Yes (hash used to sign ephemeral ECDHE public key)</td><td>✔ <strong>ServerKeyExchange signature in TLS 1.2</strong> (e.g., ECDSA-SHA256) or <strong>ServerHello signature in TLS 1.3</strong>.<br>✔ <strong>PRF</strong> (HMAC-SHA256) for key derivation.</td><td><strong>Not needed</strong>:<br>Authentication is implicit in the ECDHE signature (no <code>CertificateVerify</code> required).</td></tr></tbody></table>
+| **Key Exchange Type** | **Hashing in Key Exchange Itself?**                  | **Where Hashing is Used**                                                                                                                                                                                                             | **Explicit Authentication (`CertificateVerify`)?**                                                                                                          |
+| --------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **RSA (TLS 1.2)**     | ✗ No (raw RSA encryption for key transport)          | <p>✔ <strong>Certificate signatures</strong> (e.g., RSA-SHA256).<br>✔ <strong>PRF</strong> (HMAC-SHA256 for key derivation).<br>✔ <strong>Optional:</strong> <code>CertificateVerify</code> signs handshake hash (SHA-256 + RSA).</p> | <p><strong>Optional but recommended</strong>:<br>Server sends <code>CertificateVerify</code> (signed hash of handshake) to prove private key ownership.</p> |
+| **ECDHE (TLS 1.2)**   | ✔ Yes (hash used to sign ephemeral ECDHE public key) | <p>✔ <strong>ServerKeyExchange signature</strong> (e.g., ECDSA-SHA256).<br>✔ <strong>PRF</strong> (HMAC-SHA256 for keys).</p>                                                                                                         | <p><strong>Not required</strong>.<br>Server’s signature on ECDHE params provides implicit authentication.</p>                                               |
+| **ECDHE (TLS 1.3)**   | ✔ Yes (hash used in handshake signature)             | <p>✔ <strong>ServerHello signature</strong> (covers entire handshake context).<br>✔ <strong>HKDF</strong> (SHA-256/384 for key derivation).</p>                                                                                       | <p><strong>Mandatory</strong>.<br><code>CertificateVerify</code> signs all handshake messages (SHA-256 + RSA/ECDSA).</p>                                    |
 
 **Hashing for signing handshake messages happens in both TLS 1.2 and 1.3.**
 
@@ -109,18 +113,22 @@ In RSA (TLS 1.2) the server may send the client a `CertificateVerify` message wh
 5. **Encrypted Data Exchange (Integrity via AEAD)**
    * TLS 1.3 uses AEAD (e.g., AES-GCM), which handles encryption + integrity **without separate hashing**.
 
-#### **Visual TLS 1.3 Handshake Snippet**
+#### **Visual TLS 1.3 Handshake (Simplified)**
 
 ```
 ClientHello  
-  ↓  
-ServerHello + KeyShare (ECDHE pubkey)  
-  ↓  
-Certificate               // CA’s signature (RSA+SHA-256)  
-  ↓  
-CertificateVerify         // Server signs handshake hash (SHA-256 + RSA/ECDSA)  
-  ↓  
-Finished (encrypted)      // Session key active  
+  ↓ (Includes KeyShare: Client’s ECDHE pubkey + supported groups)  
+ServerHello + KeyShare (Server’s ECDHE pubkey)  
+  ↓ (Negotiated cipher suite + "hello" messages hashed for keys)  
+EncryptedExtensions  
+  ↓ (Optional server config, e.g., ALPN)  
+Certificate  
+  ↓ (Server’s cert, signed by CA with RSA/ECDSA + SHA-256)  
+CertificateVerify  
+  ↓ (Server signs hash of handshake with its private key)  
+Finished (encrypted)  
+  ↓ (HMAC over handshake transcript, using derived key)  
+[Application Data]  
 ```
 
 ***
@@ -130,8 +138,6 @@ The **TLS 1.2 Handshake Snippet** with key hashing actions highlighted:
 ***
 
 **Visual TLS 1.2 Handshake Snippet**
-
-plaintext
 
 ```
 ClientHello  
@@ -275,8 +281,6 @@ Symmetric encryption plays a crucial role in SSL/TLS by ensuring **data confiden
 * **Confidentiality**: Only the sender and receiver share the same secret key, preventing unauthorized parties from decrypting the data.
 
 **How It Works in SSL/TLS:**
-
-
 
 
 

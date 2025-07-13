@@ -28,7 +28,9 @@ This section discusses the [Open Systems Interconnection (OSI) model](https://ww
 
 ### [The Open Systems Interconnection (OSI) Model](https://en.wikipedia.org/wiki/OSI_model)
 
-The purpose of networking is to allow two hosts to share data with one another. To share data, hosts must follow a set of rules. According to the [Open Systems Interconnection Reference Model](https://www.networkworld.com/article/3239677/the-osi-model-explained-and-how-to-easily-remember-its-7-layers.html), the rules of networking are divided into seven layers: Application, Presentation, Session, Transport, Network, Data Link, and Physical. Remember the layers of the OSI model by remembering the mnemonic, All People Seem To Need Data Processing.
+The purpose of networking is to allow two hosts to share data with one another. To share data, hosts must follow a set of rules. According to the [Open Systems Interconnection Reference Model](https://www.networkworld.com/article/3239677/the-osi-model-explained-and-how-to-easily-remember-its-7-layers.html), the rules of networking are divided into seven layers: Application, Presentation, Session, Transport, Network, Data Link, and Physical.&#x20;
+
+Remember the layers of the OSI model by remembering the mnemonic, All People Seem To Need Data Processing. Understanding the OSI model will help you build a strong network, troubleshoot problems, develop effective applications, and evaluate third-party products.&#x20;
 
 Each layer of the OSI model serves a specific function that contributes to the overall goal of allowing two hosts to share data with one another. Each layer uses its own addressing scheme to accomplish its goal. There are various devices and protocols which operate at specific layers of the OSI model which serve in accomplishing each layer’s goal.&#x20;
 

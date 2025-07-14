@@ -26,7 +26,7 @@ This chapter covers networking fundamentals by way of tracing the movement of a 
 
 ## Topics covered in this chapter
 
-[Network devices and their functions](network-devices-and-their-functions.md)
+[Network devices and their functions](network-devices-and-their-functions/)
 
 [The Open Systems Interconnection (OSI) model](the-open-systems-interconnection-osi-model.md)
 

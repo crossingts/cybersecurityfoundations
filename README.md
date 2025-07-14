@@ -78,3 +78,5 @@ This chapter covers ethical hacking and penetration testing - definitions, techn
 7. Chapter 7: Conclusion
 
 This chapter sheds light on and summarizes salient topics and concepts covered in each chapter.
+
+[About the author](https://itnetworkingskills.wordpress.com/baha-abu-shaqra-academic-publications/)

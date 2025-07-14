@@ -48,15 +48,17 @@ There are many types of network devices, such as access points, firewalls, IDS/I
 
 ### Repeaters, hubs, bridges, switches, and routers
 
-Repeaters regenerate signals, allowing devices to communicate across great distances. Connecting hosts directly to each other does not scale. Hubs connect multiple devices together, solving the scaling problem. Hubs are multi-port repeaters. A hub facilitates scaling communication between additional hosts. A hub will duplicate a packet and send it out to all ports on the hub. Everybody receives everybody else’s data.&#x20;
+Repeaters regenerate signals, allowing devices to communicate across great distances by extending the physical reach of a network (e.g., allowing Ethernet to go beyond the standard 100m limit). Repeaters do not filter or interpret data, unlike hubs which broadcast traffic and switches which forward traffic. Repeaters are typically used in long-distance cabling (e.g., fiber optic repeaters).
 
-A bridge sits in between hub-connected hosts, connecting two hubs. Bridges only have two ports – each facing a different hub. Bridges learn which hosts are on which side of the bridge, which allows bridges to contain communication/channel packets to their relative networks. Bridges allow packets to traverse to the other side of the bridge when needed.
+Connecting hosts directly to each other does not scale. Hubs connect multiple devices together, solving the scaling problem. Hubs are multi-port repeaters—hubs connect multiple hosts in a single collision domain. When a host sends a packet, the hub duplicates it and floods it out all ports (no MAC learning). Everybody receives everybody else’s data. However, hubs do not scale well due to collisions and wasted bandwidth.
 
-Switches have multiple ports (like hubs) and learn which hosts are on each port and can channel communication on a per port basis. A switch is a device that facilitates communication within a network.
+A bridge sits in between hub-connected hosts, connecting two hubs. Bridges only have two ports – each facing a different hub. Bridges learn which hosts are on which side of the bridge (which MAC addresses are on each side), which allows bridges to contain communication/channel packets to their relative networks (i.e., filter traffic). Bridges will forward packets if the destination is on the other segment. Bridges reduce unnecessary broadcasts, improving network performance. But bridges have been largely replaced by switches, which are much more efficient than bridges.
 
-You may want to separate sets of devices into separate networks because each set has its own connectivity requirements. A network boundary is what is meant to be a logical separation of devices.
+A switch is a multi-port bridge with dedicated bandwidth per port. A switch maintains a full MAC address table for all ports and forwards traffic only to the destination port (unless it is flooding frames—more on the concept of flooding later on).&#x20;
 
-A router is a device that facilitates communication between different networks. Routers connect networks to the Internet. Routers provide traffic control points (security, filtering, redirecting) between networks. Routers sit on the boundary between networks, providing a logical location to apply security policies.&#x20;
+A switch is a device that facilitates communication within a network. A router is a device that facilitates communication between different networks.&#x20;
+
+Routers connect networks to the Internet. Routers provide traffic control points (security, filtering, redirecting) between networks. Routers sit on the boundary between networks, providing a logical location to apply security policies.
 
 Routers learn which networks they are attached to. The knowledge of each different network is a route. Routes are stored in a routing table. A routing table is all the networks a router knows about. A router uses the routing table to funnel traffic to the appropriate interface.
 

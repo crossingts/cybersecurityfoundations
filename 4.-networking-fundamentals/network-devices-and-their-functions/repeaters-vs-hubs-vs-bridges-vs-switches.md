@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Repeaters vs hubs vs bridges vs switches
 
 ### Hubs vs. Switches: Key Differences
@@ -80,40 +76,3 @@ Bridges were an early improvement over hubs but were later replaced by **switche
 4. **Switches** are **scalable, high-performance bridges** with per-port forwarding.
 
 ***
-
-Repeaters regenerate signals, allowing devices to communicate across great distances by extending the physical reach of a network (e.g., allowing Ethernet to go beyond the standard 100m limit).
-
-Connecting hosts directly to each other does not scale. Hubs connect multiple devices together, solving the scaling problem. Hubs are multi-port repeaters. A hub facilitates scaling communication between additional hosts. A hub will duplicate a packet and send it out to all ports on the hub. Everybody receives everybody else’s data. A bridge sits in between hub-connected hosts, connecting two hubs. Bridges only have two ports – each facing a different hub. Bridges learn which hosts are on which side of the bridge, which allows bridges to contain communication/channel packets to their relative networks. Bridges allow packets to traverse to the other side of the bridge when needed.
-
-#### **Rewritten Explanation for Accuracy & Clarity**
-
-**Repeaters (Signal Regeneration)**
-
-* **Function:** Regenerate and retransmit signals to extend the physical reach of a network (e.g., allowing Ethernet to go beyond the standard 100m limit).
-* **Limitation:** Do **not** filter or interpret data—just amplify/rebuild the signal.
-* **Example:** Used in long-distance cabling (e.g., fiber optic repeaters).
-
-**Hubs (Multi-Port Repeaters)**
-
-* **Function:** A **hub is essentially a multi-port repeater**—it connects multiple hosts in a single collision domain.
-* **How it works:**
-  * When a host sends a packet, the hub **duplicates it and floods it out all ports**.
-  * **No MAC learning** → Every device sees all traffic (inefficient & insecure).
-* **Problem:** Does **not scale well** due to collisions and wasted bandwidth.
-
-**Bridges (Early Traffic Filtering)**
-
-* **Function:** Connects **two separate hub-based segments** (only two ports).
-* **How it works:**
-  * Learns which MAC addresses are on each side.
-  * **Filters traffic**—only forwards packets **if the destination is on the other segment**.
-  * Reduces unnecessary broadcasts (improves performance vs. hubs).
-* **Limitation:** Low port count (only 2 ports) → Replaced by switches.
-
-**Switches (Advanced Bridges)**
-
-* **Function:** A **multi-port bridge** with dedicated bandwidth per port.
-* **Advantages over bridges/hubs:**
-  * Maintains a **full MAC address table** for all ports.
-  * **Forwards traffic only to the destination port** (no flooding unless unknown).
-  * Supports **full-duplex** (no collisions) and **VLANs**.

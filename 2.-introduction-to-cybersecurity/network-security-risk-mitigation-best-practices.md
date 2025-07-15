@@ -51,6 +51,8 @@ Best practices for access control in network design:
 * **Continuous Monitoring**: Using SIEM (Security Information and Event Management) tools to detect anomalies. Access to data and modification of data has to be logged and recorded in the central SIEM system. A SIEM system consumes multiple logs and allows those handling security to connect the dots and create a big picture that gives insight into multiple events. For example, it can draw attention to a user who sends abnormal amounts of data outbound, or one who connects to an unusual amount of servers.
 * **Automated Policy Enforcement**: Deploying solutions like NAC (Network Access Control) to validate device compliance before granting access.
 
+Network Access Control (NAC) limits access to network resources, granting it only to endpoint devices that adhere to a defined security policy. Some NAC systems can automatically remediate non-compliant devices, ensuring they meet security standards before permitting access. NAC is most effective in stable environments with strict control over users and devices, such as enterprises and government agencies. However, it may be less practical in dynamic settings with diverse, frequently changing users and devices—common in sectors like education and healthcare.
+
 ### Multi-factor authentication
 
 No matter how secure the password, there is still a chance it gets into the hands of an attacker. That’s why multi-factor authentication is becoming more and more wide-spread.

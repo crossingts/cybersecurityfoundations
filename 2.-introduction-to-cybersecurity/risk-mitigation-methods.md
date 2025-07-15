@@ -27,7 +27,7 @@ This section reviews the main risk mitigation methods used to reduce the risk of
 
 ### Risk mitigation technologies
 
-Common risk mitigation technologies include: Firewalls, IDS/IPS, Next-Generation IPS, Next-Generation Firewalls, Web Proxies, VPN, Encryption, SIEM, EDR/XDR, Network Access Control, Anti-Virus.
+Common risk mitigation technologies include: Firewalls, IDS/IPS, Next-Generation IPS, Next-Generation Firewalls, Web Proxies, VPN, Encryption, SIEM, EDR/XDR, Network Access Control (NAC), Anti-Virus.
 
 #### Firewalls
 
@@ -120,9 +120,11 @@ Reverse proxies like Nginx or Traefik are crucial for modern web architectures. 
 
 The choice between forward and reverse proxies depends on the use case. Forward proxies are ideal for user privacy and bypassing restrictions, while reverse proxies excel in optimizing server performance and security. For instance, a company might use a forward proxy to monitor employee internet traffic, while a high-traffic website would deploy a reverse proxy like Nginx to balance loads between servers. Both types can coexist—Cloudflare, for example, acts as a reverse proxy for websites while also offering forward proxy-like features (e.g., WARP VPN). Understanding these distinctions helps in designing scalable, secure, and efficient network infrastructures.
 
-• **Virtual Private Networks (VPNs)**: Creating a secure, encrypted connection between two or more networks over the Internet.
+• **Virtual Private Networks (VPNs)**: Create a secure, encrypted connection between two or more networks over the Internet.
 
-• **Encryption**: Converting plaintext data into unreadable ciphertext to protect it from unauthorized access.
+• **Encryption**: Convert plaintext data into unreadable ciphertext to protect it from unauthorized access.
+
+**• Web filters** prevent users’ browsers from loading certain pages from particular websites. There are different web filters designed for individual, family, institutional and enterprise use.
 
 ### Risk mitigation via (re)design
 

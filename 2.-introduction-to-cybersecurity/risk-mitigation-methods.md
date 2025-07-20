@@ -147,7 +147,7 @@ All organizational web traffic—outbound (workstation to internet) and inbound 
 
 • **Encryption**: Convert plaintext data into unreadable ciphertext to protect it from unauthorized access.
 
-**• Web filters** prevent users’ browsers from loading certain pages from particular websites. There are different web filters designed for individual, family, institutional, and enterprise use.
+**• Web filters** prevent users’ browsers from loading certain pages from particular websites. There are different web filters designed for individual, family, institutional, and enterprise use. Web domain whitelisting can be implemented using a web filter that can make web access policies and perform web site monitoring.
 
 ### Risk mitigation via (re)design
 
@@ -318,7 +318,11 @@ QoS settings are vital in managing network traffic, ensuring priority is given t
 
 #### Honeypots
 
-A honeypot is a security mechanism designed to detect, deflect, or study unauthorized access attempts in a network. It acts as a decoy system, appearing to be a legitimate target (e.g., a server, database, or IoT device) but is actually isolated and monitored to gather information about attackers. When properly deployed, honeypots enhance threat detection and incident response capabilities.
+A honeypot is a security mechanism designed to detect, deflect, or study unauthorized access attempts in a network. It acts as a decoy system, appearing to be a legitimate target (e.g., a server, database, or IoT device) but is actually isolated and monitored to gather information about attackers. For example, you might set up a server that appears to be a financial database but actually has only fake records.&#x20;
+
+Honeypots can exhaust attackers by making them interact with phoney systems. Further, since honeypots are not real systems, legitimate users do not ever access them and therefore you can turn on extremely detailed monitoring and logging there. When an attacker does access a honeypot, you can gather a lot of evidence to aid in your investigation. When properly deployed, honeypots enhance threat detection and incident response capabilities.
+
+A honeynet can be deployed as a complementary defense mechanism. A honeynet is a fake network segment that appears to be a very enticing target. Some organizations set up fake wireless access points for just this purpose.
 
 ### **Types of Honeypots**
 

@@ -151,7 +151,7 @@ All organizational web traffic—outbound (workstation to internet) and inbound 
 
 ### Risk mitigation via (re)design
 
-Segmentation, DMZ, Honeypots, Defense in Depth, Network Automation
+Network Segmentation, DMZ, Honeypots, Defense in Depth, Network Automation
 
 A well designed network supports efficient Internet usage and device communication as well as redundancy, optimization, and security.
 
@@ -166,7 +166,16 @@ Key strategies for secure network (re)design include:
 * **Micro-Segmentation**: Applying granular **security policies** to individual workloads or applications for enhanced protection.
 * **Defense-in-Depth**: Layering security controls (firewalls, IDS/IPS, encryption) to provide multiple barriers against attacks.
 
-The Preventive Measure: It's important that any internet-connected network have a local router in operation with NAT and DHCP, both for security reasons and to prevent IP address exhaustion. The router needs to be the only device connected to the modem, with all other devices connecting through the router.
+#### Network Segmentation
+
+Network segmentation involves segregating a network into logical or functional zones. For\
+example, you might have a zone for sales, a zone for technical support, and a zone for research, with each zone having different technical needs. You can separate zones using routers or switches or using virtual local area networks (VLANs).
+
+Segmentation limits the potential damage of a compromise to whatever is in the compromised zone. Segmentation divides one target into many, which forces attackers to interact with each segment as a separate network. This creates a great deal of additional work for the attacker, since the attacker must compromise each segment individually. Further, this approach dramatically increases the attacker’s exposure to being discovered.&#x20;
+
+Segmentation also helps enforce data protection by applying different security rules to each zone based on sensitivity. In extreme cases, critical systems can be air-gapped (disconnected entirely) to prevent attacks, such as with backup servers.
+
+Virtualization is another way to segment a network. It is much easier to segment virtual systems than it is to segment physical systems. For example, you can easily configure a virtual machine on your workstation so that the virtual machine is completely isolated from the workstation — it does not share a clipboard, common folders or drives, and literally operates as an isolated system.
 
 #### VLANs&#x20;
 

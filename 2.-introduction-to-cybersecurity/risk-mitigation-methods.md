@@ -116,6 +116,33 @@ Reverse proxies like Nginx or Traefik are crucial for modern web architectures. 
 
 The choice between forward and reverse proxies depends on the use case. Forward proxies are ideal for user privacy and bypassing restrictions, while reverse proxies excel in optimizing server performance and security. For instance, a company might use a forward proxy to monitor employee internet traffic, while a high-traffic website would deploy a reverse proxy like Nginx to balance loads between servers. Both types can coexist—Cloudflare, for example, acts as a reverse proxy for websites while also offering forward proxy-like features (e.g., WARP VPN). Understanding these distinctions helps in designing scalable, secure, and efficient network infrastructures.
 
+#### **When to Use Each?**
+
+| **Scenario**                    | **Solution**                   | **Example Tools**                                   |
+| ------------------------------- | ------------------------------ | --------------------------------------------------- |
+| **Control outbound web access** | Forward proxy (authenticating) | Zscaler, Squid, Palo Alto Prisma Access             |
+| **Control inbound web access**  | Reverse proxy/gateway          | Cloudflare Access, Azure AD App Proxy, NGINX + Auth |
+| **Comprehensive control**       | Both (Zero Trust)              | Combine Zscaler (outbound) + Cloudflare (inbound)   |
+
+**Outbound vs. Inbound Web Access**
+
+* **Outbound web access**
+  * **Goal:** Control/monitor internal users/devices accessing the internet.
+  * **Proxy Role:**
+    * Enforces policies (e.g., block malicious sites, filter content).
+    * Authenticates users (e.g., prevents malware from exfiltrating data anonymously).
+    * Logs traffic for audits (e.g., detect compromised workstations).
+    * **Compliance:** Regulations like PCI DSS require monitoring outbound traffic for data leaks.
+  * _Example:_ A company uses **Zscaler** or **Squid Proxy** to block employees from visiting phishing sites.
+* **Inbound web access**
+  * **Goal:** Protect internal resources from external access (e.g., web apps, APIs).
+  * **Proxy/Gateway Role:**
+    * Authenticates external users (e.g., VPN, WAF).
+    * Filters malicious traffic (e.g., DDoS, SQL injection).
+  * _Example:_ A bank routes all inbound traffic through **Cloudflare Access** or an **Azure Application Proxy** to enforce MFA.
+
+All organizational web traffic—outbound (workstation to internet) and inbound (external access to internal apps)—should route through authenticated gateways for control and monitoring. For outbound traffic, a forward proxy ensures only authorized users/programs initiate connections. For inbound traffic, a reverse proxy or API gateway enforces access policies. This centralized approach simplifies security without significant user impact.
+
 • **Virtual Private Networks (VPNs)**: Create a secure, encrypted connection between two or more networks over the Internet.
 
 • **Encryption**: Convert plaintext data into unreadable ciphertext to protect it from unauthorized access.

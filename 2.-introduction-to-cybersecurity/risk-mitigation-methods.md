@@ -147,11 +147,11 @@ All organizational web traffic—outbound (workstation to internet) and inbound 
 
 • **Encryption**: Convert plaintext data into unreadable ciphertext to protect it from unauthorized access.
 
-**• Web filters** prevent users’ browsers from loading certain pages from particular websites. There are different web filters designed for individual, family, institutional and enterprise use.
+**• Web filters** prevent users’ browsers from loading certain pages from particular websites. There are different web filters designed for individual, family, institutional, and enterprise use.
 
 ### Risk mitigation via (re)design
 
-Network Segmentation, DMZ, Honeypots, Defense in Depth, Network Automation
+Network Segmentation, DMZ, Honeypots, Defense in Depth, Network Automation, Effective Network Architecture
 
 A well designed network supports efficient Internet usage and device communication as well as redundancy, optimization, and security.
 
@@ -356,6 +356,16 @@ security devices and in segmenting the network. Essentially, in an SDN, the enti
 which enables relatively easy segmentation of the network. It also allows administrators to place virtualized security devices wherever they want.
 
 Adopting SDN permits dynamic security policy adjustments in response to emerging threats. For example, Cisco DNA Center is a software-based network management and automation platform that helps organizations simplify, automate, and secure their networks. DNA Center is an SDN controller in SD-Access architecture, but it can also be used as a general network management tool even in networks that do not use SD-Access. DNA Center has two main roles. First, it is the SDN controller used in SD-Access. Second, it can be a network manager in a traditional network that is not using SD-Access. In this case, it acts as a central point to monitor, analyze, and configure the network.
+
+#### **Effective Network Architecture**
+
+When designing your network segregation strategy, device placement is critical. The simplest device to position is the firewall: it should be deployed at every network zone junction, ensuring each segment is protected. Fortunately, this is easier than it sounds—modern switches and routers include built-in firewall capabilities that only need activation and proper configuration. Another essential perimeter device is an anti-DDoS solution, which mitigates attacks before they impact the entire network. Behind the primary public-facing firewall, a web filter proxy should also be implemented.
+
+For other devices, placement depends on your network’s structure. Load balancers, for example, should reside in the same segment as the servers they manage—whether in a DMZ for web servers or a private segment for database clusters.&#x20;
+
+Network aggregation switches lack a fixed placement rule but are commonly used to consolidate bandwidth streams—for instance, optimizing throughput to and from a server cluster.
+
+Finally, any internet-connected network must have a local router with NAT and DHCP, both for security and to prevent IP exhaustion. The router should be the sole device connected to the modem, with all other devices routing through it.
 
 ### Networking protocols
 

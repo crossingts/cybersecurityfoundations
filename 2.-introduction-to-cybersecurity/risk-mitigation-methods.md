@@ -265,6 +265,8 @@ The next step is applying these principles to practical VLAN deployment and poli
 | **Management** | Dedicated to network/device management (often grouped with Audit).  | Virtualization management, backup servers |
 | **Audit**      | Dedicated to security monitoring (often grouped with Management).   | SIEM, telemetry                           |
 
+A demilitarized zone (DMZ) is a noncritical yet secure segment of the network at the periphery of a private network, positioned between the public internet and the internal network. It is typically separated from the public network by an outer firewall and may also be divided from the private network by an additional firewall. Organizations often deploy a DMZ to host public-facing servers—such as web or email servers—that need to be accessible to untrusted users. By placing these servers in the DMZ, the organization can restrict access to the internal network, reducing exposure to potential threats. While authorized internal users can still reach the DMZ servers, external users are confined to the DMZ and cannot penetrate deeper into the network.
+
 * **Network Security Policies and Controls**
 
 Now that we’ve discussed segmentation and secure architecture design (security zones), enforcement becomes critical. Key considerations include:
@@ -340,7 +342,11 @@ A honeypot is a security mechanism designed to detect, deflect, or study unautho
 
 #### Network Automation
 
-Adopting software-defined networking (SDN) allows for dynamic security policy adjustments in response to emerging threats. For example, Cisco DNA Center is a software-based network management and automation platform that helps organizations simplify, automate, and secure their networks. DNA Center is an SDN controller in SD-Access architecture, but it can also be used as a general network management tool even in networks that do not use SD-Access. DNA Center has two main roles. First, it is the SDN controller used in SD-Access. Second, it can be a network manager in a traditional network that is not using SD-Access. In this case, it acts as a central point to monitor, analyze, and configure the network.
+Software-defined networking (SDN) is a relatively recent trend that can be useful both in placing\
+security devices and in segmenting the network. Essentially, in an SDN, the entire network is virtualized,\
+which enables relatively easy segmentation of the network. It also allows administrators to place virtualized security devices wherever they want.
+
+Adopting SDN permits dynamic security policy adjustments in response to emerging threats. For example, Cisco DNA Center is a software-based network management and automation platform that helps organizations simplify, automate, and secure their networks. DNA Center is an SDN controller in SD-Access architecture, but it can also be used as a general network management tool even in networks that do not use SD-Access. DNA Center has two main roles. First, it is the SDN controller used in SD-Access. Second, it can be a network manager in a traditional network that is not using SD-Access. In this case, it acts as a central point to monitor, analyze, and configure the network.
 
 ### Networking protocols
 

@@ -28,9 +28,11 @@ This section reviews common network security risk mitigation best practices, inc
 
 ### Least privilege access control
 
-The principle of least privilege rules that only the required functionality is granted for each authorized user group.
+The principle of least privilege rules that only the required functionality is granted for each authorized user or user group.
 
-Reduce user access privileges to necessities. It is easier to stay secure by enabling access when needed than to revoke and mitigate damage after an incident.&#x20;
+Establishing and enforcing the least-privilege principle for access management and access control is the principal preventive measure against insider threats. Giving users the least amount of access they need to do their jobs, what is necessary and sufficient, enhances data security, because it limits what they can accidentally or deliberately access and ensures that if their password is compromised, a hacker does not have all keys to the kingdom.
+
+It is easier to stay secure by enabling access when needed than to revoke and mitigate damage after an incident.&#x20;
 
 \<In order to properly secure data, an organization should develop clear and precise standards of data classification. Usually data access is governed via a data-access control scheme. A simple and sound way to develop one is using **role-based access control (RBAC)**.>
 

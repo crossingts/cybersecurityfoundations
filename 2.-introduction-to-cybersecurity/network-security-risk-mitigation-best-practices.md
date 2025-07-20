@@ -51,7 +51,69 @@ Best practices for access control in network design:
 * **Continuous Monitoring**: Using SIEM (Security Information and Event Management) tools to detect anomalies. Access to data and modification of data has to be logged and recorded in the central SIEM system. A SIEM system consumes multiple logs and allows those handling security to connect the dots and create a big picture that gives insight into multiple events. For example, it can draw attention to a user who sends abnormal amounts of data outbound, or one who connects to an unusual amount of servers.
 * **Automated Policy Enforcement**: Deploying solutions like NAC (Network Access Control) to validate device compliance before granting access.
 
-Network Access Control (NAC) limits access to network resources, granting it only to endpoint devices that adhere to a defined security policy. Some NAC systems can automatically remediate non-compliant devices, ensuring they meet security standards before permitting access. NAC is most effective in stable environments with strict control over users and devices, such as enterprises and government agencies. However, it may be less practical in dynamic settings with diverse, frequently changing users and devices—common in sectors like education and healthcare.
+**Network Access Control (NAC)** restricts network access to only those devices that comply with security policies, such as having up-to-date antivirus or OS patches. Non-compliant devices may be blocked, quarantined, or automatically remediated (e.g., by redirecting to a patch server). NAC works best in tightly controlled environments like corporate offices or government networks but can be challenging in dynamic settings like hospitals or universities, where device types and users change frequently, which complicates policy enforcement.
+
+**Examples of NAC Technologies:**
+
+* **Open Source:**
+  1. **PacketFence** – A widely used open-source NAC that enforces policies via VLAN assignment, captive portals, and device profiling.
+  2. **FreeRADIUS** – A flexible authentication server often integrated with NAC to control network access via protocols like 802.1X.
+* **Commercial:**
+  1. **Cisco ISE (Identity Services Engine)** – A leading enterprise NAC solution that enforces policies, profiles devices, and automates threat responses.
+  2. **Aruba ClearPass** – A policy-based NAC platform that supports BYOD, IoT security, and dynamic role-based access.
+
+**NAC vs Identity and Access Management (IAM)**
+
+**Network Access Control (NAC)** and **Identity and Access Management (IAM)** are both security frameworks, but they serve different purposes and operate at different layers of IT infrastructure. Here’s how they differ, with concrete examples:
+
+**1. Primary Focus**
+
+* **NAC** → Controls **device access to the network** based on compliance (e.g., antivirus status, OS patches).
+  * _Example:_ A hospital blocks an unpatched laptop from connecting to the network until it updates its OS.
+* **IAM** → Manages **user identities and their access to systems/applications** (e.g., logins, permissions).
+  * _Example:_ An employee uses single sign-on (SSO) to access Salesforce but is denied entry to the HR system due to their role.
+
+**2. Scope of Enforcement**
+
+* **NAC** operates at the **network layer** (ports, VLANs, Wi-Fi).
+  * _Tools:_ Cisco ISE, Aruba ClearPass, PacketFence.
+  * _Use case:_ A university grants students Wi-Fi access only after their devices pass an antivirus check.
+* **IAM** operates at the **application/cloud layer** (user logins, APIs, databases).
+  * _Tools:_ Okta, Microsoft Entra ID (Azure AD), Keycloak.
+  * _Use case:_ A contractor can log in to Google Workspace but can’t access the company’s AWS admin console.
+
+**3. Key Functions**
+
+| **NAC**                                      | **IAM**                                              |
+| -------------------------------------------- | ---------------------------------------------------- |
+| Authenticates _devices_                      | Authenticates _users_                                |
+| Checks device health (e.g., firewall status) | Manages roles/permissions (e.g., "Read-only" access) |
+| Assigns VLANs or restricts network segments  | Enforces multi-factor authentication (MFA)           |
+| Often uses 802.1X, MAC filtering             | Uses SAML, OAuth, OpenID Connect                     |
+
+**4. Overlap & Integration**
+
+Modern systems often combine both:
+
+* A **NAC** (like Cisco ISE) might integrate with an **IAM** (like Microsoft Entra ID) to enforce:
+  * _Step 1:_ Device compliance (NAC) → "Is your laptop patched?"
+  * _Step 2:_ User authentication (IAM) → "Is this employee allowed to use the finance app?"
+
+**Example:** A bank might use:
+
+* **NAC** to block a teller’s personal tablet from the corporate network.
+* **IAM** to ensure the same teller can’t approve transactions in the banking software.
+
+**When to Use Which?**
+
+* **Use NAC** when you need to:
+  * Secure network ports/Wi-Fi against rogue devices.
+  * Enforce endpoint compliance (e.g., HIPAA-mandated encryption).
+* **Use IAM** when you need to:
+  * Manage user access to cloud apps (e.g., SaaS like Slack).
+  * Implement least-privilege access (e.g., "Developer" vs. "Admin" roles).
+
+Think of it this way: NAC guards the _network door_ (devices), while IAM guards the _application doors_ (users). Both are critical for Zero Trust security.
 
 ### Multi-factor authentication
 
@@ -64,6 +126,17 @@ First is something you know, for example a username and password combination.
 Next is something you have, for example pressing a notification that appears on your phone using an authenticator app, or using a badge that is scanned.
 
 The third is something you are, these are unique characteristics about you. For example, biometrics such as a face scan, palm scan, fingerprint scan, retina scan, etc.&#x20;
+
+#### Enhancing Visibility and Threat Detection
+
+A secure network design must incorporate robust monitoring to detect and respond to threats in real time. Deploying intrusion detection and prevention systems (IDS/IPS) helps identify malicious activity, while endpoint detection and response (EDR) solutions track suspicious behavior across devices. Network traffic analysis (NTA) tools provide visibility into data flows, helping detect lateral movement by attackers. By integrating these technologies, organizations can proactively identify vulnerabilities and mitigate risks before they escalate.
+
+Essential tools for improved network visibility:
+
+* **Intrusion Detection/Prevention Systems (IDS/IPS)**: Monitoring for and blocking malicious traffic.
+* **Endpoint Detection and Response (EDR)**: Analyzing endpoint activities for signs of compromise.
+* **Network Traffic Analysis (NTA)**: Identifying unusual patterns that may indicate an attack.
+* **SIEM Solutions**: Aggregating and correlating logs for centralized threat detection.
 
 ### Network monitoring
 

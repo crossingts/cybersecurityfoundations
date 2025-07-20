@@ -27,7 +27,7 @@ This section reviews the main risk mitigation methods used to reduce the risk of
 
 ### Risk mitigation technologies
 
-Common risk mitigation technologies include: Firewalls, IDS/IPS, Next-Generation IPS, Next-Generation Firewalls, Web Proxies, VPN, Encryption, SIEM, EDR/XDR, Network Access Control (NAC), Anti-Virus.
+Common risk mitigation technologies include: Firewalls, IDS/IPS, Next-Generation IPS, Next-Generation Firewalls, Web Proxies, VPN, Encryption, Web filters, SIEM, EDR/XDR, Network Access Control (NAC), Anti-Virus.
 
 #### Firewalls
 
@@ -91,8 +91,6 @@ Proxies act as intermediaries between clients and servers, but their roles diffe
 
 Unlike a **forward proxy** (which hides clients from servers, e.g., VPNs), a **reverse proxy** hides servers from clients, improving security, performance, and scalability.
 
-***
-
 **Key Functions of a Reverse Proxy**
 
 1. **Load Balancing**
@@ -109,8 +107,6 @@ Unlike a **forward proxy** (which hides clients from servers, e.g., VPNs), a **r
    * Can block malicious traffic (DDoS, SQLi) before it reaches the app.
 5. **URL Rewriting & Routing**
    * Redirects requests based on paths (e.g., `/blog` → a WordPress server, `/api` → a Node.js app).
-
-***
 
 **How Reverse Proxies Optimize Web Servers**
 
@@ -208,7 +204,7 @@ When segmenting networks for security, both **subnets** and **VLANs** can be use
 ✔ **Avoid VLAN hopping** by securing trunk ports and using private VLANs where needed.\
 ✔ **Prefer Subnets in cloud** (cloud networks rely on IP-based segmentation).
 
-#### **Final Recommendation**
+#### **Praactical Approach**
 
 * **For physical networks:** Start with VLANs, then assign subnets for routing.
 * **For cloud/virtual networks:** Use subnets with security groups/NACLs.
@@ -281,17 +277,6 @@ Explore **practical ACL implementation** in traffic filtering and access control
 Set up QoS (Quality of Service) policies on routers, switches, and firewalls to shape and prioritize traffic.&#x20;
 
 QoS settings are vital in managing network traffic, ensuring priority is given to critical applications. Load balancing and bandwidth management further help in evenly distributing network traffic, preventing any single resource from becoming a bottleneck.
-
-#### Enhancing Visibility and Threat Detection
-
-A secure network design must incorporate robust monitoring to detect and respond to threats in real time. Deploying intrusion detection and prevention systems (IDS/IPS) helps identify malicious activity, while endpoint detection and response (EDR) solutions track suspicious behavior across devices. Network traffic analysis (NTA) tools provide visibility into data flows, helping detect lateral movement by attackers. By integrating these technologies, organizations can proactively identify vulnerabilities and mitigate risks before they escalate.
-
-Essential tools for improved network visibility:
-
-* **Intrusion Detection/Prevention Systems (IDS/IPS)**: Monitoring for and blocking malicious traffic.
-* **Endpoint Detection and Response (EDR)**: Analyzing endpoint activities for signs of compromise.
-* **Network Traffic Analysis (NTA)**: Identifying unusual patterns that may indicate an attack.
-* **SIEM Solutions**: Aggregating and correlating logs for centralized threat detection.
 
 #### Honeypots
 

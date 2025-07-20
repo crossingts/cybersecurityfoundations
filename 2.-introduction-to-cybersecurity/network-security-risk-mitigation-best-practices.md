@@ -23,8 +23,10 @@ This section reviews common network security risk mitigation best practices, inc
 * **Network monitoring**&#x20;
 * **Incident response and disaster recovery**
 * **Layered security (defense in depth)**
+* **Using multiple vendors**
 * **Quality assurance**
 * **On time software patching**&#x20;
+* **Physically securing the network**
 
 ### Least privilege access control
 
@@ -268,6 +270,10 @@ By working together, risk mitigation methods create a layered security approach 
 
 Layers of Defense example: firewall > IDS/IPS > SIEM
 
+### Using multiple vendors
+
+To enhance security, it is best practice to diversify your vendor choices. For instance, when defending against malware, deploy antimalware solutions from different vendors across various layers—such as individual computers, the network, and the firewall. Since a single vendor typically uses the same detection algorithms across all its products, relying on just one provider (e.g., Vendor A) for all three layers means that if one product fails to detect a threat, the other vendor products likely will too. A more effective strategy is to use Vendor A for the firewall, Vendor B for the network, and Vendor C for workstations. This way, the likelihood of all three solutions—each with distinct detection algorithms/methods—missing the same malware is significantly lower than if you depended on a single vendor.
+
 ### Quality assurance
 
 **• Information assurance as a holistic approach to information security management**
@@ -306,6 +312,48 @@ Automation is a game-changer in patch management, ensuring patches are deployed 
 * **Prioritizing critical updates** based on CVSS scores or vendor advisories.
 * **Generating audit logs** for compliance reporting, proving adherence to regulatory requirements.\
   Automation also enables **continuous monitoring** for missing patches and **rollback capabilities** if updates cause instability. By integrating with SIEM or IT service management (ITSM) platforms, automated patching systems can trigger alerts for failed deployments, ensuring no asset is left unprotected. In essence, automation reduces human error, enforces policy adherence, and strengthens overall security posture.
+
+### Physically securing the network
+
+To protect an enterprise network from physical threats, organizations must implement robust **physical security controls** to prevent unauthorized access, theft, or tampering with critical infrastructure. Below are key strategies used in real-world environments:
+
+**1. Controlled Access to Facilities**
+
+* **Badge & Biometric Systems** – Require employees to use **smart cards, key fobs, or biometric scans** (fingerprint/retina) to enter secure areas.
+* **Mantraps & Turnstiles** – Use double-door entry systems (mantraps) to prevent tailgating and ensure only one person enters at a time.
+* **Visitor Logs & Escorts** – All guests must sign in, present ID, and be accompanied by authorized personnel while inside restricted zones.
+
+**2. Securing Network Infrastructure**
+
+* **Locked Server Rooms & Cabinets** – Critical network devices (servers, routers, switches) should be housed in **access-controlled, monitored rooms** with **rack-mounted locks**.
+* **Tamper-Evident Seals** – Use security screws, seals, or sensors to detect unauthorized hardware modifications.
+* **Disable Unused Ports** – Physically block or disable unused Ethernet, USB, and console ports to prevent unauthorized connections.
+
+**3. Surveillance & Monitoring**
+
+* **24/7 CCTV with AI Analytics** – Deploy high-resolution cameras with **motion detection and facial recognition** to monitor sensitive areas.
+* **Security Guards & Patrols** – On-site personnel should conduct **random checks** and verify access permissions.
+* **Environmental Sensors** – Monitor for **temperature, humidity, and smoke** to prevent equipment damage.
+
+**4. Preventing Data & Hardware Theft**
+
+* **Asset Tagging & RFID Tracking** – Tag all equipment with **barcodes or RFID chips** to track movement and detect unauthorized removal.
+* **Checkpoint Inspections** – Security staff should inspect bags and devices when employees exit the building to prevent data theft.
+* **Secure Disposal Policies** – Destroy decommissioned drives (shredding/degaussing) and enforce strict e-waste handling procedures.
+
+**5. Redundancy & Disaster Preparedness**
+
+* **Offsite Backup Storage** – Keep backups in a **geographically separate, access-controlled facility** to ensure recovery in case of physical damage.
+* **UPS & Backup Power** – Use **uninterruptible power supplies (UPS)** and generators to maintain operations during outages.
+* **Fire Suppression Systems** – Install **gas-based (e.g., FM-200) or waterless suppression systems** in server rooms to avoid damage from traditional sprinklers.
+
+**Enforcement & Best Practices**
+
+* **Regular Audits** – Conduct surprise inspections to verify compliance with physical security policies.
+* **Employee Training** – Educate staff on **social engineering risks** (e.g., impersonators) and proper access protocols.
+* **Zero Trust for Physical Access** – Apply the **principle of least privilege**—only grant access to personnel who absolutely need it.
+
+By implementing these measures, enterprises can significantly reduce the risk of **physical breaches, insider threats, and unauthorized data exfiltration**, ensuring the integrity of their network infrastructure.
 
 ### Key takeaways
 

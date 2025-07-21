@@ -348,17 +348,74 @@ Encrypted_Record = AES-GCM(plaintext)  # Includes auth tag
 
 SSL/TLS uses asymmetric encryption (public-key cryptography) primarily for secure key exchange, digital signatures, and certificate authentication. During the handshake, the server shares its public key via a digital certificate, which the client verifies using a trusted Certificate Authority (CA). The client then generates a pre-master secret, encrypts it with the server’s public key, and sends it to the server, which decrypts it with its private key. This establishes a shared secret while ensuring confidentiality and authentication. Asymmetric encryption is computationally expensive, so it is only used for initial setup before switching to symmetric encryption for bulk data transfer.
 
-#### **Role of Asymmetric Encryption in SSL/TLS**
+#### Role of Asymmetric Encryption in SSL/TLS
 
-* Purpose: Secure key exchange and authentication
+* Purpose: Secure key exchange and authentication (digital signatures and certificate authentication)
 * Common algorithms (RSA, ECC, DH)
 * How TLS uses asymmetric crypto for:
-  * Initial handshake
-  * Key exchange
+  * Key exchange (in the TLS handshake)
   * Digital signatures
-  * Server authentication
+  * Certificate authentication (server authentication)
 
-\--
+**Key Exchange (TLS 1.2 vs. TLS 1.3)**
+
+In **TLS 1.2**, asymmetric encryption (public-key crypto) is used in two ways for key exchange:
+
+1. **Direct Key Exchange (RSA-based)**
+   * The client encrypts a **pre-master secret** with the server’s public key (from its certificate).
+   * Only the server (with its private key) can decrypt it.
+   * Used in **RSA key exchange**, but vulnerable if the server’s private key is compromised (no **forward secrecy**).
+2. **Ephemeral Diffie-Hellman (DHE/ECDHE)**
+   * Asymmetric crypto is used only for **authentication** (via digital signatures).
+   * The actual key exchange happens via **ephemeral (temporary) DH/ECDH**, ensuring **forward secrecy**.
+
+In **TLS 1.3**, asymmetric encryption is used more efficiently:
+
+* **Only Ephemeral Diffie-Hellman (ECDHE)** is allowed (forward secrecy is mandatory).
+* The server’s public key (from its certificate) is used just to **sign the DH parameters** (not encrypt them).
+* The handshake is faster because fewer steps rely on asymmetric crypto.
+
+**Key Difference:**
+
+* **TLS 1.2:** Supports both RSA key exchange (no forward secrecy) and ephemeral DH.
+* **TLS 1.3:** Only ephemeral DH, with asymmetric crypto limited to authentication (signatures).
+
+This makes TLS 1.3 both **more secure** (always forward-secret) and **faster** (fewer round trips).
+
+**Digital Signatures**
+
+* **Purpose:** Verify the integrity and authenticity of data.
+* **How it works in SSL/TLS:**
+  * The server (and optionally the client) signs a piece of data (e.g., a handshake message) with its **private key**.
+  * The recipient verifies the signature using the sender’s **public key** to ensure the message was not tampered with and truly came from the claimed sender.
+* **Example:** During the TLS handshake, the server signs the `ServerKeyExchange` message (in some key exchange methods like ECDHE) to prove it owns the private key matching its certificate.
+
+**Certificate Authentication**
+
+* **Purpose:** Bind an entity (e.g., a server) to its public key, verified by a trusted third party (CA).
+* **How it works in SSL/TLS:**
+  * A **Certificate Authority (CA)** signs the server’s certificate (which contains the server’s public key) using the CA’s private key.
+  * The client checks the certificate’s signature against the CA’s public key (from its trust store) to ensure the certificate is valid and unaltered.
+* **Example:** When you connect to `https://example.com`, your browser checks if the server’s certificate was issued and signed by a trusted CA.
+
+Key Differences:
+
+| Feature             | Digital Signatures                             | Certificate Authentication                       |
+| ------------------- | ---------------------------------------------- | ------------------------------------------------ |
+| **Purpose**         | Verify message integrity & sender authenticity | Verify identity & public key binding             |
+| **Signed Data**     | Handshake messages (e.g., `ServerKeyExchange`) | The server’s certificate (public key + metadata) |
+| **Signer**          | Server (or client)                             | Certificate Authority (CA)                       |
+| **Verification By** | Peer (client/server)                           | Client (via CA’s public key)                     |
+
+Why Both Are Needed:
+
+* **Certificate Authentication** ensures you’re talking to the right entity (e.g., `example.com` and not an impostor).
+* **Digital Signatures** ensure that the handshake messages exchanged weren’t modified in transit.
+
+Analogy:
+
+* **Certificate Auth** = Checking a government-issued ID to confirm someone’s identity.
+* **Digital Signature** = That person signing a document in front of you to prove they’re the one acting.
 
 ***
 
@@ -366,7 +423,7 @@ SSL/TLS uses asymmetric encryption (public-key cryptography) primarily for secur
 
 Once the handshake is complete, SSL/TLS switches to symmetric encryption (e.g., AES or ChaCha20) for encrypting actual application data. Both parties derive the same session keys from the pre-master secret to encrypt and decrypt transmitted data efficiently. Symmetric encryption is faster than asymmetric encryption and provides confidentiality for the bulk of the communication. The keys are ephemeral, generated per session, and never reused, mitigating risks from key compromise. Integrity is further enforced using HMAC or AEAD (Authenticated Encryption with Additional Data) modes like AES-GCM.
 
-#### **Role of Symmetric Encryption in SSL/TLS**
+#### Role of Symmetric Encryption in SSL/TLS
 
 Symmetric encryption plays a crucial role in SSL/TLS by ensuring **data confidentiality** during secure communication. It is used to encrypt the actual data transmitted between a client (e.g., a web browser) and a server (e.g., a website).
 
@@ -393,8 +450,6 @@ Symmetric encryption plays a crucial role in SSL/TLS by ensuring **data confiden
   * Suitable for large amounts of data
   * Minimal latency impact on user experience
   * Perfect for protecting the actual content of communications
-
-\--
 
 ### Key takeaways <a href="#key-takeaways" id="key-takeaways"></a>
 

@@ -386,13 +386,11 @@ Finally, any internet-connected network must have a local router with NAT and DH
 
 IPsec/GRE over IPsec, Encryption protocols/IEEE 802.11, DTP/VTP
 
-Vulnerable protocols that transmit data in plaintext (e.g., FTP, SNMP v1/v2c community strings, Telnet passwords). Credentials and configuration data can be exposed to anyone on the network. Organizations should assume attackers can see their unencrypted traffic and eliminate cleartext protocols wherever possible.
-
-Network Address Translation (NAT): Hiding internal IP addresses from the public Internet by translating them to a public IP address.
+Vulnerable protocols that transmit data in plaintext should be substituted with secure protocols to prevent exposure of credentials and configuration data in transit. For example, FTP, SNMP v1/v2c community strings, and Telnet should be replaced with FTPS, SFTP, and SSH. Organizations should assume attackers can see their unencrypted traffic and eliminate cleartext protocols wherever possible.
 
 **Network Address Translation (NAT)** helps organizations overcome the limited availability of IPv4 addresses by allowing multiple devices on a private network to share a single public IP address. NAT works by converting private (internal) IP addresses—used within an organization—into publicly routable addresses for communication over the internet or other IP networks.
 
-Beyond addressing limitations, NAT enhances network security by acting as an additional layer of defense alongside firewalls. Hosts within the protected private network can initiate outbound connections to external systems, but external devices cannot directly access internal hosts without passing through a NAT gateway. This obscures the internal network structure, making it harder for attackers to identify and target specific devices. Additionally, by reducing the number of exposed public IP addresses, NAT further complicates reconnaissance efforts by malicious actors.
+Furthermore, NAT hides internal IP addresses from the public Internet by translating them to a public IP address. NAT enhances network security by acting as an additional layer of defense alongside firewalls. Hosts within the protected private network can initiate outbound connections to external systems, but external devices cannot directly access internal hosts without passing through a NAT gateway. This obscures the internal network structure, making it harder for attackers to identify and target specific devices. Additionally, by reducing the number of exposed public IP addresses, NAT further complicates reconnaissance efforts by malicious actors.
 
 Secure DNS services like Cloudflare’s offer enhanced privacy and security by encrypting DNS queries, which can protect against DNS eavesdropping and spoofing attacks, often providing faster response times and improved reliability compared to standard DNS services.
 

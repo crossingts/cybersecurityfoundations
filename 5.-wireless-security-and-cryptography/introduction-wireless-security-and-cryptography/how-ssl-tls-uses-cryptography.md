@@ -7,18 +7,18 @@ hidden: true
 ## Learning objectives
 
 • Understand why hashing acts as a foundational layer for securing web traffic\
-• Understand how in SSL/TLS a combination of hashing and asymmetric encryption secures websites and online transactions
+• Understand how in SSL/TLS a combination of hashing and cryptographic encryption secures websites and online transactions
 
 This section explains how cryptographic tools (symmetric/asymmetric encryption, and hashing) secure Internet communications via SSL/TLS.
 
 ## Topics covered in this section
 
-* **Introduction**
+* **Introduction: SSL/TLS use cases**
 * **How SSL/TLS uses hashing**
 * **How SSL/TLS uses asymmetric encryption**
 * **How SSL/TLS uses symmetric encryption**
 
-### Introduction
+### Introduction: SSL/TLS use cases
 
 SSL/TLS are cryptographic protocols that provide **encryption, authentication, and data integrity** for secure communication over a network. For example, the HTTPS protocol ensures that data exchanged between a client (e.g., a web browser) and a server (e.g., a website) is private and tamper-proof.
 
@@ -401,7 +401,7 @@ Symmetric encryption plays a crucial role in SSL/TLS by ensuring **data confiden
 ### Key takeaways <a href="#key-takeaways" id="key-takeaways"></a>
 
 • Understand why hashing acts as a foundational layer for securing web traffic\
-• Understand how in SSL/TLS a combination of hashing and asymmetric encryption secures websites and online transactions
+• Understand how in SSL/TLS a combination of hashing and cryptographic encryption secures websites and online transactions
 
 ### References
 

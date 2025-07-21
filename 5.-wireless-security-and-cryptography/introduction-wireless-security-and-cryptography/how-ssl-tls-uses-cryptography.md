@@ -1,8 +1,4 @@
----
-hidden: true
----
-
-# How SSL/TLS uses Cryptography
+# How SSL/TLS uses cryptography
 
 ## Learning objectives
 
@@ -421,13 +417,9 @@ Analogy:
 
 ### How SSL/TLS uses symmetric encryption
 
-Once the handshake is complete, SSL/TLS switches to symmetric encryption (e.g., AES or ChaCha20) for encrypting actual application data. Both parties derive the same session keys from the pre-master secret to encrypt and decrypt transmitted data efficiently. Symmetric encryption is faster than asymmetric encryption and provides confidentiality for the bulk of the communication. The keys are ephemeral, generated per session, and never reused, mitigating risks from key compromise. Integrity is further enforced using HMAC or AEAD (Authenticated Encryption with Additional Data) modes like AES-GCM.
+Once the handshake is complete, SSL/TLS switches to symmetric encryption (e.g., AES or ChaCha20) for encrypting actual application data. Symmetric encryption is used to encrypt the actual data transmitted between a client (e.g., a web browser) and a server (e.g., a website). Both parties derive the same session keys from the pre-master secret to encrypt and decrypt transmitted data efficiently. Symmetric encryption is faster than asymmetric encryption and provides confidentiality for the bulk of the communication. The keys are ephemeral, generated per session, and never reused, mitigating risks from key compromise. Integrity is further enforced using HMAC or AEAD (Authenticated Encryption with Additional Data) modes like AES-GCM.
 
 #### Role of Symmetric Encryption in SSL/TLS
-
-Symmetric encryption plays a crucial role in SSL/TLS by ensuring **data confidentiality** during secure communication. It is used to encrypt the actual data transmitted between a client (e.g., a web browser) and a server (e.g., a website).
-
-**How It Works in SSL/TLS:**
 
 * Purpose: Confidentiality of bulk data
 * Common algorithms: AES (128/256-bit), ChaCha20
@@ -444,7 +436,6 @@ Symmetric encryption plays a crucial role in SSL/TLS by ensuring **data confiden
   4. **Cipher Modes**:
      * Authenticated Encryption (AEAD): Combines encryption + integrity (e.g., AES-GCM)
      * CBC mode (older TLS versions) with HMAC for integrity
-* Why symmetric encryption is used for data transmission
 * Key characteristics:
   * Fast processing (optimized for hardware/software)
   * Suitable for large amounts of data

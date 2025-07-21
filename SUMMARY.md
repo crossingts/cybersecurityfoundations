@@ -46,7 +46,7 @@
 ## 5. Wireless security and cryptography
 
 * [Introduction - Wireless security and cryptography](5.-wireless-security-and-cryptography/introduction-wireless-security-and-cryptography/README.md)
-  * [How SSL/TLS uses Cryptography](5.-wireless-security-and-cryptography/introduction-wireless-security-and-cryptography/how-ssl-tls-uses-cryptography.md)
+  * [How SSL/TLS uses cryptography](5.-wireless-security-and-cryptography/introduction-wireless-security-and-cryptography/how-ssl-tls-uses-cryptography.md)
 * [Hashing algorithms and message integrity](5.-wireless-security-and-cryptography/hashing-algorithms-and-message-integrity/README.md)
   * [Understanding hash, digest, checksum, and fingerprint](5.-wireless-security-and-cryptography/hashing-algorithms-and-message-integrity/understanding-hash-digest-checksum-and-fingerprint.md)
 * [Cryptographic encryption and confidentiality](5.-wireless-security-and-cryptography/cryptographic-encryption-and-confidentiality.md)

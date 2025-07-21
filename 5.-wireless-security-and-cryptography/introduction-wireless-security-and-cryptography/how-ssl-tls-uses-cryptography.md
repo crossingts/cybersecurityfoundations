@@ -42,7 +42,7 @@ SSL/TLS is the backbone of secure communications. SSL/TLS is used almost anywher
 
 ### How SSL/TLS uses hashing
 
-SSL/TLS uses hashing for fingerprint verification, message Authentication Codes (MAC), and digital signatures, thus ensuring **data integrity, authentication, and non-repudiation** in encrypted communications.&#x20;
+SSL/TLS uses hashing for fingerprint verification, Message Authentication Codes (MAC), and digital signatures, thus ensuring **data integrity, authentication, and non-repudiation** in encrypted communications.&#x20;
 
 **Hashing role in TLS handshake:**
 
@@ -56,17 +56,17 @@ SSL/TLS uses hashing for fingerprint verification, message Authentication Codes 
        * Hashing role: The CA’s signature includes a hash (e.g., SHA-256) of the certificate data.
        * _This happens **before** key exchange._
     2. **Key Exchange (e.g., RSA or ECDHE)**:
-       * **In RSA** key exchange (deprecated in TLS 1.3), the client encrypts the "pre-master secret" with the server's public key.
+       * **In RSA** key exchange (deprecated in TLS 1.3), the client encrypts the pre-master secret with the server's public key.
        * **Server authentication (optional):** In TLS 1.2, the server may send a `CertificateVerify` message (signed with RSA+hash) to prove it owns the private key.
-       * The "pre-master secret" is combined with nonces to derive the "master secret" (then session key). Hashing role: SHA-256 is used in the PRF (Pseudo-Random Function) to derive master secret (e.g., combining pre-master secret + nonces).&#x20;
-       * **In ECDHE**, the server signs its ephemeral public key (e.g., using ECDSA+SHA-256 or RSA-PSS+SHA-256) to prove it owns the certificate. Hashing role: The signature includes a hash (e.g., SHA-256) of the handshake messages (for integrity).
-       * The "pre-master secret" is combined with nonces to derive the "master secret" (then session key). Hashing role: SHA-256 is used in the PRF (Pseudo-Random Function) to derive master secret (e.g., combining pre-master secret + nonces).&#x20;
+       * The pre-master secret is combined with nonces to derive the master secret (then session key). Hashing role: SHA-256 is used in the PRF (Pseudo-Random Function) to derive master secret (e.g., combining pre-master secret + nonces).&#x20;
+       * **In ECDHE** (TLS 1.2), the server signs its ephemeral public key (e.g., using ECDSA+SHA-256 or RSA-PSS+SHA-256) to prove it owns the certificate. Hashing role: The signature includes a hash (e.g., SHA-256) of the handshake messages (for integrity).
+       * The pre-master secret is combined with nonces to derive the master secret (then session key). Hashing role: SHA-256 is used in the PRF (Pseudo-Random Function) to derive master secret (e.g., combining pre-master secret + nonces).&#x20;
 
 2. **Integrity Checks: Verifies data integrity (prevents data alteration in transit). Example Algorithms: SHA-256, HMAC.**
 
 **Hashing for Integrity Checks (e.g., SHA-256, HMAC)**
 
-* **After symmetric key negotiation.** Once the TLS handshake establishes a shared session key (the "master secret"), hashing (often via HMAC or AEAD ciphers like AES-GCM) is used to verify message integrity **during the encrypted application data exchange** (not during the handshake itself).
+* **After symmetric key negotiation.** Once the TLS handshake establishes a shared session key, hashing (often via HMAC or AEAD ciphers like AES-GCM) is used to verify message integrity **during the encrypted application data exchange** (not during the handshake itself).
 * **Example:** In TLS 1.2, HMAC-SHA256 is used with the session key to generate MACs for each encrypted record. In TLS 1.3, AEAD (e.g., AES-GCM) combines encryption and integrity checks.
 
 **Note -** In RSA (TLS 1.2) , the `CertificateVerify` message (sent after the server's certificate) is used to prove ownership of the private key by signing a hash of the handshake messages. In RSA (TLS 1.2) the server may send the client a `CertificateVerify` message which is a **signed hash of the handshake messages** (up to that point) using the private key of the server, proving (to the client) the server’s ownership of the private key (**authentication**).
@@ -161,9 +161,7 @@ Finished (encrypted)
 [Application Data]  
 ```
 
-***
-
-**TLS 1.2 vs. TLS 1.3: Key Differences in Hashing and Handshake Signing (**&#x43;omparing handshake message signing, key exchange, and integrity mechanisms):
+TLS 1.2 vs. TLS 1.3: Key Differences in Hashing and Handshake Signing (comparing handshake message signing, key exchange, and integrity mechanisms):
 
 | **Step**              | **TLS 1.2**                                       | **TLS 1.3**                          |
 | --------------------- | ------------------------------------------------- | ------------------------------------ |

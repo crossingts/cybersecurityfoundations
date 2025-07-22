@@ -39,8 +39,6 @@ While "SSL/TLS handshake" and "TLS handshake" in modern contexts refer to the sa
 
 TLS 1.2+ handshakes are more efficient and secure than SSL handshakes. For security, disable SSL entirely and enforce TLS 1.2+.
 
-When discussing handshakes, "TLS handshake" is more accurate, but "SSL/TLS handshake" is widely understood.
-
 #### The SSL/TLS Handshake Process
 
 1. ClientHello and ServerHello
@@ -50,15 +48,15 @@ When discussing handshakes, "TLS handshake" is more accurate, but "SSL/TLS hands
 
     * The server sends its certificate (containing its public key and identity) to the client.
     * The client validates the certificate by:
-      * Checking if it’s issued by a trusted **Certificate Authority (CA)**.
-      * Verifying the certificate’s digital signature (to ensure it wasn’t forged).
+      * Checking if it’s issued by a trusted **Certificate Authority (CA)**, e.g., DigiCert, Let’s Encrypt.
+      * Verifying that the CA's digital signature on the certificate is authentic. The client verifies the CA’s signature on the server’s certificate using the CA’s public key. This ensures the certificate wasn’t forged or tampered with.
       * Confirming the certificate hasn’t expired or been revoked (via CRL/OCSP).
       * Ensuring the server’s domain matches the certificate’s **Subject Alternative Name (SAN)** or **Common Name (CN)**.
 3. Key exchange (Diffie-Hellman or RSA)
 4. Session key generation (symmetric crypto)
 5. Secure data transmission begins
 
-The TLS handshake establishes a secure session by:
+**The TLS handshake establishes a secure session by:**
 
 * Authenticating the server (and optionally the client).
 * Negotiating encryption algorithms (e.g., AES for symmetric encryption).

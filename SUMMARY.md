@@ -67,6 +67,7 @@
 * [The perils of unethical hacking](6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking.md)
 * [Defensive security vs offensive security](6.-practical-foundations-in-ethical-hacking/defensive-security-vs-offensive-security.md)
 * [Defensive cybersecurity technologies](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md)
+  * [Network-based IDS (NIDS) vs host-based IDS (HIDS)](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/network-based-ids-nids-vs-host-based-ids-hids.md)
   * [Using Wireshark to identify non-secure network traffic](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/using-wireshark-to-identify-non-secure-network-traffic.md)
   * [How to get started with Wireshark](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/how-to-get-started-with-wireshark.md)
 * [Phases of the penetration testing process](6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process.md)

@@ -12,9 +12,7 @@ description: >-
 • Point 2 \
 • Point 3&#x20;
 
-This section looks at popular open source defensive cybersecurity technologies, exploring their role in cybersecurity, key advantages/characteristics, and deployment (use cases) in lab and production environments.&#x20;
-
-Key categories of defensive technologies covered include host/network firewalls (e.g., OPNsense, pfilter, and nftables), IDS/IPS (e.g., Suricata and Snort), network security monitoring/SIEM (e.g., Wazuh), and packet analyzers (e.g., Wireshark and tcpdump).
+This section looks at popular open source defensive cybersecurity technologies, exploring their role in cybersecurity, key advantages/characteristics, and deployment (use cases) in lab and production environments. Key categories of defensive technologies covered include host/network firewalls (e.g., OPNsense, pfilter, and nftables), IDS/IPS (e.g., Suricata and Snort), network security monitoring/SIEM (e.g., Wazuh), and packet analyzers (e.g., Wireshark and tcpdump).
 
 ## Topics covered in this section
 
@@ -37,7 +35,7 @@ OPNsense, pfilter, and nftables.
 
 Suricata and Snort.
 
-Network-based IDS vs host-based IDS
+Network-based IDS (NIDS) vs host-based IDS (HIDS)
 
 ### Network security monitoring/SIEM
 

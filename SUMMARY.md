@@ -56,6 +56,7 @@
   * [The SSL/TLS key exchange and derivation process](5.-wireless-security-and-cryptography/the-ssl-tls-handshake/the-ssl-tls-key-exchange-and-derivation-process.md)
 * [Replay attacks and anti-replay methods](5.-wireless-security-and-cryptography/replay-attacks-and-anti-replay-methods.md)
 * [Generating and applying an RSA key](5.-wireless-security-and-cryptography/generating-and-applying-an-rsa-key.md)
+* [Diffie-Hellman (DH) key exchange](5.-wireless-security-and-cryptography/diffie-hellman-dh-key-exchange.md)
 * [IEEE 802.11 authentication methods](5.-wireless-security-and-cryptography/ieee-802.11-authentication-methods.md)
 * [IEEE 802.11 privacy and integrity methods](5.-wireless-security-and-cryptography/ieee-802.11-privacy-and-integrity-methods.md)
 * [Authentication and encryption in WPA, WPA2, and WPA3](5.-wireless-security-and-cryptography/authentication-and-encryption-in-wpa-wpa2-and-wpa3.md)

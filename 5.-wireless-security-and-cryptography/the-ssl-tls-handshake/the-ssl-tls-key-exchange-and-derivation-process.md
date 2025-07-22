@@ -2,15 +2,15 @@
 hidden: true
 ---
 
-# TLS handshake
+# The SSL/TLS key exchange and derivation process
 
-#### **The Key Derivation Process**
+### The SSL/TLS key exchange and derivation process
 
-1. **Key Exchange (Asymmetric Encryption):** The client and server use asymmetric encryption (e.g., RSA, ECC, DH/ECDH) to securely exchange a pre-master secret. This ensures that even if an attacker intercepts the key exchange, they cannot derive the symmetric key.
+1. **Key Exchange (Asymmetric Encryption):** The client and server use asymmetric encryption (e.g., RSA, ECC, DH/ECDH) to securely exchange a pre-master secret.&#x20;
 
 * The client generates a **pre-master secret (PMS)** (a random 48-byte value in TLS 1.2).
 * The client encrypts the PMS with the **server’s public key** (RSA) or computes it via **Diffie-Hellman (DH/ECDH)**.
-* The encrypted PMS is sent to the server, which decrypts it using its **private key**.
+* The client sends the encrypted PMS to the server, which decrypts it using its **private key**.
 * **Now, both client and server have the same PMS.**
 
 2. **Key Derivation (Hashing the PMS with Nonces):** The pre-master secret is hashed (using algorithms like SHA-256) along with random values to generate a **master secret**. The master secret is then used to derive symmetric session keys (for encryption and integrity checks).
@@ -22,7 +22,7 @@ hidden: true
 * The output is the **master secret**, which is then used to derive:
   * **Symmetric session keys** (e.g., AES-256 key for encryption)
   * **MAC keys** (for integrity, e.g., HMAC-SHA256)
-  * **IVs** (if required by the cipher)
+  * **Initialization Vectors (IVs)** (if required by the cipher)
 * **Both the client and server independently** compute the same symmetric session keys using:
   * The shared PMS
   * The exchanged `ClientRandom` and `ServerRandom`
@@ -32,8 +32,6 @@ hidden: true
 
 * The symmetric session key (derived during the handshake) is used alongside a symmetric encryption algorithm (e.g., AES-256, ChaCha20) to encrypt the actual application data (e.g., HTTP requests, form submissions).
 * Hashing (via HMAC) ensures **data integrity**, preventing tampering during transit.
-
-***
 
 **Step-by-Step Flow**
 
@@ -52,16 +50,9 @@ hidden: true
 
 This ensures **confidentiality (AES)**, **integrity (HMAC)**, and **authentication (PKI)** in SSL/TLS. **PKI (Public Key Infrastructure)** is a framework that enables **authentication** by verifying the identity of entities (such as servers or clients) using digital certificates and asymmetric cryptography.
 
-This process achieves:\
-✅ **Confidentiality** (AES)\
-✅ **Integrity** (HMAC)\
-✅ **Authentication** (Server’s certificate)
-
-### The SSL/TLS key exchange and derivation process
+#### SSL/TLS Key Exchange & Derivation Flow
 
 Here’s a **simplified diagram** of the SSL/TLS key exchange and derivation process to visualize how symmetric keys are securely established:
-
-**SSL/TLS Key Exchange & Derivation Flow**
 
 _(Simplified for RSA Key Exchange, TLS 1.2)_
 
@@ -101,8 +92,6 @@ _(Simplified for RSA Key Exchange, TLS 1.2)_
 +-------------------+                       +-------------------+
 ```
 
-***
-
 **Key Steps Explained Visually**
 
 1. **Handshake Initiation**
@@ -140,8 +129,6 @@ Once the **master secret** is computed (using `PMS + ClientRandom + ServerRandom
 2.  **Key Expansion Using PRF**\
     The master secret is fed into the PRF along with a **label** (e.g., `"key expansion"`) and the two nonces to generate a **key block**:
 
-    text
-
     ```
     key_block = PRF(MasterSecret, "key expansion", ClientRandom + ServerRandom)
     ```
@@ -157,8 +144,6 @@ Once the **master secret** is computed (using `PMS + ClientRandom + ServerRandom
     * **Initialization Vectors (IVs)** (if required by the cipher, e.g., AES-CBC).
 
     Example (simplified):
-
-    text
 
     ```
     key_block = [client_write_key][server_write_key][client_MAC_key][server_MAC_key][client_IV][server_IV]  

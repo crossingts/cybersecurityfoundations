@@ -6,52 +6,40 @@ description: >-
 
 # Defensive cybersecurity technologies
 
-• Describe common defensive security technologies such as packet analyzers (e.g., Wireshark), IDS/IPS (e.g., Suricata and Snort), network security monitoring/SIEM (e.g., Wazuh), and host/network firewalls (e.g., OPNsense, pfilter, and nftables).
+## Learning objectives
 
-#### Wireshark
+• Point 1\
+• Point 2 \
+• Point 3&#x20;
 
-Wireshark is primarily a defensive (security monitoring) tool, but it can also be used in offensive security (ethical hacking) scenarios.
+This section looks at popular open source defensive cybersecurity technologies, exploring their role in cybersecurity, key advantages/characteristics, and deployment (use cases) in lab and production environments.&#x20;
 
-**Wireshark Defensive Uses:**
+Key categories of defensive technologies covered include host/network firewalls (e.g., OPNsense, pfilter, and nftables), IDS/IPS (e.g., Suricata and Snort), network security monitoring/SIEM (e.g., Wazuh), and packet analyzers (e.g., Wireshark and tcpdump).
 
-1. **Traffic Analysis for Security Monitoring**
-   * Wireshark’s core function is capturing and analyzing network traffic, which is essential for detecting anomalies, intrusions, and malicious activity (e.g., malware C2 traffic, suspicious connections).
-   * Security teams use it to inspect packets for signs of attacks (e.g., port scans, unusual protocols, data exfiltration).
-2. **Incident Response & Forensics**
-   * After a breach, analysts use Wireshark to review packet captures (PCAPs) to understand attack vectors, lateral movement, and data leaks.
-   * It helps reconstruct events by examining raw network data.
-3. **Network Troubleshooting (Non-Attack Use Cases)**
-   * IT admins and defenders use Wireshark to diagnose connectivity issues, misconfigurations, and performance problems—not just security threats.
-4. **Passive Tool (No Active Exploitation)**
-   * Wireshark doesn’t send packets or exploit vulnerabilities; it only observes traffic. Offensive tools (e.g., Metasploit, Nmap) actively interact with targets.
+## Topics covered in this section
 
-**Wireshark Offensive Uses (Secondary Role):**
+* Firewalls
+* Intrusion Detection Systems (IDS/IPS)
+* Network security monitoring/SIEM&#x20;
+* Packet analyzers
 
-While defensive use is primary, ethical hackers and attackers can leverage Wireshark for:
+### Firewalls
 
-* **Reconnaissance**: Capturing unencrypted credentials, session tokens, or sensitive data in transit.
-* **Man-in-the-Middle (MITM) Analysis**: Inspecting traffic during red-team engagements (e.g., ARP spoofing attacks).
-* **Protocol Reverse-Engineering**: Studying proprietary protocols for vulnerabilities.
-
-However, these offensive uses typically require additional tools (e.g., Ettercap, BetterCAP) to actively manipulate traffic—Wireshark alone is just the analyzer.
-
-Wireshark is **defensive-first** because its primary purpose is monitoring, analysis, and defense. Its core value lies in visibility—whether for protecting or probing a network.
-
-Here’s a concise table summarizing Wireshark’s dual-use capabilities in **defensive (security monitoring)** and **offensive (ethical hacking)** contexts:
-
-| **Category**         | **Defensive Use (Security Monitoring)**                                                                                                              | **Offensive Use (Ethical Hacking)**                                                                                                          |
-| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Primary Role**     | Traffic inspection, threat detection, and incident response.                                                                                         | Reconnaissance, protocol analysis, and attack validation.                                                                                    |
-| **Key Functions**    | <p>- Detect malware C2 traffic.<br>- Analyze intrusion attempts.<br>- Troubleshoot network issues.<br>- Forensic investigations (PCAP analysis).</p> | <p>- Capture unencrypted credentials.<br>- Analyze MITM attack results.<br>- Reverse-engineer protocols.<br>- Validate exploit payloads.</p> |
-| **Tool Interaction** | Used alongside SIEMs, IDS/IPS (e.g., Snort), and firewalls.                                                                                          | Paired with exploitation tools (e.g., Metasploit, Responder).                                                                                |
-| **Activity Type**    | **Passive**: Observes traffic without modification.                                                                                                  | **Supportive**: Analyzes traffic generated by active attacks.                                                                                |
-| **Examples**         | <p>- Identifying a ransomware beacon.<br>- Investigating a data exfiltration attempt.</p>                                                            | <p>- Sniffing FTP credentials.<br>- Debugging a custom exploit's network behavior.</p>                                                       |
+OPNsense, pfilter, and nftables.
 
 #### nftables firewall to optimize traffic flow
 
 • Default to connection denial for inbound traffic
 
 • Limit accessible ports and hosts with an allow list
+
+### Intrusion Detection Systems (IDS/IPS)
+
+Suricata and Snort.
+
+Network-based IDS vs host-based IDS
+
+### Network security monitoring/SIEM
 
 #### Wazuh (SIEM) as a network security monitoring tool
 
@@ -102,4 +90,49 @@ A mature security stack combines:
 2. **IDS/IPS** → Stops known attacks in traffic.
 3. **SIEM** → Correlates alerts from all sources.
 4. **EDR** → Hunts for endpoint compromises.
-5. **NTA** → Detects stealthy threats in network flows.
+5. **NTA (Network Trafific Analysis)** → Detects stealthy threats in network flows.
+
+### Packet analyzers
+
+Wireshark and tcpdump.
+
+#### Wireshark
+
+Wireshark is primarily a defensive (security monitoring) tool, but it can also be used in offensive security (ethical hacking) scenarios.
+
+**Wireshark Defensive Uses:**
+
+1. **Traffic Analysis for Security Monitoring**
+   * Wireshark’s core function is capturing and analyzing network traffic, which is essential for detecting anomalies, intrusions, and malicious activity (e.g., malware C2 traffic, suspicious connections).
+   * Security teams use it to inspect packets for signs of attacks (e.g., port scans, unusual protocols, data exfiltration).
+2. **Incident Response & Forensics**
+   * After a breach, analysts use Wireshark to review packet captures (PCAPs) to understand attack vectors, lateral movement, and data leaks.
+   * It helps reconstruct events by examining raw network data.
+3. **Network Troubleshooting (Non-Attack Use Cases)**
+   * IT admins and defenders use Wireshark to diagnose connectivity issues, misconfigurations, and performance problems—not just security threats.
+4. **Passive Tool (No Active Exploitation)**
+   * Wireshark doesn’t send packets or exploit vulnerabilities; it only observes traffic. Offensive tools (e.g., Metasploit, Nmap) actively interact with targets.
+
+**Wireshark Offensive Uses (Secondary Role):**
+
+While defensive use is primary, ethical hackers and attackers can leverage Wireshark for:
+
+* **Reconnaissance**: Capturing unencrypted credentials, session tokens, or sensitive data in transit.
+* **Man-in-the-Middle (MITM) Analysis**: Inspecting traffic during red-team engagements (e.g., ARP spoofing attacks).
+* **Protocol Reverse-Engineering**: Studying proprietary protocols for vulnerabilities.
+
+However, these offensive uses typically require additional tools (e.g., Ettercap, BetterCAP) to actively manipulate traffic—Wireshark alone is just the analyzer.
+
+Wireshark is **defensive-first** because its primary purpose is monitoring, analysis, and defense. Its core value lies in visibility—whether for protecting or probing a network.
+
+Here’s a concise table summarizing Wireshark’s dual-use capabilities in **defensive (security monitoring)** and **offensive (ethical hacking)** contexts:
+
+| **Category**         | **Defensive Use (Security Monitoring)**                                                                                                              | **Offensive Use (Ethical Hacking)**                                                                                                          |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Primary Role**     | Traffic inspection, threat detection, and incident response.                                                                                         | Reconnaissance, protocol analysis, and attack validation.                                                                                    |
+| **Key Functions**    | <p>- Detect malware C2 traffic.<br>- Analyze intrusion attempts.<br>- Troubleshoot network issues.<br>- Forensic investigations (PCAP analysis).</p> | <p>- Capture unencrypted credentials.<br>- Analyze MITM attack results.<br>- Reverse-engineer protocols.<br>- Validate exploit payloads.</p> |
+| **Tool Interaction** | Used alongside SIEMs, IDS/IPS (e.g., Snort), and firewalls.                                                                                          | Paired with exploitation tools (e.g., Metasploit, Responder).                                                                                |
+| **Activity Type**    | **Passive**: Observes traffic without modification.                                                                                                  | **Supportive**: Analyzes traffic generated by active attacks.                                                                                |
+| **Examples**         | <p>- Identifying a ransomware beacon.<br>- Investigating a data exfiltration attempt.</p>                                                            | <p>- Sniffing FTP credentials.<br>- Debugging a custom exploit's network behavior.</p>                                                       |
+
+Table: Wireshark’s dual-use capabilities

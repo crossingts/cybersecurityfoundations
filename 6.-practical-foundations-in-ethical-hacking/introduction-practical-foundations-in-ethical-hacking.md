@@ -23,7 +23,7 @@ Ethical hacking is the cornerstone of security verification within organizations
 
 • Become familiar with defensive security and offensive security approaches, including SIRT/CSIRT (Security Incident Response Team/Computer Security Incident Response Team), SOC (Security Operations Center), red teaming, and ethical hacking.
 
-• Describe common defensive security technologies such as packet analyzers (e.g., Wireshark), IDS/IPS (e.g., Suricata and Snort), network security monitoring/SIEM (e.g., Wazuh), and host/network firewalls (e.g., OPNsense, pfilter, and nftables).
+• Describe common defensive security technologies such as packet analyzers (e.g., Wireshark and tcpdump), IDS/IPS (e.g., Suricata and Snort), network security monitoring/SIEM (e.g., Wazuh), and host/network firewalls (e.g., OPNsense, pfilter, and nftables).
 
 • Describe the phases of the penetration testing process (planning and reconnaissance, scanning and enumeration, exploitation, post-exploitation, and reporting).
 

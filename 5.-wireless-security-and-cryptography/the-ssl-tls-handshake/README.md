@@ -70,9 +70,9 @@ After certificate validation, the client and server negotiate a symmetric sessio
 
 **A. RSA Key Exchange (older, used in TLS 1.2, now discouraged)**
 
-1. The client generates a **premaster secret**, encrypts it with the server’s public key (from the certificate), and sends it.
-2. The server decrypts it with its private key.
-3. Both derive the same **symmetric session key** from the premaster secret.
+1. The client generates a **pre-master secret**, encrypts it with the server’s public key (from the digital certificate), and sends it to the server.
+2. The server decrypts the pre-master secret with its private key.
+3. Both derive the same **symmetric session key** from the pre-master secret.
 
 **Weakness**: If the server’s private key is compromised later, past communications can be decrypted (no **forward secrecy**).
 
@@ -99,11 +99,9 @@ The TLS handshake ensures:
 3. **Authentication** – The server (and optionally client) proves identity (via certificates).
 4. **Forward Secrecy** (if using ephemeral keys) – Past sessions can’t be decrypted even if the private key is later compromised.
 
-### TLS 1.3 Handshake Explained (Simplified & Secure)
+### TLS 1.3 Handshake Simplified Workflow
 
 Below is a step-by-step breakdown of the TLS 1.3 handshake with a simplified workflow.
-
-**Step-by-Step TLS 1.3 Handshake**
 
 **1. Client Hello**
 
@@ -113,7 +111,7 @@ Below is a step-by-step breakdown of the TLS 1.3 handshake with a simplified wor
   * **Key Share (DH public key)** – Used for key exchange (e.g., x25519, P-256).
   * **Optional: Pre-shared Key (PSK) hint** (for session resumption).
 
-📌 _In TLS 1.3, the client guesses the server’s preferred key exchange method and sends its public key upfront (reducing round trips)._
+_In TLS 1.3, the client guesses the server’s preferred key exchange method and sends its public key upfront (reducing round trips)._
 
 **2. Server Hello**
 
@@ -124,7 +122,7 @@ Below is a step-by-step breakdown of the TLS 1.3 handshake with a simplified wor
   * **CertificateVerify** (proof of private key ownership).
   * **Finished** (MAC to verify handshake integrity).
 
-📌 _TLS 1.3 skips the "Certificate Request" and "Server Key Exchange" steps (used in TLS 1.2)._
+_TLS 1.3 skips the "Certificate Request" and "Server Key Exchange" steps (used in TLS 1.2)._
 
 **3. Client Verification & Key Derivation**
 
@@ -133,14 +131,12 @@ Below is a step-by-step breakdown of the TLS 1.3 handshake with a simplified wor
   * **Computes the shared secret** using:
     * Its own private key + server’s public key (Diffie-Hellman).
   * **Derives session keys** (for symmetric encryption).
-  * Sends:
-    * **Finished** (confirms successful key exchange).
+  * Sends: **Finished** (confirms successful key exchange).
 
 **4. Secure Data Transmission**
 
-* Both sides now have:
-  * **Same session keys** (for AES-GCM/ChaCha20 encryption).
-  * **Encrypted communication begins**.
+* Both sides now have the **same session keys** (for AES-GCM/ChaCha20 encryption).
+* **Encrypted communication begins**.
 
 **TLS 1.3 vs. TLS 1.2 Key Differences**
 
@@ -152,13 +148,9 @@ Below is a step-by-step breakdown of the TLS 1.3 handshake with a simplified wor
 | **Encryption Start**   | After handshake                    | Partially encrypted early          |
 | **Obsolete Ciphers**   | Supports weak ones (RSA, RC4)      | Removed (only modern AEAD ciphers) |
 
-📌 \*0-RTT (Zero Round Trip Time Resumption): Allows instant reconnection for returning clients (but risks replay attacks).\*
+\*0-RTT (Zero Round Trip Time Resumption): Allows instant reconnection for returning clients (but risks replay attacks).\*
 
-***
-
-**TLS 1.3 Handshake Workflow (Diagram)**
-
-textCopyDownload
+**TLS 1.3 Handshake Simplified Workflow (Diagram)**
 
 ```
 Client                                                                 Server
@@ -172,16 +164,12 @@ Client                                                                 Server
   | <=== ENCRYPTED DATA EXCHANGE BEGINS ===>                             |
 ```
 
-***
-
 **Why TLS 1.3 is Better**
 
 ✅ **1-RTT Handshake** (vs. 2 in TLS 1.2).\
 ✅ **Stronger Security** (no RSA key exchange, only forward-secure methods).\
 ✅ **Simpler & Faster** (removes obsolete features).\
 ⚠️ **0-RTT tradeoff**: Faster but vulnerable to replay attacks (mitigated by limiting 0-RTT data).
-
-***
 
 **Final Notes**
 

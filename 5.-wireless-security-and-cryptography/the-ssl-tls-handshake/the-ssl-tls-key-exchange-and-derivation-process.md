@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # The SSL/TLS key exchange and derivation process
 
 ### The SSL/TLS key exchange and derivation process
@@ -114,9 +110,7 @@ _(Simplified for RSA Key Exchange, TLS 1.2)_
 
 #### **How Both Client and Server Derive the Same Symmetric Session Key from the Master Secret**
 
-When both sides calculate the master secret (each have the same master secret at this point), how do they both derive the same symmetric session key?
-
-Once the **master secret** is computed (using `PMS + ClientRandom + ServerRandom`), **both the client and server independently derive the same symmetric session keys** using a **deterministic key derivation process**. Here’s how it works:
+Once both sides compute the **master secret** (using `PMS + ClientRandom + ServerRandom`), **both the client and server independently derive the same symmetric session keys** using a **deterministic key derivation process**. Here’s how it works:
 
 **Step-by-Step Key Derivation Process**
 

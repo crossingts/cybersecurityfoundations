@@ -22,9 +22,7 @@ description: >-
 | **Testing Approaches**    | <p>Blackbox testing, Black hat hacking </p><p></p><p>Third party audit/auditor perspective of infosec governance</p> | Whitebox testing, White hat hacking                                                                      |
 | **Authentication**        | Unauthenticated scan (outsider attack)                                                                               | Authenticated scan (simulation of insider attack)                                                        |
 
-***
-
-#### How red teaming and ethical hacking differ and overlap
+#### Ethical hacking and red teaming similarities and key differences I
 
 #### **Similarities:**
 
@@ -48,11 +46,72 @@ description: >-
 * A red team _can_ use ethical hacking techniques (e.g., exploiting a server vulnerability).
 * Some ethical hackers perform red teaming if the engagement includes advanced adversary simulation.
 
-#### **Analogy:**
+***
 
-* **Ethical Hacking** = A home inspector checking for structural flaws.
-* **Red Teaming** = A burglary drill testing alarms, guards, and response times.
+#### Ethical hacking and red teaming similarities and key differences II
 
-#### **Bottom Line:**
+#### **1. White Hat Hackers (Ethical Hackers)**
 
-Red teaming is a _subset_ of ethical hacking with a broader, adversarial focus. Ethical hacking is more general, while red teaming mimics sophisticated threat actors. Many professionals do both, but not all ethical hackers are red teamers.
+* **Typically Contracted Professionals (but not always):**
+  * Many white hat hackers work as **independent consultants** or are employed by **cybersecurity firms** that provide penetration testing, bug bounty hunting, or security audits to multiple clients.
+  * Some may also be **full-time employees** of a company, especially in large organizations with dedicated security teams.
+* **Common Roles:**
+  * **Bug bounty hunters** (freelancers who find vulnerabilities for rewards).
+  * **Penetration testers** (hired to simulate attacks).
+  * **Security researchers** (may work for firms or independently).
+
+#### **2. Red Teams**
+
+* **Usually Company Employees (but not always):**
+  * Red teams are often **internal teams** within an organization tasked with simulating real-world attacks to test defenses.
+  * Some companies **outsource red teaming** to specialized firms (making them contracted professionals).
+* **Key Difference from White Hats:**
+  * Red teams focus on **long-term, adversarial simulations** (like advanced persistent threats), whereas white hats may do shorter-term assessments (like pentests).
+
+#### **Overlap & Inconsistencies**
+
+* Some **white hats** are employees (e.g., in-house security teams).
+* Some **red teams** are external contractors (e.g., hired for a specific engagement).
+* **Purple Teams** (a blend of red + blue teams) further blur the lines, as they involve collaboration between attackers and defenders.
+
+#### **General Rule of Thumb**
+
+| Role                 | Typically Employed By             | Focus                                            |
+| -------------------- | --------------------------------- | ------------------------------------------------ |
+| **White Hat Hacker** | External (but sometimes internal) | Pentests, bug bounties, vulnerability research   |
+| **Red Team**         | Internal (but sometimes external) | Advanced attack simulations, adversary emulation |
+
+So while there is some inconsistency, the **general trend** is:\
+✅ **White hats** = Often external contractors (but can be employees).\
+✅ **Red teams** = Often employees (but can be outsourced).
+
+***
+
+#### SOC (Security Operations Center)/Blue Teaming
+
+**SOC (Security Operations Center) analysts and engineers are essentially the operational arm of the "Blue Team."** However, whether they are **in-house employees or contracted** depends on the organization's structure.
+
+**SOC as the Blue Team (Defenders)**
+
+* **Primary Role:**
+  * Monitor, detect, analyze, and respond to security incidents.
+  * Handle alerts from SIEM (Security Information and Event Management), EDR (Endpoint Detection & Response), firewalls, etc.
+  * Perform **threat hunting** (proactively searching for undetected threats).
+  * Work closely with **Incident Response (IR)** teams when breaches occur.
+
+#### **In-House vs. Contracted/MSSP SOCs**
+
+| Type                      | Description                                                            | Pros                                                                                               | Cons                                                                                |
+| ------------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| **In-House SOC**          | Employees directly hired by the company.                               | <p>- Better knowledge of internal systems.<br>- Faster coordination with IT/other teams.</p>       | <p>- Expensive to maintain 24/7.<br>- Requires hiring skilled analysts.</p>         |
+| **Contracted SOC (MSSP)** | Managed by a third-party **MSSP (Managed Security Service Provider)**. | <p>- Cost-effective (no need for full-time staff).<br>- Access to broader threat intelligence.</p> | <p>- Less familiarity with internal networks.<br>- Possible delays in response.</p> |
+
+**Key Overlaps & Clarifications**
+
+1. **Blue Team ≠ SOC (but SOC is a core part of Blue Team)**
+   * The **Blue Team** is a broader concept, including **SOC, IR, vulnerability management, and security hardening teams**.
+   * The **SOC is the 24/7 monitoring & initial response unit** within the Blue Team.
+2. **Some Companies Have Hybrid Models**
+   * Example: A company might have an **in-house SOC for critical systems** but outsource **lower-priority monitoring** to an MSSP.
+3. **Contract SOC Analysts (Staff Augmentation)**
+   * Some firms hire **temporary SOC analysts** through staffing agencies (neither fully in-house nor full MSSP).

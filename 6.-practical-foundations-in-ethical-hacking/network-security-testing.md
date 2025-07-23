@@ -22,6 +22,12 @@ Typically, performance-monitoring systems use the Simple Network Management Prot
 
 The most common parameters for monitoring network performance are: Throughput (kbps), Latency (ms/RTT), Jitter, packet loss, CPU and memory utilization of a network device, hard device space.
 
+• **Intrusion detection systems/intrusion prevention systems (IDS/IPS)** using such tools as Suricata and Snort. Most network intrusion detection systems (NIDS) are packet analyzers that watch for peculiar traffic patterns that are unique to network attacks.
+
+• **Incident response and mitigation (SIEM) and endpoint detection and response (EDR)** using such tools as Wazuh SIEM/XDR.
+
+• **Host and network firewalls** using such tools as ufw, iptables, nftables, pf (packet filter), and OPNsense/pfsense.
+
 • **Network security testing** - netadmins perform network security testing to assess and verify the threats and vulnerabilities of their network.&#x20;
 
 ### Network Security Testing

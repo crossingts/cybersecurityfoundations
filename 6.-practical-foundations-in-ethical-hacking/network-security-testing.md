@@ -17,19 +17,33 @@ Packet analyzers
 
 Network admins perform various monitoring and testing activities to ensure smooth and secure network operation:
 
-• Connectivity testing/troubleshooting (basic netadmin) using such tools/technologies as, ping, traceroute, whois, nslookup, dig, netstat, nbtstat, arp, and syslog.
+• **Connectivity testing/troubleshooting** (basic netadmin) using such tools/technologies as ping, traceroute, whois, nslookup, dig, netstat, nbtstat, arp, and syslog.
 
-• Network availability monitoring (part of Network Management System) to determine the availability of network resources to the users using such tools as Big Brother, OpenNMS, and Nagios. Network availability monitoring is "the concept of observing, measuring, and comparing the performance of a computer network using both technology and personnel". The purpose of network availability monitoring is "to detect faults within a network and ensure steady network operations" (Deveriya, 2005, p. 270).
+• **Network availability monitoring** (part of Network Management System) to determine the availability of network resources to the users using such tools as Big Brother, OpenNMS, and Nagios. Network availability monitoring is "the concept of observing, measuring, and comparing the performance of a computer network using both technology and personnel". The purpose of network availability monitoring is "to detect faults within a network and ensure steady network operations" (Deveriya, 2005, p. 270).
 
 Typically, a network-monitoring system is comprised of Windows- or UNIX-based network-ready computers loaded with network-monitoring software. The network-monitoring system polls the monitored nodes at regular intervals to determine the overall health of the network and its components. Based on the polled results, the network-monitoring system generates alerts. These alerts can be e-mailed, sent through pager messages, or relayed through a web page. The network-monitoring system also stores the historical data for reporting and trending. (Deveriya, 2005, p. 270)
 
 Key concepts related to network availability monitoring include SLAs (Service-Level Agreements), MTTR (mean time to repair), and Five Nines.
 
-• Network performance monitoring (part of NMS), SNMP-based MRTG (monitor +manage devices), CiscoWorks. Focus: Network performance monitoring is the process of collecting, storing, and analyzing network statistics. The most common parameters for monitoring network performance are: Throughput kbps, Latency, Jitter, packet loss, CPU and memory utilization of a network device, hard device space.
+• **Network performance monitoring** (part of NMS) to determine the adequacy of key performance parameters of network devices and links using such tools as MRTG and Cacti. Network performance monitoring is "the process of collecting, storing, and analyzing network statistics" (Deveriya, 2005, p. 314).&#x20;
 
-• Network security testing - to assess and verify the threats and vulnerabilities of a network.&#x20;
+Typically, performance-monitoring systems use the Simple Network Management Protocol (SNMP) to communicate with the monitored hosts. Using SNMP, the performance-monitoring system regularly polls the monitored hosts and collects performance-parameter samples. The samples are then stored in a central database for analysis and reporting, such as historical trending. (Deveriya, 2005, p. 314)
+
+The most common parameters for monitoring network performance are: Throughput (kbps), Latency (ms/RTT), Jitter, packet loss, CPU and memory utilization of a network device, hard device space.
+
+• **Network security testing** - netadmins perform network security testing to assess and verify the threats and vulnerabilities of their network.&#x20;
 
 ### Network Security Testing Overview
+
+We introduce tools and methodologies of network security testing using network scanners, vulnerability scanners, and sniffers.
+
+This chapter introduces the following tools and methodologies of security testing:
+
+• Network scanners&#x20;
+
+• Vulnerability scanners&#x20;
+
+• Packet analyzers&#x20;
 
 The process of testing network security is also known as any of the following:
 
@@ -43,10 +57,6 @@ The tools used for security auditing can be loosely classified into the followin
 
 • Scanners - Active tools that send out probe packets to the target host or network to attack or gather information.\
 • Packet analyzers - Passive in their operation because they do not send probe packets. Instead, packet analyzers work by capturing and analyzing the data that is flowing across the network.
-
-Bootable CD-ROM–Based Tool Kits
-
-The Knoppix CD-ROM provides an easy-to-use graphical user interface (GUI) with basic security-testing tools, including Nmap, Nessus, Ethereal, and Tcpdump. Knoppix also includes the following tools and services…
 
 #### Network Scanners
 

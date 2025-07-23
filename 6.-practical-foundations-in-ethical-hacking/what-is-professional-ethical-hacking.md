@@ -171,8 +171,20 @@ The professional ethics of white hat hackers are defined by legal compliance, co
 
 ### References
 
-* Andress, J., & Winterfeld, S. (2013). _Cyber Warfare: Techniques, Tactics and Tools for Security Practitioners_. Elsevier.
-* Coleman, G. (2014). _Hacker, Hoaxer, Whistleblower, Spy: The Many Faces of Anonymous_. Verso.
-* Denning, D. (2010). "Cyber Conflict as an Emergent Social Phenomenon." _Corporate Cyber Security_.
-* Furnell, S., & Warren, M. (1999). "Ethical Hacking: A Necessary Evil?" _Computers & Security_.
-* Rid, T. (2013). _Cyber War Will Not Take Place_. Oxford University Press.
+Chandler, A. (1996). The changing definition and image of hackers in popular discourse. _International Journal of the Sociology of Law, 24_(2), 229–251. [https://doi.org/10.1006/ijsl.1996.0012](https://doi.org/10.1006/ijsl.1996.0012)
+
+Coleman, G. (2014). _Hacker, Hoaxer, Whistleblower, Spy: The Many Faces of Anonymous_. Verso.
+
+Denning, D. (2010). "Cyber Conflict as an Emergent Social Phenomenon." _Corporate Cyber Security_.
+
+Furnell, S., & Warren, M. (1999). "Ethical Hacking: A Necessary Evil?" _Computers & Security_.
+
+Gotterbarn, D., Miller, K., & Rogerson, S. (2018). Software engineering code of ethics and professional practice. _ACM, 41_(1), 110–118. [https://doi.org/10.1145/3177851](https://doi.org/10.1145/3177851)
+
+Jordan, T., & Taylor, P. (2004). _Hacktivism and cyberwars: Rebels with a cause?_ Routledge. [https://doi.org/10.4324/9780203637997](https://doi.org/10.4324/9780203637997)
+
+Rid, T. (2013). _Cyber War Will Not Take Place_. Oxford University Press.
+
+Samuel, A. (2004). Hacktivism and the future of political participation. _Harvard Law Review, 117_(8), 2714–2727. [https://doi.org/10.2307/4093405](https://doi.org/10.2307/4093405)
+
+Schneier, B. (2020). _Click here to kill everybody: Security and survival in a hyper-connected world._ W.W. Norton & Company.

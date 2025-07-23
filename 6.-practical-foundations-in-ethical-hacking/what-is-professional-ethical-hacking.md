@@ -163,5 +163,3 @@ The professional ethics of white hat hackers are defined by legal compliance, co
 * Whitman, M., & Mattord, H. (2018). _Principles of Information Security_. Cengage Learning.
 
 ***
-
-\--

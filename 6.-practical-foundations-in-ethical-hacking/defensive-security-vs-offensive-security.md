@@ -9,7 +9,7 @@ description: >-
 
 • Become familiar with defensive security and offensive security approaches, including SIRT/CSIRT (Security Incident Response Team/Computer Security Incident Response Team), SOC (Security Operations Center), red teaming, and ethical hacking.
 
-**Two key cybersecurity paradigms**
+### Two key cybersecurity paradigms
 
 | **Strategy**              | **Offensive Security**                                                                                               | **Defensive Security**                                                                                   |
 | ------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
@@ -22,33 +22,11 @@ description: >-
 | **Testing Approaches**    | <p>Blackbox testing, Black hat hacking </p><p></p><p>Third party audit/auditor perspective of infosec governance</p> | Whitebox testing, White hat hacking                                                                      |
 | **Authentication**        | Unauthenticated scan (outsider attack)                                                                               | Authenticated scan (simulation of insider attack)                                                        |
 
-#### Ethical hacking and red teaming similarities and key differences I
-
-#### **Similarities:**
-
-* Both involve authorized attempts to identify vulnerabilities in systems, networks, or organizations.
-* Both aim to improve security by exposing weaknesses before malicious actors exploit them.
-* Both require technical skills in penetration testing, social engineering, and attack simulations.
-
-#### **Key Differences:**
-
-| **Aspect**         | **Ethical Hacking**                         | **Red Teaming**                                                                   |
-| ------------------ | ------------------------------------------- | --------------------------------------------------------------------------------- |
-| **Scope**          | Often focuses on specific systems or apps.  | Broader, simulating real-world adversaries (including physical & social attacks). |
-| **Objective**      | Find and fix vulnerabilities.               | Test detection & response capabilities (not just tech flaws).                     |
-| **Duration**       | Short-term, targeted engagements.           | Longer, multi-phase operations (like espionage).                                  |
-| **Stealth**        | May or may not avoid detection.             | Often prioritizes stealth to mimic real attackers.                                |
-| **Team Structure** | Usually individual testers or small groups. | Larger, multidisciplinary teams (cyber, physical, social).                        |
-| **Reporting**      | Detailed technical remediation guidance.    | Focuses on strategic security gaps & organizational resilience.                   |
-
-#### **When They Overlap:**
-
-* A red team _can_ use ethical hacking techniques (e.g., exploiting a server vulnerability).
-* Some ethical hackers perform red teaming if the engagement includes advanced adversary simulation.
-
 ***
 
-#### Ethical hacking and red teaming similarities and key differences II
+### Ethical hacking vs red teaming
+
+#### Ethical hacking vs red teaming organizational position
 
 #### **1. White Hat Hackers (Ethical Hackers)**
 
@@ -68,12 +46,6 @@ description: >-
 * **Key Difference from White Hats:**
   * Red teams focus on **long-term, adversarial simulations** (like advanced persistent threats), whereas white hats may do shorter-term assessments (like pentests).
 
-#### **Overlap & Inconsistencies**
-
-* Some **white hats** are employees (e.g., in-house security teams).
-* Some **red teams** are external contractors (e.g., hired for a specific engagement).
-* **Purple Teams** (a blend of red + blue teams) further blur the lines, as they involve collaboration between attackers and defenders.
-
 #### **General Rule of Thumb**
 
 | Role                 | Typically Employed By             | Focus                                            |
@@ -81,9 +53,35 @@ description: >-
 | **White Hat Hacker** | External (but sometimes internal) | Pentests, bug bounties, vulnerability research   |
 | **Red Team**         | Internal (but sometimes external) | Advanced attack simulations, adversary emulation |
 
-So while there is some inconsistency, the **general trend** is:\
-✅ **White hats** = Often external contractors (but can be employees).\
-✅ **Red teams** = Often employees (but can be outsourced).
+#### **Overlap & Inconsistencies**
+
+* Some **white hats** are employees (e.g., in-house security teams).
+* Some **red teams** are external contractors (e.g., hired for a specific engagement).
+* **Purple Teams** (a blend of red + blue teams) further blur the lines, as they involve collaboration between attackers and defenders.
+
+#### Ethical hacking vs red teaming cybersecurity activities
+
+#### **Key Similarities:**
+
+* Both involve authorized attempts to identify vulnerabilities in systems, networks, or organizations.
+* Both aim to improve security by exposing weaknesses before malicious actors exploit them.
+* Both require technical skills in penetration testing, social engineering, and attack simulations.
+
+#### **Key Differences:**
+
+| **Aspect**         | **Ethical Hacking**                         | **Red Teaming**                                                                   |
+| ------------------ | ------------------------------------------- | --------------------------------------------------------------------------------- |
+| **Scope**          | Often focuses on specific systems or apps.  | Broader, simulating real-world adversaries (including physical & social attacks). |
+| **Objective**      | Find and fix vulnerabilities.               | Test detection & response capabilities (not just tech flaws).                     |
+| **Duration**       | Short-term, targeted engagements.           | Longer, multi-phase operations (like espionage).                                  |
+| **Stealth**        | May or may not avoid detection.             | Often prioritizes stealth to mimic real attackers.                                |
+| **Team Structure** | Usually individual testers or small groups. | Larger, multidisciplinary teams (cyber, physical, social).                        |
+| **Reporting**      | Detailed technical remediation guidance.    | Focuses on strategic security gaps & organizational resilience.                   |
+
+#### **When They Overlap:**
+
+* A red team can use ethical hacking techniques (e.g., exploiting a server vulnerability).
+* Some ethical hackers perform red teaming if the engagement includes advanced adversary simulation.
 
 ***
 

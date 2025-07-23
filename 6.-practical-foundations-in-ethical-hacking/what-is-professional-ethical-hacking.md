@@ -52,7 +52,7 @@ White hat hackers are professional ethical hackers who operate within legal boun
 
 #### Gray Hat Hackers: The Unauthorized "Researchers"
 
-Gray hat hackers fall between white and black hats—they hack systems without permission but usually claim altruistic motives. They often breach networks to find vulnerabilities, then notify the victim (sometimes demanding payment) or threaten public exposure to force fixes. While some may genuinely help improve security, their methods are illegal and unethical by professional standards. Some call themselves "security researchers," but legitimate researchers work within legal frameworks (e.g., bug bounty programs).
+Gray hat hackers fall between white and black hats—they hack systems without permission but usually claim altruistic motives (Jordan & Taylor, 2004). They often breach regulations (e.g., CFAA) in the course of discovering security flaws within commercial software—a practice critiqued in literature as "vigilante security" (Denning, 2010). They then notify the software vendor (sometimes demanding payment) or threaten public exposure to force fixes. While some may genuinely help improve security, their methods are illegal and unethical by professional standards. Some call themselves security researchers, but legitimate researchers work within legal frameworks (e.g., bug bounty programs).
 
 * **Key Traits:**
   * Hack without permission but often claim to act in the public interest.
@@ -68,10 +68,10 @@ Gray hat hackers fall between white and black hats—they hack systems without p
 
 #### Black Hat Hackers: The Criminals
 
-Black hat hackers engage in illegal hacking for personal gain, sabotage, or malicious intent. They exploit vulnerabilities to steal data, deploy ransomware, or disrupt systems. Unlike white or gray hats, they have no ethical constraints and often work within organized cybercrime syndicates or are rogue intelligence operatives. Their activities include identity theft, financial fraud, and espionage.
+Black hat hackers engage in illegal hacking for personal gain, sabotage, or espionage (Chandler, 1996). They exploit vulnerabilities to steal data, deploy ransomware, or disrupt systems. Research ties them to organized crime and state-sponsored threats (Rid, 2013), with motivations ranging from financial theft to ideological disruption. Unlike white or gray hats, they have no ethical constraints and often work within organized cybercrime syndicates or are rogue intelligence operatives. Their activities include identity theft, financial fraud, and espionage.
 
 * **Key Traits:**
-  * Operate purely for profit or destruction.
+  * Operate purely for personal profit or destruction.
   * Use malware, phishing, and zero-day exploits maliciously.
   * Often work in underground forums (e.g., Dark Web markets).
   * May be state-sponsored (e.g., hacking for governments).
@@ -84,7 +84,7 @@ Black hat hackers engage in illegal hacking for personal gain, sabotage, or mali
 
 #### Hacktivists: The Politically Motivated Hackers
 
-Hacktivists use hacking as a form of protest or to promote political agendas. Unlike black hats, they are not primarily motivated by money but by ideology. Their targets include governments, corporations, or organizations they oppose. Tactics include DDoS attacks, website defacements, and data leaks.
+Hacktivists leverage cyber techniques for political or social causes, blurring lines between activism and cybercrime (Samuel, 2004). While some actions (e.g., DDoS) are illegal, their goals distinguish them from profit-driven black hats (Coleman, 2014). Unlike black hats, they are not primarily motivated by money but by ideology. Their targets include governments, corporations, or organizations they oppose. Tactics include DDoS attacks, website defacements, and data leaks.
 
 * **Key Traits:**
   * Motivated by political/social causes (e.g., human rights, anti-censorship).
@@ -93,7 +93,7 @@ Hacktivists use hacking as a form of protest or to promote political agendas. Un
 
 **Examples:**
 
-1. **Anonymous** – Known for attacks on _Sony, the Church of Scientology, and governments_ in support of free speech.
+1. **Anonymous** – Known for attacks on Sony (2011), the Church of Scientology, and governments in support of free speech.
 2. **WikiLeaks Supporters** – Hackers who targeted institutions to expose classified documents (e.g., _Chelsea Manning leaks_).
 3. **Phineas Fisher** – A hacktivist who breached _Hacking Team_ and _Gamma Group_, exposing surveillance tools sold to oppressive regimes.
 

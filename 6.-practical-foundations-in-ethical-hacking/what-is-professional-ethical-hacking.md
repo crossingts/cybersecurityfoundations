@@ -17,37 +17,32 @@ description: >-
 
 There are many ways distinctions can be made between white hat hackers, gray hat hackers, black hat hackers, and hacktivists. However, we make a comparison differentiating between these four forms of hacking on the logic that there is only one category of ethical hacking: professional ethical hacking. In this classification scheme, white hat hacking is synonymous with ethical hacking.&#x20;
 
-1\) white hat hackers are professional ethical hackers who only hack systems or machines with legal authorization to do so (including legal contractual agreements). So whether resident (in-house) employees of a company or hired by a company for security testing, this would be ethical hacking. Bug bounty hunters, also ethical hackers since they work within the law/contracts.&#x20;
+1\) White hat hackers are professional ethical hackers who only hack systems or machines with legal authorization to do so (including legal contractual agreements). So whether resident (in-house) employees of a company or hired by a company for security testing, this would be ethical hacking. Bug bounty hunters, also ethical hackers since they work within the law/contracts.&#x20;
 
 • Professional ethical hacking is legal (authorized) and contract based.
 
 • Ethical hackers are trustworthy.
 
-2\) gray hat hackers hack systems or computers to discover vulnerabilities and then inform the hacked entity about the vulnerabilities so that they can fix their commercial software/products or else hackers will publicly disclose the discovered vulnerabilities to shame a software vendor to pressure them to patch the vulnerabilities. However, this category of hackers often end up bragging about their hacking and call themselves security researchers. There are bonafide/legitimate security researchers who work professionally within the scope of authorized hacking.
+2\) Gray hat hackers hack systems or computers to discover vulnerabilities and then inform the hacked entity about the vulnerabilities so that they can fix their commercial software/products or else hackers will publicly disclose the discovered vulnerabilities to shame a software vendor to pressure them to patch the vulnerabilities. However, this category of hackers often end up bragging about their hacking and call themselves security researchers. There are bonafide/legitimate security researchers who work professionally within the scope of authorized hacking.
 
-• Gray hat hacking is unauthorized hacking, but is essentially apolitical.
+3\) Black hat hackers come in two variations. The original/more traditional attribution of the label "black hat hackers" was given to the bad guys who hack for profit or for some other criminal goal. The more recent adoption of the term black hat hacking refers to presumably legal hacking practices whereby hackers have no prior knowledge of the target security system (i.e., it's based on a technical perspective rather than an ethical perspective).
 
-3\) black hat hackers come in two variations. The original/more traditional attribution of the label "black hat hackers" was given to the bad guys who hack for profit or for some other criminal goal. The more recent adoption of the term black hat hacking refers to presumably legal hacking practices whereby hackers have no prior knowledge of the target security system (i.e., it's based on a technical perspective rather than an ethical perspective).
-
-• Black hat hacking is criminal hacking (on ethical, not technical, grounds).
-
-4\) hacktivists, these hack for political ends.&#x20;
-
-Follows is an analysis of the four types of hacking and the criteria to differentiate between them based on their practices and values.
-
-• Hacktivisim is politically motivated hacking.
+4\) Hacktivists, these hack for political ends.&#x20;
 
 ### Profiles of Hackers
 
+Follows is an analysis of the four types of hacking/hackers classified based on their practices and values, including adherence to legal/ethical frameworks.&#x20;
+
 #### White Hat Hackers: The Ethical Professionals
 
-White hat hackers are professional ethical hackers who operate within legal boundaries, conducting security assessments only with explicit authorization from the system owners. They follow strict ethical guidelines and often work as in-house security experts, consultants, or bug bounty hunters. Their primary goal is to improve cybersecurity by identifying and fixing vulnerabilities before malicious actors can exploit them. Unlike gray or black hats, they never disclose vulnerabilities publicly without permission and adhere to contracts and responsible disclosure policies.
+White hat hackers are professional ethical hackers who operate within legal boundaries, conducting security assessments only with explicit authorization from system/network owners. They follow strict ethical guidelines and often work as in-house security experts, consultants, or bug bounty hunters. Their work aligns with professional codes like the **ACM Code of Ethics (2018)** and **IEEE Sec. 7.8 on Penetration Testing**, which mandate permission-based hacking for public benefit (Gotterbarn et al., 2018). Their primary goal is to improve cybersecurity by identifying and fixing vulnerabilities before malicious actors can exploit them. Unlike gray or black hats, they never disclose vulnerabilities publicly without permission and adhere to contracts and responsible disclosure policies.
 
 * **Key Traits:**
-  * Operate legally under contracts or employment agreements.
-  * Follow responsible disclosure practices (e.g., report vulnerabilities privately to the vendor).
+  * Operate legally under contracts or employment agreements (Schneier, 2020).
+  * Follow responsible disclosure practices (ISO/IEC 29147), e.g., report vulnerabilities privately to the vendor.
   * Motivated by improving security, not fame or profit.
-  * Often hold certifications like **CEH (Certified Ethical Hacker)** or **OSCP (Offensive Security Certified Professional)**.
+  * Often hold certifications like CEH (Certified Ethical Hacker) or OSCP (Offensive Security Certified Professional).
+  * Compliance with laws like the Computer Fraud and Abuse Act (CFAA) (Schneier, 2020).
 
 **Examples:**
 
@@ -163,3 +158,21 @@ The professional ethics of white hat hackers are defined by legal compliance, co
 * Whitman, M., & Mattord, H. (2018). _Principles of Information Security_. Cengage Learning.
 
 ***
+
+### Key takeaways
+
+• Professional ethical hacking is legal (authorized) and contract based.
+
+• Gray hat hacking is unauthorized hacking, but is essentially apolitical.
+
+• Black hat hacking is criminal hacking (on ethical, not technical, grounds).
+
+• Hacktivisim is politically motivated hacking.
+
+### References
+
+* Andress, J., & Winterfeld, S. (2013). _Cyber Warfare: Techniques, Tactics and Tools for Security Practitioners_. Elsevier.
+* Coleman, G. (2014). _Hacker, Hoaxer, Whistleblower, Spy: The Many Faces of Anonymous_. Verso.
+* Denning, D. (2010). "Cyber Conflict as an Emergent Social Phenomenon." _Corporate Cyber Security_.
+* Furnell, S., & Warren, M. (1999). "Ethical Hacking: A Necessary Evil?" _Computers & Security_.
+* Rid, T. (2013). _Cyber War Will Not Take Place_. Oxford University Press.

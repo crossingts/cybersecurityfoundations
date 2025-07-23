@@ -50,11 +50,11 @@ Tools used for security auditing can be loosely classified into the following tw
 
 The following discussion introduces the following tools and methodologies of network security testing:
 
-• Network scanners&#x20;
+• Network scanners - Nmap network scanner
 
-• Vulnerability scanners&#x20;
+• Vulnerability scanners - OpenVAS vulnerability scanner (forked Nessus)
 
-• Packet analyzers (sniffers)
+• Packet analyzers (sniffers) - Wireshark, Tcpdump
 
 #### Network Scanners
 
@@ -67,13 +67,17 @@ graphical reports. (Deveriya, 2005, p. 365)
 
 Some of the most popular open source network scanners are Nmap, Nessus, and Netcat.
 
-Nmap: The Swiss army knife of network scanners; a popular and versatile tool.
+• **Nmap** (Network Mapper): The Swiss army knife of network scanners; a popular and versatile tool.
 
-Nessus: The most popular **vulnerability scanner** with the ability to regularly update the vulnerability database; comes preinstalled with many Linux live CD-ROMs; good reporting capability.
+• **Nessus** (proprietary since October 5, 2005): The most popular **vulnerability scanner** with the ability to regularly update the vulnerability database; comes preinstalled with many Linux live CD-ROMs; good reporting capability.
 
-Netcat: A port scanner with the additional capability to read and write data across a network through TCP and UDP ports.
+Nessus was an open source network scanner with the additional capability of scanning known vulnerabilities present on the target hosts. Vulnerabilities are the weaknesses in an operating system or software that can potentially be exploited by malicious users with an intent to cause system damage. Network vulnerability scanners such as Nessus provide security vulnerability detection and reporting for networks and host systems. p. 377
 
-**Nmap** is highly versatile tool for scanning and enumerating networks. Nmap also looks for\
+• **Netcat**: A port scanner with the additional capability to read and write data across a network through TCP and UDP ports.
+
+#### Technology focus: Nmap
+
+Nmap is highly versatile tool for scanning and enumerating networks. Nmap also looks for\
 services that are running on hosts by scanning TCP and UDP ports. Often referred to as the\
 Swiss army knife of security tools, Nmap is an integral part of every network security\
 professional's tool kit. p. 366
@@ -91,8 +95,6 @@ Some of the routine (and cumbersome) Netadmin tasks that Nmap can do are as foll
 • Verify the OS running on a remote host&#x20;
 
 In addition to using Internet Control Message Protocol (ICMP) ping scans for network discovery, Nmap can use other scanning techniques using TCP and UDP packets. These techniques enable network scanning even if ICMP traffic is blocked in a network.
-
-**Nessus** is an open source network scanner with the additional capability of scanning known vulnerabilities present on the target hosts. Vulnerabilities are the weaknesses in an operating system or software that can potentially be exploited by malicious users with an intent to cause system damage. Network vulnerability scanners such as Nessus provide security vulnerability detection and reporting for networks and host systems. p. 377
 
 #### Packet Analyzers
 

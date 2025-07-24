@@ -46,7 +46,7 @@ TLS 1.2+ handshakes are more efficient and secure than SSL handshakes. For secur
 
     Before key exchange, the server proves its identity using a **digital certificate**:
 
-    * The server sends its certificate (containing its public key and identity) to the client.
+    * The server sends its digital certificate (containing its public key and identity) to the client.
     * The client validates the certificate by:
       * Checking if it’s issued by a trusted **Certificate Authority (CA)**, e.g., DigiCert, Let’s Encrypt.
       * Verifying that the CA's digital signature on the certificate is authentic. The client verifies the CA’s signature on the server’s certificate using the CA’s public key. This ensures the certificate wasn’t forged or tampered with.
@@ -98,6 +98,27 @@ The TLS handshake ensures:
 2. **Integrity** – Data isn’t tampered with (via hashes/MACs).
 3. **Authentication** – The server (and optionally client) proves identity (via certificates).
 4. **Forward Secrecy** (if using ephemeral keys) – Past sessions can’t be decrypted even if the private key is later compromised.
+
+In (EC)DHE key exchange (used in TLS 1.3), the client verifies the server’s identity just like in TLS 1.2 via the server's digital certificate (before key exchange, the server proves its identity using a digital certificate), but the server's public key is only used for authentication, not in key exchange as in RSA based TLS 1.2. In the TLS 1.3 handshake, the server's public key is only used for authentication thus:&#x20;
+
+**Authentication via `CertificateVerify`**
+
+* The server signs a hash of the handshake messages (including the ephemeral DH parameters) using its **private key**.
+* The client verifies this signature using the server's **public key** (from its certificate).
+* This proves:
+  * The server owns the private key matching the certificate.
+  * The server was present during the handshake (not a replay attack).
+  * The server is the same entity that generated the ephemeral DH keys (prevents man-in-the-middle).
+
+#### **Key Clarifications TLS 1.2 vs TLS 1.3**&#x20;
+
+* **TLS 1.2 (RSA Key Transport)**:
+  * Server’s public key encrypts the pre-master secret (key exchange + authentication coupled).
+  * No Perfect Forward Secrecy (PFS) unless using (EC)DHE.
+* **TLS 1.3 (Only (EC)DHE)**:
+  * Server’s public key **never touches key exchange** (only authentication via `CertificateVerify`).
+  * Perfect Forward Secrecy (PFS) is mandatory.
+  * The shared secret is derived solely from ephemeral (EC)DHE keys, independent of the server’s long-term public key. This ensures PFS by design.
 
 ### TLS 1.3 Handshake Simplified Workflow
 

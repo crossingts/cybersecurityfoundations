@@ -6,21 +6,28 @@ description: >-
 
 # Authentication methods
 
-This section discusses three common methods of authentication: username and password, and two other common [cryptographic authentication methods](https://www.bu.edu/tech/about/security-resources/bestpractice/auth/), Pre-Shared Keys (PSKs) and digital certificates.
+This section discusses three common [cryptographic authentication methods](https://www.bu.edu/tech/about/security-resources/bestpractice/auth/): username and password, Pre-Shared Keys (PSKs), and digital certificates.
 
+* **Introduction: Two-factor authentication (2FA)**
 * **Username and password**
 * **Pre-Shared Key (PSK)**
 * **Digital certificates**
 
-### Username and password
+### Introduction: Two-factor authentication (2FA)
 
 Authentication refers to the idea of verifying an identity. You can authenticate an identity with:
 
-1\) Something you know, for example, a password/user name combination.
+1\) Something you know, for example, a username/password combination.
 
 2\) Something you have, for example, an ATM card or an employee badge. For example, many websites send a random code to your phone via SMS when you are trying to log in, forcing you to have possession of your phone to log in. This is also the same concept behind the various authentication tokens. If you can provide the code the server is expecting, then you must have had the token.
 
 3\) Something you are. This category refers to various types of bio-metric identification technologies, such as fingerprint scanners, retina scanners, hand-print scanners, facial recognition, and voice recognition technologies.
+
+#### Two-factor authentication (2FA)
+
+The user is identified by using (combining) two authentication methods from the noted three methods (something you know, something you have, and something you are). A common 2FA combination is a username/password combination and an authentication code via SMS.
+
+### Username and password
 
 Commonly, a username and password are used to authenticate a user to a server. A user of an app/service creates a unique username and password to access a service from a server.
 
@@ -46,10 +53,6 @@ The process of password hashing on the client side entails:
 * Server Storage – The server stores the hashed password (or may perform additional hashing if needed).
 
 This way of hashing ensures the plaintext password never leaves the device, which reduces the risk of exposure in transit or server breaches. Note that the server may still perform additional hashing for extra security.
-
-**Two-factor authentication (2FA)**
-
-The user is identified by using (combining) two authentication methods from the noted three methods (something you know, something you have, and something you are). A common 2FA combination is a password and an authentication code via SMS.
 
 ### Pre-Shared Key (PSK)
 

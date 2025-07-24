@@ -9,7 +9,7 @@
 * The client sends the encrypted PMS to the server, which decrypts it using its **private key**.
 * **Now, both client and server have the same PMS.**
 
-2. **Key Derivation (Hashing the PMS with Nonces):** The pre-master secret is hashed (using algorithms like SHA-256) along with random values to generate a **master secret**. The master secret is then used to derive symmetric session keys (for encryption and integrity checks).
+2. **Key Derivation (Hashing the PMS with Nonces):** The pre-master secret is hashed (using algorithms like SHA-256) along with random values to generate a **master secret**. The master secret is then used to derive symmetric session keys and MAC keys (for encryption and integrity checks).
 
 * The PMS alone is **not used directly** as the session key. Instead, it is **hashed** along with:
   * **Client random** (nonce sent in `ClientHello`)

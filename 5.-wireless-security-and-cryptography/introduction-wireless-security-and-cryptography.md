@@ -27,22 +27,24 @@ This chapter covers how SSL/TLS uses cryptographic tools (symmetric encryption, 
 
 ## Topics covered in this chapter
 
-[Hashing algorithms and message integrity](../hashing-algorithms-and-message-integrity/)
+[Hashing algorithms and message integrity](hashing-algorithms-and-message-integrity/)
 
-[Cryptographic encryption and confidentiality](../cryptographic-encryption-and-confidentiality.md)
+[Cryptographic encryption and confidentiality](cryptographic-encryption-and-confidentiality.md)
 
-[The SSL/TLS handshake](../the-ssl-tls-handshake/)
+[Message signing using asymmetric keys](message-signing-using-asymmetric-keys.md)
 
-[Message signing using asymmetric keys](../message-signing-using-asymmetric-keys.md)
+[Authentication methods](authentication-methods.md)
 
-[Authentication methods](../authentication-methods.md)
+[The SSL/TLS handshake](the-ssl-tls-handshake/)
 
-[Replay attacks and anti-replay methods](../replay-attacks-and-anti-replay-methods.md)
+[How SSL/TLS uses cryptography](how-ssl-tls-uses-cryptography.md)
 
-[Generating and applying an RSA key](../generating-and-applying-an-rsa-key.md)
+[Replay attacks and anti-replay methods](replay-attacks-and-anti-replay-methods.md)
 
-[IEEE 802.11 authentication methods](../ieee-802.11-authentication-methods.md)
+[Generating and applying an RSA key](generating-and-applying-an-rsa-key.md)
 
-[IEEE 802.11 privacy and integrity methods](../ieee-802.11-privacy-and-integrity-methods.md)
+[IEEE 802.11 authentication methods](ieee-802.11-authentication-methods.md)
 
-[Authentication and encryption in WPA, WPA2, and WPA3](../authentication-and-encryption-in-wpa-wpa2-and-wpa3.md)
+[IEEE 802.11 privacy and integrity methods](ieee-802.11-privacy-and-integrity-methods.md)
+
+[Authentication and encryption in WPA, WPA2, and WPA3](authentication-and-encryption-in-wpa-wpa2-and-wpa3.md)

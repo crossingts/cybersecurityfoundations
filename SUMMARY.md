@@ -45,8 +45,7 @@
 
 ## 5. Wireless security and cryptography
 
-* [Introduction - Wireless security and cryptography](5.-wireless-security-and-cryptography/introduction-wireless-security-and-cryptography/README.md)
-  * [How SSL/TLS uses cryptography](5.-wireless-security-and-cryptography/introduction-wireless-security-and-cryptography/how-ssl-tls-uses-cryptography.md)
+* [Introduction - Wireless security and cryptography](5.-wireless-security-and-cryptography/introduction-wireless-security-and-cryptography.md)
 * [Hashing algorithms and message integrity](5.-wireless-security-and-cryptography/hashing-algorithms-and-message-integrity/README.md)
   * [Understanding hash, digest, checksum, and fingerprint](5.-wireless-security-and-cryptography/hashing-algorithms-and-message-integrity/understanding-hash-digest-checksum-and-fingerprint.md)
 * [Cryptographic encryption and confidentiality](5.-wireless-security-and-cryptography/cryptographic-encryption-and-confidentiality.md)
@@ -54,6 +53,7 @@
 * [Authentication methods](5.-wireless-security-and-cryptography/authentication-methods.md)
 * [The SSL/TLS handshake](5.-wireless-security-and-cryptography/the-ssl-tls-handshake/README.md)
   * [The SSL/TLS key exchange and derivation process](5.-wireless-security-and-cryptography/the-ssl-tls-handshake/the-ssl-tls-key-exchange-and-derivation-process.md)
+* [How SSL/TLS uses cryptography](5.-wireless-security-and-cryptography/how-ssl-tls-uses-cryptography.md)
 * [Replay attacks and anti-replay methods](5.-wireless-security-and-cryptography/replay-attacks-and-anti-replay-methods.md)
 * [Generating and applying an RSA key](5.-wireless-security-and-cryptography/generating-and-applying-an-rsa-key.md)
 * [Diffie-Hellman (DH) key exchange](5.-wireless-security-and-cryptography/diffie-hellman-dh-key-exchange.md)

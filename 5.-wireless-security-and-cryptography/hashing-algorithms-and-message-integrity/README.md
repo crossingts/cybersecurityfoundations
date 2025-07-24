@@ -1,7 +1,7 @@
 ---
 description: >-
-  This section explores how hashing algorithms (SHA-256) can be used to ensure
-  the integrity of messages exchanged between hosts
+  This section explores how hashing algorithms (e.g., SHA-256) can be used to
+  ensure the integrity of messages exchanged between hosts
 ---
 
 # Hashing algorithms and message integrity

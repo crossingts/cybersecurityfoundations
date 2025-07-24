@@ -26,7 +26,7 @@ The most common parameters for monitoring network performance are: Throughput (k
 
 • **Incident response and mitigation (SIEM) and endpoint detection and response (EDR)** using such tools as Wazuh SIEM/XDR.
 
-• **Host and network firewalls** using such tools as ufw, iptables, nftables, pf (packet filter), and OPNsense/pfsense.
+• **Host and network firewalls** using such tools as ufw, iptables, nftables, pf (packet filter = CLI based macOS built-in Unix firewall), and OPNsense/pfsense.
 
 • **Network security testing** - netadmins perform network security testing to assess and verify the threats and vulnerabilities of their network.&#x20;
 

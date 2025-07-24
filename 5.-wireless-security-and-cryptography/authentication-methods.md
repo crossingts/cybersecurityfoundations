@@ -56,17 +56,13 @@ This way of hashing ensures the plaintext password never leaves the device, whic
 
 ### Pre-Shared Key (PSK)
 
-A PSK is a shared secret that is used to authenticate two parties. It is used in a variety of applications, such as wireless networks, VPNs, and file encryption.
-
-In a PSK-based system, PSKs must be initially shared out-of-band. The two parties must share the same PSK. This can be done manually, such as by exchanging the PSK over a secure channel, or it can be done automatically, such as by using a secure network configuration protocol.
-
-Once the two parties have shared the PSK, they can use it to encrypt and decrypt messages. This is done by using a symmetric encryption algorithm, such as AES or DES.
+A PSK is a shared secret that is used to authenticate two parties. It is used in a variety of applications, such as wireless networks, VPNs, and file encryption. In a PSK-based system, PSKs must be initially shared out-of-band. The two parties must share the same PSK. This can be done manually, such as by exchanging the PSK over a secure channel, or it can be done automatically, such as by using a secure network configuration protocol. Once the two parties have shared the PSK, they can use it to encrypt and decrypt messages. This is done by using a symmetric encryption algorithm, such as AES or DES.
 
 PSKs are a simple and effective way to authenticate two parties. However, they have some drawbacks. One drawback is that the PSK must be kept secret. If the PSK is compromised, then the two parties’ communications can be decrypted by an attacker.
 
 For better security, the PSK can be used to derive short-lived session keys. The client and server each generate and exchange a random number ("nonce") and each use each other's nonce to independently derive the session key using a key derivation function. All communication in this session uses that key. After the session ends, the key is thrown away. Thus each session has its unique key. If both client and server correctly derive the same session key, then each had the same PSK. If either side fails to generate the correct key, authentication fails.
 
-In IPsec, for example, both parties generate random nonces and exchange them during the handshake. Since both parties use the same inputs (PSK + nonce₁ + nonce₂), they will compute identical session keys. This allows mutual authentication—if the server’s derived key matches the client’s, both parties confirm they share the same PSK without ever transmitting it directly.
+In IPsec, for example, both parties generate random nonces and exchange them during the TLS handshake. Since both parties use the same inputs (PSK + nonce₁ + nonce₂), they will compute identical session keys. This allows mutual authentication—if the server’s derived key matches the client’s, both parties confirm they share the same PSK without ever transmitting it directly.
 
 Because each session uses fresh nonces, an attacker who intercepts a token cannot reuse it in future sessions. Even with a captured token, they cannot reverse-engineer the PSK or spoof authentication.
 
@@ -90,7 +86,7 @@ Digital certificates are used in a variety of applications, including:
 
 The digital certificate is issued by a trusted Certificate Authority (CA) after verifying ownership of a domain. A digital certificate is a file that contains information about a website’s identity (e.g., domain name, and optionally organization details), a public key tied to the identity of the domain name holder of an asymmetric key pair (used for encryption, e.g., in key exchange, and for verifying signatures, to prove the digital certificate holder controls the corresponding private key), the CA’s digital signature (created by hashing the certificate data and encrypting the hash with the CA’s private key), and a validity period (expiration date).
 
-#### The TLS handshake and its purposes
+#### The TLS Handshake and Its Purposes
 
 The **TLS handshake** is a process that establishes a secure, encrypted connection between a client (e.g., a web browser) and a server (e.g., a website). Its primary purposes are:
 
@@ -141,15 +137,7 @@ The public key in the certificate is used in one of two ways, depending on the *
 
 **How Digital Certificates Work in HTTPS**
 
-HTTPS uses SSL/TLS protocols to secure browsing sessions. When you visit `https://example.com`, the TLS handshake happens before any data is sent, securing your login or payment details.
-
-When you visit a website that uses HTTPS, your browser will first verify the identity of the website by checking the digital certificate that is presented by the website server. If the certificate is valid, if a trusted Certificate Authority (CA) issued it, your browser will use the **public key** in the certificate to establish an encrypted connection to encrypt all of the communications between your computer and the website.&#x20;
-
-**Role of Certificate Authorities (CAs)**
-
-* CAs verify domain ownership before issuing certificates.
-* Examples: DigiCert, Let’s Encrypt, Sectigo.
-* Browsers and operating systems maintain a **list of trusted CAs**.
+HTTPS uses SSL/TLS protocols to secure browsing sessions. When you visit `https://example.com`, the TLS handshake happens before any data is sent, securing your login or payment details. When you visit a website that uses HTTPS, your browser will first verify the identity of the website by checking the digital certificate that is presented by the website server. If the certificate is valid, if a trusted Certificate Authority (CA) issued it, your browser will use the **public key** in the certificate to establish an encrypted connection to encrypt all of the communications between your computer and the website.
 
 **Role of Digital Certificates in the SSL/TLS Handshake**
 
@@ -159,7 +147,7 @@ Digital certificates serve three main purposes in the SSL/TLS handshake process:
 
 * A digital certificate (also called an **SSL/TLS certificate**) is issued by a trusted **Certificate Authority (CA)** (e.g., DigiCert, Let’s Encrypt).
 * It binds a **public key** to an entity (e.g., a domain name, company, or server), proving that the server is legitimate.
-* When a client connects to a server, the server presents its certificate, and the client verifies it against trusted CAs.
+* Browsers and operating systems maintain a **list of trusted CAs**. When a client (e.g., a browser) connects to a server, the server presents its certificate, and the client verifies it against trusted CAs.
 
 **B. Key Exchange (Secure Encryption Setup)**
 
@@ -194,18 +182,9 @@ Digital certificates serve three main purposes in the SSL/TLS handshake process:
 3. **Secure Session**:
    * Symmetric encryption (AES) is used for fast, secure data transfer.
 
-**Without a Certificate?**
-
-* No authentication → Risk of **man-in-the-middle (MITM) attacks**.
-* Browsers show **"Not Secure"** warnings (e.g., self-signed certs).
-
 **The mechanisms of action of authentication methods**
 
-A digital certificate can only be considered proof of someone’s identity if they can provide the matching private key. There are two ways this can be verified.
-
-Alice is presenting a digital certificate to Bob. Let’s look at two methods Alice can use to provide evidence that she is in possession of the private key and so is the true owner of the digital certificate (we are authenticating Alice).
-
-These two methods are the basis for how authentication works with digital signatures.
+A digital certificate can only be considered proof of someone’s identity if they can provide the matching private key. Alice is presenting a digital certificate to Bob. Let’s look at two methods Alice can use to provide evidence that she is in possession of the private key and so is the true owner of the digital certificate (we are authenticating Alice). These two methods are the basis for how authentication works with digital signatures.
 
 1\) If Alice presents Bob with her certificate, Bob can generate a random value and encrypt it with Alice’s public key. Alice should be the only person with the correlating private key, and therefore, Alice should be the only person that can extract the random value. If she can then prove to Bob that she extracted the correct value, then Bob can be assured that Alice is indeed the true owner of the certificate.
 

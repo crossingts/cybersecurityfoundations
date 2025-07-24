@@ -6,16 +6,14 @@ description: >-
 
 # Hashing algorithms and message integrity
 
-This section discusses [hashing algorithms and message integrity](https://builtin.com/cybersecurity/what-is-hashing). This section explains the key qualities (characteristics) of a hashing algorithm. This discussion also explains how hashing algorithms can be used to ensure the integrity of messages exchanged between a client/sender and server/receiver.
+This section discusses [hashing algorithms and message integrity](https://builtin.com/cybersecurity/what-is-hashing). This section explains the key qualities (characteristics) of a hashing algorithm and how hashing algorithms can be used to ensure the integrity of messages exchanged between a client and a server.
 
 * **Hashing algorithms**
 * **Message integrity**
 
 ### Hashing algorithms
 
-A hashing algorithm is a mathematical function that takes an input (data) of arbitrary size and produces a fixed-size output, a representational sample of the original data called a hash value or hash.
-
-Hashing algorithms are used in a variety of applications, including data integrity, password hashing, file indexing, identifying duplicate files/data, and digital signatures.
+A hashing algorithm is a mathematical function that takes an input (data) of arbitrary size and produces a fixed-size output, a representational sample of the original data called a hash value or hash. Hashing algorithms are used in a variety of applications, including data integrity, password hashing, file indexing, identifying duplicate files/data, and digital signatures.
 
 A basic hashing algorithm can be converting letters to numbers (a = 1, b = 2, c = 3, etc.):
 
@@ -27,11 +25,11 @@ If someone changed the h (in hello) to c,
 
 cello → 47 (message digest)
 
-Comparing the message digests shows the original message has changed.
+Comparing the two message digests shows the original message has changed.
 
 But this hashing algorithm is terrible. If the original message was changed to celt, running the message through the hashing algorithm would produce the same hash value of 52.
 
-#### Note
+#### Note:
 
 • The message digest (52 for "hello") is more technically a hash or checksum in this case, but calling it a digest is fine for illustration.
 
@@ -67,7 +65,7 @@ There are many different hashing algorithms available, each with its own strengt
 
 #### **How Hashing and HMAC Ensure Message Integrity and Authentication**
 
-When exchanging messages between a client (sender) and a server (receiver), **hashing algorithms** can help verify that the message was not altered in transit—a property known as **message integrity**. Here’s how it works:
+When exchanging messages between a client and a server, **hashing algorithms** can help verify that the message was not altered in transit—a property known as **message integrity**. Here’s how it works:
 
 **1. Basic Integrity Check Using Hashing**
 
@@ -80,17 +78,11 @@ When exchanging messages between a client (sender) and a server (receiver), **ha
 
 1. Modify the message.
 2. Compute a **new hash** of the altered message.
-3. Send the **modified message + new hash** to the receiver.\
-   Since the receiver only checks if the hashes match, they would **falsely believe the message is authentic**.
+3. Send the **modified message + new hash** to the receiver. Since the receiver only checks if the hashes match, they would **falsely believe the message is authentic**.
 
 **2. Strengthening Security with a Secret Key (HMAC)**
 
-To prevent tampering, the sender and receiver share a **secret key**. Instead of just hashing the message, the sender computes a **Message Authentication Code (MAC)** over the message using this key, which ensures:
-
-* **Integrity** – The message was not altered.
-* **Authenticity** – The sender possesses the secret key.
-
-The most widely used MAC is **HMAC (Hash-Based Message Authentication Code)**, which securely combines the key and message.
+To prevent tampering, the sender and receiver share a **secret key**. Instead of just hashing the message, the sender computes a **Message Authentication Code (MAC)** over the message using this key, which ensures **integrity** (the message was not altered) and **authenticity** (the sender possesses the secret key). The most widely used MAC is **HMAC (Hash-Based Message Authentication Code)**, which securely combines the key and message.
 
 **How HMAC Works:**
 
@@ -101,17 +93,17 @@ The most widely used MAC is **HMAC (Hash-Based Message Authentication Code)**, w
 2. **Receiver’s Side:**
    * The receiver recomputes the HMAC using the **received message + their copy of the secret key**.
    * If the computed MAC **matches** the received MAC, the message is:
-     * **Untampered (integrity preserved).**
-     * **Authentic (sent by someone with the key).**
+     * **Untampered (message integrity preserved).**
+     * **Authentic (sent by someone with the secret key).**
 
 **3. Alternatives to HMAC**
 
 * **Digital Signatures** (e.g., RSA, ECDSA) can also ensure integrity and authenticity but use **asymmetric cryptography** (public/private keys) instead of a shared secret.
-* **Encryption (e.g., AES-GCM)** can provide integrity + confidentiality, but HMAC is often used when encryption is not required.
+* **Encryption + MAC (e.g., AES-GCM)** can provide integrity + confidentiality, but HMAC is often used when encryption is not required.
 
 **Key Takeaways:**
 
-✅ **Hashing alone** → Detects **accidental** corruption but not malicious tampering.\
+✅ **Hashing alone** → Cannot detect malicious tampering during message exchange.\
 ✅ **HMAC (Key + Hash)** → Ensures **integrity + authenticity** against active attackers.\
 ✅ **HMAC is preferred** over simple keyed hashes due to stronger security.\
 ✅ For even stronger guarantees, **digital signatures** or **encryption + MAC** can be used.

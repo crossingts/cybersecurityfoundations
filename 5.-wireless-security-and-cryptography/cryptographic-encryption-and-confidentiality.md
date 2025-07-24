@@ -59,9 +59,7 @@ Benefits of data confidentiality through encryption:
 
 ### Symmetric encryption
 
-Symmetric encryption is an encryption scheme that encrypts and decrypts using the same secret key.
-
-Here is a simple example of symmetric encryption.
+Symmetric encryption is an encryption scheme that encrypts and decrypts using the same secret key. Here is a simple example of symmetric encryption.
 
 hello → khoor
 
@@ -75,9 +73,7 @@ Here is another example.
 
 66 → 462 (66 x 7)
 
-Here, a symmetric encryption algorithm of multiplication and a secret key of 7 were used. To decipher the text, we inverse the operation. We divide 462 by 7.
-
-The key point here is that we used the same secret key to encrypt and decrypt the text.
+Here, a symmetric encryption algorithm of multiplication and a secret key of 7 were used. To decipher the text, we inverse the operation. We divide 462 by 7. The key point here is that we used the same secret key to encrypt and decrypt the text.
 
 The encryption algorithm is typically and ideally publicly known. So the strength of the encryption practically rests on the strength of the secret key. Longer and more random keys are considered more secure.
 
@@ -95,9 +91,7 @@ The encryption algorithm is typically and ideally publicly known. So the strengt
 
 ### Asymmetric encryption
 
-Asymmetric encryption uses different keys to encrypt and decrypt data.
-
-Here is a simple example.
+Asymmetric encryption uses different keys to encrypt and decrypt data. Here is a simple example of asymmetric encryption.
 
 hello –— asymmetric encryption (key = 5) → mjqqt
 
@@ -111,7 +105,7 @@ This just demonstrates the basic idea of asymmetric encryption, that two differe
 
 That said, our example invokes an important concept in asymmetric encryption: asymmetric keys are mathematically linked. What one key encrypts, only the other key can decrypt. In our example, if we used key 21 to encrypt hello, we can decrypt the cipher with a key of 5.
 
-One of the key pair is private, never shared with anyone else. This is the private key. The other key is the public key, and it is public. Every participant in asymmetric encryption has their own unique key pair. Each key can be used in different ways to achieve different security features.
+One of the key pair is private, never shared with anyone else. This is the private key. The other key is the public key, and it is public. Each key can be used in different ways to achieve different security features.
 
 #### Confidentiality via asymmetric encryption
 

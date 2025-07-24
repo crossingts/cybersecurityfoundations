@@ -4,6 +4,25 @@ hidden: true
 
 # Setting up a cybersecurity lab
 
+This exercise will guide you through setting up a fully functional cybersecurity virtual lab using open source technologies.&#x20;
+
+Design/pipeline 1 (AMD64): OPNsense firewall + Suricata IDS/IPS + Wazuh & TheHive + Kali Linux
+
+Designed for protecting entire networks with features like IDS/IPS, VPN (OpenVPN/WireGuard), traffic\
+shaping, and reporting.
+
+Design/pipeline 2 (AMD64): pfSense + Snort + Wazuh + Kali Linux
+
+Design/pipeline 3 (ARM64): nftables + Suricata + Wazuh + Kali Linux
+
+Inspiration: YouTube playlist (16 videos +150,000 views)
+
+Virtual Cyber Security Lab Building Series by LS111 Cyber Security Education
+
+[https://www.youtube.com/playlist?list=PLjjkJroii8DDb0QZpWLo978VXcLp8-xW3](https://www.youtube.com/playlist?list=PLjjkJroii8DDb0QZpWLo978VXcLp8-xW3)&#x20;
+
+<figure><img src="../.gitbook/assets/image (16).png" alt=""><figcaption><p>Cybersecurity virtual lab design (courtesy of LS111 Cyber Security Education)</p></figcaption></figure>
+
 #### **Open-Source Firewall & IDS/IPS Compatibility Table**
 
 _(✅ = Native Support | ⚠️ = Partial/Workaround | ❌ = Not Supported | VM = Virtual Machine Only)_
@@ -39,9 +58,9 @@ _(✅ = Native Support | ⚠️ = Partial/Workaround | ❌ = Not Supported | VM 
 
 ***
 
-Most firewalls/routers use x86-64 for performance and driver compatibility.
+Most firewalls/routers use x86-64 for performance and driver compatibility. x86-64 is also known as x64, x86\_64, AMD64, and Intel 64.
 
-* **x86-64 is a CPU architecture**, not an OS. It is used by:
+* **x86-64 is a CPU architecture** (not an OS). It is used by:
   * Windows (e.g., Windows 10/11 x64).
   * Linux (x86-64 distributions).
   * FreeBSD (OPNsense’s base).

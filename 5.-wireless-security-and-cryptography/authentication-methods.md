@@ -170,19 +170,7 @@ Digital certificates serve three main purposes in the SSL/TLS handshake process:
 * **Extended Validation (EV)** – Highest trust, shows company name in the browser.
 * **Wildcard & Multi-Domain** – Covers multiple subdomains or domains.
 
-#### **How SSL/TLS Uses Digital Certificates**
-
-1. **Handshake Phase**:
-   * Client sends a `ClientHello`.
-   * Server responds with its **digital certificate** + public key.
-   * Client verifies the certificate (checks CA, expiry, domain match).
-2. **Key Exchange**:
-   * Client generates a session key, encrypts it with the server’s public key.
-   * Server decrypts it with its **private key** (only the server has this).
-3. **Secure Session**:
-   * Symmetric encryption (AES) is used for fast, secure data transfer.
-
-**The mechanisms of action of authentication methods**
+#### Two methods digital signatures can be used for authentication
 
 A digital certificate can only be considered proof of someone’s identity if they can provide the matching private key. Alice is presenting a digital certificate to Bob. Let’s look at two methods Alice can use to provide evidence that she is in possession of the private key and so is the true owner of the digital certificate (we are authenticating Alice). These two methods are the basis for how authentication works with digital signatures.
 

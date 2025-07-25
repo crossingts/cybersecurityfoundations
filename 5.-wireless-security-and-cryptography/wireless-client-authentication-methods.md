@@ -21,24 +21,16 @@ Second, this section introduces the wireless client authentication methods of op
 ## Topics covered in this section
 
 * Introduction
-
-The IEEE 802.11 standard as a wireless security management framework
-
-Open authentication
-
-WEP (Wired Equivalent Privacy)
-
-Pre-Shared Key (PSK) and SAE (Simultaneous Authentication of Equals)
-
-802.1x/EAP (Extensible Authentication Protocol) (EAP-based authentication methods)
-
-LEAP (Lightweight EAP)
-
-EAP-FAST (Flexible Authentication by Secure Tunneling)
-
-PEAP (Protected EAP)
-
-EAP-TLS (EAP Transport Layer Security)
+* The IEEE 802.11 standard as a wireless security management framework
+  * Open authentication
+  * WEP (Wired Equivalent Privacy)
+* Wireless client authentication methods in chronological order
+* Pre-Shared Key (PSK) and SAE (Simultaneous Authentication of Equals)
+* IEEE 802.1x/EAP: EAP-based authentication methods
+  * LEAP (Lightweight EAP)
+  * EAP-FAST (Flexible Authentication by Secure Tunneling)
+  * PEAP (Protected EAP)
+  * EAP-TLS (EAP Transport Layer Security)
 
 ### Introduction
 
@@ -52,8 +44,6 @@ A comprehensive approach to securing a wireless network involves:
 4. **Protecting the wireless data from tampering** with frame authentication – for example, with **802.11’s frame integrity checks (MIC)** or **GCMP** in WPA3.
 
 Endpoint identification ensures only authorized devices connect, while user authentication verifies legitimate users. Together, these measures strengthen access control, while encryption and integrity checks safeguard data in transit.
-
-
 
 ### The IEEE 802.11 standard as a wireless security management framework
 
@@ -94,8 +84,6 @@ Only WEP (RC4-based) is defined in the original 802.11 standard. As noted, WEP�
 #### Data integrity
 
 No true message authentication (MIC) existed within the original 802.11 standard. WPA introduced Michael MIC, which was better than WEP but still vulnerable to forgery.
-
-
 
 **Summary for Original IEEE 802.11 Standard:**
 
@@ -172,7 +160,7 @@ Below is a list of wireless authentication methods in chronological order.
    * **WPA/WPA2-Personal (PSK/SAE)** → Uses **pre-shared keys**, not part of original 802.11 auth.
    * **WPA/WPA2/WPA3-Enterprise** → Relies on **802.1X/EAP**, not native 802.11.
 
-
+### Pre-Shared Key (PSK) and SAE (Simultaneous Authentication of Equals)
 
 There are several methods of wireless client **authentication**. One common method is to use a shared static text string, also known as a **pre-shared key (PSK)**. The PSK is stored on the client device and is presented to the AP when the client attempts to connect to the network. Any user who possessed the device could authenticate to the network. More stringent authentication methods require interaction with a user database, with the end user entering a valid username and password.
 
@@ -199,7 +187,20 @@ MICs can be used to protect data in a variety of ways. For example, they can be 
 * Protect data that is being transmitted over a network.
 * Prevent unauthorized access to data.
 
-#### IEEE 802.1x/EAP (Extensible Authentication Protocol)
+### IEEE 802.1x/EAP: EAP-based authentication methods
+
+
+
+* LEAP (Lightweight EAP)
+* EAP-FAST (Flexible Authentication by Secure Tunneling)
+* PEAP (Protected EAP)
+* EAP-TLS (EAP Transport Layer Security)
+
+
+
+IEEE 802.1x/EAP (Extensible Authentication Protocol)
+
+The IEEE 802.1x/EAP standard uses EAP-based authentication methods.
 
 IEEE 802.1X (Port-Based Network Access Control) and EAP (Extensible Authentication Protocol) are not tied to a single Wi-Fi security generation but have evolved alongside Wi-Fi authentication methods. IEEE 802.1x/EAP is used in corporate/enterprise networks and relies on RADIUS servers and EAP methods. Here's how they fit chronologically and their role in Wi-Fi security:
 

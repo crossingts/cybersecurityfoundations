@@ -13,10 +13,11 @@ description: >-
 • Point 3 \
 • Point 4&#x20;
 
-This section has two main goals. First, this section will hep students understand how the IEEE 802.11 standard provides a basis for a wireless security management framework (client authentication, message privacy, and message integrity). Second, this section will familiarize students with authentication methods used in the IEEE 802.11 wireless networking standard.&#x20;
+This section has two main goals. First, this section will hep students understand how the IEEE 802.11 standard provides a basis for a wireless security management framework (client authentication, message privacy, and message integrity). Second, this section will familiarize students with client authentication methods used in the IEEE 802.11 wireless networking standard.&#x20;
 
 ## Topics covered in this section
 
+* Introduction
 * The IEEE 802.11 standard as a wireless security management framework
 * Wireless client authentication methods
   * Open authentication
@@ -28,7 +29,7 @@ This section has two main goals. First, this section will hep students understan
     * PEAP (Protected EAP)
     * EAP-TLS (EAP Transport Layer Security)
 
-### The IEEE 802.11 standard as a wireless security management framework
+### Introduction
 
 In a wireless connection, data is transmitted via radio waves that propagate in all directions, making it accessible to any nearby device within range. Unlike wired connections, which confine signals to physical cables, wireless signals are inherently broadcasted, allowing unintended recipients to potentially intercept them if not properly encrypted or secured.
 
@@ -41,15 +42,37 @@ A comprehensive approach to securing a wireless network involves:
 
 Endpoint identification ensures only authorized devices connect, while user authentication verifies legitimate users. Together, these measures strengthen access control, while encryption and integrity checks safeguard data in transit.
 
+### The IEEE 802.11 standard as a wireless security management framework
+
 The IEEE 802.11 standard provides a wireless security management framework to be used to add trust, privacy, and integrity to a wireless network. The following discussion gives an overview of the wireless security framework.
 
-**Authentication (trust)**
+#### Authentication (trust)
 
 Clients must first discover a BSS and then request permission to associate with it. Only trusted and expected devices should be given network access. Clients should be authenticated before they are allowed to associate. Potential clients must present a form of credentials to the APs to identify themselves.&#x20;
 
-There are several methods of wireless authentication. One common method is to use a shared static text string, known as a pre-shared key (PSK). The PSK is stored on the client device and is presented to the AP when the client attempts to connect to the network. Any user who possessed the device could authenticate to the network. More stringent authentication methods require interaction with a user database, with the end user entering a valid username and password.
+There are several methods of wireless client authentication. One common method is to use a shared static text string, also known as a **pre-shared key (PSK)**. The PSK is stored on the client device and is presented to the AP when the client attempts to connect to the network. Any user who possessed the device could authenticate to the network. More stringent authentication methods require interaction with a user database, with the end user entering a valid username and password.
 
-**Data privacy**
+The original 802.11 standard gave only two options to authenticate clients: open authentication and WEP.
+
+**Open authentication**
+
+The open authentication process has only one requirement for a client wishing to access a WLAN, that they must use an 802.11 authentication request before attempting to associate with an AP. No other credentials are needed.
+
+With no challenge, any 802.11 client may authenticate to access the network. That is, in fact, the whole purpose of open authentication—to validate that a client is a valid 802.11 device by authenticating the wireless hardware and the protocol. Authenticating the user’s identity is handled as a true security process through other means. (Odom, 2020, p. 710)
+
+Client screening in WLANs with open authentication will often be a form of web authentication. Most client operating systems will flag WLANs with open authentication to warn you that your wireless data will not be secured in any way if you join.
+
+**WEP (Wired Equivalent Privacy)**
+
+WEP uses a shared key (WEP key) that must be known to both the sender and receiver ahead of time in order to encrypt and decrypt data. WEP keys are either 40 or 104 bits in length, represented by a string of 10 or 26 hex digits. Every potential client and AP must share the same key before any client can associate with the AP.
+
+WEP uses the RC4 cipher algorithm to encrypt data that is transmitted over a wireless network. “The same algorithm encrypts data at the sender and decrypts it at the receiver. The algorithm uses a string of bits as a key, commonly called a WEP key, to derive other encryption keys—one per wireless frame” (p. 711).
+
+the WEP key can also be used as an optional authentication method. A client not using the correct WEP key cannot associate with an AP.&#x20;
+
+The AP tests the client’s knowledge of the WEP key by sending it a random challenge phrase. The client encrypts the challenge phrase with WEP and returns the result to the AP. The AP can compare the client’s encryption with its own to see whether the two WEP keys yield identical results. (p. 711)
+
+#### Data privacy
 
 To protect data privacy on a wireless network, the data must be encrypted while it is traveling between clients and APs. This is done by encrypting the data payload in each wireless frame just before it is transmitted, and then decrypting it as it is received. The encryption method must be one that the transmitter and receiver share, so that the data can be encrypted and decrypted successfully.
 
@@ -65,7 +88,7 @@ WPA (2003) primarily uses TKIP (Temporal Key Integrity Protocol) as its encrypti
 | **WPA2**          | PSK / Enterprise                     | AES-CCMP               | TKIP (deprecated)              |
 | **WPA3**          | SAE (Personal) / 802.1X (Enterprise) | AES-CCMP (128-bit)     | AES-256-GCMP (Enterprise only) |
 
-**Data integrity**
+#### Data integrity
 
 A message integrity check (MIC) is a security tool that can protect against data tampering. A MIC is a value that is calculated from the data in a message using a cryptographic algorithm. The MIC is then sent along with the message. When the message is received, the MIC is recalculated and compared to the value that was sent. If the two values do not match, then the message has been tampered with.&#x20;
 

@@ -37,15 +37,23 @@ The IEEE 802.11 standard provides a wireless security management framework to be
 
 Clients must first discover a BSS and then request permission to associate with it. Only trusted and expected devices should be given network access. Clients should be authenticated before they are allowed to associate. Potential clients must present a form of credentials to the APs to identify themselves.&#x20;
 
-There are several methods of wireless authentication. One common method is to use a shared static text string, also known as a pre-shared key (PSK). The PSK is stored on the client device and is presented to the AP when the client attempts to connect to the network. Any user who possessed the device could authenticate to the network. More stringent authentication methods require interaction with a user database, with the end user entering a valid username and password.
+There are several methods of wireless authentication. One common method is to use a shared static text string, known as a pre-shared key (PSK). The PSK is stored on the client device and is presented to the AP when the client attempts to connect to the network. Any user who possessed the device could authenticate to the network. More stringent authentication methods require interaction with a user database, with the end user entering a valid username and password.
 
 **Data privacy**
 
 To protect data privacy on a wireless network, the data must be encrypted while it is traveling between clients and APs. This is done by encrypting the data payload in each wireless frame just before it is transmitted, and then decrypting it as it is received. The encryption method must be one that the transmitter and receiver share, so that the data can be encrypted and decrypted successfully.
 
-In WPA/WPA2-Personal, the PSK (your Wi-Fi password) is used to derive encryption keys. In WPA3-Personal, PSK is replaced by SAE, a more secure method for key exchange.
+In WPA/WPA2-Personal, the PSK (your Wi-Fi password) is used to derive encryption keys. In WPA3-Personal, PSK is replaced by SAE (Simultaneous Authentication of Equals) for authentication, a more secure method for key exchange (WPA3-Enterprise uses 802.1X for authentication)—the actual encryption in WPA3 uses AES-CCMP.
 
-For encryption, WPA uses TKIP (AES optional), and WPA2 uses AES-CCMP (default), TKIP (fallback).
+WPA (2003) primarily uses TKIP (Temporal Key Integrity Protocol) as its encryption method. AES was optional in WPA but not commonly supported. WPA2 (2004) made AES-CCMP mandatory as the encryption method, with TKIP as an optional fallback for backward compatibility. WPA3 mandates AES-CCMP (128-bit) for WPA3-Personal. WPA3-Enterprise supports AES-256-GCMP (stronger encryption for enterprise networks).
+
+#### **Summary of Encryption Methods:**
+
+| Security Protocol | Authentication                       | Encryption (Mandatory) | Encryption (Optional/Fallback) |
+| ----------------- | ------------------------------------ | ---------------------- | ------------------------------ |
+| **WPA**           | PSK / Enterprise                     | TKIP                   | AES (rarely supported)         |
+| **WPA2**          | PSK / Enterprise                     | AES-CCMP               | TKIP (deprecated)              |
+| **WPA3**          | SAE (Personal) / 802.1X (Enterprise) | AES-CCMP (128-bit)     | AES-256-GCMP (Enterprise only) |
 
 **Data integrity**
 

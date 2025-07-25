@@ -59,7 +59,7 @@
 * [Diffie-Hellman (DH) key exchange](5.-wireless-security-and-cryptography/diffie-hellman-dh-key-exchange.md)
 * [Wireless client authentication methods](5.-wireless-security-and-cryptography/wireless-client-authentication-methods/README.md)
   * [Copy of Wireless client authentication methods](5.-wireless-security-and-cryptography/wireless-client-authentication-methods/copy-of-wireless-client-authentication-methods.md)
-* [Wireless privacy and integrity methods](5.-wireless-security-and-cryptography/wireless-privacy-and-integrity-methods/README.md)
+* [Wireless privacy and integrity methods](5.-wireless-security-and-cryptography/ieee-802.11-privacy-and-integrity-methods.md)
   * [IEEE 802.11 privacy and integrity methods](5.-wireless-security-and-cryptography/wireless-privacy-and-integrity-methods/ieee-802.11-privacy-and-integrity-methods.md)
 * [Authentication and encryption in WPA, WPA2, and WPA3](5.-wireless-security-and-cryptography/authentication-and-encryption-in-wpa-wpa2-and-wpa3.md)
 

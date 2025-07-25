@@ -11,15 +11,21 @@ This section covers key wireless privacy methods/algorithms, including TKIP (WPA
 
 Become familiar with key encryption and message integrity algorithms used in securing wireless networks.
 
+**privacy**/auth
+
+In WPA-Personal and WPA2-Personal, the PSK (your Wi-Fi **password**) is used to derive encryption keys. In WPA3-Personal, PSK is replaced by SAE (Simultaneous Authentication of Equals) for authentication (WPA3-Enterprise uses 802.1X for authentication)—the actual encryption in WPA3 uses AES-CCMP.
+
+WPA (2003) primarily uses TKIP (Temporal Key Integrity Protocol) as its encryption method. AES was optional in WPA but not commonly supported. WPA2 (2004) made AES-CCMP mandatory as the encryption method, with TKIP as an optional fallback for backward compatibility. WPA3 mandates AES-CCMP (128-bit) for WPA3-Personal. WPA3-Enterprise supports AES-256-GCMP (stronger encryption for enterprise networks).
+
 ### TKIP (WPA)
 
 Temporal Key Integrity Protocol (**TKIP**) was designed by the IEEE 802.11i task group and the Wi-Fi Alliance as an interim solution to replace WEP without requiring the replacement of legacy hardware. Under WEP it was possible to alter a packet whose content was known even if it had not been decrypted. The breaking of WEP had left Wi-Fi networks without viable link-layer security, and a solution was required for already deployed hardware.&#x20;
 
-To be able to run on legacy WEP hardware with minor upgrades, TKIP uses RC4 as its cipher. TKIP also provides a rekeying mechanism. TKIP ensures that every data packet is sent with a unique encryption key (Interim Key/Temporal Key + Packet Sequence Counter). Key mixing increases the complexity of decoding the keys by giving an attacker substantially less data that has been encrypted using any one key.&#x20;
+To be able to run on legacy WEP hardware with minor upgrades, **TKIP uses RC4 as its cipher.** TKIP also provides a rekeying mechanism. TKIP ensures that every data packet is sent with a unique encryption key (Interim Key/Temporal Key + Packet Sequence Counter). Key mixing increases the complexity of decoding the keys by giving an attacker substantially less data that has been encrypted using any one key.&#x20;
 
 TKIP brought the following security features using legacy hardware and the underlying WEP encryption (pp. 714-715):
 
-■ MIC: This efficient algorithm adds a hash value to each frame as a message integrity check to prevent tampering; commonly called “Michael” as an informal reference to MIC.
+■ MIC: This efficient algorithm adds a hash value to each frame as a message integrity check to prevent tampering; commonly called “**Michael**” as an informal reference to MIC.
 
 ■ Time stamp: A time stamp is added into the MIC to prevent replay attacks that attempt to reuse or replay frames that have already been sent.
 
@@ -65,7 +71,28 @@ GCMP is used in WPA3.
 
 ### MIC (Message Integrity Check "Michael" in WPA)
 
+**integrity**
 
+WPA introduced Michael MIC, which was better than WEP but still vulnerable to forgery.
+
+A message integrity check (MIC) is a security tool that can protect against data tampering. A MIC is a value that is calculated from the data in a message using a cryptographic algorithm. The MIC is then sent along with the message. When the message is received, the MIC is recalculated and compared to the value that was sent. If the two values do not match, then the message has been tampered with.&#x20;
+
+There are two main types of MICs:
+
+* Hash functions: these calculate a value that is a fixed size, regardless of the size of the data that is hashed.&#x20;
+* Message authentication codes (MACs): these calculate a value that is the same size as the data that is being protected.
+
+MICs can be used to protect data in a variety of ways. For example, they can be used to:
+
+* Verify the integrity of files that are downloaded from the internet.
+* Protect data that is being transmitted over a network.
+* Prevent unauthorized access to data.
+
+MICs are an important part of many security protocols. For example, they are used in the Transport Layer Security (TLS) protocol, which is used to secure web traffic.
+
+MICs are often used in conjunction with encryption to provide a higher level of security. But MICs are not perfect, and they can be fooled by attackers who have access to the cryptographic algorithm. Figure 28-5 shows the MIC process.
+
+<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/5aef3-checking-message-integrity-3.webp?w=1201" alt="Checking-Message-Integrity" height="430" width="1201"><figcaption><p>Figure 28-5 Checking Message Integrity over a Wireless Network (Odom, 2020, p. 710)</p></figcaption></figure>
 
 ### References
 

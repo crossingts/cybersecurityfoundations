@@ -45,6 +45,6 @@ This chapter covers how SSL/TLS uses cryptographic tools (symmetric encryption, 
 
 [IEEE 802.11 authentication methods](broken-reference)
 
-[IEEE 802.11 privacy and integrity methods](wireless-privacy-and-integrity-methods/)
+[IEEE 802.11 privacy and integrity methods](ieee-802.11-privacy-and-integrity-methods.md)
 
 [Authentication and encryption in WPA, WPA2, and WPA3](authentication-and-encryption-in-wpa-wpa2-and-wpa3.md)

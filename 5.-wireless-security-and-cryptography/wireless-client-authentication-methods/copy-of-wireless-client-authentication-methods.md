@@ -158,33 +158,6 @@ There are several methods of wireless client authentication. One common method i
 
 In WPA-Personal and WPA2-Personal, the PSK (your Wi-Fi **password**) is used to derive encryption keys. In WPA3-Personal, PSK is replaced by SAE (Simultaneous Authentication of Equals) for authentication, a more secure method for key exchange (WPA3-Enterprise uses 802.1X for authentication)—the actual encryption in WPA3 uses AES-CCMP.
 
-\--
-
-**privacy**/auth
-
-In WPA-Personal and WPA2-Personal, the PSK (your Wi-Fi **password**) is used to derive encryption keys. In WPA3-Personal, PSK is replaced by SAE (Simultaneous Authentication of Equals) for authentication, a more secure method for key exchange (WPA3-Enterprise uses 802.1X for authentication)—the actual encryption in WPA3 uses AES-CCMP.
-
-WPA (2003) primarily uses TKIP (Temporal Key Integrity Protocol) as its encryption method. AES was optional in WPA but not commonly supported. WPA2 (2004) made AES-CCMP mandatory as the encryption method, with TKIP as an optional fallback for backward compatibility. WPA3 mandates AES-CCMP (128-bit) for WPA3-Personal. WPA3-Enterprise supports AES-256-GCMP (stronger encryption for enterprise networks).
-
-**integrity**
-
-WPA introduced Michael MIC, which was better than WEP but still vulnerable to forgery.
-
-A message integrity check (MIC) is a security tool that can protect against data tampering. A MIC is a value that is calculated from the data in a message using a cryptographic algorithm. The MIC is then sent along with the message. When the message is received, the MIC is recalculated and compared to the value that was sent. If the two values do not match, then the message has been tampered with.&#x20;
-
-There are two main types of MICs:
-
-* Hash functions: these calculate a value that is a fixed size, regardless of the size of the data that is hashed.&#x20;
-* Message authentication codes (MACs): these calculate a value that is the same size as the data that is being protected.
-
-MICs can be used to protect data in a variety of ways. For example, they can be used to:
-
-* Verify the integrity of files that are downloaded from the internet.
-* Protect data that is being transmitted over a network.
-* Prevent unauthorized access to data.
-
-
-
 ### IEEE 802.1x/EAP: EAP-based authentication methods
 
 

@@ -1,12 +1,34 @@
 ---
 description: >-
-  This section covers key IEEE 802.11 authentication methods, including open
+  This section covers key wireless client authentication methods, including open
   authentication, WEP, and 802.1x/EAP
 ---
 
-# IEEE 802.11 authentication methods
+# Wireless client authentication methods
+
+## Learning objectives
+
+• Point 1 \
+• Point 2\
+• Point 3 \
+• Point 4&#x20;
 
 This section has two main goals. First, this section will hep students understand how the IEEE 802.11 standard provides a basis for a wireless security management framework (client authentication, message privacy, and message integrity). Second, this section will familiarize students with authentication methods used in the IEEE 802.11 wireless networking standard.&#x20;
+
+## Topics covered in this section
+
+* The IEEE 802.11 standard as a wireless security management framework
+* Wireless client authentication methods
+  * Open authentication
+  * WEP (Wired Equivalent Privacy)
+  * 802.1x/EAP (Extensible Authentication Protocol)
+  * EAP-based authentication methods
+    * LEAP (Lightweight EAP)
+    * EAP-FAST (Flexible Authentication by Secure Tunneling)
+    * PEAP (Protected EAP)
+    * EAP-TLS (EAP Transport Layer Security)
+
+### The IEEE 802.11 standard as a wireless security management framework
 
 In a wireless connection, data is transmitted via radio waves that propagate in all directions, making it accessible to any nearby device within range. Unlike wired connections, which confine signals to physical cables, wireless signals are inherently broadcasted, allowing unintended recipients to potentially intercept them if not properly encrypted or secured.
 
@@ -18,18 +40,6 @@ A comprehensive approach to securing a wireless network involves:
 4. **Protecting the wireless data from tampering** with frame authentication – for example, with **802.11’s frame integrity checks (MIC)** or **GCMP** in WPA3.
 
 Endpoint identification ensures only authorized devices connect, while user authentication verifies legitimate users. Together, these measures strengthen access control, while encryption and integrity checks safeguard data in transit.
-
-* **Wireless client authentication methods**
-  * **Open authentication**
-  * **WEP (Wired Equivalent Privacy)**
-  * **802.1x/EAP (Extensible Authentication Protocol)**
-  * **EAP-based authentication methods**
-    * **LEAP (Lightweight EAP)**
-    * **EAP-FAST (Flexible Authentication by Secure Tunneling)**
-    * **PEAP (Protected EAP)**
-    * **EAP-TLS (EAP Transport Layer Security)**
-
-#### The IEEE 802.11 standard
 
 The IEEE 802.11 standard provides a wireless security management framework to be used to add trust, privacy, and integrity to a wireless network. The following discussion gives an overview of the wireless security framework.
 
@@ -70,7 +80,7 @@ MICs can be used to protect data in a variety of ways. For example, they can be 
 * Protect data that is being transmitted over a network.
 * Prevent unauthorized access to data.
 
-#### IEEE 802.11 authentication methods
+### Wireless client authentication methods
 
 IEEE 802.11 (Wi-Fi) authentication methods can be categorized into **Open System Authentication**, **Shared Key Authentication**, and more advanced methods used in **WPA/WPA2/WPA3**. Below is a list of IEEE 802.11 authentication methods in chronological order.
 
@@ -171,9 +181,7 @@ IEEE 802.1X (Port-Based Network Access Control) and EAP (Extensible Authenticati
 * **Cloud RADIUS services** (e.g., Azure AD, Okta) now integrate with 802.1X.
 * **EAP-TLS is growing** due to zero-trust security trends.
 
-***
-
-#### **Key Takeaways:**
+**Key Takeaways:**
 
 * **802.1X/EAP is not a Wi-Fi authentication method itself** but a framework used by:
   * **WPA-Enterprise** (2003)

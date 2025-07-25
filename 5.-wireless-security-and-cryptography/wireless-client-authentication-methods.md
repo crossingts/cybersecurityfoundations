@@ -136,13 +136,13 @@ Wireless client authentication methods (sometimes generically referred to as IEE
 
 * Introduced **TKIP** (Temporal Key Integrity Protocol) as a WEP replacement.
 * **WPA-PSK (Pre-Shared Key)** for home users.
-* **WPA-Enterprise (802.1X/EAP)** for businesses.
+* **WPA-Enterprise (802.1X/EAP)** for businesses. 802.1X/EAP is defined in IEEE 802.1X, not 802.11 itself. Used in WPA/WPA2/WPA3-Enterprise.
 
 #### **4. WPA2-Personal/WPA2-Enterprise (2004 – 802.11i standard)**
 
 * Replaced TKIP with **AES-CCMP** (stronger encryption).
 * **WPA2-PSK** became the dominant Wi-Fi security method.
-* **WPA2-Enterprise** with EAP methods (e.g., PEAP, EAP-TLS) for corporations.
+* **WPA2-Enterprise** **(802.1X/EAP)**.
 
 #### **5. Wi-Fi Protected Setup (WPS – 2006)**
 
@@ -156,6 +156,7 @@ Wireless client authentication methods (sometimes generically referred to as IEE
 
 #### **7. WPA3-Enterprise (2018)**
 
+* **WPA3-Enterprise** **(802.1X/EAP)**.
 * Added **192-bit cryptographic suite** for higher-security environments.
 * Mandates use of **AES-GCMP** instead of TKIP.
 
@@ -164,19 +165,17 @@ Wireless client authentication methods (sometimes generically referred to as IEE
 * Replaced **Open Authentication** with encryption (no passwords).
 * Protects against passive eavesdropping in public Wi-Fi.
 
-#### **9. WPA3 Version 2 (2022–2023 updates)**
+#### **Key Clarifications:**
 
-* Further refinements in SAE and enterprise security.
-* Phasing out legacy protocols (e.g., WPA2 transition guidance).
-
-#### IEEE 802.11 authentication methods in order of popularity
-
-1. **WPA2/WPA3-Personal (PSK)** (Most common for home/small office).
-2. **Open System + Captive Portal** (Public Wi-Fi).
-3. **WPA2/WPA3-Enterprise (802.1X/EAP)** (Corporate/education).
-4. **WPA3-Enhanced Open (OWE)** (Emerging for public networks).
-5. **WEP/Shared Key** (Legacy, highly insecure).
-6. **WPS** (Convenient but insecure).
+1. **802.1X/EAP is not part of the original 802.11 standard**
+   * It was introduced later (via **802.11i/WPA**) for enterprise security.
+   * **802.1X is a port-based authentication framework** (from wired networks) adapted for Wi-Fi.
+2. **EAP methods (LEAP, PEAP, EAP-TLS, etc.) are not "802.11 authentication"**
+   * They are **authentication protocols** running **inside** 802.1X.
+   * The actual 802.11 layer just facilitates the exchange (EAPoL frames).
+3. **Modern Wi-Fi uses a mix of 802.11 and non-802.11 auth methods**
+   * **WPA/WPA2-Personal (PSK/SAE)** → Uses **pre-shared keys**, not part of original 802.11 auth.
+   * **WPA/WPA2/WPA3-Enterprise** → Relies on **802.1X/EAP**, not native 802.11.
 
 #### IEEE 802.1x/EAP (Extensible Authentication Protocol)
 

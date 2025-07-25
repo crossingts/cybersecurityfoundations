@@ -66,29 +66,25 @@ Client screening in WLANs with open authentication will often be a form of web a
 
 WEP uses a shared key (WEP key) that must be known to both the sender and receiver ahead of time in order to encrypt and decrypt data. WEP keys are either 40 or 104 bits in length, represented by a string of 10 or 26 hex digits. Every potential client and AP must share the same key before any client can associate with the AP.
 
-WEP uses the RC4 cipher algorithm to encrypt data that is transmitted over a wireless network. “The same algorithm encrypts data at the sender and decrypts it at the receiver. The algorithm uses a string of bits as a key, commonly called a WEP key, to derive other encryption keys—one per wireless frame” (p. 711).
+WEP uses the RC4 cipher algorithm to encrypt data that is transmitted over a wireless network. “The same algorithm encrypts data at the sender and decrypts it at the receiver. The algorithm uses a string of bits as a key, commonly called a WEP key, to derive other encryption keys—one per wireless frame” (Odom, 2020, p. 711).
 
-the WEP key can also be used as an optional authentication method. A client not using the correct WEP key cannot associate with an AP.&#x20;
+The WEP key can also be used as an optional authentication method. A client not using the correct WEP key cannot associate with an AP.&#x20;
 
-The AP tests the client’s knowledge of the WEP key by sending it a random challenge phrase. The client encrypts the challenge phrase with WEP and returns the result to the AP. The AP can compare the client’s encryption with its own to see whether the two WEP keys yield identical results. (p. 711)
+The AP tests the client’s knowledge of the WEP key by sending it a random challenge phrase. The client encrypts the challenge phrase with WEP and returns the result to the AP. The AP can compare the client’s encryption with its own to see whether the two WEP keys yield identical results. (Odom, 2020, p. 711)
 
 #### Data privacy
 
 To protect data privacy on a wireless network, the data must be encrypted while it is traveling between clients and APs. This is done by encrypting the data payload in each wireless frame just before it is transmitted, and then decrypting it as it is received. The encryption method must be one that the transmitter and receiver share, so that the data can be encrypted and decrypted successfully.
 
+Only WEP (RC4-based) is defined in the original 802.11 standard. As noted, WEP’s shared key is both the authentication secret and encryption key, making it fundamentally insecure (modern protocols such as WPA2/WPA3 derive temporary keys instead). WEP’s encryption was optional – networks could run unencrypted (Open System). No other encryption options existed until TKIP (WPA, 2003) and AES-CCMP (WPA2, 2004).&#x20;
+
 In WPA/WPA2-Personal, the PSK (your Wi-Fi password) is used to derive encryption keys. In WPA3-Personal, PSK is replaced by SAE (Simultaneous Authentication of Equals) for authentication, a more secure method for key exchange (WPA3-Enterprise uses 802.1X for authentication)—the actual encryption in WPA3 uses AES-CCMP.
 
 WPA (2003) primarily uses TKIP (Temporal Key Integrity Protocol) as its encryption method. AES was optional in WPA but not commonly supported. WPA2 (2004) made AES-CCMP mandatory as the encryption method, with TKIP as an optional fallback for backward compatibility. WPA3 mandates AES-CCMP (128-bit) for WPA3-Personal. WPA3-Enterprise supports AES-256-GCMP (stronger encryption for enterprise networks).
 
-#### **Summary of Encryption Methods:**
-
-| Security Protocol | Authentication                       | Encryption (Mandatory) | Encryption (Optional/Fallback) |
-| ----------------- | ------------------------------------ | ---------------------- | ------------------------------ |
-| **WPA**           | PSK / Enterprise                     | TKIP                   | AES (rarely supported)         |
-| **WPA2**          | PSK / Enterprise                     | AES-CCMP               | TKIP (deprecated)              |
-| **WPA3**          | SAE (Personal) / 802.1X (Enterprise) | AES-CCMP (128-bit)     | AES-256-GCMP (Enterprise only) |
-
 #### Data integrity
+
+No true message authentication (MIC) existed within the original 802.11 standard. WPA introduced Michael MIC, better than WEP but still vulnerable to forgery.
 
 A message integrity check (MIC) is a security tool that can protect against data tampering. A MIC is a value that is calculated from the data in a message using a cryptographic algorithm. The MIC is then sent along with the message. When the message is received, the MIC is recalculated and compared to the value that was sent. If the two values do not match, then the message has been tampered with.&#x20;
 
@@ -103,9 +99,27 @@ MICs can be used to protect data in a variety of ways. For example, they can be 
 * Protect data that is being transmitted over a network.
 * Prevent unauthorized access to data.
 
+**Summary for Original IEEE 802.11 Standard:**
+
+| **Feature**        | **Original 802.11 (1997)**          | **Modern Fix (WPA2/WPA3)**       |
+| ------------------ | ----------------------------------- | -------------------------------- |
+| **Privacy**        | WEP (RC4) or None (Open)            | AES-CCMP / GCMP                  |
+| **Integrity**      | CRC-32 (ICV) – No security          | AES-CBC-MAC (CCMP) / GMAC (GCMP) |
+| **Authentication** | Open System or Shared Key (WEP PSK) | 802.1X/EAP or SAE (WPA3)         |
+
+**Comparison Table (WEP, WPA, WPA2, WPA3)**
+
+| **Protocol**        | **Authentication**                                  | **Encryption**     | **Integrity Mechanism**                             | **Key Size**      | **Introduced**        |
+| ------------------- | --------------------------------------------------- | ------------------ | --------------------------------------------------- | ----------------- | --------------------- |
+| **WEP**             | Open System or Shared Key (WEP PSK)                 | RC4 (weak)         | **CRC-32 (ICV)** – Easily forged                    | 40-bit / 104-bit  | 1997 (802.11)         |
+| **WPA**             | WPA-Personal (PSK) or WPA-Enterprise (802.1X/EAP)   | TKIP (RC4 + fixes) | **Michael MIC** – Weak, but better than WEP         | 128-bit (TKIP)    | 2003 (Wi-Fi Alliance) |
+| **WPA2**            | WPA2-Personal (PSK) or WPA2-Enterprise (802.1X/EAP) | AES-CCMP (strong)  | **CCMP (AES-CBC-MAC)** – Strong integrity           | 128-bit (AES)     | 2004 (802.11i)        |
+| **WPA3-Personal**   | **SAE (Simultaneous Authentication of Equals)**     | AES-CCMP/GCMP      | **GCMP (256-bit)** – Stronger integrity             | 128-bit / 256-bit | 2018                  |
+| **WPA3-Enterprise** | 802.1X/EAP (with stricter requirements)             | AES-256-GCMP       | **GCMP (256-bit) + CNSA Suite** – Highest integrity | 192-bit / 256-bit | 2018                  |
+
 ### Wireless client authentication methods
 
-IEEE 802.11 (Wi-Fi) authentication methods can be categorized into **Open System Authentication**, **Shared Key Authentication**, and more advanced methods used in **WPA/WPA2/WPA3**. Below is a list of IEEE 802.11 authentication methods in chronological order.
+Wireless client authentication methods (sometimes generically referred to as IEEE 802.11 authentication methods or Wi-Fi authentication methods) can be categorized into Open System Authentication, Shared Key Authentication, and more advanced methods used in WPA/WPA2/WPA3. Below is a list of IEEE 802.11 authentication methods in chronological order.
 
 #### **1. Open System Authentication (1997 – 802.11 original standard)**
 

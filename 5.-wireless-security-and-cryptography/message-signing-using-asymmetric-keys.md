@@ -32,7 +32,7 @@ Alice wants to sign a message to Bob. Alice runs her message through a hashing a
 
 Bob then uses Alice’s public key to decrypt the digest, then he independently calculates the hash of the original message using the same hashing algorithm that Alice used to hash the message. Bob then compares the digests. If they match, Bob knows that Alice must have sent the original message (authenticity). Bob also knows that the message has not changed (message integrity).
 
-#### **Key Takeaway**
+#### **Key takeaways**
 
 * Signing **uses hashing** (for integrity) + **asymmetric encryption** (for authenticity).
 * Signing is **not pure encryption** (only the hash is processed).

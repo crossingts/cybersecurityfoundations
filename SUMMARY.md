@@ -78,6 +78,7 @@
 * [Common attack targets](6.-practical-foundations-in-ethical-hacking/common-attack-targets.md)
 * [Setting up a cybersecurity lab](6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/README.md)
   * [OPNsense vs Zenarmor](6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/opnsense-vs-zenarmor.md)
+  * [Firewalls](6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/firewalls.md)
 * [Ethical assessment of teaching ethical hacking](6.-practical-foundations-in-ethical-hacking/ethical-assessment-of-teaching-ethical-hacking.md)
 * [The ethical teaching of ethical hacking](6.-practical-foundations-in-ethical-hacking/the-ethical-teaching-of-ethical-hacking.md)
 * [Professional ethical hacking body of knowledge](6.-practical-foundations-in-ethical-hacking/professional-ethical-hacking-body-of-knowledge/README.md)

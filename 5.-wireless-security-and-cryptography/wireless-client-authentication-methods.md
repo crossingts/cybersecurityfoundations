@@ -14,9 +14,7 @@ hidden: true
 • Point 3 \
 • Point 4&#x20;
 
-This section has two main goals. First, this section introduces the IEEE 802.11 wireless networking standard which provides a basis for a wireless security management framework (client authentication, message privacy, and message integrity).
-
-Second, this section introduces the wireless client authentication methods of open authentication, WEP, PSK, SAE, and 802.1x/EAP.
+This section has two main goals. First, this section introduces the IEEE 802.11 wireless networking standard which provides a basis for a wireless security management framework (client authentication, message privacy, and message integrity). Second, this section introduces the wireless client authentication methods of open authentication, WEP, PSK, SAE, and 802.1x/EAP.
 
 ## Topics covered in this section
 
@@ -47,15 +45,11 @@ Endpoint identification ensures only authorized devices connect, while user auth
 
 ### The IEEE 802.11 standard as a wireless security management framework
 
-The IEEE 802.11 standard provides a basis for a wireless security management framework that can be used to add trust, privacy, and integrity to a wireless network.&#x20;
-
-The following discussion gives a brief overview of the IEEE 802.11 standard.
+The IEEE 802.11 standard provides a basis for a wireless security management framework that can be used to add trust, privacy, and integrity to a wireless network. The following discussion gives a brief overview of the IEEE 802.11 standard.
 
 #### Authentication (trust)
 
-Clients must first discover a BSS and then request permission to associate with it. Only trusted and expected devices should be given network access. Clients should be authenticated before they are allowed to associate. Potential clients must present a form of credentials to the APs to identify themselves.&#x20;
-
-The original 802.11 standard gave only two options to authenticate clients: open authentication and WEP.
+Clients must first discover a BSS and then request permission to associate with it. Only trusted and expected devices should be given network access. Clients should be authenticated before they are allowed to associate. Potential clients must present a form of credentials to the APs to identify themselves. The original 802.11 standard gave only two options to authenticate clients: open authentication and WEP.
 
 **Open authentication**
 
@@ -105,9 +99,7 @@ No true message authentication (MIC) existed within the original 802.11 standard
 
 ### Wireless client authentication methods in chronological order
 
-Wireless client authentication methods (sometimes generically referred to as IEEE 802.11 authentication methods or Wi-Fi authentication methods) can be categorized into Open System Authentication, Shared Key Authentication, and more advanced methods used in WPA/WPA2/WPA3.&#x20;
-
-Below is a list of wireless authentication methods in chronological order.
+Wireless client authentication methods (sometimes generically referred to as IEEE 802.11 authentication methods or Wi-Fi authentication methods) can be categorized into Open System Authentication, Shared Key Authentication, and more advanced methods used in WPA/WPA2/WPA3. Follows is a list of wireless authentication methods in chronological order.
 
 #### **1. Open System Authentication (1997 – 802.11 original standard)**
 
@@ -148,12 +140,12 @@ Below is a list of wireless authentication methods in chronological order.
 * Added 192-bit cryptographic suite for higher-security environments.
 * Mandates use of AES-GCMP instead of TKIP.
 
-#### **Key Clarifications:**
+#### **Clarifications:**
 
 1. **802.1X/EAP is not part of the original 802.11 standard**
    * It was introduced later (via **802.11i/WPA**) **for enterprise security**.
    * **802.1X is a port-based authentication framework** (from wired networks) adapted for Wi-Fi.
-2. **EAP methods (LEAP, PEAP, EAP-TLS, etc.) are not "802.11 authentication"**
+2. **EAP methods (LEAP, PEAP, EAP-TLS, etc.) are not 802.11 authentication**
    * They are **authentication protocols** running **inside** 802.1X.
    * The actual 802.11 layer just facilitates the exchange (EAPoL frames).
 3. **Modern Wi-Fi uses a mix of 802.11 and non-802.11 auth methods**
@@ -162,7 +154,11 @@ Below is a list of wireless authentication methods in chronological order.
 
 ### Pre-Shared Key (PSK) and SAE (Simultaneous Authentication of Equals)
 
-There are several methods of wireless client **authentication**. One common method is to use a shared static text string, also known as a **pre-shared key (PSK)**. The PSK is stored on the client device and is presented to the AP when the client attempts to connect to the network. Any user who possessed the device could authenticate to the network. More stringent authentication methods require interaction with a user database, with the end user entering a valid username and password.
+There are several methods of wireless client authentication. One common method is to use a shared static text string, also known as a pre-shared key (PSK). The PSK is stored on the client device and is presented to the AP when the client attempts to connect to the network. Any user who possessed the device could authenticate to the network. More stringent authentication methods require interaction with a user database, with the end user entering a valid username and password.
+
+In WPA-Personal and WPA2-Personal, the PSK (your Wi-Fi **password**) is used to derive encryption keys. In WPA3-Personal, PSK is replaced by SAE (Simultaneous Authentication of Equals) for authentication, a more secure method for key exchange (WPA3-Enterprise uses 802.1X for authentication)—the actual encryption in WPA3 uses AES-CCMP.
+
+\--
 
 **privacy**/auth
 
@@ -186,6 +182,8 @@ MICs can be used to protect data in a variety of ways. For example, they can be 
 * Verify the integrity of files that are downloaded from the internet.
 * Protect data that is being transmitted over a network.
 * Prevent unauthorized access to data.
+
+
 
 ### IEEE 802.1x/EAP: EAP-based authentication methods
 

@@ -1,7 +1,7 @@
 ---
 description: >-
   This section covers key wireless client authentication methods, including open
-  authentication, WEP, and 802.1x/EAP
+  authentication, WEP, PSK, SAE, and 802.1x/EAP
 hidden: true
 ---
 
@@ -14,21 +14,31 @@ hidden: true
 • Point 3 \
 • Point 4&#x20;
 
-This section has two main goals. First, this section will hep students understand how the IEEE 802.11 standard provides a basis for a wireless security management framework (client authentication, message privacy, and message integrity). Second, this section will familiarize students with client authentication methods used in the IEEE 802.11 wireless networking standard.&#x20;
+This section has two main goals. First, this section introduces the IEEE 802.11 wireless networking standard which provides a basis for a wireless security management framework (client authentication, message privacy, and message integrity).
+
+Second, this section introduces the wireless client authentication methods of open authentication, WEP, PSK, SAE, and 802.1x/EAP.
 
 ## Topics covered in this section
 
 * Introduction
-* The IEEE 802.11 standard as a wireless security management framework
-* Wireless client authentication methods
-  * Open authentication
-  * WEP (Wired Equivalent Privacy)
-  * 802.1x/EAP (Extensible Authentication Protocol)
-  * EAP-based authentication methods
-    * LEAP (Lightweight EAP)
-    * EAP-FAST (Flexible Authentication by Secure Tunneling)
-    * PEAP (Protected EAP)
-    * EAP-TLS (EAP Transport Layer Security)
+
+The IEEE 802.11 standard as a wireless security management framework
+
+Open authentication
+
+WEP (Wired Equivalent Privacy)
+
+Pre-Shared Key (PSK) and SAE (Simultaneous Authentication of Equals)
+
+802.1x/EAP (Extensible Authentication Protocol) (EAP-based authentication methods)
+
+LEAP (Lightweight EAP)
+
+EAP-FAST (Flexible Authentication by Secure Tunneling)
+
+PEAP (Protected EAP)
+
+EAP-TLS (EAP Transport Layer Security)
 
 ### Introduction
 
@@ -43,15 +53,17 @@ A comprehensive approach to securing a wireless network involves:
 
 Endpoint identification ensures only authorized devices connect, while user authentication verifies legitimate users. Together, these measures strengthen access control, while encryption and integrity checks safeguard data in transit.
 
+
+
 ### The IEEE 802.11 standard as a wireless security management framework
 
-The IEEE 802.11 standard provides a wireless security management framework to be used to add trust, privacy, and integrity to a wireless network. The following discussion gives an overview of the wireless security framework.
+The IEEE 802.11 standard provides a basis for a wireless security management framework that can be used to add trust, privacy, and integrity to a wireless network.&#x20;
+
+The following discussion gives a brief overview of the IEEE 802.11 standard.
 
 #### Authentication (trust)
 
 Clients must first discover a BSS and then request permission to associate with it. Only trusted and expected devices should be given network access. Clients should be authenticated before they are allowed to associate. Potential clients must present a form of credentials to the APs to identify themselves.&#x20;
-
-There are several methods of wireless client authentication. One common method is to use a shared static text string, also known as a **pre-shared key (PSK)**. The PSK is stored on the client device and is presented to the AP when the client attempts to connect to the network. Any user who possessed the device could authenticate to the network. More stringent authentication methods require interaction with a user database, with the end user entering a valid username and password.
 
 The original 802.11 standard gave only two options to authenticate clients: open authentication and WEP.
 
@@ -77,28 +89,13 @@ The AP tests the client’s knowledge of the WEP key by sending it a random chal
 
 To protect data privacy on a wireless network, the data must be encrypted while it is traveling between clients and APs. This is done by encrypting the data payload in each wireless frame just before it is transmitted, and then decrypting it as it is received. The encryption method must be one that the transmitter and receiver share, so that the data can be encrypted and decrypted successfully.
 
-Only WEP (RC4-based) is defined in the original 802.11 standard. As noted, WEP’s shared key is both the authentication secret and encryption key, making it fundamentally insecure (modern protocols such as Wi-Fi Protected Access WPA2 and WPA3 derive temporary keys instead). WEP’s encryption was optional – networks could run unencrypted (Open System). No other encryption options existed until TKIP (WPA, 2003) and AES-CCMP (WPA2, 2004).&#x20;
-
-In WPA-Personal and WPA2-Personal, the PSK (your Wi-Fi password) is used to derive encryption keys. In WPA3-Personal, PSK is replaced by SAE (Simultaneous Authentication of Equals) for authentication, a more secure method for key exchange (WPA3-Enterprise uses 802.1X for authentication)—the actual encryption in WPA3 uses AES-CCMP.
-
-WPA (2003) primarily uses TKIP (Temporal Key Integrity Protocol) as its encryption method. AES was optional in WPA but not commonly supported. WPA2 (2004) made AES-CCMP mandatory as the encryption method, with TKIP as an optional fallback for backward compatibility. WPA3 mandates AES-CCMP (128-bit) for WPA3-Personal. WPA3-Enterprise supports AES-256-GCMP (stronger encryption for enterprise networks).
+Only WEP (RC4-based) is defined in the original 802.11 standard. As noted, WEP’s shared key is both the authentication secret and encryption key, making it fundamentally insecure. Modern protocols such as Wi-Fi Protected Access (WPA2 and WPA3) derive temporary keys instead. WEP’s encryption was optional – networks could run unencrypted (Open System). No other encryption options existed until TKIP (WPA, 2003) and AES-CCMP (WPA2, 2004).&#x20;
 
 #### Data integrity
 
-No true message authentication (MIC) existed within the original 802.11 standard. WPA introduced Michael MIC, better than WEP but still vulnerable to forgery.
+No true message authentication (MIC) existed within the original 802.11 standard. WPA introduced Michael MIC, which was better than WEP but still vulnerable to forgery.
 
-A message integrity check (MIC) is a security tool that can protect against data tampering. A MIC is a value that is calculated from the data in a message using a cryptographic algorithm. The MIC is then sent along with the message. When the message is received, the MIC is recalculated and compared to the value that was sent. If the two values do not match, then the message has been tampered with.&#x20;
 
-There are two main types of MICs:
-
-* Hash functions: these calculate a value that is a fixed size, regardless of the size of the data that is hashed.&#x20;
-* Message authentication codes (MACs): these calculate a value that is the same size as the data that is being protected.
-
-MICs can be used to protect data in a variety of ways. For example, they can be used to:
-
-* Verify the integrity of files that are downloaded from the internet.
-* Protect data that is being transmitted over a network.
-* Prevent unauthorized access to data.
 
 **Summary for Original IEEE 802.11 Standard:**
 
@@ -118,7 +115,7 @@ MICs can be used to protect data in a variety of ways. For example, they can be 
 | **WPA3-Personal**   | **SAE (Simultaneous Authentication of Equals)**     | AES-CCMP/GCMP      | **GCMP (256-bit)** – Stronger integrity             | 128-bit / 256-bit | 2018                  |
 | **WPA3-Enterprise** | 802.1X/EAP (with stricter requirements)             | AES-256-GCMP       | **GCMP (256-bit) + CNSA Suite** – Highest integrity | 192-bit / 256-bit | 2018                  |
 
-### Wireless client authentication methods
+### Wireless client authentication methods in chronological order
 
 Wireless client authentication methods (sometimes generically referred to as IEEE 802.11 authentication methods or Wi-Fi authentication methods) can be categorized into Open System Authentication, Shared Key Authentication, and more advanced methods used in WPA/WPA2/WPA3.&#x20;
 
@@ -174,6 +171,33 @@ Below is a list of wireless authentication methods in chronological order.
 3. **Modern Wi-Fi uses a mix of 802.11 and non-802.11 auth methods**
    * **WPA/WPA2-Personal (PSK/SAE)** → Uses **pre-shared keys**, not part of original 802.11 auth.
    * **WPA/WPA2/WPA3-Enterprise** → Relies on **802.1X/EAP**, not native 802.11.
+
+
+
+There are several methods of wireless client **authentication**. One common method is to use a shared static text string, also known as a **pre-shared key (PSK)**. The PSK is stored on the client device and is presented to the AP when the client attempts to connect to the network. Any user who possessed the device could authenticate to the network. More stringent authentication methods require interaction with a user database, with the end user entering a valid username and password.
+
+**privacy**/auth
+
+In WPA-Personal and WPA2-Personal, the PSK (your Wi-Fi **password**) is used to derive encryption keys. In WPA3-Personal, PSK is replaced by SAE (Simultaneous Authentication of Equals) for authentication, a more secure method for key exchange (WPA3-Enterprise uses 802.1X for authentication)—the actual encryption in WPA3 uses AES-CCMP.
+
+WPA (2003) primarily uses TKIP (Temporal Key Integrity Protocol) as its encryption method. AES was optional in WPA but not commonly supported. WPA2 (2004) made AES-CCMP mandatory as the encryption method, with TKIP as an optional fallback for backward compatibility. WPA3 mandates AES-CCMP (128-bit) for WPA3-Personal. WPA3-Enterprise supports AES-256-GCMP (stronger encryption for enterprise networks).
+
+**integrity**
+
+WPA introduced Michael MIC, which was better than WEP but still vulnerable to forgery.
+
+A message integrity check (MIC) is a security tool that can protect against data tampering. A MIC is a value that is calculated from the data in a message using a cryptographic algorithm. The MIC is then sent along with the message. When the message is received, the MIC is recalculated and compared to the value that was sent. If the two values do not match, then the message has been tampered with.&#x20;
+
+There are two main types of MICs:
+
+* Hash functions: these calculate a value that is a fixed size, regardless of the size of the data that is hashed.&#x20;
+* Message authentication codes (MACs): these calculate a value that is the same size as the data that is being protected.
+
+MICs can be used to protect data in a variety of ways. For example, they can be used to:
+
+* Verify the integrity of files that are downloaded from the internet.
+* Protect data that is being transmitted over a network.
+* Prevent unauthorized access to data.
 
 #### IEEE 802.1x/EAP (Extensible Authentication Protocol)
 

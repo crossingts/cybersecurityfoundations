@@ -2,10 +2,9 @@
 description: >-
   This section covers key wireless client authentication methods, including open
   authentication, WEP, and 802.1x/EAP
-hidden: true
 ---
 
-# Wireless client authentication methods
+# IEEE 802.11 authentication methods
 
 ## Learning objectives
 

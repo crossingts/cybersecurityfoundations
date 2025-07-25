@@ -5,7 +5,7 @@ description: >-
 hidden: true
 ---
 
-# Wireless client authentication methods
+# Copy of Wireless client authentication methods
 
 ## Learning objectives
 

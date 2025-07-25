@@ -43,7 +43,7 @@ This chapter covers how SSL/TLS uses cryptographic tools (symmetric encryption, 
 
 [Generating and applying an RSA key](generating-and-applying-an-rsa-key.md)
 
-[IEEE 802.11 authentication methods](ieee-802.11-authentication-methods.md)
+[IEEE 802.11 authentication methods](broken-reference)
 
 [IEEE 802.11 privacy and integrity methods](ieee-802.11-privacy-and-integrity-methods.md)
 

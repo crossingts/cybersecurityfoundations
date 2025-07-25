@@ -76,9 +76,9 @@ The AP tests the client’s knowledge of the WEP key by sending it a random chal
 
 To protect data privacy on a wireless network, the data must be encrypted while it is traveling between clients and APs. This is done by encrypting the data payload in each wireless frame just before it is transmitted, and then decrypting it as it is received. The encryption method must be one that the transmitter and receiver share, so that the data can be encrypted and decrypted successfully.
 
-Only WEP (RC4-based) is defined in the original 802.11 standard. As noted, WEP’s shared key is both the authentication secret and encryption key, making it fundamentally insecure (modern protocols such as WPA2/WPA3 derive temporary keys instead). WEP’s encryption was optional – networks could run unencrypted (Open System). No other encryption options existed until TKIP (WPA, 2003) and AES-CCMP (WPA2, 2004).&#x20;
+Only WEP (RC4-based) is defined in the original 802.11 standard. As noted, WEP’s shared key is both the authentication secret and encryption key, making it fundamentally insecure (modern protocols such as Wi-Fi Protected Access WPA2 and WPA3 derive temporary keys instead). WEP’s encryption was optional – networks could run unencrypted (Open System). No other encryption options existed until TKIP (WPA, 2003) and AES-CCMP (WPA2, 2004).&#x20;
 
-In WPA/WPA2-Personal, the PSK (your Wi-Fi password) is used to derive encryption keys. In WPA3-Personal, PSK is replaced by SAE (Simultaneous Authentication of Equals) for authentication, a more secure method for key exchange (WPA3-Enterprise uses 802.1X for authentication)—the actual encryption in WPA3 uses AES-CCMP.
+In WPA-Personal and WPA2-Personal, the PSK (your Wi-Fi password) is used to derive encryption keys. In WPA3-Personal, PSK is replaced by SAE (Simultaneous Authentication of Equals) for authentication, a more secure method for key exchange (WPA3-Enterprise uses 802.1X for authentication)—the actual encryption in WPA3 uses AES-CCMP.
 
 WPA (2003) primarily uses TKIP (Temporal Key Integrity Protocol) as its encryption method. AES was optional in WPA but not commonly supported. WPA2 (2004) made AES-CCMP mandatory as the encryption method, with TKIP as an optional fallback for backward compatibility. WPA3 mandates AES-CCMP (128-bit) for WPA3-Personal. WPA3-Enterprise supports AES-256-GCMP (stronger encryption for enterprise networks).
 
@@ -160,11 +160,6 @@ Wireless client authentication methods (sometimes generically referred to as IEE
 * Added **192-bit cryptographic suite** for higher-security environments.
 * Mandates use of **AES-GCMP** instead of TKIP.
 
-#### **8. WPA3-Enhanced Open (OWE – 2018)**
-
-* Replaced **Open Authentication** with encryption (no passwords).
-* Protects against passive eavesdropping in public Wi-Fi.
-
 #### **Key Clarifications:**
 
 1. **802.1X/EAP is not part of the original 802.11 standard**
@@ -179,7 +174,7 @@ Wireless client authentication methods (sometimes generically referred to as IEE
 
 #### IEEE 802.1x/EAP (Extensible Authentication Protocol)
 
-IEEE 802.1X (Port-Based Network Access Control) and EAP (Extensible Authentication Protocol) are not tied to a single Wi-Fi security generation but have evolved alongside Wi-Fi authentication methods. Here's how they fit chronologically and their role in Wi-Fi security:
+IEEE 802.1X (Port-Based Network Access Control) and EAP (Extensible Authentication Protocol) are not tied to a single Wi-Fi security generation but have evolved alongside Wi-Fi authentication methods. IEEE 802.1x/EAP is used in corporate/enterprise networks and relies on RADIUS servers and EAP methods. Here's how they fit chronologically and their role in Wi-Fi security:
 
 #### **1. Initial Introduction (2001 – IEEE 802.1X standard)**
 
@@ -189,7 +184,7 @@ IEEE 802.1X (Port-Based Network Access Control) and EAP (Extensible Authenticati
 
 #### **2. Formal Wi-Fi Adoption (2003 – WPA-Enterprise)**
 
-* When **WPA** was introduced (as a stopgap before WPA2), **802.1X/EAP** became the backbone of **WPA-Enterprise**.
+* When **WPA** was introduced, **802.1X/EAP** became the backbone of **WPA-Enterprise**.
 * Replaced **WEP’s weak authentication** with dynamic key generation via RADIUS servers.
 * Common EAP methods at the time:
   * **EAP-TLS** (certificate-based, most secure but complex).
@@ -219,12 +214,9 @@ IEEE 802.1X (Port-Based Network Access Control) and EAP (Extensible Authenticati
 
 **Key Takeaways:**
 
-* **802.1X/EAP is not a Wi-Fi authentication method itself** but a framework used by:
-  * **WPA-Enterprise** (2003)
-  * **WPA2-Enterprise** (2004)
-  * **WPA3-Enterprise** (2018)
+* **802.1X/EAP is not a Wi-Fi authentication method itself** but a framework used by **WPA-Enterprise** (2003), **WPA2-Enterprise** (2004), and **WPA3-Enterprise** (2018).
 * **EAP methods evolved** from weak (LEAP, EAP-MD5) to robust (EAP-TLS, PEAP).
-* **Still the most secure Wi-Fi auth method** when properly configured (e.g., with certificates).
+* **Still the most secure Wi-Fi authentication method** when properly configured (e.g., with certificates).
 
 ### References
 

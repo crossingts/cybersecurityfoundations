@@ -10,7 +10,7 @@ Open source and free virtualization tools
 | ----------------------------- | --------------------- | ------------------ | ---------------- | ------------- | ----------- | ----------------------------------------------------------------- |
 | **Oracle VM VirtualBox**      | macOS, Windows, Linux | GPLv2              | ✅ Yes            | ✅ Yes         | ✅ Yes       | Fully open-source. Best balance of features & usability.          |
 | **QEMU**                      | macOS, Windows, Linux | GPLv2              | ✅ Yes (via CLI)  | ❌ No\*        | ✅ (Manual)  | Advanced, needs KVM for best performance. No native snapshot UI.  |
-| **VMware Fusion Player**      | macOS only            | Free (Proprietary) | ❌ No (Single VM) | ✅ Yes         | ✅ Yes       | Free version limits to 1 running VM. Better macOS integration.    |
+| **VMware Fusion Player**      | macOS only            | Free (Proprietary) | ✅ Yes            | ✅ Yes         | ✅ Yes       | Better macOS integration.                                         |
 | **VMware Workstation Player** | Windows, Linux        | Free (Proprietary) | ❌ No (Single VM) | ✅ Yes         | ✅ Yes       | Free version restricts to 1 running VM. Good for lightweight use. |
 
 **Key Takeaways:**

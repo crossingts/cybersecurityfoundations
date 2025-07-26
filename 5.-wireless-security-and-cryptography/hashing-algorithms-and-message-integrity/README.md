@@ -6,7 +6,15 @@ description: >-
 
 # Hashing algorithms and message integrity
 
+## Learning objectives
+
+• Point 1 \
+• Point 2 \
+• Point 3
+
 This section discusses [hashing algorithms and message integrity](https://builtin.com/cybersecurity/what-is-hashing). This section explains the key qualities (characteristics) of a hashing algorithm and how hashing algorithms can be used to ensure the integrity of messages exchanged between a client and a server.
+
+## Topics covered in this section
 
 * **Hashing algorithms**
 * **Message integrity**
@@ -108,9 +116,12 @@ To prevent tampering, the sender and receiver share a **secret key**. Instead of
 ✅ **HMAC is preferred** over simple keyed hashes due to stronger security.\
 ✅ For even stronger guarantees, **digital signatures** or **encryption + MAC** can be used.
 
-***
-
 Hashing Demonstration with Linux: [Run a hashing algorithm (md5sum or sha1sum) on a string of text in a Linux terminal.](https://www.practicalnetworking.net/series/cryptography/hashing-algorithm/)
+
+### Key takeaways
+
+• Point 1 \
+• Point 2
 
 ### References
 

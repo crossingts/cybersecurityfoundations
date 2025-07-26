@@ -7,17 +7,25 @@ description: >-
 
 # What is professional ethical hacking
 
-• What differentiates white hat hacking (ethical hacking) from gray hat hacking and hacktivism.
+## Learning objectives
 
-• Become familiar with the professional ethics of ethical hackers.
+• Identify ethical hacking on the basis of ethical/legal conduct and social values \
+• Become familiar with the professional ethics of ethical hackers\
+• Point 3&#x20;
 
-• Evaluate organizational benefits of ethical hacking (risk reduction) vs. risks (e.g., system disruption and privacy concerns).
+This sections differentiates white hat hacking (ethical hacking) from gray hat hacking and hacktivism. The analysis frames an understanding of what is professional ethical hacking by comparison of various types of hacking and hacker practices and values—on the basis of ethical and legal conduct and social values.
+
+## Topics covered in this section
+
+* **Introduction**
+* **Profiles of hackers**&#x20;
+* **Professional ethics of ethical hackers**
 
 ### Introduction
 
 There are many ways distinctions can be made between white hat hackers, gray hat hackers, black hat hackers, and hacktivists. However, we make a comparison differentiating between these four forms of hacking on the logic that there is only one category of ethical hacking: professional ethical hacking. In this classification scheme, white hat hacking is synonymous with ethical hacking.&#x20;
 
-1\) White hat hackers are professional ethical hackers who only hack systems or machines with legal authorization to do so (including legal contractual agreements). So whether resident (in-house) employees of a company or hired by a company for security testing, this would be ethical hacking. Bug bounty hunters, also ethical hackers since they work within the law/contracts.&#x20;
+1\) White hat hackers are professional ethical hackers who only hack systems or machines with legal authorization to do so (including legal contractual agreements). So whether resident (in-house) employees of a company or hired by a company for security testing, this would be ethical hacking as long as hacking is performed in accordance with agreed upon terms and within the specified authorization parameters. Bug bounty hunters are ethical hackers since they work within this contractual framework.&#x20;
 
 • Professional ethical hacking is legal (authorized) and contract based.
 
@@ -29,7 +37,7 @@ There are many ways distinctions can be made between white hat hackers, gray hat
 
 4\) Hacktivists, these hack for political ends.&#x20;
 
-### Profiles of Hackers
+### Profiles of hackers
 
 Follows is an analysis of the four types of hacking/hackers classified based on their practices and values, including adherence to legal/ethical frameworks.&#x20;
 
@@ -108,9 +116,7 @@ Hacktivists leverage cyber techniques for political or social causes, blurring l
 
 Each type has distinct motivations and methods, but the legality and ethics separate them most clearly. While white hats work within the system, gray hats operate in a moral gray zone, black hats are outright criminals, and hacktivists prioritize ideology over law.
 
-***
-
-### Professional Ethics of Ethical Hackers
+### Professional ethics of ethical hackers
 
 White hat hackers, or professional ethical hackers, operate under strict ethical guidelines to ensure their actions remain legal, responsible, and beneficial to cybersecurity. Unlike malicious hackers, they adhere to formalized codes of conduct, often outlined by organizations such as the **EC-Council (International Council of E-Commerce Consultants)**, **(ISC)²**, and the **IEEE**. These frameworks emphasize principles like **authorization, confidentiality, and non-maleficence** (avoiding harm). Academic research highlights that ethical hackers must balance aggressive security testing with respect for privacy and system integrity (Furnell & Warren, 1999).
 
@@ -149,16 +155,6 @@ Academic literature underscores the need for standardized ethical training in cy
 
 The professional ethics of white hat hackers are defined by legal compliance, contractual obligations, moral responsibility, and adherence to industry standards. Unlike gray or black hat hackers, ethical hackers must navigate complex ethical landscapes where their actions can either strengthen cybersecurity or inadvertently cause harm. By following established frameworks and maintaining public trust, they play a crucial role in defending digital systems against malicious threats.
 
-**References**
-
-* Furnell, S., & Warren, M. (1999). "Ethical Hacking: A Necessary Evil?" _Computers & Security_.
-* Harris, S. (2021). _CISSP All-in-One Exam Guide_. McGraw-Hill.
-* Schneier, B. (2020). _Click Here to Kill Everybody: Security and Survival in a Hyper-Connected World_. W.W. Norton.
-* Tavani, H. (2016). _Ethics and Technology: Controversies, Questions, and Strategies for Ethical Computing_. Wiley.
-* Whitman, M., & Mattord, H. (2018). _Principles of Information Security_. Cengage Learning.
-
-***
-
 ### Key takeaways
 
 • Professional ethical hacking is legal (authorized) and contract based.
@@ -181,6 +177,8 @@ Furnell, S., & Warren, M. (1999). "Ethical Hacking: A Necessary Evil?" _Computer
 
 Gotterbarn, D., Miller, K., & Rogerson, S. (2018). Software engineering code of ethics and professional practice. _ACM, 41_(1), 110–118. [https://doi.org/10.1145/3177851](https://doi.org/10.1145/3177851)
 
+Harris, S. (2021). CISSP All-in-One Exam Guide. McGraw-Hill.
+
 Jordan, T., & Taylor, P. (2004). _Hacktivism and cyberwars: Rebels with a cause?_ Routledge. [https://doi.org/10.4324/9780203637997](https://doi.org/10.4324/9780203637997)
 
 Rid, T. (2013). _Cyber War Will Not Take Place_. Oxford University Press.
@@ -188,3 +186,7 @@ Rid, T. (2013). _Cyber War Will Not Take Place_. Oxford University Press.
 Samuel, A. (2004). Hacktivism and the future of political participation. _Harvard Law Review, 117_(8), 2714–2727. [https://doi.org/10.2307/4093405](https://doi.org/10.2307/4093405)
 
 Schneier, B. (2020). _Click here to kill everybody: Security and survival in a hyper-connected world._ W.W. Norton & Company.
+
+Tavani, H. (2016). Ethics and Technology: Controversies, Questions, and Strategies for Ethical Computing. Wiley.
+
+Whitman, M., & Mattord, H. (2018). Principles of Information Security. Cengage Learning.

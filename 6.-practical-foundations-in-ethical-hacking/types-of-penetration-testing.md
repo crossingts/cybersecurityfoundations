@@ -11,6 +11,8 @@ description: >-
 
 • Compare black box penetration testing and white box penetration testing methods.
 
+• Evaluate organizational benefits of ethical hacking (risk reduction) vs. risks (e.g., system disruption and privacy concerns).
+
 ### Types of penetration testing
 
 • Reconnaissance or Open Source Intelligence (OSINT) gathering

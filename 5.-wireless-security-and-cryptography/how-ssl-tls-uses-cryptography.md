@@ -34,7 +34,7 @@ SSL/TLS is the backbone of secure communications. SSL/TLS is used almost anywher
 
 **How SSL/TLS uses Cryptography**
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt="How-SSL-TLS-uses-Cryptography"><figcaption><p>How SSL/TLS uses cryptographic tools to secure data transmission (image courtesy of Ed Harmoush, Practical Networking)</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt="How-SSL-TLS-uses-Cryptography"><figcaption><p>How SSL/TLS uses cryptographic tools to secure data transmission (image courtesy of Ed Harmoush, Practical Networking)</p></figcaption></figure>
 
 ### How SSL/TLS uses hashing
 
@@ -398,7 +398,7 @@ Key Differences:
 
 | Feature             | Digital Signatures                             | Certificate Authentication                       |
 | ------------------- | ---------------------------------------------- | ------------------------------------------------ |
-| **Purpose**         | Verify message integrity & sender authenticity | Verify identity & public key binding             |
+| **Purpose**         | Verify message integrity & sender authenticity | Verify server identity & public key binding      |
 | **Signed Data**     | Handshake messages (e.g., `ServerKeyExchange`) | The server’s certificate (public key + metadata) |
 | **Signer**          | Server (or client)                             | Certificate Authority (CA)                       |
 | **Verification By** | Peer (client/server)                           | Client (via CA’s public key)                     |

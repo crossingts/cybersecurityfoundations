@@ -81,6 +81,7 @@
 * [Setting up a cybersecurity lab](6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/README.md)
   * [OPNsense vs Zenarmor](6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/opnsense-vs-zenarmor.md)
   * [Firewalls](6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/firewalls.md)
+  * [Open source and free virtualization tools](6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/open-source-and-free-virtualization-tools.md)
 * [Ethical assessment of teaching ethical hacking](6.-practical-foundations-in-ethical-hacking/ethical-assessment-of-teaching-ethical-hacking.md)
 * [The ethical teaching of ethical hacking](6.-practical-foundations-in-ethical-hacking/the-ethical-teaching-of-ethical-hacking.md)
 * [Professional ethical hacking body of knowledge](6.-practical-foundations-in-ethical-hacking/professional-ethical-hacking-body-of-knowledge/README.md)

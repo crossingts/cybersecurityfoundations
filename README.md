@@ -69,7 +69,7 @@ This chapter covers host to host communication across networks (how data flows t
 
 5. [Chapter 5: Wireless security and cryptography](5.-wireless-security-and-cryptography/introduction-wireless-security-and-cryptography.md)
 
-This chapter covers how SSL/TLS secures data in transit, and the IEEE 802.11 wireless standard (WPA, WPA2, and WPA3 wireless protocols).
+This chapter covers how SSL/TLS secures data in transit, the IEEE 802.11 wireless standard, and WPA, WPA2, and WPA3 wireless protocols.
 
 6. [Chapter 6: Practical foundations in ethical hacking ](6.-practical-foundations-in-ethical-hacking/introduction-practical-foundations-in-ethical-hacking.md)
 

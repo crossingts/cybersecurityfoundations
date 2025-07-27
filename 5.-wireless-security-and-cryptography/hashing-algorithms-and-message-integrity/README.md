@@ -8,16 +8,17 @@ description: >-
 
 ## Learning objectives
 
-• Point 1 \
-• Point 2 \
-• Point 3
+* Develop a foundational understanding of how hashing algorithms function
+* Know the key qualities (characteristics) of an industry grad hashing algorithm&#x20;
+* Develop a foundational understanding of how hashing can be used to ensure message integrity
+* Develop a foundational understanding of how hashing can be used to authenticate someone
 
 This section discusses [hashing algorithms and message integrity](https://builtin.com/cybersecurity/what-is-hashing). This section explains the key qualities (characteristics) of a hashing algorithm and how hashing algorithms can be used to ensure the integrity of messages exchanged between a client and a server.
 
 ## Topics covered in this section
 
 * **Hashing algorithms**
-* **Message integrity**
+* **How hashing and HMAC ensure message integrity and authentication**
 
 ### Hashing algorithms
 
@@ -69,9 +70,7 @@ There are many different hashing algorithms available, each with its own strengt
 * Collision Resistance: A hash function must make it nearly impossible for two different inputs to produce the same hash (SHA-256 is secure; MD5/SHA-1 are broken).
 * A longer digest tends to be regarded as more secure.
 
-### Message integrity
-
-#### **How Hashing and HMAC Ensure Message Integrity and Authentication**
+### How hashing and HMAC ensure message integrity and authentication
 
 When exchanging messages between a client and a server, **hashing algorithms** can help verify that the message was not altered in transit—a property known as **message integrity**. Here’s how it works:
 
@@ -120,8 +119,9 @@ Hashing Demonstration with Linux: [Run a hashing algorithm (md5sum or sha1sum) o
 
 ### Key takeaways
 
-• Point 1 \
-• Point 2
+* A hashing algorithm performs a series of calculations iteratively
+* An industry grade hashing algorithm has four fundamental characteristics&#x20;
+* Hashing and HMAC are commonly used for data integrity and authentication
 
 ### References
 

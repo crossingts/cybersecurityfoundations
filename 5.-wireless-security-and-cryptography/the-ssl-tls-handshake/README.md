@@ -6,9 +6,22 @@ description: >-
 
 # The SSL/TLS handshake
 
+## Learning objectives <a href="#learning-objectives" id="learning-objectives"></a>
+
+* Point 1&#x20;
+* Point 2&#x20;
+* Point 3
+
 This section explains how the [SSL/TLS handshake](https://en.wikipedia.org/wiki/TLS/SSL#TLS_handshake) establishes a secure communication channel between two endpoints: Typically, client (e.g., web browser, mobile app) and server (e.g., website, API). For example, when you visit https://example.com, your browser (client) performs a TLS handshake with example.com's server to encrypt all traffic.
 
-#### SSL/TLS handshake or TLS handshak?
+## Topics covered in this section <a href="#topics-covered-in-this-section" id="topics-covered-in-this-section"></a>
+
+* **SSL/TLS handshake or TLS handshake?**
+* **The SSL/TLS handshake process**
+* **TLS handshake secure session key negotiation**
+* **TLS 1.3 handshake simplified workflow**
+
+### SSL/TLS handshake or TLS handshake?
 
 While "SSL/TLS handshake" and "TLS handshake" in modern contexts refer to the same process, there are historical and technical distinctions:
 
@@ -39,7 +52,7 @@ While "SSL/TLS handshake" and "TLS handshake" in modern contexts refer to the sa
 
 TLS 1.2+ handshakes are more efficient and secure than SSL handshakes. For security, disable SSL entirely and enforce TLS 1.2+.
 
-#### The SSL/TLS Handshake Process
+### The SSL/TLS handshake process
 
 1. ClientHello and ServerHello
 2.  Certificate validation (asymmetric crypto)&#x20;
@@ -64,7 +77,7 @@ TLS 1.2+ handshakes are more efficient and secure than SSL handshakes. For secur
 
 The ultimate goal of the TLS handshake is to derive session keys which will encrypt and secure the data transfer between the client and the server. The client must trust the server’s public key (from the certificate) to securely establish session keys.
 
-### TLS Handshake Secure Session Key Negotiation&#x20;
+### TLS handshake secure session key negotiation&#x20;
 
 After certificate validation, the client and server negotiate a symmetric session key (used for encrypting data). Two primary methods:
 
@@ -120,7 +133,7 @@ In (EC)DHE key exchange (used in TLS 1.3), the client verifies the server’s id
   * Perfect Forward Secrecy (PFS) is mandatory.
   * The shared secret is derived solely from ephemeral (EC)DHE keys, independent of the server’s long-term public key. This ensures PFS by design.
 
-### TLS 1.3 Handshake Simplified Workflow
+### TLS 1.3 handshake simplified workflow
 
 Below is a step-by-step breakdown of the TLS 1.3 handshake with a simplified workflow.
 
@@ -197,3 +210,8 @@ Client                                                                 Server
 * TLS 1.3 is now the **default in modern browsers & servers**.
 * Most free certificates (Let’s Encrypt) support TLS 1.3.
 * Wireshark/`openssl s_client` can help debug handshakes.
+
+### Key takeaways
+
+* Point 1
+* Point 2

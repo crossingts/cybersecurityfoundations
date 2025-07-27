@@ -4,13 +4,11 @@
 
 Client authentication typically involves a challenge-response mechanism, in which the client is presented with a challenge and must provide a correct response in order to be authenticated. Client authentication can also involve the exchange of session or encryption keys.
 
-The deprecation of WEP in 2004 meant a more secure authentication method was needed. The **Extensible Authentication Protocol (EAP)** is a flexible and scalable authentication framework. “EAP defines a set of common functions that actual authentication methods can use to authenticate users” (p. 712). EAP can integrate with the **IEEE 802.1x** port-based access control standard.&#x20;
-
 When 802.1x is enabled, for a wireless client to gain access to the network, the client must first associate with an AP and then successfully authenticate. The client uses open authentication to associate with the AP, and then the actual client authentication occurs at a dedicated authentication server.  This is different from open and WEP authentication where wireless clients are authenticated locally at the AP without further intervention.&#x20;
 
 The three-party 802.1x arrangement involves of the following entities:
 
-■ Supplicant: The client device requesting access.
+■ Supplicant: The client device requesting access. The client is the device that is trying to connect to the network, while the supplicant is the software on the client that is responsible for actually authenticating with the network.
 
 ■ Authenticator: The network device providing (controlling) access to the network, a LAN switch or a WLC.
 
@@ -19,6 +17,8 @@ The three-party 802.1x arrangement involves of the following entities:
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/dbe52-802.1x-client-authentication-roles-4.webp?w=1201" alt="802.1x-Client-Authentication-Roles" height="395" width="1201"><figcaption><p>Figure 28-6 802.1x Client Authentication Roles (Odom, 2020, p. 712)</p></figcaption></figure>
 
 The WLC acts as a middleman in the client authentication process, controlling user access according to 802.1x and communicating with the authentication server using the EAP framework.
+
+The **Extensible Authentication Protocol (EAP)** is a flexible and scalable authentication framework. “EAP defines a set of common functions that actual authentication methods can use to authenticate users” (p. 712). EAP is commonly integrated with the **IEEE 802.1x** port-based access control standard.&#x20;
 
 The client authentication process involving a WLC is as follows:
 
@@ -29,12 +29,6 @@ The client authentication process involving a WLC is as follows:
 * The client device can then start sending and receiving data on the network.
 
 The RADIUS server uses a variety of authentication methods, such as passwords, certificates, and biometrics.
-
-What’s a supplicant again?
-
-In computer networking, a supplicant is an entity at one end of a point-to-point LAN segment that seeks to be authenticated by an authenticator attached to the other end of that link. The IEEE 802.1X standard uses the term “supplicant” to refer either to hardware or to software. In practice, a supplicant is a software application installed on an end-user’s computer. The user invokes the supplicant and submits credentials to connect the computer to a secure network. If the authentication succeeds, the authenticator typically allows the computer to connect to the network. wikipedia.org/wiki/Supplicant\_(computer)
-
-So, the client is the device that is trying to connect to the network, while the supplicant is the software on the client that is responsible for actually authenticating with the network.
 
 The WLC uses the RADIUS server to authenticate client devices because it is a more secure and scalable approach to protecting wireless networks from unauthorized access than authenticating client devices directly on the AP. The RADIUS server can be located in a central location, which makes it easier to manage and secure. Additionally, the RADIUS server can support a large number of client devices, which is ideal for large networks.
 

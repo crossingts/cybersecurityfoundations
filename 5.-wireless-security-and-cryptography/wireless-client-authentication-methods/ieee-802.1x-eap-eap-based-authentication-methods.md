@@ -1,6 +1,6 @@
 # IEEE 802.1x/EAP: EAP-based authentication methods
 
-#### 802.1x/EAP (Extensible Authentication Protocol)
+### 802.1x/EAP (Extensible Authentication Protocol)
 
 Client authentication typically involves a challenge-response mechanism, in which the client is presented with a challenge and must provide a correct response in order to be authenticated. Client authentication can also involve the exchange of session or encryption keys.
 
@@ -45,7 +45,7 @@ Benefits of using a WLC for client authentication include:
 * Improved performance: WLCs can improve the performance of wireless networks by offloading some of the processing tasks from the APs.
 * Robust security: WLCs can use a variety of authentication methods, such as passwords, certificates, and biometrics. This makes them a more secure solution than authenticating client devices directly on the AP.
 
-#### EAP-based authentication methods
+### EAP-based authentication methods
 
 The following discussion gives an overview of some common EAP-based authentication methods.&#x20;
 
@@ -98,3 +98,7 @@ EAP-TLS is considered “**the most secure wireless authentication method availa
 Along with the AS, each wireless client must obtain and install a certificate. Manually installing certificates on hundreds or thousands of clients can be impractical. Instead, you would need to implement a Public Key Infrastructure (PKI) that could supply certificates securely and efficiently and revoke them when a client or user should no longer have access to the network. (p. 714)
 
 EAP-TLS can only be used if the wireless clients can accept and use digital certificates.&#x20;
+
+### References
+
+Odom, W. (2020). Chapter 28. Securing Wireless Networks, _CCNA 200-301 Official Cert Guide_ (pp. 704-719), Volume 1. Cisco Press.

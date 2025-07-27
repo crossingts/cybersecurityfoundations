@@ -8,26 +8,24 @@ description: >-
 
 ## Learning objectives
 
-• Point 1 \
-• Point 2\
-• Point 3 \
-• Point 4&#x20;
+* Point 1 &#x20;
+* Point 2
 
 This section has two main goals. First, this section introduces the IEEE 802.11 wireless networking standard which provides a basis for a wireless security management framework (client authentication, message privacy, and message integrity). Second, this section introduces the wireless client authentication methods of open authentication, WEP, PSK, SAE, and 802.1x/EAP.
 
 ## Topics covered in this section
 
-* Introduction
-* The IEEE 802.11 standard as a wireless security management framework
-  * Open authentication
-  * WEP (Wired Equivalent Privacy)
-* Wireless client authentication methods in chronological order
-* Pre-Shared Key (PSK) and SAE (Simultaneous Authentication of Equals)
-* IEEE 802.1x/EAP: EAP-based authentication methods
-  * LEAP (Lightweight EAP)
-  * EAP-FAST (Flexible Authentication by Secure Tunneling)
-  * PEAP (Protected EAP)
-  * EAP-TLS (EAP Transport Layer Security)
+* **Introduction**
+* **The IEEE 802.11 standard as a wireless security management framework**
+  * **Open authentication**
+  * **WEP (Wired Equivalent Privacy)**
+* **Wireless client authentication methods in chronological order**
+* **Pre-Shared Key (PSK) and SAE (Simultaneous Authentication of Equals)**
+* **IEEE 802.1x/EAP: EAP-based authentication methods**
+  * **LEAP (Lightweight EAP)**
+  * **EAP-FAST (Flexible Authentication by Secure Tunneling)**
+  * **PEAP (Protected EAP)**
+  * **EAP-TLS (EAP Transport Layer Security)**
 
 ### Introduction
 
@@ -206,7 +204,7 @@ Here is a chronology of key developments within the IEEE 802.1x/EAP standard.
 * **Cloud RADIUS services** (e.g., Azure AD, Okta) now integrate with 802.1X.
 * **EAP-TLS is growing** due to zero-trust security trends.
 
-**Key Takeaways:**
+### Key Takeaways
 
 * **802.1X/EAP is not a Wi-Fi authentication method itself** but a framework used by **WPA-Enterprise** (2003), **WPA2-Enterprise** (2004), and **WPA3-Enterprise** (2018).
 * **EAP methods evolved** from weak (LEAP, EAP-MD5) to robust (EAP-TLS, PEAP).

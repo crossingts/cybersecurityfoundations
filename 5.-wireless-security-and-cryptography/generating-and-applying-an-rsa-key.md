@@ -6,7 +6,15 @@ description: >-
 
 # Generating and applying an RSA key
 
+## Learning objectives
+
+* Understand the key mathematical concepts underlying the functionality of RSA
+* Become familiar with the main steps involved in generating an RSA key
+* Develop a foundational understanding of how an RSA key can be applied to encrypt plain text
+
 This section presents a [working example of RSA’s key generation](https://www.youtube.com/watch?v=Pq8gNbvfaoM), encryption, and signing capabilities. This section explores the math behind the RSA algorithm. The discussion covers the steps involved in generating an RSA key, and then applies the key to a plain text to see how RSA encryption works.
+
+## Topics covered in this section
 
 * **Rivest–Shamir–Adleman (RSA) introduction**
 * **Four key concepts**
@@ -18,7 +26,7 @@ This section presents a [working example of RSA’s key generation](https://www.
 
 The initialism "RSA" comes from the surnames of Ron Rivest, Adi Shamir, and Leonard Adleman, who publicly described their public key cryptosystem in 1977. RSA is a widely used public-key encryption algorithm that enables secure data transmission over insecure channels like the Internet. RSA is the most common encryption algorithm used by SSL and TLS.
 
-Asymmetric encryption uses a key pair comprised of one public key used to encrypt a text and one private key used to decrypt the cipher. Both keys are mathematically linked, what one key encrypts the other decrypts.&#x20;
+Asymmetric encryption uses a key pair comprised of one public key used to encrypt a text and one private key used to decrypt the cipher. Both keys are mathematically linked, what one key encrypts only the other decrypts.&#x20;
 
 **Common uses:**
 
@@ -140,6 +148,14 @@ To decrypt, original message (M) = cipher text^E MOD N
 If we plug that into a calculator, we get:
 
 36^29 MOD 133 = 99
+
+### Key takeaways
+
+* The first step in RSA key generation is selecting two prime numbers: P and Q
+* The second step in RSA key generation is calculating N, whereby N = P\*Q
+* The third step in RSA key generation is calculating the Totient (T) of N: (P-1)\*(Q-1)
+* The fourth step in RSA key generation is selecting a public key (E)
+* The fifth step in RSA key generation is selecting a private key (D)
 
 ### References
 

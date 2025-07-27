@@ -129,11 +129,12 @@ There are **two different integrity mechanisms** at different stages of the TLS 
 
 * **Process**:
   1. The sender:
-     * Encrypts data with the symmetric key (e.g., AES-CBC).
-     * Computes an **HMAC** (e.g., `HMAC-SHA256`) over the ciphertext _using the same symmetric key_ (or a derived subkey).
+     * Encrypts data with the symmetric key (e.g., AES-CBC). The output is ciphertext.
+     * Computes an HMAC (e.g., `HMAC-SHA256`) over the ciphertext using the same symmetric key (or a derived subkey). The HMAC uses a separate MAC key derived from the same symmetric session key. The output is MAC tag (integrity check value).&#x20;
+     * Sends ciphertext + MAC tag to the receiver.
   2. The receiver:
-     * Recomputes the HMAC and checks if it matches.
-     * If not, the data was tampered with.
+     * Recomputes the HMAC and checks if it matches. The receiver recomputes the HMAC over the received ciphertext using the same symmetric MAC key.
+     * If the computed MAC matches the received MAC tag → integrity is valid. If not, the data was tampered with.
 * **Used in**: Older TLS (e.g., TLS 1.2 with AES-CBC + HMAC-SHA256).
 
 **B. AEAD (Authenticated Encryption with Associated Data)**

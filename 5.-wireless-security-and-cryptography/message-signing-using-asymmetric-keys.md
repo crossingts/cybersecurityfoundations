@@ -11,12 +11,12 @@ description: >-
 * Understand why message signing can provide non-repudiation, authentication, and message integrity verification
 * Develop a foundational understanding of how message signing is done using hashing and asymmetric encryption
 
-This section looks at how a combination of hashing and asymmetric encryption can be used for message signing, and the potential security benefits of message signing.&#x20;
+This section looks at how a combination of hashing and asymmetric encryption can be used for message signing and the potential security benefits of message signing.&#x20;
 
 ## Topics covered in this section <a href="#topics-covered-in-this-section" id="topics-covered-in-this-section"></a>
 
 * **Introduction to message signing**
-* **How signing works (hashing + asymmetric encryption)**
+* **How message signing works (hashing + asymmetric encryption)**
 
 ### Introduction to message signing
 
@@ -24,7 +24,7 @@ Alice wants to send a message to Bob. Alice wants Bob to know beyond a shadow of
 
 This process is called **message signing.** It provides authentication and **non-repudiation**, meaning Alice cannot deny sending the message. It also ensures the message was not altered, as any tampering would invalidate the signature.
 
-### How signing works (hashing + asymmetric encryption)
+### How message signing works (hashing + asymmetric encryption)
 
 1. **Hashing the Message**:
    * Alice generates a cryptographic hash (e.g., using SHA-256) of the message. A _hash_ is a fixed-size fingerprint of the message. This ensures _integrity_—any change to the message would produce a different hash.
@@ -38,9 +38,7 @@ This process is called **message signing.** It provides authentication and **non
 
 1. Bob uses Alice’s _public key_ to "decrypt" the signature, revealing the original hash.
 2. Bob independently hashes the received message.
-3. If the hashes match, the message is authentic and untampered.
-
-The recipient then hashes the received message and compares it with the decrypted hash. If they match, the message is **authentic (sender verified)**, **unaltered (integrity preserved)**, and the sender cannot deny sending it (**non-repudiation**).
+3. If the hashes match, the message is **authentic (sender verified)**, **unaltered (integrity preserved)**, and the sender cannot deny sending it (**non-repudiation**).
 
 In other words, Alice wants to sign a message to Bob. Alice runs her message through a hashing algorithm (e.g., SHA-256), and then encrypts the resulting digest with her own private key. Alice then sends the encrypted digest to Bob, along with the original message.
 
@@ -49,7 +47,6 @@ Bob then uses Alice’s public key to decrypt the digest, then he independently 
 #### Important Notes:
 
 * **Non-repudiation** relies on the assumption that only the sender possesses their private key. If the private key is compromised, this property is weakened.
-* **Message signing does not provide confidentiality**—the message itself may still be readable if not encrypted separately.
 * Common algorithms used for signing include **RSA-PSS, ECDSA, and EdDSA**.
 
 ### Key takeaways
@@ -57,13 +54,10 @@ Bob then uses Alice’s public key to decrypt the digest, then he independently 
 * Signing uses hashing (for integrity) + asymmetric encryption (for authenticity)
 * Signing is not pure encryption (only the hash is processed)
 * Signing is not pure hashing (since it adds a private-key step for verification)
-* Private key operation ≠ classic encryption: It’s a mathematical proof, not secrecy
-
-**Message signing** provides the following three key security properties:
-
-1. **Non-repudiation** – The sender cannot later deny having signed the message, as the signature is uniquely tied to their private key (assuming the private key was kept secure).
-2. **Authentication (sender verification)** – The recipient can verify the identity of the sender by validating the signature using the sender's public key.
-3. **Message Integrity** – The signature ensures that the message has not been altered in transit, as any modification would invalidate the signature.
+* Message signing provides the following three key security properties:
+  * Non-repudiation – The sender cannot later deny having signed the message, as the signature is uniquely tied to their private key (assuming the private key was kept secure).
+  * Authentication (sender verification) – The recipient can verify the identity of the sender by validating the signature using the sender's public key.
+  * Message Integrity – The signature ensures that the message has not been altered in transit, as any modification would invalidate the signature.
 
 ### References
 

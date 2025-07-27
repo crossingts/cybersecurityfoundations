@@ -8,10 +8,11 @@ description: >-
 
 ## Learning objectives
 
-* Point 1 &#x20;
+* Identify IEEE 802.11 as a basis for a wireless security management framework
+* Become familiar with common wireless client authentication methods
 * Identify common EAP-based authentication methods
 
-This section has two main goals. First, this section introduces the IEEE 802.11 wireless networking standard which provides a basis for a wireless security management framework (client authentication, message privacy, and message integrity). Second, this section introduces the wireless client authentication methods of open authentication, WEP, PSK, SAE, and 802.1x/EAP.
+This section has two main goals. First, this section introduces the IEEE 802.11 networking standard which provides a basis for a wireless security management framework (client authentication, message privacy, and message integrity). Second, this section introduces the wireless client authentication methods of open authentication, WEP, PSK, SAE, and 802.1x/EAP.
 
 ## Topics covered in this section
 
@@ -199,12 +200,12 @@ Here is a chronology of key developments within the IEEE 802.1x/EAP standard.
 * **Cloud RADIUS services** (e.g., Azure AD, Okta) now integrate with 802.1X.
 * **EAP-TLS is growing** due to zero-trust security trends.
 
-### Key Takeaways
+### Key takeaways
 
-* **802.1X/EAP is not a Wi-Fi authentication method itself** but a framework used by **WPA-Enterprise** (2003), **WPA2-Enterprise** (2004), and **WPA3-Enterprise** (2018).
-* Common EAP-based authentication methods include LEAP, EAP-FAST, PEAP, and EAP-TLS.
-* **EAP methods evolved** from weak (LEAP, EAP-MD5) to robust (EAP-TLS, PEAP).
-* **Still the most secure Wi-Fi authentication method** when properly configured (e.g., with certificates).
+* 802.1X/EAP is not a Wi-Fi authentication method itself but a framework used by WPA-Enterprise (2003), WPA2-Enterprise (2004), and WPA3-Enterprise (2018)
+* Common EAP-based authentication methods include LEAP, EAP-FAST, PEAP, and EAP-TLS
+* EAP methods evolved from weak (LEAP, EAP-MD5) to robust (EAP-TLS, PEAP)
+* Still the most secure Wi-Fi authentication method when properly configured (e.g., with certificates)
 
 ### References
 

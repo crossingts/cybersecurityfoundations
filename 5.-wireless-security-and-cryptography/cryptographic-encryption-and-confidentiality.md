@@ -1,12 +1,19 @@
 ---
 description: >-
-  This sections discusses how symmetric encryption (AES) and asymmetric
-  encryption (RSA) can be used to protect the confidentiality of data
+  This sections discusses how symmetric encryption (e.g., AES) and asymmetric
+  encryption (e.g., RSA) can be used to protect the confidentiality of data
 ---
 
 # Cryptographic encryption and confidentiality
 
+## Learning objectives
+
+* Develop a foundational understanding of how cryptographic encryption works
+* Understand why symmetric encryption is a preferred choice for bulk data encryption
+
 This section sheds light on how cryptographic encryption can be used to achieve data confidentiality. This discussion looks at how symmetric encryption and asymmetric encryption work—how scrambling plain text according to some mathematical logic encrypts text into cipher.
+
+## Topics covered in this section
 
 * **Confidentiality**
 * **Symmetric encryption**
@@ -133,6 +140,14 @@ As noted, asymmetric encryption is not ideal for bulk encryption. Symmetric encr
 Bob wants to send an encrypted message to Alice. Bob starts by randomly generating a symmetric secret key. Bob then uses Alice’s public key to encrypt the symmetric secret key. This encrypted symmetric key is sent across the wire to Alice. Alice then uses her private key to extract the symmetric secret key that Bob sent. At this point, both Bob and Alice have an identical symmetric secret key that can be used to symmetrically encrypt as much data as they need.
 
 Thus Bob and Alice are benefiting from the security of asymmetric encryption, with the speed and efficiency of symmetric encryption.
+
+### Key takeaways
+
+* Symmetric encryption uses a single shared key for both encryption and decryption
+* Asymmetric encryption uses two different keys for the encryption and decryption
+* In asymmetric encryption, you use the recipient’s public key to encrypt a message to them. Only the recipient’s private key can decrypt the message
+* Symmetric encryption is a preferred choice for bulk data encryption
+* Hybrid encryption is a solution to the key exchange problem
 
 ### References
 

@@ -1,20 +1,26 @@
+---
+description: >-
+  This section explains how symmetric encryption, asymmetric encryption, and
+  hashing secure Internet communications via SSL/TLS
+---
+
 # How SSL/TLS uses cryptography
 
 ## Learning objectives
 
-• Understand why hashing acts as a foundational layer for securing web traffic\
-• Understand how in SSL/TLS a combination of hashing and cryptographic encryption secures websites and online transactions
+* Understand why hashing acts as a foundational layer for securing web traffic
+* Understand how in SSL/TLS a combination of hashing and cryptographic encryption secures websites and online transactions
 
-This section explains how cryptographic tools (symmetric/asymmetric encryption, and hashing) secure Internet communications via SSL/TLS.
+This section explains how cryptographic tools (symmetric encryption, asymmetric encryption, and hashing) secure Internet communications via SSL/TLS.
 
 ## Topics covered in this section
 
-* **Introduction: SSL/TLS use cases**
+* **SSL/TLS use cases**
 * **How SSL/TLS uses hashing**
 * **How SSL/TLS uses asymmetric encryption**
 * **How SSL/TLS uses symmetric encryption**
 
-### Introduction: SSL/TLS use cases
+### SSL/TLS use cases
 
 SSL/TLS are cryptographic protocols that provide **encryption, authentication, and data integrity** for secure communication over a network. For example, the HTTPS protocol ensures that data exchanged between a client (e.g., a web browser) and a server (e.g., a website) is private and tamper-proof.
 
@@ -342,7 +348,7 @@ Encrypted_Record = AES-GCM(plaintext)  # Includes auth tag
 
 ### How SSL/TLS uses asymmetric encryption
 
-SSL/TLS uses asymmetric encryption (public-key cryptography) primarily for secure key exchange, digital signatures, and certificate authentication. During the handshake, the server shares its public key via a digital certificate, which the client verifies using a trusted Certificate Authority (CA). The client then generates a pre-master secret, encrypts it with the server’s public key, and sends it to the server, which decrypts it with its private key. This establishes a shared secret while ensuring confidentiality and authentication. Asymmetric encryption is computationally expensive, so it is only used for initial setup before switching to symmetric encryption for bulk data transfer.
+SSL/TLS uses asymmetric encryption (public-key cryptography) for secure key exchange, digital signatures, and certificate authentication. During the handshake, the server shares its public key via a digital certificate, which the client verifies using a trusted Certificate Authority (CA). The client then generates a pre-master secret, encrypts it with the server’s public key, and sends it to the server, which decrypts it with its private key. This establishes a shared secret while ensuring confidentiality and authentication. Asymmetric encryption is computationally expensive, so it is only used for initial setup before switching to symmetric encryption for bulk data transfer.
 
 #### Role of Asymmetric Encryption in SSL/TLS
 
@@ -444,8 +450,10 @@ Once the handshake is complete, SSL/TLS switches to symmetric encryption (e.g., 
 
 ### Key takeaways <a href="#key-takeaways" id="key-takeaways"></a>
 
-• Understand why hashing acts as a foundational layer for securing web traffic\
-• Understand how in SSL/TLS a combination of hashing and cryptographic encryption secures websites and online transactions
+* SSL/TLS are cryptographic protocols that provide encryption, authentication, and data integrity for secure communication over a network
+* SSL/TLS uses hashing for fingerprint verification, Message Authentication Codes (MAC), and digital signatures
+* SSL/TLS uses asymmetric encryption for secure key exchange, digital signatures, and certificate authentication
+* SSL/TLS uses asymmetric encryption to encrypt the actual data transmitted between a client and a server
 
 ### References
 

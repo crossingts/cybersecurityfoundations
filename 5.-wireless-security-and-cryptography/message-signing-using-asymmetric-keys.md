@@ -55,9 +55,9 @@ Bob then uses Alice’s public key to decrypt the digest, then he independently 
 * Signing is not pure encryption (only the hash is processed)
 * Signing is not pure hashing (since it adds a private-key step for verification)
 * Message signing provides the following three key security properties:
-  * Non-repudiation – The sender cannot later deny having signed the message, as the signature is uniquely tied to their private key (assuming the private key was kept secure).
-  * Authentication (sender verification) – The recipient can verify the identity of the sender by validating the signature using the sender's public key.
-  * Message Integrity – The signature ensures that the message has not been altered in transit, as any modification would invalidate the signature.
+  * Non-repudiation – The sender cannot later deny having signed the message, as the signature is uniquely tied to their private key (assuming the private key was kept secure)
+  * Authentication (sender verification) – The recipient can verify the identity of the sender by validating the signature using the sender's public key
+  * Message Integrity – The signature ensures that the message has not been altered in transit, as any modification would invalidate the signature
 
 ### References
 

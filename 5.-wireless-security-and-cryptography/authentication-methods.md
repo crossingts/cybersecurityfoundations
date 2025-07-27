@@ -6,14 +6,23 @@ description: >-
 
 # Authentication methods
 
+## Learning objectives <a href="#learning-objectives" id="learning-objectives"></a>
+
+* Define two-factor authentication (2FA)
+* Understand how a username + password combination function as a secure authentication method
+* Develop a foundational understanding of how a Pre-Shared Key (PSK) is used for authentication
+* Develop a foundational understanding of how digital certificates can be used to authenticate servers, encrypt communications, and ensure data integrity
+
 This section discusses three common [cryptographic authentication methods](https://www.bu.edu/tech/about/security-resources/bestpractice/auth/): username and password, Pre-Shared Keys (PSKs), and digital certificates.
 
-* **Introduction: Two-factor authentication (2FA)**
+## Topics covered in this section <a href="#topics-covered-in-this-section" id="topics-covered-in-this-section"></a>
+
+* **Two-factor authentication (2FA)**
 * **Username and password**
 * **Pre-Shared Key (PSK)**
 * **Digital certificates**
 
-### Introduction: Two-factor authentication (2FA)
+### Two-factor authentication (2FA)
 
 Authentication refers to the idea of verifying an identity. You can authenticate an identity with:
 
@@ -23,17 +32,15 @@ Authentication refers to the idea of verifying an identity. You can authenticate
 
 3\) Something you are. This category refers to various types of bio-metric identification technologies, such as fingerprint scanners, retina scanners, hand-print scanners, facial recognition, and voice recognition technologies.
 
-#### Two-factor authentication (2FA)
-
-The user is identified by using (combining) two authentication methods from the noted three methods (something you know, something you have, and something you are). A common 2FA combination is a username/password combination and an authentication code via SMS.
+In 2FA, the user is identified by combining two authentication methods from the noted three methods (something you know, something you have, and something you are). A common 2FA combination is a username/password combination and an authentication code via SMS.
 
 ### Username and password
 
 Commonly, a username and password are used to authenticate a user to a server. A user of an app/service creates a unique username and password to access a service from a server.
 
-The password can be scrambled (hashed) either on the users’ device or on the server they are connecting to. The hashing process can happen in two places: on the client (e.g., a smartphone) or on a server (e.g., an Amazon AWS server).
+The password can be hashed either on the users’ device or on the server they are connecting to. The hashing process can happen in two places: on the client (e.g., a smartphone) or on a server (e.g., an Amazon AWS server).
 
-The process of password hashing on a server entails:
+The process of password hashing on a server side entails:
 
 * The user enters their username and password into the website’s login form.
 * The website sends the username and password to the server.
@@ -60,7 +67,7 @@ A PSK is a shared secret that is used to authenticate two parties. It is used in
 
 PSKs are a simple and effective way to authenticate two parties. However, they have some drawbacks. One drawback is that the PSK must be kept secret. If the PSK is compromised, then the two parties’ communications can be decrypted by an attacker.
 
-For better security, the PSK can be used to derive short-lived session keys. The client and server each generate and exchange a random number ("nonce") and each use each other's nonce to independently derive the session key using a key derivation function. All communication in this session uses that key. After the session ends, the key is thrown away. Thus each session has its unique key. If both client and server correctly derive the same session key, then each had the same PSK. If either side fails to generate the correct key, authentication fails.
+For better security, the PSK can be used to derive short-lived session keys. The client and server each generate and exchange a random number "nonce" and each use each other's nonce to independently derive the session key using a key derivation function. All communication in this session uses that key. After the session ends, the key is thrown away. Thus each session has its unique key. If both client and server correctly derive the same session key, then each had the same PSK. If either side fails to generate the correct key, authentication fails.
 
 In IPsec, for example, both parties generate random nonces and exchange them during the TLS handshake. Since both parties use the same inputs (PSK + nonce₁ + nonce₂), they will compute identical session keys. This allows mutual authentication—if the server’s derived key matches the client’s, both parties confirm they share the same PSK without ever transmitting it directly.
 
@@ -68,7 +75,7 @@ Because each session uses fresh nonces, an attacker who intercepts a token canno
 
 ### Digital certificates
 
-Digital certificates are a critical security technology that is used to protect communications over the Internet. Digital certificates are the primary method of identification on the Internet. A digital certificate is an electronic document that binds a public key to an identity, such as a company or a server. A digital certificate is used to verify the identity of the holder of the public key (e.g., a server) and optionally the client, to encrypt communications by facilitating secure key exchange (e.g., via the TLS handshake), and to ensure data integrity (through digital signatures).
+Digital certificates are a critical security technology that is used to protect communications over the Internet. Digital certificates are arguably the primary method of identification on the Internet. A digital certificate is an electronic document that binds a public key to an identity, such as a company or a server. A digital certificate is used to verify the identity of the holder of the public key (e.g., a server) and optionally the client, to encrypt communications by facilitating secure key exchange (e.g., via the TLS handshake), and to ensure data integrity (through digital signatures).
 
 Digital certificates are used in a variety of applications, including:
 
@@ -77,12 +84,6 @@ Digital certificates are used in a variety of applications, including:
 * Email Security (S/MIME): Digital certificates can be used to authenticate email senders and to encrypt email messages.
 * File encryption: Digital certificates can be used to encrypt files and to sign digital documents, ensuring their authenticity and integrity.
 * Software distribution: Digital certificates can be used to verify the authenticity of software downloads.
-
-**Benefits of using digital certificates:**
-
-* **Authentication/Trust**: Confirms the identity of websites, software, or users.
-* **Encryption**: Protects data in transit (e.g., HTTPS, email).
-* **Integrity**: Ensures files or messages are unaltered (via digital signatures).
 
 The digital certificate is issued by a trusted Certificate Authority (CA) after verifying ownership of a domain. A digital certificate is a file that contains information about a website’s identity (e.g., domain name, and optionally organization details), a public key tied to the identity of the domain name holder of an asymmetric key pair (used for encryption, e.g., in key exchange, and for verifying signatures, to prove the digital certificate holder controls the corresponding private key), the CA’s digital signature (created by hashing the certificate data and encrypting the hash with the CA’s private key), and a validity period (expiration date).
 
@@ -177,6 +178,17 @@ A digital certificate can only be considered proof of someone’s identity if th
 1\) If Alice presents Bob with her certificate, Bob can generate a random value and encrypt it with Alice’s public key. Alice should be the only person with the correlating private key, and therefore, Alice should be the only person that can extract the random value. If she can then prove to Bob that she extracted the correct value, then Bob can be assured that Alice is indeed the true owner of the certificate.
 
 2\) Alice can encrypt a value known to both parties with her private key, and send the resulting cipher text to Bob. If Bob can decrypt it with Alice’s public key, it proves Alice must have had the correlating private key.
+
+### Key takeaways
+
+* In 2FA, the user is identified by combining two different authentication methods
+* Password hashing can take place on the client side or on the server side
+* PSKs are a simple and effective way to authenticate two parties. However, if the PSK is compromised, then two parties’ communications can be decrypted by an attacker
+* Digital certificates are arguably the primary method of identification on the Internet
+* Benefits of using digital certificates:
+  * Authentication/Trust: Confirms the identity of websites, software, or users
+  * Encryption: Protects data in transit (e.g., HTTPS, email)
+  * Integrity: Ensures files or messages are unaltered (via digital signatures)
 
 ### References
 

@@ -8,9 +8,10 @@ description: >-
 
 ## Learning objectives <a href="#learning-objectives" id="learning-objectives"></a>
 
-* Point 1&#x20;
-* Point 2&#x20;
-* Point 3
+* Develop a basic understanding of the historical development of the SSL/TLS protocol
+* Develop a practical understanding of the phases and purposes of the TLS handshake
+* Describe the TLS handshake secure session key negotiation in TLS 1.2 and TLS 1.3
+* Identify the key cryptographic algorithms involved in the TLS handshake
 
 This section explains how the [SSL/TLS handshake](https://en.wikipedia.org/wiki/TLS/SSL#TLS_handshake) establishes a secure communication channel between two endpoints: Typically, client (e.g., web browser, mobile app) and server (e.g., website, API). For example, when you visit https://example.com, your browser (client) performs a TLS handshake with example.com's server to encrypt all traffic.
 
@@ -77,7 +78,7 @@ TLS 1.2+ handshakes are more efficient and secure than SSL handshakes. For secur
 
 The ultimate goal of the TLS handshake is to derive session keys which will encrypt and secure the data transfer between the client and the server. The client must trust the server’s public key (from the certificate) to securely establish session keys.
 
-### TLS handshake secure session key negotiation&#x20;
+### TLS handshake secure session key negotiation
 
 After certificate validation, the client and server negotiate a symmetric session key (used for encrypting data). Two primary methods:
 
@@ -213,5 +214,5 @@ Client                                                                 Server
 
 ### Key takeaways
 
-* Point 1
-* Point 2
+* TLS 1.0 (1999) is essentially SSL 3.1 (renamed to avoid legal issues). TLS 1.2 (2008) was a major security upgrade and is widely adopted. TLS 1.3 (2018) is faster and more secure
+* Key phases of the TLS handshake are client and server hellos, certificate validation, session key negotiation, and exchanging finished messages

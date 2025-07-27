@@ -6,7 +6,14 @@ description: >-
 
 # Replay attacks and anti-replay methods
 
+## Learning objectives
+
+* Understand what are replay attacks and what security risks they pose
+* Point 2
+
 This section discusses [replay attacks and anti-replay methods](https://www.baeldung.com/cs/replay-attacks). Six anti-replay methods that are not mutually exclusive are covered, including using sequence numbers, using cryptographic hashes, and rotating the secret keys.
+
+## Topics covered in this section
 
 * **Replay attacks**
 * **Anti-replay methods**
@@ -127,6 +134,11 @@ SSL/TLS doesn’t just encrypt data—it also **actively prevents replay attacks
 ✔ **Cryptographic hashes (HMAC)** ensuring message integrity\
 ✔ **Ephemeral keys** (preventing key reuse)\
 ✔ **Timestamps/nonces** in session tickets and handshakes
+
+### Key takeaways
+
+* Point 1
+* Point 2
 
 ### References
 

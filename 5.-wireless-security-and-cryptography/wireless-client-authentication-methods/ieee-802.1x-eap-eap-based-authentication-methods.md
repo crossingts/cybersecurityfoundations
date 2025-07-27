@@ -2,8 +2,6 @@
 
 ### 802.1x/EAP (Extensible Authentication Protocol)
 
-Client authentication typically involves a challenge-response mechanism, in which the client is presented with a challenge and must provide a correct response in order to be authenticated. Client authentication can also involve the exchange of session or encryption keys.
-
 When 802.1x is enabled, for a wireless client to gain access to the network, the client must first associate with an AP and then successfully authenticate. The client uses open authentication to associate with the AP, and then the actual client authentication occurs at a dedicated authentication server.  This is different from open and WEP authentication where wireless clients are authenticated locally at the AP without further intervention.&#x20;
 
 The three-party 802.1x arrangement involves of the following entities:
@@ -28,9 +26,7 @@ The client authentication process involving a WLC is as follows:
 * If the client device is authenticated successfully, the WLC grants access to the network.
 * The client device can then start sending and receiving data on the network.
 
-The RADIUS server uses a variety of authentication methods, such as passwords, certificates, and biometrics.
-
-The WLC uses the RADIUS server to authenticate client devices because it is a more secure and scalable approach to protecting wireless networks from unauthorized access than authenticating client devices directly on the AP. The RADIUS server can be located in a central location, which makes it easier to manage and secure. Additionally, the RADIUS server can support a large number of client devices, which is ideal for large networks.
+The RADIUS server uses a variety of authentication methods, such as passwords, certificates, and biometrics. The WLC uses the RADIUS server to authenticate client devices because it is a more secure and scalable approach to protecting wireless networks from unauthorized access than authenticating client devices directly on the AP. The RADIUS server can be located in a central location, which makes it easier to manage and secure. Additionally, the RADIUS server can support a large number of client devices, which is ideal for large networks.
 
 Benefits of using a WLC for client authentication include:
 
@@ -41,9 +37,14 @@ Benefits of using a WLC for client authentication include:
 
 ### EAP-based authentication methods
 
+When configuring user authentication on a WLAN, you do not need to select a specific authentication method. Instead, you select 802.1x on the WLC. This will allow the WLC to handle a variety of EAP methods. The client and authentication server will then use a compatible method. Once 802.1X is enabled on the WLC, the client and authentication server will negotiate a method to use.
+
 The following discussion gives an overview of some common EAP-based authentication methods.&#x20;
 
-Note, when configuring user authentication on a WLAN, you do not need to select a specific authentication method. Instead, you select 802.1x on the WLC. This will allow the WLC to handle a variety of EAP methods. The client and authentication server will then use a compatible method. Once 802.1X is enabled on the WLC, the client and authentication server will negotiate a method to use.
+* LEAP (Lightweight EAP)
+* EAP-FAST (Flexible Authentication by Secure Tunneling)
+* PEAP (Protected EAP)
+* EAP-TLS (EAP Transport Layer Security)
 
 **\*LEAP (Lightweight EAP)**
 

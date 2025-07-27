@@ -9,7 +9,7 @@ description: >-
 ## Learning objectives
 
 * Point 1 &#x20;
-* Point 2
+* Identify common EAP-based authentication methods
 
 This section has two main goals. First, this section introduces the IEEE 802.11 wireless networking standard which provides a basis for a wireless security management framework (client authentication, message privacy, and message integrity). Second, this section introduces the wireless client authentication methods of open authentication, WEP, PSK, SAE, and 802.1x/EAP.
 
@@ -21,7 +21,9 @@ This section has two main goals. First, this section introduces the IEEE 802.11 
   * **WEP (Wired Equivalent Privacy)**
 * **Wireless client authentication methods in chronological order**
 * **Pre-Shared Key (PSK) and SAE (Simultaneous Authentication of Equals)**
-* **IEEE 802.1x/EAP: EAP-based authentication methods**
+* **Key developments within the IEEE 802.1x/EAP standard**
+* **802.1x/EAP (Extensible Authentication Protocol)**
+* **EAP-based authentication methods**
   * **LEAP (Lightweight EAP)**
   * **EAP-FAST (Flexible Authentication by Secure Tunneling)**
   * **PEAP (Protected EAP)**
@@ -155,16 +157,9 @@ There are several methods of wireless client authentication. One common method i
 
 In WPA-Personal and WPA2-Personal, the PSK (your Wi-Fi **password**) is used to derive encryption keys. In WPA3-Personal, PSK is replaced by SAE (Simultaneous Authentication of Equals) for authentication, a more secure method for key exchange (WPA3-Enterprise uses 802.1X for authentication)—the actual encryption in WPA3 uses AES-CCMP.
 
-### IEEE 802.1x/EAP: EAP-based authentication methods
+### Key developments within the IEEE 802.1x/EAP standard
 
-* LEAP (Lightweight EAP)
-* EAP-FAST (Flexible Authentication by Secure Tunneling)
-* PEAP (Protected EAP)
-* EAP-TLS (EAP Transport Layer Security)
-
-IEEE 802.1X (Port-Based Network Access Control) and EAP (Extensible Authentication Protocol) are not tied to a single Wi-Fi security generation but have evolved alongside Wi-Fi authentication methods.&#x20;
-
-The IEEE 802.1x/EAP standard is used in corporate/enterprise networks and relies on RADIUS servers and uses EAP-based authentication methods.
+IEEE 802.1X (Port-Based Network Access Control) and EAP (Extensible Authentication Protocol) are not tied to a single Wi-Fi security generation but have evolved alongside Wi-Fi authentication methods. The IEEE 802.1x/EAP standard is used in corporate/enterprise networks and relies on RADIUS servers and uses EAP-based authentication methods.
 
 Here is a chronology of key developments within the IEEE 802.1x/EAP standard.
 
@@ -207,6 +202,7 @@ Here is a chronology of key developments within the IEEE 802.1x/EAP standard.
 ### Key Takeaways
 
 * **802.1X/EAP is not a Wi-Fi authentication method itself** but a framework used by **WPA-Enterprise** (2003), **WPA2-Enterprise** (2004), and **WPA3-Enterprise** (2018).
+* Common EAP-based authentication methods include LEAP, EAP-FAST, PEAP, and EAP-TLS.
 * **EAP methods evolved** from weak (LEAP, EAP-MD5) to robust (EAP-TLS, PEAP).
 * **Still the most secure Wi-Fi authentication method** when properly configured (e.g., with certificates).
 

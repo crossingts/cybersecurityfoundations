@@ -11,7 +11,7 @@ description: >-
 * Define two-factor authentication (2FA)
 * Understand how a username + password combination function as a secure authentication method
 * Develop a foundational understanding of how a Pre-Shared Key (PSK) is used for authentication
-* Develop a foundational understanding of how digital certificates can be used to authenticate servers, encrypt communications, and ensure data integrity
+* Develop a foundational understanding of how digital certificates can be used to authenticate servers, encrypt communications, and ensure message integrity
 
 This section discusses three common [cryptographic authentication methods](https://www.bu.edu/tech/about/security-resources/bestpractice/auth/): username and password, Pre-Shared Keys (PSKs), and digital certificates.
 
@@ -75,7 +75,7 @@ Because each session uses fresh nonces, an attacker who intercepts a token canno
 
 ### Digital certificates
 
-Digital certificates are a critical security technology that is used to protect communications over the Internet. Digital certificates are arguably the primary method of identification on the Internet. A digital certificate is an electronic document that binds a public key to an identity, such as a company or a server. A digital certificate is used to verify the identity of the holder of the public key (e.g., a server) and optionally the client, to encrypt communications by facilitating secure key exchange (e.g., via the TLS handshake), and to ensure data integrity (through digital signatures).
+Digital certificates are a critical security technology that is used to protect communications over the Internet. Digital certificates are arguably the primary method of identification on the Internet. A digital certificate is an electronic document that binds a public key to an identity, such as a company or a server. A digital certificate is used to verify the identity of the holder of the public key (e.g., a server) and optionally the client, to encrypt communications by facilitating secure key exchange (e.g., via the TLS handshake), and to ensure message integrity (through digital signatures).
 
 Digital certificates are used in a variety of applications, including:
 
@@ -87,7 +87,7 @@ Digital certificates are used in a variety of applications, including:
 
 The digital certificate is issued by a trusted Certificate Authority (CA) after verifying ownership of a domain. A digital certificate is a file that contains information about a website’s identity (e.g., domain name, and optionally organization details), a public key tied to the identity of the domain name holder of an asymmetric key pair (used for encryption, e.g., in key exchange, and for verifying signatures, to prove the digital certificate holder controls the corresponding private key), the CA’s digital signature (created by hashing the certificate data and encrypting the hash with the CA’s private key), and a validity period (expiration date).
 
-#### The TLS Handshake and Its Purposes
+#### The TLS Handshake Purposes
 
 The **TLS handshake** is a process that establishes a secure, encrypted connection between a client (e.g., a web browser) and a server (e.g., a website). Its primary purposes are:
 
@@ -96,7 +96,7 @@ The **TLS handshake** is a process that establishes a secure, encrypted connecti
 3. **Cipher Suite Agreement** – Determines the encryption algorithms (e.g., AES, ChaCha20) and hash functions (e.g., SHA-256) to be used.
 4. **Secure Session Establishment** – Ensures all further communication is encrypted and tamper-proof.
 
-After the handshake, both the client and server use the derived symmetric session key to encrypt all transmitted data and to verify integrity using HMAC or AEAD modes like AES-GCMP.
+After the handshake, both the client and server use the derived symmetric session key to encrypt all transmitted data and to verify integrity using HMAC or AEAD modes like AES-GCMP. The symmetric session key derived during the handshake is used alongside a symmetric encryption algorithm (e.g., AES-256, ChaCha20) to encrypt the actual application data (e.g., HTTP requests, form submissions).
 
 #### Simplified Steps in a TLS Handshake
 
@@ -106,9 +106,47 @@ After the handshake, both the client and server use the derived symmetric sessio
 4. **Session Key Generation** – Both sides compute the same **symmetric session key** using the random numbers and pre-master secret.
 5. **Secure Communication** – All further data is encrypted with the shared/computed session key.
 
-The symmetric session key (derived during the handshake) is used alongside a symmetric encryption algorithm (e.g., AES-256, ChaCha20) to encrypt the actual application data (e.g., HTTP requests, form submissions).
+#### Two Integrity Mechanisms
 
-In the PSK handshake, instead of a PMS, the client and server start with a pre-shared key.
+There are **two different integrity mechanisms** at different stages of the TLS process:
+
+**1. Integrity During the TLS Handshake (Digital Signatures)**
+
+* The server sends its digital certificate to the client during the handshake.
+* The client verifies the certificate (trust chain, expiry, revocation).
+* The server signs parts of the **TLS handshake messages** (e.g., `ServerKeyExchange` in RSA-based key exchange or the entire handshake transcript in modern TLS 1.3), generating a digital signature using its private key.
+* The client checks the signature using the server’s **public key** (from the digital certificate).&#x20;
+* If the signature is valid → **message integrity is confirmed**. This ensures the handshake messages themselves were not tampered with, and authenticates the server (proves it owns the private key).
+
+**2. Integrity After the Handshake (HMAC or AEAD)**
+
+* Once the handshake completes, **all application data** (e.g., HTTP traffic) is encrypted and integrity-protected using:
+  * **HMAC** (Hash-based Message Authentication Code) in older TLS versions (e.g., TLS 1.2 with AES-CBC + HMAC-SHA256).
+  * **AEAD modes** (e.g., AES-GCM, ChaCha20-Poly1305) in modern TLS 1.3.
+* **How?** A **symmetric session key** (derived during the handshake) is used for both encryption and integrity. The symmetric key is used in one of two ways:
+
+**A. HMAC (Hash-Based Message Authentication Code)**
+
+* **Process**:
+  1. The sender:
+     * Encrypts data with the symmetric key (e.g., AES-CBC).
+     * Computes an **HMAC** (e.g., `HMAC-SHA256`) over the ciphertext _using the same symmetric key_ (or a derived subkey).
+  2. The receiver:
+     * Recomputes the HMAC and checks if it matches.
+     * If not, the data was tampered with.
+* **Used in**: Older TLS (e.g., TLS 1.2 with AES-CBC + HMAC-SHA256).
+
+**B. AEAD (Authenticated Encryption with Associated Data)**
+
+* **Process**:
+  * Algorithms like **AES-GCM** or **ChaCha20-Poly1305** _combine encryption + integrity_ in one step.
+  * The symmetric key is used to both encrypt _and_ generate an integrity tag (no separate HMAC step).
+* **Used in**: Modern TLS (e.g., TLS 1.3 _only_ uses AEAD modes).
+
+**Why Both Are Needed**
+
+1. **Handshake integrity** ensures the key exchange itself is secure (e.g., no attacker alters the DH parameters).
+2. **Data integrity** ensures the actual HTTP/email/etc. content isn’t modified.
 
 #### **Key Exchange (Establishing a Session Key) in the TLS Handshake**
 

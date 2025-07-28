@@ -6,15 +6,23 @@ description: >-
 
 # Authentication and encryption in WPA, WPA2, and WPA3
 
-This section compares WPA, WPA2, and WPA3 wireless security protocols for authentication and encryption.
+## Learning objectives
+
+* Become familiar with key authentication and encryption methods and algorithms used in WPA, WPA2, and WPA3
+
+This section compares WPA, WPA2, and WPA3 wireless security protocols for authentication and encryption methods and algorithms.
+
+## Topics covered in this section
+
+* **Introduction**
+* **Cryptographic methods and algorithms in personal and enterprise modes**
+* **Final review**
 
 ### Introduction&#x20;
 
 Wi-Fi Protected Access (WPA) is a suite of security certifications for wireless networks, developed and maintained by the Wi-Fi Alliance (a nonprofit industry association that promotes Wi-Fi technology and interoperability). These certifications define security protocols to protect data transmitted over Wi-Fi. A wireless client device and an AP and its associated WLC certified by the Wi-Fi Alliance for the same WPA version are compatible and offer the same security components.
 
-There are three WPA versions: WPA, WPA2, and WPA3.
-
-The first generation WPA certification (known simply as WPA) was introduced while the IEEE 802.11i amendment for best practice security methods was still under development. The Wi-Fi Alliance based WPA on parts of 802.11i and included 802.1x authentication, TKIP, and a method for dynamic encryption key management.
+There are three WPA versions: WPA, WPA2, and WPA3. The first generation WPA certification (known simply as WPA) was introduced while the IEEE 802.11i amendment for best practice security methods was still under development. The Wi-Fi Alliance based WPA on parts of 802.11i and included 802.1x authentication, TKIP, and a method for dynamic encryption key management.
 
 The Wi-Fi Alliance incorporated the full IEEE 802.11i standard into its WPA2 certification after it was ratified and published. WPA2 uses the superior AES CCMP algorithms instead of the deprecated TKIP algorithms from WPA. WPA2 was intended to replace WPA.
 
@@ -29,7 +37,7 @@ The three WPA versions support two client authentication modes, based on the sca
 * A pre-shared key (PSK) or personal mode
 * 802.1x or enterprise mode
 
-### Cryptographic algorithms/methods in personal and enterprise modes
+### Cryptographic methods and algorithms in personal and enterprise modes
 
 Table 28-2 Comparing WPA, WPA2, and WPA3 (Odom, 2020, p. 716)
 
@@ -86,18 +94,23 @@ Here’s a summary table for **WPA, WPA2, and WPA3 in Enterprise mode**, which r
 4. **Key Management (Enterprise mode)**:
    * **WPA/WPA2: Per-user, dynamic keys**: Each device gets unique session keys, preventing PSK-style attacks.
    * **WPA3-Enterprise**: Adds forward secrecy and stronger key derivation (e.g., CNSA-compliant for gov/military).
-
-**WPA2/WPA3-Enterprise** are the only modes compliant with modern security standards (e.g., PCI-DSS).
+   * **WPA2/WPA3-Enterprise** are the only modes compliant with modern security standards (e.g., PCI-DSS).
 
 Notice from Table 28-2 that WPA, WPA2, and WPA3 support 802.1x or enterprise authentication. This implies EAP-based authentication, but the WPA versions do not require any specific EAP method. Instead, the Wi-Fi Alliance certifies interoperability with well- known EAP methods like EAP-TLS, PEAP, EAP-TTLS, and EAP-SIM. Enterprise authentication is more complex to deploy than personal mode because authentication servers must be set up and configured as a critical enterprise resource. (p. 717)
 
-**Final review**
+### Final review
 
 Remember that an effective wireless security strategy includes a method to authenticate clients and a method to provide data privacy and integrity. These two types of methods are listed in the leftmost column. Work your way to the right to remember what types of authentication and privacy/integrity are available. (Odom, 2020, p. 718)
 
 Table 28-3 Review of Wireless Security Mechanisms and Options (Odom, 2020, p. 718)
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/0f424-wireless-security-mechanisms-7.webp?w=849" alt="Wireless-Security-Mechanisms" height="675" width="849"><figcaption><p>Table 28-3 Review of Wireless Security Mechanisms and Options (Odom, 2020, p. 718)</p></figcaption></figure>
+
+### Key takeaways
+
+* Key authentication methods in personal mode include PSK (WPA, WPA2) and SAE (WPA3)
+* Enterprise mode uses the 802.1X (EAP) authentication method
+* Key encryption algorithms in personal and enterprise mode include TKIP (WPA), AES-CCMP (WPA2), and AES-GCMP (WPA3)
 
 ### References
 

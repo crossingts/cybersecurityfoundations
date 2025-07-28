@@ -6,7 +6,7 @@ This discussion of the penetration testing process covers the steps of the penet
 * **Open source penetration testing methodologies**
 * **The penetration test report**
 
-### [Steps of the penetration testing process](https://crashtest-security.com/penetration-test-steps/)
+### Steps of the penetration testing process = exactly 4.3.1. Steps of the penetration testing process.
 
 To conduct a security audit, first, the scope of the penetration testing or vulnerability assessment operations is specified. Penetration tests should be seen as targeted exercises. The scope of test activities and test objectives, a schedule for the test activities, and the specific machines or applications to be tested are all specified upfront. Each test objective will have its own set of parameters and processes. In the words of NIST SP 800-115,
 
@@ -34,7 +34,7 @@ Table 19: Properties of a Network and Whether they Can Be Discovered Passively
 
 Most vulnerabilities exploited by penetration testing fall into the following categories: Misconfigurations (particularly, insecure default settings), kernel flaws, buffer overflows, insufficient input validation, symbolic links, file descriptors, race conditions, and incorrect file and directory permissions (NIST SP 800-115, 2008, pp. 5-4-5-5).&#x20;
 
-### Open source penetration testing methodologies
+### Open source penetration testing methodologies = exactly 4.3.2. Open source penetration testing methodologies.
 
 Markedly different testing methodologies are developed independently within the open source community. Key open source penetration testing methodologies include Open Source Security Testing Methodology Manual (OSSTMM) (Herzog, 2006), NIST 800-115 (2008) Technical Guide to Information Security Testing and Assessment, The Open Web Application Security Project (OWASP), The Penetration Testing Execution Standard (PTES), The Information System Security Assessment Framework (ISSAF), PCI-DSS v.1 2015 Penetration Testing Guide, and Communications Security Establishment/Royal Canadian Mounted Police, Harmonized Threat and Risk Assessment Methodology (CSE/RCMP, 2007) (see Bradbury, 2010; Faircloth, 2011; Goel & Mehtre, 2015; Shah & Mehtre, 2015; Valvis & Polemi, 2005). Key open source penetration testing methodologies discussed here are Open Source Security Testing Methodology Manual (OSSTMM 3.0), NIST Special Publication 800-115: Technical Guide to Information Security Testing and Assessment (NIST 800-115), and Communications Security Establishment/Royal Canadian Mounted Police, Harmonized Threat and Risk Assessment Methodology (CSE/RCMP, 2007). A comparative analysis of the three open source penetration testing methodologies offers insights into how they can integrate with a harmonized penetration testing methodology based on IA philosophy to information security (see Table 20: Information Security Assessment Methodologies).
 
@@ -50,7 +50,7 @@ A comparative analysis of three open source methodologies—OSSTMM, NIST, and Ca
 
 See Table 20: Information Security Assessment Methodologies.
 
-### The penetration test report
+### The penetration test report = exactly 4.3.3. The penetration test report.
 
 A vulnerability scanner “actively communicates with the target system, sends the malicious packets and analyses the results, which can then be exported to PDF, HTML, CSV and other formats” (Rasskazov, 2013, p. 58). Typical vulnerability management software obtains the results and provides a comprehensive dashboard to present the results. “It can build trends, sort the results by criticality, and keep additional records, for example business purpose of the system or location” (Rodger, 2013, p. 48). The software’s reporting component can generate the compliance reports against widely used standards, for example PCI DSS, ISO 27001, or against the corporate policies, for example the percentage of computers with outdated software or weak password policy. Nexpose and other vendors include the vulnerability management software in the package with vulnerability scanners, while other vendors (e.g., Nessus) sell the software separately.
 

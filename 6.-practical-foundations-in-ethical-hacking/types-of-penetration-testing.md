@@ -31,6 +31,8 @@ description: >-
 
 ### Black box penetration testing and white box penetration testing
 
+Based on the type of auditing required, there are two main penetration testing types. In black box testing, the penetration tester has no prior knowledge of a company’s network, more closely replicating remote attacks. In white box testing, the testers typically have complete access to information about the application they are attacking, that is, the testers have a complete knowledge of the network. White box testing represents a worst-case scenario where the attacker has a complete knowledge of the network.
+
 **White box** and **black box penetration testing** are two fundamental approaches to security assessments, differing in the level of knowledge and access given to the testers. Here’s a breakdown:
 
 **1. White Box Penetration Testing ("Clear Box" or "Full Knowledge")**

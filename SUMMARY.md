@@ -67,6 +67,7 @@
 * [Introduction - Practical foundations in ethical hacking](6.-practical-foundations-in-ethical-hacking/introduction-practical-foundations-in-ethical-hacking.md)
 * [What is professional ethical hacking](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/README.md)
   * [Who are ethical hackers](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/who-are-ethical-hackers.md)
+  * [What do ethical hackers do?](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/what-do-ethical-hackers-do.md)
 * [The perils of unethical hacking](6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking.md)
 * [Network security testing](6.-practical-foundations-in-ethical-hacking/network-security-testing.md)
 * [Defensive security vs offensive security](6.-practical-foundations-in-ethical-hacking/defensive-security-vs-offensive-security.md)

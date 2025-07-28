@@ -4,7 +4,7 @@ hidden: true
 
 # Who are ethical hackers
 
-PhD thesis section: 4.2.4. An identity and legitimacy crisis.
+PhD thesis section: 4.2.4. An identity and legitimacy crisis
 
 **Historical account:**
 

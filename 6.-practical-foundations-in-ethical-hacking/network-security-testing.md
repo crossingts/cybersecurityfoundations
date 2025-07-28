@@ -73,7 +73,7 @@ Vulnerabilities are the weaknesses in an operating system or software that can p
 
 #### Technology focus: Nmap
 
-Nmap is highly versatile tool for scanning and enumerating networks. Nmap also looks for services that are running on hosts by scanning TCP and UDP ports. Nmap is an integral part of every network security professional's tool kit (Deveriya, 2005).
+Nmap is highly versatile tool used for port scanning and network enumeration. Nmap also looks for services that are running on hosts by scanning TCP and UDP ports. Nmap is an integral part of every network security professional's tool kit (Deveriya, 2005).
 
 Some of the routine (and cumbersome) netadmin tasks that Nmap can do are as follows:
 

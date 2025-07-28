@@ -29,15 +29,21 @@ The penetration testing process can be broken down into several stages: planning
 
 In OSINT, “the penetration tester uncovers possible weaknesses and entry points within the security posture of the organization, including the network, applications, website and wireless networks, physical facilities, cloud-based systems, and employees” (cipher.com). Open source information on the Internet and from other public sources can be used to build a profile of the target user or system to determine entry points into a computer system.
 
-Each phase within the discovery phase can be either active or passive. Active recon involves social engineering and “anything that requires the hacker to interact with the organization” (Walker, 2017, p. 45). Passive reconnaissance involves gathering information from the public domain in places like Internet registries, Google, newspapers, and public records. At this stage “the target does not even know generally that they are the subject of surveillance.” The vast majority of OSINT activity is passive in nature.
+Each phase within the discovery phase can be either active or passive.&#x20;
+
+**Footprinting passive and active methods/tools**
+
+Active recon involves social engineering and “anything that requires the hacker to interact with the organization” (Walker, 2017, p. 45). Passive reconnaissance involves gathering information from the public domain in places like Internet registries, Google, newspapers, and public records. At this stage “the target does not even know generally that they are the subject of surveillance.” The vast majority of OSINT activity is passive in nature.
 
 Automated OSINT is used by hackers and penetration testers to gather and analyze intelligence about a specific target from social networks, including names, online handles, jobs, friends, likes/dislikes/interactions, locations, pictures, etc. (McLaughlin, 2012). Recon-ng and Maltego are intelligence gathering and data management tools designed to facilitate the process of gathering, analyzing, and organizing OSINT.
 
-Attackers will scan networks to discover open ports and network services. Enumeration is the process of extracting user names, machine names, network resources, and other services from a network. Nmap is a popular tool used for port scanning and network enumeration.
+**network enumeration passive and active methods/tools**
+
+**port scanning passive and active methods/tools**
 
 ### Vulnerability assessment vs penetration testing - discussed in 4.2.3. What do ethical hackers do?
 
-Penetration tests have a tightly defined scope, are time sensitive, and usually involve discovery of unknown vulnerabilities. Their scope is often external systems (outsider perspective). In comparison, vulnerability assessments typically entail an in-depth view, focus on technical flaws, and typically do not involve exploitation of discovered weaknesses. Their scope is often both external and internal systems.
+Penetration tests have a tightly defined scope and are time sensitive. Their scope is often external systems (outsider's perspective). In comparison, vulnerability assessments typically entail a broader scope and typically do not involve exploitation of discovered weaknesses. Their scope is often both external and internal systems.
 
 **Table 15: Vulnerability Scan and Penetration Test Comparison (Rodger, 2013, p. 49):**
 
@@ -51,7 +57,7 @@ Penetration testing may be done once a year. It identifies what data was comprom
 
 The goal of risk assessment is “to identify which investments of time and resources will best protect the organization from its most likely and serious threats” (Reynolds, 2012, p. 103). - **Table 10:** Professional Ethical Hackers Coding Table
 
-According to the General Security Risk Assessment Guidelines, ASIS International (2003), the basic components of a risk assessment plan include, identifying assets, specifying loss events (threats), assessing the frequency and impact of events, recommending mitigation options, conducting a cost/benefit analysis, and making decisions.
+According to the General Security Risk Assessment Guidelines, ASIS International (2003), the essential components of a risk assessment plan include, identifying assets, specifying loss events (threats), assessing the frequency and impact of events, recommending mitigation options, conducting a cost/benefit analysis, and making decisions.
 
 Risk assessments help risk managers select appropriate control measures or countermeasures to lower the risk to an acceptable level (Engebretson, 2011; Landoll & Landoll, 2005; Peltier, 2005). The concept of reasonable assurance guides the decision making process: managers must use their judgement to ensure that the cost of control does not exceed the system’s benefits or the risks involved. The risk management process “supports executive decision-making, allowing managers and owners to perform their fiduciary responsibility of protecting the assets of their enterprises” (Peltier, 2005, p. 10).
 

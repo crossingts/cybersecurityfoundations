@@ -24,6 +24,8 @@ Coleman and Golub (2008) saw various hacker ethic as representative of the subje
 
 Table 14: Profiles of Hackers
 
-**Information security account (case study/personal experience):**
+**Information security account (case study/personal experience):**&#x20;
+
+**- discussed in 4.2.1. Professional ethical hacking is legal.**
 
 Palmer (2001) offers one of the most authoritative conceptions of who are ethical hackers from inside the information security field.

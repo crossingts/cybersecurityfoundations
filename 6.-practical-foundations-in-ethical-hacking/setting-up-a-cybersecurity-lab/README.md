@@ -4,7 +4,21 @@ hidden: true
 
 # Setting up a cybersecurity lab
 
-This exercise will guide you through setting up a fully functional cybersecurity virtual lab using open source technologies.&#x20;
+This exercise will guide you through setting up a fully functional cybersecurity virtual lab using exclusively open source technologies.&#x20;
+
+Setting up a cybersecurity lab steps
+
+* Design the lab - choose a design pipeline&#x20;
+* Choose a virtualization environment/tool
+* Choose a project documentation platform
+* Build the lab&#x20;
+* Configure subnet interfaces and verify connectivity
+* Configure and verify the firewall
+* Configure and verify the IDS/IPS
+* Configure and verify a web server (e.g., nginx, Apache) and/or a database server (MySQL)
+* Configure and verify SIEM/EDR (e.g., Wazuh)
+* Configure and verify Kali Linux
+* Launch attacks from Kali Linux and doucment the project
 
 Design pipeline 1 (AMD64): OPNsense firewall/Zenarmor (AI-driven NGFW) + Suricata IDS/IPS + Wazuh & TheHive + Kali Linux
 
@@ -69,9 +83,7 @@ Most firewalls/routers use x86-64 for performance and driver compatibility. x86-
 
 ***
 
-**Firewalls discussed, categorized by their primary use case (host vs. network vs. hybrid):**
-
-***
+**Firewalls categorized by their primary use case (host vs. network vs. hybrid):**
 
 #### **1. Host Firewalls**
 

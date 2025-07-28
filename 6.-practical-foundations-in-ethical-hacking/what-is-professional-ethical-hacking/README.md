@@ -25,6 +25,8 @@ There are many approaches to distinguish between white hat hackers, gray hat hac
 
 1\) White hat hackers are professional ethical hackers who only hack systems or machines with legal authorization to do so (including legal contractual agreements). So whether resident (in-house) employees of a company or hired by a company for security testing, this would be ethical hacking as long as hacking is performed in accordance with agreed upon terms and within the specified authorization parameters (hacking beyond authorized level or terms ceases to be ethical). Bug bounty hunters are ethical hackers since they work within this contractual framework.&#x20;
 
+Ethical hacking may be a contracted outside service. An ethical hacker may be an independent computer security professional who attempts to break into an organization’s computer system, similar to having independent auditors verify an organization’s bookkeeping records.
+
 • Professional ethical hacking is legal
 
 • Ethical hackers are trustworthy.

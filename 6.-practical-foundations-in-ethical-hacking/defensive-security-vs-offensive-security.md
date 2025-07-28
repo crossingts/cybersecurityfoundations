@@ -9,6 +9,8 @@ description: >-
 
 • Become familiar with defensive security and offensive security approaches, including SIRT/CSIRT (Security Incident Response Team/Computer Security Incident Response Team), SOC (Security Operations Center), red teaming, and ethical hacking.
 
+Since a malicious hacker may be an insider or an outsider, a proper attack simulation often necessitates a two-prone approach to security testing: outsider’s attack (associated with offensive security and black box testing) and insider’s attack (associated with defensive security and white box testing).&#x20;
+
 ### Two key cybersecurity paradigms
 
 | **Strategy**              | **Offensive Security**                                                                                               | **Defensive Security**                                                                                   |

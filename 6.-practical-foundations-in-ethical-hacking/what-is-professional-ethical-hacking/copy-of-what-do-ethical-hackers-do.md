@@ -4,9 +4,7 @@ hidden: true
 
 # Copy of What do ethical hackers do?
 
-This is an analysis of what ethical hackers do - their practices.
-
-Penetration testing is applied in risk assessment and design implementation (verifying the implementation of the recommended security design).
+This section presents a synthesis of ethical hacking practices.
 
 * **Penetration testing**
 * **Vulnerability assessment vs penetration testing**
@@ -15,31 +13,13 @@ Penetration testing is applied in risk assessment and design implementation (ver
 
 ### Penetration testing
 
-Penetration testing involves “launching real attacks on real systems and data using tools and techniques commonly used by hackers” (NIST SP 800-115, p. 5-2). (**4.3.1.** Steps of the penetration testing process)
-
-The technical risks of penetration testing on computer systems to an organization include damaging the system infrastructure or data assets (CIA), downtime, and exploits may remain in the system. Given the potential side effects of penetration testing, the work of penetration testers is often conducted on a defined schedule and focuses on specific aspects of a network or computer infrastructure rather than being an ongoing overall security. The penetration tester may have limited access to the system that is subject to testing and only for the duration of the testing. - **discussed in 4.3.1**
+Penetration testing is applied in risk assessment and design implementation (verifying the implementation of the recommended security design).
 
 **The penetration testing process** - **discussed in 4.3.1**
 
 * Steps of the penetration testing process
 * Open source penetration testing methodologies
 * The penetration test report
-
-The penetration testing process can be broken down into several stages: planning, reconnaissance, scanning and enumeration, gaining access, maintaining access, covering tracks, and analysis. The planning phase is followed by a phase of intelligence gathering, what NIST (2008) calls the discovery phase, spanning OSINT (open source intelligence) or recon (reconnaissance) or footprinting, and network enumeration and scanning.
-
-In OSINT, “the penetration tester uncovers possible weaknesses and entry points within the security posture of the organization, including the network, applications, website and wireless networks, physical facilities, cloud-based systems, and employees” (cipher.com). Open source information on the Internet and from other public sources can be used to build a profile of the target user or system to determine entry points into a computer system.
-
-Each phase within the discovery phase can be either active or passive.&#x20;
-
-**Footprinting passive and active methods/tools**
-
-Active recon involves social engineering and “anything that requires the hacker to interact with the organization” (Walker, 2017, p. 45). Passive reconnaissance involves gathering information from the public domain in places like Internet registries, Google, newspapers, and public records. At this stage “the target does not even know generally that they are the subject of surveillance.” The vast majority of OSINT activity is passive in nature.
-
-Automated OSINT is used by hackers and penetration testers to gather and analyze intelligence about a specific target from social networks, including names, online handles, jobs, friends, likes/dislikes/interactions, locations, pictures, etc. (McLaughlin, 2012). Recon-ng and Maltego are intelligence gathering and data management tools designed to facilitate the process of gathering, analyzing, and organizing OSINT.
-
-**network enumeration passive and active methods/tools**
-
-**port scanning passive and active methods/tools**
 
 ### Vulnerability assessment vs penetration testing - discussed in 4.2.3. What do ethical hackers do?
 

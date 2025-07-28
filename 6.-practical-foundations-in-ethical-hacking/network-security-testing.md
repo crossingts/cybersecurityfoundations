@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Network security testing
 
 ### Introduction

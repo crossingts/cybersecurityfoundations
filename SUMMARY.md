@@ -66,7 +66,6 @@
 
 * [Introduction - Practical foundations in ethical hacking](6.-practical-foundations-in-ethical-hacking/introduction-practical-foundations-in-ethical-hacking.md)
 * [What is professional ethical hacking](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/README.md)
-  * [Who are ethical hackers - highlights](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/who-are-ethical-hackers.md)
   * [What do ethical hackers do - highlights](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/what-do-ethical-hackers-do.md)
   * [Copy of What do ethical hackers do?](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/copy-of-what-do-ethical-hackers-do.md)
 * [The perils of unethical hacking](6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking.md)
@@ -88,9 +87,9 @@
 * [Ethical assessment of teaching ethical hacking](6.-practical-foundations-in-ethical-hacking/ethical-assessment-of-teaching-ethical-hacking.md)
 * [The ethical teaching of ethical hacking](6.-practical-foundations-in-ethical-hacking/the-ethical-teaching-of-ethical-hacking.md)
 * [Professional ethical hacking body of knowledge](6.-practical-foundations-in-ethical-hacking/professional-ethical-hacking-body-of-knowledge/README.md)
-  * [Who are ethical hackers?](6.-practical-foundations-in-ethical-hacking/professional-ethical-hacking-body-of-knowledge/who-are-ethical-hackers.md)
   * [The ethics of ethical hackers](6.-practical-foundations-in-ethical-hacking/professional-ethical-hacking-body-of-knowledge/the-ethics-of-ethical-hackers.md)
   * [The penetration testing process](6.-practical-foundations-in-ethical-hacking/professional-ethical-hacking-body-of-knowledge/the-penetration-testing-process.md)
+* [Who are ethical hackers - highlights](6.-practical-foundations-in-ethical-hacking/who-are-ethical-hackers-highlights.md)
 
 ## 7. Conclusion
 

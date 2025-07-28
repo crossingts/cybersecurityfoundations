@@ -6,7 +6,7 @@ hidden: true
 
 ### Introduction
 
-Network admins perform various monitoring and testing activities to ensure smooth and secure network operation:
+Network admins perform various monitoring and testing activities to ensure smooth and secure network operation. These activities include:
 
 • **Connectivity testing/troubleshooting** (basic netadmin) using such tools/technologies as ping, traceroute, whois, nslookup, dig, netstat, nbtstat, arp, and syslog.
 
@@ -20,7 +20,7 @@ Key concepts related to network availability monitoring include SLAs (Service-Le
 
 Typically, performance-monitoring systems use the Simple Network Management Protocol (SNMP) to communicate with the monitored hosts. Using SNMP, the performance-monitoring system regularly polls the monitored hosts and collects performance-parameter samples. The samples are then stored in a central database for analysis and reporting, such as historical trending. (Deveriya, 2005, p. 314)
 
-The most common parameters for monitoring network performance are: Throughput (kbps), Latency (ms/RTT), Jitter, packet loss, CPU and memory utilization of a network device, hard device space.
+The most common parameters for monitoring network performance are throughput (kbps), latency (ms/RTT), jitter, packet loss, CPU and memory utilization of network devices, and hard device space.
 
 • **Intrusion detection systems/intrusion prevention systems (IDS/IPS)** using such tools as Suricata and Snort. Most network intrusion detection systems (NIDS) are packet analyzers that watch for peculiar traffic patterns that are unique to network attacks.
 
@@ -30,29 +30,21 @@ The most common parameters for monitoring network performance are: Throughput (k
 
 • **Network security testing** - netadmins perform network security testing to assess and verify the threats and vulnerabilities of their network.&#x20;
 
-### Network Security Testing
+### Network security testing
 
-Network security is an ongoing process that is best described by the Cisco security wheel. The security wheel, as shown in Figure 7-1, consists of the following four items: Secure, Monitor, Test, Improve.
+Network security is an ongoing process that can be described by the Cisco security wheel. The security wheel (Figure 7-1) consists of the following four phases: Secure, Monitor, Test, and Improve.
 
 <figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption><p>Cisco Security Wheel (image courtesy of Deveriya, 2005, p. 362)</p></figcaption></figure>
 
-The third item, Test, or network security testing, helps the Netadmin to verify the security design and to\
-discover vulnerabilities within the network.
+The third phase, Test, or network security testing, helps netadmins verify the security design and\
+discover vulnerabilities within a network.
 
-The process of testing network security is also known as any of the following:
-
-Security audit\
-Penetration testing\
-Posture assessment\
-Ethical hacking\
-Vulnerability assessment
-
-All these terms essentially mean the same thing - a legitimate process of attacking, discovering, and reporting security holes in a network. A security-testing process uses tools and methods that are similar to those of the underground hacking community.
+The process of network security testing is also commonly known as security audit, security assessment, posture assessment, vulnerability assessment, penetration testing, and ethical hacking. All these terms are invoked to refer to "a legitimate process of attacking, discovering, and reporting security holes in a network" (Deveriya, 2005, p. 362).
 
 Tools used for security auditing can be loosely classified into the following two categories:
 
-• Scanners - Active tools that send out probe packets to the target host or network to attack or gather information.\
-• Packet analyzers - Passive in their operation because they do not send probe packets. Instead, packet analyzers work by capturing and analyzing the data that is flowing across the network.
+* Scanners - Active tools that send out probe packets to the target host or network to attack or gather information.
+* Packet analyzers - Passive in their operation because they do not send probe packets. Instead, packet analyzers work by capturing and analyzing the data that is flowing across the network.
 
 The following discussion introduces the following tools and methodologies of network security testing:
 
@@ -75,38 +67,33 @@ Some of the most popular open source network scanners are Nmap, Nessus, and Netc
 
 • **Nmap** (Network Mapper): The Swiss army knife of network scanners; a popular and versatile tool.
 
-• **Nessus** (proprietary since October 5, 2005): The most popular **vulnerability scanner** with the ability to regularly update the vulnerability database; comes preinstalled with many Linux live CD-ROMs; good reporting capability.
+• **Nessus** (proprietary since October 5, 2005): A popular **vulnerability scanner** with the ability to regularly update the vulnerability database; comes preinstalled with many Linux live CD-ROMs; and has good reporting capability.&#x20;
 
-Nessus was an open source network scanner with the additional capability of scanning known vulnerabilities present on the target hosts. Vulnerabilities are the weaknesses in an operating system or software that can potentially be exploited by malicious users with an intent to cause system damage. Network vulnerability scanners such as Nessus provide security vulnerability detection and reporting for networks and host systems. p. 377
+Nessus turned commercial in October 2005 but a limited feature version is available (Nessus Essentials provides high-speed, in-depth vulnerability scanning for up to 16 IP addresses per scanner).
+
+Vulnerabilities are the weaknesses in an operating system or software that can potentially be exploited by malicious users with an intent to cause system damage. Network vulnerability scanners such as Nessus provide security vulnerability detection and reporting for networks and host systems. (Deveriya, 2005, p. 377)
 
 • **Netcat**: A port scanner with the additional capability to read and write data across a network through TCP and UDP ports.
 
 #### Technology focus: Nmap
 
-Nmap is highly versatile tool for scanning and enumerating networks. Nmap also looks for\
-services that are running on hosts by scanning TCP and UDP ports. Often referred to as the\
-Swiss army knife of security tools, Nmap is an integral part of every network security\
-professional's tool kit. p. 366
+Nmap is highly versatile tool for scanning and enumerating networks. Nmap also looks for services that are running on hosts by scanning TCP and UDP ports. Nmap is an integral part of every network security professional's tool kit (Deveriya, 2005).
 
-Some of the routine (and cumbersome) Netadmin tasks that Nmap can do are as follows:
+Some of the routine (and cumbersome) netadmin tasks that Nmap can do are as follows:
 
-• Verify unused IP addresses in a network&#x20;
+* Verify unused IP addresses in a network&#x20;
+* Verify available hosts in a network&#x20;
+* Verify services running on a host in a network&#x20;
+* Verify the firewall security configurations&#x20;
+* Verify the OS running on a remote host&#x20;
 
-• Verify available hosts in a network&#x20;
-
-• Verify services running on a host in a network&#x20;
-
-• Verify the firewall security configurations&#x20;
-
-• Verify the OS running on a remote host&#x20;
-
-In addition to using Internet Control Message Protocol (ICMP) ping scans for network discovery, Nmap can use other scanning techniques using TCP and UDP packets. These techniques enable network scanning even if ICMP traffic is blocked in a network.
+Nmap uses Internet Control Message Protocol (ICMP) ping scans for network discovery as well as other scanning techniques using TCP and UDP packets. These techniques enable network scanning even if ICMP traffic is blocked in a network.
 
 #### Packet Analyzers
 
-Packet analyzers are software or hardware devices that capture and analyze the data flowing through the network. Packet analyzers are also called sniffers, protocol analyzers, and network analyzers … Many packet analyzers provide capabilities to filter, store, and analyze the captured data. In fact, most network intrusion detection systems (NIDS) are packet analyzers that watch for peculiar traffic patterns that are unique to network attacks. Packet analyzers work at Layers 1 and 2 of the OSI model but can also decode data at higher layers. This feature enables networking professionals to have a cross-sectional view of the data flowing through the network in real time. The ability to slice and view the raw data flowing through the wires is important when troubleshooting. Such views also help networking professionals to learn and understand the functioning of various protocols and applications. The views also provide clear proof that the network and its components are operational. p. 386
+Packet analyzers are software or hardware devices that capture and analyze the data flowing through the network. Packet analyzers are also called sniffers, protocol analyzers, and network analyzers … Many packet analyzers provide capabilities to filter, store, and analyze the captured data. In fact, most network intrusion detection systems (NIDS) are packet analyzers that watch for peculiar traffic patterns that are unique to network attacks. Packet analyzers work at Layers 1 and 2 of the OSI model but can also decode data at higher layers. This feature enables networking professionals to have a cross-sectional view of the data flowing through the network in real time. The ability to slice and view the raw data flowing through the wires is important when troubleshooting. Such views also help networking professionals to learn and understand the functioning of various protocols and applications. The views also provide clear proof that the network and its components are operational. (Deveriya, 2005, p. 386)
 
-Both Tcpdump and Ethereal are powerful tools capable of sniffing and analyzing network traffic. Both packet analyzers are under active development and enjoy community wide support. The following sections cover these tools in more detail. p. 389
+Wireshark and Tcpdump are powerful tools capable of sniffing and analyzing network traffic.
 
 ### References
 

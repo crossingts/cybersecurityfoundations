@@ -15,6 +15,8 @@ This discussion of the penetration testing process covers the steps of the penet
 
 ### Steps of the penetration testing process
 
+Penetration tests have a tightly defined scope and are time sensitive.&#x20;
+
 Penetration tests should be seen as targeted exercises. The scope of test activities and test objectives, a schedule for the test activities, and the specific machines or applications to be tested are all specified upfront. Each test objective will have its own set of parameters and processes.&#x20;
 
 The penetration testing process can be broken down into several **stages**: planning, reconnaissance, scanning and enumeration, gaining access, maintaining access, covering tracks, and analysis. The planning phase is followed by a phase of intelligence gathering, what NIST (2008) calls the **discovery** phase, spanning OSINT (open source intelligence) or recon (reconnaissance) or footprinting, and network enumeration and port scanning.

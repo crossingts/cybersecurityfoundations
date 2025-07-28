@@ -8,15 +8,12 @@ description: >-
 
 • Describe the phases of the penetration testing process (planning and reconnaissance, scanning and enumeration, exploitation, post-exploitation, and reporting).
 
-PhD thesis section: 4.3.1. Steps of the penetration testing process
-
 This discussion of the penetration testing process covers the steps of the penetration testing process, open source penetration testing methodologies, and best practices for writing the penetration test report.
 
 * **Steps of the penetration testing process**
-* **Open source penetration testing methodologies**
 * **The penetration test report**
 
-### Steps of the penetration testing process = exactly 4.3.1. Steps of the penetration testing process.
+### Steps of the penetration testing process
 
 To conduct a security audit, first, the scope of the penetration testing or vulnerability assessment operations is specified. Penetration tests should be seen as targeted exercises. The scope of test activities and test objectives, a schedule for the test activities, and the specific machines or applications to be tested are all specified upfront. Each test objective will have its own set of parameters and processes. In the words of NIST SP 800-115,
 
@@ -36,15 +33,11 @@ Passive network sniffers, notably Snort, the de facto standard for IDS/IPS appli
 
 Effective network security requires real time awareness of the activities taking place on the network, to verify that the network policy is not being violated by any user or misconfiguration. A network can be periodically scanned to obtain real-time awareness. Active techniques to periodically scan the network have two disadvantages. First, they are intrusive, they introduce traffic into the network which consumes considerable bandwidth. Second, scanning can miss an activity, for example, when a specific port is probed with a specific protocol, because these look for a particular activity. These drawbacks can be addressed by using passive techniques where no traffic is introduced into the network. “Passive techniques have been in use in both defensive and offensive approaches for years but have only appeared recently in commercial products” (Treurniet, 2004, p. 1). “A sniffer is strategically placed on the network and the traffic is examined as it passes by. The behaviour of the traffic can be compared to an established policy for deviations” (Treurniet, 2004, p. iv). The passive technique can also identify information leaking form the network that could be used by malicious hackers. Attackers expect that active methods are used by organizations to test their own networks, so it “stands to reason, then, that more experienced attackers would also employ passive methods to obtain network information” (Treurniet, 2004, p. 2). Thus continuous surveillance or monitoring can be achieved using passive network sniffers to assess the security of a network.
 
-[Types of penetration tests](https://cipher.com/blog/the-types-of-pentests-you-must-know-about/)
-
 Table 17: Five Phases of Reconnaissance\
 Table 18: Pen Source/Free Tools—for Network Penetration Testing\
 Table 19: Properties of a Network and Whether they Can Be Discovered Passively
 
-Most vulnerabilities exploited by penetration testing fall into the following categories: Misconfigurations (particularly, insecure default settings), kernel flaws, buffer overflows, insufficient input validation, symbolic links, file descriptors, race conditions, and incorrect file and directory permissions (NIST SP 800-115, 2008, pp. 5-4-5-5).&#x20;
-
-### The penetration test report = exactly 4.3.3. The penetration test report.
+### The penetration test report
 
 A vulnerability scanner “actively communicates with the target system, sends the malicious packets and analyses the results, which can then be exported to PDF, HTML, CSV and other formats” (Rasskazov, 2013, p. 58). Typical vulnerability management software obtains the results and provides a comprehensive dashboard to present the results. “It can build trends, sort the results by criticality, and keep additional records, for example business purpose of the system or location” (Rodger, 2013, p. 48). The software’s reporting component can generate the compliance reports against widely used standards, for example PCI DSS, ISO 27001, or against the corporate policies, for example the percentage of computers with outdated software or weak password policy. Nexpose and other vendors include the vulnerability management software in the package with vulnerability scanners, while other vendors (e.g., Nessus) sell the software separately.
 
@@ -52,4 +45,4 @@ The penetration test report typically two sections: The executive summary and th
 
 ### References
 
-Reference
+Reference 1

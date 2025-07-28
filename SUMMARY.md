@@ -86,10 +86,7 @@
   * [Open source and free virtualization tools](6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/open-source-and-free-virtualization-tools.md)
 * [Ethical assessment of teaching ethical hacking](6.-practical-foundations-in-ethical-hacking/ethical-assessment-of-teaching-ethical-hacking.md)
 * [The ethical teaching of ethical hacking](6.-practical-foundations-in-ethical-hacking/the-ethical-teaching-of-ethical-hacking.md)
-* [Professional ethical hacking body of knowledge](6.-practical-foundations-in-ethical-hacking/professional-ethical-hacking-body-of-knowledge/README.md)
-  * [The ethics of ethical hackers](6.-practical-foundations-in-ethical-hacking/professional-ethical-hacking-body-of-knowledge/the-ethics-of-ethical-hackers.md)
-  * [The penetration testing process](6.-practical-foundations-in-ethical-hacking/professional-ethical-hacking-body-of-knowledge/the-penetration-testing-process.md)
-* [Who are ethical hackers - highlights](6.-practical-foundations-in-ethical-hacking/who-are-ethical-hackers-highlights.md)
+* [The ethics of ethical hackers](6.-practical-foundations-in-ethical-hacking/the-ethics-of-ethical-hackers.md)
 
 ## 7. Conclusion
 

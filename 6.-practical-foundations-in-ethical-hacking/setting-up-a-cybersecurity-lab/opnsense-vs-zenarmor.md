@@ -4,7 +4,7 @@ hidden: true
 
 # OPNsense vs Zenarmor
 
-Zenarmor and OPNsense are both firewall solutions, but they serve different purposes and have distinct strengths. Here’s a detailed comparison to help you decide which one to use and which is easier to learn.
+Zenarmor (AI-driven NGFW) and OPNsense are both firewall solutions, but they serve different purposes and have distinct strengths. Here’s a detailed comparison to help you decide which one to use and which is easier to learn.
 
 **1. Overview**
 

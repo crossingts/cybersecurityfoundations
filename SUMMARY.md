@@ -66,6 +66,7 @@
 
 * [Introduction - Practical foundations in ethical hacking](6.-practical-foundations-in-ethical-hacking/introduction-practical-foundations-in-ethical-hacking.md)
 * [What is professional ethical hacking](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/README.md)
+  * [The ethics of ethical hackers](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/the-ethics-of-ethical-hackers.md)
   * [What do ethical hackers do - highlights](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/what-do-ethical-hackers-do.md)
   * [Copy of What do ethical hackers do?](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/copy-of-what-do-ethical-hackers-do.md)
 * [The perils of unethical hacking](6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking.md)
@@ -84,9 +85,6 @@
   * [OPNsense vs Zenarmor](6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/opnsense-vs-zenarmor.md)
   * [Firewalls](6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/firewalls.md)
   * [Open source and free virtualization tools](6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/open-source-and-free-virtualization-tools.md)
-* [Ethical assessment of teaching ethical hacking](6.-practical-foundations-in-ethical-hacking/ethical-assessment-of-teaching-ethical-hacking.md)
-* [The ethical teaching of ethical hacking](6.-practical-foundations-in-ethical-hacking/the-ethical-teaching-of-ethical-hacking.md)
-* [The ethics of ethical hackers](6.-practical-foundations-in-ethical-hacking/the-ethics-of-ethical-hackers.md)
 
 ## 7. Conclusion
 

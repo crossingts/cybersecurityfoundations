@@ -45,4 +45,4 @@ The penetration test report typically two sections: The executive summary and th
 
 ### References
 
-Reference 1
+Abu-Shaqra, B. (2020). Technoethics and sensemaking: Risk assessment and knowledge management of ethical hacking in a sociotechnical society (2020-04-17T20:04:42Z) \[Doctoral dissertation, University of Ottawa]. uO Research.

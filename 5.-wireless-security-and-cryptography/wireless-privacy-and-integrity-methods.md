@@ -1,15 +1,24 @@
 ---
 description: >-
-  This section covers key wireless privacy methods/algorithms, including TKIP
-  (WPA), AES-CCMP (WPA2), AES-GCMP (WPA3), and MIC (Message Integrity Check
+  This section covers key wireless privacy and integrity algorithms, including
+  TKIP (WPA), AES-CCMP (WPA2), AES-GCMP (WPA3), and MIC (Message Integrity Check
   "Michael" in WPA)
 ---
 
 # Wireless privacy and integrity methods
 
-This section covers key wireless privacy methods/algorithms, including TKIP (WPA), AES-CCMP (WPA2), AES-GCMP (WPA3), and MIC (Message Integrity Check "Michael" in WPA)
+## Learning objectives
 
-Become familiar with key encryption and message integrity algorithms used in securing wireless networks.
+* Become familiar with key encryption and message integrity algorithms used in securing wireless networks
+
+This section covers key encryption and message integrity algorithms used in securing wireless networks, including TKIP (WPA), AES-CCMP (WPA2), AES-GCMP (WPA3), and MIC (Message Integrity Check "Michael" in WPA).
+
+## Topics covered in this section
+
+* **TKIP (WPA)**
+* **AES-CCMP (WPA2)**
+* **AES-GCMP (WPA3)**
+* **MIC (Message Integrity Check "Michael" in WPA)**
 
 ### TKIP (WPA)
 
@@ -39,8 +48,6 @@ TKIP became a stopgap measure to enable stronger encryption on WEP-supporting ha
 
 ### AES-CCMP (WPA2)
 
-#### CCMP (Counter/CBC-MAC Protocol)
-
 The Counter/CBC-MAC Protocol (CCMP) is considered more secure than TKIP. CCMP consists of two algorithms:
 
 ■ AES (Advanced Encryption Standard) counter mode encryption.
@@ -55,8 +62,6 @@ Devices that support CCMP have the WPA2 designation.
 
 ### AES-GCMP (WPA3)
 
-#### GCMP (Galois/Counter Mode Protocol)
-
 The Galois/Counter Mode Protocol (GCMP) is a cryptographic protocol that provides confidentiality and integrity for data in wireless networks. It is used in the IEEE 802.11i standard for wireless security, and is also supported by some other wireless networking standards.
 
 GCMP is an authenticated encryption suite that is more secure and more efficient than CCMP. GCMP consists of two algorithms:
@@ -68,8 +73,6 @@ GCMP is an authenticated encryption suite that is more secure and more efficient
 GCMP is used in WPA3.
 
 ### MIC (Message Integrity Check "Michael" in WPA)
-
-**integrity**
 
 WPA introduced Michael MIC, which was better than WEP but still vulnerable to forgery.
 
@@ -91,6 +94,10 @@ MICs are an important part of many security protocols. For example, they are use
 MICs are often used in conjunction with encryption to provide a higher level of security. But MICs are not perfect, and they can be fooled by attackers who have access to the cryptographic algorithm. Figure 28-5 shows the MIC process.
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/5aef3-checking-message-integrity-3.webp?w=1201" alt="Checking-Message-Integrity" height="430" width="1201"><figcaption><p>Figure 28-5 Checking Message Integrity over a Wireless Network (Odom, 2020, p. 710)</p></figcaption></figure>
+
+### Key takeaways
+
+* Key encryption and message integrity algorithms used in securing wireless networks include TKIP (WPA), AES-CCMP (WPA2), AES-GCMP (WPA3), and Michael (WPA)
 
 ### References
 

@@ -2,7 +2,7 @@
 hidden: true
 ---
 
-# Who are ethical hackers
+# Who are ethical hackers - highlights
 
 PhD thesis section: 4.2.4. An identity and legitimacy crisis
 

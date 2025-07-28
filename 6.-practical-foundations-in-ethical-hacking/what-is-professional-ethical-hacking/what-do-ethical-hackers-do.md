@@ -2,7 +2,7 @@
 hidden: true
 ---
 
-# What do ethical hackers do?
+# What do ethical hackers do - highlights
 
 PhD thesis section: 4.2.3. What do ethical hackers do?
 
@@ -14,7 +14,7 @@ Key practices of ethical hackers include 1) Risk assessment usually against know
 
 **Risk assessment definition**
 
-The NIST Risk Management Guide defines risk assessment as “the process of identifying the risks to system security and determining the probability of occurrence, the resulting impact, and additional safeguards that would mitigate this impact” (Landoll & Landoll, 2005, p. 10).&#x20;
+The NIST Risk Management Guide defines risk assessment as “the process of identifying the risks to system security and determining the probability of occurrence, the resulting impact, and additional safeguards that would mitigate this impact” (Landoll & Landoll, 2005, p. 10). A vulnerability assessment is the process of identifying, quantifying, and prioritizing (ranking) the vulnerabilities in a system. Vulnerability assessments can include passive and active vulnerability scanning of network and operating systems. Vulnerability assessments usually covers network and infrastructure testing.
 
 **Penetration testing definition**
 

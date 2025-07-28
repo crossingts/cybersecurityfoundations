@@ -82,6 +82,8 @@ Risk management requires understanding **threats, vulnerabilities, and mitigatio
 * A risk arises when a threat exploits a vulnerability.
 * Related concepts: **exploit** (how the attack happens) and **threat vector** (the pathway of the attack).
 
+Risk is “a threat that exploits some vulnerability that could cause harm to an asset” (Peltier, 2005, p.16). “One instance of risk within a system is represented by the formula (asset\*threat\*vulnerability)” (Landoll & Landoll, 2005, p. 8).&#x20;
+
 **Sources of Vulnerabilities**
 
 Vulnerabilities can be categorized based on their origin:

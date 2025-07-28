@@ -113,7 +113,7 @@ Three enterprise information security analyst roles are presented: Vulnerability
 
 * Vulnerability Assessment Analyst and Penetration Tester/Ethical Hacker
 
-[What do ethical hackers do?](../6.-practical-foundations-in-ethical-hacking/professional-ethical-hacking-body-of-knowledge/what-do-ethical-hackers-do.md) Key practices, responsibilities, and roles of professional ethical hackers.
+[What do ethical hackers do?](broken-reference) Key practices, responsibilities, and roles of professional ethical hackers.
 
 [Vulnerability Assessment & Penetration Testing (VAPT) Track](https://www.eccouncil.org/cybersecurity-training-and-certification-canada/) (EC-Council training and certification)
 

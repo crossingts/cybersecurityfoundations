@@ -2,15 +2,13 @@
 hidden: true
 ---
 
-# What do ethical hackers do - highlights
+# What do ethical hackers do?
 
-PhD thesis section: 4.2.3. What do ethical hackers do?
-
-Defined from within the information security field the term ethical hacking most formally refers to penetration testing practices, and less formally to vulnerability assessment and risk assessment processes.&#x20;
+The term ethical hacking most formally refers to penetration testing, and less formally to vulnerability assessment and risk assessment practices.&#x20;
 
 The core work of professional ethical hackers involves performing security assessments or security audits and their cybersecurity role in organizations can be seen as “analysts” collecting and analyzing threat and vulnerability data and giving actionable recommendations to mitigate any vulnerabilities and security risks.
 
-Key practices of ethical hackers include 1) Risk assessment usually against known vulnerabilities/threats; 2) Discover unknown vulnerabilities/threats; and 3) Compliance with privacy and security regulations and standards--government regulations (e.g., Privacy Act, 1983; PIPEDA, 2000), industry regulations (e.g., PCI DSS, ISO/NIST), and in-house standard procedures and best practices.
+Key practices of ethical hackers include 1) performing risk assessments, usually against known vulnerabilities/threats; 2) discovering unknown vulnerabilities and identifying threats; and 3) performing compliance audits against security regulations and standards--government regulations (e.g., Privacy Act, 1983; PIPEDA, 2000), industry regulations (e.g., PCI DSS, ISO/NIST), and in-house standard procedures and best practices.
 
 **Risk assessment definition**
 

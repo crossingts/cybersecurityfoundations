@@ -18,7 +18,7 @@ Key practices of ethical hackers include:
 
 These activities are not mutually exclusive. A risk assessment can be performed to achieve compliance with a certain regulation, and vulnerability assessments are performed as part of risk assessments. "Penetration testing", strictly speaking, is the act of exploiting known/discovered vulnerabilities (or testing a hypothesis about the existence of a vulnerability) but in reality the term penetration testing is used in a more broader sense, variably, and the act of exploiting vulnerabilities is typically and ideally performed as part of a more comprehensive risk assessment exercise.&#x20;
 
-A **vulnerability assessment** is the process of identifying, quantifying, and prioritizing (ranking) the vulnerabilities in a system. Vulnerability assessments can include passive and active vulnerability scanning of network hosts (operating systems, devices, and endpoints) and services (such as web servers, databases, and other exposed applications).
+A **vulnerability assessment** is the process of identifying, quantifying, and prioritizing (ranking) the vulnerabilities in a system. Vulnerability assessments can include passive and active scanning of networks, hosts (including OS-level vulnerabilities) and services (ports and applications).
 
 Passive scanning involves monitoring network traffic or configurations without actively probing systems, while active scanning involves sending probes to identify vulnerabilities (e.g., port scanning, vulnerability testing).
 
@@ -26,7 +26,7 @@ Passive scanning involves monitoring network traffic or configurations without a
 
 The NIST Risk Management Guide defines risk assessment as “the process of identifying the risks to system security and determining the probability of occurrence, the resulting impact, and additional safeguards that would mitigate this impact” (Landoll & Landoll, 2005, p. 10).&#x20;
 
-The goal of risk assessment is “to identify which investments of time and resources will best protect the organization from its most likely and serious threats” (Reynolds, 2012, p. 103). - **Table 10:** Professional Ethical Hackers Coding Table
+The goal of risk assessment is “to identify which **investments of time and resources** will best protect the organization from its most likely and serious threats” (Reynolds, 2012, p. 103). - **Table 10:** Professional Ethical Hackers Coding Table
 
 According to the General Security Risk Assessment Guidelines, ASIS International (2003), the essential components of a risk assessment plan include, identifying assets, specifying loss events (threats), assessing the frequency and impact of events, recommending mitigation options, conducting a cost/benefit analysis, and making decisions.
 
@@ -36,7 +36,7 @@ The concepts of acceptable risk and reasonable assurance guide the decision maki
 
 **Penetration testing definition**
 
-“A penetration test is,
+A penetration test is,
 
 a proactive and authorized attempt to evaluate the security of an IT infrastructure by safely attempting to exploit system vulnerabilities, including OS, service and application flaws, improper configurations, and even risky or illegal end-user behaviour. (Rodger, 2013, p. 41)
 
@@ -48,11 +48,9 @@ The “**magic**” part of a penetration test is exploiting a vulnerability dis
 
 A penetration test “is when ethical hackers do their **magic**. They can test many of the vulnerabilities identified during the vulnerability assessment to quantify the actual threat and risk posed by the vulnerability” (Harper el al., 2011, p. 11). Penetration testing includes **probing** for vulnerabilities as well as giving proof of concept for an attack--that is, testing or verifying a hypothesis.&#x20;
 
-\--
+### Table 15: Vulnerability Scan and Penetration Test Comparison (Rodger, 2013, p. 49):
 
-**Table 15: Vulnerability Scan and Penetration Test Comparison (Rodger, 2013, p. 49):**
-
-Businesses need to evaluate information security risks for the purposes of insurance underwriting and resource allocation.&#x20;
+Businesses need to evaluate information security risks for the purposes of insurance underwriting and **resource allocation**.&#x20;
 
 Several major regulatory frameworks (such as HIPAA, PCI DSS, SSAE 16, FFIEC, and GLBA) require businesses to perform penetration testing and vulnerability scanning periodically.
 

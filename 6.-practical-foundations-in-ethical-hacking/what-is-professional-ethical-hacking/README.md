@@ -116,6 +116,8 @@ Hacktivists leverage cyber techniques for political or social causes, blurring l
 
 Each type has distinct motivations and methods, but the legality and ethics separate them most clearly. While white hats work within the system, gray hats operate in a moral gray zone, black hats are outright criminals, and hacktivists prioritize ideology over law.
 
+5.2.1.5. Professionalism/Professional Practice in Society.
+
 ### Professional ethics of ethical hackers
 
 White hat hackers, or professional ethical hackers, operate under strict ethical guidelines to ensure their actions remain legal, responsible, and beneficial to cybersecurity. Unlike malicious hackers, they adhere to formalized codes of conduct, often outlined by organizations such as the **EC-Council (International Council of E-Commerce Consultants)**, **(ISC)²**, and the **IEEE**. These frameworks emphasize principles like **authorization, confidentiality, and non-maleficence** (avoiding harm). Academic research highlights that ethical hackers must balance aggressive security testing with respect for privacy and system integrity (Furnell & Warren, 1999).

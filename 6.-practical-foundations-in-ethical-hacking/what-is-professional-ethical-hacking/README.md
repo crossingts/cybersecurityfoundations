@@ -116,6 +116,8 @@ Hacktivists leverage cyber techniques for political or social causes, blurring l
 
 Each type has distinct motivations and methods, but the legality and ethics separate them most clearly. While white hats work within the system, gray hats operate in a moral gray zone, black hats are outright criminals, and hacktivists prioritize ideology over law.
 
+5.2.1.4. Countermeasures component.
+
 5.2.1.5. Professionalism/Professional Practice in Society.
 
 ### Professional ethics of ethical hackers

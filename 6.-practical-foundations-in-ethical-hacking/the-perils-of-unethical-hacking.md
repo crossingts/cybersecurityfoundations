@@ -1,12 +1,26 @@
 ---
 description: >-
-  This section explains the potential ethical and legal consequences of
+  This section explores the potential ethical and legal consequences of
   unethical hacking
 ---
 
 # The perils of unethical hacking
 
-• Appreciate the ethical and legal consequences (e.g., CFAA violations) of unethical hacking.
+## Learning objectives
+
+* Appreciate the ethical and legal consequences (e.g., CFAA violations) of unethical hacking
+* Point 2
+
+This section explores the potential ethical and legal consequences of unethical hacking.
+
+## Topics covered in this section
+
+* **Introduction**
+* **Point 2**
+
+### Introduction
+
+Ethical hacking curricula should include the ethical and legal consequences of misusing hacking skills learned in university as a prevention component integrated with the technical instruction (Logan & Clarkson, 2005; Pashel, 2006).
 
 ### Professional Codes of Conduct in Ethical Hacking
 
@@ -47,16 +61,6 @@ While different organizations have their own codes, the underlying principles re
 #### **Conclusion**
 
 Professional ethical hackers are bound by a web of codes that govern their behavior, ensuring their work aligns with legal and societal expectations. These standards are not just theoretical—they are enforced through accreditation, certification bodies, and legal systems. By adhering to these principles, ethical hackers maintain the trust of clients, the public, and the broader cybersecurity community, distinguishing themselves as true professionals in a field where the line between right and wrong can sometimes blur.
-
-5.2.1.3. The case for ethics instruction.
-
-5.2.1.4. Countermeasures component.
-
-Ethical hacking curricula should include the ethical-legal consequences of misusing hacking skills learned in university as a prevention component integrated with the technical instruction. Presently few computing students are required to study the ethical-legal consequences of misusing the hacking skills learned in college (Logan & Clarkson, 2005; Pashel, 2006).
-
-Universities are incorporating information security curricula at the undergraduate and graduate levels to address a national need for security education. The goals of such programs are “to reduce vulnerability in National Information Infrastructure by promoting higher education in information assurance and security, and to produce a growing number of professionals with information systems security expertise” (Sharma & Sefchek, 2007, p. 290).&#x20;
-
-From the perspective of software security, CS programs should teach students hacking skills as skills in assurance (Radziwill et al., 2015). Students need to learn vulnerability discovery plus information security defense measures as part of a comprehensive audit. Students should be able to “perform vulnerability assessments on the entire spectrum of data assets: Applications, policies, procedures, and physical infrastructure,” but hacking performed on a network “should be part of a larger security audit process designed to reveal vulnerabilities and improve security policies and procedures” (Logan & Clarkson, 2005, p. 158).
 
 ### Ethical and Legal Consequences of Unethical Hacking
 

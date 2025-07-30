@@ -16,13 +16,13 @@ This section frames an understanding of ethical hacking (penetration testing) as
 
 This section&#x20;
 
-• differentiates white hat hacking from gray hat hacking, black hat hacking, and hacktivism on the basis of ethical (moral) and legal practices of the various hacker groups
+• differentiates white hat hacking from gray hat hacking, black hat hacking, and hacktivism on the basis of ethical (moral) and legal practices
 
 \--
 
 Assumptions:
 
-• Penetration testing is ethical hacking, since penetration testers strictly abide by a legal framework, while acknowledging that it does not follow that all ethical hacking is penetration testing—there could be other varieties of claimed ethical hacking practices (e.g., hacktivists). So we need to further specify what constitutes "ethical" in ethical hacking, and we advance that it refers to widely established professional codes on conduct (which hacktivists, e.g., do not adhere to).
+• Penetration testing is ethical hacking, since penetration testers strictly abide by a legal framework, while acknowledging that it does not follow from this that all ethical hacking is penetration testing—there could be other varieties of claimed ethical hacking practices (e.g., hacktivists). So we further specify what constitutes "ethical" in ethical hacking and we advance that it refers to widely established professional codes on conduct (which hacktivists, e.g., do not adhere to).
 
 • Ethical hackers (as penetration testers) fit only within the white hat hackers group on the basis of legal and ethical (moral) conduct.
 
@@ -38,11 +38,11 @@ Assumptions:
 
 There are many approaches to distinguish between white hat hackers, gray hat hackers, black hat hackers, and hacktivists. For example, idioms and practices, or historical account.&#x20;
 
-However, we make a comparison differentiating between these four hacker groups and their hacking practices on the logic that there is only one category of "white hat" hacking: legal hacking. Espoused ethical values and moral conduct (practices) further cement this taxonomy of the various hacker groups.
+However, we make a comparison differentiating between these four hacker groups and their hacking practices on the logic that there is only one category of white hat hacking: legal hacking. Ethical values and moral conduct further cement this taxonomy of the various hacker groups.
 
 Ethical hackers (penetration testers) necessarily fit into the white hat hackers group--there's no moral or legal ambiguity regrading the legality of their practices. No greyness. In this classification scheme, the terms white hat hacking and ethical hacking can be used **interchangeably**.&#x20;
 
-Finally, we advance an understanding that professional ethical hacking is ethical hacking (penetration testing) in accordance with widely established industry and licensing standards regarding what constitutes professional conduct.
+Finally, we advance an understanding that professional ethical hacking is ethical hacking (penetration testing) performed in accordance with widely established industry and licensing standards regarding what constitutes professional conduct.
 
 ### Profiles of hackers
 
@@ -56,11 +56,28 @@ Finally, we advance an understanding that professional ethical hacking is ethica
 
 ### Profiles of hackers
 
-Follows is an analysis of the four types of hacking/hacker groups classified based on the legality of their practices and their values, including adherence to ethical and legal frameworks.&#x20;
+Follows is an analysis of the four types of hacking/hacker groups classified based on the legality of their practices, professional ethical conduct, and moral ethics.
 
 #### White Hat Hackers: The Ethical Professionals
 
-White hat hackers operate within legal boundaries, conducting security assessments only with explicit authorization from system/network owners. They follow strict ethical guidelines and often work as in-house security experts, consultants, or bug bounty hunters. Their work aligns with professional codes like the **ACM Code of Ethics (2018)** and **IEEE Sec. 7.8 on Penetration Testing**, which mandate permission-based hacking for public benefit (Gotterbarn et al., 2018). Their primary goal is to improve cybersecurity by identifying and fixing vulnerabilities before malicious actors can exploit them. Unlike gray or black hats, they never disclose vulnerabilities publicly without permission and adhere to contracts and responsible disclosure policies.
+White hat hackers operate within legal boundaries, conducting security assessments only with explicit authorization from system/network owners. They follow strict ethical guidelines and often work as in-house security experts, consultants, or bug bounty hunters. Their work aligns with professional codes like the **ACM Code of Ethics (2018)** and
+
+The **ACM Code of Ethics (2018)** does indeed stress **permission-based hacking** (e.g., Principle 2.8: "Access computing and communication resources only when authorized").
+
+white hat hackers operate with **explicit permission**, follow **ethical guidelines** (e.g., **EC-Council’s CEH**, **OSSTMM**, or **NIST SP 800-115**), and often work as professionals or bug bounty hunters.
+
+**penetration testing ethics** are often covered in other IEEE standards or guidelines, such as those from the **IEEE Cybersecurity Initiative** or **IEEE Certifed Ethical Hacker (CEH) resources**. For example:
+
+* **IEEE 802.10** (historical standard for security) and newer frameworks emphasize authorized testing.
+* **IEEE Std. 1012** (software verification) or **IEEE 2600** (hardware security) may touch on testing protocols.
+
+widely recognized frameworks&#x20;
+
+* **NIST SP 800-115** (Technical Guide to Penetration Testing).
+* **ISO/IEC 27001** (for security testing norms).
+* **EC-Council’s CEH Code of Ethics** (explicit rules for pentesters).
+
+Their primary goal is to improve cybersecurity by identifying and fixing vulnerabilities before malicious actors can exploit them. Unlike gray or black hats, they never disclose vulnerabilities publicly without permission and adhere to contracts and responsible disclosure policies.
 
 * **Key Traits:**
   * Operate legally under contracts or employment agreements (Schneier, 2020).
@@ -206,8 +223,6 @@ Coleman, G. (2014). _Hacker, Hoaxer, Whistleblower, Spy: The Many Faces of Anony
 Denning, D. (2010). "Cyber Conflict as an Emergent Social Phenomenon." _Corporate Cyber Security_.
 
 Furnell, S., & Warren, M. (1999). "Ethical Hacking: A Necessary Evil?" _Computers & Security_.
-
-Gotterbarn, D., Miller, K., & Rogerson, S. (2018). Software engineering code of ethics and professional practice. _ACM, 41_(1), 110–118. [https://doi.org/10.1145/3177851](https://doi.org/10.1145/3177851)
 
 Harris, S. (2021). CISSP All-in-One Exam Guide. McGraw-Hill.
 

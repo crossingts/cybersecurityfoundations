@@ -4,8 +4,6 @@ hidden: true
 
 # The ethics of ethical hackers
 
-5.2.1.4. Countermeasures component.
-
 5.2.1.5. Professionalism/Professional Practice in Society.
 
 The ethics of ethical hackers are discussed here in the context of professionalism/professional practice in society.&#x20;

@@ -44,6 +44,14 @@ Inspiration: YouTube playlist (16 videos +150,000 views)
 
 <figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption><p>Cybersecurity virtual lab design (courtesy of LS111 Cyber Security Education)</p></figcaption></figure>
 
+Choose a virtualization environment/tool
+
+Choose a project documentation platform/method
+
+Build the lab: Configure subnet interfaces and verify connectivity
+
+Build the lab: Configure and verify the firewall
+
 #### **Open-Source Firewall & IDS/IPS Compatibility Table**
 
 _(✅ = Native Support | ⚠️ = Partial/Workaround | ❌ = Not Supported | VM = Virtual Machine Only)_

@@ -12,21 +12,7 @@ hidden: true
 * Point 1
 * Become familiar with the professional ethics of ethical hackers&#x20;
 
-This section frames an understanding of ethical hacking (penetration testing) as professional ethical hacking.
-
-This section&#x20;
-
-• differentiates white hat hacking from gray hat hacking, black hat hacking, and hacktivism on the basis of **ethical (moral ethics), professional ethics, and legal practices**
-
-\--
-
-Assumptions:
-
-• Penetration testing is ethical hacking, since ethical hacking most formally refers to penetration testing, and since penetration testing professionals strictly abide by a legal framework, while acknowledging that it does not follow from this that all ethical hacking is penetration testing—there could be other varieties of claimed ethical hacking practices (e.g., hacktivists). So we further specify what constitutes "ethical" in ethical hacking and we advance that it refers to claimed or demonstrated moral ethics and to widely established professional codes on conduct (which hacktivists, e.g., do not adhere to).
-
-• Ethical hackers (as penetration testers) fit only within the white hat hackers group on the basis of legal and ethical (moral) conduct.
-
-• Professional ethical hacking is ethical hacking performed in accordance with widely established industry standards and professional licensing authorities regarding what constitutes professional conduct.
+This section frames an understanding of ethical hacking (penetration testing) as professional ethical hacking. The analysis differentiates white hat hacking from gray hat hacking, black hat hacking, and hacktivism on the basis of **ethics (moral ethics), professional ethics, and legal practices.**
 
 ## Topics covered in this section
 
@@ -38,27 +24,27 @@ Assumptions:
 
 There are many approaches to distinguish between white hat hackers, gray hat hackers, black hat hackers, and hacktivists. For example, idioms and practices, or historical account.&#x20;
 
-However, we make a comparison differentiating between these four hacker groups and their hacking practices on the logic that there is only one category of white hat hacking: legal hacking. Ethical values and moral conduct further cement this taxonomy of the various hacker groups.
+However, we make a comparison differentiating between these four hacker groups and their hacking practices on the logic that there is only one category of white hat hacking: legal hacking. Ethical values and professional ethics underlying the practices of white hat hackers further cement this taxonomy of the various hacker groups.
 
-Ethical hackers (penetration testers) necessarily fit into the white hat hackers group--there's no moral or legal ambiguity regrading the legality of their practices. No greyness. In this classification scheme, the terms white hat hacking and ethical hacking can be used **interchangeably**.&#x20;
+Ethical hackers (as penetration testers) necessarily fit into the white hat hackers group—there's no moral or legal ambiguity regrading the legality of their practices. No greyness. In this classification scheme, the terms white hat hacking and ethical hacking can be used **interchangeably**.&#x20;
 
 Finally, we advance an understanding that professional ethical hacking is ethical hacking (penetration testing) performed in accordance with widely established industry and licensing standards regarding what constitutes professional conduct.
 
-### Profiles of hackers
+Assumptions:
 
-1\) White hat hackers only hack systems or machines with legal authorization to do so (including legal contractual agreements). So whether resident (in-house) employees of a company or hired by a company for security testing, this would be ethical hacking as long as hacking is performed in accordance with agreed upon terms and within the specified authorization parameters (hacking beyond authorized level or terms ceases to be ethical). Bug bounty hunters are ethical hackers since they work within this contractual framework.&#x20;
+• Penetration testing is ethical hacking, since ethical hacking most formally refers to penetration testing, and since penetration testing professionals strictly abide by a legal framework, while acknowledging that it does not follow from this that all ethical hacking is penetration testing—there could be other varieties of claimed ethical hacking practices (e.g., hacktivists). So we further specify what constitutes "ethical" in ethical hacking and we advance that it refers to claimed or demonstrated moral ethics and to widely established professional codes on conduct (which hacktivists, e.g., do not adhere to).
 
-2\) Gray hat hackers hack systems or computers to discover vulnerabilities and then inform the hacked entity about the vulnerabilities so that they can fix their commercial software/products or else hackers will publicly disclose the discovered vulnerabilities to shame a software vendor to pressure it into patching the vulnerabilities. However, hackers of this category often end up bragging about their hacking prowess/activities and call themselves security researchers. There are legitimate security researchers who work professionally within the scope of authorized hacking.
+• Ethical hackers (as penetration testers) fit only within the white hat hackers group on the basis of legal and ethical (moral) conduct.
 
-3\) Black hat hackers come in two variations. The original/more traditional attribution of the label "black hat hackers" was given to the bad actors who hack for profit or for some other criminal goal. The more recent adoption of the term black hat hacking refers to presumably legal hacking practices whereby hackers have no prior knowledge of the target system (i.e., an label/attribution based on a technical perspective rather than an ethical perspective).
-
-4\) Hacktivists hack for political ends.&#x20;
+• Professional ethical hacking is ethical hacking performed in accordance with widely established industry standards and professional licensing authorities regarding what constitutes professional conduct.
 
 ### Profiles of hackers
 
 Follows is an analysis of the four types of hacking/hacker groups classified based on the legality of their practices, professional ethical conduct, and moral ethics.
 
 #### White Hat Hackers: The Ethical Professionals
+
+1\) White hat hackers only hack systems or machines with legal authorization to do so (including legal contractual agreements). So whether resident (in-house) employees of a company or hired by a company for security testing, this would be ethical hacking as long as hacking is performed in accordance with agreed upon terms and within the specified authorization parameters (hacking beyond authorized level or terms ceases to be ethical). Bug bounty hunters are ethical hackers since they work within this contractual framework.&#x20;
 
 White hat hackers operate within legal boundaries, conducting security assessments only with explicit authorization from computer system. They adhere to strict ethical guidelines, often working as in-house experts, consultants, or bug bounty hunters.
 
@@ -96,6 +82,8 @@ Their primary goal is to improve cybersecurity by identifying and fixing vulnera
 
 #### Gray Hat Hackers: The Unauthorized "Researchers"
 
+2\) Gray hat hackers hack systems or computers to discover vulnerabilities and then inform the hacked entity about the vulnerabilities so that they can fix their commercial software/products or else hackers will publicly disclose the discovered vulnerabilities to shame a software vendor to pressure it into patching the vulnerabilities. However, hackers of this category often end up bragging about their hacking prowess/activities and call themselves security researchers. There are legitimate security researchers who work professionally within the scope of authorized hacking.
+
 Gray hat hackers fall between white and black hats—they hack systems without permission but usually claim altruistic motives (Jordan & Taylor, 2004). They often breach regulations (e.g., CFAA) in the course of discovering security flaws within commercial software—a practice critiqued in literature as "vigilante security" (Denning, 2010). They then notify the software vendor (sometimes demanding payment) or threaten public exposure to force fixes. While some may genuinely help improve security, their methods are illegal and ethically questionable. Some call themselves security researchers, but legitimate researchers work within legal frameworks (e.g., bug bounty programs).
 
 * **Key Traits:**
@@ -112,6 +100,8 @@ Gray hat hackers fall between white and black hats—they hack systems without p
 
 #### Black Hat Hackers: The Criminals
 
+3\) Black hat hackers come in two variations. The original/more traditional attribution of the label "black hat hackers" was given to the bad actors who hack for profit or for some other criminal goal. The more recent adoption of the term black hat hacking refers to presumably legal hacking practices whereby hackers have no prior knowledge of the target system (i.e., an label/attribution based on a technical perspective rather than an ethical perspective).
+
 Black hat hackers engage in illegal hacking for personal gain, sabotage, or espionage (Chandler, 1996). They exploit vulnerabilities to steal data, deploy ransomware, or disrupt systems. Research ties them to organized crime and state-sponsored threats (Rid, 2013), with motivations ranging from financial theft to ideological disruption. Unlike white hats, they have no ethical constraints and often work within organized cybercrime syndicates or are rogue intelligence operatives. Their activities include identity theft, financial fraud, and espionage.
 
 * **Key Traits:**
@@ -127,6 +117,8 @@ Black hat hackers engage in illegal hacking for personal gain, sabotage, or espi
 3. **The Lazarus Group** – A North Korean state-sponsored hacking group behind the _Sony Pictures hack_ and _WannaCry_.
 
 #### Hacktivists: The Politically Motivated Hackers
+
+4\) Hacktivists hack for political ends.&#x20;
 
 Hacktivists leverage cyber techniques for political or social causes, blurring lines between activism and cybercrime (Samuel, 2004). While some actions (e.g., DDoS) are illegal, their goals distinguish them from profit-driven black hats (Coleman, 2014). Unlike black hats, they are not primarily motivated by money but by ideology. Their targets include governments, corporations, or organizations they oppose. Tactics include DDoS attacks, website defacements, and data leaks.
 

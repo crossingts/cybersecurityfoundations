@@ -4,26 +4,32 @@ hidden: true
 
 # The ethics of ethical hackers
 
-The ethics of ethical hackers are discussed here in the context of professionalism/professional practice in society.&#x20;
-
-The ethics and values of professional ethical hackers as discussed here are **based on** research conducted at a Canadian university. In-depth, semi-structured interviews were conducted with 14 interview participants in addition to one participant who contributed via email comprised of ethical hacking university experts, ethical hacking industry practitioners, and policy experts. Other data collection methods included organizational document reviews and literature reviews.
-
-Several **codes of conduct** for information security professionals and ethical hackers exit. They are all voluntary and only applicable to individuals who are members or certified professionals of the respective association. The codes of ethics may contain similar directives but they are all different and include different levels of detail.
+This section explores the professional ethics of ethical hackers as stipulated/enriched in widely accepted industry and professional certification bodies/authorities.&#x20;
 
 * **Professional ethics**
+  * **Professionalism as grounded in university teaching - Academic qualifications**
+  * **Professionalism as grounded in industry associations - Industry qualifications**
 * **The social context**
-* **Professional ethical hacking is legal**
+* **Professional ethical hacking is legal -->who are ethical hackers**
 * **Ethical hackers are trustworthy -->who are ethical hackers**
 
 ### Professional ethics
 
-Three interviewed ethical hacking university experts said professionalism, as in professional ethics or a professional code of conduct, guides the behavior of professional engineers and computer scientists (PPT11, PPT3, PPT10). As a professional engineer, says PPT3, he is “bound by a number of codes of practice, of ethics.” “As a professional engineer, I’m bound by the PEO code of ethics … I’m also bound by the software engineering code of ethics, the ACM code of ethics, the IEEE code of ethics, because I’m members of multiple societies that have codes.” PPT3 says he teaches “five different codes of ethics. They are all broadly the same, but I teach about them to students.”
+Several **codes of conduct** for information security professionals and ethical hackers exit. They are all voluntary and only applicable to individuals who are members or certified professionals of the respective association. The codes of ethics may contain similar directives but they are all different and include different levels of detail.
 
-That is in the course calendar descriptions and it’s also in our accreditation. We are accredited by CIPS, the Canadian Information Processing Society, and by the Canadian Engineering Accreditation Board, and both of those require us to teach students about ethics. (PPT3)
+**Professionalism as grounded in university teaching - Academic qualifications**
 
-Emphasizing the importance of professional conduct for the industry/business side, PPT11 says, “It’s the professionalism that large organizations are looking for to take you seriously.”
+Three interviewed ethical hacking university experts said professionalism, as in professional ethics or a professional code of conduct, guides the behavior of professional engineers and computer scientists (PPT11, PPT3, PPT10).&#x20;
+
+As a professional engineer, said a Canadian university professor of computer science and software engineering,
+
+he is “bound by a number of codes of practice, of ethics.” “As a professional engineer, I’m bound by the **PEO code of ethics** … I’m also bound by the **software engineering code of ethics**, the **ACM code of ethics, the IEEE code of ethics**, because I’m members of multiple societies that have codes.” He says he teaches “five different codes of ethics. They are all **broadly the same**, but I teach about them to students.” He add:
+
+_That is in the course calendar descriptions and it’s also in our accreditation. We are accredited by CIPS, the Canadian Information Processing Society, and by the Canadian Engineering Accreditation Board, and both of those require us to teach students about ethics._&#x20;
 
 [Interview Participants by Area of Expertise](https://docs.google.com/document/d/e/2PACX-1vQ5iF6m--APIZrFd9hnz1HH9zv3jJjuBjl0zGDgpviYSSMRBxpWQxCvKQmK8rrP0D5o_Hx4grwLkRcs/pub)
+
+**Professionalism as grounded in industry associations - Industry qualifications**
 
 **Key Codes of Conduct for Information Security Professionals (Adapted from Thomas et al., 2018, pp. 5-6)**
 
@@ -35,9 +41,17 @@ Emphasizing the importance of professional conduct for the industry/business sid
 | ISACA Code of Professional Ethics                                                                                                                                                                                                                               | <p>ISACA was established in 1969 and focuses on IT governance. It has over 140,000 members worldwide (ISACA, n.d.). ISACA provides training and certification for information security and cybersecurity professionals.<br><br>The ISACA Code of Professional Ethics mandates that compliance with standards and procedures, due diligence, legal conduct and confidentiality, competency, and continuing professional development are maintained (ISACA, n.d).</p>                                                                                                                                                                                                                 |
 | <p>ISC2 Code of Ethics  <br><br>Code of Ethics Preamble:<br>The safety and welfare of society and the common good, duty to our principals, and to each other, requires that we adhere, and be seen to adhere, to the highest ethical standards of behavior.</p> | <p>The International Information System Security Certification Consortium or ISC2 – more correctly, (ISC)² – is an international, not for profit organization with over 125,000 members in the information security profession (ISC2, n.d.).<br><br>ISC2’s Code of Ethics Canons consists of four directives: 1) Protect society, the common good, necessary public trust and confidence, and the infrastructure; 2) Act honorably, honestly, justly, responsibly, and legally; 3) Provide diligent and competent service to principals; and 4) Advance and protect the profession.</p>                                                                                             |
 
-### The social context
+### Contextualizing ethical hacking technology
 
-This area of ethical hacking instruction pertains to teaching the social science context of technology use and professional practice, and includes the sociopolitical and scientific values underlying the behavior of professional engineers and computer scientists and situating the role of ethical hacking practitioners in historical and theoretical context. The first point pertains to following and teaching the scientific values of society, including a scientific approach to knowledge management – and although not specifically cited by any of the interviewed participants, the second point pertains to teaching the sociopolitical values of society. PPT11 says the way to deal with the “greyness” in the academic discipline of ethical hacking is to teach following scientific values.
+Contextualizing ethical hacking technology
+
+This area of ethical hacking instruction pertains to teaching the social science context of technology use, the theoretical and historical context,
+
+and includes the sociopolitical and scientific values underlying the behavior of professional ethical hackers
+
+
+
+The first point pertains to following and teaching the scientific values of society, including a scientific approach to knowledge management – and although not specifically cited by any of the interviewed participants, the second point pertains to teaching the sociopolitical values of society. PPT11 says the way to deal with the “greyness” in the academic discipline of ethical hacking is to teach following scientific values.
 
 It’s kind of like when software engineering became an engineering discipline. There were a lot of coders that knew how to code, but they didn’t have the mindset to approach it as a systematic large problem. I think ethical hacking is a very similar thing. (PPT11)
 

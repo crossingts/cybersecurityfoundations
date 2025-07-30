@@ -60,9 +60,11 @@ Follows is an analysis of the four types of hacking/hacker groups classified bas
 
 #### White Hat Hackers: The Ethical Professionals
 
-White hat hackers operate within legal boundaries, conducting security assessments only with explicit authorization from system/network owners. They follow strict ethical guidelines and often work as in-house security experts, consultants, or bug bounty hunters. Their work aligns with professional codes like the **ACM Code of Ethics (2018)** and
+White hat hackers operate within legal boundaries, conducting security assessments only with explicit authorization from computer system. They adhere to strict ethical guidelines, often working as in-house experts, consultants, or bug bounty hunters.
 
-The **ACM Code of Ethics (2018)** does indeed stress **permission-based hacking** (e.g., Principle 2.8: "Access computing and communication resources only when authorized").
+Their practices align with professional codes like the ACM Code of Ethics (2018), which mandates permission-based hacking, and industry standards such as IEEE guidelines on penetration testing (e.g., IEEE 2600-series) and NIST SP 800-115
+
+The **ACM Code of Ethics (2018)** stresses **permission-based hacking** (e.g., Principle 2.8: "Access computing and communication resources only when authorized").
 
 white hat hackers operate with **explicit permission**, follow **ethical guidelines** (e.g., **EC-Council’s CEH**, **OSSTMM**, or **NIST SP 800-115**), and often work as professionals or bug bounty hunters.
 
@@ -94,7 +96,7 @@ Their primary goal is to improve cybersecurity by identifying and fixing vulnera
 
 #### Gray Hat Hackers: The Unauthorized "Researchers"
 
-Gray hat hackers fall between white and black hats—they hack systems without permission but usually claim altruistic motives (Jordan & Taylor, 2004). They often breach regulations (e.g., CFAA) in the course of discovering security flaws within commercial software—a practice critiqued in literature as "vigilante security" (Denning, 2010). They then notify the software vendor (sometimes demanding payment) or threaten public exposure to force fixes. While some may genuinely help improve security, their methods are illegal and unethical by professional standards. Some call themselves security researchers, but legitimate researchers work within legal frameworks (e.g., bug bounty programs).
+Gray hat hackers fall between white and black hats—they hack systems without permission but usually claim altruistic motives (Jordan & Taylor, 2004). They often breach regulations (e.g., CFAA) in the course of discovering security flaws within commercial software—a practice critiqued in literature as "vigilante security" (Denning, 2010). They then notify the software vendor (sometimes demanding payment) or threaten public exposure to force fixes. While some may genuinely help improve security, their methods are illegal and ethically questionable. Some call themselves security researchers, but legitimate researchers work within legal frameworks (e.g., bug bounty programs).
 
 * **Key Traits:**
   * Hack without permission but often claim to act in the public interest.
@@ -110,7 +112,7 @@ Gray hat hackers fall between white and black hats—they hack systems without p
 
 #### Black Hat Hackers: The Criminals
 
-Black hat hackers engage in illegal hacking for personal gain, sabotage, or espionage (Chandler, 1996). They exploit vulnerabilities to steal data, deploy ransomware, or disrupt systems. Research ties them to organized crime and state-sponsored threats (Rid, 2013), with motivations ranging from financial theft to ideological disruption. Unlike white or gray hats, they have no ethical constraints and often work within organized cybercrime syndicates or are rogue intelligence operatives. Their activities include identity theft, financial fraud, and espionage.
+Black hat hackers engage in illegal hacking for personal gain, sabotage, or espionage (Chandler, 1996). They exploit vulnerabilities to steal data, deploy ransomware, or disrupt systems. Research ties them to organized crime and state-sponsored threats (Rid, 2013), with motivations ranging from financial theft to ideological disruption. Unlike white hats, they have no ethical constraints and often work within organized cybercrime syndicates or are rogue intelligence operatives. Their activities include identity theft, financial fraud, and espionage.
 
 * **Key Traits:**
   * Operate purely for personal profit or destruction.

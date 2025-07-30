@@ -64,11 +64,12 @@
 
 ## 6. Practical foundations in ethical hacking
 
-* [Introduction - Practical foundations in ethical hacking](6.-practical-foundations-in-ethical-hacking/introduction-practical-foundations-in-ethical-hacking.md)
+* [Introduction - Practical foundations in ethical hacking](6.-practical-foundations-in-ethical-hacking/introduction-practical-foundations-in-ethical-hacking/README.md)
+  * [Who are ethical hackers?](6.-practical-foundations-in-ethical-hacking/introduction-practical-foundations-in-ethical-hacking/who-are-ethical-hackers.md)
 * [What is professional ethical hacking](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/README.md)
   * [The ethics of ethical hackers](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/the-ethics-of-ethical-hackers.md)
-  * [Ethical hacking is unambiguously legal](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/ethical-hacking-is-unambiguously-legal.md)
-  * [4.2.2. Ethical hackers are trustworthy](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/4.2.2.-ethical-hackers-are-trustworthy.md)
+  * [Ethical hacking is legal](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/ethical-hacking-is-legal.md)
+  * [Ethical hackers are trustworthy](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/ethical-hackers-are-trustworthy.md)
   * [What do ethical hackers do?](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/what-do-ethical-hackers-do.md)
 * [The perils of unethical hacking](6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking.md)
 * [Network security testing](6.-practical-foundations-in-ethical-hacking/network-security-testing.md)

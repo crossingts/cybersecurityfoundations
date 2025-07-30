@@ -39,16 +39,16 @@ Ethical hacking is the cornerstone of security verification within organizations
 
 What is professional ethical hacking
 
-[The perils of unethical hacking](the-perils-of-unethical-hacking.md)
+[The perils of unethical hacking](../the-perils-of-unethical-hacking.md)
 
-[Defensive security vs offensive security](defensive-security-vs-offensive-security.md)
+[Defensive security vs offensive security](../defensive-security-vs-offensive-security.md)
 
-[Defensive cybersecurity technologies](defensive-cybersecurity-technologies/)
+[Defensive cybersecurity technologies](../defensive-cybersecurity-technologies/)
 
-[Phases of the penetration testing process](phases-of-the-penetration-testing-process.md)
+[Phases of the penetration testing process](../phases-of-the-penetration-testing-process.md)
 
-[Types of penetration testing](types-of-penetration-testing.md)
+[Types of penetration testing](../types-of-penetration-testing.md)
 
-[Pentesting methodologies, frameworks, and technologies](pentesting-methodologies-frameworks-and-technologies/)
+[Pentesting methodologies, frameworks, and technologies](../pentesting-methodologies-frameworks-and-technologies/)
 
-[Common attack targets](common-attack-targets.md)
+[Common attack targets](../common-attack-targets.md)

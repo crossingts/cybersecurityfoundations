@@ -37,7 +37,7 @@ Ethical hacking is the cornerstone of security verification within organizations
 
 ## Topics covered in this chapter
 
-[What is professional ethical hacking](what-is-professional-ethical-hacking/)
+What is professional ethical hacking
 
 [The perils of unethical hacking](the-perils-of-unethical-hacking.md)
 

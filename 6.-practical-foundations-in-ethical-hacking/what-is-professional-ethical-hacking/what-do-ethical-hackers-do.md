@@ -18,17 +18,37 @@ Key practices of ethical hackers include:
 
 These activities are not mutually exclusive. A risk assessment can be performed to achieve compliance with a certain regulation, and vulnerability assessments are performed as part of risk assessments. "Penetration testing", strictly speaking, is the act of exploiting known/discovered vulnerabilities (or testing a hypothesis about the existence of a vulnerability) but in reality the term penetration testing is used in a more broader sense, variably, and the act of exploiting vulnerabilities is typically and ideally performed as part of a more comprehensive risk assessment exercise.&#x20;
 
+Ethical hackers as pentesters:
+
+Pentesters Security Professionals
+
+Network Administrators (OSCP)
+
+The purpose of penetration testing activities includes:
+
+1. compliance with government legislation (e.g., Privacy Act, 1983; PIPEDA, 2000), and industry regulations (e.g., PCI DSS, ISO/NIST);
+2. validation of existing security controls;
+3. identification of unknown security gaps; and
+4. Prioritizing existing security initiatives.
+5. verify vulnerability assessment results
+
+Compile and track vulnerabilities over time for metrics purposes.
+
+Track and disclose vulnerabilities to national repositories (e.g., the National Vulnerability Databases).
+
+\--
+
 A **vulnerability assessment** is the process of identifying, quantifying, and prioritizing (ranking) the vulnerabilities in a system. Vulnerability assessments can include passive and active scanning of networks, hosts (including OS-level vulnerabilities) and services (ports and applications).
 
 Passive scanning involves monitoring network traffic or configurations without actively probing systems, while active scanning involves sending probes to identify vulnerabilities (e.g., port scanning, vulnerability testing).
 
 **Risk assessment definition**
 
-The NIST Risk Management Guide defines risk assessment as “the process of identifying the risks to system security and determining the probability of occurrence, the resulting impact, and additional safeguards that would mitigate this impact” (Landoll & Landoll, 2005, p. 10).&#x20;
+The NIST Risk Management Guide defines risk assessment as “the process of identifying the risks to system security and determining the probability of occurrence, the resulting impact, and additional safeguards that would **mitigate** this impact” (Landoll & Landoll, 2005, p. 10).&#x20;
 
 The goal of risk assessment is “to identify which **investments of time and resources** will best protect the organization from its most likely and serious threats” (Reynolds, 2012, p. 103). - **Table 10:** Professional Ethical Hackers Coding Table
 
-According to the General Security Risk Assessment Guidelines, ASIS International (2003), the essential components of a risk assessment plan include, identifying assets, specifying loss events (threats), assessing the frequency and impact of events, recommending mitigation options, conducting a cost/benefit analysis, and making decisions.
+According to the General Security Risk Assessment Guidelines, ASIS International (2003), the essential components of a risk assessment plan include, identifying assets, specifying loss events (threats), assessing the frequency and impact of events, recommending **mitigation** options, conducting a cost/benefit analysis, and making decisions.
 
 Risk assessments help risk managers select appropriate security control measures to lower the risk to an acceptable level (Engebretson, 2011; Landoll & Landoll, 2005; Peltier, 2005).&#x20;
 

@@ -16,13 +16,13 @@ This section frames an understanding of ethical hacking (penetration testing) as
 
 This section&#x20;
 
-• differentiates white hat hacking from gray hat hacking, black hat hacking, and hacktivism on the basis of ethical (moral) and legal practices
+• differentiates white hat hacking from gray hat hacking, black hat hacking, and hacktivism on the basis of **ethical (moral ethics), professional ethics, and legal practices**
 
 \--
 
 Assumptions:
 
-• Penetration testing is ethical hacking, since penetration testers strictly abide by a legal framework, while acknowledging that it does not follow from this that all ethical hacking is penetration testing—there could be other varieties of claimed ethical hacking practices (e.g., hacktivists). So we further specify what constitutes "ethical" in ethical hacking and we advance that it refers to widely established professional codes on conduct (which hacktivists, e.g., do not adhere to).
+• Penetration testing is ethical hacking, since ethical hacking most formally refers to penetration testing, and since penetration testing professionals strictly abide by a legal framework, while acknowledging that it does not follow from this that all ethical hacking is penetration testing—there could be other varieties of claimed ethical hacking practices (e.g., hacktivists). So we further specify what constitutes "ethical" in ethical hacking and we advance that it refers to claimed or demonstrated moral ethics and to widely established professional codes on conduct (which hacktivists, e.g., do not adhere to).
 
 • Ethical hackers (as penetration testers) fit only within the white hat hackers group on the basis of legal and ethical (moral) conduct.
 

@@ -4,8 +4,6 @@ hidden: true
 
 # The ethics of ethical hackers
 
-5.2.1.5. Professionalism/Professional Practice in Society.
-
 The ethics of ethical hackers are discussed here in the context of professionalism/professional practice in society.&#x20;
 
 The ethics and values of professional ethical hackers as discussed here are **based on** research conducted at a Canadian university. In-depth, semi-structured interviews were conducted with 14 interview participants in addition to one participant who contributed via email comprised of ethical hacking university experts, ethical hacking industry practitioners, and policy experts. Other data collection methods included organizational document reviews and literature reviews.

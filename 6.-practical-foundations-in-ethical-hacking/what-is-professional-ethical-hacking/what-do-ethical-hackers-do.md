@@ -68,6 +68,8 @@ The “**magic**” part of a penetration test is exploiting a vulnerability dis
 
 A penetration test “is when ethical hackers do their **magic**. They can test many of the vulnerabilities identified during the vulnerability assessment to quantify the actual threat and risk posed by the vulnerability” (Harper el al., 2011, p. 11). Penetration testing includes **probing** for vulnerabilities as well as giving proof of concept for an attack--that is, testing or verifying a hypothesis.&#x20;
 
+Ethical hacking may be a contracted outside service. An ethical hacker may be an independent computer security professional who attempts to break into an organization’s computer system, similar to having independent auditors verify an organization’s bookkeeping records.
+
 ### Table 15: Vulnerability Scan and Penetration Test Comparison (Rodger, 2013, p. 49):
 
 Businesses need to evaluate information security risks for the purposes of insurance underwriting and **resource allocation**.&#x20;

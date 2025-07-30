@@ -32,6 +32,11 @@ Risk assessments help risk managers select appropriate security control measures
 
 The concepts of acceptable risk and reasonable assurance guide the decision making process: managers must use their judgement to ensure that the cost of control does not exceed the system’s benefits or the risks involved. The risk management process “supports executive decision-making, allowing managers and owners to perform their fiduciary responsibility of protecting the assets of their enterprises” (Peltier, 2005, p. 10).
 
+Ethical hackers should address both systemic vulnerabilities as well as preventive measures (Harris, 2007; Palmer, 2001).&#x20;
+
+“Many hacking books and classes are irresponsible. If these items are really being developed to help out the good guys, they should be developed and structured that way.” For Harris (2007), responsible hacking books should give information about how to break into systems as well as about defence and **prevention** measures.\
+This means more than just showing how to exploit a vulnerability. These educational components should show the necessary countermeasures required to fight against these types of attacks, and how to implement preventive measures to help ensure that these vulnerabilities are not exploited. (Harris, 2007, The Controversy of Hacking Books, para. 3).
+
 #### Penetration testing&#x20;
 
 The **magic** part of a penetration test is exploiting a vulnerability discovered during the vulnerability assessment phase (Harper et al., 2011; Walker, 2017).

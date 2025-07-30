@@ -8,6 +8,8 @@ The ethics of ethical hackers are discussed here in the context of professionali
 
 The ethics and values of professional ethical hackers as discussed here are **based on** research conducted at a Canadian university. In-depth, semi-structured interviews were conducted with 14 interview participants in addition to one participant who contributed via email comprised of ethical hacking university experts, ethical hacking industry practitioners, and policy experts. Other data collection methods included organizational document reviews and literature reviews.
 
+Several **codes of conduct** for information security professionals and ethical hackers exit. They are all voluntary and only applicable to individuals who are members or certified professionals of the respective association. The codes of ethics may contain similar directives but they are all different and include different levels of detail.
+
 * **Professional ethics**
 * **The social context**
 * **Professional ethical hacking is legal**

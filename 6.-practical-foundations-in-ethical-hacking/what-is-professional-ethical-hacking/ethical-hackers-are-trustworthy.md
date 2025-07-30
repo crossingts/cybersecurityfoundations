@@ -4,9 +4,19 @@ hidden: true
 
 # Ethical hackers are trustworthy
 
-Graves (2010) and Palmer (2001) agree on the **three** attributes of **trust**, honouring the integrity of the **client’s system**, and on seeking prior **permission** from the client. Graves refers to these traits as **professional**. First and foremost, ethical hackers “must be completely **trustworthy.** While testing the security of a client’s systems, the ethical hacker may discover information about the client that should remain secret" (Palmer, 2001, p. 771).&#x20;
+Graves (2010) and Palmer (2001) agree on the **three** attributes of **trust**, honouring the integrity of the **client’s system**, and on seeking prior **permission** from the client. Graves refers to these traits as **professional**.&#x20;
 
-During an evaluation, “the ethical hacker often holds the ‘keys to the company,’ and therefore must be trusted to exercise tight control over any information about a target that could be misused” (Palmer, 2001, p. 771). Second, ethical hackers should take “all precautions to do no harm to their systems during a pen test” (Graves, 2010, para. 1). Third, ethical hackers abide by the imperative to obtain permission before attempting to access the computer network--the practices of professional ethical hackers are governed by a legal framework (Graves, 2010; Palmer, 2001).
+First and foremost, ethical hackers “must be completely **trustworthy.** While testing the security of a client’s systems, the ethical hacker may discover information about the client that should remain secret" (Palmer, 2001, p. 771). During an evaluation, “the ethical hacker often holds the ‘keys to the company,’ and therefore must be **trusted** to exercise tight control over any information about a target that could be misused” (Palmer, 2001, p. 771).&#x20;
+
+According to the International Council of Electronic Commerce Consultants (EC-Council), an ethical hacker is “an individual who is usually employed with the organization and who can be **trusted** to undertake an attempt to penetrate networks and/or computer systems using the same methods and techniques as a Hacker.”&#x20;
+
+Second, ethical hackers should take “all precautions to do no harm to their systems during a pen test” (Graves, 2010, para. 1). An ethical hacker will **not damage or harm the test network infrastructure** or information assets and will report on and **remediate** any accidental damage (Graves, 2010).
+
+In the case of computer security, these “tiger teams” or “ethical hackers” would employ the **same** tools and techniques as the intruders, but they would **neither damage the target systems nor steal information**. Instead, they would evaluate the target systems’ security and report back to the owners with the vulnerabilities they found and instructions for how to **remedy** them. (Palmer, 2001, p. 770)
+
+Third, ethical hackers abide by the imperative to obtain **permission** before attempting to access the computer network--the practices of professional ethical hackers are governed by a legal framework (Graves, 2010; Palmer, 2001).
+
+A Certified Ethical Hacker (EC-Council) is, “a skilled **professional** who understands and knows how to look for weaknesses and vulnerabilities in target systems and uses the **same knowledge and tools** as a malicious hacker, but in a **lawful** and legitimate manner to assess the security posture of the target system(s).” In contrast to a cracker, who is a malicious hacker, an ethical hacker “is someone who employs the **same tools** and techniques a criminal might use, with the customer’s full support and approval, to help secure a network or system” (Walker, 2017, p. 29).&#x20;
 
 Harper et al. (2011) are an important authority on what constitutes ethical hacking. We do not have to agree with them wholeheartedly, but their conception of ethical hackers underscores the centrality of **trust** in ethical hacking practices. The title of their book, _Gray Hat Hacking: The Ethical Hacker’s Handbook_, is a giveaway to their view, which is that ethical hackers are in fact grey hat hackers by necessity, by virtue of their practices.&#x20;
 
@@ -21,28 +31,3 @@ Thomas et al. (2018) argue that "to be effective, ethical hacking involves tryin
 The authors point out a fact highlighting an intrinsic grey area in the ethical hacking profession and which emphasizes the need for ethical hackers to espouse a strong moral character.
 
 an ethical hacker needs to keep their knowledge of exploits up to date, and they will likely need to go “underground” to gain this knowledge (Conran 2014). Because ethical hackers may even utilize questionable means to gain intelligence it may result in a question of their professional ethics. (Thomas et al., 2018, p. 4)
-
-
-
-**ethical hackers use same tools, have same knowledge**
-
-In contrast to a cracker, who is a malicious hacker, an ethical hacker “is someone who employs the **same tools** and techniques a criminal might use, with the customer’s full support and approval, to help secure a network or system” (Walker, 2017, p. 29).&#x20;
-
-According to the International Council of Electronic Commerce Consultants (EC-Council), an ethical hacker is “an individual who is usually employed with the organization and who can be **trusted** to undertake an attempt to penetrate networks and/or computer systems using the same methods and techniques as a Hacker.”&#x20;
-
-A Certified Ethical Hacker (EC-Council) is, “a skilled **professional** who understands and knows how to look for weaknesses and vulnerabilities in target systems and uses the **same knowledge and tools** as a malicious hacker, but in a **lawful** and legitimate manner to assess the security posture of the target system(s).”&#x20;
-
-
-
-**remediation**&#x20;
-
-Ethical hackers should address both systemic vulnerabilities as well as preventive measures (Harris, 2007; Palmer, 2001).&#x20;
-
-In the case of computer security, these “tiger teams” or “ethical hackers” would employ the **same** tools and techniques as the intruders, but they would neither damage the target systems nor steal information. Instead, they would evaluate the target systems’ security and report back to the owners with the vulnerabilities they found and instructions for how to **remedy** them. palmer p. 770
-
-An ethical hacker will not damage or harm the test network infrastructure or information assets and will report on and **remediate** any accidental damage (Graves, 2010).
-
-Several **codes of conduct** for information security professionals and ethical hackers exit. They are all voluntary and only applicable to individuals who are members or certified professionals of the respective association. The codes of ethics may contain similar directives but they are all different and include different levels of detail.
-
-“Many hacking books and classes are irresponsible. If these items are really being developed to help out the good guys, they should be developed and structured that way.” For Harris (2007), responsible hacking books should give information about how to break into systems as well as about defence and **prevention** measures.\
-This means more than just showing how to exploit a vulnerability. These educational components should show the necessary countermeasures required to fight against these types of attacks, and how to implement preventive measures to help ensure that these vulnerabilities are not exploited. (Harris, 2007, The Controversy of Hacking Books, para. 3).

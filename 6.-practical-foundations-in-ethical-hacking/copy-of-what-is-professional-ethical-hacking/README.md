@@ -5,7 +5,7 @@ description: >-
 hidden: true
 ---
 
-# What is professional ethical hacking
+# Copy of What is professional ethical hacking
 
 ## Learning objectives
 

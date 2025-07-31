@@ -12,11 +12,9 @@ But for Young et al. (2007), 9 of the 10 shades represent variations of the same
 
 Hacking as an illegal practice “is used most typically to describe a person who accesses computers and information stored on computers without first obtaining permission" (Pashel, 2006, p. 197). Pashel (2006), citing Logan and Clarkson (2005), advances the definition of hacking as accessing a system that one is either **not authorized** to access or one who accesses a system at a level beyond their authorization.&#x20;
 
-The key defining characteristic of ethical hacking in comparison to other hacking practices is the legal imperative: ethical hacking is unambiguously **legal**. The practices of ethical hackers are governed by a **legal framework**. Ethical hackers have **authorization** to hack the target system (Graves, 2010; Palmer, 2001). Ethical hackers need prior authorization, stipulated in a legally binding contract with the computer network owners, before attempting to breach a computer network (Bodhani, 2013; Palmer, 2001; Young, Lixuan, & Prybutok, 2007).&#x20;
-
 \--
 
-Ethical hackers must obtain explicit permission before testing systems (Harris, 2021).
+The key defining characteristic of ethical hacking in comparison to other hacking practices is the legal imperative: ethical hacking is unambiguously **legal**. The practices of ethical hackers are governed by a **legal framework**. Ethical hackers have **authorization** to hack the target system (Graves, 2010; Palmer, 2001). Ethical hackers need prior authorization, stipulated in a legally binding contract with the computer network owners, before attempting to breach a computer network (Bodhani, 2013; Palmer, 2001; Young, Lixuan, & Prybutok, 2007).&#x20;
 
 \--
 

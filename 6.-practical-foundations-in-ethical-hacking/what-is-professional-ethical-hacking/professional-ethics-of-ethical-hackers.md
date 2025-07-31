@@ -4,20 +4,21 @@ hidden: true
 
 # Professional ethics of ethical hackers
 
-This section explores the professional ethics of ethical hackers as stipulated/enriched in widely accepted industry and professional certification bodies/authorities.&#x20;
+This section explores the professional ethics of ethical hackers as stipulated/enriched in widely accepted industry and professional certification bodies.&#x20;
 
+## Topics covered in this section
+
+* **Introduction**&#x20;
 * **Professional ethics**
-  * **Professionalism as grounded in university teaching - Academic qualifications**
-  * **Professionalism as grounded in industry associations - Industry qualifications**
-* **The social context**
-* **Professional ethical hacking is legal -->who are ethical hackers**
-* **Ethical hackers are trustworthy -->who are ethical hackers**
+  * **Professionalism as grounded in university credentials**&#x20;
+  * **Professionalism as grounded in industry credentials and regulatory guidelines/standards**
+* **The social science context**
 
 ### Introduction
 
-#### **The Universality of Professional Ethical Principles Across Codes**
+Several **professional codes of conduct** exist for information security professionals and ethical hackers, applicable to individuals who are members or certified professionals of the respective association. The codes of ethics may contain similar directives but they are all distinct and include different levels of detail.
 
-While different organizations have their own codes, the underlying principles remain consistent: **protect the public, act lawfully, and maintain trust**. A professor highlighted that despite teaching **five different codes**, their core messages align—whether from **ACM, IEEE, PEO, CIPS, or (ISC)²**. This universality reinforces that ethical hacking is not a subjective practice but one grounded in well-established professional norms. By internalizing these codes, ethical hackers ensure their work enhances cybersecurity without crossing into gray or black hat territory. Ultimately, professionalism in ethical hacking is what separates it from malicious hacking, making it a respected and legally defensible discipline.
+While different organizations have their own codes, the underlying principles remain consistent: **protect the public, act lawfully, and maintain trust**. A Canadian university professor highlighted that despite teaching **five different codes**, their core messages align—whether from **ACM, IEEE, PEO, CIPS, or (ISC)²**. This universality reinforces that ethical hacking is not a subjective practice but one grounded in well-established professional norms. By internalizing these codes, ethical hackers ensure their work enhances cybersecurity without crossing into gray or black hat territory. Ultimately, professionalism in ethical hacking is what separates it from malicious hacking, making it a respected and legally defensible discipline.
 
 * **Common Themes Across All Major Codes:**
   * **Public Safety First:** Vulnerabilities must be handled in a way that minimizes societal harm.
@@ -25,8 +26,6 @@ While different organizations have their own codes, the underlying principles re
   * **Continuous Improvement:** Staying updated on evolving threats and ethical debates (e.g., AI hacking ethics).
 
 ### Professional ethics
-
-Several **codes of conduct** for information security professionals and ethical hackers exit. They are all voluntary and only applicable to individuals who are members or certified professionals of the respective association. The codes of ethics may contain similar directives but they are all different and include different levels of detail.
 
 **Professionalism as grounded in university teaching - Academic qualifications**
 
@@ -45,8 +44,6 @@ Key assumptions involved in this perspective is that university instruction equi
 It’s kind of like when software engineering became an engineering discipline. There were a lot of coders that knew how to code, but they didn’t have the mindset to approach it as a systematic large problem. I think ethical hacking is a very similar thing. (PPT11)
 
 PPT11 adds, ethical hacking “has become more of an engineering type of discipline now. There’s structure, there’s rigor, there’s tools out there that can be used for it … you need to systematically approach a problem, how to see if you can penetrate a system or not.” It is “that systematic nature that most of the underground ethical hackers, or the small people, don’t have because they’ve never had exposure to doing it in kind of an engineering mindset.”
-
-### Professional Codes of Conduct in Ethical Hacking
 
 Ethical hackers operate within a structured framework of professional codes of conduct, which define their responsibilities and ensure accountability. These codes, such as those from the **Association for Computing Machinery (ACM)**, **IEEE**, and **Professional Engineers Ontario (PEO)**, emphasize principles like **integrity, public welfare, and lawful conduct**. As one university professor noted, being a professional engineer or computer scientist means adhering to multiple overlapping ethical guidelines, all of which reinforce the same core values. This multi-layered ethical foundation ensures that ethical hackers do not merely rely on personal judgment but follow institutionalized best practices that have been refined over decades.
 
@@ -85,9 +82,11 @@ Certifications like **Certified Ethical Hacker (CEH)** and **Offensive Security 
 | ISACA Code of Professional Ethics                                                                                                                                                                                                                               | <p>ISACA was established in 1969 and focuses on IT governance. It has over 140,000 members worldwide (ISACA, n.d.). ISACA provides training and certification for information security and cybersecurity professionals.<br><br>The ISACA Code of Professional Ethics mandates that compliance with standards and procedures, due diligence, legal conduct and confidentiality, competency, and continuing professional development are maintained (ISACA, n.d).</p>                                                                                                                                                                                                                 |
 | <p>ISC2 Code of Ethics  <br><br>Code of Ethics Preamble:<br>The safety and welfare of society and the common good, duty to our principals, and to each other, requires that we adhere, and be seen to adhere, to the highest ethical standards of behavior.</p> | <p>The International Information System Security Certification Consortium or ISC2 – more correctly, (ISC)² – is an international, not for profit organization with over 125,000 members in the information security profession (ISC2, n.d.).<br><br>ISC2’s Code of Ethics Canons consists of four directives: 1) Protect society, the common good, necessary public trust and confidence, and the infrastructure; 2) Act honorably, honestly, justly, responsibly, and legally; 3) Provide diligent and competent service to principals; and 4) Advance and protect the profession.</p>                                                                                             |
 
-### Contextualizing ethical hacking technology
+### The social science context
 
-A discussion of ethics underlying the behaviour of professional ethical hackers should include a discussion of social values, notably, sociopolitical, ethical, and scientific values. The research approach within the STS fields places technology in its historical and theoretical context. These influences are less formal and explicit but their effect on employee (professional ethical hackers) and student behaviour is profound and should not be ignored.
+A discussion of the ethics underlying the behaviour of professional ethical hackers should include a discussion of social values, notably, sociopolitical, ethical, and scientific values, contextualize technology in a social science context.
+
+The research approach within the STS fields places technology in its historical and theoretical context. These influences are less formal and explicit but their effect on employee (professional ethical hackers) and student behaviour is profound and should not be ignored.
 
 Studies by Whitman & Mattord (2018) argue that ethical hacking curricula should include philosophical ethics (utilitarianism, deontology) alongside technical skills.&#x20;
 
@@ -100,17 +99,3 @@ Discussion normative ethics (ethical theories): Ethical decision-making theories
 
 Discussion of scientific values: Scientific method in research.\
 Canadian society can be defined by two key scientific values that define it as a secular and trusting society: critical rationalism and pragmatism.
-
-### Professional ethical hacking is legal
-
-### Ethical hackers are trustworthy
-
-
-
-[Table 10: Professional Ethical Hackers Coding Table](https://docs.google.com/document/d/e/2PACX-1vTW3d4S55Ax5k4Pz0pwo8WkJHbrgiYdK_9fLQP3O3vlRRFVp1osvgijIvAlg7CZrp_0CTcANyVEOWVR/pub)
-
-[Table 14: Profiles of Hackers](https://docs.google.com/document/d/e/2PACX-1vQVQ4AWXWyM83aXg5QxKwWkl9Oi8-gfRvUh7WhrMKekgb_I8yph4dTOtQYoXjflUA_6roJD5hWRGUT5/pub)
-
-### References
-
-Reference

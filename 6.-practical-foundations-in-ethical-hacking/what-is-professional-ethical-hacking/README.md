@@ -42,42 +42,23 @@ Assumptions:
 
 Follows is an analysis of the four types of hacking/hacker groups classified based on the legality of their practices, professional ethical conduct, and moral ethics.
 
-The professional ethics of white hat hackers are defined by legal compliance, contractual obligations, moral responsibility, and adherence to industry standards. Unlike gray or black hat hackers, ethical hackers must navigate complex ethical landscapes where their actions can either strengthen cybersecurity or inadvertently cause harm. By following established frameworks and maintaining public trust, they play a crucial role in defending digital systems against malicious threats.
-
-#### **Legal and Contractual Obligations**
-
-Professional ethical hackers work within legal boundaries, often bound by contracts that define the scope of penetration testing, data handling, and disclosure procedures. The **Computer Fraud and Abuse Act (CFAA)** in the U.S. and similar laws globally criminalize unauthorized access, making formal agreements essential (Schneier, 2020). Ethical hackers must **also** comply with industry standards like **ISO/IEC 27001** (information security management) and **NIST SP 800-115** (penetration testing guidelines). Failure to adhere to these obligations can result in legal consequences and reputational damage.
-
-* **Critical Contractual Elements:**
-  * **Scope of Work:** Clearly defined systems, networks, and testing methods.
-  * **Non-Disclosure Agreements (NDAs):** Preventing leaks of sensitive findings.
-  * **Responsible Disclosure Timelines:** Allowing vendors reasonable time to patch vulnerabilities before public disclosure.
+The professional ethics of white hat hackers are defined by legal compliance, contractual obligations, moral responsibility, and adherence to industry standards. Unlike gray or black hat hackers, ethical hackers must successfully navigate complex ethical and legal landscapes to preserve their professional and reputational standing. By following established frameworks and maintaining public trust, ethical hackers play a crucial role in defending digital systems against malicious threats.
 
 #### White Hat Hackers: The Ethical Professionals
 
-White hat hackers only hack systems or machines with legal authorization to do so (including legal contractual agreements). So whether resident (in-house) employees of a company or hired by a company for security testing, this would be ethical hacking as long as hacking is performed in accordance with agreed upon terms and within the specified authorization parameters (hacking beyond authorized level or terms ceases to be ethical). Bug bounty hunters are ethical hackers since they work within this contractual framework.&#x20;
+White hat hackers only hack systems or machines with legal authorization to do so (including legal contractual agreements). So whether resident (in-house) employees of a company or hired by a company for security testing, the practices of white hat hackers would be ethical as long as hacking is performed in accordance with agreed upon terms and within the specified authorization parameters (hacking beyond authorized levels or terms of service ceases to be ethical). Bug bounty hunters are ethical hackers since they work within this contractual framework.&#x20;
 
-White hat hackers operate within legal boundaries, conducting security assessments only with explicit authorization from computer system. They adhere to strict ethical guidelines, often working as in-house experts, consultants, or bug bounty hunters.
+White hat hackers operate with **explicit permission** and follow **industry and regulatory ethical guidelines** (e.g., **EC-Council’s CEH**, **OSSTMM**, or **NIST SP 800-115**)
 
-Their practices align with professional codes like the ACM Code of Ethics (2018), which mandates permission-based hacking, and industry standards such as IEEE guidelines on penetration testing (e.g., IEEE 2600-series) and NIST SP 800-115
+The practices of white hats align with professional codes like the **ACM Code of Ethics (2018)**, which mandates permission-based hacking, and guidelines such as IEEE guidelines on penetration testing (e.g., IEEE 2600-series) and NIST SP 800-115. The **ACM Code of Ethics (2018)** stresses **permission-based hacking** (e.g., Principle 2.8: "Access computing and communication resources only when authorized").
 
-The **ACM Code of Ethics (2018)** stresses **permission-based hacking** (e.g., Principle 2.8: "Access computing and communication resources only when authorized").
-
-white hat hackers operate with **explicit permission**, follow **ethical guidelines** (e.g., **EC-Council’s CEH**, **OSSTMM**, or **NIST SP 800-115**), and often work as professionals or bug bounty hunters.
-
-**penetration testing ethics** are often covered in other IEEE standards or guidelines, such as those from the **IEEE Cybersecurity Initiative** or **IEEE Certifed Ethical Hacker (CEH) resources**. For example:
+**Penetration testing ethics** are covered in IEEE standards or guidelines, such as those from the **IEEE Cybersecurity Initiative** or **IEEE Certifed Ethical Hacker (CEH) resources**. For example:
 
 * **IEEE 802.10** (historical standard for security) and newer frameworks emphasize authorized testing.
 * **IEEE Std. 1012** (software verification) or **IEEE 2600** (hardware security) may touch on testing protocols.
-
-widely recognized frameworks&#x20;
-
 * **NIST SP 800-115** (Technical Guide to Penetration Testing).
 * **ISO/IEC 27001** (for security testing norms).
 * **EC-Council’s CEH Code of Ethics** (explicit rules for pentesters).
-
-Their primary goal is to improve cybersecurity by identifying and fixing vulnerabilities before malicious actors can exploit them. Unlike gray or black hats, they never disclose vulnerabilities publicly without permission and adhere to contracts and responsible disclosure policies.
-
 * **Key Traits:**
   * Operate legally under contracts or employment agreements (Schneier, 2020).
   * Follow responsible disclosure practices (ISO/IEC 29147), e.g., report vulnerabilities privately to the vendor.

@@ -10,17 +10,27 @@ This section explores the professional ethics of ethical hackers as stipulated/e
 
 * **Introduction**&#x20;
 * **Professional ethics**
-  * **Professionalism as grounded in university credentials**&#x20;
-  * **Professionalism as grounded in industry credentials and regulatory guidelines/standards**
+  * **Professionalism as grounded in university credentials/instruction**&#x20;
+  * **Professionalism as grounded in industry and regulatory credentials/standards**
 * **The social science context**
 
 ### Introduction
 
 Several **professional codes of conduct** exist for information security professionals and ethical hackers, applicable to individuals who are members or certified professionals of the respective association. The codes of ethics may contain similar directives but they are all distinct and include different levels of detail.
 
+• Industry certifications: CEH, OSCP
+
+• Regulatory/governmental standards/guidelines: NIST
+
+• Industry standards/guidelines: ISO
+
+• Professional associations: ACM Code of Ethics (2018), IEEE
+
+• Professional licensing/accreditation bodies: PEO, CEAB, CIPS
+
 While different organizations have their own codes, the underlying principles remain consistent: **protect the public, act lawfully, and maintain trust**. A Canadian university professor highlighted that despite teaching **five different codes**, their core messages align—whether from **ACM, IEEE, PEO, CIPS, or (ISC)²**. This universality reinforces that ethical hacking is not a subjective practice but one grounded in well-established professional norms. By internalizing these codes, ethical hackers ensure their work enhances cybersecurity without crossing into gray or black hat territory. Ultimately, professionalism in ethical hacking is what separates it from malicious hacking, making it a respected and legally defensible discipline.
 
-* **Common Themes Across All Major Codes:**
+* **Common Themes Across All Major Prrofessional Codes:**
   * **Public Safety First:** Vulnerabilities must be handled in a way that minimizes societal harm.
   * **Honesty and Transparency:** No hiding or exaggerating findings for personal gain.
   * **Continuous Improvement:** Staying updated on evolving threats and ethical debates (e.g., AI hacking ethics).
@@ -29,48 +39,44 @@ While different organizations have their own codes, the underlying principles re
 
 **Professionalism as grounded in university teaching - Academic qualifications**
 
-Three interviewed ethical hacking university experts said professionalism, as in professional ethics or a professional code of conduct, guides the behavior of professional engineers and computer scientists (PPT11, PPT3, PPT10).&#x20;
+Ethical hackers operate within a structured framework of professional codes of conduct, which define their responsibilities and ensure accountability.&#x20;
 
-As a professional engineer, said a Canadian university professor of computer science and software engineering,
+Three Canadian university professors of computer science disciplines interviewed said professionalism, as in professional ethics or a professional code of conduct, guides the behavior of professional engineers and computer scientists (PPT11, PPT3, PPT10).&#x20;
 
-he is “bound by a number of codes of practice, of ethics.” “As a professional engineer, I’m bound by the **PEO code of ethics** … I’m also bound by the **software engineering code of ethics**, the **ACM code of ethics, the IEEE code of ethics**, because I’m members of multiple societies that have codes.” He says he teaches “five different codes of ethics. They are all **broadly the same**, but I teach about them to students.” He add:
+As a professional engineer, said a Canadian university professor of computer science and software engineering, he is “bound by a number of codes of practice, of ethics.” “As a professional engineer, I’m bound by the **PEO code of ethics** … I’m also bound by the **software engineering code of ethics**, the **ACM code of ethics, the IEEE code of ethics**, because I’m members of multiple societies that have codes.” He says he teaches “five different codes of ethics. They are all **broadly the same**, but I teach about them to students.” He added:
 
 That is in the course calendar descriptions and it’s also in our accreditation. We are accredited by CIPS, the Canadian Information Processing Society, and by the Canadian Engineering Accreditation Board, and both of those require us to teach students about ethics.&#x20;
 
-[Interview Participants by Area of Expertise](https://docs.google.com/document/d/e/2PACX-1vQ5iF6m--APIZrFd9hnz1HH9zv3jJjuBjl0zGDgpviYSSMRBxpWQxCvKQmK8rrP0D5o_Hx4grwLkRcs/pub)
-
-Key assumptions involved in this perspective is that university instruction equips students with scientific and critical thinking skills necessary for professionalism on the job.
-
-It’s kind of like when software engineering became an engineering discipline. There were a lot of coders that knew how to code, but they didn’t have the mindset to approach it as a systematic large problem. I think ethical hacking is a very similar thing. (PPT11)
-
-PPT11 adds, ethical hacking “has become more of an engineering type of discipline now. There’s structure, there’s rigor, there’s tools out there that can be used for it … you need to systematically approach a problem, how to see if you can penetrate a system or not.” It is “that systematic nature that most of the underground ethical hackers, or the small people, don’t have because they’ve never had exposure to doing it in kind of an engineering mindset.”
-
-Ethical hackers operate within a structured framework of professional codes of conduct, which define their responsibilities and ensure accountability. These codes, such as those from the **Association for Computing Machinery (ACM)**, **IEEE**, and **Professional Engineers Ontario (PEO)**, emphasize principles like **integrity, public welfare, and lawful conduct**. As one university professor noted, being a professional engineer or computer scientist means adhering to multiple overlapping ethical guidelines, all of which reinforce the same core values. This multi-layered ethical foundation ensures that ethical hackers do not merely rely on personal judgment but follow institutionalized best practices that have been refined over decades.
-
-* **Key Codes Governing Ethical Hackers:**
-  * **ACM Code of Ethics (2018):** Prioritizes avoiding harm, respecting privacy, and honesty in disclosure.
-  * **IEEE Code of Ethics:** Emphasizes transparency, accountability, and rejecting bribery or conflicts of interest.
-  * **CEH (Certified Ethical Hacker) Code of Conduct:** Mandates legal authorization and confidentiality in testing.
-
-#### **Academic Integration of Ethical Standards**
-
-University programs teaching ethical hacking incorporate these professional codes into their curricula to ensure graduates enter the field with a strong ethical foundation. As one professor explained, accreditation bodies like the **Canadian Engineering Accreditation Board (CEAB)** and **Canadian Information Processing Society (CIPS)** require ethics education as part of degree programs. This means students learn not only technical penetration testing skills but also how to apply ethical decision-making in real-world scenarios. For example, coursework may include case studies on **responsible disclosure dilemmas** or discussions on **legal consequences of unauthorized testing**, reinforcing that ethical hacking is not just about technical skill but professional responsibility.
+**Accreditation bodies** like the **Canadian Engineering Accreditation Board (CEAB)** and **Canadian Information Processing Society (CIPS)** require ethics education as part of degree programs. This means students learn not only technical penetration testing skills but also how to apply ethical decision-making in real-world scenarios. For example, coursework may include case studies on **responsible disclosure dilemmas** or discussions on **legal consequences of unauthorized testing**, reinforcing that ethical hacking is not just about technical skill but professional responsibility.
 
 * **How Ethics is Taught in Academia:**
   * **Case-Based Learning:** Analyzing past breaches (e.g., **Equifax, SolarWinds**) to discuss ethical failures.
   * **Role-Playing Scenarios:** Simulating situations where students must choose between profit and responsible reporting.
   * **Guest Lectures from Industry:** Professionals share real-world ethical challenges they’ve faced.
 
-**Professionalism as grounded in industry associations - Industry qualifications**
+[Interview Participants by Area of Expertise](https://docs.google.com/document/d/e/2PACX-1vQ5iF6m--APIZrFd9hnz1HH9zv3jJjuBjl0zGDgpviYSSMRBxpWQxCvKQmK8rrP0D5o_Hx4grwLkRcs/pub)
 
-White hat hackers, or professional ethical hackers, operate under strict ethical guidelines to ensure their actions remain legal, responsible, and beneficial to cybersecurity. Unlike malicious hackers, they adhere to formalized codes of conduct, often outlined by organizations such as the **EC-Council (International Council of E-Commerce Consultants)**, **(ISC)²**, and the **IEEE**. These frameworks emphasize principles like **authorization, confidentiality, and non-maleficence** (avoiding harm).&#x20;
+Key assumptions involved in this perspective is that university instruction equips students with ethical, scientific, and critical thinking skills necessary for professionalism on the job.
 
-Certifications like **Certified Ethical Hacker (CEH)** and **Offensive Security Certified Professional (OSCP)** include ethics modules to reinforce professional conduct. Furthermore, organizations like **OWASP (Open Web Application Security Project)** provide guidelines for responsible vulnerability disclosure, ensuring ethical hackers contribute positively to the cybersecurity ecosystem.
+It’s kind of like when software engineering became an engineering discipline. There were a lot of coders that knew how to code, but they didn’t have the mindset to approach it as a systematic large problem. I think ethical hacking is a very similar thing. (PPT11)
 
-* **Best Practices from Research:**
-  * **Transparency:** Documenting all testing activities for accountability.
-  * **Continuous Education:** Staying updated on legal and ethical developments in cybersecurity.
-  * **Public Interest:** Prioritizing vulnerabilities that pose significant societal risks (e.g., medical systems, infrastructure).
+PPT11 adds, ethical hacking “has become more of an engineering type of discipline now. There’s structure, there’s rigor, there’s tools out there that can be used for it … you need to systematically approach a problem, how to see if you can penetrate a system or not.” It is “that systematic nature that most of the underground ethical hackers, or the small people, don’t have because they’ve never had exposure to doing it in kind of an engineering mindset.”
+
+Professional codes, such as those from the **Association for Computing Machinery (ACM)**, **IEEE**, and **Professional Engineers Ontario (PEO)**, emphasize principles like **integrity, public welfare, and lawful conduct**.&#x20;
+
+Adhering to multiple overlapping ethical guidelines, all of which reinforce the same core values, ensures that ethical hackers do not merely rely on personal judgment but follow institutionalized best practices that have been refined over decades.
+
+University programs teaching ethical hacking incorporate these professional codes into their curricula to ensure graduates enter the field with a strong ethical foundation.&#x20;
+
+**Professionalism as grounded in industry credentials**
+
+**Professionalism as grounded in industry credentials and regulatory guidelines/standards**
+
+Professional ethical hackers operate under strict ethical guidelines to ensure their actions remain legal, responsible, and beneficial to cybersecurity. Unlike malicious hackers, they adhere to formalized codes of conduct, often outlined by organizations such as the **EC-Council (International Council of E-Commerce Consultants)**, **(ISC)²**, and the **IEEE**. These frameworks emphasize principles like **authorization, confidentiality, and non-maleficence** (avoiding harm).&#x20;
+
+**Industry certifications** like **Certified Ethical Hacker (CEH)** and **Offensive Security Certified Professional (OSCP)** include ethics modules to reinforce professional conduct.&#x20;
+
+**Industry standards/guidelines** such as **OWASP (Open Web Application Security Project)** provide guidelines for responsible vulnerability disclosure, ensuring ethical hackers contribute positively to the cybersecurity ecosystem.
 
 **Key Codes of Conduct for Information Security Professionals (Adapted from Thomas et al., 2018, pp. 5-6)**
 
@@ -99,3 +105,9 @@ Discussion normative ethics (ethical theories): Ethical decision-making theories
 
 Discussion of scientific values: Scientific method in research.\
 Canadian society can be defined by two key scientific values that define it as a secular and trusting society: critical rationalism and pragmatism.
+
+**Key Codes Governing Ethical Hackers:**
+
+* **ACM Code of Ethics (2018):** Prioritizes avoiding harm, respecting privacy, and honesty in disclosure.
+* **IEEE Code of Ethics:** Emphasizes transparency, accountability, and rejecting bribery or conflicts of interest.
+* **CEH (Certified Ethical Hacker) Code of Conduct:** Mandates legal authorization and confidentiality in testing.

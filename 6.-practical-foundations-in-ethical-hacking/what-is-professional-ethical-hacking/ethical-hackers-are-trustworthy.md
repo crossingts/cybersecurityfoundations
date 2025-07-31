@@ -14,6 +14,8 @@ Discovered vulnerabilities must be reported privately to the organization, not p
 
 Findings should not be exploited for personal gain or malicious purposes.
 
+Ethical hackers hold a unique position of **trust**, as their work involves accessing sensitive systems that could be exploited if mishandled. Research by Tavani (2016) emphasizes the **duty of care** that ethical hackers owe to organizations and end-users. This includes avoiding unnecessary disruptions (e.g., crashing production servers) and ensuring that discovered vulnerabilities are not leaked to malicious actors. Additionally, ethical hackers must avoid conflicts of interest—such as working for competing firms without transparency—to maintain professional credibility.
+
 **Second**, ethical hackers should take “all precautions to do no harm to their systems during a pen test” (Graves, 2010, para. 1). An ethical hacker will **not damage or harm the test network infrastructure** or information assets and will report on and **remediate** any accidental damage (Graves, 2010).
 
 In the case of computer security, these “tiger teams” or “ethical hackers” would employ the **same** tools and techniques as the intruders, but they would **neither damage the target systems nor steal information**. Instead, they would evaluate the target systems’ security and report back to the owners with the vulnerabilities they found and instructions for how to **remedy** them. (Palmer, 2001, p. 770)

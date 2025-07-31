@@ -42,6 +42,17 @@ Assumptions:
 
 Follows is an analysis of the four types of hacking/hacker groups classified based on the legality of their practices, professional ethical conduct, and moral ethics.
 
+The professional ethics of white hat hackers are defined by legal compliance, contractual obligations, moral responsibility, and adherence to industry standards. Unlike gray or black hat hackers, ethical hackers must navigate complex ethical landscapes where their actions can either strengthen cybersecurity or inadvertently cause harm. By following established frameworks and maintaining public trust, they play a crucial role in defending digital systems against malicious threats.
+
+#### **Legal and Contractual Obligations**
+
+Professional ethical hackers work within legal boundaries, often bound by contracts that define the scope of penetration testing, data handling, and disclosure procedures. The **Computer Fraud and Abuse Act (CFAA)** in the U.S. and similar laws globally criminalize unauthorized access, making formal agreements essential (Schneier, 2020). Ethical hackers must **also** comply with industry standards like **ISO/IEC 27001** (information security management) and **NIST SP 800-115** (penetration testing guidelines). Failure to adhere to these obligations can result in legal consequences and reputational damage.
+
+* **Critical Contractual Elements:**
+  * **Scope of Work:** Clearly defined systems, networks, and testing methods.
+  * **Non-Disclosure Agreements (NDAs):** Preventing leaks of sensitive findings.
+  * **Responsible Disclosure Timelines:** Allowing vendors reasonable time to patch vulnerabilities before public disclosure.
+
 #### White Hat Hackers: The Ethical Professionals
 
 White hat hackers only hack systems or machines with legal authorization to do so (including legal contractual agreements). So whether resident (in-house) employees of a company or hired by a company for security testing, this would be ethical hacking as long as hacking is performed in accordance with agreed upon terms and within the specified authorization parameters (hacking beyond authorized level or terms ceases to be ethical). Bug bounty hunters are ethical hackers since they work within this contractual framework.&#x20;
@@ -139,38 +150,6 @@ Hacktivists leverage cyber techniques for political or social causes, blurring t
 | **Hacktivist** | ❌ No   | Political/social change | DDoS, leaks, defacements            | Anonymous, Phineas Fisher       |
 
 Each hacker group has distinct motivations, but the legality of their practices and their moral ethics separate them most clearly. While white hats work within the legal system, gray hats operate in a moral gray zone, black hats are outright criminals, and hacktivists prioritize ideology over law.
-
-### Professional ethics of ethical hackers
-
-#### **Legal and Contractual Obligations**
-
-Professional ethical hackers work within legal boundaries, often bound by contracts that define the scope of penetration testing, data handling, and disclosure procedures. The **Computer Fraud and Abuse Act (CFAA)** in the U.S. and similar laws globally criminalize unauthorized access, making formal agreements essential (Schneier, 2020). Ethical hackers must also comply with industry standards like **ISO/IEC 27001** (information security management) and **NIST SP 800-115** (penetration testing guidelines). Failure to adhere to these obligations can result in legal consequences and reputational damage.
-
-* **Critical Contractual Elements:**
-  * **Scope of Work:** Clearly defined systems, networks, and testing methods.
-  * **Non-Disclosure Agreements (NDAs):** Preventing leaks of sensitive findings.
-  * **Responsible Disclosure Timelines:** Allowing vendors reasonable time to patch vulnerabilities before public disclosure.
-
-#### **Moral Responsibility and Public Trust**
-
-Ethical hackers hold a unique position of trust, as their work involves accessing sensitive systems that could be exploited if mishandled. Research by Tavani (2016) emphasizes the **duty of care** that ethical hackers owe to organizations and end-users. This includes avoiding unnecessary disruptions (e.g., crashing production servers) and ensuring that discovered vulnerabilities are not leaked to malicious actors. Additionally, ethical hackers must avoid conflicts of interest—such as working for competing firms without transparency—to maintain professional credibility.
-
-* **Ethical Dilemmas in Practice:**
-  * **Bug Bounty Ethics:** Should a hacker report a flaw for free or demand payment? Legitimate programs (e.g., HackerOne) provide structured rewards.
-  * **Whistleblowing:** If a company ignores critical vulnerabilities, should the hacker go public? Most frameworks discourage this unless all legal avenues are exhausted.
-
-#### **Academic and Industry Standards**
-
-Academic literature underscores the need for standardized ethical training in cybersecurity education. Studies by Whitman & Mattord (2018) argue that ethical hacking curricula should include **philosophical ethics (utilitarianism, deontology)** alongside technical skills. Certifications like **Certified Ethical Hacker (CEH)** and **Offensive Security Certified Professional (OSCP)** include ethics modules to reinforce professional conduct. Furthermore, organizations like **OWASP (Open Web Application Security Project)** provide guidelines for responsible vulnerability disclosure, ensuring ethical hackers contribute positively to the cybersecurity ecosystem.
-
-* **Best Practices from Research:**
-  * **Transparency:** Documenting all testing activities for accountability.
-  * **Continuous Education:** Staying updated on legal and ethical developments in cybersecurity.
-  * **Public Interest:** Prioritizing vulnerabilities that pose significant societal risks (e.g., medical systems, infrastructure).
-
-#### **Conclusion**
-
-The professional ethics of white hat hackers are defined by legal compliance, contractual obligations, moral responsibility, and adherence to industry standards. Unlike gray or black hat hackers, ethical hackers must navigate complex ethical landscapes where their actions can either strengthen cybersecurity or inadvertently cause harm. By following established frameworks and maintaining public trust, they play a crucial role in defending digital systems against malicious threats.
 
 ### Other perspectives on hacking/hacker ethics
 

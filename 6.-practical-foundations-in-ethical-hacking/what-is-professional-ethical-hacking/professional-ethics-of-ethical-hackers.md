@@ -2,7 +2,7 @@
 hidden: true
 ---
 
-# The ethics of ethical hackers
+# Professional ethics of ethical hackers
 
 This section explores the professional ethics of ethical hackers as stipulated/enriched in widely accepted industry and professional certification bodies/authorities.&#x20;
 
@@ -68,6 +68,13 @@ University programs teaching ethical hacking incorporate these professional code
 
 White hat hackers, or professional ethical hackers, operate under strict ethical guidelines to ensure their actions remain legal, responsible, and beneficial to cybersecurity. Unlike malicious hackers, they adhere to formalized codes of conduct, often outlined by organizations such as the **EC-Council (International Council of E-Commerce Consultants)**, **(ISC)²**, and the **IEEE**. These frameworks emphasize principles like **authorization, confidentiality, and non-maleficence** (avoiding harm).&#x20;
 
+Certifications like **Certified Ethical Hacker (CEH)** and **Offensive Security Certified Professional (OSCP)** include ethics modules to reinforce professional conduct. Furthermore, organizations like **OWASP (Open Web Application Security Project)** provide guidelines for responsible vulnerability disclosure, ensuring ethical hackers contribute positively to the cybersecurity ecosystem.
+
+* **Best Practices from Research:**
+  * **Transparency:** Documenting all testing activities for accountability.
+  * **Continuous Education:** Staying updated on legal and ethical developments in cybersecurity.
+  * **Public Interest:** Prioritizing vulnerabilities that pose significant societal risks (e.g., medical systems, infrastructure).
+
 **Key Codes of Conduct for Information Security Professionals (Adapted from Thomas et al., 2018, pp. 5-6)**
 
 | **Code of conduct**                                                                                                                                                                                                                                             | **Key directives**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
@@ -81,6 +88,8 @@ White hat hackers, or professional ethical hackers, operate under strict ethical
 ### Contextualizing ethical hacking technology
 
 A discussion of ethics underlying the behaviour of professional ethical hackers should include a discussion of social values, notably, sociopolitical, ethical, and scientific values. The research approach within the STS fields places technology in its historical and theoretical context. These influences are less formal and explicit but their effect on employee (professional ethical hackers) and student behaviour is profound and should not be ignored.
+
+Studies by Whitman & Mattord (2018) argue that ethical hacking curricula should include philosophical ethics (utilitarianism, deontology) alongside technical skills.&#x20;
 
 The key social values are liberalism (classical liberalism), pragmatic ethics, knowledge making (Weick’s constructivism), and scientific (pragmatic philosophy).
 

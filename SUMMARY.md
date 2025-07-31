@@ -68,7 +68,7 @@
 * [Introduction - Practical foundations in ethical hacking](6.-practical-foundations-in-ethical-hacking/introduction-practical-foundations-in-ethical-hacking/README.md)
   * [Assignment: Who are ethical hackers?](6.-practical-foundations-in-ethical-hacking/introduction-practical-foundations-in-ethical-hacking/assignment-who-are-ethical-hackers.md)
 * [What is professional ethical hacking](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/README.md)
-  * [The ethics of ethical hackers](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/the-ethics-of-ethical-hackers.md)
+  * [Professional ethics of ethical hackers](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/professional-ethics-of-ethical-hackers.md)
   * [Ethical hacking is legal](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/ethical-hacking-is-legal.md)
   * [Ethical hackers are trustworthy](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/ethical-hackers-are-trustworthy.md)
   * [What do ethical hackers do?](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/what-do-ethical-hackers-do.md)

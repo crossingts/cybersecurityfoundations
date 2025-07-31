@@ -48,7 +48,8 @@
 * [Introduction - Wireless security and cryptography](5.-wireless-security-and-cryptography/introduction-wireless-security-and-cryptography.md)
 * [Hashing algorithms and message integrity](5.-wireless-security-and-cryptography/hashing-algorithms-and-message-integrity/README.md)
   * [Understanding hash, digest, checksum, and fingerprint](5.-wireless-security-and-cryptography/hashing-algorithms-and-message-integrity/understanding-hash-digest-checksum-and-fingerprint.md)
-* [Cryptographic encryption and confidentiality](5.-wireless-security-and-cryptography/cryptographic-encryption-and-confidentiality.md)
+* [Cryptographic encryption and confidentiality](5.-wireless-security-and-cryptography/cryptographic-encryption-and-confidentiality/README.md)
+  * [Pretty Good Privacy (PGP)](5.-wireless-security-and-cryptography/cryptographic-encryption-and-confidentiality/pretty-good-privacy-pgp.md)
 * [Message signing using asymmetric keys](5.-wireless-security-and-cryptography/message-signing-using-asymmetric-keys.md)
 * [Authentication methods](5.-wireless-security-and-cryptography/authentication-methods.md)
 * [The SSL/TLS handshake](5.-wireless-security-and-cryptography/the-ssl-tls-handshake/README.md)
@@ -76,8 +77,8 @@
 * [Defensive security vs offensive security](6.-practical-foundations-in-ethical-hacking/defensive-security-vs-offensive-security.md)
 * [Defensive cybersecurity technologies](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md)
   * [Network-based IDS (NIDS) vs host-based IDS (HIDS)](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/network-based-ids-nids-vs-host-based-ids-hids.md)
-  * [Using Wireshark to identify non-secure network traffic](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/using-wireshark-to-identify-non-secure-network-traffic.md)
   * [How to get started with Wireshark](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/how-to-get-started-with-wireshark.md)
+  * [Using Wireshark to identify non-secure network traffic](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/using-wireshark-to-identify-non-secure-network-traffic.md)
 * [Phases of the penetration testing process](6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process.md)
 * [Types of penetration testing](6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing.md)
 * [Pentesting methodologies, frameworks, and technologies](6.-practical-foundations-in-ethical-hacking/pentesting-methodologies-frameworks-and-technologies/README.md)
@@ -97,9 +98,5 @@
 * [Networking fundamentals](7.-conclusion/networking-fundamentals.md)
 * [Wireless security and cryptography](7.-conclusion/wireless-security-and-cryptography.md)
 * [Practical foundations in ethical hacking](7.-conclusion/practical-foundations-in-ethical-hacking.md)
-* [Appendices](7.-conclusion/appendices.md)
-
-## 8. Special topics
-
-* [Ethics and philosophy](https://dti-techs.gitbook.io/research-and-academics/ethics-and-philosophy)
-* [Organizational communication (Karl Weick)](https://dti-techs.gitbook.io/research-and-academics/communication-theory/sensemaking-karl-weick)
+* [Appendices](7.-conclusion/appendices/README.md)
+  * [Glossary](7.-conclusion/appendices/glossary.md)

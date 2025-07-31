@@ -2,7 +2,7 @@
 hidden: true
 ---
 
-# Ethical hacking is unambiguously legal
+# Ethical hacking is legal
 
 Hackers can be divided into a number of groups, some of which “are clearly ethical, others are clearly unethical, and still others exist in a gray area of sorts and whose ethics can be debated”, argues Pashel (2006, p. 197). White hats use their skills “in a manner that most would clearly define as ethical". For example, white hat hackers could be employees who "with permission, attack a company’s network in order to determine weaknesses, and law enforcement and intelligence agents who use their skill in the name of national security or to investigate and solve crimes” (p. 197).&#x20;
 
@@ -13,6 +13,12 @@ But for Young et al. (2007), 9 of the 10 shades represent variations of the same
 Hacking as an illegal practice “is used most typically to describe a person who accesses computers and information stored on computers without first obtaining permission" (Pashel, 2006, p. 197). Pashel (2006), citing Logan and Clarkson (2005), advances the definition of hacking as accessing a system that one is either **not authorized** to access or one who accesses a system at a level beyond their authorization.&#x20;
 
 The key defining characteristic of ethical hacking in comparison to other hacking practices is the legal imperative: ethical hacking is unambiguously **legal**. The practices of ethical hackers are governed by a **legal framework**. Ethical hackers have **authorization** to hack the target system (Graves, 2010; Palmer, 2001). Ethical hackers need prior authorization, stipulated in a legally binding contract with the computer network owners, before attempting to breach a computer network (Bodhani, 2013; Palmer, 2001; Young, Lixuan, & Prybutok, 2007).&#x20;
+
+\--
+
+Ethical hackers must obtain explicit permission before testing systems (Harris, 2021).
+
+\--
 
 Much of the discussion around the various hat color codes of hackers revolves around **this point**. In this conception, ethical hackers are white hat hackers who hack within legal frameworks.
 
@@ -25,4 +31,3 @@ Similarly, Palmer's (2001) use of the explicit terms “ethical hacker” and �
 Logan and Clarkson (2005), Palmer (2001), Pashel (2006), Sharma and Sefchek (2007), Xu, Hu, and Zhang (2013), and Young et al. (2007) all more or less echo Pike’s definition--essentially placing hacking and hackers at either side of the law.
 
 That ethical hacking is a legal practice is hardly a point of contention whether in literature or in the public sphere. But it should be noted, legal does not necessarily equate with ethical. For example, Pashel (2006) and Bodhani (2013) explicitly acknowledge variations of grey hat hacking exist, but they would agree that white hat hacking can be distinguished as being unambiguously legal and authorized.&#x20;
-

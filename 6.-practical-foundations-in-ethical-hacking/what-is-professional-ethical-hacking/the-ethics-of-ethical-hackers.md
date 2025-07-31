@@ -15,7 +15,7 @@ This section explores the professional ethics of ethical hackers as stipulated/e
 
 ### Introduction
 
-#### **The Universality of Ethical Principles Across Codes**
+#### **The Universality of Professional Ethical Principles Across Codes**
 
 While different organizations have their own codes, the underlying principles remain consistent: **protect the public, act lawfully, and maintain trust**. A professor highlighted that despite teaching **five different codes**, their core messages align—whether from **ACM, IEEE, PEO, CIPS, or (ISC)²**. This universality reinforces that ethical hacking is not a subjective practice but one grounded in well-established professional norms. By internalizing these codes, ethical hackers ensure their work enhances cybersecurity without crossing into gray or black hat territory. Ultimately, professionalism in ethical hacking is what separates it from malicious hacking, making it a respected and legally defensible discipline.
 
@@ -65,6 +65,8 @@ University programs teaching ethical hacking incorporate these professional code
   * **Guest Lectures from Industry:** Professionals share real-world ethical challenges they’ve faced.
 
 **Professionalism as grounded in industry associations - Industry qualifications**
+
+White hat hackers, or professional ethical hackers, operate under strict ethical guidelines to ensure their actions remain legal, responsible, and beneficial to cybersecurity. Unlike malicious hackers, they adhere to formalized codes of conduct, often outlined by organizations such as the **EC-Council (International Council of E-Commerce Consultants)**, **(ISC)²**, and the **IEEE**. These frameworks emphasize principles like **authorization, confidentiality, and non-maleficence** (avoiding harm).&#x20;
 
 **Key Codes of Conduct for Information Security Professionals (Adapted from Thomas et al., 2018, pp. 5-6)**
 

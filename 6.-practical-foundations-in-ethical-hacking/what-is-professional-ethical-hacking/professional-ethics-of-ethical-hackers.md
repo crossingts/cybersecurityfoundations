@@ -18,19 +18,19 @@ This section explores the professional ethics of ethical hackers as stipulated/e
 
 Several **professional codes of conduct** exist for information security professionals and ethical hackers, applicable to individuals who are members or certified professionals of the respective association. The codes of ethics may contain similar directives but they are all distinct and include different levels of detail.
 
-• Industry certifications: CEH, OSCP
+• Industry certifications: CEH Code of Ethics (EC-Council), OSCP (Offensive Security), (ISC)²
 
-• Regulatory/governmental standards/guidelines: NIST
+• Regulatory/governmental standards/guidelines: NIST SP 800-115
 
-• Industry standards/guidelines: ISO
+• Industry standards/guidelines: OSSTMM, ISO/IEC 27001
 
-• Professional associations: ACM Code of Ethics (2018), IEEE
+• Professional associations: ACM Code of Ethics (2018), IEEE standards/guidelines (IEEE Cybersecurity Initiative, IEEE Certified Ethical Hacker (CEH) resources), IEEE code of ethics, IEEE code of conduct
 
-• Professional licensing/accreditation bodies: PEO, CEAB, CIPS
+• Professional licensing/accreditation bodies: Professional Engineers Ontario (PEO)/PEO code of ethics, CEAB, CIPS
 
 While different organizations have their own codes, the underlying principles remain consistent: **protect the public, act lawfully, and maintain trust**. A Canadian university professor highlighted that despite teaching **five different codes**, their core messages align—whether from **ACM, IEEE, PEO, CIPS, or (ISC)²**. This universality reinforces that ethical hacking is not a subjective practice but one grounded in well-established professional norms. By internalizing these codes, ethical hackers ensure their work enhances cybersecurity without crossing into gray or black hat territory. Ultimately, professionalism in ethical hacking is what separates it from malicious hacking, making it a respected and legally defensible discipline.
 
-* **Common Themes Across All Major Prrofessional Codes:**
+* **Common Themes Across All Major Professional Codes:**
   * **Public Safety First:** Vulnerabilities must be handled in a way that minimizes societal harm.
   * **Honesty and Transparency:** No hiding or exaggerating findings for personal gain.
   * **Continuous Improvement:** Staying updated on evolving threats and ethical debates (e.g., AI hacking ethics).

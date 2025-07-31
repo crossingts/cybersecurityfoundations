@@ -50,12 +50,12 @@ White hat hackers only hack systems or machines with legal authorization to do s
 
 White hat hackers operate with **explicit permission** and follow **industry and regulatory ethical guidelines** (e.g., **EC-Council’s CEH**, **OSSTMM**, or **NIST SP 800-115**)
 
-The practices of white hats align with professional codes like the **ACM Code of Ethics (2018)**, which mandates permission-based hacking, and guidelines such as IEEE guidelines on penetration testing (e.g., IEEE 2600-series) and NIST SP 800-115. The **ACM Code of Ethics (2018)** stresses **permission-based hacking** (e.g., Principle 2.8: "Access computing and communication resources only when authorized").
+The practices of white hats align with professional codes like the **ACM Code of Ethics (2018)**, which mandates permission-based hacking, and guidelines such as IEEE code of ethics, IEEE code of conduct and NIST SP 800-115. The **ACM Code of Ethics (2018)** stresses **permission-based hacking** (e.g., Principle 2.8: "Access computing and communication resources only when authorized").
 
-**Penetration testing ethics** are covered in IEEE standards or guidelines, such as those from the **IEEE Cybersecurity Initiative** or **IEEE Certifed Ethical Hacker (CEH) resources**. For example:
+**Penetration testing ethics** are covered in IEEE standards or guidelines, such as those from the **IEEE Cybersecurity Initiative** or **IEEE Certified Ethical Hacker (CEH) resources**. For example:
 
 * **IEEE 802.10** (historical standard for security) and newer frameworks emphasize authorized testing.
-* **IEEE Std. 1012** (software verification) or **IEEE 2600** (hardware security) may touch on testing protocols.
+* **IEEE Std. 1012** (software verification).
 * **NIST SP 800-115** (Technical Guide to Penetration Testing).
 * **ISO/IEC 27001** (for security testing norms).
 * **EC-Council’s CEH Code of Ethics** (explicit rules for pentesters).

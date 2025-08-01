@@ -86,3 +86,7 @@ Several major regulatory frameworks (such as HIPAA, PCI DSS, SSAE 16, FFIEC, and
 Vulnerability scans are automated assessments of computers, networks, and applications, and are typically done on an ongoing basis, especially following the installation of new equipment or software. They are typically done by in-house staff, and cost about U.S. $1,200/year plus staff time. Their purpose is detection of exploitable vulnerabilities.
 
 Penetration testing may be done once a year. It identifies what data was compromised (discovers unknown exposures to normal business processes). It is typically done by an independent outside service, costing about U.S. $10K/year. Its purpose is preventive control, used to reduce exposure.
+
+### Key takeaways
+
+* Point 1

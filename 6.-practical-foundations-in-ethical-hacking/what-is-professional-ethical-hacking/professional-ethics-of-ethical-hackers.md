@@ -77,18 +77,19 @@ A Certified Ethical Hacker (EC-Council) is, “a skilled professional who unders
 
 ### The social science context
 
-A discussion of the ethics underlying the behaviour of professional ethical hackers should include a discussion of social values, notably, sociopolitical, ethical, and scientific values, contextualize technology in a social science context.
+A discussion of the ethics underlying the behaviour of professional ethical hackers should include a discussion of social values, notably, sociopolitical, ethical, and scientific values. In other words, such discussion should contextualize technology in a social science context.
 
-The research approach within the STS fields places technology in its historical and theoretical context. These influences are less formal and explicit but their effect on employee (professional ethical hackers) and student behaviour is profound and should not be ignored.
+The STS research approach places technology in its historical and theoretical context. Social value influences are less formal and explicit than formal guidelines/standards but their effect on the behaviour of professional ethical hackers is profound and should not be ignored.
 
-Studies by Whitman & Mattord (2018) argue that ethical hacking curricula should include philosophical ethics (utilitarianism, deontology) alongside technical skills.&#x20;
-
-The key social values are liberalism (classical liberalism), pragmatic ethics, knowledge making (Weick’s constructivism), and scientific (pragmatic philosophy).
+The key social values are liberalism (classical liberalism), pragmatic ethics (Bunge's technoethics), knowledge making (Weick’s constructivism), and scientific (pragmatic philosophy).
 
 Discussion of pragmatic ethics: The technoethics of Mario Bunge.\
 Bunge’s (1975) pragmatic technoethics serves as an overarching framework guiding the application of key societal normative ethical perspectives – deontology (duty), rights, virtue, and utilitarianism.
 
-Discussion normative ethics (ethical theories): Ethical decision-making theories: Introduction to normative ethics.
-
 Discussion of scientific values: Scientific method in research.\
 Canadian society can be defined by two key scientific values that define it as a secular and trusting society: critical rationalism and pragmatism.
+
+### Key takeaways
+
+* Professionalism (professional behaviour) of ethical hackers can be grounded in university training and industry standards
+* Social values underlying the behaviour of professional ethical hackers should be made explicit by grounding technology in its historical and theoretical context

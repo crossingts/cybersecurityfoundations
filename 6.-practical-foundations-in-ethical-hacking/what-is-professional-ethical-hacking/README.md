@@ -18,7 +18,11 @@ This section frames an understanding of ethical hacking (penetration testing) as
 
 * **Introduction**
 * **Profiles of hackers**&#x20;
-* **Professional ethics of ethical hackers**
+  * **White Hat Hackers: The Ethical Professionals**
+  * **Gray Hat Hackers: The Unauthorized Researchers**
+  * **Black Hat Hackers: The Criminals**
+  * **Hacktivists: The Politically Motivated Hackers**
+* **Other perspectives on hacking/hacker ethics**
 
 ### Introduction
 

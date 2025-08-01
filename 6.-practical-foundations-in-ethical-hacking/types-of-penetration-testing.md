@@ -1,19 +1,28 @@
 ---
 description: >-
-  This section explores six types of penetration testing, including
-  vulnerabilities targeted/attack vectors and technologies used, and
-  differentiates between black box and white box penetration testing
+  This section explores types of penetration testing, differentiates black box
+  from white box penetration testing, and possible risks of penetration testing
 ---
 
 # Types of penetration testing
 
-• Describe types of penetration testing: network, wireless, web application, physical, social engineering, and cloud.
+## Learning objectives
 
-• Compare black box penetration testing and white box penetration testing methods.
+* Describe main types of penetration testing
+* Compare black box penetration testing and white box penetration testing methods
+* Identify the possible risks of penetration testing
 
-• Evaluate organizational benefits of ethical hacking (risk reduction) vs. risks (e.g., system disruption and privacy concerns).
+This section explores six types of penetration testing, compares between black box and white box penetration testing, and shed light on possible risks of penetration testing to the client organization.
+
+## Topics covered in this section
+
+* **Types of penetration testing**
+* **Black box penetration testing and white box penetration testing**
+* **Possible risks of penetration testing**
 
 ### Types of penetration testing
+
+• Describe main types of penetration testing: network, wireless, web application, physical, social engineering, and cloud.
 
 • Reconnaissance or Open Source Intelligence (OSINT) gathering
 
@@ -30,6 +39,10 @@ description: >-
 • Cloud penetration testing
 
 ### Black box penetration testing and white box penetration testing
+
+• Compare black box penetration testing and white box penetration testing methods.
+
+Black box penetration testing and white box penetration testing methods broadly simulate an insider's and outsider's attack types
 
 Based on the type of auditing required, there are two main penetration testing types. In black box testing, the penetration tester has no prior knowledge of a company’s network, more closely replicating remote attacks. In white box testing, the testers typically have complete access to information about the application they are attacking, that is, the testers have a complete knowledge of the network. White box testing represents a worst-case scenario where the attacker has a complete knowledge of the network.
 
@@ -84,6 +97,18 @@ Based on the type of auditing required, there are two main penetration testing t
 * **White Box** → Best for **developers, internal security teams**.
 * **Black Box** → Best for **external security assessments, red teams**.
 * **Gray Box** → A **balanced** approach for most pentests.
+
+### Possible risks of penetration testing
+
+• Evaluate organizational benefits of ethical hacking (risk reduction) vs. risks (e.g., system disruption and privacy concerns).
+
+Organizations must weigh potential benefits vs possible risks when deciding the details of the penetration test
+
+### Key takeaways
+
+* Types of penetration testing include network, wireless, web application, physical, social engineering, and cloud
+* Black box penetration testing and white box penetration testing methods broadly simulate an insider's and outsider's attack types
+* Organizations must weigh potential benefits vs possible risks when deciding the details of the penetration test
 
 ### References
 

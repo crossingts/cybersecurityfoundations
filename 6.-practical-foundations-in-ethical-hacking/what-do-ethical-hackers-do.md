@@ -49,6 +49,20 @@ Their primary goal is to improve cybersecurity by identifying and fixing vulnera
 
 This means more than just showing how to exploit a vulnerability. These educational components should show the necessary countermeasures required to fight against these types of attacks, and how to implement preventive measures to help ensure that these vulnerabilities are not exploited. (Harris, 2007, The Controversy of Hacking Books, para. 3).
 
+#### Practical considerations before a risk assessment
+
+A client who needs to conduct a security evaluation (risk assessment) has to ponder three questions (Palmer, 2001, p. 772):
+
+1. What are you trying to protect?
+2. What are you trying to protect against?
+3. How much time, effort, and money are you willing to expend to obtain adequate protection?
+
+Answering the first question should specify all of the critical information assets for which loss could adversely affect the organization or its clients.&#x20;
+
+These assets should also include secondary information sources, such as employee names and addresses (which are privacy and safety risks), computer and network information (which could provide assistance to an intruder), and other organizations with which this organization collaborates (which provide alternate paths into the target systems through a possibly less secure partner’s system). (Palmer, 2001, p. 772)
+
+Answering the second question should cover strategic considerations such as the business impact of a loss of revenue and customers due to a DDoS attack and a hack affecting the organization’s image. Answering the third question has to consider network performance and functionality (vs. security) on the one hand, and the required prevention and mitigation investments on the other. These considerations will eventually converge on the balance of what is acceptable risk to the organization.&#x20;
+
 ### Penetration testing&#x20;
 
 Penetration testing includes probing for vulnerabilities as well as giving proof of concept for an attack--that is, testing or verifying a hypothesis (verifying vulnerability assessment results). A penetration test is,

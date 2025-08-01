@@ -2,7 +2,7 @@
 
 ### Introduction
 
-Network admins perform various monitoring and testing activities to ensure smooth and secure network operation. These activities include:
+Network administrators configure various monitoring tools and perform various testing activities to ensure smooth and secure network operation. These activities include:
 
 • **Connectivity testing/troubleshooting** (basic netadmin) using such tools/technologies as ping, traceroute, whois, nslookup, dig, netstat, nbtstat, arp, and syslog.
 

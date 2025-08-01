@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Assignment: Who are ethical hackers?
 
 Assignment: Who are ethical hackers?

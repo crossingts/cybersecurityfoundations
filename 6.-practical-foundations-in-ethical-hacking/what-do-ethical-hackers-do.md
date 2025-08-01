@@ -1,5 +1,7 @@
 ---
-description: This section sheds light on key practices of ethical hackers
+description: >-
+  This section sheds light on key practices of ethical hackers, including
+  vulnerability assessments, risk assessments, and penetration testing
 ---
 
 # What do ethical hackers do?
@@ -10,16 +12,19 @@ description: This section sheds light on key practices of ethical hackers
 * Define risk assessment and penetration testing
 * Explain key differences between vulnerability scan and penetration test
 
-The term ethical hacking most formally refers to penetration testing, and less formally to vulnerability assessments (security assessments or security audits) and risk assessment practices. The role of ethical hackers within organizations can be seen as analysts collecting and analyzing vulnerability and threat data and giving actionable recommendations to mitigate any vulnerabilities and security risks. This section sheds light on key practices of ethical hackers.
+This section sheds light on key practices of ethical hackers, specifically, vulnerability assessments, risk assessments, and penetration testing.
 
 ## Topics covered in this section
 
 * **Introduction**
 * **Vulnerability assessment**
 * **Risk assessment**
+* **Practical considerations before a risk assessment**
 * **Penetration testing**
 
 ### Introduction
+
+The term ethical hacking most formally refers to penetration testing, and less formally to vulnerability assessments (security assessments or security audits) and risk assessment practices. The role of ethical hackers within organizations can be seen as analysts collecting and analyzing vulnerability and threat data and giving actionable recommendations to mitigate any vulnerabilities and security risks.&#x20;
 
 Key practices of ethical hackers include:
 
@@ -27,11 +32,17 @@ Key practices of ethical hackers include:
 * Discovering unknown vulnerabilities and identifying threats. This includes tracking vulnerabilities over time for metrics purposes and disclosing vulnerabilities to national repositories (e.g., the National Vulnerability Databases).
 * Performing compliance audits against security regulations and standards. This includes government regulations (e.g., Privacy Act, 1983; PIPEDA, 2000), industry regulations (e.g., PCI DSS, ISO/IEC 27001, NIST SP 800-115), and in-house standard procedures and best practices.
 
-These activities are not mutually exclusive. A risk assessment can be performed to achieve compliance with a certain regulation, and vulnerability assessments are performed as part of risk assessments. "Penetration testing", strictly speaking, is the act of exploiting known/discovered vulnerabilities (or testing a hypothesis about the existence of a vulnerability) but in reality the term penetration testing is used in a more broader sense, variably, and the act of exploiting vulnerabilities is typically and ideally performed as part of a more comprehensive risk assessment exercise.&#x20;
+These activities are not mutually exclusive. A risk assessment can be performed to achieve compliance with a certain regulation, and vulnerability assessments are performed as part of risk assessments. "Penetration testing", strictly speaking, is the act of exploiting known/discovered vulnerabilities (or testing a hypothesis about the existence of a vulnerability) but in reality the term penetration testing is used in a more broader sense, variably, and the act of exploiting vulnerabilities is typically and ideally performed as part of a more comprehensive risk assessment exercise. Ultimately, a robust vulnerability assessment program aligns with risk management frameworks (e.g., NIST SP 800-115) to ensure compliance and reduce the organization’s attack surface iteratively.
 
 ### Vulnerability assessment
 
 A vulnerability assessment is the process of identifying, quantifying, and prioritizing (ranking) the vulnerabilities in a system. Vulnerability assessments can include passive and active scanning of networks, hosts (including OS-level vulnerabilities) and services (ports and applications). Passive scanning involves monitoring network traffic or configurations without actively probing systems, while active scanning involves sending probes to identify vulnerabilities (e.g., port scanning).
+
+A comprehensive vulnerability assessment employs a systematic approach to identify weaknesses across multiple layers of an IT environment, including network infrastructure, operating systems, applications, and services. The process typically begins with asset discovery, where tools like Nmap, Nessus, or OpenVAS perform network enumeration to catalog active hosts, open ports, and running services. This phase may utilize ICMP ping sweeps, ARP scans, or DNS queries to map the attack surface. Once assets are identified, vulnerability scanning tools leverage signature-based detection (e.g., CVE databases), heuristic analysis, and configuration checks to detect known vulnerabilities such as unpatched software (e.g., missing MS17-010 for EternalBlue), default credentials, or misconfigured services (e.g., SMB signing disabled).
+
+Advanced assessments incorporate credentialed scanning, where authenticated checks provide deeper visibility into OS and application-level flaws by analyzing registry settings, file permissions, and patch levels. For web applications, dynamic application security testing (DAST) tools like Burp Suite or OWASP ZAP probe for OWASP Top 10 vulnerabilities (e.g., SQLi, XSS, CSRF) by injecting malicious payloads. Meanwhile, passive vulnerability detection via tools like Snort or Zeek (formerly Bro) analyzes network traffic for anomalies, such as protocol deviations or suspicious service banners, without direct interaction. The assessment culminates in risk scoring (e.g., CVSS metrics) and remediation prioritization, balancing exploitability, impact, and compensating controls to guide mitigation efforts.
+
+Modern vulnerability assessments extend beyond point-in-time scans by integrating threat intelligence feeds (e.g., MITRE ATT\&CK, CISA KEV) to contextualize findings with active exploits in the wild. For instance, a scan detecting CVE-2021-44228 (Log4Shell) gains urgency if threat actors are actively weaponizing it.
 
 ### Risk assessment
 
@@ -49,7 +60,7 @@ Their primary goal is to improve cybersecurity by identifying and fixing vulnera
 
 This means more than just showing how to exploit a vulnerability. These educational components should show the necessary countermeasures required to fight against these types of attacks, and how to implement preventive measures to help ensure that these vulnerabilities are not exploited. (Harris, 2007, The Controversy of Hacking Books, para. 3).
 
-#### Practical considerations before a risk assessment
+### Practical considerations before a risk assessment
 
 A client who needs to conduct a security evaluation (risk assessment) has to ponder three questions (Palmer, 2001, p. 772):
 
@@ -89,4 +100,5 @@ Penetration testing may be done once a year. It identifies what data was comprom
 
 ### Key takeaways
 
-* Point 1
+* A robust vulnerability assessment program aligns with risk management frameworks (e.g., NIST SP 800-115)
+* Typically, vulnerability scans are part of vulnerability assessments, which are part of risk assessments

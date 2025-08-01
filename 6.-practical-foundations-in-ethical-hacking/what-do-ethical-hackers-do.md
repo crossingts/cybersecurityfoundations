@@ -63,6 +63,8 @@ These assets should also include secondary information sources, such as employee
 
 Answering the second question should cover strategic considerations such as the business impact of a loss of revenue and customers due to a DDoS attack and a hack affecting the organization’s image. Answering the third question has to consider network performance and functionality (vs. security) on the one hand, and the required prevention and mitigation investments on the other. These considerations will eventually converge on the balance of what is acceptable risk to the organization.&#x20;
 
+After answering these three questions, the client and ethical hacker together write a contractual agreement which identifies the systems to be tested, how they should be tested, and any limitations on that testing. This agreement is the security evaluation plan, and is commonly referred to by ethical hackers as a “get out of jail free card" since it protects ethical hackers against prosecution given that much of their testing activities would be illegal in most countries.&#x20;
+
 ### Penetration testing&#x20;
 
 Penetration testing includes probing for vulnerabilities as well as giving proof of concept for an attack--that is, testing or verifying a hypothesis (verifying vulnerability assessment results). A penetration test is,

@@ -1,6 +1,6 @@
 # Professional ethics of ethical hackers
 
-This section explores the professional ethics of ethical hackers as stipulated/enriched in widely accepted industry and professional certification bodies.
+This section explores the professional ethics of ethical hackers as stipulated/enriched in widely accepted and well established industry and professional certification bodies.
 
 ## Topics covered in this section
 
@@ -37,7 +37,7 @@ That is in the course calendar descriptions and it’s also in our accreditation
 Accreditation bodies like the Canadian Engineering Accreditation Board (CEAB) and Canadian Information Processing Society (CIPS) require ethics education as part of degree programs. This means students learn not only technical penetration testing skills but also how to apply ethical decision-making in real-world scenarios. For example, coursework may include case studies on responsible disclosure dilemmas or discussions on legal consequences of unauthorized testing, reinforcing that ethical hacking is not just about technical skill but professional responsibility.
 
 * **How Ethics is Taught in Academia:**
-  * **Case-Based Learning:** Analyzing past breaches (e.g., **Equifax, SolarWinds**) to discuss ethical failures.
+  * **Case-Based Learning:** Analyzing past breaches (e.g., Equifax, SolarWinds) to discuss ethical failures.
   * **Role-Playing Scenarios:** Simulating situations where students must choose between profit and responsible reporting.
   * **Guest Lectures from Industry:** Professionals share real-world ethical challenges they’ve faced.
 

@@ -98,42 +98,39 @@ Based on the type of auditing required, there are two main penetration testing t
 * **Black Box** → Best for **external security assessments, red teams**.
 * **Gray Box** → A **balanced** approach for most pentests.
 
+**Testing from an outsider vs insider perspective**
+
+There are several kinds of testing. Any combination of the following may be called for:
+
+• Remote network. This test simulates the intruder launching an attack across the Internet. The primary defenses that must be defeated here are border firewalls, filtering routers, and Web servers.
+
+• Remote dial-up network. This test simulates the intruder launching an attack against the client’s modem pools. The primary defenses that must be defeated here are user authentication schemes. These kinds of tests should be coordinated with the local telephone company. (Palmer 2001, p. 777)
+
+• Local network. This test simulates an employee or other authorized person who has a legal connection to the organization’s network. The primary defenses that must be defeated here are intranet firewalls, internal Web servers, server security measures, and e-mail systems.
+
+• Stolen laptop computer. (Palmer 2001, p. 778)
+
+• Social engineering. This test evaluates the target organization’s staff as to whether it would leak information to someone. A typical example of this would be an intruder calling the organization’s computer help line and asking for the external telephone numbers of the modem pool. Defending against this kind of attack is the hardest, because people and personalities are involved. Most people are basically helpful, so it seems harmless to tell someone who appears to be lost where the computer room is located, or to let someone into the building who “forgot” his or her badge. The only defense against this is to raise security awareness.
+
+• Physical entry. This test acts out a physical penetration of the… (Palmer 2001, p. 778)
+
+Each of these kinds of testing can be performed from three perspectives: as a total outsider, a “semi-outsider,” or a valid user. (Palmer 2001, p. 779)
+
 ### Possible risks of penetration testing
 
-• Evaluate organizational benefits of ethical hacking (risk reduction) vs. risks (e.g., system disruption and privacy concerns).
+• Potential benefits of ethical hacking: security breach risk reduction
 
-Organizations must weigh potential benefits vs possible risks when deciding the details of the penetration test
+• Possible risks of ethical hacking: system disruption, privacy concerns...
 
-Palmer 2001:
+There are risks inherent to ethical hacker evaluations and the client should be made fully aware of them. Organizations must weigh potential benefits vs possible risks when deciding the details of the penetration test. Organizations must decide what devices and applications to test and when and how to test them--and the risks involved in performing the security testing.&#x20;
 
-re risks of performing ethical hacking:\
-… the client should be made fully aware of the risks inherent to ethical hacker evaluations. These risks include alarmed staff and unintentional system crashes, degraded network or system performance, denial of service, and log-file size explosions. 776
+"These risks include alarmed staff and unintentional system crashes, degraded network or system performance, denial of service, and log-file size explosions" (Palmer, 2001, p. 776).
 
-Once the contractual agreement is in place, the testing may begin as defined in the agreement. It should be noted that the testing itself poses some risk to the client, since a criminal hacker monitoring the transmissions of the ethical hackers could learn the same information. If the ethical hackers identify a weakness in the client’s security, the criminal hacker could potentially attempt to exploit that vulnerability. This is especially vexing since the activities of the ethical hackers might mask those of the criminal hackers. The best approach to this dilemma is to maintain several addresses around the Internet from which the ethical hacker’s transmissions will emanate, and to switch origin addresses often. Complete logs of the tests performed by the ethical hackers are always maintained, both for the final report and in the event that something unusual occurs. In extreme cases, additional intrusion monitoring software can be deployed at the target to ensure that all the tests are coming from the ethical hacker’s machines. 777
+The risk of serious side effects from performing penetration testing will inform the specific tests to be made and how on a live system.&#x20;
 
-me: testing on isolated networks
+The best evaluation is done under a “no-holds-barred” approach. This means that the ethical hacker can try anything he or she can think of to attempt to gain access to or disrupt the target system. While this is the most realistic and useful, some clients balk at this level of testing. Clients have several reasons for this, the most common of which is that the target systems are “in production” and interference with their operation could be damaging to the organization’s interests. (Palmer, 2001, pp. 775-776)
 
-\--
-
-Palmer 2001
-
-Once the target systems are identified, the agreement must describe how they should be tested. The best evaluation is done under a “no-holds-barred” approach. This means that the ethical hacker can try 775\
-anything he or she can think of to attempt to gain access to or disrupt the target system. While this is the most realistic and useful, some clients balk at this level of testing. Clients have several reasons for this, the most common of which is that the target systems are “in production” and interference with their operation could be damaging to the organization’s interests. 776
-
-As dramatized in Figure 5, there are several kinds of testing. Any combination of the following may be called for:\
-● Remote network. This test simulates the intruder launching an attack across the Internet. The primary defenses that must be defeated here are border firewalls, filtering routers, and Web servers.\
-● Remote dial-up network. This test simulates the intruder launching an attack against the client’s modem pools. The primary defenses that must be defeated here are user authentication schemes. These kinds of tests should be coordinated with the local telephone company. 777
-
-● Local network. This test simulates an employee or other authorized person who has a legal connection to the organization’s network. The primary defenses that must be defeated here are intranet firewalls, internal Web servers, server security measures, and e-mail systems.\
-● Stolen laptop computer. 778\
-Social engineering. This test evaluates the target organization’s staff as to whether it would leak information to someone. A typical example of this would be an intruder calling the organization’s computer help line and asking for the external telephone numbers of the modem pool. Defending against this kind of attack is the hardest, because people and personalities are involved. Most people are basically helpful, so it seems harmless to tell someone who appears to be lost where the computer room is located, or to let someone into the building who “forgot” his or her badge. The only defense against this is to raise security awareness.\
-● Physical entry. This test acts out a physical penetration of the… 778
-
-Each of these kinds of testing can be performed from three perspectives: as a total outsider, a “semi-outsider,” or a valid user. 779
-
-The actual evaluation of the client’s systems proceeds through several phases, as described previously by Boulanger. 779
-
-A. Boulanger, “Catapults and Grappling Hooks: The Tools and Techniques of Information Warfare,” IBM Systems Journal 37, No. 1, 106–114 (1998).
+Once the contractual agreement is in place, the testing may begin as defined in the agreement. It should be noted that the testing itself poses some risk to the client, since a criminal hacker monitoring the transmissions of the ethical hackers could learn the same information. If the ethical hackers identify a weakness in the client’s security, the criminal hacker could potentially attempt to exploit that vulnerability. This is especially vexing since the activities of the ethical hackers might mask those of the criminal hackers. The best approach to this dilemma is to maintain several addresses around the Internet from which the ethical hacker’s transmissions will emanate, and to switch origin addresses often. Complete logs of the tests performed by the ethical hackers are always maintained, both for the final report and in the event that something unusual occurs. In extreme cases, additional intrusion monitoring software can be deployed at the target to ensure that all the tests are coming from the ethical hacker’s machines. (Palmer, 2001, p. 777)
 
 ### Key takeaways
 

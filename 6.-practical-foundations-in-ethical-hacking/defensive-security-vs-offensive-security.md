@@ -14,7 +14,9 @@ Become familiar with defensive security and offensive security approaches and co
 
 * **Two key cybersecurity paradigms**
 * **Blue teaming**
-* **Point 3**
+* **SOC (Security Operations Center)**
+* **SIRT/CSIRT (Security Incident Response Team/Computer SIRT)**
+* **Ethical hacking vs red teaming**
 
 ### Two key cybersecurity paradigms
 
@@ -89,29 +91,46 @@ Blue Team is broader concept—it includes roles outside SOC/CSIRT (e.g., securi
 
 ***
 
+### SOC (Security Operations Center)
 
+**SOC (Security Operations Center) analysts and engineers are essentially the operational arm of the Blue Team.** However, whether they are **in-house employees or contracted** depends on the organization's structure.
 
-**\*\*SOC (Security Operations Center)**
+**SOC as the Blue Team (Defenders)**
 
+* **Primary Role:**&#x20;
+  * Monitor, detect, analyze, and respond to security incidents.
+  * Handle alerts from SIEM (Security Information and Event Management), EDR (Endpoint Detection & Response), firewalls, etc.
+  * Perform **threat hunting** (proactively searching for undetected threats).
+  * Work closely with **Incident Response (IR)** teams when breaches occur.
 
+#### **In-House vs. Contracted/MSSP SOCs**
+
+| Type                      | Description                                                            | Pros                                                                                               | Cons                                                                                |
+| ------------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| **In-House SOC**          | Employees directly hired by the company.                               | <p>- Better knowledge of internal systems.<br>- Faster coordination with IT/other teams.</p>       | <p>- Expensive to maintain 24/7.<br>- Requires hiring skilled analysts.</p>         |
+| **Contracted SOC (MSSP)** | Managed by a third-party **MSSP (Managed Security Service Provider)**. | <p>- Cost-effective (no need for full-time staff).<br>- Access to broader threat intelligence.</p> | <p>- Less familiarity with internal networks.<br>- Possible delays in response.</p> |
+
+**Key Overlaps & Clarifications**
+
+1. **Blue Team ≠ SOC (but SOC is a core part of Blue Team)**
+   * The **Blue Team** is a broader concept, including **SOC, Incident Response (IR), vulnerability management, and security hardening teams**.
+   * The **SOC is the 24/7 monitoring & initial response unit** within the Blue Team.
+2. **Some Companies Have Hybrid Models**
+   * Example: A company might have an **in-house SOC for critical systems** but outsource **lower-priority monitoring** to an MSSP.
+3. **Contract SOC Analysts (Staff Augmentation)**
+   * Some firms hire **temporary SOC analysts** through staffing agencies (neither fully in-house nor full MSSP).
+
+***
 
 **\*\*SIRT/CSIRT (Security Incident Response Team/Computer Security Incident Response Team)**
 
 
 
-**\*\*red teaming**
+***
 
+### Ethical hacking vs red teaming
 
-
-**\*\*ethical hacking**
-
-
-
-\--
-
-Ethical hacking vs red teaming
-
-#### Ethical hacking vs red teaming organizational position
+#### Ethical hacking vs red teaming cybersecurity roles
 
 #### **1. White Hat Hackers (Ethical Hackers)**
 
@@ -163,51 +182,18 @@ Ethical hacking vs red teaming
 | **Team Structure** | Usually individual testers or small groups. | Larger, multidisciplinary teams (cyber, physical, social).                        |
 | **Reporting**      | Detailed technical remediation guidance.    | Focuses on strategic security gaps & organizational resilience.                   |
 
-#### **When They Overlap:**
+#### **When Ethical Hacking and Red Teaming Overlap:**
 
 * A red team can use ethical hacking techniques (e.g., exploiting a server vulnerability).
 * Some ethical hackers perform red teaming if the engagement includes advanced adversary simulation.
 
 ***
 
-### SOC (Security Operations Center)/Blue Teaming
-
-**SOC (Security Operations Center) analysts and engineers are essentially the operational arm of the Blue Team.** However, whether they are **in-house employees or contracted** depends on the organization's structure.
-
-**SOC as the Blue Team (Defenders)**
-
-* **Primary Role:**&#x20;
-  * Monitor, detect, analyze, and respond to security incidents.
-  * Handle alerts from SIEM (Security Information and Event Management), EDR (Endpoint Detection & Response), firewalls, etc.
-  * Perform **threat hunting** (proactively searching for undetected threats).
-  * Work closely with **Incident Response (IR)** teams when breaches occur.
-
-#### **In-House vs. Contracted/MSSP SOCs**
-
-| Type                      | Description                                                            | Pros                                                                                               | Cons                                                                                |
-| ------------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| **In-House SOC**          | Employees directly hired by the company.                               | <p>- Better knowledge of internal systems.<br>- Faster coordination with IT/other teams.</p>       | <p>- Expensive to maintain 24/7.<br>- Requires hiring skilled analysts.</p>         |
-| **Contracted SOC (MSSP)** | Managed by a third-party **MSSP (Managed Security Service Provider)**. | <p>- Cost-effective (no need for full-time staff).<br>- Access to broader threat intelligence.</p> | <p>- Less familiarity with internal networks.<br>- Possible delays in response.</p> |
-
-**Key Overlaps & Clarifications**
-
-1. **Blue Team ≠ SOC (but SOC is a core part of Blue Team)**
-   * The **Blue Team** is a broader concept, including **SOC, Incident Response (IR), vulnerability management, and security hardening teams**.
-   * The **SOC is the 24/7 monitoring & initial response unit** within the Blue Team.
-2. **Some Companies Have Hybrid Models**
-   * Example: A company might have an **in-house SOC for critical systems** but outsource **lower-priority monitoring** to an MSSP.
-3. **Contract SOC Analysts (Staff Augmentation)**
-   * Some firms hire **temporary SOC analysts** through staffing agencies (neither fully in-house nor full MSSP).
-
 ### Key takeaways
 
-**Blue Team ≠ SOC or CSIRT**—it’s the **umbrella** for defensive security.
-
-**SOC is operational** (monitoring), **CSIRT is reactive** (incidents), **Blue Team is cultural/philosophical** (defense-in-depth).
-
-**Not all companies use "Blue Team" as a formal name**—many just say SOC/CSIRT.
-
-**Interchangeability depends on context**:
-
-* In a startup? "Blue Team" might mean 1–2 people doing everything.
-* In a bank? "Blue Team" could refer to a 100-person division.
+* Blue Team ≠ SOC or CSIRT—it’s the umbrella for defensive security
+* SOC is operational (monitoring), CSIRT is reactive (incidents), Blue Team is cultural/philosophical (defense-in-depth)
+* Not all companies use "Blue Team" as a formal name—many just say SOC/CSIRT
+* Interchangeability depends on context:
+  * In a startup? "Blue Team" might mean 1–2 people doing everything
+  * In a bank? "Blue Team" could refer to a 100-person division

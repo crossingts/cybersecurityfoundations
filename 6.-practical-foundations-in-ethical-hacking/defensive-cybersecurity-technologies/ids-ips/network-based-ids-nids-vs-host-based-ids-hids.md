@@ -1,6 +1,6 @@
 # Network-based IDS (NIDS) vs host-based IDS (HIDS)
 
-Both **Suricata** and **Wazuh** can function as **Intrusion Detection Systems (IDS)**, but they operate in different ways, and only **Wazuh** is primarily considered a **Host-Based Intrusion Detection System (HIDS)**. Here's why:
+Both Suricata and Wazuh can function as Intrusion Detection Systems (IDS), but they operate in different ways, and only Wazuh is primarily considered a Host-Based Intrusion Detection System (HIDS). Here's why:
 
 #### **1. Wazuh - A Host-Based IDS (HIDS)**
 

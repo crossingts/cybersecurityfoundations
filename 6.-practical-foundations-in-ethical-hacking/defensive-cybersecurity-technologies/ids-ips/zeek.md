@@ -1,6 +1,6 @@
 # Zeek
 
-**Zeek (formerly Bro)** is a powerful network analysis framework, widely used in research and enterprises. Zeek is dominant in **network visibility**—it has the capability to provide **deep, protocol-aware monitoring and logging of network activity.** Zeek focuses on **analyzing network traffic at the application layer**, generating structured logs that answer:
+Zeek (formerly Bro) is a powerful network analysis framework, widely used in research and enterprises. Zeek is dominant in network visibility—it has the capability to provide deep, protocol-aware monitoring and logging of network activity. Zeek focuses on analyzing network traffic at the application layer, generating structured logs that answer:
 
 * **Who** is communicating? (IPs, devices, users)
 * **What** are they doing? (HTTP requests, DNS queries, SSL certificates, SSH logins, etc.)

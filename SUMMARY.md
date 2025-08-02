@@ -80,6 +80,8 @@
     * [Network-based IDS (NIDS) vs host-based IDS (HIDS)](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/ids-ips/network-based-ids-nids-vs-host-based-ids-hids.md)
     * [Zeek](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/ids-ips/zeek.md)
   * [SIEM/EDR](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/siem-edr.md)
+  * [Defensive security pipeline](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/defensive-security-pipeline.md)
+  * [Packet analyzers](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/packet-analyzers.md)
   * [How to get started with Wireshark](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/how-to-get-started-with-wireshark.md)
   * [Using Wireshark to identify non-secure network traffic](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/using-wireshark-to-identify-non-secure-network-traffic.md)
 * [Network security testing](6.-practical-foundations-in-ethical-hacking/network-security-testing/README.md)

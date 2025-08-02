@@ -17,23 +17,23 @@ This section looks at popular open source defensive cybersecurity technologies, 
 ## Topics covered in this section
 
 * **Firewalls**
-* **Intrusion Detection Systems (IDS/IPS)**
-* **Network security monitoring/SIEM**&#x20;
+* **IDS/IPS**
+* **SIEM/EDR**
 * **Packet analyzers**
 
 ### Firewalls
 
 Popular open source host and network firewalls include iptables, nftables, ufw, pf, OPNsense, and pfSense (CE).
 
-### Intrusion Detection Systems (IDS/IPS)
+### IDS/IPS
 
 Popular open source NIDS and HIDS include Suricata, Snort, Wazuh, OSSEC, Fail2Ban, Zeek (formerly Bro), Security Onion, and OpenWIPS-NG.
 
-### Network security monitoring/SIEM
+### SIEM/EDR
 
 Popular open source SIEM/EDR (Security Information and Event Management/Endpoint Detection and Response) technologies include Wazuh, TheHive, Zeek, OSSEC, Suricata, and Velociraptor.
 
-#### Wazuh (SIEM) as a network security monitoring tool
+#### Wazuh (SIEM/XDR)
 
 The Wazuh Security Information and Event Management (SIEM) solution is a centralized platform for aggregating and analyzing telemetry in real time for threat detection and compliance. Wazuh collects event data from various sources like endpoints, network devices, cloud workloads, and applications for broader security coverage. (wazuh.com)
 
@@ -64,25 +64,6 @@ Wazuh is an open-source security monitoring platform that provides SIEM (log ana
    * When a rule is triggered, Wazuh generates an **alert**.
    * Alerts can be sent via email, SIEM integrations (Elasticsearch, Splunk), or other notification methods.
    * Wazuh also provides **active monitoring** (e.g., checking for unauthorized changes in files, detecting malware) and **automated responses** (e.g., blocking an IP after too many failed logins).
-
-**Comparison Table: SIEM vs. IDS/IPS vs. Firewalls vs. EDR**
-
-| Feature                   | **Firewall (nftables, iptables, pfSense)** | **IDS/IPS (Snort, Suricata)**       | **SIEM (Wazuh, Splunk)**              | **EDR (CrowdStrike, Wazuh EDR)**             |
-| ------------------------- | ------------------------------------------ | ----------------------------------- | ------------------------------------- | -------------------------------------------- |
-| **Primary Role**          | Filter traffic based on rules              | Detect/block malicious traffic      | Log correlation, alerting, compliance | Detect/respond to endpoint threats           |
-| **Detection Method**      | Rule-based (allow/deny)                    | Signature + anomaly detection       | Rule-based + anomaly (if configured)  | Behavioral analysis + threat intelligence    |
-| **Prevention Capability** | Blocks traffic based on rules              | IPS can block, IDS alerts           | No (alerting only)                    | Can block processes, isolate hosts           |
-| **Data Source**           | Network traffic (L3/L4 filtering)          | Network traffic (packet inspection) | Logs (network, endpoints, apps)       | Endpoint processes, memory, files            |
-| **Scope**                 | Network perimeter/internal segmentation    | Network-focused                     | Broad (entire infrastructure)         | Endpoint-focused (workstations, servers)     |
-| **Best For**              | Access control, network segmentation       | Real-time threat blocking           | Incident investigation, compliance    | Advanced malware, lateral movement detection |
-
-A mature security stack combines:
-
-1. **Firewall** → Blocks unauthorized access.
-2. **IDS/IPS** → Stops known attacks in traffic.
-3. **SIEM** → Correlates alerts from all sources.
-4. **EDR** → Hunts for endpoint compromises.
-5. **NTA (Network Trafific Analysis)** → Detects stealthy threats in network flows.
 
 ### Packet analyzers
 

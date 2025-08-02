@@ -23,19 +23,11 @@ This section looks at popular open source defensive cybersecurity technologies, 
 
 ### Firewalls
 
-Host and network firewalls using such tools as ufw, iptables, nftables, pf (packet filter = CLI based macOS built-in Unix firewall), OPNsense, and pfsense.
-
-#### nftables firewall to optimize traffic flow
-
-• Default to connection denial for inbound traffic
-
-• Limit accessible ports and hosts with an allow list
+Popular open source host and network firewalls include iptables, nftables, ufw, pf, OPNsense, and pfSense (CE).
 
 ### Intrusion Detection Systems (IDS/IPS)
 
-Suricata and Snort.
-
-Network-based IDS (NIDS) vs host-based IDS (HIDS)
+Popular open source NIDS and HIDS include Zeek (formerly Bro), Security Onion, OSSEC, Wazuh, Fail2Ban, OpenWIPS-NG, Suricata, and Snort.
 
 ### Network security monitoring/SIEM
 

@@ -6,15 +6,15 @@ Packet-filtering firewall technologies such as iptables and pfilter (PF) operate
 
 **Core Packet-Filtering Firewall Technologies (Open Source Except WFP)**
 
-| Firewall                             | OS/Platform                              | Notes                                                                                                                           |
-| ------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| **iptables**                         | Linux                                    | Predecessor to nftables. Part of the Linux kernel (Netfilter project), licensed under GPL.                                      |
-| **nftables**                         | Linux (replaces iptables)                | Modern successor to iptables, more flexible syntax. Also part of Linux (Netfilter), GPL-licensed.                               |
-| **PF (Packet Filter)**               | BSD (OpenBSD, FreeBSD, OPNsense/pfSense) | More advanced than iptables, used in BSD-based firewalls. Originally from OpenBSD, now also in FreeBSD and others, BSD license. |
-| **ipfw**                             | FreeBSD, macOS (legacy)                  | Older BSD firewall, mostly replaced by PF. Found in FreeBSD (and older macOS versions), BSD license.                            |
-| **firewalld**                        | Linux (RHEL/Fedora)                      | Frontend for iptables/nftables, uses zones for simplicity. Developed by Red Hat, GPL.                                           |
-| **UFW (Uncomplicated Firewall)**     | Linux (Debian/Ubuntu)                    | Simplified iptables wrapper for beginners, GPL-licensed.                                                                        |
-| **Windows Filtering Platform (WFP)** | Windows                                  | Microsoft’s built-in firewall (CLI: `netsh advfirewall`).                                                                       |
+| Firewall                             | OS/Platform                              | Notes                                                                                                                                                                   |
+| ------------------------------------ | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **iptables**                         | Linux                                    | Predecessor to nftables. Part of the Linux kernel (Netfilter project), licensed under GPL.                                                                              |
+| **nftables**                         | Linux (replaces iptables)                | Modern successor to iptables, more flexible syntax. Also part of Linux (Netfilter), GPL-licensed.                                                                       |
+| **PF (Packet Filter)**               | BSD (OpenBSD, FreeBSD, OPNsense/pfSense) | More advanced than iptables, used in BSD-based firewalls. Originally from OpenBSD, now also in FreeBSD and others, BSD license. CLI based macOS built-in Unix firewall. |
+| **ipfw**                             | FreeBSD, macOS (legacy)                  | Older BSD firewall, mostly replaced by PF. Found in FreeBSD (and older macOS versions), BSD license.                                                                    |
+| **firewalld**                        | Linux (RHEL/Fedora)                      | Frontend for iptables/nftables, uses zones for simplicity. Developed by Red Hat, GPL.                                                                                   |
+| **UFW (Uncomplicated Firewall)**     | Linux (Debian/Ubuntu)                    | Simplified iptables wrapper for beginners, GPL-licensed.                                                                                                                |
+| **Windows Filtering Platform (WFP)** | Windows                                  | Microsoft’s built-in firewall (CLI: `netsh advfirewall`).                                                                                                               |
 
 ***
 
@@ -43,13 +43,73 @@ Stateful firewalls primarily operate at **L3 (Network) and L4 (Transport)**, tra
 
 **Open-Source Stateful Firewalls (Open Source)**
 
-| Firewall                                    | OS/Platform         | Notes                                            |
-| ------------------------------------------- | ------------------- | ------------------------------------------------ |
-| **iptables/nftables**                       | Linux               | Tracks connections via `conntrack`.              |
-| **PF (Packet Filter)**                      | OpenBSD/FreeBSD     | Stateful by default (e.g., `keep state`).        |
-| **firewalld**                               | Linux (RHEL/Fedora) | Uses nftables/iptables with stateful zones.      |
-| **OPNsense/pfSense Community Edition (CE)** | BSD-based           | GUI for PF (stateful rules + IDS/IPS).           |
-| **Suricata (IPS mode)**                     | Cross-platform      | Open-source IDS with stateful firewall features. |
+| Firewall                                    | OS/Platform         | Notes                                                     |
+| ------------------------------------------- | ------------------- | --------------------------------------------------------- |
+| **iptables/nftables**                       | Linux               | Tracks connections via `conntrack` (connection tracking). |
+| **PF (Packet Filter)**                      | OpenBSD/FreeBSD     | Stateful by default (e.g., `keep state`).                 |
+| **firewalld**                               | Linux (RHEL/Fedora) | Uses nftables/iptables with stateful zones.               |
+| **OPNsense/pfSense Community Edition (CE)** | BSD-based           | GUI for PF (stateful rules + IDS/IPS).                    |
+| **Suricata (IPS mode)**                     | Cross-platform      | Open-source IDS with stateful firewall features.          |
+
+**Clarifying Notes:**
+
+**1. Stateless firewall**: Filters packets individually (no memory of past packets). Example: Traditional ACLs.
+
+**2. Stateful firewall**: Tracks connections and makes decisions based on the full session state (auto-allows valid follow-up traffic). Example: PF, iptables (with conntrack).&#x20;
+
+**3. Connection Tracking (`conntrack`)**
+
+* **Definition:** `conntrack` (connection tracking) is a subsystem in the Linux kernel (part of Netfilter) that monitors and records the state of network connections (e.g., TCP, UDP, ICMP).
+* **Purpose:** It allows iptables/nftables to make decisions based on the **state** of a connection rather than just individual packets.
+
+**How It Works**
+
+* When a packet arrives, `conntrack` checks if it belongs to an **existing connection** (e.g., an ongoing TCP session).
+* If it's a **new connection**, it gets logged in a connection tracking table (`/proc/net/nf_conntrack`).
+* Subsequent packets are matched against this table to determine if they are part of an established, related, or invalid connection.
+
+**Common States in `conntrack`**
+
+| State           | Meaning                                                                          |
+| --------------- | -------------------------------------------------------------------------------- |
+| **NEW**         | First packet of a new connection (e.g., TCP SYN).                                |
+| **ESTABLISHED** | Packets belonging to an already-seen connection (e.g., TCP handshake completed). |
+| **RELATED**     | Packets related to an existing connection (e.g., FTP data connection).           |
+| **INVALID**     | Malformed or suspicious packets (e.g., TCP RST without prior connection).        |
+
+**Example Rule (iptables)**
+
+sh
+
+```
+iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+```
+
+This rule **allows** packets that are part of an existing or related connection.
+
+**4. keep state in PF (OpenBSD Packet Filter)**
+
+**`keep state` (PF) or `--ctstate` (iptables)** = Enables stateful filtering.
+
+*   When PF sees a rule like:
+
+    sh
+
+    ```
+    pass in proto tcp from any to 192.168.1.1 port 22 keep state
+    ```
+
+    * It **allows** the initial packet (e.g., TCP SYN).
+    * Then, it **automatically permits** subsequent packets in the same flow (ACKs, data, etc.) without requiring additional rules.
+    * It also **blocks** packets that don’t match a known state (e.g., unsolicited responses).
+
+**Why Stateful Filtering is Useful**
+
+✅ **Simpler Rules**: No need to manually allow reply traffic.\
+✅ **Security**: Blocks unsolicited/invalid packets (e.g., spoofed ACKs).\
+✅ **Performance**: Faster than checking every packet against all rules.
+
+### Stateless vs. Stateful Firewalls&#x20;
 
 **Stateless vs. Stateful (Diagram)**
 
@@ -98,28 +158,6 @@ Stateless firewalls (ACLs) are simpler and faster but lack intelligence. They ar
 
 Most modern firewalls (e.g., NGFW) are stateful by default due to their security advantages.
 
-### Web Application Firewalls (WAFs)
-
-**Characteristics?**
-
-* Scope: Inspects payloads (e.g., "Block HTTP requests with SQLi").
-* L7 Awareness: Understands HTTP, DNS, etc. (deep packet inspection)
-* Performance Impact: High (parses full packets).
-
-**Are WAFs Host-Based or Network-Based?**
-
-WAFs can be **host-based and network-based**, depending on deployment:
-
-| Type                  | Example Tools                         | Deployment                                                      |
-| --------------------- | ------------------------------------- | --------------------------------------------------------------- |
-| **Host-Based WAF**    | ModSecurity (Apache/Nginx plugin)     | Runs on the web server (e.g., as a module).                     |
-| **Network-Based WAF** | Cloudflare WAF, HAProxy + ModSecurity | Standalone appliance/cloud service (protects multiple servers). |
-
-**Key Difference**
-
-* **Host WAF:** Protects a single service (e.g., one NGINX instance).
-* **Network WAF:** Protects all traffic before it reaches servers (e.g., a reverse proxy).
-
 ***
 
 **Roots of Common Packet-Filtering Firewalls (Table + Diagram)**
@@ -165,10 +203,32 @@ Windows
 └─ WFP (Integrated)
 ```
 
-***
-
 **Summary**
 
 1. **Stateful Firewalls:** Open-source examples include iptables/nftables (Linux), PF (BSD), and OPNsense.
 2. **WAFs:** Can be host-based (ModSecurity) or network-based (Cloudflare WAF).
 3. **Firewall Roots:** Linux uses Netfilter (iptables/nftables), BSD uses PF/ipfw, Windows uses WFP.
+
+***
+
+### Web Application Firewalls (WAFs)
+
+**Characteristics?**
+
+* Scope: Inspects payloads (e.g., "Block HTTP requests with SQLi").
+* L7 Awareness: Understands HTTP, DNS, etc. (deep packet inspection)
+* Performance Impact: High (parses full packets).
+
+**Are WAFs Host-Based or Network-Based?**
+
+WAFs can be **host-based and network-based**, depending on deployment:
+
+| Type                  | Example Tools                         | Deployment                                                      |
+| --------------------- | ------------------------------------- | --------------------------------------------------------------- |
+| **Host-Based WAF**    | ModSecurity (Apache/Nginx plugin)     | Runs on the web server (e.g., as a module).                     |
+| **Network-Based WAF** | Cloudflare WAF, HAProxy + ModSecurity | Standalone appliance/cloud service (protects multiple servers). |
+
+**Key Difference**
+
+* **Host WAF:** Protects a single service (e.g., one NGINX instance).
+* **Network WAF:** Protects all traffic before it reaches servers (e.g., a reverse proxy).

@@ -23,7 +23,7 @@ This section looks at popular open source defensive cybersecurity technologies, 
 
 ### Firewalls
 
-OPNsense, pfilter, and nftables.
+Host and network firewalls using such tools as ufw, iptables, nftables, pf (packet filter = CLI based macOS built-in Unix firewall), OPNsense, and pfsense.
 
 #### nftables firewall to optimize traffic flow
 
@@ -90,11 +90,7 @@ A mature security stack combines:
 4. **EDR** → Hunts for endpoint compromises.
 5. **NTA (Network Trafific Analysis)** → Detects stealthy threats in network flows.
 
-### Packet analyzers
-
-Wireshark and tcpdump.
-
-#### Wireshark
+### Packet analyzers: Wireshark
 
 Wireshark is primarily a defensive (security monitoring) tool, but it can also be used in offensive security (ethical hacking) scenarios.
 

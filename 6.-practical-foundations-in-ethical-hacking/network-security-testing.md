@@ -1,4 +1,12 @@
+---
+description: >-
+  This section looks at common open source network security testing tools,
+  specifically, Nmap, OpenVAS, Wireshark, and tcpdump
+---
+
 # Network security testing
+
+This section looks at network scanners and packet analyzers used in network security testing, specifically, Nmap, OpenVAS, Wireshark, and tcpdump.
 
 ### Introduction
 
@@ -22,33 +30,31 @@ The most common parameters for monitoring network performance are throughput (kb
 
 • **Incident response and mitigation (SIEM) and endpoint detection and response (EDR)** using such tools as Wazuh SIEM/XDR.
 
-• **Host and network firewalls** using such tools as ufw, iptables, nftables, pf (packet filter = CLI based macOS built-in Unix firewall), and OPNsense/pfsense.
+• **Host and network firewalls** using such tools as ufw, iptables, nftables, pf (packet filter), OPNsense, and pfsense.
 
-• **Network security testing** - netadmins perform network security testing to assess and verify the threats and vulnerabilities of their network.&#x20;
+• **Network security testing** - netadmins perform network security testing to assess and verify the threats and vulnerabilities of their network using such tools as Nmap, Nessus, OpenVAS, Netcat, Wireshark, and tcpdump.
 
 ### Network security testing
 
-Network security is an ongoing process that can be described by the Cisco security wheel. The security wheel (Figure 7-1) consists of the following four phases: Secure, Monitor, Test, and Improve.
+Network security is an ongoing process that can be described by the Cisco security wheel. The security wheel (Figure 7-1) consists of the following four phases: Secure, Monitor, Test, and Improve. The third phase, Test, or network security testing, helps netadmins verify the security design and\
+discover vulnerabilities within a network.
 
 <figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption><p>Cisco Security Wheel (image courtesy of Deveriya, 2005, p. 362)</p></figcaption></figure>
 
-The third phase, Test, or network security testing, helps netadmins verify the security design and\
-discover vulnerabilities within a network.
-
 The process of network security testing is also commonly known as security audit, security assessment, posture assessment, vulnerability assessment, penetration testing, and ethical hacking. All these terms are invoked to refer to "a legitimate process of attacking, discovering, and reporting security holes in a network" (Deveriya, 2005, p. 362).
 
-Tools used for security auditing can be loosely classified into the following two categories:
+Tools used for security testing can be loosely classified into the following two categories:
 
 * Scanners - Active tools that send out probe packets to the target host or network to attack or gather information.
 * Packet analyzers - Passive in their operation because they do not send probe packets. Instead, packet analyzers work by capturing and analyzing the data that is flowing across the network.
 
-The following discussion introduces the following tools and methodologies of network security testing:
+**The following discussion introduces the following tools and methodologies of network security testing:**
 
 • Network scanners - Nmap network scanner
 
 • Vulnerability scanners - OpenVAS vulnerability scanner (forked Nessus)
 
-• Packet analyzers (sniffers) - Wireshark, Tcpdump
+• Packet analyzers (sniffers) - tcpdump
 
 #### Network Scanners
 
@@ -89,7 +95,7 @@ Nmap uses Internet Control Message Protocol (ICMP) ping scans for network discov
 
 Packet analyzers are software or hardware devices that capture and analyze the data flowing through the network. Packet analyzers are also called sniffers, protocol analyzers, and network analyzers … Many packet analyzers provide capabilities to filter, store, and analyze the captured data. In fact, most network intrusion detection systems (NIDS) are packet analyzers that watch for peculiar traffic patterns that are unique to network attacks. Packet analyzers work at Layers 1 and 2 of the OSI model but can also decode data at higher layers. This feature enables networking professionals to have a cross-sectional view of the data flowing through the network in real time. The ability to slice and view the raw data flowing through the wires is important when troubleshooting. Such views also help networking professionals to learn and understand the functioning of various protocols and applications. The views also provide clear proof that the network and its components are operational. (Deveriya, 2005, p. 386)
 
-Wireshark and Tcpdump are powerful tools capable of sniffing and analyzing network traffic.
+Wireshark and tcpdump are powerful tools capable of sniffing and analyzing network traffic.
 
 ### References
 

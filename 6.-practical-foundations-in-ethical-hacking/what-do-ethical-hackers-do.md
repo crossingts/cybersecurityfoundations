@@ -42,8 +42,6 @@ A comprehensive vulnerability assessment employs a systematic approach to identi
 
 Advanced assessments incorporate credentialed scanning, where authenticated checks provide deeper visibility into OS and application-level flaws by analyzing registry settings, file permissions, and patch levels. For web applications, dynamic application security testing (DAST) tools like Burp Suite or OWASP ZAP probe for OWASP Top 10 vulnerabilities (e.g., SQLi, XSS, CSRF) by injecting malicious payloads. Meanwhile, passive vulnerability detection via tools like Snort or Zeek (formerly Bro) analyzes network traffic for anomalies, such as protocol deviations or suspicious service banners, without direct interaction. The assessment culminates in risk scoring (e.g., CVSS metrics) and remediation prioritization, balancing exploitability, impact, and compensating controls to guide mitigation efforts.
 
-Modern vulnerability assessments extend beyond point-in-time scans by integrating threat intelligence feeds (e.g., MITRE ATT\&CK, CISA KEV) to contextualize findings with active exploits in the wild. For instance, a scan detecting CVE-2021-44228 (Log4Shell) gains urgency if threat actors are actively weaponizing it.
-
 ### Risk assessment
 
 The goal of risk assessment is “to identify which investments of time and resources will best protect the organization from its most likely and serious threats” (Reynolds, 2012, p. 103).&#x20;

@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Firewalls
 
 ### Core Packet-Filtering Firewall Technologies
@@ -47,13 +43,13 @@ Stateful firewalls primarily operate at **L3 (Network) and L4 (Transport)**, tra
 
 **Open-Source Stateful Firewalls**
 
-| Firewall                    | OS/Platform         | Notes                                            |
-| --------------------------- | ------------------- | ------------------------------------------------ |
-| **iptables/nftables**       | Linux               | Tracks connections via `conntrack`.              |
-| **PF (Packet Filter)**      | OpenBSD/FreeBSD     | Stateful by default (e.g., `keep state`).        |
-| **OPNsense/pfSense**        | BSD-based           | GUI for PF (stateful rules + IDS/IPS).           |
-| **firewalld**               | Linux (RHEL/Fedora) | Uses nftables/iptables with stateful zones.      |
-| **Suricata (IDS/IPS mode)** | Cross-platform      | Open-source IDS with stateful firewall features. |
+| Firewall                | OS/Platform         | Notes                                            |
+| ----------------------- | ------------------- | ------------------------------------------------ |
+| **iptables/nftables**   | Linux               | Tracks connections via `conntrack`.              |
+| **PF (Packet Filter)**  | OpenBSD/FreeBSD     | Stateful by default (e.g., `keep state`).        |
+| **OPNsense/pfSense**    | BSD-based           | GUI for PF (stateful rules + IDS/IPS).           |
+| **firewalld**           | Linux (RHEL/Fedora) | Uses nftables/iptables with stateful zones.      |
+| **Suricata (IPS mode)** | Cross-platform      | Open-source IDS with stateful firewall features. |
 
 **Stateless vs. Stateful (Diagram)**
 

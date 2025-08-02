@@ -1,25 +1,25 @@
 ---
 description: >-
-  This section covers important defensive security technologies such as packet
-  analyzers, intrusion detection/intrusion prevention, SIEM, and firewalls
+  This section covers important defensive cybersecurity technologies such as
+  firewalls, IDS/IPS, network security event management (SIEM), and packet
+  analyzers
 ---
 
 # Defensive cybersecurity technologies
 
 ## Learning objectives
 
-• Point 1\
-• Point 2 \
-• Point 3&#x20;
+* Point 1
+* Point 2
 
-This section looks at popular open source defensive cybersecurity technologies, exploring their role in cybersecurity, key advantages/characteristics, and deployment (use cases) in lab and production environments. Key categories of defensive technologies covered include host/network firewalls (e.g., OPNsense, pfilter, and nftables), IDS/IPS (e.g., Suricata and Snort), network security monitoring/SIEM (e.g., Wazuh), and packet analyzers (e.g., Wireshark and tcpdump).
+This section looks at popular open source defensive cybersecurity technologies, exploring their key advantages/characteristics and deployment (use cases). Key categories of defensive technologies covered include host/network firewalls (e.g., OPNsense, pfilter, and nftables), IDS/IPS (e.g., Suricata and Snort), network security monitoring/SIEM (e.g., Wazuh), and packet analyzers (e.g., Wireshark and tcpdump).
 
 ## Topics covered in this section
 
-* Firewalls
-* Intrusion Detection Systems (IDS/IPS)
-* Network security monitoring/SIEM&#x20;
-* Packet analyzers
+* **Firewalls**
+* **Intrusion Detection Systems (IDS/IPS)**
+* **Network security monitoring/SIEM**&#x20;
+* **Packet analyzers**
 
 ### Firewalls
 
@@ -90,7 +90,9 @@ A mature security stack combines:
 4. **EDR** → Hunts for endpoint compromises.
 5. **NTA (Network Trafific Analysis)** → Detects stealthy threats in network flows.
 
-### Packet analyzers: Wireshark
+### Packet analyzers
+
+#### Wireshark
 
 Wireshark is primarily a defensive (security monitoring) tool, but it can also be used in offensive security (ethical hacking) scenarios.
 

@@ -39,7 +39,7 @@ The most common parameters for monitoring network performance are throughput (kb
 Network security is an ongoing process that can be described by the Cisco security wheel. The security wheel (Figure 7-1) consists of the following four phases: Secure, Monitor, Test, and Improve. The third phase, Test, or network security testing, helps netadmins verify the security design and\
 discover vulnerabilities within a network.
 
-<figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption><p>Cisco Security Wheel (image courtesy of Deveriya, 2005, p. 362)</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption><p>Cisco Security Wheel (image courtesy of Deveriya, 2005, p. 362)</p></figcaption></figure>
 
 The process of network security testing is also commonly known as security audit, security assessment, posture assessment, vulnerability assessment, penetration testing, and ethical hacking. All these terms are invoked to refer to "a legitimate process of attacking, discovering, and reporting security holes in a network" (Deveriya, 2005, p. 362).
 

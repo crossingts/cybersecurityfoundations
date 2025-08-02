@@ -27,9 +27,11 @@ Popular open source host and network firewalls include iptables, nftables, ufw, 
 
 ### Intrusion Detection Systems (IDS/IPS)
 
-Popular open source NIDS and HIDS include Zeek (formerly Bro), Security Onion, OSSEC, Wazuh, Fail2Ban, OpenWIPS-NG, Suricata, and Snort.
+Popular open source NIDS and HIDS include Suricata, Snort, Wazuh, OSSEC, Fail2Ban, Zeek (formerly Bro), Security Onion, and OpenWIPS-NG.
 
 ### Network security monitoring/SIEM
+
+Popular open source SIEM/EDR (Security Information and Event Management/Endpoint Detection and Response) technologies include Wazuh, TheHive, Zeek, OSSEC, Suricata, and Velociraptor.
 
 #### Wazuh (SIEM) as a network security monitoring tool
 

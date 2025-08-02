@@ -1,5 +1,7 @@
 # Firewalls
 
+Popular open source host and network firewalls include iptables, nftables, ufw, pf, OPNsense, and pfSense (CE).
+
 ### Core Packet-Filtering Firewall Technologies
 
 Packet-filtering firewall technologies such as iptables and pfilter (PF) operate at the network level (Layer 3/4). These tools allow administrators to define rules for allowing, blocking, or modifying traffic based on IPs, ports, protocols, and connection states.&#x20;

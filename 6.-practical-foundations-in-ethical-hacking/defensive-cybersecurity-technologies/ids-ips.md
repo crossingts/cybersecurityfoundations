@@ -1,108 +1,8 @@
 # IDS/IPS
 
-Popular open source Intrusion Detection Systems/Intrusion Prevention Systems (IDS/IPS).
+Popular open source Intrusion Detection Systems/Intrusion Prevention Systems (IDS/IPS) ordered by relative popularity:&#x20;
 
-#### **1. Zeek (formerly Bro)**
-
-* **Type**: Network Analysis Framework (NIDS)
-* **Features**:
-  * Focuses on network traffic analysis rather than signature-based detection.
-  * Generates detailed logs for protocols, files, and connections.
-  * Highly customizable with scripting (Bro scripting language).
-* **Use Case**: Best for network monitoring, forensics, and anomaly detection.
-* **Website**: [https://zeek.org/](https://zeek.org/)
-
-#### **2. Security Onion**
-
-* **Type**: Network Security Monitoring (NSM) Suite (includes Suricata, Zeek, and other tools)
-* **Features**:
-  * Combines Suricata (IDS/IPS), Zeek (network analysis), and Elastic Stack (log analysis).
-  * Provides a full **SIEM-like** environment for threat detection.
-* **Use Case**: Enterprise-grade network security monitoring.
-* **Website**: [https://securityonion.net/](https://securityonion.net/)
-
-#### **3. OSSEC**
-
-* **Type**: Host-based IDS (HIDS)
-* **Features**:
-  * Monitors file integrity, log analysis, rootkit detection, and active responses.
-  * Can be used as a **centralized log analysis tool**.
-* **Use Case**: Server security, compliance monitoring, and log-based intrusion detection.
-* **Website**: [https://www.ossec.net/](https://www.ossec.net/)
-
-#### **4. Wazuh**
-
-* **Type**: HIDS + SIEM (Fork of OSSEC with extended features)
-* **Features**:
-  * Combines **HIDS, log analysis, file integrity monitoring, and vulnerability detection**.
-  * Integrates with **Elasticsearch** for visualization.
-* **Use Case**: Endpoint security, compliance (PCI DSS, GDPR), and threat detection.
-* **Website**: [https://wazuh.com/](https://wazuh.com/)
-
-#### **5. Fail2Ban**
-
-* **Type**: Lightweight IPS (for log-based blocking)
-* **Features**:
-  * Scans log files (e.g., SSH, Apache) and bans malicious IPs.
-  * Uses **iptables/nftables** for blocking.
-* **Use Case**: Protecting servers from brute-force attacks.
-* **Website**: [https://www.fail2ban.org/](https://www.fail2ban.org/)
-
-#### **6. OpenWIPS-NG**
-
-* **Type**: Wireless IPS (WIPS)
-* **Features**:
-  * Detects and prevents **Wi-Fi attacks** (rogue APs, deauth attacks).
-  * Works with **RF sensors** for wireless monitoring.
-* **Use Case**: Wireless network security.
-* **Website**: [https://openwips-ng.org/](https://openwips-ng.org/)
-
-#### **7. Samhain**
-
-* **Type**: HIDS (File integrity, log monitoring)
-* **Features**:
-  * Monitors file changes, rootkits, and suspicious processes.
-  * Supports **centralized logging** and stealth operation.
-* **Use Case**: Server integrity monitoring.
-* **Website**: [https://www.la-samhna.de/samhain/](https://www.la-samhna.de/samhain/)
-
-#### **8. AIDE (Advanced Intrusion Detection Environment)**
-
-* **Type**: File Integrity Checker (HIDS)
-* **Features**:
-  * Creates a database of file hashes and detects unauthorized changes.
-* **Use Case**: Server security & compliance auditing.
-* **Website**: [http://aide.sourceforge.net/](http://aide.sourceforge.net/)
-
-#### **9. Prelude SIEM (with Prelude OSS)**
-
-* **Type**: Hybrid IDS + SIEM
-* **Features**:
-  * Supports multiple detection engines (Suricata, Snort, OSSEC).
-  * Provides **unified alerting** and correlation.
-* **Use Case**: Enterprise security monitoring.
-* **Website**: [https://www.prelude-siem.org/](https://www.prelude-siem.org/)
-
-#### **10. FireHOL / FireQOS (for Traffic Shaping & IPS-like blocking)**
-
-* **Type**: Firewall + Traffic Management (Can act as IPS)
-* **Features**:
-  * Uses **iptables/nftables** for blocking malicious traffic.
-  * Can integrate with Suricata/Snort for active response.
-* **Use Case**: DDoS mitigation and traffic filtering.
-* **Website**: [https://firehol.org/](https://firehol.org/)
-
-#### **11. Snort**
-
-* **Type**: Signature-based NIDS/NIPS
-* **Features**:
-  * Lightweight, rule-based detection.
-  * Large community rule sets (Emerging Threats, Talos).
-  * Can be used inline (IPS mode).
-* **Use Case**: Small to medium networks, basic threat detection.
-* **Website**: [https://www.snort.org/](https://www.snort.org/)
-
-#### **12. Suricata**
+#### **Suricata**
 
 * **Type**: High-performance NIDS/NIPS
 * **Features**:
@@ -112,22 +12,102 @@ Popular open source Intrusion Detection Systems/Intrusion Prevention Systems (ID
 * **Use Case**: Enterprise networks, high-speed traffic analysis.
 * **Website**: [https://suricata.io/](https://suricata.io/)
 
+#### **Snort**
+
+* **Type**: Signature-based NIDS/NIPS
+* **Features**:
+  * Lightweight, rule-based detection.
+  * Large community rule sets (Emerging Threats, Talos).
+  * Can be used inline (IPS mode).
+* **Use Case**: Small to medium networks, basic threat detection.
+* **Website**: [https://www.snort.org/](https://www.snort.org/)
+
+#### **Wazuh**
+
+* **Type**: HIDS + SIEM (Fork of OSSEC with extended features)
+* **Features**:
+  * Combines **HIDS, log analysis, file integrity monitoring, and vulnerability detection**.
+  * Integrates with **Elasticsearch** for visualization.
+* **Use Case**: Endpoint security, compliance (PCI DSS, GDPR), and threat detection.
+* **Website**: [https://wazuh.com/](https://wazuh.com/)
+
+#### **OSSEC**
+
+* **Type**: Host-based IDS (HIDS)
+* **Features**:
+  * Monitors file integrity, log analysis, rootkit detection, and active responses.
+  * Can be used as a **centralized log analysis tool**.
+* **Use Case**: Server security, compliance monitoring, and log-based intrusion detection.
+* **Website**: [https://www.ossec.net/](https://www.ossec.net/)
+
+#### **Fail2Ban**
+
+* **Type**: Lightweight IPS (for log-based blocking)
+* **Features**:
+  * Scans log files (e.g., SSH, Apache) and bans malicious IPs.
+  * Uses **iptables/nftables** for blocking.
+* **Use Case**: Protecting servers from brute-force attacks.
+* **Website**: [https://www.fail2ban.org/](https://www.fail2ban.org/)
+
+#### **Zeek (formerly Bro)**
+
+* **Type**: Network Analysis Framework (NIDS)
+* **Features**:
+  * Focuses on network traffic analysis rather than signature-based detection.
+  * Generates detailed logs for protocols, files, and connections.
+  * Highly customizable with scripting (Bro scripting language).
+* **Use Case**: Best for network monitoring, forensics, and anomaly detection.
+* **Website**: [https://zeek.org/](https://zeek.org/)
+
+#### **Security Onion**
+
+* **Type**: Network Security Monitoring (NSM) Suite (includes Suricata, Zeek, and other tools)
+* **Features**:
+  * Combines Suricata (IDS/IPS), Zeek (network analysis), and Elastic Stack (log analysis).
+  * Provides a full **SIEM-like** environment for threat detection.
+* **Use Case**: Enterprise-grade network security monitoring.
+* **Website**: [https://securityonion.net/](https://securityonion.net/)
+
+#### **AIDE (Advanced Intrusion Detection Environment)**
+
+* **Type**: File Integrity Checker (HIDS)
+* **Features**:
+  * Creates a database of file hashes and detects unauthorized changes.
+* **Use Case**: Server security & compliance auditing.
+* **Website**: [http://aide.sourceforge.net/](http://aide.sourceforge.net/)
+
+#### **Samhain**
+
+* **Type**: HIDS (File integrity, log monitoring)
+* **Features**:
+  * Monitors file changes, rootkits, and suspicious processes.
+  * Supports **centralized logging** and stealth operation.
+* **Use Case**: Server integrity monitoring.
+* **Website**: [https://www.la-samhna.de/samhain/](https://www.la-samhna.de/samhain/)
+
+**OpenWIPS-NG**
+
+* **Type**: Wireless IPS (WIPS)
+* **Features**:
+  * Detects and prevents **Wi-Fi attacks** (rogue APs, deauth attacks).
+  * Works with **RF sensors** for wireless monitoring.
+* **Use Case**: Wireless network security.
+* **Website**: [https://openwips-ng.org/](https://openwips-ng.org/)
+
 #### **Summary Table**
 
-| **Tool**           | **Type**                   | **Best For**                              |
-| ------------------ | -------------------------- | ----------------------------------------- |
-| **Zeek (Bro)**     | NIDS (Traffic Analysis)    | Network forensics, anomaly detection      |
-| **OSSEC**          | HIDS                       | Log analysis, file integrity monitoring   |
-| **Wazuh**          | HIDS + SIEM                | Endpoint security, compliance             |
-| **Security Onion** | NSM Suite                  | Full network monitoring (Suricata + Zeek) |
-| **Fail2Ban**       | Lightweight IPS            | Brute-force protection                    |
-| **OpenWIPS-NG**    | Wireless IPS               | Wi-Fi security                            |
-| **Samhain**        | HIDS                       | Stealth monitoring, rootkit detection     |
-| **AIDE**           | File Integrity             | Server security auditing                  |
-| **Prelude SIEM**   | Hybrid IDS/SIEM            | Enterprise alert correlation              |
-| **FireHOL**        | Firewall/IPS               | Traffic filtering & DDoS mitigation       |
-| **Snort**          | Signature-based NIDS/NIPS  | Small/medium networks, legacy setups      |
-| **Suricata**       | High-performance NIDS/NIPS | High-speed networks, modern threats       |
+| **Tool**           | **Type**                   | **Best For**                              | Features |
+| ------------------ | -------------------------- | ----------------------------------------- | -------- |
+| **Suricata**       | High-performance NIDS/NIPS | High-speed networks, modern threats       |          |
+| **Snort**          | Signature-based NIDS/NIPS  | Small/medium networks, legacy setups      |          |
+| **Wazuh**          | HIDS + SIEM                | Endpoint security, compliance             |          |
+| **OSSEC**          | HIDS                       | Log analysis, file integrity monitoring   |          |
+| **Fail2Ban**       | Lightweight IPS            | Brute-force protection                    |          |
+| **Zeek (Bro)**     | NIDS (Traffic Analysis)    | Network forensics, anomaly detection      |          |
+| **Security Onion** | NSM Suite                  | Full network monitoring (Suricata + Zeek) |          |
+| **AIDE**           | File Integrity             | Server security auditing                  |          |
+| **Samhain**        | HIDS                       | Stealth monitoring, rootkit detection     |          |
+| **OpenWIPS-NG**    | Wireless IPS               | Wi-Fi security                            |          |
 
 #### **Which One Should You Choose?**
 

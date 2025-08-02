@@ -1,5 +1,7 @@
 # IDS/IPS
 
+### Popular open source IDS/IPS
+
 Popular open source Intrusion Detection Systems/Intrusion Prevention Systems (IDS/IPS) ordered by relative popularity:&#x20;
 
 #### **Suricata**
@@ -56,7 +58,7 @@ Popular open source Intrusion Detection Systems/Intrusion Prevention Systems (ID
   * Focuses on network traffic analysis rather than signature-based detection.
   * Generates detailed logs for protocols, files, and connections.
   * Highly customizable with scripting (Bro scripting language).
-* **Use Case**: Best for network monitoring, forensics, and anomaly detection.
+* **Use Case**: Best for network monitoring, forensics, and anomaly detection (deep traffic analysis).
 * **Website**: [https://zeek.org/](https://zeek.org/)
 
 #### **Security Onion**
@@ -96,29 +98,20 @@ Popular open source Intrusion Detection Systems/Intrusion Prevention Systems (ID
 
 #### **Summary Table**
 
-| **Tool**           | **Type**                   | **Best For**                              | Features |
-| ------------------ | -------------------------- | ----------------------------------------- | -------- |
-| **Suricata**       | High-performance NIDS/NIPS | High-speed networks, modern threats       |          |
-| **Snort**          | Signature-based NIDS/NIPS  | Small/medium networks, legacy setups      |          |
-| **Wazuh**          | HIDS + SIEM                | Endpoint security, compliance             |          |
-| **OSSEC**          | HIDS                       | Log analysis, file integrity monitoring   |          |
-| **Fail2Ban**       | Lightweight IPS            | Brute-force protection                    |          |
-| **Zeek (Bro)**     | NIDS (Traffic Analysis)    | Network forensics, anomaly detection      |          |
-| **Security Onion** | NSM Suite                  | Full network monitoring (Suricata + Zeek) |          |
-| **AIDE**           | File Integrity             | Server security auditing                  |          |
-| **Samhain**        | HIDS                       | Stealth monitoring, rootkit detection     |          |
-| **OpenWIPS-NG**    | Wireless IPS               | Wi-Fi security                            |          |
+| **Tool**           | **Type**                   | **Best For**                              |
+| ------------------ | -------------------------- | ----------------------------------------- |
+| **Suricata**       | High-performance NIDS/NIPS | High-speed networks, modern threats       |
+| **Snort**          | Signature-based NIDS/NIPS  | Small/medium networks, legacy setups      |
+| **Wazuh**          | HIDS + SIEM                | Endpoint security, compliance             |
+| **OSSEC**          | HIDS                       | Log analysis, file integrity monitoring   |
+| **Fail2Ban**       | Lightweight IPS            | Brute-force protection                    |
+| **Zeek (Bro)**     | NIDS (Traffic Analysis)    | Network forensics, anomaly detection      |
+| **Security Onion** | NSM Suite                  | Full network monitoring (Suricata + Zeek) |
+| **AIDE**           | File Integrity             | Server security auditing                  |
+| **Samhain**        | HIDS                       | Stealth monitoring, rootkit detection     |
+| **OpenWIPS-NG**    | Wireless IPS               | Wi-Fi security                            |
 
-#### **Which One Should You Choose?**
-
-* **For network-based detection**: **Zeek** (if you need deep traffic analysis) or **Security Onion** (for a full SIEM-like setup).
-* **For host-based security**: **Wazuh** (modern OSSEC fork with SIEM features) or **OSSEC**.
-* **For wireless security**: **OpenWIPS-NG**.
-* **For lightweight log-based blocking**: **Fail2Ban**.
-
-***
-
-**Snort vs. Suricata Key Differences and Similarities**
+### Snort vs. Suricata
 
 | **Feature**          | **Snort**                            | **Suricata**                        |
 | -------------------- | ------------------------------------ | ----------------------------------- |

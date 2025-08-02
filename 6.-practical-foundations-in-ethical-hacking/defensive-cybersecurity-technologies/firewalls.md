@@ -4,23 +4,23 @@
 
 Packet-filtering firewall technologies such as iptables and pfilter (PF) operate at the network level (Layer 3/4). These tools allow administrators to define rules for allowing, blocking, or modifying traffic based on IPs, ports, protocols, and connection states.&#x20;
 
-**Core Packet-Filtering Firewall Technologies**
+**Core Packet-Filtering Firewall Technologies (Open Source Except WFP)**
 
-| Firewall                             | OS/Platform                              | Notes                                                      |
-| ------------------------------------ | ---------------------------------------- | ---------------------------------------------------------- |
-| **iptables**                         | Linux                                    | Predecessor to nftables.                                   |
-| **nftables**                         | Linux (replaces iptables)                | Modern successor to iptables, more flexible syntax.        |
-| **firewalld**                        | Linux (RHEL/Fedora)                      | Frontend for iptables/nftables, uses zones for simplicity. |
-| **UFW (Uncomplicated Firewall)**     | Linux (Debian/Ubuntu)                    | Simplified iptables wrapper for beginners.                 |
-| **PF (Packet Filter)**               | BSD (OpenBSD, FreeBSD, OPNsense/pfSense) | More advanced than iptables, used in BSD-based firewalls.  |
-| **ipfw**                             | FreeBSD, macOS (legacy)                  | Older BSD firewall, mostly replaced by PF.                 |
-| **Windows Filtering Platform (WFP)** | Windows                                  | Microsoft’s built-in firewall (CLI: `netsh advfirewall`).  |
+| Firewall                             | OS/Platform                              | Notes                                                                                                                           |
+| ------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **iptables**                         | Linux                                    | Predecessor to nftables. Part of the Linux kernel (Netfilter project), licensed under GPL.                                      |
+| **nftables**                         | Linux (replaces iptables)                | Modern successor to iptables, more flexible syntax. Also part of Linux (Netfilter), GPL-licensed.                               |
+| **PF (Packet Filter)**               | BSD (OpenBSD, FreeBSD, OPNsense/pfSense) | More advanced than iptables, used in BSD-based firewalls. Originally from OpenBSD, now also in FreeBSD and others, BSD license. |
+| **ipfw**                             | FreeBSD, macOS (legacy)                  | Older BSD firewall, mostly replaced by PF. Found in FreeBSD (and older macOS versions), BSD license.                            |
+| **firewalld**                        | Linux (RHEL/Fedora)                      | Frontend for iptables/nftables, uses zones for simplicity. Developed by Red Hat, GPL.                                           |
+| **UFW (Uncomplicated Firewall)**     | Linux (Debian/Ubuntu)                    | Simplified iptables wrapper for beginners, GPL-licensed.                                                                        |
+| **Windows Filtering Platform (WFP)** | Windows                                  | Microsoft’s built-in firewall (CLI: `netsh advfirewall`).                                                                       |
 
 ***
 
-**What is BSD in "BSD-based Firewalls"?**
+**BSD-Based Firewalls**
 
-**BSD** stands for **Berkeley Software Distribution**, a family of Unix-like operating systems derived from the original Berkeley Unix (developed at UC Berkeley). BSD-based firewalls use networking and security tools native to BSD systems, the most notable being:
+BSD-based firewalls use networking and security tools native to BSD systems. BSD stands for Berkeley Software Distribution, a family of **Unix-like operating systems** derived from the original Berkeley Unix (developed at UC Berkeley).&#x20;
 
 **Key BSD Variants in Firewalling**
 
@@ -31,7 +31,7 @@ Packet-filtering firewall technologies such as iptables and pfilter (PF) operate
 | **NetBSD**         | **NPF** or **IPFilter**                | Less common in firewalls.                                       |
 | **macOS (Darwin)** | **ipfw (legacy)** / **PF (partially)** | macOS inherited some BSD firewall tools.                        |
 
-**Why BSD Firewalls?**
+**Characteristics of BSD Firewalls**
 
 * **Stability & Security:** OpenBSD is famously secure (used in critical infra).
 * **Performance:** PF handles high traffic efficiently (better than iptables in some cases).
@@ -39,17 +39,17 @@ Packet-filtering firewall technologies such as iptables and pfilter (PF) operate
 
 ### Stateful Firewalls: Definition & Open-Source Examples
 
-Stateful firewalls primarily operate at **L3 (Network) and L4 (Transport)**, tracking connections (e.g., TCP/UDP sessions). A stateful firewall tracks the **state of active connections** (e.g., TCP handshakes, UDP streams) to make dynamic decisions. Unlike stateless filters (which check only individual packets), it understands _sessions_.
+Stateful firewalls primarily operate at **L3 (Network) and L4 (Transport)**, tracking connections (e.g., TCP/UDP sessions). A stateful firewall tracks the state of active connections (e.g., TCP handshakes, UDP streams) to make dynamic decisions. Unlike stateless filters (which check only individual packets), it understands sessions.
 
-**Open-Source Stateful Firewalls**
+**Open-Source Stateful Firewalls (Open Source)**
 
-| Firewall                | OS/Platform         | Notes                                            |
-| ----------------------- | ------------------- | ------------------------------------------------ |
-| **iptables/nftables**   | Linux               | Tracks connections via `conntrack`.              |
-| **PF (Packet Filter)**  | OpenBSD/FreeBSD     | Stateful by default (e.g., `keep state`).        |
-| **OPNsense/pfSense**    | BSD-based           | GUI for PF (stateful rules + IDS/IPS).           |
-| **firewalld**           | Linux (RHEL/Fedora) | Uses nftables/iptables with stateful zones.      |
-| **Suricata (IPS mode)** | Cross-platform      | Open-source IDS with stateful firewall features. |
+| Firewall                                    | OS/Platform         | Notes                                            |
+| ------------------------------------------- | ------------------- | ------------------------------------------------ |
+| **iptables/nftables**                       | Linux               | Tracks connections via `conntrack`.              |
+| **PF (Packet Filter)**                      | OpenBSD/FreeBSD     | Stateful by default (e.g., `keep state`).        |
+| **firewalld**                               | Linux (RHEL/Fedora) | Uses nftables/iptables with stateful zones.      |
+| **OPNsense/pfSense Community Edition (CE)** | BSD-based           | GUI for PF (stateful rules + IDS/IPS).           |
+| **Suricata (IPS mode)**                     | Cross-platform      | Open-source IDS with stateful firewall features. |
 
 **Stateless vs. Stateful (Diagram)**
 

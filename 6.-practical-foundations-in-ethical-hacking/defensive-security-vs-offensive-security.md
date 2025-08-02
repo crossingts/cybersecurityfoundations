@@ -3,7 +3,6 @@ description: >-
   This section explains two important concepts within the cybersecurity field,
   defensive security and offensive security, and their importance for an
   effective organizational security policy
-hidden: true
 ---
 
 # Defensive security vs offensive security

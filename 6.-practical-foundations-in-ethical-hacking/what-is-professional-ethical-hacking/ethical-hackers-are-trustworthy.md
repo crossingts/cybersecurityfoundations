@@ -14,7 +14,7 @@ According to EC-Council (International Council of Electronic Commerce Consultant
 
 Ethical hacking is typically designed to simulate real-world attacks. The ethical hacker will use the same techniques and tools of malicious hackers, target the same information and infrastructure assets, and hence might expose confidential information and even might unwillingly damage assets or disrupt the infrastructure (Harris, 2021; Palmer, 2001).&#x20;
 
-Ethical hackers hold a unique position of trust, as their work involves accessing sensitive systems that could be exploited if mishandled. Ethical hackers can be trusted not to exploit findings for personal gain or malicious purposes. Further, they will report discovered vulnerabilities privately to the organization, not publicly disclose them without consent.&#x20;
+Ethical hackers hold a unique position of trust, as their work involves accessing sensitive systems that could be exploited if mishandled. Ethical hackers can be trusted not to exploit findings for personal gain or malicious purposes. Further, they will report discovered vulnerabilities privately to the organization, not publicly disclose them without the client's explicit consent.
 
 One rule that IBM’s ethical hacking effort had from the very beginning was that we would not hire ex-hackers. While some will argue that only a “real hacker” would have the skill to actually do the work, we feel that the requirement for absolute trust eliminated such candidates. (Palmer, 2001, p. 772)
 
@@ -28,9 +28,9 @@ If a pen-test group is going to actively try to breach your defenses, you want t
 
 Thomas et al. (2018) argue that "to be effective, ethical hacking involves trying to gain access to a system to access confidential and sensitive information. This means, that a certain level of trust needs to be established between the ethical hacker and the party engaging them” (p. 3).&#x20;
 
-The authors point out a fact highlighting an intrinsic grey area in the ethical hacking profession and which emphasizes the need for ethical hackers to espouse a strong moral character.
+The authors point out a fact highlighting an intrinsic grey area in the ethical hacking profession and which emphasizes the need for ethical hackers to espouse a strong moral standing.
 
-an ethical hacker needs to keep their knowledge of exploits up to date, and they will likely need to go “underground” to gain this knowledge (Conran 2014). Because ethical hackers may even utilize questionable means to gain intelligence it may result in a question of their professional ethics. (Thomas et al., 2018, p. 4)
+\[A]n ethical hacker needs to keep their knowledge of exploits up to date, and they will likely need to go “underground” to gain this knowledge (Conran 2014). Because ethical hackers may even utilize questionable means to gain intelligence it may result in a question of their professional ethics. (Thomas et al., 2018, p. 4)
 
 ### Ethical hackers honour the integrity of the client’s system
 
@@ -39,7 +39,3 @@ Ethical hackers should take “all precautions to do no harm to their systems du
 In the case of computer security, these “tiger teams” or “ethical hackers” would employ the same tools and techniques as the intruders, but they would neither damage the target systems nor steal information. Instead, they would evaluate the target systems’ security and report back to the owners with the vulnerabilities they found and instructions for how to remedy them. (Palmer, 2001, p. 770)
 
 Research by Tavani (2016) emphasizes the duty of care that ethical hackers owe to organizations and end-users. This includes avoiding unnecessary disruptions (e.g., crashing production servers) and ensuring that discovered vulnerabilities are not leaked to malicious actors. Additionally, ethical hackers must avoid conflicts of interest—such as working for competing firms without transparency—to maintain professional credibility.
-
-### Ethical hackers adhere to legal frameworks&#x20;
-
-The practices of professional ethical hackers are governed by a legal framework. Ethical hackers abide by the imperative to obtain permission before attempting to access a computer network (Graves, 2010; Harris, 2021; Palmer, 2001).

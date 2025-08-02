@@ -12,6 +12,8 @@ But for Young et al. (2007), 9 of the 10 shades represent variations of the same
 
 Hacking as an illegal practice “is used most typically to describe a person who accesses computers and information stored on computers without first obtaining permission" (Pashel, 2006, p. 197). Pashel (2006), citing Logan and Clarkson (2005), advances the definition of hacking as accessing a system that one is either not authorized to access or one who accesses a system at a level beyond their authorization.&#x20;
 
+The practices of professional ethical hackers are governed by a legal framework. Ethical hackers abide by the imperative to obtain permission before attempting to access a computer network (Graves, 2010; Harris, 2021; Palmer, 2001).
+
 While a white hat hacker is “authorised to break into supposedly ‘secure’ computer systems without malicious intent, but with the aim of discovering vulnerabilities in order to bring about improved protection,” a black-hat hacker is “someone who hacks with malicious intent and without authorisation” (Bodhani, 2013, p. 64).&#x20;
 
 Pike (2013) draws a sharp distinction between white and black hats. A white-hat hacker is defined as “a hacker who is committed to full compliance with legal and regulatory statutes as well as published ethical frameworks that apply to the task at hand.” In contrast, a black-hat hacker is “a hacker who either ignores or intentionally defies legal or regulatory statutes with presumably little interest in ethical frameworks” (p. 69).&#x20;

@@ -86,6 +86,7 @@
   * [Using Wireshark to identify non-secure network traffic](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/using-wireshark-to-identify-non-secure-network-traffic.md)
 * [Network security testing](6.-practical-foundations-in-ethical-hacking/network-security-testing/README.md)
   * [Nmap and OpenVAS](6.-practical-foundations-in-ethical-hacking/network-security-testing/nmap-and-openvas.md)
+  * [tcpdump](6.-practical-foundations-in-ethical-hacking/network-security-testing/tcpdump.md)
 * [Phases of the penetration testing process](6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process.md)
 * [Types of penetration testing](6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing.md)
 * [Pentesting methodologies, frameworks, and technologies](6.-practical-foundations-in-ethical-hacking/pentesting-methodologies-frameworks-and-technologies.md)

@@ -6,7 +6,17 @@ description: >-
 
 # Network security testing
 
+## Learning objectives
+
+* Point 1&#x20;
+* Point 2
+
 This section looks at network scanners and packet analyzers used in network security testing, specifically, Nmap, OpenVAS, Wireshark, and tcpdump.
+
+## Topics covered in this section
+
+* **Introduction**
+* **Network security testing**
 
 ### Introduction
 
@@ -50,9 +60,9 @@ Tools used for security testing can be loosely classified into the following two
 
 **The following discussion introduces the following tools and methodologies of network security testing:**
 
-• Network scanners - Nmap network scanner
+• Network scanners - Nmap
 
-• Vulnerability scanners - OpenVAS vulnerability scanner (forked Nessus)
+• Vulnerability scanners - OpenVAS (forked Nessus)
 
 • Packet analyzers (sniffers) - tcpdump
 
@@ -77,25 +87,9 @@ Vulnerabilities are the weaknesses in an operating system or software that can p
 
 • **Netcat**: A port scanner with the additional capability to read and write data across a network through TCP and UDP ports.
 
-#### Technology focus: Nmap
-
-Nmap is highly versatile tool used for port scanning and network enumeration. Nmap also looks for services that are running on hosts by scanning TCP and UDP ports. Nmap is an integral part of every network security professional's tool kit (Deveriya, 2005).
-
-Some of the routine (and cumbersome) netadmin tasks that Nmap can do are as follows:
-
-* Verify unused IP addresses in a network&#x20;
-* Verify available hosts in a network&#x20;
-* Verify services running on a host in a network&#x20;
-* Verify the firewall security configurations&#x20;
-* Verify the OS running on a remote host&#x20;
-
-Nmap uses Internet Control Message Protocol (ICMP) ping scans for network discovery as well as other scanning techniques using TCP and UDP packets. These techniques enable network scanning even if ICMP traffic is blocked in a network.
-
 #### Packet Analyzers
 
-Packet analyzers are software or hardware devices that capture and analyze the data flowing through the network. Packet analyzers are also called sniffers, protocol analyzers, and network analyzers … Many packet analyzers provide capabilities to filter, store, and analyze the captured data. In fact, most network intrusion detection systems (NIDS) are packet analyzers that watch for peculiar traffic patterns that are unique to network attacks. Packet analyzers work at Layers 1 and 2 of the OSI model but can also decode data at higher layers. This feature enables networking professionals to have a cross-sectional view of the data flowing through the network in real time. The ability to slice and view the raw data flowing through the wires is important when troubleshooting. Such views also help networking professionals to learn and understand the functioning of various protocols and applications. The views also provide clear proof that the network and its components are operational. (Deveriya, 2005, p. 386)
-
-Wireshark and tcpdump are powerful tools capable of sniffing and analyzing network traffic.
+Packet analyzers are software or hardware devices that capture and analyze the data flowing through the network ... Many packet analyzers provide capabilities to filter, store, and analyze the captured data. In fact, most network intrusion detection systems (NIDS) are packet analyzers that watch for peculiar traffic patterns that are unique to network attacks. Packet analyzers work at Layers 1 and 2 of the OSI model but can also decode data at higher layers. This feature enables networking professionals to have a cross-sectional view of the data flowing through the network in real time. The ability to slice and view the raw data flowing through the wires is important when troubleshooting. Such views also help networking professionals to learn and understand the functioning of various protocols and applications. The views also provide clear proof that the network and its components are operational. (Deveriya, 2005, p. 386)
 
 ### References
 

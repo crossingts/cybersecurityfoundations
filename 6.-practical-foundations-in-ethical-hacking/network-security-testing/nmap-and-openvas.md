@@ -4,6 +4,28 @@ hidden: true
 
 # Nmap and OpenVAS
 
+**Topics covered in this section**
+
+Technology focus: Nmap
+
+Technology focus: OpenVAS
+
+Using Nmap and OpenVAS in vulnerability assessment and penetration testing
+
+### Technology focus: Nmap
+
+Nmap is highly versatile tool used for port scanning and network enumeration. Nmap also looks for services that are running on hosts by scanning TCP and UDP ports. Nmap is an integral part of every network security professional's tool kit (Deveriya, 2005).
+
+Some of the routine (and cumbersome) netadmin tasks that Nmap can do are as follows:
+
+* Verify unused IP addresses in a network&#x20;
+* Verify available hosts in a network&#x20;
+* Verify services running on a host in a network&#x20;
+* Verify the firewall security configurations&#x20;
+* Verify the OS running on a remote host&#x20;
+
+Nmap uses Internet Control Message Protocol (ICMP) ping scans for network discovery as well as other scanning techniques using TCP and UDP packets. These techniques enable network scanning even if ICMP traffic is blocked in a network.
+
 **Nmap** is best described as a **network scanning tool**, but it also functions as a **network security auditing and reconnaissance tool**. Here's why:
 
 #### 1. **Primarily a Network Scanner**
@@ -29,6 +51,12 @@ hidden: true
 * It doesn’t exploit vulnerabilities (like Metasploit) but provides data for further analysis.
 
 **Best Description:** _Nmap is a powerful open-source network scanner used for discovery, security auditing, and network diagnostics._ This covers its primary role (scanning) while acknowledging its importance in security and administration.
+
+### Technology focus: OpenVAS
+
+OpenVAS (Open Vulnerability Assessment System) is a powerful open-source vulnerability scanner designed to detect and assess security weaknesses in networks, servers, and applications. Unlike general-purpose network scanners such as Nmap, which primarily focus on discovering hosts, services, and open ports, OpenVAS specializes in deep vulnerability analysis by leveraging a comprehensive database of known security flaws. It performs authenticated and unauthenticated scans, checks for outdated software, misconfigurations, and missing patches, and provides detailed risk assessments with remediation guidance. This makes OpenVAS particularly valuable for penetration testers and security teams prioritizing vulnerability management over basic reconnaissance.
+
+While Nmap excels at fast, efficient network mapping and service enumeration, OpenVAS goes further by analyzing the identified services for specific vulnerabilities. Nmap’s scripting engine (NSE) can perform limited vulnerability checks, but OpenVAS offers a more systematic approach with regularly updated vulnerability tests (NVTs). Additionally, OpenVAS provides a centralized web interface for managing scans and reports, whereas Nmap is typically command-line driven and requires additional tools for in-depth vulnerability analysis. Together, they complement each other—Nmap for initial discovery and OpenVAS for thorough security assessment—but OpenVAS stands out as a dedicated solution for vulnerability scanning and compliance auditing.
 
 ### Using Nmap and OpenVAS in vulnerability assessment and penetration testing
 

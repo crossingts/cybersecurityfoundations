@@ -67,13 +67,13 @@ Wazuh is an open-source security monitoring platform that provides SIEM (log ana
 
 ### Packet analyzers
 
-Packet analyzers, also known as network sniffers or protocol analyzers, are essential tools for monitoring, troubleshooting, and securing network traffic. Packet analyzers capture raw data packets traversing a network, decode their headers and payloads, and present them in a human-readable format. Understanding packet analyzers is crucial for diagnosing connectivity issues, verifying routing and switching behavior, and detecting security threats such as unauthorized access or malware. Packet analyzers operate at different layers of the OSI model, with some focusing on low-level frame analysis (Ethernet, ARP) while others specialize in application-layer protocols (HTTP, DNS, VoIP).
+Packet analyzers, also known as network sniffers or protocol analyzers or network analyzers, are essential tools for monitoring, troubleshooting, and securing network traffic. Packet analyzers capture raw data packets traversing a network, decode their headers and payloads, and present them in a human-readable format. Understanding packet analyzers is crucial for diagnosing connectivity issues, verifying routing and switching behavior, and detecting security threats such as unauthorized access or malware. Packet analyzers operate at different layers of the OSI model, with some focusing on low-level frame analysis (Ethernet, ARP) while others specialize in application-layer protocols (HTTP, DNS, VoIP).
 
-Modern packet analyzers support **filtering** (e.g., BPF syntax in tcpdump), **statistical analysis** (e.g., throughput, latency), and **decryption** (for TLS/SSL traffic with the right keys). Some packet analyzers, like Wireshark, provide deep protocol dissection, while others, like Zeek and Suricata, focus on behavioral analysis and intrusion detection. Whether used for **network forensics, performance tuning, or security auditing**, packet analyzers are indispensable for network engineers, cybersecurity professionals, and system administrators.
+Modern packet analyzers support filtering (e.g., BPF syntax in tcpdump), statistical analysis (e.g., throughput, latency), and decryption (for TLS/SSL traffic with the right keys). Some packet analyzers, like Wireshark, provide deep protocol dissection, while others, like Zeek and Suricata, focus on behavioral analysis and intrusion detection. Whether used for network forensics, performance tuning, or security auditing, packet analyzers are indispensable for network engineers, cybersecurity professionals, and system administrators.
 
-#### **1. What is BPF (Berkeley Packet Filter) in tcpdump?**
+#### **BPF (Berkeley Packet Filter)**
 
-**BPF (Berkeley Packet Filter)** is a highly efficient packet-filtering mechanism used by tools like `tcpdump`, Wireshark, and Linux's `libpcap` to capture only the network traffic that matches specific criteria. Instead of capturing all packets and filtering them later (which is resource-intensive), BPF applies filters **at the kernel level**, reducing CPU and memory usage.
+BPF is a highly efficient packet-filtering mechanism used by tools like `tcpdump`, Wireshark, and Linux's `libpcap` to capture only the network traffic that matches specific criteria. Instead of capturing all packets and filtering them later (which is resource-intensive), BPF applies filters at the kernel level, reducing CPU and memory usage.
 
 **Key Features of BPF Syntax in tcpdump:**
 
@@ -93,13 +93,11 @@ tcpdump 'udp and not port 53'               # Captures UDP traffic except DNS
 
 BPF is crucial for efficient packet analysis, especially in high-traffic networks.
 
-***
-
-#### **2. What Does "Decryption for TLS/SSL Traffic with the Right Keys" Mean?**
+**Decryption for TLS/SSL Traffic**
 
 Modern encrypted protocols like **TLS (used in HTTPS, VPNs, etc.)** prevent packet analyzers from inspecting payloads by default. However, some tools (like Wireshark) can **decrypt TLS/SSL traffic** if provided with the necessary decryption keys.
 
-**What Are "The Right Keys"?**
+**What Are The Necessary Decryption Keys?**
 
 * **Pre-master secret key (for RSA-based TLS)**: If you have the server’s private key, Wireshark can decrypt traffic.
 * **Session keys (for TLS 1.3 and forward)**: Requires logging the session keys during the handshake (e.g., via `SSLKEYLOGFILE` in browsers).
@@ -125,21 +123,11 @@ Then, in Wireshark:\
 
 **Limitations:**
 
+* Decrypts HTTPS traffic only if session keys or private keys are available.
 * **Cannot decrypt without keys**: If traffic uses **perfect forward secrecy (PFS)**, you must capture keys live (not retroactively).
 * **Not all protocols supported**: Some custom encryption (e.g., proprietary VPNs) may not be decryptable.
 
 ***
-
-#### **Summary Table**
-
-| Concept            | Explanation                                                           | Example Usage               |
-| ------------------ | --------------------------------------------------------------------- | --------------------------- |
-| **BPF Syntax**     | Kernel-level packet filtering for efficiency.                         | `tcpdump 'tcp port 443'`    |
-| **TLS Decryption** | Decrypts HTTPS traffic if session keys or private keys are available. | Wireshark + `SSLKEYLOGFILE` |
-
-Would you like a step-by-step guide on decrypting TLS in Wireshark or advanced BPF filtering techniques?
-
-
 
 #### Wireshark
 

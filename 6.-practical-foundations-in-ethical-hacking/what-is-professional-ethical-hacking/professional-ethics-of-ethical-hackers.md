@@ -14,11 +14,11 @@ This section explores the professional ethics of ethical hackers as stipulated/e
 
 Ethical hackers operate within a structured framework of professional codes of conduct, which define their responsibilities and ensure accountability. Several professional codes of conduct exist for information security professionals and ethical hackers, applicable to individuals who are members or certified professionals of the respective association. For example,&#x20;
 
-* Industry certifications: CEH Code of Ethics (EC-Council), OSCP (Offensive Security Code of Conduct), (ISC)² Code of Ethics, ISACA Code of Professional Ethics
-* Regulatory/governmental standards/guidelines: NIST publications (e.g., NIST SP 800-12, SP 800-53) touch on broader security and privacy principles
-* Industry standards/guidelines: OSSTMM, ISO/IEC 27001, OWASP (Open Web Application Security Project) Testing Guide, PCI DSS Penetration Testing Guidance
-* Professional associations: ACM Code of Ethics (2018), IEEE standards/guidelines (IEEE Cybersecurity Initiative, IEEE Certified Ethical Hacker (CEH) resources), IEEE code of ethics, IEEE code of conduct
-* Professional licensing/accreditation bodies: Professional Engineers Ontario (PEO)/PEO code of ethics, CEAB, CIPS
+* Industry certifications: CEH Code of Ethics (EC-Council), OSCP (Offensive Security Code of Conduct), (ISC)² Code of Ethics, ISACA Code of Professional Ethics.
+* Regulatory/governmental standards/guidelines: NIST SP 800-12 and NIST SP 800-53 touch on broader security and privacy principles, NIST SP 800-115 (Technical Guide to Penetration Testing) emphasizes authorized testing.
+* Industry standards/guidelines: OSSTMM, ISO/IEC 27001, OWASP (Open Web Application Security Project) Testing Guide, PCI DSS Penetration Testing Guidance.
+* Professional associations: ACM Code of Ethics (2018), IEEE standards/guidelines (IEEE Cybersecurity Initiative, IEEE Certified Ethical Hacker (CEH) resources), IEEE code of ethics, IEEE code of conduct.
+* Professional licensing/accreditation bodies: Professional Engineers Ontario (PEO)/PEO code of ethics, CEAB, CIPS.
 
 While different organizations have their own codes, several underlying principles cut through them: protecting the public (or public safety), acting lawfully, acting with integrity, and maintaining trust.&#x20;
 

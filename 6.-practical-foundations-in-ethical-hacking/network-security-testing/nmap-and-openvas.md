@@ -4,17 +4,18 @@ hidden: true
 
 # Nmap and OpenVAS
 
-**Topics covered in this section**
+### Topics covered in this section
 
-Technology focus: Nmap
-
-Technology focus: OpenVAS
-
-Using Nmap and OpenVAS in vulnerability assessment and penetration testing
+* Technology focus: Nmap
+* Technology focus: OpenVAS
+* Using Nmap and OpenVAS in vulnerability assessment and penetration testing
 
 ### Technology focus: Nmap
 
-Nmap is highly versatile tool used for port scanning and network enumeration. Nmap also looks for services that are running on hosts by scanning TCP and UDP ports. Nmap is an integral part of every network security professional's tool kit (Deveriya, 2005).
+Nmap is highly versatile tool for scanning and enumerating networks. Nmap also looks for\
+services that are running on hosts by scanning TCP and UDP ports. Often referred to as the\
+Swiss army knife of security tools, Nmap is an integral part of every network security\
+professional's tool kit. (Deveriya, 2005, p. 366)
 
 Some of the routine (and cumbersome) netadmin tasks that Nmap can do are as follows:
 

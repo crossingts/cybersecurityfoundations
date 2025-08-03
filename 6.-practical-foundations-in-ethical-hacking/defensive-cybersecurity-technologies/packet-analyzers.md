@@ -45,8 +45,25 @@ Popular open source packet analyzers ranked by approximate popularity and usage,
 * Can work in **sniffer, logger, or IPS mode**.
 * Large community rule sets available.
 
-#### **Bonus: Arkime (formerly Moloch)**
+#### **7. Arkime (formerly Moloch)**
 
 * **Large-scale packet capture & indexing** (for full traffic retention).
 * Web-based interface for searching and analyzing stored PCAPs.
 * Used by enterprises and ISPs for **forensic analysis**.
+
+#### **Recommendations Based on Use Cases**
+
+| **Use Case**                      | **Best Tool(s)**           | **Why?**                                                                         |
+| --------------------------------- | -------------------------- | -------------------------------------------------------------------------------- |
+| **General Troubleshooting**       | Wireshark, TShark          | Deep protocol inspection, user-friendly GUI (Wireshark), CLI scripting (TShark). |
+| **High-Speed Packet Capture**     | tcpdump, Suricata          | Low overhead (tcpdump), multi-threaded analysis (Suricata).                      |
+| **Security Monitoring (IDS/IPS)** | Suricata, Zeek, Snort      | Real-time threat detection, signature & anomaly-based analysis.                  |
+| **Network Forensics**             | Arkime (Moloch), Wireshark | Long-term packet storage (Arkime), detailed analysis (Wireshark).                |
+| **Automation & Scripting**        | TShark, tcpdump            | Easily integrated into scripts (TShark for JSON/CSV, tcpdump for BPF).           |
+| **Behavioral Analysis**           | Zeek (Bro)                 | Generates high-level logs (e.g., HTTP sessions) instead of raw packets.          |
+
+**Additional Notes:**
+
+* For **enterprise-scale analysis**, **Arkime + Suricata** is a powerful combo.
+* For **low-level debugging**, **tcpdump + Wireshark** is the gold standard.
+* For **threat hunting**, **Zeek + Suricata** provides both logging and real-time detection.

@@ -306,4 +306,6 @@ The primary goals of cryptography are confidentiality, authentication, data inte
 
 ### References
 
+Abu-Shaqra, B. (2020). Technoethics and sensemaking: Risk assessment and knowledge management of ethical hacking in a sociotechnical society (2020-04-17T20:04:42Z) \[Doctoral dissertation, University of Ottawa]. uO Research.
+
 Blakley, B., McDermott, E., & Geer, D. (2001, September). Information security is information risk management. In Proceedings of the 2001 workshop on New security paradigms (pp. 97-104). ACM.

@@ -1,7 +1,7 @@
 ---
 description: >-
   This section describes the phases of the penetration testing process, the
-  goals of each phase and key technologies used
+  goals of each phase, and key technologies used
 ---
 
 # Phases of the penetration testing process
@@ -9,9 +9,9 @@ description: >-
 ## Learning objectives
 
 * Describe the phases of the penetration testing process
-* Point 2&#x20;
+* Describe best practices for writing the penetration test report
 
-This section covers steps of the penetration testing process--planning, reconnaissance, scanning and enumeration, exploitation, post-exploitation, and reporting--and best practices for writing the penetration test report.
+This section covers steps of the penetration testing process—planning, reconnaissance, enumeration and scanning, exploitation, post-exploitation, and reporting—and best practices for writing the penetration test report.
 
 ## Topics covered in this section
 
@@ -20,7 +20,7 @@ This section covers steps of the penetration testing process--planning, reconnai
 
 ### Steps of the penetration testing process
 
-Penetration tests have a tightly defined scope and are time sensitive. Penetration tests should be seen as targeted exercises. The scope of test activities and test objectives, a schedule for the test activities, and the specific machines or applications to be tested are all specified upfront in a contractual agreement. Each test objective will have its own set of parameters and processes. The contractual agreement specified what is to be tested and how it is to be tested. It,
+Penetration tests have a tightly defined scope and are time sensitive. Penetration tests should be seen as targeted exercises. The scope of test activities and test objectives, a schedule for the test activities, and the specific machines or applications to be tested are all specified upfront in a contractual agreement between the client and ethical hacker. Each test objective will have its own set of parameters and processes. The contractual agreement specifies what is to be tested and how it is to be tested. The agreement,
 
 provides a precise description, usually in the form of network addresses or modem telephone numbers, of the systems to be evaluated. Precision on this point is of the utmost importance, since a minor mistake could lead to the evaluation of the wrong system at the client’s installation or, in the worst case, the evaluation of some other organization’s system. (Palmer, 2001, p. 775)
 

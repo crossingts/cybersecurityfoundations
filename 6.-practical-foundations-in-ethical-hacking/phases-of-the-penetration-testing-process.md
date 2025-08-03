@@ -2,6 +2,7 @@
 description: >-
   This section describes phases of the penetration testing process, the goals of
   each phase, and key technologies used
+hidden: true
 ---
 
 # Phases of the penetration testing process
@@ -28,7 +29,7 @@ The penetration testing process can be broken down into several **stages**: plan
 
 In the planning phase, rules are identified, management approval is finalized and documented, and testing goals are set. The planning phase sets the groundwork for a successful penetration test. No actual testing occurs in this phase. (NIST SP 800-115, 2008, p. 5-2)
 
-The planning phase is followed by a phase of intelligence gathering, what NIST (2008) calls the **discovery** phase, spanning OSINT (open source intelligence) or recon (reconnaissance) or footprinting, and scanning and enumeration.
+The planning phase is followed by a phase of intelligence gathering, spanning OSINT (open source intelligence) or recon (reconnaissance) or footprinting, and scanning and enumeration.
 
 Walker (2017) proposes five main stages for a penetration test or “act of hacking”: 1) Reconnaissance involves the steps taken to gather evidence and information on the target, 2) scanning and enumeration takes the information gathered in reconnaissance and applies tools and techniques to gather more in-depth information on the targets, 3) gaining access where “true attacks are leveled against the targets enumerated in the second phase,” 4) maintaining access, where hackers attempt to ensure they have a way back into the compromised system, and 5) covering tracks, where “attackers attempt to conceal their success and avoid detection by security professionals” (p. 36).&#x20;
 
@@ -42,11 +43,15 @@ Table 17: Five Phases of Reconnaissance (Faircloth, 2011, p. 33)
 
 <table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Phase</td><td valign="top">Objectives</td><td valign="top">Output</td><td valign="top">Tools</td></tr><tr><td valign="top"><p>Intelligence</p><p>Gathering</p></td><td valign="top">To learn as much about the target, its business, its organizational structure, and its business partners as possible.</td><td valign="top">The output of this phase is a list of company names, partner organization names, and DNS names which reflect the entire target organization including all of its brands, divisions, and local representations.</td><td valign="top"><p># Search engines</p><p># Financial databases</p><p># Business reports</p><p># WHOIS</p><p># RWHOIS</p><p># Domain name registries and registrars</p><p># Web archives</p><p># Data mining tools</p></td></tr><tr><td valign="top">Footprinting</td><td valign="top">To mine as many DNS host names as possible from the domains or company names collected and translate those into IP addresses or IP address ranges.</td><td valign="top">The output of this phase is a list of DNS host names, IP addresses, and IP address ranges.</td><td valign="top"><p># DNS</p><p># WHOIS</p><p># DIG</p><p># SMTP</p><p># Data mining tools</p></td></tr><tr><td valign="top"><p>Human</p><p>Recon</p></td><td valign="top">To analyze the human perspective of the target and gain as much intelligence as possible about the people associated with the organization.</td><td valign="top">The output of this phase is a list of names, job titles, contact information, and other personal details about the people associated with the organization.</td><td valign="top"><p># Search engines</p><p># Email lists and web site posts</p><p># Social networking services</p><p># Publicly available records</p></td></tr><tr><td valign="top">Verification</td><td valign="top">To confirm the validity of information collected in the prior phases.</td><td valign="top">This phase rarely produces new output, but can clean up existing output by removing invalid data. Some additional information can sometimes be gathered as a side-product of the verification.</td><td valign="top"><p># DNS</p><p># WHOIS</p><p># DIG</p></td></tr><tr><td valign="top">Vitality</td><td valign="top">To confirm the reachability of the IP addresses identified in prior phases. This is a phase which spreads between reconnaissance and enumeration.</td><td valign="top">The output of this phase is a list of IP addresses from prior phases which have been confirmed as reachable.</td><td valign="top"><p># PING</p><p># Port scanners</p><p># Mapping tools</p></td></tr></tbody></table>
 
-NIST SP 800-115 divides penetration testing into four main phases: Planning phase, Discovery phase (addressing Target Identification and Analysis Techniques), Attack phase (addressing Target Vulnerability Validation Techniques), and Reporting (see NIST SP 800-115, p. 5-2 for an in-depth discussion of the discovery phase).&#x20;
+NIST SP 800-115 divides penetration testing into four main phases: Planning phase, Discovery phase (addressing Target Identification and Analysis Techniques), Attack phase (addressing Target Vulnerability Validation Techniques), and Reporting.
 
-The three steps of the discovery phase represent successive stages of escalation in network access privileges. Reconnaissance uncovers information about a target company, such as its name and the identity of its partners, employee numbers, primary top-level domain names, and email address structure. Enumeration produces a narrowed-down list of specific IP addresses, port numbers, hostnames, and bulk lists of email addresses. Scanning gathers client-server level intelligence.
+Reconnaissance uncovers information about a target company, such as its name and the identity of its partners, employee numbers, primary top-level domain names, and email address structure.&#x20;
 
-Each phase within the discovery phase (NIST) can be either active or passive.&#x20;
+Scanning gathers client-server level intelligence.
+
+Enumeration produces a narrowed-down list of specific IP addresses, port numbers, hostnames, and bulk lists of email addresses.
+
+Each phase can be either active or passive.&#x20;
 
 **Footprinting passive and active methods/tools**
 
@@ -64,7 +69,7 @@ Social engineering is a threat that can exploit an ignorance (skill/knowledge ga
 
 At this stage “the target does not even know generally that they are the subject of surveillance.” The first step involves collating technical information on an organization’s public-facing systems. “Internet registries, coupled with services such as Shodan or VPN Hunter, can highlight and identify an organization’s Web servers, mail servers, remote access endpoints and many other Internet-facing devices.” Methods include “gathering of competitive intelligence, using search engines, perusing social media sites, participating in the ever-popular dumpster dive, gaining network ranges, and raiding DNS for information” (Walker, 2017, p. 44). A key argument is that there is no clear cutoff point between passive and active intelligence gathering techniques. Wheeler (2011) notes, “Although passive testing sounds harmless, beware that the definition of passive is not always consistent across the field. There are definitely gray areas to be aware of.” The confusion includes whether the use of third parties for services is considered passive testing (e.g., Passive Information Gathering (Part 1), Ollmann, 2007), whether the process of testing can be traced back to the tester, and whether the information gathering can be performed without the knowledge of the organization under investigation (i.e., stealthy–the key emphasis here is that intelligence gathering does not draw attention and remains undetected).
 
-**Network enumeration and port scanning passive and active methods/tools**
+**Scanning and enumeration passive and active methods/tools**
 
 Network enumeration involves the discovery of active devices on a network and mapping them to their IP addresses.&#x20;
 
@@ -115,3 +120,7 @@ The final report is typically delivered directly to an officer of the client org
 ### References
 
 Abu-Shaqra, B. (2020). Technoethics and sensemaking: Risk assessment and knowledge management of ethical hacking in a sociotechnical society (2020-04-17T20:04:42Z) \[Doctoral dissertation, University of Ottawa]. uO Research.
+
+NIST Special Publication 800-115: Technical Guide to Information Security Testing and Assessment (NIST 800-115). Retrieved January 21, 2020, from http://csrc.nist.gov/publications/nistpubs/800-115/SP800-115.pdf
+
+Walker, M. (2017). CEH Certified Ethical Hacker All-in-One Exam Guide, Second Edition. New York, NY: McGraw-Hill Education.

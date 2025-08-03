@@ -31,7 +31,7 @@ In the planning phase, rules are identified, management approval is finalized an
 
 Beyond the planning phase, Walker (2017) proposes five main stages for a penetration test or “act of hacking”: 1) Reconnaissance involves the steps taken to gather evidence and information on the target, 2) scanning and enumeration takes the information gathered in reconnaissance and applies tools and techniques to gather more in-depth information on the targets, 3) gaining access where “true attacks are leveled against the targets enumerated in the second phase,” 4) maintaining access, where hackers attempt to ensure they have a way back into the compromised system, and 5) covering tracks, where “attackers attempt to conceal their success and avoid detection by security professionals” (p. 36).&#x20;
 
-In this section/for the rest of this discussion, we will follow closely the five penetration testing phases as presented in Walker (2012, 2017), as it provides a comprehensive foundational framework for understanding the penetration testing process.
+The ensuing discussion closely follows the five penetration testing phases as presented in Walker (2012, 2017), as it provides a comprehensive foundational framework for understanding the penetration testing process.
 
 ### Phase: Reconnaissance
 
@@ -43,15 +43,15 @@ Table 17: Five Phases of Reconnaissance (Faircloth, 2011, p. 33)
 
 Footprinting passive and active methods/tools:
 
-Active recon involves social engineering and “anything that requires the hacker to interact with the organization” (Walker, 2017, p. 45). Passive reconnaissance involves gathering information from the public domain in places like Internet registries, Google, newspapers, and public records. At this stage “the target does not even know generally that they are the subject of surveillance.” The vast majority of OSINT activity is passive in nature.
+Penetration tests begin with an extensive information gathering phase. Open source information on the Internet can be used to build a profile of the target user or system. The vast majority of footprinting activity, also called OSINT, is passive in nature.&#x20;
+
+Active recon involves social engineering and “anything that requires the hacker to interact with the organization” (Walker, 2017, p. 45). Passive recon involves gathering information from the public domain in places like Internet registries, Google, newspapers, and public records.&#x20;
+
+At this stage “the target does not even know generally that they are the subject of surveillance.” The vast majority of OSINT activity is passive in nature.
 
 In OSINT, “the penetration tester uncovers possible weaknesses and entry points within the security posture of the organization, including the network, applications, website and wireless networks, physical facilities, cloud-based systems, and employees” (cipher.com). Open source information on the Internet and from other public sources can be used to build a profile of the target user or system to determine entry points into a computer system.
 
 Automated OSINT is used by hackers and penetration testers to gather and analyze intelligence about a specific target from social networks, including names, online handles, jobs, friends, likes/dislikes/interactions, locations, pictures, etc. (McLaughlin, 2012). Recon-ng and Maltego are intelligence gathering tools designed to facilitate the process of gathering, analyzing, and organizing OSINT.
-
-Penetration tests begin with an extensive information gathering phase. Open source information on the Internet can be used to build a profile of the target user or system. The vast majority of footprinting activity, also called OSINT, is passive in nature.&#x20;
-
-Active recon involves social engineering and “anything that requires the hacker to interact with the organization” (Walker, 2017, p. 45).&#x20;
 
 Social engineering is a threat that can exploit an ignorance (skill/knowledge gap) or credulity (lack of critical thinking) of the technology user (i.e., a gap in end-user security awareness) regarding the safe and ethical use of technology. Passive reconnaissance involves gathering information from the public domain in places like Internet registries, Google, newspapers, and public records.&#x20;
 

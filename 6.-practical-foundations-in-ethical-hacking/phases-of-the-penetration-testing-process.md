@@ -1,7 +1,7 @@
 ---
 description: >-
-  This section describes the phases of the penetration testing process, the
-  goals of each phase, and key technologies used
+  This section describes phases of the penetration testing process, the goals of
+  each phase, and key technologies used
 ---
 
 # Phases of the penetration testing process
@@ -11,7 +11,7 @@ description: >-
 * Describe the phases of the penetration testing process
 * Describe best practices for writing the penetration test report
 
-This section covers steps of the penetration testing process—planning, reconnaissance, enumeration and scanning, exploitation, post-exploitation, and reporting—and best practices for writing the penetration test report.
+This section describes steps of the penetration testing process—planning, reconnaissance, scanning and enumeration, exploitation (gaining access and privilege escalation), and post-exploitation (maintaining access and covering tracks)—as well as the goals of each phase and key technologies used. Finally, this section covers best practices for writing the penetration test report.
 
 ## Topics covered in this section
 
@@ -28,15 +28,15 @@ The penetration testing process can be broken down into several **stages**: plan
 
 In the planning phase, rules are identified, management approval is finalized and documented, and testing goals are set. The planning phase sets the groundwork for a successful penetration test. No actual testing occurs in this phase. (NIST SP 800-115, 2008, p. 5-2)
 
-The planning phase is followed by a phase of intelligence gathering, what NIST (2008) calls the **discovery** phase, spanning OSINT (open source intelligence) or recon (reconnaissance) or footprinting, and network enumeration and port scanning.
+The planning phase is followed by a phase of intelligence gathering, what NIST (2008) calls the **discovery** phase, spanning OSINT (open source intelligence) or recon (reconnaissance) or footprinting, and scanning and enumeration.
 
 Walker (2017) proposes five main stages for a penetration test or “act of hacking”: 1) Reconnaissance involves the steps taken to gather evidence and information on the target, 2) scanning and enumeration takes the information gathered in reconnaissance and applies tools and techniques to gather more in-depth information on the targets, 3) gaining access where “true attacks are leveled against the targets enumerated in the second phase,” 4) maintaining access, where hackers attempt to ensure they have a way back into the compromised system, and 5) covering tracks, where “attackers attempt to conceal their success and avoid detection by security professionals” (p. 36).&#x20;
 
 Faircloth (2011) proposes an iterative five stage reconnaissance phase: Intelligence Gathering, Footprinting, Human Recon, Verification, and Vitality. Table 17: Five Phases of Reconnaissance outlines the intelligence objectives, output (deliverables), and intelligence resources and tools for each phase. The last phase (Vitality) can be omitted in passive reconnaissance.
 
-There are two types or techniques of attacks: An active attack threatens the confidentiality and integrity of data, and a passive attack threatens the confidentiality of data. The three key steps or phases of footprinting (reconnaissance), network enumeration, and port scanning (what NIST SP 800-115 calls the discovery phase) are intelligence gathering processes to prepare for an exploit strategy against a target.&#x20;
+There are two types or techniques of attacks: An active attack threatens the confidentiality and integrity of data, and a passive attack threatens the confidentiality of data.&#x20;
 
-Each of the three phases of the discovery phase (NIST SP 800-115, 2008) can be either passive or active.&#x20;
+The two phases of reconnaissance, and scanning and enumeration are intelligence gathering processes that serve to prepare for an exploit strategy against a target. Each of the two phases can be either passive or active.&#x20;
 
 Table 17: Five Phases of Reconnaissance (Faircloth, 2011, p. 33)
 
@@ -45,16 +45,6 @@ Table 17: Five Phases of Reconnaissance (Faircloth, 2011, p. 33)
 NIST SP 800-115 divides penetration testing into four main phases: Planning phase, Discovery phase (addressing Target Identification and Analysis Techniques), Attack phase (addressing Target Vulnerability Validation Techniques), and Reporting (see NIST SP 800-115, p. 5-2 for an in-depth discussion of the discovery phase).&#x20;
 
 The three steps of the discovery phase represent successive stages of escalation in network access privileges. Reconnaissance uncovers information about a target company, such as its name and the identity of its partners, employee numbers, primary top-level domain names, and email address structure. Enumeration produces a narrowed-down list of specific IP addresses, port numbers, hostnames, and bulk lists of email addresses. Scanning gathers client-server level intelligence.
-
-Key risk thresholds or milestones within the three-step penetration testing framework: 1) From footprinting to network enumeration mark a change in network access authorization level (what is public and “open” and what is not) (e.g., lawful DNS-based data exfiltration from public sources vs unauthorized network access); 2) from network enumeration to active port scanning–active interference in network communication processes may **cause delay or downtime** (e.g., consumption of bandwidth during continuous active enumeration or monitoring, or during continuous penetration testing or to ensure network awareness within IT security governance), and traceability to penetration testers becomes a concern; and 3) from vulnerability assessment to “proof of concept” or the testing of security hypotheses regarding exploitable vulnerabilities within an information system.&#x20;
-
-Most “ethical hacking” activities are in practice vulnerability assessment activities.&#x20;
-
-Penetration testing involves “launching real attacks on real systems and data using tools and techniques commonly used by hackers” (NIST SP 800-115, p. 5-2). &#x20;
-
-Performing real attacks on real systems carries a higher risk that must be weighed carefully against the intended benefits. It must be justified on a cost-benefit basis by a security analyst with broad and interdisciplinary knowledge about the social threat landscape, human behavior, sociopolitical conflicts, in addition to the technical knowledge. Penetration testing can compromise data integrity or availability (accidental damage) or confidentiality (the penetration tester sees confidential information just by virtue of performing the test).
-
-The technical risks of penetration testing on computer systems to an organization include damaging the system infrastructure or data assets, or exposing confidential information, downtime, and exploits may remain in the system. Given the potential **side effects** of penetration testing, the work of penetration testers is often conducted on a defined schedule and focuses on specific aspects of a network or computer infrastructure rather than being an ongoing overall security. The penetration tester may have only limited access to the system that is subject to testing and only for the duration of the testing.
 
 Each phase within the discovery phase (NIST) can be either active or passive.&#x20;
 

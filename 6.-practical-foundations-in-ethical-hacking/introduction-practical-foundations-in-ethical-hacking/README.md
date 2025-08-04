@@ -45,7 +45,7 @@ What is professional ethical hacking
 
 [Defensive cybersecurity technologies](../defensive-cybersecurity-technologies/)
 
-[Phases of the penetration testing process](../phases-of-the-penetration-testing-process.md)
+[Phases of the penetration testing process](../phases-of-the-penetration-testing-process/)
 
 [Types of penetration testing](../types-of-penetration-testing.md)
 

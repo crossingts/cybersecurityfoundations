@@ -91,3 +91,7 @@ Here’s a **NIST SP 800-115-aligned table** mapping **vulnerabilities** to thei
 
 * **NIST SP 800-115** focuses on **technical vulnerabilities** (e.g., kernel flaws), while OWASP Top 10 emphasizes **web-specific risks**.
 * **Shared themes**: Input validation, misconfigurations appear in both.
+
+***
+
+Network penetration testing and exploitation techniques typically include bypassing firewalls, router testing, IPS/IDS evasion, DNS footprinting, open port scanning and testing, SSH attacks, proxy servers, network vulnerabilities, and application penetration testing (Cipher, n.d.).

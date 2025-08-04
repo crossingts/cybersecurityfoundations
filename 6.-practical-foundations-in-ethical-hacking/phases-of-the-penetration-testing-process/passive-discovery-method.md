@@ -8,7 +8,7 @@ Treurniet (2004) used a proprietary tool developed at DRDC to analyze network tr
 
 **Table** 19: Properties of a Network and Whether they Can Be Discovered Passively (Treurniet, 2004, p. 2)
 
-<figure><img src="../../.gitbook/assets/image.png" alt="Passive discovery method"><figcaption><p><strong>Table</strong> 19: Properties of a Network and Whether they Can Be Discovered Passively</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt="Passive discovery method"><figcaption><p><strong>Table</strong> 19: Properties of a Network and Whether they Can Be Discovered Passively</p></figcaption></figure>
 
 The check mark: the property can usually be found passively.
 

@@ -40,7 +40,7 @@ SSL/TLS is the backbone of secure communications. SSL/TLS is used almost anywher
 
 **How SSL/TLS uses Cryptography**
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt="How-SSL-TLS-uses-Cryptography"><figcaption><p>How SSL/TLS uses cryptographic tools to secure data transmission (image courtesy of Ed Harmoush, Practical Networking)</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt="How-SSL-TLS-uses-Cryptography"><figcaption><p>How SSL/TLS uses cryptographic tools to secure data transmission (image courtesy of Ed Harmoush, Practical Networking)</p></figcaption></figure>
 
 ### How SSL/TLS uses hashing
 

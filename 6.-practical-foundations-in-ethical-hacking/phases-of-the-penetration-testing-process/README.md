@@ -33,9 +33,11 @@ In the words of Walker (2012, 2017), taken a whole, a pentest has three chronolo
 
 The preparation phase defines the time period during which the actual contract is hammered out. The scope of the test, the types of attacks allowed, and the individuals assigned to perform the activity are all agreed upon in this phase. The assessment phase (sometimes also known as the security evaluation phase) is exactly what it sounds like—the actual assaults on the security controls are conducted during this time. Lastly, the conclusion (or post-assessment) phase defines the time when final reports are prepared for the customer, detailing the findings of the tests (including the types of tests performed) and many times even providing recommendations to improve security. (Walker, 2012, p. 8)
 
-Beyond the planning or preparation phase, Walker (2017) proposes five main phases (the assessment step) for a penetration test or “act of hacking”: 1) Reconnaissance, which involves the steps taken to gather evidence and information on the target, 2) scanning and enumeration, which takes the information gathered in reconnaissance and applies tools and techniques to gather more in-depth information on the targets, 3) gaining access, where “true attacks are leveled against the targets enumerated in the second phase,” 4) maintaining access, where hackers attempt to ensure they have a way back into the compromised system, and 5) covering tracks, where “attackers attempt to conceal their success and avoid detection by security professionals” (p. 36).&#x20;
+Beyond the planning or preparation phase, Walker (2017) proposes five main phases (the assessment step) for a penetration test or “act of hacking” (Figure 1-2 Phases of ethical hacking): 1) Reconnaissance, which involves the steps taken to gather evidence and information on the target; 2) scanning and enumeration, which takes the information gathered in reconnaissance and applies tools and techniques to gather more in-depth information on the targets; 3) gaining access, where “true attacks are leveled against the targets enumerated in the second phase”; 4) maintaining access, where hackers attempt to ensure they have a way back into the compromised system; and 5) covering tracks, where “attackers attempt to conceal their success and avoid detection by security professionals” (p. 36).&#x20;
 
-The ensuing discussion closely follows the five penetration testing phases as presented in Walker (2012, 2017), as it provides a comprehensive foundational framework for understanding the penetration testing process.
+<figure><img src="../../.gitbook/assets/image.png" alt="EC-Council-Phases-Ethical-Hacking"><figcaption><p>Figure 1-2 Phases of ethical hacking (Walker, 2012, p. 8)</p></figcaption></figure>
+
+The ensuing discussion leans considerably on the five penetration testing phases as presented in Walker (2012, 2017), as it provides a comprehensive foundational framework for understanding the penetration testing process.
 
 ### Phase: Reconnaissance
 
@@ -69,7 +71,7 @@ p0f is a passive monitoring Nmap alternative. p0f is a passive fingerprinting to
 
 Table 18: Pen Source/Free Tools—for Network Penetration Testing (Shah & Mehtre, 2015, p. 45)
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt="open-source-penetration-testing-tools"><figcaption><p>Table 18: Pen Source/Free Tools—for Network Penetration Testing (Shah &#x26; Mehtre, 2015, p. 45)</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt="open-source-penetration-testing-tools"><figcaption><p>Table 18: Pen Source/Free Tools—for Network Penetration Testing (Shah &#x26; Mehtre, 2015, p. 45)</p></figcaption></figure>
 
 Passive network sniffers can monitor and capture data packets passing through a given network in real time. “Sniffers operate at the data link layer of the network. Any data sent across the LAN is actually sent to each and every machine connected to the LAN. This is called passive since sniffers placed by the attackers passively wait for the data to be sent and capture them.” Placing a packet sniffer on a network in promiscuous mode allows a malicious intruder to capture and analyze all of the network traffic such as payloads containing confidential information.&#x20;
 

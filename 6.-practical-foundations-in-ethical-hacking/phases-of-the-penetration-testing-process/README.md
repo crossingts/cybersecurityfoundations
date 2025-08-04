@@ -65,25 +65,17 @@ Scanning and enumeration help pentesters map network topology and services to fi
 
 A tool like Nmap usually performs enumeration and scanning by launching custom TCP, UDP or ICMP packets against a given target. The target responds to the information requests in the form of a digital signature. This signature is key to identifying what software, protocols and OS is running the target device. Nmap scans can identify network services, OS number and version, software applications, databases, and configurations, all with high probability.&#x20;
 
-p0f is a passive monitoring Nmap alternative. p0f is a passive fingerprinting tool that does not generate network traffic. It is used to analyze network traffic and identify patterns behind TCP/IP-based communications often blocked for Nmap active fingerprinting techniques.&#x20;
-
-Passive fingerprinting uses sniffer traces from the remote system to determine the operating system of the remote host. p0f uses a fingerprinting technique based on analyzing the structure of a TCP/IP packet to determine the OS and other configuration properties of a remote host. It includes powerful network-level fingerprinting features, and the ability to analyze application-level payloads such as HTTP, and can be used for detecting NAT, proxy and load balancing setups.
+p0f is a passive monitoring Nmap alternative. p0f is a passive fingerprinting tool that does not generate network traffic. It is used to analyze network traffic and identify patterns behind TCP/IP-based communications often blocked for Nmap active fingerprinting techniques. Passive fingerprinting uses sniffer traces from the remote system to determine the operating system of the remote host. p0f uses a fingerprinting technique based on analyzing the structure of a TCP/IP packet to determine the OS and other configuration properties of a remote host. It includes powerful network-level fingerprinting features, and the ability to analyze application-level payloads such as HTTP, and can be used for detecting NAT, proxy and load balancing setups.
 
 Table 18: Pen Source/Free Tools—for Network Penetration Testing (Shah & Mehtre, 2015, p. 45)
 
 <figure><img src="../../.gitbook/assets/image (1).png" alt="open-source-penetration-testing-tools"><figcaption><p>Table 18: Pen Source/Free Tools—for Network Penetration Testing (Shah &#x26; Mehtre, 2015, p. 45)</p></figcaption></figure>
 
-
-
-Passive network sniffers can monitor and capture data packets passing through a given network in real time. “Sniffers operate at the data link layer of the network. Any data sent across the LAN is actually sent to each and every machine connected to the LAN. This is called passive since sniffers placed by the attackers passively wait for the data to be sent and capture them.”&#x20;
-
-Placing a packet sniffer on a network in promiscuous mode allows a malicious intruder to capture and analyze all of the network traffic such as payloads containing confidential information.&#x20;
-
-Effective network security requires real time awareness of the activities taking place on the network, to verify that the network policy is not being violated by any user or misconfiguration. A network can be periodically scanned to obtain real-time awareness. Active techniques to periodically scan the network have two disadvantages. First, they are intrusive, they introduce traffic into the network which consumes considerable bandwidth. Second, scanning can miss an activity, for example, when a specific port is probed with a specific protocol, because these look for a particular activity. These drawbacks can be addressed by using passive techniques where no traffic is introduced into the network. “Passive techniques have been in use in both defensive and offensive approaches for years but have only appeared recently in commercial products” (Treurniet, 2004, p. 1). “A sniffer is strategically placed on the network and the traffic is examined as it passes by. The behaviour of the traffic can be compared to an established policy for deviations” (Treurniet, 2004, p. iv). The passive technique can also identify information leaking form the network that could be used by malicious hackers. Attackers expect that active methods are used by organizations to test their own networks, so it “stands to reason, then, that more experienced attackers would also employ passive methods to obtain network information” (Treurniet, 2004, p. 2). Thus continuous surveillance or monitoring can be achieved using passive network sniffers to assess the security of a network.
+Passive network sniffers can monitor and capture data packets passing through a given network in real time. “Sniffers operate at the data link layer of the network. Any data sent across the LAN is actually sent to each and every machine connected to the LAN. This is called passive since sniffers placed by the attackers passively wait for the data to be sent and capture them.” Placing a packet sniffer on a network in promiscuous mode allows a malicious intruder to capture and analyze all of the network traffic such as payloads containing confidential information.&#x20;
 
 ### Phase: Gaining access
 
-gaining access where “true attacks are leveled against the targets enumerated in the second phase” (Walker 2017).
+where “true attacks are leveled against the targets enumerated in the second phase” (Walker 2017).
 
 ### Phase: Maintaining access
 

@@ -2,7 +2,6 @@
 description: >-
   This section describes phases of the penetration testing process, the goals of
   each phase, and key technologies used
-hidden: true
 ---
 
 # Phases of the penetration testing process

@@ -51,4 +51,4 @@ What is professional ethical hacking
 
 [Pentesting methodologies, frameworks, and technologies](../pentesting-methodologies-frameworks-and-technologies/)
 
-[Common attack targets](../common-attack-targets.md)
+[Common attack targets](../common-attack-targets/)

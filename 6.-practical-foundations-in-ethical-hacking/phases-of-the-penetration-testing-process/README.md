@@ -105,14 +105,25 @@ The final report is typically delivered directly to an officer of the client org
 ### Key takeaways
 
 * Phases of the penetration testing process are planning, reconnaissance, scanning and enumeration, exploitation, post-exploitation, and reporting
-
-The two phases of reconnaissance, and scanning and enumeration are intelligence gathering phases that serve to prepare for an exploit strategy against a target. Each of the two phases can be either passive or active.&#x20;
-
-Reconnaissance uncovers information about a target company, such as its name and the identity of its partners, employee numbers, primary top-level domain names, and email address structure.&#x20;
-
-Scanning gathers client-server level intelligence.
-
-Enumeration produces a narrowed-down list of specific IP addresses, port numbers, hostnames, and bulk lists of email addresses that can be potentially compromised.&#x20;
+* The two phases of reconnaissance, and scanning and enumeration are intelligence gathering phases that serve to prepare for an exploit strategy against a target. Each of the two phases can be either passive or active
+* Reconnaissance can be passive (e.g., OSINT, WHOIS, social media) or active (e.g., DNS queries, network probing)
+* Reconnaissance uncovers information about the target company:
+  * Company structure (partners, subsidiaries).
+  * Employee details (names, roles, email formats).
+  * Network infrastructure (domains, subdomains, IP ranges).
+  * Publicly exposed services (via search engines, Shodan).
+* Scanning is more intrusive than reconnaissance, often active. Scanning techniques include:
+  * Host discovery (ICMP, ARP, TCP/UDP probes).
+  * Port scanning (TCP SYN, Connect, UDP scans).
+  * OS & service fingerprinting (banner grabbing, version detection).
+  * Vulnerability scanning (automated tools like Nessus, OpenVAS).
+* Scanning discovers live hosts, open ports, running services, and potential vulnerabilities
+* Enumeration represents deeper probing to extract usable attack surfaces:
+  * User accounts (via LDAP, SMB, SMTP, RPC).
+  * Network shares & services (NFS, Samba, NetBIOS).
+  * Application-specific data (SQL databases, SNMP, DNS records).
+  * Email lists (harvested from exposed directories or breaches).
+  * Results in a refined target list (e.g., vulnerable services, weak credentials).
 
 ### References
 

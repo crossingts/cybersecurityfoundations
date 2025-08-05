@@ -388,7 +388,7 @@ Finally, any internet-connected network must have a local router with NAT and DH
 
 IPsec/GRE over IPsec, Encryption protocols/IEEE 802.11, DTP/VTP
 
-Vulnerable protocols that transmit data in plaintext should be substituted with secure protocols to prevent exposure of credentials and configuration data in transit. For example, FTP, SNMP v1/v2c community strings, and Telnet should be replaced with FTPS, SFTP, and SSH. Organizations should assume attackers can see their unencrypted traffic and eliminate cleartext protocols wherever possible.
+Vulnerable protocols that transmit data in plaintext should be substituted with secure protocols to prevent exposure of credentials and configuration data in transit. For example, FTP, SNMP v1/v2c community strings, and Telnet should be replaced with FTPS, SFTP, and SSH. In SNMPv1 the strings are sent in clear text. NTPv3 and SMTPv3 both provide encryption, authentication, and message integrity functions. Organizations should assume attackers can see their unencrypted traffic and eliminate cleartext protocols wherever possible.
 
 **Network Address Translation (NAT)** helps organizations overcome the limited availability of IPv4 addresses by allowing multiple devices on a private network to share a single public IP address. NAT works by converting private (internal) IP addresses—used within an organization—into publicly routable addresses for communication over the internet or other IP networks.
 

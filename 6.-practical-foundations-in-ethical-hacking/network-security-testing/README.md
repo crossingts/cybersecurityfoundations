@@ -46,6 +46,8 @@ The most common parameters for monitoring network performance are throughput (kb
 
 ### Network security testing
 
+“Every organization on the planet that has any concern whatsoever for the security of its resources must perform various security assessments—and some don’t have a choice, if they need to comply with FISMA or other various government standards" (Walker, 2012, p. 312).
+
 Network security is an ongoing process that can be described by the Cisco security wheel. The security wheel (Figure 7-1) consists of the following four phases: Secure, Monitor, Test, and Improve. The third phase, Test, or network security testing, helps netadmins verify the security design and\
 discover vulnerabilities within a network.
 

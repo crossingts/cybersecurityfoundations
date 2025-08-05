@@ -32,7 +32,7 @@ In the words of Walker (2012, 2017), taken a whole, a pentest has three chronolo
 
 The preparation phase defines the time period during which the actual contract is hammered out. The scope of the test, the types of attacks allowed, and the individuals assigned to perform the activity are all agreed upon in this phase. The assessment phase (sometimes also known as the security evaluation phase) is exactly what it sounds like—the actual assaults on the security controls are conducted during this time. Lastly, the conclusion (or post-assessment) phase defines the time when final reports are prepared for the customer, detailing the findings of the tests (including the types of tests performed) and many times even providing recommendations to improve security. (Walker, 2012, p. 8)
 
-Beyond the planning or preparation phase, Walker (2017) proposes five main phases (the assessment step) for a penetration test or “act of hacking” (Figure 1-2 Phases of ethical hacking): 1) Reconnaissance, which involves the steps taken to gather evidence and information on the target; 2) scanning and enumeration, which takes the information gathered in reconnaissance and applies tools and techniques to gather more in-depth information on the targets; 3) gaining access, where “true attacks are leveled against the targets enumerated in the second phase”; 4) maintaining access, where hackers attempt to ensure they have a way back into the compromised system; and 5) covering tracks, where “attackers attempt to conceal their success and avoid detection by security professionals” (p. 36).&#x20;
+Beyond the planning or preparation phase, Walker (2017) proposes five main phases (the assessment phase) for a penetration test or “act of hacking” (Figure 1-2 Phases of ethical hacking): 1) Reconnaissance, which involves the steps taken to gather evidence and information on the target; 2) scanning and enumeration, which takes the information gathered in reconnaissance and applies tools and techniques to gather more in-depth information on the targets; 3) gaining access, where “true attacks are leveled against the targets enumerated in the second phase”; 4) maintaining access, where hackers attempt to ensure they have a way back into the compromised system; and 5) covering tracks, where “attackers attempt to conceal their success and avoid detection by security professionals” (p. 36). Some of the assessment phases run concurrently and continuously throughout a test.
 
 <figure><img src="../../.gitbook/assets/image.png" alt="EC-Council-Phases-Ethical-Hacking"><figcaption><p>Figure 1-2 Phases of ethical hacking (Walker, 2012, p. 8)</p></figcaption></figure>
 
@@ -44,11 +44,9 @@ Penetration tests begin with an extensive information gathering phase to build a
 
 Automated OSINT is used by hackers and penetration testers to gather and analyze intelligence about a specific target from social networks, including names, online handles, jobs, friends, likes/dislikes/interactions, locations, pictures, etc. (McLaughlin, 2012). Recon-ng and Maltego are intelligence gathering tools designed to facilitate the process of gathering, analyzing, and organizing OSINT.
 
-The vast majority of OSINT activity is passive in nature. Passive recon involves gathering information from the public domain in places like Internet registries, Google, newspapers, and public records. At this stage “the target does not even know generally that they are the subject of surveillance.”&#x20;
+Reconnaissance can be passive or active. Passive recon involves gathering information from the public domain in places like Internet registries, Google, newspapers, and public records. At this stage “the target does not even know generally that they are the subject of surveillance.” Active recon involves social engineering and “anything that requires the hacker to interact with the organization” (Walker, 2017, p. 45). The vast majority of OSINT activity is passive in nature.&#x20;
 
-Active recon involves social engineering and “anything that requires the hacker to interact with the organization” (Walker, 2017, p. 45). Social engineering is a threat that can exploit an ignorance (skill/knowledge gap) or credulity (lack of critical thinking) of the technology user (i.e., a gap in end-user security awareness) regarding the safe and ethical use of technology. Passive reconnaissance involves gathering information from the public domain in places like Internet registries, Google, newspapers, and public records.&#x20;
-
-Recon involves collating technical information on an organization’s public-facing systems. “Internet registries, coupled with services such as Shodan or VPN Hunter, can highlight and identify an organization’s Web servers, mail servers, remote access endpoints and many other Internet-facing devices.” Methods include “gathering of competitive intelligence, using search engines, perusing social media sites, participating in the ever-popular dumpster dive, gaining network ranges, and raiding DNS for information” (Walker, 2017, p. 44).&#x20;
+Recon involves collating technical information on an organization’s public-facing systems. “Internet registries, coupled with services such as Shodan or VPN Hunter, can highlight and identify an organization’s Web servers, mail servers, remote access endpoints and many other Internet-facing devices.” Recon methods include “gathering of competitive intelligence, using search engines, perusing social media sites, participating in the ever-popular dumpster dive, gaining network ranges, and raiding DNS for information” (Walker, 2017, p. 44).&#x20;
 
 Faircloth (2011) proposes an iterative five stage reconnaissance phase: Intelligence Gathering, Footprinting, Human Recon, Verification, and Vitality. Table 17: Five Phases of Reconnaissance outlines the intelligence objectives, output (deliverables), and intelligence resources and tools for each phase. The last phase (Vitality) can be omitted in passive reconnaissance.
 
@@ -60,9 +58,9 @@ A key argument is that there is no clear cutoff point between passive and active
 
 ### Phase: Scanning and enumeration
 
-**Scanning and enumeration passive and active methods and tools**
+Security analysts now apply the information they gathered in recon towards gathering more in-depth information on the targets.
 
-Scanning and enumeration help pentesters map network topology and services to fine-tune their assault tactics.&#x20;
+This can be something as simple as running a ping sweep or a network mapper to see what systems are on the network, or as complex as running a vulnerability scanner to determine which ports may be open on a particular system. For example, whereas recon may have shown the network to have 500 or so machines connected to a single subnet inside a building, scanning and enumeration would tell me which ones are Windows machines and which ones are running FTP. (Walker, 2012, p. 9)
 
 A tool like Nmap usually performs enumeration and scanning by launching custom TCP, UDP or ICMP packets against a given target. The target responds to the information requests in the form of a digital signature. This signature is key to identifying what software, protocols and OS is running the target device. Nmap scans can identify network services, OS number and version, software applications, databases, and configurations, all with high probability.&#x20;
 
@@ -76,27 +74,23 @@ Passive network sniffers can monitor and capture data packets passing through a 
 
 ### Phase: Gaining access
 
-where “true attacks are leveled against the targets enumerated in the second phase” (Walker 2017).
+Now true attacks are leveled against the targets enumerated in the second phase.
+
+These attacks can be as simple as accessing an open and nonsecured wireless access point and then manipulating it for whatever purpose, or as complex as writing and delivering a buffer overflow or SQL injection against a web application. (Walker, 2012, p. 10)
 
 ### Phase: Maintaining access
 
-where hackers attempt to ensure they have a way back into the compromised system.
+Now hackers attempt to ensure they have a way back into the compromised system.
+
+Back doors are left open by the attacker for future use—especially if the system in question has been turned into a zombie (a machine used to launch further attacks from) or if the system is used for further information gathering—for example, a sniffer can be placed on a compromised machine to watch traffic on a specific subnet. Access can be maintained through the use of Trojans, rootkits, or any number of other methods. (Walker, 2012, p. 10)
+
+The concept of “escalation of privileges” between phases 3 and 4 refers to actions taken by a hacker to promote his access to root or administrative levels.
 
 ### Phase: Covering tracks
 
-where hackers cover their tracks.
+Now, in the final phase of security assessment, hackers attempt to conceal their presence in the compromised machines to avoid detection.
 
-### Summary/review
-
-The two phases of reconnaissance, and scanning and enumeration are intelligence gathering processes that serve to prepare for an exploit strategy against a target. Each of the two phases can be either passive or active.&#x20;
-
-Reconnaissance uncovers information about a target company, such as its name and the identity of its partners, employee numbers, primary top-level domain names, and email address structure.&#x20;
-
-Scanning gathers client-server level intelligence.
-
-Enumeration produces a narrowed-down list of specific IP addresses, port numbers, hostnames, and bulk lists of email addresses.
-
-Each phase can be either active or passive.&#x20;
+Steps taken here consist of removing or altering log files, hiding files with hidden attributes or directories, and even using tunneling protocols to communicate with the system. If auditing is even turned on and monitored, and often it is not, log files are an indicator of attacks on a machine. Clearing the log file completely is just as big an indicator to the security administrator watching the machine, so sometimes selective editing is your best bet. Another great method to use here is simply corrupting the log file itself—whereas a completely empty log file screams an attack is in progress, files get corrupted all the time and, chances are, the administrator won’t bother to try to rebuild it. In any case, good pen testers are truly defined in this phase. (Walker, 2012, p. 10)
 
 ### The penetration test report
 
@@ -110,7 +104,15 @@ The final report is typically delivered directly to an officer of the client org
 
 ### Key takeaways
 
-* Phases of the penetration testing process are planning and reconnaissance, scanning and enumeration, exploitation, post-exploitation, and reporting
+* Phases of the penetration testing process are planning, reconnaissance, scanning and enumeration, exploitation, post-exploitation, and reporting
+
+The two phases of reconnaissance, and scanning and enumeration are intelligence gathering phases that serve to prepare for an exploit strategy against a target. Each of the two phases can be either passive or active.&#x20;
+
+Reconnaissance uncovers information about a target company, such as its name and the identity of its partners, employee numbers, primary top-level domain names, and email address structure.&#x20;
+
+Scanning gathers client-server level intelligence.
+
+Enumeration produces a narrowed-down list of specific IP addresses, port numbers, hostnames, and bulk lists of email addresses that can be potentially compromised.&#x20;
 
 ### References
 

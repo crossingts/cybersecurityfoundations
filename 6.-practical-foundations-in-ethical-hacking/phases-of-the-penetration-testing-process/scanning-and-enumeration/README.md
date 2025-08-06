@@ -92,8 +92,229 @@ A quick-and-easy tip to remember is that all scans return an RST on a closed por
 
 <figure><img src="../../../.gitbook/assets/image (18).png" alt="Network Scan Types"><figcaption><p>Source: Walker (2012, p. 100)</p></figcaption></figure>
 
+#### Vulnerability Scanning
+
+Vulnerability scanning involves using automated tools to identify security weaknesses in a system, network, or application. These scanners must:
+
+* Stay updated with the latest known vulnerabilities.
+* Avoid causing harm to the systems being scanned.
+
+**Types of Vulnerability Scanners**
+
+1. **Enterprise-Level Scanners**
+   * Scan entire networks, generate reports, and help enforce patch compliance.
+   * Example: **Retina CS** (by BeyondTrust).
+2. **Targeted Scanners**
+   * Focus on specific environments (e.g., Windows).
+   * Example: **Microsoft Baseline Security Analyzer (MBSA)** – Checks missing patches on Windows machines.
+3. **General-Purpose Scanners**
+   * Some are effective, while others may not be reliable.
+
+**Industry Standard: Nessus (by Tenable)**
+
+* **Features:**
+  * High-speed asset discovery, configuration auditing, malware detection, compliance checks (PCI, HIPAA, etc.).
+  * Supports **credentialed (deep) and non-credentialed (remote) scans**.
+  * Over **450 compliance templates** available.
+* **Pricing:**
+  * **$2,190/year** for Nessus Professional (7-day free trial available).
+  * Enterprise version: **Security Center**.
+* **Additional Capabilities:**
+  * Detects viruses, backdoors, botnet communications, and malicious web services.
+
+**Other Notable Vulnerability Scanners**
+
+1. **GFI LanGuard**
+   * Combines vulnerability scanning with **patch management**.
+   * Useful for compliance and security assessments.
+2. **Qualys FreeScan**
+   * Specializes in **web application scanning** (OWASP Top 10 risks, malware detection).
+   * Often referenced in certification exams.
+3. **OpenVAS (Open Vulnerability Assessment System)**
+   * **Free and open-source alternative to Nessus**.
+   * Comparable (or superior) in functionality.
+
+#### **Illustrative Comparison**
+
+| **Scanner**         | **Type**           | **Key Features**                          | **Cost**       |
+| ------------------- | ------------------ | ----------------------------------------- | -------------- |
+| **Nessus**          | Commercial         | Comprehensive scanning, compliance checks | $2,190/year    |
+| **OpenVAS**         | Free & Open-Source | Nessus alternative, robust scanning       | Free           |
+| **GFI LanGuard**    | Commercial         | Vulnerability + patch management          | Paid (varies)  |
+| **Qualys FreeScan** | Freemium           | Web app scanning, OWASP focus             | Free (limited) |
+
 ### Enumeration
 
+Enumeration refers to listing off the items found within a specific target. After identifying open ports, we now want to find things like open shares and any easy-to-grab user account information. We can use a variety of tools and techniques, many of which bleeds over from scanning.&#x20;
 
+Enumeration should be performed on every system found on the target network, regardless of operating system. However, because Windows machines will likely make up the majority of the targets, it would helpful to spend a little time on them—to learn some of the basics of Windows’ design and security features.
+
+#### Windows Security Basics
+
+Everything in a Windows system runs within the context of an account. An account can be that of a user, running in something called user mode, or the system account, which runs in kernel mode. Actions and applications running in user mode are easy to detect and contain. Those running in kernel mode, though, can be hidden and run with absolute authority. Knowing this, a hacker must attempt to get code running in kernel mode as often as possible. (Walker, 2012, p. 108)
+
+* **User Mode**:
+  * Standard user accounts operate in **user mode**, where actions are restricted and monitored.
+  * Malicious code running here is easier to detect and contain.
+* **Kernel Mode (System Account)**:
+  * The **SYSTEM account** operates in **kernel mode**, the highest privilege level.
+  * Attackers aim to execute code here because it allows **stealth, persistence, and full system control**.
+
+User rights are granted via an account’s membership within a group and determine which system tasks an account is allowed to perform. Permissions are used to determine which resources an account has access to. The method by which Windows keeps track of which account holds what rights and permissions comes down to SIDs and RIDs. (Walker, 2012, p. 109)
+
+* **Rights**: Define **what system tasks** an account can perform (e.g., shutting down the system, changing the time).
+  * Granted via **group membership** (e.g., Administrators, Power Users).
+* **Permissions**: Define **access to resources** (files, folders, registry keys).
+  * Example: A user may have **rights** to install software but **no permission** to modify system files.
+
+**SIDs and RIDs (Security & Resource Identifiers)**
+
+* **SID (Security Identifier)**:
+  * Unique identifier for users, groups, and computers.
+  * Format: **`S-1-5-21-[Domain]-[RID]`**
+    * **S** = Security ID
+    * **1** = Revision level
+    * **5** = Authority (Windows)
+    * **21-\[Domain]** = Domain/computer identifier
+    * **\[RID]** = User/group identifier
+* **RID (Resource Identifier)**:
+  * The last part of the SID, indicating a specific account.
+  * **Well-known RIDs**:
+    * **500** → Administrator
+    * **501** → Guest
+    * **1000+** → Regular users (incremented sequentially, even if usernames are reused).
+
+**Example**:
+
+* `S-1-5-21-3874928736-367528774-1298337465-500` → **Local Administrator**
+* `S-1-5-21-3984762567-8273651772-8976228637-1014` → **14th user created** (RID 1014)
+
+**Password Storage (SAM Database)**
+
+* **Local Passwords**: Stored in **`C:\Windows\System32\Config\SAM`** (encrypted).
+* **Domain Passwords**: Handled by **Active Directory Domain Controllers**.
+* **Security Implication**:
+  * Attackers target the **SAM file** (e.g., via offline attacks like **Pass-the-Hash** or **SAM extraction**).
+  * Domain attacks focus on **compromising the Domain Controller** (e.g., **Kerberoasting** or **DCSync**).
+
+**Note**
+
+* **Privilege Escalation**: Moving from **user mode → kernel mode** is a key attack vector.
+* **SID/RID Manipulation**: Attackers may spoof or exploit well-known SIDs (e.g., RID 500 for Admin).
+* **Credential Attacks**: Dumping the **SAM database** is a common post-exploitation step.
+
+#### Enumeration Techniques
+
+### **1. Banner Grabbing**
+
+**Definition:** Banner grabbing retrieves service information (e.g., software version) from open ports by analyzing responses to connection requests.
+
+#### **Methods:**
+
+* **Telnet:**
+  * Example: `telnet <IP> 80` (HTTP) or `telnet <IP> 25` (SMTP)
+  * May reveal server software (e.g., `IIS/5.0`, `Microsoft Exchange`).
+* **Netcat (nc):**
+  * Example: `nc <IP> 80`
+  * A versatile tool for reading/writing network data.
+* **Port Scanners (Nmap, SuperScan):**
+  * Many scanning tools include banner grabbing functionality.
+
+#### **Notes:**
+
+* **Active Banner Grabbing:** Sends crafted packets to analyze responses.
+* **Passive Banner Grabbing:** Relies on sniffing traffic, error messages, or page extensions.
 
 ***
+
+### **2. NetBIOS Enumeration**
+
+**Definition:** Exploits the NetBIOS protocol to gather Windows network details (e.g., shares, users, roles).
+
+#### **Tools & Techniques:**
+
+* **`nbtstat` (Built-in Windows Tool):**
+  * `nbtstat -n` → Local NetBIOS names.
+  * `nbtstat -A <IP>` → Remote system’s NetBIOS table.
+  *   Example output:
+
+      text
+
+      ```
+      Name               Type         Status  
+      ---------------------------------------  
+      WORKSTATION      <00>  UNIQUE      Registered  
+      WORKGROUP        <1E>  GROUP       Registered  
+      ```
+
+      * `<00>` = Workstation service.
+      * `<20>` = File/print sharing.
+      * `<1D>` = Master browser.
+* **Other Tools:**
+  * **SuperScan** (Port scanner + NetBIOS enumerator).
+  * **Hyena** (GUI tool for shares, users, services).
+  * **Winfingerprint, NSAuditor** (Additional enumeration tools).
+
+#### **Notes:**
+
+* NetBIOS **does not work with IPv6**.
+* Focus on **NetBIOS codes (e.g., `<00>`, `<20>`)** and tools.
+
+***
+
+### **3. SNMP Enumeration**
+
+**Definition:** Exploits **Simple Network Management Protocol (SNMP)** to extract device info via **Management Information Base (MIB)** queries.
+
+#### **Key Concepts:**
+
+* **Community Strings (Default Passwords):**
+  * **Read-Only:** `public`
+  * **Read-Write:** `private`
+* **SNMP Versions:**
+  * **SNMPv1/v2:** Cleartext community strings.
+  * **SNMPv3:** Encrypted (more secure).
+* **MIB (Management Information Base):**
+  * Stores device data (OS, configs, usage stats).
+  * Accessed via **OIDs (Object Identifiers)**.
+
+#### **Tools:**
+
+* **Engineer’s Toolset (SolarWinds)**
+* **SNMPScanner**
+* **OpUtils 5**
+* **SNScan**
+
+***
+
+### **4. LDAP Enumeration**
+
+**Definition:** Queries **Lightweight Directory Access Protocol (LDAP)** for directory info (users, org structure, system data).
+
+#### **Key Points:**
+
+* Runs on **TCP 389**.
+* Used in **Active Directory (AD)** environments.
+* Returns structured data via **Basic Encoding Rules (BER)**.
+
+#### **Tools:**
+
+* **Softerra LDAP Browser**
+* **JXplorer**
+* **Active Directory Explorer (Windows)**
+
+***
+
+### **Conclusion**
+
+Enumeration provides critical details for ethical hackers, including:\
+✅ **Banner Grabbing** → Service versions.\
+✅ **NetBIOS** → Windows shares & roles.\
+✅ **SNMP** → Device configurations.\
+✅ **LDAP** → User/org data.
+
+**Notes**
+
+* Know **tools (nbtstat, netcat, SNMP scanners)**.
+* Understand **default credentials (SNMP, NetBIOS)**.
+* Differentiate **active vs. passive banner grabbing**.

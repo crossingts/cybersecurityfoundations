@@ -19,19 +19,24 @@ The simplest and easiest way to check for live systems on a network is to take a
 
 An ICMP Type 8 packet received by a host tells the recipient, “Hey! I’m sending you a few packets. When you get them, reply back with the same number so I know you’re there.” The recipient will respond with an ICMP Type 0, stating, “Sure, I’m alive. Here are the data packets you just sent me as proof!” (Walker, 2012, p. 87)
 
-The associated responses provide detailed information about the recipient host. For example, if an Echo Request (Type 8) sent to a host returned a Type 3.&#x20;
+The associated responses provide detailed information about the recipient host. Consider, for example, an Echo Request (Type 8) sent to a host returning a Type 3. Code 7 would tell us whether the host is down. Code 0 would tell us whether the network route is missing or corrupt in our local route tables. Code 13 would tell us whether a filtering device, such as a firewall, is preventing ICMP messages altogether.
 
-Code 7 would tell us whether the host is down. Code 0 would tell us whether the network route is missing or corrupt in our local route tables. Code 13 would tell us whether a filtering device, such as a firewall, is preventing ICMP messages altogether.
-
-Combining pings to each and every address within a subnet range is known as a ping sweep. A ping sweep is the easiest method to identify active machines on the network, though it may not necessarily be the only or best option.
+Combining pings to each and every address within a subnet range is known as a ping sweep. A ping sweep is the easiest method to identify active machines on the network, though it may not necessarily be the only or best option. Sometimes it's convenient to combine the search for active machines with a port scan.
 
 Another option for identifying machines (not necessarily live ones, but ones that were live at some time) is called a list scan, performed by running a reverse DNS lookup on all IPs in the subnet.
 
-In addition to the ping command on its own, several applications will provide a ping sweep for you. Angry IP Scanner is one of the more prevalent tools available p. 88
+In addition to the ping command on its own, several tools can be used for a ping sweep. Examples include Angry IP Scanner, Pinger, WS\_Ping, SuperScan, and Friendly Pinger.
 
-Some other tools of note include, but are not limited to, Pinger, WS\_Ping, SuperScan, and Friendly Pinger. Sample use of a ping sweep tool is covered in Exercise 4-1. p. 88
+#### Port Scanning
 
-Exercise 4-1: Using a Ping Sweep Tool
+Port scanning is "the method by which systems on a network are queried to see which ports they are listening to" (Walker, 2012, p. 92). Since well-known port numbers are associated with specific upper-layer protocols, we can tell a lot about what services a system is running by performing port scanning. A system is said to be "listening for a port" when it has that port open (Walker, 2012, p. 92).
 
-Unless you turn off host discovery, Nmap is going to ping sweep your range for you on virtually every port scan you attempt with it.\
-Sometimes it’s just as easy to combine the search for active machines with a port scan…
+All port scanners work by manipulating Transport Layer (TCP/UDP) flags and analyzing responses to identify active hosts and scan their ports remotely.
+
+#### TCP and UDP Communication
+
+So what is a TCP flag and how does TCP and UDP communication work?
+
+When two TCP/IP-enabled hosts communicate with each other … two methods of data transfer are available at the transport layer: connectionless and connection-oriented. (Walker, 2012, p. 94)
+
+### Enumeration

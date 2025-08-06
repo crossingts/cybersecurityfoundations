@@ -68,11 +68,30 @@ A tool like Nmap usually performs enumeration and scanning by launching custom T
 
 p0f is a passive monitoring Nmap alternative. p0f is a passive fingerprinting tool that does not generate network traffic. It is used to analyze network traffic and identify patterns behind TCP/IP-based communications often blocked for Nmap active fingerprinting techniques. Passive fingerprinting uses sniffer traces from the remote system to determine the operating system of the remote host. p0f uses a fingerprinting technique based on analyzing the structure of a TCP/IP packet to determine the OS and other configuration properties of a remote host. It includes powerful network-level fingerprinting features, and the ability to analyze application-level payloads such as HTTP, and can be used for detecting NAT, proxy and load balancing setups.
 
+**Passive vs Active Discovery Techniques**
+
+| **Type**           | **Passive**                  | **Active**            |
+| ------------------ | ---------------------------- | --------------------- |
+| **Interaction**    | No direct contact            | Direct probes         |
+| **Detection Risk** | Low                          | High                  |
+| **Speed/Accuracy** | Slower, less precise         | Faster, more detailed |
+| **Use Case**       | Early recon, avoiding alerts | Post-recon deep dive  |
+
+***
+
 Table 18: Pen Source/Free Tools—for Network Penetration Testing (Shah & Mehtre, 2015, p. 45)
 
 <figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt="open-source-penetration-testing-tools"><figcaption><p>Table 18: Pen Source/Free Tools—for Network Penetration Testing (Shah &#x26; Mehtre, 2015, p. 45)</p></figcaption></figure>
 
 Passive network sniffers can monitor and capture data packets passing through a given network in real time. “Sniffers operate at the data link layer of the network. Any data sent across the LAN is actually sent to each and every machine connected to the LAN. This is called passive since sniffers placed by the attackers passively wait for the data to be sent and capture them.” Placing a packet sniffer on a network in promiscuous mode allows a malicious intruder to capture and analyze all of the network traffic such as payloads containing confidential information.&#x20;
+
+#### **Scanning vs Enumeration**
+
+| **Scanning**                              | **Enumeration**                                             |
+| ----------------------------------------- | ----------------------------------------------------------- |
+| _"What's alive and what ports are open?"_ | _"What can I extract from those services?"_                 |
+| Broad, network-level discovery            | Targeted, service-specific probing                          |
+| Tools: `nmap`, `masscan`, `arp-scan`      | Tools: `enum4linux`, `Metasploit aux modules`, `ldapsearch` |
 
 ### Phase: Gaining access
 

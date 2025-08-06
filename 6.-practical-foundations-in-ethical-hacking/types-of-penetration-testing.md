@@ -38,6 +38,8 @@ This section explores six types of penetration testing, compares between black b
 
 • Cloud penetration testing
 
+Network penetration testing and exploitation techniques typically include bypassing firewalls, router testing, IPS/IDS evasion, DNS footprinting, open port scanning and testing, SSH attacks, proxy servers, network vulnerabilities, and application penetration testing (Cipher, n.d.).
+
 ### Black box penetration testing and white box penetration testing
 
 • Compare black box penetration testing and white box penetration testing methods.

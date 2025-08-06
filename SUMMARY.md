@@ -99,6 +99,7 @@
   * [Vulnerability Assessment Integration with Threat Intelligence](6.-practical-foundations-in-ethical-hacking/pentesting-methodologies-frameworks-and-technologies/vulnerability-assessment-integration-with-threat-intelligence.md)
 * [Common attack targets](6.-practical-foundations-in-ethical-hacking/common-attack-targets/README.md)
   * [Attack types (CEH/EC-Council)](6.-practical-foundations-in-ethical-hacking/common-attack-targets/attack-types-ceh-ec-council.md)
+  * [Attack target vs attack vector](6.-practical-foundations-in-ethical-hacking/common-attack-targets/attack-target-vs-attack-vector.md)
 * [Setting up a cybersecurity lab](6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/README.md)
   * [OPNsense, pfSense, and nftables](6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/opnsense-pfsense-and-nftables.md)
   * [OPNsense vs Zenarmor](6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/opnsense-vs-zenarmor.md)

@@ -8,51 +8,6 @@ description: >-
 
 • Identify common attack targets, including OS vulnerabilities, shrink-wrap code, misconfigurations and default credentials, and OWASP Top 10 vulnerabilities such as cross-site scripting (XSS) and SQL injection (SQLi).
 
-### Common attack targets
-
-• OS vulnerabilities (unpatched CVE-listed flaws)&#x20;
-
-• Shrink-wrap code
-
-• Misconfigurations (insecure default settings/improperly configured systems or services)
-
-• Default credentials (weak or unchanged default login credentials)
-
-• Web application vulnerabilities (OWASP Top 10)
-
-Cross-Site Scripting (XSS) – Client-side script execution.&#x20;
-
-SQL Injection (SQLi) – Database manipulation.
-
-Here’s a structured **comparison table** separating **Attack Targets**, **Vectors**, and **Vulnerabilities** for common attacks, with additional examples:
-
-| **Attack Target**         | **Attack Vector**                 | **Underlying Vulnerability**                      |
-| ------------------------- | --------------------------------- | ------------------------------------------------- |
-| **Operating System (OS)** | Exploiting unpatched services     | Unpatched OS vulnerabilities (CVE-listed flaws)   |
-|                           | Brute-forcing weak credentials    | Default or weak passwords                         |
-| **Web Application**       | SQL Injection (SQLi)              | Improper input sanitization in database queries   |
-|                           | Cross-Site Scripting (XSS)        | Lack of output encoding/input validation          |
-|                           | CSRF (Cross-Site Request Forgery) | Missing anti-CSRF tokens                          |
-| **Network Services**      | Man-in-the-Middle (MITM) attacks  | Unencrypted communications (e.g., plaintext HTTP) |
-|                           | DNS spoofing                      | Misconfigured DNS settings                        |
-| **Human (User)**          | Phishing emails                   | Lack of security awareness                        |
-|                           | Credential stuffing               | Password reuse across accounts                    |
-| **IoT Devices**           | Exploiting default credentials    | Factory-set passwords not changed                 |
-|                           | Firmware exploitation             | Lack of secure update mechanisms                  |
-| **Cloud Services**        | Misconfigured S3 buckets          | Excessive permissions (public access enabled)     |
-|                           | API abuse                         | Broken authentication/authorization               |
-
-#### **Key Clarifications**
-
-1. **Target**: The asset being attacked (e.g., OS, user, app).
-2. **Vector**: The delivery method (e.g., phishing, SQLi).
-3. **Vulnerability**: The weakness enabling the attack (e.g., unpatched software).
-
-#### **Example Flow**
-
-* **Target**: Web Application → **Vector**: XSS → **Vulnerability**: Lack of input sanitization.
-* **Target**: User → **Vector**: Phishing → **Vulnerability**: Human error (clicking malicious links).
-
 Most vulnerabilities exploited by penetration testing fall into the following categories: Misconfigurations (particularly, insecure default settings), kernel flaws, buffer overflows, insufficient input validation, symbolic links, file descriptors, race conditions, and incorrect file and directory permissions (NIST SP 800-115, 2008, pp. 5-4-5-5).&#x20;
 
 Here’s a **NIST SP 800-115-aligned table** mapping **vulnerabilities** to their typical **attack targets**, **vectors**, and **exploits**:
@@ -71,7 +26,7 @@ Here’s a **NIST SP 800-115-aligned table** mapping **vulnerabilities** to thei
 
 ***
 
-#### **Key Insights from NIST SP 800-115**
+**Key Insights from NIST SP 800-115**
 
 1. **Focus on Exploitability**:
    * These vulnerabilities are prioritized because they’re **frequently exploitable** during pentests (e.g., misconfigurations are low-hanging fruit).
@@ -87,11 +42,7 @@ Here’s a **NIST SP 800-115-aligned table** mapping **vulnerabilities** to thei
 
 ***
 
-#### **Comparison to OWASP/Other Frameworks**
+**Comparison to OWASP/Other Frameworks**
 
 * **NIST SP 800-115** focuses on **technical vulnerabilities** (e.g., kernel flaws), while OWASP Top 10 emphasizes **web-specific risks**.
 * **Shared themes**: Input validation, misconfigurations appear in both.
-
-***
-
-Network penetration testing and exploitation techniques typically include bypassing firewalls, router testing, IPS/IDS evasion, DNS footprinting, open port scanning and testing, SSH attacks, proxy servers, network vulnerabilities, and application penetration testing (Cipher, n.d.).

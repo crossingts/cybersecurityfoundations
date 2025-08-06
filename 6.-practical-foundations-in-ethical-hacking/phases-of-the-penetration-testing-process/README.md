@@ -60,6 +60,8 @@ A key argument is that there is no clear cutoff point between passive and active
 
 Security analysts now apply the information they gathered in recon towards gathering more in-depth information on the targets.
 
+Both passive and active techniques exist for scanning and enumeration. There are three major types of scanning—network scanning, port scanning, and vulnerability scanning. Enumeration techniques include Banner Grabbing, NetBIOS Enumeration, SNMP Enumeration, using LDAP, and using NTP and SMTP.
+
 This can be something as simple as running a ping sweep or a network mapper to see what systems are on the network, or as complex as running a vulnerability scanner to determine which ports may be open on a particular system. For example, whereas recon may have shown the network to have 500 or so machines connected to a single subnet inside a building, scanning and enumeration would tell me which ones are Windows machines and which ones are running FTP. (Walker, 2012, p. 9)
 
 A tool like Nmap usually performs enumeration and scanning by launching custom TCP, UDP or ICMP packets against a given target. The target responds to the information requests in the form of a digital signature. This signature is key to identifying what software, protocols and OS is running the target device. Nmap scans can identify network services, OS number and version, software applications, databases, and configurations, all with high probability.&#x20;

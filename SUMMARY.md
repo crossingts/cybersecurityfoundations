@@ -90,6 +90,7 @@
   * [tcpdump](6.-practical-foundations-in-ethical-hacking/network-security-testing/tcpdump.md)
 * [Phases of the penetration testing process](6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md)
   * [Reconnaissance (footprinting)](6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/reconnaissance-footprinting.md)
+  * [Scanning and enumeration](6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/scanning-and-enumeration.md)
   * [Passive discovery method](6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/passive-discovery-method.md)
 * [Types of penetration testing](6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing.md)
 * [Pentesting methodologies, frameworks, and technologies](6.-practical-foundations-in-ethical-hacking/pentesting-methodologies-frameworks-and-technologies/README.md)

@@ -47,57 +47,61 @@ Inspiration/example set up: YouTube playlist (16 videos +150,000 views)
 
 pfSense (firewall) + Snort (IDS/IPS) + web server (Apache) and/or database server (MySQL) + Wazuh (SIEM/XDR) + Kali Linux
 
+**🔥 Open Source Firewall Compatibility Table**
+
+**Key:** ✔ = Supported | ✕ = Not Supported | _Bare Metal = replaces host OS_
+
+| Firewall      | Linux Host (x86/ARM) | Windows Host (x86) | macOS Host (Intel) | macOS Host (ARM) | Notes                                                              |
+| ------------- | -------------------- | ------------------ | ------------------ | ---------------- | ------------------------------------------------------------------ |
+| **OPNsense**  | ✔ (VM)               | ✔ (VM)             | ✔ (VM)             | ✕                | FreeBSD-based. Bare metal requires wiping host OS. No ARM support. |
+| **pfSense**   | ✔ (VM)               | ✔ (VM)             | ✔ (VM)             | ✕                | FreeBSD-based, same as OPNsense.                                   |
+| **IPTables**  | ✔ (Native)           | ✕                  | ✕                  | ✕                | Legacy Linux kernel firewall.                                      |
+| **nftables**  | ✔ (Native)           | ✕                  | ✕                  | ✕                | Modern Linux firewall (replaces IPTables).                         |
+| **UFW**       | ✔ (Native)           | ✕                  | ✕                  | ✕                | Ubuntu/Debian simplified firewall.                                 |
+| **Firewalld** | ✔ (Native)           | ✕                  | ✕                  | ✕                | RHEL/CentOS frontend for IPTables/nftables.                        |
+| **macOS PF**  | ✕                    | ✕                  | ✔ (Native)         | ✔ (Native)       | Built-in BSD `pf` firewall (CLI-only).                             |
+
+**Clarifications:**
+
+1. **OPNsense/pfSense:**
+   * **VM Support:** Works on x86 hosts (Linux/Windows/Intel macOS).
+   * **macOS ARM:** ✕ No VM support (FreeBSD lacks ARM virtualization drivers).
+   * **Bare Metal:** x86 only (wipes host OS).
+2. **Linux Firewalls (IPTables/nftables/UFW/Firewalld):**
+   * **Native to Linux** (no VM or cross-platform support).
+3. **macOS PF:**
+   * Native on both Intel/ARM Macs (CLI-only).
+
+**🛡️ Open Source IDS/IPS Compatibility Table**
+
+**Key:** ✔ = Supported | ✕ = Not Supported | ⚠ = Partial/Experimental
+
+| Technology     | Linux Host (x86/ARM) | Windows Host (x86) | macOS Host (Intel/ARM) | Bare Metal (ARM)         | Notes                                                                   |
+| -------------- | -------------------- | ------------------ | ---------------------- | ------------------------ | ----------------------------------------------------------------------- |
+| **Suricata**   | ✔ (Native/VM)        | ✔ (Native/WSL2)    | ✔ (Native/VM)          | ✔ (ARM64)                | Multi-threaded, supports inline IPS. ARM64 works on Raspberry Pi 4+.    |
+| **Zeek (Bro)** | ✔ (Native)           | ⚠ (WSL2/Cygwin)    | ✔ (Native)             | ✔ (ARM64)                | Network analysis, not real-time IPS. ARM64 supported via source builds. |
+| **Snort**      | ✔ (Native)           | ✔ (Native)         | ✔ (Native)             | ⚠ (ARM community builds) | Legacy IDS/IPS. ARM support limited.                                    |
+
+**Clarifications**
+
+* **Windows Subsystem for Linux (WSL)**
+  * Lets you run Linux binaries natively on Windows.
+  * ⚠️ Limited networking (WSL2 uses a virtual NIC).
+* **x86-64**&#x20;
+  * x86-64 is also known as x64, x86\_64, AMD64, and Intel 64.
+  * x86-64 is a CPU architecture. It is used by:
+    * Windows (e.g., Windows 10/11 x64).
+    * Linux (x86-64 distributions).
+    * FreeBSD (OPNsense’s base).
+    * macOS (Intel Macs).
+
 ### Choose a virtualization environment/tool
-
-
 
 Choose a project documentation platform/method
 
 Build the lab: Configure subnet interfaces and verify connectivity
 
 Build the lab: Configure and verify the firewall
-
-#### **Open-Source Firewall & IDS/IPS Compatibility Table**
-
-_(✅ = Native Support | ⚠️ = Partial/Workaround | ❌ = Not Supported | VM = Virtual Machine Only)_
-
-**🔥 Firewalls**
-
-| Technology    | Linux (x86/ARM) | Windows (x86) | macOS (Intel) | macOS (ARM) | Notes                                       |
-| ------------- | --------------- | ------------- | ------------- | ----------- | ------------------------------------------- |
-| **OPNsense**  | ✅ (x86)         | ❌             | ✅ (VM)        | ❌           | FreeBSD-based; no ARM or Windows support.   |
-| **pfSense**   | ✅ (x86)         | ❌             | ✅ (VM)        | ❌           | FreeBSD-based; same as OPNsense.            |
-| **OpenWRT**   | ✅ (x86/ARM)     | ❌             | ✅ (VM)        | ✅ (ARM VM)  | Linux-based; best for ARM routers.          |
-| **IPTables**  | ✅ (x86/ARM)     | ❌             | ❌             | ❌           | Linux kernel firewall.                      |
-| **nftables**  | ✅ (x86/ARM)     | ❌             | ❌             | ❌           | Modern Linux firewall (replaces IPTables).  |
-| **Firewalld** | ✅ (x86/ARM)     | ❌             | ❌             | ❌           | RHEL/CentOS frontend for IPTables/nftables. |
-| **UFW**       | ✅ (x86/ARM)     | ❌             | ❌             | ❌           | Simplified Linux firewall (Ubuntu).         |
-| **macOS PF**  | ❌               | ❌             | ✅ (Native)    | ✅ (Native)  | Built-in BSD `pf` firewall (CLI-only).      |
-| **LuLu**      | ❌               | ❌             | ✅             | ✅           | GUI firewall for macOS (blocks outbound).   |
-
-**🛡️ IDS/IPS Compatibiity Table**
-
-| Technology     | Linux (x86/ARM) | Windows (x86) | macOS (Intel) | macOS (ARM) | Notes                             |
-| -------------- | --------------- | ------------- | ------------- | ----------- | --------------------------------- |
-| **Suricata**   | ✅               | ⚠️ (WSL)      | ✅             | ✅ (Slow)    | Real-time IDS/IPS; best on Linux. |
-| **Zeek (Bro)** | ✅               | ⚠️ (WSL)      | ✅             | ✅           | Network analysis (not blocking).  |
-| **Snort**      | ✅               | ⚠️ (WSL)      | ✅             | ✅           | Legacy but stable IDS/IPS.        |
-
-**Clarifications**
-
-* **Windows Subsystem for Linux (WSL)**
-  * Lets you run Linux binaries natively on Windows.
-  * Relevance: Suricata/Zeek/Snort can run in WSL, but:
-    * ⚠️ No IPS mode (can’t block traffic at kernel level).
-    * ⚠️ Limited networking (WSL2 uses a virtual NIC).
-* **x86-64**&#x20;
-  * Most firewalls/routers use x86-64 for performance and driver compatibility.&#x20;
-  * x86-64 is also known as x64, x86\_64, AMD64, and Intel 64.
-  * x86-64 is a CPU architecture (not an OS). It is used by:
-    * Windows (e.g., Windows 10/11 x64).
-      * Linux (x86-64 distributions).
-      * FreeBSD (OPNsense’s base).
-      * macOS (Intel Macs).
 
 ***
 

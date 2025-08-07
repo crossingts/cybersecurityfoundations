@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Setting up a cybersecurity lab
 
 This exercise will guide you through setting up a fully functional cybersecurity virtual lab using exclusively open source technologies.&#x20;

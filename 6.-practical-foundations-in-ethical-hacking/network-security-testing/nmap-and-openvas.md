@@ -1,10 +1,6 @@
----
-hidden: true
----
-
 # Nmap and OpenVAS
 
-### Topics covered in this section
+### Topics covered
 
 * Technology focus: Nmap
 * Technology focus: OpenVAS

@@ -8,10 +8,10 @@ description: >-
 
 ## Learning objectives
 
-* Point 1&#x20;
-* Point 2
+* Understand the practical use of network scanners in network security testing
+* Understand the practical use of packet analyzers in network security testing
 
-This section looks at network scanners and packet analyzers used in network security testing, specifically, Nmap, OpenVAS, Wireshark, and tcpdump.
+This section covers the use of network scanners (Nmap and OpenVAS) and packet analyzers (Wireshark and tcpdump) in network security testing.
 
 ## Topics covered in this section
 
@@ -95,4 +95,4 @@ Packet analyzers are software or hardware devices that capture and analyze the d
 
 ### References
 
-Network Administrators Survival Guide (Anand Deveriya, 2005)
+Deveriya, A. (2005). Network Administrators Survival Guide. Pearson Education.

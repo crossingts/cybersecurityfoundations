@@ -2,9 +2,9 @@
 
 ### Topics covered
 
-* Technology focus: Nmap
-* Technology focus: OpenVAS
-* Using Nmap and OpenVAS in vulnerability assessment and penetration testing
+* **Technology focus: Nmap**
+* **Technology focus: OpenVAS**
+* **Using Nmap and OpenVAS in vulnerability assessment and penetration testing**
 
 ### Technology focus: Nmap
 

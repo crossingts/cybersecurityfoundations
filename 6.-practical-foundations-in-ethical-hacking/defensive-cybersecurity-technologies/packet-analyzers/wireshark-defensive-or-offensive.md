@@ -1,6 +1,4 @@
-# Wireshark and tcpdump
-
-### Wireshark
+# Wireshark: Defensive or offensive?
 
 Wireshark is primarily a defensive (security monitoring) tool, but it can also be used in offensive security (ethical hacking) scenarios.
 

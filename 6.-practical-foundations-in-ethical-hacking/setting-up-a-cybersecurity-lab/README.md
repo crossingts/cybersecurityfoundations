@@ -18,29 +18,38 @@ This exercise will guide you through setting up a fully functional cybersecurity
 
 ### Design the lab - choose a design pipeline&#x20;
 
-**Design pipeline 1 (AMD64):**&#x20;
+**Design pipeline 1 (ARM64):**&#x20;
 
-OPNsense (firewall) + Suricata (IDS/IPS) + Wazuh (SIEM/XDR) + Kali Linux
+nftables (firewall) + Suricata (IDS/IPS) + web server (Apache) + database server (MySQL) + Wazuh (SIEM/XDR) + Kali Linux
 
-OPNsense is a full-featured, open-source firewall and routing platform based on FreeBSD. It is highly customizable with plugins. It is suitable for protecting entire networks with features like IDS/IPS (via Suricata or Zeek), and VPN (OpenVPN, WireGuard).
+Cybersecurity virtual lab in VMware Fusion on M1 Mac
 
-OPNsense has a web-based interface and can be used on the x86-64 platform. Along with acting as a firewall, it has traffic shaping, load balancing, captive portal and virtual private network capabilities, and others can be added via plugins. The software also offers next-generation firewall capabilities utilizing Zenarmor, a NGFW plugin developed by OPNsense partner Sunny Valley Networks. (Wikipedia)
+* [Lab design and configuring interfaces](https://drive.proton.me/urls/TM4PKAVGM4#48yHrBXTk0nA)
+* [Testing/troubleshooting network connectivity](https://drive.proton.me/urls/VRKY3A12FC#Vjc5DoAfwaHh)
+* [Configuring nftables on the Debian firewall](https://drive.proton.me/urls/6CWHJ0269M#Se4xqwyz4UNv)
+* [Configuring Suricata on the Debian IDS/IPS](https://drive.proton.me/urls/NH9SG0ZZW4#QOf2lieJuOTS)
+* [Setting up Apache HTTP Server on Ubuntu](https://drive.proton.me/urls/9NJRE0HBNR#V6Lb057YQUeF)
+* [Setting up MySQL Server on Ubuntu](https://drive.proton.me/urls/XG01TWTEX0#R4dutVB8XUq5)
+* [Setting up Wazuh (SIEM/XDR) on Ubuntu server](https://drive.proton.me/urls/R74XWK7XSW#7x1OsbPmpCmr)
+* Setting up Kali Linux for security testing
 
 **Design pipeline 2 (AMD64):**&#x20;
 
-pfSense (firewall) + Snort (IDS/IPS) + Wazuh (SIEM/XDR) + Kali Linux
+OPNsense (firewall) + Suricata (IDS/IPS) + web server (Apache) and/or database server (MySQL) + Wazuh (SIEM/XDR) + Kali Linux
 
-**Design pipeline 3 (ARM64):**&#x20;
-
-nftables (firewall) + Suricata (IDS/IPS) + Wazuh (SIEM/XDR) + Kali Linux
-
-Inspiration: YouTube playlist (16 videos +150,000 views)
+Inspiration/example set up: YouTube playlist (16 videos +150,000 views)
 
 [Virtual Cyber Security Lab Building Series by LS111 Cyber Security Education](https://www.youtube.com/playlist?list=PLjjkJroii8DDb0QZpWLo978VXcLp8-xW3)
 
 <figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption><p>Cybersecurity virtual lab design (courtesy of LS111 Cyber Security Education)</p></figcaption></figure>
 
-Choose a virtualization environment/tool
+**Design pipeline 3 (AMD64):**&#x20;
+
+pfSense (firewall) + Snort (IDS/IPS) + web server (Apache) and/or database server (MySQL) + Wazuh (SIEM/XDR) + Kali Linux
+
+### Choose a virtualization environment/tool
+
+
 
 Choose a project documentation platform/method
 

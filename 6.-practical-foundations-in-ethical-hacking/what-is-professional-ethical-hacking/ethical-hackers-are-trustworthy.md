@@ -1,10 +1,4 @@
----
-hidden: true
----
-
 # Ethical hackers are trustworthy
-
-### Ethical hackers “must be completely trustworthy"
 
 Graves (2010) and Palmer (2001) agree on three key attributes of ethical hackers: trust, honouring the integrity of the client’s system, and seeking prior permission from the client. Graves refers to these traits as professional.&#x20;
 
@@ -31,8 +25,6 @@ Thomas et al. (2018) argue that "to be effective, ethical hacking involves tryin
 The authors point out a fact highlighting an intrinsic grey area in the ethical hacking profession and which emphasizes the need for ethical hackers to espouse a strong moral standing.
 
 \[A]n ethical hacker needs to keep their knowledge of exploits up to date, and they will likely need to go “underground” to gain this knowledge (Conran 2014). Because ethical hackers may even utilize questionable means to gain intelligence it may result in a question of their professional ethics. (Thomas et al., 2018, p. 4)
-
-### Ethical hackers honour the integrity of the client’s system
 
 Ethical hackers should take “all precautions to do no harm to their systems during a pen test” (Graves, 2010, para. 1). An ethical hacker will not damage or harm the test network infrastructure or information assets and will report on and remediate any accidental damage (Graves, 2010).
 

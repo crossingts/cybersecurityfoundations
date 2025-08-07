@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Ethical hacking is legal
 
 Hackers can be divided into a number of groups, some of which “are clearly ethical, others are clearly unethical, and still others exist in a gray area of sorts and whose ethics can be debated”, argues Pashel (2006, p. 197). White hats use their skills “in a manner that most would clearly define as ethical". For example, white hat hackers could be employees who "with permission, attack a company’s network in order to determine weaknesses, and law enforcement and intelligence agents who use their skill in the name of national security or to investigate and solve crimes” (p. 197).

@@ -34,8 +34,6 @@ Since a malicious hacker may be an insider or an outsider, an effective cybersec
 | **Testing Approaches**    | <p>Blackbox testing, Black hat hacking </p><p></p><p>Third party audit/auditor perspective of infosec governance</p> | Whitebox testing, White hat hacking                                                                      |
 | **Authentication**        | Unauthenticated scan (outsider attack)                                                                               | Authenticated scan (simulation of insider attack)                                                        |
 
-***
-
 ### Blue teaming
 
 #### **What is the "Blue Team"?**
@@ -88,8 +86,6 @@ Blue Team is broader concept—it includes roles outside SOC/CSIRT (e.g., securi
 * **"Blue Team" = Proactive Defense Unit**
   * Focuses on **threat hunting**, adversary simulation, and custom tooling.
 
-***
-
 ### SOC (Security Operations Center)
 
 **SOC (Security Operations Center) analysts and engineers are essentially the operational arm of the Blue Team.** However, whether they are **in-house employees or contracted** depends on the organization's structure.
@@ -123,8 +119,6 @@ A SOC is often the first line of defense, working 24/7 to identify and mitigate 
    * Example: A company might have an **in-house SOC for critical systems** but outsource **lower-priority monitoring** to an MSSP.
 3. **Contract SOC Analysts (Staff Augmentation)**
    * Some firms hire **temporary SOC analysts** through staffing agencies (neither fully in-house nor full MSSP).
-
-***
 
 ### SIRT/CSIRT (Security Incident Response Team/Computer SIRT)
 
@@ -206,8 +200,6 @@ Some orgs start with a SOC-only model, then evolve:
 
 Example: A tech startup’s SOC might handle IR until a breach occurs, prompting the creation of a CSIRT.
 
-***
-
 ### Ethical hacking vs red teaming
 
 #### Ethical hacking vs red teaming cybersecurity roles
@@ -266,8 +258,6 @@ Example: A tech startup’s SOC might handle IR until a breach occurs, prompting
 
 * A red team can use ethical hacking techniques (e.g., exploiting a server vulnerability).
 * Some ethical hackers perform red teaming if the engagement includes advanced adversary simulation.
-
-***
 
 ### Key takeaways
 

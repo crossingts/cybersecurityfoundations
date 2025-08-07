@@ -18,7 +18,7 @@ Ethical hackers operate within a structured framework of professional codes of c
 * Regulatory/governmental standards/guidelines: NIST SP 800-12 and NIST SP 800-53 touch on broader security and privacy principles, NIST SP 800-115 (Technical Guide to Penetration Testing) emphasizes authorized testing.
 * Industry standards/guidelines: OSSTMM, ISO/IEC 27001, OWASP (Open Web Application Security Project) Testing Guide, PCI DSS Penetration Testing Guidance.
 * Professional associations: ACM Code of Ethics (2018), IEEE standards/guidelines (IEEE Cybersecurity Initiative, IEEE Certified Ethical Hacker (CEH) resources), IEEE code of ethics, IEEE code of conduct.
-* Professional licensing/accreditation bodies: Professional Engineers Ontario (PEO)/PEO code of ethics, CEAB, CIPS.
+* Professional licensing/accreditation bodies: Professional Engineers Ontario (PEO)/PEO code of ethics, Canadian Engineering Accreditation Board (CEAB), Canadian Information Processing Society (CIPS).
 
 While different organizations have their own codes, several underlying principles cut through them: protecting the public (or public safety), acting lawfully, acting with integrity, and maintaining trust.&#x20;
 
@@ -36,10 +36,11 @@ That is in the course calendar descriptions and it’s also in our accreditation
 
 Accreditation bodies like the Canadian Engineering Accreditation Board (CEAB) and Canadian Information Processing Society (CIPS) require ethics education as part of degree programs. This means students learn not only technical penetration testing skills but also how to apply ethical decision-making in real-world scenarios. For example, coursework may include case studies on responsible disclosure dilemmas or discussions on legal consequences of unauthorized testing, reinforcing that ethical hacking is not just about technical skill but professional responsibility.
 
-* **How Ethics is Taught in Academia:**
-  * **Case-Based Learning:** Analyzing past breaches (e.g., Equifax, SolarWinds) to discuss ethical failures.
-  * **Role-Playing Scenarios:** Simulating situations where students must choose between profit and responsible reporting.
-  * **Guest Lectures from Industry:** Professionals share real-world ethical challenges they’ve faced.
+**How Ethics is Taught in Academia**
+
+* Case-Based Learning: Analyzing past breaches (e.g., Equifax, SolarWinds) to discuss ethical failures.
+* Role-Playing Scenarios: Simulating situations where students must choose between profit and responsible reporting.
+* Guest Lectures from Industry: Professionals share real-world ethical challenges they’ve faced.
 
 [Interview Participants by Area of Expertise](https://docs.google.com/document/d/e/2PACX-1vQ5iF6m--APIZrFd9hnz1HH9zv3jJjuBjl0zGDgpviYSSMRBxpWQxCvKQmK8rrP0D5o_Hx4grwLkRcs/pub)
 

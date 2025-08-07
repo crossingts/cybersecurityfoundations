@@ -1,8 +1,7 @@
 ---
 description: >-
-  This section covers important defensive cybersecurity technologies such as
-  firewalls, IDS/IPS, network security event management (SIEM), and packet
-  analyzers
+  This section focuses on popular open source defensive cybersecurity
+  technologies such as firewalls, IDS/IPS, SIEM/EDR, and packet analyzers
 ---
 
 # Defensive cybersecurity technologies
@@ -12,7 +11,7 @@ description: >-
 * Point 1
 * Point 2
 
-This section looks at popular open source defensive cybersecurity technologies, exploring their key advantages/characteristics and deployment (use cases). Key categories of defensive technologies covered include host/network firewalls (e.g., OPNsense, pfilter, and nftables), IDS/IPS (e.g., Suricata and Snort), network security monitoring/SIEM (e.g., Wazuh), and packet analyzers (e.g., Wireshark and tcpdump).
+This section looks at popular open source defensive cybersecurity technologies, exploring their key characteristics and deployment (use cases). Key categories of defensive cybersecurity technologies discussed include host/network firewalls (e.g., UFW, iptables, nftables, PF, OPNsense, and pfSense), IDS/IPS (e.g., Suricata and Snort), network security monitoring/SIEM (e.g., Wazuh and OSSEC), and packet analyzers (e.g., Wireshark and tcpdump).
 
 ## Topics covered in this section
 
@@ -23,15 +22,21 @@ This section looks at popular open source defensive cybersecurity technologies, 
 
 ### Firewalls
 
-Popular open source host and network firewalls include iptables, nftables, ufw, pf, OPNsense, and pfSense (CE).
+Popular open source host and network firewalls include UFW (Uncomplicated Firewall), iptables, nftables, PF or pfilter (packet filter), OPNsense, and pfSense (Community Edition).
+
+Technology focus: nftables and OPNsense.
 
 ### IDS/IPS
 
 Popular open source NIDS and HIDS include Suricata, Snort, Wazuh, OSSEC, Fail2Ban, Zeek (formerly Bro), Security Onion, and OpenWIPS-NG.
 
+Technology focus: Suricata.
+
 ### SIEM/EDR
 
 Popular open source SIEM/EDR (Security Information and Event Management/Endpoint Detection and Response) technologies include Wazuh, TheHive, Zeek, OSSEC, Suricata, and Velociraptor.
+
+Technology focus: Wazuh (SIEM/XDR).
 
 #### Wazuh (SIEM/XDR)
 

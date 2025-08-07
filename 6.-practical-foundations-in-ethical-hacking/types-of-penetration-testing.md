@@ -22,10 +22,6 @@ This section explores six types of penetration testing, compares between black b
 
 ### Types of penetration testing
 
-• Describe main types of penetration testing: network, wireless, web application, physical, social engineering, and cloud.
-
-• Reconnaissance or Open Source Intelligence (OSINT) gathering
-
 • Network penetration testing
 
 • Wireless network penetration testing
@@ -41,8 +37,6 @@ This section explores six types of penetration testing, compares between black b
 Network penetration testing and exploitation techniques typically include bypassing firewalls, router testing, IPS/IDS evasion, DNS footprinting, open port scanning and testing, SSH attacks, proxy servers, network vulnerabilities, and application penetration testing (Cipher, n.d.).
 
 ### Black box penetration testing and white box penetration testing
-
-• Compare black box penetration testing and white box penetration testing methods.
 
 Black box penetration testing and white box penetration testing methods broadly simulate an insider's and outsider's attack types
 
@@ -102,27 +96,21 @@ Based on the type of auditing required, there are two main penetration testing t
 
 **Testing from an outsider vs insider perspective**
 
-There are several kinds of testing. Any combination of the following may be called for:
+There are several kinds of testing—each of which can be performed from an outsider or insider perspective (Palmer, 2001, pp. 777-778):
 
 • Remote network. This test simulates the intruder launching an attack across the Internet. The primary defenses that must be defeated here are border firewalls, filtering routers, and Web servers.
 
-• Remote dial-up network. This test simulates the intruder launching an attack against the client’s modem pools. The primary defenses that must be defeated here are user authentication schemes. These kinds of tests should be coordinated with the local telephone company. (Palmer 2001, p. 777)
+• Remote dial-up network. This test simulates the intruder launching an attack against the client’s modem pools. The primary defenses that must be defeated here are user authentication schemes. These kinds of tests should be coordinated with the local telephone company.&#x20;
 
 • Local network. This test simulates an employee or other authorized person who has a legal connection to the organization’s network. The primary defenses that must be defeated here are intranet firewalls, internal Web servers, server security measures, and e-mail systems.
 
-• Stolen laptop computer. (Palmer 2001, p. 778)
+• Stolen laptop computer. In this test, the laptop computer of a key employee, such as an upper-level manager or strategist, is taken by the client without warning and given to the ethical hackers.
 
 • Social engineering. This test evaluates the target organization’s staff as to whether it would leak information to someone. A typical example of this would be an intruder calling the organization’s computer help line and asking for the external telephone numbers of the modem pool. Defending against this kind of attack is the hardest, because people and personalities are involved. Most people are basically helpful, so it seems harmless to tell someone who appears to be lost where the computer room is located, or to let someone into the building who “forgot” his or her badge. The only defense against this is to raise security awareness.
 
-• Physical entry. This test acts out a physical penetration of the… (Palmer 2001, p. 778)
-
-Each of these kinds of testing can be performed from three perspectives: as a total outsider, a “semi-outsider,” or a valid user. (Palmer 2001, p. 779)
+• Physical entry. This test acts out a physical penetration of the organization's building.
 
 ### Possible risks of penetration testing
-
-• Potential benefits of ethical hacking: security breach risk reduction
-
-• Possible risks of ethical hacking: system disruption, privacy concerns...
 
 There are risks inherent to ethical hacker evaluations and the client should be made fully aware of them. Organizations must weigh potential benefits vs possible risks when deciding the details of the penetration test. Organizations must decide what devices and applications to test and when and how to test them--and the risks involved in performing the security testing.&#x20;
 
@@ -149,3 +137,5 @@ The technical risks of penetration testing on computer systems to an organizatio
 ### References
 
 Cipher. (n.d.). The types of pentests you must know about. Retrieved January 21, 2020, from https://cipher.com/blog/the-types-of-pentests-you-must-know-about/
+
+Palmer, C. C. (2001). Ethical hacking. _IBM Systems Journal, 40_(3), 769-780.

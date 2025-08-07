@@ -2,7 +2,7 @@
 hidden: true
 ---
 
-# OPNsense, pfSense, and nftables
+# nftables
 
 nftables firewall to optimize traffic flow
 

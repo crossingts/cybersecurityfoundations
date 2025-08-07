@@ -10,7 +10,7 @@ Although there is a lot you can learn about Wireshark, it’s quite easy to get 
 
 Up here you can see the packets as they are sent or received by the network interface you are capturing traffic from:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 If you click on a packet you can see more details.
 
@@ -26,7 +26,7 @@ As you can see here, the entire frame is indeed captured.
 
 \>Transmission Control Protocol (TCP) is the Layer 4 segment
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 At the end of this demonstration you will be asked to do a few basic tasks to try out in Wireshark, so you will need to download Wireshark if you want to do them.
 
@@ -46,19 +46,19 @@ When the capture starts you will see there is already a lot of network traffic g
 
 In fact, a lot of traffic went passing by when the video was played. Let’s analyze some of it.
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Note that in Wireshark you are able to filter output. There are many ways you can do so.
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Source: Troubleshooting slow networks with Wireshark // wireshark filters // Wireshark performance - YouTube video</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Source: Troubleshooting slow networks with Wireshark // wireshark filters // Wireshark performance - YouTube video</p></figcaption></figure>
 
 Wireshark are decent people. They will let you know when you enter the wrong syntax for a filter. For example, to filter by IP address use ip.addr == ip address in dotted decimal (i.e., use two equal signs, not only one - the red code signals that the syntax is wrong).
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 Here are some operators you can use to construct a filter. The top row and bottom row symbols are identical operators (they mean/do the same thing in a filter string):
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 This tutorial is not about how to master Wireshark. Here we focus on getting a basic understanding of how Wireshark works.
 
@@ -78,7 +78,7 @@ Under Info you can see the source and destination ports. From 62652 to 443 in th
 
 Look here, do you recognize this series of messages? SYN, SYN-ACK, followed by ACK.
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 That’s the TCP 3-way handshake.
 
@@ -86,7 +86,7 @@ So, in these first three messages our PC and the remote server established a TCP
 
 You can also see the sequence number, acknowledgment number, and window length.
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 We learned in the previous lesson on TCP and UDP ([Comparing TCP to UDP](https://itnetworkingskills.wordpress.com/2023/04/06/compare-tcp-udp/)) that the initial sequence number is randomly selected. So you may be thinking it is a big coincidence that 0 was randomly selected as the sequence number.
 
@@ -98,13 +98,13 @@ So sequence number 0 is acknowledged with 1, there’s the forward acknowledgmen
 
 Then there is the actual exchange of data here. Notice that most of these display SSL in the protocol column.
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 SSL is what gives the security to HTTPS, Hypertext Transfer Protocol Secure. TCP is still being used, but Wireshark displays SSL in the column here.
 
 Finally, you can see the exchange of FINs and ACKs to terminate the connection at the end.
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
 You probably noticed that the flags are a little different than as introduced in the [TCP and UDP lesson](https://itnetworkingskills.wordpress.com/2023/04/06/compare-tcp-udp/) - there is an extra ACK in the first and third messages. There are some nuances to the connection termination process which you don’t need to worry about at the CCNA level. But remember the basic FIN, ACK, FIN, ACK sequence.
 
@@ -114,19 +114,19 @@ Now let’s briefly look inside one of those segments.
 
 This is the very first SYN message at the beginning of the three-way handshake. First up, notice that the segment is of course encapsulated in an Ethernet frame and IP packet.
 
-<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 We’re just looking deeper than we did before, but don’t forget about Layers 2 and 3.
 
 Notice the sequence number here.
 
-<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
 Notice that 0 is the relative sequence number. Wireshark does this to make it easier to analyze the traffic. Below you can see the real sequence number. As you can probably imagine, it is much harder to analyze when using sequence and acknowledgment numbers like 1 billion 224 million 315 thousand 781.
 
 Because this is a SYN message, under the flags section you can see that the SYN bit is set, it’s 1.
 
-<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
 All of the other flags are not set, they are 0.
 
@@ -136,7 +136,7 @@ Finally, you can see the TCP window size down below, i.e., “Window size value:
 
 Before wrapping up this brief demonstration let’s look at a UDP segment.
 
-<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
 First up, notice under Protocol, DNS (Domain Name System). This is a DNS message from our PC to a DNS server.
 

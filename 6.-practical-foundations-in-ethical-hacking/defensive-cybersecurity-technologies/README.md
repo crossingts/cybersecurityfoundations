@@ -6,11 +6,6 @@ description: >-
 
 # Defensive cybersecurity technologies
 
-## Learning objectives
-
-* Point 1
-* Point 2
-
 This section looks at popular open source defensive cybersecurity technologies, exploring their key characteristics and deployment (use cases). Key categories of defensive cybersecurity technologies discussed include host/network firewalls (e.g., UFW, iptables, nftables, PF, OPNsense, and pfSense), IDS/IPS (e.g., Suricata and Snort), network security monitoring/SIEM (e.g., Wazuh and OSSEC), and packet analyzers (e.g., Wireshark and tcpdump).
 
 ## Topics covered in this section

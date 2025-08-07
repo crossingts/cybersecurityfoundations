@@ -2,9 +2,9 @@
 
 ## Topics covered
 
-* Packet analyzers background
-* Popular open source packet analyzers (Wireshark, tcpdump, Zeek, Snort, Arkime)
-* Technology focus: Wireshark and tcpdump
+* **Packet analyzers background**
+* **Popular open source packet analyzers**
+* **Technology focus: Wireshark and tcpdump**
 
 ### Packet analyzers background
 
@@ -75,8 +75,6 @@ Then, in Wireshark:\
 * **Not all protocols supported**: Some custom encryption (e.g., proprietary VPNs) may not be decryptable.
 
 ### Popular open source packet analyzers
-
-Popular open source packet analyzers (Wireshark, tcpdump, Zeek, Snort, Arkime)
 
 Popular open source packet analyzers ranked by approximate popularity and usage, along with their key features:
 

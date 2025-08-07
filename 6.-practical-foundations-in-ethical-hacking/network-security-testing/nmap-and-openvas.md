@@ -63,9 +63,7 @@ While Nmap excels at fast, efficient network mapping and service enumeration, Op
 
 Nmap and OpenVAS serve different but complementary roles in **vulnerability assessment (VA) and penetration testing (PT)**. Here’s a detailed comparison:
 
-***
-
-#### **1. Core Functionality**
+**1. Core Functionality**
 
 | **Feature**                 | **Nmap**                                               | **OpenVAS (now Greenbone Vulnerability Management - GVM)**   |
 | --------------------------- | ------------------------------------------------------ | ------------------------------------------------------------ |
@@ -74,9 +72,7 @@ Nmap and OpenVAS serve different but complementary roles in **vulnerability asse
 | **Automated Exploitation**  | No (only detection)                                    | No (but identifies exploitable vulnerabilities)              |
 | **Reporting**               | Basic (text/XML)                                       | Advanced (HTML, PDF, with risk scoring and remediation tips) |
 
-***
-
-#### **2. Vulnerability Assessment (VA)**
+**2. Vulnerability Assessment (VA)**
 
 **Nmap**
 
@@ -103,9 +99,7 @@ Nmap and OpenVAS serve different but complementary roles in **vulnerability asse
 * **Nmap**: Quickly find open ports (`nmap -sV 192.168.1.0/24`).
 * **OpenVAS**: Scan for **CVE-2023-1234** in a web app (`openvas-cli --target=192.168.1.10`).
 
-***
-
-#### **3. Penetration Testing (PT)**
+**3. Penetration Testing (PT)**
 
 **Nmap in PT**
 
@@ -124,9 +118,7 @@ Nmap and OpenVAS serve different but complementary roles in **vulnerability asse
 2. **OpenVAS** → Deep scan for vulnerabilities (`openvas-scan target.com`).
 3. **Metasploit** → Exploit flaws (e.g., `use exploit/multi/http/struts2_code_exec`).
 
-***
-
-#### **4. When to Use Each**
+**4. When to Use Each**
 
 | **Scenario**            | **Nmap**  | **OpenVAS**        |
 | ----------------------- | --------- | ------------------ |
@@ -136,9 +128,7 @@ Nmap and OpenVAS serve different but complementary roles in **vulnerability asse
 | Compliance auditing     | ❌ Limited | ✅ (PCI-DSS, HIPAA) |
 | Pre-exploitation recon  | ✅ Good    | ✅ Best             |
 
-***
-
-#### **5. Integration**
+**5. Integration**
 
 * **Nmap + OpenVAS**:
   * Use Nmap for **initial scanning**, then OpenVAS for **deep VA**.
@@ -151,9 +141,7 @@ Nmap and OpenVAS serve different but complementary roles in **vulnerability asse
       openvas-cli --import-targets targets.xml  
       ```
 
-***
-
-#### **Final Verdict**
+**Conclusion**
 
 * **Nmap** = **Network scanner + light VA** (best for recon).
 * **OpenVAS** = **Full vulnerability assessment** (best for compliance/PT prep).

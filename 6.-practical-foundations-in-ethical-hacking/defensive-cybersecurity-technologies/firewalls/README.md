@@ -276,13 +276,28 @@ _(Designed to protect entire networks, often running on dedicated hardware/appli
 
 _(Can function as both host or network firewalls, or have multi-purpose roles.)_
 
-| **Firewall**           | **Key Characteristics**                                                 |
-| ---------------------- | ----------------------------------------------------------------------- |
-| **Zeek (Bro)**         | Primarily a network monitor/IDS, but can enforce policies (scriptable). |
-| **PF (Packet Filter)** | Can be used on both hosts (OpenBSD/macOS) and gateways (network).       |
+| **Firewall**           | **Key Characteristics**                                                                                         |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------- |
+| **Suricata**           | Primarily an IDS/IPS, but can enforce host _or_ network-level rules via integration with `pf`/`nftables`.       |
+| **Zeek (Bro)**         | Primarily a network monitor/IDS, but can enforce policies (trigger host-level scripts), e.g., block IPs via PF. |
+| **PF (Packet Filter)** | Can be used on both hosts (OpenBSD/macOS) and gateways (network).                                               |
 
 **Notes:**
 
 * **Snort/Suricata/Zeek** are primarily IDS/IPS tools but can act like firewalls in specific setups.
 * **PF** and **ipfw** are flexible (used in both host and network contexts).
 * **OPNsense/pfSense** are full firewall distros (network-focused but can run as VMs).
+
+**Key Differences**
+
+| **Type**    | **Scope**               | **Typical Use Case**  | **Example**                               |
+| ----------- | ----------------------- | --------------------- | ----------------------------------------- |
+| **Host**    | Single machine          | Laptops, workstations | macOS PF, LuLu, UFW                       |
+| **Network** | Entire subnet           | Routers, gateways     | OPNsense, OpenWRT                         |
+| **Hybrid**  | Both (config-dependent) | Security appliances   | Suricata (if integrated with PF/nftables) |
+
+**Why the Distinction Matters**
+
+* **Host firewalls** are ideal for endpoints (e.g., blocking malware on your laptop).
+* **Network firewalls** protect multiple devices (e.g., home/router security).
+* **Hybrid tools** like Suricata are flexible but require manual setup to act as both.

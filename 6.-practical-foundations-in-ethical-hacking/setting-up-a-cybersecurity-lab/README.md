@@ -76,11 +76,11 @@ pfSense (firewall) + Snort (IDS/IPS) + web server (Apache) and/or database serve
 
 **Key:** ✔ = Supported | ✕ = Not Supported | ⚠ = Partial/Experimental
 
-| Technology     | Linux Host (x86/ARM) | Windows Host (x86) | macOS Host (Intel/ARM) | Bare Metal (ARM)         | Notes                                                                   |
-| -------------- | -------------------- | ------------------ | ---------------------- | ------------------------ | ----------------------------------------------------------------------- |
-| **Suricata**   | ✔ (Native/VM)        | ✔ (Native/WSL2)    | ✔ (Native/VM)          | ✔ (ARM64)                | Multi-threaded, supports inline IPS. ARM64 works on Raspberry Pi 4+.    |
-| **Zeek (Bro)** | ✔ (Native)           | ⚠ (WSL2/Cygwin)    | ✔ (Native)             | ✔ (ARM64)                | Network analysis, not real-time IPS. ARM64 supported via source builds. |
-| **Snort**      | ✔ (Native)           | ✔ (Native)         | ✔ (Native)             | ⚠ (ARM community builds) | Legacy IDS/IPS. ARM support limited.                                    |
+| Technology     | Linux Host (x86/ARM) | Windows Host (x86) | macOS Host (Intel/ARM) | Notes                                                                   |
+| -------------- | -------------------- | ------------------ | ---------------------- | ----------------------------------------------------------------------- |
+| **Suricata**   | ✔ (Native/VM)        | ✔ (Native/WSL2)    | ✔ (Native/VM)          | Multi-threaded, supports inline IPS. ARM64 works on Raspberry Pi 4+.    |
+| **Zeek (Bro)** | ✔ (Native)           | ⚠ (WSL2/Cygwin)    | ✔ (Native)             | Network analysis, not real-time IPS. ARM64 supported via source builds. |
+| **Snort**      | ✔ (Native)           | ✔ (Native)         | ✔ (Native)             | Legacy IDS/IPS. ARM support limited.                                    |
 
 **Clarifications**
 
@@ -95,6 +95,8 @@ pfSense (firewall) + Snort (IDS/IPS) + web server (Apache) and/or database serve
     * FreeBSD (OPNsense’s base).
     * macOS (Intel Macs).
 
+***
+
 ### Choose a virtualization environment/tool
 
 Choose a project documentation platform/method
@@ -102,56 +104,3 @@ Choose a project documentation platform/method
 Build the lab: Configure subnet interfaces and verify connectivity
 
 Build the lab: Configure and verify the firewall
-
-***
-
-**Firewalls categorized by their primary use case (host vs. network vs. hybrid):**
-
-#### **1. Host Firewalls**
-
-_(Protect a single machine; filter traffic to/from that host only)_
-
-| Firewall                      | OS Compatibility  | Notes                                                                     |
-| ----------------------------- | ----------------- | ------------------------------------------------------------------------- |
-| **macOS PF**                  | macOS (Intel/ARM) | Built-in BSD `pf` (CLI-only). Configures rules for the local machine.     |
-| **LuLu**                      | macOS (Intel/ARM) | GUI-based, blocks outbound connections (like Little Snitch).              |
-| **IPTables**                  | Linux (x86/ARM)   | Kernel-level firewall for individual Linux systems.                       |
-| **nftables**                  | Linux (x86/ARM)   | Modern replacement for IPTables (per-host rules).                         |
-| **UFW**                       | Linux (x86/ARM)   | Simplified frontend for IPTables/nftables (Ubuntu).                       |
-| **Firewalld**                 | Linux (x86/ARM)   | Dynamic firewall manager for RHEL/CentOS (host-focused).                  |
-| **Windows Defender Firewall** | Windows (x86)     | Built-in host firewall (not open-source, but mentioned for completeness). |
-
-**2. Network Firewalls**
-
-_(Protect entire networks; route/filter traffic between devices)_
-
-| Firewall     | OS Compatibility               | Notes                                                          |
-| ------------ | ------------------------------ | -------------------------------------------------------------- |
-| **OPNsense** | Bare-metal x86-64 / x86-64 VMs | FreeBSD-based, full-featured router/firewall OS.               |
-| **pfSense**  | Bare-metal x86-64 / x86-64 VMs | FreeBSD-based (similar to OPNsense).                           |
-| **OpenWRT**  | Bare-metal x86/ARM / VMs       | Lightweight Linux-based router OS (often used on ARM devices). |
-
-**3. Hybrid Firewalls**
-
-_(Can function as both host and network firewalls, depending on configuration)_
-
-| Firewall       | OS Compatibility          | Notes                                                                                                     |
-| -------------- | ------------------------- | --------------------------------------------------------------------------------------------------------- |
-| **Suricata**   | Linux/macOS/Windows (WSL) | Primarily an IDS/IPS, but can enforce host _or_ network-level rules via integration with `pf`/`nftables`. |
-| **Zeek (Bro)** | Linux/macOS/Windows (WSL) | Network analysis tool, but can trigger host-level scripts (e.g., block IPs via PF).                       |
-
-**Key Differences**
-
-| **Type**    | **Scope**               | **Typical Use Case**  | **Example**                               |
-| ----------- | ----------------------- | --------------------- | ----------------------------------------- |
-| **Host**    | Single machine          | Laptops, workstations | macOS PF, LuLu, UFW                       |
-| **Network** | Entire subnet           | Routers, gateways     | OPNsense, OpenWRT                         |
-| **Hybrid**  | Both (config-dependent) | Security appliances   | Suricata (if integrated with PF/nftables) |
-
-***
-
-#### **Why the Distinction Matters**
-
-* **Host firewalls** are ideal for endpoints (e.g., blocking malware on your laptop).
-* **Network firewalls** protect multiple devices (e.g., home/router security).
-* **Hybrid tools** like Suricata are flexible but require manual setup to act as both.

@@ -49,6 +49,6 @@ What is professional ethical hacking
 
 [Types of penetration testing](../types-of-penetration-testing.md)
 
-[Pentesting methodologies, frameworks, and technologies](../pentesting-methodologies-frameworks-and-technologies/)
+[Pentesting methodologies, frameworks, and technologies](../pentesting-methodologies-and-frameworks/)
 
 [Common attack targets](../common-attack-targets/)

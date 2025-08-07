@@ -4,7 +4,8 @@
 
 * **Packet analyzers background**
 * **Popular open source packet analyzers**
-* **Technology focus: Wireshark and tcpdump**
+* **Technology focus: Wireshark**
+* **Technology focus: tcpdump**
 
 ### Packet analyzers background
 

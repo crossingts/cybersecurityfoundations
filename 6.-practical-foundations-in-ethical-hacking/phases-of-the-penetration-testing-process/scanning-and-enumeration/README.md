@@ -15,7 +15,7 @@ The steps for a scanning methodology according to EC-Council's CEH curriculum ar
 
 The simplest and easiest way to check for live systems on a network is to take advantage of ICMP (Internet Control Message Protocol), i.e., pinging target hosts. ICMP is built into every TCP/IP device. ICMP presents information back to the sender in one of several ICMP types. The most common of these are Type 8 (Echo Request) and Type 0 (Echo Reply). Table 4-1 lists some of the more relevant message type codes.
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt="ICMP message types"><figcaption><p>Source: Walker (2012, p. 88)</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (2).png" alt="ICMP message types"><figcaption><p>Source: Walker (2012, p. 88)</p></figcaption></figure>
 
 An ICMP Type 8 packet received by a host tells the recipient, “Hey! I’m sending you a few packets. When you get them, reply back with the same number so I know you’re there.” The recipient will respond with an ICMP Type 0, stating, “Sure, I’m alive. Here are the data packets you just sent me as proof!” (Walker, 2012, p. 87)
 

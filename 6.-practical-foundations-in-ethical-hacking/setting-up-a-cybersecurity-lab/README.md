@@ -187,21 +187,6 @@ _SSGs = Static Site Generators (e.g., Jekyll, MkDocs, Docusaurus)._
   * Sequence diagrams (`sequenceDiagram`)
   * Class diagrams (`classDiagram`)
   * Gantt charts (`gantt`)
-*   **Example**:
-
-    markdown
-
-    ````
-    ```mermaid  
-    graph LR  
-      A[Firewall] --> B[Suricata IDS]  
-      B --> C[Apache]  
-    ```  
-    ````
-
-    Renders as:
-
-    DiagramCode
 
 **Mermaid.js vs. Draw.io**
 

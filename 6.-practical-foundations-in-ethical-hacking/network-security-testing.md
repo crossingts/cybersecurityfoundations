@@ -51,11 +51,11 @@ The most common parameters for monitoring network performance are throughput (kb
 Network security is an ongoing process that can be described by the Cisco security wheel. The security wheel (Figure 7-1) consists of the following four phases: Secure, Monitor, Test, and Improve. The third phase, Test, or network security testing, helps netadmins verify the security design and\
 discover vulnerabilities within a network.
 
-<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption><p>Cisco Security Wheel (image courtesy of Deveriya, 2005, p. 362)</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption><p>Cisco Security Wheel (image courtesy of Deveriya, 2005, p. 362)</p></figcaption></figure>
 
 The process of network security testing is also commonly known as security audit, security assessment, posture assessment, vulnerability assessment, penetration testing, and ethical hacking. All these terms are invoked to refer to "a legitimate process of attacking, discovering, and reporting security holes in a network" (Deveriya, 2005, p. 362).
 
-Tools used for security testing can be loosely classified into the following two categories:
+Tools used for network security testing can be loosely classified into the following two categories:
 
 * Scanners - Active tools that send out probe packets to the target host or network to attack or gather information.
 * Packet analyzers - Passive in their operation because they do not send probe packets. Instead, packet analyzers work by capturing and analyzing the data that is flowing across the network.
@@ -92,6 +92,13 @@ Vulnerabilities are the weaknesses in an operating system or software that can p
 #### Packet Analyzers
 
 Packet analyzers are software or hardware devices that capture and analyze the data flowing through the network ... Many packet analyzers provide capabilities to filter, store, and analyze the captured data. In fact, most network intrusion detection systems (NIDS) are packet analyzers that watch for peculiar traffic patterns that are unique to network attacks. Packet analyzers work at Layers 1 and 2 of the OSI model but can also decode data at higher layers. This feature enables networking professionals to have a cross-sectional view of the data flowing through the network in real time. The ability to slice and view the raw data flowing through the wires is important when troubleshooting. Such views also help networking professionals to learn and understand the functioning of various protocols and applications. The views also provide clear proof that the network and its components are operational. (Deveriya, 2005, p. 386)
+
+### Key takeaways
+
+* Tools used for network security testing can be loosely classified into two categories: network scanners and packet analyzers
+* Nmap and OpenVAS are two popular and complementary open source network scanners—Nmap identifies live hosts, open ports, and what services are running and OpenVAS automatically scans those hosts, ports, and services for known vulnerabilities
+* tcpdump is a powerful command-line packet analyzer that captures and displays network traffic in real time, allowing deep inspection of packets for troubleshooting or security analysis
+* While Nmap discovers hosts and services and OpenVAS scans for vulnerabilities, tcpdump provides visibility into the raw network traffic between them
 
 ### References
 

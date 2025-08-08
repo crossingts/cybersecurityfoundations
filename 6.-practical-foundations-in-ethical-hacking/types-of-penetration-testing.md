@@ -1,7 +1,8 @@
 ---
 description: >-
   This section explores types of penetration testing, differentiates black box
-  from white box penetration testing, and possible risks of penetration testing
+  from white box penetration testing, and explores possible risks of penetration
+  testing
 ---
 
 # Types of penetration testing
@@ -9,7 +10,7 @@ description: >-
 ## Learning objectives
 
 * Describe main types of penetration testing
-* Compare black box penetration testing and white box penetration testing methods
+* Compare black box and white box penetration testing methods
 * Identify the possible risks of penetration testing
 
 This section explores six types of penetration testing, compares between black box and white box penetration testing, and shed light on possible risks of penetration testing to the client organization.

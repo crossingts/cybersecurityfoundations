@@ -1,5 +1,7 @@
 # Nmap and OpenVAS
 
+Nmap and OpenVAS are two popular and complementary open source network scanners—Nmap identifies live hosts, open ports, and what services are running and OpenVAS automatically scans those hosts, ports, and services for known vulnerabilities.
+
 ### Topics covered
 
 * **Technology focus: Nmap**
@@ -54,6 +56,12 @@ Nmap uses Internet Control Message Protocol (ICMP) ping scans for network discov
 OpenVAS (Open Vulnerability Assessment System) is a powerful open-source vulnerability scanner designed to detect and assess security weaknesses in networks, servers, and applications. Unlike general-purpose network scanners such as Nmap, which primarily focus on discovering hosts, services, and open ports, OpenVAS specializes in deep vulnerability analysis by leveraging a comprehensive database of known security flaws. It performs authenticated and unauthenticated scans, checks for outdated software, misconfigurations, and missing patches, and provides detailed risk assessments with remediation guidance. This makes OpenVAS particularly valuable for penetration testers and security teams prioritizing vulnerability management over basic reconnaissance.
 
 While Nmap excels at fast, efficient network mapping and service enumeration, OpenVAS goes further by analyzing the identified services for specific vulnerabilities. Nmap’s scripting engine (NSE) can perform limited vulnerability checks, but OpenVAS offers a more systematic approach with regularly updated vulnerability tests (NVTs). Additionally, OpenVAS provides a centralized web interface for managing scans and reports, whereas Nmap is typically command-line driven and requires additional tools for in-depth vulnerability analysis. Together, they complement each other—Nmap for initial discovery and OpenVAS for thorough security assessment—but OpenVAS stands out as a dedicated solution for vulnerability scanning and compliance auditing.
+
+**OpenVAS scans hosts, open ports, and services for vulnerabilities**
+
+1. **Hosts**: OpenVAS can scan entire hosts (systems) for vulnerabilities, including OS-level flaws or misconfigurations.
+2. **Open ports**: It checks which ports are open (as identified by Nmap or its own port-scanning) and analyzes them for vulnerabilities.
+3. **Services**: It examines the services running on those ports (e.g., Apache, SSH, SMB) for known vulnerabilities.
 
 ### Using Nmap and OpenVAS in vulnerability assessment and penetration testing
 

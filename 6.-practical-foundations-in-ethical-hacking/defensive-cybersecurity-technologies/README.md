@@ -49,4 +49,11 @@ Technology focus: Wireshark and tcpdump.
 
 ### Key takeaways
 
-* Point 1
+* Popular open source host-based firewalls include nftables and pf&#x20;
+* Popular open source network-based firewalls include OPNsense and pfSense (CE)
+* Packet-filtering firewall technologies such as iptables and pfilter (PF) operate at the network level (Layer 3/4)
+* WAFs operate at the Application level (L7) and can be host- and network-based
+* Popular open source HIDS include Wazuh and OSSEC
+* Popular open source NIDS include Suricata and Snort
+* Popular open source SIEM include Wazuh and TheHive
+* Popular open source packet analyzers include Wireshark and tcpdump

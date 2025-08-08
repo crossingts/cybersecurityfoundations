@@ -151,9 +151,8 @@ In conclusion, the professional ethics of white hat hackers are defined by legal
 ### Key takeaways
 
 * Professional ethical hacking is legal (authorized) and contract based
-* Grey hat hacking is unauthorized hacking, but is essentially apolitical
-* Black hat hacking is criminal hacking (on ethical, not technical, grounds)
-* Hacktivisim is politically motivated hacking
+* The practices of ethical hackers align with professional codes such as the ACM Code of Ethics and the IEEE Code of Ethics
+* White hats follow well established penetration testing industry and regulatory ethical guidelines such as EC-Council’s CEH and NIST SP 800-115
 
 ### References
 

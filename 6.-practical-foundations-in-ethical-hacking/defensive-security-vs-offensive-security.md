@@ -7,7 +7,15 @@ description: >-
 
 # Defensive security vs offensive security
 
-Become familiar with defensive security and offensive security approaches and concepts, including blue teaming, SOC (Security Operations Center), SIRT/CSIRT (Security Incident Response Team/Computer Security Incident Response Team), red teaming, and ethical hacking.
+## Learning objectives
+
+* Become familiar with defensive security and offensive security paradigms
+* Recognize blue teams as an organization's cybersecurity defensive cadre&#x20;
+* Recognize SOC as the operational arm of blue teams
+* Understand the focus of SIRT/CSIRT in incident response for escalated SOC events
+* Understand how the roles of ethical hackers and red teams intersect and transverse
+
+This section explains the two important cybersecurity concepts of defensive security and offensive security and the organizational roles associated each concept.
 
 ## Topics covered in this section
 
@@ -35,8 +43,6 @@ Since a malicious hacker may be an insider or an outsider, an effective cybersec
 | **Authentication**        | Unauthenticated scan (outsider attack)                                                                               | Authenticated scan (simulation of insider attack)                                                        |
 
 ### Blue teaming
-
-#### **What is the "Blue Team"?**
 
 The **Blue Team** refers to the **defensive security** side of an organization, focused on:
 

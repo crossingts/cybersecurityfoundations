@@ -2,7 +2,7 @@
 
 This section explores the professional ethics of ethical hackers as stipulated/enriched in widely accepted and well established industry and professional certification bodies.
 
-## Topics covered in this section
+## Topics covered
 
 * **Introduction**&#x20;
 * **Professional ethics**

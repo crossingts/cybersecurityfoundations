@@ -99,7 +99,32 @@ pfSense (firewall) + Snort (IDS/IPS) + web server (Apache) and/or database serve
 
 ### Choose a virtualization environment/tool
 
-Choose a project documentation platform/method
+**Open source and free virtualization tools**
+
+| **Virtual Machine**           | **Host OS**            | **License**        | **Multiple VMs** | **Snapshots** | **Cloning** | **Notes**                                                         |
+| ----------------------------- | ---------------------- | ------------------ | ---------------- | ------------- | ----------- | ----------------------------------------------------------------- |
+| **Oracle VM VirtualBox**      | macOS, Windows, Linux  | GPLv2              | ✅ Yes            | ✅ Yes         | ✅ Yes       | Fully open-source. Best balance of features & usability.          |
+| **VMware Workstation Player** | Windows, Linux         | Free (Proprietary) | ❌ No (Single VM) | ✅ Yes         | ✅ Yes       | Free version restricts to 1 running VM. Good for lightweight use. |
+| **VMware Fusion Player**      | macOS (Intel/ARM) only | Free (Proprietary) | ✅ Yes            | ✅ Yes         | ✅ Yes       | Better macOS integration.                                         |
+| **QEMU**                      | macOS, Windows, Linux  | GPLv2              | ✅ Yes (via CLI)  | ❌ No\*        | ✅ (Manual)  | Advanced, needs KVM for best performance. No native snapshot UI.  |
+
+**Clarifying Notes:**
+
+* **For open-source & full features** → **VirtualBox** (cross-platform, supports multiple VMs, snapshots, cloning).
+* **For macOS-only free use** → **VMware Fusion Player** (better performance than VirtualBox but single-VM limit).
+* **For lightweight Windows/Linux use** → **VMware Workstation Player** (free but single-VM limit).
+
+#### **QEMU: Emulation vs. Virtualization**
+
+* **QEMU by itself** is primarily an **emulator**—it can simulate entire systems (CPU, memory, devices) even on different architectures (e.g., running ARM on x86). This makes it flexible but slower than hardware-assisted virtualization.
+* **QEMU + KVM (Kernel-based Virtual Machine)** enables **full hardware-assisted virtualization** (like VMware or VirtualBox) when running on Linux.&#x20;
+  * KVM is a Linux kernel module that turns the host OS into a Type-1 hypervisor (bare-metal virtualization). It allows QEMU to run VMs with near-native performance by using CPU virtualization extensions (Intel VT-x / AMD-V).
+* **On Windows**, QEMU can use **WHPX (Windows Hypervisor Platform)** for acceleration, but performance may not be as good as KVM on Linux or dedicated hypervisors like VMware/Hyper-V.
+  * WHPX is a hypervisor-based acceleration feature on Windows 10/11 Pro and Enterprise editions. It allows virtualization software (like QEMU) to use hardware-assisted virtualization (Intel VT-x / AMD-V).
+
+***
+
+### Choose a project documentation platform/method
 
 Build the lab: Configure subnet interfaces and verify connectivity
 

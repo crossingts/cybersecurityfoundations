@@ -111,7 +111,6 @@
   * [OPNsense](6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/opnsense.md)
   * [OPNsense vs Zenarmor](6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/opnsense-vs-zenarmor.md)
   * [nftables](6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/nftables.md)
-  * [Open source and free virtualization tools](6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/open-source-and-free-virtualization-tools.md)
 
 ## 7. Conclusion
 

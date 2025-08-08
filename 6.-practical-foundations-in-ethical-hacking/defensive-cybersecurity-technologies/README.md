@@ -6,6 +6,14 @@ description: >-
 
 # Defensive cybersecurity technologies
 
+## Learning objectives
+
+* Become familiar with popular open source host- and network-based firewalls
+* Understand the difference between Web Application Firewalls (WAFs) and packet-filtering firewalls
+* Become familiar with popular open source host- and network-based IDS and their key features
+* Become familiar with popular open source security event management technologies and their key features
+* Become familiar with popular open source packet analyzers and their common use cases
+
 This section looks at popular open source defensive cybersecurity technologies, exploring their key characteristics and deployment (use cases). Key categories of defensive cybersecurity technologies discussed include host/network firewalls (e.g., UFW, iptables, nftables, PF, OPNsense, and pfSense), IDS/IPS (e.g., Suricata and Snort), network security monitoring/SIEM (e.g., Wazuh and OSSEC), and packet analyzers (e.g., Wireshark and tcpdump).
 
 ## Topics covered in this section
@@ -39,4 +47,6 @@ Popular open source packet analyzers include Wireshark, tcpdump, Zeek, Snort, an
 
 Technology focus: Wireshark and tcpdump.
 
-***
+### Key takeaways
+
+* Point 1

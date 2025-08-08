@@ -243,8 +243,6 @@ WAFs can be **host-based and network-based**, depending on deployment:
 
 The following firewall technologies (except WFP) are open source: iptables, nftables, ufw, PF (Packet Filter), ipfw, firewalld, OPNsense, and pfSense (CE), snort, suricata, zeek, Windows Filtering Platform (WFP).
 
-Popular open source host and network firewalls include iptables, nftables, ufw, pf, OPNsense, and pfSense (CE).
-
 Here is a categorized table of popular open-source firewall technologies organized by **Host**, **Network**, and **Hybrid** firewalls, along with their key characteristics:
 
 **1. Host-Based Firewalls**

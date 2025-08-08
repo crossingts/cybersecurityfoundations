@@ -1,16 +1,12 @@
----
-hidden: true
----
-
 # Alternative chapter topics
 
-Network devices and their functions
+✅ Network devices and their functions
 
-The Open Systems Interconnection (OSI) model
+✅ The Open Systems Interconnection (OSI) model
 
-Host to host communication in networking
+✅ Host to host communication in networking
 
-Network protocols and their functions
+✅ Network protocols and their functions
 
 Cisco IOS CLI and device security
 
@@ -28,4 +24,4 @@ Configuring and verifying DHCP client and relay
 
 Static NAT configuration
 
-OSI model layers and security threats
+✅ OSI model layers and security threats

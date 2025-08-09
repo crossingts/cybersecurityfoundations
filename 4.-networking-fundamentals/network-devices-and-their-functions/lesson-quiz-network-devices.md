@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Lesson quiz: Network devices
 
 \*Quiz

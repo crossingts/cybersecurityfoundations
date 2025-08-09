@@ -1,10 +1,10 @@
 # Repeaters vs hubs vs bridges vs switches
 
-### Hubs vs. Switches: Key Differences
+### Hubs vs. switches
 
-Hubs and switches are both networking devices that connect multiple devices in a LAN, but they operate very differently at the **data link layer (Layer 2)** of the OSI model.
+Hubs and switches are both networking devices that connect multiple devices in a LAN, but they operate very differently at the data link layer (Layer 2) of the OSI model.
 
-**Key Technical Differences**
+**Hubs vs. Switches: Key Differences**
 
 | Feature                  | Hub (Dumb Device)                                                         | Switch (Intelligent Device)                                            |
 | ------------------------ | ------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
@@ -25,39 +25,16 @@ Hubs and switches are both networking devices that connect multiple devices in a
 4. **VLAN Support** – Switches can segment networks into **VLANs** (Virtual LANs), while hubs cannot.
 5. **Traffic Optimization** – Switches reduce unnecessary traffic, improving efficiency, whereas hubs waste bandwidth.
 
-#### **Conclusion**
-
 Switches are **vastly superior** to hubs in speed, efficiency, and security. Hubs are **obsolete** in modern networks due to their **broadcast nature** and **shared bandwidth limitations**.
 
-### Hubs vs. Bridges vs. Switches: Key Differences
+### Repeaters vs. hubs vs. bridges vs. switches
 
-Here’s an expanded comparison table that includes **bridges**, which sit between hubs and switches in terms of functionality.
-
-| Feature              | **Hub (Layer 1)**                                       | **Bridge (Layer 2)**                                | **Switch (Layer 2, Advanced)**                           |
-| -------------------- | ------------------------------------------------------- | --------------------------------------------------- | -------------------------------------------------------- |
-| **OSI Layer**        | Physical (Layer 1)                                      | Data Link (Layer 2)                                 | Data Link (Layer 2)                                      |
-| **Traffic Handling** | Broadcasts to **all ports** (flooding)                  | Forwards based on **MAC addresses** (filtering)     | Forwards based on **MAC table**, per-port forwarding     |
-| **Collision Domain** | **Single collision domain** (all ports share bandwidth) | **Divides collision domains** (2 or more segments)  | **Per-port collision domain** (full-duplex possible)     |
-| **Bandwidth Usage**  | **Shared** (e.g., 10Mbps divided among all ports)       | **Semi-dedicated** (reduces unnecessary traffic)    | **Dedicated per port** (e.g., 100Mbps per port)          |
-| **MAC Learning**     | **No** (dumb device)                                    | **Yes** (maintains a simple MAC table)              | **Yes** (maintains a full MAC table for all ports)       |
-| **Ports**            | Typically **4–12 ports**                                | Usually **2 ports** (connects two network segments) | **4–48+ ports** (scalable)                               |
-| **Performance**      | **Slow** (collisions, broadcasts)                       | **Moderate** (reduces collisions but limited ports) | **Fast** (no collisions, optimized forwarding)           |
-| **Security**         | **None** (all traffic visible to all devices)           | **Basic filtering** (isolates segments)             | **Better isolation** (per-port forwarding, VLAN support) |
-| **Use Case**         | **Obsolete** (historical use)                           | **Legacy segmentation** (older networks)            | **Modern standard** (all Ethernet networks)              |
-
-#### **Key Takeaways:**
-
-* **Hubs** = **Dumb repeaters** (no intelligence, all traffic broadcasted).
-* **Bridges** = **Basic traffic filters** (split collision domains, simple MAC learning).
-* **Switches** = **Advanced bridges** (full MAC tables, dedicated bandwidth, VLANs, high port density).
-
-Bridges were an early improvement over hubs but were later replaced by **switches**, which offer **more ports, faster forwarding, and better scalability**.
+Bridges were an early improvement over hubs but were later replaced by switches, which offer more ports, faster forwarding, and better scalability.
 
 ### Repeaters vs. Hubs vs. Bridges vs. Switches: Key Differences
 
 | Feature              | **Repeater (L1)**                                | **Hub (L1)**                                            | **Bridge (L2)**                                     | **Switch (L2, Advanced)**                                |
 | -------------------- | ------------------------------------------------ | ------------------------------------------------------- | --------------------------------------------------- | -------------------------------------------------------- |
-| **OSI Layer**        | Physical (L1)                                    | Physical (L1)                                           | Data Link (L2)                                      | Data Link (L2)                                           |
 | **Function**         | **Regenerates signals** (extends cable reach)    | **Multi-port repeater** (broadcasts to all ports)       | **Connects two network segments** (filters by MAC)  | **Multi-port bridge** (intelligent forwarding)           |
 | **Traffic Handling** | **No filtering** (boosts signal only)            | **Broadcasts to all ports** (no intelligence)           | **Forwards based on MAC table (2 ports only)**      | **Forwards based on full MAC table (per-port)**          |
 | **Collision Domain** | **Extends collision domain** (no isolation)      | **Single collision domain** (all ports share bandwidth) | **Splits collision domains** (two segments)         | **Per-port collision domain** (full-duplex possible)     |
@@ -68,11 +45,9 @@ Bridges were an early improvement over hubs but were later replaced by **switche
 | **Security**         | **None** (raw signal passthrough)                | **None** (all traffic visible to all devices)           | **Basic filtering** (isolates segments)             | **Better isolation** (per-port forwarding, VLAN support) |
 | **Use Case**         | **Extending cable runs** (e.g., Ethernet, fiber) | **Obsolete** (historical use)                           | **Legacy segmentation** (older networks)            | **Modern standard** (all Ethernet networks)              |
 
-#### **Key Takeaways**
+#### **Key Notes**
 
 1. **Repeaters** extend signals but **do nothing for traffic efficiency**.
 2. **Hubs** are just **multi-port repeaters**—they flood all traffic, creating congestion.
-3. **Bridges** improve on hubs by **splitting collision domains** but are limited to 2 ports.
-4. **Switches** are **scalable, high-performance bridges** with per-port forwarding.
-
-***
+3. **Bridges** sit between hubs and switches in terms of functionality; improve on hubs by **splitting collision domains** but are limited to 2 ports.
+4. **Switches** are **scalable, high-performance bridges** with per-port forwarding (full MAC tables, dedicated bandwidth, VLANs, high port density).

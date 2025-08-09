@@ -37,17 +37,25 @@ The global demand for skilled cybersecurity professionals has never been higher.
 
 • Relate network layers (OSI/TCP/IP models) to vulnerabilities and mitigation techniques.
 
-• Describe how SSL/TLS uses cryptography (symmetric/asymmetric encryption and hashing) to secure data in transit.
+• Describe how SSL/TLS uses cryptography (symmetric encryption, asymmetric encryption, and hashing) to secure data in transit.
 
-• Compare wireless security protocols (WPA2/WPA3) and their authentication and encryption methods.
+• Compare wireless security protocols (WPA/WPA2/WPA3) and their authentication and encryption methods.
 
 ### Part 3: Ethical Hacking (Chapters 6)
 
-• Compare professional ethical hacking (authorized penetration testing), gray-hat hacking, and hacktivism.
+• Compare professional ethical hacking (authorized penetration testing), grey hat hacking, and hacktivism.
 
-• Identify and compare the main penetration testing methodologies (e.g., OSSTMM, NIST SP 800-115, ISSAF, and PTES), frameworks (e.g., OWASP Testing Guide and MITRE ATT\&CK/cyber kill chain), and technologies (e.g., Nmap, OpenVAS, Metasploit, and Burp Suite).
+• Become familiar with the professional ethics of ethical hackers.
 
-• Identify common attack targets - OS, shrink-wrap code attacks, device misconfiguration, OWASP Top 10 vulnerabilities such as cross-site scripting (XSS) and SQL injection (SQLi) attacks.
+• Become familiar with defensive security and offensive security approaches, including SIRT/CSIRT (Security Incident Response Team/Computer Security Incident Response Team), SOC (Security Operations Center), red teaming, and ethical hacking.
+
+• Describe common defensive cybersecurity technologies such as packet analyzers (e.g., Wireshark and tcpdump), IDS/IPS (e.g., Suricata and Snort), network security monitoring/SIEM (e.g., Wazuh), and host/network firewalls (e.g., OPNsense, pfilter, and nftables).
+
+• Describe the phases of the penetration testing process (planning, reconnaissance, scanning and enumeration, exploitation, post-exploitation, and reporting).
+
+• Become familiar with key penetration testing methodologies (e.g., OSSTMM, NIST SP 800-115, ISSAF, and PTES), frameworks (e.g., OWASP Testing Guide and MITRE ATT\&CK/cyber kill chain), and technologies (e.g., Nmap, OpenVAS, Metasploit, and Burp Suite).
+
+• Identify common attack targets, including OS vulnerabilities, misconfigurations and default credentials, and OWASP Top 10 vulnerabilities such as cross-site scripting (XSS) and SQL injection (SQLi).
 
 ## Book Chapters
 
@@ -75,8 +83,8 @@ This chapter covers how SSL/TLS secures data in transit, the IEEE 802.11 wireles
 
 This chapter covers ethical hacking and penetration testing - definitions, technologies, testing methodologies, and testing phases.
 
-7. Chapter 7: Conclusion
+7. [Chapter 7: Conclusion](broken-reference)
 
-This chapter sheds light on and summarizes salient topics and concepts covered in each chapter.
+This chapter sheds light on and summarizes key topics and concepts covered in each chapter.
 
 [About the author](https://itnetworkingskills.wordpress.com/baha-abu-shaqra-academic-publications/)

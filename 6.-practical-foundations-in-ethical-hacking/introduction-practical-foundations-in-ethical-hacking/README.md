@@ -31,7 +31,7 @@ Ethical hacking is the cornerstone of security verification within organizations
 
 • Compare black box penetration testing and white box penetration testing methods.
 
-• Become familiar with key penetration testing methodologies (e.g., OSSTMM, NIST SP 800-115, ISSAF, and PTES), frameworks (e.g., OWASP Testing Guide and MITRE ATT\&CK/cyber kill chain), and technologies (e.g., Nmap, OpenVAS, Metasploit, and Burp Suite).
+• Become familiar with key penetration testing methodologies (e.g., OSSTMM, NIST SP 800-115, ISSAF, and PTES), frameworks (e.g., OWASP Testing Guide and MITRE ATT\&CK), and technologies (e.g., Nmap, OpenVAS, Metasploit, and Burp Suite).
 
 • Identify common attack targets, including OS vulnerabilities, misconfigurations and default credentials, and OWASP Top 10 vulnerabilities such as cross-site scripting (XSS) and SQL injection (SQLi).
 

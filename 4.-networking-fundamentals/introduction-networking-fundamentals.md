@@ -18,7 +18,7 @@ This chapter covers networking fundamentals by way of tracing the movement of a 
 
 • Compare switches (intra-network) and routers (inter-network) in facilitating communication.
 
-• Identify common networking protocols (e.g., HTTP, TCP/IP, DNS) and become familiar with their security implications.
+• Identify common networking protocols involved in data transmission (e.g., HTTP, TCP/IP, DNS) and become familiar with their security implications.
 
 • Understand what happens when someone types www.google.com into a web browser.
 

@@ -143,7 +143,7 @@ pfSense (firewall) + Snort (IDS/IPS) + web server (Apache) and/or database serve
 
 _SSGs = Static Site Generators (e.g., Jekyll, MkDocs, Docusaurus)._
 
-**Key Takeaways for the Lab Project**
+**Clarification Notes**
 
 1. **For pure documentation:**
    * **GitHub Wiki** (simple, free, Git-backed).
@@ -168,7 +168,7 @@ _SSGs = Static Site Generators (e.g., Jekyll, MkDocs, Docusaurus)._
 | **VS Code**      | <p>1. Use Draw.io extension.<br>2. Edit <code>.drawio</code> files directly.</p>                                             | ✅ Yes         | ✅ Yes (with Mermaid extension)     | Local editing with live preview.            |
 | **MkDocs**       | <p>1. Export as <code>.svg</code> → embed.<br>2. Or use <code>plantuml</code> plugin for Draw.io XML.</p>                    | ❌ No          | ✅ Yes (native support)             | Automated docs with code-based diagrams.    |
 
-#### **Key Takeaways**
+**Clarification Notes**
 
 * **Mermaid.js works best in**: GitBook, GitHub Pages (with plugins), MkDocs, and VS Code.
 * **Draw.io is better for**: Platforms without Mermaid support (e.g., GitHub Wiki, Notion).

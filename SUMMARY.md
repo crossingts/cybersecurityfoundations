@@ -106,6 +106,8 @@
 * [Penetration testing technologies](6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/README.md)
   * [Nmap and OpenVAS](6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/nmap-and-openvas.md)
   * [tcpdump](6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/tcpdump.md)
+  * [Metasploit](6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/metasploit.md)
+  * [Burp Suite](6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/burp-suite.md)
 * [Common attack targets](6.-practical-foundations-in-ethical-hacking/common-attack-targets/README.md)
   * [Attack types (CEH/EC-Council)](6.-practical-foundations-in-ethical-hacking/common-attack-targets/attack-types-ceh-ec-council.md)
   * [Attack target vs attack vector](6.-practical-foundations-in-ethical-hacking/common-attack-targets/attack-target-vs-attack-vector.md)

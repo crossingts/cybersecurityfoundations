@@ -60,7 +60,7 @@ Tools used for network security testing can be loosely classified into the follo
 * Scanners - Active tools that send out probe packets to the target host or network to attack or gather information.
 * Packet analyzers - Passive in their operation because they do not send probe packets. Instead, packet analyzers work by capturing and analyzing the data that is flowing across the network.
 
-**The following discussion introduces the following tools and methodologies of network security testing:**
+**This section focuses on the following tools and methodologies of network security testing:**
 
 • Network scanners - Nmap
 
@@ -81,11 +81,7 @@ Some of the most popular open source network scanners are Nmap, Nessus, and Netc
 
 • **Nmap** (Network Mapper): The Swiss army knife of network scanners; a popular and versatile tool.
 
-• **Nessus** (proprietary since October 5, 2005): A popular **vulnerability scanner** with the ability to regularly update the vulnerability database; comes preinstalled with many Linux live CD-ROMs; and has good reporting capability.&#x20;
-
-Nessus turned commercial in October 2005 but a limited feature version is available (Nessus Essentials provides high-speed, in-depth vulnerability scanning for up to 16 IP addresses per scanner).
-
-Vulnerabilities are the weaknesses in an operating system or software that can potentially be exploited by malicious users with an intent to cause system damage. Network vulnerability scanners such as Nessus provide security vulnerability detection and reporting for networks and host systems. (Deveriya, 2005, p. 377)
+• **Nessus**: A popular **vulnerability scanner** with the ability to regularly update the vulnerability database; comes preinstalled with many Linux live CD-ROMs; and has good reporting capability. Nessus turned commercial in October 2005 but a limited feature version is available (Nessus Essentials provides vulnerability scanning for up to 16 IP addresses per scanner).
 
 • **Netcat**: A port scanner with the additional capability to read and write data across a network through TCP and UDP ports.
 

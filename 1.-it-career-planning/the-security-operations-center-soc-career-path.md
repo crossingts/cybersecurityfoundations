@@ -14,7 +14,7 @@ description: >-
 • Describe the four main SOC roles\
 • Understand the main responsibilities, skills, and industry certifications of the SOC analyst
 
-This section discusses the [Security Operations Center (SOC) career path](https://resources.infosecinstitute.com/career/soc-analyst-career-path/). First, the SOC unit composition and technologies are discussed. Then the SOC team member roles and responsibilities, skills/qualifications, and certifications are discussed. Finally, training resources for SOC careers are suggested.
+This section discusses the Security Operations Center (SOC) career path. First, the SOC unit composition and technologies are discussed. Then the SOC team member roles and responsibilities, skills/qualifications, and certifications are discussed. Finally, training resources for SOC careers are suggested.
 
 ## Topics covered in this section
 

@@ -90,7 +90,7 @@ Several major regulatory frameworks (such as HIPAA, PCI DSS, SSAE 16, FFIEC, and
 
 **Vulnerability Scan and Penetration Test Comparison**
 
-<figure><img src="../.gitbook/assets/image (17).png" alt="Vulnerability Scan and Penetration Test Comparison"><figcaption><p>Table 15: Vulnerability Scan and Penetration Test Comparison (Rodger, 2013, p. 49)</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (17).png" alt="Vulnerability Scan and Penetration Test Comparison"><figcaption><p>Table 15: Vulnerability Scan and Penetration Test Comparison (Rodger, 2013, p. 49)</p></figcaption></figure>
 
 Vulnerability scans are automated assessments of computers, networks, and applications, and are typically done on an ongoing basis, especially following the installation of new equipment or software. They are typically done by in-house staff, and cost about U.S. $1,200/year plus staff time. Their purpose is detection of exploitable vulnerabilities.
 

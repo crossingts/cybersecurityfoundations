@@ -17,22 +17,24 @@ This chapter explores how organizations integrate cybersecurity into enterprise 
 
 • Define the concepts of Governance, Risk, and Compliance, and explain their role in IT governance.
 
-• Identify key cybersecurity regulations (e.g., GGDPR, HIPAA, and SOX) and industry standards (e.g., PCI DSS).
+• Understand information security risk assessment phases and terminology.
 
-• Become familiar with popular information security RMFs, including NIST SP 800-37, NIST CSF, and ISO/IEC 27001, and how they can be combined.
+• Identify key cybersecurity regulations (e.g., GGDPR, HIPAA, and SOX) and industry standards (e.g., PCI DSS).
 
 • Understand how GRC can be used as a cybersecurity risk management framework (RMF).
 
-• Understand information security risk assessment phases and terminology.
+• Become familiar with popular information security RMFs, including NIST SP 800-37, NIST CSF, and ISO/IEC 27001, and how they can be combined.
 
 ## Topics covered in this chapter
 
-Foundational GRC concepts and terminology (governance, risk, compliance, controls, due diligence, policies, audits, reporting).
+Foundational GRC concepts&#x20;
+
+Risk assessment phases&#x20;
 
 Salient cybersecurity regulations
 
-Key features of salient cybersecurity industry standards, such as PCI DSS (payment security), and SOC 2 (service providers).
+GRC as a risk management framework (RMF)
 
-Applying risk management frameworks, such as NIST SP 800-37 (RMF for federal systems), NIST Cybersecurity Framework (CSF) (Identify, Protect, Detect, Respond, Recover), and ISO/IEC 27001 (ISMS framework).
+RMFs NIST SP 800-37, NIST CSF, ISO/IEC 27001
 
-Risk assessment phases (risk identification, risk analysis, risk mitigation, and risk monitoring).
+Common combinations of cybersecurity RMFs

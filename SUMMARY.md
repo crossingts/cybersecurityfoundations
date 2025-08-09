@@ -26,7 +26,12 @@
 
 * [Introduction - Cybersecurity GRC](3.-cybersecurity-grc/introduction-cybersecurity-grc.md)
 * [Cybersecurity GRC](https://dti-techs.gitbook.io/cybersecurity-grc)
+* [Foundational GRC concepts](3.-cybersecurity-grc/foundational-grc-concepts.md)
+* [Risk assessment phases](3.-cybersecurity-grc/risk-assessment-phases.md)
 * [Salient cybersecurity regulations](3.-cybersecurity-grc/salient-cybersecurity-regulations.md)
+* [GRC as a risk management framework (RMF)](3.-cybersecurity-grc/grc-as-a-risk-management-framework-rmf.md)
+* [RMFs NIST SP 800-37, NIST CSF, ISO/IEC 27001](3.-cybersecurity-grc/rmfs-nist-sp-800-37-nist-csf-iso-iec-27001.md)
+* [Common combinations of cybersecurity RMFs](3.-cybersecurity-grc/common-combinations-of-cybersecurity-rmfs.md)
 
 ## 4. Networking fundamentals
 
@@ -75,7 +80,8 @@
   * [Ethical hacking is legal](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/ethical-hacking-is-legal.md)
   * [Ethical hackers are trustworthy](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/ethical-hackers-are-trustworthy.md)
 * [The perils of unethical hacking](6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking.md)
-* [What do ethical hackers do?](6.-practical-foundations-in-ethical-hacking/what-do-ethical-hackers-do.md)
+* [What do ethical hackers do?](6.-practical-foundations-in-ethical-hacking/what-do-ethical-hackers-do/README.md)
+  * [Privacy Act (1983) and PIPEDA (2000)](6.-practical-foundations-in-ethical-hacking/what-do-ethical-hackers-do/privacy-act-1983-and-pipeda-2000.md)
 * [Defensive security vs offensive security](6.-practical-foundations-in-ethical-hacking/defensive-security-vs-offensive-security.md)
 * [Defensive cybersecurity technologies](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md)
   * [Firewalls](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/firewalls/README.md)

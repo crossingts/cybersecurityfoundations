@@ -1,8 +1,8 @@
 ---
 description: >-
-  This book covers key theoretical and practical foundations designed to help
-  learners looking to enter the cybersecurity field choose a specialization and
-  plan their skill development journey
+  This book covers key theoretical and practical foundations designed to equip
+  students with the necessary skills to launch and plan a successful career in
+  cybersecurity
 ---
 
 # 🖌️ Practical Foundations in Cybersecurity

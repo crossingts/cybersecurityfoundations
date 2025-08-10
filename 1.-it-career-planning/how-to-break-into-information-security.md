@@ -125,7 +125,7 @@ With this option, the security analyst is likely to be doing a bit of both infra
 
 * GRC Analyst
 
-[The GRC approach to managing cybersecurity](the-grc-analyst-role.md)
+[The GRC approach to managing cybersecurity](the-grc-analyst-job-role.md)
 
 Possible enterprise information security analyst entry-level roles include Cybersecurity Analyst, System Analyst, Network Security Analyst, Jr. Network Security Engineer, Vulnerability Assessment Analyst, Penetration Tester/Ethical Hacker, GRC Analyst, and IT Auditor.
 

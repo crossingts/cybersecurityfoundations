@@ -33,7 +33,7 @@ This chapter introduces students to emerging IT and cybersecurity career paths a
 
 [The Security Operations Center (SOC) career path](the-security-operations-center-soc-career-path.md)
 
-[The GRC analyst role](the-grc-analyst-role.md)
+[The GRC analyst role](the-grc-analyst-job-role.md)
 
 [How to get CCNA certification](how-to-get-ccna-certification.md)
 

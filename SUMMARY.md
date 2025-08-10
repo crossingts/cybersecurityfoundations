@@ -9,7 +9,7 @@
 * [Job roles in IT and cybersecurity](1.-it-career-planning/job-roles-in-it-and-cybersecurity.md)
 * [How to break into information security](1.-it-career-planning/how-to-break-into-information-security.md)
 * [The Security Operations Center (SOC) career path](1.-it-career-planning/the-security-operations-center-soc-career-path.md)
-* [The GRC analyst role](1.-it-career-planning/the-grc-analyst-role.md)
+* [The GRC analyst job role](1.-it-career-planning/the-grc-analyst-job-role.md)
 * [How to get CCNA certification](1.-it-career-planning/how-to-get-ccna-certification.md)
 * [Job search strategy](1.-it-career-planning/job-search-strategy.md)
 

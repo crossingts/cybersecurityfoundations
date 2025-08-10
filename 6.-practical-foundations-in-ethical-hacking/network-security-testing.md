@@ -42,7 +42,7 @@ The most common parameters for monitoring network performance are throughput (kb
 
 • **Host and network firewalls** using such tools as ufw, iptables, nftables, pf (packet filter), OPNsense, and pfsense.
 
-• **Network security testing** - netadmins perform network security testing to assess and verify the threats and vulnerabilities of their network using such tools as Nmap, Nessus, OpenVAS, Netcat, Wireshark, and tcpdump.
+• **Network security testing** is performed to assess and verify threats and vulnerabilities of a network using such tools as Nmap, Nessus, OpenVAS, Netcat, Wireshark, and tcpdump.
 
 ### Network security testing
 
@@ -66,7 +66,9 @@ Tools used for network security testing can be loosely classified into the follo
 
 • Vulnerability scanners - OpenVAS (forked Nessus)
 
-• Packet analyzers (sniffers) - tcpdump
+• Packet analyzers (sniffers) - tcpdump and Wireshark
+
+\*Nmap, OpenVAS, and tcpdump are covered in the section [Penetration testing technologies](penetration-testing-technologies/). Wireshark is covered in the section [Defensive cybersecurity technologies](defensive-cybersecurity-technologies/).
 
 #### Network Scanners
 
@@ -77,15 +79,11 @@ identify the OS, the services that are running, and the associated security vuln
 present on the discovered hosts. Some scanners can also display the results in the form of\
 graphical reports. (Deveriya, 2005, p. 365)
 
-Some of the most popular open source network scanners are Nmap, Nessus, OpenVAS, and Netcat.
-
 • **Nmap** (Network Mapper): The Swiss army knife of network scanners; a popular and versatile tool. Nmap identifies live hosts, open ports, and what services are running.&#x20;
 
 • **Nessus**: A popular **vulnerability scanner** with the ability to regularly update the vulnerability database; comes preinstalled with many Linux live CD-ROMs; and has good reporting capability. Nessus turned commercial in October 2005 but a limited feature version is available (Nessus Essentials provides vulnerability scanning for up to 16 IP addresses per scanner).
 
 • **OpenVAS** (forked Nessus): Automatically scans live hosts, open ports, and running services for known vulnerabilities.
-
-• **Netcat**: A port scanner with the additional capability to read and write data across a network through TCP and UDP ports.
 
 #### Packet Analyzers
 

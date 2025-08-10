@@ -41,7 +41,7 @@ Ethical hacking is the cornerstone of security verification within organizations
 
 [The perils of unethical hacking](../the-perils-of-unethical-hacking.md)
 
-[What do ethical hackers do?](../what-do-ethical-hackers-do/)
+[What do ethical hackers do?](../what-do-ethical-hackers-do.md)
 
 [Defensive security vs offensive security](../defensive-security-vs-offensive-security.md)
 

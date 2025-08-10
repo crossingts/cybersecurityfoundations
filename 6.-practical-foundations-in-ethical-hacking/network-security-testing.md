@@ -77,17 +77,23 @@ identify the OS, the services that are running, and the associated security vuln
 present on the discovered hosts. Some scanners can also display the results in the form of\
 graphical reports. (Deveriya, 2005, p. 365)
 
-Some of the most popular open source network scanners are Nmap, Nessus, and Netcat.
+Some of the most popular open source network scanners are Nmap, Nessus, OpenVAS, and Netcat.
 
-• **Nmap** (Network Mapper): The Swiss army knife of network scanners; a popular and versatile tool.
+• **Nmap** (Network Mapper): The Swiss army knife of network scanners; a popular and versatile tool. Nmap identifies live hosts, open ports, and what services are running.&#x20;
 
 • **Nessus**: A popular **vulnerability scanner** with the ability to regularly update the vulnerability database; comes preinstalled with many Linux live CD-ROMs; and has good reporting capability. Nessus turned commercial in October 2005 but a limited feature version is available (Nessus Essentials provides vulnerability scanning for up to 16 IP addresses per scanner).
+
+• **OpenVAS** (forked Nessus): Automatically scans live hosts, open ports, and running services for known vulnerabilities.
 
 • **Netcat**: A port scanner with the additional capability to read and write data across a network through TCP and UDP ports.
 
 #### Packet Analyzers
 
 Packet analyzers are software or hardware devices that capture and analyze the data flowing through the network ... Many packet analyzers provide capabilities to filter, store, and analyze the captured data. In fact, most network intrusion detection systems (NIDS) are packet analyzers that watch for peculiar traffic patterns that are unique to network attacks. Packet analyzers work at Layers 1 and 2 of the OSI model but can also decode data at higher layers. This feature enables networking professionals to have a cross-sectional view of the data flowing through the network in real time. The ability to slice and view the raw data flowing through the wires is important when troubleshooting. Such views also help networking professionals to learn and understand the functioning of various protocols and applications. The views also provide clear proof that the network and its components are operational. (Deveriya, 2005, p. 386)
+
+• **tcpdump**: A powerful command-line packet analyzer that captures and displays network traffic in real time, allowing deep inspection of packets for troubleshooting or security analysis.
+
+• **Wireshark**: A versatile network protocol analyzer that captures and interactively displays traffic on a network in real time. With its graphical interface and deep inspection capabilities, Wireshark allows users to analyze packet data for troubleshooting, security analysis, and protocol development. It supports hundreds of protocols and offers powerful filtering and visualization tools.
 
 ### Key takeaways
 

@@ -117,6 +117,7 @@
 * [Common attack targets](6.-practical-foundations-in-ethical-hacking/common-attack-targets/README.md)
   * [Attack types (CEH/EC-Council)](6.-practical-foundations-in-ethical-hacking/common-attack-targets/attack-types-ceh-ec-council.md)
   * [Attack target vs attack vector](6.-practical-foundations-in-ethical-hacking/common-attack-targets/attack-target-vs-attack-vector.md)
+  * [Misconfigured security settings](6.-practical-foundations-in-ethical-hacking/common-attack-targets/misconfigured-security-settings.md)
 * [Setting up a cybersecurity lab](6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/README.md)
   * [nftables](6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/nftables.md)
   * [OPNsense](6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/opnsense.md)

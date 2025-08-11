@@ -22,6 +22,8 @@ This exercise will guide you through setting up a fully functional cybersecurity
 
 nftables (firewall) + Suricata (IDS/IPS) + web server (Apache) + database server (MySQL) + Wazuh (SIEM/XDR) + Kali Linux
 
+Inspiration/example set up:
+
 Cybersecurity virtual lab in VMware Fusion on M1 Mac
 
 * [Lab design and configuring interfaces](https://drive.proton.me/urls/TM4PKAVGM4#48yHrBXTk0nA)
@@ -37,7 +39,7 @@ Cybersecurity virtual lab in VMware Fusion on M1 Mac
 
 OPNsense (firewall) + Suricata (IDS/IPS) + web server (Apache) and/or database server (MySQL) + Wazuh (SIEM/XDR) + Kali Linux
 
-Inspiration/example set up: YouTube playlist (16 videos +150,000 views)
+Inspiration/example set up (YouTube playlist. 16 videos):
 
 [Virtual Cyber Security Lab Building Series by LS111 Cyber Security Education](https://www.youtube.com/playlist?list=PLjjkJroii8DDb0QZpWLo978VXcLp8-xW3)
 

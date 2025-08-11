@@ -2,13 +2,13 @@
 description: This section discusses major penetration testing methodologies and frameworks
 ---
 
-# Pentesting methodologies and frameworks
+# Penetration testing methodologies and frameworks
 
 ## Learning objectives
 
 * Become familiar with major penetration testing methodologies and frameworks
 
-This section discusses major penetration testing methodologies (e.g., OSSTMM, NIST SP 800-115, ISSAF, and PTES) and frameworks (e.g., OWASP Testing Guide and MITRE ATT\&CK/cyber kill chain).
+This section discusses major penetration testing methodologies (e.g., OSSTMM, NIST SP 800-115, PTES, and ISSAF) and frameworks (e.g., OWASP Testing Guide and MITRE ATT\&CK/cyber kill chain).
 
 ### Topics covered in this section
 
@@ -19,7 +19,7 @@ This section discusses major penetration testing methodologies (e.g., OSSTMM, NI
 
 Security assessments follow structured methodologies to ensure thorough testing. Below are the most widely used penetration testing frameworks and their key features and use cases.
 
-#### 1. OSSTMM (Open Source Security Testing Methodology Manual)
+#### OSSTMM (Open Source Security Testing Methodology Manual)
 
 * **Focus:** Scientific, rules-based security testing (not just pentesting).
 * **Key Features:**
@@ -28,15 +28,15 @@ Security assessments follow structured methodologies to ensure thorough testing.
   * Emphasizes **legal compliance and safety**.
 * **Best For:** Comprehensive audits beyond just hacking (e.g., compliance, physical security).
 
-#### 2. OWASP Testing Guide
+#### NIST SP 800-115 (Technical Guide to Information Security Testing)
 
-* **Focus:** Web application security.
+* **Focus:** Aligns with **NIST Cybersecurity Framework (CSF)**.
 * **Key Features:**
-  * Detailed checklist for **OWASP Top 10 vulnerabilities** (SQLi, XSS, CSRF, etc.).
-  * Covers **APIs, serverless, and cloud apps**.
-* **Best For:** Web app pentesters, DevSecOps teams.
+  * Covers **vulnerability scanning, pentesting, and social engineering**.
+  * Used heavily in **government and compliance (e.g., FISMA)**.
+* **Best For:** Organizations needing **regulatory compliance**.
 
-#### 3. PTES (Penetration Testing Execution Standard)
+#### PTES (Penetration Testing Execution Standard)
 
 * **Focus:** Standardized phases for pentesting.
 * **7 Phases:**
@@ -49,15 +49,7 @@ Security assessments follow structured methodologies to ensure thorough testing.
   7. **Reporting** (Remediation guidance).
 * **Best For:** General pentesting (network, web, cloud).
 
-#### 4. NIST SP 800-115 (Technical Guide to Information Security Testing)
-
-* **Focus:** Aligns with **NIST Cybersecurity Framework (CSF)**.
-* **Key Features:**
-  * Covers **vulnerability scanning, pentesting, and social engineering**.
-  * Used heavily in **government and compliance (e.g., FISMA)**.
-* **Best For:** Organizations needing **regulatory compliance**.
-
-#### 5. ISSAF (Information Systems Security Assessment Framework)
+#### ISSAF (Information Systems Security Assessment Framework)
 
 * **Focus:** Step-by-step pentesting (older but still referenced).
 * **Key Features:**
@@ -65,7 +57,15 @@ Security assessments follow structured methodologies to ensure thorough testing.
   * Covers **network, web apps, and databases**.
 * **Best For:** Learning historical pentesting methods.
 
-#### 6. MITRE ATT\&CK-Based Testing
+#### OWASP Testing Guide
+
+* **Focus:** Web application security.
+* **Key Features:**
+  * Detailed checklist for **OWASP Top 10 vulnerabilities** (SQLi, XSS, CSRF, etc.).
+  * Covers **APIs, serverless, and cloud apps**.
+* **Best For:** Web app pentesters, DevSecOps teams.
+
+#### MITRE ATT\&CK-Based Testing
 
 * **Focus:** Emulating **real-world adversary TTPs** (Tactics, Techniques, Procedures).
 * **Key Features:**
@@ -78,10 +78,10 @@ Security assessments follow structured methodologies to ensure thorough testing.
 | Methodology       | Scope                             | Strengths                   | Weaknesses                 | Best Used For                    |
 | ----------------- | --------------------------------- | --------------------------- | -------------------------- | -------------------------------- |
 | **OSSTMM**        | Broad (physical, networks, human) | Scientific, measurable      | Less focus on exploitation | Compliance, full-spectrum audits |
-| **OWASP**         | Web apps                          | Covers OWASP Top 10         | Limited to apps            | Web security                     |
-| **PTES**          | General pentesting                | Structured phases           | Not industry-enforced      | Network/web pentests             |
 | **NIST 800-115**  | Compliance-focused                | Aligns with NIST CSF        | Less technical depth       | Government/regulated industries  |
+| **PTES**          | General pentesting                | Structured phases           | Not industry-enforced      | Network/web pentests             |
 | **ISSAF**         | Historical pentesting             | Detailed exploitation steps | Outdated in parts          | Learning basics                  |
+| **OWASP**         | Web apps                          | Covers OWASP Top 10         | Limited to apps            | Web security                     |
 | **MITRE ATT\&CK** | Adversary emulation               | Real-world TTPs             | Not a full methodology     | Red teaming, threat hunting      |
 
 **Which Should You Use?**
@@ -194,5 +194,5 @@ The framework organizes threats into **matrices** for different environments:
 
 ### Key takeaways
 
-* Major penetration testing methodologies include OSSTMM, NIST SP 800-115, ISSAF, and PTES
+* Major penetration testing methodologies include OSSTMM, NIST SP 800-115, PTES, and ISSAF
 * Major penetration testing frameworks include OWASP Testing Guide and MITRE ATT\&CK/cyber kill chain

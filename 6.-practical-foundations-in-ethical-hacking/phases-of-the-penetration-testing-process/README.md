@@ -15,10 +15,15 @@ This section describes phases of the penetration testing process—planning, rec
 
 ## Topics covered in this section
 
-* **Steps of the penetration testing process**
+* **Phases of the penetration testing process**
+* Reconnaissance
+* Scanning and enumeration
+* Gaining access
+* Maintaining access
+* Covering tracks
 * **The penetration test report**
 
-### Steps of the penetration testing process
+### Phases of the penetration testing process
 
 Penetration tests have a tightly defined scope and are time sensitive. Penetration tests should be seen as targeted exercises. The scope of test activities and test objectives, a schedule for the test activities, and the specific machines or applications to be tested are all specified upfront in a contractual agreement between the client and ethical hacker during the planning phase. Each test objective will have its own set of parameters and processes. The contractual agreement specifies what is to be tested and how it is to be tested. The agreement,
 
@@ -38,7 +43,7 @@ Beyond the planning or preparation phase, Walker (2017) proposes five main phase
 
 The ensuing discussion leans considerably on the five penetration testing phases as presented in Walker (2012, 2017), as it provides a comprehensive foundational framework for understanding the penetration testing process.
 
-### Phase: Reconnaissance
+### Reconnaissance
 
 Penetration tests begin with an extensive information gathering phase to build a profile of the target user or system to determine entry points into a computer system. In OSINT, “the penetration tester uncovers possible weaknesses and entry points within the security posture of the organization, including the network, applications, website and wireless networks, physical facilities, cloud-based systems, and employees” (cipher.com).&#x20;
 
@@ -56,7 +61,7 @@ Table 17: Five Phases of Reconnaissance (Faircloth, 2011, p. 33)
 
 A key argument is that there is no clear cutoff point between passive and active intelligence gathering techniques. Wheeler (2011) notes, “Although passive testing sounds harmless, beware that the definition of passive is not always consistent across the field. There are definitely gray areas to be aware of.” The confusion includes whether the use of third parties for services is considered passive testing (e.g., Ollmann, 2007), whether the process of testing can be traced back to the tester, and whether the information gathering can be performed without the knowledge of the organization under investigation (i.e., remains stealthy).
 
-### Phase: Scanning and enumeration
+### Scanning and enumeration
 
 Security analysts now apply the information they gathered in recon towards gathering more in-depth information on the targets.
 
@@ -93,13 +98,13 @@ Passive network sniffers can monitor and capture data packets passing through a 
 | Broad, network-level discovery            | Targeted, service-specific probing                          |
 | Tools: `nmap`, `masscan`, `arp-scan`      | Tools: `enum4linux`, `Metasploit aux modules`, `ldapsearch` |
 
-### Phase: Gaining access
+### Gaining access
 
 Now true attacks are leveled against the targets enumerated in the second phase.
 
 These attacks can be as simple as accessing an open and nonsecured wireless access point and then manipulating it for whatever purpose, or as complex as writing and delivering a buffer overflow or SQL injection against a web application. (Walker, 2012, p. 10)
 
-### Phase: Maintaining access
+### Maintaining access
 
 Now hackers attempt to ensure they have a way back into the compromised system.
 
@@ -107,7 +112,7 @@ Back doors are left open by the attacker for future use—especially if the syst
 
 The concept of “escalation of privileges” between phases 3 and 4 refers to actions taken by a hacker to promote his access to root or administrative levels.
 
-### Phase: Covering tracks
+### Covering tracks
 
 Now, in the final phase of security assessment, hackers attempt to conceal their presence in the compromised machines to avoid detection.
 

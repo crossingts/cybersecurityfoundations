@@ -26,7 +26,7 @@ This section sheds light on the GRC analyst role as a career choice, including h
 
 ### How to get into GRC <a href="#ember510" id="ember510"></a>
 
-GRC Analysts ensure organizational compliance with regulations, assess risks, and align governance frameworks with business objectives. You can get into GRC through a security analyst role, a cyber defender role (e.g., SOC analyst), a red teaming role, a policy analyst role, a risk analyst or risk manager role, a compliance auditor role, or a Quality Assurance role, to name a few. GRC analyst can be your first job in IT.
+GRC analysts ensure organizational compliance with regulations, assess risks, and align governance frameworks with business objectives. You can get into GRC through a security analyst role, a cyber defender role (e.g., SOC analyst), a red teaming role, a policy analyst role, a risk analyst or risk manager role, a compliance auditor role, or a Quality Assurance role, to name a few. GRC analyst can be your first job in IT.
 
 GRC analyst relevant job titles include Compliance Analyst, IT Auditor, Risk and Compliance Analyst, Cyber Audit Analyst, GRC Specialist, and GRC manager.
 
@@ -38,10 +38,10 @@ As a GRC professional, you’re interacting and coordinating regulatory complian
 
 ### Salient risk management frameworks <a href="#ember516" id="ember516"></a>
 
-* NIST Cybersecurity Framework (CSF) as an information security program framework and NIST SP 800-30 to risk assess it
-* NIST SP 800-37 and select the appropriate subset of security controls from the control catalog in NIST SP 800-53
-* SOC 2 Cybersecurity Framework is a good RMF – AICPA maps SOC 2 to all sorts of frameworks
-* Other: ISO/IEC 27001, CMMC
+* NIST Cybersecurity Framework (CSF) as an information security program framework and NIST SP 800-30 (Guide for Conducting Risk Assessments) to risk assess it
+* NIST SP 800-37 (Risk Management Framework for Information Systems and Organizations: A System Life Cycle Approach for Security and Privacy) and the appropriate subset of security controls from the control catalog in NIST SP 800-53 (Security and Privacy Controls for Information Systems and Organizations)
+* SOC 2 Cybersecurity Framework as a RMF – AICPA (American Institute of Certified Public Accountants) maps SOC 2 to various other frameworks
+* Other: ISO/IEC 27001 Information Security Management System (ISMS), CMMC (DoD)
 
 ### Key GRC analyst job activities/responsibilities <a href="#ember518" id="ember518"></a>
 

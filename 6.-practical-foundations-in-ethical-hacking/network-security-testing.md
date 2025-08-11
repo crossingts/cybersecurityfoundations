@@ -89,9 +89,58 @@ graphical reports. (Deveriya, 2005, p. 365)
 
 Packet analyzers are software or hardware devices that capture and analyze the data flowing through the network ... Many packet analyzers provide capabilities to filter, store, and analyze the captured data. In fact, most network intrusion detection systems (NIDS) are packet analyzers that watch for peculiar traffic patterns that are unique to network attacks. Packet analyzers work at Layers 1 and 2 of the OSI model but can also decode data at higher layers. This feature enables networking professionals to have a cross-sectional view of the data flowing through the network in real time. The ability to slice and view the raw data flowing through the wires is important when troubleshooting. Such views also help networking professionals to learn and understand the functioning of various protocols and applications. The views also provide clear proof that the network and its components are operational. (Deveriya, 2005, p. 386)
 
+• **Wireshark**: A versatile network protocol analyzer that captures and interactively displays traffic on a network in real time. With its graphical interface and deep inspection capabilities, Wireshark allows users to analyze packet data for troubleshooting, security analysis, and protocol development. It supports hundreds of protocols and offers powerful filtering and visualization tools.
+
 • **tcpdump**: A powerful command-line packet analyzer that captures and displays network traffic in real time, allowing deep inspection of packets for troubleshooting or security analysis.
 
-• **Wireshark**: A versatile network protocol analyzer that captures and interactively displays traffic on a network in real time. With its graphical interface and deep inspection capabilities, Wireshark allows users to analyze packet data for troubleshooting, security analysis, and protocol development. It supports hundreds of protocols and offers powerful filtering and visualization tools.
+Deep inspection involves analyzing not just Layer 3 (IP) and Layer 4 (TCP/UDP) headers, but also higher-layer protocols (L5-L7)—like HTTP requests, DNS queries, TLS handshakes, or even application-specific data (e.g., SSH encryption types, SMB file-sharing commands).
+
+Layers 3-4 basic inspection of packets includes source/destination IPs, ports, TCP flags (SYN/ACK), packet size, and TTL (e.g., `tcpdump -i eth0 'tcp port 80'` shows HTTP traffic metadata).
+
+Layers 5-7 deep inspection of packets includes:
+
+* **Protocol dissection**: Decodes protocols like HTTP (`Host:` headers), DNS (`A? example.com`), FTP/SSH commands.
+* **Payload analysis**: Displays partial/full payloads (e.g., `-X` flag for hex/ASCII output).
+* Example: `tcpdump -A -s0 'port 443'` (attempts to show plaintext parts of TLS/SSL traffic).
+
+**Basic vs. Deep Packet Inspection: tcpdump vs. Wireshark**
+
+| **Feature**                  | **tcpdump (CLI)**                                                               | **Wireshark (GUI)**                                                                   |
+| ---------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| **Basic Inspection (L3-L4)** | ✅ IPs, ports, TCP/UDP flags, packet size                                        | ✅ Same as tcpdump, but with color-coding                                              |
+| **Deep Inspection (L5-L7)**  | ❗ Limited (requires `-A`/`-X` flags, no automatic decoding)                     | ✅ Full protocol dissection (HTTP, DNS, TLS, etc.)                                     |
+| **Decryption Support**       | ❌ No built-in decryption                                                        | ✅ Supports TLS (with keys), WEP/WPA, etc.                                             |
+| **Filtering**                | ✅ BPF syntax (e.g., `host 1.1.1.1`)                                             | ✅ Advanced display + capture filters                                                  |
+| **Stream Reassembly**        | ❌ Manual (hard to track streams)                                                | ✅ Reconstructs HTTP, TCP, VoIP streams                                                |
+| **Expert Analysis**          | ❌ Minimal (manual interpretation)                                               | ✅ Warnings/errors (retransmissions, etc.)                                             |
+| **Export/Reporting**         | ✅ Text/PCAP only                                                                | ✅ PCAP, CSV, JSON, graphs, statistics                                                 |
+| **Typical Application**      | Quick checks on servers, minimal resource usage, or piping data to other tools. | Forensics, complex troubleshooting, or when you need protocol decoding/visualization. |
+
+**Key Clarifications**
+
+tcpdump is lightweight and fast for basic L3-L4 inspection (e.g., "Show me all traffic to port 443").
+
+*   Example:
+
+    sh
+
+    ```
+    tcpdump -i eth0 'tcp port 443' -X
+    ```
+
+    (Shows TCP metadata + hex/ASCII payload snippets.)
+
+tcpdump cannot decrypt modern encrypted traffic (e.g., HTTPS), but it _can_ expose:
+
+* Unencrypted protocols (HTTP, SMTP).
+* Protocol anomalies (e.g., suspicious TCP retransmissions).
+* Metadata (e.g., TLS ClientHello SNI, DNS exfiltration).
+
+Wireshark excels at deep L5-L7 analysis (e.g., "Decode this HTTP/2 stream" or "Find malformed DNS packets").
+
+* Example:
+  * Right-click a packet → Follow → TCP Stream (reconstructs sessions).
+  * Statistics → Protocol Hierarchy (shows traffic breakdown by protocol).
 
 ### Key takeaways
 

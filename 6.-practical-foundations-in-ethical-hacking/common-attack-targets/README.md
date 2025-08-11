@@ -6,7 +6,12 @@ description: >-
 
 # Common attack targets
 
-• Identify common attack targets, including OS vulnerabilities, shrink-wrap code, misconfigurations and default credentials, and OWASP Top 10 vulnerabilities such as cross-site scripting (XSS) and SQL injection (SQLi).
+## Topics covered in this section
+
+* **NIST SP 800-115's attack categories**
+* **Expanded attack categories**
+
+### NIST SP 800-115's attack categories
 
 Most vulnerabilities exploited by penetration testing fall into the following categories (NIST SP 800-115, 2008, pp. 5-4-5-5):
 
@@ -48,9 +53,10 @@ Most vulnerabilities exploited by penetration testing fall into the following ca
    * **Least privilege** (permissions, file descriptors).
    * **Input sanitization** (SQLi/XSS prevention).
 
-***
-
 **Comparison to OWASP/Other Frameworks**
 
 * **NIST SP 800-115** focuses on **technical vulnerabilities** (e.g., kernel flaws), while OWASP Top 10 emphasizes **web-specific risks**.
 * **Shared themes**: Input validation, misconfigurations appear in both.
+
+***
+

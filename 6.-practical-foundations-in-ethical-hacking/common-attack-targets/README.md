@@ -58,5 +58,6 @@ Most vulnerabilities exploited by penetration testing fall into the following ca
 * **NIST SP 800-115** focuses on **technical vulnerabilities** (e.g., kernel flaws), while OWASP Top 10 emphasizes **web-specific risks**.
 * **Shared themes**: Input validation, misconfigurations appear in both.
 
-***
+### References
 
+NIST Special Publication 800-115: Technical Guide to Information Security Testing and Assessment (NIST 800-115). Retrieved January 21, 2020, from http://csrc.nist.gov/publications/nistpubs/800-115/SP800-115.pdf

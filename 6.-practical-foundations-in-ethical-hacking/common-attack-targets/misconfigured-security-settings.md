@@ -2,8 +2,8 @@
 
 ## Topics covered
 
-* Misconfigured security settings
-* Insecure default settings
+* **Misconfigured security settings**
+* **Insecure default settings**
 
 ### Misconfigured security settings
 

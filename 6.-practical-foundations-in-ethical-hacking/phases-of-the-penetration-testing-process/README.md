@@ -16,11 +16,11 @@ This section describes phases of the penetration testing process—planning, rec
 ## Topics covered in this section
 
 * **Phases of the penetration testing process**
-* Reconnaissance
-* Scanning and enumeration
-* Gaining access
-* Maintaining access
-* Covering tracks
+* **Reconnaissance**
+* **Scanning and enumeration**
+* **Gaining access**
+* **Maintaining access**
+* **Covering tracks**
 * **The penetration test report**
 
 ### Phases of the penetration testing process

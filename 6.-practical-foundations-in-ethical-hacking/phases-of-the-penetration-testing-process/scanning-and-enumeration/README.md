@@ -1,6 +1,6 @@
 # Scanning and enumeration
 
-### Scanning for Targets
+### Introduction
 
 Scanning is "the process of discovering systems on the network and taking a look at what open ports and applications may be running" (Walker, 2012, p. 86).&#x20;
 

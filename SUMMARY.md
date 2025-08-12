@@ -102,6 +102,7 @@
   * [Scanning and enumeration](6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/scanning-and-enumeration/README.md)
     * [Scanning and enumeration tools](6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/scanning-and-enumeration/scanning-and-enumeration-tools.md)
     * [Scanning and enumeration techniques and tools](6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/scanning-and-enumeration/scanning-and-enumeration-techniques-and-tools.md)
+  * [Gaining access (attacking a system)](6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/gaining-access-attacking-a-system.md)
   * [Passive discovery method](6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/passive-discovery-method.md)
 * [Types of penetration testing](6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing.md)
 * [Penetration testing methodologies and frameworks](6.-practical-foundations-in-ethical-hacking/penetration-testing-methodologies-and-frameworks/README.md)

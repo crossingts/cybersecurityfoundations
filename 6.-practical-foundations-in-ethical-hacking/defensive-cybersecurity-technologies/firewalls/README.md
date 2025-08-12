@@ -6,13 +6,11 @@
 * **Stateful firewalls: Definition and open source examples**
 * **Stateless vs stateful firewalls**
 * **Web Application Firewalls (WAFs)**
-* **Popular open source firewalls**
-* **Technology focus: nftables**
-* **Technology focus: OPNsense**
+* **Host-based, network-based, and hybrid firewalls**
 
 ### Core packet-filtering firewall technologies
 
-Packet-filtering firewall technologies such as iptables and pfilter (PF) operate at the network level (Layer 3/4). These tools allow administrators to define rules for allowing, blocking, or modifying traffic based on IPs, ports, protocols, and connection states.&#x20;
+Packet-filtering firewall technologies such as iptables and pfilter (PF) operate at the network level (Layer 3/4). These tools allow administrators to define rules for allowing, blocking, or modifying traffic based on IPs, ports, protocols, and connection states.
 
 **Core Packet-Filtering Firewall Technologies (Open Source Except WFP)**
 
@@ -239,11 +237,9 @@ WAFs can be **host-based and network-based**, depending on deployment:
 * **Host WAF:** Protects a single service (e.g., one NGINX instance).
 * **Network WAF:** Protects all traffic before it reaches servers (e.g., a reverse proxy).
 
-### Popular open source firewalls
+### Host-based, network-based, and hybrid firewalls
 
-The following firewall technologies (except WFP) are open source: iptables, nftables, ufw, PF (Packet Filter), ipfw, firewalld, OPNsense, and pfSense (CE), snort, suricata, zeek, Windows Filtering Platform (WFP).
-
-Here is a categorized table of popular open-source firewall technologies organized by **Host**, **Network**, and **Hybrid** firewalls, along with their key characteristics:
+The following firewall technologies (except WFP) are open source: iptables, nftables, ufw, PF (Packet Filter), ipfw, firewalld, OPNsense, and pfSense (CE), Snort, Suricata, Zeek, Windows Filtering Platform (WFP).
 
 **1. Host-Based Firewalls**
 

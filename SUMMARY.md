@@ -108,6 +108,8 @@
   * [Vulnerability Assessment Integration with Threat Intelligence](6.-practical-foundations-in-ethical-hacking/penetration-testing-methodologies-and-frameworks/vulnerability-assessment-integration-with-threat-intelligence.md)
 * [Penetration testing technologies](6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/README.md)
   * [Nmap and OpenVAS](6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/nmap-and-openvas.md)
+  * [Nmap cheat sheet for netadmins/sysadmins](6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/nmap-cheat-sheet-for-netadmins-sysadmins.md)
+  * [OpenVAS cheat sheet for netadmins/sysadmins](6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/openvas-cheat-sheet-for-netadmins-sysadmins.md)
   * [tcpdump: Defensive or offensive?](6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/tcpdump-defensive-or-offensive.md)
   * [tcpdump](6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/tcpdump.md)
   * [Metasploit](6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/metasploit.md)

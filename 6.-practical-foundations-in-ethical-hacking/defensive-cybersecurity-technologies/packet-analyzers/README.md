@@ -2,12 +2,12 @@
 
 ## Topics covered
 
-* **Packet analyzers background**
-* **Popular open source packet analyzers**
-* **Technology focus: Wireshark**
-* **Technology focus: tcpdump**
+* **Introduction**
+* **BPF (Berkeley Packet Filter) syntax in tcpdump**
+* **Decryption for TLS/SSL traffic using Wireshark**
+* **Packet filter recommendations based on use cases**
 
-### Packet analyzers background
+### Introduction
 
 Packet analyzers, also known as network sniffers or protocol analyzers or network analyzers, are essential tools for monitoring, troubleshooting, and securing network traffic. Packet analyzers capture raw data packets traversing a network, decode their headers and payloads, and present them in a human-readable format.&#x20;
 
@@ -17,9 +17,9 @@ Active techniques to periodically scan the network have two disadvantages. First
 
 Understanding packet analyzers is crucial for diagnosing connectivity issues, verifying routing and switching behavior, and detecting security threats such as unauthorized access or malware. Packet analyzers operate at different layers of the OSI model, with some focusing on low-level frame analysis (Ethernet, ARP) while others specialize in application-layer protocols (HTTP, DNS, VoIP).
 
-Modern packet analyzers support filtering (e.g., BPF syntax in tcpdump), statistical analysis (e.g., throughput, latency), and decryption (for TLS/SSL traffic with the right keys). Some packet analyzers, like Wireshark, provide deep protocol dissection, while others, like Zeek and Suricata, focus on behavioral analysis and intrusion detection. Whether used for network forensics, performance tuning, or security auditing, packet analyzers are indispensable for network engineers, cybersecurity professionals, and system administrators.
+Modern packet analyzers support filtering (e.g., BPF syntax in tcpdump), decryption (for TLS/SSL traffic with the right keys), and statistical analysis (e.g., throughput, latency). Some packet analyzers, like Wireshark, provide deep protocol dissection, while others, like Zeek and Suricata, focus on behavioral analysis and intrusion detection. Whether used for network forensics, performance tuning, or security auditing, packet analyzers are indispensable for network engineers, cybersecurity professionals, and system administrators.
 
-#### **BPF (Berkeley Packet Filter)**
+### **BPF (Berkeley Packet Filter) syntax in tcpdump**
 
 BPF is a highly efficient packet-filtering mechanism used by tools like `tcpdump`, Wireshark, and Linux's `libpcap` to capture only the network traffic that matches specific criteria. Instead of capturing all packets and filtering them later (which is resource-intensive), BPF applies filters at the kernel level, reducing CPU and memory usage.
 
@@ -41,9 +41,9 @@ tcpdump 'udp and not port 53'               # Captures UDP traffic except DNS
 
 BPF is crucial for efficient packet analysis, especially in high-traffic networks.
 
-**Decryption for TLS/SSL Traffic**
+### **Decryption for TLS/SSL traffic using Wireshark**
 
-Modern encrypted protocols like **TLS (used in HTTPS, VPNs, etc.)** prevent packet analyzers from inspecting payloads by default. However, some tools (like Wireshark) can **decrypt TLS/SSL traffic** if provided with the necessary decryption keys.
+Modern encrypted protocols like **TLS (used in HTTPS, VPNs, etc.)** prevent packet analyzers from inspecting payloads by default. However, some tools such as Wireshark can **decrypt TLS/SSL traffic** if provided with the necessary decryption keys.
 
 **What Are The Necessary Decryption Keys?**
 
@@ -75,60 +75,7 @@ Then, in Wireshark:\
 * **Cannot decrypt without keys**: If traffic uses **perfect forward secrecy (PFS)**, you must capture keys live (not retroactively).
 * **Not all protocols supported**: Some custom encryption (e.g., proprietary VPNs) may not be decryptable.
 
-### Popular open source packet analyzers
-
-Popular open source packet analyzers ranked by approximate popularity and usage, along with their key features:
-
-#### **1. Wireshark**
-
-* **Most widely used** GUI-based packet analyzer.
-* Supports **deep inspection** of hundreds of protocols.
-* Live capture & offline analysis.
-* Cross-platform (Windows, Linux, macOS).
-* Advanced filtering (BPF syntax) and decryption support (TLS, SSL).
-
-#### **2. TShark (CLI version of Wireshark)**
-
-* Command-line equivalent of Wireshark.
-* Ideal for **scripting & automation**.
-* Same powerful dissection capabilities as Wireshark.
-* Output in JSON, CSV, XML, and other formats.
-
-#### **3. tcpdump**
-
-* **Lightweight CLI packet sniffer** for Unix-like systems.
-* Uses **BPF (Berkeley Packet Filter)** for efficient capture.
-* Minimal overhead, great for remote servers.
-* Output can be piped into Wireshark for analysis.
-
-#### **4. Zeek (formerly Bro)**
-
-* **Network security monitoring** tool, not just a sniffer.
-* Focuses on **behavioral analysis** (e.g., detecting anomalies).
-* Generates high-level logs (HTTP, DNS, SSH) instead of raw packets.
-* Scriptable for custom traffic analysis.
-
-#### **5. Suricata**
-
-* **Real-time IDS/IPS (Intrusion Detection/Prevention System)**.
-* Multi-threaded for **high-speed traffic analysis**.
-* Supports **automated threat detection** (signature & anomaly-based).
-* Can export PCAPs for further analysis.
-
-#### **6. Snort**
-
-* One of the oldest **open-source IDS/IPS** tools.
-* Rule-based detection (malware, exploits, port scans).
-* Can work in **sniffer, logger, or IPS mode**.
-* Large community rule sets available.
-
-#### **7. Arkime (formerly Moloch)**
-
-* **Large-scale packet capture & indexing** (for full traffic retention).
-* Web-based interface for searching and analyzing stored PCAPs.
-* Used by enterprises and ISPs for **forensic analysis**.
-
-#### **Recommendations Based on Use Cases**
+### **Packet filter recommendations based on use cases**
 
 | **Use Case**                      | **Best Tool(s)**           | **Why?**                                                                         |
 | --------------------------------- | -------------------------- | -------------------------------------------------------------------------------- |

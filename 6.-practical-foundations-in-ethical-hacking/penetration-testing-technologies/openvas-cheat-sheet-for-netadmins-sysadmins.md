@@ -1,6 +1,13 @@
 # OpenVAS cheat sheet for netadmins/sysadmins
 
-A cheat sheet for OpenVAS focused on its application in scanning hosts, open ports, and running services for known vulnerabilities for use by netadmins/sysadmins.
+A concise guide to vulnerability scanning, assessment, and management with OpenVAS—designed for netadmins and sysadmins to identify security risks, prioritize patching, and harden systems.
+
+This cheat sheet covers:
+
+✔ **Installation & initial setup**\
+✔ **Scanning targets & scheduling tasks**\
+✔ **Report analysis & vulnerability management**\
+✔ **CLI usage & troubleshooting tips**
 
 ## **OpenVAS Cheat Sheet for NetAdmins & SysAdmins**
 

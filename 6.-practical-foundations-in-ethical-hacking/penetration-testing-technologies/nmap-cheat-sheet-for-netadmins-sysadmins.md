@@ -1,6 +1,13 @@
 # Nmap cheat sheet for netadmins/sysadmins
 
-A cheat sheet for Nmap focused on its application in active host discovery, port scanning, and enumeration for use by netadmins/sysadmins.
+The ultimate reference for network exploration, security auditing, and system enumeration—tailored for netadmins and sysadmins to map networks, discover services, and assess vulnerabilities efficiently.
+
+This cheat sheet covers:
+
+✔ **Host discovery techniques**\
+✔ **Port scanning & service detection**\
+✔ **OS fingerprinting & script automation**\
+✔ **Stealth & evasion tactics**
 
 ## **Nmap Cheat Sheet for NetAdmins & SysAdmins**
 

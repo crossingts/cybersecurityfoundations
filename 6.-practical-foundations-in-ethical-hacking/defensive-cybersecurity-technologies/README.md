@@ -253,6 +253,7 @@ Technology focus: Wazuh (SIEM/XDR).
   * **Cloud/SaaS integration** (AWS, Azure, GCP).
   * **Centralized dashboard** (Elastic Stack/Kibana).
   * **Active response** (e.g., blocking malicious IPs).
+* **Use Case**: Unified SIEM + endpoint security with compliance monitoring and threat detection.
 
 #### **2. TheHive**
 
@@ -262,6 +263,7 @@ Technology focus: Wazuh (SIEM/XDR).
   * **Integrates with MISP** (threat intelligence).
   * **Automated workflows** for incident handling.
   * **No detection capabilities** (relies on other tools like Wazuh/Suricata).
+* **Use Case**: Collaborative incident response platform for SOC teams.
 
 #### **3. Zeek (formerly Bro)**
 
@@ -271,6 +273,7 @@ Technology focus: Wazuh (SIEM/XDR).
   * **Behavioral detection** (e.g., C2 traffic, anomalies).
   * **Detailed logs** (`.log` files) for forensics.
   * **No built-in SIEM/EDR** (passive monitoring).
+* **Use Case**: Network traffic analysis and behavioral threat detection via protocol logs.
 
 #### **4. OSSEC**
 
@@ -280,6 +283,7 @@ Technology focus: Wazuh (SIEM/XDR).
   * **Active response** (e.g., block IPs after brute-force attempts).
   * **No native GUI** (CLI-based, but Wazuh extends it).
   * **Lightweight**, best for endpoint monitoring.
+* **Use Case**: Lightweight HIDS for log analysis, file integrity, and active response.
 
 #### **5. Suricata**
 
@@ -290,6 +294,7 @@ Technology focus: Wazuh (SIEM/XDR).
   * **EVE JSON logs** for structured data.
   * **Can act as IPS** (inline blocking).
   * **Not an EDR** (focused on network traffic).
+* **Use Case**: High-performance NIDS/NIPS with file extraction and IPS capabilities.
 
 #### **6. Velociraptor**
 
@@ -299,6 +304,7 @@ Technology focus: Wazuh (SIEM/XDR).
   * **Hunt for threats** (live query endpoints with VQL).
   * **Memory forensics**, **artifact collection**.
   * **No built-in SIEM** (but integrates with other tools).
+* **Use Case**: Endpoint hunting and forensic investigation with live querying.
 
 **SIEM/EDR Comparison Table**
 
@@ -343,6 +349,7 @@ Technology focus: Wireshark and tcpdump.
   * **Visualization** (flow graphs, I/O graphs).
   * **Decryption** (TLS/SSL with keys, WEP/WPA).
   * **Cross-platform** (Windows, Linux, macOS).
+* **Use Case**: Deep protocol inspection and troubleshooting via GUI.
 
 #### **2. tcpdump**
 
@@ -353,6 +360,7 @@ Technology focus: Wireshark and tcpdump.
   * **Save to PCAP** for later analysis.
   * **No GUI** (often used with Wireshark for analysis).
   * **Ubiquitous** (preinstalled on most Unix-like systems).
+* **Use Case**: Lightweight CLI packet capture for quick traffic analysis.
 
 #### **3. Zeek (formerly Bro)**
 
@@ -362,6 +370,7 @@ Technology focus: Wireshark and tcpdump.
   * **Behavioral analysis** (e.g., detecting C2 traffic).
   * **No live packet inspection** (post-capture analysis).
   * **Custom scripting** (Zeek scripts for advanced detection).
+* **Use Case**: Generates structured network logs for forensic analysis.
 
 #### **4. Snort**
 
@@ -371,6 +380,7 @@ Technology focus: Wireshark and tcpdump.
   * **Real-time traffic analysis** (alerts on malicious activity).
   * **Can dump PCAPs** of suspicious traffic.
   * **CLI-based** (no native GUI).
+* **Use Case**: Rule-based NIDS for real-time traffic inspection and alerting.
 
 #### **5. Arkime** (formerly Moloch)
 
@@ -380,6 +390,7 @@ Technology focus: Wireshark and tcpdump.
   * **Web GUI** for searching/filtering traffic.
   * **Scalable** (handles multi-gigabit traffic).
   * **Integrates with Suricata/Wazuh** for alerts.
+* **Use Case**: Large-scale PCAP storage and indexed traffic analysis.
 
 **Packet Analyzers Comparison Table**
 

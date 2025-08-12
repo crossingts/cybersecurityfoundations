@@ -41,6 +41,7 @@ Technology focus: nftables and OPNsense.
   * Predefined application profiles (e.g., allow SSH, HTTP).
   * Integrates with `iptables` or `nftables` as the backend.
   * Designed for simplicity, ideal for desktop users and beginners.
+* **Use Case:** Best for Linux beginners who need a simple, no-fuss host firewall.
 
 #### **2. iptables**
 
@@ -52,6 +53,7 @@ Technology focus: nftables and OPNsense.
   * Supports NAT, packet filtering, and stateful inspection.
   * Complex syntax (requires expertise).
   * Being replaced by `nftables` but still widely used.
+* **Use Case:** Legacy Linux firewall for experts needing granular control.
 
 #### **3. nftables**
 
@@ -63,6 +65,7 @@ Technology focus: nftables and OPNsense.
   * Faster rule processing and better scalability.
   * Supports sets and maps for dynamic rules.
   * Backward-compatible with `iptables` via translation tools.
+* **Use Case:** Modern Linux firewall unifying and simplifying `iptables` rules.
 
 #### **4. PF (Packet Filter) / pfilter**
 
@@ -73,6 +76,7 @@ Technology focus: nftables and OPNsense.
   * Clean, readable rule syntax (e.g., `pass in on eth0 proto tcp to port 22`).
   * Supports logging, SYN proxy, and scrubbing.
   * Integrated in OpenBSD (security-focused).
+* **Use Case:** Powerful BSD firewall with clean syntax for servers/networks.
 
 #### **5. OPNsense**
 
@@ -84,6 +88,7 @@ Technology focus: nftables and OPNsense.
   * Regular updates with a focus on security and usability.
   * Plugins for extended functionality (e.g., Nginx, CrowdSec).
   * Community and commercial support options.
+* **Use Case:** Feature-rich open-source firewall with frequent updates for SMBs/enterprises.
 
 #### **6. pfSense (Community Edition)**
 
@@ -95,6 +100,7 @@ Technology focus: nftables and OPNsense.
   * Supports packages (Snort, Squid, HAProxy).
   * Stateful firewall, NAT, and traffic shaping.
   * Large community but slower updates than OPNsense.
+* **Use Case:** Reliable FreeBSD-based network firewall with a large support community.
 
 **Firewall Comparison Table**
 
@@ -134,6 +140,7 @@ Technology focus: Suricata.
   * File extraction (e.g., malware detection via **YARA**).
   * Supports **EVE JSON** for structured logging.
   * Can act as an IPS (inline blocking).
+* **Use Case**: Enterprise networks, high-speed traffic analysis.
 
 #### **2. Snort**
 
@@ -144,6 +151,7 @@ Technology focus: Suricata.
   * Lightweight but single-threaded (lower throughput than Suricata).
   * Supports **PCAP analysis** for forensics.
   * Can be used as an IPS with inline mode.
+* **Use Case**: Small to medium networks, basic threat detection.
 
 #### **3. Wazuh**
 
@@ -154,6 +162,7 @@ Technology focus: Suricata.
   * Supports **MITRE ATT\&CK mapping**.
   * Centralized management via web UI.
   * Integrates with **Elasticsearch** for log storage.
+* **Use Case**: Endpoint security, compliance (PCI DSS, GDPR), and threat detection.
 
 #### **4. OSSEC**
 
@@ -163,6 +172,7 @@ Technology focus: Suricata.
   * **Log analysis**, **file integrity checks**, **rootkit detection**.
   * **Active response** (e.g., block IPs after brute-force attempts).
   * No native GUI (CLI-based, but Wazuh adds one).
+* **Use Case**: Server security, compliance monitoring, and log-based intrusion detection.
 
 #### **5. Fail2Ban**
 
@@ -172,6 +182,7 @@ Technology focus: Suricata.
   * **Automatically bans malicious IPs** (via iptables/nftables).
   * Lightweight, easy to configure.
   * Limited to log-based attacks (not full HIDS).
+* **Use Case**: Protecting servers from brute-force attacks.
 
 #### **6. Zeek (formerly Bro)**
 
@@ -181,6 +192,7 @@ Technology focus: Suricata.
   * Generates **detailed logs** (`.log` files) for forensic analysis.
   * **Behavioral detection** (e.g., detecting C2 traffic).
   * No built-in IPS (passive monitoring only).
+* **Use Case**: Best for network monitoring, forensics, and anomaly detection (deep traffic analysis).
 
 #### **7. Security Onion**
 
@@ -190,6 +202,7 @@ Technology focus: Suricata.
   * **Full packet capture** (via Stenographer).
   * **SOC-friendly** with dashboards (Kibana, Grafana).
   * Heavy resource requirements (best for dedicated hardware).
+* **Use Case**: Enterprise-grade network security monitoring.
 
 #### **8. OpenWIPS-NG**
 
@@ -198,6 +211,7 @@ Technology focus: Suricata.
   * Detects **rogue APs**, **evil twin attacks**, **deauthentication floods**.
   * Supports **RFMON mode** for wireless monitoring.
   * Less maintained than others (but unique for Wi-Fi security).
+* **Use Case**: Wireless network security.
 
 **IDS/IPS Comparison Table**
 

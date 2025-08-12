@@ -227,7 +227,87 @@ Popular open source SIEM/EDR (Security Information and Event Management/Endpoint
 
 Technology focus: Wazuh (SIEM/XDR).
 
+#### SIEM/EDR Key features
 
+#### **1. Wazuh**
+
+* **Type**: SIEM + HIDS + Compliance
+* **Key Features**:
+  * **Log analysis**, **file integrity monitoring (FIM)**, **vulnerability detection**.
+  * **MITRE ATT\&CK mapping** for threat detection.
+  * **Endpoint protection** (Linux, Windows, macOS).
+  * **Cloud/SaaS integration** (AWS, Azure, GCP).
+  * **Centralized dashboard** (Elastic Stack/Kibana).
+  * **Active response** (e.g., blocking malicious IPs).
+
+#### **2. TheHive**
+
+* **Type**: Incident Response + Case Management (Not a SIEM/EDR, but complementary)
+* **Key Features**:
+  * **Collaborative platform** for SOC teams.
+  * **Integrates with MISP** (threat intelligence).
+  * **Automated workflows** for incident handling.
+  * **No detection capabilities** (relies on other tools like Wazuh/Suricata).
+
+#### **3. Zeek (formerly Bro)**
+
+* **Type**: Network Security Monitoring (NSM) + NTA
+* **Key Features**:
+  * **Protocol-aware traffic analysis** (HTTP, DNS, SSL).
+  * **Behavioral detection** (e.g., C2 traffic, anomalies).
+  * **Detailed logs** (`.log` files) for forensics.
+  * **No built-in SIEM/EDR** (passive monitoring).
+
+#### **4. OSSEC**
+
+* **Type**: HIDS (Host-based IDS)
+* **Key Features**:
+  * **Log analysis**, **file integrity checks**, **rootkit detection**.
+  * **Active response** (e.g., block IPs after brute-force attempts).
+  * **No native GUI** (CLI-based, but Wazuh extends it).
+  * **Lightweight**, best for endpoint monitoring.
+
+#### **5. Suricata**
+
+* **Type**: NIDS/NIPS (Network IDS/IPS)
+* **Key Features**:
+  * **Real-time traffic inspection** (supports Snort rules).
+  * **File extraction** (YARA for malware detection).
+  * **EVE JSON logs** for structured data.
+  * **Can act as IPS** (inline blocking).
+  * **Not an EDR** (focused on network traffic).
+
+#### **6. Velociraptor**
+
+* **Type**: EDR + Digital Forensics
+* **Key Features**:
+  * **Endpoint visibility** (Windows, Linux, macOS).
+  * **Hunt for threats** (live query endpoints with VQL).
+  * **Memory forensics**, **artifact collection**.
+  * **No built-in SIEM** (but integrates with other tools).
+
+**SIEM/EDR Comparison Table**
+
+| Tool             | Type               | Detection Capabilities          | Key Strengths                         | SIEM Integration | EDR Features | Best For                           |
+| ---------------- | ------------------ | ------------------------------- | ------------------------------------- | ---------------- | ------------ | ---------------------------------- |
+| **Wazuh**        | SIEM + HIDS        | Log/FIM/vulnerability detection | MITRE ATT\&CK, cloud support, Kibana  | Yes (Elastic)    | Basic EDR    | Compliance, centralized monitoring |
+| **TheHive**      | Incident Response  | None (case management)          | SOC collaboration, MISP integration   | Via APIs         | No           | Incident handling, teamwork        |
+| **Zeek**         | Network Monitoring | Behavioral/protocol analysis    | Deep traffic forensics                | Via logs         | No           | Network forensics, research        |
+| **OSSEC**        | HIDS               | Log/FIM/rootkit detection       | Lightweight, active response          | Via Wazuh        | No           | Endpoint security                  |
+| **Suricata**     | NIDS/NIPS          | Signature/anomaly detection     | High-speed, file extraction, IPS mode | Via logs         | No           | Network traffic analysis           |
+| **Velociraptor** | EDR                | Endpoint forensics, hunting     | Live querying, memory analysis        | Via APIs         | Yes          | Threat hunting, IR                 |
+
+**Summary**
+
+* **SIEM**: **Wazuh** (best all-in-one), **OSSEC** (lightweight HIDS).
+* **EDR**: **Velociraptor** (advanced forensics), **Wazuh** (basic endpoint protection).
+* **Network Analysis**: **Zeek** (deep inspection), **Suricata** (real-time IPS).
+* **Incident Response**: **TheHive** (case management).
+
+**Best Combinations**:
+
+* **Wazuh + TheHive + Suricata** → Full SIEM + IR + NIDS.
+* **Velociraptor + Zeek** → Advanced EDR + network forensics.
 
 ***
 
@@ -236,6 +316,81 @@ Technology focus: Wazuh (SIEM/XDR).
 Popular open source packet analyzers include Wireshark, tcpdump, Zeek, Snort, and Arkime.
 
 Technology focus: Wireshark and tcpdump.
+
+#### Packet analyzers Key features
+
+#### **1. Wireshark**
+
+* **Type**: GUI-based packet analyzer
+* **Key Features**:
+  * **Deep protocol dissection** (supports 3,000+ protocols).
+  * **Live capture** + **offline analysis** (PCAP files).
+  * **Filtering** (BPF syntax, e.g., `tcp.port == 443`).
+  * **Visualization** (flow graphs, I/O graphs).
+  * **Decryption** (TLS/SSL with keys, WEP/WPA).
+  * **Cross-platform** (Windows, Linux, macOS).
+
+#### **2. tcpdump**
+
+* **Type**: CLI packet analyzer
+* **Key Features**:
+  * **Lightweight**, low-overhead capture.
+  * **BPF filtering** (e.g., `tcpdump -i eth0 'port 80'`).
+  * **Save to PCAP** for later analysis.
+  * **No GUI** (often used with Wireshark for analysis).
+  * **Ubiquitous** (preinstalled on most Unix-like systems).
+
+#### **3. Zeek (formerly Bro)**
+
+* **Type**: Network Traffic Analyzer (NTA)
+* **Key Features**:
+  * **Protocol-aware logging** (generates `.log` files for HTTP, DNS, SSL, etc.).
+  * **Behavioral analysis** (e.g., detecting C2 traffic).
+  * **No live packet inspection** (post-capture analysis).
+  * **Custom scripting** (Zeek scripts for advanced detection).
+
+#### **4. Snort**
+
+* **Type**: NIDS (Network Intrusion Detection System)
+* **Key Features**:
+  * **Packet capture + rule-based detection** (signatures).
+  * **Real-time traffic analysis** (alerts on malicious activity).
+  * **Can dump PCAPs** of suspicious traffic.
+  * **CLI-based** (no native GUI).
+
+#### **5. Arkime** (formerly Moloch)
+
+* **Type**: Large-scale packet capture + analysis
+* **Key Features**:
+  * **Indexes and stores PCAPs** for long-term analysis.
+  * **Web GUI** for searching/filtering traffic.
+  * **Scalable** (handles multi-gigabit traffic).
+  * **Integrates with Suricata/Wazuh** for alerts.
+
+**Packet Analyzers Comparison Table**
+
+| Tool          | Type             | Interface | Live Capture | Protocol Decoding | Key Strengths                        | Best For                         |
+| ------------- | ---------------- | --------- | ------------ | ----------------- | ------------------------------------ | -------------------------------- |
+| **Wireshark** | Packet Analyzer  | GUI       | Yes          | 3,000+ protocols  | Deep inspection, visualization       | Troubleshooting, forensics       |
+| **tcpdump**   | Packet Sniffer   | CLI       | Yes          | Basic protocols   | Lightweight, scripting-friendly      | Quick captures, server debugging |
+| **Zeek**      | Traffic Analyzer | CLI/Logs  | No\*         | 50+ protocols     | Behavioral analysis, logging         | Network forensics, research      |
+| **Snort**     | NIDS             | CLI       | Yes          | Limited           | Rule-based detection, PCAP dumping   | Security monitoring              |
+| **Arkime**    | PCAP Storage     | Web GUI   | Yes          | 100+ protocols    | Scalable, long-term packet retention | SOCs, large networks             |
+
+**Key Takeaways**
+
+* **For deep analysis**: **Wireshark** (GUI) or **tcpdump** (CLI).
+* **For traffic logging**: **Zeek** (creates structured logs).
+* **For security monitoring**: **Snort** (NIDS mode).
+* **For large-scale PCAP storage**: **Arkime** (web-based).
+
+**Workflow Examples**:
+
+1. **Capture with tcpdump** → Analyze in Wireshark.
+2. **Zeek for traffic logs** + Arkime for PCAP retention.
+3. **Snort for alerts** → Inspect PCAPs in Wireshark.
+
+***
 
 ### Key takeaways
 

@@ -85,11 +85,92 @@ The **C$ share** is another **hidden administrative share** that grants access t
   * Restrict SMB access via firewall rules.
   * Use **LAPS (Local Admin Password Solution)** to randomize local admin passwords.
 
+Note — Passwords on Windows systems are found in the SAM file, located in c:\windows\system32\config (you may also find one in c:\windows\repair folder). Passwords for Linux are found in /etc/shadow.&#x20;
+
+**Keyloggers**
+
+Keyloggers record every keystroke typed—including passwords, messages, and sensitive data. They come in two forms:
+
+* **Hardware keyloggers**: Physical devices plugged between the keyboard and computer (nearly undetectable without manual inspection).
+* **Software keyloggers**: Malicious programs running silently in the background (easier to detect with security tools).
+
+**How to Detect & Remove Them**
+
+**1. Software Keyloggers** (Detectable with free tools)
+
+* **Scan with Anti-Malware Tools**:
+  * **Malwarebytes** (Free) – Scans for spyware and keyloggers.
+  * **Spybot Search & Destroy** (Free) – Specializes in spyware removal.
+  * **ClamAV** (Open-source) – Lightweight scanner for Linux/Windows.
+* **Check Running Processes**:
+  * **Process Explorer** (Free, Microsoft) – Monitors suspicious background apps.
+  * **RKill** – Terminates malware processes before scanning.
+* **Network Monitoring**:
+  * **Wireshark** (Open-source) – Detects unusual outbound traffic (e.g., keystrokes being sent to attackers).
+
+**2. Hardware Keyloggers** (Manual Detection Only)
+
+* **Inspect USB/PS2 Connections**: Physically check for unexpected devices between the keyboard and PC.
+* **Use a Virtual Keyboard**: Bypasses hardware keyloggers (Windows has an **On-Screen Keyboard**).
+
+**Prevention Tips**
+
+* **Use Two-Factor Authentication (2FA)** – Makes stolen keystrokes less useful.
+* **Encrypt Keystrokes** – Tools like **KeyScrambler** (Free) encrypt typing in real time.
+* **Regular Scans** – Schedule weekly checks with **Malwarebytes** or **ClamAV**.
+
+**Final Note**: While software keyloggers can be removed, hardware keyloggers require physical inspection—so always check your ports!
+
+Here’s a table summarizing which free/open-source keylogger detection tools work across **Windows, Linux, and macOS**:
+
+| **Tool**             | **Windows** | **Linux** | **macOS** | **Notes**                                                                |
+| -------------------- | ----------- | --------- | --------- | ------------------------------------------------------------------------ |
+| **Malwarebytes**     | ✅           | ❌         | ✅         | Free version for Windows/macOS; no Linux support.                        |
+| **ClamAV**           | ✅           | ✅         | ✅         | Open-source; cross-platform but requires manual setup on macOS.          |
+| **Wireshark**        | ✅           | ✅         | ✅         | Network traffic analyzer; detects exfiltration (not keylogger-specific). |
+| **Process Explorer** | ✅           | ❌         | ❌         | Windows-only (Microsoft Sysinternals).                                   |
+| **Spybot S\&D**      | ✅           | ❌         | ❌         | Windows-only.                                                            |
+| **RKill**            | ✅           | ❌         | ❌         | Windows-only (terminates malware processes).                             |
+
+#### **Key Takeaways**:
+
+* **Cross-Platform Tools**:
+  * **ClamAV** (antivirus) and **Wireshark** (network analysis) work on all three OSes.
+* **Windows-Only**:
+  * Most specialized tools (Spybot, RKill, Process Explorer) are limited to Windows.
+* **macOS Options**:
+  * **Malwarebytes** (GUI) or **ClamAV** (command-line) for scans.
+* **Linux**:
+  * Relies on **ClamAV** or manual inspection (e.g., `ps aux`, `netstat`).
+
 • Offline attack: This happens when an attacker steals a password database (like Windows' **SAM file** or a Linux **/etc/shadow**) and cracks it offline on their own system using such tools as Hashcat or John the Ripper—without interacting with the target. When an attacker **"cracks"** a stolen password file, they use computational methods to convert the scrambled (hashed) passwords back into plaintext.&#x20;
 
 There are three main methods of offline password cracking: dictionary attack, hybrid attack, and brute-force attack.&#x20;
 
-A dictionary attack is the easiest and by far the fastest attack available. This attack uses a list of passwords in a text file, which is then hashed by the same algorithm/process the original password was put through. The hashes are compared and, if a match is found, the password is cracked. Technically speaking, dictionary attacks are only supposed to work on words you’d find in a dictionary. They can work just as well on “complex” passwords too; however, the word list you use must have the exact match in it—you can’t get close, it must be exact. You can create your own dictionary file or simply download any of the thousands available on the Internet. (Walker, 2012, p. 164)
+1. **Dictionary Attack**\
+   Uses a pre-made list of passwords (e.g., common words, leaked passwords). Each entry is hashed and compared to the stolen hash. If matched, the password is cracked.
+2. **Hybrid Attack**\
+   Enhances dictionary attacks by modifying words—replacing letters with symbols (e.g., `P@ssw0rd`) or appending numbers (e.g., `Password123`). More effective than pure dictionary attacks.
+3. **Brute-Force Attack**\
+   Tries every possible combination of characters (e.g., `a`, `aa`, `aaa…`). Extremely slow but guaranteed to crack any password—eventually. Best for complex passwords but requires heavy computing power.
 
-A hybrid attack is a step above the dictionary attack. In the hybrid attack, the cracking tool is smart enough to take words from a list and substitute numbers and symbols for alpha characters—perhaps a zero for an O, an @ for an a. Hybrid attacks may also append numbers and symbols to the end of dictionary file passwords—bet you’ve never simply added a “1234” to the end of a password before, huh? By doing so, you stand a better chance of cracking passwords in a complex environment.\
-(Walker, 2012, p. 164)
+**Rainbow Tables**\
+Precomputed tables of hashes for quick lookups. Faster than brute-forcing but less effective against _salted_ hashes.
+
+**Popular open source password-cracking tools and their key features**
+
+| **Tool**            | **Platform**  | **Target Passwords**                             | **Attack Methods**                          | **Notes**                                                                                        |
+| ------------------- | ------------- | ------------------------------------------------ | ------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| **John the Ripper** | Linux/Windows | Unix, Windows NT, Kerberos, MySQL (with add-ons) | Dictionary, Hybrid, Brute-force             | Highly flexible, supports custom rules & hash formats. "Gold standard" for open-source cracking. |
+| **Hashcat**         | Linux/Windows | 300+ hash types (NTLM, SHA, WPA, etc.)           | Dictionary, Hybrid, Brute-force, Rule-based | GPU-accelerated (fastest). Supports rainbow tables & advanced masking.                           |
+| **Ophcrack**        | Linux/Windows | Windows LM/NTLM hashes                           | Rainbow tables                              | Specialized for Windows. Free version includes prebuilt tables.                                  |
+| **THC Hydra**       | Linux/Windows | Online services (SSH, FTP, RDP, etc.)            | Dictionary, Brute-force                     | Not strictly offline but useful for credential stuffing.                                         |
+| **RainbowCrack**    | Linux/Windows | Generic hashes (with rainbow tables)             | Rainbow tables                              | Precomputed hashes for faster cracking. Limited to supported algorithms.                         |
+
+#### **Clarification Notes**
+
+* **Fastest method**: Dictionary attacks (using tools like John or Hashcat).
+* **Most thorough**: Brute-force (but slow; Hashcat’s GPU support speeds this up).
+* **For Windows**: Ophcrack (rainbow tables) or John the Ripper (NTLM).
+* **For versatility**: Hashcat (supports almost every hash type).
+* **Not open-source**: Ophcrack (proprietary but free). LC5/L0phtCrack, Cain, KerbCrack, and Legion are proprietary tools.

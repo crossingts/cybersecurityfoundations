@@ -101,7 +101,7 @@ Keyloggers record every keystroke typed—including passwords, messages, and sen
 * **Scan with Anti-Malware Tools**:
   * **Malwarebytes** (Free) – Scans for spyware and keyloggers.
   * **Spybot Search & Destroy** (Free) – Specializes in spyware removal.
-  * **ClamAV** (Open-source) – Lightweight scanner for Linux/Windows.
+  * **ClamAV** (Open-source) – A lightweight cross platform scanner.
 * **Check Running Processes**:
   * **Process Explorer** (Free, Microsoft) – Monitors suspicious background apps.
   * **RKill** – Terminates malware processes before scanning.
@@ -174,3 +174,32 @@ Precomputed tables of hashes for quick lookups. Faster than brute-forcing but le
 * **For Windows**: Ophcrack (rainbow tables) or John the Ripper (NTLM).
 * **For versatility**: Hashcat (supports almost every hash type).
 * **Not open-source**: Ophcrack (proprietary but free). LC5/L0phtCrack, Cain, KerbCrack, and Legion are proprietary tools.
+
+#### **Escalating Privileges and Maintaining Stealth**
+
+To gain administrator (or root) privileges on a system, there are four primary methods:
+
+1. **Cracking an Admin/Root Password**
+   * This should be your primary focus (especially for the CEH exam).
+   * Successfully obtaining the password makes other methods unnecessary.
+2. **Exploiting OS or Application Vulnerabilities**
+   * Unpatched security flaws can allow privilege escalation.
+   * Stay updated on vulnerabilities using security websites and tools like **Nessus**.
+   * Proactively identify weaknesses before running automated scans.
+3. **Using Exploitation Tools (e.g., Metasploit)**
+   * **Metasploit** is a powerful framework for executing exploits and payloads.
+     * Input the target’s IP and port, select an exploit, and deploy a payload.
+     * Available in a free version (**Metasploit Framework**) and a paid **Metasploit Pro** (more advanced features).
+   * Can be used via command line or a web-based GUI.
+   * Extensive resources (forums, blogs, guides) are available on [metasploit.com](http://www.metasploit.com/).
+   * **GUI Front-End Tools (e.g., Armitage)**
+     * Provides a user-friendly interface for Metasploit.
+     * Simplifies exploitation with an intuitive design.
+     * More info at [fastandeasyhacking.com](http://fastandeasyhacking.com/).
+4. **Social Engineering**
+
+You can put executable code in an e-mail and ask the user to click it—more often than not, they will! Craft a PDF file to take advantage of a known Adobe flaw on an unpatched system and send it to them—most of the time, they’ll click and open it! (Walker, 2012, p. 171)
+
+### Key takeaways
+
+Privilege escalation relies on weak credentials, unpatched vulnerabilities, exploitation tools like Metasploit, or social engineering

@@ -198,7 +198,156 @@ To gain administrator (or root) privileges on a system, there are four primary m
      * More info at [fastandeasyhacking.com](http://fastandeasyhacking.com/).
 4. **Social Engineering**
 
-You can put executable code in an e-mail and ask the user to click it—more often than not, they will! Craft a PDF file to take advantage of a known Adobe flaw on an unpatched system and send it to them—most of the time, they’ll click and open it! (Walker, 2012, p. 171)
+You can embed executable code in an e-mail marked "urgent" and ask the target to click it. A malicious PDF exploits a bug in the PDF viewer (not the OS itself). If the viewer is unpatched, opening the PDF can silently run attacker code. Privilege escalation happens afterward if the attacker needs to gain admin rights from a regular user.
+
+**Stealth: Before, During, and After**
+
+After gaining access to a machine, a hacker must remain stealthy. There’s stealth involved in hiding files, covering tracks, and maintaining access on the machine. To operate undetected during a penetration test or malicious attack, adversaries employ various techniques to hide files, evade logging, and cover their tracks.
+
+### **1. Hiding Files on Windows Systems**
+
+#### **A. Alternate Data Streams (ADS) in NTFS**
+
+**What it is:**\
+Alternate Data Streams (ADS) is a feature of the NTFS file system that allows files to be embedded within other files invisibly. Originally introduced for compatibility with Apple’s HFS, ADS has persisted in Windows from NT through Windows 10/11.
+
+**How it works:**
+
+* An attacker can attach hidden files (text, executables, etc.) to an existing file without altering its visible properties.
+*   Example commands:
+
+    cmd
+
+    ```
+    echo "Malicious payload" > innocent.txt:secret.txt  
+    type malware.exe > report.pdf:hidden.exe  
+    ```
+* The hidden file does not appear in directory listings (`dir`) or Windows Explorer unless explicitly checked.
+
+**Detection & Limitations:**
+
+* Modern forensic tools (e.g., **LNS, Sfind, Autopsy**) scan for ADS.
+* Windows Vista+ includes `dir /r` to reveal streams.
+* Copying files to a FAT32 partition removes ADS (FAT doesn’t support streams).
+* Executables run from ADS may still appear in Task Manager under the parent process.
+
+**Defensive Measures:**
+
+* Monitor for suspicious ADS usage with tools like **StreamArmor** or **Sysinternals Streams**.
+* Restrict execution of files from unusual locations via **AppLocker** or **SRP**.
+
+***
+
+#### **B. Hidden File Attributes**
+
+**What it is:**\
+A basic method where files are marked as "hidden" in Windows, preventing them from appearing in normal directory listings.
+
+**How it works:**
+
+* **GUI Method:** Right-click → Properties → Enable "Hidden."
+*   **CLI Method:**
+
+    cmd
+
+    ```
+    attrib +h secretfile.txt  
+    ```
+
+**Limitations:**
+
+* Easily bypassed if "Show hidden files" is enabled in Folder Options.
+* Does not protect against forensic analysis.
+
+**Defensive Measures:**
+
+* Configure Group Policy to force "Show hidden files" on critical systems.
+* Use PowerShell scripts to scan for hidden files in sensitive directories.
+
+***
+
+### **2. Data Concealment via Steganography**
+
+**What it is:**\
+Steganography hides data inside other files (images, audio, documents) without visibly altering them, making detection difficult.
+
+**Common Tools:**
+
+* **ImageHide, S-Tools, OpenStego** (for hiding data in images).
+* **Snow** (hides text in whitespace).
+* **Mp3Stego** (embeds data in MP3 files).
+
+**Attack Scenario:**
+
+* An attacker exfiltrates sensitive data by embedding it in a vacation photo (`beach.jpg`) and emailing it externally.
+* Network monitoring sees only an image transfer, not the hidden payload.
+
+**Detection & Prevention:**
+
+* **Statistical Analysis Tools** (e.g., **StegExpose, StegDetect**) can identify anomalies.
+* Block or scan suspicious file types (e.g., images from untrusted sources).
+
+***
+
+### **3. Log Manipulation & Anti-Forensics**
+
+#### **A. Windows Event Logs**
+
+Windows maintains three primary logs:
+
+1. **Application Log** – Records software-specific errors.
+2. **System Log** – Tracks OS events (driver failures, reboots).
+3. **Security Log** – Stores authentication, file access, and policy changes (if auditing is enabled).
+
+#### **B. Poor Stealth Tactics (Avoid These)**
+
+* **Deleting Entire Logs:**
+  * Obvious red flag—empty logs trigger alerts.
+* **Disabling Auditing Temporarily:**
+  * Leaves a suspicious gap in logs.
+
+#### **C. Better Log Evasion Methods**
+
+1. **Selective Log Editing**
+   * Remove only entries related to the attack.
+   * Example: If brute-forcing a login, delete only failed login attempts.
+2. **Log Corruption**
+   * Partially corrupting logs may be dismissed as a system glitch.
+3. **Relocating Log Files**
+   *   Change the default log path via Registry:
+
+       text
+
+       ```
+       HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog
+       ```
+   * Makes forensic analysis harder if logs are not in `%systemroot%\System32\Config`.
+
+#### **D. Log Manipulation Tools**
+
+*   **Auditpol** – Disables logging on remote machines:
+
+    cmd
+
+    ```
+    auditpol \\[TargetIP] /disable  
+    ```
+* **WinZapper, Evidence Eliminator** – Selective log erasure.
+* **Manual Registry Edits** – Modify audit policies to exclude certain events.
+
+**Key Takeaways for Attackers & Defenders**
+
+**For Attackers:**
+
+* **ADS** is outdated but still works in some environments.
+* **Steganography** is effective for data exfiltration.
+* **Log manipulation** requires subtlety—corruption is better than deletion.
+
+**For Defenders:**
+
+* **Monitor ADS usage** with forensic tools.
+* **Enable deep log auditing** and store logs in a secure, separate location.
+* **Train staff** to recognize steganography and unusual file behavior.
 
 ### Key takeaways
 

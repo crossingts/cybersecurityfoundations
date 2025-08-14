@@ -8,7 +8,7 @@ Next, we start talking about actual system hacking. In the enumeration phase, we
 
 ### Password Attacks
 
-Most people will make their passwords the exact length of the minimum required. "If the network administrator sets the minimum at eight characters, over 95 percent of the passwords will be only eight characters—very helpful to the password-cracking attacker" (Walker, 2012, p. 157).
+Most people will make their passwords the exact length of the minimum required. "If the network administrator sets the minimum at eight characters, over 95 percent of the passwords will be only eight characters—very helpful to the password-cracking attacker" (Walker, 2012, p. 157). Password attacks are often considered the first line of exploitation.
 
 ECC defines four main attack types for password cracking: passive online, active online, offline, and non-electronic (social engineering).
 
@@ -87,39 +87,56 @@ The **C$ share** is another **hidden administrative share** that grants access t
 
 Note — Passwords on Windows systems are found in the SAM file, located in c:\windows\system32\config (you may also find one in c:\windows\repair folder). Passwords for Linux are found in /etc/shadow.&#x20;
 
+**Keyloggers and Screen Capture**
+
+Keyloggers and screen capture tools are two common methods attackers use to steal sensitive information from target systems.
+
 **Keyloggers**
 
-Keyloggers record every keystroke typed—including passwords, messages, and sensitive data. They come in two forms:
+Keyloggers record every keystroke typed—including passwords, messages, and other confidential data. They come in two forms:
 
-* **Hardware keyloggers**: Physical devices plugged between the keyboard and computer (nearly undetectable without manual inspection).
-* **Software keyloggers**: Malicious programs running silently in the background (easier to detect with security tools).
+* **Hardware Keyloggers:**
+  * Physical devices plugged between the keyboard and computer.
+  * Nearly undetectable without manual inspection.
+* **Software Keyloggers:**
+  * Malicious programs running silently in the background.
+  * Easier to detect with antivirus and anti-malware tools.
+
+**Screen Capture Tools**
+
+Screen capture malware takes periodic or real-time screenshots of a victim’s desktop, allowing attackers to:
+
+* Steal login credentials entered via on-screen keyboards.
+* Capture sensitive documents, emails, or application data.
+* Monitor user activity for further exploitation. Some advanced variants even record screen activity as video.
 
 **How to Detect & Remove Them**
 
-**1. Software Keyloggers** (Detectable with free tools)
+**1. Software Keyloggers & Screen Capture Malware (Detectable with Tools)**
 
-* **Scan with Anti-Malware Tools**:
-  * **Malwarebytes** (Free) – Scans for spyware and keyloggers.
-  * **Spybot Search & Destroy** (Free) – Specializes in spyware removal.
-  * **ClamAV** (Open-source) – A lightweight cross platform scanner.
-* **Check Running Processes**:
-  * **Process Explorer** (Free, Microsoft) – Monitors suspicious background apps.
+* **Scan with Anti-Malware Tools:**
+  * **Malwarebytes (Free)** – Detects spyware, keyloggers, and screen capture malware.
+  * **Spybot Search & Destroy (Free)** – Specializes in spyware removal.
+  * **ClamAV (Open-source)** – Lightweight cross-platform scanner.
+* **Check Running Processes:**
+  * **Process Explorer (Microsoft)** – Monitors suspicious background apps.
   * **RKill** – Terminates malware processes before scanning.
-* **Network Monitoring**:
-  * **Wireshark** (Open-source) – Detects unusual outbound traffic (e.g., keystrokes being sent to attackers).
+* **Network Monitoring:**
+  * **Wireshark (Open-source)** – Detects unusual outbound traffic (e.g., keystrokes or screenshots being exfiltrated).
 
-**2. Hardware Keyloggers** (Manual Detection Only)
+**2. Hardware Keyloggers (Manual Detection Only)**
 
-* **Inspect USB/PS2 Connections**: Physically check for unexpected devices between the keyboard and PC.
-* **Use a Virtual Keyboard**: Bypasses hardware keyloggers (Windows has an **On-Screen Keyboard**).
+* **Inspect USB/PS2 Connections:** Physically check for unexpected devices between the keyboard and PC.
+* **Use a Virtual Keyboard:** Bypasses hardware keyloggers (Windows includes an On-Screen Keyboard).
 
 **Prevention Tips**
 
-* **Use Two-Factor Authentication (2FA)** – Makes stolen keystrokes less useful.
-* **Encrypt Keystrokes** – Tools like **KeyScrambler** (Free) encrypt typing in real time.
-* **Regular Scans** – Schedule weekly checks with **Malwarebytes** or **ClamAV**.
+* **Use Two-Factor Authentication (2FA):** Renders stolen keystrokes or screenshots less useful.
+* **Encrypt Keystrokes:** Tools like **KeyScrambler (Free)** encrypt typing in real time.
+* **Disable Unnecessary Screen Recording Permissions:** Restrict apps from capturing the screen without consent.
+* **Regular Scans:** Schedule weekly checks with **Malwarebytes** or **ClamAV**.
 
-**Final Note**: While software keyloggers can be removed, hardware keyloggers require physical inspection—so always check your ports!
+**Note:** While software-based threats can be removed with scans, hardware keyloggers require physical inspection—always check your ports! For screen capture malware, staying vigilant about unusual processes and network traffic is key.
 
 Here’s a table summarizing which free/open-source keylogger detection tools work across **Windows, Linux, and macOS**:
 
@@ -178,30 +195,88 @@ Precomputed tables of hashes of every password imaginable for quick lookups. Fas
 
 #### **Escalating Privileges and Maintaining Stealth**
 
-To gain administrator (or root) privileges on a system, there are four primary methods:
+Gaining administrator (or root) privileges is a critical step in penetration testing. Attackers typically rely on four main methods to achieve privilege escalation, each with its own advantages and challenges. A skilled ethical hacker will use a combination of these methods, adapting based on the target’s defenses.&#x20;
 
-1. **Cracking an Admin/Root Password**
-   * This should be your primary focus (especially for the CEH exam).
-   * Successfully obtaining the password makes other methods unnecessary.
-2. **Exploiting OS or Application Vulnerabilities**
-   * Unpatched security flaws can allow privilege escalation.
-   * Stay updated on vulnerabilities using security websites and tools like **Nessus**.
-   * Proactively identify weaknesses before running automated scans.
-3. **Using Exploitation Tools (e.g., Metasploit)**
-   * **Metasploit** is a powerful framework for executing exploits and payloads.
-     * Input the target’s IP and port, select an exploit, and deploy a payload.
-     * Available in a free version (**Metasploit Framework**) and a paid **Metasploit Pro** (more advanced features).
-   * Can be used via command line or a web-based GUI.
-   * Extensive resources (forums, blogs, guides) are available on [metasploit.com](http://www.metasploit.com/).
-   * **GUI Front-End Tools (e.g., Armitage)**
-     * Provides a user-friendly interface for Metasploit.
-     * Simplifies exploitation with an intuitive design.
-     * More info at [fastandeasyhacking.com](http://fastandeasyhacking.com/).
-4. **Social Engineering**
+**1. Cracking the Password of a Privileged Account**
 
-You can embed executable code in an e-mail marked "urgent" and ask the target to click it. A malicious PDF exploits a bug in the PDF viewer (not the OS itself). If the viewer is unpatched, opening the PDF can silently run attacker code. Privilege escalation happens afterward if the attacker needs to gain admin rights from a regular user.
+This is often the most straightforward method—if you can obtain or guess the password of an administrator or root account, you gain immediate access without needing further exploits.
 
-**Stealth: Before, During, and After**
+* **Approaches to Password Cracking:**
+  * **Brute-force attacks:** Systematically trying every possible password combination.
+  * **Dictionary attacks:** Using wordlists of common passwords.
+  * **Rainbow tables:** Precomputed hash tables for reversing cryptographic hashes.
+  * **Credential harvesting:** Extracting passwords from memory, keyloggers, or phishing.
+* **Limitations:**
+  * Strong password policies (complexity, lockouts) can make cracking difficult.
+  * Modern systems often store passwords securely (e.g., salted hashes).
+
+If successful, this method bypasses the need for further exploitation, making it highly efficient.
+
+**2. Exploiting OS or Application Vulnerabilities**
+
+When password attacks fail, the next best option is exploiting security flaws in the operating system or installed software.
+
+* **How It Works:**
+  * Attackers identify unpatched vulnerabilities (e.g., buffer overflows, privilege escalation bugs).
+  * They craft or use existing exploits to execute arbitrary code with elevated privileges.
+* **Key Considerations:**
+  * **Vulnerability research is critical:** Websites like CVE Details, Exploit-DB, and vendor bulletins help identify known flaws.
+  * **Automated scanners (e.g., Nessus, OpenVAS)** can detect missing patches.
+  * **Zero-day exploits** (unknown vulnerabilities) are highly valuable but rare.
+* **Example Scenario:**
+  * If a Windows server hasn’t been patched for a known Local Privilege Escalation (LPE) flaw, an attacker can exploit it to gain SYSTEM-level access.
+
+This method requires staying updated on security advisories and understanding how vulnerabilities translate into real-world attacks.
+
+**3. Using Exploitation Frameworks (e.g., Metasploit)**
+
+Tools like **Metasploit** automate and simplify the exploitation process, making them indispensable for penetration testers.
+
+* **How Metasploit Works:**
+  * **Step 1:** Select a target (IP, port, service).
+  * **Step 2:** Choose an exploit (e.g., a known vulnerability in an application).
+  * **Step 3:** Configure a payload (e.g., a reverse shell for remote access).
+  * **Step 4:** Execute the attack—Metasploit handles the exploitation process.
+* **Metasploit Versions:**
+  * **Free (Community Edition):** Fully functional for most exploits.
+  * **Metasploit Pro:** Adds advanced features like automated phishing, web app testing, and team collaboration.
+  * Extensive resources (forums, blogs, guides) are available on [metasploit.com](http://www.metasploit.com/).
+* **Armitage (GUI for Metasploit):**
+  * Provides a visual interface, making exploitation more intuitive.
+  * Useful for beginners or those who prefer graphical workflows.
+  * More info at [fastandeasyhacking.com](http://fastandeasyhacking.com/).
+* **Why Metasploit Dominates:**
+  * It integrates reconnaissance, exploitation, and post-exploitation tools in one platform.
+  * Its extensive module library covers thousands of known vulnerabilities.
+
+While powerful, Metasploit requires skill to use effectively—misconfigurations can lead to failed exploits or detection.
+
+**4. Social Engineering (The Human Factor)**
+
+The easiest and often most effective method is bypassing technical defenses entirely by manipulating users.
+
+* **Common Tactics:**
+  * **Phishing Emails:** Sending malicious attachments (e.g., a disguised PDF or Word doc with embedded malware).
+  * **Fake Updates:** Tricking users into installing "security patches" that are actually malware.
+  * **USB Drops:** Leaving infected USB drives in public places, hoping someone plugs them in.
+* **Why It Works:**
+  * Users are often the weakest link—many will click links or open files without suspicion.
+  * Even well-secured systems can be compromised if an admin is tricked into running malware.
+* **Real-World Example:**
+  * A hacker sends a fake "invoice" PDF that exploits an unpatched Adobe Reader flaw, granting them elevated access when opened.
+
+Social engineering requires minimal technical skill but relies heavily on psychological manipulation.
+
+**Note:**
+
+Each privilege escalation method has its strengths:
+
+* **Password attacks** are direct but depend on weak credentials.
+* **Vulnerability exploits** are powerful but require up-to-date knowledge.
+* **Metasploit** automates exploitation but has a learning curve.
+* **Social engineering** is the easiest but relies on human error.
+
+#### **Stealth: Before, During, and After**
 
 After gaining access to a machine, a hacker must remain stealthy. There’s stealth involved in hiding files, covering tracks, and maintaining access on the machine. To operate undetected during a penetration test or malicious attack, adversaries employ various techniques to hide files, evade logging, and cover their tracks.&#x20;
 
@@ -350,6 +425,62 @@ Windows maintains three primary logs:
 * **Monitor ADS usage** with forensic tools.
 * **Enable deep log auditing** and store logs in a secure, separate location.
 * **Train staff** to recognize steganography and unusual file behavior.
+
+**Rootkits**
+
+A rootkit is a type of malicious software (_malware_) designed to hide an attacker’s presence on a compromised system. Unlike simpler viruses or trojans, rootkits actively conceal their activities—making them extremely dangerous for long-term infiltration.
+
+**How Rootkits Work:**
+
+* **Stealth Mechanisms:**
+  * Modify system files, processes, and logs to evade detection.
+  * Hide running malware, network connections, and unauthorized user accounts.
+* **Persistence & Backdoors:**
+  * Maintain long-term access by embedding deep in the OS (kernel-level rootkits) or firmware.
+  * Provide remote attackers with covert entry points for future exploitation.
+* **Anti-Forensics:**
+  * Actively erase traces of malicious activity (e.g., deleting logs or disguising file changes).
+
+**Why Rootkits Are More Than Just Cloaking:**
+
+While their primary function is _obscuring compromise_, rootkits are inherently malicious:
+
+1. **They are malware**—often bundled with payloads like keyloggers, ransomware, or botnet agents.
+2. **They enable further attacks** by ensuring undetected access.
+3. **They exploit system vulnerabilities** to gain privileged access (e.g., ring-0/kernel mode).
+
+**Detection Challenges:**
+
+* Traditional antivirus tools often fail because rootkits manipulate the OS itself.
+* Specialized tools such as GMER, RootkitRevealer, chkrootkit, and Rootkit Hunter or offline scans are needed.
+
+There are three main types of rootkits (Walker, 2012, p. 175):
+
+• Application level: As the name implies, these rootkits are directed to replace valid application files with Trojan binaries. These kits work inside an application and can use an assortment of means to change the application’s behavior, user rights level, and actions.
+
+• Kernel level: These rootkits attack the boot sectors and kernel level of the operating systems themselves, replacing kernel code with backdoor code. These are by far the most dangerous and are difficult to detect and remove.
+
+• Library level: These rootkits basically make use of system-level calls to hide their existence.&#x20;
+
+Rootkits first emerged in the Linux environment, primarily taking two distinct forms:
+
+1. **Binary Replacement Rootkits (Early Generation)**
+   * **How They Worked:**\
+     These rootkits replaced critical system binaries (e.g., `ls`, `ps`, `netstat`) with malicious versions designed to hide attacker activity.
+   * **Detection Weakness:**\
+     The modified binaries often had file size discrepancies, making them detectable by integrity-checking tools like **Tripwire**.
+2. **Kernel-Level Rootkits (More Advanced)**
+   * **Evolution:**\
+     Attackers shifted to **Loadable Kernel Modules (LKMs)**, embedding rootkits directly into the kernel.
+   * **Stealth Advantages:**
+     * Operated at the highest privilege level (ring 0), making them far harder to detect.
+     * Could manipulate system calls and data structures in real time.
+   * **Early Examples:**\
+     Notable Linux rootkits included **Adore**, **Flea**, and **T0rn**, which demonstrated the growing sophistication of kernel-mode attacks.
+
+This progression from user-space binary replacement to kernel-level integration marked a critical shift in rootkit stealth and persistence—a trend that later influenced rootkit development across all operating systems.
+
+Rootkits are exponentially more complicated than your typical malware application and reflect significant sophistication. If your company detects a customized rootkit and thinks they were targeted, it’s time to get the FBI involved. And to truly scare the wits out of you, check out what a truly sophisticated rootkit can do: http://en.wikipedia.org/wiki/Blue\_ Pill\_(malware). (Walker, 2012, p. 177)
 
 ### Key takeaways
 

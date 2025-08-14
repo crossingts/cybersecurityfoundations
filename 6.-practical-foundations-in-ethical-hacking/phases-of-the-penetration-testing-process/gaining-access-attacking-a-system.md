@@ -4,7 +4,7 @@
 
 The magic part of a penetration test is exploiting a vulnerability discovered during the vulnerability assessment phase (Harper et al., 2011; Walker, 2017). A penetration test “is when ethical hackers do their magic. They can test many of the vulnerabilities identified during the vulnerability assessment to quantify the actual threat and risk posed by the vulnerability” (Harper el al., 2011, p. 11).
 
-Next, we start talking about actual system hacking—what to do once you’re at the machine’s front door.&#x20;
+Next, we start talking about actual system hacking. In the enumeration phase, we successfully obtained user account information. Now what?  We’ll go over some of the basics on escalating your current privilege level. If the user account is not an administrator or doesn’t have access to interesting shares, escalating access privileges is necessary. After all, the point of hacking is gaining access to data or services. We'll go over four primary methods to gain administrator (or root) privileges on a system and best practices to maintain access and remain undetected after a successful penetration of a target system.
 
 ### Password Attacks
 
@@ -154,8 +154,9 @@ There are three main methods of offline password cracking: dictionary attack, hy
 3. **Brute-Force Attack**\
    Tries every possible combination of characters (e.g., `a`, `aa`, `aaa…`). Extremely slow but guaranteed to crack any password—eventually. Best for complex passwords but requires heavy computing power.
 
-**Rainbow Tables**\
-Precomputed tables of hashes for quick lookups. Faster than brute-forcing but less effective against _salted_ hashes.
+**Rainbow Tables**
+
+Precomputed tables of hashes of every password imaginable for quick lookups. Faster than brute-forcing but less effective against _salted_ hashes.
 
 **Popular open source password-cracking tools and their key features**
 
@@ -202,11 +203,16 @@ You can embed executable code in an e-mail marked "urgent" and ask the target to
 
 **Stealth: Before, During, and After**
 
-After gaining access to a machine, a hacker must remain stealthy. There’s stealth involved in hiding files, covering tracks, and maintaining access on the machine. To operate undetected during a penetration test or malicious attack, adversaries employ various techniques to hide files, evade logging, and cover their tracks.
+After gaining access to a machine, a hacker must remain stealthy. There’s stealth involved in hiding files, covering tracks, and maintaining access on the machine. To operate undetected during a penetration test or malicious attack, adversaries employ various techniques to hide files, evade logging, and cover their tracks.&#x20;
 
-### **1. Hiding Files on Windows Systems**
+* Hiding Files on Windows Systems
+* Data Concealment via Steganography
+* Log Manipulation & Anti-Forensics
+* Rootkits
 
-#### **A. Alternate Data Streams (ADS) in NTFS**
+**Hiding Files on Windows Systems**
+
+**A. Alternate Data Streams (ADS) in NTFS**
 
 **What it is:**\
 Alternate Data Streams (ADS) is a feature of the NTFS file system that allows files to be embedded within other files invisibly. Originally introduced for compatibility with Apple’s HFS, ADS has persisted in Windows from NT through Windows 10/11.
@@ -224,6 +230,8 @@ Alternate Data Streams (ADS) is a feature of the NTFS file system that allows fi
     ```
 * The hidden file does not appear in directory listings (`dir`) or Windows Explorer unless explicitly checked.
 
+Hands on NTFS File Streaming exercise: See Walker (2012, p. 172, Exercise 6-2: NTFS File Streaming). In the first part of this exercise, you want to hide the contents of a file named wanttohide.txt. To do this, you’re going to hide it behind a normal file that anyone browsing the directory would see. In the second part, you’ll hide an executable behind a file.&#x20;
+
 **Detection & Limitations:**
 
 * Modern forensic tools (e.g., **LNS, Sfind, Autopsy**) scan for ADS.
@@ -236,9 +244,7 @@ Alternate Data Streams (ADS) is a feature of the NTFS file system that allows fi
 * Monitor for suspicious ADS usage with tools like **StreamArmor** or **Sysinternals Streams**.
 * Restrict execution of files from unusual locations via **AppLocker** or **SRP**.
 
-***
-
-#### **B. Hidden File Attributes**
+**B. Hidden File Attributes**
 
 **What it is:**\
 A basic method where files are marked as "hidden" in Windows, preventing them from appearing in normal directory listings.
@@ -264,9 +270,7 @@ A basic method where files are marked as "hidden" in Windows, preventing them fr
 * Configure Group Policy to force "Show hidden files" on critical systems.
 * Use PowerShell scripts to scan for hidden files in sensitive directories.
 
-***
-
-### **2. Data Concealment via Steganography**
+**Data Concealment via Steganography**
 
 **What it is:**\
 Steganography hides data inside other files (images, audio, documents) without visibly altering them, making detection difficult.
@@ -287,11 +291,9 @@ Steganography hides data inside other files (images, audio, documents) without v
 * **Statistical Analysis Tools** (e.g., **StegExpose, StegDetect**) can identify anomalies.
 * Block or scan suspicious file types (e.g., images from untrusted sources).
 
-***
+**Log Manipulation & Anti-Forensics**
 
-### **3. Log Manipulation & Anti-Forensics**
-
-#### **A. Windows Event Logs**
+**A. Windows Event Logs**
 
 Windows maintains three primary logs:
 
@@ -299,14 +301,14 @@ Windows maintains three primary logs:
 2. **System Log** – Tracks OS events (driver failures, reboots).
 3. **Security Log** – Stores authentication, file access, and policy changes (if auditing is enabled).
 
-#### **B. Poor Stealth Tactics (Avoid These)**
+**B. Poor Stealth Tactics (Avoid These)**
 
 * **Deleting Entire Logs:**
   * Obvious red flag—empty logs trigger alerts.
 * **Disabling Auditing Temporarily:**
   * Leaves a suspicious gap in logs.
 
-#### **C. Better Log Evasion Methods**
+**C. Better Log Evasion Methods**
 
 1. **Selective Log Editing**
    * Remove only entries related to the attack.
@@ -323,7 +325,7 @@ Windows maintains three primary logs:
        ```
    * Makes forensic analysis harder if logs are not in `%systemroot%\System32\Config`.
 
-#### **D. Log Manipulation Tools**
+**D. Log Manipulation Tools**
 
 *   **Auditpol** – Disables logging on remote machines:
 
@@ -335,7 +337,7 @@ Windows maintains three primary logs:
 * **WinZapper, Evidence Eliminator** – Selective log erasure.
 * **Manual Registry Edits** – Modify audit policies to exclude certain events.
 
-**Key Takeaways for Attackers & Defenders**
+**Key points for Attackers & Defenders**
 
 **For Attackers:**
 

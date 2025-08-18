@@ -17,7 +17,7 @@ The global demand for skilled cybersecurity professionals has never been higher.
 
 • Understand emerging cybersecurity job roles and relevant skills and industry certifications.
 
-• Define core cybersecurity concepts, including the CIA triad (confidentiality, integrity, and availability) and key risk management concepts (threats, vulnerabilities, and mitigation).
+• Define core cybersecurity concepts, including the CIA triad (confidentiality, integrity, and availability) and key risk management concepts such as threats, vulnerabilities, and mitigation.
 
 • Understand the evolving cybersecurity threat landscape and its key technological and sociopolitical drivers.
 
@@ -43,7 +43,7 @@ The global demand for skilled cybersecurity professionals has never been higher.
 
 ### Part 3: Ethical Hacking (Chapters 6)
 
-• Compare professional ethical hacking (authorized penetration testing), grey hat hacking, and hacktivism.
+• Compare professional ethical hacking (white hat hacking), grey hat hacking, black hat hacking, and hacktivism.
 
 • Become familiar with the professional ethics of ethical hackers.
 

@@ -9,9 +9,9 @@ description: >-
 
 ## Learning objectives
 
-• Understand from which organizational functions you can pivot into a GRC analyst role\
-• Identify important skills of a GRC analyst\
-• Identify industry certifications relevant to the GRC analyst/manager role
+* Understand from which organizational functions you can pivot into a GRC analyst role
+* Identify important skills of a GRC analyst
+* Identify industry certifications relevant to the GRC analyst/manager role
 
 This section sheds light on the GRC analyst role as a career choice, including how to pivot into it from another IT job role, relevant skills of a GRC analyst, and relevant industry certifications.
 

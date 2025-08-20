@@ -9,10 +9,10 @@ description: >-
 
 ## Learning objectives
 
-• Define the organizational function of the SOC\
-• Describe the key SOC technologies\
-• Describe the four main SOC roles\
-• Understand the main responsibilities, skills, and industry certifications of the SOC analyst
+* Define the organizational function of the SOC
+* Describe the key SOC technologies
+* Describe the four main SOC roles
+* Understand the main responsibilities, skills, and industry certifications of the SOC analyst
 
 This section discusses the Security Operations Center (SOC) career path. First, the SOC unit composition and technologies are discussed. Then the SOC team member roles and responsibilities, skills/qualifications, and certifications are discussed. Finally, training resources for SOC careers are suggested.
 
@@ -166,10 +166,10 @@ Relevant certifications: CCNA, CCNP Security, AWS Security, and CISSP.
 
 ### Key takeaways
 
-• The SOC ensures digital assets remain secure and protected from unauthorized access\
-• The Security Information and Event Management (SIEM) system is the keystone SOC technology \
-• The four main SOC roles are SOC Analyst, SOC Manager, CISO, and Security Engineer\
-• Key skills for all SOC analysts include IT networking, ethical hacking, and incident response
+* The SOC ensures digital assets remain secure and protected from unauthorized access
+* The Security Information and Event Management (SIEM) system is the keystone SOC technology&#x20;
+* The four main SOC roles are SOC Analyst, SOC Manager, CISO, and Security Engineer
+* Key skills for all SOC analysts include IT networking, ethical hacking, and incident response
 
 ### References
 

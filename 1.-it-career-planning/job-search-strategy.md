@@ -8,11 +8,11 @@ description: >-
 
 ## Learning objectives
 
-• Identify your target job role, industry, and companies\
-• Analyze your skill gap for the role\
-• Create a skill development plan\
-• Tailor and optimize your CV for the role\
-• Become familiar with the job interview process
+* Identify your target job role, industry, and companies
+* Analyze your skill gap for the role
+* Create a skill development plan
+* Tailor and optimize your CV for the role
+* Become familiar with the job interview process
 
 When a recruiter has limited time with a decision-maker, they may only highlight one or two resumes—you want yours to be one of them. Below are steps to help you stand out.
 
@@ -216,10 +216,10 @@ Consider:
 
 ### Key takeaways
 
-• Start your IT and cybersecurity career by selecting a job role\
-• Research the industry skills for the role and create a skill development plan\
-• Tailor your resume for the role \
-• Start building a professional network ASAP&#x20;
+* Start your IT and cybersecurity career by selecting a job role
+* Research the industry skills for the role and create a skill development plan
+* Tailor your resume for the target role&#x20;
+* Start building a professional network ASAP
 
 ### References
 

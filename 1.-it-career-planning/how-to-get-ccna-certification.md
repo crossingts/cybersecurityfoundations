@@ -9,11 +9,11 @@ description: >-
 
 ## Learning objectives
 
-• Understand the market value of CCNA certification\
-• Become familiar with the CCNA exam registration process\
-• Describe a roadmap to prepare for the CCNA exam\
-• Identify top free resources to help you prepare for the CCNA exam\
-• Become familiar with Cisco's own CNNA resources
+* Understand the market value of CCNA certification
+* Become familiar with the CCNA exam registration process
+* Describe a roadmap to prepare for the CCNA exam
+* Identify top free resources to help you prepare for the CCNA exam
+* Become familiar with Cisco's own CNNA resources
 
 Do you want to know [how to get CCNA certification](https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html)? This section offers advice on [how to get CCNA certification](https://www.coursera.org/ca/articles/what-is-the-ccna). This section explains how to become a Cisco Certified Network Associate. It offers tips and resources to help aspiring computer networking specialists pass their CCNA 200-301 exam (Implementing and Administering Cisco Networking Technologies).
 
@@ -189,10 +189,10 @@ A collection of live webinar recordings conducted on the Cisco Learning Network 
 
 ### Key takeaways
 
-• Cisco’s CCNA is widely regarded as the king of networking certifications\
-• To register for an exam, first you need to create a Cisco profile on Cisco.com\
-• If you're familiar with the CCNA curriculum, take 7 steps x 7 weeks to become CCNA certified\
-• You can find free CCNA YouTube courses (e.g., Jeremy's IT Lab) and blogs (e.g., Wendell Odom)
+* Cisco’s CCNA is widely regarded as the king of networking certifications
+* To register for an exam, first you need to create a Cisco profile on Cisco.com
+* If you're familiar with the CCNA curriculum, take 7 steps x 7 weeks to become CCNA certified
+* You can find free CCNA YouTube courses (e.g., Jeremy's IT Lab) and blogs (e.g., Wendell Odom)
 
 ### References
 

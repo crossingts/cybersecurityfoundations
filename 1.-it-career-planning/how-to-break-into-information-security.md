@@ -153,8 +153,8 @@ Here are some training resources for novices seeking to break into information s
 
 ### Key takeaways
 
-• Three key infosec foundation areas are computer networking, operating systems, and system admin\
-• Two key infosec career routes are information security analyst and SOC analyst
+* Three key infosec foundation areas are computer networking, operating systems, and system admin
+* Two key infosec career routes are information security analyst and SOC analyst
 
 ### References <a href="#ember18657" id="ember18657"></a>
 

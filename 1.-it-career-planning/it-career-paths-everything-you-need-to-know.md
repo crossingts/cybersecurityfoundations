@@ -213,9 +213,9 @@ Free online courses offered by Cisco. Certification-aligned training for Network
 
 ### Key takeaways
 
-• Key IT industry employers include hardware manufacturers, software vendors, and MSPs\
-• Key IT career paths include systems, networking, development, and security\
-• IT and cybersecurity training resources include commercial and free resources
+* Key IT industry employers include hardware manufacturers, software vendors, and MSPs
+* Key IT career paths include systems, networking, development, and security
+* IT and cybersecurity training resources include commercial and free resources
 
 ### References
 

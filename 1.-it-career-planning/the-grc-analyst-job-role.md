@@ -11,6 +11,7 @@ description: >-
 
 * Understand from which organizational functions you can pivot into a GRC analyst role
 * Identify important skills of a GRC analyst
+* Identify key GRC risk management frameworks
 * Identify industry certifications relevant to the GRC analyst/manager role
 
 This section sheds light on the GRC analyst role as a career choice, including how to pivot into it from another IT job role, relevant skills of a GRC analyst, and relevant industry certifications.
@@ -32,7 +33,7 @@ GRC analyst relevant job titles include Compliance Analyst, IT Auditor, Risk and
 
 ### Skills of a GRC analyst <a href="#ember513" id="ember513"></a>
 
-A cybersecurity analyst has skills in the technical foundations of cybersecurity, such as network administration, system administration, incident and disaster recovery management, and cloud computing. Familiarity with key cybersecurity risk management frameworks such as NIST CSF and NIST SP 800-37 is a definite plus.
+A cybersecurity analyst has skills in the technical foundations of cybersecurity, such as network administration, system administration, and cloud computing. Familiarity with key cybersecurity risk management frameworks such as NIST CSF and NIST SP 800-37 is a definite plus.
 
 As a GRC professional, you’re interacting and coordinating regulatory compliance and assurance activities with legal, procurement, engineering, project management, etc. You’re working internally, or externally with professional services.
 

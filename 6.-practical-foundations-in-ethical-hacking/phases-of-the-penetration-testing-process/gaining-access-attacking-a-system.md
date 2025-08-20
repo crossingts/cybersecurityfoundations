@@ -462,6 +462,8 @@ There are three main types of rootkits (Walker, 2012, p. 175):
 
 • Library level: These rootkits basically make use of system-level calls to hide their existence.&#x20;
 
+#### **The Evolution of Linux Rootkits**
+
 Rootkits first emerged in the Linux environment, primarily taking two distinct forms:
 
 1. **Binary Replacement Rootkits (Early Generation)**

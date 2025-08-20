@@ -51,7 +51,7 @@ The global demand for skilled cybersecurity professionals has never been higher.
 
 • Describe common defensive cybersecurity technologies such as packet analyzers (e.g., Wireshark and tcpdump), IDS/IPS (e.g., Suricata and Snort), network security monitoring/SIEM (e.g., Wazuh), and host/network firewalls (e.g., OPNsense, pfilter, and nftables).
 
-• Describe the phases of the penetration testing process (planning, reconnaissance, scanning and enumeration, exploitation, post-exploitation, and reporting).
+• Describe the phases of the penetration testing process: planning, reconnaissance, scanning and enumeration, exploitation (gaining access), post-exploitation (privilege escalation, maintaining access, and covering tracks), and reporting.
 
 • Become familiar with key penetration testing methodologies (e.g., OSSTMM, NIST SP 800-115, ISSAF, and PTES), frameworks (e.g., OWASP Testing Guide and MITRE ATT\&CK/cyber kill chain), and technologies (e.g., Nmap, OpenVAS, Metasploit, and Burp Suite).
 

@@ -326,7 +326,7 @@ Technology focus: Wazuh (SIEM/XDR).
 
 **Best Combinations**:
 
-* **Wazuh + TheHive + Suricata** → Full SIEM + IR + NIDS.
+* **Wazuh + TheHive + Suricata** → Full SIEM + IR (Incident Response) + NIDS.
 * **Velociraptor + Zeek** → Advanced EDR + network forensics.
 
 ***

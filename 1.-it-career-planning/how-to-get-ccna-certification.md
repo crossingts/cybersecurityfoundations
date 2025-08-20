@@ -15,7 +15,7 @@ description: >-
 * Identify top free resources to help you prepare for the CCNA exam
 * Become familiar with Cisco's own CNNA resources
 
-Do you want to know [how to get CCNA certification](https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html)? This section offers advice on [how to get CCNA certification](https://www.coursera.org/ca/articles/what-is-the-ccna). This section explains how to become a Cisco Certified Network Associate. It offers tips and resources to help aspiring computer networking specialists pass their CCNA 200-301 exam (Implementing and Administering Cisco Networking Technologies).
+This section offers advice on [how to get CCNA certification](https://www.coursera.org/ca/articles/what-is-the-ccna). This section outlines practical steps to become a Cisco Certified Network Associate. It offers tips and resources to help aspiring computer networking specialists pass their CCNA 200-301 exam (Implementing and Administering Cisco Networking Technologies). This section explains the market value of CCNA certification, explains the CCNA exam registration process, describes a roadmap to prepare for the CCNA exam, and identifies top free resources to help you prepare for the CCNA exam.
 
 ## Topics covered in this section
 

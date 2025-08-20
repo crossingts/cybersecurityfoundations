@@ -15,47 +15,31 @@ The global demand for skilled cybersecurity professionals has never been higher.
 
 ### Part 1: Foundational Cybersecurity (Chapters 1–3)
 
-• Understand emerging cybersecurity job roles and relevant skills and industry certifications.
-
-• Define core cybersecurity concepts, including the CIA triad (confidentiality, integrity, and availability) and key risk management concepts such as threats, vulnerabilities, and mitigation.
-
-• Understand the evolving cybersecurity threat landscape and its key technological and sociopolitical drivers.
-
-• Describe common cyber attacks and malware types.
-
-• Describe cybersecurity risk mitigation methods.
-
-• Describe network security risk mitigation best practices.
-
-• Explain how Governance, Risk, and Compliance (GRC) frameworks (e.g., NIST SP 800-37, NIST CSF, and ISO/IEC 27001) align security with business goals.
-
-• Identify key cybersecurity regulations (e.g., GDPR and HIPAA) and industry standards (e.g., PCI DSS).
+* Understand emerging cybersecurity job roles and relevant skills and industry certifications.
+* Define core cybersecurity concepts, including the CIA triad (confidentiality, integrity, and availability) and key risk management concepts such as threats, vulnerabilities, and mitigation.
+* Understand the evolving cybersecurity threat landscape and its key technological and sociopolitical drivers.
+* Describe common cyber attacks and malware types.
+* Describe cybersecurity risk mitigation methods.
+* Describe network security risk mitigation best practices.
+* Explain how Governance, Risk, and Compliance (GRC) frameworks (e.g., NIST SP 800-37, NIST CSF, and ISO/IEC 27001) align security with business goals.
+* Identify key cybersecurity regulations (e.g., GDPR and HIPAA) and industry standards (e.g., PCI DSS).
 
 ### Part 2: Networking & Cryptography (Chapters 4–5)
 
-• Explain how data flows across network layers (OSI/TCP/IP).
-
-• Relate network layers (OSI/TCP/IP models) to vulnerabilities and mitigation techniques.
-
-• Describe how SSL/TLS uses cryptography (symmetric encryption, asymmetric encryption, and hashing) to secure data in transit.
-
-• Compare wireless security protocols (WPA/WPA2/WPA3) and their authentication and encryption methods.
+* Explain how data flows across network layers (OSI/TCP/IP).
+* Relate network layers (OSI/TCP/IP models) to vulnerabilities and mitigation techniques.
+* Describe how SSL/TLS uses cryptography (symmetric encryption, asymmetric encryption, and hashing) to secure data in transit.
+* Compare wireless security protocols (WPA/WPA2/WPA3) and their authentication and encryption methods.
 
 ### Part 3: Ethical Hacking (Chapters 6)
 
-• Compare professional ethical hacking (white hat hacking), grey hat hacking, black hat hacking, and hacktivism.
-
-• Become familiar with the professional ethics of ethical hackers.
-
-• Become familiar with defensive security and offensive security approaches, including SIRT/CSIRT (Security Incident Response Team/Computer Security Incident Response Team), SOC (Security Operations Center), red teaming, and ethical hacking.
-
-• Describe common defensive cybersecurity technologies such as packet analyzers (e.g., Wireshark and tcpdump), IDS/IPS (e.g., Suricata and Snort), network security monitoring/SIEM (e.g., Wazuh), and host/network firewalls (e.g., OPNsense, pfilter, and nftables).
-
-• Describe the phases of the penetration testing process: planning, reconnaissance, scanning and enumeration, exploitation (gaining access), post-exploitation (privilege escalation, maintaining access, and covering tracks), and reporting.
-
-• Become familiar with key penetration testing methodologies (e.g., OSSTMM, NIST SP 800-115, ISSAF, and PTES), frameworks (e.g., OWASP Testing Guide and MITRE ATT\&CK/cyber kill chain), and technologies (e.g., Nmap, OpenVAS, Metasploit, and Burp Suite).
-
-• Identify common attack targets, including OS vulnerabilities, misconfigurations and default credentials, and OWASP Top 10 vulnerabilities such as cross-site scripting (XSS) and SQL injection (SQLi).
+* Compare professional ethical hacking (white hat hacking), grey hat hacking, black hat hacking, and hacktivism.
+* Become familiar with the professional ethics of ethical hackers.
+* Become familiar with defensive security and offensive security approaches, including SIRT/CSIRT (Security Incident Response Team/Computer Security Incident Response Team), SOC (Security Operations Center), red teaming, and ethical hacking.
+* Describe common defensive cybersecurity technologies such as packet analyzers (e.g., Wireshark and tcpdump), IDS/IPS (e.g., Suricata and Snort), network security monitoring/SIEM (e.g., Wazuh), and host/network firewalls (e.g., OPNsense, pfilter, and nftables).
+* Describe the phases of the penetration testing process: planning, reconnaissance, scanning and enumeration, exploitation (gaining access), post-exploitation (privilege escalation, maintaining access, and covering tracks), and reporting.
+* Become familiar with key penetration testing methodologies (e.g., OSSTMM, NIST SP 800-115, ISSAF, and PTES), frameworks (e.g., OWASP Testing Guide and MITRE ATT\&CK/cyber kill chain), and technologies (e.g., Nmap, OpenVAS, Metasploit, and Burp Suite).
+* Identify common attack targets, including OS vulnerabilities, misconfigurations and default credentials, and OWASP Top 10 vulnerabilities such as cross-site scripting (XSS) and SQL injection (SQLi).
 
 ## Book Chapters
 

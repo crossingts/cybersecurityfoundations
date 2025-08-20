@@ -8,9 +8,9 @@ description: >-
 
 ## Learning objectives
 
-• Identify the various IT industry sectors\
-• Describe key IT career paths, skills, and industry certifications\
-• Identify key IT and cybersecurity training resources
+* Identify the various IT industry sectors
+* Describe key IT career paths, skills, and industry certifications
+* Identify key IT and cybersecurity training resources
 
 [IT career paths](https://www.coursera.org/articles/it-career-paths-how-to-get-started) – everything you need to know to plan, kick-start, and level up your IT career: job roles, job titles, specializations, skills, certifications, salaries, and training resources, from entry level positions to senior level positions.
 
@@ -63,7 +63,7 @@ A **system administrator**, or sysadmin, is a person who is responsible for the 
 
 Systems administration is the field of IT that’s responsible for maintaining reliable computer systems in a multi-user environment. Sysadmins have a solid grasp of infrastructure services as well as cloud infrastructure setups and management of cloud resources. Sysadmins manage and configure servers and know how to use industry tools to manage computers, user information, and user productivity.
 
-As articulated in the [Google IT Support Professional Certificate](https://www.coursera.org/professional-certificates/google-it-support) course [System Administration and IT Infrastructure Services](https://www.coursera.org/learn/system-administration-it-infrastructure-services), a system administrator is able to (after completing the course): ● Utilize best practices for choosing hardware, vendors, and services for your organization, ● understand how the most common infrastructure services that keep an organization running work, and how to manage infrastructure servers, ● understand how to make the most of the cloud for your organization, ● manage an organization’s computers and users using the directory services, Active Directory, and OpenLDAP, ● choose and manage the tools that your organization will use, ● backup your organization’s data and know how to recover your IT infrastructure in the case of a disaster, and ● utilize systems administration knowledge to plan and improve processes for IT environments.
+As articulated in the [Google IT Support Professional Certificate](https://www.coursera.org/professional-certificates/google-it-support) course [System Administration and IT Infrastructure Services](https://www.coursera.org/learn/system-administration-it-infrastructure-services), a system administrator is able to: ● Utilize best practices for choosing hardware, vendors, and services for your organization, ● understand how the most common infrastructure services that keep an organization running work, and how to manage infrastructure servers, ● understand how to make the most of the cloud for your organization, ● manage an organization’s computers and users using the directory services, Active Directory, and OpenLDAP, ● choose and manage the tools that your organization will use, ● backup your organization’s data and know how to recover your IT infrastructure in the case of a disaster, and ● utilize systems administration knowledge to plan and improve processes for IT environments.
 
 Systems Administrator related job titles include System Admin, Server Administrator, IT Systems Administrator, and IT Administrator.
 
@@ -129,7 +129,7 @@ Master: variables, functions, conditional statements, loops, lists, dictionaries
 
 ### Career path: Information Security
 
-Information security is not as much a career path as it is a specialization within various IT career paths. Information security specialists within organizations often take the role of analysts. Information security is a sub-area of IT security within organizations. A cybersecurity role is likely a second IT job at the earliest, but [entry level cybersecurity positions](https://www.youtube.com/watch?v=iW5UitULXLY) do exist.
+Information security is not as much a career path as it is a specialization within various IT career paths. Information security specialists within organizations often take the role of analysts. Information security is a sub-area of IT security within organizations. A cybersecurity role is likely a second IT job at the earliest, but entry level cybersecurity positions do exist.
 
 Information security analysts “plan, implement, upgrade, or monitor security measures for the protection of computer networks, systems, applications and information. May ensure appropriate security controls are in place that will safeguard digital files and vital electronic infrastructure. May respond to computer security breaches and viruses” (MicroTrain Technologies).
 

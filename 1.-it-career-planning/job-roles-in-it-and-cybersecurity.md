@@ -8,18 +8,79 @@ description: >-
 
 ## Learning objectives
 
-• Identify key IT and cybersecurity job roles\
-• Describe the roles' key responsibilities, skills, and industry certifications
+* Identify key IT and cybersecurity job roles
+* Describe the roles' key responsibilities, skills, and industry certifications
 
-This section gives a succinct overview of in-demand [job roles in IT and cybersecurity](https://www.snhu.edu/about-us/newsroom/stem/cyber-security-roles). Key job responsibilities, skills, and certifications for the following IT and cybersecurity roles are covered: System Administrator, Network Administrator, Incident Responder, Penetration Tester, Cloud Engineer, Cybersecurity Manager, and Privacy Analyst.
+This section gives a succinct overview of seven in-demand job roles in IT and cybersecurity. Key job responsibilities, skills, and certifications for the following IT and cybersecurity roles are covered: System Administrator, Network Administrator, Incident Responder, Penetration Tester, Cloud Engineer, Cybersecurity Manager, and Privacy Analyst.
 
 ## Topics covered in this section
 
-* **Key IT and cybersecurity job roles**
-* **Job responsibilities**
-* **Skills and industry certifications**
+* **System Administrator**
+* **Network Administrator**
+* **Incident Responder**
+* **Penetration Tester**
+* **Cloud Engineer**
+* **Cybersecurity Manager**
+* **Privacy Analyst**
+* **Job roles in IT and cybersecurity summary table**
 
-### [Job roles in IT and cybersecurity](https://www.indeed.com/career-advice/finding-a-job/types-of-cyber-security-roles)
+### System Administrator <a href="#ember603" id="ember603"></a>
+
+System Administrators (“The server people”) are responsible for the installation, configuration, maintenance, and security of servers, operating systems, and critical software applications.
+
+* Job responsibilities: Automation; Patch management and endpoint security; Server health/server set up, configuration, optimization, troubleshooting, and maintenance; Backup/DR: system backup and restoration in disaster recovery; App compatibility: ensuring system-wide software and hardware compatibility and interoperability; System hardening, including removing processes and services not needed; Creating users and groups; Windows Defender configuration
+* Skills: Networking; Patch management; Backups and recovery; OS – Linux, Windows, Mac; Scripting and automation; PowerShell and Command line (CLI); Virtualization (VMWare); Cloud computing – containers, Kubernetes, AWS, Azure; Network monitoring, intrusion detection, intrusion prevention, firewalls
+* Certificates: Azure Administrator Associate; Network+; Linux+; Security+; VMWare Certified Professional; RHCSA (Red Hat Certified System Administrator)
+
+### Network Administrator <a href="#ember606" id="ember606"></a>
+
+Network Administrators are responsible for day-to-day configuration, maintenance, and troubleshooting of different network devices and the network itself.
+
+* Job responsibilities: Hardware: setting up, configuring, and maintaining network hardware/devices – routers, switches, firewalls, and different types of security appliances like IDS/IPS; Software/hardware installation; Network topology: mapping out the network topology; Troubleshooting (possibly 80% of the work); Network infrastructure design and optimization (equipment, budget, as well as from a data standpoint)
+* Skills: Windows Active Directory – create/remove /manage user accounts; OS – Linux; Cisco/PAN (Palo Alto) Equipment; Servers -on-prem and cloud based; Virtualization like VMWare; Troubleshooting
+* Certifications: CCNA; Network+; Azure Network Engineer Associate; AWS Certified Solutions Architect – Associate
+
+### Incident Responder <a href="#ember609" id="ember609"></a>
+
+Incident Responders are responsible for detecting, analyzing, and mitigating security breaches to minimize damage and restore normal operations swiftly.
+
+* Job responsibilities: Monitor systems/networks; Security auditing; Forensic investigations; Risk analysis; Intrusion detection; Training staff and stakeholders; Documentation; PCAP analysis with Wireshark
+* Skills: Networking; OS – Linux, Windows, Mac; Packet analysis; SIEM tools; Scripting automation (Python); Packet capturing tools (Wireshark); Backup process; Forensic tools
+* Certifications: Security+; GSEC (GIAC Security Essentials); GCIH (GIAC Certified Incident Handler); ECIH (EC-Council Certified Incident Handler); CHFI (Computer Hacking Forensic Investigator); CEH
+
+### Penetration Tester <a href="#ember612" id="ember612"></a>
+
+Penetration Testers proactively simulate cyberattacks to identify vulnerabilities and strengthen an organization’s security defenses.
+
+* Job responsibilities: Identify/exploit vulnerabilities (internal or external); Network, application, mobile, Wi-Fi (testing); Scoping; OSINT; Social engineering; Exploit; Persist; Reporting; Password cracking (Hydra, John the Ripper, Cain and Abel); Nmap
+* Skills: Networking; OS – Linux; Documentation; OSINT; Scripting (Python, Bash) and programming languages (C); Tools (modifying code; or writing your own tools); CVEs; CLI (Command Line Interface)
+* Certifications: OSCP (Offensive Security Certified Professional); CEH; eJPT (eLearnSecurity Junior Penetration Tester); GPEN (GIAC Penetration Tester); Pentest+; LPT (Licensed Penetration Tester – EC-Council)
+
+### Cloud Engineer <a href="#ember615" id="ember615"></a>
+
+Cloud Engineers design, deploy, and optimize cloud infrastructure and services to ensure scalability, security, and reliability.
+
+* Job responsibilities: Maintain cloud infrastructure; Serverless infrastructure architecture; IAM (Identity and Access Management); Automation; Cost optimization; Performance optimization; Storage
+* Skills: Networking; OS – Linux, Windows; Scripting and programming languages; Database; IAM; Troubleshooting
+* Certifications: AWS Advanced Networking Specialty; Azure Network Engineer Associate;  CCSK (Certificate of Cloud Security Knowledge); CCSP (Certified Cloud Security Professional); Cloud+
+
+### Cybersecurity Manager <a href="#ember618" id="ember618"></a>
+
+Cybersecurity Managers oversee security strategies, policies, and teams to protect an organization’s systems, data, and infrastructure from threats.
+
+* Job responsibilities: Operations; Infrastructure; Oversee assessments and audits; Ambassador; Compliance; Policies; Business continuity planning/DR (Disaster Recovery)
+* Skills: Negotiation; Time management; Incident response; Regulations and standards; Auditing; Policies and processes
+* Certifications: CISSP (Certified Information Systems Security Professional); CISM (Certified Information Security Manager); CRISC (Certified in Risk and Information Systems Control); CISA (Certified Information Systems Auditor); SC-100: Microsoft Cybersecurity Architect
+
+### Privacy Analyst <a href="#ember621" id="ember621"></a>
+
+Privacy Analysts ensure compliance with data protection laws, assess risks, and implement policies to safeguard sensitive information.
+
+* Job responsibilities: Assessing the business policies, procedures, and operations to ensure that the organization is meeting its privacy requirements; Making sure that the business is compliant with regulations or industry standards or laws that they have to follow to protect critical information; Risk management: help manage legal or operational risk; Research and analysis of sensitive data and figuring out how to comply with relevant rules; Training: developing policies and procedures and then training the organization on those policies and procedures
+* Skills: Critical thinking; Privacy laws and regulations; Data life cycle management; Researching – identifying relevant laws, regulations, and standards; Communication skills; Gap analysis
+* Certifications: CIPP (Certified Information Privacy Professional); GRC Professional; CDPSE (Certified Data Privacy Solutions Engineer); CISA (Certified Information Systems Auditor)
+
+### Job roles in IT and cybersecurity summary table
 
 | **Job role**                                                                                                                                                                                                                                      | **Job responsibilities**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | **Skills**                                                                                                                                                                                                                                                                                                                                                                | **Industry certifications**                                                                                                                                                                                                                                                                      |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -38,4 +99,4 @@ This section gives a succinct overview of in-demand [job roles in IT and cyberse
 
 ### References
 
-This table (Job roles in IT and cybersecurity) is based on the free Cybrary course [Introduction to IT & Cybersecurity](https://www.cybrary.it/course/introduction-to-it-and-cybersecurity/) (1h 41m | CEU/CPE credits: 2), which is part of a Career Path: Information Security Fundamentals.
+These job roles are based on the free Cybrary course [Introduction to IT & Cybersecurity](https://www.cybrary.it/course/introduction-to-it-and-cybersecurity/) (1h 41m | CEU/CPE credits: 2), which is part of a Career Path: Information Security Fundamentals.

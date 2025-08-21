@@ -14,12 +14,12 @@ description: >-
 * Develop an appreciation for the need for a layered approach to cybersecurity
 * Identify the need for a system's view of cybersecurity management&#x20;
 
-This section reviews the main risk mitigation methods used to reduce the risk of a security breach or minimize the impact of an attack if it occurs. Risk mitigation methods explored span technologies, network design, networking protocols, organizational policies, compliance frameworks, risk assessment/security testing, and security training.
+This section reviews major risk mitigation methods used to reduce the risk of a cybersecurity breach or to minimize the impact of an attack if it occurs. Risk mitigation methods explored span technologies, network design, networking protocols, organizational policies, security testing, and security training.
 
 ## Topics covered in this section
 
 * **Risk mitigation technologies**
-* **Risk mitigation via (re)design**
+* **Network design**
 * **Networking protocols**
 * **Organizational policies**
 * **Security testing**
@@ -162,7 +162,7 @@ Setting up a VPN requires specialized hardware or VPN software installed on serv
 
 **• Web filters** prevent users’ browsers from loading certain pages from particular websites. There are different web filters designed for individual, family, institutional, and enterprise use. Web domain whitelisting can be implemented using a web filter that can make web access policies and perform web site monitoring.
 
-### Risk mitigation via (re)design
+### Network design
 
 Network Segmentation, DMZ, Honeypots, Defense in Depth, Network Automation, Effective Network Architecture
 

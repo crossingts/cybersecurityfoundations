@@ -6,10 +6,10 @@ description: This section explores common cyber attacks and malware types
 
 ## Learning objectives
 
-• Become familiar with common cyber attacks\
-• Become familiar with common malware types
+* Become familiar with common cyber attacks
+* Become familiar with common malware types
 
-This section looks at common cyber attacks (DoS, spoofing, reflection/amplification, MITM, reconnaissance, social engineering, and password attacks) and malware types (viruses, worms, and ransomware).
+This section looks at common cyber attacks (reconnaissance, social engineering, password attacks, DoS, reflection and amplification, MITM, and spoofing) and malware types (viruses, worms, and ransomware).
 
 ## Topics covered in this section
 
@@ -27,15 +27,13 @@ This section looks at common cyber attacks (DoS, spoofing, reflection/amplificat
 
 ### Common cyber attacks
 
-Attack types are threats which can potentially exploit vulnerabilities to compromise the CIA of an enterprise’s information assets and network system. We explore how attackers can threaten the CIA of enterprise systems and information by looking at the following common types of attacks: Reconnaissance, social engineering, password attacks, denial of service (DoS), reflection and amplification, MITM, and spoofing attacks. There are many more potential attacks than these, but these are some of the main attack categories.
+Attack types are threats which can potentially exploit vulnerabilities to compromise the CIA of an enterprise’s information assets and network system. This discussion explores how attackers can threaten the CIA of enterprise systems and information by looking at the following common types of attacks: Reconnaissance, social engineering, password attacks, denial of service (DoS), reflection and amplification, MITM, and spoofing attacks. There are many more potential attacks than these, but these are some of the main attack categories.
 
 #### Reconnaissance
 
-Reconnaissance “attacks” are used to gather information about a target. The information gathered in the initial stage at least is often publicly available information.
+Reconnaissance “attacks” are used to gather information about a target. The information gathered in this initial stage is often publicly available information and can be used to launch a targeted social engineering attack.
 
-For example, you can perform an NSLOOKUP to learn the IP address of a site. From there, you can probe for open ports which are potential vulnerabilities. You could also perform a WHOIS query to learn email addresses, phone numbers, physical addresses, etc. at this website: https://lookup.icann.org/en
-
-The information gathered in this stage can be used to launch a targeted social engineering attack.
+You can perform an NSLOOKUP to learn the IP address of a site. From there, you can probe for open ports which are potential vulnerabilities. You could also perform a WHOIS query to learn email addresses, phone numbers, physical addresses, etc. at this website: https://lookup.icann.org/en.
 
 #### Social engineering
 
@@ -61,19 +59,11 @@ Mishing, SMS phishing, which is phishing performed using SMS text messages to th
 
 Most systems use a username and password combination to authenticate users. The username itself is often simple and easy to guess, for example the user’s email address. So, often, the strength and secrecy of the password is relied on to provide the necessary security.
 
-However, attackers can learn a user’s password through multiple methods.
-
-First, they could guess the password. A dictionary attack can also be used, in which a program runs through a dictionary, which is a list of common words and passwords, to guess the target’s password. The program tries each word, hoping to find the correct password.
+However, attackers can learn a user’s password through multiple methods. They could guess the password. A dictionary attack can also be used, in which a program runs through a dictionary, which is a list of common words and passwords, to guess the target’s password. The program tries each word, hoping to find the correct password.
 
 A brute force attack involves trying every possible combination of letters, numbers, and special characters to find the target’s password. This requires a very powerful computer, and if the password is sufficiently strong, the chances of it working are very low, because it takes so much time.
 
-A strong password should contain at least 8 characters, preferably more than 8. The more characters, the harder it is to brute force attack the password.
-
-A strong password should have a mix of uppercase and lowercase letters and a mix of letters and numbers.
-
-It should also have one or more special characters such as question marks, exclamation points, etc.
-
-Finally it should be changed regularly.
+A strong password should contain at least 8 characters, preferably more than 8. The more characters, the harder it is to brute force attack the password. A strong password should have a mix of uppercase and lowercase letters and a mix of letters and numbers. It should also have one or more special characters such as question marks, exclamation points, etc. Finally it should be changed regularly.
 
 Most enterprises will enforce rules like these on their employees, but it’s also recommended that you follow rules like these when making your own personal passwords.
 
@@ -236,8 +226,8 @@ The above malware types can exploit various vulnerabilities to threaten any of t
 
 ### Key takeaways
 
-• Common cyber attacks include social engineering, password, and spoofing attacks\
-• Common malware types include viruses, worms, and ransomeware&#x20;
+* Common cyber attacks include social engineering, password, and spoofing attacks
+* Common malware types include viruses, worms, and ransomeware&#x20;
 
 ### References
 

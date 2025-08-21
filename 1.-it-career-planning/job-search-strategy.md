@@ -30,11 +30,9 @@ When a recruiter has limited time with a decision-maker, they may only highlight
 
 ### Identify your target job role
 
-• Determine the income range acceptable for you.
-
-• Identify the job role (job title) that matches your skills, interests, and income requirements.
-
-• Consider at least 3 job roles. Fill in the following table with the qualifications required for each role and note any gaps between your current skills and the job requirements.
+* Determine the income range acceptable for you.
+* Identify the job role (job title) that matches your skills, interests, and income requirements.
+* Consider at least 3 job roles. Fill in the following table with the qualifications required for each role and note any gaps between your current skills and the job requirements.
 
 **Job role selection grid (example):**
 
@@ -44,33 +42,24 @@ When a recruiter has limited time with a decision-maker, they may only highlight
 | Incident Responder    | OS (Linux, Windows, Mac), Packet analysis, SIEM tools, CompTIA Security+ | Windows, Mac, Wireshark | Linux, SIEM tools, CompTIA Security+ |
 | Penetration Tester    | IT networking, Kali Linux, CEH (EC-Council)                              | IT networking           | Kali Linux, CEH (EC-Council)         |
 
-• Start researching the role's skill/knowledge/credential requirements ASAP.
-
-• Consider how much time you'll need to bridge the skill gap (three months? Six months? Three years?)
+* Start researching the role's skill/knowledge/credential requirements ASAP.
+* Consider how much time you'll need to bridge the skill gap (three months? Six months? Three years?)
 
 ### Identify your target companies
 
-• Job applications: Directly (Cisco, Huawei, Apple, etc.) and indirectly (recruiters, job boards, job sites, etc.).
-
-• Compile a list of 20+ target companies hiring for your desired job role.
-
-• Identify the skills/qualifications expected at these companies for the job role.
-
-• Gather background information about the companies - history, culture, projects, products/services, etc.
-
-• Create a "wishlist" spreadsheet/an inventory of target companies (Company Name, Mission/Vision, Projects, Products/Services, Revenue, Employee Count, Competitors, Headquarter Location, Subsidiaries, etc.).
-
-• Use resources such as Huntr.co to organize your search activities and findings.
-
-• Use LLMs/AI chatbots such as ChatGPT, Gemini, DeepSeek, etc. to research company information.
+* Job applications: Directly (Cisco, Huawei, Apple, etc.) and indirectly (recruiters, job boards, job sites, etc.).
+* Compile a list of 20+ target companies hiring for your desired job role.
+* Identify the skills/qualifications expected at these companies for the job role.
+* Gather background information about the companies - history, culture, projects, products/services, etc.
+* Create a "wishlist" spreadsheet/an inventory of target companies (e.g., Company Name, Mission/Vision, Projects, Products/Services, Revenue, Employee Count, Competitors, Headquarter Location, Subsidiaries, etc.).
+* Use resources such as Huntr.co to organize your job search activities and findings.
+* Use LLMs/AI chatbots such as ChatGPT, Gemini, DeepSeek, etc. to research company information.
 
 ### Identify your skill gap
 
-• Use the list of 20+ companies to identify the expected skills for the target job role.
-
-• Research recent job ads (20+ job descriptions) for the role and extract main skills expected for the role.
-
-• Conduct a gap analysis: Identify your skill gap (skills, experience, and certifications).
+* Use the list of 20+ companies to identify the expected skills for the target job role.
+* Research recent job ads (20+ job descriptions) for the role and extract main skills expected for the role.
+* Conduct a gap analysis: Identify your skill gap (skills, experience, and certifications).
 
 **Skill gap analysis table (example):**
 
@@ -83,11 +72,15 @@ When a recruiter has limited time with a decision-maker, they may only highlight
 
 ### Create a skill bridge plan
 
-• Create an action plan to address the skill gap (set SMART goals).
-
-• Plan in terms of weeks, months, and years.
-
-• Courses, hands on projects, industry certifications, seminars, etc.
+* Create an action plan to address the skill gap.
+* Set **SMART** goals (example):
+  * **Specific**: Complete Udemy course: Mastering Active Directory: Administration and Fundamentals.
+  * **Measurable**: Study 5 hours/week and set up a test environment.
+  * **Achievable**: Udemy's course is for beginners and is highly rated.
+  * **Relevant**: Required for target role.
+  * **Time-bound**: Achieve proficiency within 2 months.
+* Plan in terms of weeks, months, and years.
+* Consider courses, hands on projects, industry certifications, seminars, etc.
 
 **A three-month action plan (example):**
 
@@ -102,35 +95,16 @@ When a recruiter has limited time with a decision-maker, they may only highlight
 
 \*\*Tasks: Courses, hands on projects, industry certifications, seminars, etc.
 
-**Setting SMART goals (example):**
-
-• **Specific**: Complete Udemy course: Mastering Active Directory: Administration and Fundamentals.
-
-• **Measurable**: Study 5 hours/week and set up a test environment.
-
-• **Achievable**: Udemy's course is for beginners and is highly rated.
-
-• **Relevant**: Required for target role.
-
-• **Time-bound**: Achieve proficiency within 2 months.
-
 ### Resume optimization
 
-• Tailor your resume to the target role.
-
-• Tailor your applications to the target position and target company.
-
-• Optimize your resume for ATS (use resources like Huntr.co).
-
-• Keep the professional summary brief (1–3 lines).
-
-• Submit as a Word document (not PDF) for recruiter edits.
-
-• Use simple formatting—avoid complex columns/fonts.
-
-• Limit length to 2–3 pages, even with extensive experience.
-
-• Roles older than 10 years need only basic details (company, title, dates), or drop.
+* Tailor your resume to the target role.
+* Tailor your applications to the target position and target company.
+* Optimize your resume for ATS (use resources like Huntr.co).
+* Keep the professional summary brief (1–3 lines).
+* Submit as a Word document (not PDF) for recruiter edits.
+* Use simple formatting—avoid complex columns/fonts.
+* Limit length to 2–3 pages, even with extensive experience.
+* Roles older than 10 years need only basic details (company, title, dates), or drop.
 
 **ATS compliant resume example:**
 
@@ -138,64 +112,40 @@ When a recruiter has limited time with a decision-maker, they may only highlight
 
 ### Networking and outreach
 
-• Update and tailor your LinkedIn profile (maybe also your X/Twitter profile).
-
-• Create Glassdoor and Indeed profiles.
-
-• Grow your connections (e.g., seven new industry professionals/week from your target companies/industry).
-
-• Build professional connections (connect, comment, message, etc. industry professionals).
-
-• Schedule informational interviews with connections for information about the job role, trends, and opportunities.
-
-• Participate in/join webinars, virtual meetups, or networking events to learn about job role trends and opportunities.
+* Update and tailor your LinkedIn profile (maybe also your X/Twitter profile).
+* Create Glassdoor and Indeed profiles.
+* Grow your connections (e.g., seven new industry professionals/week from your target companies/industry).
+* Build professional connections (connect, comment, message, etc. industry professionals).
+* Schedule informational interviews with connections for information about the job role, industry trends, and opportunities.
+* Participate in webinars, virtual meetups, or networking events to learn about job role requirements and career opportunities.
 
 ### Conduct informational interviews
 
-• Reach out to professionals in your target companies for informational interviews using social media/job hunting platforms (Glassdoor, LinkedIn, Twitter/X, etc.).
-
-• Gain valuable insights into company culture, job requirements, industry trends, organizational structure, etc.
-
-• Use informational interviews to identify any gaps in your resume, skills, or certifications.
+* Reach out to professionals in your target industry/companies for informational interviews using social media/job hunting platforms (Glassdoor, LinkedIn, Twitter/X, etc.).
+* Gain valuable insights into company culture, job requirements, industry trends, organizational structure, etc.
+* Use informational interviews to identify any gaps in your resume, skills, or certifications.
 
 ### Job interview preparation
 
-• Build a story toolbox:
-
-• People remember stories more than facts.
-
-• Use the STAR method to help structure your stories (where there's "action" or accomplishments to communicate):
-
-* **S - Situation:** Describe the context or problem.
-* **T - Task:** Explain your responsibility or role.
-* **A - Action:** Detail the actions you took to solve the problem.
-* **R - Result:** Explain the outcome/impact you made.
-
-• Prepare at least two stories demonstrating problem-solving skills, interpersonal skills, handling/learning from conflicts and mistakes.
-
-• Responses to common and expected interview questions.
-
-• Practice mock interviews with friends/acquaintances/career coach/yourself.
-
-• Demonstrate cultural/organizational fit (alignment of values, mutual gains).
-
-• Demonstrate your ability to get the job done and add value/make a difference.
-
-• For skills you don't have yet:
-
-• Emphasize (give examples of) your fast learning capabilities.
-
-• Give examples of similar skills/experiences.
-
-• Ask probing/follow-up questions (tailor your responses to their concerns).
-
-• Make a strong first impression:
-
-• Non-verbal communication (body language, tone, posture) plays a huge role—93% of communication is non-verbal.
-
-• First impressions form in a fraction of a second and can be lasting, so present yourself confidently.
-
-• Practice interview answers (responses to common and expected interview questions).
+* Build a story toolbox:
+  * People remember stories more than facts.
+  * Use the **STAR** method to help structure your stories (where there's "action" or accomplishments to communicate):
+    * **S - Situation:** Describe the context or problem.
+    * **T - Task:** Explain your responsibility or role.
+    * **A - Action:** Detail the actions you took to solve the problem.
+    * **R - Result:** Explain the outcome/impact you made.
+  * Prepare at least two stories demonstrating problem-solving skills, interpersonal skills, handling/learning from conflicts and mistakes.
+* Prepare (and practice) responses to common and expected interview questions.
+* Practice mock interviews with friends/acquaintances/career coach/yourself.
+* Demonstrate cultural/organizational fit (alignment of values, mutual gains).
+* Demonstrate your ability to get the job done and add value/make a difference.
+* For skills you don't have yet:
+  * Emphasize and give examples of your fast learning capabilities.
+  * Give examples of similar skills/experiences.
+* Ask probing/follow-up questions (tailor your responses to their concerns).
+* Make a strong first impression:
+  * First impressions form in a fraction of a second and can be lasting, so present yourself confidently.
+  * Non-verbal communication (body language, tone, posture) plays a huge role—perhaps some 90% of communication is non-verbal.
 
 **Common interview questions:**
 
@@ -209,7 +159,7 @@ Consider:
 * Seeking mentorship from infosec professionals.
 * Gaining experience through volunteer work or internships.
 * Attending industry conferences (e.g., BSides) and local meetups (ISSA, OWASP, etc.).
-* Completing courses, hands on projects, industry certifications.
+* Completing courses and hands on projects, and obtaining industry certifications.
 * Finding a reputable external recruiter.
 
 ### Key takeaways

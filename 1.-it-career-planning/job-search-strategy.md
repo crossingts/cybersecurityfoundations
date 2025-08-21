@@ -34,9 +34,7 @@ When a recruiter has limited time with a decision-maker, they may only highlight
 
 • Identify the job role (job title) that matches your skills, interests, and income requirements.
 
-• Start researching the role's skill/knowledge/credential requirements ASAP!
-
-• Analyze/consider at least 3 job roles. Fill in the following table with the qualifications required for each role and note any gaps between your current skills and the job requirements.
+• Consider at least 3 job roles. Fill in the following table with the qualifications required for each role and note any gaps between your current skills and the job requirements.
 
 **Job role selection grid (example):**
 
@@ -46,31 +44,33 @@ When a recruiter has limited time with a decision-maker, they may only highlight
 | Incident Responder    | OS (Linux, Windows, Mac), Packet analysis, SIEM tools, CompTIA Security+ | Windows, Mac, Wireshark | Linux, SIEM tools, CompTIA Security+ |
 | Penetration Tester    | IT networking, Kali Linux, CEH (EC-Council)                              | IT networking           | Kali Linux, CEH (EC-Council)         |
 
+• Start researching the role's skill/knowledge/credential requirements ASAP.
+
 • Consider how much time you'll need to bridge the skill gap (three months? Six months? Three years?)
 
 ### Identify your target companies
 
-• Job applications: Directly (Cisco, Huawei, Apple, etc.) and indirect (recruiters, job boards, job sites, etc.).
+• Job applications: Directly (Cisco, Huawei, Apple, etc.) and indirectly (recruiters, job boards, job sites, etc.).
 
-• Compile a list of 20+ target companies hiring for your desired role.
+• Compile a list of 20+ target companies hiring for your desired job role.
 
-• Identify the skills/qualifications expected at these companies for the role.
+• Identify the skills/qualifications expected at these companies for the job role.
 
-• Gather background information about the companies - culture, projects, products/services, etc.
+• Gather background information about the companies - history, culture, projects, products/services, etc.
 
-• Create a "wishlist" spreadsheet (Company Name, Mission/Vision, Projects, Products/Services, Revenue, Employee Count, Competitors, Headquarter Location, Subsidiaries, etc.).
+• Create a "wishlist" spreadsheet/an inventory of target companies (Company Name, Mission/Vision, Projects, Products/Services, Revenue, Employee Count, Competitors, Headquarter Location, Subsidiaries, etc.).
 
-• Use resources such as Huntr.co to organize your findings.
+• Use resources such as Huntr.co to organize your search activities and findings.
 
 • Use LLMs/AI chatbots such as ChatGPT, Gemini, DeepSeek, etc. to research company information.
 
 ### Identify your skill gap
 
-• Use the list of 20+ companies to identify the expected skills for the role.
+• Use the list of 20+ companies to identify the expected skills for the target job role.
 
 • Research recent job ads (20+ job descriptions) for the role and extract main skills expected for the role.
 
-• Conduct a gap analysis: Identify your skill gap (skills, experience, and certifications you need).
+• Conduct a gap analysis: Identify your skill gap (skills, experience, and certifications).
 
 **Skill gap analysis table (example):**
 
@@ -80,8 +80,6 @@ When a recruiter has limited time with a decision-maker, they may only highlight
 | Backup and disaster recovery                                                                                                                  | Yes                   | Missing           | Need hands on training in backup and disaster recovery                                                                |
 | Network availability monitoring - NMS                                                                                                         | Yes                   | Missing           | Need hands on training - Nagios / OpenNMS                                                                             |
 | Network performance monitoring - NMS                                                                                                          | Yes                   | Missing           | Need hands on training - MRTG (SNMP based) / CiscoWorks                                                               |
-
-• Decide what you need to learn (your skill gap).
 
 ### Create a skill bridge plan
 
@@ -104,7 +102,7 @@ When a recruiter has limited time with a decision-maker, they may only highlight
 
 \*\*Tasks: Courses, hands on projects, industry certifications, seminars, etc.
 
-**Setting SMART goals:**
+**Setting SMART goals (example):**
 
 • **Specific**: Complete Udemy course: Mastering Active Directory: Administration and Fundamentals.
 
@@ -142,13 +140,13 @@ When a recruiter has limited time with a decision-maker, they may only highlight
 
 • Update and tailor your LinkedIn profile (maybe also your X/Twitter profile).
 
-• Grow your connections (e.g., seven new industry professionals/week from your target companies/industry).
-
 • Create Glassdoor and Indeed profiles.
+
+• Grow your connections (e.g., seven new industry professionals/week from your target companies/industry).
 
 • Build professional connections (connect, comment, message, etc. industry professionals).
 
-• Schedule informational interviews with connections for information about the job role trends and opportunities.
+• Schedule informational interviews with connections for information about the job role, trends, and opportunities.
 
 • Participate in/join webinars, virtual meetups, or networking events to learn about job role trends and opportunities.
 

@@ -181,12 +181,6 @@ To gain access to the CCNA Prep on-demand free resources (CCNA Prep Practice Qui
 
 A collection of live webinar recordings conducted on the Cisco Learning Network (includes CCNA Certification Training Videos, CCNA Prep Program Learning Map, and CCNA Prep Program Practice Quiz).
 
-### The next step
-
-[How to get a job after passing the Cisco CCNA](https://www.youtube.com/watch?v=Wk_-cYrm21M) (Network Engineer Academy YouTube video)
-
-[What to do NEXT after passing Cisco CCNA // DON’T TAKE another IT Certification](https://www.youtube.com/watch?v=BIxVvB_NUF0) (Network Engineer Academy YouTube video)
-
 ### Key takeaways
 
 * Cisco’s CCNA is widely regarded as the king of networking certifications

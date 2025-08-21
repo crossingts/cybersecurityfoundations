@@ -8,9 +8,8 @@ description: >-
 
 ## Learning objectives
 
-• Describe the changing cybersecurity threat landscape\
-• Describe technological and sociopolitical drivers of the change\
-
+* Describe the changing cybersecurity threat landscape
+* Describe technological and sociopolitical drivers of the change
 
 This section explores cybersecurity threats at the individual, business, and societal levels and key underlying technological and sociopolitical factors.
 
@@ -223,11 +222,11 @@ Notable firms include NSO Group (Israel), Paragon (Israel), Candiru (Israel), Ci
 
 ### Key takeaways
 
-• Cybersecurity threats at the societal level include cyberattacks on critical infrastructure\
-• Cybersecurity threats at the individual level include identity theft\
-• Cybersecurity threats at the business level include data breaches \
-• Technological drivers of change include social digitization, digital convergence, and AI/ML\
-•  Sociopolitical drivers of change include U.S.-China rivalry and collusion between Western intelligence agencies and dominant media companies&#x20;
+* Cybersecurity threats at the societal level include cyberattacks on critical infrastructure
+* Cybersecurity threats at the individual level include identity theft
+* Cybersecurity threats at the business level include data breaches&#x20;
+* Technological drivers of change include social digitization, digital convergence, and AI/ML
+* Sociopolitical drivers of change include U.S.-China rivalry and collusion between Western intelligence agencies and dominant media companies&#x20;
 
 ### References
 

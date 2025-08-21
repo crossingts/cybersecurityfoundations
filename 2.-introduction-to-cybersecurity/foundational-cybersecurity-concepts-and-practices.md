@@ -9,7 +9,7 @@ description: >-
 ## Learning objectives
 
 * Become familiar with key cybersecurity concepts and practices
-* Learn key cybersecurity definitions&#x20;
+* Learn key cybersecurity definitions
 * Describe where cybersecurity fits within corporate organizational structures&#x20;
 * Understand how cybersecurity is practiced within organizations
 
@@ -320,10 +320,10 @@ The primary goals of cryptography are confidentiality, authentication, data inte
 
 ### Key takeaways
 
-• Tactically, cybersecurity is about protecting the CIA of information assets \
-• Strategically, cybersecurity is about compliance with rules and regulations\
-• Cybersecurity and information security can be synonymous \
-• Organizations take a risk-based approach to cybersecurity management
+* Tactically, cybersecurity is about protecting the CIA of information assets&#x20;
+* Strategically, cybersecurity is about compliance with rules and regulations
+* Cybersecurity and information security can be synonymous&#x20;
+* Organizations take a risk-based approach to cybersecurity management
 
 ### References
 

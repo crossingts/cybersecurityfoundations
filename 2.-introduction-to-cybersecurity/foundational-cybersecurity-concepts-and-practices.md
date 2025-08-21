@@ -62,7 +62,7 @@ Areas for which central IT most commonly has primary responsibility in higher ed
 
 ### Confidentiality, Integrity, and Availability (CIA) of information
 
-The most concrete (least abstract) and tactical (as opposed to strategic) goal of information security is the protection of the confidentiality, integrity, and availability of information assets. The principles of the CIA triad form the foundation of security. These three principles help ensure that data is protected, accurate, and accessible when needed.
+The most concrete (least abstract) and tactical (as opposed to strategic) goal of information security is the protection of the confidentiality, integrity, and availability of information assets (by comparison, the most strategic goal of information security in an enterprise is to support the enterprise's strategic vision and company mission). The principles of the CIA triad form the foundation of security. These three principles help ensure that data is protected, accurate, and accessible when needed.
 
 * Confidentiality denotes an imperative that only authorized users should be able to access privileged/private data.
 * Integrity denotes an imperative that data should not be changed or modified by unauthorized users. Data should be correct and authentic.
@@ -189,7 +189,7 @@ A key technology for ensuring data confidentiality is Data Loss Prevention (DLP)
 **How DLP Monitors and Blocks Unauthorized Data Transfers**
 
 1. **Content-Centric Detection**\
-   DLP systems scan data **at rest** (e.g., databases), **in use** (e.g., open files), and **in motion** (e.g., emails, cloud uploads) for sensitive content. Unlike generic security tools, they use techniques like:
+   DLP systems scan data **at rest** (e.g., databases), **in use** (e.g., open files), and **in motion** (e.g., emails, cloud uploads) for sensitive content. DLP systems use techniques like:
    * **Pattern matching** (e.g., credit card/PII regex).
    * **File fingerprinting** (e.g., exact matches of proprietary designs).
    * **Machine learning** (e.g., identifying confidential documents by context).
@@ -203,7 +203,18 @@ A key technology for ensuring data confidentiality is Data Loss Prevention (DLP)
    * Feed into broader security systems (e.g., SIEMs for correlation).
    * Trigger automated workflows (e.g., notifying compliance teams).
 
-DLP operates at the _data layer_—understanding content, not just traffic or behavior—making it uniquely effective against insider threats and accidental leaks.
+DLP operates at the data layer—understanding content, not just traffic or behavior—making it uniquely effective against insider threats and accidental leaks.
+
+**Open-Source & Freemium DLP Tools**
+
+1. **MyDLP** (Community Edition)
+   * Network/email DLP with basic policies (e.g., credit card detection).
+2. **OpenDLP**
+   * Scans endpoints for sensitive files (no real-time blocking).
+3. **Spyderbat** (Behavioral DLP)
+   * Open-source runtime monitoring for data exfiltration.
+4. **Apache Nifi** + **Regex Policies**
+   * Custom DIY DLP using workflows to filter sensitive data in transit.
 
 **Commercial DLP Solutions**
 
@@ -218,17 +229,6 @@ DLP operates at the _data layer_—understanding content, not just traffic or be
    * Supports hybrid cloud/on-prem deployments.
 4. **Digital Guardian**
    * Endpoint-centric with advanced threat response (blocks USB/exfiltration).
-
-**Open-Source & Freemium DLP Tools**
-
-1. **MyDLP** (Community Edition)
-   * Network/email DLP with basic policies (e.g., credit card detection).
-2. **OpenDLP**
-   * Scans endpoints for sensitive files (no real-time blocking).
-3. **Spyderbat** (Behavioral DLP)
-   * Open-source runtime monitoring for data exfiltration.
-4. **Apache Nifi** + **Regex Policies**
-   * Custom DIY DLP using workflows to filter sensitive data in transit.
 
 **Cloud-Native & Integrated Tools**
 
@@ -268,6 +268,29 @@ Several centralized logging technologies can enhance security and compliance by 
 * **Search & analytics** (to detect anomalies or breaches).
 * **Alerting & automation** (trigger responses to suspicious activity).
 
+#### Free/Open-Source vs. Commercial Tools
+
+| Category                       | Tool Name                       | Type            | Notes                                                                                                                   |
+| ------------------------------ | ------------------------------- | --------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| **SIEM Systems**               | **Splunk**                      | **Commercial**  | Powerful commercial platform. A free version (Splunk Free) exists with a daily data cap.                                |
+|                                | **IBM QRadar**                  | **Commercial**  | Enterprise-grade commercial SIEM.                                                                                       |
+|                                | **Microsoft Sentinel**          | **Commercial**  | Cloud-native SaaS solution, billed based on data ingestion.                                                             |
+|                                | **Elastic SIEM (ELK Stack)**    | **Open Source** | The core Elasticsearch, Logstash, and Kibana stack is open-source. Elastic offers paid commercial features and support. |
+| **Log Management & Analytics** | **Graylog**                     | **Open Source** | The core Graylog product is open-source. An enterprise version with advanced features is available.                     |
+|                                | **Datadog**                     | **Commercial**  | Commercial SaaS platform with usage-based pricing.                                                                      |
+|                                | **Sumo Logic**                  | **Commercial**  | Commercial SaaS platform with usage-based pricing.                                                                      |
+|                                | **Fluentd / Fluent Bit**        | **Open Source** | Cloud-native CNCF-graduated open-source projects.                                                                       |
+| **Cloud-Native & Enterprise**  | **AWS CloudTrail + CloudWatch** | **Commercial**  | Part of AWS's paid ecosystem. Pricing is based on events and log storage.                                               |
+|                                | **Google Cloud Logging**        | **Commercial**  | Part of GCP's paid ecosystem. Includes a free tier with monthly allowances.                                             |
+|                                | **Azure Monitor Logs**          | **Commercial**  | Part of Microsoft Azure's paid ecosystem. Billed based on data ingestion and retention.                                 |
+|                                | **Syslog-ng / Rsyslog**         | **Open Source** | Standard, free, and open-source log forwarders available on most Unix/Linux systems.                                    |
+
+#### Clarifications:
+
+* **Freemium Models:** Several tools listed as "Commercial" (like Splunk, Datadog, and the cloud platforms) offer generous free tiers or free plans for low-volume use, but their full-featured enterprise versions are paid services.
+* **Open Core Models:** Tools like **Elastic SIEM** and **Graylog** have strong open-source cores. However, the companies behind them also sell commercial extensions (like advanced security features, supported plugins, and professional support), which is a common business model in the open-source world.
+* **Cloud Services:** While the underlying technology of tools like Fluentd is open source, the managed services from AWS, GCP, and Azure (**CloudWatch, Google Cloud Logging, Azure Monitor**) are commercial products.
+
 #### Availability mitigation technology in focus: DDoS protection services (e.g., AWS Shield, Cloudflare)
 
 Data can become unavailable due to being damaged or destroyed, or due to ransomeware or dormant malware. Unlike confidentiality or integrity attacks, availability attacks aim primarily to disrupt service rather than steal or alter data. Mitigation strategies include rate limiting, traffic filtering, and cloud-based DDoS protection services (e.g., AWS Shield, Cloudflare).
@@ -280,15 +303,11 @@ Availability attacks, such as Distributed Denial of Service (DDoS) attacks, aim 
 
 AAA stands for Authentication, Authorization, and Accounting. It’s a framework for controlling and monitoring users of a computer system such as a network.
 
-Authentication is how you control access to your network and prevent intrusions, data loss, and unauthorized users.
-
-AAA stands for Authentication, Authorization, and Accounting. It’s a framework for controlling and monitoring users of a computer system, such as a network.
-
-* Authentication is the process of verifying a user’s identity. When a user logs in, ideally using multi-factor authentication, that’s authentication.
+* Authentication is the process of verifying a user’s identity. When a user logs in, ideally using multi-factor authentication, that’s authentication. In other words, Authentication is how you control access to your network and prevent intrusions, data loss, and unauthorized users.
 * Authorization is the process of granting the user the appropriate access and permissions. So, granting the user access to some files and services, but restricting access to other files and services, is authorization.&#x20;
 * Accounting is the process of recording the user’s activities on the system. For example, logging when a user makes a change to a file, or recording when a user logs in or logs out, is accounting.&#x20;
 
-Enterprises typically use an AAA server to provide AAA services. ISE (Identity Services Engine) is Cisco’s AAA server. AAA (network access control) servers typically support the following two AAA protocols: 1) RADIUS (Remote Authentication Dial-In User System), which is an open standard protocol and uses UDP ports 1812 and 1813; and 2) TACACS+ (Terminal Access Controller Access-Control System Plus), which is also an open standard (that was developed by Cisco) and uses TCP port 49.
+Enterprises typically use an AAA server to provide AAA services. ISE (Identity Services Engine) is Cisco’s AAA server. AAA servers typically support the following two AAA protocols for network access control: 1) RADIUS (Remote Authentication Dial-In User System), which is an open standard protocol and uses UDP ports 1812 and 1813; and 2) TACACS+ (Terminal Access Controller Access-Control System Plus), which is also an open standard (that was developed by Cisco) and uses TCP port 49.
 
 #### Foundational cryptography concepts
 
@@ -297,12 +316,12 @@ The primary goals of cryptography are confidentiality, authentication, data inte
 * Confidentiality protects information from unauthorized access.
 * Authentication verifies the identity of users and the authenticity of data.
 * Data integrity guarantees that information remains unaltered by unauthorized parties, ensuring its accuracy.
-* Non-repudiation ensures that a party cannot later deny having performed an action (such as sending a message or approving a transaction). It provides irrefutable proof—through digital signatures, timestamps, or audit logs—that a specific user took a particular action, preventing false denials and holding parties accountable.
+* Non-repudiation ensures that a party cannot later deny having performed an action (such as sending a message or approving a transaction). It provides irrefutable evidence—through digital signatures, timestamps, or audit logs—that a specific user took a particular action, preventing false denials and holding parties accountable.
 
 ### Key takeaways
 
 • Tactically, cybersecurity is about protecting the CIA of information assets \
-• Strategically, cybersecurity is about compliance with rules \
+• Strategically, cybersecurity is about compliance with rules and regulations\
 • Cybersecurity and information security can be synonymous \
 • Organizations take a risk-based approach to cybersecurity management
 

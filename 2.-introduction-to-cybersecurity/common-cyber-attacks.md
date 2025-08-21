@@ -77,7 +77,7 @@ The TCP SYN flood is a common type of DoS attack (often directed against ISPs) w
 
 The three-way handshake is SYN, SYN-ACK, and ACK. The attacker sends a large number of SYN packets to a target server. The target sends a SYN-ACK message in response to each SYN it receives. But the attacker never replies with the final ACK of the handshake.
 
-The target waits for the final ACK of each handshake, and the incomplete connections fill up the target’s TCP connection table. The incomplete connections will timeout and be removed from the table after a certain period of time, but the attacker continues sending SYN messages to fill up the table. This exhausts the server’s resources and prevents legitimate users from accessing it.
+The target waits for the final ACK of each handshake, and the incomplete connections fill up the target’s TCP connection table. The incomplete connections will timeout and be removed from the table after a certain period of time, but the attacker continues sending SYN messages. This exhausts the server’s resources and prevents legitimate users from accessing it.
 
 In the end, the target is no longer able to make legitimate TCP connections because it has reached the maximum number of TCP connections it can maintain.&#x20;
 
@@ -85,15 +85,11 @@ In the end, the target is no longer able to make legitimate TCP connections beca
 
 For each SYN message the attacker sends, the target puts an entry in its TCP connection table and sends a SYN-ACK message, then waits for an ACK to complete the connection. But the ACK never comes. The attacker keeps sending SYN messages, and the target keeps sending SYN-ACK messages. Then the target’s TCP connection table fills up, and the denial-of-service has been achieved.
 
-The attacker likely spoofs their IP address, meaning the attacker uses a fake IP address, making this a spoofing attack. The SYN-ACK messages do not return back to the attacker.&#x20;
-
-The malicious client can either simply not send the expected ACK, or by spoofing the source IP address in the SYN, cause the server to send the SYN-ACK to a falsified IP address – which will not send an ACK because it “knows” that it never sent a SYN. ([https://en.wikipedia.org/wiki/SYN\_flood](https://en.wikipedia.org/wiki/SYN_flood))
-
 A much more powerful version of this attack type is the DDoS. In a distributed denial-of-service attack, the attacker infects many target computers with malware and uses the computers to initiate a denial-of-service attack such as a TCP SYN flood attack. The group of infected computers is called a botnet.
 
 The PCs infected with malware together start flooding the target with TCP SYN messages, so the target server is no longer able to respond to legitimate TCP connection requests.&#x20;
 
-For mitigation of TCP SYN flood attacks, you would need techniques that focus on managing the connection setup process itself. A layered approach combining these methods is most effective in mitigating TCP SYN flood attacks. Here are some common mitigation methods:
+For mitigation of TCP SYN flood attacks, you would need methods that focus on managing the connection setup process itself. A layered approach combining these methods is most effective in mitigating TCP SYN flood attacks. Here are some common mitigation methods:
 
 1. Rate limiting: This limits the number of incoming SYN requests to a manageable rate, preventing the attacker from overwhelming your system.
 2. SYN cookies: This is a technique where the server generates a temporary challenge instead of allocating resources for a full connection handshake in case of a suspected SYN flood.
@@ -101,19 +97,11 @@ For mitigation of TCP SYN flood attacks, you would need techniques that focus on
 
 **DHCP exhaustion attack**
 
-DHCP exhaustion attack, also known as a DHCP starvation attack, is similar to the TCP SYN flood attack. An attacker uses spoofed MAC addresses to flood a DHCP server with DHCP Discover messages. Attackers send DHCP Discover messages with fake source MAC addresses at a very quick pace. The target server’s DHCP pool becomes full, resulting in a denial-of-service to other devices which are no longer able to get an IP address. Mitigation: DHCP snooping, Switch Port Security.
-
-A DHCP exhaustion attack is similar to the TCP SYN flood attack. An attacker uses spoofed MAC addresses to flood DHCP Discover messages. The target server’s DHCP pool becomes full, resulting in a denial-of-service to other devices which are no longer able to get an IP address.
-
-Attackers send DHCP Discover messages with fake source MAC addresses at a very quick pace. The server will reply to each Discover with a DHCP Offer message, and while it is offering an IP address it will not assign that address to other devices.&#x20;
+DHCP exhaustion attack, also known as a DHCP starvation attack, is similar to the TCP SYN flood attack. An attacker uses spoofed MAC addresses to flood a DHCP server with DHCP Discover messages. Attackers send DHCP Discover messages with fake source MAC addresses at a very quick pace. The server will reply to each Discover with a DHCP Offer message, and while it is offering an IP address it will not assign that address to other devices. The target server’s DHCP pool becomes full, resulting in a denial-of-service to other devices which are no longer able to get an IP address. Mitigation: DHCP snooping, Switch Port Security.
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/a76cf-dhcp-exhaustion-attack-2.webp?w=1201" alt="DHCP-exhaustion-attack" height="423" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Security Fundamentals | Day 48)</p></figcaption></figure>
 
 So if some PCs send DHCP Discover messages to get IP addresses, the server is not able to give them their IP addresses because its DHCP pool is full. Maybe it had 250 IP addresses to lease to clients, but they are all taken by the attacker.
-
-In a DHCP exhaustion attack, malicious actors flood the network with DHCP requests, overwhelming the real DHCP server and preventing legitimate clients from obtaining IP addresses. DHCP snooping can limit the rate of DHCP messages and filter suspicious DHCP messages, mitigating such denial-of-service attacks.
-
-A DHCP starvation attack is similar to the TCP SYN flood attack. An attacker uses spoofed MAC addresses to flood DHCP Discover messages. The target server’s DHCP pool becomes full, resulting in a denial-of-service to other devices which are no longer able to get an IP address.
 
 The goal of a DHCP starvation attack is to overwhelm the DHCP server with a flood of bogus DHCP requests, exhausting the pool of available IP addresses. This prevents legitimate clients from obtaining an IP address and essentially denies them access to the network.
 

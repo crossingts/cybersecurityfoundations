@@ -9,10 +9,10 @@ description: >-
 
 ## Learning objectives
 
-• List and describe key cybersecurity risk mitigation methods\
-• Develop an appreciation for the conceptual overlap between risk mitigation approaches\
-• Develop an appreciation for the need for a layered approach to cybersecurity\
-• Identify the need for a system's view of cybersecurity management&#x20;
+* List and describe key cybersecurity risk mitigation methods
+* Develop an appreciation for the conceptual overlap between risk mitigation approaches
+* Develop an appreciation for the need for a layered approach to cybersecurity
+* Identify the need for a system's view of cybersecurity management&#x20;
 
 This section reviews the main risk mitigation methods used to reduce the risk of a security breach or minimize the impact of an attack if it occurs. Risk mitigation methods explored span technologies, network design, networking protocols, organizational policies, compliance frameworks, risk assessment/security testing, professional conduct, and security training.
 
@@ -482,7 +482,7 @@ Multifactor locks can protect access to these restricted areas. For example, a d
 
 ### Key takeaways
 
-• Key industry cybersecurity risk mitigation methods span technologies, system/network design, and organizational and network policies&#x20;
+* Key industry cybersecurity risk mitigation methods span technologies, system/network design, and organizational and network policies
 
 ### References
 

@@ -9,10 +9,10 @@ description: >-
 
 ## Learning objectives
 
-• List and describe key network security risk mitigation best practices\
-• Develop an appreciation for the conceptual overlap between risk mitigation approaches \
-• Develop an appreciation for the need for a layered approach to cybersecurity\
-• Identify the need for a system's view of cybersecurity management
+* List and describe key network security risk mitigation best practices
+* Develop an appreciation for the conceptual overlap between risk mitigation approaches
+* Develop an appreciation for the need for a layered approach to cybersecurity
+* Identify the need for a system's view of cybersecurity management
 
 This section reviews common network security risk mitigation best practices, including least privilege access control, on time software patching, multi-factor authentication, network monitoring, incident response and disaster recovery, and layered security (defense in depth).
 
@@ -357,7 +357,7 @@ By implementing these measures, enterprises can significantly reduce the risk of
 
 ### Key takeaways
 
-• Network security risk mitigation best practices include Identity and Access Management, network monitoring, incident response and disaster recovery, and layered security
+* Network security risk mitigation best practices include Identity and Access Management, network monitoring, incident response and disaster recovery, and layered security
 
 ### References
 

@@ -2,7 +2,7 @@
 description: >-
   This section discusses network security risk mitigation methods, including
   technologies, network design, networking protocols, organizational polices,
-  compliance frameworks, and risk assessment
+  security testing, and security training
 ---
 
 # Risk mitigation methods
@@ -14,7 +14,7 @@ description: >-
 * Develop an appreciation for the need for a layered approach to cybersecurity
 * Identify the need for a system's view of cybersecurity management&#x20;
 
-This section reviews the main risk mitigation methods used to reduce the risk of a security breach or minimize the impact of an attack if it occurs. Risk mitigation methods explored span technologies, network design, networking protocols, organizational policies, compliance frameworks, risk assessment/security testing, professional conduct, and security training.
+This section reviews the main risk mitigation methods used to reduce the risk of a security breach or minimize the impact of an attack if it occurs. Risk mitigation methods explored span technologies, network design, networking protocols, organizational policies, compliance frameworks, risk assessment/security testing, and security training.
 
 ## Topics covered in this section
 
@@ -22,7 +22,7 @@ This section reviews the main risk mitigation methods used to reduce the risk of
 * **Risk mitigation via (re)design**
 * **Networking protocols**
 * **Organizational policies**
-* **Risk assessment/security testing**
+* **Security testing**
 * **Security training**
 
 ### Risk mitigation technologies
@@ -253,7 +253,7 @@ When segmenting networks for security, both **subnets** and **VLANs** can be use
 ✔ **Avoid VLAN hopping** by securing trunk ports and using private VLANs where needed.\
 ✔ **Prefer Subnets in cloud** (cloud networks rely on IP-based segmentation).
 
-#### **Praactical Approach**
+#### **Practical Approach**
 
 * **For physical networks:** Start with VLANs, then assign subnets for routing.
 * **For cloud/virtual networks:** Use subnets with security groups/NACLs.
@@ -430,7 +430,7 @@ Usage policy, Security policy, Privacy policy
 
 An organization’s information security policy has to be clear—and regularly updated. Employee’s knowledge of and adherence to information security policy are critical to robust data security.
 
-### Risk assessment/security testing
+### Security testing
 
 Information security testing is performed in risk assessments and **compliance audits**. In fact, it is an essential part of both processes.
 

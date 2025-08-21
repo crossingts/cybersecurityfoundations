@@ -131,7 +131,9 @@ There is a more powerful variant of the reflection attack called an amplificatio
 
 **DHCP poisoning**
 
-In a DHCP poisoning attack a malicious device impersonates a legitimate DHCP server and offers IP addresses to clients. Once a client accepts the attacker's offer, their communication gets routed through the attacker's device, allowing them to potentially eavesdrop on traffic, steal data, redirect the user to malicious websites, or tamper with (damage) or alter the captured traffic. Mitigation: DHCP snooping.
+In a DHCP poisoning attack a malicious device impersonates a legitimate DHCP server and offers IP addresses to clients. The spurious DHCP server leases a useful IP address to the target device, in the correct subnet, with the correct mask, but assigns its own IP address as the default gateway.
+
+Once a client accepts the attacker's offer, their communication gets routed through the attacker's device, allowing them to potentially eavesdrop on traffic, steal data, redirect the user to malicious websites, or tamper with (damage) or alter the captured traffic. Mitigation: DHCP snooping.
 
 A spurious DHCP server and a malicious MITM < DHCP snooping configuration and verification\
 [https://itnetworkingskills.wordpress.com/2023/05/14/dhcp-snooping-configuration-verification/](https://itnetworkingskills.wordpress.com/2023/05/14/dhcp-snooping-configuration-verification/)
@@ -170,43 +172,25 @@ DAI configuration and verification\
 
 To spoof an address is to use a fake source address, for example a fake IP or MAC address. There are various types of spoofing attacks:&#x20;
 
-* Denial-of-Service&#x20;
+* Denial-of-Service (DoS)
 * Reflection and Amplification&#x20;
 * Man-in-the-Middle&#x20;
 
-Each spoofing attack type involves either IP spoofing or MAC spoofing as a mechanism of action.
+Each spoofing attack type involves either IP spoofing or MAC spoofing as a mechanism of action. In IP spoofing attacks, the attacker falsifies the source IP address in network packets. In MAC spoofing attacks, the attacker falsifies the source MAC address in network packets.
 
-**IP spoofing attacks**
+#### Spoofing Attacks Summary Table
 
-• An attacker falsifies the source IP address in network packets
-
-• TCP SYN flood
-
-• Reflection and amplification
-
-• DHCP poisoning/MITM
-
-• ARP spoofing (ARP poisoning)
-
-**MAC spoofing attacks**
-
-• An attacker falsifies the source MAC address in network packets
-
-• DHCP exhaustion
-
-#### Summary Table
-
-| Spoofing Attack Type                            | Primary Spoofing Method | Mitigation                                           | Explanation                                                                                                                                                               |
-| ----------------------------------------------- | ----------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Denial-of-Service Attacks (e.g., TCP SYN Flood) | **IP Spoofing**         | Filtering with ACLs, TCP SYN cookies, IPS/IDS        | The attacker uses a spoofed source IP to hide their identity and overwhelm the target with connection requests, making the attack difficult to trace.                     |
-| DHCP Exhaustion Attack                          | **MAC Spoofing**        | DHCP Snooping, Port Security                         | The attacker spoofs many different MAC addresses to request all available IP addresses from a DHCP server, exhausting the pool and denying service to legitimate clients. |
-| Reflection and Amplification Attacks            | **IP Spoofing**         | Anti-spoofing ACLs, BCP38 (network egress filtering) | The attacker spoofs the victim's IP address as the source. This causes reflection servers to send large responses to the victim, amplifying the attack traffic.           |
-| ARP Spoofing/Poisoning (MITM)                   | **MAC Spoofing**        | Dynamic ARP Inspection (DAI)                         | The attacker sends forged ARP messages to link their MAC address to the IP address of a legitimate host, intercepting traffic.                                            |
-| DHCP Poisoning (MITM)                           | **MAC Spoofing**        | DHCP Snooping                                        | The attacker spoofs a legitimate DHCP server to provide clients with false DHCP responses, often to redirect traffic for a MITM attack.                                   |
+| Spoofing Attack Type                       | Primary Spoofing Method | Mitigation                                           | Explanation                                                                                                                                                               |
+| ------------------------------------------ | ----------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| TCP SYN Flood (DoS)                        | **IP Spoofing**         | Filtering with ACLs, TCP SYN cookies, IPS/IDS        | The attacker uses a spoofed source IP to hide their identity and overwhelm the target with connection requests, making the attack difficult to trace.                     |
+| DHCP Exhaustion Attack (DoS)               | **MAC Spoofing**        | DHCP Snooping, Port Security                         | The attacker spoofs many different MAC addresses to request all available IP addresses from a DHCP server, exhausting the pool and denying service to legitimate clients. |
+| Reflection and Amplification Attacks (DoS) | **IP Spoofing**         | Anti-spoofing ACLs, BCP38 (network egress filtering) | The attacker spoofs the victim's IP address as the source. This causes reflection servers to send large responses to the victim, amplifying the attack traffic.           |
+| ARP Spoofing (MITM)                        | **IP Spoofing**         | Dynamic ARP Inspection (DAI)                         | The attacker sends gratuitous ARP replies to link their MAC address to the IP address of a legitimate host, intercepting traffic.                                         |
+| DHCP Poisoning (MITM)                      | **IP Spoofing**         | DHCP Snooping                                        | The attacker spoofs a legitimate DHCP server to provide clients malicious DHCP responses to redirect traffic for a MITM attack.                                           |
 
 **Clarification:**
 
-While Man-in-the-Middle attacks like ARP Spoofing and DHCP Poisoning are executed by spoofing a **MAC address** to trick the local network switch, they often have the ultimate goal of facilitating **IP-based** attacks (like intercepting traffic meant for another IP). Therefore, they are a prime example of how MAC spoofing and IP spoofing can be used in conjunction, with MAC spoofing being the primary enabler for the initial network deception.
+Man-in-the-Middle attacks like ARP Spoofing and DHCP Poisoning are a prime example of how MAC spoofing and IP spoofing can be used in conjunction.
 
 ### Malware types
 
@@ -223,7 +207,7 @@ These types of malware are defined by how the malware infects a system and how i
 ### Key takeaways
 
 * Common cyber attacks include social engineering, password, and spoofing attacks
-* Common malware types include viruses, worms, and ransomeware&#x20;
+* Common malware types include viruses, worms, and ransomeware
 
 ### References
 

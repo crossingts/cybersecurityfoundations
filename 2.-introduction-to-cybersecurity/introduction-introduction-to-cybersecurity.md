@@ -12,17 +12,12 @@ Through an exploration of key concepts and practices, this chapter will help stu
 
 **This chapter will help students:**
 
-• Understand key concepts and learn key definitions within the cybersecurity field, including information confidentiality, integrity, and availability (CIA triad).
-
-• Approach information security in terms of risk, threat, vulnerability, and mitigation.
-
-• Understand the changing cybersecurity threat landscape and key technological and sociopolitical factors driving the change.
-
-• Become familiar with common cyber attacks and malware types.
-
-• Describe risk mitigation methods.
-
-• Describe network security risk mitigation best practices.
+* Understand key concepts and learn key definitions within the cybersecurity field, including information confidentiality, integrity, and availability (the CIA triad).
+* Approach information security in terms of risk, threat, vulnerability, and mitigation.
+* Understand the changing cybersecurity threat landscape and key technological and sociopolitical factors driving the change.
+* Become familiar with common cyber attacks and malware types.
+* Describe risk mitigation methods.
+* Describe network security risk mitigation best practices.
 
 ## Topics covered in this chapter
 

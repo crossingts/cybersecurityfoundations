@@ -24,7 +24,7 @@ This section explores cybersecurity threats at the individual, business, and soc
 
 **Societal level threats**
 
-Cyberwarfare/cyberattacks on critical infrastructure such as the power grid, defence facilities, and health services: “As the number and variety of devices used to support, monitor, and control critical infrastructure become more interconnected, the likelihood of cyber threat actors disrupting critical infrastructure has increased” (CSE, 2018, p. 23).
+Cyberwarfare/cyberattacks on critical infrastructure such as power grids, defence facilities, and health services: “As the number and variety of devices used to support, monitor, and control critical infrastructure become more interconnected, the likelihood of cyber threat actors disrupting critical infrastructure has increased” (CSE, 2018, p. 23).
 
 Cyberwarfare/cyberattacks on public institutions and sensitive information: Cyber threat activity “against public institutions—such as government departments, universities, and hospitals—is likely to persist because of the essential nature of the services and the sensitivity of the information they manage” (CSE, 2018, p. 26).
 
@@ -36,7 +36,7 @@ Cybercrime (personal information/identity theft): Canadians face a rising cyber 
 
 Political interference/cyber warfare (malicious online influence activity): Cyber threat actors can amplify or suppress social media content using botnets, which automate online interactions and share content with unsuspecting users (CSE, 2018). By spreading their preferred content among large numbers of paid and legitimate users, cyber threat actors can promote their specific point of view and potentially influence Canadians. (CSE, 2018, p. 15)
 
-State and business surveillance: Cases in point are NSA's dragnet surveillance program, and Facebook’s Cambridge-Analytica data scandal.
+State and business surveillance of individuals: Cases in point are NSA's Dragnet surveillance program, and Facebook’s Cambridge-Analytica data scandal. The ability to extract value from surveillance data has made privacy and innovation “the duet of the century” (Bains, 2019).
 
 **Threat landscape in Canada**
 
@@ -50,17 +50,13 @@ Businesses face an increasing risk of cybercrime, especially data breaches from 
 
 “Canadian businesses, especially those active in strategic sectors of the economy, are subject to cyber espionage aimed at stealing intellectual property and other commercially sensitive information.” This cyber threat activity “can harm Canada’s competitive business advantage and undermine our strategic position in global markets” (CSE, 2018, p. 19).
 
-“Foreign and domestic adversaries target higher education institutions that have military and government contracts” (McNamara March 15, 2019).
+Espionage/information theft: Cyber campaigns launched by hackers from one country targeting firms of another country resulting in the theft of business information “such as bid prices, contracts and information related to mergers and acquisitions” (Onag, 2018).
+
+“Foreign and domestic adversaries target higher education institutions that have military and government contracts” (McNamara, March 15, 2019).
 
 **Political interference/cyberwarfare**
 
-Cyber warfare can involve sabotage (e.g., Stuxnet attributed to the United States and Israel); Malware attacks on financial institutions (e.g., WannaCry and Petya ransomware attributed to North Korea).
-
-**Surveillance**
-
-Business surveillance: Innovation vs Privacy (the "duet of century"). The ability to extract value from surveillance data has made privacy and innovation “the duet of the century” (Bains, 2019).
-
-Espionage/information theft: Cyber campaigns launched by hackers from one country targeting firms of another country resulting in the theft of business information “such as bid prices, contracts and information related to mergers and acquisitions” (Onag, 2018).
+Cyber warfare can involve sabotage (e.g., Stuxnet, attributed to the United States and Israel) and malware attacks on financial institutions (e.g., WannaCry and Petya ransomware, attributed to North Korea).
 
 #### Risk in higher education (industry in focus)
 
@@ -76,8 +72,6 @@ The top higher education information security risks in the U.S. and Canada that 
 | 2) End-User Awareness, Training, and Education              | End-user awareness, training, and education “is critical as campuses combat persistent threats and try to make faculty, students, and staff more aware of the current risks.” While “the majority of U.S. institutions (74%) require information security training for faculty and staff, those programs tend to be leanly staffed with small budgets.”                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | 3) Limited Resources for the Information Security Program   | The 2015 EDUCAUSE Core Data Service survey covering all US higher education institutions showed that about 2 percent of total central IT spending is allocated for information security and that there is 0.1 central IT information security FTEs per 1,000 institutional FTEs (full time equivalents). About 55% of surveyed respondents said the security awareness budget for 2016 was less than 5K; and about 25% said they do not know; 15% said between 5-25k; and 7% said between 25-50k; and less than 1% said between 50 and 100K. “With limited resources, higher education institutions must be creative and collaborative in addressing information security awareness needs.”                                                                                                                                                                                                                 |
 | 4) Addressing Regulatory Requirements                       | The regulatory environment impacting higher education IT systems is complex. Data protection in higher education IT systems is governed by a patchwork of different federal and/or state laws rather than by one national data protection law.   Student data are traditionally protected by the Family Educational Rights and Privacy Act of 1974 (FERPA) “although some types of student data, when it is held in healthcare IT systems, may be protected by the Health Insurance Portability and Accountability Act of 1996 (HIPAA).”   In addition, some types of student and institutional employee financial data may be protected by the Gramm Leach Bliley Act (GLBA). State laws may have data-breach notification requirements, and contractual agreements may have their own list of security technological controls that must be implemented and validated in IT systems. (Grama & Vogel, 2017) |
-
-Information Security Risk in Higher Education (Adapted from EDUCAUSE, 2019)
 
 ### Technological drivers of change
 
@@ -157,7 +151,6 @@ Developed by private firms and sold to governments, law enforcement, or private 
   * _Criticism:_ Used against journalists, activists, and dissidents.
   * _Sanctions:_ Added to U.S. export blacklist in 2021.
 * **Paragon (Israel)** – Sells **Graphite**, a spyware tool targeting iOS and Android.
-  * _Controversy:_ Allegedly used for unauthorized surveillance.
 
 **How Spyware Infects Your Computer**
 
@@ -185,24 +178,21 @@ Developed by private firms and sold to governments, law enforcement, or private 
 
 **Critics Counter:**
 
-* Enables **human rights abuses** (targeting activists, journalists).
+* Enables human rights abuses (targeting activists, journalists).
 * Sold to authoritarian regimes with poor oversight.
-* **Should face stricter bans** (e.g., U.S. blacklisting NSO Group).
+* Should face stricter bans (e.g., U.S. blacklisting NSO Group).
 
-Spyware is evolving—from **criminal hacking tools** to **government-grade surveillance software**. While some uses are legal, the lack of regulation raises serious **privacy and human rights concerns**. Staying informed and practicing good cybersecurity hygiene is crucial in this shifting landscape.
+Spyware is evolving—from criminal hacking tools to government-grade surveillance software. While some uses are legal, the lack of regulation raises serious privacy and human rights concerns. Staying informed and practicing good cybersecurity hygiene is crucial in this shifting landscape.
 
 **Mercenary spyware**
 
 Several companies, often referred to as "cyber-mercenaries" or "private-sector offensive actors" (PSOAs), specialize in developing and selling advanced spyware to governments, law enforcement, and private entities. Many operate in legal gray areas, facing criticism for enabling surveillance abuses.&#x20;
 
-Notable firms include NSO Group (Israel), Paragon (Israel), Candiru (Israel), Circles (Israel), Intellexa (Greece/Cyprus), Cytrox (North Macedonia, part of Intellexa), FinFisher (Gamma Group, UK/Germany), Wintego (Spain), RCS Labs (Italy, now part of Cy4Gate), BellTroX (India), Zerodium (France/US), and DarkMatter (UAE).
+Notable firms include NSO Group (Israel), Paragon (Israel), Candiru (Israel), Circles (Israel), Intellexa (Greece/Cyprus), Cytrox (North Macedonia, part of Intellexa), FinFisher (Gamma Group, UK/Germany), Wintego (Spain), RCS Labs (Italy, now part of Cy4Gate), BellTroX (India), and Zerodium (France/US).
 
 **NSO Group’s Legal Survival Tactics & Rebranding Efforts**
 
-* Known for Pegasus spyware, which infects smartphones, extracts messages, calls, and even activates cameras/microphones.
-  * Criticism: Used against journalists, activists, and dissidents.
-  * Sanctions: Added to U.S. export blacklist in 2021.
-* **Bankruptcy & Reinvention:** After U.S. sanctions, NSO Group **shifted ownership** (backed by U.K. firm) and rebranded as "Dream Security" (2024), claiming a focus on "defensive cybersecurity."
+* **Bankruptcy & Reinvention:** After U.S. sanctions, NSO Group shifted ownership (backed by U.K. firm) and rebranded as "Dream Security" (2024), claiming a focus on "defensive cybersecurity."
 * **Lobbying & PR:** Hired ex-NSA officials to lobby Western governments, arguing spyware is "essential" against encrypted apps (e.g., WhatsApp, Signal).
 * **Ongoing Lawsuits:**
   * **Apple’s Lawsuit (2023):** Accused NSO of violating U.S. laws by targeting iPhone users.
@@ -216,7 +206,7 @@ Notable firms include NSO Group (Israel), Paragon (Israel), Candiru (Israel), Ci
 
 ### Sociopolitical drivers of change
 
-• U.S. - China competition for technological and geopolitical dominance
+• U.S. - China rivalry for technological and geopolitical dominance
 
 • Expansion of the military-industrial complex (collusion between Western governments and the dominant media companies)
 

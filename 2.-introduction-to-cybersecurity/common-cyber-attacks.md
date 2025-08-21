@@ -111,7 +111,7 @@ DHCP snooping helps mitigate DoS attacks by limiting the rate of DHCP messages a
 
 In a direct UDP flooding attack, the **attacker directly targets a victim’s server or host** by flooding it with a high volume of UDP packets. Since UDP is connectionless, the target must process each incoming packet, consuming bandwidth, CPU, and memory. Attackers often **spoof the source IP address** to hide their identity and make mitigation harder. The goal is to exhaust the victim’s resources, causing slowdowns or a complete denial of service (DoS). Mitigation strategies include rate limiting UDP traffic, deploying firewalls to filter malicious packets, and using intrusion detection/prevention systems (IDS/IPS) to identify and block suspicious activity. Cloud-based DDoS protection services can also help absorb and disperse the attack traffic before it reaches the target.
 
-In a UDP Reflection/Amplification attack, the **attacker does not target the victim directly**. Instead, they send small, spoofed UDP requests (e.g., DNS or NTP queries) to **publicly accessible servers**, forging the victim’s IP as the source. These servers then respond with much larger replies, **reflecting and amplifying** the attack traffic toward the victim. The attacker leverages misconfigured servers as unwitting "proxies" to multiply the attack’s impact, potentially achieving **10x–100x amplification** with minimal effort. Mitigation strategies include disabling open DNS/NTP resolvers, implementing source IP validation, and using cloud-based scrubbing.
+In a UDP Reflection/Amplification attack, the **attacker does not target the victim directly**. Instead, they send small, spoofed UDP requests (e.g., DNS or NTP queries) to publicly accessible servers, **forging the victim’s IP as the source**. These servers then respond with much larger replies, reflecting and amplifying the attack traffic toward the victim. The attacker leverages misconfigured servers as unwitting "proxies" to multiply the attack’s impact, potentially achieving 10x–100x amplification with minimal effort. Mitigation strategies include disabling open DNS/NTP resolvers, implementing source IP validation, and using cloud-based scrubbing.
 
 **HTTP flooding**
 
@@ -168,27 +168,45 @@ DAI configuration and verification\
 
 #### Spoofing attacks
 
-To spoof an address is to use a fake source address, for example a fake IP or MAC address. There are many types of spoofing attacks.
+To spoof an address is to use a fake source address, for example a fake IP or MAC address. There are various types of spoofing attacks:&#x20;
 
-Denial-of-Service Attacks\
-Reflection and Amplification Attacks\
-Man-in-the-Middle Attacks
+* Denial-of-Service&#x20;
+* Reflection and Amplification&#x20;
+* Man-in-the-Middle&#x20;
 
-\*IP spoofing attacks
+Each spoofing attack type involves either IP spoofing or MAC spoofing as a mechanism of action.
 
-In an IP spoofing attack, an attacker falsifies the source IP address in network packets to impersonate another device and gain unauthorized access to the network.
+**IP spoofing attacks**
 
-TCP SYN flood (IP spoofing attack)
+• An attacker falsifies the source IP address in network packets
 
-Reflection and amplification attacks
+• TCP SYN flood
 
-DHCP poisoning/MITM
+• Reflection and amplification
 
-ARP spoofing, also known as ARP poisoning
+• DHCP poisoning/MITM
 
-\*MAC spoofing attacks
+• ARP spoofing (ARP poisoning)
 
-DHCP exhaustion attack (MAC address spoofing). Mitigation: DHCP snooping, Switch Port Security.
+**MAC spoofing attacks**
+
+• An attacker falsifies the source MAC address in network packets
+
+• DHCP exhaustion
+
+#### Summary Table
+
+| Spoofing Attack Type                            | Primary Spoofing Method | Mitigation                                           | Explanation                                                                                                                                                               |
+| ----------------------------------------------- | ----------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Denial-of-Service Attacks (e.g., TCP SYN Flood) | **IP Spoofing**         | Filtering with ACLs, TCP SYN cookies, IPS/IDS        | The attacker uses a spoofed source IP to hide their identity and overwhelm the target with connection requests, making the attack difficult to trace.                     |
+| DHCP Exhaustion Attack                          | **MAC Spoofing**        | DHCP Snooping, Port Security                         | The attacker spoofs many different MAC addresses to request all available IP addresses from a DHCP server, exhausting the pool and denying service to legitimate clients. |
+| Reflection and Amplification Attacks            | **IP Spoofing**         | Anti-spoofing ACLs, BCP38 (network egress filtering) | The attacker spoofs the victim's IP address as the source. This causes reflection servers to send large responses to the victim, amplifying the attack traffic.           |
+| ARP Spoofing/Poisoning (MITM)                   | **MAC Spoofing**        | Dynamic ARP Inspection (DAI)                         | The attacker sends forged ARP messages to link their MAC address to the IP address of a legitimate host, intercepting traffic.                                            |
+| DHCP Poisoning (MITM)                           | **MAC Spoofing**        | DHCP Snooping                                        | The attacker spoofs a legitimate DHCP server to provide clients with false DHCP responses, often to redirect traffic for a MITM attack.                                   |
+
+**Clarification:**
+
+While Man-in-the-Middle attacks like ARP Spoofing and DHCP Poisoning are executed by spoofing a **MAC address** to trick the local network switch, they often have the ultimate goal of facilitating **IP-based** attacks (like intercepting traffic meant for another IP). Therefore, they are a prime example of how MAC spoofing and IP spoofing can be used in conjunction, with MAC spoofing being the primary enabler for the initial network deception.
 
 ### Malware types
 
@@ -201,8 +219,6 @@ Malware, malicious software, refers to a variety of harmful programs that can in
 \*A Trojan horse is harmful software disguised as legitimate software. Trojan horses spread through user interaction such as opening email attachments or downloading a file from the Internet.
 
 These types of malware are defined by how the malware infects a system and how it spreads, not the attacks they carry out after infecting the system.
-
-The above malware types can exploit various vulnerabilities to threaten any of the CIA triad aspects of the target device.
 
 ### Key takeaways
 

@@ -1,10 +1,8 @@
 # NIST SP 800-61 (IR framework)
 
-A standard Incident Response (IR) process follows a lifecycle. NIST Special Publication 800-61 Rev. 2: "Computer Security Incident Handling Guide" is a widely cited and adopted standard for IR. It provides a comprehensive set of guidelines and best practices for building and managing an IR capability.
+NIST Special Publication 800-61 Rev. 2: "Computer Security Incident Handling Guide" is a widely cited and adopted standard for IR. It provides a comprehensive set of guidelines and best practices for building and managing an IR capability.
 
-IR open source stack: Wazuh + TheHive + Suricata → Full SIEM + IR + NIDS.
-
-IR in the context of this tool stack builds a capability that supports this entire NIST 800-61 lifecycle.
+**IR open source stack: Wazuh + TheHive + Suricata → Full SIEM + IR + NIDS.**
 
 #### The NIST SP 800-61r2 Incident Response Lifecycle
 
@@ -64,9 +62,65 @@ Often called the "lessons learned" phase, this is a crucial feedback loop that i
 
 The IR process is a continuous cycle. The output of **Phase 4** directly feeds improvements back into **Phase 1**, making the organization more prepared and resilient for the next incident.
 
-Resources:
+#### How The Stack Enables IR
 
-Incident Handler's Handbook (PDF, 1.97MB)\
-Published: 21 Feb, 2012\
-Created by:\
-Patrick Kral
+The proposed stack is a classic, powerful, and open-source combination that covers the entire IR lifecycle. Here's how each piece fits in:
+
+**1. Wazuh (The SIEM & EDR Core)**
+
+Wazuh is the central data aggregation and correlation engine. It's the "brains" that detects potential incidents.
+
+* **IR Role: Detection & Analysis**
+  * **Data Collection:** It gathers logs from endpoints, servers, network devices, and cloud environments (fulfilling the **SIEM** function).
+  * **Behavioral Analysis:** Its built-in **Endpoint Detection and Response (EDR)** capabilities monitor for malicious process execution, file changes, and other suspicious activities on hosts.
+  * **Correlation:** Wazuh's rules engine correlates disparate events (e.g., a failed login from Suricata + a successful login from a strange location on a host) to generate high-fidelity **alerts**. These alerts are the primary _triggers_ for starting an IR process.
+
+**2. Suricata (The NIDS)**
+
+Suricata is the **Network Intrusion Detection System (NIDS)**. It monitors network traffic for malicious activity.
+
+* **IR Role: Detection & Initial Evidence**
+  * **Threat Detection:** It identifies known attack patterns (signatures), policy violations, and anomalous behavior on the network (e.g., C2 callbacks, exploit attempts, port scans).
+  * **Evidence Gathering:** It provides crucial network-level evidence. If Wazuh detects a compromised host, Suricata's logs can show what other internal systems it was talking to, what data was exfiltrated, and what external IPs it contacted. This is vital for the **Containment** phase.
+
+**3. TheHive (The IR Platform & Case Management)**
+
+TheHive is the orchestrator and workflow engine for the IR team. It's where the actual response is managed.
+
+* **IR Role: Orchestration, Coordination, and Documentation**
+  * **Case Management:** When Wazuh generates a high-priority alert, it can be automatically forwarded to TheHive to create a new **incident case**. This becomes the single pane of glass for the entire investigation.
+  * **Collaboration:** Multiple analysts can work on the same case, assigning tasks, adding notes, and sharing findings in real-time.
+  * **Automation & Playbooks:** TheHive can execute pre-defined response playbooks (e.g., "isolate host," "block IP," "collect forensic data") often through integrations with other tools like Cortex (its usual analysis engine).
+  * **Documentation:** It automatically logs all actions, findings, and timelines. This is critical for the **Post-Incident Activity** phase, ensuring you have a complete report for management, compliance, and improving future responses.
+
+#### The IR Workflow in Practice
+
+Here’s how the IR process flows through your stack:
+
+1. **Detection:** Suricata sees an exploit attempt against a web server. Simultaneously, Wazuh on that server detects a new, suspicious process spawning.
+2. **Alerting:** Wazuh correlates these two events and generates a high-severity alert: "Potential Web Server Compromise."
+3. **Case Creation:** This alert is automatically sent to TheHive via an integration (like TheHive4py), creating a new case.
+4. **Investigation (Analysis):** The IR team uses TheHive to:
+   * **Triage:** Review the alert details from Wazuh.
+   * **Enrich:** Use integrated tools (like VirusTotal or Shodan via Cortex) to analyze the malicious IP and file hashes.
+   * **Scope:** Query Wazuh and Suricata to see if other systems are affected (lateral movement).
+5. **Response (Containment/Eradication):** The team executes actions from within TheHive:
+   * **Task:** "Isolate compromised server from network." This might be a manual task or an automated one triggering a script on the firewall.
+   * **Task:** "Initiate forensic disk image for later analysis."
+6. **Closure & Learning (Post-Incident):** TheHive's complete case log is used to write a report, leading to recommendations like: "Update our Wazuh rules to detect this specific TTP earlier" or "Patch all web servers against this vulnerability."
+
+#### Conclusion
+
+IR in the stack is the capability enabled by the seamless integration of all three technologies, supporting this entire NIST 800-61 lifecycle.
+
+* **Wazuh** finds the badness.
+* **Suricata** provides the network context.
+* **TheHive** manages the human response to it.
+
+Together, they transform isolated alerts into a managed, efficient, and documented Incident Response process, moving your security posture from passive monitoring to active defense. It's a fantastic open-source setup.
+
+#### Resources
+
+[Incident Handler's Handbook by Patrick Kral (SANS, Published: 21 Feb, 2012. PDF, 1.97MB)](https://www.sans.org/white-papers/33901)
+
+[NIST SP 800-61 Rev. 2 (Computer Security Incident Handling Guide)](https://csrc.nist.gov/pubs/sp/800/61/r2/final)

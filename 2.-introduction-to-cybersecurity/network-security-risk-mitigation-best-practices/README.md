@@ -246,95 +246,44 @@ Layers of Defense example: firewall > IDS/IPS > SIEM
 
 One of the biggest challenges facing today's IT professionals is planning and preparing for the almost inevitable security incident.
 
-Preparation, Incident identification, Containment, Eradication, Recovery
-
-The first consideration in an incident response plan is **preparation**. There should be a manifesto or playbook outlining a structured approach to managing security incidents. Typically an organization should have a security incident response team (SIRT), which will investigate and document incidents. The team can be cross functional assembled from various IT related departments or units, and it can be part of or an extension of a SOC team.
-
-The playbook will provision responses commensurate with established risk levels to data assets. For instance, it is important to rank incidents by severity level. It is critical to differentiate between security events (less serious) and security incidents (serious and requiring immediate action). A security event, like a virus on endpoint, might escalate to incident level, but typically it can be addressed via standard procedures or even automation.&#x20;
-
-\<It is critical to **identify incidents** as early as possible to significantly reduce any damage that might be done by bad actors. For swift identification, **security information and event management (SIEM) technology** should be used.
-
-\<Another key factor in incident identification is a good data-analysis capability. It is vital that an organization’s SIRT measures baselines, and investigates deviation from those baselines. When doing so, it is critical to include logs from all the important systems in the organization. It is important to remember that any security incident might just be just a deception designed to distract from another, more sophisticated, breach attempt.>
-
-\<IT and security should take swift action in order to limit an incident’s impact. When an incident is identified and verified, indicators of compromise should be documented and a high-priority ticket opened. Information should be gathered to determine all the servers, endpoints, and users involved. IT should limit involved users’ permissions, or even disable the users. IT should also limit affected systems’ network connectivity to prevent any communication between infected machines and healthy ones in the corporate LAN. The top goal of the SIRT during **the containment phase** is to protect critical systems and limit bad actors’ ability to move inside the network. Each step should be properly documented with sufficient details regarding why, how, by whom, and where containment actions were performed.>
-
-\<After compromised systems are contained, SIRT should return breached systems to working order. This would be done using restore from backup, maintaining original storage as evidence. Disks of the breached sever can be later used for forensic investigation ... Only healthy and verified backups should be used during the **incident-eradication stage**. If backup of the infected servers is vulnerable to a known exploit, it has to be patched before you connect it to the corporate network, to reduce the risk of additional breach.>
-
-<**Recovery** is about restoring the service that got breached. During this stage, it is important to verify that service is fully available again, including data and previous customizations. Infected systems’ owners should verify that restored systems function properly. Monitoring and verification of restored systems is of extreme importance to prevent any additional breach attempts. Attackers might use new tactics against previously breached systems; therefore comprehensive monitoring techniques should be used.>
-
-The [Incident Response Handler’s Handbook](https://www.sans.org/reading-room/whitepapers/incident/incident-handlers-handbook-33901) lays out the methodology of the incident response process.
-
-\<In the case of data damage, the organization may want to be able to restore older data. The timeframe within which data has to be fully restorable and usable should be aligned with an organization’s business goals and (Service Level Agreement) policies. In some cases, highly critical data should be backed up in numerous places to ensure high data resiliency and the ability to carry out a successful restoration under a range of circumstances.
-
-Organizations should schedule data backups in order to guarantee business continuity in the case of a security incident or disaster. Backups should be created on a yearly, monthly, and weekly basis, and stored in an offsite location. It is critical to encrypt backup data in order to prevent untrusted access to it.
-
-#### What is Incident Response (IR)?
-
-Incident Response is a structured methodology for handling security breaches, cyber threats, and policy violations. The goal is to manage the situation in a way that limits damage, reduces recovery time and costs, and prevents future occurrences. A standard IR process follows a lifecycle, often based on the NIST framework (NIST SP 800-61r2) which includes:
+Incident Response (IR) is a structured methodology for handling security breaches, cyber threats, and policy violations. The goal is to manage the situation in a way that limits damage, reduces recovery time and costs, and prevents future occurrences. A standard IR process follows a lifecycle, often based on the NIST framework (NIST SP 800-61r2) which includes:
 
 1. **Preparation**
 2. **Detection & Analysis**
 3. **Containment, Eradication & Recovery**
 4. **Post-Incident Activity**
 
-IR stack: **Wazuh + TheHive + Suricata → Full SIEM + IR + NIDS.**
+#### 1. Preparation
 
-#### How This Stack Enables IR
+This is the proactive phase focused on getting ready for a potential incident _before_ it happens.
 
-The proposed stack is a classic, powerful, and open-source combination that covers the entire IR lifecycle. Here's how each piece fits in:
+* **What it entails:** Establishing a Security Incident Response Team (SIRT), developing and writing an IR plan, acquiring necessary tools (forensic software, communication systems), and providing training through drills and simulations. This phase also includes implementing general security controls to prevent incidents.
 
-**1. Wazuh (The SIEM & EDR Core)**
+The first consideration in an incident response plan is **preparation**. There should be a manifesto or playbook outlining a structured approach to managing security incidents. Typically an organization should have a SIRT, which will investigate and document incidents. SIRT can be cross functional assembled from various IT related departments or units, and it can be part of or an extension of a SOC team.
 
-Wazuh is the central data aggregation and correlation engine. It's the "brains" that detects potential incidents.
+The playbook will provision responses commensurate with established risk levels to data assets. For instance, it is important to rank incidents by severity level. It is critical to differentiate between security events (less serious) and security incidents (serious and requiring immediate action). A security event, like a virus on endpoint, might escalate to incident level, but typically it can be addressed via standard procedures or even automation.&#x20;
 
-* **IR Role: Detection & Analysis**
-  * **Data Collection:** It gathers logs from endpoints, servers, network devices, and cloud environments (fulfilling the **SIEM** function).
-  * **Behavioral Analysis:** Its built-in **Endpoint Detection and Response (EDR)** capabilities monitor for malicious process execution, file changes, and other suspicious activities on hosts.
-  * **Correlation:** Wazuh's rules engine correlates disparate events (e.g., a failed login from Suricata + a successful login from a strange location on a host) to generate high-fidelity **alerts**. These alerts are the primary _triggers_ for starting an IR process.
+#### 2. Detection & Analysis
 
-**2. Suricata (The NIDS)**
+This is the phase where potential security events are identified and investigated to confirm an incident and understand its scope.
 
-Suricata is the **Network Intrusion Detection System (NIDS)**. It monitors network traffic for malicious activity.
+* **What it entails:** Monitoring systems for alerts (from IDS/IPS, SIEM, antivirus), analyzing the evidence to determine the cause, assessing the impact (what systems/data are affected), and prioritizing the incident's severity to allocate appropriate resources.
 
-* **IR Role: Detection & Initial Evidence**
-  * **Threat Detection:** It identifies known attack patterns (signatures), policy violations, and anomalous behavior on the network (e.g., C2 callbacks, exploit attempts, port scans).
-  * **Evidence Gathering:** It provides crucial network-level evidence. If Wazuh detects a compromised host, Suricata's logs can show what other internal systems it was talking to, what data was exfiltrated, and what external IPs it contacted. This is vital for the **Containment** phase.
+#### 3. Containment, Eradication & Recovery
 
-**3. TheHive (The IR Platform & Case Management)**
+This is the reactive core of the IR process where the incident is actively handled and resolved.
 
-TheHive is the orchestrator and workflow engine for the IR team. It's where the actual response is managed.
+* **Containment:** Taking immediate, short-term actions to limit the damage (e.g., isolating a network segment, disabling accounts). This is often split into short-term and long-term containment strategies.
+* **Eradication:** Removing the root cause of the incident from the environment (e.g., deleting malware, disabling breached user accounts, addressing vulnerabilities that were exploited).
+* **Recovery:** Restoring systems and data to normal operation and confirming they are no longer compromised (e.g., restoring from clean backups, rebuilding systems, bringing services back online).
 
-* **IR Role: Orchestration, Coordination, and Documentation**
-  * **Case Management:** When Wazuh generates a high-priority alert, it can be automatically forwarded to TheHive to create a new **incident case**. This becomes the single pane of glass for the entire investigation.
-  * **Collaboration:** Multiple analysts can work on the same case, assigning tasks, adding notes, and sharing findings in real-time.
-  * **Automation & Playbooks:** TheHive can execute pre-defined response playbooks (e.g., "isolate host," "block IP," "collect forensic data") often through integrations with other tools like Cortex (its usual analysis engine).
-  * **Documentation:** It automatically logs all actions, findings, and timelines. This is critical for the **Post-Incident Activity** phase, ensuring you have a complete report for management, compliance, and improving future responses.
+Organizations should schedule data backups in order to guarantee business continuity in the case of a security incident or disaster. Backups should be created on a yearly, monthly, and weekly basis, and stored in an offsite location. It is critical to encrypt backup data in order to prevent untrusted access to it.
 
-#### The IR Workflow in Practice
+#### 4. Post-Incident Activity
 
-Here’s how the IR process flows through your stack:
+This critical phase occurs after the incident is resolved and focuses on learning from the event to improve future response.
 
-1. **Detection:** Suricata sees an exploit attempt against a web server. Simultaneously, Wazuh on that server detects a new, suspicious process spawning.
-2. **Alerting:** Wazuh correlates these two events and generates a high-severity alert: "Potential Web Server Compromise."
-3. **Case Creation:** This alert is automatically sent to TheHive via an integration (like TheHive4py), creating a new case.
-4. **Investigation (Analysis):** The IR team uses TheHive to:
-   * **Triage:** Review the alert details from Wazuh.
-   * **Enrich:** Use integrated tools (like VirusTotal or Shodan via Cortex) to analyze the malicious IP and file hashes.
-   * **Scope:** Query Wazuh and Suricata to see if other systems are affected (lateral movement).
-5. **Response (Containment/Eradication):** The team executes actions from within TheHive:
-   * **Task:** "Isolate compromised server from network." This might be a manual task or an automated one triggering a script on the firewall.
-   * **Task:** "Initiate forensic disk image for later analysis."
-6. **Closure & Learning (Post-Incident):** TheHive's complete case log is used to write a report, leading to recommendations like: "Update our Wazuh rules to detect this specific TTP earlier" or "Patch all web servers against this vulnerability."
-
-#### Conclusion
-
-**IR** in the stack is the **capability enabled by the seamless integration of all three.**
-
-* **Wazuh** finds the badness.
-* **Suricata** provides the network context.
-* **TheHive** manages the human response to it.
-
-Together, they transform isolated alerts into a managed, efficient, and documented Incident Response process, moving your security posture from passive monitoring to active defense. It's a fantastic open-source setup.
+* **What it entails:** Conducting a "lessons learned" meeting to review what happened, what was done well, and what could be improved. This phase results in a formal incident report that is used to update the IR plan, policies, and security controls to prevent a recurrence.
 
 ### Using multiple vendors
 

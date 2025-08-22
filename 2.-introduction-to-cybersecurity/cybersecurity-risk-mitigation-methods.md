@@ -176,7 +176,7 @@ Anti-Virus software is a security program designed to prevent, detect, and remov
 
 ### Network design
 
-A well designed network supports efficient Internet usage and device communication as well as redundancy, optimization, and security. Network design considerations/practices in support of network security include Network Segmentation, Demilitarized Zone (DMZ), Honeypots, Defense in Depth, Network Automation, and Effective Network Architecture. Designing networks with these considerations in mind reduces attack surfaces and improves overall resilience against cyber threats.
+A well designed network supports efficient Internet usage and device communication as well as redundancy, optimization, and security. Network design considerations/practices in support of network security include Network Segmentation, Honeypots, Network Automation, and Effective Network Architecture. Designing networks with these considerations in mind reduces attack surfaces and improves overall resilience against cyber threats.
 
 #### Network Segmentation
 
@@ -402,8 +402,7 @@ A honeynet can be deployed as a complementary defense mechanism. A honeynet is a
 #### Network Automation
 
 Software-defined networking (SDN) is a relatively recent trend that can be useful both in placing\
-security devices and in segmenting the network. Essentially, in an SDN, the entire network is virtualized,\
-which enables relatively easy segmentation of the network. It also allows administrators to place virtualized security devices wherever they want.
+security devices and in segmenting the network. Essentially, in an SDN, the entire network is virtualized, which enables relatively easy segmentation of the network. It also allows administrators to place virtualized security devices wherever they want.
 
 Adopting SDN permits dynamic security policy adjustments in response to emerging threats. For example, Cisco DNA Center is a software-based network management and automation platform that helps organizations simplify, automate, and secure their networks. DNA Center is an SDN controller in SD-Access architecture, but it can also be used as a general network management tool even in networks that do not use SD-Access. DNA Center has two main roles. First, it is the SDN controller used in SD-Access. Second, it can be a network manager in a traditional network that is not using SD-Access. In this case, it acts as a central point to monitor, analyze, and configure the network.
 

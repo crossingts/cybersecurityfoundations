@@ -402,23 +402,21 @@ A honeynet can be deployed as a complementary defense mechanism. A honeynet is a
 #### Network Automation
 
 Software-defined networking (SDN) is a relatively recent trend that can be useful both in placing\
-security devices and in segmenting the network. Essentially, in an SDN, the entire network is virtualized, which enables relatively easy segmentation of the network. It also allows administrators to place virtualized security devices wherever they want.
+security devices and in segmenting the network. Essentially, in SDN the entire network is virtualized, which enables relatively easy segmentation of the network. It also allows administrators to place virtualized security devices wherever they want.
 
 Adopting SDN permits dynamic security policy adjustments in response to emerging threats. For example, Cisco DNA Center is a software-based network management and automation platform that helps organizations simplify, automate, and secure their networks. DNA Center is an SDN controller in SD-Access architecture, but it can also be used as a general network management tool even in networks that do not use SD-Access. DNA Center has two main roles. First, it is the SDN controller used in SD-Access. Second, it can be a network manager in a traditional network that is not using SD-Access. In this case, it acts as a central point to monitor, analyze, and configure the network.
 
 #### **Effective Network Architecture**
 
-When designing your network segregation strategy, device placement is critical. The simplest device to position is the firewall: it should be deployed at every network zone junction, ensuring each segment is protected. Fortunately, this is easier than it sounds—modern switches and routers include built-in firewall capabilities that only need activation and proper configuration. Another essential perimeter device is an anti-DDoS solution, which mitigates attacks before they impact the entire network. Behind the primary public-facing firewall, a web filter proxy should also be implemented.
+When designing a network segregation strategy, device placement is critical. The simplest device to position is the firewall: it should be deployed at every network zone junction, ensuring each segment is protected. Fortunately, this is easier than it sounds—modern switches and routers include built-in firewall capabilities that only need activation and proper configuration. Another essential perimeter device is an anti-DDoS solution, which mitigates attacks before they impact the entire network. Behind the primary public-facing firewall, a web filter proxy should also be implemented.
 
-For other devices, placement depends on your network’s structure. Load balancers, for example, should reside in the same segment as the servers they manage—whether in a DMZ for web servers or a private segment for database clusters.&#x20;
+For other devices, placement depends on the network’s structure. Load balancers, for example, should reside in the same segment as the servers they manage—whether in a DMZ for web servers or a private segment for database clusters.&#x20;
 
 Network aggregation switches lack a fixed placement rule but are commonly used to consolidate bandwidth streams—for instance, optimizing throughput to and from a server cluster.
 
-Finally, any internet-connected network must have a local router with NAT and DHCP, both for security and to prevent IP exhaustion. The router should be the sole device connected to the modem, with all other devices routing through it.
+Finally, any Internet-connected network must have a local router with NAT and DHCP, both for security and to prevent IP exhaustion. The router should be the sole device connected to the modem, with all other devices routing through it.
 
 ### Networking protocols
-
-IPsec/GRE over IPsec, Encryption protocols/IEEE 802.11, DTP/VTP
 
 Vulnerable protocols that transmit data in plaintext should be substituted with secure protocols to prevent exposure of credentials and configuration data in transit. For example, FTP, SNMP v1/v2c community strings, and Telnet should be replaced with FTPS, SFTP, and SSH. In SNMPv1 the strings are sent in clear text. NTPv3 and SMTPv3 both provide encryption, authentication, and message integrity functions. Organizations should assume attackers can see their unencrypted traffic and eliminate cleartext protocols wherever possible.
 
@@ -428,27 +426,25 @@ Furthermore, NAT hides internal IP addresses from the public Internet by transla
 
 Secure DNS services like Cloudflare’s offer enhanced privacy and security by encrypting DNS queries, which can protect against DNS eavesdropping and spoofing attacks, often providing faster response times and improved reliability compared to standard DNS services.
 
-Configure and enforce strong encryption standards using IPsec or SSL/TLS for network communications.
-
 **Network security protocols**
 
-Network security protocols are essentially the security guards of your data traveling across a network. These protocols act as a set of rules that ensure the data gets from point A to B safely, without unauthorized access or alteration. There are different types of security protocols, each focusing on a specific aspect of data protection. Here's a quick breakdown:
+Network security protocols are essentially the security guards of the data traveling across a network. These protocols act as a set of rules that ensure the data gets from point A to B safely, without unauthorized access or alteration. There are different types of security protocols, each focusing on a specific aspect of data protection. Here's a brief breakdown:
 
-• Encryption protocols: These scramble data using algorithms, making it unreadable to anyone without the decryption key. Examples include SSL/TLS, which secures communication on websites (like the padlock symbol you see in the address bar).
+• Encryption protocols: These scramble data using algorithms, making it unreadable to anyone without the decryption key. Examples include SSL/TLS, which secures communication on websites.
 
-• Authentication protocols: These verify the identity of users or devices trying to access a network resource. Imagine them checking IDs at the entrance. Common examples include username/password logins or multi-factor authentication.
+• Authentication protocols: These verify the identity of users or devices trying to access a network resource. For example, RADIUS (Remote Authentication Dial-In User Service) is a client-server protocol often used for managing network access.
 
-• Integrity protocols: These make sure data hasn't been tampered with during transmission. They act like checksums, ensuring the data received is exactly what was sent.
+• Integrity protocols: These make sure data has not been tampered with during transmission. They act like checksums, ensuring the data received is exactly what was sent. For example, HMAC (Hash-Based Message Authentication Code) is a specific mechanism used by other protocols such as TLS and IPsec to guarantee integrity.&#x20;
 
-• Tunneling protocols: Imagine wrapping a message in another secure package. Tunneling protocols create a secure connection within another network, like a VPN (Virtual Private Network) securing your data over public Wi-Fi.
+• Tunneling protocols: These encapsulate and encrypt data packets to create a secure "tunnel" across an untrusted network. For example, IPsec (Internet Protocol Security) operates at the network layer (Layer 3) of the OSI model, securing all communication between two points (e.g., two offices, a remote worker and a central server).&#x20;
 
-• Wireless network security protocols such as WPA or WPA2 are considered more secure than WEP.
+• Wireless network security protocols such as WPA and WPA2 are considered more secure than WEP. For example, WPA2 uses AES for encryption and 802.1X for authentication.&#x20;
 
 ### Organizational policies
 
-Usage policy, Security policy, Privacy policy
+Relevant organizational policies include Usage Policy, Information Security Policy, and Privacy Policy. These organizational policies can be articulated separately or as provisions within the same master policy (e.g., Security Policy) or as part of an organization's security program, which is an enterprise’s set of security policies and procedures.&#x20;
 
-**An information security policy covering:**
+An organization’s information security policy has to be clear—and regularly updated. Employee’s knowledge of and adherence to information security policy are critical to robust data security. A typical information security policy will cover:
 
 * Software development and testing/software security
 * Network design and testing/network security
@@ -459,8 +455,6 @@ Usage policy, Security policy, Privacy policy
 * User responsibility/usage policies (AUP)
 * Information security risk governance (cybersecurity regulations and IT governance compliance frameworks)
 * Backup and disaster recovery
-
-An organization’s information security policy has to be clear—and regularly updated. Employee’s knowledge of and adherence to information security policy are critical to robust data security.
 
 ### Security testing
 
@@ -505,21 +499,11 @@ Some of the benefits of information security testing include:
 
 ### Security training
 
-As technology evolves, so do the tactics of attackers, making continuous learning and adaptation paramount in maintaining robust cybersecurity defenses.
-
-In order to have great data security, it is important to maintain security awareness among employees. Good security awareness among IT personnel and other employees will allow your enterprise’s technical controls to work effectively. Employees should receive continuous security education.
-
-**Security awareness training/security program (formal security training)**
-
-A security program is an enterprise’s set of security policies and procedures.&#x20;
+As technology evolves, so do the tactics of attackers, making continuous learning and adaptation paramount in maintaining robust cybersecurity defenses. In order to have good data security, it is important to maintain security awareness among employees. Good security awareness among IT personnel and other employees will allow an enterprise’s technical controls to work effectively. Employees should receive continuous security education.
 
 User awareness programs are designed to make employees aware of potential security threats and risks. User awareness programs will help make employees aware of all of the cyber threats the company is facing. For example, a company might send out false phishing emails to make employees click a link and sign in with their login credentials. Employees who are tricked by the false emails will be informed that it is part of a user awareness program, and they should be more careful about phishing emails.
 
 User training programs are more formal than user awareness programs. For example, dedicated training sessions which educate users on the corporate security policies, how to create strong passwords, and how to avoid potential threats. These should happen when employees enter the company, and also at regular intervals during the year.
-
-Physical access control, which protects equipment and data from potential attackers by only allowing authorized users into protected areas such as network closets or data center floors. This is not just to prevent people outside of the organization from gaining access to these areas. Even within the company, access to these areas should be limited to those who need access.
-
-Multifactor locks can protect access to these restricted areas. For example, a door that requires users to swipe a badge and scan their fingerprint to enter. That’s something you have, a badge, and something you are, your fingerprint. Badge systems are very flexible, and permissions granted to a badge can easily be changed. This allows for strict, centralized control of who is authorized to enter where.
 
 ### Key takeaways
 

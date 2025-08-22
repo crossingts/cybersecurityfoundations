@@ -270,14 +270,14 @@ Organizations should schedule data backups in order to guarantee business contin
 
 #### What is Incident Response (IR)?
 
-Incident Response is a structured methodology for handling security breaches, cyber threats, and policy violations. The goal is to manage the situation in a way that limits damage, reduces recovery time and costs, and prevents future occurrences. A standard IR process follows a lifecycle, often based on the **NIST framework** which includes:
+Incident Response is a structured methodology for handling security breaches, cyber threats, and policy violations. The goal is to manage the situation in a way that limits damage, reduces recovery time and costs, and prevents future occurrences. A standard IR process follows a lifecycle, often based on the NIST framework (NIST SP 800-61r2) which includes:
 
 1. **Preparation**
 2. **Detection & Analysis**
 3. **Containment, Eradication & Recovery**
 4. **Post-Incident Activity**
 
-IR stack: **Wazuh + TheHive + Suricata → Full SIEM + IR + NIDS**, the **IR** stands for **Incident Response**.
+IR stack: **Wazuh + TheHive + Suricata → Full SIEM + IR + NIDS.**
 
 #### How This Stack Enables IR
 

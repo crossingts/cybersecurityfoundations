@@ -20,7 +20,8 @@
 * [The cybersecurity threat landscape](2.-introduction-to-cybersecurity/the-cybersecurity-threat-landscape.md)
 * [Common cyber attacks](2.-introduction-to-cybersecurity/common-cyber-attacks.md)
 * [Risk mitigation methods](2.-introduction-to-cybersecurity/risk-mitigation-methods.md)
-* [Network security risk mitigation best practices](2.-introduction-to-cybersecurity/network-security-risk-mitigation-best-practices.md)
+* [Network security risk mitigation best practices](2.-introduction-to-cybersecurity/network-security-risk-mitigation-best-practices/README.md)
+  * [NIST SP 800-61 (IR framework)](2.-introduction-to-cybersecurity/network-security-risk-mitigation-best-practices/nist-sp-800-61-ir-framework.md)
 
 ## 3. Cybersecurity GRC
 

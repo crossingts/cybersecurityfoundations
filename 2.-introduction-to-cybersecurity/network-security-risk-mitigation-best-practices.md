@@ -21,11 +21,11 @@ This section reviews common network security risk mitigation best practices, inc
 * **Least privilege access control**
 * **Multi-factor authentication**
 * **Network monitoring**&#x20;
-* **Incident response and disaster recovery**
 * **Layered security (defense in depth)**
+* **Incident response and disaster recovery**
 * **Using multiple vendors**
 * **Quality assurance**
-* **On time software patching**&#x20;
+* **Timely software patching**&#x20;
 * **Physically securing the network**
 
 ### Least privilege access control
@@ -227,6 +227,21 @@ SIEM can integrate and correlate distributed events and alert on hostile or abno
 * Requires **high storage** for full packet capture (PCAP).
 * Can be **noisy** without proper tuning.
 
+### Layered security (defense in depth)
+
+Defense in depth is a **strategy** for the protection of information assets that uses multiple layers\
+and different types of controls (managerial, operational, and technical) to provide optimal\
+protection.
+
+* **Defense in depth: the broader, more established term** (originating from military strategy) and is widely recognized in cybersecurity as a comprehensive approach combining multiple security layers (technical, administrative, and physical controls).
+* **Layered security: a subset of defense in depth**, often referring specifically to the **technical controls** (firewalls, encryption, endpoint protection, etc.) rather than the full strategy.
+
+Mitigation techniques also include preventing unauthorized persons from gaining physical access to the devices, for example, by keeping them in a secure rack behind a secure door.
+
+By working together, risk mitigation methods create a layered security approach to safeguard information assets and maintain network integrity.
+
+Layers of Defense example: firewall > IDS/IPS > SIEM
+
 ### Incident response and disaster recovery&#x20;
 
 One of the biggest challenges facing today's IT professionals is planning and preparing for the almost inevitable security incident.
@@ -247,26 +262,79 @@ The playbook will provision responses commensurate with established risk levels 
 
 <**Recovery** is about restoring the service that got breached. During this stage, it is important to verify that service is fully available again, including data and previous customizations. Infected systems’ owners should verify that restored systems function properly. Monitoring and verification of restored systems is of extreme importance to prevent any additional breach attempts. Attackers might use new tactics against previously breached systems; therefore comprehensive monitoring techniques should be used.>
 
-\<The [Incident Response Handler’s Handbook ](https://www.sans.org/reading-room/whitepapers/incident/incident-handlers-handbook-33901)is must-read material, as it lays out the methodology of the incident response process.>
+The [Incident Response Handler’s Handbook](https://www.sans.org/reading-room/whitepapers/incident/incident-handlers-handbook-33901) lays out the methodology of the incident response process.
 
 \<In the case of data damage, the organization may want to be able to restore older data. The timeframe within which data has to be fully restorable and usable should be aligned with an organization’s business goals and (Service Level Agreement) policies. In some cases, highly critical data should be backed up in numerous places to ensure high data resiliency and the ability to carry out a successful restoration under a range of circumstances.
 
 Organizations should schedule data backups in order to guarantee business continuity in the case of a security incident or disaster. Backups should be created on a yearly, monthly, and weekly basis, and stored in an offsite location. It is critical to encrypt backup data in order to prevent untrusted access to it.
 
-### Layered security (defense in depth)
+#### What is Incident Response (IR)?
 
-Defense in depth is a **strategy** for the protection of information assets that uses multiple layers\
-and different types of controls (managerial, operational, and technical) to provide optimal\
-protection.
+Incident Response is a structured methodology for handling security breaches, cyber threats, and policy violations. The goal is to manage the situation in a way that limits damage, reduces recovery time and costs, and prevents future occurrences. A standard IR process follows a lifecycle, often based on the **NIST framework** which includes:
 
-* **Defense in depth: the broader, more established term** (originating from military strategy) and is widely recognized in cybersecurity as a comprehensive approach combining multiple security layers (technical, administrative, and physical controls).
-* **Layered security: a subset of defense in depth**, often referring specifically to the **technical controls** (firewalls, encryption, endpoint protection, etc.) rather than the full strategy.
+1. **Preparation**
+2. **Detection & Analysis**
+3. **Containment, Eradication & Recovery**
+4. **Post-Incident Activity**
 
-Mitigation techniques also include preventing unauthorized persons from gaining physical access to the devices, for example, by keeping them in a secure rack behind a secure door.
+IR stack: **Wazuh + TheHive + Suricata → Full SIEM + IR + NIDS**, the **IR** stands for **Incident Response**.
 
-By working together, risk mitigation methods create a layered security approach to safeguard information assets and maintain network integrity.
+#### How This Stack Enables IR
 
-Layers of Defense example: firewall > IDS/IPS > SIEM
+The proposed stack is a classic, powerful, and open-source combination that covers the entire IR lifecycle. Here's how each piece fits in:
+
+**1. Wazuh (The SIEM & EDR Core)**
+
+Wazuh is the central data aggregation and correlation engine. It's the "brains" that detects potential incidents.
+
+* **IR Role: Detection & Analysis**
+  * **Data Collection:** It gathers logs from endpoints, servers, network devices, and cloud environments (fulfilling the **SIEM** function).
+  * **Behavioral Analysis:** Its built-in **Endpoint Detection and Response (EDR)** capabilities monitor for malicious process execution, file changes, and other suspicious activities on hosts.
+  * **Correlation:** Wazuh's rules engine correlates disparate events (e.g., a failed login from Suricata + a successful login from a strange location on a host) to generate high-fidelity **alerts**. These alerts are the primary _triggers_ for starting an IR process.
+
+**2. Suricata (The NIDS)**
+
+Suricata is the **Network Intrusion Detection System (NIDS)**. It monitors network traffic for malicious activity.
+
+* **IR Role: Detection & Initial Evidence**
+  * **Threat Detection:** It identifies known attack patterns (signatures), policy violations, and anomalous behavior on the network (e.g., C2 callbacks, exploit attempts, port scans).
+  * **Evidence Gathering:** It provides crucial network-level evidence. If Wazuh detects a compromised host, Suricata's logs can show what other internal systems it was talking to, what data was exfiltrated, and what external IPs it contacted. This is vital for the **Containment** phase.
+
+**3. TheHive (The IR Platform & Case Management)**
+
+TheHive is the orchestrator and workflow engine for the IR team. It's where the actual response is managed.
+
+* **IR Role: Orchestration, Coordination, and Documentation**
+  * **Case Management:** When Wazuh generates a high-priority alert, it can be automatically forwarded to TheHive to create a new **incident case**. This becomes the single pane of glass for the entire investigation.
+  * **Collaboration:** Multiple analysts can work on the same case, assigning tasks, adding notes, and sharing findings in real-time.
+  * **Automation & Playbooks:** TheHive can execute pre-defined response playbooks (e.g., "isolate host," "block IP," "collect forensic data") often through integrations with other tools like Cortex (its usual analysis engine).
+  * **Documentation:** It automatically logs all actions, findings, and timelines. This is critical for the **Post-Incident Activity** phase, ensuring you have a complete report for management, compliance, and improving future responses.
+
+#### The IR Workflow in Practice
+
+Here’s how the IR process flows through your stack:
+
+1. **Detection:** Suricata sees an exploit attempt against a web server. Simultaneously, Wazuh on that server detects a new, suspicious process spawning.
+2. **Alerting:** Wazuh correlates these two events and generates a high-severity alert: "Potential Web Server Compromise."
+3. **Case Creation:** This alert is automatically sent to TheHive via an integration (like TheHive4py), creating a new case.
+4. **Investigation (Analysis):** The IR team uses TheHive to:
+   * **Triage:** Review the alert details from Wazuh.
+   * **Enrich:** Use integrated tools (like VirusTotal or Shodan via Cortex) to analyze the malicious IP and file hashes.
+   * **Scope:** Query Wazuh and Suricata to see if other systems are affected (lateral movement).
+5. **Response (Containment/Eradication):** The team executes actions from within TheHive:
+   * **Task:** "Isolate compromised server from network." This might be a manual task or an automated one triggering a script on the firewall.
+   * **Task:** "Initiate forensic disk image for later analysis."
+6. **Closure & Learning (Post-Incident):** TheHive's complete case log is used to write a report, leading to recommendations like: "Update our Wazuh rules to detect this specific TTP earlier" or "Patch all web servers against this vulnerability."
+
+#### Conclusion
+
+**IR** in the stack is the **capability enabled by the seamless integration of all three.**
+
+* **Wazuh** finds the badness.
+* **Suricata** provides the network context.
+* **TheHive** manages the human response to it.
+
+Together, they transform isolated alerts into a managed, efficient, and documented Incident Response process, moving your security posture from passive monitoring to active defense. It's a fantastic open-source setup.
 
 ### Using multiple vendors
 
@@ -292,9 +360,7 @@ Unit Testing: A structured and automated testing methodology to ensure resilient
 
 Example: Using the internal Python module unittest to automate Python code testing.
 
-### On time software patching
-
-**The Necessity of On-Time Software Patching for a Secure Network**
+### Timely software patching
 
 Timely software patching is critical for maintaining a secure network, as unpatched systems are prime targets for cyberattacks. Vulnerabilities in software, whether in operating systems, applications, or firmware, are frequently exploited by threat actors to gain unauthorized access, deploy malware, or exfiltrate data. For example, zero-day vulnerabilities—flaws unknown to vendors until exploited—require immediate patching to mitigate risks. Additionally, compliance frameworks such as NIST, CIS, and ISO 27001 mandate regular patch management to meet security standards. Delayed patching can lead to:
 

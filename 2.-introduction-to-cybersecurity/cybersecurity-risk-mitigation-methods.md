@@ -27,9 +27,9 @@ This section reviews major cybersecurity risk mitigation methods used to reduce 
 
 ### Risk mitigation technologies
 
-Common cybersecurity risk mitigation technologies include Firewalls, IDS/IPS, Web Proxies, VPN, Encryption, Web Filters, Anti-Virus, SIEM, EDR/XDR, Network Access Control (NAC), and Identity and Access Management (IAM).
+Common cybersecurity risk mitigation technologies include Firewalls, IDS/IPS, Web Proxies, Virtual Private Networks (VPNs), Encryption, Web Filters, Anti-Virus, SIEM, EDR/XDR, Network Access Control (NAC), and Identity and Access Management (IAM).
 
-SIEM, EDR/XDR, NAC, IAM are covered in the section [Network security risk mitigation best practices](network-security-risk-mitigation-best-practices.md) (Chapter 2). SIEM/EDR/XDR are further discussed in [Defensive cybersecurity technologies](../6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/) (Chapter 6).
+Note - SIEM, EDR/XDR, NAC, IAM are covered in the section [Network security risk mitigation best practices](network-security-risk-mitigation-best-practices.md) (Chapter 2). SIEM/EDR/XDR are further discussed in [Defensive cybersecurity technologies](../6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/) (Chapter 6).
 
 #### Firewalls
 
@@ -147,7 +147,9 @@ The choice between forward and reverse proxies depends on the use case. Forward 
 
 All organizational web traffic—outbound (workstation to internet) and inbound (external access to internal apps)—should route through authenticated gateways for control and monitoring. For outbound traffic, a forward proxy ensures only authorized users/programs initiate connections. For inbound traffic, a reverse proxy or API gateway enforces access policies. This centralized approach simplifies security without significant user impact.
 
-• **Virtual Private Networks (VPNs)**: Create a secure, encrypted connection between two or more networks over the Internet. A VPN is a secure, private network connection established over a public network. It enables remote devices to connect to a local network as if they were physically present. VPNs are commonly used to link LANs across the internet securely.
+#### Virtual Private Networks (VPNs)
+
+VPNs create a secure, encrypted connection between two or more networks over the Internet. A VPN is a secure, private network connection established over a public network. It enables remote devices to connect to a local network as if they were physically present. VPNs are commonly used to link LANs across the internet securely.
 
 Setting up a VPN requires specialized hardware or VPN software installed on servers and workstations. VPNs rely on tunneling protocols like **Layer 2 Tunneling Protocol (L2TP)**, **IPSec**, or **Point-to-Point Tunneling Protocol (PPTP)**. To enhance security, VPNs often encrypt data, though this can reduce speed compared to standard network connections.
 
@@ -160,30 +162,25 @@ Setting up a VPN requires specialized hardware or VPN software installed on serv
   * **Cisco AnyConnect** – A widely adopted enterprise VPN offering robust security and scalability.
   * **NordLayer (by NordVPN)** – A business-focused VPN with advanced access control and encryption.
 
-• **Encryption**: Convert plaintext data into unreadable ciphertext to protect it from unauthorized access.
+#### Encryption
 
-**• Web Filters** prevent users’ browsers from loading certain pages from particular websites. There are different web filters designed for individual, family, institutional, and enterprise use. Web domain whitelisting can be implemented using a web filter that can make web access policies and perform web site monitoring.
+Encryption transforms readable data (plaintext) into a scrambled, unreadable format (ciphertext) using algorithms and cryptographic keys to protect it from unauthorized access. Encryption is a fundamental security measure designed to protect data confidentiality for data at rest (on storage devices), in transit (across networks), and in use (during processing). Strong encryption standards can be implemented to secure sensitive information, enforce data protection policies, and ensure privacy for communications and stored files across individual, corporate, and government use.
 
-**• Anti-Virus**
+#### Web Filters&#x20;
+
+Web Filters prevent users’ browsers from loading certain pages from particular websites. There are different web filters designed for individual, family, institutional, and enterprise use. Web domain whitelisting can be implemented using a web filter that can make web access policies and perform web site monitoring.
+
+#### Anti-Virus
+
+Anti-Virus software is a security program designed to prevent, detect, and remove malicious software (malware), including viruses, worms, Trojan horses, spyware, and ransomware. It uses a combination of signature-based detection (matching known malware code) and heuristic analysis (identifying suspicious behavior) to protect systems. Anti-Virus solutions can be implemented on individual devices, networks, and email gateways to establish security policies, perform real-time system monitoring, and quarantine threats for both personal and enterprise use.
 
 ### Network design
 
-Network Segmentation, DMZ, Honeypots, Defense in Depth, Network Automation, Effective Network Architecture
-
-A well designed network supports efficient Internet usage and device communication as well as redundancy, optimization, and security.
-
-#### Cybersecurity Risk Mitigation via Network (Re)Design
-
-Effective cybersecurity risk mitigation begins with a well-designed network architecture that prioritizes security at every layer. By strategically segmenting networks, organizations can limit the spread of malware and unauthorized access, ensuring that breaches in one area do not compromise the entire system. A zero-trust model, which requires continuous authentication and authorization for all users and devices, further enhances security by eliminating implicit trust. Designing networks with these principles in mind reduces attack surfaces and improves overall resilience against cyber threats.
-
-Key strategies for secure network (re)design include:
-
-* **Network Segmentation**: Dividing the network into smaller, isolated zones (e.g., VLANs, subnets) to contain breaches.
-* **Zero-Trust Architecture (ZTA)**: Enforcing strict **access controls** and verifying every request before granting access.
-* **Micro-Segmentation**: Applying granular **security policies** to individual workloads or applications for enhanced protection.
-* **Defense-in-Depth**: Layering security controls (firewalls, IDS/IPS, encryption) to provide multiple barriers against attacks.
+A well designed network supports efficient Internet usage and device communication as well as redundancy, optimization, and security. Network design considerations/practices in support of network security include Network Segmentation, Demilitarized Zone (DMZ), Honeypots, Defense in Depth, Network Automation, and Effective Network Architecture. Designing networks with these considerations in mind reduces attack surfaces and improves overall resilience against cyber threats.
 
 #### Network Segmentation
+
+Effective cybersecurity risk mitigation begins with a well-designed network architecture that prioritizes security at every layer. By strategically segmenting networks, organizations can limit the spread of malware and unauthorized access, ensuring that breaches in one area do not compromise the entire system.&#x20;
 
 Network segmentation involves segregating a network into logical or functional zones. For\
 example, you might have a zone for sales, a zone for technical support, and a zone for research, with each zone having different technical needs. You can separate zones using routers or switches or using virtual local area networks (VLANs).
@@ -194,9 +191,9 @@ Segmentation also helps enforce data protection by applying different security r
 
 Virtualization is another way to segment a network. It is much easier to segment virtual systems than it is to segment physical systems. For example, you can easily configure a virtual machine on your workstation so that the virtual machine is completely isolated from the workstation — it does not share a clipboard, common folders or drives, and literally operates as an isolated system.
 
-#### VLANs&#x20;
+**Virtual Local Anrea Networks (VLANs)**
 
-VLANs (Virtual LAN) are used to **segment** portions of a network at layer two and differentiate devices.
+VLANs (Virtual LANs) are used to **segment** portions of a network at layer two and differentiate devices.
 
 VLANs are configured on a switch by adding a tag to a frame. The 802.1q or dot1q tag designates the VLAN that the traffic originates from.
 
@@ -322,16 +319,48 @@ A fundamental method for enforcing access is through **ACLs (Access Control List
 
 **Practice**
 
-Explore **practical ACL implementation** in traffic filtering and access control policies:
+Explore practical ACL implementation in traffic filtering and access control policies:
 
 **How to configure standard ACLs on Cisco routers**\
 [**https://itnetworkingskills.wordpress.com/2023/04/11/how-configure-standard-acls-cisco-routers/**](https://itnetworkingskills.wordpress.com/2023/04/11/how-configure-standard-acls-cisco-routers/)
 
 #### Prioritize network traffic using QoS
 
-Set up QoS (Quality of Service) policies on routers, switches, and firewalls to shape and prioritize traffic.&#x20;
+Set up QoS (Quality of Service) policies on routers, switches, and firewalls to shape and prioritize traffic. QoS settings are vital in managing network traffic, ensuring priority is given to critical applications. Load balancing and bandwidth management further help in evenly distributing network traffic, preventing any single resource from becoming a bottleneck.
 
-QoS settings are vital in managing network traffic, ensuring priority is given to critical applications. Load balancing and bandwidth management further help in evenly distributing network traffic, preventing any single resource from becoming a bottleneck.
+**Network Segmentation vs Micro-Segmentation**
+
+While traditional network segmentation can use VLANs and subnets as its primary tool, micro-segmentation often bypasses or works on top of these constructs.&#x20;
+
+* **Network Segmentation**: Dividing the network into smaller, isolated zones (e.g., VLANs, subnets) to contain breaches.
+* **Micro-Segmentation**: Applying granular **security policies** to individual workloads or applications for enhanced protection.&#x20;
+
+A micro-segmentation policy could be applied to two VMs that are on the _same VLAN and subnet_, preventing them from talking to each other unless explicitly allowed. A traditional network firewall at the VLAN boundary would be blind to this East-West traffic.
+
+**The "Zero Trust" Principle:** Micro-segmentation is a core implementation of the Zero Trust model ("never trust, always verify"). It assumes a breach has already occurred inside a segment and prevents lateral movement by an attacker. Traditional segmentation often operates on a "trust but verify" model within a segment.
+
+**East-West vs. North-South Traffic:**
+
+* **Network Segmentation** is traditionally very good at controlling **North-South** traffic (traffic moving in and out of the network segment/zone).
+* **Micro-Segmentation** is specifically designed to control **East-West** traffic (traffic between servers _within_ the same segment/zone), which is where most malicious lateral movement occurs after a breach.
+
+Micro-segmentation takes the principle of "divide and contain" and applies it with far greater precision, using software-defined policies instead of relying on network hardware boundaries. You can have network segmentation _without_ micro-segmentation (e.g., just using VLANs), but effective micro-segmentation implements and enhances the goals of network segmentation.
+
+#### Detailed Comparison
+
+| Feature                   | Network Segmentation                                                                  | Micro-Segmentation                                                                                                                  |
+| ------------------------- | ------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| **Primary Scope**         | **Broad, network-centric.** Focuses on dividing the network itself.                   | **Granular, workload-centric.** Focuses on isolating individual workloads, applications, or processes.                              |
+| **Unit of Segmentation**  | Subnets, VLANs, Zones (e.g., "DMZ," "Finance VLAN," "User Subnet").                   | Individual servers, virtual machines (VMs), containers, or even applications _within_ a server.                                     |
+| **Enforcement Point**     | Physical or virtual network infrastructure: **Routers, Firewalls, Switches.**         | **Software-based.** The hypervisor vSwitch, host-based firewalls, or a dedicated software agent on the workload itself.             |
+| **Underlying Technology** | VLANs, ACLs (Access Control Lists), Subnetting, Physical Firewalls.                   | **Software-Defined Networking (SDN)**, Cloud Security Groups, Host-Based Firewalls (e.g., iptables, Windows Firewall).              |
+| **Policy Based On**       | Primarily **IP Addresses, TCP/UDP Ports, and VLAN tags.**                             | **Identity and Context.** Labels (e.g., "Web-Tier," "App-Tier"), workload names, security tags, and application identity.           |
+| **Agility & Flexibility** | Less agile. Changes often require reconfiguring physical hardware or network devices. | Highly agile. Policies can be applied and changed instantly through software, ideal for dynamic cloud and virtualized environments. |
+
+In a modern security architecture, you would often use both:
+
+* **Network Segmentation** to create large, logical zones (e.g., Production, Development, DMZ).
+* **Micro-Segmentation** inside each of those zones to control traffic between the individual workloads.
 
 #### Honeypots
 

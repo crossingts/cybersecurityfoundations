@@ -432,35 +432,44 @@ An organization’s information security policy has to be clear—and regularly 
 
 ### Security testing
 
-Information security testing is performed in risk assessments and **compliance audits**. In fact, it is an essential part of both processes.
+Information security testing is an essential part of both risk assessments and compliance audits.
 
-• Risk assessment: Information security testing is used to identify and assess the risks to an organization's information assets. This information is then used to develop and implement security controls to mitigate those risks.&#x20;
+A risk assessment is the process of **identifying, estimating, and prioritizing risks** to organizational operations, assets, and individuals.
 
-• Compliance audits: Information security testing is used to verify that an organization's information security controls are effective and are in compliance with applicable regulations.&#x20;
+Information security testing is used to identify and assess the risks to an organization's information assets. This information is then used to develop and implement security controls to mitigate those risks. Security testing (like vulnerability scans and penetration tests) provides the **empirical evidence** needed to:
+
+* **Identify Vulnerabilities:** Find actual weaknesses in systems, networks, and applications.
+* **Validate Threats:** Confirm whether theoretical threats can actually be exploited.
+* **Estimate Likelihood:** Get real data on how easy or difficult it is for an attacker to breach a system.
+* **Predict Impact:** Simulate an attack to understand what data could be accessed and what the business impact would be.
+
+Without testing, a risk assessment is often just an educated guess. Testing turns it into a data-driven evaluation.
+
+A compliance audit is the process of **verifying that an organization adheres to a specific set of external rules or internal policies** (e.g., PCI DSS, HIPAA, SOC 2, ISO 27001).
+
+Information security testing is used in compliance audits to verify that an organization's information security controls are effective and are in compliance with applicable regulations. Many of these standards and regulations explicitly require regular security testing as a condition for compliance. For example:
+
+* **PCI DSS:** Requires internal and external vulnerability scans (Req. 11.2) and penetration testing (Req. 11.3).
+* **ISO 27001:** Control A.12.6.1 requires information about technical vulnerabilities to be managed and addressed in a timely manner, which is operationalized through vulnerability scanning.
+* **SOC 2:** The Security principle often requires penetration testing and vulnerability scans as evidence of operational effectiveness for relevant criteria.
+
+In an audit, testing provides the evidence that an auditor will examine to verify that security controls are not just in place on paper, but are actually working effectively.
 
 There are a variety of information security testing methods that can be used, including:
 
-• Vulnerability scanning: This method scans an organization's systems and networks for known vulnerabilities.&#x20;
-
-• Penetration testing: This method simulates an attack on an organization's systems and networks to identify and exploit vulnerabilities.&#x20;
-
-• Social engineering testing: This method tests the effectiveness of an organization's security controls against social engineering attacks.&#x20;
-
-• Physical security testing: This method tests the security of an organization's physical assets, such as its buildings and data centers.&#x20;
+* Vulnerability scanning: This method scans an organization's systems and networks for known vulnerabilities.&#x20;
+* Penetration testing: This method simulates an attack on an organization's systems and networks to identify and exploit vulnerabilities.&#x20;
+* Social engineering testing: This method tests the effectiveness of an organization's security controls against social engineering attacks.&#x20;
+* Physical security testing: This method tests the security of an organization's physical assets, such as its buildings and data centers.&#x20;
 
 The specific information security testing methods that are used will vary depending on the organization's specific risk assessment and compliance requirements.
 
 Some of the benefits of information security testing include:
 
-• It helps to identify and assess risks to an organization's information assets.&#x20;
-
-• It helps to verify that an organization's information security controls are effective and are in compliance with applicable regulations.&#x20;
-
-• It helps to identify and fix security vulnerabilities before they are exploited by attackers.&#x20;
-
-• It helps to improve an organization's overall security posture.
-
-Conduct security audits: Perform penetration testing and vulnerability scanning using tools like Wireshark, Nmap, Nessus, or OpenVAS.
+* It helps to identify and assess risks to an organization's information assets.&#x20;
+* It helps to verify that an organization's information security controls are effective and are in compliance with applicable regulations.&#x20;
+* It helps to identify and fix security vulnerabilities before they are exploited by attackers.&#x20;
+* It helps to improve an organization's overall security posture.
 
 ### Security training
 

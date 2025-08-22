@@ -19,7 +19,7 @@
 * [Foundational cybersecurity concepts and practices](2.-introduction-to-cybersecurity/foundational-cybersecurity-concepts-and-practices.md)
 * [The cybersecurity threat landscape](2.-introduction-to-cybersecurity/the-cybersecurity-threat-landscape.md)
 * [Common cyber attacks](2.-introduction-to-cybersecurity/common-cyber-attacks.md)
-* [Risk mitigation methods](2.-introduction-to-cybersecurity/risk-mitigation-methods.md)
+* [Cybersecurity risk mitigation methods](2.-introduction-to-cybersecurity/cybersecurity-risk-mitigation-methods.md)
 * [Network security risk mitigation best practices](2.-introduction-to-cybersecurity/network-security-risk-mitigation-best-practices.md)
 
 ## 3. Cybersecurity GRC

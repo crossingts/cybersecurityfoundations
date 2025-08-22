@@ -1,20 +1,20 @@
 ---
 description: >-
-  This section discusses network security risk mitigation methods, including
+  This section discusses major cybersecurity risk mitigation methods, including
   technologies, network design, networking protocols, organizational polices,
   security testing, and security training
 ---
 
-# Risk mitigation methods
+# Cybersecurity risk mitigation methods
 
 ## Learning objectives
 
-* List and describe key cybersecurity risk mitigation methods
-* Develop an appreciation for the conceptual overlap between risk mitigation approaches
+* List and describe major cybersecurity risk mitigation methods
+* Develop an appreciation for the conceptual overlap between risk mitigation practices
 * Develop an appreciation for the need for a layered approach to cybersecurity
 * Identify the need for a system's view of cybersecurity management&#x20;
 
-This section reviews major risk mitigation methods used to reduce the risk of a cybersecurity breach or to minimize the impact of an attack if it occurs. Risk mitigation methods explored span technologies, network design, networking protocols, organizational policies, security testing, and security training.
+This section reviews major cybersecurity risk mitigation methods used to reduce the risk of a cybersecurity breach or to minimize the impact of an attack if it occurs. Cybersecurity risk mitigation methods explored span technologies, network design, networking protocols, organizational policies, security testing, and security training.
 
 ## Topics covered in this section
 
@@ -27,7 +27,9 @@ This section reviews major risk mitigation methods used to reduce the risk of a 
 
 ### Risk mitigation technologies
 
-Common risk mitigation technologies include Firewalls, IDS/IPS, Web Proxies, VPN, Encryption, Web Filters, SIEM, EDR/XDR, Network Access Control (NAC), Anti-Virus.
+Common cybersecurity risk mitigation technologies include Firewalls, IDS/IPS, Web Proxies, VPN, Encryption, Web Filters, Anti-Virus, SIEM, EDR/XDR, Network Access Control (NAC), and Identity and Access Management (IAM).
+
+SIEM, EDR/XDR, NAC, IAM are covered in the section [Network security risk mitigation best practices](network-security-risk-mitigation-best-practices.md) (Chapter 2). SIEM/EDR/XDR are further discussed in [Defensive cybersecurity technologies](../6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/) (Chapter 6).
 
 #### Firewalls
 
@@ -160,7 +162,9 @@ Setting up a VPN requires specialized hardware or VPN software installed on serv
 
 • **Encryption**: Convert plaintext data into unreadable ciphertext to protect it from unauthorized access.
 
-**• Web filters** prevent users’ browsers from loading certain pages from particular websites. There are different web filters designed for individual, family, institutional, and enterprise use. Web domain whitelisting can be implemented using a web filter that can make web access policies and perform web site monitoring.
+**• Web Filters** prevent users’ browsers from loading certain pages from particular websites. There are different web filters designed for individual, family, institutional, and enterprise use. Web domain whitelisting can be implemented using a web filter that can make web access policies and perform web site monitoring.
+
+**• Anti-Virus**
 
 ### Network design
 

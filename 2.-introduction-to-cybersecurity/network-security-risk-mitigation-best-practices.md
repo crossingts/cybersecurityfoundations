@@ -1,6 +1,6 @@
 ---
 description: >-
-  This section discusses network security risk mitigation best practices,
+  This section discusses key network security risk mitigation best practices,
   including least privilege access control, network monitoring, incident
   response management, and layered security
 ---
@@ -10,7 +10,7 @@ description: >-
 ## Learning objectives
 
 * List and describe key network security risk mitigation best practices
-* Develop an appreciation for the conceptual overlap between risk mitigation approaches
+* Develop an appreciation for the conceptual overlap between risk mitigation practices
 * Develop an appreciation for the need for a layered approach to cybersecurity
 * Identify the need for a system's view of cybersecurity management
 
@@ -44,14 +44,14 @@ Employee access to data should be on a need-to-know basis. In addition, procedur
 
 Identification, authentication, authorization, accounting, and identity management.
 
-A critical aspect of network (re)design is enforcing strict access controls to prevent unauthorized entry. Role-based access control (**RBAC**) ensures that users and devices only have permissions necessary for their functions, minimizing insider threats and credential misuse. Multi-factor authentication (MFA) adds an extra layer of security, requiring additional verification beyond passwords. Additionally, network administrators should regularly audit access logs and revoke unnecessary privileges to maintain a least-privilege environment.
+A critical aspect of network design is enforcing strict access controls to prevent unauthorized entry. Role-based access control (**RBAC**) ensures that users and devices only have permissions necessary for their functions, minimizing insider threats and credential misuse. Multi-factor authentication (MFA) adds an extra layer of security, requiring additional verification beyond passwords. Additionally, network administrators should regularly audit access logs and revoke unnecessary privileges to maintain a least-privilege environment.
 
 Best practices for access control in network design:
 
 * **Least Privilege Principle**: Granting minimal access required for users to perform their duties.
 * **Multi-Factor Authentication (MFA)**: Mandating multiple verification steps for sensitive systems.
 * **Continuous Monitoring**: Using SIEM (Security Information and Event Management) tools to detect anomalies. Access to data and modification of data has to be logged and recorded in the central SIEM system. A SIEM system consumes multiple logs and allows those handling security to connect the dots and create a big picture that gives insight into multiple events. For example, it can draw attention to a user who sends abnormal amounts of data outbound, or one who connects to an unusual amount of servers.
-* **Automated Policy Enforcement**: Deploying solutions like NAC (Network Access Control) to validate device compliance before granting access.
+* **Automated Policy Enforcement**: Deploying solutions like **NAC** (Network Access Control) to validate device compliance before granting access.
 
 **Network Access Control (NAC)** restricts network access to only those devices that comply with security policies, such as having up-to-date antivirus or OS patches. Non-compliant devices may be blocked, quarantined, or automatically remediated (e.g., by redirecting to a patch server). NAC works best in tightly controlled environments like corporate offices or government networks but can be challenging in dynamic settings like hospitals or universities, where device types and users change frequently, which complicates policy enforcement.
 

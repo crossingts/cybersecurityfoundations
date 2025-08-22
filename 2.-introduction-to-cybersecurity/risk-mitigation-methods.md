@@ -27,7 +27,7 @@ This section reviews major risk mitigation methods used to reduce the risk of a 
 
 ### Risk mitigation technologies
 
-Common risk mitigation technologies include: Firewalls, IDS/IPS, Next-Generation IPS, Next-Generation Firewalls, Web Proxies, VPN, Encryption, Web filters, SIEM, EDR/XDR, Network Access Control (NAC), Anti-Virus.
+Common risk mitigation technologies include Firewalls, IDS/IPS, Web Proxies, VPN, Encryption, Web Filters, SIEM, EDR/XDR, Network Access Control (NAC), Anti-Virus.
 
 #### Firewalls
 
@@ -43,7 +43,23 @@ While firewalls share some router-like features (such as packet forwarding and f
 
 The firewall needs to sit in the path of the packets so it can filter the packets, redirect them for collection and later analysis, or let them continue toward their destination.&#x20;
 
-Unlike next-generation firewalls (NGFWs), traditional firewalls do not perform deep packet inspection (DPI), user-based authentication, or advanced application-layer analysis. Instead, they focus on **network-layer security** (IPs, ports, and connection states), making them efficient for basic traffic control but less effective against sophisticated threats.
+Unlike next-generation firewalls (NGFWs), traditional firewalls do not perform deep packet inspection (DPI), user-based authentication, or advanced application-layer analysis. Instead, they focus on network-layer security (IPs, ports, and connection states), making them efficient for basic traffic control but less effective against sophisticated threats.
+
+**Industry focus: Cisco Next-Generation Firewalls**
+
+Next-generation firewall (NGFW): A firewall device with advanced features, including the ability to run many related security features in the same firewall device (IPS, malware detection, VPN termination), along with deep packet inspection with Application Visibility and Control (AVC) and the ability to perform URL filtering versus data collected about the reliability and risk associated with every domain name.
+
+The following list summarizes a few key features of an NGFW (Odom, 2020, pp. 101-102):
+
+■ Traditional firewall: An NGFW performs traditional firewall features, like stateful firewall filtering, NAT/PAT, and VPN termination.
+
+■ Application Visibility and Control (AVC): This feature looks deep into the application layer data to identify the application. For instance, it can identify the application based on the data, rather than port number, to defend against attacks that use random port numbers.
+
+■ Advanced Malware Protection: NGFW platforms run multiple security services, not just as a platform to run a separate service, but for better integration of functions. A network-based antimalware function can run on the firewall itself, blocking file transfers that would install malware, and saving copies of files for later analysis.
+
+■ URL Filtering: This feature examines the URLs in each web request, categorizes the URLs, and either filters or rate limits the traffic based on rules. The Cisco Talos security group monitors and creates reputation scores for each domain known in the Internet, with URL filtering being able to use those scores in its decision to categorize, filter, or rate limit.
+
+■ Next-generation IPS (NGIPS): The Cisco NGFW products can also run their NGIPS feature along with the firewall.
 
 #### IDS/IPS
 
@@ -53,11 +69,11 @@ A traditional IPS differs from firewalls in that instead of an engineer at the c
 
 The most fundamental approaches to detecting cyber intrusions are to monitor server logs for signs of unauthorized access, to monitor firewall or router logs for abnormal events, and to monitor network performance for spikes in traffic. (EDUCAUSE, 2020)
 
-#### Industry focus: Cisco Next-Generation IPS
+**Industry focus: Cisco Next-Generation IPS**
 
 Next-generation IPS (NGIPS): An IPS device with advanced features, including the capability to go beyond a comparison to known attack signatures to also look at contextual data, including the vulnerabilities in the current network, the capability to monitor for new zero-day threats, with frequent updates of signatures from the Cisco Talos security research group.
 
-The following list mentions a few of the Cisco NGIPS features (p. 103):
+The following list mentions a few of the Cisco NGIPS features (Odom, 2020, p. 103):
 
 ■ Traditional IPS: An NGIPS performs traditional IPS features, like using exploit signatures to compare packet flows, creating a log of events, and possibly discarding and/or redirecting packets.
 
@@ -68,22 +84,6 @@ The following list mentions a few of the Cisco NGIPS features (p. 103):
 ■ Reputation-Based Filtering: The Cisco Talos security intelligence group researches security threats daily, building the data used by the Cisco security portfolio. Part of that data identifies known bad actors, based on IP address, domain, name, or even specific URL, with a reputation score for each. A Cisco NGIPS can perform reputation-based filtering, taking the scores into account.
 
 ■ Event Impact Level: Security personnel need to assess the logged events, so an NGIPS provides an assessment based on impact levels, with characterizations as to the impact if an event is indeed some kind of attack.
-
-#### Industry focus: Cisco Next-Generation Firewalls
-
-Next-generation firewall (NGFW): A firewall device with advanced features, including the ability to run many related security features in the same firewall device (IPS, malware detection, VPN termination), along with deep packet inspection with Application Visibility and Control (AVC) and the ability to perform URL filtering versus data collected about the reliability and risk associated with every domain name.
-
-The following list summarizes a few key features of an NGFW (pp. 101-102):
-
-■ Traditional firewall: An NGFW performs traditional firewall features, like stateful firewall filtering, NAT/PAT, and VPN termination.
-
-■ Application Visibility and Control (AVC): This feature looks deep into the application layer data to identify the application. For instance, it can identify the application based on the data, rather than port number, to defend against attacks that use random port numbers.
-
-■ Advanced Malware Protection: NGFW platforms run multiple security services, not just as a platform to run a separate service, but for better integration of functions. A network-based antimalware function can run on the firewall itself, blocking file transfers that would install malware, and saving copies of files for later analysis.
-
-■ URL Filtering: This feature examines the URLs in each web request, categorizes the URLs, and either filters or rate limits the traffic based on rules. The Cisco Talos security group monitors and creates reputation scores for each domain known in the Internet, with URL filtering being able to use those scores in its decision to categorize, filter, or rate limit.
-
-■ NGIPS: The Cisco NGFW products can also run their NGIPS feature along with the firewall.
 
 #### Web Proxies
 

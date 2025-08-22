@@ -20,8 +20,7 @@
 * [The cybersecurity threat landscape](2.-introduction-to-cybersecurity/the-cybersecurity-threat-landscape.md)
 * [Common cyber attacks](2.-introduction-to-cybersecurity/common-cyber-attacks.md)
 * [Risk mitigation methods](2.-introduction-to-cybersecurity/risk-mitigation-methods.md)
-* [Network security risk mitigation best practices](2.-introduction-to-cybersecurity/network-security-risk-mitigation-best-practices/README.md)
-  * [NIST SP 800-61 (IR framework)](2.-introduction-to-cybersecurity/network-security-risk-mitigation-best-practices/nist-sp-800-61-ir-framework.md)
+* [Network security risk mitigation best practices](2.-introduction-to-cybersecurity/network-security-risk-mitigation-best-practices.md)
 
 ## 3. Cybersecurity GRC
 
@@ -97,6 +96,7 @@
     * [How to get started with Wireshark](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/packet-analyzers/how-to-get-started-with-wireshark.md)
     * [Using Wireshark to identify non-secure network traffic](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/packet-analyzers/using-wireshark-to-identify-non-secure-network-traffic.md)
   * [Defensive security pipeline](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/defensive-security-pipeline.md)
+  * [NIST SP 800-61 (IR framework)](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/nist-sp-800-61-ir-framework.md)
 * [Network security testing](6.-practical-foundations-in-ethical-hacking/network-security-testing.md)
 * [Phases of the penetration testing process](6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md)
   * [Reconnaissance (footprinting)](6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/reconnaissance-footprinting.md)

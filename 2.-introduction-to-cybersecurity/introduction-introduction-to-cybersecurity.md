@@ -29,4 +29,4 @@ Through an exploration of key concepts and practices, this chapter will help stu
 
 [Risk mitigation methods](risk-mitigation-methods.md)
 
-[Network security risk mitigation best practices](network-security-risk-mitigation-best-practices/)
+[Network security risk mitigation best practices](network-security-risk-mitigation-best-practices.md)

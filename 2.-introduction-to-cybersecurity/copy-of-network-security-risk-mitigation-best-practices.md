@@ -15,43 +15,53 @@ hidden: true
 * Develop an appreciation for the need for a layered approach to cybersecurity
 * Identify the need for a system's view of cybersecurity management
 
-This section reviews common network security risk mitigation best practices, including least privilege access control, on time software patching, multi-factor authentication, network monitoring, incident response and disaster recovery, and layered security (defense in depth).
+This section reviews common network security risk mitigation best practices, including&#x20;
+
+least privilege access control, on time software patching, multi-factor authentication, network monitoring, incident response and disaster recovery, and layered security (defense in depth).
 
 ## Topics covered in this section
 
-* **Least privilege access control**
-* **Multi-factor authentication**
-* **Network monitoring**&#x20;
-* **Layered security (defense in depth)**
-* **Incident response and disaster recovery**
-* **Using multiple vendors**
-* **Quality assurance**
-* **Timely software patching**&#x20;
-* **Physically securing the network**
+* Robust access control
+* Least privilege access control
+* Multi-factor authentication
+* Network monitoring&#x20;
+* Layered security (defense in depth)
+* Incident response and disaster recovery
+* Using multiple vendors
+* Quality assurance
+* Timely software patching&#x20;
+* Physically securing the network
 
-### Least privilege access control
+### Robust access control
+
+A critical aspect of network design is enforcing strict access controls to prevent unauthorized entry.
+
+Best practices for access control in network design include Least Privilege Access Control, Identity and Access Management (IAM), Multi-Factor Authentication (MFA), Automated Policy Enforcement (e.g., Network Access Control), and continuous monitoring (e.g., using SIEM tools).
+
+**Least Privilege Access Control:** The fundamental goal. Granting minimal access required for users to perform their duties.
+
+**Identity and Access Management (IAM):** The core framework for defining and managing identity and permissions. _(This is where RBAC, ABAC, and PAM live.)_
+
+**Multi-Factor Authentication (MFA):** A critical _component_ of IAM. Mandating multiple verification steps for sensitive systems.
+
+**Automated Policy Enforcement:** The mechanisms that execute the IAM policies. _(This is where NAC, automated security group updates, and automated threat response live.)_ For example, deploying solutions like NAC (Network Access Control) to validate device compliance before granting access.
+
+**Continuous Monitoring (e.g., SIEM):** The system that provides visibility and triggers automated enforcement actions based on real-time analysis.
+
+#### Least Privilege Access Control
 
 The principle of least privilege rules that only the necessary and sufficient level of access privilege is granted to each authorized user or user group. Establishing and enforcing the least-privilege principle for access management and access control is the principal preventive measure against insider threats. Giving users the least amount of access they need to do their jobs enhances data security because it limits what they can accidentally or deliberately access and ensures that if their passwords are compromised, a hacker does not have all keys to the kingdom. It is easier to stay secure by enabling access when needed than to revoke access and mitigate damage after an incident.&#x20;
 
+Network administrators should regularly audit access logs and revoke unnecessary privileges to maintain a least-privilege environment.
 
+#### Identity and Access Management (IAM)
 
-**Identity and Access Management**
-
-Identification, authentication, authorization, accounting, and identity management.
-
-A critical aspect of network design is enforcing strict access controls to prevent unauthorized entry. Role-based access control (**RBAC**) ensures that users and devices only have permissions necessary for their functions, minimizing insider threats and credential misuse. Multi-factor authentication (MFA) adds an extra layer of security, requiring additional verification beyond passwords. Additionally, network administrators should regularly audit access logs and revoke unnecessary privileges to maintain a least-privilege environment.
-
-
-
-**IAM (Identity and Access Management)**
+IAM is a comprehensive system for identification, authentication, authorization, accounting, and identity management.
 
 IAM is a comprehensive discipline and set of technologies focused on managing digital identities and their access rights across systems. Its core components include:
 
 * **User Lifecycle Management:** Provisioning, de-provisioning, and updating user accounts.
-* **Role-Based Access Control (RBAC):** Assigning permissions based on a user's role in the organization.
-
-\<In order to properly secure data, an organization should develop clear and precise standards of data classification. Usually data access is governed via a data-access control scheme. A simple and sound way to develop one is using **role-based access control (RBAC)**.>
-
+* **Role-Based Access Control (RBAC):** Assigning permissions based on a user's role in the organization. RBAC ensures that users and devices only have permissions necessary for their functions, minimizing insider threats and credential misuse.&#x20;
 * **Attribute-Based Access Control (ABAC):** A more dynamic model that grants access based on attributes (user, resource, environment).
 * **Federation:** Allowing users to use a single identity across different systems (e.g., using your corporate login for cloud apps).
 * **Privileged Access Management (PAM):** A subset of IAM focused on securing highly privileged accounts.
@@ -77,18 +87,6 @@ Other examples of Automated Policy Enforcement that leverage IAM include:
 * **SIEM Automation:** A SIEM (Security Information and Event Management) tool automatically disabling a user account after detecting multiple failed login attempts, based on a pre-defined policy.
 
 
-
-Best practices for access control in network design include Least Privilege Principle, Identity and Access Management (IAM), Multi-Factor Authentication (MFA), Automated Policy Enforcement (e.g., NAC (Network Access Control) and continuous monitoring (e.g., using SIEM tools).
-
-**Least Privilege Principle:** The fundamental goal. Granting minimal access required for users to perform their duties.
-
-**Identity and Access Management (IAM):** The core framework for defining and managing identity and permissions. _(This is where RBAC, ABAC, and PAM live)_.
-
-**Multi-Factor Authentication (MFA):** A critical _component_ of IAM. Mandating multiple verification steps for sensitive systems.
-
-**Automated Policy Enforcement:** The mechanisms that execute the IAM policies. _(This is where NAC, automated security group updates, and automated threat response live)_. For example, deploying solutions like NAC (Network Access Control) to validate device compliance before granting access.
-
-**Continuous Monitoring (e.g., SIEM):** The system that provides visibility and triggers automated enforcement actions based on real-time analysis.
 
 
 
@@ -157,6 +155,8 @@ Modern systems often combine both:
 Think of it this way: NAC guards the _network door_ (devices), while IAM guards the _application doors_ (users). Both are critical for Zero Trust security.
 
 ### Multi-factor authentication
+
+Multi-factor authentication (MFA) requires verification beyond passwords.
 
 No matter how secure the password, there is still a chance it gets into the hands of an attacker. That’s why multi-factor authentication is becoming more and more wide-spread.
 

@@ -29,4 +29,4 @@ Through an exploration of key concepts and practices, this chapter will help stu
 
 [Cybersecurity risk mitigation methods](cybersecurity-risk-mitigation-methods.md)
 
-[Network security risk mitigation best practices](broken-reference)
+[Network security risk mitigation best practices](network-security-risk-mitigation-best-practices.md)

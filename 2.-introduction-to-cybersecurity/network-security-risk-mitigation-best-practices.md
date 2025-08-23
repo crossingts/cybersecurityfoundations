@@ -1,8 +1,11 @@
+---
+description: >-
+  This section discusses key network security risk mitigation best practices,
+  including least privilege access control, network security monitoring, layered
+  security, and incident response management
+---
+
 # Network security risk mitigation best practices
-
-This section discusses key network security risk mitigation best practices, including&#x20;
-
-least privilege access control, network monitoring, incident response management, and layered security
 
 ## Learning objectives
 
@@ -11,9 +14,7 @@ least privilege access control, network monitoring, incident response management
 * Develop an appreciation for the need for a layered approach to cybersecurity
 * Identify the need for a system's view of cybersecurity management
 
-This section reviews common network security risk mitigation best practices, including&#x20;
-
-least privilege access control, on time software patching, multi-factor authentication, network monitoring, incident response and disaster recovery, and layered security (defense in depth).
+This section discusses key network security risk mitigation best practices, including robust access control (least privilege access control, Identity and Access Management, automated policy enforcement, and Multi-Factor Authentication), network security monitoring, layered security, incident response management, using multiple vendors, Quality Assurance, timely software patching, and physically securing the network.
 
 ## Topics covered in this section
 
@@ -23,13 +24,15 @@ least privilege access control, on time software patching, multi-factor authenti
   * **Automated policy enforcement**
   * **Multi-Factor Authentication (MFA)**
 * **Network security monitoring**&#x20;
-*
-* Layered security (defense in depth)
-* Incident response and disaster recovery
-* Using multiple vendors
-* Quality assurance
-* Timely software patching&#x20;
-* Physically securing the network
+  * **Network visibility vs network security monitoring**
+  * **Network security monitoring technologies**
+  * **Network Traffic Analysis (NTA) vs IDS/IPS**
+* **Layered security (defense in depth)**
+* **Incident response management**
+* **Using multiple vendors**
+* **Quality Assurance**
+* **Timely software patching**&#x20;
+* **Physically securing the network**
 
 ### Robust access control
 
@@ -164,6 +167,16 @@ Network monitoring is the practice of continuously observing a computer network 
 
 Two concepts that expand upon this foundation are **network security monitoring (NSM)** and network visibility. **NSM** focuses on detecting, investigating, and responding to security threats. It uses tools like IDS/IPS and SIEM platforms to analyze traffic for malicious patterns, enforce security policies, and aid in post-incident recovery. While standard monitoring might flag a high bandwidth spike, NSM would investigate if that spike is caused by a legitimate backup or a malicious denial-of-service attack. **Network visibility** is a broader, more proactive approach that encompasses both performance and security monitoring. It involves gaining a comprehensive, often granular, real-time understanding of all traffic flows across the entire network infrastructure. This is achieved through advanced telemetry data, flow analysis (NetFlow, sFlow), and packet inspection. Where basic monitoring might track if a link is up/down, visibility reveals exactly which applications, users, and protocols are consuming that link's capacity, providing the essential context needed to troubleshoot complex issues and optimize the network holistically.
 
+Network visibility is a practice/capability a level above the more traditional network monitoring. An IDS/IPS might block 99% of the obvious, automated attacks at the perimeter. An NTA solution would then be used to discover the sophisticated, stealthy attacker that bypassed the IPS by finding their unusual command-and-control traffic hidden in normal web requests.&#x20;
+
+Network visibility is the ability to see, understand, and contextualize all activity and data traversing a network. It is not a single tool, but a capability achieved through a combination of tools, processes, and policies. The key pillars of network visibility include:
+
+* **Knowing what's on your network:** All devices, users, and applications.
+* **Understanding behavior:** How those devices, users, and applications normally interact.
+* **Identifying anomalies:** Spotting deviations from normal behavior that could indicate a problem.
+* **Providing evidence:** Having the data to investigate alerts and perform forensics.
+* **Measuring performance:** Ensuring the network is functioning as required for business.
+
 #### Network security monitoring technologies
 
 A secure network design must incorporate robust monitoring to detect and respond to threats in real time. SIEM solutions aggregate and correlate system logs/alerts from IDS, firewalls, endpoints, etc. for centralized threat detection, while endpoint detection and response (EDR) solutions track suspicious behavior across devices for signs of compromise. IDS/IPS help identify/block malicious traffic. Network traffic analysis (NTA) tools provide visibility into data flows, helping detect lateral movement by attackers.&#x20;
@@ -237,31 +250,6 @@ SIEM can integrate and correlate distributed events and alert on hostile or abno
 * **Darktrace, Cisco Stealthwatch** → AI-driven anomaly detection (e.g., unusual data exfiltration).
 * **Moloch, Arkime** → Packet capture (PCAP) analysis for forensic investigations.
 
-#### NTA vs IDS/IPS Comparison
-
-| Feature           | Network Traffic Analysis (NTA)                                                                                                                                    | Intrusion Detection/Prevention System (IDS/IPS)                                                   |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| **Primary Goal**  | **Visibility, Discovery, Investigation.** To understand normal behavior, find anomalies, and perform forensic analysis.                                           | **Detection & Prevention.** To identify and stop known attacks and policy violations.             |
-| **Core Function** | Behavioral analysis, baselining, flow analysis (NetFlow, IPFIX), metadata examination, and deep packet inspection.                                                | Signature-based detection, anomaly-based detection, and policy-based blocking.                    |
-| **Focus**         | **Big Picture & Context.** "Who talked to whom, when, for how long, and what was the result?"                                                                     | **Specific Events.** "Did this packet or stream match a known attack signature?"                  |
-| **Output**        | Dashboards, maps of network communication, behavioral profiles, alerts on deviations from a baseline.                                                             | **Alerts** (IDS) or **Blocks** (IPS) on specific malicious activities.                            |
-| **Mindset**       | **Proactive & Investigative.** "Let's see what's going on and find what we don't know about."                                                                     | **Reactive & Defensive.** "Stop this specific bad thing I know about."                            |
-| **Example**       | A tool flags that a corporate workstation is sending an unusually large amount of data to a cloud storage service in a foreign country outside of business hours. | A tool blocks a packet because its signature matches the "CVE-2023-1234 Exploit" in its database. |
-
-**Both NTA and IDS/IPS rely on packet capture and analysis, but they use it in different ways and to different extents.**
-
-**How NTA Uses Packets:**
-
-1. **Full Packet Capture:** Some advanced NTA solutions perform **full PCAP** and store the packets for a period of time. This allows for deep forensic investigation _after_ an alert is generated. You can go back and replay exactly what happened.
-2. **Flow Data & Metadata:** More commonly, NTA tools analyze **network flow data** (like NetFlow, sFlow, IPFIX). This is metadata about the traffic (who are the source/destination, what ports, how many bytes/packets, timestamps) rather than the full packet payload. This is less resource-intensive and perfect for building a behavioral baseline.
-3. **Statistical Analysis:** NTA uses the captured data (both full packet and flow data) to perform statistical modeling to establish what "normal" looks like for every device and user on the network.
-
-**How IDS/IPS Uses Packets:**
-
-1. **Real-Time Packet Inspection:** IDS/IPS engines **must** capture and inspect packets in real-time. They compare each packet or stream of packets against a massive database of known attack signatures (patterns).
-2. **Pattern Matching:** The analysis is focused on finding a precise match for a malicious pattern (e.g., a specific string of code in an exploit, a known malicious domain).
-3. **Decision & Action:** Once a match is found, the system takes immediate action: an **IDS** will generate an alert, while an **IPS** will actively drop the malicious packet and block the connection.
-
 **How NTA Complements Other Tools:**
 
 | Scenario                                               | Firewall                     | IDS/IPS                         | SIEM                                     | NTA                                 |
@@ -280,21 +268,43 @@ SIEM can integrate and correlate distributed events and alert on hostile or abno
 * Requires **high storage** for full packet capture (PCAP).
 * Can be **noisy** without proper tuning.
 
-**Network visibility vs network security monitoring**
+#### Network Traffic Analysis (NTA) vs IDS/IPS
 
-Network visibility is a practice/capabillity a level above the more traditional network monitoring. An IDS/IPS might block 99% of the obvious, automated attacks at the perimeter. An NTA solution would then be used to discover the sophisticated, stealthy attacker that bypassed the IPS by finding their unusual command-and-control traffic hidden in normal web requests.&#x20;
+The network visibility vs network security monitoring dichotomy can be better understood through concrete examples. NTA is more closely related to network visibility, while IDS/IPS is more closely related to network security monitoring.
 
-Network visibility is the ability to see, understand, and contextualize all activity and data traversing a network. It is not a single tool, but a capability achieved through a combination of tools, processes, and policies.
+Both NTA and IDS/IPS are forms of "monitoring," but they have different goals:
 
-The key pillars of network visibility include:
+|                         | **Network Visibility (NTA's Goal)**    | **Security Monitoring (IDS/IPS's Goal)**    |
+| ----------------------- | -------------------------------------- | ------------------------------------------- |
+| **Question it Answers** | "What is happening on my network?"     | "Is something bad happening on my network?" |
+| **Scope**               | Broad, holistic, contextual            | Narrow, focused on threats                  |
+| **Mindset**             | Proactive, curious, investigative      | Reactive, defensive, enforcement            |
+| **Output**              | Dashboards, maps, baselines, anomalies | **Alarms** and **Blocks**                   |
 
-* **Knowing what's on your network:** All devices, users, and applications.
-* **Understanding behavior:** How those devices, users, and applications normally interact.
-* **Identifying anomalies:** Spotting deviations from normal behavior that could indicate a problem.
-* **Providing evidence:** Having the data to investigate alerts and perform forensics.
-* **Measuring performance:** Ensuring the network is functioning as required for business.
+#### NTA vs IDS/IPS Comparison
 
-The network visibility vs security monitoring dichotomy can be better understood through concrete examples. NTA is more closely related to network visibility, while IDS/IPS is more closely related to network security monitoring.
+| Feature           | Network Traffic Analysis (NTA)                                                                                                                                    | Intrusion Detection/Prevention System (IDS/IPS)                                                   |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| **Primary Goal**  | **Visibility, Discovery, Investigation.** To understand normal behavior, find anomalies, and perform forensic analysis.                                           | **Detection & Prevention.** To identify and stop known attacks and policy violations.             |
+| **Core Function** | Behavioral analysis, baselining, flow analysis (NetFlow, IPFIX), metadata examination, and deep packet inspection.                                                | Signature-based detection, anomaly-based detection, and policy-based blocking.                    |
+| **Focus**         | **Big Picture & Context.** "Who talked to whom, when, for how long, and what was the result?"                                                                     | **Specific Events.** "Did this packet or stream match a known attack signature?"                  |
+| **Output**        | Dashboards, maps of network communication, behavioral profiles, alerts on deviations from a baseline.                                                             | **Alerts** (IDS) or **Blocks** (IPS) on specific malicious activities.                            |
+| **Mindset**       | **Proactive & Investigative.** "Let's see what's going on and find what we don't know about."                                                                     | **Reactive & Defensive.** "Stop this specific bad thing I know about."                            |
+| **Example**       | A tool flags that a corporate workstation is sending an unusually large amount of data to a cloud storage service in a foreign country outside of business hours. | A tool blocks a packet because its signature matches the "CVE-2023-1234 Exploit" in its database. |
+
+Both NTA and IDS/IPS rely on packet capture and analysis, but they use it in different ways and to different extents.
+
+**How NTA Uses Packets:**
+
+1. **Full Packet Capture:** Some advanced NTA solutions perform **full PCAP** and store the packets for a period of time. This allows for deep forensic investigation _after_ an alert is generated. You can go back and replay exactly what happened.
+2. **Flow Data & Metadata:** More commonly, NTA tools analyze **network flow data** (like NetFlow, sFlow, IPFIX). This is metadata about the traffic (who are the source/destination, what ports, how many bytes/packets, timestamps) rather than the full packet payload. This is less resource-intensive and perfect for building a behavioral baseline.
+3. **Statistical Analysis:** NTA uses the captured data (both full packet and flow data) to perform statistical modeling to establish what "normal" looks like for every device and user on the network.
+
+**How IDS/IPS Uses Packets:**
+
+1. **Real-Time Packet Inspection:** IDS/IPS engines **must** capture and inspect packets in real-time. They compare each packet or stream of packets against a massive database of known attack signatures (patterns).
+2. **Pattern Matching:** The analysis is focused on finding a precise match for a malicious pattern (e.g., a specific string of code in an exploit, a known malicious domain).
+3. **Decision & Action:** Once a match is found, the system takes immediate action: an **IDS** will generate an alert, while an **IPS** will actively drop the malicious packet and block the connection.
 
 **NTA for Visibility:** The primary value proposition of NTA is to provide **deep, contextual visibility** into what is happening across the entire network. NTA is focused on Comprehensive Visibility and Behavioral Analysis. It's a tool for learning, investigation, and discovering the unknown. NAT answers questions like:
 
@@ -305,18 +315,9 @@ The network visibility vs security monitoring dichotomy can be better understood
 
 **IDS/IPS for security monitoring** or **threat monitoring:** Its job is to constantly scrutinize traffic for threats. IDS/IPS is focused on Targeted Detection and Enforcement. It's a tool for automated alerting and blocking based on known rules and signatures.
 
-Both are forms of "monitoring," but they have different goals:
-
-|                         | **Network Visibility (NTA's Goal)**    | **Security Monitoring (IDS/IPS's Goal)**    |
-| ----------------------- | -------------------------------------- | ------------------------------------------- |
-| **Question it Answers** | "What is happening on my network?"     | "Is something bad happening on my network?" |
-| **Scope**               | Broad, holistic, contextual            | Narrow, focused on threats                  |
-| **Mindset**             | Proactive, curious, investigative      | Reactive, defensive, enforcement            |
-| **Output**              | Dashboards, maps, baselines, anomalies | **Alarms** and **Blocks**                   |
+**How NTA and IDS/IPS Contribute to Visibility**
 
 NTA and IDS/IPS are complementary approaches to a robust security posture. Both approaches contribute to the security aspect of visibility.
-
-**How NTA and IDS/IPS Contribute to Visibility**
 
 Both NTA and IDS/IPS contribute to network visibility, but they do so in very different ways, providing different "lenses" to look through.
 
@@ -334,11 +335,11 @@ Defense in depth is an information security strategy that uses multiple layers a
 * **Defense in depth: the broader, more established term** (originating from military strategy) and is widely recognized in cybersecurity as a comprehensive approach combining multiple security layers (technical, administrative, and physical controls).
 * **Layered security: a subset of defense in depth**, often referring specifically to the **technical controls** (firewalls, encryption, endpoint protection, etc.) rather than the full strategy.
 
-### Incident response and disaster recovery&#x20;
+### Incident response management&#x20;
 
 One of the biggest challenges facing today's IT professionals is planning and preparing for the almost inevitable security incident.
 
-Incident Response (IR) is a structured methodology for handling security breaches, cyber threats, and policy violations. The goal is to manage the situation in a way that limits damage, reduces recovery time and costs, and prevents future occurrences. A standard IR process follows a lifecycle, often based on the NIST framework (NIST SP 800-61r2) which includes:
+Incident Response (IR) is a structured methodology for handling security breaches, cyber threats, and policy violations. The goal is to manage the situation in a way that limits damage, reduces recovery time and costs, and prevents future occurrences. A standard IR process follows a lifecycle, often based on the NIST framework (NIST SP 800-61r2: Computer Security Incident Handling Guide) which includes:
 
 1. **Preparation**
 2. **Detection and Analysis**
@@ -381,7 +382,7 @@ This critical phase occurs after the incident is resolved and focuses on learnin
 
 To enhance security, it is best practice to diversify your vendor choices. For instance, when defending against malware, deploy antimalware solutions from different vendors across various layers—such as individual computers, the network, and the firewall. Since a single vendor typically uses the same detection algorithms across all its products, relying on just one provider (e.g., Vendor A) for all three layers means that if one product fails to detect a threat, the other vendor products likely will too. A more effective strategy is to use Vendor A for the firewall, Vendor B for the network, and Vendor C for workstations. This way, the likelihood of all three solutions—each with distinct detection algorithms/methods—missing the same malware is significantly lower than if you depended on a single vendor.
 
-### Quality assurance
+### Quality Assurance
 
 Implementing quality assurance (QA) in enterprise information security risk management involves systematically evaluating processes, controls, and policies to ensure they meet defined security standards and effectively mitigate risks. QA aligns with established frameworks like NIST SP 800-37 (Risk Management Framework), NIST CSF (Cybersecurity Framework), and ISO/IEC 27001 by incorporating continuous monitoring, audits, and compliance checks to validate that security controls are functioning as intended. For example, NIST SP 800-37 emphasizes ongoing assessment and authorization, while ISO 27001 requires regular internal audits and management reviews to maintain certification. By integrating QA practices—such as control testing, gap analysis, and corrective action plans—organizations can proactively identify weaknesses, improve security postures, and ensure adherence to regulatory requirements. This structured approach not only enhances risk management maturity but also fosters a culture of continuous improvement, reducing vulnerabilities and strengthening overall information assurance.
 

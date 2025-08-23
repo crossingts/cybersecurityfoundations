@@ -3,9 +3,10 @@ description: >-
   This section discusses key network security risk mitigation best practices,
   including least privilege access control, network monitoring, incident
   response management, and layered security
+hidden: true
 ---
 
-# Network security risk mitigation best practices
+# Copy of Network security risk mitigation best practices
 
 ## Learning objectives
 
@@ -46,12 +47,53 @@ Identification, authentication, authorization, accounting, and identity manageme
 
 A critical aspect of network design is enforcing strict access controls to prevent unauthorized entry. Role-based access control (**RBAC**) ensures that users and devices only have permissions necessary for their functions, minimizing insider threats and credential misuse. Multi-factor authentication (MFA) adds an extra layer of security, requiring additional verification beyond passwords. Additionally, network administrators should regularly audit access logs and revoke unnecessary privileges to maintain a least-privilege environment.
 
-Best practices for access control in network design:
 
-* **Least Privilege Principle**: Granting minimal access required for users to perform their duties.
-* **Multi-Factor Authentication (MFA)**: Mandating multiple verification steps for sensitive systems.
-* **Continuous Monitoring**: Using SIEM (Security Information and Event Management) tools to detect anomalies. Access to data and modification of data has to be logged and recorded in the central SIEM system. A SIEM system consumes multiple logs and allows those handling security to connect the dots and create a big picture that gives insight into multiple events. For example, it can draw attention to a user who sends abnormal amounts of data outbound, or one who connects to an unusual amount of servers.
-* **Automated Policy Enforcement**: Deploying solutions like **NAC** (Network Access Control) to validate device compliance before granting access.
+
+**IAM (Identity and Access Management)**
+
+IAM is a comprehensive discipline and set of technologies focused on managing digital identities and their access rights across systems. Its core components include:
+
+* **User Lifecycle Management:** Provisioning, de-provisioning, and updating user accounts.
+* **Role-Based Access Control (RBAC):** Assigning permissions based on a user's role in the organization.
+* **Attribute-Based Access Control (ABAC):** A more dynamic model that grants access based on attributes (user, resource, environment).
+* **Federation:** Allowing users to use a single identity across different systems (e.g., using your corporate login for cloud apps).
+* **Privileged Access Management (PAM):** A subset of IAM focused on securing highly privileged accounts.
+
+IAM systems (like Microsoft Active Directory, Azure AD, Okta, Ping Identity) are the **source of truth** for identity policy.
+
+**Automated Policy Enforcement**
+
+IAM defines the policies, users, roles, and permissions. Automated Policy Enforcement (like NAC) uses the rules defined in the IAM system to automatically allow, deny, or restrict access in real-time.
+
+Automated Policy Enforcement refers to the _tools and mechanisms_ that implement the policies defined in the IAM system **without manual intervention**. This is crucial for scalability and security in modern networks.
+
+* **Network Access Control (NAC)** is a prime example. A NAC system (like Cisco ISE, Aruba ClearPass, FortiNAC) will:
+  1. **Check a device's identity** (is it a corporate laptop, a guest phone, an IoT sensor?).
+  2. **Check its compliance** (is its OS patched? does it have antivirus running?).
+  3. **Query the IAM system** (what is this user's role? Sales? Engineering?).
+  4. **Automatically enforce policy:** Based on the answers, it places the device on the correct VLAN, grants full internet access, restricts it to only specific applications, or blocks it entirely.
+
+Other examples of Automated Policy Enforcement that leverage IAM include:
+
+* **Cloud Security Groups & Firewalls:** Rules that automatically allow or deny traffic based on security tags derived from IAM roles.
+* **Endpoint Detection and Response (EDR) platforms:** Automatically isolating a compromised endpoint from the network based on a policy.
+* **SIEM Automation:** A SIEM (Security Information and Event Management) tool automatically disabling a user account after detecting multiple failed login attempts, based on a pre-defined policy.
+
+
+
+Best practices for access control in network design include Least Privilege Principle, Identity and Access Management (IAM), Multi-Factor Authentication (MFA), Automated Policy Enforcement (e.g., NAC (Network Access Control) and continuous monitoring (e.g., using SIEM tools).
+
+**Least Privilege Principle:** The fundamental goal. Granting minimal access required for users to perform their duties.
+
+**Identity and Access Management (IAM):** The core framework for defining and managing identity and permissions. _(This is where RBAC, ABAC, and PAM live)_.
+
+**Multi-Factor Authentication (MFA):** A critical _component_ of IAM. Mandating multiple verification steps for sensitive systems.
+
+**Automated Policy Enforcement:** The mechanisms that execute the IAM policies. _(This is where NAC, automated security group updates, and automated threat response live)_. For example, deploying solutions like NAC (Network Access Control) to validate device compliance before granting access.
+
+**Continuous Monitoring (e.g., SIEM):** The system that provides visibility and triggers automated enforcement actions based on real-time analysis.
+
+
 
 **Network Access Control (NAC)** restricts network access to only those devices that comply with security policies, such as having up-to-date antivirus or OS patches. Non-compliant devices may be blocked, quarantined, or automatically remediated (e.g., by redirecting to a patch server). NAC works best in tightly controlled environments like corporate offices or government networks but can be challenging in dynamic settings like hospitals or universities, where device types and users change frequently, which complicates policy enforcement.
 

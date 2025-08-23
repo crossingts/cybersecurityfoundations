@@ -1,12 +1,12 @@
 ---
-description: >-
-  This section discusses key network security risk mitigation best practices,
-  including least privilege access control, network monitoring, incident
-  response management, and layered security
 hidden: true
 ---
 
 # Copy of Network security risk mitigation best practices
+
+This section discusses key network security risk mitigation best practices, including&#x20;
+
+least privilege access control, network monitoring, incident response management, and layered security
 
 ## Learning objectives
 
@@ -25,6 +25,7 @@ least privilege access control, on time software patching, multi-factor authenti
 * Least privilege access control
 * Multi-factor authentication
 * Network monitoring&#x20;
+*
 * Layered security (defense in depth)
 * Incident response and disaster recovery
 * Using multiple vendors
@@ -38,15 +39,11 @@ A critical aspect of network design is enforcing strict access controls to preve
 
 Best practices for access control in network design include Least Privilege Access Control, Identity and Access Management (IAM), Multi-Factor Authentication (MFA), Automated Policy Enforcement (e.g., Network Access Control), and continuous monitoring (e.g., using SIEM tools).
 
-**Least Privilege Access Control:** The fundamental goal. Granting minimal access required for users to perform their duties.
-
-**Identity and Access Management (IAM):** The core framework for defining and managing identity and permissions. _(This is where RBAC, ABAC, and PAM live.)_
-
-**Multi-Factor Authentication (MFA):** A critical _component_ of IAM. Mandating multiple verification steps for sensitive systems.
-
-**Automated Policy Enforcement:** The mechanisms that execute the IAM policies. _(This is where NAC, automated security group updates, and automated threat response live.)_ For example, deploying solutions like NAC (Network Access Control) to validate device compliance before granting access.
-
-**Continuous Monitoring (e.g., SIEM):** The system that provides visibility and triggers automated enforcement actions based on real-time analysis.
+* **Least Privilege Access Control:** The fundamental goal. Granting minimal access required for users to perform their duties.
+* **Identity and Access Management (IAM):** The core framework for defining and managing identity and permissions. _(This is where RBAC, ABAC, and PAM live.)_
+* **Automated Policy Enforcement:** The mechanisms that execute the IAM policies. _(This is where NAC, automated security group updates, and automated threat response live.)_ For example, deploying solutions like NAC (Network Access Control) to validate device compliance before granting access.
+* **Multi-Factor Authentication (MFA):** A critical _component_ of IAM. Mandating multiple verification steps for sensitive systems.
+* **Continuous Network Monitoring (e.g., SIEM):** The system that provides visibility and triggers automated enforcement actions based on real-time analysis.
 
 #### Least Privilege Access Control
 
@@ -68,7 +65,7 @@ IAM is a comprehensive discipline and set of technologies focused on managing di
 
 IAM systems (like Microsoft Active Directory, Azure AD, Okta, Ping Identity) are the **source of truth** for identity policy.
 
-**Automated Policy Enforcement**
+#### Automated Policy Enforcement
 
 IAM defines the policies, users, roles, and permissions. Automated Policy Enforcement (like NAC) uses the rules defined in the IAM system to automatically allow, deny, or restrict access in real-time.
 
@@ -86,10 +83,6 @@ Other examples of Automated Policy Enforcement that leverage IAM include:
 * **Endpoint Detection and Response (EDR) platforms:** Automatically isolating a compromised endpoint from the network based on a policy.
 * **SIEM Automation:** A SIEM (Security Information and Event Management) tool automatically disabling a user account after detecting multiple failed login attempts, based on a pre-defined policy.
 
-
-
-
-
 **Network Access Control (NAC)** restricts network access to only those devices that comply with security policies, such as having up-to-date antivirus or OS patches. Non-compliant devices may be blocked, quarantined, or automatically remediated (e.g., by redirecting to a patch server). NAC works best in tightly controlled environments like corporate offices or government networks but can be challenging in dynamic settings like hospitals or universities, where device types and users change frequently, which complicates policy enforcement.
 
 **Examples of NAC Technologies:**
@@ -101,7 +94,7 @@ Other examples of Automated Policy Enforcement that leverage IAM include:
   1. **Cisco ISE (Identity Services Engine)** – A leading enterprise NAC solution that enforces policies, profiles devices, and automates threat responses.
   2. **Aruba ClearPass** – A policy-based NAC platform that supports BYOD, IoT security, and dynamic role-based access.
 
-**NAC vs Identity and Access Management (IAM)**
+**NAC vs IAM**
 
 **Network Access Control (NAC)** and **Identity and Access Management (IAM)** are both security frameworks, but they serve different purposes and operate at different layers of IT infrastructure. Here’s how they differ, with concrete examples:
 
@@ -154,11 +147,9 @@ Modern systems often combine both:
 
 Think of it this way: NAC guards the _network door_ (devices), while IAM guards the _application doors_ (users). Both are critical for Zero Trust security.
 
-### Multi-factor authentication
+#### Multi-Factor Authentication (MFA)
 
-Multi-factor authentication (MFA) requires verification beyond passwords.
-
-No matter how secure the password, there is still a chance it gets into the hands of an attacker. That’s why multi-factor authentication is becoming more and more wide-spread.
+Multi-factor authentication (MFA) requires verification beyond passwords. No matter how secure the password, there is still a chance it gets into the hands of an attacker. That’s why multi-factor authentication is becoming more and more wide-spread.
 
 Multi-factor authentication involves using at least two authentication methods from at least two of the following categories to prove your identity.
 
@@ -168,22 +159,17 @@ Next is something you have, for example pressing a notification that appears on 
 
 The third is something you are, these are unique characteristics about you. For example, biometrics such as a face scan, palm scan, fingerprint scan, retina scan, etc.&#x20;
 
-#### Enhancing Visibility and Threat Detection
+#### Continuous Network Monitoring
 
-A secure network design must incorporate robust monitoring to detect and respond to threats in real time. Deploying intrusion detection and prevention systems (IDS/IPS) helps identify malicious activity, while endpoint detection and response (EDR) solutions track suspicious behavior across devices. Network traffic analysis (NTA) tools provide visibility into data flows, helping detect lateral movement by attackers. By integrating these technologies, organizations can proactively identify vulnerabilities and mitigate risks before they escalate.
+A secure network design must incorporate robust monitoring to detect and respond to threats in real time. SIEM solutions aggregate and correlate system logs/alerts from IDS, firewalls, endpoints, etc. for centralized threat detection, while endpoint detection and response (EDR) solutions track suspicious behavior across devices for signs of compromise. Deploying intrusion detection and prevention systems (IDS/IPS) helps identify/block malicious traffic. Network traffic analysis (NTA) tools provide **visibility** into data flows, helping detect lateral movement by attackers.&#x20;
 
-Essential tools for improved network visibility:
-
-* **Intrusion Detection/Prevention Systems (IDS/IPS)**: Monitoring for and blocking malicious traffic.
-* **Endpoint Detection and Response (EDR)**: Analyzing endpoint activities for signs of compromise.
-* **Network Traffic Analysis (NTA)**: Identifying unusual patterns that may indicate an attack.
-* **SIEM Solutions**: Aggregating and correlating logs for centralized threat detection.
+By integrating these technologies, organizations can proactively identify vulnerabilities and mitigate risks before they escalate.
 
 ### Network monitoring
 
-Network security monitoring is a broad term that encompasses various techniques and tools for detecting and responding to security threats. A robust network security monitoring strategy often combines IDS/IPS (Intrusion Detection System/Intrusion Prevention System) to detect/block known malicious traffic, SIEM (Security Information and Event Management) to correlate alerts from IDS, firewalls, endpoints, etc., EDR/XDR (Endpoint Detection and Response/Extended Detection and Response) to detect advanced endpoint threats, and NTA (Network Traffic Analysis) to detect unusual lateral movement.
+Network security monitoring (IDS/IPS's domain)
 
-**Continuous Monitoring**: Using SIEM (Security Information and Event Management) tools to detect anomalies. Access to data and modification of data has to be logged and recorded in the central SIEM system. A SIEM system consumes multiple logs and allows those handling security to connect the dots and create a big picture that gives insight into multiple events. For example, it can draw attention to a user who sends abnormal amounts of data outbound, or one who connects to an unusual amount of servers.
+Network visibility (NTA's domain)
 
 #### Intrusion Detection Systems (IDS)
 

@@ -334,8 +334,6 @@ Both are forms of "monitoring," but they have different goals:
 
 
 
-
-
 NTA and IDS/IPS are complementary approaches to a robust security posture.&#x20;
 
 Both approaches contribute to the security aspect of visibility.
@@ -351,22 +349,14 @@ Both NTA and IDS/IPS contribute to network visibility, but they do so in very di
 
 
 
-
-
 ### Layered security (defense in depth)
 
-Defense in depth is a **strategy** for the protection of information assets that uses multiple layers\
-and different types of controls (managerial, operational, and technical) to provide optimal\
-protection.
+The terms layered security and defense in depth are sometimes used interchangeably to refer to a multi-layered architecture of or approach to defence. More strictly, defense in depth can be understood as a philosophy or strategy of defence, and layered security as the more concrete security controls (but this view is not universal). For example, a stack of firewall, IDS/IPS, SIEM, and EDR could constitute a layered approach to security. But the concept of layered security can be stretched to refer to security domains such as security policies, physical security, network security, endpoint security, application security, and data security.
+
+Defense in depth is an information security strategy that uses multiple layers and types of controls (managerial, operational, and technical) to provide optimal protection.
 
 * **Defense in depth: the broader, more established term** (originating from military strategy) and is widely recognized in cybersecurity as a comprehensive approach combining multiple security layers (technical, administrative, and physical controls).
 * **Layered security: a subset of defense in depth**, often referring specifically to the **technical controls** (firewalls, encryption, endpoint protection, etc.) rather than the full strategy.
-
-Mitigation techniques also include preventing unauthorized persons from gaining physical access to the devices, for example, by keeping them in a secure rack behind a secure door.
-
-By working together, risk mitigation methods create a layered security approach to safeguard information assets and maintain network integrity.
-
-Layers of Defense example: firewall > IDS/IPS > SIEM
 
 ### Incident response and disaster recovery&#x20;
 
@@ -375,11 +365,11 @@ One of the biggest challenges facing today's IT professionals is planning and pr
 Incident Response (IR) is a structured methodology for handling security breaches, cyber threats, and policy violations. The goal is to manage the situation in a way that limits damage, reduces recovery time and costs, and prevents future occurrences. A standard IR process follows a lifecycle, often based on the NIST framework (NIST SP 800-61r2) which includes:
 
 1. **Preparation**
-2. **Detection & Analysis**
+2. **Detection and Analysis**
 3. **Containment, Eradication & Recovery**
 4. **Post-Incident Activity**
 
-#### 1. Preparation
+**1. Preparation**
 
 This is the proactive phase focused on getting ready for a potential incident _before_ it happens.
 
@@ -389,13 +379,13 @@ The first consideration in an incident response plan is **preparation**. There s
 
 The playbook will provision responses commensurate with established risk levels to data assets. For instance, it is important to rank incidents by severity level. It is critical to differentiate between security events (less serious) and security incidents (serious and requiring immediate action). A security event, like a virus on endpoint, might escalate to incident level, but typically it can be addressed via standard procedures or even automation.&#x20;
 
-#### 2. Detection & Analysis
+**2. Detection and Analysis**
 
 This is the phase where potential security events are identified and investigated to confirm an incident and understand its scope.
 
 * **What it entails:** Monitoring systems for alerts (from IDS/IPS, SIEM, antivirus), analyzing the evidence to determine the cause, assessing the impact (what systems/data are affected), and prioritizing the incident's severity to allocate appropriate resources.
 
-#### 3. Containment, Eradication & Recovery
+**3. Containment, Eradication & Recovery**
 
 This is the reactive core of the IR process where the incident is actively handled and resolved.
 
@@ -405,7 +395,7 @@ This is the reactive core of the IR process where the incident is actively handl
 
 Organizations should schedule data backups in order to guarantee business continuity in the case of a security incident or disaster. Backups should be created on a yearly, monthly, and weekly basis, and stored in an offsite location. It is critical to encrypt backup data in order to prevent untrusted access to it.
 
-#### 4. Post-Incident Activity
+**4. Post-Incident Activity**
 
 This critical phase occurs after the incident is resolved and focuses on learning from the event to improve future response.
 
@@ -417,23 +407,7 @@ To enhance security, it is best practice to diversify your vendor choices. For i
 
 ### Quality assurance
 
-**• Information assurance as a holistic approach to information security management**
-
 Implementing quality assurance (QA) in enterprise information security risk management involves systematically evaluating processes, controls, and policies to ensure they meet defined security standards and effectively mitigate risks. QA aligns with established frameworks like NIST SP 800-37 (Risk Management Framework), NIST CSF (Cybersecurity Framework), and ISO/IEC 27001 by incorporating continuous monitoring, audits, and compliance checks to validate that security controls are functioning as intended. For example, NIST SP 800-37 emphasizes ongoing assessment and authorization, while ISO 27001 requires regular internal audits and management reviews to maintain certification. By integrating QA practices—such as control testing, gap analysis, and corrective action plans—organizations can proactively identify weaknesses, improve security postures, and ensure adherence to regulatory requirements. This structured approach not only enhances risk management maturity but also fosters a culture of continuous improvement, reducing vulnerabilities and strengthening overall information assurance.
-
-**• Security testing as skills in quality assurance**
-
-\*Software Development Lifecycle (SDLC)
-
-SDLC models: Waterfall, Lean, and Agile.
-
-ISO/IEC 12207: The international standard for software lifecycle processes.
-
-\*Test-driven development and unit testing
-
-Unit Testing: A structured and automated testing methodology to ensure resilient software.
-
-Example: Using the internal Python module unittest to automate Python code testing.
 
 ### Timely software patching
 

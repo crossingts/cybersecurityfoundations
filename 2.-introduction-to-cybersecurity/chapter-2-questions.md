@@ -18,3 +18,13 @@
 
 ### The cybersecurity threat landscape
 
+* What is a major cybersecurity threat facing society as a whole
+* What are two major cybersecurity threats facing individuals
+* What is the principal cybersecurity threat facing businesses&#x20;
+* Identify four technological influences underlying a changing cybersecurity threat landscape
+* Identify two sociopolitical influences underlying a changing cybersecurity threat landscape
+
+### Common cyber attacks
+
+* List six common types of cyber attacks
+* Describe three common malware types

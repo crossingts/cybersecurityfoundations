@@ -12,6 +12,7 @@
 * [The GRC analyst job role](1.-it-career-planning/the-grc-analyst-job-role.md)
 * [How to get CCNA certification](1.-it-career-planning/how-to-get-ccna-certification.md)
 * [Job search strategy](1.-it-career-planning/job-search-strategy.md)
+* [Chapter 1 quiz](1.-it-career-planning/chapter-1-quiz.md)
 
 ## 2. Introduction to cybersecurity
 

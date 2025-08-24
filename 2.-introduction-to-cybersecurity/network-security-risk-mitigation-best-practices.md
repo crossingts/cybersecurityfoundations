@@ -36,24 +36,20 @@ This section discusses key network security risk mitigation best practices, incl
 
 ### Robust access control
 
-A critical aspect of network design is enforcing strict access controls to prevent unauthorized entry. Best practices for access control in network design include least privilege access control, Identity and Access Management (IAM), automated policy enforcement (e.g., Network Access Control), and Multi-Factor Authentication (MFA).
+A critical aspect of network design is enforcing strict access controls to prevent unauthorized entry. Best practices for access control in network design include least privilege access control, Identity and Access Management (IAM), automated policy enforcement, and Multi-Factor Authentication (MFA).
 
 * **Least privilege access control:** Granting minimal access required for users to perform their duties.
 * **Identity and Access Management (IAM):** The core framework for defining and managing identity and permissions.
-* **Automated policy enforcement:** The mechanisms that execute the IAM policies. _(This is where_ Network Access Contro&#x6C;_, automated security group updates, and automated threat response live.)_
+* **Automated policy enforcement:** The mechanisms that execute the IAM policies. (This is the domain of Network Access Control, automated security group updates, and automated threat response.)
 * **Multi-Factor Authentication (MFA):** A critical _component_ of IAM. MFA involves mandating multiple verification steps for sensitive systems.
 
 #### Least privilege access control
 
-The principle of least privilege rules that only the necessary and sufficient level of access privilege is granted to each authorized user or user group. Establishing and enforcing the least-privilege principle for access management and access control is the principal preventive measure against insider threats. Giving users the least amount of access they need to do their jobs enhances data security because it limits what they can accidentally or deliberately access and ensures that if their passwords are compromised, a hacker does not have all keys to the kingdom. It is easier to stay secure by enabling access when needed than to revoke access and mitigate damage after an incident.&#x20;
-
-Network administrators should regularly audit access logs and revoke unnecessary privileges to maintain a least-privilege environment.
+The principle of least privilege rules that only the necessary and sufficient level of access privilege is granted to each authorized user or user group. Establishing and enforcing the least-privilege principle for access management and access control is the principal preventive measure against insider threats. Giving users the least amount of access they need to do their jobs enhances data security because it limits what they can accidentally or deliberately access and ensures that if their passwords are compromised, a hacker does not have all keys to the kingdom. It is easier to stay secure by enabling access when needed than to revoke access and mitigate damage after an incident. Network administrators should regularly audit access logs and revoke unnecessary privileges to maintain a least-privilege environment.
 
 #### Identity and Access Management (IAM)
 
-IAM is a comprehensive system for identification, authentication, authorization, accounting, and identity management.
-
-IAM is a comprehensive discipline and set of technologies focused on managing digital identities and their access rights across systems. Its core components include:
+IAM is a comprehensive system for identification, authentication, authorization, accounting, and identity management. IAM is a comprehensive discipline and set of technologies focused on managing digital identities and their access rights across systems. Its core components include:
 
 * **User Lifecycle Management:** Provisioning, de-provisioning, and updating user accounts.
 * **Role-Based Access Control (RBAC):** Assigning permissions based on a user's role in the organization. RBAC ensures that users and devices only have permissions necessary for their functions, minimizing insider threats and credential misuse.&#x20;
@@ -61,23 +57,21 @@ IAM is a comprehensive discipline and set of technologies focused on managing di
 * **Federation:** Allowing users to use a single identity across different systems (e.g., using your corporate login for cloud apps).
 * **Privileged Access Management (PAM):** A subset of IAM focused on securing highly privileged accounts.
 
-IAM systems (like Microsoft Active Directory, Azure AD, Okta, Ping Identity) are the **source of truth** for identity policy.
+IAM systems (like Microsoft Active Directory, Azure AD, Okta, Ping Identity) are the source of truth for identity policy.
 
 #### Automated policy enforcement
 
-IAM defines the policies, users, roles, and permissions. Automated Policy Enforcement (like NAC) uses the rules defined in the IAM system to automatically allow, deny, or restrict access in real-time.
+IAM defines the policies, users, roles, and permissions. Automated policy enforcement uses the rules defined in the IAM system to automatically allow, deny, or restrict access in real-time. Automated policy enforcement refers to the tools and mechanisms that implement the policies defined in the IAM system without manual intervention. This is crucial for scalability and security in modern networks.
 
-Automated Policy Enforcement refers to the _tools and mechanisms_ that implement the policies defined in the IAM system **without manual intervention**. This is crucial for scalability and security in modern networks.
-
-* **Network Access Control (NAC)** is a prime example. A NAC system (like Cisco ISE, Aruba ClearPass, FortiNAC) will:
+* **Network Access Control (NAC):** A prime example. A NAC system (like Cisco ISE, Aruba ClearPass, FortiNAC) will:
   1. **Check a device's identity** (is it a corporate laptop, a guest phone, an IoT sensor?).
   2. **Check its compliance** (is its OS patched? does it have antivirus running?).
   3. **Query the IAM system** (what is this user's role? Sales? Engineering?).
   4. **Automatically enforce policy:** Based on the answers, it places the device on the correct VLAN, grants full internet access, restricts it to only specific applications, or blocks it entirely.
 
-Other examples of Automated Policy Enforcement that leverage IAM include:
+Other examples of automated policy enforcement that leverage IAM include:
 
-* **Cloud Security Groups & Firewalls:** Rules that automatically allow or deny traffic based on security tags derived from IAM roles.
+* **Cloud Security Groups and Firewalls:** Rules that automatically allow or deny traffic based on security tags derived from IAM roles.
 * **Endpoint Detection and Response (EDR) platforms:** Automatically isolating a compromised endpoint from the network based on a policy.
 * **SIEM Automation:** A SIEM (Security Information and Event Management) tool automatically disabling a user account after detecting multiple failed login attempts, based on a pre-defined policy.
 
@@ -100,17 +94,17 @@ NAC restricts network access to only those devices that comply with security pol
 
 **1. Primary Focus**
 
-* **NAC** → Controls **device access to the network** based on compliance (e.g., antivirus status, OS patches).
+* **NAC:** Controls **device access to the network** based on compliance (e.g., antivirus status, OS patches).
   * _Example:_ A hospital blocks an unpatched laptop from connecting to the network until it updates its OS.
-* **IAM** → Manages **user identities and their access to systems/applications** (e.g., logins, permissions).
+* **IAM:** Manages **user identities and their access to systems/applications** (e.g., logins, permissions).
   * _Example:_ An employee uses single sign-on (SSO) to access Salesforce but is denied entry to the HR system due to their role.
 
 **2. Scope of Enforcement**
 
-* **NAC** operates at the **network layer** (ports, VLANs, Wi-Fi).
+* **NAC:** Operates at the **network layer** (ports, VLANs, Wi-Fi).
   * _Tools:_ Cisco ISE, Aruba ClearPass, PacketFence.
   * _Use case:_ A university grants students Wi-Fi access only after their devices pass an antivirus check.
-* **IAM** operates at the **application/cloud layer** (user logins, APIs, databases).
+* **IAM:** Operates at the **application/cloud layer** (user logins, APIs, databases).
   * _Tools:_ Okta, Microsoft Entra ID (Azure AD), Keycloak.
   * _Use case:_ A contractor can log in to Google Workspace but can’t access the company’s AWS admin console.
 
@@ -149,15 +143,13 @@ Think of it this way: NAC guards the _network door_ (devices), while IAM guards 
 
 #### Multi-Factor Authentication (MFA)
 
-Multi-factor authentication (MFA) requires verification beyond passwords. No matter how secure the password, there is still a chance it gets into the hands of an attacker. That’s why multi-factor authentication is becoming more and more wide-spread.
+Multi-factor authentication (MFA) requires verification beyond passwords. No matter how secure is a password, there is still a chance it gets into the hands of an attacker. That’s why Multi-Factor Authentication is becoming more and more wide-spread.
 
 Multi-factor authentication involves using at least two authentication methods from at least two of the following categories to prove your identity.
 
-First is something you know, for example a username and password combination.
-
-Next is something you have, for example pressing a notification that appears on your phone using an authenticator app, or using a badge that is scanned.
-
-The third is something you are, these are unique characteristics about you. For example, biometrics such as a face scan, palm scan, fingerprint scan, retina scan, etc.&#x20;
+* Something you know, for example a username and password combination.
+* Something you have, for example pressing a notification that appears on your phone using an authenticator app, or using a badge that is scanned.
+* Something you are, these are unique characteristics about you. For example, biometrics such as a face scan, palm scan, fingerprint scan, retina scan, etc.&#x20;
 
 ### Network security monitoring
 

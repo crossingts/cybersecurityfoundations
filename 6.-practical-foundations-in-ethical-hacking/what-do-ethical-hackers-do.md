@@ -44,9 +44,7 @@ Advanced assessments incorporate credentialed scanning, where authenticated chec
 
 ### Risk assessment
 
-The goal of risk assessment is “to identify which investments of time and resources will best protect the organization from its most likely and serious threats” (Reynolds, 2012, p. 103).&#x20;
-
-The NIST Risk Management Guide defines risk assessment as “the process of identifying the risks to system security and determining the probability of occurrence, the resulting impact, and additional safeguards that would mitigate this impact” (Landoll & Landoll, 2005, p. 10).&#x20;
+The NIST Risk Management Guide defines risk assessment as “the process of identifying the risks to system security and determining the probability of occurrence, the resulting impact, and additional safeguards that would mitigate this impact” (Landoll & Landoll, 2005, p. 10).
 
 According to the General Security Risk Assessment Guidelines, ASIS International (2003), the essential components of a risk assessment plan include, identifying assets, specifying loss events (threats), assessing the frequency and impact of events, recommending mitigation options, conducting a cost/benefit analysis, and making decisions. Risk assessments help risk managers select appropriate security control measures to lower the risk to an acceptable level (Engebretson, 2011; Landoll & Landoll, 2005; Peltier, 2005).&#x20;
 
@@ -90,7 +88,7 @@ Several major regulatory frameworks (such as HIPAA, PCI DSS, SSAE 16, FFIEC, and
 
 **Vulnerability Scan and Penetration Test Comparison**
 
-<figure><img src="../../.gitbook/assets/image (17).png" alt="Vulnerability Scan and Penetration Test Comparison"><figcaption><p>Table 15: Vulnerability Scan and Penetration Test Comparison (Rodger, 2013, p. 49)</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (17).png" alt="Vulnerability Scan and Penetration Test Comparison"><figcaption><p>Table 15: Vulnerability Scan and Penetration Test Comparison (Rodger, 2013, p. 49)</p></figcaption></figure>
 
 Vulnerability scans are automated assessments of computers, networks, and applications, and are typically done on an ongoing basis, especially following the installation of new equipment or software. They are typically done by in-house staff, and cost about U.S. $1,200/year plus staff time. Their purpose is detection of exploitable vulnerabilities.
 

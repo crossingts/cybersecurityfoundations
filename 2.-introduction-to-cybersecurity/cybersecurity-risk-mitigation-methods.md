@@ -444,6 +444,8 @@ Network security protocols are essentially the security guards of the data trave
 
 Relevant organizational policies include Usage Policy, Information Security Policy, and Privacy Policy. These organizational policies can be articulated separately or as provisions within the same master policy (e.g., Security Policy) or as part of an organization's security program, which is an enterprise’s set of security policies and procedures.&#x20;
 
+An organization’s risk management goals, guidelines, procedures, and employee responsibilities are typically detailed in an information security policy (Engebretson, 2011; Graves, 2010; Harper et al., 2011; Harris, Harper, Eagle, & Ness, 2007; Landoll & Landoll, 2005; Reynolds, 2012).
+
 An organization’s information security policy has to be clear—and regularly updated. Employee’s knowledge of and adherence to information security policy are critical to robust data security. A typical information security policy will cover:
 
 * Software development and testing/software security

@@ -10,3 +10,7 @@
 * Give a defensible definition of information security risk assessment
 * What are the possible sources of computer system vulnerabilities (based on their origin)
 * Identify the two key factors of risk scoring
+* Outline three attack techniques that can compromise data confidentiality
+* Outline three attack techniques that can compromise data integrity
+* Outline three attack techniques that can compromise data availability
+* Identify five suitable information security risk mitigation technologies for each of confidentiality, integrity, and availability

@@ -186,6 +186,8 @@ An information availability attack aims to disrupt access to data, systems, or s
 | **Integrity**          | <p>Hashing (SHA-256, HMAC)</p><p><br>Digital Signatures</p><p><br>Version Control (Git, SVN)</p><p><br>SIEM + Centralized Logging</p><p><br>Access Controls (audit logs track changes)</p><p><br>Backups (ensure clean restore points)</p>                                     | Ensures data accuracy and prevents tampering     | Access controls support integrity through audit trails       |
 | **Availability**       | <p>DDoS Protection (Cloudflare, AWS Shield)</p><p></p><p>Backups (recovery, 3-2-1 Rule, immutable backups)</p><p><br>Load Balancers (Nginx, F5)</p><p><br>High Availability systems</p><p><br>SIEM </p><p><br>Access Controls (MFA)</p><p><br>Rate Limiting (secures APIs)</p> | Maintains system uptime and access               | Rate limiting protects both availability and confidentiality |
 
+See [CIA attacks mitigation technologies](cia-attacks-mitigation-technologies.md)
+
 #### Confidentiality mitigation technology in focus: Data Loss Prevention (DLP)
 
 A key technology for ensuring data confidentiality is Data Loss Prevention (DLP), which monitors and protects sensitive information by detecting and blocking unauthorized transfers. For instance, DLP can trigger alerts if confidential files are copied to removable drives or if payment card data is shared improperly. While highly effective, DLP requires careful configuration—including accurate data classification and tailored alert rules—to maximize its security value.

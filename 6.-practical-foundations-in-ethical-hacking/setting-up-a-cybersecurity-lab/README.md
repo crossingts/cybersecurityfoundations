@@ -4,17 +4,17 @@ This exercise will guide you through setting up a fully functional cybersecurity
 
 ## Setting up a cybersecurity lab steps
 
-* Design the lab - choose a design pipeline&#x20;
-* Choose a virtualization environment/tool
-* Choose a project documentation platform/method
-* Build the lab&#x20;
-  * Configure subnet interfaces and verify connectivity
-  * Configure and verify the firewall
-  * Configure and verify the IDS/IPS
-  * Configure and verify a web server (e.g., nginx, Apache) and/or a database server (MySQL)
-  * Configure and verify SIEM/EDR (e.g., Wazuh)
-  * Configure and verify Kali Linux
-* Launch attacks from Kali Linux and document the project
+* **Design the lab - choose a design pipeline**&#x20;
+* **Choose a virtualization environment/tool**
+* **Choose a project documentation platform/method**
+* **Build the lab**&#x20;
+  * **Configure subnet interfaces and verify connectivity**
+  * **Configure and verify the firewall**
+  * **Configure and verify the IDS/IPS**
+  * **Configure and verify a web server (e.g., nginx or Apache) and/or a database server (e.g., MySQL)**
+  * **Configure and verify SIEM/EDR (e.g., Wazuh)**
+  * **Configure and verify Kali Linux**
+* **Launch attacks from Kali Linux and document the project**
 
 ### Design the lab - choose a design pipeline&#x20;
 

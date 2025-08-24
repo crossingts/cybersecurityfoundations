@@ -157,9 +157,7 @@ Multi-factor authentication involves using at least two authentication methods f
 
 Network monitoring is the practice of continuously observing a computer network for availability, performance, and reliability. Its key goal is to answer the questions: "Is the network operational, and is it performing well?" This is achieved by collecting and analyzing specific, predefined metrics such as device uptime, bandwidth usage, CPU/memory load on routers and switches, and error rates. For example, a network monitoring tool might alert an administrator if a critical server goes offline.
 
-Two concepts that expand upon this foundation are **network security monitoring (NSM)** and network visibility. **NSM** focuses on detecting, investigating, and responding to security threats. It uses tools like IDS/IPS and SIEM platforms to analyze traffic for malicious patterns, enforce security policies, and aid in post-incident recovery. While standard monitoring might flag a high bandwidth spike, NSM would investigate if that spike is caused by a legitimate backup or a malicious denial-of-service attack. **Network visibility** is a broader, more proactive approach that encompasses both performance and security monitoring. It involves gaining a comprehensive, often granular, real-time understanding of all traffic flows across the entire network infrastructure. This is achieved through advanced telemetry data, flow analysis (NetFlow, sFlow), and packet inspection. Where basic monitoring might track if a link is up/down, visibility reveals exactly which applications, users, and protocols are consuming that link's capacity, providing the essential context needed to troubleshoot complex issues and optimize the network holistically.
-
-Network visibility is a practice/capability a level above the more traditional network monitoring. An IDS/IPS might block 99% of the obvious, automated attacks at the perimeter. An NTA solution would then be used to discover the sophisticated, stealthy attacker that bypassed the IPS by finding their unusual command-and-control traffic hidden in normal web requests.&#x20;
+Two concepts that expand upon this foundation are **network security monitoring (NSM)** and **network visibility**. NSM focuses on detecting, investigating, and responding to security threats. It uses tools like IDS/IPS and SIEM platforms to analyze traffic for malicious patterns, enforce security policies, and aid in post-incident recovery. While standard monitoring might flag a high bandwidth spike, NSM would investigate if that spike is caused by a legitimate backup or a malicious denial-of-service attack. Network visibility is a broader, more proactive approach that encompasses both performance and security monitoring. It involves gaining a comprehensive, often granular, real-time understanding of all traffic flows across the entire network infrastructure. This is achieved through advanced telemetry data, flow analysis (NetFlow, sFlow) and packet inspection. Where basic monitoring might track if a link is up/down, visibility reveals which applications, users, and protocols are consuming that link's capacity, providing the essential context needed to troubleshoot complex issues and optimize the network holistically.
 
 Network visibility is the ability to see, understand, and contextualize all activity and data traversing a network. It is not a single tool, but a capability achieved through a combination of tools, processes, and policies. The key pillars of network visibility include:
 
@@ -181,11 +179,11 @@ An IDS is a device or software application that monitors a network or systems fo
 
 IDS types range in scope from single computers to large networks. The most common classifications are network intrusion detection systems (NIDS) and host-based intrusion detection systems (HIDS). (Wikipedia)
 
-A **Network Intrusion Detection System (NIDS)** is a security mechanism that monitors network traffic for malicious activity or policy violations by analyzing packet headers and payloads, using signature-based detection (known threats) or anomaly-based detection (deviations from baseline behavior). It operates in passive mode, alerting administrators without directly blocking traffic (unlike an IPS). A NIDS can be deployed inline (span port) or via network taps, leveraging protocols like Deep Packet Inspection (DPI) for enhanced threat detection. By comparison, a **Host-Based Intrusion Detection System (HIDS)** monitors important operating system files. An HIDS is capable of monitoring and analyzing the internals of a computing system as well as the network packets on its network interfaces.
+A **Network Intrusion Detection System (NIDS)** is a security mechanism that monitors network traffic for malicious activity or policy violations by analyzing packet headers and payloads, using signature-based detection (known threats) or anomaly-based detection (deviations from baseline behavior). It operates in passive mode, alerting administrators without directly blocking traffic (unlike an IPS). A NIDS can be deployed inline (span port) or via network taps, leveraging protocols like Deep Packet Inspection (DPI) for enhanced threat detection. By comparison, a **Host-Based Intrusion Detection System (HIDS)** monitors important operating system files. A HIDS is capable of monitoring and analyzing the internals of a computing system as well as the network packets on its network interfaces.
 
 **Network Intrusion Detection System (NIDS)**
 
-NIDS can be classified based on their detection approach. The most well-known variants are signature-based detection (recognizing bad patterns, such as exploitation attempts) and anomaly-based detection (detecting deviations from a model of "good" traffic, which often relies on machine learning). Another common variant is reputation-based detection (recognizing the potential threat according to the reputation scores). (Wikipedia)
+NIDS can be classified based on their detection approach. The primary variants are signature-based detection (identifying patterns associated with known threats, such as exploitation attempts), anomaly-based detection (identifying deviations from a established model of benign traffic, often using machine learning), and reputation-based detection (assessing potential malicious activity based on reputation scores).
 
 **A. Signature-Based Detection (IDS/IPS)**
 
@@ -231,18 +229,25 @@ SIEM can integrate and correlate distributed events and alert on hostile or abno
 
 #### **Network Traffic Analysis (NTA)**
 
-**Network Traffic Analysis (NTA)** is a broad _process_ of monitoring network activity to understand what is happening on your network. Its primary goal is **visibility and discovery**.
-
-**NTA** (also called **Network Detection and Response, NDR**) focuses on **analyzing raw network traffic** to detect suspicious behavior that evades traditional tools.
+Network Traffic Analysis (NTA) is a broad process of monitoring network activity to understand what is happening on your network. Its primary goal is visibility and discovery. NTA (also called Network Detection and Response, NDR) focuses on analyzing raw network traffic to detect suspicious behavior that evades traditional tools. Network visibility is a practice/capability a level above the more traditional network monitoring. For example, an IDS/IPS might block 99% of the obvious, automated attacks at the perimeter. A NTA solution would then be used to discover the sophisticated, stealthy attacker that bypassed the IPS by finding their unusual command-and-control traffic hidden in normal web requests.&#x20;
 
 **Key Technologies & Tools:**
 
-* **Zeek (formerly Bro)** → Generates high-level network logs (e.g., HTTP requests, DNS queries).
-* **Suricata (in NTA mode)** → Analyzes traffic for anomalies beyond just signatures.
-* **Darktrace, Cisco Stealthwatch** → AI-driven anomaly detection (e.g., unusual data exfiltration).
-* **Moloch, Arkime** → Packet capture (PCAP) analysis for forensic investigations.
+* **Zeek (formerly Bro):** Generates high-level network logs (e.g., HTTP requests, DNS queries).
+* **Suricata (in NTA mode), Zenarmor:** Analyzes traffic for anomalies beyond just signatures.
+* **Darktrace, Cisco Stealthwatch:** AI-driven anomaly detection (e.g., unusual data exfiltration).
+* **Moloch, Arkime:** Packet capture (PCAP) analysis for forensic investigations.
 
-**How NTA Complements Other Tools:**
+| Technology              | Type                                    | Description                                                                                                                                                                          |
+| ----------------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Zeek (formerly Bro)** | **Open Source/Free**                    | A powerful, widely-used network analysis framework. It is fundamentally a free and open-source software project.                                                                     |
+| **Suricata**            | **Open Source/Free**                    | A high-performance, open-source Network Threat Detection engine (IDS/IPS/NSM). Its core engine is free, though some commercial vendors offer managed services or hardware around it. |
+| **Zenarmor**            | **Commercial/Proprietary/Free Edition** | A next-generation firewall (NGFW) that provides application control, user/group policies, and web filtering. It is a commercial product built on top of open-source foundations.     |
+| **Darktrace**           | **Commercial/Proprietary**              | A market leader in AI-driven network security. It is a purely commercial, proprietary product sold as a subscription service, often with its own appliances.                         |
+| **Cisco Stealthwatch**  | **Commercial/Proprietary**              | Cisco's enterprise-grade NTA/NDR solution. It is a commercial product that is typically licensed as part of the Cisco ecosystem.                                                     |
+| **Moloch / Arkime**     | **Open Source/Free**                    | Moloch was renamed Arkime. It is a fully open-source, large-scale PCAP capturing, indexing, and database system.                                                                     |
+
+**How NTA Complements Other Tools Example:**
 
 | Scenario                                               | Firewall                     | IDS/IPS                         | SIEM                                     | NTA                                 |
 | ------------------------------------------------------ | ---------------------------- | ------------------------------- | ---------------------------------------- | ----------------------------------- |
@@ -264,8 +269,6 @@ SIEM can integrate and correlate distributed events and alert on hostile or abno
 
 The network visibility vs network security monitoring dichotomy can be better understood through concrete examples. NTA is more closely related to network visibility, while IDS/IPS is more closely related to network security monitoring.
 
-Both NTA and IDS/IPS are forms of "monitoring," but they have different goals:
-
 |                         | **Network Visibility (NTA's Goal)**    | **Security Monitoring (IDS/IPS's Goal)**    |
 | ----------------------- | -------------------------------------- | ------------------------------------------- |
 | **Question it Answers** | "What is happening on my network?"     | "Is something bad happening on my network?" |
@@ -273,7 +276,7 @@ Both NTA and IDS/IPS are forms of "monitoring," but they have different goals:
 | **Mindset**             | Proactive, curious, investigative      | Reactive, defensive, enforcement            |
 | **Output**              | Dashboards, maps, baselines, anomalies | **Alarms** and **Blocks**                   |
 
-#### NTA vs IDS/IPS Comparison
+**NTA vs IDS/IPS Comparison**
 
 | Feature           | Network Traffic Analysis (NTA)                                                                                                                                    | Intrusion Detection/Prevention System (IDS/IPS)                                                   |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |

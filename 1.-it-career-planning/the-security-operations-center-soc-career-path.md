@@ -9,9 +9,9 @@ description: >-
 
 ## Learning objectives
 
-* Define the organizational function of the SOC
+* Describe the organizational function of the SOC unit
 * Describe the key SOC technologies
-* Describe the four main SOC roles
+* Identify the four main SOC roles
 * Understand the main responsibilities, skills, and industry certifications of the SOC analyst
 
 This section discusses the Security Operations Center (SOC) career path. First, the SOC unit composition and technologies are discussed. Then the SOC team member roles and responsibilities, skills/qualifications, and certifications are discussed. Finally, training resources for SOC careers are suggested.

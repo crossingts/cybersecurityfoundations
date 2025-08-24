@@ -119,7 +119,7 @@ In ideal risk management, a prioritization process is followed whereby the risks
 
 **Acceptable risk**
 
-In the context of assessing information security risk, risk level is assessed (scored) based on impact and likelihood - meaning, the higher the probability of an attack or breach, the higher the risk; and the higher the potential impact of an attack or breach, the higher the risk.
+In the context of assessing information security risk, risk level is assessed (scored) based on likelihood and impact - meaning, the higher the probability of an attack or breach, the higher the risk; and the higher the potential impact of an attack or breach, the higher the risk.
 
 Risk assessments outlines what threats exist to specific assets and the associated risk levels. Risk mangers use risk levels to select appropriate security defenses and countermeasures to lower the risk to an acceptable level (Engebretson, 2011; Landoll & Landoll, 2005; Peltier, 2005).
 

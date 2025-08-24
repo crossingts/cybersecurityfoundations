@@ -12,7 +12,7 @@
 * [The GRC analyst job role](1.-it-career-planning/the-grc-analyst-job-role.md)
 * [How to get CCNA certification](1.-it-career-planning/how-to-get-ccna-certification.md)
 * [Job search strategy](1.-it-career-planning/job-search-strategy.md)
-* [Chapter 1 questions](1.-it-career-planning/chapter-1-questions.md)
+* [Chapter 1 review questions](1.-it-career-planning/chapter-1-review-questions.md)
 
 ## 2. Introduction to cybersecurity
 
@@ -23,7 +23,7 @@
 * [Common cyber attacks](2.-introduction-to-cybersecurity/common-cyber-attacks.md)
 * [Cybersecurity risk mitigation methods](2.-introduction-to-cybersecurity/cybersecurity-risk-mitigation-methods.md)
 * [Network security risk mitigation best practices](2.-introduction-to-cybersecurity/network-security-risk-mitigation-best-practices.md)
-* [Chapter 2 questions](2.-introduction-to-cybersecurity/chapter-2-questions.md)
+* [Chapter 2 review questions](2.-introduction-to-cybersecurity/chapter-2-review-questions.md)
 
 ## 3. Cybersecurity GRC
 

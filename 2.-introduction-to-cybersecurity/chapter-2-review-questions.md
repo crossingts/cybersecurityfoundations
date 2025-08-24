@@ -1,4 +1,4 @@
-# Chapter 2 questions
+# Chapter 2 review questions
 
 ### Foundational cybersecurity concepts and practices
 
@@ -27,4 +27,19 @@
 ### Common cyber attacks
 
 * List six common types of cyber attacks
+* Describe three common social engineering attacks
+* Briefly explain the dictionary and the brute force password attack types
+* List five types of DoS attacks
+* Explain the mechanism of action of the TCP SYN flood DoS attack, and identify two mitigation methods
+* Explain the mechanism of action of the DHCP exhaustion DoS attack, and identify two mitigation methods
+* List two types of Man in the middle (MITM) attacks
+* Briefly explain the mechanism of action of the DHCP poisoning MITM attack, and identify one key mitigation method
+* Briefly explain the mechanism of action of the ARP spoofing MITM attack, and identify one key mitigation method
+* Identify three types of IP spoofing/MAC spoofing attacks
 * Describe three common malware types
+
+### Cybersecurity risk mitigation methods
+
+* Identify six common cybersecurity risk mitigation technologies&#x20;
+* Point 2
+

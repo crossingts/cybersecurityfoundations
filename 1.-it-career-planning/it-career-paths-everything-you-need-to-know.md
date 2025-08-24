@@ -27,7 +27,7 @@ description: >-
 * **IT career landscape**
 * **IT training resources**
 
-<figure><img src="https://academicbullying.wordpress.com/wp-content/uploads/2024/02/587b6-it-career-paths-uncle-scrooge-1200x675px.webp?w=1024" alt="IT-career-paths-uncle scrooge-1200x675px" height="576" width="1024"><figcaption><p>A Network Security Analyst with 1-5 years experience makes between US$89,643 and US$111,280 per year (U.S. Department of Labor. (Uncredited image)</p></figcaption></figure>
+<figure><img src="https://academicbullying.wordpress.com/wp-content/uploads/2024/02/587b6-it-career-paths-uncle-scrooge-1200x675px.webp?w=1024" alt="IT-career-paths-uncle scrooge-1200x675px" height="576" width="1024"><figcaption><p>A Network Security Analyst with 1-5 years experience makes between US$89,643 and US$111,280 per year (U.S. Department of Labor). (Uncredited image)</p></figcaption></figure>
 
 ### IT industry employers
 

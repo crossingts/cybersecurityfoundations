@@ -44,7 +44,7 @@ Information security,
 
 Key information security concepts include privacy, authenticity and trustworthiness, non-repudiation, accountability and auditability, and reliability (Cherdantseva & Hilton, 2013; ISO/IEC 27000:2009).&#x20;
 
-The broad pragmatic goal of information security management is to reduce the probability of unauthorized access or damage to valued information assets to an acceptable risk level through risk mitigation strategies that involve management controls (e.g., security policies), technical controls (e.g., intrusion detection techniques), and operational controls (best practices/standard operating procedures).
+The broad pragmatic goal of information security is to reduce the probability of unauthorized access or damage to the confidentiality, integrity, and availability of valued information assets to an acceptable risk level through risk mitigation strategies that involve management controls (e.g., security policies), technical controls (e.g., intrusion detection techniques), and operational controls (best practices/standard operating procedures).
 
 Information security threats most commonly rated as a concern in higher education in North America are as follows. Confidentiality attacks: Exposure of confidential or sensitive information (79%); Integrity attacks: Unauthorized or accidental modification of data (29%); Availability attacks: Loss of availability or sabotage of systems (16%); Mixed threat attacks: Email viruses, ransomware, or other malware (31%); and Unauthorized, malicious network/system access (27%) (EDUCAUSE Information Security Almanac, April 2019, p. 2).
 
@@ -88,14 +88,14 @@ Risk is “a threat that exploits some vulnerability that could cause harm to an
 
 **Sources of Vulnerabilities**
 
-Vulnerabilities can be categorized based on their origin:
+Computer system vulnerabilities can be categorized based on their origin:
 
-* **Software Infrastructure:** Flaws in applications, operating systems, or firmware.
-* **Network Infrastructure:** Weaknesses in network devices, network protocols, or configurations.
+* **Software infrastructure:** Flaws in applications, operating systems, or firmware.
+* **Network infrastructure:** Weaknesses in network devices, network protocols, or configurations.
 * **Hardware:** Physical security flaws or insecure device designs.
-* **Organizational and Network Policies:** Poorly defined security policies that create security gaps.
-* **Human Factors:** Susceptibility to social engineering or lack of security awareness.
-* **Configuration Mistakes:** Unsecured endpoints, default passwords, or misconfigured devices.
+* **Organizational and network policies:** Poorly defined security policies that create security gaps.
+* **Human factors:** Susceptibility to social engineering or lack of security awareness.
+* **Configuration mistakes:** Unsecured endpoints, default passwords, or misconfigured devices.
 
 #### Information security in practice
 
@@ -115,13 +115,15 @@ In ideal risk management, a prioritization process is followed whereby the risks
 
 **Acceptable risk**
 
-After a risk assessment, a risk can be accepted (this involves an evaluation of whether the cost of countermeasures outweighs the possible cost of loss due to the threat), mitigated (this involves implementing safeguards and countermeasures to eliminate vulnerabilities or to block threats), or transferred (this involves transferring the cost of the threat to another business function or unit) (Stewart, 2012).
+In the context of assessing information security risk, risk level is assessed (scored) based on impact and likelihood - meaning, the higher the probability of an attack or breach, the higher the risk; and the higher the potential impact of an attack or breach, the higher the risk.
+
+After a risk assessment, a risk can be accepted (this involves an evaluation of whether the cost of countermeasures outweighs the potential cost of loss due to the threat), mitigated (this involves implementing safeguards and countermeasures to eliminate vulnerabilities or to block threats), or transferred (this involves transferring the cost of the threat to another business function or unit) (Stewart, 2012).
 
 Systems can be more secure or less secure, but there is no absolute security. For example, you can implement malware detection on your network firewall and have the best antivirus software on client PCs, but the chance of the PCs getting infected with malware is never zero.&#x20;
 
 **Security vs functionality**
 
-Data that is not accessible to anyone may be perfectly secure, but it’s worthless to an enterprise if it cannot be seen and used.
+Data that is not accessible to anyone may be perfectly secure, but it’s worthless to an enterprise if it cannot be seen and used. A security access policy is always trying to balance security and functionality (or access privileges).
 
 ### Techniques of CIA attacks
 

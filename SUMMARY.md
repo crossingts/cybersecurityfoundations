@@ -22,6 +22,7 @@
 * [Common cyber attacks](2.-introduction-to-cybersecurity/common-cyber-attacks.md)
 * [Cybersecurity risk mitigation methods](2.-introduction-to-cybersecurity/cybersecurity-risk-mitigation-methods.md)
 * [Network security risk mitigation best practices](2.-introduction-to-cybersecurity/network-security-risk-mitigation-best-practices.md)
+* [Chapter 2 questions](2.-introduction-to-cybersecurity/chapter-2-questions.md)
 
 ## 3. Cybersecurity GRC
 

@@ -205,7 +205,7 @@ NIDS can be classified based on their detection approach. The primary variants a
 
 #### SIEM (Security Information and Event Management)
 
-SIEM can integrate and correlate distributed events and alert on hostile or abnormal behavior.
+The most fundamental approaches to detecting cyber intrusions are to monitor server logs for signs of unauthorized access, to monitor firewall or router logs for abnormal events, and to monitor network performance for spikes in traffic. SIEM can integrate and correlate distributed events and alert on hostile or abnormal behavior.
 
 * **Example Tools:** Wazuh, Splunk, IBM QRadar, Elastic SIEM
 * **How it works:**

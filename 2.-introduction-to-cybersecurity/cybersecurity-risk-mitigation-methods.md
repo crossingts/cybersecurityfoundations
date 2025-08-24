@@ -67,8 +67,6 @@ Intrusion Detection Systems (IDS) monitor network traffic for signs of unauthori
 
 A traditional IPS differs from firewalls in that instead of an engineer at the company defining rules for that company based on applications (by port number) and zones, the IPS applies the logic based on signatures supplied mostly by the IPS vendor. Those signatures look for these kinds of attacks: DoS, DDoS, Worms, Viruses.
 
-The most fundamental approaches to detecting cyber intrusions are to monitor server logs for signs of unauthorized access, to monitor firewall or router logs for abnormal events, and to monitor network performance for spikes in traffic. (EDUCAUSE, 2020)
-
 **Industry focus: Cisco Next-Generation IPS**
 
 Next-generation IPS (NGIPS): An IPS device with advanced features, including the capability to go beyond a comparison to known attack signatures to also look at contextual data, including the vulnerabilities in the current network, the capability to monitor for new zero-day threats, with frequent updates of signatures from the Cisco Talos security research group.
@@ -172,7 +170,7 @@ Web Filters prevent users’ browsers from loading certain pages from particular
 
 Anti-Virus software is a security program designed to prevent, detect, and remove malicious software (malware), including viruses, worms, Trojan horses, spyware, and ransomware. It uses a combination of signature-based detection (matching known malware code) and heuristic analysis (identifying suspicious behavior) to protect systems. Anti-Virus solutions can be implemented on individual devices, networks, and email gateways to establish security policies, perform real-time system monitoring, and quarantine threats for both personal and enterprise use.
 
-**Note** - SIEM, EDR/XDR, IAM, and NAC are covered in the section [Network security risk mitigation best practices](broken-reference) (Chapter 2). SIEM/EDR/XDR are further discussed in the section [Defensive cybersecurity technologies](../6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/) (Chapter 6).
+**Note** - SIEM, EDR/XDR, IAM, and NAC are covered in the section [Network security risk mitigation best practices](network-security-risk-mitigation-best-practices.md) (Chapter 2). SIEM/EDR/XDR are further discussed in the section [Defensive cybersecurity technologies](../6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/) (Chapter 6).
 
 ### Network design
 

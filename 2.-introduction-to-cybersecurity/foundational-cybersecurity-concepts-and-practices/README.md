@@ -274,7 +274,7 @@ Several centralized logging technologies can enhance security and compliance by 
 * **Search & analytics** (to detect anomalies or breaches).
 * **Alerting & automation** (trigger responses to suspicious activity).
 
-#### Free/Open-Source vs. Commercial Tools
+**Free/Open-Source vs. Commercial Tools**
 
 | Category                       | Tool Name                       | Type            | Notes                                                                                                                   |
 | ------------------------------ | ------------------------------- | --------------- | ----------------------------------------------------------------------------------------------------------------------- |

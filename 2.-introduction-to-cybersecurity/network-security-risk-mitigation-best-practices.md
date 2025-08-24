@@ -36,12 +36,12 @@ This section discusses key network security risk mitigation best practices, incl
 
 ### Robust access control
 
-A critical aspect of network design is enforcing strict access controls to prevent unauthorized entry. Best practices for access control in network design include Least Privilege Access Control, Identity and Access Management (IAM), Automated Policy Enforcement (e.g., Network Access Control), and Multi-Factor Authentication (MFA).
+A critical aspect of network design is enforcing strict access controls to prevent unauthorized entry. Best practices for access control in network design include least privilege access control, Identity and Access Management (IAM), automated policy enforcement (e.g., Network Access Control), and Multi-Factor Authentication (MFA).
 
-* **Least privilege access control:** The fundamental goal. Granting minimal access required for users to perform their duties.
-* **Identity and Access Management (IAM):** The core framework for defining and managing identity and permissions. _(This is where RBAC, ABAC, and PAM live.)_
-* **Automated policy enforcement:** The mechanisms that execute the IAM policies. _(This is where NAC, automated security group updates, and automated threat response live.)_ For example, deploying solutions like NAC (Network Access Control) to validate device compliance before granting access.
-* **Multi-Factor Authentication (MFA):** A critical _component_ of IAM. Mandating multiple verification steps for sensitive systems.
+* **Least privilege access control:** Granting minimal access required for users to perform their duties.
+* **Identity and Access Management (IAM):** The core framework for defining and managing identity and permissions.
+* **Automated policy enforcement:** The mechanisms that execute the IAM policies. _(This is where_ Network Access Contro&#x6C;_, automated security group updates, and automated threat response live.)_
+* **Multi-Factor Authentication (MFA):** A critical _component_ of IAM. MFA involves mandating multiple verification steps for sensitive systems.
 
 #### Least privilege access control
 

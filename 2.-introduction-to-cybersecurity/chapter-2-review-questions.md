@@ -43,5 +43,6 @@
 * Identify six common cybersecurity risk mitigation technologies&#x20;
 * How are traditional firewalls similar to and different from traditional routers
 * How are traditional firewalls similar to and different from NGFWs
-* Both firewalls and IPS can filter packets. A firewall will filter packets based on source and destination IP addresses, ports, and protocols. What logic does an IPS use to filter packets?
-
+* Both firewalls and IPS can filter packets. A firewall will filter packets based on source and destination IP addresses, ports, and protocols. What logic does an IPS use to filter packets
+* A company wants to secure its internal servers against external threats. What kind of web proxy do you recommend
+* What are the key functions of a reverse proxy

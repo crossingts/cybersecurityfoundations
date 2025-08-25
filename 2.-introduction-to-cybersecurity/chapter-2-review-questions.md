@@ -61,4 +61,15 @@
 ### Network security risk mitigation best practices
 
 * Identify and briefly explain four robust access control best practices.
-
+* Briefly compare the IAM framework with the AAA framework in terms of function.
+* List the core capabilities of an IAM system.
+* List three examples of automated policy enforcement tools leveraged by IAM.
+* How can 2FA be implemented for secure access to websites, web applications, networks, servers, etc.?
+* Give a brief defensible explanation of the difference between network monitoring, network security monitoring, and network visibility.
+* List and briefly explain the functions of three network security monitoring solutions/tools.
+* Outline three ways NTA can contribute to network visibility.
+* Outline three ways IDS/IPS can contribute to network visibility.
+* Give a brief defensible definition of layered security (comparing it to defense in depth).
+* Identify four major phases of a standard IR management process.
+* What is the logic of using multiple vendors to build a computer network/IT infrastructure.
+* Briefly describe four key strategies to physically secure an enterprise network.

@@ -62,7 +62,7 @@ IAM is the broad, enterprise-wide strategy for governing identity and access pol
 | **Components** | Identity Providers (IdP), Single Sign-On (SSO), User Provisioning/De-provisioning systems, Identity Governance tools.                                                       | AAA Servers (like Cisco ISE), Network Access Devices (NADs) like switches and WLCs, and protocols like RADIUS and TACACS+.                                                                                             |
 | **Analogy**    | **The entire corporate security policy and HR department.** It defines _that_ a user is an employee, _what_ their role is, and _what_ resources they should have access to. | **The security guard at the building door.** They don't decide the policy, but they _enforce_ it by checking your ID badge (AuthN), verifying you're allowed to enter (AuthZ), and noting the time you entered (Acct). |
 
-**Core components of IAM include:**
+**Core capabilities of IAM include:**
 
 * **User Lifecycle Management:** Provisioning, de-provisioning, and updating user accounts.
 * **Role-Based Access Control (RBAC):** Assigning permissions based on a user's role in the organization. RBAC ensures that users and devices only have permissions necessary for their functions, minimizing insider threats and credential misuse.&#x20;
@@ -152,8 +152,6 @@ Modern systems often combine both:
   * Manage user access to cloud apps (e.g., SaaS like Slack).
   * Implement least-privilege access (e.g., "Developer" vs. "Admin" roles).
 
-Think of it this way: NAC guards the _network door_ (devices), while IAM guards the _application doors_ (users). Both are critical for Zero Trust security.
-
 #### Multi-Factor Authentication (MFA)
 
 Multi-factor authentication (MFA) requires verification beyond passwords. No matter how secure is a password, there is still a chance it gets into the hands of an attacker. That’s why Multi-Factor Authentication is becoming more and more wide-spread.
@@ -170,7 +168,9 @@ Multi-factor authentication involves using at least two authentication methods f
 
 Network monitoring is the practice of continuously observing a computer network for availability, performance, and reliability. Its key goal is to answer the questions: "Is the network operational, and is it performing well?" This is achieved by collecting and analyzing specific, predefined metrics such as device uptime, bandwidth usage, CPU/memory load on routers and switches, and error rates. For example, a network monitoring tool might alert an administrator if a critical server goes offline.
 
-Two concepts that expand upon this foundation are **network security monitoring (NSM)** and **network visibility**. NSM focuses on detecting, investigating, and responding to security threats. It uses tools like IDS/IPS and SIEM platforms to analyze traffic for malicious patterns, enforce security policies, and aid in post-incident recovery. While standard monitoring might flag a high bandwidth spike, NSM would investigate if that spike is caused by a legitimate backup or a malicious denial-of-service attack. Network visibility is a broader, more proactive approach that encompasses both performance and security monitoring. It involves gaining a comprehensive, often granular, real-time understanding of all traffic flows across the entire network infrastructure. This is achieved through advanced telemetry data, flow analysis (NetFlow, sFlow) and packet inspection. Where basic monitoring might track if a link is up/down, visibility reveals which applications, users, and protocols are consuming that link's capacity, providing the essential context needed to troubleshoot complex issues and optimize the network holistically.
+Two concepts that expand upon this foundation are **network security monitoring (NSM)** and **network visibility**. NSM focuses on detecting, investigating, and responding to security threats. It uses tools like IDS/IPS and SIEM platforms to analyze traffic for malicious patterns, enforce security policies, and aid in post-incident recovery. While standard monitoring might flag a high bandwidth spike, NSM would investigate if that spike is caused by a legitimate backup or a malicious denial-of-service attack.
+
+Network visibility is a broader, more proactive approach that encompasses both performance and security monitoring. It involves gaining a comprehensive, often granular, real-time understanding of all traffic flows across the entire network infrastructure. This is achieved through advanced telemetry data, flow analysis (NetFlow, sFlow) and packet inspection. Where basic monitoring might track if a link is up/down, visibility reveals which applications, users, and protocols are consuming that link's capacity, providing the essential context needed to troubleshoot complex issues and optimize the network holistically.
 
 Network visibility is the ability to see, understand, and contextualize all activity and data traversing a network. It is not a single tool, but a capability achieved through a combination of tools, processes, and policies. The key pillars of network visibility include:
 
@@ -182,7 +182,7 @@ Network visibility is the ability to see, understand, and contextualize all acti
 
 #### Network security monitoring technologies
 
-A secure network design must incorporate robust monitoring to detect and respond to threats in real time. SIEM solutions aggregate and correlate system logs/alerts from IDS, firewalls, endpoints, etc. for centralized threat detection, while endpoint detection and response (EDR) solutions track suspicious behavior across devices for signs of compromise. IDS/IPS help identify/block malicious traffic. Network traffic analysis (NTA) tools provide visibility into data flows, helping detect lateral movement by attackers.&#x20;
+A secure network design must incorporate robust monitoring to detect and respond to threats in real time. SIEM solutions aggregate and correlate system logs/alerts from IDS, firewalls, endpoints, etc. for centralized threat detection, while endpoint detection and response (EDR) solutions track suspicious behavior across devices for signs of compromise. IDS/IPS solutions help identify/block malicious traffic. Network traffic analysis (NTA) solutions provide visibility into data flows, helping detect lateral movement by attackers.&#x20;
 
 By integrating these technologies, organizations can proactively identify vulnerabilities and mitigate risks before they escalate.
 
@@ -200,7 +200,7 @@ NIDS can be classified based on their detection approach. The primary variants a
 
 **A. Signature-Based Detection (IDS/IPS)**
 
-* **Example Tools:** Snort, Suricata, Cisco Firepower
+* **Example Tools:** Snort (open source), Suricata (open source), Cisco Firepower (commercial)
 * **How it works:**
   * Compares network traffic or system activity against known attack patterns (signatures).
   * **IDS (Intrusion Detection System):** Passive monitoring and alerting.
@@ -210,7 +210,7 @@ NIDS can be classified based on their detection approach. The primary variants a
 
 **B. Anomaly-Based Detection (Network Behavior Analysis)**
 
-* **Example Tools:** Darktrace, Cisco Stealthwatch
+* **Example Tools:** Darktrace (commercial), Cisco Stealthwatch (commercial)
 * **How it works:**
   * Uses machine learning or statistical baselining to detect unusual behavior.
   * Can identify novel attacks but may have higher false positives.
@@ -220,7 +220,7 @@ NIDS can be classified based on their detection approach. The primary variants a
 
 The most fundamental approaches to detecting cyber intrusions are to monitor server logs for signs of unauthorized access, to monitor firewall or router logs for abnormal events, and to monitor network performance for spikes in traffic. SIEM can integrate and correlate distributed events and alert on hostile or abnormal behavior.
 
-* **Example Tools:** Wazuh, Splunk, IBM QRadar, Elastic SIEM
+* **Example Tools:** Wazuh (open source), Splunk (commercial), IBM QRadar (commercial), Elastic SIEM (open core)
 * **How it works:**
   * **Aggregates logs** from multiple sources (e.g., network devices, cloud services, IDS, servers).
   * **Correlates events** to detect complex attack patterns (e.g., multiple failed logins followed by a successful one).
@@ -234,7 +234,7 @@ The most fundamental approaches to detecting cyber intrusions are to monitor ser
 
 #### Endpoint Detection and Response/Extended Detection and Response (EDR/XDR)
 
-* **Example Tools:** CrowdStrike, SentinelOne, Microsoft Defender for Endpoint
+* **Example Tools:** CrowdStrike (commercial), SentinelOne (commercial), Microsoft Defender for Endpoint (commercial)
 * **How it works:**
   * Monitors **endpoint behavior** (processes, file changes, registry edits).
   * Uses behavioral analysis to detect malware and suspicious activity.
@@ -242,7 +242,7 @@ The most fundamental approaches to detecting cyber intrusions are to monitor ser
 
 #### **Network Traffic Analysis (NTA)**
 
-Network Traffic Analysis (NTA) is a broad process of monitoring network activity to understand what is happening on your network. Its primary goal is visibility and discovery. NTA (also called Network Detection and Response, NDR) focuses on analyzing raw network traffic to detect suspicious behavior that evades traditional tools. Network visibility is a practice/capability a level above the more traditional network monitoring. For example, an IDS/IPS might block 99% of the obvious, automated attacks at the perimeter. A NTA solution would then be used to discover the sophisticated, stealthy attacker that bypassed the IPS by finding their unusual command-and-control traffic hidden in normal web requests.&#x20;
+NTA is a broad process of monitoring network activity to understand what is happening on your network. Its primary goal is visibility and discovery. NTA (also called Network Detection and Response, NDR) focuses on analyzing raw network traffic to detect suspicious behavior that evades traditional tools. Network visibility is a practice/capability a level above the more traditional network monitoring. For example, an IDS/IPS might block 99% of the obvious, automated attacks at the perimeter. A NTA solution would then be used to discover the sophisticated, stealthy attacker that bypassed the IPS by finding their unusual command-and-control traffic hidden in normal web requests.&#x20;
 
 **Key Technologies & Tools:**
 
@@ -278,18 +278,20 @@ Network Traffic Analysis (NTA) is a broad process of monitoring network activity
 * Requires **high storage** for full packet capture (PCAP).
 * Can be **noisy** without proper tuning.
 
-#### Network Traffic Analysis (NTA) vs IDS/IPS
+#### NTA vs IDS/IPS
 
 The network visibility vs network security monitoring dichotomy can be better understood through concrete examples. NTA is more closely related to network visibility, while IDS/IPS is more closely related to network security monitoring.
+
+**Network Visibility vs Security Monitoring**
 
 |                         | **Network Visibility (NTA's Goal)**    | **Security Monitoring (IDS/IPS's Goal)**    |
 | ----------------------- | -------------------------------------- | ------------------------------------------- |
 | **Question it Answers** | "What is happening on my network?"     | "Is something bad happening on my network?" |
 | **Scope**               | Broad, holistic, contextual            | Narrow, focused on threats                  |
 | **Mindset**             | Proactive, curious, investigative      | Reactive, defensive, enforcement            |
-| **Output**              | Dashboards, maps, baselines, anomalies | **Alarms** and **Blocks**                   |
+| **Output**              | Dashboards, maps, baselines, anomalies | Alarms and Blocks                           |
 
-**NTA vs IDS/IPS Comparison**
+**NTA vs IDS/IPS Summary Table**
 
 | Feature           | Network Traffic Analysis (NTA)                                                                                                                                    | Intrusion Detection/Prevention System (IDS/IPS)                                                   |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |

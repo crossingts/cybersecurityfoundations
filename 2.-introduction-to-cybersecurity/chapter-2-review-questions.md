@@ -49,3 +49,14 @@
 * Internet VPNs are broadly categorized into two types. What are they?
 * A company wants to permanently connect a branch office to the headquarters. What type of VPN is more suitable?
 * Briefly describe how web filters can protect an enterprise's computer systems.
+* Briefly explain how honeypots can enhance security.
+* Differentiate between low-interaction honeypots and high-interaction honeypots.
+* Outline five ways network automation can enhance an enterprise's cybersecurity.
+* Briefly explain how Network Address Translation (NAT) can enhance network security.
+* Identify three types or categories of network security protocols, citing at least one protocol example per type or category.
+* Identify five components of an information security policy that is aligned in structure with industry best practices.
+* Information security testing is an essential part of both risk assessments and compliance audits. Briefly outline how so.
+* Very briefly explain the difference between user awareness programs and user training programs.
+
+### Network security risk mitigation best practices
+

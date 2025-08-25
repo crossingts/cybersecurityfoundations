@@ -230,9 +230,7 @@ A well designed network supports efficient Internet usage and device communicati
 
 #### Network Segmentation
 
-Effective cybersecurity risk mitigation begins with a well-designed network architecture that prioritizes security at every layer. By strategically segmenting networks, organizations can limit the spread of malware and unauthorized access, ensuring that breaches in one area do not compromise the entire system.&#x20;
-
-Network segmentation involves segregating a network into logical or functional zones. For\
+Effective cybersecurity risk mitigation begins with a well-designed network architecture that prioritizes security at every layer. By strategically segmenting networks, organizations can limit the spread of malware and unauthorized access, ensuring that breaches in one area do not compromise the entire system. Network segmentation involves segregating a network into logical or functional zones. For\
 example, you might have a zone for sales, a zone for technical support, and a zone for research, with each zone having different technical needs. You can separate zones using routers or switches or using virtual local area networks (VLANs).
 
 Segmentation limits the potential damage of a compromise to whatever is in the compromised zone. Segmentation divides one target into many, which forces attackers to interact with each segment as a separate network. This creates a great deal of additional work for the attacker, since the attacker must compromise each segment individually. Further, this approach dramatically increases the attacker’s exposure to being discovered.&#x20;
@@ -241,15 +239,13 @@ Segmentation also helps enforce data protection by applying different security r
 
 Virtualization is another way to segment a network. It is much easier to segment virtual systems than it is to segment physical systems. For example, you can easily configure a virtual machine on your workstation so that the virtual machine is completely isolated from the workstation — it does not share a clipboard, common folders or drives, and literally operates as an isolated system.
 
-**Virtual Local Anrea Networks (VLANs)**
-
-VLANs (Virtual LANs) are used to **segment** portions of a network at layer two and differentiate devices.
-
-VLANs are configured on a switch by adding a tag to a frame. The 802.1q or dot1q tag designates the VLAN that the traffic originates from.
+**Virtual Local Area Networks (VLANs)**
 
 When segmenting networks for security, both **subnets** and **VLANs** can be used, but they serve different purposes and operate at different layers of the network. Here’s when to use each:
 
 #### **1. VLANs (Virtual LANs) – Layer 2 Segmentation**
+
+VLANs are used to segment portions of a network at layer two and differentiate devices. VLANs are configured on a switch by adding a tag to a frame. The 802.1q (dot1q) tag designates the VLAN that the traffic originates from.
 
 * **Use VLANs when:**
   * You need to **isolate broadcast domains** at Layer 2 (switch level).
@@ -273,7 +269,7 @@ When segmenting networks for security, both **subnets** and **VLANs** can be use
 * **Example Use Cases:**
   * Separating **branch offices** with different IP ranges.
   * Creating **DMZ subnets** for public-facing servers.
-  * Enforcing **microsegmentation** in data centers (e.g., PCI-compliant networks).
+  * Enforcing **micro-segmentation** in data centers (e.g., PCI-compliant networks).
 
 #### **When to Use Both VLANs + Subnets Together**
 
@@ -316,7 +312,7 @@ VLANs can be used to define security zones to regulate traffic flow within and b
 
 * **Traffic Management and Access Control**:\
   While security zones primarily focus on internal traffic, it’s crucial to plan for how external devices or traffic will integrate into the network. For example:
-  * Most external traffic (e.g., HTTP, mail) remains confined to the DMZ.
+  * Most external traffic (e.g., HTTP, mail) remains confined to the demilitarized zone (DMZ).
   * Remote users requiring internal access can be granted permissions based on MAC/IP addresses, enforced via network security controls.
   * Access rules are dictated by organizational policies, compliance requirements, and security protocols, which we’ll explore next.
 * **Implementation and Enforcement**:\
@@ -338,7 +334,7 @@ The next step is applying these principles to practical VLAN deployment and poli
 | **Management** | Dedicated to network/device management (often grouped with Audit).  | Virtualization management, backup servers |
 | **Audit**      | Dedicated to security monitoring (often grouped with Management).   | SIEM, telemetry                           |
 
-A demilitarized zone (DMZ) is a noncritical yet secure segment of the network at the periphery of a private network, positioned between the public internet and the internal network. It is typically separated from the public network by an outer firewall and may also be divided from the private network by an additional firewall. Organizations often deploy a DMZ to host public-facing servers—such as web or email servers—that need to be accessible to untrusted users. By placing these servers in the DMZ, the organization can restrict access to the internal network, reducing exposure to potential threats. While authorized internal users can still reach the DMZ servers, external users are confined to the DMZ and cannot penetrate deeper into the network.
+DMZ is a noncritical yet secure segment of the network at the periphery of a private network, positioned between the public internet and the internal network. It is typically separated from the public network by an outer firewall and may also be divided from the private network by an additional firewall. Organizations often deploy a DMZ to host public-facing servers—such as web or email servers—that need to be accessible to untrusted users. By placing these servers in the DMZ, the organization can restrict access to the internal network, reducing exposure to potential threats. While authorized internal users can still reach the DMZ servers, external users are confined to the DMZ and cannot penetrate deeper into the network.
 
 * **Network Security Policies and Controls**
 
@@ -349,8 +345,6 @@ Now that we’ve discussed segmentation and secure architecture design (security
 * **Standards & Vendor Practices**:
   * IEEE provides standardized policies like **QoS (802.11e)** for traffic prioritization.
   * Many other routing and traffic policies, though not IEEE-standardized, are widely adopted by vendors for consistency.
-
-This section focuses on **traffic filtering** and introduces core network policy concepts.
 
 **Traffic Filtering**
 
@@ -365,14 +359,11 @@ A fundamental method for enforcing access is through **ACLs (Access Control List
   * **Cisco**: Applies ACLs for traffic filtering, queuing, and dynamic access control.
   * **VyOS**: Uses ACLs or prefix lists in its basic filtering policy.
 
-**Formally, traffic filtering ensures security, validation, and segmentation by allowing or blocking traffic based on predefined rules.**
+Traffic filtering ensures security, validation, and segmentation by allowing or blocking traffic based on predefined rules.
 
 **Practice**
 
-Explore practical ACL implementation in traffic filtering and access control policies:
-
-**How to configure standard ACLs on Cisco routers**\
-[**https://itnetworkingskills.wordpress.com/2023/04/11/how-configure-standard-acls-cisco-routers/**](https://itnetworkingskills.wordpress.com/2023/04/11/how-configure-standard-acls-cisco-routers/)
+Explore practical ACL implementation in traffic filtering and access control policies: [How to configure standard ACLs on Cisco routers](https://itnetworkingskills.wordpress.com/2023/04/11/how-configure-standard-acls-cisco-routers/)
 
 **Prioritize network traffic using QoS**
 

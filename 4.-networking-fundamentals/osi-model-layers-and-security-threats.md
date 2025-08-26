@@ -10,9 +10,9 @@ description: >-
 
 • Identify and list common network attack types associated with each OSI layer\
 • Understand how each attack type can compromise the network\
-• Describe key mitigation methods
+• Describe key mitigation methods for each attack type
 
-This section discusses network layers within the OSI model in the context of threats, vulnerabilities, and mitigation. The discussion focuses on the network attack types listed in the Common Attack Types by OSI Layer Summary Table.
+This section discusses network layers within the OSI model in the context of threats, vulnerabilities, and mitigation. The discussion focuses on the following network attack types: DNS Spoofing (L7), SQL Injection (L7), Phishing (L6), Malicious File Uploads (L6), Session Hijacking (L5), SSL Stripping (L5), TCP SYN Flooding (L4), UDP Flooding (L4), ICMP Flooding (L3), IP Spoofing (L3), ARP Spoofing (L2), MAC Flooding (L2), Sniffing (L1), and Cable Tapping (L1).
 
 ## Topics covered in this section
 
@@ -249,14 +249,14 @@ Attackers upload harmful files (e.g., documents, scripts, executables) to a syst
 
 ### Key threat characteristics and mitigation strategies
 
-#### Key threat characteristics
+**Key threat characteristics**
 
 1. **L1–L4 Threats**: Focus on **infrastructure disruption** (DDoS, MITM) and **data interception**.
    * _Example_: ICMP flooding threatens uptime (L3), while ARP spoofing threatens confidentiality (L2).
 2. **L5–L7 Threats**: Target **sessions, users, and apps** (social engineering, logic flaws).
    * _Example_: Phishing (L6) exploits human trust, while SQLi (L7) exploits code flaws.
 
-#### Mitigation strategies
+**Mitigation strategies**
 
 * **Lower layers (L1–L4)**: Encryption, network hardening (e.g., firewall rules).
 * **Upper layers (L5–L7)**: Behavioral controls (e.g., MFA, training).

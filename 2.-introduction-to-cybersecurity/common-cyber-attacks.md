@@ -176,7 +176,7 @@ To spoof an address is to use a fake source address, for example a fake IP or MA
 * Reflection and Amplification&#x20;
 * Man-in-the-Middle&#x20;
 
-Each spoofing attack type involves either IP spoofing or MAC spoofing as a mechanism of action.
+Each of the following spoofing attack types involves either IP spoofing or MAC spoofing as a mechanism of action.
 
 #### Spoofing Attacks Summary Table
 

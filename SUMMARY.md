@@ -140,5 +140,4 @@
 * [Networking fundamentals](7.-conclusion/networking-fundamentals.md)
 * [Wireless security and cryptography](7.-conclusion/wireless-security-and-cryptography.md)
 * [Practical foundations in ethical hacking](7.-conclusion/practical-foundations-in-ethical-hacking.md)
-* [Appendices](7.-conclusion/appendices/README.md)
-  * [Glossary](7.-conclusion/appendices/glossary.md)
+* [Glossary](7.-conclusion/glossary.md)

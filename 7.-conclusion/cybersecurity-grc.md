@@ -2,13 +2,9 @@
 
 ## Chapter 3: Cybersecurity GRC
 
-This chapter introduces students to how organizations integrate cybersecurity into enterprise risk management through Governance, Risk, and Compliance (GRC) frameworks
+This chapter explores how organizations integrate cybersecurity into enterprise risk management through Governance, Risk, and Compliance (GRC) frameworks. Students will learn how GRC can align information security regulations, standards, and risk assessment with business objectives to mitigate cybersecurity risks.
 
-This chapter explores how organizations integrate cybersecurity into enterprise risk management through Governance, Risk, and Compliance (GRC) frameworks. Students will learn how regulations, standards, and risk assessment methodologies align with business objectives to mitigate cyber risks.
-
-***
-
-This section reviews/summarizes how Governance, Risk, and Compliance (GRC) frameworks align security with business goals. GRC frameworks such as NIST Cybersecurity Framework (CSF) and ISO 27001 help organizations align security with business goals by integrating risk management, regulatory compliance, and strategic governance into business operations. Here is an outline of how GRC frameworks can turn technical security requirements into strategic enablers—balancing protection with growth, innovation, and compliance:
+This section reviews how GRC frameworks align security with business goals. GRC frameworks such as NIST Cybersecurity Framework (CSF) and ISO 27001 help organizations align security with business goals by integrating risk management, regulatory compliance, and strategic governance into business operations. Here is an outline of how GRC frameworks can turn technical security requirements into strategic enablers—balancing protection with growth, innovation, and compliance:
 
 **1. Governance: Aligning Security with Business Strategy**
 

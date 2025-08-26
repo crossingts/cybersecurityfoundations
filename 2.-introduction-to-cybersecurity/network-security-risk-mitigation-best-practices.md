@@ -338,12 +338,12 @@ Both NTA and IDS/IPS contribute to network visibility, but they do so in very di
 
 ### Layered security (defense in depth)
 
-The terms layered security and defense in depth are sometimes used interchangeably to refer to a multi-layered architecture of or approach to defence. More strictly, defense in depth can be understood as a philosophy or strategy of defence, and layered security as the more concrete security controls (but this view is not universal). For example, a stack of firewall, IDS/IPS, SIEM, and EDR could constitute a layered approach to security. But the concept of layered security can be stretched to refer to security domains such as security policies, physical security, network security, endpoint security, application security, and data security.
+The terms layered security and defense in depth are sometimes used interchangeably to refer to a multi-layered defence architecture or approach. More strictly, defense in depth can be understood as a philosophy or strategy of defence, and layered security as a more concrete operationalization of the defense in depth strategy in the form of technical (procedures) or technological security controls. For example, a stack of firewall, IDS/IPS, SIEM, and EDR could constitute a layered approach to security. But the concept of layered security can be stretched to refer to security domains such as security policies, physical security, network security, endpoint security, application security, and data security.
 
-Defense in depth is an information security strategy that uses multiple layers and types of controls (managerial, operational, and technical) to provide optimal protection.
+Defense in depth is an information security strategy that uses multiple layers and types of controls (managerial, operational, and technical/technological) to provide optimal protection.
 
 * **Defense in depth: the broader, more established term** (originating from military strategy) and is widely recognized in cybersecurity as a comprehensive approach combining multiple security layers (technical, administrative, and physical controls).
-* **Layered security: a subset of defense in depth**, often referring specifically to the **technical controls** (firewalls, encryption, endpoint protection, etc.) rather than the full strategy.
+* **Layered security: a subset of defense in depth**, often referring specifically to the technological controls (firewalls, encryption, endpoint protection, etc.) rather than the full strategy.
 
 ### Incident response management&#x20;
 

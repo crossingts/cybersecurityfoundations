@@ -51,7 +51,7 @@ Don't jump before you look! This chapter lays out the IT and cybersecurity caree
 
 This chapter covers key aspects of cybersecurity fundamentals, including foundational definitions such as the CIA triad, the evolving cybersecurity threat landscape, and common cyber attacks and malware types.
 
-3. [Chapter 3: Cybersecurity GRC](3.-cybersecurity-grc/introduction-cybersecurity-grc.md)
+3. [Chapter 3: Cybersecurity GRC](3.-cybersecurity-grc/introduction-cybersecurity-grc/)
 
 This chapter covers Governance, Risk, and Compliance as a risk management framework (RMF) and using RMFs such as NIST SP 800-37, NIST CSF, and ISO/IEC 27001 to align cybersecurity policy with business goals.
 

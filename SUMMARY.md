@@ -27,7 +27,8 @@
 
 ## 3. Cybersecurity GRC
 
-* [Introduction - Cybersecurity GRC](3.-cybersecurity-grc/introduction-cybersecurity-grc.md)
+* [Introduction - Cybersecurity GRC](3.-cybersecurity-grc/introduction-cybersecurity-grc/README.md)
+  * [Alternative chapter outline](3.-cybersecurity-grc/introduction-cybersecurity-grc/alternative-chapter-outline.md)
 * [Cybersecurity GRC](https://dti-techs.gitbook.io/cybersecurity-grc)
 * [Foundational GRC concepts](3.-cybersecurity-grc/foundational-grc-concepts.md)
 * [Risk assessment phases](3.-cybersecurity-grc/risk-assessment-phases.md)

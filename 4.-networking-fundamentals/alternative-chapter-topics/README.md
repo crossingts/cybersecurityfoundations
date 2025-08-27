@@ -10,9 +10,9 @@
 
 [Cisco IOS CLI and device security](cisco-ios-cli-and-device-security.md)
 
-[Connected and local routes](https://itnetworkingskills.wordpress.com/2023/04/21/connected-local-routes/)
+[Connected and local routes](connected-and-local-routes.md)
 
-[How to configure static routes on Cisco routers](https://itnetworkingskills.wordpress.com/2023/04/21/configure-static-routes-cli-cisco-routers/)
+[How to configure static routes on Cisco routers](how-to-configure-static-routes-on-cisco-routers.md)
 
 [Comparing TCP to UDP](https://itnetworkingskills.wordpress.com/2023/04/06/compare-tcp-udp/)
 

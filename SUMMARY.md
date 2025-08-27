@@ -47,6 +47,7 @@
   * [How to configure static routes on Cisco routers](4.-networking-fundamentals/alternative-chapter-topics/how-to-configure-static-routes-on-cisco-routers.md)
   * [Comparing TCP to UDP](4.-networking-fundamentals/alternative-chapter-topics/comparing-tcp-to-udp.md)
   * [How to configure standard ACLs on Cisco routers](4.-networking-fundamentals/alternative-chapter-topics/how-to-configure-standard-acls-on-cisco-routers.md)
+  * [The role of DNS within the network](4.-networking-fundamentals/alternative-chapter-topics/the-role-of-dns-within-the-network.md)
 * [Network devices and their functions](4.-networking-fundamentals/network-devices-and-their-functions/README.md)
   * [Repeaters vs hubs vs bridges vs switches](4.-networking-fundamentals/network-devices-and-their-functions/repeaters-vs-hubs-vs-bridges-vs-switches.md)
   * [Lesson quiz: Network devices](4.-networking-fundamentals/network-devices-and-their-functions/lesson-quiz-network-devices.md)

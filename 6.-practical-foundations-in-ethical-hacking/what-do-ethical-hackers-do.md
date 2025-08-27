@@ -86,9 +86,17 @@ Ethical hacking may be a contracted outside service. An ethical hacker may be an
 
 Several major regulatory frameworks (such as HIPAA, PCI DSS, SSAE 16, FFIEC, and GLBA) require businesses to perform penetration testing and vulnerability scanning periodically.
 
-**Vulnerability Scan and Penetration Test Comparison**
+Vulnerability Scan and Penetration Test Comparison (Rodger, 2013, p. 49)
 
-<figure><img src="../.gitbook/assets/image (17).png" alt="Vulnerability Scan and Penetration Test Comparison"><figcaption><p>Table 15: Vulnerability Scan and Penetration Test Comparison (Rodger, 2013, p. 49)</p></figcaption></figure>
+|                         | Vulnerability Scan                                                                    | Penetration Test                                                         |
+| ----------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| How often to run        | Continuously, especially after new equipment is loaded                                | Once a year                                                              |
+| Reports                 | Comprehensive baseline of what vulnerabilities exist and changes from the last report | Short and to the point, identifies what data was actually compromised    |
+| Metrics                 | Lists known software vulnerabilities that may be exploited                            | Discovers unknown and exploitable exposures to normal business processes |
+| Performed by            | In house staff, increases expertise and knowledge of normal security profile          | Independent outside service                                              |
+| Required in regulations | FFIEC; GLBA; PCI DSS                                                                  | FFIEC; GLBA; PCI DSS                                                     |
+| Expense                 | Low to moderate: about $1200 / yr + staff time                                        | High: about $10,000 per year outside consultancy                         |
+| Value                   | Detective control, used to detect when equipment is/could be compromised              | Preventative control used to reduce exposure                             |
 
 Vulnerability scans are automated assessments of computers, networks, and applications, and are typically done on an ongoing basis, especially following the installation of new equipment or software. They are typically done by in-house staff, and cost about U.S. $1,200/year plus staff time. Their purpose is detection of exploitable vulnerabilities.
 

@@ -14,7 +14,7 @@
 
 [How to configure static routes on Cisco routers](how-to-configure-static-routes-on-cisco-routers.md)
 
-[Comparing TCP to UDP](https://itnetworkingskills.wordpress.com/2023/04/06/compare-tcp-udp/)
+[Comparing TCP to UDP](comparing-tcp-to-udp.md)
 
 [How to configure standard ACLs on Cisco routers](https://itnetworkingskills.wordpress.com/2023/04/11/how-configure-standard-acls-cisco-routers/)
 

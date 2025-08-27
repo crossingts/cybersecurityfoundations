@@ -41,7 +41,9 @@
 
 * [Introduction - Networking fundamentals](4.-networking-fundamentals/introduction-networking-fundamentals.md)
 * [How data flow through the Internet](4.-networking-fundamentals/how-data-flow-through-the-internet.md)
-* [Alternative chapter topics](4.-networking-fundamentals/alternative-chapter-topics.md)
+* [Alternative chapter topics](4.-networking-fundamentals/alternative-chapter-topics/README.md)
+  * [Cisco IOS CLI and device security](4.-networking-fundamentals/alternative-chapter-topics/cisco-ios-cli-and-device-security.md)
+  * [Connected and local routes](4.-networking-fundamentals/alternative-chapter-topics/connected-and-local-routes.md)
 * [Network devices and their functions](4.-networking-fundamentals/network-devices-and-their-functions/README.md)
   * [Repeaters vs hubs vs bridges vs switches](4.-networking-fundamentals/network-devices-and-their-functions/repeaters-vs-hubs-vs-bridges-vs-switches.md)
   * [Lesson quiz: Network devices](4.-networking-fundamentals/network-devices-and-their-functions/lesson-quiz-network-devices.md)
@@ -54,7 +56,6 @@
 * [Typing www.google.com into a web browser](4.-networking-fundamentals/typing-www.google.com-into-a-web-browser.md)
 * [OSI model layers and security threats](4.-networking-fundamentals/osi-model-layers-and-security-threats/README.md)
   * [Secure cookie attributes explained](4.-networking-fundamentals/osi-model-layers-and-security-threats/secure-cookie-attributes-explained.md)
-* [Cisco IOS CLI and device security](4.-networking-fundamentals/cisco-ios-cli-and-device-security.md)
 
 ## 5. Wireless security and cryptography
 

@@ -140,7 +140,7 @@ Cisco IOS Command Reference uses certain conventions to present command syntax. 
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | **bold**      | Bold text indicates commands and keywords that you enter as shown.                                                                          |
 | _italic_      | Italic text indicates arguments for which you supply values.                                                                                |
-| **\[x]**      | Square brackets enclose an optional keyword or argument.                                                                                    |
+| \[x]          | Square brackets enclose an optional keyword or argument.                                                                                    |
 | ...           | An ellipsis (three consecutive nonbolded periods without spaces) after a syntax element indicates that the element can be repeated.         |
 | \|            | A vertical line, called a pipe, that is enclosed within braces or square brackets indicates a choice within a set of keywords or arguments. |
 | \[x \| y]     | Square brackets enclosing keywords or arguments separated by a pipe indicate an optional choice.                                            |

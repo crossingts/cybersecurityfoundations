@@ -52,7 +52,8 @@
 * [How routers facilitate communication](4.-networking-fundamentals/how-routers-facilitate-communication.md)
 * [Network protocols and their functions](4.-networking-fundamentals/network-protocols-and-their-functions.md)
 * [Typing www.google.com into a web browser](4.-networking-fundamentals/typing-www.google.com-into-a-web-browser.md)
-* [OSI model layers and security threats](4.-networking-fundamentals/osi-model-layers-and-security-threats.md)
+* [OSI model layers and security threats](4.-networking-fundamentals/osi-model-layers-and-security-threats/README.md)
+  * [Secure cookie attributes explained](4.-networking-fundamentals/osi-model-layers-and-security-threats/secure-cookie-attributes-explained.md)
 
 ## 5. Wireless security and cryptography
 

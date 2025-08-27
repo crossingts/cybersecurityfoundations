@@ -253,7 +253,7 @@ SSL Stripping (also known as HTTP Downgrade attacks) is a man-in-the-middle (Mit
 
 **Session Hijacking (L5)**
 
-Session Hijacking is an attack where an attacker steals a user's unique session identifier (session token or cookie) to impersonate that user and gain unauthorized access to the web application. The attacker takes over the active session, effectively becoming authenticated as the victim, which can lead to:
+Session hijacking is an attack where an attacker steals a user's unique session identifier (typically a session token stored in a cookie) and uses it to impersonate the victim. By taking over the user's active session, the attacker gains unauthorized access to the web application and is effectively authenticated as the user, which can lead to:
 
 * **Identity theft** and unauthorized access to the victim's account and privileges.
 * **Theft of sensitive personal or financial data** stored in the user's account.
@@ -276,10 +276,15 @@ Session Hijacking is an attack where an attacker steals a user's unique session 
    * **Implement Short Session Timeouts:** Automatically invalidate sessions after a short period of user inactivity. This limits the window of opportunity for an attacker to use a stolen token.
    * **Provide Logout Functionality:** Logout should immediately invalidate the session token on the server.
    * **Regenerate Session Tokens:** The application should invalidate the old session ID and issue a new one after login and any other major privilege change (e.g., password change, role elevation). This prevents session fixation attacks.
-2. **Secure Cookie Attributes:**
-   * `Secure`: Ensures the session cookie is only sent over encrypted HTTPS connections.
-   * `HttpOnly`: Prevents the cookie from being accessed by client-side JavaScript, mitigating theft via XSS attacks.
-   * `SameSite=Strict` (or `Lax`): Controls when cookies are sent with cross-site requests, protecting against Cross-Site Request Forgery (CSRF) and some session hijacking techniques.
+2.  **Secure Cookie Attributes:**
+
+    * `Secure`: Ensures the session cookie is only sent over encrypted HTTPS connections.
+    * `HttpOnly`: Prevents the cookie from being accessed by client-side JavaScript, mitigating theft via XSS attacks.
+    * `SameSite=Strict` (or `Lax`): Controls when cookies are sent with cross-site requests, protecting against Cross-Site Request Forgery (CSRF) and some session hijacking techniques.
+
+    A detailed explanation of the mechanism of action for each of these secure cookie attributes in mitigating session hijacking: [Secure cookie attributes explained](secure-cookie-attributes-explained.md).
+
+
 3. **Multi-Factor Authentication (MFA):**\
    MFA adds a second layer of defense. Even if a session token is stolen, the attacker would still need to bypass the second factor (e.g., a code from a phone app) to access sensitive functionality or re-authenticate, rendering the stolen token largely useless.
 

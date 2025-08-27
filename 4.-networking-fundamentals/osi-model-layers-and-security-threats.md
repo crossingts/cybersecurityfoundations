@@ -31,7 +31,7 @@ The following tables lists common attack types/threats associated with each OSI 
 | --------------------- | ------------------------------------------------------------------------------------------ | --------------------------------- |
 | **L7 (Application)**  | Allows application processes to access network services                                    | DNS Spoofing, SQL Injection       |
 | **L6 (Presentation)** | Formats data to be presented to L7                                                         | Phishing, Malicious File Uploads  |
-| **L5 (Session)**      | Establishes and manages sessions between processes running on different stations           | Session Hijacking, SSL Stripping  |
+| **L5 (Session)**      | Establishes and manages sessions between processes running on different stations           | SSL Stripping, Session Hijacking  |
 | **L4 (Transport)**    | Ensures end-to-end error-free data delivery                                                | TCP SYN Flooding, UDP Flooding    |
 | **L3 (Network)**      | Performs packet routing (logical addressing)                                               | ICMP Flooding, IP Spoofing        |
 | **L2 (Data Link)**    | Provides node-to-node error-free data transfer (physical addressing)                       | ARP Spoofing (MITM), MAC Flooding |
@@ -43,7 +43,7 @@ The following tables lists and elaborates risk scenarios and mitigation techniqu
 
 **Common Attack Types and Mitigation by OSI Layer Summary Table**
 
-<table data-header-hidden><thead><tr><th width="73.265625"></th><th width="120.29296875"></th><th width="130.94921875"></th><th></th><th></th><th></th></tr></thead><tbody><tr><td><strong>OSI Layer</strong></td><td><strong>Attack Type/Threat</strong></td><td><strong>Attack Technique</strong></td><td><strong>Vulnerability Exploited</strong></td><td><strong>Risk Scenario</strong></td><td><strong>Mitigation</strong></td></tr><tr><td><strong>L7</strong></td><td>DNS Spoofing</td><td>Corrupting DNS cache to redirect users</td><td>Unvalidated DNS responses</td><td>Redirects users to malicious sites (e.g., fake banking portals)</td><td>DNSSEC, DoH/DoT (DNS over HTTPS/TLS)</td></tr><tr><td></td><td>SQL Injection</td><td>Injecting malicious SQL queries into input fields</td><td>Poor input validation, lack of parameterized queries</td><td>Bypasses authentication or exfiltrates DB data (e.g., <code>' OR 1=1 --</code> attacks)</td><td>Input validation, prepared statements, WAF (Web Application Firewall)</td></tr><tr><td><strong>L6</strong></td><td>Phishing</td><td>Social engineering to steal credentials</td><td>Human trust, lack of training</td><td>Tricks users into revealing credentials (e.g., fake login pages or malicious attachments)</td><td>User education, Email filtering (DMARC)</td></tr><tr><td></td><td>Malicious File Uploads</td><td>Uploading files with hidden exploits</td><td>Insufficient file type verification, lack of sandboxing</td><td>Uploads malware disguised as documents (e.g., PDFs with embedded exploits, Word files delivering Emotet or Locky)</td><td>File type verification, malware scanning, sandboxing</td></tr><tr><td><strong>L5</strong></td><td>Session Hijacking</td><td>Stealing valid session tokens</td><td>Weak session tokens, timeouts</td><td>Steals active sessions to impersonate users (e.g., stealing cookies via XSS or MITM)</td><td>HTTPS, Secure cookies, MFA</td></tr><tr><td></td><td>SSL Stripping</td><td>Downgrading HTTPS to HTTP via MITM</td><td>Lack of HSTS, insecure redirects</td><td>Forces HTTPS→HTTP to intercept plaintext data (e.g., evil-twin Wi-Fi attacks)</td><td>HSTS (HTTP Strict Transport Security), Certificate Pinning</td></tr><tr><td><strong>L4</strong></td><td>TCP SYN Flooding</td><td>Exploiting TCP handshake to exhaust resources</td><td>TCP handshake design flaw</td><td>Exhausts server TCP pools, causing service outages (e.g., volumetric DDoS)</td><td>SYN cookies, Firewall rules</td></tr><tr><td></td><td>UDP Flooding</td><td>Sending high-volume UDP packets to overwhelm services</td><td>Stateless nature of UDP</td><td>Exploits stateless UDP to flood services via reflection attacks (e.g., Mirai botnet’s DNS amplification attacks)</td><td>Rate limiting, DDoS protection (e.g., scrubbing centers)</td></tr><tr><td><strong>L3</strong></td><td>ICMP Flooding</td><td>Overwhelming a target with ping requests (DDoS)</td><td>No rate limiting on ICMP replies</td><td>DDoS attacks overwhelm bandwidth/resources (e.g., Smurf attacks using amplified ICMP replies)</td><td>ICMP rate limiting, Network filtering</td></tr><tr><td></td><td>IP Spoofing</td><td>Forging source IP headers to impersonate trusted hosts</td><td>Lack of IP source validation</td><td>Masquerading as trusted IPs to bypass ACLs or launch reflected attacks (e.g., NTP amplification)</td><td>BCP38 (RFC 2827), Ingress filtering</td></tr><tr><td><strong>L2</strong></td><td>ARP Spoofing (MITM)</td><td>Actively poisoning ARP tables to redirect traffic</td><td>Lack of ARP authentication</td><td>Attackers redirect or monitor traffic within a local network (e.g., stealing session cookies)</td><td>Dynamic ARP Inspection (DAI), VPNs</td></tr><tr><td></td><td>MAC Flooding</td><td>Flooding switches with fake MAC addresses</td><td>Switch CAM table limitations</td><td>Overwhelms switches to force open ports, enabling sniffing (e.g., CAM table overflow attacks)</td><td>Port security, MAC limiting</td></tr><tr><td><strong>L1</strong></td><td>Sniffing</td><td>Passive interception of unencrypted traffic</td><td>Unencrypted transmissions</td><td>Unauthorized data capture via exposed cables/Wi-Fi (e.g., stealing credentials from cleartext traffic)</td><td>Encryption (e.g., WPA3, MACsec)</td></tr><tr><td></td><td>Cable Tapping</td><td>Physically splicing or tapping network cables</td><td>Lack of physical security</td><td>Attacker physically taps fiber/copper lines to intercept data (common in espionage)</td><td>Tamper-evident seals, Fiber-optic monitoring (OTDR), Secure cabling conduits</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="73.265625"></th><th width="120.29296875"></th><th width="130.94921875"></th><th></th><th></th><th></th></tr></thead><tbody><tr><td><strong>OSI Layer</strong></td><td><strong>Attack Type/Threat</strong></td><td><strong>Attack Technique</strong></td><td><strong>Vulnerability Exploited</strong></td><td><strong>Risk Scenario</strong></td><td><strong>Mitigation</strong></td></tr><tr><td><strong>L7</strong></td><td>DNS Spoofing</td><td>Corrupting DNS cache to redirect users</td><td>Unvalidated DNS responses</td><td>Redirects users to malicious sites (e.g., fake banking portals)</td><td>DNSSEC, DoH/DoT (DNS over HTTPS/TLS)</td></tr><tr><td></td><td>SQL Injection</td><td>Injecting malicious SQL queries into input fields</td><td>Poor input validation, lack of parameterized queries</td><td>Bypasses authentication or exfiltrates DB data (e.g., <code>' OR 1=1 --</code> attacks)</td><td>Input validation, prepared statements, WAF (Web Application Firewall)</td></tr><tr><td><strong>L6</strong></td><td>Phishing</td><td>Social engineering to steal credentials</td><td>Human trust, lack of training</td><td>Tricks users into revealing credentials (e.g., fake login pages or malicious attachments)</td><td>User education, Email filtering (DMARC)</td></tr><tr><td></td><td>Malicious File Uploads</td><td>Uploading files with hidden exploits</td><td>Insufficient file type verification, lack of sandboxing</td><td>Uploads malware disguised as documents (e.g., PDFs with embedded exploits, Word files delivering Emotet or Locky)</td><td>File type verification, malware scanning, sandboxing</td></tr><tr><td><strong>L5</strong></td><td>SSL Stripping</td><td>Downgrading HTTPS to HTTP via MITM</td><td>Lack of HSTS, insecure redirects</td><td>Forces HTTPS→HTTP to intercept plaintext data (e.g., evil-twin Wi-Fi attacks)</td><td>HSTS, HTTPS Redirection &#x26; Secure Cookies, Certificate Pinning</td></tr><tr><td></td><td>Session Hijacking</td><td>Stealing valid session tokens</td><td>Weak session tokens, timeouts</td><td>Steals active sessions to impersonate users (e.g., stealing cookies via XSS or MITM)</td><td>Secure Session Management, Secure Cookie Attributes, MFA</td></tr><tr><td><strong>L4</strong></td><td>TCP SYN Flooding</td><td>Exploiting TCP handshake to exhaust resources</td><td>TCP handshake design flaw</td><td>Exhausts server TCP pools, causing service outages (e.g., volumetric DDoS)</td><td>SYN cookies, Firewall rules</td></tr><tr><td></td><td>UDP Flooding</td><td>Sending high-volume UDP packets to overwhelm services</td><td>Stateless nature of UDP</td><td>Exploits stateless UDP to flood services via reflection attacks (e.g., Mirai botnet’s DNS amplification attacks)</td><td>Rate limiting, DDoS protection (e.g., scrubbing centers)</td></tr><tr><td><strong>L3</strong></td><td>ICMP Flooding</td><td>Overwhelming a target with ping requests (DDoS)</td><td>No rate limiting on ICMP replies</td><td>DDoS attacks overwhelm bandwidth/resources (e.g., Smurf attacks using amplified ICMP replies)</td><td>ICMP rate limiting, Network filtering</td></tr><tr><td></td><td>IP Spoofing</td><td>Forging source IP headers to impersonate trusted hosts</td><td>Lack of IP source validation</td><td>Masquerading as trusted IPs to bypass ACLs or launch reflected attacks (e.g., NTP amplification)</td><td>BCP38 (RFC 2827), Ingress filtering</td></tr><tr><td><strong>L2</strong></td><td>ARP Spoofing (MITM)</td><td>Actively poisoning ARP tables to redirect traffic</td><td>Lack of ARP authentication</td><td>Attackers redirect or monitor traffic within a local network (e.g., stealing session cookies)</td><td>Dynamic ARP Inspection (DAI), VPNs</td></tr><tr><td></td><td>MAC Flooding</td><td>Flooding switches with fake MAC addresses</td><td>Switch CAM table limitations</td><td>Overwhelms switches to force open ports, enabling sniffing (e.g., CAM table overflow attacks)</td><td>Port security, MAC limiting</td></tr><tr><td><strong>L1</strong></td><td>Sniffing</td><td>Passive interception of unencrypted traffic</td><td>Unencrypted transmissions</td><td>Unauthorized data capture via exposed cables/Wi-Fi (e.g., stealing credentials from cleartext traffic)</td><td>Encryption (e.g., WPA3, MACsec)</td></tr><tr><td></td><td>Cable Tapping</td><td>Physically splicing or tapping network cables</td><td>Lack of physical security</td><td>Attacker physically taps fiber/copper lines to intercept data (common in espionage)</td><td>Tamper-evident seals, Fiber-optic monitoring (OTDR), Secure cabling conduits</td></tr></tbody></table>
 
 ### Explanation of threat scenarios and mitigation
 
@@ -214,10 +214,74 @@ Attackers upload harmful files (e.g., documents, scripts, executables) to a syst
 
 ***
 
-**Layer 5 (Session Layer):**
+**SSL Stripping (L5)**
 
-* **SSL Stripping** exploits insecure HTTP fallbacks, making HSTS and certificate pinning critical defenses.
-* **Session Hijacking** is mitigated by secure session management (e.g., short-lived tokens, MFA).
+SSL Stripping (also known as HTTP Downgrade attacks) is a man-in-the-middle (MitM) attack that exploits the common practice of websites offering both secure (HTTPS) and insecure (HTTP) access. The attacker intercepts the initial, unencrypted connection from a user to a website and manipulates the traffic to force a persistent HTTP connection, stripping away the SSL/TLS encryption. This allows the attacker to:
+
+* **Eavesdrop on all communication** between the user and the website, capturing sensitive data like login credentials, personal information, and session cookies.
+* **Monitor and modify all data** passing through the connection in plaintext.
+* **Impersonate the legitimate website** while the user believes they are browsing normally.
+
+**Example of SSL Stripping:**
+
+1. **The Normal, Secure Connection:**\
+   A user types `http://example.com` into their browser. The server typically responds with a redirect (301/302) to `https://example.com`, ensuring all subsequent communication is encrypted and secure.
+2. **The Hacker’s Trick (SSL Stripping):**\
+   An attacker on the same network (e.g., public Wi-Fi) positions themselves between the user and the website.
+   * The user sends a request to `http://example.com`.
+   * The attacker intercepts this request and forwards it to the real server.
+   * The real server responds with a redirect to `https://example.com`.
+   * The attacker intercepts this redirect, prevents it from reaching the user, and instead continues to communicate with the _server_ over HTTPS.
+   * The attacker then returns a stripped-down, insecure HTTP version of the site to the _user_, acting as a proxy.
+   * The user's browser now displays `http://example.com` in the address bar, and all their traffic passes through the attacker in plaintext, completely unaware of the breach.
+
+**Mitigation**
+
+1. **HTTP Strict Transport Security (HSTS):**\
+   This is a critical web server header that instructs browsers to _only_ connect to the site using HTTPS for a specified period.
+   * The server sends a header: `Strict-Transport-Security: max-age=31536000; includeSubDomains`
+   * Upon receiving this, a compliant browser will automatically convert any `http://` request to `https://` for the given domain before sending it, defeating the downgrade attempt.
+   * The `includeSubDomains` directive extends this protection to all subdomains.
+   * **Preloading:** Sites can be submitted to the HSTS preload list, a list built into all major browsers that automatically uses HTTPS for the site even on the very first visit.
+2. **Server-Side HTTPS Redirection & Secure Cookies:**
+   * Web servers should be configured to permanently redirect all HTTP requests to their HTTPS counterparts.
+   * Session cookies must be set with the `Secure` attribute, ensuring they are only sent over HTTPS connections and never in plaintext via HTTP.
+3. **Certificate Pinning:**\
+   This technique hardcodes (or pins) the expected public key or certificate of a website within the application itself (common in mobile apps).
+   * When the app connects to the server, it verifies that the server's certificate matches one of the pinned certificates.
+   * Even if an attacker presents a valid certificate from a trusted Certificate Authority (CA) during a MitM attack, the pinning check will fail because it doesn't match the specific pinned certificate, and the connection will be terminated.
+
+**Session Hijacking (L5)**
+
+Session Hijacking is an attack where an attacker steals a user's unique session identifier (session token or cookie) to impersonate that user and gain unauthorized access to the web application. The attacker takes over the active session, effectively becoming authenticated as the victim, which can lead to:
+
+* **Identity theft** and unauthorized access to the victim's account and privileges.
+* **Theft of sensitive personal or financial data** stored in the user's account.
+* **Fraudulent actions** performed on the user's behalf (e.g., transferring funds, making purchases).
+
+**Example of Session Hijacking:**
+
+1. **The Normal Session:**\
+   After a user successfully logs into `bank.com`, the server generates a unique session token (e.g., `SESSID=abc123`) and sends it to the user's browser in a cookie. The browser automatically includes this cookie with every subsequent request to `bank.com` to prove its authenticated identity.
+2. **The Hacker’s Trick (Session Hijacking):**\
+   An attacker can steal the `SESSID` token through various means:
+   * **Network Eavesdropping:** If any part of the communication uses HTTP (not HTTPS), the token is sent in plaintext and can be sniffed from the network.
+   * **Cross-Site Scripting (XSS):** The attacker injects malicious JavaScript into a web page. When the victim views the page, the script executes in their browser and steals their session cookie.
+   * **Predictable Tokens:** If the application uses weak, predictable algorithms to generate session tokens, an attacker can guess a valid token. Once the attacker has the token `abc123`, they simply place it into their own browser's cookie for `bank.com`. The server cannot distinguish between the attacker's request and the victim's legitimate request, granting the attacker full access to the victim's account.
+
+**Mitigation**
+
+1. **Secure Session Management:**
+   * **Use Long, Random, Unpredictable Session Tokens:** Tokens should be generated using a cryptographically secure random number generator.
+   * **Implement Short Session Timeouts:** Automatically invalidate sessions after a short period of user inactivity. This limits the window of opportunity for an attacker to use a stolen token.
+   * **Provide Logout Functionality:** Logout should immediately invalidate the session token on the server.
+   * **Regenerate Session Tokens:** The application should invalidate the old session ID and issue a new one after login and any other major privilege change (e.g., password change, role elevation). This prevents session fixation attacks.
+2. **Secure Cookie Attributes:**
+   * `Secure`: Ensures the session cookie is only sent over encrypted HTTPS connections.
+   * `HttpOnly`: Prevents the cookie from being accessed by client-side JavaScript, mitigating theft via XSS attacks.
+   * `SameSite=Strict` (or `Lax`): Controls when cookies are sent with cross-site requests, protecting against Cross-Site Request Forgery (CSRF) and some session hijacking techniques.
+3. **Multi-Factor Authentication (MFA):**\
+   MFA adds a second layer of defense. Even if a session token is stolen, the attacker would still need to bypass the second factor (e.g., a code from a phone app) to access sensitive functionality or re-authenticate, rendering the stolen token largely useless.
 
 ***
 

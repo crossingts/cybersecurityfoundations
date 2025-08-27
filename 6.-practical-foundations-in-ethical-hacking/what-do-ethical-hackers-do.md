@@ -86,7 +86,7 @@ Ethical hacking may be a contracted outside service. An ethical hacker may be an
 
 Several major regulatory frameworks (such as HIPAA, PCI DSS, SSAE 16, FFIEC, and GLBA) require businesses to perform penetration testing and vulnerability scanning periodically.
 
-Vulnerability Scan and Penetration Test Comparison (Rodger, 2013, p. 49)
+**Vulnerability Scan and Penetration Test Comparison (Rodger, 2013, p. 49)**
 
 |                         | Vulnerability Scan                                                                    | Penetration Test                                                         |
 | ----------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |

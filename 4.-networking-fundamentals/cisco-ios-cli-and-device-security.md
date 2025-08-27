@@ -28,19 +28,15 @@ Cisco IOS is the operating system used on Cisco devices. IOS stands for Internet
 
 ### Connecting to a Cisco device via the console port
 
-There are a couple of methods to connect to a Cisco device to configure it with the CLI. First, remotely via [Telnet or SSH](https://itnetworkingskills.wordpress.com/2023/04/12/how-configure-ssh-cisco-devices/). Second, locally via the console port. Here we will discuss connecting via the console port.
-
-Connecting to a Cisco device via the console port typically involves bringing your laptop to the device and connecting to the console port of the device.
+There are a couple of methods to connect to a Cisco device to configure it with the CLI. First, remotely via [Telnet or SSH](https://itnetworkingskills.wordpress.com/2023/04/12/how-configure-ssh-cisco-devices/). Second, locally via the console port. Here we will discuss connecting via the console port. Connecting to a Cisco device via the console port typically involves bringing your laptop to the device and connecting to the console port of the device.
 
 This is a Cisco Catalyst switch. Notice the two console ports: one is an RJ45 (Registered Jack), the other is a USB Mini-B.&#x20;
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/a0e21-rj45-cisco-catalyst.webp?w=1051" alt="RJ45-cisco-catalyst" height="676" width="1051"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Intro to the CLI | Day 4)</p></figcaption></figure>
 
-Let’s say we’re going to connect to the RJ45 port. We will need the proper cable. A rollover cable can be used to connect to the RJ45 console port on a Cisco device.
+Let’s say we’re going to connect to the RJ45 port. We will need the proper cable. A rollover cable (console cable) can be used to connect to the RJ45 console port on a Cisco device. A rollover cable has on one end an RJ45 connector and on the other end a DB9 connector. Most modern laptops do not have a serial port a DB9 connector can be plugged into. So you might need an adapter to connect to a USB port on a laptop.
 
-A rollover cable has on one end an RJ45 connector and on the other end a DB9 connector. Most modern laptops do not have a serial port a DB9 connector can be plugged into. So you might need an adapter to connect to a USB port on a laptop.
-
-This image shows the wiring in a rollover cable. Like in an Ethernet UTP cable there are eight pins on each end.
+This image shows the wiring in a rollover cable. Like in an Ethernet UTP cable there are eight pins on each end. Pin 1 on one end connects to Pin 8 on the other, Pin 2 to Pin 7, Pin 3 to Pin 6, and so on.
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/52dad-rollover-cable-wiring.webp?w=1201" alt="rollover-cable-wiring" height="574" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Intro to the CLI | Day 4)</p></figcaption></figure>
 
@@ -48,9 +44,7 @@ So we’ve connected a laptop/computer to a Cisco Catalyst device via the device
 
 ### Terminal Emulator (PuTTY)
 
-Once you have connected your computer to the device you can access the CLI using a Terminal Emulator.
-
-PuTTY is a popular choice. You can get PuTTY at[ ](https://www.google.com/url?q=http://putty.org\&sa=D\&source=editors\&ust=1694043778222797\&usg=AOvVaw0afc3nKW8nyq0IeiHdARxL)[putty.org](https://www.google.com/url?q=http://putty.org\&sa=D\&source=editors\&ust=1694043778222916\&usg=AOvVaw3KVjZjjLvW7-QiamfJvmYx)
+Once you have connected your computer to the device you can access the CLI using a Terminal Emulator. PuTTY is a popular choice. You can get PuTTY at[ ](https://www.google.com/url?q=http://putty.org\&sa=D\&source=editors\&ust=1694043778222797\&usg=AOvVaw0afc3nKW8nyq0IeiHdARxL)[putty.org](https://www.google.com/url?q=http://putty.org\&sa=D\&source=editors\&ust=1694043778222916\&usg=AOvVaw3KVjZjjLvW7-QiamfJvmYx)
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/047a8-putty-cli.webp?w=1201" alt="PuTTY-CLI" height="529" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Intro to the CLI | Day 4)</p></figcaption></figure>
 
@@ -94,7 +88,7 @@ Privileged EXEC mode provides complete access to view the device’s configurati
 
 But it is not the mode in which you change the configuration.
 
-### [Cisco IOS CLI shortcuts](https://content.cisco.com/chapter.sjs?uri=/searchable/chapter/content/en/us/td/docs/ios-xml/ios/fundamentals/configuration/15mt/fundamentals-15-mt-book/cf-cli-basics.html.xml)
+### Cisco IOS CLI shortcuts
 
 A comparison of the commands available in user mode and privileged EXEC mode:
 
@@ -140,9 +134,20 @@ The shortest form of the enable command is en. The shortest for the exit command
 
 ### Command syntax conventions&#x20;
 
-Cisco IOS Command Reference uses certain conventions to present command syntax.
+Cisco IOS Command Reference uses certain conventions to present command syntax. Cisco IOS documentation uses the following command syntax conventions:
 
-<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/9921d-command-syntax-conventions-7.webp?w=1201" alt="Command-syntax-conventions" height="646" width="1201"><figcaption><p>Cisco IOS Configuration Fundamentals Command Reference, Cisco Systems, Inc., 2010</p></figcaption></figure>
+| Convention    | Description                                                                                                                                 |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| **bold**      | Bold text indicates commands and keywords that you enter as shown.                                                                          |
+| _italic_      | Italic text indicates arguments for which you supply values.                                                                                |
+| **\[x]**      | Square brackets enclose an optional keyword or argument.                                                                                    |
+| ...           | An ellipsis (three consecutive nonbolded periods without spaces) after a syntax element indicates that the element can be repeated.         |
+| \|            | A vertical line, called a pipe, that is enclosed within braces or square brackets indicates a choice within a set of keywords or arguments. |
+| \[x \| y]     | Square brackets enclosing keywords or arguments separated by a pipe indicate an optional choice.                                            |
+| {x \| y}      | Braces enclosing keywords or arguments separated by a pipe indicate a required choice.                                                      |
+| \[x {y \| z}] | Braces and a pipe within square brackets indicate a required choice within an optional element.                                             |
+
+Cisco IOS Configuration Fundamentals Command Reference, Cisco Systems, Inc., 2010
 
 ### Global configuration mode
 
@@ -472,35 +477,3 @@ Note: The resources cited below (in the “Key references” section of this doc
 [Destiny Erhabor. (Oct. 18, 2022). Linux Command Line Tutorial – How to Use Common Terminal Commands (freecodecamp.org)](https://www.freecodecamp.org/news/linux-command-line-tutorial/)
 
 [Sean Douglas. (Nov 17, 2022). Top 5 Network Admin Cisco Commands Cheat Sheet (pluralsight)](https://www.pluralsight.com/blog/it-ops/cisco-commands-for-network-admin)
-
-### Related content
-
-[Automation and programmability – introduction](https://www.linkedin.com/pulse/automation-programmability-introduction-baha-mnaxc/)
-
-[CCNA configurations portal](https://www.linkedin.com/pulse/ccna-configurations-portal-baha-abu-shaqra-phd-dti-uottawa-/)
-
-[CCNA math portal](https://www.linkedin.com/pulse/ccna-math-portal-baha-abu-shaqra-phd-dti-uottawa-/)
-
-[CCNA Security Fundamentals portal](https://www.linkedin.com/pulse/ccna-security-fundamentals-portal-baha-abu-shaqra-phd-dti-uottawa-/)
-
-[CCNA wireless networking portal](https://www.linkedin.com/pulse/ccna-wireless-networking-portal-baha-abu-shaqra-phd-dti-uottawa-/)
-
-[Compliance frameworks and industry standards](https://dti-techs.gitbook.io/cybersecurity-grc)
-
-[Coursera’s top courses](https://academicbullying.wordpress.com/2023/10/07/coursera-courses-quiz-answers/)
-
-[How to break into information security](https://www.linkedin.com/pulse/how-break-information-security-baha-abu-shaqra-phd/)
-
-[How to configure SSH on Cisco devices](https://itnetworkingskills.wordpress.com/2023/04/12/how-configure-ssh-cisco-devices/)
-
-[IT career paths – everything you need to know](https://dti-techs.gitbook.io/foundations-in-cybersecurity)
-
-[Networking Fundamentals](https://dti-techs.gitbook.io/networking-fundamentals/)
-
-[Networking (IT)](https://professionaludev.wordpress.com/networking-it/)
-
-[What is the Google Cybersecurity Professional Certificate?](https://professionaludev.wordpress.com/2023/08/16/what-is-the-google-cybersecurity-professional-certificate/)
-
-[What is the Google Data Analytics certification?](https://professionaludev.wordpress.com/2023/07/02/what-is-the-google-data-analytics-certification/)
-
-[DTI Courses](https://dtitechs.wordpress.com/)

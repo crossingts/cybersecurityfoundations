@@ -16,12 +16,12 @@
 
 [Comparing TCP to UDP](comparing-tcp-to-udp.md)
 
-[How to configure standard ACLs on Cisco routers](https://itnetworkingskills.wordpress.com/2023/04/11/how-configure-standard-acls-cisco-routers/)
+[How to configure standard ACLs on Cisco routers](how-to-configure-standard-acls-on-cisco-routers.md)
 
-[The role of DNS within the network](https://itnetworkingskills.wordpress.com/2023/04/11/role-dns-domain-name-system-network/)
+[The role of DNS within the network](the-role-of-dns-within-the-network.md)
 
-[Configuring and verifying DHCP client and relay](https://itnetworkingskills.wordpress.com/2023/04/11/configure-verify-dhcp-client-relay/)
+[Configuring and verifying DHCP client and relay](configuring-and-verifying-dhcp-client-and-relay.md)
 
-[Static NAT configuration](https://itnetworkingskills.wordpress.com/2023/04/12/static-nat-configuration/)
+[Static NAT configuration](static-nat-configuration.md)
 
 ✅ OSI model layers and security threats

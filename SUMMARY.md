@@ -49,6 +49,7 @@
   * [How to configure standard ACLs on Cisco routers](4.-networking-fundamentals/alternative-chapter-topics/how-to-configure-standard-acls-on-cisco-routers.md)
   * [The role of DNS within the network](4.-networking-fundamentals/alternative-chapter-topics/the-role-of-dns-within-the-network.md)
   * [Configuring and verifying DHCP client and relay](4.-networking-fundamentals/alternative-chapter-topics/configuring-and-verifying-dhcp-client-and-relay.md)
+  * [Static NAT configuration](4.-networking-fundamentals/alternative-chapter-topics/static-nat-configuration.md)
 * [Network devices and their functions](4.-networking-fundamentals/network-devices-and-their-functions/README.md)
   * [Repeaters vs hubs vs bridges vs switches](4.-networking-fundamentals/network-devices-and-their-functions/repeaters-vs-hubs-vs-bridges-vs-switches.md)
   * [Lesson quiz: Network devices](4.-networking-fundamentals/network-devices-and-their-functions/lesson-quiz-network-devices.md)

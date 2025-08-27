@@ -412,17 +412,112 @@ IP Spoofing is a foundational attack for many DDoS techniques (e.g., SYN floods 
 
 ***
 
-**Layer 2 (Data Link Layer):**
+**ARP Spoofing (L2)**
 
-* **ARP Spoofing** enables MITM attacks—DAI (Dynamic ARP Inspection) and encrypted traffic (VPNs) are key defenses.
-* **MAC Flooding** exploits switch CAM tables—port security (e.g., limiting MACs per port) prevents overflow.
+ARP Spoofing (or ARP Poisoning) is a link-layer attack where an attacker sends forged Address Resolution Protocol (ARP) messages—more specifically, gratuitous ARP reply messages—onto a local area network (LAN). This malicious activity corrupts the ARP caches of other devices on the network, allowing the attacker to intercept, modify, or block data frames between two victims—a classic Man-in-the-Middle (MitM) attack on the local subnet.
+
+**Example of ARP Spoofing:**
+
+1. **The Normal ARP Process:**
+   * Device A (`192.168.1.10`) wants to send data to Device B (`192.168.1.20`).
+   * Device A broadcasts an ARP Request: "Who has IP `192.168.1.20`? Tell `192.168.1.10`."
+   * Device B responds with a unicast ARP Reply: "I am `192.168.1.20`, my MAC address is `BB:BB:BB:BB:BB:BB`."
+   * Device A stores this IP-to-MAC mapping in its ARP cache and sends frames directly to that MAC address.
+2. **The Hacker’s Trick (ARP Spoofing):**\
+   The attacker (`192.168.1.99`, MAC `CC:CC:CC:CC:CC:CC`) aims to intercept traffic between A and B.
+   * The attacker sends a unsolicited ARP Reply (a "gratuitous ARP") to Device A, claiming: "I am `192.168.1.20`, my MAC address is `CC:CC:CC:CC:CC:CC`."
+   * Simultaneously, the attacker sends a gratuitous ARP to Device B, claiming: "I am `192.168.1.10`, my MAC address is `CC:CC:CC:CC:CC:CC`."
+   * Both victims update their ARP caches with these incorrect mappings. Device A now sends traffic destined for B to the attacker's MAC. The attacker can then forward the traffic to B (to avoid detection) after inspecting or modifying it. All communication between A and B now flows through the attacker.
+
+**Mitigation**
+
+1. **Dynamic ARP Inspection (DAI):**\
+   This is the primary technical defense and is implemented on managed network switches.
+   * **How it works:** DAI is a security feature that validates ARP packets in a network. It intercepts all ARP requests and replies on the network and checks them against a trusted database—the DHCP Snooping binding table—which contains valid IP-to-MAC address bindings for devices that obtained an IP via DHCP.
+   * **Result:** Any ARP packet with an invalid IP-to-MAC binding (like an attacker claiming to be another device) is identified as malicious and immediately dropped. The switch can also shut down the port and alert the administrator. DAI effectively prevents ARP cache poisoning on the protected network.
+2. **Virtual Private Networks (VPNs):**
+   * **How it works:** A VPN encrypts all traffic from a device to a secure endpoint (e.g., a corporate server or a VPN provider) located outside the local network. This encryption creates a secure "tunnel" through the local LAN.
+   * **Result:** Even if an attacker successfully performs ARP spoofing and intercepts the data frames, the content of the communication remains encrypted and unreadable. The attacker can see that communication is happening, but cannot decipher or modify the payload in a meaningful way. VPNs are a crucial defense for sensitive communications on untrusted networks (e.g., public Wi-Fi).
+
+**MAC Flooding (L2)**
+
+A MAC Flooding attack targets network switches in an attempt to compromise their intended functionality and force them to behave like a network hub (broadcasting all traffic to all ports). The attacker overwhelms the switch's Content Addressable Memory (CAM) table, which is a finite-sized hardware table that stores MAC address-to-port mappings.
+
+**Example of MAC Flooding:**
+
+1. **The Normal Switch Operation:**\
+   A switch intelligently forwards traffic by learning which MAC addresses are connected to which physical ports.
+   * When a device sends a frame, the switch notes the source MAC address and the port it came in on, populating its CAM table.
+   * When a frame needs to be sent to a specific MAC address, the switch looks it up in the CAM table and forwards the frame only out of the correct port. This provides network segmentation and security.
+2. **The Hacker’s Trick (MAC Flooding):**\
+   The attacker uses a tool to generate a massive number of Ethernet frames in rapid succession, each containing a different, random fake source MAC address.
+   * The switch receives these frames and tries to learn each new source MAC address, adding every single one to its limited CAM table.
+   * Once the CAM table is completely full of these fake entries, the switch can no longer learn any legitimate MAC addresses. To handle subsequent traffic it does not have a mapping for, the switch enters a "fail-open" mode.
+   * In this state, the switch acts like a hub, **broadcasting unknown unicast traffic out of every port** except the source port. This allows the attacker to connect to any port on the switch and capture all broadcasted traffic, potentially sniffing sensitive data from other hosts.
+
+**Mitigation**
+
+1. **Port Security:**\
+   This is the fundamental switch-based security feature designed explicitly to prevent MAC flooding and other Layer 2 attacks.
+   * **How it works:** Port Security allows an administrator to configure a switch port with specific rules:
+     * **MAC Limiting:** Set a maximum number of MAC addresses that can be learned on a single port (e.g., 1 for an access port, a few more for a port connected to a VoIP phone and computer).
+     * **Static MAC Assignment:** Specify the exact MAC address(es) that are allowed to use a port.
+     * **Violation Actions:** Define what happens when a violation occurs (e.g., an attacker connects or tries to flood MACs). Actions include **shutdown** (hard-disabling the port), **restrict** (dropping packets and sending an alert), or **protect** (silently dropping packets from unauthorized MACs).
+   * **Result:** When an attacker starts flooding fake MACs on a secured port, the violation limit is quickly exceeded. The switch triggers the configured action (e.g., shutting down the port), instantly neutralizing the attack and protecting the rest of the network.
+2. **MAC Limiting (as part of Port Security):**\
+   While often used synonymously, MAC limiting is the specific action within the broader Port Security feature set. Configuring a low limit (like 1-5 addresses) on access ports is a best practice that strictly enforces the principle of "one user, one port, a few devices," making a flooding attack impossible to execute without triggering a security response.
 
 ***
 
-**Layer 1 (Physical Layer):**
+**Sniffing (Eavesdropping) (L1)**
 
-* **Sniffing** exploits unencrypted transmissions—modern encryption (WPA3, MACsec) is critical for mitigation. Use end-to-end encryption (e.g., HTTPS, VPNs) even if Layer 1 is compromised.
-* **Cable Tapping** is a high-skill, high-reward attack (e.g., state-sponsored espionage). Physical safeguards like tamper-proof infrastructure and optical monitoring (OTDR) are essential. Employ optical time-domain reflectometers (OTDR) to detect fiber breaches, and restrict physical access to network junctions.
+Sniffing (or packet sniffing/eavesdropping) is the act of capturing and monitoring data as it travels across a network. Sniffing exploits unencrypted transmissions. In its benign form, sniffing is a crucial tool for network administrators to diagnose problems. However, when used maliciously, it becomes a potent attack to harvest unprotected data directly from the physical transmission medium, such as radio waves (Wi-Fi) or electrical signals in a cable.
+
+**Example of Malicious Sniffing:**
+
+1. **The Normal Network Communication:**
+   * A user enters their credentials on a website that uses HTTP (not HTTPS).
+   * Their computer assembles the data into frames and packets, which are converted into electrical signals (Ethernet) or radio waves (Wi-Fi) and transmitted onto the physical medium.
+   * Network devices like switches are designed to forward these signals only to the intended recipient.
+2. **The Hacker’s Trick (Sniffing):**\
+   An attacker configures a device's network interface card (NIC) in "promiscuous mode," instructing it to capture all traffic it sees on the medium, not just traffic addressed to it.
+   * **On a Shared Medium (Hubs/Wi-Fi):** In old networks using hubs or in a default Wi-Fi setting, all devices physically receive all traffic. The attacker can easily capture everything broadcasted.
+   * **On a Switched Network:** While switches segment traffic, an attacker can use techniques like ARP spoofing (see L2) to redirect traffic to their machine, or they can gain access to a mirror/SPAN port configured for monitoring.
+   * The sniffer software (e.g., Wireshark) captures the raw data and reassembles the packets. If the data is not encrypted, the attacker can directly read the usernames, passwords, and any other information sent in plaintext.
+
+**Mitigation**
+
+1. **Encryption:**\
+   Encryption is the absolute and primary defense against sniffing. If an attacker captures the data but it is encrypted, the captured packets are useless without the encryption key.
+   * **WPA3 (Wi-Fi Protected Access 3):** For wireless networks, WPA3 is the current security standard. It provides robust encryption for all wireless traffic, preventing eavesdroppers from decrypting data even if they capture the radio transmissions. It also offers forward secrecy, meaning past traffic cannot be decrypted if the password is later compromised.
+   * **MACsec (IEEE 802.1AE):** For wired Ethernet networks, MACsec provides point-to-point encryption at the data link layer between devices (e.g., between a user's computer and the switch, or between two switches). It encrypts all traffic on the wire, securing it against physical tapping on the LAN segment.
+   * **Upper-Layer Encryption (HTTPS, SSH, VPNs):** Application and transport-layer encryption like HTTPS (TLS) for web traffic, SSH for remote access, and VPNs for creating encrypted tunnels are critical. This strategy, often called "end-to-end encryption," protects data even if the underlying physical or network layers are compromised.
+
+**Cable Tapping (L1)**
+
+Cable Tapping is a physical intrusion attack (e.g., state-sponsored espionage) where an attacker gains unauthorized access to the network's physical transmission medium—the cables themselves—to intercept or monitor data signals. This is a direct, physical form of eavesdropping that bypasses all logical network security controls.
+
+**Example of Cable Tapping:**
+
+1. **The Normal Physical Link:**\
+   Data travels securely within a cable (e.g., copper Ethernet or fiber-optic) running through a building's walls, ceilings, or conduits. The integrity of the physical path is assumed.
+2. **The Hacker’s Trick (Tapping):**\
+   An attacker with physical access gains the ability to intercept the signal.
+   * **Copper Cable Tapping:** For copper-based cables (like Ethernet), an attacker can use inductive clamps that read the electromagnetic emissions from the cable without making physical contact, or they can physically splice into the line to create a direct connection.
+   * **Fiber-Optic Tapping:** Tapping fiber is more difficult but possible. It requires bending the cable to force a small amount of light to leak out, which can be detected and read by a photodetector, or by cutting and splicing the cable to insert a splitter that diverts a portion of the light signal to the attacker's equipment.
+
+**Mitigation**
+
+1. **Tamper-Evident Seals and Secure Conduits:**
+   * **Tamper-Evident Seals:** Use these on access panels, wiring closets, server room doors, and junction boxes. These seals provide a clear, visible indication if a physical area or cabinet has been accessed without authorization.
+   * **Secure Conduits and Cable Trays:** Run all network cables through locked conduits, ceilings with limited access, or metal cable trays with locks. This prevents casual access and makes it exceedingly difficult for an attacker to reach the cables without being detected.
+2. **Fiber-Optic Monitoring (OTDR):**
+   * **How it works:** An Optical Time-Domain Reflectometer (OTDR) is a device that can be used to monitor the health and integrity of fiber-optic cables. It sends a pulse of light down the fiber and analyzes the light that is reflected back.
+   * **Result:** Any attempt to tap the fiber—whether by bending, cutting, or splicing—will create a unique "signature" or fault in the reflected light that the OTDR can detect. This allows for continuous monitoring and immediate alerts for any physical tampering on the fiber link.
+3. **Physical Security and Access Controls:**\
+   The first line of defense is strict physical security. This includes using **locked server rooms and wiring closets** with access restricted via keycards, logs, or biometrics, and implementing **surveillance cameras** to monitor critical network infrastructure areas. Without physical access, a cable tapping attack cannot be performed.
+
+***
 
 ### Key threat characteristics and mitigation strategies
 

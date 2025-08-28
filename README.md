@@ -55,7 +55,7 @@ This chapter covers key aspects of cybersecurity fundamentals, including foundat
 
 This chapter covers Governance, Risk, and Compliance as a risk management framework (RMF) and using RMFs such as NIST SP 800-37, NIST CSF, and ISO/IEC 27001 to align cybersecurity policy with business goals.
 
-4. [Chapter 4: Networking fundamentals](4.-networking-fundamentals/introduction-networking-fundamentals.md)
+4. [Chapter 4: Networking fundamentals](4.-networking-fundamentals/introduction-networking-fundamentals/)
 
 This chapter covers host to host communication across networks (how data flows through the network).
 

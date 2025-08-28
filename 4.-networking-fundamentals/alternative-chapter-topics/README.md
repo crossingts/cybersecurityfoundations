@@ -8,6 +8,8 @@
 
 ✅ Network protocols and their functions
 
+✅ Typing www.google.com into a web browser
+
 [Cisco IOS CLI and device security](cisco-ios-cli-and-device-security.md)
 
 [Connected and local routes](connected-and-local-routes.md)

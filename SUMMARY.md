@@ -39,8 +39,8 @@
 
 ## 4. Networking fundamentals
 
-* [Introduction - Networking fundamentals](4.-networking-fundamentals/introduction-networking-fundamentals.md)
-* [How data flow through the Internet](4.-networking-fundamentals/how-data-flow-through-the-internet.md)
+* [Introduction - Networking fundamentals](4.-networking-fundamentals/introduction-networking-fundamentals/README.md)
+  * [How data flow through the Internet](4.-networking-fundamentals/introduction-networking-fundamentals/how-data-flow-through-the-internet.md)
 * [Alternative chapter topics](4.-networking-fundamentals/alternative-chapter-topics/README.md)
   * [Cisco IOS CLI and device security](4.-networking-fundamentals/alternative-chapter-topics/cisco-ios-cli-and-device-security.md)
   * [Connected and local routes](4.-networking-fundamentals/alternative-chapter-topics/connected-and-local-routes.md)
@@ -52,12 +52,10 @@
   * [Static NAT configuration](4.-networking-fundamentals/alternative-chapter-topics/static-nat-configuration.md)
 * [Network devices and their functions](4.-networking-fundamentals/network-devices-and-their-functions/README.md)
   * [Repeaters vs hubs vs bridges vs switches](4.-networking-fundamentals/network-devices-and-their-functions/repeaters-vs-hubs-vs-bridges-vs-switches.md)
-  * [Lesson quiz: Network devices](4.-networking-fundamentals/network-devices-and-their-functions/lesson-quiz-network-devices.md)
   * [Lab: Getting started with Cisco Packet Tracer](4.-networking-fundamentals/network-devices-and-their-functions/lab-getting-started-with-cisco-packet-tracer.md)
+  * [Lesson quiz: Network devices](4.-networking-fundamentals/network-devices-and-their-functions/lesson-quiz-network-devices.md)
 * [The Open Systems Interconnection (OSI) model](4.-networking-fundamentals/the-open-systems-interconnection-osi-model.md)
 * [Host to host communication in networking](4.-networking-fundamentals/host-to-host-communication-in-networking.md)
-* [How switches facilitate communication](4.-networking-fundamentals/how-switches-facilitate-communication.md)
-* [How routers facilitate communication](4.-networking-fundamentals/how-routers-facilitate-communication.md)
 * [Network protocols and their functions](4.-networking-fundamentals/network-protocols-and-their-functions.md)
 * [Typing www.google.com into a web browser](4.-networking-fundamentals/typing-www.google.com-into-a-web-browser.md)
 * [OSI model layers and security threats](4.-networking-fundamentals/osi-model-layers-and-security-threats/README.md)

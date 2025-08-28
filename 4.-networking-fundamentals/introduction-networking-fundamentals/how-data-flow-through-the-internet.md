@@ -7,11 +7,9 @@ hidden: true
 
 # How data flow through the Internet
 
-This chapter has two main goals. First, this chapter explains what happens when someone types www.google.com into a web browser.&#x20;
+This chapter has two main goals. First, this chapter demystifies the underlying framework that makes networking possible. You will explore the core hardware, theoretical models like OSI, and essential protocols that work in concert to move data across a network. This knowledge culminates in a complete understanding of the journey a simple web request takes, tracing each step from the moment you type "www.google.com" into your browser until the page appears on your screen.
 
-Second, this chapter teaches configuration and verification of static routes and network services.
-
-
+Second, this chapter establishes the essential groundwork for building and securing a functional network. You will develop the necessary skills to configure and verify a router's core operational services, from implementing device security and establishing static routes to controlling traffic with ACLs. Furthermore, you will learn to integrate fundamental network services by configuring DHCP for dynamic addressing, DNS for name resolution, and NAT for internet connectivity, providing a comprehensive toolkit for modern network management.
 
 **\*book intro**&#x20;
 

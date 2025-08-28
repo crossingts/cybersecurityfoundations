@@ -75,11 +75,11 @@ There are many types of DoS attacks, such as TCP SYN flood, DHCP exhaustion atta
 
 The TCP SYN flood is a common type of DoS attack (often directed against ISPs) which exploits the TCP three-way handshake process used by TCP connections. The attacker likely spoofs their IP address, meaning the attacker uses a fake IP address, making this a spoofing attack. By spoofing the source IP address in the SYN, the malicious client causes the server to send the SYN-ACK to a falsified IP address – which will not send an ACK because it knows that it never sent a SYN. Or the malicious client can simply not send the expected ACK.
 
-The three-way handshake is SYN, SYN-ACK, and ACK. The attacker sends a large number of SYN packets to a target server. The target sends a SYN-ACK message in response to each SYN it receives. But the attacker never replies with the final ACK of the handshake.
+The three-way handshake is SYN, SYN-ACK, and ACK. The attacker sends a large number of SYN packets to a target server. The target server sends a SYN-ACK message in response to each SYN it receives. But the attacker never replies with the final ACK of the handshake.
 
 The target waits for the final ACK of each handshake, and the incomplete connections fill up the target’s TCP connection table. The incomplete connections will timeout and be removed from the table after a certain period of time, but the attacker continues sending SYN messages. This exhausts the server’s resources and prevents legitimate users from accessing it.
 
-In the end, the target is no longer able to make legitimate TCP connections because it has reached the maximum number of TCP connections it can maintain.&#x20;
+In the end, the target is no longer able to make legitimate TCP connections because it has reached the maximum number of TCP connections it can maintain.
 
 ```mermaid
 sequenceDiagram
@@ -89,7 +89,7 @@ sequenceDiagram
 
     Note over Attacker, Target Server: Phase 1: Attack Setup
     Attacker->>Target Server: SYN Packet (spoofed source IP)
-    Target Server->>Attacker: SYN-ACK Packet (to spoofed IP)
+    Target Server->>Nowhere: SYN-ACK Packet (to non-existent IP)
     Note right of Target Server: Half-open connection created<br/>Waits for final ACK
 
     Note over Attacker, Target Server: Phase 2: Flood Attack
@@ -107,13 +107,9 @@ sequenceDiagram
     Note over Target Server: Server State: Overwhelmed<br/>- Connection queue full<br/>- Memory exhausted<br/>- CPU overloaded<br/>- Legitimate traffic blocked
 ```
 
-<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/730e6-tcp-syn-flood-1.webp?w=1201" alt="TCP-SYN-flood" height="234" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Security Fundamentals | Day 48)</p></figcaption></figure>
-
 For each SYN message the attacker sends, the target puts an entry in its TCP connection table and sends a SYN-ACK message, then waits for an ACK to complete the connection. But the ACK never comes. The attacker keeps sending SYN messages, and the target keeps sending SYN-ACK messages. Then the target’s TCP connection table fills up, and the denial-of-service has been achieved.
 
-A much more powerful version of this attack type is the DDoS. In a distributed denial-of-service attack, the attacker infects many target computers with malware and uses the computers to initiate a denial-of-service attack such as a TCP SYN flood attack. The group of infected computers is called a botnet.
-
-The PCs infected with malware together start flooding the target with TCP SYN messages, so the target server is no longer able to respond to legitimate TCP connection requests.&#x20;
+A much more powerful version of this attack type is the DDoS. In a distributed denial-of-service attack, the attacker infects many target computers with malware and uses the computers to initiate a denial-of-service attack such as a TCP SYN flood attack. The group of infected computers is called a botnet. The PCs infected with malware together start flooding the target with TCP SYN messages, so the target server is no longer able to respond to legitimate TCP connection requests.&#x20;
 
 For mitigation of TCP SYN flood attacks, you would need methods that focus on managing the connection setup process itself. A layered approach combining these methods is most effective in mitigating TCP SYN flood attacks. Here are some common mitigation methods:
 

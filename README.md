@@ -57,7 +57,7 @@ This chapter covers Governance, Risk, and Compliance as a risk management framew
 
 4. [Chapter 4: Networking fundamentals](4.-networking-fundamentals/introduction-networking-fundamentals/)
 
-This chapter covers host to host communication across networks (how data flows through the network).
+This chapter covers two key foundational networking areas: host to host communication across networks (how data flows through the network), and essential network configuration skills.
 
 5. [Chapter 5: Wireless security and cryptography](5.-wireless-security-and-cryptography/introduction-wireless-security-and-cryptography.md)
 

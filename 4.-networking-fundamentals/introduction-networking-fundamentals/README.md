@@ -13,27 +13,13 @@ This chapter has two main goals. First, this chapter demystifies the underlying 
 
 **This chapter will help students:**
 
-• Map networking protocols and devices to their functions and OSI model layers.
-
-• Identify common networking protocols involved in data transmission (e.g., HTTP, TCP/IP, DNS) and become familiar with their security implications.
-
-• Understand what happens when someone types www.google.com into a web browser.
-
-• Relate network layers (OSI/TCP/IP models) to vulnerabilities and mitigation techniques.
-
-\--
-
 * Explain the function of network devices, the OSI model layers, and how protocols enable host-to-host communication.
-* Trace the entire path of a web request, such as typing a URL into a browser, to illustrate applied networking concepts.
-* Configure and verify fundamental router operations, including device security, static routes, and standard ACLs.
+* Identify common networking protocols involved in data transmission (e.g., HTTP, TCP/IP, DNS) and become familiar with their security implications.
+* Trace the path of a web request, such as typing a URL into a browser, to illustrate applied networking concepts.
+* Configure and verify fundamental router operations using the Cisco IOS CLI, including device security, IP addresses, static routes, and standard ACLs.
+* Compare and contrast key transport layer protocols, specifically TCP and UDP, and their use cases.
 * Implement and integrate essential network services including DNS, DHCP, and Static NAT.
-
-\--
-
-* **Configure** and verify fundamental router operations using the Cisco IOS CLI, including device security, connected routes, and static routes.
-* **Compare and contrast** key transport layer protocols, specifically TCP and UDP, and their use cases.
-* **Control** network traffic through the configuration and application of standard Access Control Lists (ACLs).
-* **Implement** critical network services by configuring and verifying DHCP client/relay and Static NAT.
+* Relate network layers (OSI/TCP/IP models) to vulnerabilities and mitigation techniques.
 
 ## Topics covered in this chapter
 

@@ -7,32 +7,6 @@ hidden: true
 
 # How data flow through the Internet
 
-This chapter has two main goals. First, this chapter demystifies the underlying framework that makes networking possible. You will explore the core hardware, theoretical models like OSI, and essential protocols that work in concert to move data across a network. This knowledge culminates in a complete understanding of the journey a simple web request takes, tracing each step from the moment you type "www.google.com" into your browser until the page appears on your screen.
-
-Second, this chapter establishes the essential groundwork for building and securing a functional network. You will develop the necessary skills to configure and verify a router's core operational services, from implementing device security and establishing static routes to controlling traffic with ACLs. Furthermore, you will learn to integrate fundamental network services by configuring DHCP for dynamic addressing, DNS for name resolution, and NAT for internet connectivity, providing a comprehensive toolkit for modern network management.
-
-**\*book intro**&#x20;
-
-Chapter 4: Networking fundamentals
-
-This chapter covers host to host communication across networks (how data flows through the network).
-
-**\*Chapter 4: Networking fundamentals**
-
-This chapter explains what happens when someone types www.google.com into a web browser
-
-This chapter covers networking fundamentals by way of tracing the movement of a data packet from one host to another across the Internet - highlighting key network devices and network protocols involved, data encapsulation/de-encapsulation against the OSI model layers, and how switches and routers facilitate communication on the network.
-
-**\*conclusion chapter**
-
-Chapter 4: Networking fundamentals
-
-This chapter explains what happens when someone types www.google.com into a web browser
-
-This chapter covers networking fundamentals by way of tracing the movement of a data packet from one host to another across the Internet - highlighting key network devices and network protocols involved, data encapsulation/de-encapsulation against the OSI model layers, and how switches and routers facilitate communication on the network.
-
-\--
-
 This chapter constitutes an introduction to the topic of computer networking, emphasizing breadth over depth. This chapter is the perfect introduction to computer networking, coming at the topic from a practical angle.
 
 This chapter is based on the YouTube playlist “[Networking Fundamentals](https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi)” by Ed Harmoush, a Network Engineer and YouTuber based in Seattle, WA, U.S. ([Practical Networking](https://www.youtube.com/@PracticalNetworking)).

@@ -59,6 +59,7 @@
 * [Static NAT configuration](4.-networking-fundamentals/static-nat-configuration.md)
 * [OSI model layers and security threats](4.-networking-fundamentals/osi-model-layers-and-security-threats/README.md)
   * [Secure cookie attributes explained](4.-networking-fundamentals/osi-model-layers-and-security-threats/secure-cookie-attributes-explained.md)
+* [Chapter 4 review questions](4.-networking-fundamentals/chapter-4-review-questions.md)
 
 ## 5. Wireless security and cryptography
 

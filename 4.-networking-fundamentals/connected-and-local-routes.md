@@ -1,10 +1,6 @@
 # Connected and local routes
 
-In the Ethernet LAN switching lessons we looked at how switches forward frames to their destination. The process routers use to forward packets to their destination is different, and that’s what we start exploring in this lesson. This lesson covers the basics of routing – how routers decide where to forward packets. We look at two types of routes, [Connected and Local routes](https://www.computernetworkingnotes.com/ccna-study-guide/connected-routes-and-local-routes-explained.html). Those routes are automatically added to the router’s routing table when you configure an IP address on the router’s interface. Connected routes provide a route to a network the router’s interface is directly connected to, and Local routes provide a route to the router’s own IP address.
-
-The next lesson, [How to configure static routes on Cisco routers](https://itnetworkingskills.wordpress.com/2023/04/21/configure-static-routes-cli-cisco-routers/), looks at how to read a routing table, how to configure a static IP address for the eth0 network interface of a PC as the default gateway, and how to configure a default route on a Cisco router.
-
-This lesson first answers the question, what is routing? Then the routing table on a Cisco router is examined. Switches have MAC address tables, and routers have routing tables. It’s very important that you know how to read a router’s routing table. Specifically, we will look at two types of routes found in a routing table: [Connected and Local routes](https://learningnetwork.cisco.com/s/question/0D53i00000Kt2iuCAB/what-is-the-difference-between-local-and-connected-routes). Finally, the lesson looks at routing fundamentals, specifically, route selection. In a router’s routing table, routers will usually have a variety of routes. We will discuss how the router selects the correct route for a packet.
+In this lesson we start looking at how routers forward packets to their destination, i.e., the mechanism and logic of IP routing. This lesson first answers the question, what is routing? Then we configure IP addresses on a router's interface using the Cisco IOS CLI. Then we examine the routing table on a Cisco router. Switches have MAC address tables, and routers have routing tables. Knowing how to read a router's routing table is a fundamental networking skill. Specifically, we will look at two types of routes found in a routing table: [Connected and Local routes](https://learningnetwork.cisco.com/s/question/0D53i00000Kt2iuCAB/what-is-the-difference-between-local-and-connected-routes). Those routes are automatically added to the router’s routing table when you configure an IP address on the router’s interface. Connected routes provide a route to a network the router’s interface is directly connected to, and local routes provide a route to the router’s own IP address. Finally, we look at route selection. In a router’s routing table, routers will usually have a variety of routes. We discuss how a router selects the correct route for a packet.
 
 * **What is routing?**
 * **R1 pre-configurations (IP addresses)**
@@ -40,7 +36,9 @@ This lesson covers [Connected and Local routes](https://www.youtube.com/watch?v=
 
 To demonstrate routing concepts we will use the following example network.
 
-There are four routers connected together, and they represent a Wide Area Network. A WAN is a network that extends over a large geographical area. For example, these four routers could be in different cities or even different countries. Connected to R1 and R4 are two LANs. Each of these LANs could be a different office in a different city, and each could be connected to many more hosts than is shown here. R2 and R3 each can have their own connected LANs too.
+There are four routers connected together, and they represent a Wide Area Network. A WAN is a network that extends over a large geographical area. For example, each of these four routers could be in a different city or even a different country.
+
+Connected to R1 and R4 are two LANs. Each of these LANs could be a different office in a different city, and each could be connected to many more hosts than is shown here. R2 and R3 each can have their own connected LANs too.
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/12c62-what-is-routing.webp?w=1201" alt="What-is-routing" height="250" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Routing Fundamentals (part 1) | Day 11)</p></figcaption></figure>
 

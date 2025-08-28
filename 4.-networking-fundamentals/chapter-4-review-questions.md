@@ -24,7 +24,7 @@ hidden: true
 
 * Point 1
 
-### Cisco IOS CLI and device security
+### Cisco IOS CLI and basic device security
 
 * Point 1
 

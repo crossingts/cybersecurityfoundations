@@ -1,23 +1,24 @@
-# Cisco IOS CLI and device security
+# Cisco IOS CLI and basic device security
 
 This section is an introduction to the [Cisco IOS CLI and basic device security configuration](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/fundamentals/configuration/15mt/fundamentals-15-mt-book/cf-cli-basics.html).
 
 * **What is the Cisco IOS CLI?**
 * **Connecting to a Cisco device via the console port**
 * **Terminal Emulator (PuTTY)**
-* **User EXEC mode**
-* **Privileged EXEC mode**
-* **Cisco IOS CLI shortcuts**
+* **CLI command modes**
+  * **User EXEC mode**
+  * **Privileged EXEC mode**
+  * **Cisco IOS CLI shortcuts**
+  * **Global configuration mode**
 * **Command syntax conventions**
-* **Global configuration mode**
-* **enable password command**
-* **show running-config and show startup-config commands**
-* **Saving the configuration**
-* **service password-encryption command**
-* **enable secret command**
+* **Basic device security**
+  * **enable password command**
+  * **show running-config and show startup-config commands**
+  * **Saving the configuration**
+  * **service password-encryption command**
+  * **enable secret command**
 * **Canceling commands**
-* **Review CLI command modes**
-* **Review CLI commands**
+* **Command review**
 * **Packet Tracer lab (basic device security)**
 
 ### What is the Cisco IOS CLI?
@@ -60,9 +61,11 @@ Once you connect to the Cisco device (e.g., a Cisco ISR router) you will be gree
 
 Since this is the first time booting the device, you are asked to enter the initial configuration dialogue. Answer no. As per the screen instructions, press the enter key (RETURN) to get started. Now you can start typing commands in the CLI.
 
-The tasks discussed in this lesson can be done with Packet Tracer to an adequate approximation to real, physical Cisco devices being configured by a Terminal Emulator/PuTTY.
+The tasks discussed in this lesson can be done with **Packet Tracer** to an adequate approximation to real, physical Cisco devices being configured by a Terminal Emulator/PuTTY.
 
-### User EXEC mode
+### CLI command modes
+
+#### User EXEC mode
 
 When you first enter the CLI, you will be by default in the user EXEC mode (also called user mode).
 
@@ -76,7 +79,7 @@ User EXEC mode is very limited. Users can look at some settings but cannot make 
 
 Let’s move on to a mode with a little more power to make changes to the device.
 
-### Privileged EXEC mode
+#### Privileged EXEC mode
 
 If you enter the enable command in user mode, you will be placed in privileged EXEC mode.
 
@@ -90,9 +93,9 @@ Privileged EXEC mode provides complete access to view the device’s configurati
 
 But it is not the mode in which you change the configuration.
 
-### Cisco IOS CLI shortcuts
+#### Cisco IOS CLI shortcuts
 
-Follows is a list of the commands available in user and privileged modes. The first list is from **User EXEC Mode** (indicated by the `Router>` prompt) and the second, longer list is from **Privileged EXEC Mode** (indicated by the `Router#` prompt, which you get after typing `enable`). You can use the question mark to view the commands available to you: Router>? and Router#?
+Follows is a list of the commands available in user and privileged modes. The first list is from **User EXEC Mode** (indicated by the `Router>` prompt) and the second, longer list is from **Privileged EXEC Mode** (indicated by the `Router#` prompt, which you get after typing `enable`). You can use the question mark to view the commands available to you. For example: Router>? and Router#?
 
 **User EXEC Mode Commands (`Router>?`)**
 
@@ -179,6 +182,20 @@ Router>e
 
 The shortest form of the enable command is en. The shortest for the exit command is ex.
 
+#### Global configuration mode
+
+Now let’s make some changes to the router configuration. We need to enter global configuration mode.
+
+Router#configure terminal (the command to enter global configuration mode)
+
+Or
+
+Router#conf t (shortcut for configure terminal)
+
+Router(config)# (now we are in global configuration mode)
+
+In global configuration mode, config is inserted after the host name.
+
 ### Command syntax conventions&#x20;
 
 Cisco IOS Command Reference uses certain conventions to present command syntax. Cisco IOS documentation uses the following command syntax conventions:
@@ -196,21 +213,11 @@ Cisco IOS Command Reference uses certain conventions to present command syntax. 
 
 Cisco IOS Configuration Fundamentals Command Reference, Cisco Systems, Inc., 2010
 
-### Global configuration mode
+### Basic device security
 
-Now let’s make some changes to the router configuration. We need to enter global configuration mode.
+Next we look at how to configure basic device security using **enable password** and **enable secret** commands.
 
-Router#configure terminal (the command to enter global configuration mode)
-
-Or
-
-Router#conf t (shortcut for configure terminal)
-
-Router(config)# (now we are in global configuration mode)
-
-In global configuration mode, config is inserted after the host name.
-
-### enable password command
+#### enable password command
 
 We can protect access to privileged EXEC mode with a password, so that if a user enters the enable command from the user EXEC mode they are asked for the password. This can be done with the command **enable password** in global configuration mode.
 
@@ -260,19 +267,14 @@ Password:
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/34c22-configure-terminal-command-9.webp?w=1201" alt="configure-terminal-command" height="506" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Intro to the CLI | Day 4)</p></figcaption></figure>
 
-\*We used the enable command to enter privileged EXEC mode from user mode.
+* We used the enable command to enter privileged EXEC mode from user mode.
+* From privileged EXEC mode we used configure terminal to enter global configuration mode.
+* In global configuration mode, we used the command enable password CCNA to protect privileged EXEC mode with a password.
+* Then we typed exit to return to privileged EXEC mode.
+* And exit again to return to user EXEC mode.
+* We typed enable again and entered the password CCNA and we were brought back to privileged EXEC mode.
 
-\*From privileged EXEC mode we used configure terminal to enter global configuration mode.
-
-\*In global configuration mode, we used the command enable password CCNA to protect privileged EXEC mode with a password.
-
-\*Then we typed exit to return to privileged EXEC mode.
-
-\*And exit again to return to user EXEC mode.
-
-\*We typed enable again and entered the password CCNA and we were brought back to privileged EXEC mode.
-
-### show running-config and show startup-config commands
+#### show running-config and show startup-config commands
 
 We have confirmed the function of the password, but let’s check the configuration file.
 
@@ -291,7 +293,7 @@ Use the **show startup-config** command in privileged EXEC mode to view the star
 
 Note, if you did not yet save the running configuration you will get a response that startup config is not present.
 
-### Saving the configuration
+#### Saving the configuration
 
 Cisco IOS software is typically stored in disk/flash memory on Cisco routers and switches. The running configuration is stored in RAM (Random Access Memory). The startup configuration in Cisco devices is typically stored in NVRAM (Non-Volatile RAM).
 
@@ -303,7 +305,7 @@ Now if we use the show startup-config command, the IOS CLI will display the same
 
 The CLI output of show running-config displays the enable password “CCNA” in plain text. This is a security risk. An unauthorized person may be able to use this knowledge to enter privileged EXEC mode and then global configuration mode and change the configuration of the router.
 
-### service password-encryption command
+#### service password-encryption command
 
 So how to level up the security? With the **service password-encryption** command in global configuration mode.
 
@@ -317,7 +319,7 @@ The service password-encryption command will encrypt passwords. If we run the co
 
 The service password-encryption command is more secure than naught, but it is not especially secure and can be cracked using an online Cisco type 7 password cracker.
 
-### enable secret command
+#### enable secret command
 
 There is a more secure enable password for Cisco devices with stronger encryption, a method called **enable secret** command.
 
@@ -365,15 +367,16 @@ Router(config)#**do show running-config**
 
 Thus future passwords will no longer be encrypted. But passwords already encrypted will not be decrypted by disabling password-encryption. New passwords however will be in clear text.
 
-### Review CLI command modes
+### Command review
 
-Router> =user EXEC mode
+Router> \
+→user EXEC mode
 
-Router# =privileged EXEC mode
+Router# \
+→privileged EXEC mode
 
-Router(config)# =global configuration mode
-
-### Review CLI commands
+Router(config)# \
+→global configuration mode
 
 Router>**enable**\
 →to enter privileged EXEC mode
@@ -412,6 +415,8 @@ Router#**copy running-config startup-config**\
 →to save the current running configuration and make it the startup configuration
 
 ### Packet Tracer lab (basic device security)
+
+[**Get the lab file (.pkt) from Google Drive (Jeremy McDowell's Free CCNA Online Course)**](https://drive.google.com/drive/folders/1PwK_jWqfUtOjV7gHt8ODutq9QA5cxCgi)**: Day 04 Lab - Basic Device Security.pkt**
 
 The lab tasks involve doing some configurations on a router and a switch.
 

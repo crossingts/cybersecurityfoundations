@@ -60,6 +60,8 @@ Once you connect to the Cisco device (e.g., a Cisco ISR router) you will be gree
 
 Since this is the first time booting the device, you are asked to enter the initial configuration dialogue. Answer no. As per the screen instructions, press the enter key (RETURN) to get started. Now you can start typing commands in the CLI.
 
+The tasks discussed in this lesson can be done with Packet Tracer to an adequate approximation to real, physical Cisco devices being configured by a Terminal Emulator/PuTTY.
+
 ### User EXEC mode
 
 When you first enter the CLI, you will be by default in the user EXEC mode (also called user mode).
@@ -90,11 +92,64 @@ But it is not the mode in which you change the configuration.
 
 ### Cisco IOS CLI shortcuts
 
-A comparison of the commands available in user mode and privileged EXEC mode:
+Follows is a list of the commands available in user and privileged modes. The first list is from **User EXEC Mode** (indicated by the `Router>` prompt) and the second, longer list is from **Privileged EXEC Mode** (indicated by the `Router#` prompt, which you get after typing `enable`).
 
-<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/49cb3-cisco-ios-cli-shortcuts-6.webp?w=1201" alt="Cisco-IOS-CLI-shortcuts" height="576" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Intro to the CLI | Day 4)</p></figcaption></figure>
+**User EXEC Mode Commands (`Router>?`)**
 
-This comparison table was produced by Cisco Packet Tracer software. The tasks discussed in this lesson can be done with Packet Tracer to an adequate approximation to real, physical Cisco devices being configured by a Terminal Emulator/PuTTY.
+| Command      | Description                               |
+| ------------ | ----------------------------------------- |
+| `<1-99>`     | Session number to resume                  |
+| `connect`    | Open a terminal connection                |
+| `disable`    | Turn off privileged commands              |
+| `disconnect` | Disconnect an existing network connection |
+| `enable`     | Turn on privileged commands               |
+| `exit`       | Exit from the EXEC                        |
+| `logout`     | Exit from the EXEC                        |
+| `ping`       | Send echo messages                        |
+| `resume`     | Resume an active network connection       |
+| `show`       | Show running system information           |
+| `ssh`        | Open a secure shell link connection       |
+| `telnet`     | Open a telnet connection                  |
+| `terminal`   | Set terminal line parameters              |
+| `traceroute` | Trace route to destination                |
+
+**Privileged EXEC Mode Commands (`Router#?`)**
+
+| Command      | Description                                                 |
+| ------------ | ----------------------------------------------------------- |
+| `<1-99>`     | Session number to resume                                    |
+| `auto`       | Exec level Automation                                       |
+| `clear`      | Reset functions                                             |
+| `clock`      | Manage the system clock                                     |
+| `configure`  | Enter configuration mode                                    |
+| `connect`    | Open a terminal connection                                  |
+| `copy`       | Copy from one file to another                               |
+| `debug`      | Debugging functions (see also 'undobug')                    |
+| `delete`     | Delete a file                                               |
+| `dir`        | List files on a filesystem                                  |
+| `disable`    | Turn off privileged commands                                |
+| `disconnect` | Disconnect an existing network connection                   |
+| `enable`     | Turn on privileged commands                                 |
+| `erase`      | Erase a filesystem                                          |
+| `exit`       | Exit from the EXEC                                          |
+| `logout`     | Exit from the EXEC                                          |
+| `mkdir`      | Create new directory                                        |
+| `more`       | Display the contents of a file                              |
+| `no`         | Disable debugging informations                              |
+| `ping`       | Send echo messages                                          |
+| `reload`     | Halt and perform a cold restart                             |
+| `resume`     | Resume an active network connection                         |
+| `rmdir`      | Remove existing directory                                   |
+| `send`       | Send a message to other tty lines                           |
+| `setup`      | Run the SETUP command facility                              |
+| `show`       | Show running system information                             |
+| `ssh`        | Open a secure shell client connection                       |
+| `telnet`     | Open a telnet connection                                    |
+| `terminal`   | Set terminal line parameters                                |
+| `traceroute` | Trace route to destination                                  |
+| `undebug`    | Disable debugging functions (see also 'debug')              |
+| `vlan`       | Configure VLAN parameters                                   |
+| `write`      | Write running configuration to memory, network, or terminal |
 
 You can use the question mark to view the commands available to you. Examples:
 

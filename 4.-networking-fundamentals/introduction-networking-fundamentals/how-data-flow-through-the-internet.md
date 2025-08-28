@@ -7,6 +7,34 @@ hidden: true
 
 # How data flow through the Internet
 
+This chapter has two main goals. First, this chapter explains what happens when someone types www.google.com into a web browser.&#x20;
+
+Second, this chapter teaches configuration and verification of static routes and network services.
+
+
+
+**\*book intro**&#x20;
+
+Chapter 4: Networking fundamentals
+
+This chapter covers host to host communication across networks (how data flows through the network).
+
+**\*Chapter 4: Networking fundamentals**
+
+This chapter explains what happens when someone types www.google.com into a web browser
+
+This chapter covers networking fundamentals by way of tracing the movement of a data packet from one host to another across the Internet - highlighting key network devices and network protocols involved, data encapsulation/de-encapsulation against the OSI model layers, and how switches and routers facilitate communication on the network.
+
+**\*conclusion chapter**
+
+Chapter 4: Networking fundamentals
+
+This chapter explains what happens when someone types www.google.com into a web browser
+
+This chapter covers networking fundamentals by way of tracing the movement of a data packet from one host to another across the Internet - highlighting key network devices and network protocols involved, data encapsulation/de-encapsulation against the OSI model layers, and how switches and routers facilitate communication on the network.
+
+\--
+
 This chapter constitutes an introduction to the topic of computer networking, emphasizing breadth over depth. This chapter is the perfect introduction to computer networking, coming at the topic from a practical angle.
 
 This chapter is based on the YouTube playlist “[Networking Fundamentals](https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi)” by Ed Harmoush, a Network Engineer and YouTuber based in Seattle, WA, U.S. ([Practical Networking](https://www.youtube.com/@PracticalNetworking)).

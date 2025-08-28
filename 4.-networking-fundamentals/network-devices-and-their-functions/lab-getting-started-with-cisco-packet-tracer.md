@@ -26,13 +26,11 @@ We will recreate this network in this lesson’s lab.
 
 <figure><img src="../../.gitbook/assets/image (21).png" alt="Packet Tracer Network Topology"><figcaption></figcaption></figure>
 
-Get the lab files from Google Drive
-
-[Lab 1 Network devices](https://drive.proton.me/urls/ZSSAEE4NV4#kkwl6etUcv6n)
+Get the lab file (.pkt) from Proton Drive: [Lab 1 Network devices](https://drive.proton.me/urls/ZSSAEE4NV4#kkwl6etUcv6n)
 
 Launch Packet Tracer to complete the lab.
 
-Before we go through the lab instructions, you may want to look at the preferences menu. In the top menu, select Cisco Packet Tracer > Preferences.&#x20;
+Before we go through the lab instructions, you may want to look at the preferences menu. In the top menu, select Cisco Packet Tracer > Preferences.
 
 <figure><img src="../../.gitbook/assets/image (22).png" alt="Packet Tracer Preferences"><figcaption></figcaption></figure>
 

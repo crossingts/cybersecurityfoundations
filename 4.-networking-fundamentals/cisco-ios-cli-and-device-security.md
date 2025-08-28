@@ -92,7 +92,7 @@ But it is not the mode in which you change the configuration.
 
 ### Cisco IOS CLI shortcuts
 
-Follows is a list of the commands available in user and privileged modes. The first list is from **User EXEC Mode** (indicated by the `Router>` prompt) and the second, longer list is from **Privileged EXEC Mode** (indicated by the `Router#` prompt, which you get after typing `enable`).
+Follows is a list of the commands available in user and privileged modes. The first list is from **User EXEC Mode** (indicated by the `Router>` prompt) and the second, longer list is from **Privileged EXEC Mode** (indicated by the `Router#` prompt, which you get after typing `enable`). You can use the question mark to view the commands available to you: Router>? and Router#?
 
 **User EXEC Mode Commands (`Router>?`)**
 
@@ -150,14 +150,6 @@ Follows is a list of the commands available in user and privileged modes. The fi
 | `undebug`    | Disable debugging functions (see also 'debug')              |
 | `vlan`       | Configure VLAN parameters                                   |
 | `write`      | Write running configuration to memory, network, or terminal |
-
-You can use the question mark to view the commands available to you. Examples:
-
-Router>?&#x20;
-
-and&#x20;
-
-Router#?
 
 The tab key is a convenient feature of the CLI. If you press the tab key after typing “Router>en”, the CLI will complete the word and display the complete word on a new line:
 
@@ -223,10 +215,6 @@ In global configuration mode, config is inserted after the host name.
 We can protect access to privileged EXEC mode with a password, so that if a user enters the enable command from the user EXEC mode they are asked for the password. This can be done with the command **enable password** in global configuration mode.
 
 To know what enable password command options are available, we type the enable password command followed by a question mark:
-
-Router(config)#enable password ?
-
-(If we don’t leave a space between password and ? the terminal will show the command options that only contain the word password, which is only password.)
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/39b75-enable-password-command-8.webp?w=1201" alt="enable-password-command" height="450" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Intro to the CLI | Day 4)</p></figcaption></figure>
 

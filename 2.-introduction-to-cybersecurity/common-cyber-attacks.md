@@ -81,7 +81,6 @@ The target waits for the final ACK of each handshake, and the incomplete connect
 
 In the end, the target is no longer able to make legitimate TCP connections because it has reached the maximum number of TCP connections it can maintain.&#x20;
 
-````mermaid
 ```mermaid
 sequenceDiagram
     participant Attacker
@@ -107,7 +106,6 @@ sequenceDiagram
 
     Note over Target Server: Server State: Overwhelmed<br/>- Connection queue full<br/>- Memory exhausted<br/>- CPU overloaded<br/>- Legitimate traffic blocked
 ```
-````
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/730e6-tcp-syn-flood-1.webp?w=1201" alt="TCP-SYN-flood" height="234" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Security Fundamentals | Day 48)</p></figcaption></figure>
 

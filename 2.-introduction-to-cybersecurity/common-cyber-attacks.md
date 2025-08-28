@@ -81,6 +81,32 @@ The target waits for the final ACK of each handshake, and the incomplete connect
 
 In the end, the target is no longer able to make legitimate TCP connections because it has reached the maximum number of TCP connections it can maintain.&#x20;
 
+```mermaid
+sequenceDiagram
+    participant Attacker
+    participant Target Server
+    participant Legitimate Client
+
+    Note over Attacker, Target Server: Phase 1: Attack Setup
+    Attacker->>Target Server: SYN Packet (spoofed source IP)
+    Target Server->>Attacker: SYN-ACK Packet (to spoofed IP)
+    Note right of Target Server: Half-open connection created<br/>Waits for final ACK
+
+    Note over Attacker, Target Server: Phase 2: Flood Attack
+    loop Continuous SYN Flood
+        Attacker->>Target Server: Multiple SYN Packets<br/>(different spoofed IPs)
+        Target Server->>Nowhere: SYN-ACK Responses<br/>(to non-existent hosts)
+        Note right of Target Server: Connection queue fills up<br/>Memory resources exhausted
+    end
+
+    Note over Attacker, Target Server: Phase 3: Service Denial
+    Legitimate Client->>Target Server: Legitimate SYN Request
+    Target Server-->>Legitimate Client: No response or timeout
+    Note right of Target Server: Server cannot accept<br/>new legitimate connections
+
+    Note over Target Server: Server State: Overwhelmed<br/>- Connection queue full<br/>- Memory exhausted<br/>- CPU overloaded<br/>- Legitimate traffic blocked
+```
+
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/730e6-tcp-syn-flood-1.webp?w=1201" alt="TCP-SYN-flood" height="234" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Security Fundamentals | Day 48)</p></figcaption></figure>
 
 For each SYN message the attacker sends, the target puts an entry in its TCP connection table and sends a SYN-ACK message, then waits for an ACK to complete the connection. But the ACK never comes. The attacker keeps sending SYN messages, and the target keeps sending SYN-ACK messages. Then the target’s TCP connection table fills up, and the denial-of-service has been achieved.

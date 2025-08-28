@@ -36,20 +36,20 @@ This chapter covers networking fundamentals by way of tracing the movement of a 
 
 [Typing www.google.com into a web browser](../typing-www.google.com-into-a-web-browser.md)
 
-[Cisco IOS CLI and device security](../alternative-chapter-topics/cisco-ios-cli-and-device-security.md)
+[Cisco IOS CLI and device security](../cisco-ios-cli-and-device-security.md)
 
-[Connected and local routes](../alternative-chapter-topics/connected-and-local-routes.md)
+[Connected and local routes](../connected-and-local-routes.md)
 
-[How to configure static routes on Cisco routers](../alternative-chapter-topics/how-to-configure-static-routes-on-cisco-routers.md)
+[How to configure static routes on Cisco routers](../how-to-configure-static-routes-on-cisco-routers.md)
 
-[Comparing TCP to UDP](../alternative-chapter-topics/comparing-tcp-to-udp.md)
+[Comparing TCP to UDP](../comparing-tcp-to-udp.md)
 
-[How to configure standard ACLs on Cisco routers](../alternative-chapter-topics/how-to-configure-standard-acls-on-cisco-routers.md)
+[How to configure standard ACLs on Cisco routers](../how-to-configure-standard-acls-on-cisco-routers.md)
 
-[The role of DNS within the network](../alternative-chapter-topics/the-role-of-dns-within-the-network.md)
+[The role of DNS within the network](../the-role-of-dns-within-the-network.md)
 
-[Configuring and verifying DHCP client and relay](../alternative-chapter-topics/configuring-and-verifying-dhcp-client-and-relay.md)
+[Configuring and verifying DHCP client and relay](../configuring-and-verifying-dhcp-client-and-relay.md)
 
-[Static NAT configuration](../alternative-chapter-topics/static-nat-configuration.md)
+[Static NAT configuration](../static-nat-configuration.md)
 
 [OSI model layers and security threats](../osi-model-layers-and-security-threats/)

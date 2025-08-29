@@ -1,10 +1,14 @@
 # Comparing TCP to UDP
 
-This lesson covers two important L4 protocols, TCP (Transmission Control Protocol) and UDP (User Datagram Protocol) – how they function and their characteristics. TCP and UDP are mentioned in Section 1.0 Network Fundamentals, subsection 1.5, of the CCNA exam topics list, which says you must be able to “[Compare TCP to UDP](https://www.spiceworks.com/tech/networking/articles/tcp-vs-udp/)”.
+This lesson covers two important Layer 4 protocols, TCP (Transmission Control Protocol) and UDP (User Datagram Protocol) – how they function and their key characteristics.&#x20;
 
-First, the basic functions of TCP and UDP are discussed, focusing on how they provide 1) transparent transfer of data between end hosts, 2) various services to applications, and 3) Layer 4 addressing to deliver data to the correct destination. We discuss how L4 ports are used to identify application services and to track sessions between end hosts and servers (session multiplexing). IANA’s port number ranges that Application layer protocols use are then explained.&#x20;
+First, the basic functions of TCP and UDP are discussed, focusing on how they provide 1) transparent transfer of data between end hosts, 2) various services to applications, and 3) Layer 4 addressing to deliver data to the correct destination.&#x20;
 
-We then zoom in on TCP. First we explain why TCP is a connection-oriented protocol. So we look at the three-way handshake and the four-way handshake. We then discuss TCP functions in closer detail, especially, how TCP provides sequencing, reliable communication, and flow control. We then move on to UDP, highlighting how it is similar to and different from TCP. We [compare TCP to UDP](https://www.freecodecamp.org/news/tcp-vs-udp/). We compare the fields in the L4 headers of each of the two transport protocols, the features, and the real-world applications of each protocol. Last but not least, we look at important well-known port numbers and matching Application layer protocols we must know for the CCNA.
+We elaborate on L4 addressing by discussing how L4 ports are used to identify application services and to track sessions between end hosts and servers (session multiplexing). IANA’s port number ranges that Application layer protocols use are then explained.&#x20;
+
+We then zoom in on TCP. First we explain why TCP is a connection-oriented protocol. So we look at the three-way handshake and the four-way handshake. We then discuss TCP functions in closer detail, especially, how TCP provides sequencing, reliable communication, and flow control.&#x20;
+
+We then move on to UDP, highlighting how it is similar to and different from TCP. We [compare TCP to UDP](https://www.freecodecamp.org/news/tcp-vs-udp/). We compare the fields in the L4 headers of each of the two transport protocols, the features, and the real-world applications of each protocol. Finally, we look at some important well-known port numbers and matching Application layer protocols we must know for the CCNA.
 
 * **Basic functions of Layer 4 protocols (Transport layer)**
 * **Port numbers/session multiplexing**
@@ -25,7 +29,15 @@ We then zoom in on TCP. First we explain why TCP is a connection-oriented protoc
 
 ### Basic functions of Layer 4 protocols (Transport layer)
 
-Layer 4 protocols have three basic functions: 1) provide transparent transfer of data between end hosts, 2) provide (or not provide) various services to applications, and 3) provide Layer 4 addressing (port numbers) to deliver data to the correct destination.
+TCP and UDP have three basic functions: 1) providing transparent transfer of data between end hosts, 2) providing (or not providing) various services to applications, and 3) providing Layer 4 addressing (port numbers) to deliver data to the correct destination.
+
+The primary Layer 4 protocols, TCP and UDP, fulfill the three basic functions in different ways:
+
+| Function                        | TCP (Transmission Control Protocol)                                                                                                      | UDP (User Datagram Protocol)                                                                                                                                 |
+| ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **1. Data Transfer**            | **Reliable & Connection-Oriented.** Establishes a session, guarantees delivery, ensures in-order receipt, and retransmits lost data.     | **Unreliable & Connectionless.** Sends datagrams without establishing a connection, offering no guarantees of delivery, ordering, or duplication protection. |
+| **2. Services to Applications** | Provides extensive services: **error recovery, flow control, and congestion control.** This ensures data integrity but adds overhead.    | Provides minimal services—essentially just a checksum for data corruption. This low latency and overhead is its primary service.                             |
+| **3. Layer 4 Addressing**       | Uses **source and destination port numbers** to multiplex data between applications on the same host and establish specific connections. | Uses **source and destination port numbers** to direct datagrams to the correct application process on a host.                                               |
 
 Let’s elaborate.
 
@@ -335,14 +347,15 @@ In addition, acknowledgments and retransmissions can slow down the transfer of d
 
 Here’s a chart summarizing the key differences between TCP and UDP.
 
-| **TCP (Transmission Control Protocol)** | **UDP (User Datagram Protocol)** |
-| --------------------------------------- | -------------------------------- |
-| Stateful                                | Stateless                        |
-| Connection-oriented                     | Connectionless                   |
-| Reliable                                | Unreliable                       |
-| Sequencing                              | No sequencing                    |
-| Flow control                            | No flow control                  |
-| Use for downloads, file sharing, etc.   | Use for VoIP, live video, etc.   |
+| **TCP (Transmission Control Protocol)** | **UDP (User Datagram Protocol)**                 |
+| --------------------------------------- | ------------------------------------------------ |
+| Stateful                                | Stateless                                        |
+| Connection-oriented                     | Connectionless                                   |
+| Slower transmission                     | Faster transmission (minimal delay and overhead) |
+| Reliable                                | Unreliable                                       |
+| Sequencing                              | No sequencing                                    |
+| Flow control                            | No flow control                                  |
+| Use for downloads, file sharing, etc.   | Use for VoIP, live video, etc.                   |
 
 ### Port numbers
 

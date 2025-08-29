@@ -1,6 +1,14 @@
+---
+description: >-
+  This section is an introduction to the Cisco IOS CLI and basic device security
+  configuration
+---
+
 # Cisco IOS CLI and basic device security
 
-This section is an introduction to the [Cisco IOS CLI and basic device security configuration](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/fundamentals/configuration/15mt/fundamentals-15-mt-book/cf-cli-basics.html).
+Welcome to the practical heart of network administration. In this section, we move from conceptual networking fundamentals to the essential hands-on skill of configuring and securing a network device. We will be using the Cisco IOS Command-Line Interface (CLI), the operating system that powers the vast majority of routers and switches worldwide. You will first learn how to physically connect to a device and access the CLI using a terminal emulator. We will then guide you through the CLI's structure, including its different command modes and shortcuts. More importantly, we will immediately apply these skills to the critical task of basic device security, where you will learn how to set passwords, encrypt them, and securely manage your device's configuration. This foundation is your first step toward managing network infrastructure and is a core competency for any cybersecurity professional tasked with protecting network assets.
+
+## Topics covered in this section
 
 * **What is the Cisco IOS CLI?**
 * **Connecting to a Cisco device via the console port**
@@ -19,6 +27,7 @@ This section is an introduction to the [Cisco IOS CLI and basic device security 
   * **enable secret command**
 * **Canceling commands**
 * **Command review**
+* **Key learnings**
 * **Packet Tracer lab (basic device security)**
 
 ### What is the Cisco IOS CLI?
@@ -414,6 +423,25 @@ Router#**write memory**\
 Router#**copy running-config startup-config**\
 →to save the current running configuration and make it the startup configuration
 
+### Key learnings
+
+* The Cisco IOS CLI is the text-based command-line interface used to configure, manage, and troubleshoot Cisco networking devices.
+* Initial access to a device for configuration is typically achieved by connecting a computer to the console port using a rollover cable.
+* A Terminal Emulator program like PuTTY is required on the computer to establish the console connection and interact with the CLI.
+* The CLI operates in distinct command modes, each providing a different level of access and functionality. The two primary modes are:
+  * User EXEC Mode: Limited to basic monitoring commands (denoted by the `>` prompt).
+  * Privileged EXEC Mode: Provides full access to view and manage all device functions (denoted by the `#` prompt).
+* Global Configuration Mode is entered from Privileged EXEC mode and is where changes are made to the device's running configuration.
+* The Cisco IOS CLI supports numerous shortcuts (like `Tab` for auto-complete and `?` for context-sensitive help) to improve efficiency and reduce errors.
+* Implementing basic device security begins with setting passwords to control access to the device's modes.
+* The `enable password` command sets a password to enter Privileged EXEC mode, but it is stored in plain text, making it insecure.
+* The `enable secret` command is the secure alternative, as it encrypts the Privileged EXEC password using a strong cryptographic hash.
+* The `service password-encryption` command provides a weaker encryption for other plaintext passwords in the configuration file.
+* The `show running-config` command displays the current, active configuration in RAM.
+* The `show startup-config` command displays the saved configuration stored in NVRAM, which is loaded on device boot.
+* Configuration changes are temporary until they are permanently saved from RAM to NVRAM using the `copy running-config startup-config` command.
+* Commands can be cancelled using the `no` keyword or interrupted using key combinations like `Ctrl-C`.
+
 ### Packet Tracer lab (basic device security)
 
 [**Get the lab file (.pkt) from Google Drive (Jeremy McDowell's Free CCNA Online Course)**](https://drive.google.com/drive/folders/1PwK_jWqfUtOjV7gHt8ODutq9QA5cxCgi)**: Day 04 Lab - Basic Device Security.pkt**
@@ -519,6 +547,8 @@ Note: The resources cited below (in the “Key references” section of this doc
 [Free CCNA | Basic Device Security | Day 4 Lab | CCNA 200-301 Complete Course](https://www.youtube.com/watch?v=SDocmq1c05s\&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ\&index=9)
 
 ### Other references/resources
+
+[cisco.com. (n.d.). Cisco IOS Master Command List, All Releases](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/mcl/allreleasemcl/all-book.html)
 
 [Cisco. (April 2010). Cisco IOS Configuration Fundamentals Command Reference](https://www.cisco.com/c/en/us/td/docs/ios/fundamentals/command/reference/cf_book.pdf)
 

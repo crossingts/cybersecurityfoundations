@@ -2,6 +2,8 @@
 
 In this lesson we start looking at how routers forward packets to their destination, i.e., the mechanism and logic of IP routing. This lesson first answers the question, what is routing? Then we configure IP addresses on a router's interface using the Cisco IOS CLI. Then we examine the routing table on a Cisco router. Switches have MAC address tables, and routers have routing tables. Knowing how to read a router's routing table is a fundamental networking skill. Specifically, we will look at two types of routes found in a routing table: [Connected and Local routes](https://learningnetwork.cisco.com/s/question/0D53i00000Kt2iuCAB/what-is-the-difference-between-local-and-connected-routes). Those routes are automatically added to the router’s routing table when you configure an IP address on the router’s interface. Connected routes provide a route to a network the router’s interface is directly connected to, and local routes provide a route to the router’s own IP address. Finally, we look at route selection. In a router’s routing table, routers will usually have a variety of routes. We discuss how a router selects the correct route for a packet.
 
+## Topics covered in this section
+
 * **What is routing?**
 * **R1 pre-configurations (IP addresses)**
 * **Routing table (show ip route)**
@@ -15,7 +17,6 @@ In this lesson we start looking at how routers forward packets to their destinat
 * **Summary**
 * **Command review**
 * **Key learnings**
-* **Practice quiz questions**
 
 ### What is routing?
 
@@ -249,24 +250,6 @@ R#**show ip route**
 \*How to read the routing table on a Cisco router, specifically looking at Connected and Local routes.
 
 \*Routing fundamentals (route selection) – how routers select which route to use to forward a particular packet.&#x20;
-
-### Practice quiz questions&#x20;
-
-**Quiz question 1**
-
-The IP address configured on a router interface will appear in the routing table as what kind of route?&#x20;
-
-a) Static
-
-b) Connected
-
-c) Local
-
-d) Dynamic
-
-The answer is C, local. When you configure an IP address on an interface, two routes are automatically added to the router’s routing table, assuming the interface is enabled, a connected route to the network, and a local route to the exact IP address configured on the router interface.&#x20;
-
-You can find four more practice questions for this lesson in Jeremy’s video lesson Routing Fundamentals (part 1), cited below.
 
 ### Key references
 

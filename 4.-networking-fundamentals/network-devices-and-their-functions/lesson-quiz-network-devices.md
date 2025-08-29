@@ -10,17 +10,21 @@ hidden: true
 
 1\) Server
 
-_2) Client_
+**2) Client**
 
 3\) End host
+
+
 
 2\. What connects networks together? (Choose one answer)
 
 1\) Switch
 
-_2) Router_
+**2) Router**
 
 3\) Firewall
+
+
 
 3\. Switches: (Choose one answer)
 
@@ -28,20 +32,24 @@ _2) Router_
 
 2\) Forward data between LANs
 
-_3) Do not provide connectivity between LANs_
+**3) Do not provide connectivity between LANs**
+
+
 
 4\. Routers: (Choose two answers)
 
 1\) Are Layer 2 devices
 
-_2) Are used to send data over the Internet_
+**2) Are used to send data over the Internet**
 
-_3) Provide connectivity between LANs_
+**3) Provide connectivity between LANs**
+
+
 
 5\. A network is: (Choose two answers)
 
-_1) What transports traffic between hosts_
+**1) What transports traffic between hosts**
 
 2\) A PC, a switch, and a router
 
-_3) Two or more connected hosts_
+**3) Two or more connected hosts**

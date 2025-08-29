@@ -4,6 +4,8 @@ This lesson focuses on [static NAT configuration](https://www.manageengine.com/n
 
 There are different types of NAT, such as static NAT, dynamic NAT, and [port address translation (PAT)](https://itnetworkingskills.wordpress.com/2023/04/13/dynamic-pat-configuration/). Static NAT maps a private IP address to a fixed public IP address. Dynamic NAT assigns a public IP address from a pool of available addresses to a private IP address on demand. PAT uses a single public IP address and different port numbers to distinguish between multiple private IP addresses. NAT will be covered in two parts. This lesson (NAT Part 1) focuses on the following four topic areas: 1) the need for private IPv4 addressing, 2) NAT purpose in networks, 3) how NAT works, and 4) [static NAT configuration](https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus3548/sw/interfaces/b_N3548_Interfaces_Config_503_A1/b_N3548_Interfaces_Config_503_A1_chapter_0101.pdf).
 
+## Topics covered in this section
+
 * **Private IPv4 addresses (RFC 1918)**
 * **NAT (Network Address Translation) introduction**
 * **Static NAT configuration – introduction**

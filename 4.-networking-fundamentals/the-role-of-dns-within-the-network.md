@@ -2,6 +2,8 @@
 
 The [DNS (Domain Name System) protocol ](https://study-ccna.com/domain-name-system-dns/)makes it easy for humans to use the Internet by translating domain names into IP addresses. This means that we can type in a human-readable address like [http://www.google.com](http://www.google.com/) instead of a complex IP address like 172.217.0.142. DNS is mentioned in the CCNA exam topics list in Section 4, IP Services, subsection 4.3, which states that you must be able to “[Explain the role of DHCP and DNS within the network](https://study-ccna.com/dhcp-dns/)”. This lesson explains the [role of DNS within the network](https://its.umich.edu/enterprise/wifi-networks/dns-dhcp) and how to configure DNS in Cisco IOS.&#x20;
 
+## Topics covered in this section
+
 * **The role of DNS within the network**
 * **ip config /all (Windows)**
 * **nslookup (Windows)**
@@ -76,9 +78,18 @@ Steps:
 
 Pinging serves several purposes:
 
-* Reachability check: It’s a simple way to verify if the target host is online and accessible. If you get a reply, the host is reachable. No reply indicates unreachable, but could also be due to network issues.
+* Reachability check: It’s a simple way to verify if the target host is online and accessible. If you get a reply, the host is reachable. No reply indicates the host is unreachable, but could also be due to network issues.
 * Latency measurement: The RTT provides an estimate of the time it takes data to travel between two hosts, giving an idea of network speed and potential delays.
 * Basic troubleshooting: Pinging can help pinpoint where communication issues might lie. If pings to a gateway router fail but pings to an external host succeed, the problem is likely within your local network.
+
+The most common reasons for a failed ping (`Request Timed Out`) include:
+
+* The target host is offline.
+* A firewall (on the target host or a network device) is blocking ICMP Echo Requests.
+* A network device (router, switch) between the hosts is down or misconfigured.
+* The packet's Time-to-Live (TTL) value expired before reaching the target.
+
+Each IP packet has a Time-to-Live (TTL) field, a counter that decrements every time the packet passes through a router (a "hop"). If this counter reaches zero, the packet is discarded. This prevents packets from circulating endlessly on the internet. `ping` uses this field, and it's the fundamental mechanism that tools like `traceroute` exploit to map the network path.
 
 Ping is often used alongside other network diagnostic tools like traceroute for more in-depth troubleshooting. Different ping tools offer advanced options like sending multiple packets, varying packet size, and specifying timeout values.
 

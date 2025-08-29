@@ -4,6 +4,8 @@ This is Part 1 of 2 of ACLs study notes for the CCNA. The CCNA exam topics list 
 
 This lesson looks at what are ACLs and what is their purpose, how ACLs work/how to build ACLs, ACL logic/how the router processes ACLs, and ACL types used on Cisco routers. Further, we learn how to configure and verify two kinds of ACLs, standard numbered ACLs, and standard named ACLs.&#x20;
 
+## Topics covered in this section
+
 * **What are ACLs (Access Control Lists)?**
 * **How ACLs work**
 * **ACL logic**

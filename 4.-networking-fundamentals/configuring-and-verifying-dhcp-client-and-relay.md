@@ -4,6 +4,8 @@ This lesson covers DHCP, Dynamic Host Configuration Protocol. DHCP is mentioned 
 
 This lesson covers 1) the [role of DHCP within the network](https://www.techtarget.com/searchnetworking/definition/DHCP), 2) the basic functions of DHCP, specifically the four-message exchange that clients use to get an IP address from a DHCP server (Discover, Offer, Request, and Acknowledgment), and 3) [how to configure and verify DHCP client and relay](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/ipaddr_dhcp/configuration/15-sy/dhcp-15-sy-book/dhcp-relay-agent.html). We learn how to configure a Cisco router as a DHCP server, a DHCP client, and a DHCP relay agent.
 
+## Topics covered in this section
+
 * **The role of DHCP within the network**
 * **The basic functions of DHCP**
 * **ipconfig /release (Windows)**

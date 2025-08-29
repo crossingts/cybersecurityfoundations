@@ -1,14 +1,10 @@
 # Comparing TCP to UDP
 
-This lesson covers two important Layer 4 protocols, TCP (Transmission Control Protocol) and UDP (User Datagram Protocol) – how they function and their key characteristics.&#x20;
+This lesson covers two important Layer 4 protocols, TCP (Transmission Control Protocol) and UDP (User Datagram Protocol), focusing on their key functions and characteristics. First, the basic functions of TCP and UDP are discussed, focusing on how they provide 1) transparent transfer of data between end hosts, 2) various services to applications, and 3) Layer 4 addressing to deliver data to the correct destination. We elaborate on L4 addressing by discussing how L4 ports are used to identify application services and track sessions between end hosts and servers (session multiplexing). IANA’s port number ranges that Application layer protocols use are then explained.&#x20;
 
-First, the basic functions of TCP and UDP are discussed, focusing on how they provide 1) transparent transfer of data between end hosts, 2) various services to applications, and 3) Layer 4 addressing to deliver data to the correct destination.&#x20;
+We then zoom in on TCP. First we look at some key fields and flags of the TCP header. We then cover why TCP is a connection-oriented protocol, so we look at the three-way handshake and the four-way handshake. The process TCP uses to establish connections is called the TCP Three-Way Handshake. The process TCP uses to terminate connections is sometimes called the TCP four-way handshake. We then discuss key TCP functions in closer detail, especially, how TCP provides sequencing, TCP retransmission, error recovery, and flow control. We then move on to UDP, highlighting how it is similar to and different from TCP. We [compare TCP to UDP](https://www.freecodecamp.org/news/tcp-vs-udp/). We compare the fields in the L4 headers of each of the two transport protocols, the features, and the real-world applications of each protocol. Finally, we look at some important well-known port numbers and matching Application layer protocols we must know for the CCNA.
 
-We elaborate on L4 addressing by discussing how L4 ports are used to identify application services and to track sessions between end hosts and servers (session multiplexing). IANA’s port number ranges that Application layer protocols use are then explained.&#x20;
-
-We then zoom in on TCP. First we explain why TCP is a connection-oriented protocol. So we look at the three-way handshake and the four-way handshake. We then discuss TCP functions in closer detail, especially, how TCP provides sequencing, reliable communication, and flow control.&#x20;
-
-We then move on to UDP, highlighting how it is similar to and different from TCP. We [compare TCP to UDP](https://www.freecodecamp.org/news/tcp-vs-udp/). We compare the fields in the L4 headers of each of the two transport protocols, the features, and the real-world applications of each protocol. Finally, we look at some important well-known port numbers and matching Application layer protocols we must know for the CCNA.
+## Topics covered in this section
 
 * **Basic functions of Layer 4 protocols (Transport layer)**
 * **Port numbers/session multiplexing**
@@ -53,7 +49,7 @@ A **second function** of Layer 4 protocols is to provide, or not provide, variou
 
 The following are services provided by TCP but not UDP.
 
-* Reliable data transfer. That means making sure that the destination host actually received every bit of data that it’s supposed to. TCP provides data transfer reliability at L4 by making use of three fields (Sequence Number, Acknowledge Number, and Window Size) and four flags (SYN/Synchronize, ACK/Acknowledgement, FIN/Finished, and RST/Reset) in the TCP header. More on this shortly.
+* Reliable data transfer. That means making sure that the destination host actually received every bit of data that it’s supposed to. TCP provides data transfer reliability at L4 by making use of three fields (Sequence Number, Acknowledge Number, and Window Size) and four flags (SYN/Synchronize, ACK/Acknowledgement, FIN/Finished, and RST/Reset) in the TCP header. More on this shortly. The destination host must acknowledge that it received each TCP segment. If the source host does not receive an acknowledgment for a segment, the source host sends the segment again. TCP **retransmits** any segments that are not acknowledged.&#x20;
 * Error recovery. If an error occurs in transmission, Layer 4 can ensure the data is sent again.
 * Data sequencing, making sure that even if data arrives at the destination out of order, the end host can sequence it in the correct order.
 * Flow control, making sure that the source host does not send traffic faster than the destination host can handle.&#x20;
@@ -126,27 +122,7 @@ As you probably noticed, all of the randomly selected source port numbers in the
 
 ### TCP (Transmission Control Protocol)
 
-After an overview of the functions of the TCP,  we will look at the TCP header, and then go more in depth on a few of its functions.&#x20;
-
-\*TCP is a connection-oriented protocol.&#x20;
-
-\>The source host does not start sending data without first communicating with the destination host and setting up a connection. Once a connection is established, the data exchange begins.&#x20;
-
-\*TCP provides reliable communication.
-
-\>The destination host must acknowledge that it received each TCP segment.&#x20;
-
-\>If the source host does not receive an acknowledgment for a segment, the source host sends the segment again.&#x20;
-
-\*TCP provides sequencing.&#x20;
-
-\>There is a sequence field in the TCP header.&#x20;
-
-\>Destination hosts use the sequence numbers in the TCP header to put segments in the correct order even if they arrive out of order.
-
-\*TCP provides flow control.
-
-\>The destination host can tell the source host to increase or decrease the rate of data transfer (flow), so that the destination host is not overwhelmed by traffic.
+Next we look at the TCP header, and then we cover the three-way handshake and the four-way handshake. We then go more in depth on a few of TCP's key functions: how TCP provides sequencing, TCP retransmission, error recovery, and flow control.
 
 ### TCP header
 
@@ -164,7 +140,7 @@ The window size field is used for flow control, adjusting the rate at which data
 
 ### Establishing connections: three-way handshake
 
-TCP is connection-oriented, meaning, hosts first communicate to establish a connection before sending any data. The method TCP uses to establish connections is called the TCP Three-Way Handshake. The method involves three messages being sent between any two hosts.&#x20;
+TCP is a connection-oriented protocol, meaning, the source host does not start sending data without first communicating with the destination host and setting up a connection. Once a connection is established, the data exchange begins. The process TCP uses to establish connections is called the TCP Three-Way Handshake. The method involves three messages being sent between any two hosts.&#x20;
 
 Let’s say PC1 wants to access a webpage on SRV1 using HTTP. First, PC1 must establish a TCP connection. To do so, PC1 uses two flags in the TCP header, SYN (synchronization), and ACK (acknowledgment).
 
@@ -190,7 +166,7 @@ SRV1 then sends its own FIN. Finally, PC1 sends an ACK in response to SRV1’s F
 
 ### Sequencing/Acknowledgement
 
-Let’s see how TCP uses the sequence and acknowledgment fields of the header to provide **reliable** communication and **sequencing**.&#x20;
+There is a sequence field in the TCP header. Destination hosts use the sequence numbers in the TCP header to put segments in the correct order even if they arrive out of order. Let’s see how TCP uses the sequence and acknowledgment fields of the header to provide reliable communication and sequencing.&#x20;
 
 Here is an exchange between two PCs, PC1 and PC2. When PC1 sends the three-way handshake’s SYN message, PC1 sets a random initial sequence number, let’s say 10. When PC2 sends the SYN-ACK to PC1, PC2 sets its own random initial sequence number, for example 50. PC2 also acknowledges that it received PC1’s segment with the sequence number of 10, by setting the acknowledgment field to 11.&#x20;
 
@@ -256,9 +232,7 @@ TCP error recovery is an important part of what makes TCP so reliable. It allows
 
 ### TCP flow control: window size
 
-Let’s discuss how TCP provides **flow** control.
-
-Acknowledging every single segment, no matter what size, is inefficient. The TCP header’s window size field allows more data to be sent before an acknowledgment is required.&#x20;
+Acknowledging every single segment, no matter what size, is inefficient. The TCP header’s window size field allows more data to be sent before an acknowledgment is required. The destination host can tell the source host to increase or decrease the rate of data transfer (flow), so that the destination host is not overwhelmed by traffic.
 
 Here’s an example. A host could send three segments, with sequence numbers 20, 21, and 22, and then an Ack is sent with sequence number 23.&#x20;
 
@@ -402,13 +376,10 @@ The only protocol you should be aware of that uses both TCP and UDP is DNS, Doma
 
 ### Key learnings
 
-\*Basics of Layer 4, including Layer 4 addressing in the form of port numbers and matching transport protocol identifiers.
-
-\*TCP, a Layer 4 protocol which provides various services to applications, such as reliable communication and flow control.&#x20;
-
-\*UDP, which does not provide the various services that TCP does, but uses a smaller header with less overhead.&#x20;
-
-\*Comparing TCP to UDP.
+* Basics of Layer 4, including Layer 4 addressing in the form of port numbers and matching transport protocol identifiers.
+* TCP, a Layer 4 protocol which provides various services to applications, such as reliable communication and flow control.&#x20;
+* UDP, which does not provide the various services that TCP does, but uses a smaller header with less overhead.&#x20;
+* Comparing TCP to UDP.
 
 ### Key references
 

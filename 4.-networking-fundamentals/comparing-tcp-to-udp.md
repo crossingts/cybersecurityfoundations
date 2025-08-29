@@ -29,11 +29,12 @@ TCP and UDP have three basic functions: 1) providing transparent transfer of dat
 
 The primary Layer 4 protocols, TCP and UDP, fulfill the three basic functions in different ways:
 
-| Function                        | TCP (Transmission Control Protocol)                                                                                                      | UDP (User Datagram Protocol)                                                                                                                                 |
-| ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **1. Data Transfer**            | **Reliable & Connection-Oriented.** Establishes a session, guarantees delivery, ensures in-order receipt, and retransmits lost data.     | **Unreliable & Connectionless.** Sends datagrams without establishing a connection, offering no guarantees of delivery, ordering, or duplication protection. |
-| **2. Services to Applications** | Provides extensive services: **error recovery, flow control, and congestion control.** This ensures data integrity but adds overhead.    | Provides minimal services—essentially just a checksum for data corruption. This low latency and overhead is its primary service.                             |
-| **3. Layer 4 Addressing**       | Uses **source and destination port numbers** to multiplex data between applications on the same host and establish specific connections. | Uses **source and destination port numbers** to direct datagrams to the correct application process on a host.                                               |
+| Function                         | TCP (Transmission Control Protocol)                                                                                                                                                                                                                               | UDP (User Datagram Protocol)                                                                                                                                 |
+| -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **1. Transparent Data Transfer** | The process underlying the delivery of data from host to host is transparent to the applications running on the hosts. The applications simply send data to the Transport layer, and the Transport layer ensures that it is delivered to the correct destination. | Ditto but best-effort delivery/fire-and-forget.                                                                                                              |
+| **2. Services to Applications**  | **Reliable & Connection-Oriented.** Establishes a session, guarantees delivery, ensures in-order receipt, and retransmits lost data.                                                                                                                              | **Unreliable & Connectionless.** Sends datagrams without establishing a connection, offering no guarantees of delivery, ordering, or duplication protection. |
+|                                  | Provides extensive services: **error recovery, flow control, and congestion control.** This ensures data integrity but adds overhead.                                                                                                                             | Provides minimal services—essentially just a checksum for data corruption. This low latency and overhead is its primary service.                             |
+| **3. Layer 4 Addressing**        | Uses **source and destination port numbers** to multiplex data between applications on the same host and establish specific connections.                                                                                                                          | Uses **source and destination port numbers** to direct datagrams to the correct application process on a host.                                               |
 
 Let’s elaborate.
 
@@ -45,7 +46,7 @@ In this network topology Host A is sending data to Host B.
 
 The Transport layer encapsulates the data with a Layer 4 header, and then uses the services of the lower layers, Layers 3, 2, and 1, to deliver the data unchanged to the destination host. The hosts themselves are not aware of the details of the underlying network, the transfer of data is transparent to them.
 
-A **second function** of Layer 4 protocols is to provide, or not provide, various **services to applications**. TCP provides services to applications whereas UDP does not.&#x20;
+A **second function** of Layer 4 protocols is to provide, or not provide, various **services to applications**.
 
 The following are services provided by TCP but not UDP.
 
@@ -86,9 +87,7 @@ Here are some examples of L4 ports and the Application layer protocols and servi
 
 ### Port numbers/session multiplexing
 
-Here we have PC1, and it will access resources from two servers over the Internet, SRV1 and SRV2.&#x20;
-
-Let’s see how L4 ports can be used to **identify the application service** PC1 wants to access, and to **track sessions** between PC1 and the servers.
+Here we have PC1, and it will access resources from two servers over the Internet, SRV1 and SRV2. Let’s see how L4 ports can be used to **identify the application service** PC1 wants to access, and to **track sessions** between PC1 and the servers.
 
 A session is an exchange of data between two or more communicating devices. A PC is typically handling multiple communication sessions at once. A PC user typically has several web browser tabs open at any one time, accessing different services over the Internet. The user probably has multiple services running on his computer that need Internet access.
 
@@ -190,15 +189,11 @@ To provide **reliable** communication, TCP retransmits any segments that are not
 
 TCP retransmission works like this:
 
-\>PC1 sends SRV1 a segment with sequence number 20.&#x20;
-
-\>SRV1 sends Ack 21 to PC1.&#x20;
-
-\>PC1 then sends sequence number 21. But something is amiss. PC1 does not receive an Ack for sequence 21 from SRV1.&#x20;
-
-\>After waiting a certain amount of time with no Ack, PC1 resends the segment.&#x20;
-
-This time SRV1 receives it, and sends Ack 22 to tell PC1 that it was received.
+* PC1 sends SRV1 a segment with sequence number 20.&#x20;
+* SRV1 sends Ack 21 to PC1.&#x20;
+* PC1 then sends sequence number 21. But something is amiss. PC1 does not receive an Ack for sequence 21 from SRV1.&#x20;
+* After waiting a certain amount of time with no Ack, PC1 resends the segment.&#x20;
+* This time SRV1 receives it, and sends Ack 22 to tell PC1 that it was received.
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/cbe1d-tcp-tcp-retransmission-8.webp?w=1201" alt="tcp-TCP-retransmission" height="597" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | TCP &#x26; UDP | Day 30)</p></figcaption></figure>
 

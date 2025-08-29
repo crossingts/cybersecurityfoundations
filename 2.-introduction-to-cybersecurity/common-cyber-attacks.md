@@ -121,7 +121,40 @@ For mitigation of TCP SYN flood attacks, you would need methods that focus on ma
 
 DHCP exhaustion attack, also known as a DHCP starvation attack, is similar to the TCP SYN flood attack. An attacker uses spoofed MAC addresses to flood a DHCP server with DHCP Discover messages. Attackers send DHCP Discover messages with fake source MAC addresses at a very quick pace. The server will reply to each Discover with a DHCP Offer message, and while it is offering an IP address it will not assign that address to other devices. The target server’s DHCP pool becomes full, resulting in a denial-of-service to other devices which are no longer able to get an IP address. Mitigation: DHCP snooping, Switch Port Security.
 
-<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/a76cf-dhcp-exhaustion-attack-2.webp?w=1201" alt="DHCP-exhaustion-attack" height="423" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Security Fundamentals | Day 48)</p></figcaption></figure>
+```mermaid
+sequenceDiagram
+    participant Legitimate Client
+    participant Attacker
+    participant DHCP Server
+    participant Network Switch
+
+    Note over DHCP Server: Initial State: Healthy DHCP Pool
+    Note right of DHCP Server: Available IPs: 250/250
+
+    Legitimate Client->>Network Switch: Legitimate DHCP Discover (Real MAC)
+    Network Switch->>DHCP Server: Forward Discover
+    DHCP Server->>Legitimate Client: DHCP Offer (IP: 192.168.1.10)
+    Legitimate Client->>DHCP Server: DHCP Request
+    DHCP Server->>Legitimate Client: DHCP Ack
+    Note right of DHCP Server: IP 192.168.1.10 leased<br/>Available IPs: 249/250
+
+    Note over Attacker, DHCP Server: Phase 1: Attack Launch
+    loop Flood of Bogus Requests
+        Attacker->>Network Switch: DHCP Discover (Spoofed MAC)
+        Network Switch->>DHCP Server: Forward Discover
+        DHCP Server->>Nowhere: DHCP Offer (to non-existent client)
+        Note right of DHCP Server: IP reserved in pool<br/>Available IPs: 248... 200... 100...
+    end
+
+    Note over DHCP Server: Phase 2: Pool Exhaustion
+    Note right of DHCP Server: ❌ Pool Status: FULL (0/250)<br/>All IPs are reserved for<br/>non-existent clients.
+
+    Note over Legitimate Client, DHCP Server: Phase 3: Service Denial
+    Legitimate Client->>Network Switch: Legitimate DHCP Discover (Real MAC)
+    Network Switch->>DHCP Server: Forward Discover
+    DHCP Server-->>Legitimate Client: ❌ No IP Address Available (or Silence)
+    Note left of Legitimate Client: Client cannot get an IP.<br/>No network access. Denied Service.
+```
 
 So if some PCs send DHCP Discover messages to get IP addresses, the server is not able to give them their IP addresses because its DHCP pool is full. Maybe it had 250 IP addresses to lease to clients, but they are all taken by the attacker.
 

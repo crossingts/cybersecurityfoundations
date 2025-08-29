@@ -186,18 +186,53 @@ There is a more powerful variant of the reflection attack called an amplificatio
 
 **DHCP poisoning**
 
-In a DHCP poisoning attack a malicious device impersonates a legitimate DHCP server and offers IP addresses to clients. The spurious DHCP server leases a useful IP address to the target device, in the correct subnet, with the correct mask, but assigns its own IP address as the default gateway.
+In a DHCP poisoning attack a malicious device impersonates a legitimate DHCP server and offers IP addresses to clients. The spurious DHCP server leases a useful IP address to the target device, in the correct subnet, with the correct mask, but assigns its own IP address as the default gateway. Once a client accepts the attacker's offer, their communication gets routed through the attacker's device, allowing them to potentially eavesdrop on traffic, steal data, redirect the user to malicious websites, or tamper with (damage) or alter the captured traffic. Mitigation: DHCP snooping.
 
-Once a client accepts the attacker's offer, their communication gets routed through the attacker's device, allowing them to potentially eavesdrop on traffic, steal data, redirect the user to malicious websites, or tamper with (damage) or alter the captured traffic. Mitigation: DHCP snooping.
+```mermaid
+sequenceDiagram
+    participant Legitimate Client
+    participant Attacker
+    participant Legit DHCP Server
+    participant Legit Gateway
 
-A spurious DHCP server and a malicious MITM < DHCP snooping configuration and verification\
-[https://itnetworkingskills.wordpress.com/2023/05/14/dhcp-snooping-configuration-verification/](https://itnetworkingskills.wordpress.com/2023/05/14/dhcp-snooping-configuration-verification/)
+    Note over Legitimate Client: Client needs an IP address
 
-DHCP snooping is a security feature that helps to prevent unauthorized DHCP servers from providing IP addresses to devices on a network. It does this by classifying ports on a switch as either trusted or untrusted. Untrusted ports are only allowed to forward DHCP discover messages.
+    Legitimate Client->>Attacker: DHCP Discover (Broadcast)
+    Legitimate Client->>Legit DHCP Server: DHCP Discover (Broadcast)
+
+    Note over Attacker, Legit DHCP Server: The Attacker races to respond first
+
+    Attacker->>Legitimate Client: DHCP Offer (Malicious)
+    Note left of Attacker: Offers: IP: 192.168.1.100<br/>Gateway: Attacker_IP<br/>DNS: Attacker_IP
+    Legit DHCP Server->>Legitimate Client: DHCP Offer (Legitimate)
+    Note right of Legit DHCP Server: Offers: IP: 192.168.1.10<br/>Gateway: Legit_Gateway_IP
+
+    Note over Legitimate Client: Client typically accepts<br/>the first offer it receives
+
+    Legitimate Client->>Attacker: DHCP Request (For malicious offer)
+    Legitimate Client->>Legit DHCP Server: DHCP Request (For malicious offer - Broadcast)
+
+    Attacker->>Legitimate Client: DHCP Ack
+    Note left of Attacker: ✅ Attack Successful<br/>Client now uses attacker as gateway.
+
+    Legit DHCP Server-->>Legitimate Client: (Silently discards request)
+
+    Note over Legitimate Client, Attacker: Phase 2: Man-in-the-Middle Achieved
+
+    Legitimate Client->>Attacker: All traffic to Internet
+    Note left of Legitimate Client: Sends data via<br/>attacker's gateway
+    Attacker->>Legit Gateway: Forward Traffic (Intercept & Inspect)
+    Legit Gateway->>Attacker: Return Traffic
+    Attacker->>Legitimate Client: Forward Traffic (Intercept & Inspect)
+
+    Note over Attacker: Attacker can now:<br/>- Eavesdrop on all traffic<br/>- Steal data (passwords, etc.)<br/>- Redirect to malicious sites<br/>- Alter or damage packets
+```
+
+DHCP snooping is a security feature that helps prevent MITM attacks by identifying and discarding unauthorized DHCP messages, thereby stopping the attacker from establishing themselves as a fake server. DHCP snooping helps to prevent unauthorized DHCP servers from providing IP addresses to devices on a network. It does this by classifying ports on a switch as either trusted or untrusted. Untrusted ports are only allowed to forward DHCP discover messages.
 
 A DHCP server can only send DHCP offers and acknowledgements to ports that are trusted. If a DHCP server tries to send a DHCP offer or acknowledgement to an untrusted port, the switch will drop the packet. This helps to prevent unauthorized DHCP servers from providing IP addresses to devices on the network.
 
-DHCP snooping helps prevent MITM attacks by identifying and discarding unauthorized DHCP messages, thereby stopping the attacker from establishing themselves as a fake server.
+A further illustration of the DHCP poisoning attack (also covering DHCP snooping configuration and verification): [A spurious DHCP server and a malicious MITM](https://itnetworkingskills.wordpress.com/2023/05/14/dhcp-snooping-configuration-verification/)
 
 **ARP spoofing**
 

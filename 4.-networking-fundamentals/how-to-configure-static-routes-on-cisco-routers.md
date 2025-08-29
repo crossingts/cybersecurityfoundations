@@ -8,6 +8,8 @@ Connected routes provide a route to a network the router’s interface is direct
 
 First we review Connected and Local routes. Next is an introduction to static routes and an explanation of how we can use static routes to instruct routers about how to forward packets. Then we will look at [how to configure static routes in the CLI of Cisco routers](https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus3000/sw/unicast/503_u1_2/nexus3000_unicast_config_gd_503_u1_2/l3_route.html). Finally, default routes are explained and we look at how to configure a default route on a Cisco router.
 
+## Topics covered in this section
+
 * **Connected and Local routes – review**
 * **Default gateway – routing packets**
 * **Routing packets between end hosts in different networks (PC1 and PC4)**

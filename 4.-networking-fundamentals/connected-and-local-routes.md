@@ -20,24 +20,18 @@ In this lesson we start looking at how routers forward packets to their destinat
 
 ### What is routing?
 
-\*Routing is the process that routers use to determine the path that IP packets should take over a network to reach their destination. When a router receives a packet, it’s the router’s job to forward the packet to the correct destination.&#x20;
+Routing is the process that routers use to determine the path that IP packets should take over a network to reach their destination. Routers store routes to all of their known destinations in a routing table. When routers receive packets, they look in the routing table to find the best route to forward the packets.
 
-Routers store routes to all of their known destinations in a routing table. When routers receive packets, they look in the routing table to find the best route to forward the packets.
+A route is an instruction to the router. A route tells the router: to send a packet to destination X, you should send the packet to next-hop Y. Next hop means the next router in the path to the destination. Or, if the destination is directly connected to the router, send the packet directly to the destination. Or, if the destination is the router’s own IP address, receive the packet for yourself, do not forward it.
 
-\*A route is an instruction to the router. A route tells the router: to send a packet to destination X, you should send the packet to next-hop Y. Next hop means the next router in the path to the destination.
-
-Or, if the destination is directly connected to the router, send the packet directly to the destination. Or, if the destination is the router’s own IP address, receive the packet for yourself, do not forward it.
-
-\*There are two main routing methods (methods routers use to learn routes):
+There are two main routing methods (methods routers use to learn routes):
 
 * Dynamic routing, in which routers use dynamic routing protocols such as OSPF to share routing information with each other automatically and build their routing tables.
-* Static routing. In this case, a network engineer or network admin manually configures routes on the router.
+* Static routing. In this case, a network admin manually configures routes on the router.
 
-This lesson covers [Connected and Local routes](https://www.youtube.com/watch?v=ke0Jqwgqw1o), both do not fit into either of the above two categories.
+Connected and Local routes do not fit into either of the above two categories.
 
-To demonstrate routing concepts we will use the following example network.
-
-There are four routers connected together, and they represent a Wide Area Network. A WAN is a network that extends over a large geographical area. For example, each of these four routers could be in a different city or even a different country.
+To demonstrate routing concepts we will use the following example network. There are four routers connected together, and they represent a Wide Area Network. A WAN is a network that extends over a large geographical area. For example, each of these four routers could be in a different city or even a different country.
 
 Connected to R1 and R4 are two LANs. Each of these LANs could be a different office in a different city, and each could be connected to many more hosts than is shown here. R2 and R3 each can have their own connected LANs too.
 
@@ -45,17 +39,17 @@ Connected to R1 and R4 are two LANs. Each of these LANs could be a different off
 
 Now let’s look at the IP addresses each device will be using.
 
-\>For the LAN connected to R1, the network is 192.168.1.0/24 and R1’s G0/2 interface IP is 192.168.1.1 and PC1’s IP is 192.168.1.10.&#x20;
+For the LAN connected to R1, the network is 192.168.1.0/24 and R1’s G0/2 interface IP is 192.168.1.1 and PC1’s IP is 192.168.1.10.&#x20;
 
-\>The WAN connection between R1 and R2 is 192.168.12.0/24. R1 G0/1’s IP is 192.168.12.1 and R2 G0/0’s IP is 192.168.12.2.
+The WAN connection between R1 and R2 is 192.168.12.0/24. R1 G0/1’s IP is 192.168.12.1 and R2 G0/0’s IP is 192.168.12.2.
 
-\>The WAN connection between R1 and R3 is 192.168.13.0/24, with R1 G0/0 as 192.168.13.1 and R3 G0/0 as 192.168.13.3.
+The WAN connection between R1 and R3 is 192.168.13.0/24, with R1 G0/0 as 192.168.13.1 and R3 G0/0 as 192.168.13.3.
 
-\>The WAN connection between R2 and R4 is 192.168.24.0/24, with R2 G0/1 as 192.168.24.2 and R4 G0/0 as 192.168.24.4.
+The WAN connection between R2 and R4 is 192.168.24.0/24, with R2 G0/1 as 192.168.24.2 and R4 G0/0 as 192.168.24.4.
 
-\>The final WAN connection between R3 and R4 is 192.168.34.0/24, with R3 G0/1 as 192.168.34.3 and R4 G0/1 as 192.168.34.4.&#x20;
+The final WAN connection between R3 and R4 is 192.168.34.0/24, with R3 G0/1 as 192.168.34.3 and R4 G0/1 as 192.168.34.4.&#x20;
 
-\>Then, the LAN connected to R4’s G0/2 interface is 192.168.4.0/24, with R4 G0/2 as 192.168.4.4 and PC4 as 192.168.4.10.&#x20;
+Then, the LAN connected to R4’s G0/2 interface is 192.168.4.0/24, with R4 G0/2 as 192.168.4.4 and PC4 as 192.168.4.10.&#x20;
 
 Notice that all the router IP addresses are the same as their name. All of R1’s IP addresses are .1, R2’s IP addresses are .2, R3’s IP addresses are .3, and R4’s IP addresses are .4.
 
@@ -87,7 +81,7 @@ The Codes legend in the output of SHOW IP ROUTE lists the different protocols wh
 
 The code L is used for routes to the actual IP address configured on the router’s interface, and these routes will have a /32 mask. If you look at the routes below in the above diagram, notice there are three routes with L highlighted in blue, one for each of R1’s interfaces. The code C is used for routes to the network the interface is connected to, with the actual netmask (subnet mask) configured on the interface. Notice there are also three routes with the C code in the output.
 
-Even though we haven’t configured any routes yet on R1, R1 already has six routes. When you configure an IP address on an interface and enable it with the NO SHUTDOWN command, two routes per interface will be automatically added to the routing table, a connected route, and a local route.&#x20;
+Even though we haven’t configured any routes yet on R1, R1 already has six routes. When you configure an IP address on a router interface and enable it with the NO SHUTDOWN command, two routes per interface will be automatically added to the routing table, a Connected route, and a Local route.&#x20;
 
 Note, the statement “192.168.1.0/24 is variably subnetted, 2 subnets, 2 masks” means that in the routing table there are two routes to subnets that fit within the 192.168.1.0/24 Class C network, with two different subnet masks, those being /24 and /32. The other two similarly-worded lines mean the same thing for their respective networks.&#x20;
 
@@ -205,9 +199,9 @@ A route tells the router, if the destination is directly connected (**Connected 
 
 –For example, if the interface’s IP is 192.168.1.1/24, the connected route will be to 1.0/24.
 
-–It tells the router: to send a packet to a destination in this network, send it out of the interface specified in the route.&#x20;
+–The Connected route tells the router: to send a packet to a destination in this network, send it out of the interface specified in the route.&#x20;
 
-\>The second kind of route is a **Local route**, indicated by code L in the routing table. It’s a route to the exact IP address configured on the interface.&#x20;
+\>The second kind of route is a **Local route**, indicated by code L in the routing table. It is a route to the exact IP address configured on the interface.&#x20;
 
 –So, if the interface’s IP is 192.168.1.1/24, the local route will be to 1.1/32. A /32 netmask is used to specify just the one IP address.
 
@@ -245,11 +239,9 @@ R#**show ip route**
 
 ### Key learnings
 
-\*What is routing?&#x20;
-
-\*How to read the routing table on a Cisco router, specifically looking at Connected and Local routes.
-
-\*Routing fundamentals (route selection) – how routers select which route to use to forward a particular packet.&#x20;
+* What is routing?&#x20;
+* How to read the routing table on a Cisco router, specifically looking at Connected and Local routes.
+* Routing fundamentals (route selection) – how routers select which route to use to forward a particular packet.&#x20;
 
 ### Key references
 

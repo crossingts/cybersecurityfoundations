@@ -38,11 +38,9 @@ a) Static
 
 b) Connected
 
-c) Local
+**c) Local**
 
 d) Dynamic
-
-The answer is C, local. When you configure an IP address on an interface, two routes are automatically added to the router’s routing table, assuming the interface is enabled, a connected route to the network, and a local route to the exact IP address configured on the router interface.
 
 ### How to configure static routes on Cisco routers
 

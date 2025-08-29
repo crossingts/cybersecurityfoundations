@@ -1,16 +1,11 @@
 # How to configure static routes on Cisco routers
 
-In this lesson we learn [how to configure static routes in the CLI of Cisco routers](https://docs.ruckuswireless.com/fastiron/08.0.60/fastiron-08060-l3guide/GUID-5FDB9268-E525-4641-87AE-F626B9C93872.html). We look at how to read a routing table, how to configure a static IP address for the eth0 network interface of a PC as the default gateway, and how to configure a default route on a Cisco router.
+In this lesson we learn how to configure static routes in the CLI of Cisco routers. We look at how to read a routing table, how to configure a static IP address for the eth0 network interface of a PC as the default gateway, and how to configure a default route on a Cisco router.
 
-Static routing is a very important topic in computer networking and for the CCNA. In the previous lesson, [Connected and local routes](https://itnetworkingskills.wordpress.com/2023/04/21/connected-local-routes/), we looked at the basics of routing, how routers decide where to forward packets. We explored two types of routes – [Connected and Local routes](https://itnetworkingskills.wordpress.com/2023/04/21/connected-local-routes/).
-
-Connected routes provide a route to a network the router’s interface is directly connected to, and Local routes provide a route to the router’s own IP address. However, for the router to be able to send traffic to destinations not directly connected to the router itself, Connected and Local routes are not enough. Static routes enable routers to send packets to remote destinations not directly connected to the router itself. Unlike Connected and Local routes, static routes are not automatically added to the routing table and must be manually configured.
-
-First we review Connected and Local routes. Next is an introduction to static routes and an explanation of how we can use static routes to instruct routers about how to forward packets. Then we will look at [how to configure static routes in the CLI of Cisco routers](https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus3000/sw/unicast/503_u1_2/nexus3000_unicast_config_gd_503_u1_2/l3_route.html). Finally, default routes are explained and we look at how to configure a default route on a Cisco router.
+In the previous lesson, we explored two types of routes: Connected and Local routes. Connected routes provide a route to a network the router’s interface is directly connected to, and Local routes provide a route to the router’s own IP address. However, for the router to be able to send traffic to destinations not directly connected to the router itself, Connected and Local routes are not enough. Static routes enable routers to send packets to remote destinations not directly connected to the router itself. Unlike Connected and Local routes, static routes are not automatically added to the routing table and must be manually configured.
 
 ## Topics covered in this section
 
-* **Connected and Local routes – review**
 * **Default gateway – routing packets**
 * **Routing packets between end hosts in different networks (PC1 and PC4)**
 * **Static routes: planning**
@@ -20,47 +15,12 @@ First we review Connected and Local routes. Next is an introduction to static ro
 * **Default route**
 * **Command review**
 * **Key learnings**
-* **Practice quiz questions**
-
-### [Connected and Local routes – review](https://itnetworkingskills.wordpress.com/2023/04/21/connected-local-routes/)
-
-Let’s first review Connected and Local routes by configuring IP addresses on the routers and checking their routing tables.
-
-In the last lesson, Connected and local routes, we configured R1, so this time let’s start from R2.
-
-<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/12c62-what-is-routing.webp?w=1201" alt="What-is-routing" height="250" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Routing Fundamentals (part 1) | Day 11)</p></figcaption></figure>
-
-Here are **R2’s configurations.** We configured IP addresses on R2’s G0/0 and G0/1 interfaces and enabled both interfaces with **no shutdown**.&#x20;
-
-<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/d3df4-c-l-routes-review.webp?w=1201" alt="C-L-routes-review" height="198" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Routing Fundamentals (part 2) | Day 11)</p></figcaption></figure>
-
-Recall, when you configure IP addresses on router interfaces, connected and local routes are added automatically in the routing table. One connected route and one local route per interface are added. So we can expect to find four routes already added in R2’s routing table. Remember, if an interface is disabled the connected and local routes for that interface will not appear in the routing table.&#x20;
-
-The connected routes are routes to the networks which R2’s interfaces are connected to. So there should be one route to 192.168.12.0/24 and one route to 192.168.24.0/24. And then the local routes are to the exact IP addresses configured on R2’s interfaces, so there should be a route to 192.168.12.2/32 and a route to 192.168.24.2/32.
-
-Here are the routes.&#x20;
-
-<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/36397-r2-show-ip-route-3.webp?w=1201" alt="R2-show-ip-route" height="337" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Routing Fundamentals (part 2) | Day 11)</p></figcaption></figure>
-
-As expected, R2 has two connected routes: one to 12.0/24 and one to 24.0/24. R2 also has two local routes, one to 12.2/32 and one to 24.2/32.&#x20;
-
-To summarize: R2 knows how to reach its own IP addresses and destinations in its connected networks, but it does not know how to reach destinations in remote networks (networks not directly connected to R2). So R2 knows how to reach destinations in the 192.168.12.0/24 and 192.168.24.0/24 networks, including its own IP addresses in those networks. But it does not know how to reach any of the other networks in the network topology. If R2 receives packets destined for hosts in these other networks, it will have to drop them.&#x20;
-
-And here are **R3’s configurations**. 192.168.13.3/24 on its G0/0 interface and 192.168.34.3/24 on G0/1.
-
-<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/99196-r3-configure-terminal-4.webp?w=1201" alt="R3-configure-terminal" height="545" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Routing Fundamentals (part 2) | Day 11)</p></figcaption></figure>
-
-R3’s routing table shows R3 has two Connected and two Local routes. Like on R2, R3 knows how to reach destinations in its connected networks, those are the connected routes, and its own IP addresses, those are the local routes. So R3 knows how to reach 192.168.13.0/24, including its own IP of 13.3/32, and it also knows how to reach 34.0/24, including its own IP of 34.3/32. But R3 does not know how to reach any of the other networks. So, for example, if R3 receives a packet and the destination is PC4’s IP address, 192.168.4.10, R3 would have to drop the packet.
-
-And here are **R4’s configurations**. R4 has three interfaces in use, so it will have six routes in its routing table, three Connected and three Local.&#x20;
-
-<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/6377c-r4-interface-g0-0-5.webp?w=1201" alt="R4-interface-g0-0" height="406" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Routing Fundamentals (part 2) | Day 11)</p></figcaption></figure>
-
-Now let’s start looking at how to configure the routers to allow PC1 and PC4 to communicate. So we are going to start looking at how packets move through the network. First, we are going to look at the concept of **default gateway**.
+* **Configuring static routes – Packet Tracer Lab 1**
+* **Troubleshooting static routes – Packet Tracer Lab 2**
 
 ### Default gateway – routing packets
 
-Here is our network topology, in a new, colorful dress.
+Here is our network topology. Let’s start looking at how to configure the routers to allow PC1 and PC4 to communicate. So we are going to start looking at how packets move through the network. First, we are going to look at the concept of **default gateway**.
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/8b60d-static-route-configuration-6_8_10_11.webp?w=1201" alt="static-route-configuration" height="257" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Routing Fundamentals (part 2) | Day 11)</p></figcaption></figure>
 
@@ -289,33 +249,14 @@ R(config)#**ip route** 0.0.0.0 0.0.0.0 _next-hop_\
 
 ### Key learnings
 
-\*How to configure an IP address on the router’s interface, and how to read/identify connected and local routes in a routing table via the show ip route command (a review of material covered in the previous lesson).
+* How to configure an IP address on the router’s interface, and how to read/identify connected and local routes in a routing table via the show ip route command (a review of material covered in the previous lesson).
+* How to configure a static IP address for the eth0 network interface of a PC as the default gateway.
+* How to configure static routes on Cisco routers to route packets between end hosts in different networks (PC1 and PC4).
+* How to configure a default route on a Cisco router.
 
-\*How to configure a static IP address for the eth0 network interface of a PC as the default gateway.
+### Configuring static routes – Packet Tracer Lab 1
 
-\*How to configure static routes on Cisco routers to route packets between end hosts in different networks (PC1 and PC4).
-
-\*How to configure a default route on a Cisco router.&#x20;
-
-### Practice quiz questions&#x20;
-
-**Quiz question 1**
-
-Which of the following commands configures a default route on a Cisco router?
-
-a) R1(config)#ip route 0.0.0.0 0.0.0.0 10.1.1.255
-
-b) R1(config)#ip route 0.0.0.0/0 10.1.1.255
-
-c) R1(config)#ip route 0.0.0.0 255.255.255.255 10.1.1.255
-
-d) R1(config)#ip route 0.0.0.0/32 10.1.1.255
-
-The answer is a), ip route 0.0.0.0 0.0.0.0 10.1.1.255.&#x20;
-
-For four more practice questions for this lesson, visit Jeremy’s Static Routing, Day 11 (part 2), video lesson, cited below.
-
-### Configuring static routes – Lab 1
+[**Get the lab file (.pkt) from Google Drive (Jeremy McDowell's Free CCNA Online Course)**](https://drive.google.com/drive/folders/1PwK_jWqfUtOjV7gHt8ODutq9QA5cxCgi)**: Day 11 Lab - Configuring Static Routes.pkt**
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/f5a7b-config-static-routes-day11-lab-24.webp?w=1201" alt="Config-Static-Routes-Day11-lab" height="607" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Configuring Static Routes | Day 11 Lab 1)</p></figcaption></figure>
 
@@ -364,7 +305,9 @@ R2(config)#ip route 192.168.3.0 255.255.255.0 192.168.13.3
 
 R3(config)#ip route 192.168.1.0 255.255.255.0 192.168.13.2
 
-### Troubleshooting static routes – Lab 2
+### Troubleshooting static routes – Packet Tracer Lab 2
+
+[**Get the lab file (.pkt) from Google Drive (Jeremy McDowell's Free CCNA Online Course)**](https://drive.google.com/drive/folders/1PwK_jWqfUtOjV7gHt8ODutq9QA5cxCgi)**: Day 11 Lab - Troubleshooting Static Routes.pkt**
 
 Troubleshoot a configured network that has some problems – using the same network topology of the previous lab.
 

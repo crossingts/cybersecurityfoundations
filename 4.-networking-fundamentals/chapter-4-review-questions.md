@@ -44,7 +44,17 @@ d) Dynamic
 
 ### How to configure static routes on Cisco routers
 
-* Point 1
+* Quiz question 1
+
+Which of the following commands configures a default route on a Cisco router?
+
+**a) R1(config)#ip route 0.0.0.0 0.0.0.0 10.1.1.255**
+
+b) R1(config)#ip route 0.0.0.0/0 10.1.1.255
+
+c) R1(config)#ip route 0.0.0.0 255.255.255.255 10.1.1.255
+
+d) R1(config)#ip route 0.0.0.0/32 10.1.1.255
 
 ### Comparing TCP to UDP
 

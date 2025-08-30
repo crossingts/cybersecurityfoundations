@@ -1,8 +1,6 @@
 # Configuring and verifying DHCP client and relay
 
-This lesson covers DHCP, Dynamic Host Configuration Protocol. DHCP is mentioned in the CCNA exam blueprint in Section 4.0 IP Services. Subsection 4.3 states that you must be able to “[Explain the role of DHCP and DNS within the network](https://www.univention.com/blog-en/2019/03/brief-introduction-dhcp-dns/)”, and subsection 4.6 says you must be able to “[Configure and verify DHCP client and relay](https://study-ccna.com/dhcp-relay-agent/).” DHCP is also mentioned in Section 5.0, Security Fundamentals, subsection 5.7, “Configure and verify Layer 2 security features ([DHCP snooping](https://itnetworkingskills.wordpress.com/2023/05/14/dhcp-snooping-configuration-verification/), dynamic ARP inspection, and port security)”, but [DHCP security](https://supervisorbullying.com/dhcp-snooping-configuration-verification/) is covered in a separate lesson.
-
-This lesson covers 1) the [role of DHCP within the network](https://www.techtarget.com/searchnetworking/definition/DHCP), 2) the basic functions of DHCP, specifically the four-message exchange that clients use to get an IP address from a DHCP server (Discover, Offer, Request, and Acknowledgment), and 3) [how to configure and verify DHCP client and relay](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/ipaddr_dhcp/configuration/15-sy/dhcp-15-sy-book/dhcp-relay-agent.html). We learn how to configure a Cisco router as a DHCP server, a DHCP client, and a DHCP relay agent.
+This lesson explains the role of DHCP within the network. This lesson covers 1) the [role of DHCP within the network](https://www.techtarget.com/searchnetworking/definition/DHCP), 2) the basic functions of DHCP, specifically the four-message exchange that clients use to get an IP address from a DHCP server (Discover, Offer, Request, and Acknowledgment), and 3) [how to configure and verify DHCP client and relay](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/ipaddr_dhcp/configuration/15-sy/dhcp-15-sy-book/dhcp-relay-agent.html). We learn how to configure a Cisco router as a DHCP server, a DHCP client, and a DHCP relay agent.
 
 ## Topics covered in this section
 
@@ -37,7 +35,9 @@ Devices such as routers and servers are usually manually configured. This is bec
 
 ### The basic functions of DHCP
 
-DHCP servers play a vital role in networks. Almost every user endpoint uses DHCP to learn its IP address, mask, default gateway, and DNS server IP addresses. For some background for this lesson, feel free to consult the section “The DHCP protocol” in this lesson: [Network protocols and their functions](https://itnetworkingskills.wordpress.com/2023/01/15/network-protocols-their-functions/).
+DHCP servers play a vital role in networks. Almost every user endpoint uses DHCP to learn its IP address, mask, default gateway, and DNS server IP addresses.&#x20;
+
+For some background for this lesson, feel free to consult the section “The DHCP protocol” in this lesson: [Network protocols and their functions](https://itnetworkingskills.wordpress.com/2023/01/15/network-protocols-their-functions/).
 
 In his [free CCNA DHCP lesson on YouTube](https://www.google.com/url?q=https://www.youtube.com/watch?v%3DhzkleGAC2_Y%26list%3DPLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ%26index%3D76\&sa=D\&source=editors\&ust=1683277194574315\&usg=AOvVaw0N8Bv9UI_NrvUGYA8e6g9g) (from 3:49-7:26), Jeremy McDowell (Jeremy’s IT Lab) walks us through a short demonstration on his Windows 10 PC. Jeremy applies the **ipconfig /all** command to verify various IP/DHCP parameters for Windows OS.
 
@@ -397,11 +397,9 @@ R2(config-if)#**ip address dhcp**\
 
 ### Key learnings
 
-\*The role of DHCP within the network.&#x20;
-
-\*The DHCP leasing process – the four-message process used to lease an IP address from a DHCP server (DORA).
-
-\*How to configure DHCP in Cisco IOS: how to configure a Cisco router as a DHCP server, how to configure a Cisco router as a DHCP relay agent, and how to configure a Cisco router as a DHCP client.
+* The role of DHCP within the network.&#x20;
+* The DHCP leasing process – the four-message process used to lease an IP address from a DHCP server (DORA).
+* How to configure DHCP in Cisco IOS: how to configure a Cisco router as a DHCP server, how to configure a Cisco router as a DHCP relay agent, and how to configure a Cisco router as a DHCP client.
 
 ### Key references
 

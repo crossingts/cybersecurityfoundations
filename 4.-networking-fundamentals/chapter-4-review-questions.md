@@ -70,7 +70,19 @@ The answer is ACL 1. Entry 10 permits PC1 and entry 20 permits PC4. The implicit
 
 ### The role of DNS within the network
 
-* Point 1
+* Quiz question 1
+
+Which of the following Windows command prompt commands will display the PC’s DNS server? Select two.
+
+a) ipconfig
+
+**b) ipconfig /all**
+
+c) ipcofig /displaydns
+
+**d) nslookup**
+
+The correct answers are b and d. a, IPCONFIG, displays the PC’s IP address, subnet mask, and default gateway, but not details like the DNS server. c, IPCONFIG /DISPLAYDNS, shows the PC’s DNS cache, but not the DNS server address.
 
 ### Configuring and verifying DHCP client and relay
 

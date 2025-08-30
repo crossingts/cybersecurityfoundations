@@ -1,6 +1,6 @@
 # The role of DNS within the network
 
-The [DNS (Domain Name System) protocol ](https://study-ccna.com/domain-name-system-dns/)makes it easy for humans to use the Internet by translating domain names into IP addresses. This means that we can type in a human-readable address like [http://www.google.com](http://www.google.com/) instead of a complex IP address like 172.217.0.142. DNS is mentioned in the CCNA exam topics list in Section 4, IP Services, subsection 4.3, which states that you must be able to “[Explain the role of DHCP and DNS within the network](https://study-ccna.com/dhcp-dns/)”. This lesson explains the [role of DNS within the network](https://its.umich.edu/enterprise/wifi-networks/dns-dhcp) and how to configure DNS in Cisco IOS.&#x20;
+The [DNS (Domain Name System) protocol ](https://study-ccna.com/domain-name-system-dns/)makes it easy for humans to use the Internet by translating domain names into IP addresses. This means that we can type in a human-readable address like [http://www.google.com](http://www.google.com/) instead of a complex IP address like 172.217.0.142. This lesson explains the [role of DNS within the network](https://its.umich.edu/enterprise/wifi-networks/dns-dhcp) and how to configure DNS in Cisco IOS.
 
 ## Topics covered in this section
 
@@ -18,11 +18,10 @@ The [DNS (Domain Name System) protocol ](https://study-ccna.com/domain-name-syst
 * **Configuring a router as a DNS client**
 * **Command review**
 * **Key learnings**
-* **Practice quiz questions**
 
 ### [The role of DNS within the network](https://www.fortinet.com/resources/cyberglossary/what-is-dns)
 
-DNS is used to resolve (i.e., convert) human-readable names such as google.com to IP addresses. When you type youtube.com into a web browser, your device will ask a DNS server for the IP address of youtube.com.
+DNS is used to resolve (i.e., convert) human-readable names such as youtube.com to IP addresses. When you type youtube.com into a web browser, your device will ask a DNS server for the IP address of youtube.com.
 
 The DNS server or servers your device uses can be manually configured or automatically learned via [DHCP (dynamic host configuration protocol)](https://itnetworkingskills.wordpress.com/2023/04/11/configure-verify-dhcp-client-relay/).
 
@@ -289,29 +288,9 @@ R1(config)#ip domain name jeremysitlab.com
 
 ### Key learnings
 
-\*The role of DNS within the network.
-
-\*The basic functions of DNS – an overview of how DNS works using a Windows PC. For example, how a Windows PC uses Google’s DNS server to learn the IP address of youtube.com, and then adds that IP address to its DNS cache.&#x20;
-
-\*How to configure DNS in Cisco IOS – how to configure a Cisco router to be a DNS server and a DNS client.
-
-### Practice quiz questions
-
-**Quiz question 1**
-
-Which of the following Windows command prompt commands will display the PC’s DNS server? Select two.
-
-a) ipconfig
-
-b) ipconfig /all
-
-c) ipcofig /displaydns
-
-d) nslookup
-
-The correct answers are b and d. a, IPCONFIG, displays the PC’s IP address, subnet mask, and default gateway, but not details like the DNS server. c, IPCONFIG /DISPLAYDNS, shows the PC’s DNS cache, but not the DNS server address.
-
-You can find four more practice questions for this lesson (plus a bonus one) in Jeremy’s video lesson DNS, cited below.
+* The role of DNS within the network.
+* The basic functions of DNS – an overview of how DNS works using a Windows PC. For example, how a Windows PC uses Google’s DNS server to learn the IP address of youtube.com, and then adds that IP address to its DNS cache.&#x20;
+* How to configure DNS in Cisco IOS – how to configure a Cisco router to be a DNS server and a DNS client.
 
 ### Key references
 

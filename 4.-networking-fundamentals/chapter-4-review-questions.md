@@ -44,7 +44,7 @@ hidden: true
 
 * Quiz questions
 
-**Quiz question 1 - Identify the route type**
+**Quiz question 1**&#x20;
 
 The IP address configured on a router interface will appear in the routing table as what kind of route?&#x20;
 
@@ -62,7 +62,7 @@ d) Dynamic
 
 * Quiz questions
 
-**Quiz question 1 - Configuring a default route**
+**Quiz question 1**&#x20;
 
 Which of the following commands configures a default route on a Cisco router?
 
@@ -86,7 +86,7 @@ d) R1(config)#ip route 0.0.0.0/32 10.1.1.255
 
 * Quiz questions
 
-**Quiz question 1 - Identify the correct ACL**
+**Quiz question 1**&#x20;
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/2f1ca-acls-practice-quiz-questions-22.webp?w=1201" alt="acls-Practice-quiz-questions" height="608" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Standard ACLs | Day 34)</p></figcaption></figure>
 
@@ -105,7 +105,7 @@ The answer is ACL 1. Entry 10 permits PC1 and entry 20 permits PC4. The implicit
 
 * Quiz questions
 
-**Quiz question 1 - Displaying IP parameters**
+**Quiz question 1**&#x20;
 
 Which of the following Windows command prompt commands will display the PC’s DNS server? Select two.
 
@@ -119,6 +119,34 @@ c) ipcofig /displaydns
 
 The correct answers are b and d. a, IPCONFIG, displays the PC’s IP address, subnet mask, and default gateway, but not details like the DNS server. c, IPCONFIG /DISPLAYDNS, shows the PC’s DNS cache, but not the DNS server address.
 
+**Quiz question 2**
+
+A user can successfully ping a web server's IP address but cannot load its website by typing the URL into a browser. Which of the following is the most likely cause of this problem?
+
+a) The default gateway is misconfigured
+
+**b) The DNS service is unavailable**
+
+c) The network cable is unplugged&#x20;
+
+d) The web server is down
+
+Correct Answer: b) The DNS service is unavailable. Explanation: The fact that the IP address ping works proves that the network path is functional (ruling out a, c, and d). The browser uses the domain name (URL), which must be translated into an IP address by DNS. If DNS is unavailable, this translation fails, and the browser cannot connect.
+
+**Quiz question 3**
+
+Which command on a Windows PC would you use to determine which DNS server the computer is configured to use?
+
+a) `ping`
+
+b) `nslookup`
+
+**c) `ipconfig /all`**
+
+d) `tracert`
+
+Correct Answer: c) `ipconfig /all.` Explanation: The `ipconfig /all` command displays the complete IP configuration for all network adapters, including the IP addresses of the configured DNS servers. While `nslookup` _uses_ the DNS server, it doesn't explicitly show you which one is configured in the adapter's settings.
+
 ***
 
 ### Static NAT configuration
@@ -126,7 +154,7 @@ The correct answers are b and d. a, IPCONFIG, displays the PC’s IP address, su
 * Describe the need for private IPv4 addressing.
 * Quiz questions
 
-**Quiz question 1 - Basic configuration**
+**Quiz question 1**&#x20;
 
 **Scenario:** You are configuring a network where an internal web server with the IP address `192.168.50.100` must be accessible from the internet. The router's public IP address on its outside interface is `203.0.113.50`. You have been assigned the public IP `203.0.113.100` to statically map to the web server.
 
@@ -152,7 +180,7 @@ ip nat inside source static 192.168.50.100 203.0.113.100
 * Correctly identifies and sets the `ip nat outside` command on the appropriate interface.
 * Uses the correct `ip nat inside source static` command with the proper order of arguments: `local-inside-ip` first, then `global-outside-ip`.
 
-**Quiz question 2 - Verification and interpretation**
+**Quiz question 2**&#x20;
 
 **Scenario:** After configuring static NAT for a server, you run the `show ip nat translations` command on your router and get the following output:
 
@@ -173,7 +201,7 @@ A. The Inside Global IP (`203.0.113.100`) is the public IP address that represen
 B. The user on the internet must use the Inside Global IP address: `203.0.113.100`.\
 C. The "Outside" fields are empty because there are currently no active translations or connections involving outside hosts. The static NAT entry is pre-programmed and always in the table, but it only shows outside addresses when a connection is actively using the translation.
 
-**Explanation for Grading:**
+**Grading:**
 
 * **(A)** Answer correctly identifies the Inside Global IP as the public representation of the internal host.
 * **(B)** Answer correctly identifies that external users target the global (public) IP.

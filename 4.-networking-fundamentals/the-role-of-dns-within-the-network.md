@@ -1,3 +1,9 @@
+---
+description: >-
+  This section explores the critical role of DNS within a network and how to
+  configure and verify DNS services on Cisco IOS devices
+---
+
 # The role of DNS within the network
 
 ## Learning objectives
@@ -295,14 +301,19 @@ R1(config)#ip domain name jeremysitlab.com
 
 ### Key learnings
 
-* The role of DNS within the network.
-* The basic functions of DNS – an overview of how DNS works using a Windows PC. For example, how a Windows PC uses Google’s DNS server to learn the IP address of youtube.com, and then adds that IP address to its DNS cache.&#x20;
-* How to configure DNS in Cisco IOS – how to configure a Cisco router to be a DNS server and a DNS client.
+* DNS is a critical network service that resolves easy-to-remember domain names (e.g., [www.cisco.com](http://www.cisco.com/)) to their corresponding numerical IP addresses, enabling easier navigation of networks and the Internet.
+* Common commands like `ipconfig /all`, `nslookup`, and `ping` are essential tools for verifying a device's IP configuration and testing DNS resolution from a client.
+* A Cisco router can be configured to act as both a DNS client and a basic DNS server.
+  * As a DNS client, the router is configured with the IP addresses of DNS servers (e.g., 8.8.8.8). When you use a command like `ping www.example.com` on the router, it acts as a client and sends a query to those servers to resolve the name.
+  * As a basic DNS server, the router can answer DNS queries from other devices on its local networks. It can be configured with static hostname-to-IP-address mappings, allowing local devices to query the router for name resolution instead of a external server.
+* DNS functionality can be observed and analyzed using packet capture tools like Wireshark, which allows you to see the query and response process between a client and a DNS server.
 
-### Key references
-
-Note: The resources cited below (in the “Key references” section of this document) are the main source of knowledge for these study notes/this lesson, unless stated otherwise.
+### References
 
 [Free CCNA | DNS | Day 38 | CCNA 200-301 Complete Course](https://www.youtube.com/watch?v=4C6eeQes4cs\&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ\&index=73)
 
 [Free CCNA | DNS | Day 38 Lab | CCNA 200-301 Complete Course](https://www.youtube.com/watch?v=7D_FapNrRUM\&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ\&index=74)
+
+Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 1. Cisco Press.
+
+Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 2. Cisco Press.

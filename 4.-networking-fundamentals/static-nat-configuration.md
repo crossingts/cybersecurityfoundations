@@ -331,4 +331,6 @@ R#**show ip nat statistics**\
 
 [NAT – Practical Networking — CCNA Topics](https://www.practicalnetworking.net/index/ccna/)
 
+Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 1. Cisco Press.
+
 Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 2. Cisco Press.

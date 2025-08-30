@@ -158,4 +158,4 @@ C. The "Outside" fields are empty because there are currently no active translat
 * Identify two common network attack types associated with each OSI layer.
 * Briefly describe how each identified attack type can compromise a network.
 * Identify two key mitigation methods for each identified attack type.
-* Sort the identified network attack types by their potential level of risk (consider frequency and impact).
+* Sort the identified network attack types by their potential level of risk (consider attack likelihood and potential impact).

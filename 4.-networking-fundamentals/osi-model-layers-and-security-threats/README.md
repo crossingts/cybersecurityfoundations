@@ -8,9 +8,9 @@ description: >-
 
 ## Learning objectives
 
-• Identify and list common network attack types associated with each OSI layer\
-• Understand how each attack type can compromise the network\
-• Describe key mitigation methods for each attack type
+* Identify and list common network attack types associated with each OSI layer
+* Understand how each attack type can compromise the network
+* Describe key mitigation methods for each attack type
 
 This section discusses network layers within the OSI model in the context of threats, vulnerabilities, and mitigation. The discussion focuses on the following network attack types: DNS Spoofing (L7), SQL Injection (L7), Phishing (L6), Malicious File Uploads (L6), Session Hijacking (L5), SSL Stripping (L5), TCP SYN Flooding (L4), UDP Flooding (L4), ICMP Flooding (L3), IP Spoofing (L3), ARP Spoofing (L2), MAC Flooding (L2), Sniffing (L1), and Cable Tapping (L1).
 
@@ -545,10 +545,10 @@ Cable Tapping is a physical intrusion attack (e.g., state-sponsored espionage) w
 
 ### Key takeaways
 
-• Common L7 attacks are DNS Spoofing and SQL Injection\
-• Common L6 attacks are Phishing and Malicious File Uploads\
-• Common L5 attacks are Session Hijacking and SSL Stripping\
-• Common L4 attacks are TCP SYN Flooding and UDP Flooding\
-• Common L3 attacks are ICMP Flooding and IP Spoofing\
-• Common L2 attacks are ARP Spoofing (MITM) and MAC Flooding\
-• Common L1 attacks are Sniffing and Cable Tapping
+* Common L7 attacks are DNS Spoofing and SQL Injection
+* Common L6 attacks are Phishing and Malicious File Uploads
+* Common L5 attacks are Session Hijacking and SSL Stripping
+* Common L4 attacks are TCP SYN Flooding and UDP Flooding
+* Common L3 attacks are ICMP Flooding and IP Spoofing
+* Common L2 attacks are ARP Spoofing (MITM) and MAC Flooding
+* Common L1 attacks are Sniffing and Cable Tapping

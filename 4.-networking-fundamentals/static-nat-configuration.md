@@ -1,8 +1,6 @@
 # Static NAT configuration
 
-This lesson focuses on [static NAT configuration](https://www.manageengine.com/network-configuration-manager/configlets/configure-static-nat-cisco.html) on Cisco IOS devices. NAT (network address translation) is an important topic for the CCNA exam and for network engineering. NAT is used to translate the source and/or destination IP address of a packet to a different IP address. NAT is covered in Section 4 of the CCNA exam topics list, IP Services, subsection 4.1, which says you must be able to “[Configure and verify inside source NAT using static and pools](https://www.cisco.com/c/en/us/support/docs/ip/network-address-translation-nat/13772-12.html)”. Further, Section 1, Network Fundamentals, states you must be able to “[Describe the need for private IPv4 addressing](https://www.arin.net/reference/research/statistics/address_filters/).”
-
-There are different types of NAT, such as static NAT, dynamic NAT, and [port address translation (PAT)](https://itnetworkingskills.wordpress.com/2023/04/13/dynamic-pat-configuration/). Static NAT maps a private IP address to a fixed public IP address. Dynamic NAT assigns a public IP address from a pool of available addresses to a private IP address on demand. PAT uses a single public IP address and different port numbers to distinguish between multiple private IP addresses. NAT will be covered in two parts. This lesson (NAT Part 1) focuses on the following four topic areas: 1) the need for private IPv4 addressing, 2) NAT purpose in networks, 3) how NAT works, and 4) [static NAT configuration](https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus3548/sw/interfaces/b_N3548_Interfaces_Config_503_A1/b_N3548_Interfaces_Config_503_A1_chapter_0101.pdf).
+This lesson focuses on [static NAT configuration](https://www.manageengine.com/network-configuration-manager/configlets/configure-static-nat-cisco.html) on Cisco IOS devices. NAT (Network Address Translation) is an important networking topic. NAT is used to translate the source and/or destination IP address of a packet to a different IP address. There are different types of NAT, such as static NAT, dynamic NAT, and [Port Address Translation (PAT)](https://itnetworkingskills.wordpress.com/2023/04/13/dynamic-pat-configuration/). Static NAT maps a private IP address to a fixed public IP address. Dynamic NAT assigns a public IP address from a pool of available addresses to a private IP address on demand. PAT uses a single public IP address and different port numbers to distinguish between multiple private IP addresses. This lesson covers on the following four topic areas: 1) the need for private IPv4 addressing, 2) NAT purpose in networks, 3) how NAT works, and 4) configuring and verifying inside source NAT using static NAT.
 
 ## Topics covered in this section
 
@@ -229,17 +227,9 @@ R#**show ip nat statistics**\
 
 ### Key learnings&#x20;
 
-\*Introduction to private IPv4 addresses – the need for private IPv4 addressing, and the three private IP address ranges, 10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16. &#x20;
-
-\*Introduction to NAT in general. The function of NAT in a network, and how static source NAT functions.
-
-\*How to configure static NAT – specify the inside and outside interfaces, and then configure the IP address mappings.&#x20;
-
-### Practice quiz questions
-
-\*You can find five practice questions for this lesson (plus a bonus one) in Jeremy’s NAT (Part 1) video, cited below.
-
-\*You can find five practice questions for NAT (including dynamic NAT and PAT) in Odom, 2020, pp. 521-523. See citation below.
+* Introduction to private IPv4 addresses – the need for private IPv4 addressing, and the three private IP address ranges, 10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16. &#x20;
+* Introduction to NAT in general. The function of NAT in a network, and how static source NAT functions.
+* How to configure static NAT – specify the inside and outside interfaces, and then configure the IP address mappings.&#x20;
 
 ### Key references
 

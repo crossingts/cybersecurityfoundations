@@ -538,20 +538,20 @@ Use R1(config)#do show startup-config to view the startup configuration file.
 
 Follow the same procedures to configure the switch.
 
-### Key references
-
-Note: The resources cited below (in the “Key references” section of this document) are the main source of knowledge for these study notes/this lesson, unless stated otherwise.
+### References
 
 [Free CCNA | Intro to the CLI | Day 4 | CCNA 200-301 Complete Course](https://www.youtube.com/watch?v=IYbtai7Nu2g\&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ\&index=8)
 
 [Free CCNA | Basic Device Security | Day 4 Lab | CCNA 200-301 Complete Course](https://www.youtube.com/watch?v=SDocmq1c05s\&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ\&index=9)
-
-### Other references/resources
 
 [cisco.com. (n.d.). Cisco IOS Master Command List, All Releases](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/mcl/allreleasemcl/all-book.html)
 
 [Cisco. (April 2010). Cisco IOS Configuration Fundamentals Command Reference](https://www.cisco.com/c/en/us/td/docs/ios/fundamentals/command/reference/cf_book.pdf)
 
 [Destiny Erhabor. (Oct. 18, 2022). Linux Command Line Tutorial – How to Use Common Terminal Commands (freecodecamp.org)](https://www.freecodecamp.org/news/linux-command-line-tutorial/)
+
+Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 1. Cisco Press.
+
+Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 2. Cisco Press.
 
 [Sean Douglas. (Nov 17, 2022). Top 5 Network Admin Cisco Commands Cheat Sheet (pluralsight)](https://www.pluralsight.com/blog/it-ops/cisco-commands-for-network-admin)

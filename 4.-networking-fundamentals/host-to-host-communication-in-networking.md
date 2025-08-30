@@ -120,3 +120,7 @@ The first step any host takes when it’s trying to send data on a network is to
 [Everything Hosts do to speak on the Internet – Part 2 – Networking Fundamentals – Lesson 3 (PracNet, Part 2)](https://www.youtube.com/watch?v=JI9Zm2tbUoE)
 
 [Host (network). (2022, November 17). Wikipedia, The Free Encyclopedia. Retrieved 20:16, December 31, 2022, from https://en.wikipedia.org/wiki/Host\_(network)](https://en.wikipedia.org/wiki/Host_\(network\))
+
+Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 1. Cisco Press.
+
+Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 2. Cisco Press.

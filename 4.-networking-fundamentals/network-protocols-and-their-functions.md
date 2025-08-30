@@ -174,3 +174,7 @@ DNS is also what makes email possible. If asked for your email address, you woul
 [Internet Protocol. (2022, December 29). Wikipedia, The Free Encyclopedia. Retrieved 15:47, January 15, 2023, from https://en.wikipedia.org/wiki/Internet\_Protocol](https://en.wikipedia.org/wiki/Internet_Protocol)
 
 [Network Protocols – ARP, FTP, SMTP, HTTP, SSL, TLS, HTTPS, DNS, DHCP – Networking Fundamentals – L6 (PracNet)](https://www.youtube.com/watch?v=E5bSumTAHZE\&ab_channel=PracticalNetworking)
+
+Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 1. Cisco Press.
+
+Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 2. Cisco Press.

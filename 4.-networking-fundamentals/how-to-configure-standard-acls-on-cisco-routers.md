@@ -519,10 +519,12 @@ R1(config-std-nacl)#permit …
 
 \*Verify configurations with show access-lists, show ip access-lists, and show running-config
 
-### Key references
-
-Note: The resources cited below (in the “Key references” section of this document) are the main source of knowledge for these study notes/this lesson, unless stated otherwise.
+### References
 
 [Free CCNA | Standard ACLs | Day 34 | CCNA 200-301 Complete Course](https://www.youtube.com/watch?v=z023_eRUtSo\&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ\&index=65)
 
 [Free CCNA | Standard ACLs | Day 34 Lab | CCNA 200-301 Complete Course](https://www.youtube.com/watch?v=sJ8PXmiAkvs\&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ\&index=66)
+
+Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 1. Cisco Press.
+
+Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 2. Cisco Press.

@@ -148,3 +148,5 @@ Host-based firewalls are software applications that filter traffic entering and 
 [Network devices part 1: Network Devices – Hosts, IP Addresses, Networks – Networking Fundamentals – Lesson 1a](https://www.youtube.com/watch?v=bj-Yfakjllc\&ab_channel=PracticalNetworking)
 
 Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 1. Cisco Press.
+
+Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 2. Cisco Press.

@@ -96,8 +96,20 @@ The answer is ACL 1. Entry 10 permits PC1 and entry 20 permits PC4. The implicit
 
 ### Configuring and verifying DHCP client and relay
 
-* Point 1
 * Identify the key IP parameters displayed by ipconfig /all and the primary reasons for using this essential command.
+* Quiz questions
+
+**Quiz question 1**
+
+During the DORA process, which message is a broadcast from the client indicating its acceptance of the offered IP address?
+
+Answer: DHCP Request message. The Request message is broadcast by the client to formally accept the offer from the server and to inform all other potential servers that it has chosen an address.
+
+**Quiz question 2**
+
+What Cisco IOS command is essential to configure an interface to forward incoming DHCP broadcasts to a specific DHCP server on another network?
+
+Answer: ip helper-address. This interface configuration command tells the router to forward certain broadcast packets, including DHCP Discover messages, to the specified IP address of the DHCP server.
 
 ***
 

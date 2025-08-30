@@ -377,13 +377,13 @@ The only protocol you should be aware of that uses both TCP and UDP is DNS, Doma
 * UDP, which does not provide the various services that TCP does, but uses a smaller header with less overhead.&#x20;
 * Comparing TCP to UDP.
 
-### Key references
-
-Note: The resources cited below (in the “Key references” section of this document) are the main source of knowledge for these study notes/this lesson, unless stated otherwise.
+### References
 
 [Free CCNA | TCP & UDP | Day 30 | CCNA 200-301 Complete Course](https://www.youtube.com/watch?v=LIEACBqlntY\&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ\&index=57)
 
-### Other references/resources
+Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 1. Cisco Press.
+
+Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 2. Cisco Press.
 
 [TCP – 12 simple ideas to explain the Transmission Control Protocol](https://www.youtube.com/watch?v=JFch3ctY6nE)
 

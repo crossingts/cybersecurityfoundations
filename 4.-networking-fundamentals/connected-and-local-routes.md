@@ -243,8 +243,10 @@ R#**show ip route**
 * How to read the routing table on a Cisco router, specifically looking at Connected and Local routes.
 * Routing fundamentals (route selection) – how routers select which route to use to forward a particular packet.&#x20;
 
-### Key references
-
-Note: The resources cited below (in the “Key references” section of this document) are the main source of knowledge for these study notes/this lesson, unless stated otherwise.
+### References
 
 [Free CCNA | Routing Fundamentals | Day 11 (part 1) | CCNA 200-301 Complete Course](https://www.youtube.com/watch?v=aHwAm8GYbn8\&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ\&index=19)
+
+Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 1. Cisco Press.
+
+Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 2. Cisco Press.

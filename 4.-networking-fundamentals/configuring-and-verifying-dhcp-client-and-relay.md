@@ -1,6 +1,21 @@
+---
+description: >-
+  This section covers DHCP and its basic function (DORA), configuration as a
+  server and relay agent, and verification commands on clients
+---
+
 # Configuring and verifying DHCP client and relay
 
-This lesson explains the role of DHCP within the network, the basic function of DHCP, specifically the four-message exchange that clients use to get an IP address from a DHCP server (Discover, Offer, Request, and Acknowledgment), and how to configure a Cisco router as a DHCP server, a DHCP relay agent, and a DHCP client.&#x20;
+## Learning objectives
+
+* Explain the purpose and benefits of DHCP in modern IP networks
+* Describe the four-step DORA process used by a client to obtain an IP address lease
+* Configure a Cisco IOS router to act as a DHCP server for a local network
+* Configure a Cisco IOS router to act as a DHCP relay agent to forward requests to a central server
+* Configure a Cisco router as a DHCP client
+* Use common client utilities (ipconfig /release, /renew, /all) to verify and manage DHCP-obtained addressing
+
+This section explains the role of DHCP within the network, the basic function of DHCP, specifically the four-message exchange that clients use to get an IP address from a DHCP server (Discover, Offer, Request, and Acknowledgment), and how to configure a Cisco router as a DHCP server, a DHCP relay agent, and a DHCP client.&#x20;
 
 ## Topics covered in this section
 
@@ -427,14 +442,18 @@ R2(config-if)#**ip address dhcp**\
 
 ### Key learnings
 
-* The role of DHCP within the network.&#x20;
-* The DHCP leasing process – the four-message process used to lease an IP address from a DHCP server (DORA).
-* How to configure DHCP in Cisco IOS: how to configure a Cisco router as a DHCP server, how to configure a Cisco router as a DHCP relay agent, and how to configure a Cisco router as a DHCP client.
+* DHCP automates IP address, subnet mask, gateway, and DNS server assignment, reducing administrative overhead.
+* The client-server exchange follows the DORA process: Discover, Offer, Request, Acknowledgement.
+* A DHCP server is configured with a pool of addresses and critical network information (default gateway, DNS servers).
+* A DHCP relay agent (using the `ip helper-address` command) is required to forward broadcast DHCP messages across router boundaries to a central server.
+* Client-side commands like `ipconfig /all`, `/release`, and `/renew` are crucial for verifying connectivity and troubleshooting DHCP issues.
 
-### Key references
-
-Note: The resources cited below (in the “Key references” section of this document) are the main source of knowledge for these study notes/this lesson, unless stated otherwise.
+### References
 
 [Free CCNA | DHCP | Day 39 | CCNA 200-301 Complete Course](https://www.youtube.com/watch?v=hzkleGAC2_Y\&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ\&index=75)
 
 [Free CCNA | DHCP | Day 39 Lab | CCNA 200-301 Complete Course](https://www.youtube.com/watch?v=cgMsoIQB9Wk\&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ\&index=76)
+
+Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 1. Cisco Press.
+
+Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 2. Cisco Press.

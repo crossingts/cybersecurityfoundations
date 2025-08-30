@@ -62,7 +62,11 @@ d) R1(config)#ip route 0.0.0.0/32 10.1.1.255
 
 ### How to configure standard ACLs on Cisco routers
 
-* Point 1
+* Quiz question 1
+
+<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/2f1ca-acls-practice-quiz-questions-22.webp?w=1201" alt="acls-Practice-quiz-questions" height="608" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Standard ACLs | Day 34)</p></figcaption></figure>
+
+The answer is ACL 1. Entry 10 permits PC1 and entry 20 permits PC4. The implicit deny will deny all other traffic. ACL 1 fulfills the requirements. The other ACLs do not.
 
 ### The role of DNS within the network
 

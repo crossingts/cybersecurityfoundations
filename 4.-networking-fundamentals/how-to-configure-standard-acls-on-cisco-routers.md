@@ -1,8 +1,6 @@
 # How to configure standard ACLs on Cisco routers
 
-This is Part 1 of 2 of ACLs study notes for the CCNA. The CCNA exam topics list mentions ACLs (Access Control Lists) in Section 5, Security Fundamentals, subsection 5.6, which says you must be able to “[configure and verify access control lists](https://www.cisco.com/c/en/us/support/docs/security/ios-firewall/23602-confaccesslists.html)”. This subsection refers to IPv4 ACLs. This lesson focuses on [how to configure standard ACLs on Cisco routers](https://www.cisco.com/c/en/us/support/docs/security/ios-firewall/23602-confaccesslists.html). The next lesson, [ACLs Part 2](https://itnetworkingskills.wordpress.com/2023/04/11/how-configure-extended-acls-cisco-routers/), focuses on [how to configure extended ACLs on Cisco routers](https://itnetworkingskills.wordpress.com/2023/04/11/how-configure-extended-acls-cisco-routers/).
-
-This lesson looks at what are ACLs and what is their purpose, how ACLs work/how to build ACLs, ACL logic/how the router processes ACLs, and ACL types used on Cisco routers. Further, we learn how to configure and verify two kinds of ACLs, standard numbered ACLs, and standard named ACLs.&#x20;
+This lesson looks at [how to configure standard access control lists (ACLs) on Cisco routers](https://www.cisco.com/c/en/us/support/docs/security/ios-firewall/23602-confaccesslists.html). This lesson looks at what are ACLs and what is their purpose, how ACLs work (how to build ACLs), ACL logic (how the router processes ACLs), and ACL types used on Cisco routers. Finally, we learn how to configure and verify two kinds of ACLs: standard numbered ACLs and standard named ACLs.
 
 ## Topics covered in this section
 
@@ -15,7 +13,6 @@ This lesson looks at what are ACLs and what is their purpose, how ACLs work/how 
 * **Configuring standard named ACLs on Cisco routers**
 * **Command review**
 * **Key learnings**
-* **Practice quiz questions**
 
 ### [What are ACLs (Access Control Lists)?](https://www.fortinet.com/resources/cyberglossary/network-access-control-list)
 
@@ -177,7 +174,15 @@ To summarize this point, there is an implicit deny at the end of all ACLs. The i
 
 There are two main types of ACLs, standard ACLs and extended ACLs. Each of those two types have two sub-types.
 
-<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/fa147-acl-types-9.webp?w=1201" alt="ACL-types" height="497" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Standard ACLs | Day 34)</p></figcaption></figure>
+Standard ACLs match based on source IP address only.
+
+* Standard numbered ACLs
+* Standard named ACLs
+
+Extended ACLs match based on source/destination IP address, source/destination port, etc.
+
+* Extended numbered ACLs
+* Extended named ACLs
 
 The first type is standard ACLs. These match based on source IP address only, so they are quite simple. The two sub-types of standard ACLs are standard numbered ACLs, which are identified with a number like 1, 2, etc. And there are standard named ACLs, which are identified with a name. There are differences in how you configure numbered and named ACLs.
 
@@ -195,9 +200,28 @@ The type of ACL you have to learn for the CCNA is IP ACL. There are lots of diff
 
 Standard ACLs can use 1 to 99 and 1300 to 1999. The ACL number has to be in one of these ranges. You cannot configure a standard ACL with the number 100, for example.&#x20;
 
-Here is a list of different ACL types and the different number ranges that identify them.&#x20;
+**ACL types and the number ranges that identify them**
 
-<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/00ab5-acl-number-ranges-10.webp?w=1201" alt="ACL-number-ranges" height="478" width="1201"><figcaption></figcaption></figure>
+| ACL Type                               | Number Range       |
+| -------------------------------------- | ------------------ |
+| Standard IP                            | 1–99, 1300–1999    |
+| Extended IP                            | 100–199, 2000–2699 |
+| Ethernet Type Code                     | 200–299            |
+| Ethernet Address                       | 700–799            |
+| **Transparent Bridging**               |                    |
+|   Protocol Type                        | 200–299            |
+|   Vendor Code                          | 700–799            |
+| Extended Transparent Bridging          | 1100–1199          |
+| DECnet and Extended DECnet             | 300–399            |
+| Xerox Network Systems (XNS)            | 400–499            |
+| Extended XNS                           | 500–599            |
+| AppleTalk                              | 600–699            |
+| **Source-Route Bridging**              |                    |
+|   Protocol Type                        | 200–299            |
+|   Vendor Code                          | 700–799            |
+| Internetwork Packet Exchange (IPX)     | 800–899            |
+| Extended IPX                           | 900–999            |
+| IPX Service Advertising Protocol (SAP) | 1000–1099          |
 
 The command syntax to configure a standard numbered ACL is:
 
@@ -494,16 +518,6 @@ R1(config-std-nacl)#deny …
 R1(config-std-nacl)#permit …
 
 \*Verify configurations with show access-lists, show ip access-lists, and show running-config
-
-### Practice quiz questions
-
-**Quiz question 1**&#x20;
-
-<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/2f1ca-acls-practice-quiz-questions-22.webp?w=1201" alt="acls-Practice-quiz-questions" height="608" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Standard ACLs | Day 34)</p></figcaption></figure>
-
-The answer is ACL 1. Entry 10 permits PC1 and entry 20 permits PC4. The implicit deny will deny all other traffic. ACL 1 fulfills the requirements. The other ACLs do not.
-
-You can find four more practice questions for this lesson (plus a bonus one) in Jeremy’s video lesson Standard ACLs, cited below.
 
 ### Key references
 

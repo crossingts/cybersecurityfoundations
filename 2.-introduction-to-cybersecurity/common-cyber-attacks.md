@@ -77,9 +77,7 @@ The TCP SYN flood is a common type of DoS attack (often directed against ISPs) w
 
 The three-way handshake is SYN, SYN-ACK, and ACK. The attacker sends a large number of SYN packets to a target server. The target server sends a SYN-ACK message in response to each SYN it receives. But the attacker never replies with the final ACK of the handshake.
 
-The target waits for the final ACK of each handshake, and the incomplete connections fill up the target’s TCP connection table. The incomplete connections will timeout and be removed from the table after a certain period of time, but the attacker continues sending SYN messages. This exhausts the server’s resources and prevents legitimate users from accessing it.
-
-In the end, the target is no longer able to make legitimate TCP connections because it has reached the maximum number of TCP connections it can maintain.
+The target waits for the final ACK of each handshake, and the incomplete connections fill up the target’s TCP connection table. The incomplete connections will timeout and be removed from the table after a certain period of time, but the attacker continues sending SYN messages. This exhausts the server’s resources and prevents legitimate users from accessing it. In the end, the target is no longer able to make legitimate TCP connections because it has reached the maximum number of TCP connections it can maintain.
 
 ```mermaid
 sequenceDiagram
@@ -240,11 +238,7 @@ ARP spoofing, also known as ARP poisoning, is a MITM attack that allows attacker
 
 The attacker sends fake ARP replies (gratuitous ARP) to associate their own MAC address with someone else’s IP address (e.g., the gateway’s IP). The attacker spoofs the source IP address of the target device as their own (impersonates a legitimate IP address). This tricks other devices into sending traffic intended for the victim’s IP to the attacker’s MAC instead.
 
-In an ARP spoofing attack, a host sends an ARP request asking for the MAC address of another device. PC1 is asking for the MAC address of host 10.0.0.1, which is SRV1. Because ARP request messages are broadcast, the switch floods the frame, so both SRV1 and the attacker receive it. SRV1 sends an ARP reply to PC1.
-
-<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/3e6ba-man-middle-attack-3.webp?w=1201" alt="man-middle-attack" height="339" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Security Fundamentals | Day 48)</p></figcaption></figure>
-
-The attacker waits briefly and then sends another ARP reply (called **gratuitous ARP**) after the legitimate reply. If the attacker’s ARP reply arrives last, it will overwrite the legitimate ARP entry in PC1’s ARP table.&#x20;
+In an ARP spoofing attack, a host sends an ARP request asking for the MAC address of another device. PC1 is asking for the MAC address of host 10.0.0.1, which is SRV1. Because ARP request messages are broadcast, the switch floods the frame, so both SRV1 and the attacker receive it. SRV1 sends an ARP reply to PC1. The attacker waits briefly and then sends another ARP reply (called **gratuitous ARP**) after the legitimate reply. If the attacker’s ARP reply arrives last, it will overwrite the legitimate ARP entry in PC1’s ARP table.&#x20;
 
 Now in PC1’s ARP table, the entry for 10.0.0.1 will have the attacker’s MAC address, not the MAC address of the real 10.0.0.1, SRV1. So when PC1 tries to send traffic to SRV1, traffic will be forwarded to the attacker instead. Then, the attacker can inspect the messages, read their contents and then forward them to SRV1. Or the attacker can modify the messages before forwarding them to SRV1.
 
@@ -313,7 +307,7 @@ Each of the following spoofing attack types involves either IP spoofing or MAC s
 
 | Spoofing Attack Type                       | Primary Spoofing Method | Mitigation                                           | Explanation                                                                                                                                                               |
 | ------------------------------------------ | ----------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| TCP SYN Flood (DoS)                        | **IP Spoofing**         | Filtering with ACLs, TCP SYN cookies, IPS/IDS        | The attacker uses a spoofed source IP to hide their identity and overwhelm the target with connection requests, making the attack difficult to trace.                     |
+| TCP SYN Flood (DoS)                        | **IP Spoofing**         | Rate limiting, SYN cookies, Firewalls and IPS        | The attacker uses a spoofed source IP to hide their identity and overwhelm the target with connection requests, making the attack difficult to trace.                     |
 | DHCP Exhaustion Attack (DoS)               | **MAC Spoofing**        | DHCP Snooping, Port Security                         | The attacker spoofs many different MAC addresses to request all available IP addresses from a DHCP server, exhausting the pool and denying service to legitimate clients. |
 | Reflection and Amplification Attacks (DoS) | **IP Spoofing**         | Anti-spoofing ACLs, BCP38 (network egress filtering) | The attacker spoofs the victim's IP address as the source. This causes reflection servers to send large responses to the victim, amplifying the attack traffic.           |
 | DHCP Poisoning (MITM)                      | **IP Spoofing**         | DHCP Snooping                                        | The attacker spoofs a legitimate DHCP server to provide clients malicious DHCP responses to redirect traffic for a MITM attack.                                           |

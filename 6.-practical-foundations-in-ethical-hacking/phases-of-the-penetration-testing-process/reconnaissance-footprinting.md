@@ -38,7 +38,7 @@ Some records provide IP addresses for individual systems within your network, wh
 
 The record types held within a company's DNS system can tell a hacker valuable information about the network layout, such as which server in the network holds and manages all the DNS records, where the e-mail servers are located, and where all the public-facing websites actually reside. All this information can be determined by examining the DNS record types.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt="DNS record types"><figcaption><p>Source: Walker (2012, p. 63)</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt="DNS record types"><figcaption><p>Source: Walker (2012, p. 63)</p></figcaption></figure>
 
 DNS (Domain Name System) is a foundational component of the internet, acting as a directory that translates human-readable domain names (like _example.com_) into machine-readable IP addresses (like \*192.0.2.1\*). For ethical hackers and penetration testers, DNS is a goldmine of reconnaissance data, revealing critical details about a target’s network infrastructure. This discussion explores how attackers (and defenders) leverage DNS for footprinting, including key DNS records, tools, and techniques.
 

@@ -23,7 +23,7 @@ The OpenPGP standard (RFC 4880) is an open standard for encrypting and decryptin
 
 User A wants to send User B an encrypted email.
 
-<figure><img src="../../.gitbook/assets/image.png" alt="How PGP Encryption Works" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt="How PGP Encryption Works" width="563"><figcaption></figcaption></figure>
 
 * First, using GPG, User A generates a random symmetric session key using AES or 3DES (GPG defaults to AES-256 since \~2014). This key is only used once.
 * User A encrypts their message to User B using the session key.
@@ -280,7 +280,7 @@ gpg --decrypt encrypted.asc > decrypted.txt # saves the output to the current wo
 * Search for my **Key ID**: 6CA33C2D9F494DB1
 * Click the result → Download (saves as a .asc file, e.g., as 2FC6F12930D378E3048EC6286CA33C2D9F494DB1.asc).
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt="keys.openpgp.org"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt="keys.openpgp.org"><figcaption></figcaption></figure>
 
 Next, import 2FC6F12930D378E3048EC6286CA33C2D9F494DB1.asc to the GPG keyring:
 

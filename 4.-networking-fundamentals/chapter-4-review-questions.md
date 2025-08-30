@@ -68,6 +68,11 @@ d) R1(config)#ip route 0.0.0.0/32 10.1.1.255
 
 The answer is ACL 1. Entry 10 permits PC1 and entry 20 permits PC4. The implicit deny will deny all other traffic. ACL 1 fulfills the requirements. The other ACLs do not.
 
+### Configuring and verifying DHCP client and relay
+
+* Point 1
+* Identify the key IP parameters displayed by ipconfig /all and the primary reasons for using this essential command.
+
 ### The role of DNS within the network
 
 * Quiz question 1
@@ -83,10 +88,6 @@ c) ipcofig /displaydns
 **d) nslookup**
 
 The correct answers are b and d. a, IPCONFIG, displays the PC’s IP address, subnet mask, and default gateway, but not details like the DNS server. c, IPCONFIG /DISPLAYDNS, shows the PC’s DNS cache, but not the DNS server address.
-
-### Configuring and verifying DHCP client and relay
-
-* Point 1
 
 ### Static NAT configuration
 

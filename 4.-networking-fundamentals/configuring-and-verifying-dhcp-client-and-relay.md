@@ -1,19 +1,19 @@
 # Configuring and verifying DHCP client and relay
 
-This lesson explains the role of DHCP within the network. This lesson covers 1) the [role of DHCP within the network](https://www.techtarget.com/searchnetworking/definition/DHCP), 2) the basic functions of DHCP, specifically the four-message exchange that clients use to get an IP address from a DHCP server (Discover, Offer, Request, and Acknowledgment), and 3) [how to configure and verify DHCP client and relay](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/ipaddr_dhcp/configuration/15-sy/dhcp-15-sy-book/dhcp-relay-agent.html). We learn how to configure a Cisco router as a DHCP server, a DHCP client, and a DHCP relay agent.
+This lesson explains the role of DHCP within the network, the basic function of DHCP, specifically the four-message exchange that clients use to get an IP address from a DHCP server (Discover, Offer, Request, and Acknowledgment), and how to configure a Cisco router as a DHCP server, a DHCP relay agent, and a DHCP client.&#x20;
 
 ## Topics covered in this section
 
 * **The role of DHCP within the network**
-* **The basic functions of DHCP**
+* **ipconfig /all (Windows)**
 * **ipconfig /release (Windows)**
 * **ipconfig /renew (Windows)**
-* **DHCP Discover message**
-* **DHCP Offer message**
-* **DHCP Request message**
-* **DHCP Ack message**
+* **The basic function of DHCP**
+  * **DHCP Discover message**
+  * **DHCP Offer message**
+  * **DHCP Request message**
+  * **DHCP Ack message**
 * **DORA (Discover, Offer, Request, Acknowledge)**
-* **DHCP relay**
 * **How to configure DHCP**
   * **DHCP server configuration in IOS**
   * **DHCP relay agent configuration in IOS**
@@ -23,23 +23,55 @@ This lesson explains the role of DHCP within the network. This lesson covers 1) 
 
 ### The role of DHCP within the network
 
-DHCP is a network protocol that is used to configure network devices to communicate on an IP network. DHCP automatically assigns IP addresses and other network configuration settings to devices on a network. This eliminates the need for network administrators to manually configure each device, which can save time and reduce errors.
+DHCP is a network protocol that is used to configure network devices to communicate on an IP network. DHCP automatically assigns IP addresses and other network configuration settings to devices on a network. This eliminates the need for network administrators to manually configure each device, which can save time and reduce errors. DHCP servers play a vital role in networks. Almost every user endpoint uses DHCP to learn its IP address, mask, default gateway, and DNS server IP addresses.&#x20;
 
-When a DHCP client device boots up, it sends a broadcast message to the network asking for a DHCP server. The DHCP server responds with an offer, which includes configuration information such as an IP address, subnet mask, default gateway, and one or more DNS server addresses. The DHCP client then accepts the offer and begins using the assigned IP address.
+When a DHCP client device boots up, it sends a broadcast message to the network asking for a DHCP server. The DHCP server responds with an offer, which includes configuration information such as an IP address, subnet mask, default gateway, and one or more DNS server addresses. The DHCP client then accepts the offer and begins using the assigned IP parameters.
 
-DHCP is a very important protocol for large networks, as it allows for efficient and automated management of IP addresses. It is also commonly used on home networks, as it makes it easy to add new devices to the network without having to manually configure them.
-
-In small networks such as home networks the router typically acts as the DHCP server for hosts in the LAN. In large networks, such as a large enterprise network, the DHCP server is usually a Windows or Linux server.
+DHCP is a very important protocol for large networks, as it allows for efficient and automated management of IP addresses. It is also commonly used on home networks, as it makes it easy to add new devices to the network without having to manually configure them. In small networks such as home networks the router typically acts as the DHCP server for hosts in the LAN. In large networks, such as a large enterprise network, the DHCP server is usually a Windows or Linux server.
 
 Devices such as routers and servers are usually manually configured. This is because they need to have a fixed IP address to perform their function. If the default gateway of the network kept changing it would slow down networking.
 
-### The basic functions of DHCP
+### ipconfig /all (Windows)
 
-DHCP servers play a vital role in networks. Almost every user endpoint uses DHCP to learn its IP address, mask, default gateway, and DNS server IP addresses.&#x20;
+The ipconfig /all command provides a detailed configuration report for every network adapter on the machine. The most critical IP parameters are:
 
-For some background for this lesson, feel free to consult the section “The DHCP protocol” in this lesson: [Network protocols and their functions](https://itnetworkingskills.wordpress.com/2023/01/15/network-protocols-their-functions/).
+| Parameter                  | Description                                                                                 | What It Tells You                                                                                                             |
+| -------------------------- | ------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| **IPv4 Address**           | The unique address assigned to your computer on the local network (e.g., `192.168.1.101`).  | Your computer's identity on the LAN. An address starting with `169.254.x.x` means it failed to get a valid address.           |
+| **Subnet Mask**            | Defines the size and boundaries of your local network (e.g., `255.255.255.0`).              | Which other addresses are on your local network vs. a remote one.                                                             |
+| **Default Gateway**        | The IP address of your router, the "door" to the internet.                                  | The path your computer uses to access the internet. If this is missing, you have no internet access.                          |
+| **DHCP Enabled**           | States whether the IP address was obtained automatically from a server.                     | "Yes" is standard for most networks. "No" means the address is set manually (static IP).                                      |
+| **DHCP Server**            | Identifies the device that leased the IP address to your computer.                          | On most home networks, this is the same as your **Default Gateway** (your router).                                            |
+| **DNS Servers**            | The "phone book" servers that translate domain names (e.g., google.com) to IP addresses.    | Who is responsible for your domain name lookups. Could be your router, your ISP, or a public service like Google (`8.8.8.8`). |
+| **Lease Obtained/Expires** | The timestamp showing when the current IP address was assigned and when it will be renewed. | Helps diagnose connectivity issues related to DHCP lease expiration.                                                          |
+| **Physical Address (MAC)** | The unique, burned-in hardware address of the network adapter.                              | A permanent identifier used for device recognition on the network.                                                            |
 
-In his [free CCNA DHCP lesson on YouTube](https://www.google.com/url?q=https://www.youtube.com/watch?v%3DhzkleGAC2_Y%26list%3DPLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ%26index%3D76\&sa=D\&source=editors\&ust=1683277194574315\&usg=AOvVaw0N8Bv9UI_NrvUGYA8e6g9g) (from 3:49-7:26), Jeremy McDowell (Jeremy’s IT Lab) walks us through a short demonstration on his Windows 10 PC. Jeremy applies the **ipconfig /all** command to verify various IP/DHCP parameters for Windows OS.
+Here is the raw ipconfig /all command output on a Windows 10 machine.
+
+<figure><img src="../.gitbook/assets/image (1).png" alt="ipconfig-all-1"><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image (2).png" alt="ipconfig-all-2"><figcaption></figcaption></figure>
+
+**When and Why to Use `ipconfig /all`**
+
+This command is the first and most important tool for **network troubleshooting**. You would use it to:
+
+1. **Diagnose "No Internet Access" or Connection Problems:**
+   * **Why:** To find the exact point of failure. Is the problem with getting an IP address, finding the router, or resolving domain names?
+   * **What to look for:**
+     * **No IP Address or `169.254.x.x` address:** The computer cannot contact the DHCP server (router). Indicates a cable, Wi-Fi, or router issue.
+     * **Missing Default Gateway:** You have an IP but no path to the internet.
+     * **Can ping Gateway but not websites:** A **DNS server** issue.
+2. **Verify Network Configuration:**
+   * **Why:** To confirm your computer has received the correct settings from the network or that manual (static) settings are entered properly.
+   * **What to look for:** Check if the `IPv4 Address`, `Subnet Mask`, `Default Gateway`, and `DNS Servers` match what is expected for your network.
+3. **Release and Renew a DHCP IP Address:**
+   * **Why:** To request a fresh IP configuration from the router, which can solve many common connectivity issues.
+   * **How:** Use the commands `ipconfig /release` followed by `ipconfig /renew`. Then, run `ipconfig /all` again to verify the new parameters.
+4. **Find Physical Hardware Addresses (MAC Address):**
+   * **Why:** To register a device on a network that uses **MAC address filtering** for security, or to identify a specific device on the network.
+
+In short, `ipconfig /all` is used to get a complete view of your computer's network identity and connectivity status, making it the fundamental first step in solving any network problem.
 
 ### ipconfig /release (Windows)
 
@@ -75,6 +107,8 @@ From the Windows command prompt we used the command IPCONFIG /RENEW. Our PC cont
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/4cc17-ipconfig-renew-3.webp?w=1201" alt="ipconfig-renew" height="506" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | DHCP | Day 39)</p></figcaption></figure>
 
+### The basic function of DHCP
+
 Here is a brief outline of the four-message process that a DHCP client goes through to lease an IP address from a DHCP server.
 
 * DHCP Discover: The client sends a DHCP Discover message to the network. This message is a broadcast message, so it can be heard by all DHCP servers on the network. The DHCP Discover message tells the DHCP servers that the client is looking for an IP address.
@@ -87,7 +121,7 @@ Here is a brief outline of the four-message process that a DHCP client goes thro
 
 Once the DHCP Acknowledgement message has been received, the client can start using the assigned IP address.
 
-### DHCP Discover message
+#### DHCP Discover message
 
 The **first** message is the DHCP Discover message. The DHCP Discover message is a broadcast message sent from the client (our PC) asking if there are any DHCP servers in the local network, telling them it needs an IP address. The Discover message contains information such as the client identifier (e.g., the MAC address and hostname of the client), and the client’s preferred lease time (of the assigned IP address) and requested options (like subnet mask, default gateway, and DNS servers).
 
@@ -125,7 +159,7 @@ The options are also displayed. Notice, they are different than the options used
 
 Note option (50), Requested IP Address. Because our PC previously had the IP address 192.168.0.167, it requested that address again. If the address is available, the server might grant it again. Otherwise our PC will be assigned a different IP address.&#x20;
 
-### DHCP Offer message
+#### DHCP Offer message
 
 The **second** message is the DHCP Offer message. It is sent from the DHCP server to the client, offering an IP address for the client to use, as well as other information such as:
 
@@ -152,7 +186,7 @@ Let’s look at a Wireshark capture of the DHCP Offer message our router sent to
 
 Finally, the options. Option 51 indicates the lease time. Option 6 is the DNS server. And option 3 is router, which tells the client the default gateway.&#x20;
 
-### DHCP Request message
+#### DHCP Request message
 
 The **third** message of the four-message process used to lease an IP address from a DHCP server is the DHCP Request message. The DHCP Request message is sent from the DHCP client to the server. The Request message informs the server that the client wants to use the offered IP address.
 
@@ -174,7 +208,7 @@ If there are multiple DHCP servers in the network, they will all receive the Req
 
 Finally, the options for this Request message. Notice that the server’s IP address is indicated using option 54. If there are multiple DHCP servers on the local network, this is how the client says which server it selected.
 
-### DHCP Ack message
+#### DHCP Ack message
 
 The **fourth** and final message in the process of leasing an IP address is the DHCP Ack, acknowledgement. This is sent from the server to the client, confirming that the client may use the requested IP address.&#x20;
 
@@ -200,28 +234,6 @@ Here’s a summary of the IP lease process. A common way to remember the message
 | Request  | Client → Server | Broadcast            |
 | Ack      | Server → Client | Broadcast or unicast |
 | Release  | Client → Server | Unicast              |
-
-### DHCP relay
-
-What is DHCP relay and how does a DHCP relay agent work?
-
-Some network engineers might choose to configure each router to act as the DHCP server for its connected LANs. However, large enterprises often choose to use a centralized DHCP server, which will assign IP addresses to DHCP clients in all subnets in the enterprise. &#x20;
-
-If the server is centralized, the server will not receive the clients’ broadcast DHCP messages. Recall, broadcast messages do not leave the local subnet. Routers do not forward broadcast messages.
-
-A router can be configured as a DHCP relay agent. Then the router will forward the clients’ broadcast DHCP messages to the remote DHCP server as unicast messages. &#x20;
-
-PC1 is a DHCP client, so it will broadcast a DHCP Discover message to ask DHCP servers on the local network for an IP address. R1 is not a DHCP server. SRV1 is the central DHCP server for this network, so R1 will need to forward any DHCP messages from PC1 to SRV1.
-
-<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/6b43b-dhcp-relay-9.webp?w=1201" alt="DHCP-relay" height="622" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | DHCP | Day 39)</p></figcaption></figure>
-
-SRV1 is a DHCP server, and R1 is a DHCP relay agent.&#x20;
-
-PC1 broadcasts a DHCP Discover message to get an IP address. R1, a DHCP relay agent, relays the message to SRV1. Notice that the source IP address changes to the address of R1’s G0/1 interface, and the destination is SRV1’s IP address (it is a unicast message).&#x20;
-
-Then SRV1 replies with the DHCP Offer, sending it to R1’s G0/1, 192.168.1.1. R1 then forwards the Offer message to PC1. The message source is R1’s IP address, and the message is sent either unicast to PC1 or broadcast.&#x20;
-
-Then PC1 broadcasts a Request message, and R1 relays it to SRV1. Finally SRV1 replies with a DHCP Ack, and R1 forwards that to PC1, which configures the IP address it was assigned, for example, 192.168.1.100. &#x20;
 
 ### How to configure DHCP
 
@@ -273,7 +285,25 @@ The configuration was successful.&#x20;
 
 ### DHCP relay agent configuration in IOS
 
-Let’s see how to configure a router as a DHCP relay agent.
+What is DHCP relay and how does a DHCP relay agent work? Some network engineers might choose to configure each router to act as the DHCP server for its connected LANs. However, large enterprises often choose to use a centralized DHCP server, which will assign IP addresses to DHCP clients in all subnets in the enterprise. &#x20;
+
+If the server is centralized, the server will not receive the clients’ broadcast DHCP messages. Recall, broadcast messages do not leave the local subnet. Routers do not forward broadcast messages.
+
+A router can be configured as a DHCP relay agent. Then the router will forward the clients’ broadcast DHCP messages to the remote DHCP server as unicast messages. &#x20;
+
+PC1 is a DHCP client, so it will broadcast a DHCP Discover message to ask DHCP servers on the local network for an IP address. R1 is not a DHCP server. SRV1 is the central DHCP server for this network, so R1 will need to forward any DHCP messages from PC1 to SRV1.
+
+<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/6b43b-dhcp-relay-9.webp?w=1201" alt="DHCP-relay" height="622" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | DHCP | Day 39)</p></figcaption></figure>
+
+SRV1 is a DHCP server, and R1 is a DHCP relay agent.&#x20;
+
+PC1 broadcasts a DHCP Discover message to get an IP address. R1, a DHCP relay agent, relays the message to SRV1. Notice that the source IP address changes to the address of R1’s G0/1 interface, and the destination is SRV1’s IP address (it is a unicast message).&#x20;
+
+Then SRV1 replies with the DHCP Offer, sending it to R1’s G0/1, 192.168.1.1. R1 then forwards the Offer message to PC1. The message source is R1’s IP address, and the message is sent either unicast to PC1 or broadcast.&#x20;
+
+Then PC1 broadcasts a Request message, and R1 relays it to SRV1. Finally SRV1 replies with a DHCP Ack, and R1 forwards that to PC1, which configures the IP address it was assigned, for example, 192.168.1.100. &#x20;
+
+**Next let’s see how to configure a router as a DHCP relay agent.**
 
 Here’s that same network as before, SRV1 is a DHCP server and R1 will be a DHCP relay agent after we configure it. &#x20;
 
@@ -303,14 +333,14 @@ We checked with SHOW IP INTERFACE G0/1, and you can see the entry, “address de
 
 **1. Windows command prompt**
 
+C:\Users\user>**ipconfig /all**\
+→to check the network configuration on the PC (all available information for each adapter)
+
 C:\Users\user>**ipconfig /release**\
 →to tell the PC to give up its current DHCP-learned IP address
 
 C:\Users\user>**ipconfig /renew**\
 →to renew the IP address configuration of the PC’s network adapter
-
-C:\Users\user>**ipconfig /all**\
-→to check the network configuration on the PC (all available information for each adapter)
 
 **2. Cisco IOS commands (DHCP configuration)**
 

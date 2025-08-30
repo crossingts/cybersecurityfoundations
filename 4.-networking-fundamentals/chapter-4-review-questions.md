@@ -8,29 +8,43 @@ hidden: true
 
 * Point 1
 
+***
+
 ### The Open Systems Interconnection (OSI) model
 
 * Map networking protocols to their OSI model layers.
+
+***
 
 ### Host to host communication in networking
 
 * Point 1
 
+***
+
 ### Network protocols and their functions
 
 * Point 1
+
+***
 
 ### Typing www.google.com into a web browser
 
 * Point 1
 
+***
+
 ### Cisco IOS CLI and basic device security
 
 * Point 1
 
+***
+
 ### Connected and local routes
 
-* Quiz question 1
+* Quiz questions
+
+**Quiz question 1 - Identify the route type**
 
 The IP address configured on a router interface will appear in the routing table as what kind of route?&#x20;
 
@@ -42,9 +56,13 @@ b) Connected
 
 d) Dynamic
 
+***
+
 ### How to configure static routes on Cisco routers
 
-* Quiz question 1
+* Quiz questions
+
+**Quiz question 1 - Configuring a default route**
 
 Which of the following commands configures a default route on a Cisco router?
 
@@ -56,26 +74,38 @@ c) R1(config)#ip route 0.0.0.0 255.255.255.255 10.1.1.255
 
 d) R1(config)#ip route 0.0.0.0/32 10.1.1.255
 
+***
+
 ### Comparing TCP to UDP
 
 * Point 1
 
+***
+
 ### How to configure standard ACLs on Cisco routers
 
-* Quiz question 1
+* Quiz questions
+
+**Quiz question 1 - Identify the correct ACL**
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/2f1ca-acls-practice-quiz-questions-22.webp?w=1201" alt="acls-Practice-quiz-questions" height="608" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Standard ACLs | Day 34)</p></figcaption></figure>
 
 The answer is ACL 1. Entry 10 permits PC1 and entry 20 permits PC4. The implicit deny will deny all other traffic. ACL 1 fulfills the requirements. The other ACLs do not.
+
+***
 
 ### Configuring and verifying DHCP client and relay
 
 * Point 1
 * Identify the key IP parameters displayed by ipconfig /all and the primary reasons for using this essential command.
 
+***
+
 ### The role of DNS within the network
 
-* Quiz question 1
+* Quiz questions
+
+**Quiz question 1 - Displaying IP parameters**
 
 Which of the following Windows command prompt commands will display the PC’s DNS server? Select two.
 
@@ -89,12 +119,14 @@ c) ipcofig /displaydns
 
 The correct answers are b and d. a, IPCONFIG, displays the PC’s IP address, subnet mask, and default gateway, but not details like the DNS server. c, IPCONFIG /DISPLAYDNS, shows the PC’s DNS cache, but not the DNS server address.
 
+***
+
 ### Static NAT configuration
 
 * Describe the need for private IPv4 addressing.
-* Quiz question 1
+* Quiz questions
 
-**Basic Configuration**
+**Quiz question 1 - Basic configuration**
 
 **Scenario:** You are configuring a network where an internal web server with the IP address `192.168.50.100` must be accessible from the internet. The router's public IP address on its outside interface is `203.0.113.50`. You have been assigned the public IP `203.0.113.100` to statically map to the web server.
 
@@ -120,11 +152,7 @@ ip nat inside source static 192.168.50.100 203.0.113.100
 * Correctly identifies and sets the `ip nat outside` command on the appropriate interface.
 * Uses the correct `ip nat inside source static` command with the proper order of arguments: `local-inside-ip` first, then `global-outside-ip`.
 
-***
-
-* Quiz question 2
-
-**Verification and Interpretation**
+**Quiz question 2 - Verification and interpretation**
 
 **Scenario:** After configuring static NAT for a server, you run the `show ip nat translations` command on your router and get the following output:
 

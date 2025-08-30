@@ -14,7 +14,7 @@ description: >-
 * Understand how static source NAT works
 * Configuring and verifying inside source NAT using static NAT
 
-This section focuses on static NAT configuration on Cisco IOS devices. NAT (Network Address Translation) is an important networking topic. NAT is used to translate the source and/or destination IP address of a packet to a different IP address. There are different types of NAT, such as static NAT, dynamic NAT, and Port Address Translation (PAT). Static NAT maps a private IP address to a fixed public IP address. Dynamic NAT assigns a public IP address from a pool of available addresses to a private IP address on demand. PAT uses a single public IP address and different port numbers to distinguish between multiple private IP addresses. This section covers on the following four topic areas: 1) the need for private IPv4 addressing, 2) NAT purpose in networks, 3) how NAT works, and 4) configuring and verifying inside source NAT using static NAT.
+This section covers static NAT configuration on Cisco IOS devices. NAT (Network Address Translation) is an important networking topic. NAT is used to translate the source and/or destination IP address of a packet to a different IP address. There are different types of NAT, such as static NAT, dynamic NAT, and Port Address Translation (PAT). Static NAT maps a private IP address to a fixed public IP address. Dynamic NAT assigns a public IP address from a pool of available addresses to a private IP address on demand. PAT uses a single public IP address and different port numbers to distinguish between multiple private IP addresses. This section covers on the following four topic areas: 1) the need for private IPv4 addressing, 2) NAT purpose in networks, 3) how NAT works, and 4) configuring and verifying inside source NAT using static NAT.
 
 ## Topics covered in this section
 
@@ -285,49 +285,43 @@ R#**show ip nat statistics**\
     * Class B: `172.16.0.0` to `172.31.255.255` (172.16.0.0/12)
     * Class C: `192.168.0.0` to `192.168.255.255` (192.168.0.0/16)
   * NAT is required for hosts using these addresses to communicate with the Internet.
-* **Three Major Reasons to Use NAT/PAT**
-  * **IP Address Conservation:** PAT (Overload) allows thousands of internal hosts to share a single public IP address, directly combating IPv4 exhaustion.
-  * **Enhanced Security:** Hides internal network topology and acts as a basic firewall by dropping unsolicited inbound connections that lack a NAT table entry.
-  * **Network Flexibility:** Allows an organization to change its internal addressing scheme without impacting its public presence, making ISP migrations easier.
-* **Types of Inside Source NAT**
-  * **Static NAT:** A permanent, one-to-one mapping between an inside local and inside global address. Used for servers that need to be accessible from the Internet.
-  * **Dynamic NAT:** A temporary, one-to-one mapping from a pool of public addresses. Does not use port translation. Less common.
-  * **PAT (NAT Overload):** A many-to-one (or many-to-few) mapping that uses port numbers to distinguish between connections. This is the most common type.
-    * Can be configured to use a **pool of public IPs**.
-    * Or, more commonly, to use a **router's interface IP** (e.g., `interface GigabitEthernet0/1 overload`).
-* **How Source NAT Works**
-  * The process is triggered when an **inside host initiates** traffic to an outside network.
+* Three Major Reasons to Use NAT/PAT
+  * IP Address Conservation: PAT (Overload) allows thousands of internal hosts to share a single public IP address, directly combating IPv4 exhaustion.
+  * Enhanced Security: Hides internal network topology and acts as a basic firewall by dropping unsolicited inbound connections that lack a NAT table entry.
+  * Network Flexibility: Allows an organization to change its internal addressing scheme without impacting its public presence, making ISP migrations easier.
+* Types of Inside Source NAT
+  * Static NAT: A permanent, one-to-one mapping between an inside local and inside global address. Used for servers that need to be accessible from the Internet.
+  * Dynamic NAT: A temporary, one-to-one mapping from a pool of public addresses. Does not use port translation. Less common.
+  * PAT (NAT Overload): A many-to-one (or many-to-few) mapping that uses port numbers to distinguish between connections. This is the most common type.
+    * Can be configured to use a pool of public IPs.
+    * Or, more commonly, to use a router's interface IP (e.g., `interface GigabitEthernet0/1 overload`).
+* How Source NAT Works
+  * The process is triggered when an inside host initiates traffic to an outside network.
   * The router checks the packet against its NAT rules.
-  * It translates the **source IP address** (and for PAT, the source port) in the packet header.
-  * It creates an entry in its **NAT translation table** to remember the mapping.
+  * It translates the source IP address (and for PAT, the source port) in the packet header.
+  * It creates an entry in its NAT translation table to remember the mapping.
   * Return traffic is matched against this table and translated back to the original inside IP/port before being forwarded into the local network.
-* **Cisco NAT Terminology**
-  * **Inside Local:** The real, private IP address of the host as seen on the inside network (e.g., `192.168.1.10`).
-  * **Inside Global:** The public IP address representing the inside host as seen on the outside network (e.g., `203.0.113.5`).
-  * **Outside Global:** The real, public IP address of the external destination host.
-  * **Outside Local:** Rarely used; the IP address of the outside host as seen from the inside network (usually the same as the Outside Global).
-
-**Using the `ip nat inside source static` Command**
-
-* Command: `ip nat inside source static <inside-local-ip> <inside-global-ip>`
-* This command creates a permanent, bidirectional entry in the NAT table.
-* Must be paired with configuring `ip nat inside` and `ip nat outside` on the appropriate interfaces.
-
-**`show ip nat translations`**
-
-* The primary command for **verifying** NAT operation.
-* Displays the current content of the router's NAT table.
-* For static NAT, entries are always present.
-* For dynamic NAT/PAT, entries appear only when active connections exist and will timeout.
-
-**`show ip nat statistics`**
-
-* Provides a **summary and counters** for NAT operations.
-* Shows:
-  * The total number of active translations.
-  * NAT configuration parameters (e.g., ACLs, pools, interfaces).
-  * Counters for hits and misses, indicating how many translations have occurred.
-* Essential for **troubleshooting** (e.g., confirming if a pool is exhausted).
+* Cisco NAT Terminology
+  * Inside Local: The real, private IP address of the host as seen on the inside network (e.g., `192.168.1.10`).
+  * Inside Global: The public IP address representing the inside host as seen on the outside network (e.g., `203.0.113.5`).
+  * Outside Global: The real, public IP address of the external destination host.
+  * Outside Local: Rarely used; the IP address of the outside host as seen from the inside network (usually the same as the Outside Global).
+* `ip nat inside source static`
+  * Command: `ip nat inside source static <inside-local-ip> <inside-global-ip>`
+  * This command creates a permanent, bidirectional entry in the NAT table.
+  * Must be paired with configuring `ip nat inside` and `ip nat outside` on the appropriate interfaces.
+* `show ip nat translations`
+  * The primary command for verifying NAT operation.
+  * Displays the current content of the router's NAT table.
+  * For static NAT, entries are always present.
+  * For dynamic NAT/PAT, entries appear only when active connections exist and will timeout.
+* `show ip nat statistics`
+  * Provides a summary and counters for NAT operations.
+  * Shows:
+    * The total number of active translations.
+    * NAT configuration parameters (e.g., ACLs, pools, interfaces).
+    * Counters for hits and misses, indicating how many translations have occurred.
+  * Essential for troubleshooting (e.g., confirming if a pool is exhausted).
 
 ### References
 

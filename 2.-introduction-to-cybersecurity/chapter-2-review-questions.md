@@ -16,6 +16,8 @@
 * Identify 2-3 suitable mitigation technologies for each outlined attack technique.
 * Briefly explain what is the AAA framework.
 
+***
+
 ### The cybersecurity threat landscape
 
 * What is a major cybersecurity threat facing society as a whole?
@@ -23,6 +25,8 @@
 * What is the principal cybersecurity threat facing businesses?
 * Identify four technological influences underlying a changing cybersecurity threat landscape.
 * Identify two sociopolitical influences underlying a changing cybersecurity threat landscape.
+
+***
 
 ### Common cyber attacks
 
@@ -37,6 +41,8 @@
 * Briefly explain the mechanism of action of the ARP spoofing MITM attack, and identify one key mitigation method.
 * Identify three types of IP spoofing/MAC spoofing attacks.
 * Describe three common malware types.
+
+***
 
 ### Cybersecurity risk mitigation methods
 
@@ -57,6 +63,8 @@
 * Identify five components of an information security policy that is aligned in structure with industry best practices.
 * Information security testing is an essential part of both risk assessments and compliance audits. Briefly outline how so.
 * Very briefly explain the difference between user awareness programs and user training programs.
+
+***
 
 ### Network security risk mitigation best practices
 

@@ -1,6 +1,13 @@
 # The role of DNS within the network
 
-The [DNS (Domain Name System) protocol ](https://study-ccna.com/domain-name-system-dns/)makes it easy for humans to use the Internet by translating domain names into IP addresses. This means that we can type in a human-readable address like [http://www.google.com](http://www.google.com/) instead of a complex IP address like 172.217.0.142. This lesson explains the [role of DNS within the network](https://its.umich.edu/enterprise/wifi-networks/dns-dhcp) and how to configure DNS in Cisco IOS.
+## Learning objectives
+
+* Understand the role of DNS within the network
+* Learn key commands to verify IP parameters
+* Configuring a router as a DNS server
+* Configuring a router as a DNS client
+
+This section explains the [role of DNS within the network](https://its.umich.edu/enterprise/wifi-networks/dns-dhcp) and how to configure DNS in Cisco IOS. The [DNS (Domain Name System) protocol ](https://study-ccna.com/domain-name-system-dns/)makes it easy for humans to use the Internet by translating domain names into IP addresses. This means that we can type in a human-readable address like [http://www.google.com](http://www.google.com/) into a web browser instead of a complex IP address like 172.217.0.142.&#x20;
 
 ## Topics covered in this section
 

@@ -248,15 +248,56 @@ The attacker waits briefly and then sends another ARP reply (called **gratuitous
 
 Now in PC1’s ARP table, the entry for 10.0.0.1 will have the attacker’s MAC address, not the MAC address of the real 10.0.0.1, SRV1. So when PC1 tries to send traffic to SRV1, traffic will be forwarded to the attacker instead. Then, the attacker can inspect the messages, read their contents and then forward them to SRV1. Or the attacker can modify the messages before forwarding them to SRV1.
 
+```mermaid
+sequenceDiagram
+    participant PC1
+    participant Attacker
+    participant Switch
+    participant SRV1
+
+    Note over PC1: Needs to send data to SRV1 (10.0.0.1)
+    Note over PC1: Checks its ARP table...<br/>? -> 10.0.0.1
+
+    PC1->>Switch: ARP Request (Broadcast)<br/>"Who has 10.0.0.1? Tell PC1"
+    Note right of PC1: ARP Table: 10.0.0.1 -> ?
+
+    Switch->>SRV1: Flood Request
+    Switch->>Attacker: Flood Request
+
+    Note over SRV1, Attacker: Both devices receive the request.
+
+    SRV1->>Switch: LEGITIMATE ARP Reply (Unicast)<br/>"10.0.0.1 is at MAC-SRV1"
+    Switch->>PC1: Forward Reply
+
+    Note over PC1: ARP Table Updated (Temporarily Correct)<br/>10.0.0.1 -> MAC-SRV1
+
+    Attacker->>Switch: MALICIOUS Gratuitous ARP Reply (Unicast/Broadcast)<br/>"10.0.0.1 is at MAC-ATTACKER"<br/>(Spoofs SRV1's IP)
+    Switch->>PC1: Forward Malicious Reply
+
+    Note over PC1: ⚠️ ARP Table POISONED<br/>Legitimate entry is OVERWRITTEN<br/>10.0.0.1 -> MAC-ATTACKER
+
+    Note over PC1, Attacker: Phase 2: Man-in-the-Middle Achieved
+
+    PC1->>Switch: Data for SRV1 (10.0.0.1)
+    Note left of PC1: Dest MAC: MAC-ATTACKER
+    Switch->>Attacker: Forward Data
+
+    Note over Attacker: Attacker INTERCEPTS traffic.<br/>Can now:<br/>- Eavesdrop (Sniff)
+    Attacker->>SRV1: Forward Data (Option A: Passively Relay)
+    Note over Attacker: - Alter (Modify packets)<br/>- Damage (Drop packets)
+    Attacker->>SRV1: Modified Data (Option B: Actively Tamper)
+
+    SRV1->>Attacker: Reply Data (Dest: PC1)
+    Attacker->>PC1: Forward Reply (Intercept & Inspect)
+```
+
 DAI (Dynamic ARP Inspection) validates ARP packets by checking them against a trusted DHCP snooping binding table or a manually configured ARP ACL. DAI ensures that the IP-to-MAC mappings in ARP replies are correct, stopping attackers from spoofing another host's IP address (a key technique in ARP poisoning attacks).
 
 Since DAI verifies that an ARP reply matches a legitimate IP-MAC binding, it prevents a malicious host from falsely claiming a MAC address that does not belong to it (thus indirectly helping to prevent MAC spoofing).
 
-Man in the middle attacks < CCNA security fundamentals\
-[https://itnetworkingskills.wordpress.com/2023/05/06/ccna-security-fundamentals/](https://itnetworkingskills.wordpress.com/2023/05/06/ccna-security-fundamentals/)
+A further illustration of the ARP spoofing attack: [Man in the middle attacks](https://itnetworkingskills.wordpress.com/2023/05/06/ccna-security-fundamentals/)
 
-DAI configuration and verification\
-[https://itnetworkingskills.wordpress.com/2023/05/16/dynamic-arp-inspection-configuration-and-verification/](https://itnetworkingskills.wordpress.com/2023/05/16/dynamic-arp-inspection-configuration-and-verification/)
+A further illustration of the ARP spoofing attack and mitigation via dynamic ARP inspection: [DAI configuration and verification](https://itnetworkingskills.wordpress.com/2023/05/16/dynamic-arp-inspection-configuration-and-verification/)
 
 #### Spoofing attacks
 
@@ -275,8 +316,8 @@ Each of the following spoofing attack types involves either IP spoofing or MAC s
 | TCP SYN Flood (DoS)                        | **IP Spoofing**         | Filtering with ACLs, TCP SYN cookies, IPS/IDS        | The attacker uses a spoofed source IP to hide their identity and overwhelm the target with connection requests, making the attack difficult to trace.                     |
 | DHCP Exhaustion Attack (DoS)               | **MAC Spoofing**        | DHCP Snooping, Port Security                         | The attacker spoofs many different MAC addresses to request all available IP addresses from a DHCP server, exhausting the pool and denying service to legitimate clients. |
 | Reflection and Amplification Attacks (DoS) | **IP Spoofing**         | Anti-spoofing ACLs, BCP38 (network egress filtering) | The attacker spoofs the victim's IP address as the source. This causes reflection servers to send large responses to the victim, amplifying the attack traffic.           |
-| ARP Spoofing (MITM)                        | **IP Spoofing**         | Dynamic ARP Inspection (DAI)                         | The attacker sends gratuitous ARP replies to link their MAC address to the IP address of a legitimate host, intercepting traffic.                                         |
 | DHCP Poisoning (MITM)                      | **IP Spoofing**         | DHCP Snooping                                        | The attacker spoofs a legitimate DHCP server to provide clients malicious DHCP responses to redirect traffic for a MITM attack.                                           |
+| ARP Spoofing (MITM)                        | **IP Spoofing**         | Dynamic ARP Inspection (DAI)                         | The attacker sends gratuitous ARP replies to link their MAC address to the IP address of a legitimate host, intercepting traffic.                                         |
 
 **Clarification:**
 

@@ -46,7 +46,16 @@
 
 ### Cisco IOS CLI and basic device security
 
-* Point 1
+* What is the primary functional difference between User EXEC mode and Privileged EXEC mode
+  * Answer: User EXEC mode is for basic, read-only monitoring commands. Privileged EXEC mode provides full administrative access to all viewing, debugging, and device control commands (e.g., reload, copy).
+* What is the single, most important CLI shortcut for getting help and how is it used?
+  * Answer: The question mark `?`. It is used for context-sensitive help. Typing it at a prompt lists all available commands. Typing it after a partial command shows possible completions and arguments.
+* Which command should always be used over `enable password` to secure access to privileged EXEC mode and why?
+  * Answer: The `enable secret` command. It should always be used because it encrypts the password using a strong, irreversible MD5 hash, whereas the `enable password` stores it in plain text, which is a security risk.
+* A colleague can see a password in plain text when they use the `show running-config` command. What single global configuration command can you use to prevent this for all such passwords?
+  * Answer: `service password-encryption`
+* What is the specific purpose of the `show startup-config` command?
+  * Answer: To display the configuration file (`startup-config`) that is stored in NVRAM. This is the configuration that the device will load and use when it boots up or is reloaded.
 
 ***
 

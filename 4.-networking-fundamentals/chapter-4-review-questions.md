@@ -73,7 +73,16 @@
 
 ### Comparing TCP to UDP
 
-* Point 1
+* During the TCP connection termination process, explain why a four-way handshake is used instead of a three-way handshake.
+  * Answer: Because a TCP connection is full-duplex, meaning data can flow independently in each direction. Each side must independently signal that it has finished sending data (FIN) and acknowledge the other side's FIN signal. This independent termination for each direction requires four segments.
+* A host receives three TCP segments with sequence numbers 1500, 500, and 1000. Based on TCP's design, how does the host handle these segments to ensure correct data order?
+  * Answer: The host uses the sequence numbers to identify the correct order of the data. It will hold the segments with sequence numbers 500 and 1000 in a buffer until the segment with sequence number 1500 arrives and is acknowledged. It then reassembles them in the order 500, 1000, 1500 before passing the data to the application.
+* What is the fundamental purpose of an ephemeral port number, and from which IANA-defined range is it selected?
+  * Answer: Its purpose is to uniquely identify a specific communication session on the source host. The source host randomly selects an ephemeral port number from the IANA range 49152 to 65535 to use for the duration of that session.
+* Describe a specific scenario where an application would be better suited to use UDP instead of TCP, and explain the reason for this choice.
+  * Answer: Scenario: A live voice-over-IP (VoIP) phone call. Reason: Speed and low latency are more critical than 100% reliability. Dropping a few audio packets is preferable to the delay caused by TCP's retransmission, acknowledgments, and congestion control, which would result in choppy, delayed audio.
+* A packet capture shows a segment with a destination port of 443. Based on the IANA port ranges, what type of port is this, and what application-layer protocol is it almost certainly associated with?
+  * Answer: Port 443 is a well-known port (0-1023 range). It is associated with the HTTPS protocol, used for secure web browsing.
 
 ***
 

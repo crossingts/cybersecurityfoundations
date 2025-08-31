@@ -162,17 +162,15 @@ Let’s say PC1 wants to access a webpage on SRV1 using HTTP. First, PC1 must es
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/82b5f-tcp-three-way-handshake-5.webp?w=1201" alt="tcp-three-way-handshake" height="589" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | TCP &#x26; UDP | Day 30)</p></figcaption></figure>
 
-First, PC1 will send a TCP segment to SRV1 with the SYN flag set, meaning that bit is set to 1.&#x20;
-
-Secondly, SRV1 will reply by sending a TCP segment to PC1 with the SYN and ACK flags set. So both bits are set to 1.&#x20;
-
-Thirdly, PC1 will send a TCP segment with the ACK bit set.&#x20;
+First, PC1 will send a TCP segment to SRV1 with the SYN flag set, meaning that bit is set to 1. Secondly, SRV1 will reply by sending a TCP segment to PC1 with the SYN and ACK flags set. So both bits are set to 1. The second segment (SYN-ACK) acknowledges the first segment and simultaneously initiates its own connection request. Thirdly, PC1 will send a TCP segment with the ACK bit set.&#x20;
 
 Now the three-way handshake is complete and the connection is established. The first three messages of the three-way handshake establish a connection. Then real data exchange can begin.
 
 ### Terminating connections: four-way handshake&#x20;
 
 The process TCP uses to terminate connections is sometimes called the TCP four-way handshake. When PC1 decides that it no longer needs the connection with SRV1 it will initiate this process to terminate the connection. TCP uses two flags (in the TCP header) in this process, FIN and ACK.
+
+TCP connection is full-duplex, meaning data can flow independently in each direction. Each side must independently signal that it has finished sending data (FIN) and acknowledge the other side's FIN signal. This independent termination for each direction requires four segments.
 
 First, PC1 sends a TCP segment to SRV1 with the FIN flag set. SRV1 responds with an ACK.&#x20;
 

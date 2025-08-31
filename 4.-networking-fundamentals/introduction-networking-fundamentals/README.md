@@ -27,7 +27,7 @@ This chapter has two main goals. First, this chapter demystifies the underlying 
 
 [The Open Systems Interconnection (OSI) model](../the-open-systems-interconnection-osi-model/)
 
-[Host to host communication in networking](../host-to-host-communication-in-networking.md)
+[Host to host communication in networking](../host-to-host-communication-in-networking/)
 
 [Network protocols and their functions](../network-protocols-and-their-functions.md)
 

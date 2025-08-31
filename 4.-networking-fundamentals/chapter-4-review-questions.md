@@ -19,7 +19,14 @@
 
 ### Host to host communication in networking
 
-* Point 1
+* Briefly explain the difference in the ARP process when a host communicates with another host on its local network versus one on a foreign network.
+  * Answer: For a host on the local network, the host sends an ARP request to resolve the destination host's IP address to the destination host's MAC address. For a host on a foreign network, the host sends an ARP request to resolve the default gateway's IP address to the default gateway's MAC address.
+* What are the three key pieces of information a host must be configured with to communicate on an IP network?
+  * Answer: 1) An IP address, 2) A subnet mask, and 3) A default gateway.
+* After a packet arrives at its final destination host, what happens to the Layer 2 and Layer 3 headers?
+  * Answer: The destination host discards the Layer 2 header (as its job for NIC-to-NIC delivery is done) and then retires the Layer 3 header (as its job for end-to-end delivery is done), leaving only the data for the application to process.
+* Once a host has resolved the MAC address of its default gateway via ARP, how does this benefit future communications?
+  * Answer: The MAC-to-IP mapping is stored in the host's ARP cache. This resolved MAC address can be reused for any subsequent packet destined for any foreign network, as the first hop for all such traffic is the same router. The host does not need to ARP for the gateway again until the cache entry expires.
 
 ***
 

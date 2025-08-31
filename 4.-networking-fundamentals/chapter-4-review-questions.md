@@ -36,43 +36,7 @@ hidden: true
 
 ### Cisco IOS CLI and basic device security
 
-* Quiz questions
-
-**Quiz question 1**
-
-Which command provides the most secure method for setting a password to access privileged EXEC mode?
-
-a) `login password`
-
-b) `enable password`
-
-**c) `enable secret`**
-
-d) `secret password`
-
-**Quiz question 2**
-
-You have just configured a console password and an enable secret on a new router. After reloading the router, the console password is required, but the enable secret is not. What is the most likely cause?
-
-a) The `enable secret` command was entered in User EXEC mode
-
-**b) The configuration was not saved to startup-config before reloading**
-
-c) The `service password-encryption` command was not used
-
-d) The terminal emulator software is incompatible
-
-**Quiz question 3**
-
-Which CLI mode is indicated by the `Router(config)#` prompt and is required to make changes that affect the entire device?
-
-a) User EXEC Mode
-
-b) Privileged EXEC Mode
-
-c) Interface Configuration Mode
-
-**d) Global Configuration Mode**
+* Point 1
 
 ***
 

@@ -33,7 +33,7 @@ This chapter has two main goals. First, this chapter demystifies the underlying 
 
 [Typing www.google.com into a web browser](../typing-www.google.com-into-a-web-browser.md)
 
-[Cisco IOS CLI and basic device security](../cisco-ios-cli-and-basic-device-security.md)
+[Cisco IOS CLI and basic device security](../cisco-ios-cli-and-basic-device-security/)
 
 [Connected and local routes](../connected-and-local-routes.md)
 

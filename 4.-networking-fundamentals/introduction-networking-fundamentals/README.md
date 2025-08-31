@@ -39,7 +39,7 @@ This chapter has two main goals. First, this chapter demystifies the underlying 
 
 [How to configure static routes on Cisco routers](../how-to-configure-static-routes-on-cisco-routers/)
 
-[Comparing TCP to UDP](../comparing-tcp-to-udp.md)
+[Comparing TCP to UDP](../comparing-tcp-to-udp/)
 
 [How to configure standard ACLs on Cisco routers](../how-to-configure-standard-acls-on-cisco-routers.md)
 

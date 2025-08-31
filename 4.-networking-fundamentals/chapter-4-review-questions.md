@@ -54,43 +54,7 @@ hidden: true
 
 ### Comparing TCP to UDP
 
-* Quiz questions
-
-**Quiz question 1**&#x20;
-
-Which characteristic best describes why TCP is considered a stateful protocol?
-
-a) It uses a checksum to detect errors in the data
-
-**b) It tracks the state of the communication session through handshakes and sequence numbers**
-
-c) It can operate over both IPv4 and IPv6 networks
-
-d) It uses port numbers to direct data to the correct application
-
-**Quiz question 2**
-
-A cybersecurity analyst notices network traffic using destination port 53. Which protocol and service are most likely being used?
-
-a) TCP and HTTPS
-
-**b) UDP and DNS**
-
-c) TCP and SSH
-
-d) UDP and SMTP
-
-**Quiz question 3**
-
-What is the primary advantage UDP has over TCP?
-
-a) Stronger error correction and data recovery features
-
-b) Guaranteed, in-order delivery of all data packets
-
-**c) Lower latency and reduced protocol overhead**
-
-d) Built-in encryption for securing data in transit
+* Point 1
 
 ***
 

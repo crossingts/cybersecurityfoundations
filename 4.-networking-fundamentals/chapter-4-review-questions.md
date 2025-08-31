@@ -67,7 +67,16 @@
 
 ### How to configure static routes on Cisco routers
 
-* Point 1
+* What is the fundamental difference between how a connected route and a static route are added to a router's routing table?
+  * Answer: A connected route is added automatically when a router interface is configured with an IP address and enabled. A static route must be manually configured by an administrator using the `ip route` command.
+* A Linux host's Ethernet interface (`eth0`) needs a static IP address of `10.0.1.5/24` and a default gateway of `10.0.1.1`. What lines would you add to the `/etc/network/interfaces` file to achieve this?
+  * Answer: `iface eth0 inet static address 10.0.1.5 netmask 255.255.255.0 gateway 10.0.1.1`
+* What does the code "S\*" indicate in a Cisco router's `show ip route` output?
+  * Answer: The "S" indicates a static route. The asterisk "\*" indicates that this static route is a candidate default route (a gateway of last resort).
+* What is the key functional difference between a host's default gateway and a router's default route?
+  * Answer: A default gateway is an IP address configured on an end host (like a PC), telling it where to send traffic for any network not on its local subnet. A default route is configured on a router itself (0.0.0.0/0), telling it where to forward packets that do not match any other, more specific route in its routing table.
+* What is a significant operational drawback of configuring a static route using only an exit interface (e.g., `ip route 192.168.1.0 255.255.255.0 GigabitEthernet0/1`) instead of a next-hop IP address?
+  * Answer: The router will treat the destination network as if it is directly connected to that interface. This can cause problems because the router may rely on Proxy ARP for every destination in that network, which is inefficient and can fail if Proxy ARP is disabled on the neighboring router. It is generally considered less reliable and specific than using a next-hop IP address.
 
 ***
 

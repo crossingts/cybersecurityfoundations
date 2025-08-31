@@ -34,7 +34,7 @@ This section explains the role of DHCP within the network, the basic function of
   * **DHCP relay agent configuration in IOS**
   * **DHCP client configuration in IOS**
 * **Command review**
-* **Key learnings**
+* **Key takeaways**
 
 ### The role of DHCP within the network
 
@@ -440,7 +440,7 @@ R2(config-if)#**ip address dhcp**\
 
 [Free CCNA | DHCP | Day 39 Lab – Notes](https://docs.google.com/document/d/e/2PACX-1vT5Ec0vkK81awEL8mLOTPR20Rro8g3AUyvN-wNsxFWaZiUq8_7CZOhIYZ78wsE_MFRirI9OXIdS6iui/pub)
 
-### Key learnings
+### Key takeaways
 
 * DHCP automates IP address, subnet mask, gateway, and DNS server assignment, reducing administrative overhead.
 * The client-server exchange follows the DORA process: Discover, Offer, Request, Acknowledgement.

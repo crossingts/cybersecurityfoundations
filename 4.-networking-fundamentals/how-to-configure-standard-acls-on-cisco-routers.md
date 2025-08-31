@@ -1,6 +1,21 @@
+---
+description: >-
+  This section explains the purpose, logic, and configuration of standard ACLs
+  on Cisco IOS routers
+---
+
 # How to configure standard ACLs on Cisco routers
 
-This lesson looks at [how to configure standard access control lists (ACLs) on Cisco routers](https://www.cisco.com/c/en/us/support/docs/security/ios-firewall/23602-confaccesslists.html). This lesson looks at what are ACLs and what is their purpose, how ACLs work (how to build ACLs), ACL logic (how the router processes ACLs), and ACL types used on Cisco routers. Finally, we learn how to configure and verify two kinds of ACLs: standard numbered ACLs and standard named ACLs.
+## Learning objectives
+
+* Explain the purpose and function of Access Control Lists (ACLs) in a network
+* Describe the logic a router uses to process ACLs, including the concept of an implicit deny
+* Differentiate between standard and extended ACLs and identify their use cases
+* Configure a standard numbered ACL to filter traffic based on source IP address
+* Create and apply a standard named ACL to meet a simple security policy
+* Use IOS commands to verify and validate ACL configuration and operation
+
+This section looks at [how to configure standard access control lists (ACLs) on Cisco routers](https://www.cisco.com/c/en/us/support/docs/security/ios-firewall/23602-confaccesslists.html). ACLs are the fundamental gatekeepers of network traffic, defining what data is permitted or denied. This section explains the purpose of ACLs, how ACLs work (how to build ACLs), ACL logic (how the router processes ACLs), and ACL types used on Cisco routers. Finally, this section shows how to configure and verify two kinds of ACLs: standard numbered ACLs and standard named ACLs.
 
 ## Topics covered in this section
 
@@ -12,7 +27,7 @@ This lesson looks at [how to configure standard access control lists (ACLs) on C
 * **Configuring standard numbered ACLs on Cisco routers**
 * **Configuring standard named ACLs on Cisco routers**
 * **Command review**
-* **Key learnings**
+* **Key takeaways**
 
 ### [What are ACLs (Access Control Lists)?](https://www.fortinet.com/resources/cyberglossary/network-access-control-list)
 
@@ -487,37 +502,25 @@ R#**show running-config** | \[**section access-list**]\
 
 [Free CCNA | Standard ACLs | Day 34 Lab – Notes](https://docs.google.com/document/d/e/2PACX-1vS9WStUi2BHiCCmPfhZsfjH5biNHVstzzUFAnStdu74SNfQB80g_pdz8LUQ-aDw0ZuMJCTVhfOTUXyV/pub)
 
-### Key learnings
+### Key takeaways
 
-\*How ACLs work/how to build ACLs
-
-\*ACL logic/how the router processes ACLs
-
-\*ACL types overview – standard ACLs and extended ACLs, and each of those can be configured as numbered or named ACLs.&#x20;
-
-\*How to configure standard numbered ACLs from global config mode
-
-Standard numbered ACLs are configured in global config mode using a series of entries with the ACCESS-LIST command.
-
-R1(config)#access-list 1 permit …
-
-R1(config)#access-list 1 deny …
-
-R1(config)#access-list 1 permit …
-
-\*How to configure standard named ACLs from standard named ACL config mode
-
-For standard named ACLs, you use the IP ACCESS-LIST command to enter standard named ACL config mode, and then configure the entries.&#x20;
-
-R1(config)#ip access-list standard BLOCK\_BOB
-
-R1(config-std-nacl)#permit …
-
-R1(config-std-nacl)#deny …
-
-R1(config-std-nacl)#permit …
-
-\*Verify configurations with show access-lists, show ip access-lists, and show running-config
+* Standard ACLs filter traffic based solely on the source IP address.
+* Standard ACLs and extended ACLs each can be configured as numbered or named ACLs.&#x20;
+* ACLs are processed from the top down; the first matched entry determines the action (permit/deny).
+* Every ACL has an implicit **deny any** statement at the end, which blocks all traffic not explicitly permitted.
+* There are two main types of standard ACLs: numbered ACLs (e.g., 1-99) and named ACLs, which are more descriptive and easier to edit.
+* ACLs must be applied to a router interface (inbound or outbound) to take effect.
+* Standard numbered ACLs are configured in global config mode using a series of entries with the ACCESS-LIST command.
+  * R1(config)#access-list 1 permit …
+  * R1(config)#access-list 1 deny …
+  * R1(config)#access-list 1 permit …
+* Standard named ACLs are configured from standard named ACL config mode.
+  * You use the IP ACCESS-LIST command to enter standard named ACL config mode, and then configure the entries.&#x20;
+    * R1(config)#ip access-list standard BLOCK\_BOB
+    * R1(config-std-nacl)#permit …
+    * R1(config-std-nacl)#deny …
+    * R1(config-std-nacl)#permit …
+* Verify configurations with show access-lists, show ip access-lists, and show running-config.
 
 ### References
 

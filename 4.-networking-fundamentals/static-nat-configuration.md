@@ -26,7 +26,7 @@ This section covers static NAT configuration on Cisco IOS devices. NAT (Network 
 * **clear ip nat translation**
 * **show ip nat statistics**
 * **Command review**
-* **Key learnings**
+* **Key takeaways**
 * **Practice quiz questions**
 
 ### Private IPv4 addresses (RFC 1918)

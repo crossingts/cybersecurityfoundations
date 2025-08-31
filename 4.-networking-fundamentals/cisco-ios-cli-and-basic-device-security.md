@@ -27,7 +27,7 @@ Welcome to the practical heart of network administration. In this section, we mo
   * **enable secret command**
 * **Canceling commands**
 * **Command review**
-* **Key learnings**
+* **Key takeaways**
 * **Packet Tracer lab (basic device security)**
 
 ### What is the Cisco IOS CLI?
@@ -423,7 +423,7 @@ Router#**write memory**\
 Router#**copy running-config startup-config**\
 →to save the current running configuration and make it the startup configuration
 
-### Key learnings
+### Key takeaways
 
 * The Cisco IOS CLI is the text-based command-line interface used to configure, manage, and troubleshoot Cisco networking devices.
 * Initial access to a device for configuration is typically achieved by connecting a computer to the console port using a rollover cable.

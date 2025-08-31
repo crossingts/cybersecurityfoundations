@@ -92,6 +92,30 @@ d) R1(config)#ip route 0.0.0.0/32 10.1.1.255
 
 The answer is ACL 1. Entry 10 permits PC1 and entry 20 permits PC4. The implicit deny will deny all other traffic. ACL 1 fulfills the requirements. The other ACLs do not.
 
+**Quiz question 2**
+
+What is the final implicit statement at the end of every standard ACL?\
+a) permit any\
+**b) deny any**\
+c) log all\
+d) permit host
+
+**Quiz question 3**
+
+Standard ACLs are best applied close to the destination because they filter based on:\
+a) Destination IP address and port number\
+**b) Source IP address only**\
+c) Protocol type\
+d) Destination IP address only
+
+**Quiz question 4**
+
+Which of the following is an advantage of using a named ACL over a numbered ACL?\
+a) Named ACLs can filter on a wider range of criteria\
+b) Named ACLs have a higher performance efficiency\
+**c) Named ACLs allow for easier editing and more descriptive entries**\
+d) Named ACLs are applied differently to router interfaces
+
 ***
 
 ### Configuring and verifying DHCP client and relay

@@ -30,7 +30,7 @@ This section explains the [role of DNS within the network](https://its.umich.edu
 * **DNS demo 2**
 * **Configuring a router as a DNS client**
 * **Command review**
-* **Key learnings**
+* **Key takeaways**
 
 ### [The role of DNS within the network](https://www.fortinet.com/resources/cyberglossary/what-is-dns)
 
@@ -299,7 +299,7 @@ R1(config)#ip domain name jeremysitlab.com
 
 [Free CCNA | DNS | Day 38 Lab – Notes](https://docs.google.com/document/d/e/2PACX-1vS79akeguiFLpMKYg0BgdioGPEi1iLx88PQPS39SxXs_9bX5uDZG3iIdN4FUivXDYidrb-STxcFKxX7/pub)
 
-### Key learnings
+### Key takeaways
 
 * DNS is a critical network service that resolves easy-to-remember domain names (e.g., [www.cisco.com](http://www.cisco.com/)) to their corresponding numerical IP addresses, enabling easier navigation of networks and the Internet.
 * Common commands like `ipconfig /all`, `nslookup`, and `ping` are essential tools for verifying a device's IP configuration and testing DNS resolution from a client.

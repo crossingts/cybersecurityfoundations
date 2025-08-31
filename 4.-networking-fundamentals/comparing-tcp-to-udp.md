@@ -21,7 +21,7 @@ We then zoom in on TCP. First we look at some key fields and flags of the TCP he
 * **UDP (User Datagram Protocol)**
 * **Comparing TCP to UDP**
 * **Port numbers**
-* **Key learnings**
+* **Key takeaways**
 
 ### Basic functions of Layer 4 protocols (Transport layer)
 
@@ -370,7 +370,7 @@ Syslog uses UDP port 514.&#x20;
 
 The only protocol you should be aware of that uses both TCP and UDP is DNS, Domain Name System. It usually uses UDP, but uses TCP in some situations.
 
-### Key learnings
+### Key takeaways
 
 * Basics of Layer 4, including Layer 4 addressing in the form of port numbers and matching transport protocol identifiers.
 * TCP, a Layer 4 protocol which provides various services to applications, such as reliable communication and flow control.&#x20;

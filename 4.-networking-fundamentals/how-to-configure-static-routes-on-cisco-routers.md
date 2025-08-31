@@ -14,7 +14,7 @@ In the previous lesson, we explored two types of routes: Connected and Local rou
 * **Static route configuration (exit interface)**
 * **Default route**
 * **Command review**
-* **Key learnings**
+* **Key takeaways**
 * **Configuring static routes – Packet Tracer Lab 1**
 * **Troubleshooting static routes – Packet Tracer Lab 2**
 
@@ -247,7 +247,7 @@ R(config)#**no ip route** 192.168.3.0 255.255.255.0 192.168.12.3\
 R(config)#**ip route** 0.0.0.0 0.0.0.0 _next-hop_\
 →to configure a default route
 
-### Key learnings
+### Key takeaways
 
 * How to configure an IP address on the router’s interface, and how to read/identify connected and local routes in a routing table via the show ip route command (a review of material covered in the previous lesson).
 * How to configure a static IP address for the eth0 network interface of a PC as the default gateway.

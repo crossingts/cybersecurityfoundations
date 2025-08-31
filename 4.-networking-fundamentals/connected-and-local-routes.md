@@ -16,7 +16,7 @@ In this lesson we start looking at how routers forward packets to their destinat
 * **Route selection practice (5)**
 * **Summary**
 * **Command review**
-* **Key learnings**
+* **Key takeaways**
 
 ### What is routing?
 
@@ -237,7 +237,7 @@ R#**show ip interface** **brief**
 
 R#**show ip route**
 
-### Key learnings
+### Key takeaways
 
 * What is routing?&#x20;
 * How to read the routing table on a Cisco router, specifically looking at Connected and Local routes.

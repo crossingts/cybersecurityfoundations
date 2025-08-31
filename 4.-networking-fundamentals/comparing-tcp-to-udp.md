@@ -1,6 +1,22 @@
+---
+description: >-
+  This section delves into the connection-oriented reliability of TCP and the
+  connectionless simplicity of UDP, comparing their headers, functions, and
+  ideal use cases
+---
+
 # Comparing TCP to UDP
 
-This lesson covers two important Layer 4 protocols, TCP (Transmission Control Protocol) and UDP (User Datagram Protocol), focusing on their key functions and characteristics. First, the basic functions of TCP and UDP are discussed, focusing on how they provide 1) transparent transfer of data between end hosts, 2) various services to applications, and 3) Layer 4 addressing to deliver data to the correct destination. We elaborate on L4 addressing by discussing how L4 ports are used to identify application services and track sessions between end hosts and servers (session multiplexing). IANA’s port number ranges that Application layer protocols use are then explained.&#x20;
+## Learning objectives
+
+* Explain the core functions shared by all Transport layer protocols, including multiplexing using port numbers.
+* Describe the purpose of the TCP three-way handshake and four-way handshake for connection establishment and termination.
+* Identify key mechanisms TCP uses to provide reliable data delivery, such as sequencing, acknowledgments, and retransmission.
+* Contrast the TCP header and its fields with the simpler, minimal header of UDP.
+* Compare and state the critical differences between TCP and UDP, including their connection state, reliability, and overhead.
+* Recognize common well-known port numbers and their associated application-layer protocols.
+
+This section covers two important Layer 4 protocols, TCP (Transmission Control Protocol) and UDP (User Datagram Protocol), focusing on their key functions and characteristics. First, the basic functions of TCP and UDP are discussed, focusing on how they provide 1) transparent transfer of data between end hosts, 2) various services to applications, and 3) Layer 4 addressing to deliver data to the correct destination. We elaborate on L4 addressing by discussing how L4 ports are used to identify application services and track sessions between end hosts and servers (session multiplexing). IANA’s port number ranges that Application layer protocols use are then explained.&#x20;
 
 We then zoom in on TCP. First we look at some key fields and flags of the TCP header. We then cover why TCP is a connection-oriented protocol, so we look at the three-way handshake and the four-way handshake. The process TCP uses to establish connections is called the TCP Three-Way Handshake. The process TCP uses to terminate connections is sometimes called the TCP four-way handshake. We then discuss key TCP functions in closer detail, especially, how TCP provides sequencing, TCP retransmission, error recovery, and flow control. We then move on to UDP, highlighting how it is similar to and different from TCP. We [compare TCP to UDP](https://www.freecodecamp.org/news/tcp-vs-udp/). We compare the fields in the L4 headers of each of the two transport protocols, the features, and the real-world applications of each protocol. Finally, we look at some important well-known port numbers and matching Application layer protocols we must know for the CCNA.
 
@@ -25,7 +41,7 @@ We then zoom in on TCP. First we look at some key fields and flags of the TCP he
 
 ### Basic functions of Layer 4 protocols (Transport layer)
 
-TCP and UDP have three basic functions: 1) providing transparent transfer of data between end hosts, 2) providing (or not providing) various services to applications, and 3) providing Layer 4 addressing (port numbers) to deliver data to the correct destination.
+To manage data flow between applications, the Transport layer employs two primary protocols with markedly different philosophies. TCP and UDP have three basic functions: 1) providing transparent transfer of data between end hosts, 2) providing (or not providing) various services to applications, and 3) providing Layer 4 addressing (port numbers) to deliver data to the correct destination.
 
 The primary Layer 4 protocols, TCP and UDP, fulfill the three basic functions in different ways:
 
@@ -372,10 +388,12 @@ The only protocol you should be aware of that uses both TCP and UDP is DNS, Doma
 
 ### Key takeaways
 
-* Basics of Layer 4, including Layer 4 addressing in the form of port numbers and matching transport protocol identifiers.
-* TCP, a Layer 4 protocol which provides various services to applications, such as reliable communication and flow control.&#x20;
-* UDP, which does not provide the various services that TCP does, but uses a smaller header with less overhead.&#x20;
-* Comparing TCP to UDP.
+* TCP is a connection-oriented, reliable protocol that uses handshakes, sequencing, acknowledgments, and retransmissions to guarantee data delivery.
+* UDP is a connectionless, "best-effort" protocol that prioritizes low overhead and speed over reliability.
+* Both protocols use port numbers for session multiplexing, allowing multiple applications to communicate over a single network connection.
+* The TCP header is large and complex (20+ bytes), containing fields for control flags, sequence numbers, and window size for flow control.
+* The UDP header is very small and simple (8 bytes), containing only source/destination ports, length, and a checksum.
+* Understanding the trade-off between reliability (TCP) and speed (UDP) is essential for selecting the right protocol for a given application, such as web traffic (TCP) versus voice or video streaming (UDP).
 
 ### References
 

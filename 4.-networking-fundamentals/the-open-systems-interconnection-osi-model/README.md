@@ -34,17 +34,23 @@ Remember the layers of the OSI model by remembering the mnemonic, All People See
 
 #### Key Protocols Operating at Each Layer of the OSI Model
 
-| OSI Model Layer    | Protocols & Standards                                                                             |
-| ------------------ | ------------------------------------------------------------------------------------------------- |
-| Application Layer  | DNS, DHCP, FTP, TFTP, HTTP, HTTPS, LDAP, NTP, POP3, RTP, RTSP, SSH, Telnet, SIP, SMTP, SNMP, MIME |
-| Presentation Layer | JPEG, ASCII, EBDIC, MIDI, MPEG, PICT, TIFF. GIF                                                   |
-| Session Layer      | NetBIOS, NFS, PAP, SCP, RPC, SQL, ZIP                                                             |
-| Transport Layer    | TCP, UDP, SPX                                                                                     |
-| Network Layer      | ICMP, IGMP, IPsec, IPv4, IPv6, IPX, RIP, OSPF                                                     |
-| Data Link Layer    | ARP, RARP, ATM, CDP, FDDI, Frame Relay, HDLC, MPLS, PPP, SLIP, STP, Token Ring                    |
-| Physical Layer     | Bluetooth, DSL, Hub, Ethernet II, IEEE 802.3, IEEE 802.11 (WiFi), ISDN                            |
+| OSI Model Layer        | Protocols & Standards                                                                             | Key Protocols/Standards and Their Functions                                                                                                                                                                                                                                                                                                                                            |
+| ---------------------- | ------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Application Layer**  | DNS, DHCP, FTP, TFTP, HTTP, HTTPS, LDAP, NTP, POP3, RTP, RTSP, SSH, Telnet, SIP, SMTP, SNMP, MIME | <p><strong>DNS:</strong> Translates human-readable domain names (e.g., example.com) into machine-readable IP addresses.<br><strong>DHCP:</strong> Automatically assigns IP addresses and other network configuration parameters to devices.<br><strong>HTTP:</strong> Defines how web browsers and web servers communicate and transfer web pages.</p>                                 |
+| **Presentation Layer** | JPEG, ASCII, EBCDIC, MIDI, MPEG, PICT, TIFF, GIF                                                  | <p><strong>JPEG:</strong> A standard method for compressing and encoding digital images.<br><strong>ASCII:</strong> A character encoding standard for representing text and control characters in computers.</p>                                                                                                                                                                       |
+| **Session Layer**      | NetBIOS, NFS, PAP, SCP, RPC, SQL, ZIP                                                             | <p><strong>NetBIOS:</strong> Provides services for session establishment and name resolution on a local network.<br><strong>SQL:</strong> A language used to manage and communicate with database servers.<br><strong>ZIP:</strong> Manates AppleTalk session initiation and maintenance.</p>                                                                                          |
+| **Transport Layer**    | TCP, UDP, SPX                                                                                     | <p><strong>TCP:</strong> A connection-oriented protocol that provides reliable, ordered, and error-checked delivery of a data stream.<br><strong>UDP:</strong> A connectionless protocol that provides fast, but best-effort and unordered delivery of datagrams.</p>                                                                                                                  |
+| **Network Layer**      | ICMP, IGMP, IPsec, IPv4, IPv6, IPX, RIP, OSPF                                                     | <p><strong>ICMP:</strong> Used by network devices to send error messages and operational information (e.g., ping).<br><strong>IPv4/IPv6:</strong> Core protocols for addressing and routing packets across networks (IPv4 uses 32-bit addresses, IPv6 uses 128-bit).</p>                                                                                                               |
+| **Data Link Layer**    | ARP, RARP, ATM, CDP, FDDI, Frame Relay, HDLC, MPLS, PPP, SLIP, STP, Token Ring                    | <p><strong>ARP:</strong> Discovers the MAC address associated with a known IP address on the local network.<br><strong>MPLS:</strong> A routing technique that directs data using path labels rather than network addresses for high-speed traffic engineering.<br><strong>STP:</strong> Prevents network loops in switched Ethernet networks by blocking redundant paths.</p>         |
+| **Physical Layer**     | Bluetooth, DSL, Hub, Ethernet II, IEEE 802.3, IEEE 802.11 (WiFi), ISDN                            | <p><strong>Bluetooth:</strong> A wireless standard for short-range exchange of data between fixed and mobile devices.<br><strong>IEEE 802.3 (Ethernet):</strong> Defines the wiring and signaling standards for a wired LAN.<br><strong>IEEE 802.11 (Wi-Fi):</strong> Defines the media access control and physical layer specifications for wireless local area networks (WLANs).</p> |
 
-Each layer of the OSI model serves a specific function that contributes to the overall goal of allowing two hosts to share data with one another. Each layer uses its own addressing scheme to accomplish its goal. There are various devices and protocols which operate at specific layers of the OSI model which serve in accomplishing each layer’s goal.&#x20;
+Each layer of the OSI model serves a specific function that contributes to the overall goal of allowing two hosts to share data with one another. Each layer uses its own addressing scheme to accomplish its goal. The three addressing schemes used at Layers 2, 3, and 4 of the OSI model are:
+
+1. **Layer 2 (Data Link): MAC Address** - Used for **hop-to-hop delivery** on the same network segment. It physically identifies the next immediate device, like a router or switch.
+2. **Layer 3 (Network): IP Address** - Used for **end-to-end delivery** across an entire network path. It logically identifies the source and destination hosts.
+3. **Layer 4 (Transport): Port Number** - Used for **service-to-service delivery** to the correct application or service (e.g., web, email) on the destination host.
+
+There are various devices and protocols which operate at specific layers of the OSI model which serve in accomplishing each layer’s goal.&#x20;
 
 **A brief explanation of the function of each layer**
 
@@ -82,7 +88,7 @@ More generally, the Data Link layer:
 
 ### Layer 3: Network layer – end to end delivery
 
-Layer 3 handles the end to end delivery of data, i.e., the flow of data from host to host across networks. To accomplish this goal, Layer 3 uses its own addressing scheme known as the IP address.
+Layer 3 handles the end to end delivery of data, i.e., the flow of data from host to host across networks. To accomplish this goal, Layer 3 uses its own addressing scheme known as the IP address. End-to-end delivery involves logical addressing (like IP addresses), routing, and path determination to get data from a source host to a destination host across different networks.
 
 Routers are a Layer 3 technology because they aid in moving data from host to host across networks. Anything with an IP address can be considered to exist on Layer 3 of the OSI model.
 

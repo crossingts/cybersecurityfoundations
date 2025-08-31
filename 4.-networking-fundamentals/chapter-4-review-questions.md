@@ -8,7 +8,9 @@
 
 ### The Open Systems Interconnection (OSI) model
 
-* Point 1
+* Briefly describe the primary function of the Network Layer (Layer 3) in the OSI model.
+* List three key protocols that operates at the Application Layer (Layer 7) and state their purpose.
+* Identify three addressing schemes used at Layers 2, 3, and 4 of the OSI model and state the purpose of each.
 
 ***
 

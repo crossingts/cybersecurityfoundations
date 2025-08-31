@@ -25,7 +25,7 @@ This chapter has two main goals. First, this chapter demystifies the underlying 
 
 [Network devices and their functions](../network-devices-and-their-functions/)
 
-[The Open Systems Interconnection (OSI) model](../the-open-systems-interconnection-osi-model.md)
+[The Open Systems Interconnection (OSI) model](../the-open-systems-interconnection-osi-model/)
 
 [Host to host communication in networking](../host-to-host-communication-in-networking.md)
 

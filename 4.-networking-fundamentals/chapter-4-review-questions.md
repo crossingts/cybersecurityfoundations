@@ -46,7 +46,7 @@
 
 ### Cisco IOS CLI and basic device security
 
-* What is the primary functional difference between User EXEC mode and Privileged EXEC mode
+* What is the primary functional difference between User EXEC mode and Privileged EXEC mode?
   * Answer: User EXEC mode is for basic, read-only monitoring commands. Privileged EXEC mode provides full administrative access to all viewing, debugging, and device control commands (e.g., reload, copy).
 * What is the single, most important CLI shortcut for getting help and how is it used?
   * Answer: The question mark `?`. It is used for context-sensitive help. Typing it at a prompt lists all available commands. Typing it after a partial command shows possible completions and arguments.
@@ -85,7 +85,16 @@
 
 ### The role of DNS within the network
 
-* Point 1
+* What is the primary function of the Domain Name System (DNS), and why is it essential for human users?
+  * Answer: The primary function of DNS is to translate human-readable domain names (e.g., www.google.com) into machine-readable IP addresses (e.g., 172.217.0.142).&#x20;
+* A Windows user can successfully ping `8.8.8.8` but cannot ping `google.com`. What is the most likely cause, and which command would you use on the Windows PC to investigate the configured resolver?
+  * Answer: The most likely cause is a DNS resolution failure. The user's device cannot translate `google.com` into an IP address. To investigate, you would use the `ipconfig /all` command on the Windows PC to verify which DNS server it is configured to use.
+* What are the two primary purposes of the `ip host` and `ip name-server` commands when configuring a Cisco router to act as a DNS server for local clients?
+  * Answer: The `ip host` command is used to build a local host table on the router by statically mapping hostnames to IP addresses (e.g., `ip host PC1 192.168.0.101`). The `ip name-server` command configures an external DNS server (e.g., `8.8.8.8`) that the router will query if a client requests a name not found in its local host table.
+* In a Wireshark capture of a DNS query for `youtube.com`, you see one query for an "A" record and another for a "AAAA" record. What is the difference between these two record types?
+  * Answer: An "A" record maps a domain name to an IPv4 address. A "AAAA" (quad-A) record maps a domain name to an IPv6 address. The two queries are made to get both the IPv4 and IPv6 addresses for the same domain name.
+* What is the key functional difference between a router acting as a DNS client versus a DNS server? What is the main command to enable each role?
+  * Answer: DNS Client: The router sends DNS queries to an external server to resolve names for its own use (e.g., when using the `ping` command). The main command is `ip name-server <address>`. DNS Server: The router answers DNS queries from other devices on the network. The main command to enable this is `ip dns server`.
 
 ***
 

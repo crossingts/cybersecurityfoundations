@@ -20,9 +20,9 @@ As you scroll down (just under the heading “Learn more on how to use Packet Tr
 
 Consider taking a free course, e.g., Getting Started with Cisco Packet Tracer (2 hours). It is probably worth it since you will be using it from now on.
 
-In this lesson we will download Packet Tracer and build a simple network to start getting familiar with the Packet Tracer simulation and visualization environment and learn about the features of Packet Tracer.
+In this section we will download Packet Tracer and build a simple network to start getting familiar with the Packet Tracer simulation and visualization environment and learn about the features of Packet Tracer.
 
-We will recreate this network in this lesson’s lab.
+We will recreate this network in this section's lab.
 
 <figure><img src="../../.gitbook/assets/image (21).png" alt="Packet Tracer Network Topology"><figcaption></figcaption></figure>
 
@@ -44,7 +44,7 @@ To select a cable type to connect devices click on the lightning bolt icon (Conn
 
 For example, to connect PC1 to Switch1 with the proper cable connection, after selecting the cable type by simply clicking on it, click on PC1 and then click on Switch1.
 
-When you open the Packet Tracer file of the lesson, you will immediately see the lab instructions of the lesson embedded in the main screen area where we will be building and configuring networks.
+When you open the Packet Tracer file of the section, you will immediately see the lab instructions embedded in the main screen area where we will be building and configuring networks.
 
 **LAB 1 INSTRUCTIONS**
 

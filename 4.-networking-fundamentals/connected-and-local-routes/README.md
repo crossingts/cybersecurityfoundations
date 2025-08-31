@@ -70,7 +70,7 @@ Notice that all the router IP addresses are the same as their name. All of R1’
 
 ### R1 pre-configurations (IP addresses)
 
-Before looking at routes, let’s configure the IP addresses using the Cisco IOS CLI. Only the configurations on R1 are shown (see the following diagram) since that’s the router we’ll be focusing on in this lesson.
+Before looking at routes, let’s configure the IP addresses using the Cisco IOS CLI. Only the configurations on R1 are shown (see the following diagram) since that’s the router we’ll be focusing on in this section.
 
 From the top, from privileged EXEC mode, we enter “conf t” (configure terminal) to enter global configuration mode. We then enter interface configuration mode by typing the keyword interface followed by the interface name.
 

@@ -2,7 +2,10 @@
 
 ### Network devices and their functions
 
-* Point 1
+* What is the fundamental difference between the function of a switch and the function of a router?
+* Explain the primary limitation of using a hub in a network.
+* What are the two main categories of firewalls covered in the section, and how do they differ in their physical form and placement?
+* A host needs to communicate with another host on a different network. What is the role of its "gateway" in this process?
 
 ***
 

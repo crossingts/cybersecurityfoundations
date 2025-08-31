@@ -124,7 +124,7 @@ ASA 5500-X and Firepower 2100 are network firewalls, which are hardware devices 
 
 Host-based firewalls are software applications that filter traffic entering and exiting a host machine, like a PC. Your PC almost certainly has a software firewall installed. Even in a network with a hardware firewall, each PC should include a software firewall as an extra line of defense.
 
-### Key takeways
+### Key takeaways
 
 * A host is any device that sends or receives traffic:
   * a client initiates a request for some data or a service, a server responds.

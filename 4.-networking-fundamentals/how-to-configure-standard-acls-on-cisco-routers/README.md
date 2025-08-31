@@ -41,7 +41,7 @@ ACLs can be used to implement a variety of security policies, such as:
 * Controlling traffic flow. ACLs can be used to control the flow of traffic between different parts of the network, for example, to prevent users on one subnet from accessing resources on another subnet.
 * Protecting against malicious traffic. ACLs can be used to block traffic from known malicious sources, such as known botnets or malware C\&C (Command and Control) servers.
 
-This lesson, [How to configure standard ACLs on Cisco routers](https://www.cbtnuggets.com/blog/certifications/cisco/networking-basics-how-to-configure-standard-acls-on-cisco-routers), and the next, [How to configure extended ACLs on Cisco routers](https://itnetworkingskills.wordpress.com/2023/04/11/how-configure-extended-acls-cisco-routers/), focus only on ACLs from a security perspective, controlling which clients or hosts have access to different parts of the network.
+This section focus only on ACLs from a security perspective, controlling which clients or hosts have access to different parts of the network.
 
 In the context of security, ACLs function as a packet filter, instructing the router to permit or discard specific traffic. When a router receives a packet and the router has a route to the packet’s destination, the router will forward the packet according to its routing table. However, ACLs can override this default process. ACLs configured on a router act as gatekeepers, permitting certain traffic flows and denying others.
 
@@ -203,7 +203,7 @@ The first type is standard ACLs. These match based on source IP address only, so
 
 The second main type of ACLs is extended ACLs. These are more complex and can match based on source and/or destination IP address, source and/or destination port numbers, as well as some other parameters. Like standard ACLs, there are numbered and named versions of extended ACLs.
 
-All the examples so far have been standard ACLs, filtering packets only based on their source IP address. This lesson only covers standard ACLs. Extended ACLs are covered in the lesson [How to configure extended ACLs on Cisco routers](https://supervisorbullying.com/how-configure-extended-acls-cisco-routers/).
+All the examples so far have been standard ACLs, filtering packets only based on their source IP address. This section only covers standard ACLs. Extended ACLs are covered in [How to configure extended ACLs on Cisco routers](https://supervisorbullying.com/how-configure-extended-acls-cisco-routers/).
 
 ### [Configuring standard numbered ACLs on Cisco routers](https://study-ccna.com/configuring-standard-acls/)
 

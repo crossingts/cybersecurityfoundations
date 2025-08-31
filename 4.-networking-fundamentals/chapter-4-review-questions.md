@@ -42,109 +42,13 @@ hidden: true
 
 ### Connected and local routes
 
-* Quiz questions
-
-**Quiz question 1**&#x20;
-
-The IP address configured on a router interface will appear in the routing table as what kind of route?&#x20;
-
-a) Static
-
-b) Connected
-
-**c) Local**
-
-d) Dynamic
-
-**Quiz question 2**
-
-After configuring the IP address 192.168.1.1/24 on a router's GigabitEthernet0/1 interface, which two routes are automatically added to the routing table?
-
-a) A static route and a default route
-
-**b) A connected route to 192.168.1.0/24 and a local route to 192.168.1.1/32**
-
-c) A local route to 192.168.1.0/24 and a connected route to 192.168.1.1/32
-
-d) Two equal-cost static routes
-
-**Quiz question 3**
-
-In a Cisco routing table, what code letter signifies a Local route?
-
-a) C
-
-b) S
-
-**c) L**
-
-d) D
-
-**Quiz question 4**
-
-When a router receives a packet destined for the IP address 10.0.0.1, and its routing table contains both a route to 10.0.0.0/24 and 10.0.0.1/32, which route will it select?
-
-a) The 10.0.0.0/24 route because it represents a larger network
-
-**b) The 10.0.0.1/32 route because it is a longer, more specific prefix match**
-
-c) The router will load-balance traffic across both routes
-
-d) The router will drop the packet due to a routing conflict
+* Point 1
 
 ***
 
 ### How to configure static routes on Cisco routers
 
-* Quiz questions
-
-**Quiz question 1**
-
-Which of the following commands configures a default route on a Cisco router?
-
-**a) R1(config)#ip route 0.0.0.0 0.0.0.0 10.1.1.255**
-
-b) R1(config)#ip route 0.0.0.0/0 10.1.1.255
-
-c) R1(config)#ip route 0.0.0.0 255.255.255.255 10.1.1.255
-
-d) R1(config)#ip route 0.0.0.0/32 10.1.1.255
-
-**Quiz question 2**
-
-What is the primary purpose of configuring a static route on a router?
-
-a) To automatically learn all possible network paths
-
-**b) To manually define a path to a remote network that is not directly connected**
-
-c) To assign an IP address to a router's physical interface
-
-d) To encrypt traffic between two remote hosts
-
-**Quiz question 3**
-
-Which command is the correct syntax for configuring a default static route on a Cisco router?
-
-**a) `ip route 0.0.0.0 0.0.0.0 192.168.1.1`**
-
-b) `ip default-route 192.168.1.1`
-
-c) `ip route 192.168.1.0 255.255.255.0 GigabitEthernet0/1`
-
-d) `default-information originate`
-
-**Quiz question 4**
-
-For a host on a network to communicate with a host on a different network, it must be configured with which of the following?
-
-a) A Dynamic Host Configuration Protocol (DHCP) server address
-
-b) A DNS server address
-
-**c) A default gateway address**
-
-d) A subnet mask for the remote network
+* Point 1
 
 ***
 

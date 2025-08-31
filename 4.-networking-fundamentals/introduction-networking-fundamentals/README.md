@@ -35,9 +35,9 @@ This chapter has two main goals. First, this chapter demystifies the underlying 
 
 [Cisco IOS CLI and basic device security](../cisco-ios-cli-and-basic-device-security/)
 
-[Connected and local routes](../connected-and-local-routes.md)
+[Connected and local routes](../connected-and-local-routes/)
 
-[How to configure static routes on Cisco routers](../how-to-configure-static-routes-on-cisco-routers.md)
+[How to configure static routes on Cisco routers](../how-to-configure-static-routes-on-cisco-routers/)
 
 [Comparing TCP to UDP](../comparing-tcp-to-udp.md)
 

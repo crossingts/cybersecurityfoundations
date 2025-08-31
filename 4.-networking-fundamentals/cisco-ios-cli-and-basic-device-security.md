@@ -1,10 +1,20 @@
 ---
 description: >-
-  This section is an introduction to the Cisco IOS CLI and basic device security
-  configuration
+  This section introduces the Cisco IOS Command-Line Interface (CLI) and shows
+  how to apply Cisco IOS commands to implement basic device security using
+  encrypted passwords
 ---
 
 # Cisco IOS CLI and basic device security
+
+## Learning objectives
+
+* Access a Cisco device’s operating system using a terminal emulator via the console port
+* Navigate the different CLI modes, including User EXEC, Privileged EXEC, and Global Configuration mode
+* Utilize IOS command shortcuts and syntax conventions to efficiently operate the CLI
+* Configure and encrypt device passwords to prevent unauthorized access
+* Examine the active and saved device configurations using `show running-config` and `show startup-config`
+* Save device configuration changes and understand the difference between volatile and non-volatile memory
 
 Welcome to the practical heart of network administration. In this section, we move from conceptual networking fundamentals to the essential hands-on skill of configuring and securing a network device. We will be using the Cisco IOS Command-Line Interface (CLI), the operating system that powers the vast majority of routers and switches worldwide. You will first learn how to physically connect to a device and access the CLI using a terminal emulator. We will then guide you through the CLI's structure, including its different command modes and shortcuts. More importantly, we will immediately apply these skills to the critical task of basic device security, where you will learn how to set passwords, encrypt them, and securely manage your device's configuration. This foundation is your first step toward managing network infrastructure and is a core competency for any cybersecurity professional tasked with protecting network assets.
 

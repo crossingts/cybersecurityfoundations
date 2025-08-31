@@ -45,7 +45,7 @@ This chapter has two main goals. First, this chapter demystifies the underlying 
 
 [The role of DNS within the network](../the-role-of-dns-within-the-network/)
 
-[Configuring and verifying DHCP client and relay](../configuring-and-verifying-dhcp-client-and-relay.md)
+[Configuring and verifying DHCP client and relay](../configuring-and-verifying-dhcp-client-and-relay/)
 
 [Static NAT configuration](../static-nat-configuration.md)
 

@@ -56,6 +56,42 @@ b) Connected
 
 d) Dynamic
 
+**Quiz question 2**
+
+After configuring the IP address 192.168.1.1/24 on a router's GigabitEthernet0/1 interface, which two routes are automatically added to the routing table?
+
+a) A static route and a default route
+
+**b) A connected route to 192.168.1.0/24 and a local route to 192.168.1.1/32**
+
+c) A local route to 192.168.1.0/24 and a connected route to 192.168.1.1/32
+
+d) Two equal-cost static routes
+
+**Quiz question 3**
+
+In a Cisco routing table, what code letter signifies a Local route?
+
+a) C
+
+b) S
+
+**c) L**
+
+d) D
+
+**Quiz question 4**
+
+When a router receives a packet destined for the IP address 10.0.0.1, and its routing table contains both a route to 10.0.0.0/24 and 10.0.0.1/32, which route will it select?
+
+a) The 10.0.0.0/24 route because it represents a larger network
+
+**b) The 10.0.0.1/32 route because it is a longer, more specific prefix match**
+
+c) The router will load-balance traffic across both routes
+
+d) The router will drop the packet due to a routing conflict
+
 ***
 
 ### How to configure static routes on Cisco routers

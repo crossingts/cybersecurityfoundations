@@ -1,6 +1,21 @@
+---
+description: >-
+  This section covers the fundamentals of IP routing, beginning with how routers
+  build their routing tables, to connected and local routes, and onto how a
+  router selects the best path to forward packets
+---
+
 # Connected and local routes
 
-In this lesson we start looking at how routers forward packets to their destination, i.e., the mechanism and logic of IP routing. This lesson first answers the question, what is routing? Then we configure IP addresses on a router's interface using the Cisco IOS CLI. Then we examine the routing table on a Cisco router. Switches have MAC address tables, and routers have routing tables. Knowing how to read a router's routing table is a fundamental networking skill. Specifically, we will look at two types of routes found in a routing table: [Connected and Local routes](https://learningnetwork.cisco.com/s/question/0D53i00000Kt2iuCAB/what-is-the-difference-between-local-and-connected-routes). Those routes are automatically added to the router’s routing table when you configure an IP address on the router’s interface. Connected routes provide a route to a network the router’s interface is directly connected to, and local routes provide a route to the router’s own IP address. Finally, we look at route selection. In a router’s routing table, routers will usually have a variety of routes. We discuss how a router selects the correct route for a packet.
+## Learning objectives
+
+* Define IP routing and explain its role in network communication
+* Configure an IP address on a Cisco router's interface using the IOS CLI
+* Interpret the output of the show ip route command to view a router's routing table
+* Differentiate between a connected route and a local route in the routing table
+* Explain the process a router uses to select the best matching route for a packet
+
+In this section we start looking at how routers forward packets to their destination, i.e., the mechanism and logic of IP routing. This section first answers the question, what is routing? Then we configure IP addresses on a router's interface using the Cisco IOS CLI. Then we examine the routing table on a Cisco router. Switches have MAC address tables, and routers have routing tables. Knowing how to read a router's routing table is a fundamental networking skill. Specifically, we will look at two types of routes found in a routing table: [Connected and Local routes](https://learningnetwork.cisco.com/s/question/0D53i00000Kt2iuCAB/what-is-the-difference-between-local-and-connected-routes). Those routes are automatically added to the router’s routing table when you configure an IP address on the router’s interface. Connected routes provide a route to a network the router’s interface is directly connected to, and local routes provide a route to the router’s own IP address. Finally, we look at route selection. In a router’s routing table, routers will usually have a variety of routes. We discuss how a router selects the correct route for a packet.
 
 ## Topics covered in this section
 
@@ -239,11 +254,12 @@ R#**show ip route**
 
 ### Key takeaways
 
-* What is routing?&#x20;
-* How to read the routing table on a Cisco router, specifically looking at Connected and Local routes.
-* Routing fundamentals (route selection) – how routers select which route to use to forward a particular packet.&#x20;
-
-How to configure an IP address on the router’s interface, and how to read connected and local routes in a routing table via the show ip route command
+* IP routing is the process by which routers forward packets toward their destination network.
+* A router makes its forwarding decisions based on information stored in its routing table.
+* When an IP address is configured on an active router interface, the router automatically adds two types of routes to its table:
+  * A Connected route (denoted by a C in the routing table) represents the entire IP network to which the interface is directly attached.
+  * A Local route (denoted by an L in the routing table) represents the specific IP address configured on the router's interface itself.
+* When multiple paths to a destination exist, the router uses a route selection process to choose the most specific matching route.
 
 ### References
 

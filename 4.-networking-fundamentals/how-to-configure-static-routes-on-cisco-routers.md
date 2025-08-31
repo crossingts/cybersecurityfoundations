@@ -1,8 +1,22 @@
+---
+description: >-
+  This section teaches the manual configuration of static routes on Cisco
+  routers to control traffic flow across the network
+---
+
 # How to configure static routes on Cisco routers
 
-In this lesson we learn how to configure static routes in the CLI of Cisco routers. We look at how to read a routing table, how to configure a static IP address for the eth0 network interface of a PC as the default gateway, and how to configure a default route on a Cisco router.
+## Learning objectives
 
-In the previous lesson, we explored two types of routes: Connected and Local routes. Connected routes provide a route to a network the router’s interface is directly connected to, and Local routes provide a route to the router’s own IP address. However, for the router to be able to send traffic to destinations not directly connected to the router itself, Connected and Local routes are not enough. Static routes enable routers to send packets to remote destinations not directly connected to the router itself. Unlike Connected and Local routes, static routes are not automatically added to the routing table and must be manually configured.
+* Explain the purpose of a default gateway and how it enables communication between different networks
+* Interpret entries within a Cisco router's routing table
+* Plan a static route to direct traffic toward a specific remote network
+* Configure a static IP address for the eth0 network interface of a PC as the default gateway
+* Configure a static route using the Cisco IOS CLI, both with a next-hop IP address and an exit interface
+* Configure a default static route on a Cisco router to handle all traffic destined for networks not explicitly listed in the routing table
+* Apply this knowledge to troubleshoot basic static routing issues in a lab environment
+
+In this section we learn how to configure static routes in the CLI of Cisco routers. We look at how to read a routing table, how to configure a static IP address for the eth0 network interface of a PC as the default gateway, and how to configure a default route on a Cisco router. In the previous section, we explored two types of routes: Connected and Local routes. Connected routes provide a route to a network the router’s interface is directly connected to, and Local routes provide a route to the router’s own IP address. However, for the router to be able to send traffic to destinations not directly connected to the router itself, Connected and Local routes are not enough. Static routes enable routers to send packets to remote destinations not directly connected to the router itself. Unlike Connected and Local routes, static routes are not automatically added to the routing table and must be manually configured.
 
 ## Topics covered in this section
 
@@ -249,10 +263,11 @@ R(config)#**ip route** 0.0.0.0 0.0.0.0 _next-hop_\
 
 ### Key takeaways
 
-* How to configure an IP address on the router’s interface, and how to read/identify connected and local routes in a routing table via the show ip route command (a review of material covered in the previous lesson).
-* How to configure a static IP address for the eth0 network interface of a PC as the default gateway.
-* How to configure static routes on Cisco routers to route packets between end hosts in different networks (PC1 and PC4).
-* How to configure a default route on a Cisco router.
+* Static routes are not learned automatically and must be manually configured by an administrator to define a path to remote networks.
+* A default gateway (often a router's interface) is the IP address a host uses to forward traffic destined for a network outside its own.
+* A default route (0.0.0.0/0) is a special type of static route that acts as a catch-all for any traffic to a network not found in the routing table.
+* Proper routing table configuration on all intermediary routers is essential for end-to-end communication between hosts on different networks.
+* Mastery of static routing is a foundational, practical skill for building and securing network infrastructure.
 
 ### Configuring static routes – Packet Tracer Lab 1
 

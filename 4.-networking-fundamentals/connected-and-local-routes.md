@@ -243,6 +243,8 @@ R#**show ip route**
 * How to read the routing table on a Cisco router, specifically looking at Connected and Local routes.
 * Routing fundamentals (route selection) – how routers select which route to use to forward a particular packet.&#x20;
 
+How to configure an IP address on the router’s interface, and how to read connected and local routes in a routing table via the show ip route command
+
 ### References
 
 [Free CCNA | Routing Fundamentals | Day 11 (part 1) | CCNA 200-301 Complete Course](https://www.youtube.com/watch?v=aHwAm8GYbn8\&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ\&index=19)

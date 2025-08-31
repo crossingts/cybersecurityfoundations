@@ -62,7 +62,7 @@ d) Dynamic
 
 * Quiz questions
 
-**Quiz question 1**&#x20;
+**Quiz question 1**
 
 Which of the following commands configures a default route on a Cisco router?
 
@@ -73,6 +73,33 @@ b) R1(config)#ip route 0.0.0.0/0 10.1.1.255
 c) R1(config)#ip route 0.0.0.0 255.255.255.255 10.1.1.255
 
 d) R1(config)#ip route 0.0.0.0/32 10.1.1.255
+
+**Quiz question 2**
+
+What is the primary purpose of configuring a static route on a router?\
+a) To automatically learn all possible network paths\
+b) To manually define a path to a remote network that is not directly connected\
+c) To assign an IP address to a router's physical interface\
+d) To encrypt traffic between two remote hosts\
+Answer: b
+
+**Quiz question 3**
+
+Which command is the correct syntax for configuring a default static route on a Cisco router?\
+a) `ip route 0.0.0.0 0.0.0.0 192.168.1.1`\
+b) `ip default-route 192.168.1.1`\
+c) `ip route 192.168.1.0 255.255.255.0 GigabitEthernet0/1`\
+d) `default-information originate`\
+Answer: a
+
+**Quiz question 4**
+
+For a host on a network to communicate with a host on a different network, it must be configured with which of the following?\
+a) A Dynamic Host Configuration Protocol (DHCP) server address\
+b) A DNS server address\
+c) A default gateway address\
+d) A subnet mask for the remote network\
+Answer: c
 
 ***
 

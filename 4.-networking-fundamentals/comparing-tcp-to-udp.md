@@ -9,12 +9,12 @@ description: >-
 
 ## Learning objectives
 
-* Explain the core functions shared by all Transport layer protocols, including multiplexing using port numbers.
-* Describe the purpose of the TCP three-way handshake and four-way handshake for connection establishment and termination.
-* Identify key mechanisms TCP uses to provide reliable data delivery, such as sequencing, acknowledgments, and retransmission.
-* Contrast the TCP header and its fields with the simpler, minimal header of UDP.
-* Compare and state the critical differences between TCP and UDP, including their connection state, reliability, and overhead.
-* Recognize common well-known port numbers and their associated application-layer protocols.
+* Explain the core functions shared by all Transport layer protocols, including multiplexing using port numbers
+* Describe the purpose of the TCP three-way handshake and four-way handshake for connection establishment and termination
+* Identify key mechanisms TCP uses to provide reliable data delivery, such as sequencing, acknowledgments, and retransmission
+* Contrast the TCP header and its fields with the simpler, minimal header of UDP
+* Compare and state the critical differences between TCP and UDP, including their connection state, reliability, and overhead
+* Recognize common well-known port numbers and their associated application-layer protocols
 
 This section covers two important Layer 4 protocols, TCP (Transmission Control Protocol) and UDP (User Datagram Protocol), focusing on their key functions and characteristics. First, the basic functions of TCP and UDP are discussed, focusing on how they provide 1) transparent transfer of data between end hosts, 2) various services to applications, and 3) Layer 4 addressing to deliver data to the correct destination. We elaborate on L4 addressing by discussing how L4 ports are used to identify application services and track sessions between end hosts and servers (session multiplexing). IANA’s port number ranges that Application layer protocols use are then explained.&#x20;
 

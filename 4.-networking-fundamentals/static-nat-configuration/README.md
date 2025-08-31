@@ -23,11 +23,10 @@ This section covers static NAT configuration on Cisco IOS devices. NAT (Network 
 * **Static NAT configuration – introduction**
 * **Static NAT configuration**
 * **Cisco NAT terminology**
-* **clear ip nat translation**
+* **show ip nat translations and clear ip nat translation \***
 * **show ip nat statistics**
 * **Command review**
 * **Key takeaways**
-* **Practice quiz questions**
 
 ### Private IPv4 addresses (RFC 1918)
 
@@ -67,7 +66,7 @@ There are two problems here. The first problem is that there are duplicate addre
 
 NAT solves both of these problems.&#x20;
 
-Private IP addresses do not have to be unique, but public IP addresses must be unique. When our PC needs to reach destinations over the Internet, NAT will allow it to borrow the unique public IP address of our router or to use another public IP address configured for NAT. In [dynamic PAT (port address translation)](https://itnetworkingskills.wordpress.com/2023/04/13/dynamic-pat-configuration/), a variation of NAT, the PC and all other home devices can use the same public IP address to access the Internet, all at the same time. For example, our PC can borrow our router’s public IP address and communicate over the Internet using 203.0.113.1, and the other PC can communicate over the Internet using 203.0.113.5.
+Private IP addresses do not have to be unique, but public IP addresses must be unique. When our PC needs to reach destinations over the Internet, NAT will allow it to borrow the unique public IP address of our router or to use another public IP address configured for NAT. In [dynamic PAT](https://itnetworkingskills.wordpress.com/2023/04/13/dynamic-pat-configuration/), a variation of NAT, the PC and all other home devices can use the same public IP address to access the Internet, all at the same time. For example, our PC can borrow our router’s public IP address and communicate over the Internet using 203.0.113.1, and the other PC can communicate over the Internet using 203.0.113.5.
 
 ### NAT (Network Address Translation) introduction
 
@@ -207,7 +206,7 @@ The four terms – inside local, inside global, outside local, and outside globa
 
 “Local” and “global” indicate the perspective. Local means from the perspective of the local, inside network. Global means from the perspective of the global, outside network. For example, 192.168.0.167 is PC1’s IP address from the perspective of the local network, and 100.0.0.1 is PC1’s IP address from the perspective of the global network. &#x20;
 
-### clear ip nat translation
+### show ip nat translations and clear ip nat translation \*
 
 Each time the static NAT entries are used, dynamic entries are added to the NAT translation table for those translations, as you can see in the following CLI output, as an example. These dynamic entries will eventually time out and be removed from the NAT translation table after PC1 and PC2 stop communicating with 8.8.8.8.
 

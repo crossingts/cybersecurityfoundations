@@ -47,6 +47,6 @@ This chapter has two main goals. First, this chapter demystifies the underlying 
 
 [Configuring and verifying DHCP client and relay](../configuring-and-verifying-dhcp-client-and-relay/)
 
-[Static NAT configuration](../static-nat-configuration.md)
+[Static NAT configuration](../static-nat-configuration/)
 
 [OSI model layers and security threats](../osi-model-layers-and-security-threats/)

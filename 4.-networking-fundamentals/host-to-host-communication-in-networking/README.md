@@ -8,9 +8,9 @@ description: >-
 
 ## Learning objectives <a href="#learning-objectives" id="learning-objectives"></a>
 
-• Understand how ARP resolves IP addresses to MAC addresses\
-• Understand how hosts in the same network send and receive data\
-• Understand how hosts in different networks communicate over the wire
+* Understand how ARP resolves IP addresses to MAC addresses
+* Understand how hosts in the same network send and receive data
+* Understand how hosts in different networks communicate over the wire
 
 This section discusses [host to host communication in networking](https://ine.com/blog/2009-03-01-ccent-host-to-host-network-addressing-example). This discussion covers everything hosts do to send and receive data on the wire. Key concepts discussed in this section include the Address Resolution Protocol (ARP), how hosts in the same network communicate, and how hosts in different networks communicate.
 
@@ -102,12 +102,12 @@ The first step any host takes when it’s trying to send data on a network is to
 
 ### Key takeaways
 
-* The steps a host takes when speaking to another host on the same network
-  * steps are the same regardless if there are switches or hubs
-* What hosts do to speak to hosts on a foreign network
-  * steps are the same whether what hosts are trying to speak to is on the other side of one router or multiple routers
-* ARP’s role in this host to host communication process
-  * how L2 and L3 headers are populated to get the data to the other host
+* The steps a host takes when speaking to another host on the same network:
+  * steps are the same regardless if there are switches or hubs.
+* What hosts do to speak to hosts on a foreign network:
+  * steps are the same whether what hosts are trying to speak to is on the other side of one router or multiple routers.
+* ARP’s role in this host to host communication process:
+  * how L2 and L3 headers are populated to get the data to the other host.
 
 ### References
 

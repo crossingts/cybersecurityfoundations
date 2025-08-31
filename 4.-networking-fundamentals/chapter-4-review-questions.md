@@ -27,6 +27,8 @@
   * Answer: The destination host discards the Layer 2 header (as its job for NIC-to-NIC delivery is done) and then retires the Layer 3 header (as its job for end-to-end delivery is done), leaving only the data for the application to process.
 * Once a host has resolved the MAC address of its default gateway via ARP, how does this benefit future communications?
   * Answer: The MAC-to-IP mapping is stored in the host's ARP cache. This resolved MAC address can be reused for any subsequent packet destined for any foreign network, as the first hop for all such traffic is the same router. The host does not need to ARP for the gateway again until the cache entry expires.
+* Where does a host store the IP-to-MAC address mappings it learns from ARP responses?
+  * Answer: The host stores them in its ARP cache (also called an ARP table).
 
 ***
 

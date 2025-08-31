@@ -11,9 +11,19 @@
 
 ### The Open Systems Interconnection (OSI) model
 
+* Briefly describe the primary function of the Physical Layer (Layer 1) in the OSI model.
+  * Answer: The primary function of the Physical Layer is transporting bits between hosts. It defines the physical characteristics of the medium (like cables and radio waves) and converts digital bits into electrical, light, or radio signals for transmission.
+* Briefly describe the primary function of the Data Link Layer (Layer 2) in the OSI model.
+  * Answer: The primary function of the Data Link Layer is hop-to-hop delivery. It uses MAC addresses to move data from one Network Interface Card (NIC) to the next immediate device on the same network segment, such as from a computer to a switch or from a switch to a router.
 * Briefly describe the primary function of the Network Layer (Layer 3) in the OSI model.
-* List three key protocols that operates at the Application Layer (Layer 7) and state their purpose.
+  * Answer: The primary function of the Network Layer is end-to-end delivery. It uses IP addresses for logical addressing and routing to get data from a source host to a destination host across different networks.
+* List three key protocols that operate at the Application Layer (Layer 7) and state their purpose.
+  * Answer: DNS: Translates human-readable domain names (e.g., example.com) into machine-readable IP addresses. HTTP: Defines how web browsers and web servers communicate and transfer web pages. DHCP: Automatically assigns IP addresses and other network configuration parameters to devices on a network.
 * Identify three addressing schemes used at Layers 2, 3, and 4 of the OSI model and state the purpose of each.
+  * Answer:&#x20;
+    * Layer 2 (Data Link): MAC Address - Used for hop-to-hop delivery to physically identify the next immediate device on the local network segment.
+    * Layer 3 (Network): IP Address - Used for end-to-end delivery to logically identify the source and destination hosts across an entire network path.
+    * Layer 4 (Transport): Port Number - Used for service-to-service delivery to ensure data is delivered to the correct application or service on the destination host.
 
 ***
 
@@ -140,18 +150,43 @@
 
 ### Configuring and verifying DHCP client and relay
 
+* What is the primary purpose of the DHCP protocol on a network, and what are two key benefits it provides?
+  * Answer: The primary purpose of DHCP is to automatically assign IP addresses and other network configuration parameters (like subnet mask, default gateway, and DNS servers) to client devices. Two key benefits are reducing administrative overhead by eliminating manual configuration and minimizing human error.
+* List the four steps of the DORA process and briefly state the purpose of each.
+  * Answer: Discover: The client broadcasts a message to find available DHCP servers. Offer: A DHCP server unicasts or broadcasts a message offering an IP address lease to the client. Request: The client broadcasts a message formally requesting the offered IP address and informing other servers of its choice. Acknowledgement (Ack): The chosen server sends a final confirmation, allowing the client to use the IP address.
 * Identify the key IP parameters displayed by ipconfig /all and the primary reasons for using this essential command.
-* During the DORA process, which message is a broadcast from the client indicating its acceptance of the offered IP address?
-* What Cisco IOS command is essential to configure an interface to forward incoming DHCP broadcasts to a specific DHCP server on another network?
+  * Answer: Key parameters include IPv4 Address, Subnet Mask, Default Gateway, DHCP Server, and DNS Servers. The primary reasons for using ipconfig /all are to verify network configuration and to diagnose connectivity issues (e.g., missing IP address or gateway).
+* Which Cisco IOS command is used to configure a router's interface to obtain its IP address from a DHCP server? Provide the exact command syntax.
+  * Answer: The command is `ip address dhcp`. It is entered in interface configuration mode for the specific interface (e.g., `R1(config-if)# ip address dhcp`).
+* A network administrator needs to see all active IP address leases assigned by the router's DHCP server. What is the exact command to display this information?
+  * Answer: The command is `show ip dhcp binding`. This command displays the IP address, MAC address, lease expiration, and type of binding for each client.
 
 ***
 
 ### Static NAT configuration
 
 * Describe the need for private IPv4 addressing.
-* List the three main types of NAT mentioned in the text introduction.
-* Briefly explain the main operational difference between dynamic NAT and PAT (Port Address Translation).
-* What is the purpose of the `clear ip nat translation` command in the context of verifying a static NAT configuration?
+  * Answer: The need for private IPv4 addressing arose from the imminent exhaustion of public IPv4 addresses. It allows organizations to use non-unique, reusable addresses (defined in RFC 1918) for their internal networks, while requiring only a limited number of public IPs for external communication via NAT. This conserves the global IPv4 address space and extends its usability.
+* List the three RFC 1918 private IP address ranges and their corresponding CIDR notations.
+  * Answer:
+    * 10.0.0.0/8 (10.0.0.0 to 10.255.255.255)
+    * 172.16.0.0/12 (172.16.0.0 to 172.31.255.255)
+    * 192.168.0.0/16 (192.168.0.0 to 192.168.255.255)
+* What is the primary functional difference between Static NAT and PAT (Overload) regarding IP address usage?
+  * Answer: Static NAT creates a one-to-one, permanent mapping between a single private IP and a single public IP. PAT (Overload) allows many private IP addresses to share a single public IP address by using unique source port numbers to distinguish between connections.
+* What are two main reasons for implementing NAT?
+  * Answer: 1) IP Address Conservation: To solve IPv4 exhaustion by allowing many devices to share few public IPs. 2) Enhanced Security: To hide the internal network topology and provide a basic firewall by dropping unsolicited inbound traffic.
+* Provide the complete sequence of Cisco IOS commands to configure a basic static NAT mapping for a server. Assume the server's private IP is 192.168.1.10 and its public IP is 203.0.113.10. The inside interface is GigabitEthernet0/1 and the outside interface is GigabitEthernet0/0.
+  * Answer:
+
+```
+Router(config)# interface GigabitEthernet0/1
+Router(config-if)# ip nat inside
+Router(config-if)# interface GigabitEthernet0/0
+Router(config-if)# ip nat outside
+Router(config-if)# exit
+Router(config)# ip nat inside source static 192.168.1.10 203.0.113.10
+```
 
 ***
 

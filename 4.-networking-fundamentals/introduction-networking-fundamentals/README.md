@@ -41,9 +41,9 @@ This chapter has two main goals. First, this chapter demystifies the underlying 
 
 [Comparing TCP to UDP](../comparing-tcp-to-udp/)
 
-[How to configure standard ACLs on Cisco routers](../how-to-configure-standard-acls-on-cisco-routers.md)
+[How to configure standard ACLs on Cisco routers](../how-to-configure-standard-acls-on-cisco-routers/)
 
-[The role of DNS within the network](../the-role-of-dns-within-the-network.md)
+[The role of DNS within the network](../the-role-of-dns-within-the-network/)
 
 [Configuring and verifying DHCP client and relay](../configuring-and-verifying-dhcp-client-and-relay.md)
 

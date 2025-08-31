@@ -60,97 +60,13 @@ hidden: true
 
 ### How to configure standard ACLs on Cisco routers
 
-* Quiz questions
-
-**Quiz question 1**&#x20;
-
-<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/2f1ca-acls-practice-quiz-questions-22.webp?w=1201" alt="acls-Practice-quiz-questions" height="608" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Standard ACLs | Day 34)</p></figcaption></figure>
-
-The answer is ACL 1. Entry 10 permits PC1 and entry 20 permits PC4. The implicit deny will deny all other traffic. ACL 1 fulfills the requirements. The other ACLs do not.
-
-**Quiz question 2**
-
-What is the final implicit statement at the end of every standard ACL?
-
-a) permit any
-
-**b) deny any**
-
-c) log all
-
-d) permit host
-
-**Quiz question 3**
-
-Standard ACLs are best applied close to the destination because they filter based on:
-
-a) Destination IP address and port number
-
-**b) Source IP address only**
-
-c) Protocol type
-
-d) Destination IP address only
-
-**Quiz question 4**
-
-Which of the following is an advantage of using a named ACL over a numbered ACL?
-
-a) Named ACLs can filter on a wider range of criteria
-
-b) Named ACLs have a higher performance efficiency
-
-**c) Named ACLs allow for easier editing and more descriptive entries**
-
-d) Named ACLs are applied differently to router interfaces
+* Point 1
 
 ***
 
 ### The role of DNS within the network
 
-* Quiz questions
-
-**Quiz question 1**&#x20;
-
-Which of the following Windows command prompt commands will display the PC’s DNS server? Select two.
-
-a) ipconfig
-
-**b) ipconfig /all**
-
-c) ipcofig /displaydns
-
-**d) nslookup**
-
-The correct answers are b and d. a, IPCONFIG, displays the PC’s IP address, subnet mask, and default gateway, but not details like the DNS server. c, IPCONFIG /DISPLAYDNS, shows the PC’s DNS cache, but not the DNS server address.
-
-**Quiz question 2**
-
-A user can successfully ping a web server's IP address but cannot load its website by typing the URL into a browser. Which of the following is the most likely cause of this problem?
-
-a) The default gateway is misconfigured
-
-**b) The DNS service is unavailable**
-
-c) The network cable is unplugged&#x20;
-
-d) The web server is down
-
-Correct Answer: b) The DNS service is unavailable. Explanation: The fact that the IP address ping works proves that the network path is functional (ruling out a, c, and d). The browser uses the domain name (URL), which must be translated into an IP address by DNS. If DNS is unavailable, this translation fails, and the browser cannot connect.
-
-**Quiz question 3**
-
-Which command on a Windows PC would you use to determine which DNS server the computer is configured to use?
-
-a) `ping`
-
-b) `nslookup`
-
-**c) `ipconfig /all`**
-
-d) `tracert`
-
-Correct Answer: c) `ipconfig /all.` Explanation: The `ipconfig /all` command displays the complete IP configuration for all network adapters, including the IP addresses of the configured DNS servers. While `nslookup` _uses_ the DNS server, it doesn't explicitly show you which one is configured in the adapter's settings.
+* Point 1
 
 ***
 

@@ -84,7 +84,7 @@ We elaborated the OSI model in section 2 The Open Systems Interconnection (OSI) 
 
 ### The DHCP protocol
 
-Every host needs four items for Internet connectivity. Anytime a host connects to a network there are four items that need to be configured on this host to achieve Internet connectivity.
+Every host needs four items for Internet connectivity. Anytime a host connects to a network there are four parameters that need to be configured on this host to achieve Internet connectivity.
 
 **First**, an IP address. This serves as the the host identity on the Internet.
 
@@ -98,7 +98,7 @@ With these three elements configured on a host, a host can speak through the rou
 
 **Fourth**, a default DNS server. The fourth item that every host needs in order to achieve Internet connectivity is the IP address of a DNS server so that it can translate domain names to IP addresses, so that it can then communicate with other hosts using their domain names.
 
-These four things must be configured on every host anytime it connects to a network.
+These four IP parameters must be configured on every host anytime it connects to a network.
 
 Recall, a host is anything that sends or receives traffic on the Internet, which means a host could be your laptop or your printer or your mobile phone. In all cases every time any of these devices connects to a new network these devices must be configured with these four items.
 

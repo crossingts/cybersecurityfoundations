@@ -44,7 +44,7 @@
 * [Network devices and their functions](4.-networking-fundamentals/network-devices-and-their-functions/README.md)
   * [Repeaters vs hubs vs bridges vs switches](4.-networking-fundamentals/network-devices-and-their-functions/repeaters-vs-hubs-vs-bridges-vs-switches.md)
   * [Lab: Getting started with Cisco Packet Tracer](4.-networking-fundamentals/network-devices-and-their-functions/lab-getting-started-with-cisco-packet-tracer.md)
-  * [Lesson quiz: Network devices](4.-networking-fundamentals/network-devices-and-their-functions/lesson-quiz-network-devices.md)
+  * [4.1. Quiz](4.-networking-fundamentals/network-devices-and-their-functions/4.1.-quiz.md)
 * [The Open Systems Interconnection (OSI) model](4.-networking-fundamentals/the-open-systems-interconnection-osi-model.md)
 * [Host to host communication in networking](4.-networking-fundamentals/host-to-host-communication-in-networking.md)
 * [Network protocols and their functions](4.-networking-fundamentals/network-protocols-and-their-functions.md)

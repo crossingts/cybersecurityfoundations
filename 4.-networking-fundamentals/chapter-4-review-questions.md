@@ -12,7 +12,7 @@ hidden: true
 
 ### The Open Systems Interconnection (OSI) model
 
-* Map networking protocols to their OSI model layers.
+* Point 1
 
 ***
 

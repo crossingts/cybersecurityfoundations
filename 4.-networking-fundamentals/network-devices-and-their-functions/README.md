@@ -8,9 +8,9 @@ description: >-
 
 ## Learning objectives
 
-• Develop a basic understanding of the concepts of host, client, server, IP address, and network\
-• Learn how to define network devices\
-• Become familiar with major network devices and their role in network operations
+* Develop a basic understanding of the concepts of host, client, server, IP address, and network
+* Learn how to define network devices
+* Become familiar with major network devices and their role in network operations
 
 This discussion introduces foundational concepts in computer networking and explains the functions of key networking components and devices. Key concepts discussed in this section include hosts, IP addresses, networks, repeaters, hubs, bridges, switches, and routers.
 
@@ -126,18 +126,18 @@ Host-based firewalls are software applications that filter traffic entering and 
 
 ### Key takeways
 
-* A host is any device that sends or receives traffic
-  * a client initiates a request for some data or a service, a server responds
-* An IP address is the identity of each host
-* A network is what transports traffic between hosts
-  * a network is a logical grouping of hosts which require similar connectivity
-  * networks can contain other networks called sub-networks or subnets
-* Network devices&#x20;
-  * repeaters regenerate signals
-  * hubs are multiport repeaters
-  * bridges sit between hub-connected hosts
-  * switches facilitate communication within a network
-  * routers facilitate communication between networks
+* A host is any device that sends or receives traffic:
+  * a client initiates a request for some data or a service, a server responds.
+* An IP address is the identity of each host.
+* A network is what transports traffic between hosts:
+  * a network is a logical grouping of hosts which require similar connectivity.
+  * networks can contain other networks called sub-networks or subnets.
+* Network devices:
+  * repeaters regenerate signals.
+  * hubs are multiport repeaters.
+  * bridges sit between hub-connected hosts.
+  * switches facilitate communication within a network.
+  * routers facilitate communication between networks.
 
 ### References
 

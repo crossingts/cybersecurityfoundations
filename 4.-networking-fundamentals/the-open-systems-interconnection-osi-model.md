@@ -8,11 +8,11 @@ description: >-
 
 ## Learning objectives <a href="#learning-objectives" id="learning-objectives"></a>
 
-• Understand what is the OSI model\
-• List the layers of the OSI model and describe their functions\
-• Understand the types of network devices that operate at each layer of the model\
-• Know what protocols operate at each layer of the model\
-• Understand the addressing schemes of layers 2, 3, and 4
+* Understand what is the OSI model
+* List the layers of the OSI model and describe their functions
+* Understand the types of network devices that operate at each layer of the model
+* Become familiar with key protocols operating at each layer of the OSI model
+* Understand the addressing schemes of layers 2, 3, and 4
 
 This section discusses the [Open Systems Interconnection (OSI) model](https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/) layers and their role in data flow. Key concepts discussed in this section include the OSI model Physical layer, Data Link layer, Network layer, Transport layer, Session layer, Presentation layer, Application layer, and data encapsulation/de-encapsulation.
 
@@ -32,7 +32,21 @@ The purpose of networking is to allow two hosts to share data with one another. 
 
 Remember the layers of the OSI model by remembering the mnemonic, All People Seem To Need Data Processing. Understanding the OSI model will help you build a strong network, troubleshoot problems, develop effective applications, and evaluate third-party products.&#x20;
 
+#### Key Protocols Operating at Each Layer of the OSI Model
+
+| OSI Model Layer    | Protocols & Standards                                                                             |
+| ------------------ | ------------------------------------------------------------------------------------------------- |
+| Application Layer  | DNS, DHCP, FTP, TFTP, HTTP, HTTPS, LDAP, NTP, POP3, RTP, RTSP, SSH, Telnet, SIP, SMTP, SNMP, MIME |
+| Presentation Layer | JPEG, ASCII, EBDIC, MIDI, MPEG, PICT, TIFF. GIF                                                   |
+| Session Layer      | NetBIOS, NFS, PAP, SCP, RPC, SQL, ZIP                                                             |
+| Transport Layer    | TCP, UDP, SPX                                                                                     |
+| Network Layer      | ICMP, IGMP, IPsec, IPv4, IPv6, IPX, RIP, OSPF                                                     |
+| Data Link Layer    | ARP, RARP, ATM, CDP, FDDI, Frame Relay, HDLC, MPLS, PPP, SLIP, STP, Token Ring                    |
+| Physical Layer     | Bluetooth, DSL, Hub, Ethernet II, IEEE 802.3, IEEE 802.11 (WiFi), ISDN                            |
+
 Each layer of the OSI model serves a specific function that contributes to the overall goal of allowing two hosts to share data with one another. Each layer uses its own addressing scheme to accomplish its goal. There are various devices and protocols which operate at specific layers of the OSI model which serve in accomplishing each layer’s goal.&#x20;
+
+**A brief explanation of the function of each layer**
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/2d70c-open-systems-interconnection-ccna.webp" alt="open-systems-interconnection-osi-model-ccna" height="546" width="542"><figcaption><p>OSI Model Reference Chart (courtesy of Cisco, The Cisco Learning Network)</p></figcaption></figure>
 
@@ -187,27 +201,27 @@ We’ve been talking about IP addresses and MAC addresses as independent functio
 
 ### Key takeaways
 
-* The OSI model is a way to conceptualize what is required for data to flow through the Internet
-* Layer 1: Physical layer – transporting bits
-  * wires, cables, Wi-Fi, repeaters, hubs
-* Layer 2: Data Link layer – hop to hop delivery
-  * MAC addresses, switches
-* Layer 3: Network layer – end to end delivery
-  * IP addresses, routers, any device with an IP address
-* How layers 2 and 3 work together to move data across different hops to get data from one end to another
-* Layer 4: Transport layer – service to service delivery
-  * distinguish data streams
-  * addressing scheme – ports – 0-65535, TCP or UDP
-  * 0-65535 – TCP – favours reliability
-  * 0-65535 – UDP – favours efficiency
-  * servers listen for requests to pre-defined ports
-  * clients select random port for each connection – response traffic will arrive on this port
-* Layers 5, 6, 7 – Session, Presentation, Application
-  * the distinction between these layers is somewhat vague
-  * other networking models combines theses three layers into one
-  * L1-L4 are the most important to understand how data flow through the Internet
-* OSI data encapsulation/de-encapsulation
-  * how hosts communicate with each other using the OSI networking stack
+* The OSI model is a way to conceptualize what is required for data to flow through the Internet.
+* Layer 1: Physical layer – transporting bits:
+  * wires, cables, Wi-Fi, repeaters, hubs.
+* Layer 2: Data Link layer – hop to hop delivery:
+  * MAC addresses, switches.
+* Layer 3: Network layer – end to end delivery:
+  * IP addresses, routers, any device with an IP address.
+* How layers 2 and 3 work together to move data across different hops to get data from one end to another.
+* Layer 4: Transport layer – service to service delivery:
+  * distinguish data streams.
+  * addressing scheme – ports – 0-65535, TCP or UDP.
+  * 0-65535 – TCP – favours reliability.
+  * 0-65535 – UDP – favours efficiency.
+  * servers listen for requests to pre-defined ports.
+  * clients select random port for each connection – response traffic will arrive on this port.
+* Layers 5, 6, 7 – Session, Presentation, Application:
+  * the distinction between these layers is somewhat vague.
+  * other networking models combines theses three layers into one.
+  * L1-L4 are the most important to understand how data flow through the Internet.
+* OSI data encapsulation/de-encapsulation:
+  * how hosts communicate with each other using the OSI networking stack.
 
 ### References
 

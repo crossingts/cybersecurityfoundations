@@ -61,7 +61,19 @@
 
 ### Connected and local routes
 
-* Point 1
+* What is the fundamental purpose of a router's routing table, and how does a router use it when it receives a packet?
+  * Answer: The routing table is a router's map of known networks. Its purpose is to store the best paths to those networks. When a router receives a packet, it examines the packet's destination IP address and looks for a matching route in its routing table to determine where to send the packet next (the "next-hop") or if it should accept the packet itself.
+* After successfully configuring the command `ip address 10.0.5.1 255.255.255.128` on an interface and issuing `no shutdown`, which two specific routes will appear in the `show ip route` output? List them with their correct prefix lengths.
+  * Answer: A Connected route to `10.0.5.0/25` (since 255.255.255.128 is a /25 mask). A Local route to `10.0.5.1/32`.
+* A new network technician sees a Local route (L) to 192.168.55.1/32 and a Connected route (C) to 192.168.55.0/24 in the routing table. They ask, "Why do I need the Local route if the Connected route already includes that IP address?" How would you explain the critical functional difference between these two routes to them?
+  * Answer: I would explain that the Connected route (`192.168.55.0/24`) is an instruction for forwarding traffic to other hosts on that network (e.g., `192.168.55.100`). The Local route (`192.168.55.1/32`) is an instruction for the router to accept and process traffic destined to its own interface IP.&#x20;
+* A router's routing table contains the following two routes:\
+  \* `C 172.16.0.0/16 is directly connected, GigabitEthernet0/1`\
+  \* `L 172.16.5.1/32 is directly connected, GigabitEthernet0/1`\
+  For a packet destined to `172.16.5.1`, which route will the router use and why?
+  * Answer: The router will use the `L 172.16.5.1/32` route. Why: Because of the longest prefix match rule. Both routes match the destination, but the /32 mask (255.255.255.255) is longer (more specific) than the /16 mask (255.255.0.0). The router always chooses the most specific match.
+* What is the single, most important rule a Cisco router uses to choose between multiple routes that all match a packet's destination IP address? What is the specific term for this rule?
+  * Answer: The most important rule is to select the matching route with the longest subnet mask (highest prefix value, e.g., /32 is longer than /24). The specific term for this rule is Longest Prefix Match.
 
 ***
 

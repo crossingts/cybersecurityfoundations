@@ -79,7 +79,17 @@
 
 ### How to configure standard ACLs on Cisco routers
 
-* Point 1
+* What is the key characteristic that differentiates a standard ACL from an extended ACL in terms of what it can filter?
+  * Answer: A standard ACL filters traffic based only on the source IP address. An extended ACL can filter based on source and destination IP address, as well as source and destination port numbers and protocol.
+* A colleague has configured an ACL but it is not working. You check the configuration and see the ACL has been created but is not applied to any interface. What is the single, necessary step they have missed?
+  * Answer: They must apply the ACL to a router interface in either the inbound or outbound direction using the `ip access-group` command (e.g., `ip access-group 1 out`).
+* Write the global configuration command to create an ACE in ACL number 15 that permits traffic from the single host with IP address 192.168.55.1. Use the most efficient method.
+  * Answer: `R1(config)# access-list 15 permit host 192.168.55.1`\
+    (Alternatively, `R1(config)# access-list 15 permit 192.168.55.1` is also acceptable as the router interprets a lone IP address as a host address).
+* Explain why the order of ACEs (Access Control Entries) within an ACL is critically important.
+  * Answer: ACLs are processed from the top down. The router takes the action (permit/deny) for the first matching entry and stops processing further entries. A more general statement placed above a more specific one will cause the specific one to be ignored.
+* You need to create a standard ACL to prevent the entire 172.16.0.0/16 network from passing through a router, but allow all other traffic. Besides the 'deny' statement for that network, what other explicit statement must you add to the ACL and why?
+  * Answer: You must add an explicit `permit any` statement. If you do not, the implicit deny at the end of the ACL will block all traffic that isn't from 172.16.0.0/16, which is the opposite of the intended goal. The explicit `permit any` overrides the implicit deny for all other traffic.
 
 ***
 

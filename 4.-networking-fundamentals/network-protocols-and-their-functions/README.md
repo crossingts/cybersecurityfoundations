@@ -8,11 +8,11 @@ description: >-
 
 ## Learning objectives
 
-• Understand what are network protocols\
-• Understand how the TCP/IP model maps to the OSI model\
-• List and describe the four parameters every host needs to achieve Internet connectivity\
-• Understand the roles of the DHCP protocol and the DNS protocol in Internet communication\
-• Describe the functions of the network protocols ARP, FTP, SMTP, HTTP, SSL, TLS, and HTTPS
+* Understand what are network protocols
+* Understand how the TCP/IP model maps to the OSI model
+* List and describe the four parameters every host needs to achieve Internet connectivity
+* Understand the roles of the DHCP protocol and the DNS protocol in Internet communication
+* Describe the functions of the network protocols ARP, FTP, SMTP, HTTP, SSL, TLS, and HTTPS
 
 This section discusses several important [network protocols and their functions](https://www.comptia.org/content/guides/what-is-a-network-protocol). Key concepts discussed in this section include the TCP/IP model, and the functions of the network protocols ARP, FTP, SMTP, HTTP, SSL, TLS, HTTPS, DHCP, and DNS.
 
@@ -160,12 +160,12 @@ DNS is also what makes email possible. If asked for your email address, you woul
 
 ### Key takeaways
 
-* DHCP and DNS play crucial roles in facilitating Internet communication
-  * DHCP allows a DHCP server to provide an IP address, a mask, a default gateway, and a DNS server for any client
-  * DNS resolves domain names to IP addresses
-* A protocol is a set of rules and messages that form an Internet standard
-* Network protocols are Internet protocols that operate at specific layers of the TCP/IP and OSI models
-  * ARP, FTP, SMTP, HTTP, SSL, TLS, HTTPS, DHCP, DNS
+* DHCP and DNS play crucial roles in facilitating Internet communication:
+  * DHCP allows a DHCP server to provide an IP address, a mask, a default gateway, and a DNS server for any client.
+  * DNS resolves domain names to IP addresses.
+* A protocol is a set of rules and messages that form an Internet standard.
+* Network protocols are Internet protocols that operate at specific layers of the TCP/IP and OSI models:
+  * ARP, FTP, SMTP, HTTP, SSL, TLS, HTTPS, DHCP, DNS.
 
 ### References
 

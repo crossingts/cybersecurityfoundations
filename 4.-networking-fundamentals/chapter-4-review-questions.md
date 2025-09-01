@@ -219,7 +219,17 @@ Router(config)# ip nat inside source static 192.168.1.10 203.0.113.10
 
 ### OSI model layers and security threats
 
-* Identify two common network attack types associated with each OSI layer.
-* Briefly describe how each identified attack type can compromise a network.
-* Identify two key mitigation methods for each identified attack type.
-* Sort the identified network attack types by their potential level of risk (consider attack likelihood and potential impact).
+* A junior developer is building a login form. What is the single most effective coding practice they should implement to prevent SQL Injection attacks, and what does it do?
+  * Answer: The most effective practice is to use Prepared Statements (Parameterized Queries). This technique separates SQL code from user data. The query structure is pre-compiled with placeholders (e.g., `?`), and user input is treated strictly as data, not executable code, preventing it from altering the query's intent.
+* Briefly explain the primary risk scenario and the key technical mitigation for ARP Spoofing.
+  * Answer:
+    * Risk Scenario: An attacker sends forged ARP replies to poison the ARP caches of devices on a local network, redirecting traffic through their machine to perform a Man-in-the-Middle (MitM) attack and intercept data.
+    * Key Mitigation: Dynamic ARP Inspection (DAI) on managed network switches. DAI validates ARP packets against a trusted database (like the DHCP snooping table) and drops any malicious or spoofed ARP messages.
+* What is the purpose of the `HttpOnly` secure cookie attribute in mitigating Session Hijacking?
+  * Answer: The `HttpOnly` attribute prevents a session cookie from being accessed by client-side scripts (e.g., JavaScript). This directly mitigates the theft of session tokens via Cross-Site Scripting (XSS) attacks, as the malicious script cannot read the cookie value to exfiltrate it.
+* How do SYN Cookies help mitigate a TCP SYN Flood attack?
+  * Answer: SYN Cookies mitigate the attack by allowing the server to handle SYN requests without initially allocating memory for the half-open connection. The server encodes connection details into a cryptographic cookie sent in the SYN-ACK response. Memory is only allocated if a legitimate client returns a valid ACK with the correct cookie, preserving server resources against spoofed requests.
+* For a network administrator, what are two specific physical security measures to deter Cable Tapping?
+  * Answer:
+    * Tamper-evident seals on access panels, wiring closets, and junction boxes to provide visible evidence of unauthorized access.
+    * Running cables through locked secure conduits or trays to restrict physical access to the network medium.

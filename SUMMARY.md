@@ -19,6 +19,7 @@
 * [Introduction - Introduction to cybersecurity](2.-introduction-to-cybersecurity/introduction-introduction-to-cybersecurity.md)
 * [Foundational cybersecurity concepts and practices](2.-introduction-to-cybersecurity/foundational-cybersecurity-concepts-and-practices/README.md)
   * [CIA attacks mitigation technologies](2.-introduction-to-cybersecurity/foundational-cybersecurity-concepts-and-practices/cia-attacks-mitigation-technologies.md)
+  * [The 3-2-1 Rule and immutable backups](2.-introduction-to-cybersecurity/foundational-cybersecurity-concepts-and-practices/the-3-2-1-rule-and-immutable-backups.md)
 * [The cybersecurity threat landscape](2.-introduction-to-cybersecurity/the-cybersecurity-threat-landscape.md)
 * [Common cyber attacks](2.-introduction-to-cybersecurity/common-cyber-attacks.md)
 * [Cybersecurity risk mitigation methods](2.-introduction-to-cybersecurity/cybersecurity-risk-mitigation-methods.md)

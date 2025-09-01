@@ -109,13 +109,13 @@ Three enterprise information security analyst roles are presented: Vulnerability
 
 * Vulnerability Assessment Analyst and Penetration Tester/Ethical Hacker
 
-[What do ethical hackers do?](../6.-practical-foundations-in-ethical-hacking/what-do-ethical-hackers-do.md) Key practices, responsibilities, and roles of professional ethical hackers.
+[What do ethical hackers do?](../../6.-practical-foundations-in-ethical-hacking/what-do-ethical-hackers-do.md) Key practices, responsibilities, and roles of professional ethical hackers.
 
 [Vulnerability Assessment & Penetration Testing (VAPT) Track](https://www.eccouncil.org/cybersecurity-training-and-certification-canada/) (EC-Council training and certification)
 
 * Network/Systems Analyst
 
-CCNA certification is a great place to start if you choose to focus on network security as your entry point to a career in information security: [How to get CCNA certification](how-to-get-ccna-certification.md).
+CCNA certification is a great place to start if you choose to focus on network security as your entry point to a career in information security: [How to get CCNA certification](../how-to-get-ccna-certification.md).
 
 With this option, the security analyst is likely to be doing a bit of both infrastructure design and optimization tasks as well as risk assessment by security testing tasks.
 
@@ -123,7 +123,7 @@ With this option, the security analyst is likely to be doing a bit of both infra
 
 SOC analyst roles are associated with MSSPs. Nearly 6 in 10 financial service providers own a security operations center (EY Global Information Security Survey 2018-2019).
 
-[The Security Operations Center (SOC) career path](the-security-operations-center-soc-career-path.md)
+[The Security Operations Center (SOC) career path](../the-security-operations-center-soc-career-path.md)
 
 SOC analysts take on two cybersecurity roles – defensive (Blue Team) and offensive (Red Team or ethical hackers). Defensive roles include Incident Responder and Forensic Investigator. Offensive roles include Cyber Operator.
 
@@ -153,8 +153,8 @@ Here are some training resources for novices seeking to break into information s
 
 ### Key takeaways
 
-* Three key infosec foundation areas are computer networking, operating systems, and system admin
-* Two key infosec career routes are information security analyst and SOC analyst
+* Three key infosec foundation areas are computer networking, operating systems, and system admin.
+* Two key infosec career routes are information security analyst and SOC analyst.
 
 ### References <a href="#ember18657" id="ember18657"></a>
 

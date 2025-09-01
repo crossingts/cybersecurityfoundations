@@ -25,7 +25,7 @@ This chapter will introduce students to emerging IT and cybersecurity career pat
 
 [Job roles in IT and cybersecurity](job-roles-in-it-and-cybersecurity/)
 
-[How to break into information security](how-to-break-into-information-security.md)
+[How to break into information security](how-to-break-into-information-security/)
 
 [The Security Operations Center (SOC) career path](the-security-operations-center-soc-career-path.md)
 

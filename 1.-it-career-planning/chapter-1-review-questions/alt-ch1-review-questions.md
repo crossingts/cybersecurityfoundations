@@ -40,3 +40,20 @@ hidden: true
 
 ### How to break into information security
 
+**1. List the three key information security foundation areas described in the section.**\
+**Answer:** The three key foundation areas are: 1) Computer Networking, 2) Operating Systems, and 3) System Administration.
+
+**2. What is the core difference between traditional IT infrastructure and cloud infrastructure?**\
+**Answer:** In a traditional infrastructure, the components (like datacenters and equipment) are managed and owned by the business within their own facilities. With cloud infrastructure, the components and resources are rented from a cloud provider.
+
+**3. Name two specific technical skills mentioned for the 'Operating Systems' foundation area.**\
+**Answer:** (Any two of the following are acceptable): Navigating filesystems using a command line; Setting up users, groups, and permissions; Installing, configuring, and removing software; Configuring disk partitions; Managing system processes; Working with system logs.
+
+**4. What are the two primary cybersecurity roles associated with a SOC analyst?**\
+**Answer:** The two primary roles are Defensive (Blue Team) and Offensive (Red Team or ethical hackers).
+
+**5. According to the section, what are the two main career routes to break into information security?**\
+**Answer:** The two main career routes are: 1) Information Security Analyst (e.g., Vulnerability Analyst, Network Analyst) and 2) SOC Analyst.
+
+### The Security Operations Center (SOC) career path
+

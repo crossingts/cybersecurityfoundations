@@ -1,6 +1,6 @@
 # Chapter 2 review questions
 
-### Foundational cybersecurity concepts and practices
+### Foundational cybersecurity concepts
 
 * Give a defensible definition of information security.
 * Explain the broad pragmatic goal of information security.

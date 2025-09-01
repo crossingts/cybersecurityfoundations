@@ -4,7 +4,7 @@ description: >-
   practices such as confidentiality, integrity, and availability (the CIA triad)
 ---
 
-# Foundational cybersecurity concepts and practices
+# Foundational cybersecurity concepts
 
 ## Learning objectives
 
@@ -326,10 +326,10 @@ The primary goals of cryptography are confidentiality, authentication, data inte
 
 ### Key takeaways
 
-* Tactically, cybersecurity is about protecting the CIA of information assets&#x20;
-* Strategically, cybersecurity is about compliance with rules and regulations
-* Cybersecurity and information security can be synonymous&#x20;
-* Organizations take a risk-based approach to cybersecurity management
+* Tactically, cybersecurity is about protecting the CIA of information assets.
+* Strategically, cybersecurity is about compliance with rules and regulations.
+* Cybersecurity and information security can be synonymous.
+* Organizations take a risk-based approach to cybersecurity management.
 
 ### References
 

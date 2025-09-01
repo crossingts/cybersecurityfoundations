@@ -74,3 +74,22 @@ hidden: true
 
 ### The GRC analyst job role
 
+**1. Besides technical IT roles, name two other organizational functions mentioned from which someone could pivot into a GRC analyst role.**\
+**Answer:** Policy analyst role and compliance auditor role. (Also acceptable: Risk analyst/manager, Quality Assurance, legal, procurement).
+
+**2. What is the primary purpose of the NIST SP 800-53 publication?**\
+**Answer:** It serves as a catalog (or list) of security and privacy controls for information systems and organizations.
+
+**3. List two of the key industry certifications relevant to a GRC analyst/manager as mentioned in the text.**\
+**Answer:** Any two of the following: CISA, CRISC, CISM, ISO 27001 Lead Auditor, ISACA’s IT Risk Fundamentals Certificate.
+
+**4. What are two of the primary job activities of a GRC analyst as described in the section?**\
+**Answer:** Any two of the following: Developing a cybersecurity governance program; Identifying relevant regulations and a suitable RMF; Establishing compliance procedures (e.g., for GDPR, PCI DSS); Establishing IT security audit procedures; Establishing performance measures for GRC programs.
+
+**5. Name one specific online training resource mentioned for learning about GRC and what it focuses on.**\
+**Answer:** _Example Answer:_ "Executive RMF" on Cybrary, which discusses the NIST Risk Management Framework from an executive perspective and how to implement it in an organization. (Other correct answers are the Coursera and TCM Security courses listed).
+
+### How to get CCNA certification
+
+
+

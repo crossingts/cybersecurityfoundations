@@ -3,9 +3,15 @@
 ### Network devices and their functions
 
 * What is the fundamental difference between the function of a switch and the function of a router?
+  * Answer: A switch facilitates communication within a single network. A router facilitates communication between different networks.
 * Explain the primary limitation of using a hub in a network.
+  * Answer: Hubs do not scale well because they create a single collision domain, duplicating and flooding all traffic out every port. This leads to collisions and wasted bandwidth as every device receives everyone else's data.
 * What are the two main categories of firewalls covered in the section, and how do they differ in their physical form and placement?
+  * Answer: The two categories are network firewalls (hardware devices that filter traffic between networks) and host-based firewalls (software applications installed on a host machine to filter its incoming and outgoing traffic).
 * A host needs to communicate with another host on a different network. What is the role of its "gateway" in this process?
+  * Answer: The gateway is the host's way out of its local network. It is the IP address of its closest router, which will receive the packet and route it towards the destination network.
+* What is the key functional difference between a bridge and a hub, and why are bridges considered an improvement?
+  * Answer: A hub blindly floods all traffic to all ports, while a bridge learns which MAC addresses are on each of its two sides and can filter traffic, only forwarding frames if the destination is on the other segment. This reduces unnecessary broadcasts and improves network performance.
 
 ***
 

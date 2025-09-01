@@ -15,10 +15,12 @@
   * [1.4. The Security Operations Center (SOC) career path — Quiz](1.-it-career-planning/the-security-operations-center-soc-career-path/1.4.-the-security-operations-center-soc-career-path-quiz.md)
 * [The GRC analyst job role](1.-it-career-planning/the-grc-analyst-job-role/README.md)
   * [1.5. The GRC analyst job role — Quiz](1.-it-career-planning/the-grc-analyst-job-role/1.5.-the-grc-analyst-job-role-quiz.md)
-* [How to get CCNA certification](1.-it-career-planning/how-to-get-ccna-certification.md)
-* [Job search strategy](1.-it-career-planning/job-search-strategy.md)
+* [How to get CCNA certification](1.-it-career-planning/how-to-get-ccna-certification/README.md)
+  * [1.6. How to get CCNA certification — Quiz](1.-it-career-planning/how-to-get-ccna-certification/1.6.-how-to-get-ccna-certification-quiz.md)
+* [Job search strategy](1.-it-career-planning/job-search-strategy/README.md)
+  * [1.7. Job search strategy — Quiz](1.-it-career-planning/job-search-strategy/1.7.-job-search-strategy-quiz.md)
 * [Chapter 1 review questions](1.-it-career-planning/chapter-1-review-questions/README.md)
-  * [Alt Ch1 review questions](1.-it-career-planning/chapter-1-review-questions/alt-ch1-review-questions.md)
+  * [Alternative Chapter 1 review questions](1.-it-career-planning/chapter-1-review-questions/alternative-chapter-1-review-questions.md)
 
 ## 2. Introduction to cybersecurity
 

@@ -183,10 +183,10 @@ A collection of live webinar recordings conducted on the Cisco Learning Network 
 
 ### Key takeaways
 
-* Cisco’s CCNA is widely regarded as the king of networking certifications
-* To register for an exam, first you need to create a Cisco profile on Cisco.com
-* If you're familiar with the CCNA curriculum, take 7 steps x 7 weeks to become CCNA certified
-* You can find free CCNA YouTube courses (e.g., Jeremy's IT Lab) and blogs (e.g., Wendell Odom)
+* Cisco’s CCNA is widely regarded as the king of networking certifications.
+* To register for an exam, first you need to create a Cisco profile on Cisco.com.
+* If you're familiar with the CCNA curriculum, take 7 steps x 7 weeks to become CCNA certified.
+* You can find free CCNA YouTube courses (e.g., Jeremy's IT Lab) and blogs (e.g., Wendell Odom).
 
 ### References
 

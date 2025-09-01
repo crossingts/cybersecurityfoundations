@@ -31,6 +31,6 @@ This chapter will introduce students to emerging IT and cybersecurity career pat
 
 [The GRC analyst job role](the-grc-analyst-job-role/)
 
-[How to get CCNA certification](how-to-get-ccna-certification.md)
+[How to get CCNA certification](how-to-get-ccna-certification/)
 
-[Job search strategy](job-search-strategy.md)
+[Job search strategy](job-search-strategy/)

@@ -115,7 +115,7 @@ Three enterprise information security analyst roles are presented: Vulnerability
 
 * Network/Systems Analyst
 
-CCNA certification is a great place to start if you choose to focus on network security as your entry point to a career in information security: [How to get CCNA certification](../how-to-get-ccna-certification.md).
+CCNA certification is a great place to start if you choose to focus on network security as your entry point to a career in information security: [How to get CCNA certification](../how-to-get-ccna-certification/).
 
 With this option, the security analyst is likely to be doing a bit of both infrastructure design and optimization tasks as well as risk assessment by security testing tasks.
 

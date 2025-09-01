@@ -164,10 +164,10 @@ Consider:
 
 ### Key takeaways
 
-* Start your IT and cybersecurity career by selecting a job role
-* Research the industry skills for the role and create a skill development plan
-* Tailor your resume for the target role&#x20;
-* Start building a professional network ASAP
+* Start your IT and cybersecurity career by selecting a job role.
+* Research the industry skills for the role and create a skill development plan.
+* Tailor your resume for the target role.
+* Start building a professional network ASAP.
 
 ### References
 

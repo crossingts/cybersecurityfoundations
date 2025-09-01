@@ -1,6 +1,6 @@
-# 1.1. IT career paths – everything you need to know — Quiz
+# IT career paths — Quiz
 
-### IT career paths – everything you need to know
+### IT career paths
 
 **1. Which of the following is a primary way to enter the IT field with a university degree but without industry experience? (Choose three answers)**\
 a) Starting in an entry-level IT support role\

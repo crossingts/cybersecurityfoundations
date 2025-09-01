@@ -1,10 +1,6 @@
----
-hidden: true
----
+# Chapter 1 review questions
 
-# Alternative Chapter 1 review questions
-
-### IT career paths – everything you need to know
+### IT career paths
 
 **1. Besides hardware manufacturers like Cisco and Dell, name three other types of IT industry employers mentioned in the text.**\
 **Answer:** Any three of the following: Value Added Resellers (VARs), Managed Service Providers (MSPs), Internet Service Providers (ISPs), IT recruiters, businesses/nonprofits/schools/government, freelancing platforms (e.g., Upwork, Fiverr).

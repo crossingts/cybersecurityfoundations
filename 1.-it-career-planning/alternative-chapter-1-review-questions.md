@@ -1,6 +1,10 @@
-# Chapter 1 review questions
+---
+hidden: true
+---
 
-### IT career paths – everything you need to know
+# Alternative Chapter 1 review questions
+
+### IT career paths
 
 * Identify six categories of IT industry employers.
 * Identify six IT career paths and six specializations (one specialization per path) and 2-3 related job titles per specialization.

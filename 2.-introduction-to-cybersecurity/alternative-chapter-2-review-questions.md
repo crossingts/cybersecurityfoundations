@@ -1,4 +1,8 @@
-# Chapter 2 review questions
+---
+hidden: true
+---
+
+# Alternative Chapter 2 review questions
 
 ### Foundational cybersecurity concepts
 

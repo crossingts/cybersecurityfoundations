@@ -38,3 +38,23 @@ Both RADIUS and TACACS+ are AAA protocols, but they have key differences:
 
 ### The cybersecurity threat landscape
 
+**1. List two types of cybersecurity threats faced by individuals, as outlined in the section.**\
+**Answer:** Identity theft/personal information theft and political interference/malicious online influence activity (e.g., through botnets).
+
+**2. What are the four top information security risks that were a priority for higher education IT in 2016?**\
+**Answer:** 1) Phishing and Social Engineering, 2) End-User Awareness, Training, and Education, 3) Limited Resources for the Information Security Program, and 4) Addressing Regulatory Requirements.
+
+**3. According to Kool et al. (2017), what are the three phases in the "cybernetic loop" that characterizes the new wave of digitization?**\
+**Answer:** The three phases are: 1) Collection (measuring processes in the physical world), 2) Analysis (of the resulting data), and 3) Application (real-time intervention based on that analysis).
+
+**4. How does the "digital convergence of communications channels" expand the cybersecurity threat landscape?**\
+**Answer:** It expands the threat landscape by interconnecting previously isolated systems (like telecom, broadcast, and IT) onto IP-based networks and cloud platforms. This creates new vulnerabilities, as attackers can exploit weaknesses in one sector (e.g., telecom) to attack another (e.g., a business's VoIP system or a government broadcast system).
+
+**5. Name one technological driver and one sociopolitical driver that are changing the cybersecurity threat landscape.**\
+**Answer:**
+
+* **Technological Driver:** Artificial Intelligence/Machine Learning (AI/ML) OR Internet of Things (IoT) OR Social Digitization OR Digital Convergence OR A growing spyware industry.
+* **Sociopolitical Driver:** U.S.-China rivalry for technological dominance OR Expansion of the military-industrial complex (collusion between governments, media, and tech companies).
+
+### Common cyber attacks
+

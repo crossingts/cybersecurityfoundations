@@ -57,7 +57,7 @@
 * Explain the role of the DHCP protocol in the context of a user connecting to a new Wi-Fi network.
   * Answer: When a user connects to a new Wi-Fi network, their device (the DHCP client) automatically sends a DHCP discover message. A DHCP server on that network responds by providing the four necessary parameters (IP address, subnet mask, default gateway, DNS server), automatically configuring the host for Internet access without any manual input from the user.
 * Differentiate between the functions of DNS and ARP.
-  * Answer: DNS is an application-layer protocol that resolves a _domain name_ (e.g., `example.com`) to an _IP address_. ARP is a link-layer protocol that resolves a known _IP address_ on the local network to a _MAC address_.
+  * Answer: DNS is an application-layer protocol that resolves a domain name (e.g., `example.com`) to an IP address. ARP is a link-layer protocol that resolves a known IP address on the local network to a MAC address.
 * What is the relationship between HTTP, SSL/TLS, and HTTPS?
   * Answer: HTTP is the protocol for transferring web content. SSL and TLS are cryptographic protocols that create a secure, encrypted tunnel between a client and server. HTTPS is not a separate protocol but is the term for conducting an HTTP communication within that secure SSL/TLS tunnel.
 
@@ -190,7 +190,7 @@
 
 ***
 
-### Static NAT configuration
+### _Static NAT configuration_
 
 * Describe the need for private IPv4 addressing.
   * Answer: The need for private IPv4 addressing arose from the imminent exhaustion of public IPv4 addresses. It allows organizations to use non-unique, reusable addresses (defined in RFC 1918) for their internal networks, while requiring only a limited number of public IPs for external communication via NAT. This conserves the global IPv4 address space and extends its usability.

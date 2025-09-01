@@ -57,3 +57,20 @@ hidden: true
 
 ### The Security Operations Center (SOC) career path
 
+**1. List the four main roles within a SOC team as described in the text.**\
+**Answer:** The four main SOC roles are: 1) Security Analyst (SOC Analyst), 2) SOC Manager, 3) CISO (Chief Information Security Officer), and 4) Security Engineer.
+
+**2. What are the three primary stages of the incident response process that SOC analysts are responsible for?**\
+**Answer:** The three stages are: 1) Threat Detection, 2) Threat Investigation, and 3) Timely Response.
+
+**3. Briefly explain the difference in core duties between a Tier 1 and a Tier 3 SOC analyst.**\
+**Answer:** A Tier 1 analyst primarily monitors, prioritizes, and triages initial SIEM alerts to determine if a real incident is occurring. A Tier 3 analyst is a senior expert focused on proactive threat hunting, analyzing cyber threat intelligence, and identifying new threats and vulnerabilities, rather than just reacting to alerts.
+
+**4. Name two industry certifications that would be relevant for an aspiring Tier 1 SOC analyst.**\
+**Answer:** (Any two of the following are correct): CompTIA Security+, GSEC (GIAC Security Essentials), GCIA (GIAC Certified Intrusion Analyst), CND (Certified Network Defender), CEH (Certified Ethical Hacker), CSA (Certified SOC Analyst).
+
+**5. Besides monitoring for threats, what are two other key focus areas for a SOC within an organization?**\
+**Answer:** (Any two of the following are correct): Network and System Administration (e.g., identity management, firewall admin) and Control and Digital Forensics (e.g., compliance enforcement, penetration testing).
+
+### The GRC analyst job role
+

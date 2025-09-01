@@ -27,7 +27,7 @@ This chapter will introduce students to emerging IT and cybersecurity career pat
 
 [How to break into information security](how-to-break-into-information-security/)
 
-[The Security Operations Center (SOC) career path](the-security-operations-center-soc-career-path.md)
+[The Security Operations Center (SOC) career path](the-security-operations-center-soc-career-path/)
 
 [The GRC analyst job role](the-grc-analyst-job-role.md)
 

@@ -166,10 +166,10 @@ Relevant certifications: CCNA, CCNP Security, AWS Security, and CISSP.
 
 ### Key takeaways
 
-* The SOC ensures digital assets remain secure and protected from unauthorized access
-* The Security Information and Event Management (SIEM) system is the keystone SOC technology&#x20;
-* The four main SOC roles are SOC Analyst, SOC Manager, CISO, and Security Engineer
-* Key skills for all SOC analysts include IT networking, ethical hacking, and incident response
+* The SOC ensures digital assets remain secure and protected from unauthorized access.
+* The Security Information and Event Management (SIEM) system is the keystone SOC technology.&#x20;
+* The four main SOC roles are SOC Analyst, SOC Manager, CISO, and Security Engineer.
+* Key skills for all SOC analysts include IT networking, ethical hacking, and incident response.
 
 ### References
 

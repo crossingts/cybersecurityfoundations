@@ -123,7 +123,7 @@ With this option, the security analyst is likely to be doing a bit of both infra
 
 SOC analyst roles are associated with MSSPs. Nearly 6 in 10 financial service providers own a security operations center (EY Global Information Security Survey 2018-2019).
 
-[The Security Operations Center (SOC) career path](../the-security-operations-center-soc-career-path.md)
+[The Security Operations Center (SOC) career path](../the-security-operations-center-soc-career-path/)
 
 SOC analysts take on two cybersecurity roles – defensive (Blue Team) and offensive (Red Team or ethical hackers). Defensive roles include Incident Responder and Forensic Investigator. Offensive roles include Cyber Operator.
 

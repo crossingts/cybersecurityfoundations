@@ -92,3 +92,17 @@ Both RADIUS and TACACS+ are AAA protocols, but they have key differences:
 
 ### Network security risk mitigation best practices
 
+**1. Explain the difference between IAM and AAA in one or two sentences.**\
+**Answer:** IAM is the enterprise-wide strategy and governance for managing digital identities and access policies. AAA is the network-centric operational framework that enforces those policies for network access through Authentication, Authorization, and Accounting.
+
+**2. What are the four phases of the NIST incident response lifecycle?**\
+**Answer:** 1. Preparation, 2. Detection and Analysis, 3. Containment, Eradication & Recovery, 4. Post-Incident Activity.
+
+**3. Provide two examples of how automated policy enforcement can be implemented on a network.**\
+**Answer:** 1. A Network Access Control (NAC) system placing a non-compliant device in a quarantine VLAN automatically. 2. A SIEM tool automatically disabling a user account after detecting multiple failed login attempts.
+
+**4. Why is timely software patching considered a critical security best practice?**\
+**Answer:** Unpatched software contains known vulnerabilities that are prime targets for attackers. Timely patching reduces the attack surface by fixing these security flaws, helping to prevent unauthorized access, malware deployment, and data breaches.
+
+**5. Name two physical security controls used to prevent unauthorized access to a network server room.**\
+**Answer:** (Any two of the following) Badge/biometric access systems, mantraps, 24/7 CCTV surveillance, locked cabinets, security guards.

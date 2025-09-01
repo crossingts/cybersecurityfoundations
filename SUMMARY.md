@@ -35,7 +35,8 @@
   * [Common cyber attacks — Quiz](2.-introduction-to-cybersecurity/common-cyber-attacks/common-cyber-attacks-quiz.md)
 * [Cybersecurity risk mitigation methods](2.-introduction-to-cybersecurity/cybersecurity-risk-mitigation-methods/README.md)
   * [Cybersecurity risk mitigation methods — Quiz](2.-introduction-to-cybersecurity/cybersecurity-risk-mitigation-methods/cybersecurity-risk-mitigation-methods-quiz.md)
-* [Network security risk mitigation best practices](2.-introduction-to-cybersecurity/network-security-risk-mitigation-best-practices.md)
+* [Network security risk mitigation best practices](2.-introduction-to-cybersecurity/network-security-risk-mitigation-best-practices/README.md)
+  * [Network security risk mitigation best practices — Quiz](2.-introduction-to-cybersecurity/network-security-risk-mitigation-best-practices/network-security-risk-mitigation-best-practices-quiz.md)
 * [Chapter 2 review questions](2.-introduction-to-cybersecurity/chapter-2-review-questions/README.md)
   * [Alternative Chapter 2 review questions](2.-introduction-to-cybersecurity/chapter-2-review-questions/alternative-chapter-2-review-questions.md)
 

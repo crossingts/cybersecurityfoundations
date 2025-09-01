@@ -459,7 +459,13 @@ By implementing these measures, enterprises can significantly reduce the risk of
 
 ### Key takeaways
 
-* Network security risk mitigation best practices include Identity and Access Management, network monitoring, incident response and disaster recovery, and layered security
+* Network security risk mitigation best practices include Identity and Access Management, network monitoring, incident response and disaster recovery, and layered security.
+* A Layered Defense (Defense in Depth) is Essential: No single security control is perfect. A robust security posture requires multiple, overlapping layers of defense, including technical, administrative, and physical controls.
+* Enforce Least Privilege and Robust Access Control: Users and systems should only have the minimum level of access necessary to perform their functions. This is a fundamental preventive measure against the spread of attacks and insider threats.
+* Visibility is the Foundation of Security: You cannot protect what you cannot see. Comprehensive network visibility through monitoring, NTA, and SIEM is crucial for detecting anomalies, investigating incidents, and understanding normal network behavior.
+* Automation is Key for Scalability and Consistency: Automated policy enforcement and patch management reduce human error, ensure consistent application of security rules, and allow for a rapid response to threats.
+* Be Prepared to Respond: Having a formal, tested Incident Response plan is critical for managing a security breach effectively to limit damage, reduce recovery time, and learn from the event to improve future resilience.
+* Security Extends to the Physical World: Network security is not just digital. Physically securing critical infrastructure through access controls, surveillance, and environmental monitoring is a vital part of a comprehensive security strategy.
 
 ### References
 

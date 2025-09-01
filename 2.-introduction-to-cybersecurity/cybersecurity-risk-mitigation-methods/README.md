@@ -222,7 +222,7 @@ Web Filters prevent users’ browsers from loading certain pages from particular
 
 Anti-Virus software is a security program designed to prevent, detect, and remove malicious software (malware), including viruses, worms, Trojan horses, spyware, and ransomware. It uses a combination of signature-based detection (matching known malware code) and heuristic analysis (identifying suspicious behavior) to protect systems. Anti-Virus solutions can be implemented on individual devices, networks, and email gateways to establish security policies, perform real-time system monitoring, and quarantine threats for both personal and enterprise use.
 
-**Note** - SIEM, EDR/XDR, IAM, and NAC are covered in the section [Network security risk mitigation best practices](../network-security-risk-mitigation-best-practices.md) (Chapter 2). SIEM/EDR/XDR are further discussed in the section [Defensive cybersecurity technologies](../../6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/) (Chapter 6).
+**Note** - SIEM, EDR/XDR, IAM, and NAC are covered in the section [Network security risk mitigation best practices](../network-security-risk-mitigation-best-practices/) (Chapter 2). SIEM/EDR/XDR are further discussed in the section [Defensive cybersecurity technologies](../../6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/) (Chapter 6).
 
 ### Network design
 

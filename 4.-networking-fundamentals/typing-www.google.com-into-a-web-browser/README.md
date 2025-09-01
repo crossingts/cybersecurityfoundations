@@ -11,7 +11,7 @@ description: >-
 • Explain the steps involved in transmitting a packet from one endpoint to another across the Internet\
 • Understand how the MAC address, ARP, and routing tables facilitate data flow through a network
 
-This discussion explains what happens [when you type www.google.com into a web browser](https://lashmar.media/what-is-a-web-dns/). After completing this section you will be able to apply everything you learned in this chapter to answer the very common Network Engineering interview question, what happens [when you type www.google.com into a web browser](https://www.reddit.com/r/ccna/comments/pnh4yf/video_how_a_packet_moves_through_the_internet/)?
+This discussion explains what happens [when you type www.google.com into a web browser](https://lashmar.media/what-is-a-web-dns/). After completing this section you will be able to apply everything you learned so far to answer the very common Network Engineering interview question, what happens [when you type www.google.com into a web browser](https://www.reddit.com/r/ccna/comments/pnh4yf/video_how_a_packet_moves_through_the_internet/)?
 
 ## Topics covered in this section
 

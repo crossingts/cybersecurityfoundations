@@ -9,11 +9,11 @@ description: >-
 
 ## Chapter 4: Networking fundamentals
 
-This chapter has two main goals. First, this chapter demystifies the underlying framework that makes networking possible. You will explore the core hardware, theoretical models like OSI, and essential protocols that work in concert to move data across a network. This knowledge culminates in a complete understanding of the journey a simple web request takes, tracing each step from the moment you type "www.google.com" into your browser until the page appears on your screen. Second, this chapter establishes the essential groundwork for building and securing a functional network. You will develop the necessary skills to configure and verify a router's core operational services, from implementing device security and establishing static routes to controlling traffic with ACLs. Furthermore, you will learn to integrate fundamental network services by configuring DHCP for dynamic addressing, DNS for name resolution, and NAT for internet connectivity, providing a comprehensive toolkit for modern network management.
+This chapter has two main goals. First, this chapter demystifies the underlying framework that makes networking possible. You will explore the core hardware, theoretical models like OSI, and essential protocols that work in concert to move data across a network. This knowledge culminates in a complete understanding of the journey a simple web request takes, tracing each step from the moment you type "www.google.com" into your browser until the page appears on your screen. Second, this chapter establishes the essential groundwork for building and securing a functional network. You will develop the necessary skills to configure and verify a router's core operational services, from implementing device security and establishing static routes to controlling traffic with ACLs. Furthermore, you will learn to integrate fundamental network services by configuring DHCP for dynamic addressing, DNS for name resolution, and NAT for internet connectivity, providing a practical toolkit for modern network management.
 
 **This chapter will help students:**
 
-* Explain the function of network devices, the OSI model layers, and how protocols enable host-to-host communication.
+* Explain the function of key network devices, the OSI model layers, and how protocols enable host-to-host communication.
 * Identify common networking protocols involved in data transmission (e.g., HTTP, TCP/IP, DNS) and become familiar with their security implications.
 * Trace the path of a web request, such as typing a URL into a browser, to illustrate applied networking concepts.
 * Configure and verify fundamental router operations using the Cisco IOS CLI, including device security, IP addresses, static routes, and standard ACLs.
@@ -29,9 +29,9 @@ This chapter has two main goals. First, this chapter demystifies the underlying 
 
 [Host to host communication in networking](../host-to-host-communication-in-networking/)
 
-[Network protocols and their functions](../network-protocols-and-their-functions.md)
+[Network protocols and their functions](../network-protocols-and-their-functions/)
 
-[Typing www.google.com into a web browser](../typing-www.google.com-into-a-web-browser.md)
+[Typing www.google.com into a web browser](../typing-www.google.com-into-a-web-browser/)
 
 [Cisco IOS CLI and basic device security](../cisco-ios-cli-and-basic-device-security/)
 

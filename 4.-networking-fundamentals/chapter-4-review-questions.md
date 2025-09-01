@@ -50,13 +50,34 @@
 
 ### Network protocols and their functions
 
-* Point 1
+* What is the fundamental purpose of a network protocol?
+  * Answer: A network protocol is a set of rules that dictates how network devices should format, transmit, and receive data, enabling them to communicate effectively across networks regardless of their underlying infrastructure.
+* List the four parameters a host must have configured to achieve full Internet connectivity.
+  * Answer: An IP address, a subnet mask, a default gateway (router) IP address, and the IP address of a DNS server.
+* Explain the role of the DHCP protocol in the context of a user connecting to a new Wi-Fi network.
+  * Answer: When a user connects to a new Wi-Fi network, their device (the DHCP client) automatically sends a DHCP discover message. A DHCP server on that network responds by providing the four necessary parameters (IP address, subnet mask, default gateway, DNS server), automatically configuring the host for Internet access without any manual input from the user.
+* Differentiate between the functions of DNS and ARP.
+  * Answer: DNS is an application-layer protocol that resolves a _domain name_ (e.g., `example.com`) to an _IP address_. ARP is a link-layer protocol that resolves a known _IP address_ on the local network to a _MAC address_.
+* What is the relationship between HTTP, SSL/TLS, and HTTPS?
+  * Answer: HTTP is the protocol for transferring web content. SSL and TLS are cryptographic protocols that create a secure, encrypted tunnel between a client and server. HTTPS is not a separate protocol but is the term for conducting an HTTP communication within that secure SSL/TLS tunnel.
 
 ***
 
 ### Typing www.google.com into a web browser
 
-* Point 1
+* What are the three fundamental tables used for data flow in a network, and what does each one map?
+  * Answer:
+    * MAC Address Table: Maps a switch port to a MAC address.
+    * ARP Table: Maps an IP address to a MAC address.
+    * Routing Table: Maps an IP network to a next-hop IP address.
+* Why must a host send its packet to its default gateway when communicating with a device on a foreign network?
+  * Answer: The host determines the destination IP is on a different network using its own IP and subnet mask. The host itself cannot deliver packets outside its local network, so it must forward the packet to the router (its default gateway), which is designed to route traffic between networks.
+* Describe the two main phases that occur when you type a URL into a web browser, according to the text.
+  * Answer: 1) DNS Resolution: The browser makes a request to a DNS server to resolve the domain name (e.g., `www.google.com`) into its corresponding IP address. 2) HTTP Request: The browser uses the returned IP address to send an HTTP request (e.g., a GET request) directly to the web server at that address.
+* What is the purpose of a broadcast MAC address (all F's), and what action does a switch take when it receives a frame with this destination address?
+  * Answer: The broadcast MAC address (FF:FF:FF:FF:FF:FF) is used to send a frame to every device on the local network segment. When a switch receives a frame with this destination address, it performs flooding—it sends the frame out all of its ports except the one it was received on.
+* Once a packet arrives at the final router (e.g., R3 for host C), what two things must the router check to deliver the packet to the final destination host on its directly connected network?
+  * Answer: 1) Its routing table to confirm the destination IP address is on a directly connected network. 2) Its ARP table to find the MAC address associated with the destination host's IP address so it can build a new Layer 2 header for the final hop.
 
 ***
 

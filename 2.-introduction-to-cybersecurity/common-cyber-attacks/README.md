@@ -331,8 +331,8 @@ These types of malware are defined by how the malware infects a system and how i
 
 ### Key takeaways
 
-* Common cyber attacks include social engineering, password, and spoofing attacks
-* Common malware types include viruses, worms, and ransomeware
+* Common cyber attacks include social engineering, password, and spoofing attacks.
+* Common malware types include viruses, worms, and ransomeware.
 
 ### References
 

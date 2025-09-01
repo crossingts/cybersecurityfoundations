@@ -58,3 +58,20 @@ Both RADIUS and TACACS+ are AAA protocols, but they have key differences:
 
 ### Common cyber attacks
 
+**1. Explain the key difference between a reflection attack and an amplification attack.**\
+**Answer:** Both are types of DoS attacks where an attacker spoofs the target's IP address to send traffic to it. A reflection attack sends traffic to a reflector (e.g., a DNS server) that then sends a reply to the target. An amplification attack is a specific, more powerful type of reflection attack where the attacker sends a small request that triggers a very large reply from the reflector to the target, thereby "amplifying" the volume of attack traffic.
+
+**2. Describe what happens in an ARP spoofing (ARP poisoning) attack and name one mitigation technique.**\
+**Answer:** In an ARP spoofing attack, an attacker sends fake gratuitous ARP replies to associate their own MAC address with the IP address of a legitimate device (like the default gateway). This tricks other hosts on the network into sending traffic intended for that legitimate IP to the attacker instead, allowing them to eavesdrop or modify the traffic. A primary mitigation technique is **Dynamic ARP Inspection (DAI)**.
+
+**3. What are the two main characteristics that distinguish a worm from a virus?**\
+**Answer:** 1) A worm is a standalone program and does not require a host file or program to infect. 2) A worm can self-replicate and spread across a network automatically without any user interaction.
+
+**4. What is the purpose of a brute force password attack, and what is one key characteristic of a strong password that makes it resistant to such an attack?**\
+**Answer:** The purpose of a brute force attack is to discover a password by systematically trying every possible combination of letters, numbers, and symbols. A strong password is resistant to this because it is **long (e.g., more than 8 characters)**, which exponentially increases the number of possible combinations and the time required to guess it.
+
+**5. A user receives a phone call from someone claiming to be from the IT department who needs their password to perform a reset. What type of attack is this?**\
+**Answer:** This is a **vishing** (voice phishing) attack, which is a form of social engineering.
+
+### Cybersecurity risk mitigation methods
+

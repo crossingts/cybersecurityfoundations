@@ -25,7 +25,7 @@ Through an exploration of key concepts and practices, this chapter will help stu
 
 [The cybersecurity threat landscape](the-cybersecurity-threat-landscape/)
 
-[Common cyber attacks](common-cyber-attacks.md)
+[Common cyber attacks](common-cyber-attacks/)
 
 [Cybersecurity risk mitigation methods](cybersecurity-risk-mitigation-methods.md)
 

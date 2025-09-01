@@ -20,3 +20,23 @@ hidden: true
 
 **5. List two key knowledge areas or skills that the text associates with IT security, as taught in the "IT Security: Defense against the digital dark arts" course.**\
 **Answer:** Any two of the following: How encryption algorithms work; Various authentication systems; The difference between authentication and authorization; How to evaluate potential risks and recommend reductions; Best practices for securing a network.
+
+### Job roles in IT and cybersecurity
+
+**1. Differentiate between the primary focus of an Incident Responder and a Penetration Tester.**\
+**Answer:** An Incident Responder is reactive; their primary focus is on detecting, analyzing, and mitigating active security breaches to minimize damage. A Penetration Tester is proactive; their primary focus is on simulating cyberattacks to identify vulnerabilities before they can be exploited by malicious actors.
+
+**2. List three key responsibilities of a Cloud Engineer.**\
+**Answer:** Any three of the following: Maintaining cloud infrastructure, designing serverless architecture, managing IAM (Identity and Access Management), automation, cost optimization, performance optimization, and managing storage.
+
+**3. What is the significance of "system hardening," and which job role is typically responsible for this task?**\
+**Answer:** System hardening is the process of securing a system by reducing its attack surface, which involves removing unnecessary processes and services. This task is a key responsibility of a **System Administrator**.
+
+**4. Beyond technical skills, name two non-technical skills crucial for a Cybersecurity Manager.**\
+**Answer:** Any two of the following: Negotiation, time management, understanding regulations and standards, auditing, and managing policies and processes.
+
+**5. Which industry certification is considered a essential entry-level certification for multiple roles, including System Administrator and Incident Responder?**\
+**Answer:** **Security+** (from CompTIA) is a foundational certification listed for both roles.
+
+### How to break into information security
+

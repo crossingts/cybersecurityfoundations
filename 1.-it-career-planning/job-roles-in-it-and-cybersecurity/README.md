@@ -96,8 +96,8 @@ These job roles are based on the free Cybrary course [Introduction to IT & Cyber
 
 ### Key takeaways
 
-* Key IT and cybersecurity job roles include sysadmin, netadmin, Incident Responder, and Penetration Tester
-* Key skills include IT networking, operating systems, troubleshooting, virtualization, and scripting languages
+* Key IT and cybersecurity job roles include sysadmin, netadmin, Incident Responder, and Penetration Tester.
+* Key IT and cybersecurity skills include IT networking, operating systems, troubleshooting, virtualization, and scripting languages.
 
 ### References
 

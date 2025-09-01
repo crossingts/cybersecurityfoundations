@@ -23,7 +23,7 @@ This chapter will introduce students to emerging IT and cybersecurity career pat
 
 [IT career paths – everything you need to know](it-career-paths-everything-you-need-to-know/)
 
-[Job roles in IT and cybersecurity](job-roles-in-it-and-cybersecurity.md)
+[Job roles in IT and cybersecurity](job-roles-in-it-and-cybersecurity/)
 
 [How to break into information security](how-to-break-into-information-security.md)
 

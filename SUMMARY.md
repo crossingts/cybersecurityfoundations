@@ -5,14 +5,16 @@
 ## 1. IT career planning
 
 * [Introduction - IT career planning](1.-it-career-planning/introduction-it-career-planning.md)
-* [IT career paths – everything you need to know](1.-it-career-planning/it-career-paths-everything-you-need-to-know.md)
+* [IT career paths – everything you need to know](1.-it-career-planning/it-career-paths-everything-you-need-to-know/README.md)
+  * [1.1. IT career paths – everything you need to know — Quiz](1.-it-career-planning/it-career-paths-everything-you-need-to-know/1.1.-it-career-paths-everything-you-need-to-know-quiz.md)
 * [Job roles in IT and cybersecurity](1.-it-career-planning/job-roles-in-it-and-cybersecurity.md)
 * [How to break into information security](1.-it-career-planning/how-to-break-into-information-security.md)
 * [The Security Operations Center (SOC) career path](1.-it-career-planning/the-security-operations-center-soc-career-path.md)
 * [The GRC analyst job role](1.-it-career-planning/the-grc-analyst-job-role.md)
 * [How to get CCNA certification](1.-it-career-planning/how-to-get-ccna-certification.md)
 * [Job search strategy](1.-it-career-planning/job-search-strategy.md)
-* [Chapter 1 review questions](1.-it-career-planning/chapter-1-review-questions.md)
+* [Chapter 1 review questions](1.-it-career-planning/chapter-1-review-questions/README.md)
+  * [Alt Ch1 review questions](1.-it-career-planning/chapter-1-review-questions/alt-ch1-review-questions.md)
 
 ## 2. Introduction to cybersecurity
 

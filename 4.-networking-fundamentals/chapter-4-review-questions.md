@@ -190,7 +190,7 @@
 
 ***
 
-### _Static NAT configuration_
+### Static NAT configuration
 
 * Describe the need for private IPv4 addressing.
   * Answer: The need for private IPv4 addressing arose from the imminent exhaustion of public IPv4 addresses. It allows organizations to use non-unique, reusable addresses (defined in RFC 1918) for their internal networks, while requiring only a limited number of public IPs for external communication via NAT. This conserves the global IPv4 address space and extends its usability.

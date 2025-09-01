@@ -18,7 +18,7 @@ description: >-
 
 * **IT industry employers**
 * **Getting into IT**
-* **Career path: IT Support (Technical Support)**
+* **Career path: IT Support**
 * **Career path: Systems**
 * **Career path: Networking**
 * **Career path: ­Database**
@@ -43,7 +43,7 @@ description: >-
 
 In the absence of a university degree, entry into the IT field can be accomplished through entry level support roles. Holding a bachelor degree (especially in computer science/information systems disciplines) becomes more relevant the more senior is the position. With a four-year degree one should be able to skip entry level support roles and move straight into a junior level role. With the right combination of IT industry certification and lab (hands on) experience gained through completed learning projects and/or demonstrated talent, a university graduate should be able to land an admin/analyst position as their first job in IT. See [Information Technology Career Pathways by MicroTrain Technologies (Chicago, IL)](https://www.microtrain.net/files/career_pathways.pdf).
 
-### Career path: IT Support (Technical Support)
+### Career path: IT Support
 
 There are 400,000 U.S. job openings in IT and a $52,000 median entry-level salary in IT support, according to U.S. Burning Glass Labor Insight Report (data for 4/01/2021 – 3/31/22).
 
@@ -173,6 +173,8 @@ In the words of [Google IT Support Professional Certificate](https://www.courser
 
 ### IT training resources
 
+#### Commercial IT training resources
+
 [CBT Nuggets](https://www.cbtnuggets.com/)\
 Training for the most sought-after [Cisco certifications and skills](https://www.cbtnuggets.com/it-training/cisco). All the [cybersecurity training](https://www.cbtnuggets.com/it-training/cyber-security) you need. Check out their [IT Paths](https://www.cbtnuggets.com/it-training/it-paths) training packages/stacks (US$59 monthly subscription)
 
@@ -203,7 +205,7 @@ Learn “the right skills in the right order.” [Paths](https://www.pluralsight
 [TryHackMe](https://tryhackme.com/)\
 Hands on cyber security training through real-world scenarios for all skill levels ([£8 premium monthly subscription](https://tryhackme.com/why-subscribe))
 
-### Free IT training resources
+#### Free IT training resources
 
 [Cyber Aces Free Cyber Security Training Course](https://www.sans.org/cyberaces/) (SANS)\
 This course covers the three foundation areas of information security – operating systems, networking, and system administration
@@ -213,9 +215,11 @@ Free online courses offered by Cisco. Certification-aligned training for Network
 
 ### Key takeaways
 
-* Key IT industry employers include hardware manufacturers, software vendors, and MSPs
-* Key IT career paths include systems, networking, development, and security
-* IT and cybersecurity training resources include commercial and free resources
+* Key IT industry employers include hardware manufacturers, software vendors, Value Added Resellers (VARs), Managed Service Providers (MSPs), and Internet Service Providers (ISPs).
+* Primary IT career paths include Systems Administration, Networking, Database Administration, Development, and Information Security (which is often a specialization within other paths).
+* Information Security roles typically involve planning, implementing, upgrading, or monitoring security measures to protect computer networks, systems, and data.
+* Numerous commercial and free training resources are available, such as the Google IT Support Professional Certificate, Cisco's Skills for All, and specialized platforms like Hack The Box and Cybrary, which offer certification-aligned training.
+* Industry certifications (e.g., CompTIA A+, Network+, Security+, CCNA) are critical for validating skills and advancing in specific IT career paths.
 
 ### References
 

@@ -75,9 +75,9 @@ A GRC analyst/manager may partake in the following organizational IT governance 
 
 ### Key takeaways <a href="#ember528" id="ember528"></a>
 
-* You can get into GRC through various roles, including security analyst and policy analyst
-* Important skills of a GRC analyst span compliance auditing to incident and disaster recovery
-* Well regarded GRC analyst/manager industry certifications include CISA by ISACA and ISO 27001 Lead Auditor by CIS
+* You can get into GRC through various roles, including security analyst and policy analyst.
+* Important skills of a GRC analyst span compliance auditing to incident and disaster recovery.
+* Well regarded GRC analyst/manager industry certifications include CISA by ISACA and ISO 27001 Lead Auditor by CIS.
 
 ### References <a href="#ember530" id="ember530"></a>
 

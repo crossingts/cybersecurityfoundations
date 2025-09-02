@@ -1,7 +1,7 @@
 ---
 description: >-
   The Cisco CCNA is widely considered as the gold standard of IT networking
-  industry certification. This section outlines practical steps to become a
+  industry certifications. This section outlines practical steps to become a
   Cisco Certified Network Associate
 ---
 
@@ -13,7 +13,7 @@ description: >-
 * Become familiar with the CCNA exam registration process
 * Describe a roadmap to prepare for the CCNA exam
 * Identify top free resources to help you prepare for the CCNA exam
-* Become familiar with Cisco's own CNNA resources
+* Become familiar with Cisco's own CCNA resources
 
 This section offers advice on [how to get CCNA certification](https://www.coursera.org/ca/articles/what-is-the-ccna). This section outlines practical steps to become a Cisco Certified Network Associate. It offers tips and resources to help aspiring computer networking specialists pass their CCNA 200-301 exam (Implementing and Administering Cisco Networking Technologies). This section explains the market value of CCNA certification, explains the CCNA exam registration process, describes a roadmap to prepare for the CCNA exam, and identifies top free resources to help you prepare for the CCNA exam.
 

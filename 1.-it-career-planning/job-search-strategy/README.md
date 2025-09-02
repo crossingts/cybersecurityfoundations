@@ -1,7 +1,7 @@
 ---
 description: >-
-  This section is designed to help students strategize for and organize their
-  job search and career development activities
+  This section is designed to help students plan and organize their job search
+  and career development activities
 ---
 
 # Job search strategy

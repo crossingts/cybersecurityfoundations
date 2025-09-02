@@ -15,7 +15,7 @@ This chapter will introduce students to emerging IT and cybersecurity career pat
 
 * Plan for a career in IT and cybersecurity.
 * Understand emerging IT and cybersecurity career paths and job roles.
-* Understand key technologies, skills, and industry certifications that can help them land their dream job in IT and cybersecurity.
+* Identify key technologies, skills, and industry certifications that can help them land their dream job in IT and cybersecurity.
 * Identify the skills and practices of in-demand cybersecurity job roles such as System Administrator, Network Administrator, Incident Responder, Penetration Tester, Cloud Engineer, Cybersecurity Manager, and GRC Analyst.
 * Plan and execute a job search and career development strategy in IT and cybersecurity.
 

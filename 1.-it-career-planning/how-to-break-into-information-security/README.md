@@ -1,7 +1,7 @@
 ---
 description: >-
   This section describes three key foundational knowledge areas and two key
-  career routes of information security
+  information security career routes
 ---
 
 # How to break into information security
@@ -14,7 +14,7 @@ description: >-
 
 This section explains [how to break into information security](https://www.forbes.com/advisor/education/how-to-get-into-cyber-security-field/). Demand for information security specialists has soared in the last decade due to increasing rates of cybercrime. The increasing demand for information security analysts and a shortage of talent in the labor market is good news for those ready to seize the moment. According to the U.S. Bureau of Labor Statistics, the median annual salary for information security analysts is $102,600, more than double the national median earnings of workers across all industries ($45,760).
 
-But trying to break into information security can seem like an overwhelming endeavor. This section introduces three foundation areas (computer networking, operating systems, and system administration) and two career routes of information security (information security analyst and SOC analyst) and offers tips and resources for novices to get started in information security through entry-level security analyst roles.
+But trying to break into information security can seem like an overwhelming endeavor. This section introduces three foundation areas (computer networking, operating systems, and system administration) and two information security career routes (information security analyst and SOC analyst) and offers tips and resources for novices to get started in information security through entry-level security analyst roles.
 
 ## Topics covered in this section
 

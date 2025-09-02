@@ -1,10 +1,10 @@
 ---
 description: >-
-  This section outlines the various IT career paths, each with a brief
-  explanation of their relevant job roles and job titles
+  This section outlines various IT career paths, each with a brief explanation
+  of their relevant job roles and job titles
 ---
 
-# IT career paths – everything you need to know
+# IT career paths
 
 ## Learning objectives
 

@@ -27,7 +27,7 @@ This section looks at common cyber attacks (reconnaissance, social engineering, 
 
 ### Common cyber attacks
 
-Attack types are threats which can potentially exploit vulnerabilities to compromise the CIA of an enterprise’s information assets and network system. This discussion explores how attackers can threaten the CIA of enterprise systems and information by looking at the following common types of attacks: Reconnaissance, social engineering, password attacks, denial of service (DoS), reflection and amplification, MITM, and spoofing attacks. There are many more potential attacks than these, but these are some of the main attack categories.
+Attack types are threats which can potentially exploit vulnerabilities to compromise the CIA (confidentiality, integrity, and availability) of an enterprise’s information assets and network system security. This discussion explores how attackers can compromise the CIA of information assets by looking at the following common types of cyber attacks: Reconnaissance, social engineering, password attacks, denial of service (DoS), reflection and amplification, MITM, and spoofing attacks. There are many more potential attacks than these, but these are some of the main attack categories.
 
 #### Reconnaissance
 

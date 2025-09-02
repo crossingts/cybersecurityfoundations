@@ -45,11 +45,11 @@
 **3. Name two specific technical skills mentioned for the 'Operating Systems' foundation area.**\
 **Answer:** (Any two of the following are acceptable): Navigating filesystems using a command line; Setting up users, groups, and permissions; Installing, configuring, and removing software; Configuring disk partitions; Managing system processes; Working with system logs.
 
-**4. What are the two primary cybersecurity roles associated with a SOC analyst?**\
-**Answer:** The two primary roles are Defensive (Blue Team) and Offensive (Red Team or ethical hackers).
+**4. What are two cybersecurity job roles associated with a SOC analyst?**\
+**Answer:** (Any two of the following): Incident Responder, Forensic Investigator, and Threat Hunter.
 
 **5. According to the section, what are the two main career routes to break into information security?**\
-**Answer:** The two main career routes are: 1) Information Security Analyst (e.g., Vulnerability Analyst, Network Analyst) and 2) SOC Analyst.
+**Answer:** The two main career routes are: 1) Information Security Analyst (e.g., Vulnerability Analyst, Network/Systems Analyst) and 2) SOC Analyst.
 
 ### The Security Operations Center (SOC) career path
 

@@ -67,12 +67,12 @@ The TCP/IP model (like the OSI model) is a formalized way of organizing and repr
 | TCP/IP               | OSI Model          | Protocols & Standards                                                                             |
 | -------------------- | ------------------ | ------------------------------------------------------------------------------------------------- |
 | Application Layer    | Application Layer  | DNS, DHCP, FTP, TFTP, HTTP, HTTPS, LDAP, NTP, POP3, RTP, RTSP, SSH, Telnet, SIP, SMTP, SNMP, MIME |
-|                      | Presentation Layer | JPEG, ASCII, EBDIC, MIDI, MPEG, PICT, TIFF. GIF                                                   |
-|                      | Session Layer      | NetBIOS, NFS, PAP, SCP, RPC, SQL, ZIP                                                             |
+| Application Layer    | Presentation Layer | JPEG, ASCII, EBDIC, MIDI, MPEG, PICT, TIFF. GIF                                                   |
+| Application Layer    | Session Layer      | NetBIOS, NFS, PAP, SCP, RPC, SQL, ZIP                                                             |
 | Transport Layer      | Transport Layer    | TCP, UDP, SPX                                                                                     |
 | Internet Layer       | Network Layer      | ICMP, IGMP, IPsec, IPv4, IPv6, IPX, RIP, OSPF                                                     |
 | Network Access Layer | Data Link Layer    | ARP, RARP, ATM, CDP, FDDI, Frame Relay, HDLC, MPLS, PPP, SLIP, STP, Token Ring                    |
-|                      | Physical Layer     | Bluetooth, DSL, Hub, Ethernet II, IEEE 802.3, IEEE 802.11 (WiFi), ISDN                            |
+| Network Access Layer | Physical Layer     | Bluetooth, DSL, Hub, Ethernet II, IEEE 802.3, IEEE 802.11 (WiFi), ISDN                            |
 
 **What is the Internet Protocol?**
 

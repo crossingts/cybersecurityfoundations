@@ -27,7 +27,7 @@ This section looks at common cyber attacks (reconnaissance, social engineering, 
 
 ### Common cyber attacks
 
-Attack types are threats which can potentially exploit vulnerabilities to compromise the CIA (confidentiality, integrity, and availability) of an enterprise’s information assets and network system security. This discussion explores how attackers can compromise the CIA of information assets by looking at the following common types of cyber attacks: Reconnaissance, social engineering, password attacks, denial of service (DoS), reflection and amplification, MITM, and spoofing attacks. There are many more potential attacks than these, but these are some of the main attack categories.
+Attack types are threats which can potentially exploit vulnerabilities to compromise the CIA (Confidentiality, Integrity, and Availability) of an enterprise’s information assets and network system security. This discussion explores how attackers can compromise the CIA of information assets by looking at the following common types of cyber attacks: Reconnaissance, social engineering, password attacks, denial of service (DoS), reflection and amplification, MITM, and spoofing attacks. There are many more potential attacks than these, but these are some of the main attack categories.
 
 #### Reconnaissance
 
@@ -57,7 +57,7 @@ Mishing, SMS phishing, which is phishing performed using SMS text messages to th
 
 #### Password attacks
 
-Most systems use a username and password combination to authenticate users. The username itself is often simple and easy to guess, for example the user’s email address. So, often, the strength and secrecy of the password is relied on to provide the necessary security.
+Most systems use a username and password combination to authenticate users. The username itself is often simple and easy to guess, for example the user’s email address. So, often the strength and secrecy of the password is relied on to provide the necessary security.
 
 However, attackers can learn a user’s password through multiple methods. They could guess the password. A dictionary attack can also be used, in which a program runs through a dictionary, which is a list of common words and passwords, to guess the target’s password. The program tries each word, hoping to find the correct password.
 
@@ -107,9 +107,9 @@ sequenceDiagram
 
 For each SYN message the attacker sends, the target puts an entry in its TCP connection table and sends a SYN-ACK message, then waits for an ACK to complete the connection. But the ACK never comes. The attacker keeps sending SYN messages, and the target keeps sending SYN-ACK messages. Then the target’s TCP connection table fills up, and the denial-of-service has been achieved.
 
-A much more powerful version of this attack type is the DDoS. In a distributed denial-of-service attack, the attacker infects many target computers with malware and uses the computers to initiate a denial-of-service attack such as a TCP SYN flood attack. The group of infected computers is called a botnet. The PCs infected with malware together start flooding the target with TCP SYN messages, so the target server is no longer able to respond to legitimate TCP connection requests.&#x20;
+A much more powerful version of this attack type is the DDoS. In a distributed denial-of-service attack, the attacker infects many target computers with malware and uses the computers to initiate a denial-of-service attack such as a TCP SYN flood attack. The group of infected computers is called a botnet. The PCs infected with malware together start flooding the target with TCP SYN messages, so the target server is no longer able to respond to legitimate TCP connection requests.
 
-For mitigation of TCP SYN flood attacks, you would need methods that focus on managing the connection setup process itself. A layered approach combining these methods is most effective in mitigating TCP SYN flood attacks. Here are some common mitigation methods:
+Mitigating TCP SYN flood attacks requires methods that focus on managing the connection setup process itself. A layered approach combining these methods is most effective in mitigating TCP SYN flood attacks. Here are some common mitigation methods:
 
 1. Rate limiting: This limits the number of incoming SYN requests to a manageable rate, preventing the attacker from overwhelming your system.
 2. SYN cookies: This is a technique where the server generates a temporary challenge instead of allocating resources for a full connection handshake in case of a suspected SYN flood.
@@ -159,6 +159,8 @@ So if some PCs send DHCP Discover messages to get IP addresses, the server is no
 The goal of a DHCP starvation attack is to overwhelm the DHCP server with a flood of bogus DHCP requests, exhausting the pool of available IP addresses. This prevents legitimate clients from obtaining an IP address and essentially denies them access to the network.
 
 DHCP snooping helps mitigate DoS attacks by limiting the rate of DHCP messages and filtering out suspicious traffic (DHCP messages received on an untrusted port, as normally sent by a DHCP client, may be filtered if they appear to be part of an attack). This makes it more difficult for attackers to flood the server and disrupt network operations.
+
+An illustration of how DHCP snooping can help mitigate DoS attacks: [DHCP snooping configuration and verification](https://itnetworkingskills.wordpress.com/2023/05/14/dhcp-snooping-configuration-verification/)
 
 **UDP flooding**
 
@@ -319,22 +321,41 @@ Man-in-the-Middle attacks like ARP Spoofing and DHCP Poisoning are a prime examp
 
 ### Malware types
 
-Malware, malicious software, refers to a variety of harmful programs that can infect a computer. There are many types of malware. Here are a few types.
+Malware (malicious software) refers to a variety of harmful programs designed to infiltrate, damage, or disable computers and computer systems without the user's informed consent. There are many types of malware, categorized by how they infect a system and how they spread, not by the attacks they carry out after infecting the system.
 
-\*Viruses are malware that infects other software, called a host program. The virus spreads as the software is shared by users or downloaded from malicious websites. Once the virus has infected a device it can corrupt or modify files on the target computer.
+**Virus**\
+A virus is a type of malware that attaches itself to a legitimate program or file, known as a host. It requires human action to spread, such as a user sharing an infected file or launching a corrupted program. Once activated, a virus can replicate itself and spread to other files and systems. Its payload can range from being merely annoying to highly destructive.
 
-\*Worms are different from viruses in that they don’t require a host program. They are standalone malware and are also able to spread on their own, without user interaction. The spread of worms from device to device can congest the network, but in addition to that if the worm has a payload, other malicious code within the worm, it can cause additional harm to target devices.
+* Example: The ILOVEYOU Virus (2000) - One of the most damaging viruses ever, it arrived as a seemingly innocent love confession email attachment (`LOVE-LETTER-FOR-YOU.TXT.vbs`). Once opened, it overwrote critical user files (like JPEGs and documents) and replicated by sending itself to everyone in the victim's Microsoft Outlook address book, causing an estimated $10-15 billion in damages globally.
 
-\*A Trojan horse is harmful software disguised as legitimate software. Trojan horses spread through user interaction such as opening email attachments or downloading a file from the Internet.
+**Worm**\
+Worms are different from viruses in that they are standalone software and do not require a host program or human interaction to propagate. They exploit vulnerabilities in network services or operating systems to spread automatically across networks at an incredible speed.
 
-These types of malware are defined by how the malware infects a system and how it spreads, not the attacks they carry out after infecting the system.
+* Example: The WannaCry Worm (2017) - Although often called ransomware, WannaCry's rapid global spread was due to its worm component. It exploited a known Windows vulnerability (EternalBlue) to move laterally across networks without user interaction. Once on a system, it encrypted the user's files (its ransomware payload), demanding payment. It crippled critical infrastructure worldwide, including the UK's National Health Service (NHS), causing massive disruptions to healthcare services.
+
+**Trojan Horse**\
+A Trojan horse is harmful software disguised as legitimate or desirable software, tricking users into installing it themselves (e.g., a free game, a cracked application, or a fake software update). Unlike viruses and worms, Trojans do not self-replicate. Their purpose is to create a backdoor on the system, giving attackers unauthorized remote access.
+
+* Example: Zeus Trojan (2007) - A notorious Trojan designed to steal banking credentials through keystroke logging and form grabbing. It was primarily spread through drive-by downloads and phishing emails. Once installed, it secretly transferred millions of dollars from victims' accounts. Its code was later adapted into other malware, making it one of the most influential and damaging Trojans in history.
+
+**Ransomware**\
+Ransomware is a particularly destructive form of malware that encrypts the victim's files, rendering them inaccessible. The attackers then demand a ransom payment (usually in cryptocurrency) in exchange for the decryption key.
+
+* Example: Colonial Pipeline Attack (2021) - The DarkSide ransomware gang infected the systems of Colonial Pipeline, a major US fuel pipeline operator. The attack forced the company to shut down its entire pipeline system for days, causing widespread fuel shortages and price spikes across the US East Coast. The company paid a ransom of nearly $4.4 million, highlighting the real-world physical and economic damage cyberattacks can cause.
 
 ### Key takeaways
 
-* Common cyber attacks include social engineering, password, and spoofing attacks.
-* Common malware types include viruses, worms, and ransomeware.
+* Common cyber attacks include reconnaissance, social engineering, password attacks, denial-of-service (DoS), reflection and amplification, man-in-the-middle (MITM), and spoofing attacks.
+* Common malware types include viruses, worms, Trojan horses, and ransomware.
+* Social engineering exploits human psychology rather than technical vulnerabilities, with common types including phishing, vishing, tailgating, and watering hole attacks.
+* Password attacks like dictionary and brute force attacks target weak authentication. Strong passwords should be at least 8 characters long, complex (mixing uppercase letters, lowercase letters, numbers, and special symbols), unique for every account, and changed regularly.
+* DoS/DDoS attacks threaten availability by overwhelming a target's resources. Mitigation often involves rate limiting, traffic filtering, and network segmentation.
+* Spoofing attacks (using fake IP or MAC addresses) are a core technique enabling many other attacks, including MITM (like ARP spoofing and DHCP poisoning) and DoS (like SYN floods).
+* Specific security controls like DHCP snooping, Dynamic ARP Inspection (DAI), and SYN cookies are essential for defending against common network-based attacks.
 
 ### References
+
+ICANN. (n.d.). ICANN Lookup. Retrieved from https://lookup.icann.org/en
 
 Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 2. Cisco Press.
 

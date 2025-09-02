@@ -10,11 +10,13 @@ description: >-
 ## Learning objectives
 
 * List and describe major cybersecurity risk mitigation methods
-* Develop an appreciation for the conceptual overlap between risk mitigation practices
-* Develop an appreciation for the need for a layered approach to cybersecurity
-* Identify the need for a system's view of cybersecurity management&#x20;
+* Understand the specific functions and practical applications of key cybersecurity risk mitigation technologies
+* Understand how a segmented network architecture using VLANs and subnets can contain security breaches and limit lateral movement
+* Identify the key components of an organizational information security policy, including data classification, access control, and incident response
+* Understand the role of information security testing in validating security controls and meeting compliance requirements
+* Understand the importance of continuous security training in mitigating cybersecurity risk
 
-This section reviews major cybersecurity risk mitigation methods used to reduce the risk of a cybersecurity breach or to minimize the impact of an attack if it occurs. Cybersecurity risk mitigation methods explored span technologies, network design, networking protocols, organizational policies, security testing, and security training.
+This section studies major cybersecurity risk mitigation methods. This section explores specific functions and practical applications of common cybersecurity risk mitigation technologies such as next-generation firewalls and intrusion prevention systems. Furthermore, it looks at how network architecture—through segmentation and secure design—forms a critical layer of defense. The discussion also covers the critical role of organizational policies, the necessity for proactive security testing, and the importance of continuous employee training in creating a resilient security posture.
 
 ## Topics covered in this section
 
@@ -598,4 +600,16 @@ User training programs are more formal than user awareness programs. For example
 
 ### References
 
-Odom, W. (2020). Chapter 5. Securing Network Devices, CCNA 200-301 Official Cert Guide (pp. 86-105), Volume 2. Cisco Press.
+Engebretson, P. (2011). _The Basics of Hacking and Penetration Testing: Ethical Hacking and Penetration Testing Made Easy_. Syngress.
+
+Graves, K. (2010). _CEH: Certified Ethical Hacker Study Guide_. Wiley Publishing.
+
+Harper, A., Harris, S., Ness, J., Eagle, C., Lenkey, G., & Williams, T. (2011). _Gray Hat Hacking: The Ethical Hacker's Handbook, Third Edition_. McGraw-Hill Osborne Media.
+
+Harris, S., Harper, A., Eagle, C., & Ness, J. (2007). _Gray Hat Hacking: The Ethical Hacker's Handbook, Second Edition_. McGraw-Hill Osborne Media.
+
+Landoll, D. J., & Landoll, D. (2005). _The Security Risk Assessment Handbook: A Complete Guide for Performing Security Risk Assessments_. CRC Press.
+
+Odom, W. (2020). \*CCNA 200-301 Official Cert Guide, Volume 2\*. Cisco Press.
+
+Reynolds, G. (2012). _Ethics in Information Technology, Fourth Edition_. Course Technology, Cengage Learning.

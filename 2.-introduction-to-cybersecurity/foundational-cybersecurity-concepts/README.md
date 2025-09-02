@@ -72,7 +72,7 @@ In addition to the CIA triad, closely related and foundational information secur
 
 * A vulnerability is any potential weakness that can compromise the CIA of information assets. A window in a house is a vulnerability burglars can exploit to enter the house.&#x20;
 * An exploit is something that can potentially be used to exploit the vulnerability. A rock can exploit the weakness of glass windows and may be used to enter a house.
-* A threat is the potential of a vulnerability to be exploited. The threat of house burglary is the likelihood a burglar will exploit the glass window vulnerability using a rock (or other exploits) to gain entry into a house.&#x20;
+* A threat is the potential of a vulnerability to be exploited. The threat of house burglary is the potential a burglar will exploit the glass window vulnerability using a rock (or other exploits) to gain entry into a house.&#x20;
 * A threat vector is a means or method a threat actor can use or follow to exploit a vulnerability. A glass window a burglar can use to gain entry into a house can be considered a threat vector.
 * A mitigation technique is something that can protect against threats. Appropriate mitigation techniques should be implemented everywhere a vulnerability can be exploited, for example, devices, servers, switches, and routers. In our window example, adding welded metallic bars would be a mitigation technique.
 
@@ -340,46 +340,46 @@ The primary goals of cryptography are confidentiality, authentication, data inte
 
 ### References
 
-Anderson, J. (2003). _\[Reference from text; full citation not provided in excerpt]._
+Anderson, J. M. (2003). Why we need a new definition of information security. _Computers & Security. 22_ (4): 308–313. doi:10.1016/S0167-4048(03)00407-3.
 
 ASIS International. (2003). _General Security Risk Assessment Guidelines._
 
-Bishop, M. (2003). _\[Reference from text; full citation not provided in excerpt]._
+Bishop, M. (2003). _Computer security: art and science_. Addison-Wesley Professional.
 
 Blakley, B., McDermott, E., & Geer, D. (2001, September). Information security is information risk management. In _Proceedings of the 2001 workshop on New security paradigms_ (pp. 97-104). ACM.
 
-Cherdantseva, Y., & Hilton, J. (2013). _\[Reference from text; full citation not provided in excerpt]._
+Cherdantseva, Y. & Hilton, J. (2013). Information security and information assurance. The discussion about the meaning, scope and goals. In: _Organizational, Legal, and Technological Dimensions of Information System Administrator._ Almeida F., Portela, I. (eds.). IGI Global Publishing.&#x20;
 
-CNSS. (2010). _\[Reference from text; full citation not provided in excerpt]._
+CNSS (Committee on National Security Systems). (2010). National Information Assurance (IA) Glossary, CNSS Instruction No. 4009, 26 April 2010.
 
-EDUCAUSE. (2019, April). _Information Security Almanac._
+EDUCAUSE Information Security Almanac 2019. (April 10, 2019). Retrieved January 21, 2020, from https://library.educause.edu/resources/2019/4/the-educause-information-security-almanac-2019
 
-Engebretson, P. (2011). _\[Reference from text; full citation not provided in excerpt]._
+Engebretson, P. (2011). _The basics of hacking and penetration testing: Ethical hacking and penetration testing made easy_. \[Books24x7 version] Retrieved March 26, 2013, from http://common.books24x7.com.proxy.bib.uottawa.ca/toc.aspx?bookid=44730
 
-ISACA. (2008). _\[Reference from text; full citation not provided in excerpt]._
+ISACA. (2008). Glossary of terms, 2008. Retrieved January 21, 2020, from http://www.isaca.org/Knowledge-Center/Documents/Glossary/glossary.pdf
 
 ISO/IEC 27000:2009. _Information technology — Security techniques — Information security management systems — Overview and vocabulary._
 
 ISO 22301 Portal. (2015). _Societal security – Business continuity management system._
 
-ISO Risk Management Guide 73:2009. _\[Reference from text; full citation not provided in excerpt]._
+ISO Risk Management Guide. (2009). _Risk management — Vocabulary_ (ISO Guide 73:2009).&#x20;
 
-Landoll, D., & Landoll, D. J. (2005). _\[Reference from text; full citation not provided in excerpt]._
+Landoll, D. J., & Landoll, D. (2005). _The security risk assessment handbook: A complete guide for performing security risk assessments._ CRC Press.
 
-NCC. (2005). _IT Governance._
+NCC (National Computing Centre). (2005). IT Governance: Developing a Successful Governance Strategy (published by ISACA). Retrieved August 20, 2019, from http://m.isaca.org/Certification/CGEIT-Certified-in-the-Governance-of-Enterprise-IT/Prepare-for-the-Exam/Study-Materials/Documents/Developing-a-Successful-Governance-Strategy.pdf
 
-PCI DSS. (2005). _Risk Assessment Guidelines._
+PCI DSS. (2005). _PCI DSS Risk Assessment Guidelines_. Retrieved from https://www.pcisecuritystandards.org/
 
 Peltier, T. R. (2005). _Information Security Risk Analysis_ (2nd ed.). Auerbach Publications.
 
-Pfleeger, C. P., & Pfleeger, S. L. (2015). _\[Reference from text; full citation not provided in excerpt]._
+Pfleeger, C. P., & Pfleeger, S. L. (2015). _Analyzing computer security: A threat/vulnerability/countermeasure approach_ (5th ed.). Pearson Education.
 
-Reynolds, G. (2012). _\[Reference from text; full citation not provided in excerpt]._
+Reynolds, G. W. (2012). _Ethics in information technology_. Boston, MA: Cengage Learning.
 
-Skoudis, E., & Liston, T. (2005). _\[Reference from text; full citation not provided in excerpt]._
+Skoudis, E., & Liston, T. (2005). _Counter hack reloaded: A step-by-step guide to computer attacks and effective defenses_ (2nd ed.). Prentice Hall.
 
-Stallings, W., & Brown, L. (2018). _\[Reference from text; full citation not provided in excerpt]._
+Stallings, W., & Brown, L. (2018). _Computer security: Principles and practice_ (4th ed.). Pearson.
 
-Stewart, J. M. (2012). _\[Reference from text; full citation not provided in excerpt]._
+Stewart, J. (2012). CISSP Certified Information Systems Security Professional Study Guide Sixth Edition. Canada: John Wiley & Sons, Inc. pp. 255–257. ISBN 978-1-118-31417-3.
 
-Venter, H. S., & Eloff, J. H. P. (2003). _\[Reference from text; full citation not provided in excerpt]._
+Venter, H. S., & Eloff, J. H. (2003). A taxonomy for information security technologies. _Computers & Security, 22(_&#x34;), 299-307.

@@ -87,20 +87,20 @@
 
 ### How to get CCNA certification
 
-**1. Besides retaking the CCNA exam, what are two other methods mentioned in the text to recertify your CCNA before it expires?**\
-**Answer:** Completing enough continuing education credits, or advancing to the next tier of Cisco certifications (e.g., CCNP).
+**1. What is the single exam required to earn the CCNA certification?**\
+**Answer:** The 200-301 CCNA exam.
 
-**2. According to the text, what is the estimated first-time pass rate for the CCNA exam, and what is the recommended amount of study time per week for the "7 weeks" plan?**\
-**Answer:** The exam is rumored to have a 50% first-time pass rate. The recommended study time is 15-20 hours per week.
+**2. Name the six knowledge areas the CCNA tests.**\
+**Answer:** The CCNA exam tests a candidate’s knowledge and skills related to network fundamentals, network access, IP connectivity, IP services, security fundamentals, and automation and programmability.
 
-**3. What are the three core components of preparation for the CCNA exam, as mentioned in the "How to study for the CCNA exam" segment?**\
+**3. Based on the text, what are four examples of job titles that a CCNA holder might see in a job posting?**\
+**Answer:** (Any four of the following are correct): Infrastructure Engineer, Network Analyst, Network Engineer, Junior Network Engineer, IT Specialist, Network Technician, Network Administrator, and Systems Administrator.
+
+**4. What are the three core components of preparation for the CCNA exam, as mentioned in the "How to study for the CCNA exam" segment?** \
 **Answer:** 1. Study the theoretical material. 2. Practice configuring and troubleshooting in a virtual lab. 3. Practice exam questions.
 
-**4. Before you can schedule your CCNA exam, what two specific online profiles must you create?**\
+**5. Before you can schedule your CCNA exam, what two specific online profiles must you create?**\
 **Answer:** 1. A Cisco profile on Cisco.com. 2. A Cisco Certification candidate profile on the Certification Tracker portal.
-
-**5. Why does the "7 steps x 7 weeks" plan recommend studying the CompTIA Network+ syllabus in the first week, but not actually taking the exam?**\
-**Answer:** To build a foundation in general networking fundamentals (how computers communicate, network devices, etc.) without the cost and time commitment of obtaining a separate certification. The goal is to use the knowledge as a base for the more specialized CCNA material.
 
 ### Job search strategy
 

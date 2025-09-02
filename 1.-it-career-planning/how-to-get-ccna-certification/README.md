@@ -50,7 +50,7 @@ The CCNA is an intermediate-to-advanced certification specialized in network adm
 
 The CCNA is also a great foundation for those who want to pivot to cybersecurity. As a cybersecurity analyst you have to understand [how data flow through the Internet](https://itnetworkingskills.wordpress.com/2023/02/01/how-data-flow-through-internet/) and all the configuration errors that leave the network vulnerable to malicious attacks.
 
-Having said that, some of the job roles for CCNA holders you might encounter in job postings include: Infrastructure Engineer, Network Analyst, Network Engineer, Junior Network Engineer, IT Specialist, Network Technician, and Network/Systems Administrator.
+Having said that, some of the job roles for CCNA holders you might encounter in job postings include: Infrastructure Engineer, Network Analyst, Network Engineer, Junior Network Engineer, IT Specialist, Network Technician, Network Administrator, and Systems Administrator.
 
 The 200-301 CCNA exam is the one exam required to earn the Cisco Certified Network Associate certification. This exam tests a candidate’s knowledge and skills related to network fundamentals, network access, IP connectivity, IP services, security fundamentals, and automation and programmability.
 
@@ -185,7 +185,7 @@ A collection of live webinar recordings conducted on the Cisco Learning Network 
 
 * Cisco’s CCNA is widely regarded as the king of networking certifications.
 * To register for an exam, first you need to create a Cisco profile on Cisco.com.
-* If you're familiar with the CCNA curriculum, take 7 steps x 7 weeks to become CCNA certified.
+* If you are familiar with the CCNA curriculum, follow the "7 steps x 7 weeks" framework to become CCNA certified.
 * You can find free CCNA YouTube courses (e.g., Jeremy's IT Lab) and blogs (e.g., Wendell Odom).
 
 ### References

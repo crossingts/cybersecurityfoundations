@@ -39,7 +39,7 @@ The following tables lists common attack types/threats associated with each OSI 
 
 ### Common attack types and mitigation by OSI layer
 
-The following tables lists and elaborates risk scenarios and mitigation techniques for each OSI model attack/threat type.
+The following tables lists risk scenarios and mitigation techniques for each OSI model attack/threat type.
 
 **Common Attack Types and Mitigation by OSI Layer Summary Table**
 
@@ -53,7 +53,11 @@ DNS Spoofing (or DNS Cache Poisoning) occurs when an attacker exploits vulnerabi
 
 **Mitigation**&#x20;
 
-DNS Spoofing is well-mitigated by DNSSEC (DNS Security Extensions) and encrypted DNS protocols (DNS over HTTPS/DNS over TLS). DNSSEC is a security protocol that adds digital signatures to DNS records, ensuring responses are authentic and unmodified. Prevents spoofing but does not encrypt queries. DoH encrypts DNS traffic inside HTTPS (port 443), hiding queries from snoopers. Used by browsers like Firefox. DoT encrypts DNS traffic using TLS (port 853), preventing tampering. Common in enterprise networks. DNSSEC verifies DNS data integrity (no encryption). DoH/DoT encrypts DNS traffic (privacy-focused).
+DNS Spoofing is effectively mitigated by adopting a combination of modern security protocols, primarily **DNSSEC (DNS Security Extensions)** and encrypted DNS protocols like **DNS over HTTPS (DoH)** and **DNS over TLS (DoT)**. These technologies address the threat in complementary ways:
+
+* **DNSSEC (DNS Security Extensions)** adds a layer of trust to the DNS by providing cryptographic authentication. It works by having domain owners digitally sign their DNS records. When a resolver receives a response, it can verify these signatures to ensure the data is authentic and has not been modified in transit. Crucially, while DNSSEC prevents spoofing and tampering by ensuring data integrity, it does not encrypt the queries or responses, meaning the DNS traffic itself remains visible and potentially susceptible to eavesdropping.
+* **DNS over HTTPS (DoH)** addresses the privacy limitation of DNSSEC by encrypting all DNS queries and responses. It does this by encapsulating them within standard HTTPS traffic, which is the same protocol used for secure web browsing. Because HTTPS typically uses port 443, DoH traffic is indistinguishable from other secure web traffic. This makes it very difficult for network observers to see, block, or filter DNS queries. This privacy-focused approach is commonly implemented in web browsers like Firefox and Chrome.
+* **DNS over TLS (DoT)** also encrypts DNS traffic to provide privacy and prevent eavesdropping and tampering. However, it uses a dedicated TLS-encrypted connection on port 853, rather than bundling the traffic with other web traffic like DoH. This creates a clear, separate channel for DNS that is still encrypted. The use of a dedicated port makes it easier for network administrators to identify and manage DNS traffic, which is why DoT is common in enterprise networks where visibility and control over network traffic are required.
 
 **SQL Injection (L7)**
 

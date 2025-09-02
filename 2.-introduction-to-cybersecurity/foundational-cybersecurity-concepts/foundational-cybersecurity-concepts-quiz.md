@@ -8,11 +8,11 @@ b) Ensuring compliance with regulations like HIPAA and PCI\
 **c) Protecting the confidentiality, integrity, and availability (CIA) of information assets**\
 d) Implementing advanced technical controls like DLP and SIEM
 
-**2. According to the risk formula presented, what components are multiplied together to calculate risk? (Choose one answer)**\
-a) Asset, Threat, Vulnerability\
-**b) Threat, Vulnerability, Impact**\
-c) Threat, Vulnerability, Mitigation\
-d) Likelihood, Vulnerability, Asset
+**2. Which of the following sequences most accurately represents the phases of an information security risk assessment? (Choose one answer)**\
+a) Identify regulatory requirements, implement security controls, conduct a penetration test, report findings to management\
+**b) Identify information assets, assess the likelihood of an attack, assess the potential impact of an attack, and recommend mitigation options**\
+c) Develop security policies, deploy intrusion detection systems, measure system uptime, calculate return on investment\
+d) Interview stakeholders, quantify the value of all assets, purchase cyber insurance, schedule the next assessment
 
 **3. An attacker uses a tool like sslstrip to force a victim's browser to use an unencrypted HTTP connection instead of HTTPS to intercept their login credentials. This is an example of which type of attack? (Choose one answer)**\
 a) Integrity Attack\
@@ -26,7 +26,7 @@ a) Authentication\
 c) Accounting\
 d) Auditing
 
-**5. Which of the following technologies is specifically highlighted as a key mitigation for ensuring data&#x20;**_**integrity**_**&#x20;by providing a way to verify that data has not been altered? (Choose one answer)**\
+**5. Which of the following technologies is specifically highlighted as a key mitigation for ensuring data integrity by providing a way to verify that data has not been altered? (Choose one answer)**\
 a) Data Loss Prevention (DLP)\
 b) DDoS Protection (e.g., Cloudflare)\
 **c) Hashing (e.g., SHA-256)**\

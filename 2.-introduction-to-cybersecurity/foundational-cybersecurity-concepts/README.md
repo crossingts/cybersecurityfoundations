@@ -22,8 +22,8 @@ This section introduces cybersecurity concepts and practices germane to any inst
 * **Confidentiality, Integrity, and Availability (CIA) of information**
 * **Information security risk management**
 * **Techniques of CIA attacks**
-* **CIA mitigation technologies**
-* **Other information security concepts and practices**
+* **CIA attacks mitigation technologies**
+* **Other foundational information security concepts**
 
 ### Information security definition
 
@@ -62,7 +62,7 @@ Areas for which central IT most commonly has primary responsibility in higher ed
 
 ### Confidentiality, Integrity, and Availability (CIA) of information
 
-The most concrete (least abstract) and tactical (as opposed to strategic) goal of information security is the protection of the confidentiality, integrity, and availability of information assets (by comparison, the most strategic goal of information security in an enterprise is to support the enterprise's strategic vision and company mission). The principles of the CIA triad form the foundation of security. These three principles help ensure that data is protected, accurate, and accessible when needed.
+The most concrete (as opposed to abstract) and tactical (as opposed to strategic) goal of information security is the protection of the confidentiality, integrity, and availability of information assets. By comparison, the most strategic goal of information security in an enterprise is to support the enterprise's strategic vision and mission. The principles of the CIA triad form the foundation of security. These three principles help ensure that data is protected, accurate, and accessible when needed.
 
 * Confidentiality denotes an imperative that only authorized users should be able to access privileged/private data.
 * Integrity denotes an imperative that data should not be changed or modified by unauthorized users. Data should be correct and authentic.
@@ -176,7 +176,7 @@ An information availability attack aims to disrupt access to data, systems, or s
 4. **Ransomware attack:** Encrypting critical data and demanding payment to restore access.
 5. **Physical infrastructure sabotage:** Cutting network cables or destroying servers to halt operations.
 
-### CIA mitigation technologies
+### CIA attacks mitigation technologies
 
 #### **Technologies for Confidentiality, Integrity, and Availability**
 
@@ -303,7 +303,7 @@ Data can become unavailable due to being damaged or destroyed, or due to ransome
 
 Availability attacks, such as Distributed Denial of Service (DDoS) attacks, aim to disrupt services by overwhelming systems with malicious traffic, rendering data or applications inaccessible. To counter these threats, organizations leverage cloud-based DDoS protection services like **AWS Shield** and **Cloudflare**, which employ advanced mitigation techniques such as traffic filtering, rate limiting, and anomaly detection. AWS Shield provides automatic protection for AWS resources, defending against common network-layer attacks, while Cloudflare’s global Anycast network absorbs and disperses malicious traffic before it reaches the target. These services ensure high availability by continuously monitoring and mitigating attack traffic, allowing legitimate requests to proceed uninterrupted. By integrating such solutions, businesses can maintain operational resilience against increasingly sophisticated DDoS campaigns.
 
-### Other information security concepts and practices
+### Other foundational information security concepts
 
 #### The AAA framework
 
@@ -326,11 +326,60 @@ The primary goals of cryptography are confidentiality, authentication, data inte
 
 ### Key takeaways
 
-* Tactically, cybersecurity is about protecting the CIA of information assets.
-* Strategically, cybersecurity is about compliance with rules and regulations.
-* Cybersecurity and information security can be synonymous.
-* Organizations take a risk-based approach to cybersecurity management.
+* The core, tactical goal of information security is to protect the Confidentiality, Integrity, and Availability (CIA Triad) of information assets.
+* Information security is a risk management discipline focused on identifying assets, associated risks, and implementing suitable mitigation controls (management, technical, and operational).
+* Key related concepts form the foundation of risk management:
+  * A vulnerability is a weakness that can be exploited.
+  * A threat is the potential for a vulnerability to be exploited.
+  * Risk is the likelihood that a threat will exploit a vulnerability, resulting in a negative impact.
+* Organizations take a risk-based approach to prioritize vulnerabilities and focus mitigation efforts on the most significant risks to business operations, often driven by compliance requirements.
+* Information security governance is a top-level business function accountable for defining security policy and aligning security strategy with business objectives, while IT security is a stakeholder-level concern focused on the technological infrastructure.
+* There is no absolute security; the goal is to reduce risk to an acceptable level through mitigation, acceptance, or transfer, while balancing security needs with system functionality.
+* The AAA framework (Authentication, Authorization, and Accounting) is essential for controlling and monitoring access to systems and data.
+* Foundational cryptography provides the technical mechanisms to achieve the core security goals of confidentiality, integrity, authentication, and non-repudiation.
 
 ### References
 
-Blakley, B., McDermott, E., & Geer, D. (2001, September). Information security is information risk management. In Proceedings of the 2001 workshop on New security paradigms (pp. 97-104). ACM.
+Anderson, J. (2003). _\[Reference from text; full citation not provided in excerpt]._
+
+ASIS International. (2003). _General Security Risk Assessment Guidelines._
+
+Bishop, M. (2003). _\[Reference from text; full citation not provided in excerpt]._
+
+Blakley, B., McDermott, E., & Geer, D. (2001, September). Information security is information risk management. In _Proceedings of the 2001 workshop on New security paradigms_ (pp. 97-104). ACM.
+
+Cherdantseva, Y., & Hilton, J. (2013). _\[Reference from text; full citation not provided in excerpt]._
+
+CNSS. (2010). _\[Reference from text; full citation not provided in excerpt]._
+
+EDUCAUSE. (2019, April). _Information Security Almanac._
+
+Engebretson, P. (2011). _\[Reference from text; full citation not provided in excerpt]._
+
+ISACA. (2008). _\[Reference from text; full citation not provided in excerpt]._
+
+ISO/IEC 27000:2009. _Information technology — Security techniques — Information security management systems — Overview and vocabulary._
+
+ISO 22301 Portal. (2015). _Societal security – Business continuity management system._
+
+ISO Risk Management Guide 73:2009. _\[Reference from text; full citation not provided in excerpt]._
+
+Landoll, D., & Landoll, D. J. (2005). _\[Reference from text; full citation not provided in excerpt]._
+
+NCC. (2005). _IT Governance._
+
+PCI DSS. (2005). _Risk Assessment Guidelines._
+
+Peltier, T. R. (2005). _Information Security Risk Analysis_ (2nd ed.). Auerbach Publications.
+
+Pfleeger, C. P., & Pfleeger, S. L. (2015). _\[Reference from text; full citation not provided in excerpt]._
+
+Reynolds, G. (2012). _\[Reference from text; full citation not provided in excerpt]._
+
+Skoudis, E., & Liston, T. (2005). _\[Reference from text; full citation not provided in excerpt]._
+
+Stallings, W., & Brown, L. (2018). _\[Reference from text; full citation not provided in excerpt]._
+
+Stewart, J. M. (2012). _\[Reference from text; full citation not provided in excerpt]._
+
+Venter, H. S., & Eloff, J. H. P. (2003). _\[Reference from text; full citation not provided in excerpt]._

@@ -268,11 +268,13 @@ This creates a feedback loop: geopolitical tension fuels cyber conflict, which t
 
 ### Key takeaways
 
-* Cybersecurity threats at the societal level include cyberattacks on critical infrastructure
-* Cybersecurity threats at the individual level include identity theft
-* Cybersecurity threats at the business level include data breaches&#x20;
-* Technological drivers of change include social digitization, digital convergence, and AI/ML
-* Sociopolitical drivers of change include U.S.-China rivalry and collusion between Western intelligence agencies and dominant media companies&#x20;
+* Cybersecurity threats at the societal level include state-sponsored attacks on critical infrastructure (power grids, health services), cyberwarfare targeting public institutions to steal sensitive information, and targeted propaganda or disinformation campaigns on social media designed to foment public discord.
+* Cybersecurity threats at the individual level include cybercrime such as identity theft and financial fraud, political interference through malicious online influence campaigns and botnets, and pervasive surveillance from both state actors and corporations leading to a loss of privacy.
+* Cybersecurity threats at the business level include cyber espionage aimed at stealing intellectual property and sensitive commercial data, disruptive ransomware and malware attacks, and sophisticated social engineering schemes like phishing that target employees.
+* Technological drivers of change include social digitization (creating a cybernetic loop between the physical and digital worlds), digital convergence of communications channels (expanding the attack surface), and the dual-use nature of AI/ML (which enhances both defense and offense capabilities).
+* Society's governance structures are struggling to keep pace. The rapid digitization of society, characterized by cybernetic feedback loops, is straining public values like privacy, autonomy, and equity, and current policies are not adequately equipped to address these challenges.
+* Spyware is a growing industry. The market now includes both malicious software and controversial commercial-grade surveillance tools sold by "Private-Sector Offensive Actors" (PSOAs) to governments, blurring the lines between legal and illegal surveillance and raising serious ethical concerns.
+* Sociopolitical drivers of change include the U.S.-China rivalry for technological and geopolitical dominance (fueling espionage and pre-positioning in critical infrastructure) and the expansion of the military-industrial complex into the digital realm, involving collusion between governments, defense contractors, and dominant media companies to shape threat narratives.
 
 ### References
 

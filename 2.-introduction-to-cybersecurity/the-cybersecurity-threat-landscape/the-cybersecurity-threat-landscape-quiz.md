@@ -27,7 +27,7 @@ c) China banning all U.S. social media platforms\
 d) The U.S. outsourcing all software development to India
 
 **5. Companies like NSO Group are controversial figures in the cybersecurity landscape because they (Choose one answer)**\
-a) develop open-source antivirus software\
-b) **sell advanced spyware to governments, which can be used to target activists and journalists**\
-c) manufacture insecure IoT devices that are easily hacked\
-d) lobby for stricter data privacy laws
+a) Develop open-source antivirus software\
+b) **Sell advanced spyware to governments, which can be used to target activists and journalists**\
+c) Manufacture insecure IoT devices that are easily hacked\
+d) Lobby for stricter data privacy laws

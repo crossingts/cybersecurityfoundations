@@ -31,7 +31,6 @@ In this section we start looking at how routers forward packets to their destina
 * **Route selection practice (5)**
 * **Summary**
 * **Command review**
-* **Key takeaways**
 
 ### What is routing?
 
@@ -266,5 +265,3 @@ R#**show ip route**
 [Free CCNA | Routing Fundamentals | Day 11 (part 1) | CCNA 200-301 Complete Course](https://www.youtube.com/watch?v=aHwAm8GYbn8\&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ\&index=19)
 
 Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 1. Cisco Press.
-
-Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 2. Cisco Press.

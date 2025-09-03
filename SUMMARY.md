@@ -69,6 +69,7 @@
 * [Typing www.google.com into a web browser](4.-networking-fundamentals/typing-www.google.com-into-a-web-browser/README.md)
   * [Typing www.google.com into a web browser — Quiz](4.-networking-fundamentals/typing-www.google.com-into-a-web-browser/typing-www.google.com-into-a-web-browser-quiz.md)
 * [Cisco IOS CLI and basic device security](4.-networking-fundamentals/cisco-ios-cli-and-basic-device-security/README.md)
+  * [Lab: Basic device security](4.-networking-fundamentals/cisco-ios-cli-and-basic-device-security/lab-basic-device-security.md)
   * [Cisco IOS CLI and basic device security — Quiz](4.-networking-fundamentals/cisco-ios-cli-and-basic-device-security/cisco-ios-cli-and-basic-device-security-quiz.md)
 * [Connected and local routes](4.-networking-fundamentals/connected-and-local-routes/README.md)
   * [Connected and local routes — Quiz](4.-networking-fundamentals/connected-and-local-routes/connected-and-local-routes-quiz.md)

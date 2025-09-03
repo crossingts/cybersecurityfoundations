@@ -156,5 +156,3 @@ The switch will look at the destination MAC address to determine that this frame
 [How Data moves through the Internet – Networking Fundamentals (PracNet)](https://www.youtube.com/watch?v=YJGGYKAV4pA\&ab_channel=PracticalNetworking)
 
 Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 1. Cisco Press.
-
-Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 2. Cisco Press.

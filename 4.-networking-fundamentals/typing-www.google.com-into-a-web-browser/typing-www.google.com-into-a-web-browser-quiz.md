@@ -1,4 +1,4 @@
-# 4.5. Quiz
+# Typing www.google.com into a web browser — Quiz
 
 ### Typing www.google.com into a web browser
 
@@ -22,7 +22,7 @@ b) The Routing Table
 
 d) The DNS Cache
 
-#### 3. True or False: A host's routing table must be populated with a default gateway (a default route) to communicate with devices on a foreign network. (Choose one answer)
+#### 3. True or False: A host's routing table must be populated with a default gateway to communicate with devices on a foreign network. (Choose one answer)
 
 **a) True**
 

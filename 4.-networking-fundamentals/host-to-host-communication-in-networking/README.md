@@ -44,7 +44,7 @@ Host A has some data it wants to send to host B. Host A and host B are directly 
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/8499d-hosts-directly-connected.webp?w=1201" alt="hosts-directly-connected" height="218" width="1201"><figcaption><p>An illustration of direct host to host communication (source: Ed Harmoush, PracNet, Part 1)</p></figcaption></figure>
 
-Host A knows the IP address of host B – it knows it because perhaps a user jumped on the command prompt and typed ping 10.1.1.33 thus providing host A the IP address of host B or perhaps host A acquired the IP address through DNS (Domain Name System), a protocol which converts a domain name into an IP address. Further, host A knows the destination IP address 10.1.1.33 is on its own IP network. Host A will know this by looking at its own IP address and comparing to its own subnet mask to determine how many other IP addresses are on the same network (host A will know this through subnetting).
+Host A knows the IP address of Host B (`10.1.1.33`). Host A learned this address perhaps because a user typed a command like `ping SRVB` or perhaps because host B's IP address was resolved from a domain name by DNS. Next, Host A determines whether Host B is on its own local network or on a remote network. Host A makes this decision through a process called subnetting (by calculating the Network IDs). Host A compares the result of applying its subnet mask to its own IP address with the result of applying the same subnet mask to the destination IP address. In other words, Host A compares the Network IDs. If the Network IDs are identical, Host B is on the same local network. Host A will then attempt to communicate with it directly (using ARP to find the MAC address). If the Network IDs are different, Host B is on a remote network, and Host A will forward the traffic to its default gateway.
 
 Host A can create a L3 header to attach to the data it wants to send to host B, i.e., to accomplish end to end delivery. The L3 header will include the IP address of host A (the source) and the IP address of host B (the destination).
 
@@ -122,5 +122,3 @@ The first step any host takes when it’s trying to send data on a network is to
 [Host (network). (2022, November 17). Wikipedia, The Free Encyclopedia. Retrieved 20:16, December 31, 2022, from https://en.wikipedia.org/wiki/Host\_(network)](https://en.wikipedia.org/wiki/Host_\(network\))
 
 Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 1. Cisco Press.
-
-Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 2. Cisco Press.

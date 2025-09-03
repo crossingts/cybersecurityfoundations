@@ -235,8 +235,6 @@ We’ve been talking about IP addresses and MAC addresses as independent functio
 
 Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 1. Cisco Press.
 
-Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 2. Cisco Press.
-
 [OSI Model: A Practical Perspective – Networking Fundamentals – Lesson 2a](https://www.youtube.com/watch?v=LkolbURrtTs\&ab_channel=PracticalNetworking)
 
 [OSI Model: A Practical Perspective – Part 2 – Networking Fundamentals – Lesson 2](https://www.youtube.com/watch?v=0aGqGKrRE0g\&ab_channel=PracticalNetworking)

@@ -30,7 +30,6 @@ This section explains the [role of DNS within the network](https://its.umich.edu
 * **DNS demo 2**
 * **Configuring a router as a DNS client**
 * **Command review**
-* **Key takeaways**
 
 ### [The role of DNS within the network](https://www.fortinet.com/resources/cyberglossary/what-is-dns)
 
@@ -315,5 +314,3 @@ R1(config)#ip domain name jeremysitlab.com
 [Free CCNA | DNS | Day 38 Lab | CCNA 200-301 Complete Course](https://www.youtube.com/watch?v=7D_FapNrRUM\&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ\&index=74)
 
 Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 1. Cisco Press.
-
-Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 2. Cisco Press.

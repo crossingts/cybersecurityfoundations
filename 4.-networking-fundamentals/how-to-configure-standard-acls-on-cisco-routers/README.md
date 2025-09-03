@@ -27,7 +27,6 @@ This section looks at [how to configure standard access control lists (ACLs) on 
 * **Configuring standard numbered ACLs on Cisco routers**
 * **Configuring standard named ACLs on Cisco routers**
 * **Command review**
-* **Key takeaways**
 
 ### [What are ACLs (Access Control Lists)?](https://www.fortinet.com/resources/cyberglossary/network-access-control-list)
 
@@ -527,7 +526,5 @@ R#**show running-config** | \[**section access-list**]\
 [Free CCNA | Standard ACLs | Day 34 | CCNA 200-301 Complete Course](https://www.youtube.com/watch?v=z023_eRUtSo\&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ\&index=65)
 
 [Free CCNA | Standard ACLs | Day 34 Lab | CCNA 200-301 Complete Course](https://www.youtube.com/watch?v=sJ8PXmiAkvs\&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ\&index=66)
-
-Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 1. Cisco Press.
 
 Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 2. Cisco Press.

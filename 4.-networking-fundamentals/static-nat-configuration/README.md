@@ -26,7 +26,6 @@ This section covers static NAT (Network Address Translation) configuration on Ci
 * **show ip nat translations and clear ip nat translation \***
 * **show ip nat statistics**
 * **Command review**
-* **Key takeaways**
 
 ### Private IPv4 addresses (RFC 1918)
 
@@ -329,7 +328,5 @@ R#**show ip nat statistics**\
 [Free CCNA | Static NAT | Day 44 Lab | CCNA 200-301 Complete Course](https://www.youtube.com/watch?v=vir6n_NVZFw\&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ\&index=86)
 
 [NAT – Practical Networking — CCNA Topics](https://www.practicalnetworking.net/index/ccna/)
-
-Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 1. Cisco Press.
 
 Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 2. Cisco Press.

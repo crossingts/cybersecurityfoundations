@@ -34,7 +34,6 @@ This section explains the role of DHCP within the network, the basic function of
   * **DHCP relay agent configuration in IOS**
   * **DHCP client configuration in IOS**
 * **Command review**
-* **Key takeaways**
 
 ### The role of DHCP within the network
 
@@ -455,5 +454,3 @@ R2(config-if)#**ip address dhcp**\
 [Free CCNA | DHCP | Day 39 Lab | CCNA 200-301 Complete Course](https://www.youtube.com/watch?v=cgMsoIQB9Wk\&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ\&index=76)
 
 Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 1. Cisco Press.
-
-Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 2. Cisco Press.

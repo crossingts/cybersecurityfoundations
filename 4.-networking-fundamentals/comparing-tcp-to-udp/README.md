@@ -37,7 +37,6 @@ We then zoom in on TCP. First we look at some key fields and flags of the TCP he
 * **UDP (User Datagram Protocol)**
 * **Comparing TCP to UDP**
 * **Port numbers**
-* **Key takeaways**
 
 ### Basic functions of Layer 4 protocols (Transport layer)
 
@@ -51,8 +50,6 @@ The primary Layer 4 protocols, TCP and UDP, fulfill the three basic functions in
 | **2. Services to Applications**  | **Reliable & Connection-Oriented.** Establishes a session, guarantees delivery, ensures in-order receipt, and retransmits lost data.                                                                                                                              | **Unreliable & Connectionless.** Sends datagrams without establishing a connection, offering no guarantees of delivery, ordering, or duplication protection. |
 |                                  | Provides extensive services: **error recovery, flow control, data sequencing, and congestion control.** This ensures data integrity but adds overhead.                                                                                                            | Provides minimal services—essentially just a checksum for data corruption. This low latency and overhead is its primary service.                             |
 | **3. Layer 4 Addressing**        | Uses **source and destination port numbers** to multiplex data between applications and to establish specific connections.                                                                                                                                        | Uses **source and destination port numbers** to multiplex data between applications.                                                                         |
-
-Let’s elaborate.
 
 The **first function** of Layer 4 protocols is to provide transparent transfer of data between end hosts. This means that the applications running on the end hosts do not need to be aware of the details of the network or the Transport layer protocol. The applications simply send data to the Transport layer, and the Transport layer ensures that it is delivered to the correct destination.
 
@@ -396,8 +393,6 @@ The only protocol you should be aware of that uses both TCP and UDP is DNS, Doma
 ### References
 
 [Free CCNA | TCP & UDP | Day 30 | CCNA 200-301 Complete Course](https://www.youtube.com/watch?v=LIEACBqlntY\&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ\&index=57)
-
-Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 1. Cisco Press.
 
 Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 2. Cisco Press.
 

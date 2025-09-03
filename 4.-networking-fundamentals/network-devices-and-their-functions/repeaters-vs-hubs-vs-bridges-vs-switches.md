@@ -1,19 +1,20 @@
 # Repeaters vs hubs vs bridges vs switches
 
-### Hubs vs. switches
+### Hubs vs switches
 
-Hubs and switches are both networking devices that connect multiple devices in a LAN, but they operate very differently at the data link layer (Layer 2) of the OSI model.
+Hubs and switches are both networking devices that connect multiple devices in a LAN, but they operate very differently at the data link layer (Layer 2) of the OSI model. Switches are vastly superior to hubs in speed, efficiency, and security—and are considered "intelligent devices" when compared to hubs. Hubs are obsolete in modern networks due to their broadcast nature and shared bandwidth limitations.
 
-**Hubs vs. Switches: Key Differences**
+**Hubs vs Switches: Key Differences**
 
-| Feature                  | Hub (Dumb Device)                                                         | Switch (Intelligent Device)                                            |
+| Feature                  | Hub (Layer 1)                                                             | Switch (Layer 2)                                                       |
 | ------------------------ | ------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| **Operation**            | Operates at **Layer 1 (Physical)**                                        | Operates at **Layer 2 (Data Link)**                                    |
+| **Function**             | **Multi-port repeater** (broadcasts to all ports)                         | **Multi-port bridge** (intelligent forwarding)                         |
 | **Traffic Handling**     | Broadcasts all incoming data to **all ports** (flooding)                  | Forwards traffic **only to the destination port** using MAC addresses  |
 | **Collision Domain**     | **Single collision domain** (all devices share bandwidth)                 | **Per-port collision domain** (isolates traffic, full-duplex possible) |
 | **Bandwidth Usage**      | **Shared bandwidth** (e.g., 10Mbps hub divides bandwidth among all ports) | **Dedicated bandwidth per port** (e.g., 100Mbps per port)              |
-| **Performance**          | **Slower** (due to collisions and unnecessary traffic)                    | **Faster** (efficient forwarding, no unnecessary broadcasts)           |
 | **MAC Address Learning** | **No** (does not track devices)                                           | **Yes** (maintains a MAC address table for forwarding decisions)       |
+| **Ports**                | **4–12 ports** (multi-port repeater)                                      | **4–48+ ports** (scalable)                                             |
+| **Performance**          | **Slower** (due to collisions and unnecessary traffic)                    | **Faster** (efficient forwarding, no unnecessary broadcasts)           |
 | **Security**             | **Less secure** (all devices see all traffic)                             | **More secure** (isolates traffic between ports)                       |
 | **Use Case**             | **Obsolete** (used in early networks)                                     | **Modern standard** (used in all current networks)                     |
 
@@ -25,13 +26,11 @@ Hubs and switches are both networking devices that connect multiple devices in a
 4. **VLAN Support** – Switches can segment networks into **VLANs** (Virtual LANs), while hubs cannot.
 5. **Traffic Optimization** – Switches reduce unnecessary traffic, improving efficiency, whereas hubs waste bandwidth.
 
-Switches are **vastly superior** to hubs in speed, efficiency, and security. Hubs are **obsolete** in modern networks due to their **broadcast nature** and **shared bandwidth limitations**.
-
-### Repeaters vs. hubs vs. bridges vs. switches
+### Repeaters vs hubs vs bridges vs switches
 
 Bridges were an early improvement over hubs but were later replaced by switches, which offer more ports, faster forwarding, and better scalability.
 
-### Repeaters vs. Hubs vs. Bridges vs. Switches: Key Differences
+### Repeaters vs Hubs vs Bridges vs Switches: Key Differences
 
 | Feature              | **Repeater (L1)**                                | **Hub (L1)**                                            | **Bridge (L2)**                                     | **Switch (L2, Advanced)**                                |
 | -------------------- | ------------------------------------------------ | ------------------------------------------------------- | --------------------------------------------------- | -------------------------------------------------------- |

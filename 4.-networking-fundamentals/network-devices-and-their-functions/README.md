@@ -9,7 +9,8 @@ description: >-
 ## Learning objectives
 
 * Develop a basic understanding of the concepts of host, client, server, IP address, and network
-* Learn how to define network devices
+* Define network devices
+* Compare the functions of repeaters, hubs, bridges, switches, and routers
 * Become familiar with major network devices and their role in network operations
 
 This discussion introduces foundational concepts in computer networking and explains the functions of key networking components and devices. Key concepts discussed in this section include hosts, IP addresses, networks, repeaters, hubs, bridges, switches, and routers.
@@ -148,5 +149,3 @@ Host-based firewalls are software applications that filter traffic entering and 
 [Network devices part 1: Network Devices – Hosts, IP Addresses, Networks – Networking Fundamentals – Lesson 1a](https://www.youtube.com/watch?v=bj-Yfakjllc\&ab_channel=PracticalNetworking)
 
 Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 1. Cisco Press.
-
-Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 2. Cisco Press.

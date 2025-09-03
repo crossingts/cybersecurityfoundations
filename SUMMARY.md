@@ -74,6 +74,7 @@
 * [Connected and local routes](4.-networking-fundamentals/connected-and-local-routes/README.md)
   * [Connected and local routes — Quiz](4.-networking-fundamentals/connected-and-local-routes/connected-and-local-routes-quiz.md)
 * [How to configure static routes on Cisco routers](4.-networking-fundamentals/how-to-configure-static-routes-on-cisco-routers/README.md)
+  * [Lab: Configuring and troubleshooting static routes](4.-networking-fundamentals/how-to-configure-static-routes-on-cisco-routers/lab-configuring-and-troubleshooting-static-routes.md)
   * [How to configure static routes on Cisco routers — Quiz](4.-networking-fundamentals/how-to-configure-static-routes-on-cisco-routers/how-to-configure-static-routes-on-cisco-routers-quiz.md)
 * [Comparing TCP to UDP](4.-networking-fundamentals/comparing-tcp-to-udp/README.md)
   * [Comparing TCP to UDP — Quiz](4.-networking-fundamentals/comparing-tcp-to-udp/comparing-tcp-to-udp-quiz.md)

@@ -125,7 +125,7 @@
 * What is the key functional difference between a host's default gateway and a router's default route?
   * Answer: A default gateway is an IP address configured on an end host (like a PC), telling it where to send traffic for any network not on its local subnet. A default route is configured on a router itself (0.0.0.0/0), telling it where to forward packets that do not match any other, more specific route in its routing table.
 * What is a significant operational drawback of configuring a static route using only an exit interface (e.g., `ip route 192.168.1.0 255.255.255.0 GigabitEthernet0/1`) instead of a next-hop IP address?
-  * Answer: The router will treat the destination network as if it is directly connected to that interface. This can cause problems because the router may rely on Proxy ARP for every destination in that network, which is inefficient and can fail if Proxy ARP is disabled on the neighboring router. It is generally considered less reliable and specific than using a next-hop IP address.
+  * Answer: The router will treat the destination network as if it is directly connected to that interface. This can cause problems because the router may rely on Proxy ARP for every destination in that network, which is inefficient and can fail if Proxy ARP is disabled on the neighboring router.
 
 ***
 

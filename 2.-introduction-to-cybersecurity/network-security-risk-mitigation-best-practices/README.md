@@ -1,6 +1,6 @@
 ---
 description: >-
-  This section discusses key network security risk mitigation best practices,
+  This section discusses network security risk mitigation best practices,
   including least privilege access control, network security monitoring, layered
   security, and incident response management
 ---
@@ -9,12 +9,15 @@ description: >-
 
 ## Learning objectives
 
-* List and describe key network security risk mitigation best practices
-* Develop an appreciation for the conceptual overlap between risk mitigation practices
+* List and describe network security risk mitigation best practices
 * Develop an appreciation for the need for a layered approach to cybersecurity
-* Identify the need for a system's view of cybersecurity management
+* Explain the principle of least privilege and its critical role in preventing insider threats and limiting attack surfaces
+* Differentiate between the functions of IAM (Identity and Access Management), AAA (Authentication, Authorization, and Accounting), and NAC (Network Access Control) in network security&#x20;
+* Compare and contrast the goals and methodologies of IDS/IPS and NTA (Network Traffic Analysis)
+* Outline the four phases of the NIST incident response lifecycle and describe key activities in each phase
+* Describe the role of automation in ensuring consistent and compliant patch management processes
 
-This section discusses key network security risk mitigation best practices, including robust access control (least privilege access control, Identity and Access Management, automated policy enforcement, and Multi-Factor Authentication), network security monitoring, layered security, incident response management, using multiple vendors, Quality Assurance, timely software patching, and physically securing the network.
+This section discusses network security risk mitigation best practices, including robust access control (least privilege access control, Identity and Access Management, automated policy enforcement, and Multi-Factor Authentication), network security monitoring, layered security, incident response management, using multiple vendors, Quality Assurance, timely software patching, and physically securing the network.
 
 ## Topics covered in this section
 
@@ -192,7 +195,7 @@ An IDS is a device or software application that monitors a network or systems fo
 
 IDS types range in scope from single computers to large networks. The most common classifications are network intrusion detection systems (NIDS) and host-based intrusion detection systems (HIDS). (Wikipedia)
 
-A **Network Intrusion Detection System (NIDS)** is a security mechanism that monitors network traffic for malicious activity or policy violations by analyzing packet headers and payloads, using signature-based detection (known threats) or anomaly-based detection (deviations from baseline behavior). It operates in passive mode, alerting administrators without directly blocking traffic (unlike an IPS). A NIDS can be deployed inline (span port) or via network taps, leveraging protocols like Deep Packet Inspection (DPI) for enhanced threat detection. By comparison, a **Host-Based Intrusion Detection System (HIDS)** monitors important operating system files. A HIDS is capable of monitoring and analyzing the internals of a computing system as well as the network packets on its network interfaces.
+A Network Intrusion Detection System (**NIDS**) is a security mechanism that monitors network traffic for malicious activity or policy violations by analyzing packet headers and payloads, using signature-based detection (known threats) or anomaly-based detection (deviations from baseline behavior). It operates in passive mode, alerting administrators without directly blocking traffic (unlike an IPS). A NIDS can be deployed inline (span port) or via network taps, leveraging protocols like Deep Packet Inspection (DPI) for enhanced threat detection. By comparison, a Host-Based Intrusion Detection System (**HIDS**) monitors important operating system files. A HIDS is capable of monitoring and analyzing the internals of a computing system as well as the network packets on its network interfaces.
 
 **Network Intrusion Detection System (NIDS)**
 
@@ -242,7 +245,7 @@ The most fundamental approaches to detecting cyber intrusions are to monitor ser
 
 #### **Network Traffic Analysis (NTA)**
 
-NTA is a broad process of monitoring network activity to understand what is happening on your network. Its primary goal is visibility and discovery. NTA (also called Network Detection and Response, NDR) focuses on analyzing raw network traffic to detect suspicious behavior that evades traditional tools. Network visibility is a practice/capability a level above the more traditional network monitoring. For example, an IDS/IPS might block 99% of the obvious, automated attacks at the perimeter. A NTA solution would then be used to discover the sophisticated, stealthy attacker that bypassed the IPS by finding their unusual command-and-control traffic hidden in normal web requests.&#x20;
+NTA (also called Network Detection and Response, NDR) is a broad process of monitoring network activity to understand what is happening on the network. Its primary goal is visibility and discovery. NTA focuses on analyzing raw network traffic to detect suspicious behavior that evades traditional tools. Network visibility is a practice/capability a level above the more traditional network monitoring. For example, an IDS/IPS might block 99% of the obvious, automated attacks at the perimeter. A NTA solution would then be used to discover the sophisticated, stealthy attacker that bypassed the IPS by finding their unusual command-and-control traffic hidden in normal web requests.&#x20;
 
 **Key Technologies & Tools:**
 
@@ -469,6 +472,14 @@ By implementing these measures, enterprises can significantly reduce the risk of
 
 ### References
 
-Whitman, M. E., & Mattord, H. J. (2014). Principles of information security (p. 656). Boston, MA: Thomson Course Technology.
+Center for Internet Security (CIS). _CIS Controls_. Retrieved from https://www.cisecurity.org/controls
 
-Yuri Livshitz. (2016). How to respond to a security incident (Ch. 9). In _Beginner’s Guide To Information Security_ (pp. 42-45). Peerlyst. Retrieved from https://www.peerlyst.com/posts/peerlyst-announcing-its-first-community-ebook-the-beginner-s-guide-to-information-security-limor-elbaz
+International Organization for Standardization/International Electrotechnical Commission (ISO/IEC). (2022). _Information security, cybersecurity and privacy protection — Information security management systems — Requirements_ (ISO/IEC 27001:2022).
+
+Intrusion detection system. (n.d.). In _Wikipedia_. Retrieved from https://en.wikipedia.org/wiki/Intrusion\_detection\_system
+
+National Institute of Standards and Technology (NIST). (2012). _Computer Security Incident Handling Guide_ (SP 800-61 Rev. 2).
+
+National Institute of Standards and Technology (NIST). (2018). _Risk Management Framework for Information Systems and Organizations_ (SP 800-37 Rev. 2).
+
+National Institute of Standards and Technology (NIST). (2018). _Framework for Improving Critical Infrastructure Cybersecurity (Cybersecurity Framework)_ Version 1.1.

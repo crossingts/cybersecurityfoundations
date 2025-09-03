@@ -12,9 +12,9 @@ description: >-
 * Understand the role of NAT in networks
 * Understand the difference between static NAT and dynamic NAT
 * Understand how static source NAT works
-* Configuring and verifying inside source NAT using static NAT
+* Configure and verify inside source NAT using static NAT
 
-This section covers static NAT configuration on Cisco IOS devices. NAT (Network Address Translation) is an important networking topic. NAT is used to translate the source and/or destination IP address of a packet to a different IP address. There are different types of NAT, such as static NAT, dynamic NAT, and Port Address Translation (PAT). Static NAT maps a private IP address to a fixed public IP address. Dynamic NAT assigns a public IP address from a pool of available addresses to a private IP address on demand. PAT uses a single public IP address and different port numbers to distinguish between multiple private IP addresses. This section covers on the following four topic areas: 1) the need for private IPv4 addressing, 2) NAT purpose in networks, 3) how NAT works, and 4) configuring and verifying inside source NAT using static NAT.
+This section covers static NAT (Network Address Translation) configuration on Cisco IOS devices. NAT is used to translate the source and/or destination IP address of a packet to a different IP address. There are different types of NAT, such as static NAT, dynamic NAT, and Port Address Translation (PAT). Static NAT maps a private IP address to a fixed public IP address. Dynamic NAT assigns a public IP address from a pool of available addresses to a private IP address on demand. PAT uses a single public IP address and different port numbers to distinguish between multiple private IP addresses. This section covers the following four topic areas: 1) the need for private IPv4 addressing, 2) NAT purpose in networks, 3) how NAT works, and 4) configuring and verifying inside source NAT using static NAT.
 
 ## Topics covered in this section
 

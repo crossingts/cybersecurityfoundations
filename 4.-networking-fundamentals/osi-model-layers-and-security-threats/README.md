@@ -561,7 +561,7 @@ Cable Tapping is a physical intrusion attack (e.g., state-sponsored espionage) w
 
 Maymi, F., & Harris, S. (2023). CISSP all-in-one exam guide (10th ed.). McGraw Hill.
 
-McClure, S., Scambray, J., & Kurtz, G. (2023). Hacking exposed 7: Network security secrets & solutions. McGraw Hill.
+McClure, S., Scambray, J., & Kurtz, G. (2023). Hacking exposed: Network security secrets and solutions. McGraw Hill.
 
 Kurose, J. F., & Ross, K. W. (2022). Computer networking: A top-down approach (8th ed.). Pearson.
 

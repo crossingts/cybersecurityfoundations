@@ -43,14 +43,15 @@
 ## 3. Cybersecurity GRC
 
 * [Introduction - Cybersecurity GRC](3.-cybersecurity-grc/introduction-cybersecurity-grc/README.md)
+  * [Cybersecurity GRC](https://dti-techs.gitbook.io/cybersecurity-grc)
   * [Alternative chapter outline](3.-cybersecurity-grc/introduction-cybersecurity-grc/alternative-chapter-outline.md)
-* [Cybersecurity GRC](https://dti-techs.gitbook.io/cybersecurity-grc)
 * [Foundational GRC concepts](3.-cybersecurity-grc/foundational-grc-concepts.md)
 * [Risk assessment phases](3.-cybersecurity-grc/risk-assessment-phases.md)
-* [Salient cybersecurity regulations](3.-cybersecurity-grc/salient-cybersecurity-regulations.md)
+* [Key cybersecurity regulations and standards](3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards.md)
 * [GRC as a risk management framework (RMF)](3.-cybersecurity-grc/grc-as-a-risk-management-framework-rmf.md)
-* [RMFs NIST SP 800-37, NIST CSF, ISO/IEC 27001](3.-cybersecurity-grc/rmfs-nist-sp-800-37-nist-csf-iso-iec-27001.md)
+* [NIST SP 800-37, NIST CSF, and ISO/IEC 27001](3.-cybersecurity-grc/nist-sp-800-37-nist-csf-and-iso-iec-27001.md)
 * [Common combinations of cybersecurity RMFs](3.-cybersecurity-grc/common-combinations-of-cybersecurity-rmfs.md)
+* [Review questions and exercises](3.-cybersecurity-grc/review-questions-and-exercises.md)
 
 ## 4. Networking fundamentals
 

@@ -4,14 +4,10 @@ hidden: true
 
 # Alternative chapter outline
 
-Integrating Security with Strategy: Cybersecurity Governance, Risk, and Compliance (GRC)
-
 **Introduction**
 
 * The critical need to move cybersecurity from a technical function to a strategic business enabler.
-* Defining the challenge: balancing protection, growth, innovation, and compliance.
 * Introducing GRC as the framework for integrating cybersecurity into enterprise risk management.
-* Chapter objectives and what the student will learn.
 
 **1. The Pillars of GRC: Defining Governance, Risk, and Compliance**
 
@@ -71,16 +67,3 @@ Integrating Security with Strategy: Cybersecurity Governance, Risk, and Complian
 * Key roles and responsibilities (CISO, GRC Analyst, Risk Manager, Auditor).
 * Technology and tools: Introduction to GRC platforms for automating workflows, documentation, and reporting.
 * Cultivating a culture of security and compliance within the organization.
-
-**Chapter Summary**
-
-* Recap of key takeaways: GRC is the essential bridge between technical security and business strategy.
-* Reinforcing that effective GRC is a continuous, proactive process, not a one-time project.
-* The value of a mature GRC program in building organizational resilience.
-
-**Review Questions & Exercises**
-
-1. **Discussion Questions:** e.g., "Why is it insufficient for an organization to be compliant but not have strong security governance?"
-2. **Case Study Analysis:** Analyze a real-world data breach or compliance failure through a GRC lens. What pillar (G, R, or C) failed?
-3. **Practical Exercise:** Map a common business initiative (e.g., "launch a new customer cloud application") to the NIST CSF Core Functions to identify key risks and controls.
-4. **Key Terms Glossary:** Definitions of GRC, NIST CSF, ISO 27001, Risk Appetite, ISMS, Control, Compliance, etc.

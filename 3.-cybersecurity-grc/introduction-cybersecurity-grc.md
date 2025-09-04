@@ -9,7 +9,7 @@ description: >-
 
 ## Chapter 3: Cybersecurity GRC
 
-This chapter introduces the principles of Governance, Risk, and Compliance (GRC) as the foundational structure for integrating cybersecurity into enterprise strategy and operations. This chapter provides a foundation for building and managing a cybersecurity program through well established and widely used GRC frameworks. The chapter explores how organizations use GRC to systematically manage cybersecurity risk, satisfy legal and ethical obligations, and align security initiatives with core business objectives. Students will learn how organizations use GRC frameworks to align their security posture with business objectives, navigate complex regulations, and systematically mitigate cybersecurity risks.
+This chapter introduces the principles of Governance, Risk, and Compliance (GRC) as the foundational structure for integrating cybersecurity into enterprise strategy and operations. This chapter provides a foundation for building and managing a cybersecurity program through well established and widely used GRC frameworks. The chapter explores how organizations use GRC to systematically manage cybersecurity risk, satisfy legal and ethical obligations, and align security posture with business objectives. Students will learn how organizations use GRC frameworks to navigate complex regulations and systematically mitigate cybersecurity risks.
 
 **This chapter will help students:**
 

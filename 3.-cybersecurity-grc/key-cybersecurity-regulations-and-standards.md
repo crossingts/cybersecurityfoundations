@@ -5,7 +5,9 @@ description: >-
 hidden: true
 ---
 
-# Salient cybersecurity regulations
+# Key cybersecurity regulations and standards
+
+Understand the strategic, ethical, and legal importance of cybersecurity regulations and standards for businesses.
 
 Cybersecurity regulations and frameworks are designed to protect sensitive data and ensure organizational compliance. Here are some of the most important ones across different industries:
 

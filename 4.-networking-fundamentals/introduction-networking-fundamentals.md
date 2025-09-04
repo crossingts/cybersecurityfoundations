@@ -23,30 +23,30 @@ This chapter has two main goals. First, this chapter demystifies the underlying 
 
 ## Topics covered in this chapter
 
-[Network devices and their functions](../network-devices-and-their-functions/)
+[Network devices and their functions](network-devices-and-their-functions/)
 
-[The Open Systems Interconnection (OSI) model](../the-open-systems-interconnection-osi-model/)
+[The Open Systems Interconnection (OSI) model](the-open-systems-interconnection-osi-model/)
 
-[Host to host communication in networking](../host-to-host-communication-in-networking/)
+[Host to host communication in networking](host-to-host-communication-in-networking/)
 
-[Network protocols and their functions](../network-protocols-and-their-functions/)
+[Network protocols and their functions](network-protocols-and-their-functions/)
 
-[Typing www.google.com into a web browser](../typing-www.google.com-into-a-web-browser/)
+[Typing www.google.com into a web browser](typing-www.google.com-into-a-web-browser/)
 
-[Cisco IOS CLI and basic device security](../cisco-ios-cli-and-basic-device-security/)
+[Cisco IOS CLI and basic device security](cisco-ios-cli-and-basic-device-security/)
 
-[Connected and local routes](../connected-and-local-routes/)
+[Connected and local routes](connected-and-local-routes/)
 
-[How to configure static routes on Cisco routers](../how-to-configure-static-routes-on-cisco-routers/)
+[How to configure static routes on Cisco routers](how-to-configure-static-routes-on-cisco-routers/)
 
-[Comparing TCP to UDP](../comparing-tcp-to-udp/)
+[Comparing TCP to UDP](comparing-tcp-to-udp/)
 
-[How to configure standard ACLs on Cisco routers](../how-to-configure-standard-acls-on-cisco-routers/)
+[How to configure standard ACLs on Cisco routers](how-to-configure-standard-acls-on-cisco-routers/)
 
-[The role of DNS within the network](../the-role-of-dns-within-the-network/)
+[The role of DNS within the network](the-role-of-dns-within-the-network/)
 
-[Configuring and verifying DHCP client and relay](../configuring-and-verifying-dhcp-client-and-relay/)
+[Configuring and verifying DHCP client and relay](configuring-and-verifying-dhcp-client-and-relay/)
 
-[Static NAT configuration](../static-nat-configuration/)
+[Static NAT configuration](static-nat-configuration/)
 
-[OSI model layers and security threats](../osi-model-layers-and-security-threats/)
+[OSI model layers and security threats](osi-model-layers-and-security-threats/)

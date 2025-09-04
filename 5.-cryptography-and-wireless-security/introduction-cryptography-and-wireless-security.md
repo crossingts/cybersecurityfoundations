@@ -5,9 +5,9 @@ description: >-
   management framework
 ---
 
-# Introduction - Wireless security and cryptography
+# Introduction - Cryptography and wireless security
 
-## Chapter 5: Wireless security and cryptography
+## Chapter 5: Cryptography and wireless security
 
 This chapter covers how SSL/TLS uses cryptographic tools (symmetric encryption, asymmetric encryption, and hashing) to secure data over the Internet, and how the IEEE 802.11 standard provides a basis for a wireless security management framework (client authentication, message privacy, and message integrity).
 
@@ -19,6 +19,7 @@ This chapter covers how SSL/TLS uses cryptographic tools (symmetric encryption, 
 * Develop a practical understanding of RSA’s key generation, encryption, and signing capabilities.
 * Understand how the IEEE 802.11 standard provides a basis for a wireless security management framework (client authentication, message privacy, and message integrity).
 * Become familiar with key authentication methods and encryption and message integrity algorithms used in securing wireless networks.
+* Compare wireless security protocols (WPA/WPA2/WPA3) and their authentication and encryption methods.
 
 ## Topics covered in this chapter
 

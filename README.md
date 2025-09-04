@@ -27,8 +27,12 @@ The global demand for skilled cybersecurity professionals has never been higher.
 ### Part 2: Networking & Cryptography (Chapters 4–5)
 
 * Explain how data flows across network layers (OSI/TCP/IP).
+* Configure and verify fundamental router operations using the Cisco IOS CLI, including device security, IP addresses, static routes, and standard ACLs.
+* Implement and integrate essential network services including DNS, DHCP, and Static NAT.
 * Relate network layers (OSI/TCP/IP models) to vulnerabilities and mitigation techniques.
 * Describe how SSL/TLS uses cryptography (symmetric encryption, asymmetric encryption, and hashing) to secure data in transit.
+* Understand how the IEEE 802.11 standard provides a basis for a wireless security management framework (client authentication, message privacy, and message integrity).
+* Become familiar with key authentication methods and encryption and message integrity algorithms used in securing wireless networks.
 * Compare wireless security protocols (WPA/WPA2/WPA3) and their authentication and encryption methods.
 
 ### Part 3: Ethical Hacking (Chapters 6)
@@ -55,11 +59,11 @@ This chapter covers key aspects of cybersecurity fundamentals, including foundat
 
 This chapter covers Governance, Risk, and Compliance as a risk management framework (RMF) and using RMFs such as NIST SP 800-37, NIST CSF, and ISO/IEC 27001 to align cybersecurity policy with business goals.
 
-4. [Chapter 4: Networking fundamentals](4.-networking-fundamentals/introduction-networking-fundamentals/)
+4. [Chapter 4: Networking fundamentals](4.-networking-fundamentals/introduction-networking-fundamentals.md)
 
 This chapter covers two key foundational networking areas: host to host communication across networks (how data flows through the network), and essential network configuration skills.
 
-5. [Chapter 5: Wireless security and cryptography](5.-wireless-security-and-cryptography/introduction-wireless-security-and-cryptography.md)
+5. [Chapter 5: Cryptography and wireless security](5.-cryptography-and-wireless-security/introduction-cryptography-and-wireless-security.md)
 
 This chapter covers how SSL/TLS secures data in transit, the IEEE 802.11 wireless standard, and WPA, WPA2, and WPA3 wireless protocols.
 
@@ -67,7 +71,7 @@ This chapter covers how SSL/TLS secures data in transit, the IEEE 802.11 wireles
 
 This chapter covers ethical hacking and penetration testing - definitions, technologies, testing methodologies, and testing phases.
 
-7. [Chapter 7: Conclusion](broken-reference)
+7. [Chapter 7: Conclusion](7.-conclusion/introduction-conclusion.md)
 
 This chapter sheds light on and summarizes key topics and concepts covered in each chapter.
 

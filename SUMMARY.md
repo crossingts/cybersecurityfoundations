@@ -54,8 +54,7 @@
 
 ## 4. Networking fundamentals
 
-* [Introduction - Networking fundamentals](4.-networking-fundamentals/introduction-networking-fundamentals/README.md)
-  * [How data flow through the Internet](4.-networking-fundamentals/introduction-networking-fundamentals/how-data-flow-through-the-internet.md)
+* [Introduction - Networking fundamentals](4.-networking-fundamentals/introduction-networking-fundamentals.md)
 * [Network devices and their functions](4.-networking-fundamentals/network-devices-and-their-functions/README.md)
   * [Repeaters vs hubs vs bridges vs switches](4.-networking-fundamentals/network-devices-and-their-functions/repeaters-vs-hubs-vs-bridges-vs-switches.md)
   * [Lab: Getting started with Cisco Packet Tracer](4.-networking-fundamentals/network-devices-and-their-functions/lab-getting-started-with-cisco-packet-tracer.md)
@@ -91,25 +90,25 @@
   * [OSI model layers and security threats — Quiz](4.-networking-fundamentals/osi-model-layers-and-security-threats/osi-model-layers-and-security-threats-quiz.md)
 * [Chapter 4 review questions](4.-networking-fundamentals/chapter-4-review-questions.md)
 
-## 5. Wireless security and cryptography
+## 5. Cryptography and wireless security
 
-* [Introduction - Wireless security and cryptography](5.-wireless-security-and-cryptography/introduction-wireless-security-and-cryptography.md)
-* [Hashing algorithms and message integrity](5.-wireless-security-and-cryptography/hashing-algorithms-and-message-integrity/README.md)
-  * [Understanding hash, digest, checksum, and fingerprint](5.-wireless-security-and-cryptography/hashing-algorithms-and-message-integrity/understanding-hash-digest-checksum-and-fingerprint.md)
-* [Cryptographic encryption and confidentiality](5.-wireless-security-and-cryptography/cryptographic-encryption-and-confidentiality/README.md)
-  * [Pretty Good Privacy (PGP)](5.-wireless-security-and-cryptography/cryptographic-encryption-and-confidentiality/pretty-good-privacy-pgp.md)
-* [Message signing using asymmetric keys](5.-wireless-security-and-cryptography/message-signing-using-asymmetric-keys.md)
-* [Authentication methods](5.-wireless-security-and-cryptography/authentication-methods.md)
-* [The SSL/TLS handshake](5.-wireless-security-and-cryptography/the-ssl-tls-handshake/README.md)
-  * [The SSL/TLS key exchange and derivation process](5.-wireless-security-and-cryptography/the-ssl-tls-handshake/the-ssl-tls-key-exchange-and-derivation-process.md)
-* [How SSL/TLS uses cryptography](5.-wireless-security-and-cryptography/how-ssl-tls-uses-cryptography.md)
-* [Replay attacks and anti-replay methods](5.-wireless-security-and-cryptography/replay-attacks-and-anti-replay-methods.md)
-* [Generating and applying an RSA key](5.-wireless-security-and-cryptography/generating-and-applying-an-rsa-key.md)
-* [Diffie-Hellman (DH) key exchange](5.-wireless-security-and-cryptography/diffie-hellman-dh-key-exchange.md)
-* [Wireless client authentication methods](5.-wireless-security-and-cryptography/wireless-client-authentication-methods/README.md)
-  * [IEEE 802.1x/EAP authentication methods](5.-wireless-security-and-cryptography/wireless-client-authentication-methods/ieee-802.1x-eap-authentication-methods.md)
-* [Wireless privacy and integrity methods](5.-wireless-security-and-cryptography/wireless-privacy-and-integrity-methods.md)
-* [Authentication and encryption in WPA, WPA2, and WPA3](5.-wireless-security-and-cryptography/authentication-and-encryption-in-wpa-wpa2-and-wpa3.md)
+* [Introduction - Cryptography and wireless security](5.-cryptography-and-wireless-security/introduction-cryptography-and-wireless-security.md)
+* [Hashing algorithms and message integrity](5.-cryptography-and-wireless-security/hashing-algorithms-and-message-integrity/README.md)
+  * [Understanding hash, digest, checksum, and fingerprint](5.-cryptography-and-wireless-security/hashing-algorithms-and-message-integrity/understanding-hash-digest-checksum-and-fingerprint.md)
+* [Cryptographic encryption and confidentiality](5.-cryptography-and-wireless-security/cryptographic-encryption-and-confidentiality/README.md)
+  * [Pretty Good Privacy (PGP)](5.-cryptography-and-wireless-security/cryptographic-encryption-and-confidentiality/pretty-good-privacy-pgp.md)
+* [Message signing using asymmetric keys](5.-cryptography-and-wireless-security/message-signing-using-asymmetric-keys.md)
+* [Authentication methods](5.-cryptography-and-wireless-security/authentication-methods.md)
+* [The SSL/TLS handshake](5.-cryptography-and-wireless-security/the-ssl-tls-handshake/README.md)
+  * [The SSL/TLS key exchange and derivation process](5.-cryptography-and-wireless-security/the-ssl-tls-handshake/the-ssl-tls-key-exchange-and-derivation-process.md)
+* [How SSL/TLS uses cryptography](5.-cryptography-and-wireless-security/how-ssl-tls-uses-cryptography.md)
+* [Replay attacks and anti-replay methods](5.-cryptography-and-wireless-security/replay-attacks-and-anti-replay-methods.md)
+* [Generating and applying an RSA key](5.-cryptography-and-wireless-security/generating-and-applying-an-rsa-key.md)
+* [Diffie-Hellman (DH) key exchange](5.-cryptography-and-wireless-security/diffie-hellman-dh-key-exchange.md)
+* [Wireless client authentication methods](5.-cryptography-and-wireless-security/wireless-client-authentication-methods/README.md)
+  * [IEEE 802.1x/EAP authentication methods](5.-cryptography-and-wireless-security/wireless-client-authentication-methods/ieee-802.1x-eap-authentication-methods.md)
+* [Wireless privacy and integrity methods](5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods.md)
+* [Authentication and encryption in WPA, WPA2, and WPA3](5.-cryptography-and-wireless-security/authentication-and-encryption-in-wpa-wpa2-and-wpa3.md)
 
 ## 6. Practical foundations in ethical hacking
 
@@ -175,6 +174,6 @@
 * [Introduction to cybersecurity](7.-conclusion/introduction-to-cybersecurity.md)
 * [Cybersecurity GRC](7.-conclusion/cybersecurity-grc.md)
 * [Networking fundamentals](7.-conclusion/networking-fundamentals.md)
-* [Wireless security and cryptography](7.-conclusion/wireless-security-and-cryptography.md)
+* [Cryptography and wireless security](7.-conclusion/cryptography-and-wireless-security.md)
 * [Practical foundations in ethical hacking](7.-conclusion/practical-foundations-in-ethical-hacking.md)
 * [Glossary](7.-conclusion/glossary.md)

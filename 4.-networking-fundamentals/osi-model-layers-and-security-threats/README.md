@@ -17,8 +17,8 @@ This section discusses network layers within the OSI model in the context of thr
 ## Topics covered in this section
 
 * **Common attack types by OSI layer**
-* **Common attack types and mitigation by OSI layer**
-* **Explanation of threat scenarios and mitigation**
+* **Common attack types and mitigation techniques by OSI layer**
+* **Threat scenarios and mitigation techniques**
 * **Key threat characteristics and mitigation strategies**
 
 ### Common attack types by OSI layer
@@ -37,15 +37,15 @@ The following tables lists common attack types/threats associated with each OSI 
 | **L2 (Data Link)**    | Provides node-to-node error-free data transfer (physical addressing)                       | ARP Spoofing (MITM), MAC Flooding |
 | **L1 (Physical)**     | Specifies the physical characteristics of the medium used to transfer data between devices | Sniffing, Cable Tapping           |
 
-### Common attack types and mitigation by OSI layer
+### Common attack types and mitigation techniques by OSI layer
 
-The following tables lists risk scenarios and mitigation techniques for each OSI model attack/threat type.
+The following tables lists risk scenarios and mitigation techniques for each OSI model attack/threat type. This is followed by a discussion of threat scenarios and mitigation techniques.
 
-**Common Attack Types and Mitigation by OSI Layer Summary Table**
+**Common Attack Types and Mitigation Techniques by OSI Layer Summary Table**
 
 <table data-header-hidden><thead><tr><th width="73.265625"></th><th width="120.29296875"></th><th width="130.94921875"></th><th></th><th></th><th></th></tr></thead><tbody><tr><td><strong>OSI Layer</strong></td><td><strong>Attack Type/Threat</strong></td><td><strong>Attack Technique</strong></td><td><strong>Vulnerability Exploited</strong></td><td><strong>Risk Scenario</strong></td><td><strong>Mitigation</strong></td></tr><tr><td><strong>L7</strong></td><td>DNS Spoofing</td><td>Corrupting DNS cache to redirect users</td><td>Unvalidated DNS responses</td><td>Redirects users to malicious sites (e.g., fake banking portals)</td><td>DNSSEC, DoH/DoT (DNS over HTTPS/TLS)</td></tr><tr><td></td><td>SQL Injection</td><td>Injecting malicious SQL queries into input fields</td><td>Poor input validation, lack of parameterized queries</td><td>Bypasses authentication or exfiltrates DB data (e.g., <code>' OR 1=1 --</code> attacks)</td><td>Input validation, prepared statements, WAF (Web Application Firewall)</td></tr><tr><td><strong>L6</strong></td><td>Phishing</td><td>Social engineering to steal credentials</td><td>Human trust, lack of training</td><td>Tricks users into revealing credentials (e.g., fake login pages or malicious attachments)</td><td>User education, Email filtering (DMARC)</td></tr><tr><td></td><td>Malicious File Uploads</td><td>Uploading files with hidden exploits</td><td>Insufficient file type verification, lack of sandboxing</td><td>Uploads malware disguised as documents (e.g., PDFs with embedded exploits, Word files delivering Emotet or Locky)</td><td>File type verification, malware scanning, sandboxing</td></tr><tr><td><strong>L5</strong></td><td>SSL Stripping</td><td>Downgrading HTTPS to HTTP via MITM</td><td>Lack of HSTS, insecure redirects</td><td>Forces HTTPS→HTTP to intercept plaintext data (e.g., evil-twin Wi-Fi attacks)</td><td>HSTS, HTTPS Redirection &#x26; Secure Cookies, Certificate Pinning</td></tr><tr><td></td><td>Session Hijacking</td><td>Stealing valid session tokens</td><td>Weak session tokens, timeouts</td><td>Steals active sessions to impersonate users (e.g., stealing cookies via XSS or MITM)</td><td>Secure Session Management, Secure Cookie Attributes, MFA</td></tr><tr><td><strong>L4</strong></td><td>TCP SYN Flooding</td><td>Exploiting TCP handshake to exhaust resources</td><td>TCP handshake design flaw</td><td>Exhausts server TCP pools, causing service outages (e.g., volumetric DDoS)</td><td>Rate limiting, SYN cookies, Infrastructure Solutions (e.g., firewalls and load balancers)</td></tr><tr><td></td><td>UDP Flooding</td><td>Sending high-volume UDP packets to overwhelm services</td><td>Stateless nature of UDP</td><td>Exploits stateless UDP to flood services via reflection attacks (e.g., Mirai botnet’s DNS amplification attacks)</td><td>Rate limiting, DDoS protection (e.g., scrubbing centers)</td></tr><tr><td><strong>L3</strong></td><td>ICMP Flooding</td><td>Overwhelming a target with ping requests (DDoS)</td><td>No rate limiting on ICMP replies</td><td>DDoS attacks overwhelm bandwidth/resources (e.g., Smurf attacks using amplified ICMP replies)</td><td>ICMP rate limiting, Network filtering</td></tr><tr><td></td><td>IP Spoofing</td><td>Forging source IP headers to impersonate trusted hosts</td><td>Lack of IP source validation</td><td>Masquerading as trusted IPs to bypass ACLs or launch reflected attacks (e.g., NTP amplification)</td><td>BCP38 (RFC 2827), Ingress filtering</td></tr><tr><td><strong>L2</strong></td><td>ARP Spoofing (MITM)</td><td>Actively poisoning ARP tables to redirect traffic</td><td>Lack of ARP authentication</td><td>Attackers redirect or monitor traffic within a local network (e.g., stealing session cookies)</td><td>Dynamic ARP Inspection (DAI), VPNs</td></tr><tr><td></td><td>MAC Flooding</td><td>Flooding switches with fake MAC addresses</td><td>Switch CAM table limitations</td><td>Overwhelms switches to force open ports, enabling sniffing (e.g., CAM table overflow attacks)</td><td>Port security, MAC limiting</td></tr><tr><td><strong>L1</strong></td><td>Sniffing</td><td>Passive interception of unencrypted traffic</td><td>Unencrypted transmissions</td><td>Unauthorized data capture via exposed cables/Wi-Fi (e.g., stealing credentials from cleartext traffic)</td><td>Encryption (e.g., WPA3, MACsec)</td></tr><tr><td></td><td>Cable Tapping</td><td>Physically splicing or tapping network cables</td><td>Lack of physical security</td><td>Attacker physically taps fiber/copper lines to intercept data (common in espionage)</td><td>Tamper-evident seals, Fiber-optic monitoring (OTDR), Secure cabling conduits</td></tr></tbody></table>
 
-### Explanation of threat scenarios and mitigation
+### Threat scenarios and mitigation techniques
 
 **DNS Spoofing (L7)**
 
@@ -549,10 +549,20 @@ Cable Tapping is a physical intrusion attack (e.g., state-sponsored espionage) w
 
 ### Key takeaways
 
-* Common L7 attacks are DNS Spoofing and SQL Injection
-* Common L6 attacks are Phishing and Malicious File Uploads
-* Common L5 attacks are Session Hijacking and SSL Stripping
-* Common L4 attacks are TCP SYN Flooding and UDP Flooding
-* Common L3 attacks are ICMP Flooding and IP Spoofing
-* Common L2 attacks are ARP Spoofing (MITM) and MAC Flooding
-* Common L1 attacks are Sniffing and Cable Tapping
+* Common L7 attacks are DNS Spoofing and SQL Injection.
+* Common L6 attacks are Phishing and Malicious File Uploads.
+* Common L5 attacks are Session Hijacking and SSL Stripping.
+* Common L4 attacks are TCP SYN Flooding and UDP Flooding.
+* Common L3 attacks are ICMP Flooding and IP Spoofing.
+* Common L2 attacks are ARP Spoofing (MITM) and MAC Flooding.
+* Common L1 attacks are Sniffing and Cable Tapping.
+
+### References
+
+Maymi, F., & Harris, S. (2023). CISSP all-in-one exam guide (10th ed.). McGraw Hill.
+
+McClure, S., Scambray, J., & Kurtz, G. (2023). Hacking exposed 7: Network security secrets & solutions. McGraw Hill.
+
+Kurose, J. F., & Ross, K. W. (2022). Computer networking: A top-down approach (8th ed.). Pearson.
+
+Stallings, W. (2023). Network security essentials: Applications and standards (8th ed.). Pearson.

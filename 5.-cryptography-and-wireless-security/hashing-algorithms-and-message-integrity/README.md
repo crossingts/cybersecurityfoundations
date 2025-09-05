@@ -13,7 +13,7 @@ description: >-
 * Develop a foundational understanding of how hashing can be used to ensure message integrity
 * Develop a foundational understanding of how hashing can be used to authenticate someone
 
-This section discusses [hashing algorithms and message integrity](https://builtin.com/cybersecurity/what-is-hashing). This section explains the key characteristics (qualities) of an industry grade hashing algorithm and how hashing algorithms can be used to ensure the integrity of messages exchanged between a client and a server.
+This section discusses [hashing algorithms and message integrity](https://builtin.com/cybersecurity/what-is-hashing). This section begins by showing how hashing works through a simplified example. It then explains the key characteristics (qualities) of an industry-grade hashing algorithm. It then explores how basic hashing can be used to ensure the integrity of messages exchanged between a client and a server. Finally, the lesson introduces the crucial concept of message authentication, demonstrating how a shared secret key is combined with a hash function to create a Hash-based Message Authentication Code (HMAC). You will learn how HMAC provides a robust defense against tampering by ensuring both data integrity and authenticity.
 
 ## Topics covered in this section
 
@@ -21,6 +21,8 @@ This section discusses [hashing algorithms and message integrity](https://builti
 * **How hashing and HMAC ensure message integrity and authentication**
 
 ### Hashing algorithms
+
+#### A simplified explanation of hashing
 
 A hashing algorithm is a mathematical function that takes an input (data) of arbitrary size and produces a fixed-size output, a representational sample of the original data called a hash value or hash. Hashing algorithms are used in a variety of applications, including data integrity, password hashing, file indexing, identifying duplicate files/data, and digital signatures.
 
@@ -124,3 +126,9 @@ Hashing Demonstration with Linux: [Run a hashing algorithm (md5sum or sha1sum) o
 [Ed Harmoush. (December 15, 2021). Hashing Algorithm. Practical Networking.](https://www.practicalnetworking.net/series/cryptography/hashing-algorithm/)
 
 [Ed Harmoush. (December 8, 2021). Message Integrity. Practical Networking.](https://www.practicalnetworking.net/series/cryptography/message-integrity/)
+
+Kaufman, C., Perlman, R., & Speciner, M. (2002). Network security: Private communication in a public world (2nd ed.). Prentice Hall.
+
+Paar, C., & Pelzl, J. (2010). Understanding cryptography: A textbook for students and practitioners. Springer.
+
+Stallings, W. (2024). Cryptography and network security: Principles and practice (9th ed.). Pearson.

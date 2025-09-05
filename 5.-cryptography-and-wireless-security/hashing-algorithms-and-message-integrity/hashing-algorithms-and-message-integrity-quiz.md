@@ -9,10 +9,10 @@ c) To compress the message for faster transmission\
 d) To authenticate the identity of the sender
 
 **2. Which characteristic of an industry-grade hashing algorithm ensures that even a tiny change in the input (e.g., changing one bit) produces a completely different hash output? (Choose one answer)**\
-a) Fixed-Length Output\
-b) Pre-image Resistance\
-**c) The Avalanche Effect**\
-d) Collision Resistance
+a) Fixed-length output\
+b) Pre-image resistance\
+**c) The avalanche effect**\
+d) Collision resistance
 
 **3. Why is a basic hash digest (e.g., a SHA-256 hash sent alongside a message) alone insufficient for ensuring integrity against a malicious attacker? (Choose one answer)**\
 a) The hash is always the same length, which reveals the message size\
@@ -21,12 +21,12 @@ b) An attacker can reverse the hash to discover the original message\
 d) The hash algorithm might produce collisions too easily
 
 **4. HMAC provides which two security properties that a basic hash does not? (Choose one answer)**\
-a) Encryption and Non-repudiation\
-b) Confidentiality and Availability\
-**c) Integrity and Authenticity**\
-d) Compression and Speed
+a) Encryption and non-repudiation\
+b) Confidentiality and availability\
+**c) Integrity and authenticity**\
+d) Compression and speed
 
-**5. What is the fundamental cryptographic difference between HMAC and a digital signature like RSA? (Choose one answer)**\
+**5. What is the fundamental cryptographic difference between HMAC and a digital signature? (Choose one answer)**\
 a) HMAC is faster, but digital signatures are slower\
 **b) HMAC uses a shared secret key, while digital signatures use public/private key pairs**\
 c) HMAC provides encryption, while digital signatures only provide authentication\

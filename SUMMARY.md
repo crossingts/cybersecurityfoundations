@@ -95,6 +95,7 @@
 * [Introduction - Cryptography and wireless security](5.-cryptography-and-wireless-security/introduction-cryptography-and-wireless-security.md)
 * [Hashing algorithms and message integrity](5.-cryptography-and-wireless-security/hashing-algorithms-and-message-integrity/README.md)
   * [Understanding hash, digest, checksum, and fingerprint](5.-cryptography-and-wireless-security/hashing-algorithms-and-message-integrity/understanding-hash-digest-checksum-and-fingerprint.md)
+  * [Hashing algorithms and message integrity — Quiz](5.-cryptography-and-wireless-security/hashing-algorithms-and-message-integrity/hashing-algorithms-and-message-integrity-quiz.md)
 * [Cryptographic encryption and confidentiality](5.-cryptography-and-wireless-security/cryptographic-encryption-and-confidentiality/README.md)
   * [Pretty Good Privacy (PGP)](5.-cryptography-and-wireless-security/cryptographic-encryption-and-confidentiality/pretty-good-privacy-pgp.md)
 * [Message signing using asymmetric keys](5.-cryptography-and-wireless-security/message-signing-using-asymmetric-keys.md)

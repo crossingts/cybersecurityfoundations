@@ -13,7 +13,7 @@ description: >-
 * Develop a foundational understanding of how hashing can be used to ensure message integrity
 * Develop a foundational understanding of how hashing can be used to authenticate someone
 
-This section discusses [hashing algorithms and message integrity](https://builtin.com/cybersecurity/what-is-hashing). This section explains the key qualities (characteristics) of a hashing algorithm and how hashing algorithms can be used to ensure the integrity of messages exchanged between a client and a server.
+This section discusses [hashing algorithms and message integrity](https://builtin.com/cybersecurity/what-is-hashing). This section explains the key characteristics (qualities) of an industry grade hashing algorithm and how hashing algorithms can be used to ensure the integrity of messages exchanged between a client and a server.
 
 ## Topics covered in this section
 
@@ -87,7 +87,9 @@ When exchanging messages between a client and a server, hashing algorithms can h
 
 **2. Strengthening Security with a Secret Key (HMAC)**
 
-To prevent tampering, the sender and receiver share a secret key. Instead of just hashing the message, the sender computes a Message Authentication Code (MAC) over the message using this key, which ensures integrity (the message was not altered) and authenticity (the sender possesses the secret key). The most widely used MAC is HMAC (Hash-Based Message Authentication Code), which securely combines the key and message.
+To prevent tampering, the sender and receiver share a secret key. Instead of just hashing the message, the sender computes a Message Authentication Code (MAC) over the (whole) message using this key, which ensures integrity (the message was not altered) and authenticity (the sender possesses the secret key). The most widely used MAC is HMAC (Hash-Based Message Authentication Code), which securely combines the key and message.
+
+While the first idea for a MAC might be to just put the key and message together and hash them (a simple keyed hash), this turns out to be vulnerable to specific attacks. HMAC securely combines the key and message in a method much more secure than a simple keyed hash, which is susceptible to length extension attacks.
 
 **How HMAC Works:**
 
@@ -103,7 +105,7 @@ To prevent tampering, the sender and receiver share a secret key. Instead of jus
 
 **3. Alternatives to HMAC**
 
-* Digital Signatures (e.g., RSA, ECDSA) can also ensure integrity and authenticity but use asymmetric cryptography (public/private keys) instead of a shared secret.
+* Digital signatures (such as ones based on the RSA or ECDSA algorithms) can also ensure integrity and authenticity but use asymmetric cryptography (public/private keys) instead of a shared secret.
 * Encryption + MAC (e.g., AES-GCM) can provide integrity + confidentiality, but HMAC is often used when encryption is not required.
 
 Hashing Demonstration with Linux: [Run a hashing algorithm (md5sum or sha1sum) on a string of text in a Linux terminal.](https://www.practicalnetworking.net/series/cryptography/hashing-algorithm/)

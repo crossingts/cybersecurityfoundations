@@ -9,7 +9,7 @@ description: >-
 ## Learning objectives
 
 * Develop a foundational understanding of how hashing algorithms function
-* Know the key qualities (characteristics) of an industry grad hashing algorithm&#x20;
+* Know the key characteristics of an industry grade hashing algorithm&#x20;
 * Develop a foundational understanding of how hashing can be used to ensure message integrity
 * Develop a foundational understanding of how hashing can be used to authenticate someone
 
@@ -24,27 +24,25 @@ This section discusses [hashing algorithms and message integrity](https://builti
 
 A hashing algorithm is a mathematical function that takes an input (data) of arbitrary size and produces a fixed-size output, a representational sample of the original data called a hash value or hash. Hashing algorithms are used in a variety of applications, including data integrity, password hashing, file indexing, identifying duplicate files/data, and digital signatures.
 
-A basic hashing algorithm can be converting letters to numbers (a = 1, b = 2, c = 3, etc.):
+A basic hashing algorithm can be converting letters to numbers (e.g., a = 1, b = 2, c = 3, etc.):
 
 hello (message) –— hashing algorithm (8+5+12+12+15) → 52 (message digest)
 
-The result of a hashing algorithm is called a message digest (or sometimes checksum, or fingerprint).
+The result of a hashing algorithm is called a message digest (or sometimes checksum or fingerprint).
 
-If someone changed the h (in hello) to c,
+If someone changed the h (in hello) to c:
 
-cello → 47 (message digest)
+cello (message) → 47 (message digest)
 
 Comparing the two message digests shows the original message has changed.
 
 But this hashing algorithm is terrible. If the original message was changed to celt, running the message through the hashing algorithm would produce the same hash value of 52.
 
-#### Note:
+Note — The message digest (52 for hello) is more technically a hash or checksum in this case, but calling it a digest is fine for illustration. See [Understanding hash, digest, checksum, and fingerprint](understanding-hash-digest-checksum-and-fingerprint.md).
 
-• The message digest (52 for "hello") is more technically a hash or checksum in this case, but calling it a digest is fine for illustration.
+#### Characteristics of industry grade hashing algorithms
 
-• See [Understanding hash, digest, checksum, and fingerprint](understanding-hash-digest-checksum-and-fingerprint.md)
-
-**A hashing algorithm must maintain four qualities before it is approved for industry usage:**
+A hashing algorithm must maintain four qualities before it is approved for industry usage:
 
 1\. It is mathematically impossible to extract the original message from the digest. You should not be able to reverse engineer the hashing algorithm to know the original message by just inspecting the hash value. Hashing is a one-way function, meaning that it is computationally infeasible to reverse the hash function to find the original input. Hashing is sometimes referred to as one-way encryption – you can only encrypt the message but not decrypt it.
 
@@ -56,18 +54,18 @@ But this hashing algorithm is terrible. If the original message was changed to c
 
 There are many different hashing algorithms available, each with its own strengths and weaknesses. Hashing algorithms examples include MD5, SHA-1, and SHA-256.
 
-**Common Hashing Algorithms in SSL/TLS (showing digest lengths)**
+**Common Hashing Algorithms in SSL/TLS (Showing Digest Lengths)**
 
 | Algorithm                           | Use Case in SSL/TLS                                          |
 | ----------------------------------- | ------------------------------------------------------------ |
 | **SHA-256 (256 Bits)**              | Default for certificates (replacing SHA-1, which is broken). |
 | **SHA-384 (384 Bits)**              | Used in higher-security contexts (e.g., banking).            |
 | **SHA-3**                           | Emerging, but not yet widely adopted in TLS.                 |
-| **MD5 (128 Bits)/SHA-1 (160 Bits)** | **Deprecated** due to collision vulnerabilities.             |
+| **MD5 (128 Bits)/SHA-1 (160 Bits)** | Deprecated due to collision vulnerabilities.                 |
 
-**Security Considerations**
+**Security considerations:**
 
-* Collision Resistance: A hash function must make it nearly impossible for two different inputs to produce the same hash (SHA-256 is secure; MD5/SHA-1 are broken).
+* Collision resistance: A hash function must make it nearly impossible for two different inputs to produce the same hash (SHA-256 is secure; MD5/SHA-1 are broken).
 * A longer digest tends to be regarded as more secure.
 
 ### How hashing and HMAC ensure message integrity and authentication

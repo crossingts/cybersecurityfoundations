@@ -70,56 +70,52 @@ There are many different hashing algorithms available, each with its own strengt
 
 ### How hashing and HMAC ensure message integrity and authentication
 
-When exchanging messages between a client and a server, **hashing algorithms** can help verify that the message was not altered in transit—a property known as **message integrity**. Here’s how it works:
+When exchanging messages between a client and a server, hashing algorithms can help verify that the message was not altered in transit—a property known as message integrity. Here’s how it works:
 
 **1. Basic Integrity Check Using Hashing**
 
-* The sender calculates a **hash digest** of the original message (e.g., using SHA-256).
-* The sender transmits both the **message** and the **hash digest** to the receiver.
-* Upon receiving the message, the receiver independently **recomputes the hash** and compares it to the received digest.
-* If they match, the message **has not been altered or corrupted.**
+* The sender calculates a hash digest of the original message (e.g., using SHA-256).
+* The sender transmits both the message and the hash digest to the receiver.
+* Upon receiving the message, the receiver independently recomputes the hash and compares it to the received digest.
+* If they match, the message has not been altered or corrupted.
 
-**Problem:** This method alone is **vulnerable to active attacks**. If a **man-in-the-middle (MITM) intercepts** the message, they could:
+**Problem:** This method alone is vulnerable to active attacks. If a man-in-the-middle (MITM) intercepts the message, they could:
 
 1. Modify the message.
-2. Compute a **new hash** of the altered message.
-3. Send the **modified message + new hash** to the receiver. Since the receiver only checks if the hashes match, they would **falsely believe the message is authentic**.
+2. Compute a new hash of the altered message.
+3. Send the modified message + new hash to the receiver. Since the receiver only checks if the hashes match, they would falsely believe the message is authentic.
 
 **2. Strengthening Security with a Secret Key (HMAC)**
 
-To prevent tampering, the sender and receiver share a **secret key**. Instead of just hashing the message, the sender computes a **Message Authentication Code (MAC)** over the message using this key, which ensures **integrity** (the message was not altered) and **authenticity** (the sender possesses the secret key). The most widely used MAC is **HMAC (Hash-Based Message Authentication Code)**, which securely combines the key and message.
+To prevent tampering, the sender and receiver share a secret key. Instead of just hashing the message, the sender computes a Message Authentication Code (MAC) over the message using this key, which ensures integrity (the message was not altered) and authenticity (the sender possesses the secret key). The most widely used MAC is HMAC (Hash-Based Message Authentication Code), which securely combines the key and message.
 
 **How HMAC Works:**
 
 1. **Sender’s Side:**
-   * The sender inputs the **message + secret key** into the **HMAC algorithm** (e.g., HMAC-SHA256).
-   * The output is a **fixed-size MAC (tag)**.
-   * The sender transmits the **original message + MAC**.
+   * The sender inputs the message + secret key into the HMAC algorithm (e.g., HMAC-SHA256).
+   * The output is a fixed-size MAC (tag).
+   * The sender transmits the original message + MAC.
 2. **Receiver’s Side:**
-   * The receiver recomputes the HMAC using the **received message + their copy of the secret key**.
-   * If the computed MAC **matches** the received MAC, the message is:
-     * **Untampered (message integrity preserved).**
-     * **Authentic (sent by someone with the secret key).**
+   * The receiver recomputes the MAC using the received message + their copy of the secret key.
+   * If the computed MAC matches the received MAC, the message is:
+     * Untampered (message integrity preserved).
+     * Authentic (sent by someone with the secret key).
 
 **3. Alternatives to HMAC**
 
-* **Digital Signatures** (e.g., RSA, ECDSA) can also ensure integrity and authenticity but use **asymmetric cryptography** (public/private keys) instead of a shared secret.
-* **Encryption + MAC (e.g., AES-GCM)** can provide integrity + confidentiality, but HMAC is often used when encryption is not required.
-
-**Key Takeaways:**
-
-✅ **Hashing alone** → Cannot detect malicious tampering during message exchange.\
-✅ **HMAC (Key + Hash)** → Ensures **integrity + authenticity** against active attackers.\
-✅ **HMAC is preferred** over simple keyed hashes due to stronger security.\
-✅ For even stronger guarantees, **digital signatures** or **encryption + MAC** can be used.
+* Digital Signatures (e.g., RSA, ECDSA) can also ensure integrity and authenticity but use asymmetric cryptography (public/private keys) instead of a shared secret.
+* Encryption + MAC (e.g., AES-GCM) can provide integrity + confidentiality, but HMAC is often used when encryption is not required.
 
 Hashing Demonstration with Linux: [Run a hashing algorithm (md5sum or sha1sum) on a string of text in a Linux terminal.](https://www.practicalnetworking.net/series/cryptography/hashing-algorithm/)
 
 ### Key takeaways
 
-* A hashing algorithm performs a series of calculations iteratively
-* An industry grade hashing algorithm has four fundamental characteristics&#x20;
-* Hashing and HMAC are commonly used for data integrity and authentication
+* An industry grade hashing algorithm has four fundamental characteristics.
+* A hashing algorithm performs a series of calculations iteratively.
+* Hashing alone cannot detect malicious tampering during message exchange.
+* HMAC (key + hashing) ensures integrity and authenticity against active attackers.
+* HMAC is preferred over simple keyed hashes due to stronger security.
+* For even stronger guarantees, digital signatures or encryption + MAC can be used.
 
 ### References
 

@@ -13,7 +13,7 @@ description: >-
 * Develop a foundational understanding of how hashing can be used to ensure message integrity
 * Develop a foundational understanding of how hashing can be used to authenticate someone
 
-This section discusses [hashing algorithms and message integrity](https://builtin.com/cybersecurity/what-is-hashing). This section begins by showing how hashing works through a simplified example. It then explains the key characteristics (qualities) of an industry-grade hashing algorithm. It then explores how basic hashing can be used to ensure the integrity of messages exchanged between a client and a server. Finally, the lesson introduces the crucial concept of message authentication, demonstrating how a shared secret key is combined with a hash function to create a Hash-based Message Authentication Code (HMAC). You will learn how HMAC provides a robust defense against tampering by ensuring both data integrity and authenticity.
+This section discusses [hashing algorithms and message integrity](https://builtin.com/cybersecurity/what-is-hashing). This section begins by explaining hashing's mechanism of action through a simplified example. It then explains the key characteristics (qualities) of an industry-grade hashing algorithm. It then explores how basic hashing can be used to ensure the integrity of messages exchanged between a client and a server. Finally, the lesson introduces the concept of message authentication, demonstrating how a shared secret key is combined with a hash function to create a Hash-based Message Authentication Code (HMAC). You will learn how HMAC provides a robust defense against tampering by ensuring both data integrity and authenticity.
 
 ## Topics covered in this section
 
@@ -44,17 +44,49 @@ Note — The message digest (52 for hello) is more technically a hash or checksu
 
 #### Characteristics of industry grade hashing algorithms
 
-A hashing algorithm must maintain four qualities before it is approved for industry usage:
+Industry grade hashing algorithms have five key characteristics or properties. Pre-image resistance, second pre-image resistance, and collision resistance are core security properties. Fixed-length output and the Avalanche Effect are two essential features that enable those properties.
 
-1\. It is mathematically impossible to extract the original message from the digest. You should not be able to reverse engineer the hashing algorithm to know the original message by just inspecting the hash value. Hashing is a one-way function, meaning that it is computationally infeasible to reverse the hash function to find the original input. Hashing is sometimes referred to as one-way encryption – you can only encrypt the message but not decrypt it.
+**1. Pre-image Resistance (One-Wayness)**
 
-2\. A slight change to the original message causes a drastic change in the resulting digest. A minor modification to the original message should greatly alter the computed digest (the avalanche effect). An industry approved hashing algorithm is not simply one calculation. A hashing algorithm is a series of calculations done iteratively. As a result, a small change in the beginning creates an exponentially bigger change in the resulting digest.
+* **Definition:** Given a hash value `h`, it is computationally infeasible to find _any_ input `m` such that `hash(m) = h`. Hashing is a **one-way function**, meaning that it is computationally infeasible to reverse the hash function to know the original input.&#x20;
+* **Simple Analogy:** If you are given a fingerprint, you cannot reconstruct the person it came from.
+* **Why it matters:** This ensures an attacker cannot reverse-engineer the original data/message from its digest.
 
-3\. The result of the hashing algorithm is always the same length. The resulting digest cannot provide any hints or clues about the original message, including its length. A digest should not increase in size as the length of the message increases.
+**2. Second Pre-image Resistance**
 
-4\. It is infeasible to construct a message which generates a given digest. In our example, it would not be overly difficult to generate a list of words that can produce a digest of 52 (one of which might have been the original message). In a proper hashing algorithm, this should be infeasible.
+* **Definition:** Given a specific input `m1`, it is computationally infeasible to find a _different_ input `m2` (`m2 ≠ m1`) such that `hash(m1) = hash(m2)`.
+* **Simple Analogy:** If you have a specific document and its fingerprint, you cannot create a _different_, fraudulent document that has the _exact same fingerprint_.
+* **Why it matters:** This protects against forgery. An attacker cannot substitute a malicious message for a legitimate one while keeping the same hash value.
 
-There are many different hashing algorithms available, each with its own strengths and weaknesses. Hashing algorithms examples include MD5, SHA-1, and SHA-256.
+**3. Collision Resistance**
+
+* **Definition:** It is computationally infeasible to find _any two distinct inputs_ `m1` and `m2` (where `m1 ≠ m2`) such that `hash(m1) = hash(m2)`. A hash function must make it nearly impossible for two different inputs to produce the same hash (SHA-256 is secure; MD5/SHA-1 are broken).
+* **Simple Analogy:** You cannot find any two different people in the world who have an identical fingerprint.
+* **Why it matters:** This is the hardest property to achieve and is crucial for digital signatures and commitments. If collisions are easy to find, an attacker can create two different documents with the same hash, sign the benign one, and claim the signature applies to the malicious one.
+
+**4. Fixed-Length Output (Not a "security property" but a fundamental feature)**
+
+* **Definition:** The hash function always produces an output (digest) of a fixed, predefined length, regardless of the size of the input message. The resulting digest cannot provide any hints or clues about the original message, including its length. A digest should not increase in size as the length of the message increases.
+* **Why it matters:** This provides efficiency and predictability in protocols. It also prevents leakage of information about the input size.
+
+**5. The Avalanche Effect (A critical design mechanism)**
+
+* **Definition:** A small change to the input (e.g., flipping a single bit) produces a drastic change in the output, such that the new hash appears uncorrelated to the old hash. A hashing algorithm is a series of calculations done iteratively. As a result, a small change in the beginning creates an exponentially bigger change in the resulting digest.
+* **Why it matters:** This is not a standalone security property but the _mechanism_ that makes the three properties above possible. It ensures the hash function's output is unpredictable and random-looking.
+
+**The Three Core Security Properties of Cryptographic Hash Functions (Hashing Algorithms)**
+
+| Property                        | The Challenge For an Attacker                                                           |
+| ------------------------------- | --------------------------------------------------------------------------------------- |
+| **Pre-image Resistance**        | "Here's a hash `h`. Find me _any_ input that creates it."                               |
+| **Second Pre-image Resistance** | "Here's a specific message `m1`. Find me a _different_ message that has the same hash." |
+| **Collision Resistance**        | "Find me _any two different messages_ that have the same hash."                         |
+
+An industry-grade algorithm (like SHA-256) is designed to make all three of these attacks computationally infeasible.
+
+#### Common hashing algorithms in SSL/TLS
+
+There are many different hashing algorithms available, such as MD5, SHA-1, and SHA-256, each with its own strengths and weaknesses. A longer digest tends to be regarded as more secure.
 
 **Common Hashing Algorithms in SSL/TLS (Showing Digest Lengths)**
 
@@ -64,11 +96,6 @@ There are many different hashing algorithms available, each with its own strengt
 | **SHA-384 (384 Bits)**              | Used in higher-security contexts (e.g., banking).            |
 | **SHA-3**                           | Emerging, but not yet widely adopted in TLS.                 |
 | **MD5 (128 Bits)/SHA-1 (160 Bits)** | Deprecated due to collision vulnerabilities.                 |
-
-**Security considerations:**
-
-* Collision resistance: A hash function must make it nearly impossible for two different inputs to produce the same hash (SHA-256 is secure; MD5/SHA-1 are broken).
-* A longer digest tends to be regarded as more secure.
 
 ### How hashing and HMAC ensure message integrity and authentication
 
@@ -114,7 +141,7 @@ Hashing Demonstration with Linux: [Run a hashing algorithm (md5sum or sha1sum) o
 
 ### Key takeaways
 
-* An industry grade hashing algorithm has four fundamental characteristics.
+* An industry grade hashing algorithm has **four** fundamental characteristics.
 * A hashing algorithm performs a series of calculations iteratively.
 * Hashing alone cannot detect malicious tampering during message exchange.
 * HMAC (key + hashing) ensures integrity and authenticity against active attackers.

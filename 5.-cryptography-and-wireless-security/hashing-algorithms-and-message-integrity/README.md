@@ -86,7 +86,13 @@ An industry-grade algorithm (like SHA-256) is designed to make all three of thes
 
 #### Common hashing algorithms in SSL/TLS
 
-There are many different hashing algorithms available, such as MD5, SHA-1, and SHA-256, each with its own strengths and weaknesses. A longer digest tends to be regarded as more secure.
+There are various ways to create a hash. The security and properties of a hash function (hashing algorithm) depend on the mathematical algorithm behind it. There are many different hashing algorithms, such as:
+
+* **MD5 & SHA-1:** Older functions now considered cryptographically broken (vulnerable to collisions) and unsuitable for security purposes.
+* **SHA-2 Family (e.g., SHA-256):** The current standard for most security applications (including Bitcoin).
+* **SHA-3:** The newest standard, based on a different mathematical structure, designed as a future-proof alternative.
+
+Each of these is a different mathematical function with different internal operations, but they all serve the same core purpose: taking an arbitrary amount of data and producing a fixed-size, practically unique fingerprint. A longer digest tends to be regarded as more secure.
 
 **Common Hashing Algorithms in SSL/TLS (Showing Digest Lengths)**
 

@@ -76,11 +76,11 @@ Industry grade hashing algorithms have five key characteristics or properties. P
 
 **The Three Core Security Properties of Cryptographic Hash Functions (Hashing Algorithms)**
 
-| Property                        | The Challenge For an Attacker                                                           |
-| ------------------------------- | --------------------------------------------------------------------------------------- |
-| **Pre-image Resistance**        | "Here's a hash `h`. Find me _any_ input that creates it."                               |
-| **Second Pre-image Resistance** | "Here's a specific message `m1`. Find me a _different_ message that has the same hash." |
-| **Collision Resistance**        | "Find me _any two different messages_ that have the same hash."                         |
+| Property                        | The Challenge For an Attacker                                                         |
+| ------------------------------- | ------------------------------------------------------------------------------------- |
+| **Pre-image Resistance**        | "Here's a hash `h`. Find me any input that creates it."                               |
+| **Second Pre-image Resistance** | "Here's a specific message `m1`. Find me a different message that has the same hash." |
+| **Collision Resistance**        | "Find me any two different messages that have the same hash."                         |
 
 An industry-grade algorithm (like SHA-256) is designed to make all three of these attacks computationally infeasible.
 
@@ -141,7 +141,8 @@ Hashing Demonstration with Linux: [Run a hashing algorithm (md5sum or sha1sum) o
 
 ### Key takeaways
 
-* An industry grade hashing algorithm has five key characteristics.
+* An industry grade hashing algorithm has five key characteristics:
+  * Pre-image resistance, second pre-image resistance, collision resistance, fixed-length output, and the avalanche effect.
 * A hashing algorithm performs a series of calculations iteratively.
 * Hashing alone cannot detect malicious tampering during message exchange.
 * HMAC (key + hashing) ensures integrity and authenticity against active attackers.
@@ -149,10 +150,6 @@ Hashing Demonstration with Linux: [Run a hashing algorithm (md5sum or sha1sum) o
 * For even stronger guarantees, digital signatures or encryption + MAC can be used.
 
 ### References
-
-[Ed Harmoush. (December 15, 2021). Hashing Algorithm. Practical Networking.](https://www.practicalnetworking.net/series/cryptography/hashing-algorithm/)
-
-[Ed Harmoush. (December 8, 2021). Message Integrity. Practical Networking.](https://www.practicalnetworking.net/series/cryptography/message-integrity/)
 
 Kaufman, C., Perlman, R., & Speciner, M. (2002). Network security: Private communication in a public world (2nd ed.). Prentice Hall.
 

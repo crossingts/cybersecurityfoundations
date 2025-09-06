@@ -9,11 +9,11 @@ description: >-
 ## Learning objectives
 
 * Develop a foundational understanding of how hashing algorithms function
-* Know the key characteristics of an industry grade hashing algorithm&#x20;
+* Know the characteristics of industry grade hashing algorithms
 * Develop a foundational understanding of how hashing can be used to ensure message integrity
 * Develop a foundational understanding of how hashing can be used to authenticate someone
 
-This section discusses [hashing algorithms and message integrity](https://builtin.com/cybersecurity/what-is-hashing). This section begins by explaining hashing's mechanism of action through a simplified example. It then explains the key characteristics (qualities) of an industry-grade hashing algorithm. It then explores how basic hashing can be used to ensure the integrity of messages exchanged between a client and a server. Finally, the lesson introduces the concept of message authentication, demonstrating how a shared secret key is combined with a hash function to create a Hash-based Message Authentication Code (HMAC). You will learn how HMAC provides a robust defense against tampering by ensuring both data integrity and authenticity.
+This section discusses [hashing algorithms and message integrity](https://builtin.com/cybersecurity/what-is-hashing). This section begins by explaining hashing's mechanism of action through a simplified example. It then explains the characteristics (properties) of industry grade hashing algorithms. It then explores how basic hashing can be used to ensure the integrity of messages exchanged between a client and a server. Finally, the lesson introduces the concept of message authentication, demonstrating how a shared secret key is combined with a hash function to create a Hash-Based Message Authentication Code (HMAC). You will learn how HMAC provides a robust defense against tampering by ensuring both data integrity and authenticity.
 
 ## Topics covered in this section
 
@@ -44,35 +44,35 @@ Note — The message digest (52 for hello) is more technically a hash or checksu
 
 #### Characteristics of industry grade hashing algorithms
 
-Industry grade hashing algorithms have five key characteristics or properties. Pre-image resistance, second pre-image resistance, and collision resistance are core security properties. Fixed-length output and the Avalanche Effect are two essential features that enable those properties.
+Industry grade hashing algorithms have five key characteristics or properties. Pre-image resistance, second pre-image resistance, and collision resistance are core security properties. Fixed-length output and the avalanche effect are two essential features that enable those properties.
 
 **1. Pre-image Resistance (One-Wayness)**
 
-* **Definition:** Given a hash value `h`, it is computationally infeasible to find _any_ input `m` such that `hash(m) = h`. Hashing is a **one-way function**, meaning that it is computationally infeasible to reverse the hash function to know the original input.&#x20;
-* **Simple Analogy:** If you are given a fingerprint, you cannot reconstruct the person it came from.
+* **Definition:** Given a hash value `h`, it is computationally infeasible to find any input `m` such that `hash(m) = h`. Hashing is a one-way function, meaning that it is computationally infeasible to reverse the hash function to know the original input.&#x20;
+* **Analogy:** If you are given a fingerprint, you cannot reconstruct the person it came from.
 * **Why it matters:** This ensures an attacker cannot reverse-engineer the original data/message from its digest.
 
 **2. Second Pre-image Resistance**
 
-* **Definition:** Given a specific input `m1`, it is computationally infeasible to find a _different_ input `m2` (`m2 ≠ m1`) such that `hash(m1) = hash(m2)`.
-* **Simple Analogy:** If you have a specific document and its fingerprint, you cannot create a _different_, fraudulent document that has the _exact same fingerprint_.
+* **Definition:** Given a specific input `m1`, it is computationally infeasible to find a different input `m2` (`m2 ≠ m1`) such that `hash(m1) = hash(m2)`. Given a specific input, it is computationally infeasible to find a different input that creates the same output.
+* **Analogy:** If you have a specific document and its fingerprint, you cannot create a different, fraudulent document that has the exact same fingerprint. You cannot find someone else who has the exact same fingerprint as Alice.
 * **Why it matters:** This protects against forgery. An attacker cannot substitute a malicious message for a legitimate one while keeping the same hash value.
 
 **3. Collision Resistance**
 
-* **Definition:** It is computationally infeasible to find _any two distinct inputs_ `m1` and `m2` (where `m1 ≠ m2`) such that `hash(m1) = hash(m2)`. A hash function must make it nearly impossible for two different inputs to produce the same hash (SHA-256 is secure; MD5/SHA-1 are broken).
-* **Simple Analogy:** You cannot find any two different people in the world who have an identical fingerprint.
+* **Definition:** It is computationally infeasible to find any two distinct inputs `m1` and `m2` (where `m1 ≠ m2`) such that `hash(m1) = hash(m2)`. It is computationally infeasible to find two different inputs that just so happen to create the same output.
+* **Analogy:** You cannot find any two different people in the world who have an identical fingerprint.
 * **Why it matters:** This is the hardest property to achieve and is crucial for digital signatures and commitments. If collisions are easy to find, an attacker can create two different documents with the same hash, sign the benign one, and claim the signature applies to the malicious one.
 
-**4. Fixed-Length Output (Not a "security property" but a fundamental feature)**
+**4. Fixed-Length Output**
 
-* **Definition:** The hash function always produces an output (digest) of a fixed, predefined length, regardless of the size of the input message. The resulting digest cannot provide any hints or clues about the original message, including its length. A digest should not increase in size as the length of the message increases.
+* **Definition:** The hash function always produces an output (digest) of a fixed, predefined length, regardless of the size of the input message. The resulting digest cannot provide any clues about the original message, including its length. A digest should not increase in size as the length of the message increases.
 * **Why it matters:** This provides efficiency and predictability in protocols. It also prevents leakage of information about the input size.
 
 **5. The Avalanche Effect (A critical design mechanism)**
 
-* **Definition:** A small change to the input (e.g., flipping a single bit) produces a drastic change in the output, such that the new hash appears uncorrelated to the old hash. A hashing algorithm is a series of calculations done iteratively. As a result, a small change in the beginning creates an exponentially bigger change in the resulting digest.
-* **Why it matters:** This is not a standalone security property but the _mechanism_ that makes the three properties above possible. It ensures the hash function's output is unpredictable and random-looking.
+* **Definition:** A hashing algorithm is a series of calculations done iteratively. As a result, a small change to the input (e.g., flipping a single bit) produces a drastic change in the output, such that the new hash appears uncorrelated to the old hash.&#x20;
+* **Why it matters:** This is not a standalone security property but the mechanism that makes the three properties above possible. It ensures the hash function's output is unpredictable and random-looking.
 
 **The Three Core Security Properties of Cryptographic Hash Functions (Hashing Algorithms)**
 
@@ -141,7 +141,7 @@ Hashing Demonstration with Linux: [Run a hashing algorithm (md5sum or sha1sum) o
 
 ### Key takeaways
 
-* An industry grade hashing algorithm has **four** fundamental characteristics.
+* An industry grade hashing algorithm has five key characteristics.
 * A hashing algorithm performs a series of calculations iteratively.
 * Hashing alone cannot detect malicious tampering during message exchange.
 * HMAC (key + hashing) ensures integrity and authenticity against active attackers.

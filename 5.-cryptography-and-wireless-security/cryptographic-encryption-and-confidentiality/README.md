@@ -71,23 +71,23 @@ Hash functions (such as MD5, SHA-1, SHA-256, and SHA-3) are algorithms used to g
 
 Symmetric encryption is an encryption scheme that encrypts and decrypts using the same secret key. Here is a simple example of symmetric encryption.
 
-hello → khoor
+hello —encryption→ khoor
 
 Using a rudimentary symmetric encryption algorithm of “pushing letters forward” and a secret key of 3, we converted the plain text hello to the cipher text khoor.
 
 If we know the encryption algorithm and secret key used in the encryption process, we can apply them in reverse to decrypt khoor back to hello.
 
-khoor → hello
+khoor —decryption→ hello
 
-Here is another example.
+Here is another example. A symmetric encryption algorithm of multiplication and a secret key of 7 are used.&#x20;
 
-66 → 462 (66 x 7)
+66 —x7→ 462
 
-Here, a symmetric encryption algorithm of multiplication and a secret key of 7 were used. To decipher the text, we inverse the operation. We divide 462 by 7. The key point here is that we used the same secret key to encrypt and decrypt the text.
+To decipher the text, we inverse the operation. We divide 462 by 7. The key point here is that we use the same secret key to encrypt and decrypt the text.
 
-The encryption algorithm is typically and ideally publicly known. So the strength of the encryption practically rests on the strength of the secret key. Longer and more random keys are considered more secure.
+The encryption algorithm is typically standardized and publicly known. So the strength of the encryption practically rests on the strength of the secret key. Longer and more random keys are considered more secure.
 
-**Common symmetric encryption algorithms:**
+**Common Symmetric Encryption Algorithms**
 
 | **Algorithm** | **Key size** |
 | ------------- | ------------ |
@@ -105,9 +105,7 @@ Asymmetric encryption uses different keys to encrypt and decrypt data. Here is a
 
 hello –— asymmetric encryption (key = 5) → mjqqt
 
-The plain text hello was encrypted with an asymmetric encryption algorithm of pushing letters forward and a secret key of 5.
-
-To decrypt mjqqt, we push the letters forward 21 more times (let’s pretend there are only lower case letters in the alphabet, for a total of 26 possible characters).
+The plain text hello was encrypted with an asymmetric encryption algorithm of pushing letters forward and a secret key of 5. To decrypt mjqqt, we push the letters forward 21 more times (let’s pretend there are only lower case letters in the alphabet, for a total of 26 possible characters).
 
 mjqqt –— asymmetric decryption (key = 21) → hello
 
@@ -115,21 +113,17 @@ This just demonstrates the basic idea of asymmetric encryption, that two differe
 
 That said, our example invokes an important concept in asymmetric encryption: asymmetric keys are mathematically linked. What one key encrypts, only the other key can decrypt. In our example, if we used key 21 to encrypt hello, we can decrypt the cipher with a key of 5.
 
-One of the key pair is private, never shared with anyone else. This is the private key. The other key is the public key, and it is public. Each key can be used in different ways to achieve different security features.
-
 #### Confidentiality via asymmetric encryption
 
-In asymmetric encryption, you use the recipient’s public key to encrypt a message to them. Anyone can encrypt with a public key. Only the recipient’s private key can decrypt the message. This ensures that only the intended recipient can read the message.
+In asymmetric encryption, one of the key pair is private, never shared with anyone else. This is the private key. The other key is the public key, and it is public. You use the recipient’s public key to encrypt a message to them. Anyone can encrypt with a public key. Only the recipient’s private key can decrypt the message. This ensures that only the intended recipient can read the message.
 
-Bob wants to send an encrypted message to Alice. Bob uses Alice’s public key to encrypt the message. Bob sends the message to Alice. And Alice uses her private key to decrypt the message.
-
-This exchange establishes confidentiality: the only possible key that could extract the message is Alice’s private key. And since Alice never shared her key (the private key is never shared), Bob knows that only Alice was able to read the message.
+Bob wants to send an encrypted message to Alice. Bob uses Alice’s public key to encrypt the message. Bob sends the message to Alice. And Alice uses her private key to decrypt the message. This exchange establishes confidentiality: the only possible key that could extract the message is Alice’s private key. And since Alice never shared her key (the private key is never shared), Bob knows that only Alice was able to read the message.
 
 ### Symmetric encryption vs asymmetric encryption
 
-Why symmetric encryption is a preferred choice for bulk data encryption:
+Symmetric encryption is a preferred choice for bulk data encryption because:
 
-* In symmetric encryption, the cipher text is the same size as the plain text (original data).
+* In symmetric encryption, the cipher text is the same size as the plain text (input data).
 * The math involved in symmetric encryption is relatively simpler and less CPU resource intensive. So more data can be encrypted in less time with less CPU usage.
 
 On the downside, symmetric encryption presents a “key exchange problem”, as the secret key must exist in two places, with the sender and with the receiver. Several solutions exist to the key exchange problem (how do we get the key securely from one party to the other?).
@@ -138,19 +132,17 @@ Symmetric encryption is sometimes considered less secure than asymmetric encrypt
 
 **Hybrid encryption**
 
-As noted, asymmetric encryption is not ideal for bulk encryption. Symmetric encryption is more suited for bulk encryption but we have to find a solution to the key exchange problem. **Hybrid encryption** is a solution to the **key exchange problem** that entails combining the strengths of both symmetric and asymmetric encryption while avoiding all their weaknesses.
+As noted, asymmetric encryption is not ideal for bulk encryption. Symmetric encryption is more suited for bulk encryption but we have to find a solution for the key exchange problem. **Hybrid encryption** is a solution for the **key exchange problem** that entails combining the strengths of both symmetric and asymmetric encryption.
 
-Bob wants to send an encrypted message to Alice. Bob starts by randomly generating a symmetric secret key. Bob then uses Alice’s public key to encrypt the symmetric secret key. This encrypted symmetric key is sent across the wire to Alice. Alice then uses her private key to extract the symmetric secret key that Bob sent. At this point, both Bob and Alice have an identical symmetric secret key that can be used to symmetrically encrypt as much data as they need.
-
-Thus Bob and Alice are benefiting from the security of asymmetric encryption, with the speed and efficiency of symmetric encryption.
+Bob wants to send an encrypted message to Alice. Bob starts by randomly generating a symmetric secret key. Bob then uses Alice’s public key to encrypt the symmetric secret key. This encrypted symmetric key is sent across the wire to Alice. Alice then uses her private key to extract the symmetric secret key that Bob sent. At this point, both Bob and Alice have an identical symmetric secret key that can be used to symmetrically encrypt communications between them. Thus Bob and Alice are benefiting from the security of asymmetric encryption, with the speed and efficiency of symmetric encryption.
 
 ### Key takeaways
 
-* Symmetric encryption uses a single shared key for both encryption and decryption
-* Asymmetric encryption uses two different keys for the encryption and decryption
-* In asymmetric encryption, you use the recipient’s public key to encrypt a message to them. Only the recipient’s private key can decrypt the message
-* Symmetric encryption is a preferred choice for bulk data encryption
-* Hybrid encryption is a solution to the key exchange problem
+* Symmetric encryption uses a single shared key for both encryption and decryption.
+* Asymmetric encryption uses two different keys for the encryption and decryption.
+* In asymmetric encryption, you use the recipient’s public key to encrypt a message to them. Only the recipient’s private key can decrypt the message.
+* Symmetric encryption is a preferred choice for bulk data encryption.
+* Hybrid encryption is a solution for the key exchange problem.
 
 ### References
 

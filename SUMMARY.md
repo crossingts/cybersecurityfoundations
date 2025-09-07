@@ -98,6 +98,7 @@
   * [Hashing algorithms and message integrity — Quiz](5.-cryptography-and-wireless-security/hashing-algorithms-and-message-integrity/hashing-algorithms-and-message-integrity-quiz.md)
 * [Cryptographic encryption and confidentiality](5.-cryptography-and-wireless-security/cryptographic-encryption-and-confidentiality/README.md)
   * [Pretty Good Privacy (PGP)](5.-cryptography-and-wireless-security/cryptographic-encryption-and-confidentiality/pretty-good-privacy-pgp.md)
+  * [Cryptographic encryption and confidentiality — Quiz](5.-cryptography-and-wireless-security/cryptographic-encryption-and-confidentiality/cryptographic-encryption-and-confidentiality-quiz.md)
 * [Message signing using asymmetric keys](5.-cryptography-and-wireless-security/message-signing-using-asymmetric-keys.md)
 * [Authentication methods](5.-cryptography-and-wireless-security/authentication-methods.md)
 * [The SSL/TLS handshake](5.-cryptography-and-wireless-security/the-ssl-tls-handshake/README.md)

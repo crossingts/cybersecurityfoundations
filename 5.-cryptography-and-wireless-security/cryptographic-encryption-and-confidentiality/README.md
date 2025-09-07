@@ -11,7 +11,7 @@ description: >-
 * Develop a foundational understanding of how cryptographic encryption works
 * Understand why symmetric encryption is a preferred choice for bulk data encryption
 
-This section sheds light on how cryptographic encryption can be used to achieve data confidentiality. This discussion looks at how symmetric encryption and asymmetric encryption work—how scrambling plain text according to some mathematical logic encrypts text into cipher.
+This section sheds light on how cryptographic encryption can be used to achieve data confidentiality. This discussion looks at how scrambling plain text according to some mathematical logic encrypts plain text into cipher text. We will dissect the core principles, algorithms, and practical applications of both symmetric encryption (e.g., AES) and asymmetric encryption (e.g., RSA). The lesson will compare their strengths and weaknesses, explain why symmetric encryption is favored for bulk data processing, and introduce hybrid encryption as a solution to the key exchange problem, combining the best attributes of both cryptographic systems.
 
 ## Topics covered in this section
 
@@ -138,16 +138,13 @@ Bob wants to send an encrypted message to Alice. Bob starts by randomly generati
 
 ### Key takeaways
 
-* Symmetric encryption uses a single shared key for both encryption and decryption.
-* Asymmetric encryption uses two different keys for the encryption and decryption.
-* In asymmetric encryption, you use the recipient’s public key to encrypt a message to them. Only the recipient’s private key can decrypt the message.
-* Symmetric encryption is a preferred choice for bulk data encryption.
-* Hybrid encryption is a solution for the key exchange problem.
+* Encryption is vital for ensuring confidentiality across various domains, including secure data storage (e.g., encrypted hard drives), data transmission (e.g., HTTPS), and secure messaging, preventing unauthorized access to sensitive information.
+* Symmetric Encryption relies on a single, shared secret key for both the encryption and decryption processes. Its efficiency makes it the preferred method for encrypting large volumes of data, though it requires a secure method to distribute the shared key.
+* Asymmetric Encryption uses a mathematically linked pair of keys: a public key for encryption and a private key for decryption. This eliminates the key distribution issue, as the public key can be freely shared, while the private key is kept secret. A message encrypted with a recipient's public key can only be decrypted by their corresponding private key, ensuring confidentiality.
+* The strengths of both systems are combined in Hybrid Encryption. This approach uses asymmetric encryption to securely exchange a randomly generated symmetric session key. The bulk of the data is then encrypted efficiently using this symmetric key, solving the key exchange problem while maintaining high performance.
 
 ### References
 
-[Ed Harmoush. (October 12, 2021). Confidentiality. Practical Networking.](https://www.practicalnetworking.net/series/cryptography/confidentiality/)
+Ferguson, N., Schneier, B., & Kohno, T. (2010). Cryptography Engineering: Design Principles and Practical Applications. Wiley.
 
-[Ed Harmoush. (October 12, 2021). Asymmetric Encryption. Practical Networking.](https://www.practicalnetworking.net/series/cryptography/asymmetric-encryption/)
-
-[Ed Harmoush. (December 15, 2015). Symmetric Encryption. Practical Networking.](https://www.practicalnetworking.net/series/cryptography/symmetric-encryption/)
+Stallings, W. (2017). Cryptography and Network Security: Principles and Practice (7th ed.). Pearson.

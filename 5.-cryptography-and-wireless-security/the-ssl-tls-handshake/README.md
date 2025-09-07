@@ -13,7 +13,7 @@ description: >-
 * Describe the TLS handshake secure session key negotiation in TLS 1.2 and TLS 1.3
 * Identify the key cryptographic algorithms involved in the TLS handshake
 
-This section explains how the [SSL/TLS handshake](https://en.wikipedia.org/wiki/TLS/SSL#TLS_handshake) establishes a secure communication channel between two endpoints: Typically, client (e.g., web browser, mobile app) and server (e.g., website, API). For example, when you visit https://example.com, your browser (client) performs a TLS handshake with example.com's server to encrypt all traffic.
+TLS/SSL is the bedrock of web security. This section explains how the [SSL/TLS handshake](https://en.wikipedia.org/wiki/TLS/SSL#TLS_handshake) establishes a secure communication channel between two endpoints: typically, client (e.g., web browser, mobile app) and server (e.g., website, API). For example, when you visit https://example.com, your browser (client) performs a TLS handshake with example.com's server to encrypt all traffic.
 
 ## Topics covered in this section <a href="#topics-covered-in-this-section" id="topics-covered-in-this-section"></a>
 

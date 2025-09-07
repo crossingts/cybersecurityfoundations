@@ -34,7 +34,7 @@ This process is called **message signing.** It provides authentication and **non
 * Alice takes the hash and performs a **private-key operation** (not classic encryption, but mathematically similar).
 * The result is a **digital signature**, which is tied to both the message and Alice’s private key. This step is referred to as "signing," but technically, it’s asymmetrically encrypting the hash (with Alice's private key).
 
-#### Verification by Bob:
+**Verification by Bob:**
 
 1. Bob uses Alice’s _public key_ to "decrypt" the signature, revealing the original hash.
 2. Bob independently hashes the received message.

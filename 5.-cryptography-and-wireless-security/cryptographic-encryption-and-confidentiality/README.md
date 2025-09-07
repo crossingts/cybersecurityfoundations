@@ -15,14 +15,16 @@ This section sheds light on how cryptographic encryption can be used to achieve 
 
 ## Topics covered in this section
 
-* **Confidentiality**
+* **Encryption algorithms**
 * **Symmetric encryption**
 * **Asymmetric encryption**
 * **Symmetric encryption vs asymmetric encryption**
 
-### Confidentiality
+### Encryption algorithms
 
-Confidentiality refers to the idea of keeping data private and viewable by authorized users only. Encryption is commonly used to enforce data confidentiality.&#x20;
+#### A simplified explanation of encryption
+
+Encryption is commonly used to enforce data confidentiality. Confidentiality refers to the idea of keeping data private and viewable by authorized users only.&#x20;
 
 Plain text or clear text is data before it is encrypted. Encrypted data is called cipher text. Plain text is converted to cipher text using encryption algorithms.
 

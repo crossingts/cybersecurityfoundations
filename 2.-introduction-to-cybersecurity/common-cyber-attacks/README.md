@@ -358,5 +358,3 @@ Ransomware is a particularly destructive form of malware that encrypts the victi
 ICANN. (n.d.). ICANN Lookup. Retrieved from https://lookup.icann.org/en
 
 Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 2. Cisco Press.
-
-Odom, W. (2020). Chapter 4. Security Architectures, CCNA 200-301 Official Cert Guide (pp. 68-85), Volume 2. Cisco Press.

@@ -610,6 +610,6 @@ Harris, S., Harper, A., Eagle, C., & Ness, J. (2007). _Gray Hat Hacking: The Eth
 
 Landoll, D. J., & Landoll, D. (2005). _The Security Risk Assessment Handbook: A Complete Guide for Performing Security Risk Assessments_. CRC Press.
 
-Odom, W. (2020). \*CCNA 200-301 Official Cert Guide, Volume 2\*. Cisco Press.
+Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 2. Cisco Press.
 
 Reynolds, G. (2012). _Ethics in Information Technology, Fourth Edition_. Course Technology, Cengage Learning.

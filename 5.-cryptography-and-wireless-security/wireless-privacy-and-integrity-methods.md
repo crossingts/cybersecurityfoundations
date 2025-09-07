@@ -101,4 +101,4 @@ MICs are often used in conjunction with encryption to provide a higher level of 
 
 ### References
 
-Odom, W. (2020). Chapter 28. Securing Wireless Networks, _CCNA 200-301 Official Cert Guide_ (pp. 704-719), Volume 1. Cisco Press.
+Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 1. Cisco Press.

@@ -1,4 +1,4 @@
-# IEEE 802.1x/EAP: EAP-based authentication methods
+# IEEE 802.1x/EAP authentication methods
 
 ### 802.1x/EAP (Extensible Authentication Protocol)
 
@@ -96,4 +96,4 @@ EAP-TLS can only be used if the wireless clients can accept and use digital cert
 
 ### References
 
-Odom, W. (2020). Chapter 28. Securing Wireless Networks, _CCNA 200-301 Official Cert Guide_ (pp. 704-719), Volume 1. Cisco Press.
+Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 1. Cisco Press.

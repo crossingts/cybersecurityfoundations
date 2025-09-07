@@ -89,19 +89,24 @@ The encryption algorithm is typically standardized and publicly known. So the st
 
 **Common Symmetric Encryption Algorithms**
 
-| **Algorithm** | **Key size** |
-| ------------- | ------------ |
-| DES           | 56 bits      |
-| 3DES          | 168 bits     |
-| AES           | 128 bits     |
-| AES192        | 192 bits     |
-| AES256        | 256 bits     |
+The strength of a symmetric algorithm is a combination of its mathematical design and the key size used. Using a deprecated algorithm or an insufficient key size can leave data vulnerable to attacks.
 
-2^bits value (key size) gives us the maximum possible combination of numbers for a given key. For example, 2^56 gives us 72,057,594,037,927,936 or 72 quadrillion different combinations. A 128 bit key gives us 340,282,366,920,938,463,463,374,607,431,768,211,456 different possible values (340 undecillion).
+| **Algorithm**                          | **Key Size**                  | **Status & Notes**                                                                                                                                                                                                                                                                                                 |
+| -------------------------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **DES (Data Encryption Standard)**     | 56 bits                       | **DEPRECATED & INSECURE.** Originally developed in the 1970s, its 56-bit key is too short. It can be broken by brute-force attacks in a matter of hours with modern hardware. It should never be used for new systems.                                                                                             |
+| **3DES (Triple DES)**                  | 168 bits (effective 112 bits) | **DEPRECATED & LEGACY.** Designed as a stopgap to extend the life of DES by applying it three times. Its effective security is only 112 bits due to a specific type of attack (meet-in-the-middle). NIST has disallowed its use after 2023. It should be phased out of all existing systems and replaced with AES. |
+| **AES (Advanced Encryption Standard)** | 128 bits                      | **SECURE & CURRENT.** The global standard for symmetric encryption. A 128-bit key is considered secure against brute-force attacks for the foreseeable future. It provides an excellent balance of speed and security.                                                                                             |
+| **AES192**                             | 192 bits                      | **SECURE & CURRENT.** Offers a higher security margin than AES128. It is commonly used in environments handling highly sensitive data (e.g., government TOP SECRET information) where the extra computational cost is justified.                                                                                   |
+| **AES256**                             | 256 bits                      | **SECURE & CURRENT.** Provides the highest security level of the AES variants. Like AES192, it is required for certain government classifications and is widely supported. It is considered resistant to threats from future quantum computers (to a much greater extent than smaller keys).                       |
+
+**Clarifying notes:**
+
+* AES128 is efficient and secure for the vast majority of commercial and personal applications. AES192 and AES256 are used for higher security requirements, with AES256 being the "gold standard" for long-term protection of highly sensitive data.
+* 2^bits value (key size) gives us the maximum possible combination of numbers for a given key. For example, 2^56 gives us 72,057,594,037,927,936 or 72 quadrillion different combinations. A 128 bit key gives us 340,282,366,920,938,463,463,374,607,431,768,211,456 different possible values (340 undecillion).
 
 ### Asymmetric encryption
 
-Asymmetric encryption uses different keys to encrypt and decrypt data. Here is a simple example of asymmetric encryption.
+Asymmetric encryption is the foundation of an asymmetric cryptosystem. Asymmetric encryption uses a pair of mathematically linked keys—a public key and a private key—for encryption and decryption, instead of a single shared key. Here is a simple example of asymmetric encryption.
 
 hello –— asymmetric encryption (key = 5) → mjqqt
 
@@ -118,6 +123,23 @@ That said, our example invokes an important concept in asymmetric encryption: as
 In asymmetric encryption, one of the key pair is private, never shared with anyone else. This is the private key. The other key is the public key, and it is public. You use the recipient’s public key to encrypt a message to them. Anyone can encrypt with a public key. Only the recipient’s private key can decrypt the message. This ensures that only the intended recipient can read the message.
 
 Bob wants to send an encrypted message to Alice. Bob uses Alice’s public key to encrypt the message. Bob sends the message to Alice. And Alice uses her private key to decrypt the message. This exchange establishes confidentiality: the only possible key that could extract the message is Alice’s private key. And since Alice never shared her key (the private key is never shared), Bob knows that only Alice was able to read the message.
+
+**Common Asymmetric Encryption Algorithms**
+
+The following table lists several common asymmetric encryption algorithms, their typical key sizes, and their current security status. Key sizes between asymmetric and symmetric algorithms cannot be directly compared; a 2048-bit RSA key provides a security level roughly equivalent to a 112-bit symmetric key.
+
+| **Algorithm**                         | **Typical Key Size** | **Notes**                                                                                                                                                                                       |
+| ------------------------------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **RSA**                               | 2048 - 4096 bits     | The most widely used asymmetric algorithm. Used for key exchange in TLS/SSL and for digital signatures. Keys smaller than 2048 bits are now considered **insecure and deprecated**.             |
+| **Diffie-Hellman (DH)**               | 2048 - 4096 bits     | A protocol used for **key exchange**, not for direct encryption. It allows two parties to establish a shared secret over an insecure channel. Groups smaller than 2048 bits are **deprecated**. |
+| **Elliptic Curve Cryptography (ECC)** | 256 - 521 bits       | Provides equivalent security to RSA with significantly smaller key sizes, offering better performance and smaller certificate sizes. Used in modern systems like TLS 1.3.                       |
+| **Digital Signature Algorithm (DSA)** | 2048 - 3072 bits     | **Deprecated for encryption.** Used almost exclusively for digital signatures. Keys smaller than 2048 bits are **insecure**. Largely superseded by ECDSA.                                       |
+| **Elliptic Curve DSA (ECDSA)**        | 256 - 521 bits       | The elliptic curve variant of DSA, offering better efficiency than traditional DSA. Commonly used for digital signatures in cryptocurrencies and modern protocols.                              |
+
+**Clarifying notes:**
+
+* RSA and Diffie-Hellman keys shorter than 2048 bits are considered computationally feasible to break with modern technology and are therefore deprecated and insecure.
+* DSA is not used for encryption and is generally considered legacy for signatures, having been replaced by ECDSA or RSA-based signatures in most modern applications.
 
 ### Symmetric encryption vs asymmetric encryption
 

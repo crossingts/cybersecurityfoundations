@@ -33,3 +33,27 @@
 
 **5. Briefly explain the difference between a public key and a private key in an asymmetric cryptosystem.**\
 **Answer:** 1) Public Key: Can be freely shared with anyone and is used to encrypt data or verify a digital signature. 2) Private Key: Must be kept secret by the owner and is used to decrypt data encrypted with the corresponding public key or to create a digital signature.
+
+### Message signing using asymmetric keys
+
+**1. The text states that message signing provides non-repudiation. What is the fundamental assumption that the property of non-repudiation relies upon?**\
+**Answer:**\
+Non-repudiation relies on the fundamental assumption that the sender's private key has been kept secure and is solely in the possession of the sender. If the private key is compromised or shared, the sender could legitimately deny having signed the message, as someone else could have used the key.
+
+**2. The lesson explains that the process of creating a digital signature involves a hashing step. Why is the message hashed first, rather than signing the entire message directly with the private key?**\
+**Answer:**\
+Hashing the message first is done for three primary reasons: 1) Performance: Asymmetric encryption operations are computationally slow, and hashing is very fast. Signing a small, fixed-length hash is much more efficient than signing a large message. 2) Security: Some asymmetric algorithms have input size limits. 3) Compatibility: The resulting signature is a predictable, manageable size regardless of the original message's length.
+
+**3. Differentiate between the purposes of message encryption and message signing within asymmetric cryptography.**\
+**Answer:**
+
+* Message encryption is used to provide confidentiality. It ensures that only the intended recipient can read the message by encrypting it with the recipient's public key, so that only the holder of the corresponding private key can decrypt it.
+* Message signing is used to provide authentication, integrity, and non-repudiation. It proves the message came from a specific sender and was not altered by signing a hash of the message with the sender's private key, so that anyone with the sender's public key can verify it.
+
+**4. According to the lesson, what critical problem does a Public Key Infrastructure (PKI) solve in the process of message signing?**\
+**Answer:**\
+PKI solves the problem of trust and secure key distribution. It answers the question: "How does the verifier (Bob) obtain the sender's (Alice's) public key with confidence that it is genuine and not a forgery from an attacker?" PKI uses digital certificates, issued by a trusted Certificate Authority (CA), to bind a public key to an identity, allowing a verifier to trust the public key they are using.
+
+**5. The text lists common algorithms like RSA-PSS and ECDSA. What is a key practical advantage of using elliptic curve-based algorithms (like ECDSA or EdDSA) over RSA for signing?**\
+**Answer:**\
+A key practical advantage of elliptic curve-based algorithms (ECDSA, EdDSA) over RSA is that they provide equivalent security with significantly smaller key sizes. For example, a 256-bit ECC key provides security comparable to a 3072-bit RSA key. This leads to smaller signatures, less bandwidth usage, and faster computational performance, making them more efficient for many applications.

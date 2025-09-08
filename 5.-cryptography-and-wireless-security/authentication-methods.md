@@ -71,7 +71,7 @@ In IPsec, for example, both parties generate random nonces and exchange them dur
 
 ### Digital certificates
 
-Digital certificates are a critical security technology that is used to protect communications over the Internet. Digital certificates are arguably the primary method of identification on the Internet. A digital certificate is an electronic document that binds a public key to an identity, such as a company or a server. A digital certificate is used to,
+Digital certificates are a critical security technology that is used to protect communications over the Internet. Digital certificates are the primary method for authenticating servers and services on the Internet. Digital certificates form the basis of trust for secure websites, providing users with cryptographic proof of a site's identity. A digital certificate is an electronic document that binds a public key to an identity, such as a company or a server. A digital certificate is used to,
 
 * Verify the identity of the holder of the public key (e.g., a server) and optionally the client.
 * Enable encrypted communications by facilitating the secure exchange of symmetric session keys. During the TLS handshake, the client uses the public key in the server's digital certificate to encrypt the initial keying material. This ensures only the legitimate holder of the corresponding private key, the server being authenticated, can access it, allowing both parties to securely generate the same keys used for bulk encryption. This happens during the key establishment phase of the TLS handshake.&#x20;
@@ -92,7 +92,7 @@ The digital certificate is issued by a trusted Certificate Authority (CA) after 
 The TLS handshake is a process that establishes a secure, encrypted connection between a client (e.g., a web browser) and a server (e.g., a website). Its primary purposes are:
 
 1. **Authentication** – Verifies the server’s identity (and optionally the client’s) using digital certificates.
-2. **Key Establishment** – Securely negotiates a shared session key for symmetric encryption of communications using digital certificates.
+2. **Key Establishment (or "Key Exchange")** – Securely negotiates a shared session key for symmetric encryption of communications using digital certificates.
 3. **Cipher Suite Agreement** – Determines the encryption algorithms (e.g., AES, ChaCha20) and hash functions (e.g., SHA-256) to be used.
 4. **Secure Session Establishment** – Ensures all further communication is encrypted and tamper-proof.
 
@@ -100,36 +100,41 @@ In TLS, what is actually exchanged is the pre-master secret. The final session k
 
 After the handshake, both the client and server use the derived symmetric session key to encrypt all transmitted data and to verify its integrity using HMAC or AEAD modes like AES-GCMP. The symmetric session key derived during the handshake is used alongside a symmetric encryption algorithm (e.g., AES-256, ChaCha20) to encrypt the actual application data (e.g., HTTP requests, form submissions, etc.).
 
-#### Simplified Steps in a TLS Handshake
+#### Simplified Steps in a TLS Handshake (TLS 1.2)
 
 1. **Client Hello** – The client sends supported TLS versions, cipher suites, and a random number (nonce).
 2. **Server Hello** – The server responds with its chosen cipher suite, a random number (nonce), and its **digital certificate** (containing its public key).
-3. **Key Exchange** – The client verifies the certificate against trusted CAs, then generates a **pre-master secret (PMS)**. The client computes a symmetric key using the pre-master secret, its random number, and the server's random number. The client sends the server the pre-master secret encrypted with the server’s public key
-4. **Session Key Generation** – Both sides compute the same **symmetric session key** using the random numbers and pre-master secret.
+3. **Key Establishment** – The client verifies the certificate against trusted CAs, then generates a **pre-master secret (PMS)**. The client computes a symmetric key using the pre-master secret, its random number, and the server's random number. The client sends the server the pre-master secret encrypted with the server’s public key
+4. **Session Key Generation** – The sever decrypts the pre-master secret with its private key, combines it with the client's nonce and its own once to compute its copy of the symmetric session key.
 5. **Secure Communication** – All further data is encrypted with the shared/computed session key.
 
 #### Two Integrity Mechanisms
 
-There are **two different integrity mechanisms** at different stages of the TLS process:
+There are two different integrity mechanisms at different stages of the TLS process:
 
 **1. Integrity During the TLS Handshake (Digital Signatures)**
 
 * The server sends its digital certificate to the client during the handshake.
-* The client verifies the certificate (trust chain, expiry, revocation).
-* The server signs parts of the **TLS handshake messages** (e.g., `ServerKeyExchange` in RSA-based key exchange or the entire handshake transcript in modern TLS 1.3), generating a digital signature using its private key.
-* The client checks the signature using the server’s **public key** (from the digital certificate).&#x20;
-* If the signature is valid → **message integrity is confirmed**. This ensures the handshake messages themselves were not tampered with, and authenticates the server (proves it owns the private key).
+* The client performs a thorough validation of the server's digital certificate. This process involves three critical checks:
+  * **Trust Chain Validation:** The client verifies that the certificate is issued by a trusted Certificate Authority (CA). It does this by checking the certificate's chain of signatures, ensuring it ultimately links back to a root CA certificate pre-installed in the client's trust store.
+  * **Expiry Check:** The client confirms that the current date and time fall within the certificate's validity period, ensuring the certificate is neither not-yet-valid nor expired.
+  * **Revocation Check:** The client checks that the certificate has not been prematurely revoked by its issuer. This is typically done by checking against a Certificate Revocation List (CRL) or querying an Online Certificate Status Protocol (OCSP) server.
+* The server signs parts of the TLS handshake messages (e.g., `ServerKeyExchange` in RSA-based key exchange or the entire handshake transcript in modern TLS 1.3), generating a digital signature using its private key. To prove it possesses the private key matching its certificate and to protect the handshake from tampering, the server generates a digital signature over critical parts of the handshake exchange. The exact content covered by this signature varies by protocol version and algorithm:
+  * **In TLS 1.2 (e.g., with RSA or Diffie-Hellman key exchange):** The signature is not over the entire handshake. It typically covers a hash that includes the `ServerKeyExchange` message (which contains the server's key-sharing parameters) and the random values exchanged in the `ClientHello` and `ServerHello` messages. This crucial step binds the server's identity to the specific cryptographic parameters of this session, preventing a man-in-the-middle attacker from altering them.
+  * **In Modern TLS 1.3:** The protocol is simpler and more robust. The server signs a cryptographic hash of the entire handshake transcript—meaning almost all messages sent and received by both parties up to that point. This includes the `ClientHello`, `ServerHello`, and other key-sharing messages. Signing the entire transcript provides the strongest possible integrity guarantee, ensuring that not a single byte of the negotiation was altered.
+* The client checks the signature using the server’s public key (from the digital certificate).&#x20;
+* If the signature is valid, message integrity is confirmed. This ensures the handshake messages themselves were not tampered with, and authenticates the server (proves it owns the private key).
 
 **2. Integrity After the Handshake (HMAC or AEAD)**
 
-* Once the handshake completes, **all application data** (e.g., HTTP traffic) is encrypted and integrity-protected using:
+* Once the handshake completes, all application data (e.g., HTTP traffic) is encrypted and integrity-protected using:
   * **HMAC** (Hash-based Message Authentication Code) in older TLS versions (e.g., TLS 1.2 with AES-CBC + HMAC-SHA256).
   * **AEAD modes** (e.g., AES-GCM, ChaCha20-Poly1305) in modern TLS 1.3.
-* **How?** A **symmetric session key** (derived during the handshake) is used for both encryption and integrity. The symmetric key is used in one of two ways:
+* **How?** A symmetric session key (derived during the handshake) is used for both encryption and integrity. **The symmetric key is used in one of two ways:**
 
 **A. HMAC (Hash-Based Message Authentication Code)**
 
-* **Process**:
+* Process used in older TLS (e.g., TLS 1.2 with AES-CBC + HMAC-SHA256):
   1. The sender:
      * Encrypts data with the symmetric key (e.g., AES-CBC). The output is ciphertext.
      * Computes an HMAC (e.g., `HMAC-SHA256`) over the ciphertext using the same symmetric key (or a derived subkey). The HMAC uses a separate MAC key derived from the same symmetric session key. The output is MAC tag (integrity check value).&#x20;
@@ -137,14 +142,12 @@ There are **two different integrity mechanisms** at different stages of the TLS 
   2. The receiver:
      * Recomputes the HMAC and checks if it matches. The receiver recomputes the HMAC over the received ciphertext using the same symmetric MAC key.
      * If the computed MAC matches the received MAC tag → integrity is valid. If not, the data was tampered with.
-* **Used in**: Older TLS (e.g., TLS 1.2 with AES-CBC + HMAC-SHA256).
 
 **B. AEAD (Authenticated Encryption with Associated Data)**
 
-* **Process**:
+* Process used in modern TLS (e.g., TLS 1.3 only uses AEAD modes):
   * Algorithms like **AES-GCM** or **ChaCha20-Poly1305** _combine encryption + integrity_ in one step.
   * The symmetric key is used to both encrypt _and_ generate an integrity tag (no separate HMAC step).
-* **Used in**: Modern TLS (e.g., TLS 1.3 _only_ uses AEAD modes).
 
 **Why Both Are Needed**
 
@@ -153,7 +156,7 @@ There are **two different integrity mechanisms** at different stages of the TLS 
 
 #### **Key Exchange (Establishing a Session Key) in the TLS Handshake**
 
-The public key in the certificate is used in one of two ways, depending on the **key exchange algorithm**:
+The public key in the certificate is used in one of two ways, depending on the key exchange algorithm:
 
 **A. RSA Key Exchange (Older, no forward secrecy)**
 
@@ -179,30 +182,31 @@ The public key in the certificate is used in one of two ways, depending on the *
 
 **How Digital Certificates Work in HTTPS**
 
-HTTPS uses SSL/TLS protocols to secure browsing sessions. When you visit `https://example.com`, the TLS handshake happens before any data is sent, securing your login or payment details. When you visit a website that uses HTTPS, your browser will first verify the identity of the website by checking the digital certificate that is presented by the website server. If the certificate is valid, if a trusted Certificate Authority (CA) issued it, your browser will use the **public key** in the certificate to establish an encrypted connection to encrypt all of the communications between your computer and the website.
+HTTPS uses SSL/TLS protocols to secure browsing sessions. When you visit `https://example.com`, the TLS handshake happens before any data is sent, securing your login or payment details. When you visit a website that uses HTTPS, your browser will first verify the identity of the website by checking the digital certificate that is presented by the website server. If the certificate is valid, if a trusted Certificate Authority (CA) issued it, your browser will use the public key in the certificate to establish an encrypted connection to encrypt all of the communications between your computer and the website.
 
 **Role of Digital Certificates in the SSL/TLS Handshake**
 
 Digital certificates serve three main purposes in the SSL/TLS handshake process:
 
-**A. Authentication (Identity Verification)**
+**A. Server Authentication (Identity Verification)**
 
-* A digital certificate (also called an **SSL/TLS certificate**) is issued by a trusted **Certificate Authority (CA)** (e.g., DigiCert, Let’s Encrypt).
-* It binds a **public key** to an entity (e.g., a domain name, company, or server), proving that the server is legitimate.
-* Browsers and operating systems maintain a **list of trusted CAs**. When a client (e.g., a browser) connects to a server, the server presents its certificate, and the client verifies it against trusted CAs.
+* A digital certificate (also called an SSL/TLS certificate) is issued by a trusted Certificate Authority (CA) (e.g., DigiCert, Let’s Encrypt).
+* A digital certificate binds a public key to an entity (e.g., a domain name, company, or server), proving that the server is legitimate.
+* Browsers and operating systems maintain a list of trusted CAs. When a client (e.g., a browser) connects to a server, the server presents its certificate, and the client verifies it against trusted CAs.
 
 **B. Key Exchange (Secure Encryption Setup)**
 
-* The certificate contains a **public key** used in the **TLS handshake** to establish an encrypted session.
-* The client uses this public key to:
-  * Encrypt a **pre-master secret** (in RSA-based key exchange).
-  * Verify the server’s identity (in **ECDHE** key exchange).
-* This ensures that only the legitimate server (with the matching private key) can decrypt the data.
+* The server's digital certificate contains a public key used in the TLS handshake to establish an encrypted session.
+* The public key contained within the server's digital certificate is used for one of two purposes, depending on the negotiated key exchange algorithm:
+  * **In RSA-based Key Exchange:** The client uses the server's public key **to encrypt a pre-master secret**. This ensures only the legitimate server (with the matching private key) can decrypt it and derive the session keys.
+  * **In Ephemeral Diffie-Hellman exchanges (like ECDHE):** The client uses the server's public key **to verify a digital signature**. The server uses its private key to sign its half of the Diffie-Hellman key exchange parameters. The client verifies this signature to confirm the server's identity and to ensure those parameters were not tampered with.
+
+In both cases, the successful use of the public key (for either encryption or signature verification) cryptographically proves the server's identity and ensures that only it can participate in the key agreement.
 
 **C. Trust Establishment**
 
-* Certificates are signed by CAs, which act as **trusted third parties**.
-* Browsers and operating systems come with a **pre-installed list of trusted root certificates**.
+* Certificates are signed by CAs, which act as trusted third parties.
+* Browsers and operating systems come with a pre-installed list of trusted root certificates.
 * If the certificate is valid and trusted, the SSL/TLS connection proceeds securely.
 
 #### **Types of SSL/TLS Certificates**
@@ -214,7 +218,7 @@ Digital certificates serve three main purposes in the SSL/TLS handshake process:
 
 #### Two methods digital signatures can be used for authentication
 
-A digital certificate can only be considered proof of someone’s identity if they can provide the matching private key. Alice is presenting a digital certificate to Bob. Let’s look at two methods Alice can use to provide evidence that she is in possession of the private key and so is the true owner of the digital certificate (we are authenticating Alice). These two methods are the basis for how authentication works with digital signatures.
+A digital certificate can only be considered proof of someone’s identity if they can provide the matching private key. Alice is presenting a digital certificate to Bob. Let’s look at two methods Alice can use to provide evidence that she is in possession of the private key and so is the true owner of the digital certificate. These two methods are the basis for how authentication works with digital signatures.
 
 1\) If Alice presents Bob with her certificate, Bob can generate a random value and encrypt it with Alice’s public key. Alice should be the only person with the correlating private key, and therefore, Alice should be the only person that can extract the random value. If she can then prove to Bob that she extracted the correct value, then Bob can be assured that Alice is indeed the true owner of the certificate.
 
@@ -222,14 +226,14 @@ A digital certificate can only be considered proof of someone’s identity if th
 
 ### Key takeaways
 
-* In 2FA, the user is identified by combining two different authentication methods
-* Password hashing can take place on the client side or on the server side
-* PSKs are a simple and effective way to authenticate two parties. However, if the PSK is compromised, then two parties’ communications can be decrypted by an attacker
-* Digital certificates are arguably the primary method of identification on the Internet
-* Benefits of using digital certificates:
-  * Authentication/Trust: Confirms the identity of websites, software, or users
-  * Encryption: Protects data in transit (e.g., HTTPS, email)
-  * Integrity: Ensures files or messages are unaltered (via digital signatures)
+* In 2FA, the user is identified by combining two different authentication methods.
+* Password hashing can take place on the client side or on the server side.
+* PSKs are a simple and effective way to authenticate two parties. However, if the PSK is compromised, then two parties’ communications can be decrypted by an attacker.
+* Digital certificates form the basis of trust for secure websites, providing users with cryptographic proof of a site's identity.
+* Benefits of using digital certificates include:
+  * Authentication/Trust: Confirming the identity of websites, software, or users.
+  * Encryption: Protecting data in transit (e.g., HTTPS, email).
+  * Integrity: Ensuring files or messages are unaltered (via digital signatures).
 
 ### References
 

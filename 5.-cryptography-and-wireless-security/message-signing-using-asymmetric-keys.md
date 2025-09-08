@@ -22,7 +22,7 @@ This section looks at how a combination of hashing and asymmetric encryption can
 
 Alice wants to send a message to Bob. Alice wants Bob to know beyond a shadow of a doubt that it was her that sent the message. To do this, Alice signs the message with her private key. Bob can then verify the signature using Alice’s public key. If the verification succeeds, Bob knows the message was signed with Alice’s private key, confirming it came from her.
 
-This process is called message signing. It provides authentication and non-repudiation, meaning Alice cannot deny sending the message. It also ensures the message was not altered, as any tampering would invalidate the signature.
+This process is called message signing. It provides authentication and non-repudiation, meaning Alice cannot deny sending the message. It also ensures the message was not altered, as any tampering would invalidate the signature. The core security properties provided by signing (non-repudiation, authentication, and integrity) are formally defined in industry standards such as the Internet Security Glossary (RFC 4949).
 
 Digital signatures are used everywhere in modern digital life.
 
@@ -44,6 +44,8 @@ Digital signatures are used everywhere in modern digital life.
 * Compatibility: The signature is a single, predictable size (e.g., 256 bytes for a 2048-bit RSA key) regardless of the original message size. This makes it easy to transmit and store.
 
 **4. Verification by Bob:** Bob uses Alice’s public key to "decrypt" the signature, revealing the original hash. Bob then independently hashes the received message. If the hashes match, the message is authentic (sender verified), unaltered (integrity preserved), and the sender cannot deny sending it (non-repudiation). Non-repudiation relies on the assumption that only the sender possesses their private key. If the private key is compromised, this property is weakened.
+
+The combination of hashing and asymmetric cryptography for creating signatures is a classic cryptographic construct, detailed in foundational texts such as Schneier's (1996) Applied Cryptography book.
 
 **The Trust Problem: How Bob Gets Alice's Key**
 
@@ -90,4 +92,6 @@ It's a common misconception to say signing is "encrypting with a private key." W
 
 ### References
 
-[Ed Harmoush. (December 8, 2021). Using Asymmetric Keys. Practical Networking.](https://www.practicalnetworking.net/series/cryptography/using-asymmetric-keys/)
+Internet Engineering Task Force (IETF). (2017). Internet Security Glossary, Version 2 (RFC 4949). https://www.rfc-editor.org/rfc/rfc4949
+
+Schneier, B. (1996). Applied cryptography: protocols, algorithms, and source code in C (2nd ed.). John Wiley & Sons.

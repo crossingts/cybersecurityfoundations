@@ -29,7 +29,7 @@ This chapter covers how SSL/TLS uses cryptographic tools (symmetric encryption, 
 
 [Message signing using asymmetric keys](message-signing-using-asymmetric-keys/)
 
-[Authentication methods](authentication-methods.md)
+[Cryptographic authentication methods](cryptographic-authentication-methods/)
 
 [The SSL/TLS handshake](the-ssl-tls-handshake/)
 

@@ -57,3 +57,34 @@ PKI solves the problem of trust and secure key distribution. It answers the ques
 **5. The text lists common algorithms like RSA-PSS and ECDSA. What is a key practical advantage of using elliptic curve-based algorithms (like ECDSA or EdDSA) over RSA for signing?**\
 **Answer:**\
 A key practical advantage of elliptic curve-based algorithms (ECDSA, EdDSA) over RSA is that they provide equivalent security with significantly smaller key sizes. For example, a 256-bit ECC key provides security comparable to a 3072-bit RSA key. This leads to smaller signatures, less bandwidth usage, and faster computational performance, making them more efficient for many applications.
+
+### Cryptographic authentication methods
+
+**1. The text explains that a username and password combination is a form of authentication based on "something you know." Describe the process and cryptographic purpose of the server hashing the password upon account creation.**\
+**Answer:**\
+When a user creates an account, the server takes the plaintext password and processes it through a cryptographic hashing algorithm. This generates a unique, fixed-length string of characters (a hash digest). The server then stores only this hash in its database, not the plaintext password. The purpose is to ensure that even if the password database is stolen, an attacker cannot easily obtain the original passwords, as hashing is a one-way function that is computationally infeasible to reverse.
+
+**2. The lesson states that a Pre-Shared Key (PSK) must be initially shared "out-of-band." What does this mean, and why is this step critical for security?**\
+**Answer:**\
+"Out-of-band" means the PSK is shared through a communication channel separate from the one it will be used to secure. For example, a Wi-Fi password might be told to a guest in person or printed on a receipt, not sent over the unsecured Wi-Fi network itself. This is critical because it prevents an eavesdropper from intercepting the key during the initial exchange. If the key were shared "in-band" over the untrusted network, an attacker could capture it and immediately compromise all future communications.
+
+**3. The text outlines two methods where digital signatures can be used for authentication. Briefly describe the "challenge-response" method where Bob verifies that Alice possesses the private key for her digital certificate.**\
+**Answer:**\
+In this challenge-response method:
+
+1. Bob generates a random, unique value (a "nonce" or challenge).
+2. Bob encrypts this challenge using Alice's public key (from her certificate) and sends it to her.
+3. Alice, who possesses the corresponding private key, decrypts the message to reveal the original challenge value.
+4. Alice sends the decrypted value back to Bob.
+5. Bob verifies that the value he received from Alice matches the original challenge he sent. If it matches, it cryptographically proves that Alice is the only one who could have decrypted it, thus proving her identity.
+
+**4. Differentiate between the two primary integrity mechanisms used in a TLS 1.2 connection: one used during the handshake and one used for securing application data after the handshake.**\
+**Answer:**\
+The two integrity mechanisms are:
+
+* **During the Handshake (Digital Signatures):** Integrity is provided by digital signatures. The server uses its private key to sign a hash of the handshake messages (e.g., its key exchange parameters). The client verifies this signature with the server's public key to ensure the handshake itself was not tampered with and to authenticate the server.
+* **After the Handshake (HMAC or AEAD):** Integrity for the encrypted application data (e.g., web traffic) is provided by either an HMAC (a separate cryptographic checksum calculated on the ciphertext) or an AEAD cipher mode (like AES-GCM), which seamlessly combines encryption and integrity protection into a single step using the derived symmetric session key.
+
+**5. The text explains that in a PSK system, the shared secret can be used to derive short-lived session keys. Explain the security benefit of this approach compared to using the PSK directly for encryption.**\
+**Answer:**\
+The key benefit is compartmentalization and forward secrecy. Using the PSK only for authentication and to derive a unique session key for each connection means that if a single session key is ever compromised, only the data from that specific session is exposed. All past and future sessions remain secure. If the long-term PSK were used directly for encryption, compromising it would allow an attacker to decrypt all past and future communications that used that key.

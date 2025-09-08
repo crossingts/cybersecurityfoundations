@@ -13,7 +13,7 @@ description: >-
 * Develop a foundational understanding of how a Pre-Shared Key (PSK) is used for authentication
 * Develop a foundational understanding of how digital certificates can be used to authenticate servers, encrypt communications, and ensure message integrity
 
-This section discusses three common [cryptographic authentication methods](https://www.bu.edu/tech/about/security-resources/bestpractice/auth/): username and password, Pre-Shared Keys (PSKs), and digital certificates.
+This section explains three common [cryptographic authentication methods](https://www.bu.edu/tech/about/security-resources/bestpractice/auth/): username and password, Pre-Shared Keys (PSKs), and digital certificates.
 
 ## Topics covered in this section <a href="#topics-covered-in-this-section" id="topics-covered-in-this-section"></a>
 
@@ -28,17 +28,17 @@ Authentication refers to the idea of verifying an identity. You can authenticate
 
 1\) Something you know, for example, a username/password combination.
 
-2\) Something you have, for example, an ATM card or an employee badge. For example, many websites send a random code to your phone via SMS when you are trying to log in, forcing you to have possession of your phone to log in. This is also the same concept behind the various authentication tokens. If you can provide the code the server is expecting, then you must have had the token.
+2\) Something you have, such as an ATM card, an employee badge, or an authentication code. Many websites send a random code to your phone via SMS when you are trying to log in, forcing you to have possession of your phone to log in. This is also the same concept behind the various authentication tokens. If you can provide the code the server is expecting, then you must have had the token.
 
 3\) Something you are. This category refers to various types of bio-metric identification technologies, such as fingerprint scanners, retina scanners, hand-print scanners, facial recognition, and voice recognition technologies.
 
-In 2FA, the user is identified by combining two authentication methods from the noted three methods (something you know, something you have, and something you are). A common 2FA combination is a username/password combination and an authentication code via SMS.
+In 2FA, the user is identified by combining two authentication methods from the noted three methods (something you know, something you have, and something you are). A common 2FA combination is a username/password combination and an authentication code received via SMS.
 
 ### Username and password
 
-Commonly, a username and password are used to authenticate a user to a server. A user of an app/service creates a unique username and password to access a service from a server.
+Commonly, a username and password are used to authenticate a user to a server or a website. A user of an app/service creates a unique username and password to access a service from a server.
 
-The password can be hashed either on the users’ device or on the server they are connecting to. The hashing process can happen in two places: on the client (e.g., a smartphone) or on a server (e.g., an Amazon AWS server).
+The password can be hashed either on the users’ device or on the server they are connecting to. The hashing process can happen in two places: on a client (e.g., a smartphone) or on a server (e.g., an Amazon AWS server).
 
 The process of password hashing on a server side entails:
 
@@ -49,7 +49,7 @@ The process of password hashing on a server side entails:
 * When the user logs in again, the website sends the username and password to the server.
 * The server hashes the password that the user entered and compares it to the hash that is stored in its database. If the hashes match, the user is logged in.
 
-This process ensures that the server never knows the user’s plain text password. Even if an attacker were to steal the database, they would not be able to use the passwords. The password itself is never stored, only the digest of the password, which is impossible to decrypt.
+This process ensures that the server never knows the user’s plain text password. Even if an attacker stole a password database, they would not be able to use the stolen passwords. The password itself is never stored, only the digest of the password, which should be near impossible to decrypt.
 
 The process of password hashing on the client side entails:
 
@@ -63,24 +63,24 @@ This way of hashing ensures the plaintext password never leaves the device, whic
 
 ### Pre-Shared Key (PSK)
 
-A PSK is a shared secret that is used to authenticate two parties. It is used in a variety of applications, such as wireless networks, VPNs, and file encryption. In a PSK-based system, PSKs must be initially shared out-of-band. The two parties must share the same PSK. This can be done manually, such as by exchanging the PSK over a secure channel, or it can be done automatically, such as by using a secure network configuration protocol. Once the two parties have shared the PSK, they can use it to encrypt and decrypt messages. This is done by using a symmetric encryption algorithm, such as AES or DES.
+A PSK is a shared secret that is used to authenticate two parties. It is used in a variety of applications, such as wireless networks, VPNs, and file encryption. In a PSK-based system, PSKs must be initially shared out-of-band. The two parties must share the same PSK. This can be done manually, such as by exchanging the PSK over a secure channel, or it can be done automatically, such as by using a secure network configuration protocol (e.g., WPA3's SAE). Once the two parties have shared the PSK, they can use it to encrypt and decrypt messages. This is done by using a symmetric encryption algorithm, such as AES or DES.
 
-PSKs are a simple and effective way to authenticate two parties. However, they have some drawbacks. One drawback is that the PSK must be kept secret. If the PSK is compromised, then the two parties’ communications can be decrypted by an attacker.
+PSKs are a simple and effective way to authenticate two parties. However, they have some drawbacks. One drawback is that the PSK must be kept secret. If the PSK is compromised, then the two parties’ communications can be decrypted by an attacker. For better security, the PSK can be used to derive short-lived session keys. The client and server each generate and exchange a random number "nonce" and each use each other's nonce to independently derive the session key using a key derivation function. All communication in this session uses that key. After the session ends, the key is thrown away. Thus each session has its unique key. If both client and server correctly derive the same session key, then each had the same PSK. If either side fails to generate the correct key, authentication fails.
 
-For better security, the PSK can be used to derive short-lived session keys. The client and server each generate and exchange a random number "nonce" and each use each other's nonce to independently derive the session key using a key derivation function. All communication in this session uses that key. After the session ends, the key is thrown away. Thus each session has its unique key. If both client and server correctly derive the same session key, then each had the same PSK. If either side fails to generate the correct key, authentication fails.
-
-In IPsec, for example, both parties generate random nonces and exchange them during the TLS handshake. Since both parties use the same inputs (PSK + nonce₁ + nonce₂), they will compute identical session keys. This allows mutual authentication—if the server’s derived key matches the client’s, both parties confirm they share the same PSK without ever transmitting it directly.
-
-Because each session uses fresh nonces, an attacker who intercepts a token cannot reuse it in future sessions. Even with a captured token, they cannot reverse-engineer the PSK or spoof authentication.
+In IPsec, for example, both parties generate random nonces and exchange them during the TLS handshake. Since both parties use the same inputs (PSK + nonce₁ + nonce₂), they will compute identical session keys. This allows mutual authentication—if the server’s derived key matches the client’s, both parties confirm they share the same PSK without ever transmitting it directly. Because each session uses fresh nonces, an attacker who intercepts a token cannot reuse it in future sessions. Even with a captured token, they cannot reverse-engineer the PSK or spoof authentication.
 
 ### Digital certificates
 
-Digital certificates are a critical security technology that is used to protect communications over the Internet. Digital certificates are arguably the primary method of identification on the Internet. A digital certificate is an electronic document that binds a public key to an identity, such as a company or a server. A digital certificate is used to verify the identity of the holder of the public key (e.g., a server) and optionally the client, to encrypt communications by facilitating secure key exchange (e.g., via the TLS handshake), and to ensure message integrity (through digital signatures).
+Digital certificates are a critical security technology that is used to protect communications over the Internet. Digital certificates are arguably the primary method of identification on the Internet. A digital certificate is an electronic document that binds a public key to an identity, such as a company or a server. A digital certificate is used to,
+
+* Verify the identity of the holder of the public key (e.g., a server) and optionally the client.
+* Enable encrypted communications by facilitating the secure exchange of symmetric session keys. During the TLS handshake, the client uses the public key in the server's digital certificate to encrypt the initial keying material. This ensures only the legitimate holder of the corresponding private key, the server being authenticated, can access it, allowing both parties to securely generate the same keys used for bulk encryption. This happens during the key establishment phase of the TLS handshake.&#x20;
+* Ensure message integrity and provide proof of origin (non-repudiation) through digital signatures.&#x20;
 
 Digital certificates are used in a variety of applications, including:
 
-* Secure sockets layer (SSL) and transport layer security (TLS): Digital certificates are used in the TLS handshake, helping to secure web traffic by authenticating servers, encrypting data, and protecting data integrity.
-* User Authentication: Client certificates authenticate users (e.g., logging into secure systems).
+* Secure Sockets Layer (SSL) and Transport Layer Security (TLS): Digital certificates are used in the TLS handshake, helping to secure web traffic by authenticating servers, encrypting data, and protecting data integrity.
+* User Authentication: Client certificates authenticate users (e.g., for logging into secure systems).
 * Email Security (S/MIME): Digital certificates can be used to authenticate email senders and to encrypt email messages.
 * File encryption: Digital certificates can be used to encrypt files and to sign digital documents, ensuring their authenticity and integrity.
 * Software distribution: Digital certificates can be used to verify the authenticity of software downloads.
@@ -89,14 +89,16 @@ The digital certificate is issued by a trusted Certificate Authority (CA) after 
 
 #### The TLS Handshake Purposes
 
-The **TLS handshake** is a process that establishes a secure, encrypted connection between a client (e.g., a web browser) and a server (e.g., a website). Its primary purposes are:
+The TLS handshake is a process that establishes a secure, encrypted connection between a client (e.g., a web browser) and a server (e.g., a website). Its primary purposes are:
 
-1. **Authentication** – Verifies the server’s identity (and optionally the client’s) using **digital certificates**.
-2. **Key Exchange** – Securely negotiates a **shared session key** for symmetric encryption of communications using **digital certificates**.
+1. **Authentication** – Verifies the server’s identity (and optionally the client’s) using digital certificates.
+2. **Key Establishment** – Securely negotiates a shared session key for symmetric encryption of communications using digital certificates.
 3. **Cipher Suite Agreement** – Determines the encryption algorithms (e.g., AES, ChaCha20) and hash functions (e.g., SHA-256) to be used.
 4. **Secure Session Establishment** – Ensures all further communication is encrypted and tamper-proof.
 
-After the handshake, both the client and server use the derived symmetric session key to encrypt all transmitted data and to verify integrity using HMAC or AEAD modes like AES-GCMP. The symmetric session key derived during the handshake is used alongside a symmetric encryption algorithm (e.g., AES-256, ChaCha20) to encrypt the actual application data (e.g., HTTP requests, form submissions).
+In TLS, what is actually exchanged is the pre-master secret. The final session keys used for encryption are then derived from this secret by both the client and server independently. Note that the way the "Key Establishment" goal is achieved evolved, especially with TLS 1.3.
+
+After the handshake, both the client and server use the derived symmetric session key to encrypt all transmitted data and to verify its integrity using HMAC or AEAD modes like AES-GCMP. The symmetric session key derived during the handshake is used alongside a symmetric encryption algorithm (e.g., AES-256, ChaCha20) to encrypt the actual application data (e.g., HTTP requests, form submissions, etc.).
 
 #### Simplified Steps in a TLS Handshake
 

@@ -13,34 +13,31 @@ description: >-
 * Describe the TLS handshake secure session key negotiation in TLS 1.2 and TLS 1.3
 * Identify the key cryptographic algorithms involved in the TLS handshake
 
-TLS/SSL is the bedrock of web security. This section explains how the [SSL/TLS handshake](https://en.wikipedia.org/wiki/TLS/SSL#TLS_handshake) establishes a secure communication channel between two endpoints: typically, client (e.g., web browser, mobile app) and server (e.g., website, API). For example, when you visit https://example.com, your browser (client) performs a TLS handshake with example.com's server to encrypt all traffic.
+This section explains how the [SSL/TLS handshake](https://en.wikipedia.org/wiki/TLS/SSL#TLS_handshake) establishes a secure communication channel between two endpoints: typically, client (e.g., web browser, mobile app) and server (e.g., website, API). For example, when you visit https://example.com, your browser (client) performs a TLS handshake with example.com's server to encrypt all traffic.
 
 ## Topics covered in this section <a href="#topics-covered-in-this-section" id="topics-covered-in-this-section"></a>
 
-* **SSL/TLS handshake or TLS handshake?**
+* **The SSL/TLS protocol**
 * **The SSL/TLS handshake process**
 * **TLS handshake secure session key negotiation**
 * **TLS 1.3 handshake simplified workflow**
 
-### SSL/TLS handshake or TLS handshake?
+### The SSL/TLS protocol
 
-While "SSL/TLS handshake" and "TLS handshake" in modern contexts refer to the same process, there are historical and technical distinctions:
-
-* **SSL (Secure Sockets Layer)** was the original protocol developed by Netscape in the 1990s (SSL 1.0, 2.0, 3.0).
-* **TLS (Transport Layer Security)** is the standardized, more secure successor (TLS 1.0, 1.1, 1.2, 1.3).
-* Today, **TLS is the actual protocol in use**, but due to SSL's historical dominance, people still say **"SSL/TLS"** out of habit.
+Transport Layer Security (TLS) is the essential cryptographic protocol that secures modern digital communication over networks like the Internet. While "SSL/TLS handshake" and "TLS handshake" in modern contexts refer to the same process, there are historical and technical distinctions. Evolving from the now-deprecated Secure Sockets Layer (SSL) specifications developed by Netscape in the 1990s, TLS was first established as an Internet Engineering Task Force (IETF) standard in 1999, with its most recent iteration, TLS 1.3, defined in August 2018. The protocol's primary purpose is to provide critical security guarantees—namely privacy through confidentiality, data integrity, and authenticity—for communications between applications, achieved via cryptographic methods like digital certificates. It operates in the presentation layer and is architecturally composed of two sub-protocols: the TLS handshake and the TLS record. Although it is deployed in a wide array of services including email and messaging, its most visible and widespread use is in securing HTTPS for web browsing. A closely related protocol known as Datagram Transport Layer Security (DTLS) adapts these security principles for datagram-based applications, leading to the frequent use of the combined term "(D)TLS" in technical contexts.
 
 #### **What is SSL?**
 
-* Versions: **SSL 1.0** (unreleased, flawed), **SSL 2.0** (broken), **SSL 3.0** (deprecated in 2015 due to POODLE attack).
+* SSL was the original protocol developed by Netscape in the 1990s (SSL 1.0, 2.0, 3.0).
+* Versions: SSL 1.0 (unreleased, flawed), SSL 2.0 (broken), SSL 3.0 (deprecated in 2015 due to POODLE attack).
 * Provided basic encryption but had security weaknesses.
 
 #### **What is TLS?**
 
-* **TLS 1.0 (1999)** – Essentially SSL 3.1 (renamed to avoid legal issues).
-* **TLS 1.1 (2006)** – Minor improvements.
-* **TLS 1.2 (2008)** – Major security upgrade (widely adopted).
-* **TLS 1.3 (2018)** – Faster, more secure (removes obsolete features).
+* TLS 1.0 (1999) – Essentially SSL 3.1 (renamed to avoid legal issues).
+* TLS 1.1 (2006) – Minor improvements.
+* TLS 1.2 (2008) – Major security upgrade (widely adopted).
+* TLS 1.3 (2018) – Faster, more secure (removes obsolete features).
 
 #### **Key Differences Between SSL & TLS**
 
@@ -50,8 +47,6 @@ While "SSL/TLS handshake" and "TLS handshake" in modern contexts refer to the sa
 | **Handshake**     | Slower, more round trips                              | Faster (TLS 1.3 has 1-RTT)          |
 | **Cipher Suites** | Weak (RC4, MD5)                                       | Modern (SHA-256, AEAD)              |
 | **Certificates**  | Same X.509 format, but TLS enforces better validation |                                     |
-
-TLS 1.2+ handshakes are more efficient and secure than SSL handshakes. For security, disable SSL entirely and enforce TLS 1.2+.
 
 ### The SSL/TLS handshake process
 

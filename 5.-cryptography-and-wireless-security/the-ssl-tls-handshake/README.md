@@ -61,21 +61,40 @@ Transport Layer Security (TLS) is the essential cryptographic protocol that secu
       * Verifying that the CA's digital signature on the server's certificate is authentic using the CA’s public key. This ensures the certificate wasn’t forged or tampered with.
       * Confirming the certificate has not expired and verifying via CRL or OCSP that the certificate has not been revoked.
       * Ensuring the server’s domain matches the certificate’s Subject Alternative Name (SAN) or Common Name (CN).
-3. Key exchange: Establishing a shared secret using a method like Diffie-Hellman. (For TLS 1.2 and earlier, the server's certificate public key is used directly for exchange. For TLS 1.3, the server's certificate public key is used to sign the DH exchange.)
+3. Key exchange: Establishing a shared secret using a method like RSA or Diffie-Hellman. (For TLS 1.2 and earlier, the server's certificate public key is used directly for exchange. For TLS 1.3, the server's certificate public key is used to sign the DH exchange.)
 4. Session key generation (symmetric cryptography)
 5. Secure data transmission begins
 
 **The TLS handshake establishes a secure session by:**
 
-* Authenticating the server (and optionally the client).
-* Negotiating encryption algorithms (e.g., AES for symmetric encryption).
-* Generating and exchanging symmetric session keys securely (using asymmetric encryption like RSA or ECC initially, then switching to symmetric encryption for efficiency).
+1. `ClientHello` & `ServerHello`: Negotiating the TLS version and cipher suite (which defines the symmetric encryption algorithm like AES).
+2. Authenticating the server to the client using the server's digital certificate and cryptographic signature, and optionally authenticating the client to the server using a client certificate.
+3. Generating and exchanging symmetric session keys securely (using the negotiated key exchange method from the chosen cipher suite).
+4. Switching to the negotiated symmetric encryption for efficient secure data transmission.
 
-The ultimate goal of the TLS handshake is to derive session keys which will encrypt and secure the data transfer between the client and the server. The client must trust the server’s public key (from the certificate) to securely establish session keys.
+The ultimate goal of the TLS handshake is to derive symmetric session keys which will encrypt and secure the data transfer between the client and the server. The client must trust the server’s public key (from the certificate) to securely establish session keys.
+
+#### The Hello Exchange:
+
+The `ClientHello` and `ServerHello` are the foundation for the entire secure session. In these messages, the client and server agree on the following critical parameters:
+
+1. **TLS Protocol Version:** They agree on the highest version of TLS they both support.
+2. **Cipher Suite:** This is the most important part of the negotiation. A cipher suite is a combination of algorithms that defines:
+   * **Key Exchange Algorithm:** How the symmetric key will be established (e.g., `ECDHE_RSA`, `ECDHE_ECDSA`). _(Note: In TLS 1.3, the list only contains key exchange algorithms that provide forward secrecy)._
+   * **Authentication Algorithm:** What algorithm the server will use to prove its identity (e.g., `RSA` or `ECDSA`). This is often tied to the type of certificate.
+   * **Bulk Encryption Algorithm:** The **symmetric cipher** (like `AES_256_GCM` or `CHACHA20_POLY1305`) that will be used to encrypt the actual application data.
+   * **Message Authentication Code (MAC) Algorithm:** How message integrity is verified. In modern cipher suites (like those using AES-GCM), this is a built-in part of the encryption mode.
+3. **Session ID / Resumption Parameters:** Mechanisms for resuming a previous session to save on future handshake overhead.
+4. **(Extensions) Key Share Parameters:** In TLS 1.3, the client often sends its Diffie-Hellman key share in the `ClientHello`,
+
+#### How the Negotiation Works:
+
+* **ClientHello:** The client sends a list of all the TLS versions, cipher suites, and compression methods it supports. It also generates and sends a random value.
+* **ServerHello:** The server responds by selecting **one TLS version** and **one cipher suite** from the client's provided lists. It also sends its own random value.
 
 ### TLS handshake secure session key negotiation
 
-After certificate validation, the client and server negotiate a symmetric session key (used for encrypting data). Two primary methods:
+After certificate validation, the client and server negotiate a symmetric session key (used for encrypting data) using one of two methods:
 
 **A. RSA Key Exchange (older, used in TLS 1.2, now discouraged)**
 

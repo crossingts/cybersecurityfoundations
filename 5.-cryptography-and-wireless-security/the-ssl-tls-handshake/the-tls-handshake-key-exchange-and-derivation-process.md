@@ -1,6 +1,6 @@
-# The SSL/TLS key exchange and derivation process
+# The TLS handshake key exchange and derivation process
 
-### Steps of the SSL/TLS key exchange and derivation process
+### Steps of the TLS handshake key exchange and derivation process&#x20;
 
 1. **Key Exchange (Asymmetric Encryption):** The client and server use asymmetric encryption (e.g., RSA, ECC, DH/ECDH) to securely exchange a pre-master secret.&#x20;
 

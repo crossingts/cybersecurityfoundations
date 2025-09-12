@@ -104,7 +104,7 @@
 * [Cryptographic authentication methods](5.-cryptography-and-wireless-security/cryptographic-authentication-methods/README.md)
   * [Cryptographic authentication methods — Quiz](5.-cryptography-and-wireless-security/cryptographic-authentication-methods/cryptographic-authentication-methods-quiz.md)
 * [The SSL/TLS handshake](5.-cryptography-and-wireless-security/the-ssl-tls-handshake/README.md)
-  * [The SSL/TLS key exchange and derivation process](5.-cryptography-and-wireless-security/the-ssl-tls-handshake/the-ssl-tls-key-exchange-and-derivation-process.md)
+  * [The TLS handshake key exchange and derivation process](5.-cryptography-and-wireless-security/the-ssl-tls-handshake/the-tls-handshake-key-exchange-and-derivation-process.md)
 * [How SSL/TLS uses cryptography](5.-cryptography-and-wireless-security/how-ssl-tls-uses-cryptography.md)
 * [Replay attacks and anti-replay methods](5.-cryptography-and-wireless-security/replay-attacks-and-anti-replay-methods.md)
 * [Generating and applying an RSA key](5.-cryptography-and-wireless-security/generating-and-applying-an-rsa-key.md)

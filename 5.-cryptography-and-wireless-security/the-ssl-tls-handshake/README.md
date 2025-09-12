@@ -19,7 +19,7 @@ This section explains how the [SSL/TLS handshake](https://en.wikipedia.org/wiki/
 
 * **The SSL/TLS protocol**
 * **The SSL/TLS handshake process**
-* **TLS handshake secure session key negotiation**
+* **The TLS handshake key exchange**
 * **TLS 1.3 handshake simplified workflow**
 
 ### The SSL/TLS protocol
@@ -91,6 +91,28 @@ The `ClientHello` and `ServerHello` are the foundation for the entire secure ses
 
 * **ClientHello:** The client sends a list of all the TLS versions, cipher suites, and compression methods it supports. It also generates and sends a random value.
 * **ServerHello:** The server responds by selecting **one TLS version** and **one cipher suite** from the client's provided lists. It also sends its own random value.
+
+### The TLS handshake key exchange
+
+This part of the handshake is version-dependent. In TLS 1.2, server authentication (the Certificate message) and the key exchange (e.g., RSA or Diffie-Hellman) were distinct sequential phases, often requiring multiple round trips. The handshake flow was:
+
+* Authentication: The server sends a Certificate message. This structured TLS protocol message contains the server's digital certificate chain. This chain includes the server's own certificate plus any intermediate certificates required to connect the server's certificate to a trusted root certificate.
+* Key Exchange: Depending on the cipher suite, this is followed by a ServerKeyExchange message (e.g., containing its Diffie-Hellman parameters) or the client simply uses the RSA public key from the received certificate to encrypt the pre-master secret.
+
+In TLS 1.3, the protocol was simplified for performance and security by integrating server authentication and the key exchange into a single, cryptographically bound process. This process begins with the Diffie-Hellman key exchange, which is performed immediately within the first round trip using the key\_share extension. In a DH exchange, shares are the individual pieces of information that each party contributes, which are then used to calculate the final shared session key. In this context, a share is the DH public key that each party contributes to calculate the pre-master secret. After the DH key exchange, the server uses its certificate to generate a digital signature over the entire handshake transcript, which includes the key exchange shares. This signature proves the server's identity and cryptographically binds that identity to the specific key exchange and the generated session keys. This design guarantees Forward Secrecy and prevents downgrade attacks.
+
+**TLS 1.2 and Earlier (The "Classic" Handshake):**
+
+* **Option 1 (RSA Key Exchange):** The client generates a "pre-master secret," encrypts it with the server's public RSA key (from the certificate), and sends it to the server. Only the server with the private key can decrypt it.
+* **Option 2 (Diffie-Hellman):** The server could include its Diffie-Hellman parameters in its `ServerKeyExchange` message _after_ the certificate. The client and server then exchange DH parameters to jointly calculate the pre-master secret.
+* **The Problem:** The RSA method did not provide **Forward Secrecy**. If an attacker recorded the encrypted traffic and later stole the server's private RSA key, they could decrypt all past sessions.
+
+**TLS 1.3 (The Modern Handshake):**
+
+* **Diffie-Hellman is Mandatory:** RSA-based key exchange was **completely removed**.
+* **Key Exchange is Integrated:** The Diffie-Hellman key exchange happens **immediately in the Hello messages**. The client sends its DH share (`key_share`) in the `ClientHello`, and the server sends its DH share in the `ServerHello`.
+* **Authentication Follows:** The server _then_ proves it owns the private key for the certificate by using it to **digitally sign** the entire handshake conversation so far (including the DH shares). This is called "signature-based authentication."
+* **The Benefit:** This design **guarantees Forward Secrecy** for every connection. The ephemeral DH keys are used once and discarded. Even if the server's long-term private key is compromised later, it cannot be used to decrypt past recorded sessions.
 
 ### TLS handshake secure session key negotiation
 

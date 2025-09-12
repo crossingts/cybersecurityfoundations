@@ -51,18 +51,18 @@ Transport Layer Security (TLS) is the essential cryptographic protocol that secu
 ### The SSL/TLS handshake process
 
 1. ClientHello and ServerHello
-2.  Certificate validation (asymmetric crypto)&#x20;
+2.  Certificate validation (asymmetric cryptography)&#x20;
 
-    Before key exchange, the server proves its identity using a **digital certificate**:
+    Before key exchange, the server proves its identity using a digital certificate:
 
     * The server sends its digital certificate (containing its public key and identity) to the client.
     * The client validates the certificate by:
-      * Checking if it’s issued by a trusted **Certificate Authority (CA)**, e.g., DigiCert, Let’s Encrypt.
-      * Verifying that the CA's digital signature on the certificate is authentic. The client verifies the CA’s signature on the server’s certificate using the CA’s public key. This ensures the certificate wasn’t forged or tampered with.
-      * Confirming the certificate hasn’t expired or been revoked (via CRL/OCSP).
-      * Ensuring the server’s domain matches the certificate’s **Subject Alternative Name (SAN)** or **Common Name (CN)**.
-3. Key exchange (Diffie-Hellman or RSA)
-4. Session key generation (symmetric crypto)
+      * Checking if it’s issued by a trusted Certificate Authority (CA), e.g., DigiCert or Let’s Encrypt.
+      * Verifying that the CA's digital signature on the server's certificate is authentic using the CA’s public key. This ensures the certificate wasn’t forged or tampered with.
+      * Confirming the certificate has not expired and verifying via CRL or OCSP that the certificate has not been revoked.
+      * Ensuring the server’s domain matches the certificate’s Subject Alternative Name (SAN) or Common Name (CN).
+3. Key exchange: Establishing a shared secret using a method like Diffie-Hellman. (For TLS 1.2 and earlier, the server's certificate public key is used directly for exchange. For TLS 1.3, the server's certificate public key is used to sign the DH exchange.)
+4. Session key generation (symmetric cryptography)
 5. Secure data transmission begins
 
 **The TLS handshake establishes a secure session by:**

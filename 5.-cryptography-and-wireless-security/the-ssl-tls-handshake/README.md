@@ -72,7 +72,7 @@ Transport Layer Security (TLS) is the essential cryptographic protocol that secu
 3. Generating and exchanging symmetric session keys securely (using the negotiated key exchange method from the chosen cipher suite).
 4. Switching to the negotiated symmetric encryption for efficient secure data transmission.
 
-The ultimate goal of the TLS handshake is to derive symmetric session keys which will encrypt and secure the data transfer between the client and the server. The client must trust the server’s public key (from the certificate) to securely establish session keys.
+The ultimate goal of the TLS handshake is the secure derivation of a symmetric session key by the client and server which they will use to encrypt all subsequent data transfer between them.&#x20;
 
 #### The Hello Exchange:
 
@@ -82,7 +82,7 @@ The `ClientHello` and `ServerHello` are the foundation for the entire secure ses
 2. **Cipher Suite:** This is the most important part of the negotiation. A cipher suite is a combination of algorithms that defines:
    * **Key Exchange Algorithm:** How the symmetric key will be established (e.g., `ECDHE_RSA`, `ECDHE_ECDSA`). _(Note: In TLS 1.3, the list only contains key exchange algorithms that provide forward secrecy)._
    * **Authentication Algorithm:** What algorithm the server will use to prove its identity (e.g., `RSA` or `ECDSA`). This is often tied to the type of certificate.
-   * **Bulk Encryption Algorithm:** The **symmetric cipher** (like `AES_256_GCM` or `CHACHA20_POLY1305`) that will be used to encrypt the actual application data.
+   * **Bulk Encryption Algorithm:** The symmetric cipher (like `AES_256_GCM` or `CHACHA20_POLY1305`) that will be used to encrypt the actual application data.
    * **Message Authentication Code (MAC) Algorithm:** How message integrity is verified. In modern cipher suites (like those using AES-GCM), this is a built-in part of the encryption mode.
 3. **Session ID / Resumption Parameters:** Mechanisms for resuming a previous session to save on future handshake overhead.
 4. **(Extensions) Key Share Parameters:** In TLS 1.3, the client often sends its Diffie-Hellman key share in the `ClientHello`,
@@ -90,7 +90,7 @@ The `ClientHello` and `ServerHello` are the foundation for the entire secure ses
 #### How the Negotiation Works:
 
 * **ClientHello:** The client sends a list of all the TLS versions, cipher suites, and compression methods it supports. It also generates and sends a random value.
-* **ServerHello:** The server responds by selecting **one TLS version** and **one cipher suite** from the client's provided lists. It also sends its own random value.
+* **ServerHello:** The server responds by selecting one TLS version and one cipher suite from the client's provided lists. It also sends its own random value.
 
 ### The TLS handshake key exchange
 
@@ -101,74 +101,65 @@ This part of the handshake is version-dependent. In TLS 1.2, server authenticati
 
 In TLS 1.3, the protocol was simplified for performance and security by integrating server authentication and the key exchange into a single, cryptographically bound process. This process begins with the Diffie-Hellman key exchange, which is performed immediately within the first round trip using the key\_share extension. In a DH exchange, shares are the individual pieces of information that each party contributes, which are then used to calculate the final shared session key. In this context, a share is the DH public key that each party contributes to calculate the pre-master secret. After the DH key exchange, the server uses its certificate to generate a digital signature over the entire handshake transcript, which includes the key exchange shares. This signature proves the server's identity and cryptographically binds that identity to the specific key exchange and the generated session keys. This design guarantees Forward Secrecy and prevents downgrade attacks.
 
-**TLS 1.2 and Earlier (The "Classic" Handshake):**
+The client-server key exchange method is version-dependent, with a major evolution occurring in TLS 1.3.
 
-* **Option 1 (RSA Key Exchange):** The client generates a "pre-master secret," encrypts it with the server's public RSA key (from the certificate), and sends it to the server. Only the server with the private key can decrypt it.
-* **Option 2 (Diffie-Hellman):** The server could include its Diffie-Hellman parameters in its `ServerKeyExchange` message _after_ the certificate. The client and server then exchange DH parameters to jointly calculate the pre-master secret.
-* **The Problem:** The RSA method did not provide **Forward Secrecy**. If an attacker recorded the encrypted traffic and later stole the server's private RSA key, they could decrypt all past sessions.
+**TLS 1.2 and Earlier (The "Classic" Handshake)**
 
-**TLS 1.3 (The Modern Handshake):**
+After the server’s certificate is validated, the client and server use one of two methods to establish a shared **pre-master secret**, from which the symmetric session keys are derived:
 
-* **Diffie-Hellman is Mandatory:** RSA-based key exchange was **completely removed**.
-* **Key Exchange is Integrated:** The Diffie-Hellman key exchange happens **immediately in the Hello messages**. The client sends its DH share (`key_share`) in the `ClientHello`, and the server sends its DH share in the `ServerHello`.
-* **Authentication Follows:** The server _then_ proves it owns the private key for the certificate by using it to **digitally sign** the entire handshake conversation so far (including the DH shares). This is called "signature-based authentication."
-* **The Benefit:** This design **guarantees Forward Secrecy** for every connection. The ephemeral DH keys are used once and discarded. Even if the server's long-term private key is compromised later, it cannot be used to decrypt past recorded sessions.
+* **A. RSA Key Exchange (Now discouraged):**
+  * The client generates the pre-master secret, encrypts it with the server’s public RSA key (from its certificate), and sends it to the server.
+  * The server decrypts the pre-master secret with its private key.
+  * **Weakness: This method lacks Forward Secrecy.** If the server’s private key is ever compromised, an attacker can decrypt all past recorded communications.
+* **B. (EC)DHE Key Exchange (Preferred):**
+  * The server sends its Diffie-Hellman (or Elliptic Curve DH) parameters in a `ServerKeyExchange` message after the Certificate message. In the DH key exchange, the server first sends the `ServerHello` message (which finalizes the basic connection rules, like which version of TLS and which cipher suite they will use) and then the `Certificate` message (where the server delivers its digital certificate chain which acts like a digital ID card to prove its identity to the client). The server then sends a `ServerKeyExchange` message. This message contains the server's specific DH parameters, which include its public key. To ensure these parameters cannot be altered by an attacker, the server digitally signs this message using the private key that matches its certificate. Finally, the server sends a `ServerHelloDone` message to signal to the client that the server has finished its part of the initial negotiation.
+  * The client and server exchange these DH public keys (parameters) to jointly calculate the pre-master secret.
+  * **Benefit: This method provides Forward Secrecy.** The ephemeral DH keys are used once. Compromising the server's long-term private key later does not expose past session keys.
+  * **Role of Certificate:** The server's certificate ensures the DH parameters come from the authenticated server and not an impostor.
 
-### TLS handshake secure session key negotiation
+**TLS 1.3 (The Modern Handshake): (EC)DHE Key Exchange Method is Mandatory and Integrated**
 
-After certificate validation, the client and server negotiate a symmetric session key (used for encrypting data) using one of two methods:
+TLS 1.3 was radically simplified and optimized for security and performance:
 
-**A. RSA Key Exchange (older, used in TLS 1.2, now discouraged)**
+* **Diffie-Hellman is Mandatory:** RSA-based key exchange was completely removed. Every connection must use an ephemeral (EC)DHE exchange, guaranteeing Forward Secrecy for all sessions.
+* **Integrated Key Exchange:** The Diffie-Hellman exchange is performed immediately within the first round trip. The client sends its DH public key (its "share") in the `key_share` extension of the `ClientHello` message, and the server responds with its share in the `ServerHello`.
+* **Authentication Follows:** The server then proves it owns the private key corresponding to its certificate by using it to digitally sign the entire handshake conversation (including the DH shares). This signature cryptographically binds the server’s identity to the specific key exchange, preventing tampering and downgrade attacks.
 
-1. The client generates a **pre-master secret**, encrypts it with the server’s public key (from the digital certificate), and sends it to the server.
-2. The server decrypts the pre-master secret with its private key.
-3. Both derive the same **symmetric session key** from the pre-master secret.
+**Final Steps (All TLS Versions)**
 
-**Weakness**: If the server’s private key is compromised later, past communications can be decrypted (no **forward secrecy**).
+Following a successful key exchange:
 
-**B. (EC)DHE Key Exchange (modern, used in TLS 1.3, preferred)**
+1. Both parties derive the same set of symmetric session keys from the exchanged secrets.
+2. "They exchange `Finished` messages, encrypted with the new session keys, to verify that the handshake was successful and that the entire process has not been tampered with."
+3. All further application data is encrypted and authenticated using the efficient symmetric session keys.
 
-1. The server’s certificate is still validated, but its public key is only used for authentication.
-2. The client and server perform a **Diffie-Hellman (DH) or Elliptic Curve DH (ECDH)** exchange:
-   * They exchange DH parameters (public keys) and compute a shared secret.
-   * The shared secret is used to derive the symmetric session key.
-3. Even if the server’s private key is later compromised, past sessions remain secure (**forward secrecy**).
-
-**Role of Certificate**: Ensures the DH parameters come from the authenticated server, not an impostor.
-
-**Final steps**
-
-* Both parties derive the same **session keys** (for encryption/MAC).
-* They exchange **"Finished" messages** (encrypted with the new keys) to confirm the handshake succeeded.
-* All further communication uses the symmetric session keys for efficiency.
-
-The TLS handshake ensures:
-
-1. **Confidentiality** – Data is encrypted (e.g., using AES).
-2. **Integrity** – Data isn’t tampered with (via hashes/MACs).
-3. **Authentication** – The server (and optionally client) proves identity (via certificates).
-4. **Forward Secrecy** (if using ephemeral keys) – Past sessions can’t be decrypted even if the private key is later compromised.
-
-In (EC)DHE key exchange (used in TLS 1.3), the client verifies the server’s identity just like in TLS 1.2 via the server's digital certificate (before key exchange, the server proves its identity using a digital certificate), but the server's public key is only used for authentication, not in key exchange as in RSA based TLS 1.2. In the TLS 1.3 handshake, the server's public key is only used for authentication thus:&#x20;
+In (EC)DHE key exchange used in TLS 1.3, the client verifies the server’s identity just like in TLS 1.2 via the server's digital certificate (before key exchange, the server proves its identity using a digital certificate), but the server's public key is only used for authentication, not in key exchange as in RSA based TLS 1.2. In the TLS 1.3 handshake, the server's public key is only used for authentication thus:&#x20;
 
 **Authentication via `CertificateVerify`**
 
-* The server signs a hash of the handshake messages (including the ephemeral DH parameters) using its **private key**.
-* The client verifies this signature using the server's **public key** (from its certificate).
+* The server signs a hash of the handshake messages (including the ephemeral DH parameters) using its private key.
+* The client verifies this signature using the server's public key (from its certificate).
 * This proves:
   * The server owns the private key matching the certificate.
   * The server was present during the handshake (not a replay attack).
   * The server is the same entity that generated the ephemeral DH keys (prevents man-in-the-middle).
 
-#### **Key Clarifications TLS 1.2 vs TLS 1.3**&#x20;
+**Key Clarifications TLS 1.2 vs TLS 1.3**&#x20;
 
 * **TLS 1.2 (RSA Key Transport)**:
   * Server’s public key encrypts the pre-master secret (key exchange + authentication coupled).
   * No Perfect Forward Secrecy (PFS) unless using (EC)DHE.
 * **TLS 1.3 (Only (EC)DHE)**:
-  * Server’s public key **never touches key exchange** (only authentication via `CertificateVerify`).
+  * Server’s public key never touches key exchange (only authentication via `CertificateVerify`).
   * Perfect Forward Secrecy (PFS) is mandatory.
   * The shared secret is derived solely from ephemeral (EC)DHE keys, independent of the server’s long-term public key. This ensures PFS by design.
+
+**The TLS handshake ensures:**
+
+1. **Confidentiality** – Data is encrypted (e.g., using AES).
+2. **Integrity** – Data isn’t tampered with (via hashes/MACs).
+3. **Authentication** – The server (and optionally client) proves identity (via certificates).
+4. **Forward Secrecy** (if using ephemeral keys) – Past sessions can’t be decrypted even if the private key is later compromised.
 
 ### TLS 1.3 handshake simplified workflow
 
@@ -177,37 +168,37 @@ Below is a step-by-step breakdown of the TLS 1.3 handshake with a simplified wor
 **1. Client Hello**
 
 * The client initiates the connection by sending:
-  * **Supported TLS version** (1.3).
-  * **List of cipher suites** (e.g., AES-256-GCM, ChaCha20-Poly1305).
-  * **Key Share (DH public key)** – Used for key exchange (e.g., x25519, P-256).
-  * **Optional: Pre-shared Key (PSK) hint** (for session resumption).
+  * Supported TLS version (1.3).
+  * List of cipher suites (e.g., AES-256-GCM, ChaCha20-Poly1305).
+  * Key Share (DH public key) – Used for key exchange (e.g., x25519, P-256).
+  * Optional: Pre-shared Key (PSK) hint (for session resumption).
 
 _In TLS 1.3, the client guesses the server’s preferred key exchange method and sends its public key upfront (reducing round trips)._
 
 **2. Server Hello**
 
 * The server responds with:
-  * **Selected cipher suite** (e.g., AES-256-GCM).
-  * **Key Share (DH public key)** – Matches the client’s chosen group.
-  * **Digital Certificate** (containing the server’s public key).
-  * **CertificateVerify** (proof of private key ownership).
-  * **Finished** (MAC to verify handshake integrity).
+  * Selected cipher suite (e.g., AES-256-GCM).
+  * Key Share (DH public key) – Matches the client’s chosen group.
+  * Digital Certificate (containing the server’s public key).
+  * CertificateVerify (proof of private key ownership).
+  * Finished (MAC to verify handshake integrity).
 
 _TLS 1.3 skips the "Certificate Request" and "Server Key Exchange" steps (used in TLS 1.2)._
 
 **3. Client Verification & Key Derivation**
 
 * The client:
-  * **Verifies the server’s certificate** (checks CA, expiry, domain match).
-  * **Computes the shared secret** using:
+  * Verifies the server’s certificate (checks CA, expiry, domain match).
+  * Computes the shared secret using:
     * Its own private key + server’s public key (Diffie-Hellman).
-  * **Derives session keys** (for symmetric encryption).
-  * Sends: **Finished** (confirms successful key exchange).
+  * Derives session keys (for symmetric encryption).
+  * Sends: Finished (confirms successful key exchange).
 
 **4. Secure Data Transmission**
 
-* Both sides now have the **same session keys** (for AES-GCM/ChaCha20 encryption).
-* **Encrypted communication begins**.
+* Both sides now have the same session keys (for AES-GCM/ChaCha20 encryption).
+* Encrypted communication begins.
 
 **TLS 1.3 vs. TLS 1.2 Key Differences**
 
@@ -244,7 +235,7 @@ Client                                                                 Server
 
 **Final Notes**
 
-* TLS 1.3 is now the **default in modern browsers & servers**.
+* TLS 1.3 is now the default in modern browsers & servers.
 * Most free certificates (Let’s Encrypt) support TLS 1.3.
 * Wireshark/`openssl s_client` can help debug handshakes.
 

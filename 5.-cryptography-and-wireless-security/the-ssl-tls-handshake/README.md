@@ -171,7 +171,7 @@ Below is a step-by-step breakdown of the TLS 1.3 handshake with a simplified wor
   * Supported TLS version (1.3).
   * List of cipher suites (e.g., AES-256-GCM, ChaCha20-Poly1305).
   * Key Share (DH public key) – Used for key exchange (e.g., x25519, P-256).
-  * Optional: Pre-shared Key (PSK) hint (for session resumption).
+  * Optional: Pre-Shared Key (PSK) hint (for session resumption).
 
 _In TLS 1.3, the client guesses the server’s preferred key exchange method and sends its public key upfront (reducing round trips)._
 

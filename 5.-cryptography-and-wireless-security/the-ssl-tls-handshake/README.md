@@ -13,7 +13,7 @@ description: >-
 * Describe the TLS handshake secure session key negotiation in TLS 1.2 and TLS 1.3
 * Identify the key cryptographic algorithms involved in the TLS handshake
 
-This section explains how the [SSL/TLS handshake](https://en.wikipedia.org/wiki/TLS/SSL#TLS_handshake) establishes a secure communication channel between two endpoints: typically, client (e.g., web browser, mobile app) and server (e.g., website, API). For example, when you visit https://example.com, your browser (client) performs a TLS handshake with example.com's server to encrypt all traffic.
+This section explains how the [SSL/TLS handshake](https://en.wikipedia.org/wiki/TLS/SSL#TLS_handshake) establishes a secure communication channel between two endpoints: typically, client (e.g., web browser, mobile app) and server (e.g., website, API). For example, when you visit https://example.com, your browser (client) performs a TLS handshake with example.com's server to encrypt all traffic. During the handshake, the client and server exchange cryptographic parameters that allow them to each independently derive the same symmetric session key. They achieve this using a combination of asymmetric cryptography (which uses a public and private key pair) for securing the key agreement process and symmetric encryption (which uses a single shared key) for the bulk data encryption. Once a unique session key is established, all subsequent communication between the client and the server is encrypted with symmetric encryption, ensuring confidentiality and integrity for the duration of the session.
 
 ## Topics covered in this section <a href="#topics-covered-in-this-section" id="topics-covered-in-this-section"></a>
 
@@ -38,6 +38,8 @@ Transport Layer Security (TLS) is the essential cryptographic protocol that secu
 * TLS 1.1 (2006) – Minor improvements.
 * TLS 1.2 (2008) – Major security upgrade (widely adopted).
 * TLS 1.3 (2018) – Faster, more secure (removes obsolete features).
+
+TLS 1.3 is now the default in modern browsers and servers. Most free certificates (Let’s Encrypt) support TLS 1.3.
 
 #### **Key Differences Between SSL & TLS**
 
@@ -119,11 +121,23 @@ After the server’s certificate is validated, the client and server use one of 
 
 **TLS 1.3 (The Modern Handshake): (EC)DHE Key Exchange Method is Mandatory and Integrated**
 
-TLS 1.3 was radically simplified and optimized for security and performance:
+TLS 1.3 was radically simplified and optimized for security and performance by making a specific form of key exchange non-negotiable and building it directly into the initial connection setup.
 
-* **Diffie-Hellman is Mandatory:** RSA-based key exchange was completely removed. Every connection must use an ephemeral (EC)DHE exchange, guaranteeing Forward Secrecy for all sessions.
-* **Integrated Key Exchange:** The Diffie-Hellman exchange is performed immediately within the first round trip. The client sends its DH public key (its "share") in the `key_share` extension of the `ClientHello` message, and the server responds with its share in the `ServerHello`.
-* **Authentication Follows:** The server then proves it owns the private key corresponding to its certificate by using it to digitally sign the entire handshake conversation (including the DH shares). This signature cryptographically binds the server’s identity to the specific key exchange, preventing tampering and downgrade attacks.
+* **The (EC)DHE Method is Now Mandatory:** TLS 1.3 completely removed the older, less secure RSA key exchange method. **Every single TLS 1.3 connection must use an ephemeral Diffie-Hellman exchange**, specifically either **DHE** (Diffie-Hellman Ephemeral) or, more commonly, the more efficient **ECDHE** (Elliptic Curve Diffie-Hellman Ephemeral). The "(EC)" signifies this choice. The critical word is **Ephemeral**, meaning temporary keys are used once and discarded, which guarantees **Forward Secrecy** for all sessions.
+* **The Exchange is Fully Integrated:** Unlike in TLS 1.2, where key exchange was a separate step, the **(EC)DHE exchange is performed immediately within the first round trip** of messages. The client sends its public key (its "share") in the `key_share` extension of the very first `ClientHello` message. The server then responds with its own public share in the `ServerHello` message. This integration drastically reduces the time required to establish a secure connection.
+* **Authentication Follows the Key Exchange:** With the key exchange already complete, the server then proves its identity. It uses the private key from its certificate to **digitally sign the entire handshake conversation** (which includes the freshly exchanged key shares). This signature cryptographically binds the server’s proven identity to that specific key exchange, preventing tampering and downgrade attacks.
+
+In the (EC)DHE key exchange, the client verifies the server’s identity just like in TLS 1.2 via the server's digital certificate (before key exchange, the server proves its identity using a digital certificate), but the server's public key is only used for authentication, not in key exchange as in RSA based TLS 1.2. In the TLS 1.3 handshake, the server's public key is only used for authentication. This authentication is handled by a special handshake message called `CertificateVerify`.
+
+**Authentication via `CertificateVerify`**
+
+* `CertificateVerify` is a specific handshake message where the server provides proof of ownership.
+* The server signs a hash of the handshake messages (including the ephemeral DH parameters) using its private key.
+* The client verifies this signature using the server's public key (from its certificate).
+* This proves:
+  * The server owns the private key matching the certificate.
+  * The server was present during the handshake (which eliminates the possibility of a replay attack).
+  * The server is the same entity that generated the ephemeral DH keys (prevents man-in-the-middle).
 
 **Final Steps (All TLS Versions)**
 
@@ -132,17 +146,6 @@ Following a successful key exchange:
 1. Both parties derive the same set of symmetric session keys from the exchanged secrets.
 2. "They exchange `Finished` messages, encrypted with the new session keys, to verify that the handshake was successful and that the entire process has not been tampered with."
 3. All further application data is encrypted and authenticated using the efficient symmetric session keys.
-
-In (EC)DHE key exchange used in TLS 1.3, the client verifies the server’s identity just like in TLS 1.2 via the server's digital certificate (before key exchange, the server proves its identity using a digital certificate), but the server's public key is only used for authentication, not in key exchange as in RSA based TLS 1.2. In the TLS 1.3 handshake, the server's public key is only used for authentication thus:&#x20;
-
-**Authentication via `CertificateVerify`**
-
-* The server signs a hash of the handshake messages (including the ephemeral DH parameters) using its private key.
-* The client verifies this signature using the server's public key (from its certificate).
-* This proves:
-  * The server owns the private key matching the certificate.
-  * The server was present during the handshake (not a replay attack).
-  * The server is the same entity that generated the ephemeral DH keys (prevents man-in-the-middle).
 
 **Key Clarifications TLS 1.2 vs TLS 1.3**&#x20;
 
@@ -165,52 +168,42 @@ In (EC)DHE key exchange used in TLS 1.3, the client verifies the server’s iden
 
 Below is a step-by-step breakdown of the TLS 1.3 handshake with a simplified workflow.
 
-**1. Client Hello**
+**1. Client Hello**\
+The client initiates the connection by sending:
 
-* The client initiates the connection by sending:
-  * Supported TLS version (1.3).
-  * List of cipher suites (e.g., AES-256-GCM, ChaCha20-Poly1305).
-  * Key Share (DH public key) – Used for key exchange (e.g., x25519, P-256).
-  * Optional: Pre-Shared Key (PSK) hint (for session resumption).
+* **Supported TLS version** (1.3).
+* **List of cipher suites** – Algorithms for encryption and integrity. (e.g., `AES-256-GCM` is a strong encryption algorithm, `ChaCha20-Poly1305` is another popular option).
+* **Key Share** – The client's Diffie-Hellman (DH) public key, used to start the key exchange. This includes examples of the mathematical curves used to generate the key:
+  * **`x25519`**: A modern and very efficient elliptic curve.
+  * **`P-256`**: A widely used and standardized elliptic curve.
+* **Optional: Pre-Shared Key (PSK) hint** – A reference to a previous session, allowing for a faster "resumption" handshake.
 
-_In TLS 1.3, the client guesses the server’s preferred key exchange method and sends its public key upfront (reducing round trips)._
+**In TLS 1.3, the client guesses the server’s preferred key exchange method and sends its public key upfront (reducing round trips).**
 
-**2. Server Hello**
+**2. Server Hello**\
+The server responds by selecting from the client's options and sending:
 
-* The server responds with:
-  * Selected cipher suite (e.g., AES-256-GCM).
-  * Key Share (DH public key) – Matches the client’s chosen group.
-  * Digital Certificate (containing the server’s public key).
-  * CertificateVerify (proof of private key ownership).
-  * Finished (MAC to verify handshake integrity).
+* **Selected cipher suite** (e.g., `AES-256-GCM`).
+* **Key Share** – The server's own DH public key, which uses the same type of curve (e.g., `x25519` or `P-256`) that the client supported.
+* **Digital Certificate** – The server's digital ID card, containing its long-term public key and proving its identity.
+* **CertificateVerify** – A digital signature that proves the server owns the private key for that certificate.
+* **Finished** – A message that verifies the integrity of the entire handshake so far.
 
-_TLS 1.3 skips the "Certificate Request" and "Server Key Exchange" steps (used in TLS 1.2)._
+**TLS 1.3 skips several steps needed in TLS 1.2 (like "Server Key Exchange"), making the process faster and more efficient.**
 
-**3. Client Verification & Key Derivation**
+**3. Client Verification & Key Derivation**\
+The client now:
 
-* The client:
-  * Verifies the server’s certificate (checks CA, expiry, domain match).
-  * Computes the shared secret using:
-    * Its own private key + server’s public key (Diffie-Hellman).
-  * Derives session keys (for symmetric encryption).
-  * Sends: Finished (confirms successful key exchange).
+* **Verifies the server’s certificate** (checks that it's issued by a trusted authority, isn't expired, and matches the website's domain).
+* **Computes the shared secret** using its own private key and the server's public DH key from the "Key Share."
+* **Derives session keys** – From that shared secret, it generates the symmetric encryption keys (e.g., for `AES-256-GCM`) that will be used to encrypt the actual data.
+* **Sends its own `Finished` message** – This confirms that the key exchange was successful and everything is ready.
 
 **4. Secure Data Transmission**
 
-* Both sides now have the same session keys (for AES-GCM/ChaCha20 encryption).
-* Encrypted communication begins.
-
-**TLS 1.3 vs. TLS 1.2 Key Differences**
-
-| Feature                | TLS 1.2                            | TLS 1.3                            |
-| ---------------------- | ---------------------------------- | ---------------------------------- |
-| **RTTs (Round Trips)** | 2                                  | 1 (0 with 0-RTT\*)                 |
-| **Key Exchange**       | Multiple steps (ServerKeyExchange) | Built into Client/Server Hello     |
-| **Forward Secrecy**    | Optional                           | Always On                          |
-| **Encryption Start**   | After handshake                    | Partially encrypted early          |
-| **Obsolete Ciphers**   | Supports weak ones (RSA, RC4)      | Removed (only modern AEAD ciphers) |
-
-\*0-RTT (Zero Round Trip Time Resumption): Allows instant reconnection for returning clients (but risks replay attacks).\*
+* Both sides now have the same set of symmetric **session keys**.
+* All subsequent communication is **encrypted and protected** using these keys and the chosen cipher suite (e.g., `AES-256-GCM`).
+* Encrypted application data (like HTTP requests) can now flow securely.
 
 **TLS 1.3 Handshake Simplified Workflow (Diagram)**
 
@@ -226,18 +219,17 @@ Client                                                                 Server
   | <=== ENCRYPTED DATA EXCHANGE BEGINS ===>                             |
 ```
 
-**Why TLS 1.3 is Better**
+**TLS 1.3 vs. TLS 1.2 Key Differences**
 
-✅ **1-RTT Handshake** (vs. 2 in TLS 1.2).\
-✅ **Stronger Security** (no RSA key exchange, only forward-secure methods).\
-✅ **Simpler & Faster** (removes obsolete features).\
-⚠️ **0-RTT tradeoff**: Faster but vulnerable to replay attacks (mitigated by limiting 0-RTT data).
+| Feature                | TLS 1.2                            | TLS 1.3                            |
+| ---------------------- | ---------------------------------- | ---------------------------------- |
+| **RTTs (Round Trips)** | 2-RTT                              | 1-RTT (0 with 0-RTT\*)             |
+| **Key Exchange**       | Multiple steps (ServerKeyExchange) | Built into Client/Server Hello     |
+| **Forward Secrecy**    | Optional                           | Always On (better security)        |
+| **Encryption Start**   | After handshake                    | Partially encrypted early          |
+| **Obsolete Ciphers**   | Supports weak ones (RSA, RC4)      | Removed (only modern AEAD ciphers) |
 
-**Final Notes**
-
-* TLS 1.3 is now the default in modern browsers & servers.
-* Most free certificates (Let’s Encrypt) support TLS 1.3.
-* Wireshark/`openssl s_client` can help debug handshakes.
+\*0-RTT (Zero Round Trip Time Resumption): Allows instant reconnection for returning clients, but risks replay attacks (mitigated by limiting 0-RTT data).
 
 ### Key takeaways
 

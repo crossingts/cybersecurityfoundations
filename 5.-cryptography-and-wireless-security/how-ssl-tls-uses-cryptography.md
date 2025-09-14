@@ -1,17 +1,23 @@
 ---
 description: >-
-  This section explains how symmetric encryption, asymmetric encryption, and
-  hashing secure Internet communications via SSL/TLS
+  This section explains how hashing, symmetric encryption, and asymmetric
+  encryption secure Internet communications via SSL/TLS
 ---
 
 # How SSL/TLS uses cryptography
 
 ## Learning objectives
 
-* Understand why hashing acts as a foundational layer for securing web traffic
-* Understand how in SSL/TLS a combination of hashing and cryptographic encryption secures websites and online transactions
+* Identify the wide range of applications beyond HTTPS that rely on SSL/TLS for secure communication
+* Understand how SSL/TLS uses a combination of hashing and cryptographic encryption to secure data transmission on the Internet
+* Distinguish the unique role each cryptographic tool (hashing, symmetric encryption, and asymmetric encryption) plays in achieving security goals such as confidentiality, integrity, and authentication
+* Understand the role of hashing in providing data integrity, authentication, and non-repudiation through fingerprint verification, MACs, and digital signatures
+* Distinguish between the integrity mechanisms used in TLS 1.2 (HMAC) and TLS 1.3 (AEAD ciphers like AES-GCM)
+* Explain how asymmetric encryption establishes a secure, authenticated key exchange during the handshake
+* Contrast the use of asymmetric encryption in TLS 1.2 with its mandatory use for authentication in TLS 1.3
+* Articulate why symmetric encryption is used for bulk data encryption, highlighting its performance advantages over asymmetric encryption
 
-This section explains how cryptographic tools (symmetric encryption, asymmetric encryption, and hashing) secure Internet communications via SSL/TLS.
+This section explains how cryptographic tools (hashing, symmetric encryption, and asymmetric encryption) secure Internet communications via SSL/TLS.
 
 ## Topics covered in this section
 

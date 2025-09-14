@@ -1,6 +1,6 @@
-# The TLS handshake key exchange and derivation process
+# The TLS 1.2 handshake key exchange and derivation process
 
-### Steps of the TLS handshake key exchange and derivation process&#x20;
+### Steps of the TLS 1.2 handshake key exchange and derivation process
 
 1. **Key Exchange (Asymmetric Encryption):** The client and server use asymmetric encryption (e.g., RSA, ECC, DH/ECDH) to securely exchange a pre-master secret.&#x20;
 
@@ -29,7 +29,7 @@
 * The symmetric session key (derived during the handshake) is used alongside a symmetric encryption algorithm (e.g., AES-256, ChaCha20) to encrypt the actual application data (e.g., HTTP requests, form submissions).
 * Hashing (via HMAC) ensures **data integrity**, preventing tampering during transit.
 
-**Step-by-Step Flow**
+**Step-by-Step Flow of the TLS 1.2 Handshake**
 
 | **Step**                    | **Client Action**                                                                                | **Server Action**                                  | **Purpose**                                                        |
 | --------------------------- | ------------------------------------------------------------------------------------------------ | -------------------------------------------------- | ------------------------------------------------------------------ |
@@ -112,7 +112,7 @@ _(Simplified for RSA Key Exchange, TLS 1.2)_
 
 Once both sides compute the **master secret** (using `PMS + ClientRandom + ServerRandom`), **both the client and server independently derive the same symmetric session keys** using a **deterministic key derivation process**. Here’s how it works:
 
-**Step-by-Step Key Derivation Process**
+**Step-by-Step Key Derivation Process in TLS 1.2**
 
 1. **Inputs for Key Expansion**\
    Both parties now have:

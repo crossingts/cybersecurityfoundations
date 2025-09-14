@@ -106,6 +106,7 @@
 * [The SSL/TLS handshake](5.-cryptography-and-wireless-security/the-ssl-tls-handshake/README.md)
   * [The TLS 1.2 handshake key exchange and derivation process](5.-cryptography-and-wireless-security/the-ssl-tls-handshake/the-tls-1.2-handshake-key-exchange-and-derivation-process.md)
   * [Understanding the (EC)DHE acronym](5.-cryptography-and-wireless-security/the-ssl-tls-handshake/understanding-the-ec-dhe-acronym.md)
+  * [The SSL/TLS handshake — Quiz](5.-cryptography-and-wireless-security/the-ssl-tls-handshake/the-ssl-tls-handshake-quiz.md)
 * [How SSL/TLS uses cryptography](5.-cryptography-and-wireless-security/how-ssl-tls-uses-cryptography.md)
 * [Replay attacks and anti-replay methods](5.-cryptography-and-wireless-security/replay-attacks-and-anti-replay-methods.md)
 * [Generating and applying an RSA key](5.-cryptography-and-wireless-security/generating-and-applying-an-rsa-key.md)

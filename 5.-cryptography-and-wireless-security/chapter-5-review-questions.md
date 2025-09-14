@@ -88,3 +88,20 @@ The two integrity mechanisms are:
 **5. The text explains that in a PSK system, the shared secret can be used to derive short-lived session keys. Explain the security benefit of this approach compared to using the PSK directly for encryption.**\
 **Answer:**\
 The key benefit is compartmentalization and forward secrecy. Using the PSK only for authentication and to derive a unique session key for each connection means that if a single session key is ever compromised, only the data from that specific session is exposed. All past and future sessions remain secure. If the long-term PSK were used directly for encryption, compromising it would allow an attacker to decrypt all past and future communications that used that key.
+
+### The SSL/TLS handshake
+
+**1. Explain the critical security weakness of the TLS 1.2 RSA key exchange method that led to its removal in TLS 1.3.**\
+**Answer:** The RSA key exchange method lacks Perfect Forward Secrecy (PFS). If the server's long-term private RSA key is ever compromised in the future, an attacker can use it to decrypt all past recorded communications that used that key to exchange the session secret.
+
+**2. What are the two distinct cryptographic purposes of a server's digital certificate in a TLS handshake, and how does their usage differ between TLS 1.2 (using RSA key exchange) and TLS 1.3?**\
+**Answer:** The two purposes are **authentication** (proving the server's identity) and **key exchange** (securely establishing a shared secret). In TLS 1.2 with RSA, the certificate's public key is used for both purposes. In TLS 1.3, the certificate's public key is used **only for authentication** (via the `CertificateVerify` signature); key exchange is handled separately by a mandatory (EC)DHE exchange.
+
+**3. Beyond agreeing on a TLS version, what is the most critical item negotiated in the `ClientHello` and `ServerHello` exchange, and what four algorithmic components does it define?**\
+**Answer:** The most critical item negotiated is the **cipher suite**. It defines the: 1) Key exchange algorithm, 2) Authentication algorithm, 3) Bulk encryption algorithm, and 4) Message Authentication Code (MAC) algorithm.
+
+**4. What specific handshake message in TLS 1.3 cryptographically binds the server's identity to the ephemeral key exchange, and what security threat does this prevent?**\
+**Answer:** The **`CertificateVerify`** message does this. The server signs a hash of the handshake transcript (which includes the key shares) with its private key. This prevents man-in-the-middle attacks by proving that the entity that performed the key exchange is the same entity that owns the authenticated certificate.
+
+**5. What is the primary cryptographic reason that TLS uses symmetric encryption (like AES) to encrypt application data, rather than the asymmetric encryption (like RSA) used during the handshake?**\
+**Answer:** Symmetric encryption is orders of magnitude **faster and more computationally efficient** for encrypting and decrypting large volumes of data than asymmetric encryption. The handshake uses asymmetric crypto for its secure key agreement properties, but then switches to symmetric crypto for performance once the session keys are established.

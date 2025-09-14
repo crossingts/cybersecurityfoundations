@@ -131,10 +131,10 @@ In the (EC)DHE key exchange, the client verifies the server’s identity just li
 
 **Authentication via `CertificateVerify`**
 
-* `CertificateVerify` is a specific handshake message where the server provides proof of ownership.
+* `CertificateVerify` is a specific handshake message where the server provides proof of ownership of the private key that corresponds to the public key in its digital certificate.
 * The server signs a hash of the handshake messages (including the ephemeral DH parameters) using its private key.
-* The client verifies this signature using the server's public key (from its certificate).
-* This proves:
+* The client verifies this signature using the server's public key (from its certificate).&#x20;
+* The successful creation and verification of this digital signature proves the following three things:
   * The server owns the private key matching the certificate.
   * The server was present during the handshake (which eliminates the possibility of a replay attack).
   * The server is the same entity that generated the ephemeral DH keys (prevents man-in-the-middle).
@@ -233,5 +233,18 @@ Client                                                                 Server
 
 ### Key takeaways
 
-* TLS 1.0 (1999) is essentially SSL 3.1 (renamed to avoid legal issues). TLS 1.2 (2008) was a major security upgrade and is widely adopted. TLS 1.3 (2018) is faster and more secure
-* Key phases of the TLS handshake are client and server hellos, certificate validation, session key negotiation, and exchanging finished messages
+* TLS evolved from the deprecated SSL protocol to address security flaws. TLS 1.0 (1999) was essentially SSL 3.1, TLS 1.2 (2008) was a major security upgrade, and TLS 1.3 (2018) is the modern standard focused on speed and enhanced security.
+* The primary goal of the handshake is to securely negotiate a unique, shared symmetric session key for efficient bulk data encryption, ensuring confidentiality, integrity, and authentication.
+* Key phases of the TLS 1.2 handshake are: The `ClientHello`/`ServerHello` negotiation, server authentication via certificate exchange, key exchange (e.g., RSA or (EC)DHE), and the final switch to symmetric encryption.
+* Key phases of the TLS 1.3 handshake are: An integrated `ClientHello` (containing key share) and `ServerHello` (containing key share, certificate, and `Finished` message) in one round trip, followed by client verification and the immediate start of encrypted data flow.
+* Key cryptographic algorithms involved in the TLS 1.2 handshake are: RSA for key transport (now discouraged), (EC)DHE for key agreement, SHA-256 for hashing, and symmetric ciphers like AES-CBC for bulk encryption.
+* Key cryptographic algorithms involved in the TLS 1.3 handshake are: Mandatory (EC)DHE key exchange (providing Forward Secrecy), digital signatures (RSA-PSS or ECDSA) for authentication in the `CertificateVerify` message, and modern Authenticated Encryption with Associated Data (AEAD) ciphers like AES-256-GCM or ChaCha20-Poly1305 for bulk encryption and integrity.
+* A critical security advancement in TLS 1.3 is the mandatory use of ephemeral key exchanges (like ECDHE), which provides Perfect Forward Secrecy (PFS) for all sessions, ensuring a compromised server's long-term private key cannot decrypt past communications.
+
+### References
+
+Kaufman, C., Perlman, R., & Speciner, M. (2002). Network security: Private communication in a public world (2nd ed.). Prentice Hall.
+
+Rescorla, E. (2018). The Transport Layer Security (TLS) Protocol Version 1.3. RFC 8446. IETF. https://www.rfc-editor.org/rfc/rfc8446.html
+
+Salowey, J., & Zhou, P. (Eds.). (2008). Transport Layer Security (TLS) Session Resumption without Server-Side State. RFC 5077. IETF. https://www.rfc-editor.org/rfc/rfc5077.html

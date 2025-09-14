@@ -464,3 +464,11 @@ Once the handshake is complete, SSL/TLS switches to symmetric encryption (e.g., 
 ### References
 
 Ed Harmoush. (n.d.). How SSL & TLS use Cryptographic tools to secure your data - Practical TLS. Practical Networking. https://www.youtube.com/watch?v=aCDgFH1i2B0
+
+Ferguson, N., Schneier, B., & Kohno, T. (2010). Cryptography engineering: Design principles and practical applications. Wiley.
+
+Kaufman, C., Perlman, R., & Speciner, M. (2002). Network security: Private communication in a public world (2nd ed.). Prentice Hall.
+
+Rescorla, E. (2018). SSL and TLS: Designing and building secure systems. Addison-Wesley Professional.
+
+Sheffer, Y., Saint-Andre, P., & Fossati, T. (2022). RFC 9325: Recommendations for secure use of transport layer security (TLS) and datagram transport layer security (DTLS). IETF.

@@ -115,7 +115,7 @@ After the server’s certificate is validated, the client and server use one of 
   * **Weakness: This method lacks Forward Secrecy.** If the server’s private key is ever compromised, an attacker can decrypt all past recorded communications.
 * **B. (EC)DHE Key Exchange (Preferred):**
   * The server sends its Diffie-Hellman (or Elliptic Curve DH) parameters in a `ServerKeyExchange` message after the Certificate message. In the DH key exchange, the server first sends the `ServerHello` message (which finalizes the basic connection rules, like which version of TLS and which cipher suite they will use) and then the `Certificate` message (where the server delivers its digital certificate chain which acts like a digital ID card to prove its identity to the client). The server then sends a `ServerKeyExchange` message. This message contains the server's specific DH parameters, which include its public key. To ensure these parameters cannot be altered by an attacker, the server digitally signs this message using the private key that matches its certificate. Finally, the server sends a `ServerHelloDone` message to signal to the client that the server has finished its part of the initial negotiation.
-  * The client and server exchange these DH public keys (parameters) to jointly calculate the pre-master secret.
+  * The client and server exchange these DH public keys (parameters) to independently calculate the pre-master secret.
   * **Benefit: This method provides Forward Secrecy.** The ephemeral DH keys are used once. Compromising the server's long-term private key later does not expose past session keys.
   * **Role of Certificate:** The server's certificate ensures the DH parameters come from the authenticated server and not an impostor.
 

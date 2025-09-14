@@ -33,7 +33,7 @@ This chapter covers how SSL/TLS uses cryptographic tools (symmetric encryption, 
 
 [The SSL/TLS handshake](the-ssl-tls-handshake/)
 
-[How SSL/TLS uses cryptography](how-ssl-tls-uses-cryptography.md)
+[How SSL/TLS uses cryptography](how-ssl-tls-uses-cryptography/)
 
 [Replay attacks and anti-replay methods](replay-attacks-and-anti-replay-methods.md)
 

@@ -127,7 +127,7 @@ TLS 1.3 was radically simplified and optimized for security and performance by m
 * **The Exchange is Fully Integrated:** Unlike in TLS 1.2, where key exchange was a separate step, the **(EC)DHE exchange is performed immediately within the first round trip** of messages. The client sends its public key (its "share") in the `key_share` extension of the very first `ClientHello` message. The server then responds with its own public share in the `ServerHello` message. This integration drastically reduces the time required to establish a secure connection.
 * **Authentication Follows the Key Exchange:** With the key exchange already complete, the server then proves its identity. It uses the private key from its certificate to **digitally sign the entire handshake conversation** (which includes the freshly exchanged key shares). This signature cryptographically binds the server’s proven identity to that specific key exchange, preventing tampering and downgrade attacks.
 
-In the TLS 1.3 handshake, the client verifies the server’s identity just like in TLS 1.2 via the server's digital certificate (before key exchange, the server proves its identity using a digital certificate), but the server's public key is only used for authentication, not in key exchange as in RSA based TLS 1.2. This authentication is handled by a special handshake message called `CertificateVerify`.
+In the TLS 1.3 handshake, the client verifies the server’s identity just like in TLS 1.2 via the server's digital certificate, but the server's public key is now used solely for digital signature-based authentication to prove the server's identity, not for deriving the session's encryption keys as it was with RSA key exchange in TLS 1.2. This digital signature-based authentication is handled by a special handshake message called `CertificateVerify`.
 
 **Authentication via `CertificateVerify`**
 
@@ -137,7 +137,7 @@ In the TLS 1.3 handshake, the client verifies the server’s identity just like 
 * The successful creation and verification of this digital signature proves the following three things:
   * The server owns the private key matching the certificate.
   * The server was present during the handshake (which eliminates the possibility of a replay attack).
-  * The server is the same entity that generated the ephemeral DH keys (prevents man-in-the-middle).
+  * The server is the same entity that generated the ephemeral DH keys. This cryptographic binding of the server's identity to the key exchange parameters is what definitively prevents a man-in-the-middle attack, as an attacker cannot forge this connection.
 
 **Final Steps (All TLS Versions)**
 

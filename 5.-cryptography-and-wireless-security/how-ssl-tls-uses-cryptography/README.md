@@ -17,7 +17,7 @@ description: >-
 * Contrast the use of asymmetric encryption in TLS 1.2 with its mandatory use for authentication in TLS 1.3
 * Articulate why symmetric encryption is used for bulk data encryption, highlighting its performance advantages over asymmetric encryption
 
-This section explains how cryptographic tools (hashing, symmetric encryption, and asymmetric encryption) secure Internet communications via SSL/TLS.
+This section explains how cryptographic tools (hashing, symmetric encryption, and asymmetric encryption) secure Internet communications via SSL/TLS. This section begins by establishing the critical role of SSL/TLS as the backbone for securing not just web traffic, but also email, VPNs, APIs, and much more. We will then deconstruct the TLS protocol to see how its security is built upon a foundation of three cryptographic tools: hashing, asymmetric encryption, and symmetric encryption. The lesson will first explore how hashing creates digital fingerprints for certificates and ensures data integrity. Next, it will detail how asymmetric encryption enables secure key exchange and server authentication during the handshake. Finally, we will examine the protocol's shift to high-performance symmetric encryption for safeguarding application data, a process that incorporates integrity checks through modern authenticated encryption.
 
 ## Topics covered in this section
 
@@ -46,7 +46,7 @@ SSL/TLS is the backbone of secure communications. SSL/TLS is used almost anywher
 
 **How SSL/TLS uses Cryptography**
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt="How-SSL-TLS-uses-Cryptography"><figcaption><p>How SSL/TLS uses cryptographic tools to secure data transmission (image courtesy of Ed Harmoush, Practical Networking)</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt="How-SSL-TLS-uses-Cryptography"><figcaption><p>How SSL/TLS uses cryptographic tools to secure data transmission (image courtesy of Ed Harmoush, Practical Networking)</p></figcaption></figure>
 
 ### How SSL/TLS uses hashing
 

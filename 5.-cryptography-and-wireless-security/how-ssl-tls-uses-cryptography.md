@@ -450,10 +450,10 @@ Once the handshake is complete, SSL/TLS switches to symmetric encryption (e.g., 
 
 ### Key takeaways <a href="#key-takeaways" id="key-takeaways"></a>
 
-* SSL/TLS are cryptographic protocols that provide encryption, authentication, and data integrity for secure communication over a network
-* SSL/TLS uses hashing for fingerprint verification, Message Authentication Codes (MAC), and digital signatures
-* SSL/TLS uses asymmetric encryption for secure key exchange, digital signatures, and certificate authentication
-* SSL/TLS uses asymmetric encryption to encrypt the actual data transmitted between a client and a server
+* SSL/TLS are cryptographic protocols that provide encryption, authentication, and data integrity for secure communication over a network.
+* SSL/TLS uses hashing for fingerprint verification, Message Authentication Codes (MAC), and digital signatures.
+* SSL/TLS uses asymmetric encryption for secure key exchange, digital signatures, and certificate authentication.
+* SSL/TLS uses symmetric encryption to encrypt the actual data transmitted between a client and a server.
 
 ### References
 

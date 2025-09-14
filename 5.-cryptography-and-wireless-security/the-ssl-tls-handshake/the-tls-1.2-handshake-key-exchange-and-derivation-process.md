@@ -48,9 +48,9 @@ This ensures **confidentiality (AES)**, **integrity (HMAC)**, and **authenticati
 
 #### SSL/TLS Key Exchange & Derivation Flow
 
-Here’s a **simplified diagram** of the SSL/TLS key exchange and derivation process to visualize how symmetric keys are securely established:
+Here’s a simplified diagram of the SSL/TLS key exchange and derivation process to visualize how symmetric keys are securely established:
 
-_(Simplified for RSA Key Exchange, TLS 1.2)_
+(Simplified for RSA Key Exchange, TLS 1.2)
 
 ```
 +-------------------+                       +-------------------+
@@ -169,9 +169,9 @@ Both sides derive **the same 6 keys** from the `key_block`, ensuring secure bidi
 
 **Summary**
 
-1. **Master Secret** → Generated identically on both sides (PMS + nonces).
-2. **PRF Expansion** → `key_block` = PRF(MasterSecret, "key expansion", nonces).
-3. **Key Splitting** → Both sides extract the same keys in the same order.
-4. **Secure Communication** → Symmetric encryption (AES) + integrity (HMAC) with synchronized keys.
+1. **Master Secret:** Generated identically on both sides (PMS + nonces).
+2. **PRF Expansion:** `key_block` = PRF(MasterSecret, "key expansion", nonces).
+3. **Key Splitting:** Both sides extract the same keys in the same order.
+4. **Secure Communication:** Symmetric encryption (AES) + integrity (HMAC) with synchronized keys.
 
-This ensures **no key mismatch** while keeping keys **confidential** (never transmitted).
+This ensures no key mismatch while keeping keys confidential (never transmitted).

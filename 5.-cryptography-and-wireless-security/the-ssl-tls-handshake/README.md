@@ -178,7 +178,7 @@ The client initiates the connection by sending:
   * **`P-256`**: A widely used and standardized elliptic curve.
 * **Optional: Pre-Shared Key (PSK) hint** – A reference to a previous session, allowing for a faster "resumption" handshake.
 
-**In TLS 1.3, the client guesses the server’s preferred key exchange method and sends its public key upfront (reducing round trips).**
+In TLS 1.3, the client guesses the server’s preferred key exchange method and sends its public key upfront (reducing round trips).
 
 **2. Server Hello**\
 The server responds by selecting from the client's options and sending:
@@ -189,7 +189,7 @@ The server responds by selecting from the client's options and sending:
 * **CertificateVerify** – A digital signature that proves the server owns the private key for that certificate.
 * **Finished** – A message that verifies the integrity of the entire handshake so far.
 
-**TLS 1.3 skips several steps needed in TLS 1.2 (like "Server Key Exchange"), making the process faster and more efficient.**
+TLS 1.3 skips several steps needed in TLS 1.2 (like "Server Key Exchange"), making the process faster and more efficient.
 
 **3. Client Verification & Key Derivation**\
 The client now:

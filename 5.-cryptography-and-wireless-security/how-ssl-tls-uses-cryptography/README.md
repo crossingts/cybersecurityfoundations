@@ -30,11 +30,15 @@ This section explains how cryptographic tools (hashing, symmetric encryption, an
 
 SSL/TLS are cryptographic protocols that provide **encryption, authentication, and data integrity** for secure communication over a network. For example, the HTTPS protocol ensures that data exchanged between a client (e.g., a web browser) and a server (e.g., a website) is private and tamper-proof.
 
-TLS is a cryptographic protocol designed to provide communications security over a computer network. TLS creates a secure tunnel between two machines by performing an encrypted handshake. This handshake does three crucial things:
+TLS creates a secure tunnel between two machines by performing an encrypted handshake. This handshake does three crucial things:
 
-1. **Authentication:** It verifies the server's identity using a digital certificate (like an ID card for a website), ensuring you are talking to the real "google.com" and not an imposter.
+1. **Authentication:** It verifies the server's identity using a digital certificate (like an ID card for a website), ensuring you are talking to the real google.com and not an imposter.
 2. **Encryption:** It scrambles all data exchanged between the client and server, making it unreadable to anyone eavesdropping.
 3. **Integrity:** It ensures that the data sent is the data received and that it hasn't been tampered with or corrupted in transit.
+
+**How SSL/TLS uses Cryptography**
+
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt="How-SSL-TLS-uses-Cryptography"><figcaption><p>How SSL/TLS uses cryptographic tools to secure data transmission (image courtesy of Ed Harmoush, Practical Networking)</p></figcaption></figure>
 
 **How HTTP and TLS combine to form HTTPS**
 
@@ -58,10 +62,6 @@ HTTPS (Hypertext Transfer Protocol Secure) is the standard HTTP protocol, but it
 | **Data Integrity**      | No protection from tampering.                             | Data is protected from modification in transit.       |
 | **Use Case**            | Non-sensitive information (e.g., reading a news article). | Any sensitive data (logins, payments, personal data). |
 
-**How SSL/TLS uses Cryptography**
-
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt="How-SSL-TLS-uses-Cryptography"><figcaption><p>How SSL/TLS uses cryptographic tools to secure data transmission (image courtesy of Ed Harmoush, Practical Networking)</p></figcaption></figure>
-
 While commonly associated with HTTPS (securing web traffic), SSL/TLS is widely used in many other applications, including:
 
 * **Email (SMTPS, IMAPS, POP3S)** – Secures email transmission (sending/receiving) and prevents eavesdropping.
@@ -78,31 +78,32 @@ SSL/TLS is used almost anywhere secure communication is needed—not just for we
 
 ### How SSL/TLS uses hashing
 
-SSL/TLS uses hashing for fingerprint verification, Message Authentication Codes (MAC), and digital signatures, thus ensuring **data integrity, authentication, and non-repudiation** in encrypted communications.&#x20;
+SSL/TLS uses hashing for fingerprint verification, Message Authentication Codes (MAC), and digital signatures, thus ensuring **data integrity, authentication, and non-repudiation** in encrypted communications.
 
 **Hashing role in TLS handshake:**
 
-1. **Digital Signatures (asymmetric encryption + hashing): Authenticates server identity (ensures the server is trusted, preventing MITM attacks). Example Algorithms: RSA + SHA-256, ECDSA.**
+1. Digital Signatures (asymmetric encryption + hashing): Authenticate the server's identity (ensure the server is trusted, preventing MITM attacks). Examples of algorithm combinations used to create digital signatures: RSA + SHA-256, ECDSA. The process of using digital signatures for server authentication occurs during the TLS handshake in two distinct phases:
 
-* **When does this occur?**
-  * **During the handshake**, in two distinct phases:
-    1. **Certificate Verification**:
-       * The server sends its **certificate** (signed by a CA using RSA+SHA-256 or ECDSA).
-       * The client verifies the CA's signature on the certificate to authenticate the server's identity (preventing MITM).
-       * Hashing role: The CA’s signature includes a hash (e.g., SHA-256) of the certificate data.
-       * _This happens **before** key exchange._
-    2. **Key Exchange (e.g., RSA or ECDHE)**:
-       * **In RSA** key exchange (deprecated in TLS 1.3), the client encrypts the pre-master secret with the server's public key.
-       * **Server authentication (optional):** In TLS 1.2, the server may send a `CertificateVerify` message (signed with RSA+hash) to prove it owns the private key.
-       * The pre-master secret is combined with nonces to derive the master secret (then session key). Hashing role: SHA-256 is used in the PRF (Pseudo-Random Function) to derive master secret (e.g., combining pre-master secret + nonces).&#x20;
-       * **In ECDHE** (TLS 1.2), the server signs its ephemeral public key (e.g., using ECDSA+SHA-256 or RSA-PSS+SHA-256) to prove it owns the certificate. Hashing role: The signature includes a hash (e.g., SHA-256) of the handshake messages (for integrity).
-       * The pre-master secret is combined with nonces to derive the master secret (then session key). Hashing role: SHA-256 is used in the PRF (Pseudo-Random Function) to derive master secret (e.g., combining pre-master secret + nonces).&#x20;
+**A. Certificate Verification**:
 
-2. **Integrity Checks: Verifies data integrity (prevents data alteration in transit). Example Algorithms: SHA-256, HMAC.**
+* The server sends its **certificate** (signed by a CA using RSA+SHA-256 or ECDSA).
+* The client verifies the CA's signature on the certificate to authenticate the server's identity (preventing MITM).
+* Hashing role: The CA’s signature includes a hash (e.g., SHA-256) of the certificate data.
+* _This happens **before** key exchange._
+
+**B. Key Exchange (e.g., RSA or ECDHE)**:
+
+* **In RSA** key exchange (deprecated in TLS 1.3), the client encrypts the pre-master secret with the server's public key.
+* **Server authentication (optional):** In TLS 1.2, the server may send a `CertificateVerify` message (signed with RSA+hash) to prove it owns the private key.
+* The pre-master secret is combined with nonces to derive the master secret (then session key). Hashing role: SHA-256 is used in the PRF (Pseudo-Random Function) to derive master secret (e.g., combining pre-master secret + nonces).&#x20;
+* **In ECDHE** (TLS 1.2), the server signs its ephemeral public key (e.g., using ECDSA+SHA-256 or RSA-PSS+SHA-256) to prove it owns the certificate. Hashing role: The signature includes a hash (e.g., SHA-256) of the handshake messages (for integrity).
+* The pre-master secret is combined with nonces to derive the master secret (then session key). Hashing role: SHA-256 is used in the PRF (Pseudo-Random Function) to derive master secret (e.g., combining pre-master secret + nonces).&#x20;
+
+2. Integrity Checks: Verifies data integrity (prevents data alteration in transit). Example Algorithms: SHA-256, HMAC.
 
 **Hashing for Integrity Checks (e.g., SHA-256, HMAC)**
 
-* **After symmetric key negotiation.** Once the TLS handshake establishes a shared session key, hashing (often via HMAC or AEAD ciphers like AES-GCM) is used to verify message integrity **during the encrypted application data exchange** (not during the handshake itself).
+* **After symmetric key negotiation.** Once the TLS handshake establishes a shared session key, hashing (often via HMAC or AEAD ciphers like AES-GCM) is used to verify message integrity during the encrypted application data exchange (not during the handshake itself).
 * **Example:** In TLS 1.2, HMAC-SHA256 is used with the session key to generate MACs for each encrypted record. In TLS 1.3, AEAD (e.g., AES-GCM) combines encryption and integrity checks.
 
 **Note -** In RSA (TLS 1.2) , the `CertificateVerify` message (sent after the server's certificate) is used to prove ownership of the private key by signing a hash of the handshake messages. In RSA (TLS 1.2) the server may send the client a `CertificateVerify` message which is a **signed hash of the handshake messages** (up to that point) using the private key of the server, proving (to the client) the server’s ownership of the private key (**authentication**).

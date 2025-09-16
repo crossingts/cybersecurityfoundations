@@ -30,7 +30,39 @@ This section explains how cryptographic tools (hashing, symmetric encryption, an
 
 SSL/TLS are cryptographic protocols that provide **encryption, authentication, and data integrity** for secure communication over a network. For example, the HTTPS protocol ensures that data exchanged between a client (e.g., a web browser) and a server (e.g., a website) is private and tamper-proof.
 
-While commonly associated with **HTTPS** (securing web traffic), SSL/TLS is widely used in many other applications, including:
+TLS is a cryptographic protocol designed to provide communications security over a computer network. TLS creates a secure tunnel between two machines by performing an encrypted handshake. This handshake does three crucial things:
+
+1. **Authentication:** It verifies the server's identity using a digital certificate (like an ID card for a website), ensuring you are talking to the real "google.com" and not an imposter.
+2. **Encryption:** It scrambles all data exchanged between the client and server, making it unreadable to anyone eavesdropping.
+3. **Integrity:** It ensures that the data sent is the data received and that it hasn't been tampered with or corrupted in transit.
+
+**How HTTP and TLS combine to form HTTPS**
+
+HTTPS (Hypertext Transfer Protocol Secure) is the standard HTTP protocol, but it is sent over a connection that has been secured by TLS. Here’s how it works in a typical web browsing session:
+
+1. **Client Hello:** You type `https://www.example.com` into your browser. Your browser connects to the server on port 443 (the default port for HTTPS, unlike HTTP's port 80).
+2. **TLS Handshake:** Before any HTTP data is exchanged, the browser and the server perform the TLS handshake. They agree on encryption protocols, the server proves its identity with its SSL/TLS certificate, and they generate session keys for encryption.
+3. **Secure Tunnel Established:** A secure, encrypted tunnel is now active.
+4. **HTTP Over the Tunnel:** Now, and only now, the normal HTTP request is sent. But because it's traveling through the encrypted TLS tunnel, it's secure. The request for the webpage, the HTML that is returned, the images, your login credentials—all of it is encrypted.
+5. **You see the padlock:** Your browser shows the padlock icon (🔒) in the address bar, indicating the connection is secure.
+
+**HTTP vs HTTPS**
+
+| Feature                 | HTTP                                                      | HTTPS                                                 |
+| ----------------------- | --------------------------------------------------------- | ----------------------------------------------------- |
+| **Protocol**            | Hypertext Transfer Protocol                               | Hypertext Transfer Protocol Secure                    |
+| **Underlying Security** | None                                                      | SSL/TLS Protocol                                      |
+| **Default Port**        | 80                                                        | 443                                                   |
+| **Data Encryption**     | No. Data is sent in plain text.                           | Yes. Data is encrypted.                               |
+| **Authentication**      | No identity verification.                                 | Yes, verifies server identity with a certificate.     |
+| **Data Integrity**      | No protection from tampering.                             | Data is protected from modification in transit.       |
+| **Use Case**            | Non-sensitive information (e.g., reading a news article). | Any sensitive data (logins, payments, personal data). |
+
+**How SSL/TLS uses Cryptography**
+
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt="How-SSL-TLS-uses-Cryptography"><figcaption><p>How SSL/TLS uses cryptographic tools to secure data transmission (image courtesy of Ed Harmoush, Practical Networking)</p></figcaption></figure>
+
+While commonly associated with HTTPS (securing web traffic), SSL/TLS is widely used in many other applications, including:
 
 * **Email (SMTPS, IMAPS, POP3S)** – Secures email transmission (sending/receiving) and prevents eavesdropping.
 * **VPNs (e.g., OpenVPN)** – Encrypts all traffic between a client and a private network.
@@ -42,11 +74,7 @@ While commonly associated with **HTTPS** (securing web traffic), SSL/TLS is wide
 * **DNS security (DNS over TLS)** – Prevents tampering or spying on domain name lookups.
 * **Remote desktop (RDP with TLS)** – Secures remote access to workstations/servers.
 
-SSL/TLS is the backbone of secure communications. SSL/TLS is used almost anywhere secure communication is needed—not just for websites. If an application transmits sensitive data over a network, there’s a good chance TLS is involved.
-
-**How SSL/TLS uses Cryptography**
-
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt="How-SSL-TLS-uses-Cryptography"><figcaption><p>How SSL/TLS uses cryptographic tools to secure data transmission (image courtesy of Ed Harmoush, Practical Networking)</p></figcaption></figure>
+SSL/TLS is used almost anywhere secure communication is needed—not just for websites. If an application transmits sensitive data over a network, there’s a good chance TLS is involved.
 
 ### How SSL/TLS uses hashing
 
@@ -83,7 +111,7 @@ SSL/TLS uses hashing for fingerprint verification, Message Authentication Codes 
 * It signs this hash with its **private RSA key** (e.g., using `RSA-PSS` or `RSA-PKCS#1`).
 * The client verifies the signature using the server’s **public key** (from the certificate).
 
-#### **When Hashing is Used in the TLS protocol (TLS Key Exchange and Hashing)**
+**When Hashing is Used in the TLS protocol (TLS Key Exchange and Hashing)**
 
 | **Key Exchange Type** | **Hashing in Key Exchange Itself?**                  | **Where Hashing is Used**                                                                                                                                                                                                             | **Explicit Authentication (`CertificateVerify`)?**                                                                                                          |
 | --------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |

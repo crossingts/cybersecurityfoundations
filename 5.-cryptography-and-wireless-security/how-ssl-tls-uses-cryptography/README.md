@@ -1,6 +1,6 @@
 ---
 description: >-
-  This section explains how hashing, symmetric encryption, and asymmetric
+  This section explains how hashing, asymmetric encryption, and symmetric
   encryption secure Internet communications via SSL/TLS
 ---
 
@@ -23,8 +23,8 @@ This section explains how cryptographic tools (hashing, symmetric encryption, an
 
 * **SSL/TLS use cases**
 * **How SSL/TLS uses hashing**
-* **How SSL/TLS uses asymmetric encryption**
-* **How SSL/TLS uses symmetric encryption**
+* **How SSL/TLS uses asymmetric cryptography**
+* **How SSL/TLS uses symmetric cryptography**
 
 ### SSL/TLS use cases
 
@@ -349,7 +349,7 @@ The purpose of this layer is solely to ensure that the encrypted data (e.g., web
 | ----------------------- | ------------------------------------------- | ------------------------------------------------- |
 | **Integrity Mechanism** | HMAC (SHA-256, etc.) appended to ciphertext | Built-in authentication tag (e.g., GCM tag)       |
 | **Encryption**          | Separate (e.g., AES-CBC) + HMAC             | Combined (e.g., AES-GCM encrypts + authenticates) |
-| **Performance**         | Slightly slower (extra MAC step)            | Faster (single crypto operation)                  |
+| **Performance**         | Slightly slower (extra MAC step)            | Faster (single cryptographic operation)           |
 | **Security**            | Good, but vulnerable to padding attacks     | Stronger (resists more attacks)                   |
 
 #### III. Digital Signatures
@@ -365,29 +365,22 @@ Digital signatures are a critical component of the TLS handshake, used in messag
 
 ***
 
-### How SSL/TLS uses asymmetric encryption
+### How SSL/TLS uses asymmetric cryptography
 
-SSL/TLS uses asymmetric encryption (public-key cryptography) for secure key exchange, digital signatures, and certificate authentication. During the handshake, the server shares its public key via a digital certificate, which the client verifies using a trusted Certificate Authority (CA). The client then generates a pre-master secret, encrypts it with the server’s public key, and sends it to the server, which decrypts it with its private key. This establishes a shared secret while ensuring confidentiality and authentication. Asymmetric encryption is computationally expensive, so it is only used for initial setup before switching to symmetric encryption for bulk data transfer.
-
-#### Role of Asymmetric Encryption in SSL/TLS
-
-* Purpose: Secure key exchange and authentication (digital signatures and certificate authentication)
-* Common algorithms (RSA, ECC, DH)
-* How TLS uses asymmetric crypto for:
-  * Key exchange (in the TLS handshake)
-  * Digital signatures
-  * Certificate authentication (server authentication)
+SSL/TLS uses asymmetric encryption (public-key cryptography) for secure key generation, digital signatures, and certificate authentication. During the initial handshake, the server provides its public key to the client within a digital certificate. The client then authenticates this certificate by verifying the signature of a trusted Certificate Authority (CA), ensuring the server's identity is legitimate.
 
 **Key Exchange (TLS 1.2 vs. TLS 1.3)**
 
-In **TLS 1.2**, asymmetric encryption (public-key crypto) is used in two ways for key exchange:
+The use of asymmetric cryptography in key generation differs significantly between TLS 1.2 and TLS 1.3. In TLS 1.2, asymmetric encryption is used in two primary methods. The first is a direct RSA-based key exchange, where the client encrypts a pre-master secret with the server’s public key, which only the corresponding private key can decrypt. While functional, this method lacks forward secrecy, making it vulnerable if the server's private key is ever compromised. The second method uses ephemeral Diffie-Hellman (DHE or ECDHE), where asymmetric cryptography is only employed for authentication via digital signatures, while the actual key generation is performed using temporary parameters, thus ensuring forward secrecy. In contrast, TLS 1.3 mandates forward secrecy by allowing only ephemeral Diffie-Hellman (ECDHE). The server’s public key is used solely to sign the key exchange parameters rather than to encrypt them, resulting in a more efficient handshake with fewer rounds of computationally expensive asymmetric operations. This key difference—TLS 1.2’s support for both RSA and ephemeral key exchange versus TLS 1.3’s exclusive use of authenticated ephemeral key exchange—makes TLS 1.3 both more secure and faster.
+
+In **TLS 1.2**, asymmetric encryption is used in two ways for key exchange:
 
 1. **Direct Key Exchange (RSA-based)**
    * The client encrypts a **pre-master secret** with the server’s public key (from its certificate).
    * Only the server (with its private key) can decrypt it.
    * Used in **RSA key exchange**, but vulnerable if the server’s private key is compromised (no **forward secrecy**).
 2. **Ephemeral Diffie-Hellman (DHE/ECDHE)**
-   * Asymmetric crypto is used only for **authentication** (via digital signatures).
+   * Asymmetric cryptography is used only for **authentication** (via digital signatures).
    * The actual key exchange happens via **ephemeral (temporary) DH/ECDH**, ensuring **forward secrecy**.
 
 In **TLS 1.3**, asymmetric encryption is used more efficiently:
@@ -399,11 +392,13 @@ In **TLS 1.3**, asymmetric encryption is used more efficiently:
 **Key Difference:**
 
 * **TLS 1.2:** Supports both RSA key exchange (no forward secrecy) and ephemeral DH.
-* **TLS 1.3:** Only ephemeral DH, with asymmetric crypto limited to authentication (signatures).
+* **TLS 1.3:** Only ephemeral DH, with asymmetric cryptography limited to authentication (signatures).
 
 This makes TLS 1.3 both **more secure** (always forward-secret) and **faster** (fewer round trips).
 
 **Digital Signatures**
+
+Asymmetric cryptography is fundamental to digital signatures, which verify the integrity and authenticity of handshake data. In this process, the server signs a critical piece of data, such as a handshake message, with its private key. The recipient then uses the sender’s public key to verify that the message was not altered and indeed originated from the claimed source. For example, in ECDHE key exchange, the server signs the ServerKeyExchange message to prove ownership of the private key associated with its certified public key.
 
 * **Purpose:** Verify the integrity and authenticity of data.
 * **How it works in SSL/TLS:**
@@ -413,13 +408,15 @@ This makes TLS 1.3 both **more secure** (always forward-secret) and **faster** (
 
 **Certificate Authentication**
 
+Asymmetric cryptography is the basis for certificate authentication, which binds a public key to a specific entity like a web server. A trusted Certificate Authority (CA) uses its own private key to digitally sign the server’s certificate, which contains the server's public key. During a connection, the client uses the CA’s public key, stored in its trust store, to validate the certificate’s signature. This process, such as when a browser connects to `https://example.com`, confirms that the certificate is authentic and has not been tampered with, establishing a chain of trust.
+
 * **Purpose:** Bind an entity (e.g., a server) to its public key, verified by a trusted third party (CA).
 * **How it works in SSL/TLS:**
   * A **Certificate Authority (CA)** signs the server’s certificate (which contains the server’s public key) using the CA’s private key.
   * The client checks the certificate’s signature against the CA’s public key (from its trust store) to ensure the certificate is valid and unaltered.
 * **Example:** When you connect to `https://example.com`, your browser checks if the server’s certificate was issued and signed by a trusted CA.
 
-Key Differences:
+**Key Differences: Digital Signatures and Certificate Authentication**
 
 | Feature             | Digital Signatures                               | Certificate Authentication                       |
 | ------------------- | ------------------------------------------------ | ------------------------------------------------ |
@@ -440,7 +437,9 @@ Analogy:
 
 ***
 
-### How SSL/TLS uses symmetric encryption
+### How SSL/TLS uses symmetric cryptography
+
+Asymmetric encryption is computationally expensive, so it is only used for initial setup before switching to symmetric encryption for bulk data transfer.
 
 Once the handshake is complete, SSL/TLS switches to symmetric encryption (e.g., AES or ChaCha20) for encrypting actual application data. Symmetric encryption is used to encrypt the actual data transmitted between a client (e.g., a web browser) and a server (e.g., a website). Both parties derive the same session keys from the pre-master secret to encrypt and decrypt transmitted data efficiently. Symmetric encryption is faster than asymmetric encryption and provides confidentiality for the bulk of the communication. The keys are ephemeral, generated per session, and never reused, mitigating risks from key compromise. Integrity is further enforced using HMAC or AEAD (Authenticated Encryption with Additional Data) modes like AES-GCM.
 
@@ -456,7 +455,7 @@ Once the handshake is complete, SSL/TLS switches to symmetric encryption (e.g., 
      * Unique keys generated for each session via the handshake
      * Typically 128-256 bit keys (e.g., AES-256-GCM in TLS 1.3)
   3. **Performance Advantage**:
-     * 100-1,000x faster than asymmetric crypto for data transfer
+     * 100-1,000x faster than asymmetric cryptography for data transfer
      * Enables high-speed secure communication (e.g., video streaming, large downloads)
   4. **Cipher Modes**:
      * Authenticated Encryption (AEAD): Combines encryption + integrity (e.g., AES-GCM)
@@ -471,7 +470,7 @@ Once the handshake is complete, SSL/TLS switches to symmetric encryption (e.g., 
 
 * SSL/TLS are cryptographic protocols that provide encryption, authentication, and data integrity for secure communication over a network.
 * SSL/TLS uses hashing for fingerprint verification, Message Authentication Codes (MAC), and digital signatures.
-* SSL/TLS uses asymmetric encryption for secure key exchange, digital signatures, and certificate authentication.
+* SSL/TLS uses asymmetric encryption for secure key generation, digital signatures, and certificate authentication.
 * SSL/TLS uses symmetric encryption to encrypt the actual data transmitted between a client and a server.
 
 ### References

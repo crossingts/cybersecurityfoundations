@@ -69,8 +69,8 @@ While commonly associated with HTTPS (securing web traffic), SSL/TLS is widely u
 * **File transfers (FTPS)** – Protects file transfers (different from SFTP, which uses SSH).
 * **Databases (MySQL, PostgreSQL, MongoDB with TLS)** – Encrypts queries and prevents unauthorized access to sensitive data.
 * **Directory services (LDAPS)** – Secures authentication and queries in systems like Active Directory.
-* **VoIP & messaging (SIP over TLS, XMPP)** – Encrypts call setup (VoIP) and instant messages.
-* **IoT & APIs** – Ensures secure firmware updates and encrypted API communications (e.g., payment processing).
+* **VoIP and messaging (SIP over TLS, XMPP)** – Encrypts call setup (VoIP) and instant messages.
+* **IoT and APIs** – Ensures secure firmware updates and encrypted API communications (e.g., payment processing).
 * **DNS security (DNS over TLS)** – Prevents tampering or spying on domain name lookups.
 * **Remote desktop (RDP with TLS)** – Secures remote access to workstations/servers.
 
@@ -298,35 +298,15 @@ The mechanism of using a CA's digital signature to authenticate a server fulfils
 
 #### II. Message Authentication Codes (MAC)
 
-During encrypted data exchange:
+TLS provides integrity protection at two distinct layers of the protocol—during the TLS handshake (authentication and key exchange) and during encrypted data exchange—each employing a different cryptographic mechanism.
 
-* TLS 1.2 uses HMAC (Hash-based MAC) to verify message integrity. The sender and receiver compute a hash of the data + shared secret. Mismatches indicate tampering.
-* TLS 1.3 replaces HMAC with AEAD (e.g., AES-GCM), which integrates encryption + integrity checks.
-* HMAC uses hashes (SHA-256, SHA-384) combined with a secret key.
+**First, during the handshake phase**, which handles authentication and key exchange, integrity is ensured through digital signatures like RSA or ECDSA. The primary purpose of this is to verify the server's identity and guarantee that the critical handshake messages themselves have not been tampered with. This works through several steps: the server's certificate, signed by a Certificate Authority (CA), is validated; for certain cipher suites, the `ServerKeyExchange` message is signed; and in TLS 1.3, a `CertificateVerify` message is always signed to provide explicit proof that the server possesses the private key. It is important to note that the mechanisms for encrypted data exchange, HMAC or AEAD, are not used during this initial phase.
 
-Recall, integrity protection in TLS happens at two layers, during the TLS handshake (authentication & key exchange), and during encrypted data exchange.
-
-**Integrity Protection in TLS: Two Layers**
-
-TLS ensures message integrity at **two different stages** with different mechanisms:
-
-**A. During the Handshake (Authentication & Key Exchange)**
-
-* **Mechanism:** Digital signatures (e.g., RSA, ECDSA)
-* **Purpose:** Verify the server’s identity and ensure handshake messages are untampered Handshake Phase (authentication and integrity).
-* **How it works:**
-  * The server’s certificate is signed by a CA (as previously explained).
-  * The `ServerKeyExchange` (in some cipher suites) and `CertificateVerify` (in TLS 1.3) messages are also signed to prove possession of the private key.
-  * Not HMAC or AEAD yet—these are only used after the handshake.
-
-**B. During Encrypted Data Exchange (Record Layer Integrity)**
-
-* **Mechanism:**
-  * **TLS 1.2:** HMAC (Hash-based MAC)
-  * **TLS 1.3:** AEAD (Authenticated Encryption with Associated Data, e.g., AES-GCM, ChaCha20-Poly1305)
-* **Purpose:** Ensure that encrypted application data (HTTP, etc.) is not modified in transit.
+**Second, during the encrypted data exchange phase (record layer integrity):** TLS ensures the integrity of encrypted data through Message Authentication Codes (MACs), though the specific mechanism depends on the version.&#x20;
 
 **HMAC in TLS 1.2 (Legacy Approach)**
+
+TLS 1.2 ensures the integrity of encrypted data using a Hash-Based MAC (HMAC). For every block of data, the sender computes an HMAC—which combines a cryptographic hash function like SHA-256 with a session-specific secret key—and appends this value to the encrypted message. The receiver independently performs the same calculation; if the computed HMAC does not match the one that was sent, it indicates the data was tampered with in transit and the connection is terminated.&#x20;
 
 * **How it works:**
   * After the handshake, both client and server derive session keys (e.g., `client_write_MAC_key`, `server_write_MAC_key`).
@@ -345,6 +325,8 @@ Encrypted_Record = AES-CBC(plaintext) + HMAC-SHA256(plaintext, MAC_key)
 
 **AEAD in TLS 1.3 (Modern Approach)**
 
+TLS 1.3 ensures the integrity of encrypted data using a modernized approach which replaces the separate HMAC function with Authenticated Encryption with Associated Data (AEAD) ciphers such as AES-GCM. AEAD algorithms integrate encryption and integrity protection into a single, efficient operation, generating a built-in authentication tag during encryption that is verified upon decryption.
+
 * **How it works:**
   * AEAD (e.g., AES-GCM, ChaCha20-Poly1305) combines encryption + integrity in one step.
   * Instead of HMAC, the cipher itself generates an authentication tag (like a built-in MAC).
@@ -359,6 +341,8 @@ Encrypted_Record = AES-CBC(plaintext) + HMAC-SHA256(plaintext, MAC_key)
 Encrypted_Record = AES-GCM(plaintext)  # Includes auth tag
 ```
 
+The purpose of this layer is solely to ensure that the encrypted data (e.g., web traffic) has not been altered in transit between the client and server.
+
 **Key Differences Summarized**
 
 | Feature                 | TLS 1.2 (HMAC)                              | TLS 1.3 (AEAD)                                    |
@@ -370,8 +354,7 @@ Encrypted_Record = AES-GCM(plaintext)  # Includes auth tag
 
 #### III. Digital Signatures
 
-* Used in TLS handshakes (e.g., server’s CertificateVerify message). The sender hashes the handshake messages, then signs the hash with their private key. This provided integrity and authentication checks.
-* Ensures non-repudiation: The sender cannot later deny sending the message, as only they possess the private key.
+Digital signatures are a critical component of the TLS handshake, used in messages like the server's `CertificateVerify`. The process involves a sender first generating a cryptographic hash of the handshake messages and then encrypting that hash with their private key to create a unique signature. This mechanism provides both integrity, by proving the messages were not altered, and authentication, by verifying the sender's identity. Furthermore, this process ensures non-repudiation. This means the sender cannot later deny having sent the message, as the valid signature could only have been produced by someone in possession of their unique private key.
 
 **Summary:**
 
@@ -438,12 +421,12 @@ This makes TLS 1.3 both **more secure** (always forward-secret) and **faster** (
 
 Key Differences:
 
-| Feature             | Digital Signatures                             | Certificate Authentication                       |
-| ------------------- | ---------------------------------------------- | ------------------------------------------------ |
-| **Purpose**         | Verify message integrity & sender authenticity | Verify server identity & public key binding      |
-| **Signed Data**     | Handshake messages (e.g., `ServerKeyExchange`) | The server’s certificate (public key + metadata) |
-| **Signer**          | Server (or client)                             | Certificate Authority (CA)                       |
-| **Verification By** | Peer (client/server)                           | Client (via CA’s public key)                     |
+| Feature             | Digital Signatures                               | Certificate Authentication                       |
+| ------------------- | ------------------------------------------------ | ------------------------------------------------ |
+| **Purpose**         | Verify message integrity and sender authenticity | Verify server identity and public key binding    |
+| **Signed Data**     | Handshake messages (e.g., `ServerKeyExchange`)   | The server’s certificate (public key + metadata) |
+| **Signer**          | Server (or client)                               | Certificate Authority (CA)                       |
+| **Verification By** | Peer (client/server)                             | Client (via CA’s public key)                     |
 
 Why Both Are Needed:
 

@@ -77,6 +77,8 @@ The TCP SYN flood is a common type of DoS attack (often directed against ISPs) w
 
 The three-way handshake is SYN, SYN-ACK, and ACK. The attacker sends a large number of SYN packets to a target server. The target server sends a SYN-ACK message in response to each SYN it receives. But the attacker never replies with the final ACK of the handshake.
 
+<figure><img src="../../.gitbook/assets/image (17).png" alt="TCP SYN flood"><figcaption><p>The TCP SYN flood attack</p></figcaption></figure>
+
 The target waits for the final ACK of each handshake, and the incomplete connections fill up the target’s TCP connection table. The incomplete connections will timeout and be removed from the table after a certain period of time, but the attacker continues sending SYN messages. This exhausts the server’s resources and prevents legitimate users from accessing it. In the end, the target is no longer able to make legitimate TCP connections because it has reached the maximum number of TCP connections it can maintain.
 
 ```mermaid

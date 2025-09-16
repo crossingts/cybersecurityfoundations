@@ -80,9 +80,9 @@ SSL/TLS is used almost anywhere secure communication is needed—not just for we
 
 SSL/TLS uses hashing for fingerprint verification, Message Authentication Codes (MAC), and digital signatures, thus ensuring **data integrity, authentication, and non-repudiation** in encrypted communications.
 
-**Hashing role in TLS handshake:**
+**Hashing's role in the TLS handshake:**
 
-1. Digital Signatures (asymmetric encryption + hashing): Authenticate the server's identity (ensure the server is trusted, preventing MITM attacks). Examples of algorithm combinations used to create digital signatures: RSA + SHA-256, ECDSA. The process of using digital signatures for server authentication occurs during the TLS handshake in two distinct phases:
+1. Digital signatures (asymmetric encryption + hashing): Authenticating the server's identity (ensuring the server is trusted, preventing MITM attacks). Examples of algorithm combinations used to create digital signatures: RSA + SHA-256, ECDSA. The process of using digital signatures for server authentication occurs during the TLS handshake in two distinct phases:
 
 **A. Certificate Verification**:
 
@@ -99,7 +99,7 @@ SSL/TLS uses hashing for fingerprint verification, Message Authentication Codes 
 * **In ECDHE** (TLS 1.2), the server signs its ephemeral public key (e.g., using ECDSA+SHA-256 or RSA-PSS+SHA-256) to prove it owns the certificate. Hashing role: The signature includes a hash (e.g., SHA-256) of the handshake messages (for integrity).
 * The pre-master secret is combined with nonces to derive the master secret (then session key). Hashing role: SHA-256 is used in the PRF (Pseudo-Random Function) to derive master secret (e.g., combining pre-master secret + nonces).&#x20;
 
-2. Integrity Checks: Verifies data integrity (prevents data alteration in transit). Example Algorithms: SHA-256, HMAC.
+2. Integrity checks: Verifying data integrity (preventing data alteration in transit). Examples of algorithms used to verify data integrity: SHA-256, HMAC.
 
 **Hashing for Integrity Checks (e.g., SHA-256, HMAC)**
 

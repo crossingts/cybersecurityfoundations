@@ -439,9 +439,7 @@ Analogy:
 
 ### How SSL/TLS uses symmetric cryptography
 
-Asymmetric encryption is computationally expensive, so it is only used for initial setup before switching to symmetric encryption for bulk data transfer.
-
-Once the handshake is complete, SSL/TLS switches to symmetric encryption (e.g., AES or ChaCha20) for encrypting actual application data. Symmetric encryption is used to encrypt the actual data transmitted between a client (e.g., a web browser) and a server (e.g., a website). Both parties derive the same session keys from the pre-master secret to encrypt and decrypt transmitted data efficiently. Symmetric encryption is faster than asymmetric encryption and provides confidentiality for the bulk of the communication. The keys are ephemeral, generated per session, and never reused, mitigating risks from key compromise. Integrity is further enforced using HMAC or AEAD (Authenticated Encryption with Additional Data) modes like AES-GCM.
+Asymmetric encryption is computationally expensive, so it is only used for initial setup before switching to symmetric encryption for bulk data transfer. Once the handshake is complete, SSL/TLS switches to symmetric encryption (e.g., AES or ChaCha20) for encrypting actual application data. Symmetric encryption is used to encrypt the actual data transmitted between a client (e.g., a web browser) and a server (e.g., a website). Both parties derive the same session keys from the pre-master secret to encrypt and decrypt transmitted data efficiently. Symmetric encryption is faster than asymmetric encryption and provides confidentiality for the bulk of the communication. The keys are ephemeral, generated per session, and never reused, mitigating risks from key compromise. Integrity is further enforced using HMAC or AEAD (Authenticated Encryption with Additional Data) modes like AES-GCM.
 
 #### Role of Symmetric Encryption in SSL/TLS
 
@@ -469,9 +467,22 @@ Once the handshake is complete, SSL/TLS switches to symmetric encryption (e.g., 
 ### Key takeaways <a href="#key-takeaways" id="key-takeaways"></a>
 
 * SSL/TLS are cryptographic protocols that provide encryption, authentication, and data integrity for secure communication over a network.
+  * The SSL/TLS protocols establish a secure tunnel between a client and server through an encrypted handshake.
+  * The use of SSL/TLS extends far beyond HTTPS to secure email, VPNs, database connections, API communications, and much more.
+  * SSL/TLS achieves the three core cryptographic security goals: Confidentiality (via encryption), Authentication (via certificates and signatures), and Integrity (via hashing and MACs).
 * SSL/TLS uses hashing for fingerprint verification, Message Authentication Codes (MAC), and digital signatures.
+  * Fingerprint Verification: A CA hashes a server's certificate to create a unique fingerprint, which it signs to create a trusted digital identity for authentication.
+  * Message Authentication Codes (MAC): Hashing combined with a secret key (e.g., in HMAC) is used to verify that encrypted application data was not altered in transit.
+  * Digital Signatures: The process of signing a hash of handshake messages provides authentication, integrity, and non-repudiation, proving a message came from the holder of the private key.
+  * The specific integrity mechanism evolved from HMAC in TLS 1.2 to integrated AEAD ciphers in TLS 1.3.
 * SSL/TLS uses asymmetric encryption for secure key generation, digital signatures, and certificate authentication.
+  * Certificate Authentication: The client uses a CA's public key to verify the digital signature on a server's certificate, authenticating the server's identity.
+  * Key Exchange: In TLS 1.2, asymmetric encryption was used either to encrypt a pre-master secret directly (RSA) or to authenticate ephemeral Diffie-Hellman parameters (DHE/ECDHE). TLS 1.3 only uses it for authentication, mandating forward-secure key exchange.
+  * Digital Signatures: Asymmetric cryptography is used to sign handshake messages, proving ownership of the private key and ensuring the handshake's integrity.
 * SSL/TLS uses symmetric encryption to encrypt the actual data transmitted between a client and a server.
+  * Symmetric encryption is used for bulk data encryption because it is 100-1000x faster than asymmetric encryption.
+  * Unique, ephemeral session keys are generated for each connection during the handshake and are never reused.
+  * Modern TLS (1.3) uses Authenticated Encryption with Associated Data (AEAD) ciphers like AES-GCM, which perform encryption and integrity checking in a single, efficient operation.
 
 ### References
 

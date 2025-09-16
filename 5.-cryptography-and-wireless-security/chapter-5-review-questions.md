@@ -105,3 +105,38 @@ The key benefit is compartmentalization and forward secrecy. Using the PSK only 
 
 **5. What is the primary cryptographic reason that TLS uses symmetric encryption (like AES) to encrypt application data, rather than the asymmetric encryption (like RSA) used during the handshake?**\
 **Answer:** Symmetric encryption is orders of magnitude **faster and more computationally efficient** for encrypting and decrypting large volumes of data than asymmetric encryption. The handshake uses asymmetric crypto for its secure key agreement properties, but then switches to symmetric crypto for performance once the session keys are established.
+
+### How SSL/TLS uses cryptography
+
+**1. The text states that the TLS handshake achieves three crucial security goals. What are these three goals and what does each one provide?**\
+**Answer:**\
+The three security goals are:
+
+* **Authentication:** Verifies the identity of the communicating parties, ensuring you are communicating with the legitimate server and not an impostor.
+* **Encryption:** Scrambles the data exchanged between the client and server, providing confidentiality and making it unreadable to eavesdroppers.
+* **Integrity:** Ensures that the data sent is the data received and has not been altered or corrupted in transit.
+
+**2. The text explains that TLS uses hashing for three distinct mechanisms. What are these three mechanisms and what is the primary security purpose of each?**\
+**Answer:**\
+The three mechanisms are:
+
+* **Fingerprint Verification:** Its primary purpose is **authentication**, using a hash of a certificate to verify the server's identity.
+* **Message Authentication Codes (MAC):** Its primary purpose is **data integrity**, using a keyed hash to detect if transmitted data has been tampered with.
+* **Digital Signatures:** Its primary purpose is **non-repudiation and authentication**, using an encrypted hash to bind a message to a specific sender who cannot later deny sending it.
+
+**3. The text contrasts the integrity mechanisms in TLS 1.2 and TLS 1.3. What are the two different mechanisms used and what is a key advantage of the method used in TLS 1.3?**\
+**Answer:**
+
+* **TLS 1.2** primarily uses **HMAC** (Hash-based Message Authentication Code) for integrity, which is a separate calculation appended to the encrypted data.
+* **TLS 1.3** uses **AEAD** ciphers (Authenticated Encryption with Associated Data) like AES-GCM.
+* A key advantage of AEAD is that it **combines encryption and integrity checking into a single, more efficient operation** that is also resistant to certain attacks (like padding oracles) that HMAC-based constructions can be vulnerable to.
+
+**4. The text describes a major security improvement in TLS 1.3: mandatory forward secrecy. What is forward secrecy and how is it achieved in TLS 1.3?**\
+**Answer:**
+
+* **Forward secrecy** is a property that ensures a session key remains secure even if the server's long-term private key is compromised in the future.
+* In TLS 1.3, it is achieved by **allowing only ephemeral key exchange methods** (like ECDHE). The server's long-term private key is used only to sign the handshake for authentication, not to encrypt the key exchange secrets. Since the ephemeral keys are temporary and discarded after the handshake, they cannot be recovered to decrypt past sessions.
+
+**5. The text explains that TLS switches from asymmetric to symmetric encryption after the handshake. Why is symmetric encryption used for the bulk of the communication?**\
+**Answer:**\
+Symmetric encryption is used because it is **computationally much faster and more efficient** (often 100-1000x faster) than asymmetric encryption. This performance advantage is critical for encrypting large volumes of application data (like web pages, videos, or file transfers) with minimal latency impact on the user experience.

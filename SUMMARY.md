@@ -109,6 +109,7 @@
   * [The SSL/TLS handshake — Quiz](5.-cryptography-and-wireless-security/the-ssl-tls-handshake/the-ssl-tls-handshake-quiz.md)
 * [How SSL/TLS uses cryptography](5.-cryptography-and-wireless-security/how-ssl-tls-uses-cryptography/README.md)
   * [How asymmetric encryption enables secure key exchange and server authentication during the handshake](5.-cryptography-and-wireless-security/how-ssl-tls-uses-cryptography/how-asymmetric-encryption-enables-secure-key-exchange-and-server-authentication-during-the-handshake.md)
+  * [How SSL/TLS uses cryptography — Quiz](5.-cryptography-and-wireless-security/how-ssl-tls-uses-cryptography/how-ssl-tls-uses-cryptography-quiz.md)
 * [Replay attacks and anti-replay methods](5.-cryptography-and-wireless-security/replay-attacks-and-anti-replay-methods.md)
 * [Generating and applying an RSA key](5.-cryptography-and-wireless-security/generating-and-applying-an-rsa-key.md)
 * [The Diffie-Hellman (DH) key exchange](5.-cryptography-and-wireless-security/the-diffie-hellman-dh-key-exchange.md)

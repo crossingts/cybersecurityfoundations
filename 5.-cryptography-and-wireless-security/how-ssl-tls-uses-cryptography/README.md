@@ -221,7 +221,9 @@ The following table summarizes the key differences between TLS 1.2 and TLS 1.3 r
 | **Hashing for Key Derivation (PRF)**       | ✔️ SHA-256 (or negotiated hash) for deriving `master_secret`.                                                                                                                                                          | ✔️ SHA-256 (or HKDF) for deriving `master_secret`.                             |
 | **Hashing for Data Integrity**             | ✔️ HMAC-SHA-256 (for cipher suites without AEAD).                                                                                                                                                                      | ✔️ AEAD (e.g., AES-GCM) handles integrity **without explicit hashing**.        |
 
-**How TLS uses hashing for fingerprint verification, MACs, and digital signatures (providing integrity, authentication, and non-repudiation):**
+The following table summarizes how TLS uses hashing for fingerprint verification, MACs, and digital signatures (providing authentication, integrity, and non-repudiation).
+
+**How TLS uses Hashing for Authentication, Integrity, and Non-Repudiation**
 
 | **TLS Hashing Application**            | **Security Parameter** | **Explanation**                                                                                                                                                            |
 | -------------------------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -233,7 +235,7 @@ The following table summarizes the key differences between TLS 1.2 and TLS 1.3 r
 
 **How the server authentication works in TLS:**
 
-1. **Certificate Issuance (Pre-TLS):**
+1. **Certificate Issuance (Pre-TLS Handshake):**
    * The server's operator generates a key pair (public + private key) and submits a Certificate Signing Request (CSR) to a Certificate Authority (CA).
    * The CA validates the server's identity (e.g., verifying domain ownership for HTTPS).
    * The CA creates the server's certificate, which includes:
@@ -242,8 +244,8 @@ The following table summarizes the key differences between TLS 1.2 and TLS 1.3 r
      * Issuer (CA) info
      * Validity period
      * Other metadata (extensions)
-   * The CA hashes the certificate's contents (e.g., SHA-256) → produces a fingerprint.
-   * The CA encrypts this fingerprint with its **private key** → creates the **digital signature**.
+   * The CA hashes the certificate's contents using an algorithm like SHA-256 to produce a unique fingerprint.
+   * The CA encrypts this fingerprint with its own private key to create the digital signature.
    * The signature is appended to the certificate, which is now "signed" and sent to the server.
 2. **During TLS Handshake (Authentication):**
    * The server sends its signed certificate to the client in the `Server Hello`.
@@ -263,19 +265,19 @@ The following table summarizes the key differences between TLS 1.2 and TLS 1.3 r
      * The server's identity (e.g., domain name matches the certificate's `Subject` or `SAN`).
      * The certificate hasn't been revoked (via CRL or OCSP, though modern TLS often uses OCSP stapling).
 
-Why This Works:
+The mechanism of using a CA's digital signature to authenticate a server works for the following reasons:
 
 * **Integrity**: If an attacker altered the certificate (e.g., changed the public key), the recomputed fingerprint wouldn't match the decrypted one.
 * **Authenticity**: Only the CA could have created a valid signature (requires the CA's private key, which is kept secret).
 * **Trust**: The client implicitly trusts CAs in its trust store. If the CA is compromised, authentication fails.
 
-Example Flow:
+Server authentication using digital signatures in a TLS handshake flow example:
 
 1. CA signs `example.com`'s certificate with `CA_private_key`.
 2. Client receives `example.com`'s certificate, decrypts the signature with `CA_public_key` (from CA's root certificate).
 3. If the decrypted fingerprint matches the certificate's contents, the server is authenticated.
 
-This ensures the client is communicating with the genuine server (not an impostor) before establishing encrypted communication.
+This authentication process ensures the client is communicating with the genuine server (not an impostor) before establishing encrypted communication.
 
 #### **How Fingerprints Are Generated (Example)**
 

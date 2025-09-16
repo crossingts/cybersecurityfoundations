@@ -82,35 +82,40 @@ SSL/TLS uses hashing for fingerprint verification, Message Authentication Codes 
 
 **Hashing's role in the TLS handshake:**
 
-1. Digital signatures (asymmetric encryption + hashing): Authenticating the server's identity (ensuring the server is trusted, preventing MITM attacks). Examples of algorithm combinations used to create digital signatures: RSA + SHA-256, ECDSA. The process of using digital signatures for server authentication occurs during the TLS handshake in two distinct phases:
+1\. Digital signatures (asymmetric encryption + hashing): Authenticating the server's identity (ensuring the server is trusted). Examples of algorithm combinations used to create digital signatures include RSA + SHA-256, and ECDSA + SHA-256. The process of using digital signatures for server authentication occurs during the TLS handshake in two distinct phases:
 
-**A. Certificate Verification**:
+**A. Certificate Verification (TLS 1.2 and TLS 1.3)**:
 
-* The server sends its **certificate** (signed by a CA using RSA+SHA-256 or ECDSA).
-* The client verifies the CA's signature on the certificate to authenticate the server's identity (preventing MITM).
-* Hashing role: The CA’s signature includes a hash (e.g., SHA-256) of the certificate data.
-* _This happens **before** key exchange._
+* The server sends its certificate (signed by a CA using RSA+SHA-256 or ECDSA).
+* The client verifies the CA's signature on the certificate to authenticate the server's identity (the authentication chain is: I trust the CA -> the CA vouches for this server -> therefore, I can trust this server).
+* Hashing's role: The CA’s signature includes a hash (e.g., SHA-256) of the certificate data.
+* This happens before the key exchange.
 
 **B. Key Exchange (e.g., RSA or ECDHE)**:
 
-* **In RSA** key exchange (deprecated in TLS 1.3), the client encrypts the pre-master secret with the server's public key.
-* **Server authentication (optional):** In TLS 1.2, the server may send a `CertificateVerify` message (signed with RSA+hash) to prove it owns the private key.
-* The pre-master secret is combined with nonces to derive the master secret (then session key). Hashing role: SHA-256 is used in the PRF (Pseudo-Random Function) to derive master secret (e.g., combining pre-master secret + nonces).&#x20;
-* **In ECDHE** (TLS 1.2), the server signs its ephemeral public key (e.g., using ECDSA+SHA-256 or RSA-PSS+SHA-256) to prove it owns the certificate. Hashing role: The signature includes a hash (e.g., SHA-256) of the handshake messages (for integrity).
-* The pre-master secret is combined with nonces to derive the master secret (then session key). Hashing role: SHA-256 is used in the PRF (Pseudo-Random Function) to derive master secret (e.g., combining pre-master secret + nonces).&#x20;
+* In RSA key exchange (deprecated in TLS 1.3), the client encrypts the pre-master secret with the server's public key.
 
-2. Integrity checks: Verifying data integrity (preventing data alteration in transit). Examples of algorithms used to verify data integrity: SHA-256, HMAC.
+Explicit server authentication is optional in TLS 1.2: The server may send a `CertificateVerify` message (signed with RSA+hash) to prove it owns the private key.
 
-**Hashing for Integrity Checks (e.g., SHA-256, HMAC)**
+Both the client and the server independently combine the pre-master secret with the exchanged nonces (client random and server random) to derive a master secret. Hashing's role in this process: both parties use a Pseudo-Random Function (PRF) built on a hash algorithm like SHA-256. This function actively expands the pre-master secret by mixing it with the nonces to generate the unique master secret.
 
-* **After symmetric key negotiation.** Once the TLS handshake establishes a shared session key, hashing (often via HMAC or AEAD ciphers like AES-GCM) is used to verify message integrity during the encrypted application data exchange (not during the handshake itself).
-* **Example:** In TLS 1.2, HMAC-SHA256 is used with the session key to generate MACs for each encrypted record. In TLS 1.3, AEAD (e.g., AES-GCM) combines encryption and integrity checks.
+To derive the actual session keys (for encryption and integrity checking) from the master secret, both parties perform a process called key expansion. They again use the PRF, but this time they use the master secret as the seed and mix it with the same handshake transcript (a record of all messages sent and received) to generate a block of key material. This block is then split into the specific symmetric session keys.
 
-**Note -** In RSA (TLS 1.2) , the `CertificateVerify` message (sent after the server's certificate) is used to prove ownership of the private key by signing a hash of the handshake messages. In RSA (TLS 1.2) the server may send the client a `CertificateVerify` message which is a **signed hash of the handshake messages** (up to that point) using the private key of the server, proving (to the client) the server’s ownership of the private key (**authentication**).
+* In ECDHE (TLS 1.2), the server signs its ephemeral public key (e.g., using ECDSA+SHA-256 or RSA-PSS+SHA-256) to prove it owns the certificate.&#x20;
+
+Hashing's role: The signature includes a hash (e.g., SHA-256) of the handshake messages (for integrity). The pre-master secret is combined with nonces to derive the master secret (then session key). Hashing's role: SHA-256 is used in the PRF (Pseudo-Random Function) to derive master secret (e.g., combining pre-master secret + nonces).&#x20;
+
+2\. Integrity checks: Verifying data integrity (preventing data alteration in transit). Examples of algorithms used to verify data integrity include SHA-256 and HMAC.
+
+**Hashing for Integrity Checks**
+
+After symmetric key negotiation: Once the TLS handshake establishes a shared session key, hashing (often via HMAC or AEAD ciphers like AES-GCM) is used to verify message integrity during the encrypted application data exchange (not during the handshake itself). For example, in TLS 1.2, HMAC-SHA256 is used with the session key to generate MACs for each encrypted record. In TLS 1.3, AEAD (e.g., AES-GCM) combines encryption and integrity checks.
+
+Note - In RSA (TLS 1.2) , the `CertificateVerify` message (sent after the server's certificate) is used to prove ownership of the private key by signing a hash of the handshake messages. In RSA (TLS 1.2) the server may send the client a `CertificateVerify` message which is a signed hash of the handshake messages (up to that point) using the private key of the server, proving (to the client) the server’s ownership of the private key (authentication).
 
 * The server computes a hash (e.g., SHA-256) of all previous handshake messages.
-* It signs this hash with its **private RSA key** (e.g., using `RSA-PSS` or `RSA-PKCS#1`).
-* The client verifies the signature using the server’s **public key** (from the certificate).
+* It signs this hash with its private RSA key (e.g., using `RSA-PSS` or `RSA-PKCS#1`).
+* The client verifies the signature using the server’s public key (from the certificate).
 
 **When Hashing is Used in the TLS protocol (TLS Key Exchange and Hashing)**
 
@@ -124,13 +129,13 @@ SSL/TLS uses hashing for fingerprint verification, Message Authentication Codes 
 
 **In TLS 1.2**:
 
-* Occurs in the **`ServerKeyExchange`** message (for ECDHE cipher suites) or is **omitted** (for static RSA key exchange).
-* **Trigger**: The server signs its ephemeral ECDHE public key + handshake hash (e.g., RSA in TLS 1.2 using SHA-256) to prove authenticity.
+* Occurs in the `ServerKeyExchange` message (for ECDHE cipher suites) or is omitted (for static RSA key exchange).
+* Trigger: The server signs its ephemeral ECDHE public key + handshake hash (e.g., RSA in TLS 1.2 using SHA-256) to prove authenticity.
 
 **In TLS 1.3**:
 
-* Occurs in the **`CertificateVerify`** step, **after** `ServerHello`/`KeyShare` but **before** deriving the session key.
-* **Trigger**: The server signs a SHA-256 hash of all prior handshake messages to prove private key ownership.
+* Occurs in the `CertificateVerify` step, after `ServerHello`/`KeyShare` but before deriving the session key.
+* Trigger: The server signs a SHA-256 hash of all prior handshake messages to prove private key ownership.
 
 **Visual TLS 1.2 Handshake Snippet with key hashing actions highlighted**
 
@@ -155,8 +160,8 @@ Finished (HMAC-SHA-256)  // First encrypted message, verifies handshake integrit
 **Key Differences from TLS 1.3**
 
 1. **`ServerKeyExchange`** (TLS 1.2):
-   * **ECDHE Only**: Signs ephemeral public key + SHA-256 hash of handshake messages.
-   * **RSA Key Exchange**: _Omits this step entirely_ (no handshake signing).
+   * RSA Key Exchange: Omits this step entirely (no handshake signing).
+   * ECDHE Only: Signs ephemeral public key + SHA-256 hash of handshake messages.
 2. **`CertificateVerify`**:
    * TLS 1.2 relies on `ServerKeyExchange` (for ECDHE) or implicit RSA encryption (no explicit signing).
 3. **`Finished` Uses HMAC-SHA-256**:
@@ -167,18 +172,18 @@ Finished (HMAC-SHA-256)  // First encrypted message, verifies handshake integrit
 1. **ClientHello** → **ServerHello**
    * Agree on cipher suite (e.g., `ECDHE_RSA_WITH_AES_128_GCM_SHA256`).
 2. **Key Exchange (`ServerHello` + `KeyShare`)**
-   * Server sends its ephemeral **ECDHE public key** (no signing yet).
+   * Server sends its ephemeral ECDHE public key (no signing yet).
 3. **Server Authentication Phase**
    * **Certificate**: Server sends its digital certificate (signed by CA using RSA+SHA-256/ECDSA).
    * **CertificateVerify**:
-     * **Hashing role**: The server hashes **all previous handshake messages** (up to this point) with SHA-256.
-     * **Signing**: Signs this hash with its **private key** (RSA/ECDSA) to prove ownership.
-     * _This is the explicit "signing of handshake messages" step._
+     * **Hashing's role**: The server hashes all previous handshake messages (up to this point) with SHA-256.
+     * **Signing**: Signs this hash with its private key (RSA/ECDSA) to prove ownership.
+     * This is the explicit "signing of handshake messages" step.
 4. **Final Key Derivation**
    * Client and server derive the session key (`master secret`) using:
-     * ECDHE shared secret + nonces + **PRF (SHA-256)**.
+     * ECDHE shared secret + nonces + PRF (SHA-256).
 5. **Encrypted Data Exchange (Integrity via AEAD)**
-   * TLS 1.3 uses AEAD (e.g., AES-GCM), which handles encryption + integrity **without separate hashing**.
+   * TLS 1.3 uses AEAD (e.g., AES-GCM), which handles encryption + integrity without separate hashing.
 
 #### **Visual TLS 1.3 Handshake (Simplified)**
 
@@ -198,7 +203,9 @@ Finished (encrypted)
 [Application Data]  
 ```
 
-TLS 1.2 vs. TLS 1.3: Key Differences in Hashing and Handshake Signing (comparing handshake message signing, key exchange, and integrity mechanisms):
+The following table summarizes the key differences between TLS 1.2 and TLS 1.3 regarding key exchange, handshake message signing, and integrity check mechanisms.
+
+**TLS 1.2 vs TLS 1.3: Key Differences in Hashing and Handshake Signing**
 
 | **Step**              | **TLS 1.2**                                       | **TLS 1.3**                          |
 | --------------------- | ------------------------------------------------- | ------------------------------------ |
@@ -206,7 +213,7 @@ TLS 1.2 vs. TLS 1.3: Key Differences in Hashing and Handshake Signing (comparing
 | **Handshake Signing** | ECDHE signs in `ServerKeyExchange`                | Always signs in `CertificateVerify`  |
 | **Integrity Check**   | HMAC-SHA-256 in `Finished`                        | AEAD (e.g., AES-GCM) in all messages |
 
-**All hashing roles (signing, PRF, integrity) for both versions**&#x20;
+**TLS 1.2 vs TLS 1.3: All Hashing Roles (Signing, PRF, Integrity)**
 
 | **Action**                                 | **TLS 1.2**                                                                                                                                                                                                            | **TLS 1.3**                                                                    |
 | ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |

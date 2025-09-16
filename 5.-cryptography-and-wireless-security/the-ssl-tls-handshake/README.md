@@ -53,16 +53,13 @@ TLS 1.3 is now the default in modern browsers and servers. Most free certificate
 ### The SSL/TLS handshake process
 
 1. ClientHello and ServerHello
-2.  Certificate validation (asymmetric cryptography)&#x20;
-
-    Before key exchange, the server proves its identity using a digital certificate:
-
-    * The server sends its digital certificate (containing its public key and identity) to the client.
-    * The client validates the certificate by:
-      * Checking if it’s issued by a trusted Certificate Authority (CA), e.g., DigiCert or Let’s Encrypt.
-      * Verifying that the CA's digital signature on the server's certificate is authentic using the CA’s public key. This ensures the certificate wasn’t forged or tampered with.
-      * Confirming the certificate has not expired and verifying via CRL or OCSP that the certificate has not been revoked.
-      * Ensuring the server’s domain matches the certificate’s Subject Alternative Name (SAN) or Common Name (CN).
+2. Certificate validation (asymmetric cryptography). Before key exchange, the server proves its identity using a digital certificate:
+   * The server sends its digital certificate (containing its public key and identity) to the client.
+   * The client validates the certificate by:
+     * Checking if it’s issued by a trusted Certificate Authority (CA), e.g., DigiCert or Let’s Encrypt.
+     * Verifying that the CA's digital signature on the server's certificate is authentic using the CA’s public key. This ensures the certificate wasn’t forged or tampered with.
+     * Confirming the certificate has not expired and verifying via CRL or OCSP that the certificate has not been revoked.
+     * Ensuring the server’s domain matches the certificate’s Subject Alternative Name (SAN) or Common Name (CN).
 3. Key exchange: Establishing a shared secret using a method like RSA or Diffie-Hellman. (For TLS 1.2 and earlier, the server's certificate public key is used directly for exchange. For TLS 1.3, the server's certificate public key is used to sign the DH exchange.)
 4. Session key generation (symmetric cryptography)
 5. Secure data transmission begins
@@ -156,6 +153,7 @@ Following a successful key exchange:
   * Server’s public key never touches key exchange (only authentication via `CertificateVerify`).
   * Perfect Forward Secrecy (PFS) is mandatory.
   * The shared secret is derived solely from ephemeral (EC)DHE keys, independent of the server’s long-term public key. This ensures PFS by design.
+* In all TLS versions and handshake types, the client must authenticate the server. This is the primary mechanism for preventing Man-in-the-Middle (MITM) attacks. Without it, the encrypted connection would be secure from eavesdroppers but vulnerable to a malicious actor impersonating the server.
 
 **The TLS handshake ensures:**
 

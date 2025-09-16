@@ -169,8 +169,8 @@ Finished (HMAC-SHA-256)  // First encrypted message, verifies handshake integrit
 
 #### **Detailed Breakdown (TLS 1.3 Handshake)**
 
-1. **ClientHello** → **ServerHello**
-   * Agree on cipher suite (e.g., `ECDHE_RSA_WITH_AES_128_GCM_SHA256`).
+1. **ClientHello and ServerHello Exchange**
+   * During the initial phase of the handshake, the client initiates the connection by sending a ClientHello message, listing its supported cryptographic options. The server then responds with a ServerHello message, selecting a specific cipher suite from the client's list, for example, ECDHE\_RSA\_WITH\_AES\_128\_GCM\_SHA256.
 2. **Key Exchange (`ServerHello` + `KeyShare`)**
    * Server sends its ephemeral ECDHE public key (no signing yet).
 3. **Server Authentication Phase**
@@ -215,11 +215,11 @@ The following table summarizes the key differences between TLS 1.2 and TLS 1.3 r
 
 **TLS 1.2 vs TLS 1.3: All Hashing Roles (Signing, PRF, Integrity)**
 
-| **Action**                                 | **TLS 1.2**                                                                                                                                                                                                            | **TLS 1.3**                                                                    |
-| ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| **Hashing for Signing Handshake Messages** | <p>✔️ <strong>ECDHE only</strong>: In <code>ServerKeyExchange</code> (signs ECDHE pubkey + handshake hash).<br>❌ <strong>RSA key exchange</strong>: No signing of handshake messages (optional CertificateVerify).</p> | ✔️ Always in `CertificateVerify` (signs hash of all prior handshake messages). |
-| **Hashing for Key Derivation (PRF)**       | ✔️ SHA-256 (or negotiated hash) for deriving `master_secret`.                                                                                                                                                          | ✔️ SHA-256 (or HKDF) for deriving `master_secret`.                             |
-| **Hashing for Data Integrity**             | ✔️ HMAC-SHA-256 (for cipher suites without AEAD).                                                                                                                                                                      | ✔️ AEAD (e.g., AES-GCM) handles integrity **without explicit hashing**.        |
+| **Action**                                 | **TLS 1.2**                                                                                                                                                                          | **TLS 1.3**                                                                    |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| **Hashing for Signing Handshake Messages** | <p>✔️ ECDHE only: In <code>ServerKeyExchange</code> (signs ECDHE pubkey + handshake hash).<br>❌ RSA key exchange: No signing of handshake messages (optional CertificateVerify).</p> | ✔️ Always in `CertificateVerify` (signs hash of all prior handshake messages). |
+| **Hashing for Key Derivation (PRF)**       | ✔️ SHA-256 (or negotiated hash) for deriving `master_secret`.                                                                                                                        | ✔️ SHA-256 (or HKDF) for deriving `master_secret`.                             |
+| **Hashing for Data Integrity**             | ✔️ HMAC-SHA-256 (for cipher suites without AEAD).                                                                                                                                    | ✔️ AEAD (e.g., AES-GCM) handles integrity without explicit hashing.            |
 
 The following table summarizes how TLS uses hashing for fingerprint verification, MACs, and digital signatures (providing authentication, integrity, and non-repudiation).
 
@@ -241,9 +241,9 @@ The following table summarizes how TLS uses hashing for fingerprint verification
    * The CA creates the server's certificate, which includes:
      * Server's public key
      * Server's identity (e.g., domain name)
-     * Issuer (CA) info
+     * Issuer (CA) information
      * Validity period
-     * Other metadata (extensions)
+     * Other metadata (extensions, e.g., Subject Alternative Name for multiple domains)
    * The CA hashes the certificate's contents using an algorithm like SHA-256 to produce a unique fingerprint.
    * The CA encrypts this fingerprint with its own private key to create the digital signature.
    * The signature is appended to the certificate, which is now "signed" and sent to the server.
@@ -251,14 +251,14 @@ The following table summarizes how TLS uses hashing for fingerprint verification
    * The server sends its signed certificate to the client in the `Server Hello`.
    * The client:\
      a. **Validates the certificate chain**: Checks if the certificate is issued by a trusted CA (traversing the chain up to a root CA in its trust store).\
-     b. **Decrypts the signature**: Uses the CA's **public key** (from the CA's own certificate) to decrypt the signature → extracts the original fingerprint.\
+     b. **Decrypts the signature:** Uses the CA's public key (from the CA's own certificate) to decrypt the signature, obtaining the original fingerprint.\
      c. **Recomputes the fingerprint**: Hashes the certificate's contents (excluding the signature) using the same hash algorithm the CA used.\
      d. **Compares fingerprints**: Checks if the decrypted fingerprint matches the recomputed fingerprint.
 3. **Authentication Outcomes:**
    * **Match**: The certificate is authentic (not tampered with) and was signed by the trusted CA.
      * The client now trusts the server's public key in the certificate.
      * Proceeds with key exchange (e.g., generating a premaster secret encrypted with the server's public key).
-   * **Mismatch**: The certificate is invalid (possibly tampered with or corrupted) → Handshake fails.
+   * **Mismatch**: The certificate is invalid (possibly tampered with or corrupted): the handshake fails.
 4. **Additional Checks (Beyond the Signature):**
    * The client also verifies:
      * The certificate's validity period (not expired/not yet valid).
@@ -296,7 +296,7 @@ This authentication process ensures the client is communicating with the genuine
     ```
     SHA256 Fingerprint=3A:1B:...:9F
     ```
-* **Browsers** display fingerprints in certificate details (Chrome/Firefox show SHA-1 and SHA-256 hashes).
+* Browsers display fingerprints in certificate details (Chrome/Firefox show SHA-1 and SHA-256 hashes).
 
 #### **Why Hashing is Used for Fingerprints**
 
@@ -309,7 +309,7 @@ This authentication process ensures the client is communicating with the genuine
 During encrypted data exchange:
 
 * TLS 1.2 uses HMAC (Hash-based MAC) to verify message integrity. The sender and receiver compute a hash of the data + shared secret. Mismatches indicate tampering.
-* TLS 1.3 replaces HMAC with **AEAD** (e.g., AES-GCM), which integrates encryption + integrity checks.
+* TLS 1.3 replaces HMAC with AEAD (e.g., AES-GCM), which integrates encryption + integrity checks.
 * HMAC uses hashes (SHA-256, SHA-384) combined with a secret key.
 
 Recall, integrity protection in TLS happens at two layers, during the TLS handshake (authentication & key exchange), and during encrypted data exchange.
@@ -325,7 +325,7 @@ TLS ensures message integrity at **two different stages** with different mechani
 * **How it works:**
   * The server’s certificate is signed by a CA (as previously explained).
   * The `ServerKeyExchange` (in some cipher suites) and `CertificateVerify` (in TLS 1.3) messages are also signed to prove possession of the private key.
-  * **Not HMAC or AEAD yet**—these are only used **after** the handshake.
+  * Not HMAC or AEAD yet—these are only used after the handshake.
 
 **B. During Encrypted Data Exchange (Record Layer Integrity)**
 
@@ -337,7 +337,7 @@ TLS ensures message integrity at **two different stages** with different mechani
 **HMAC in TLS 1.2 (Legacy Approach)**
 
 * **How it works:**
-  * After the handshake, both client and server derive **session keys** (e.g., `client_write_MAC_key`, `server_write_MAC_key`).
+  * After the handshake, both client and server derive session keys (e.g., `client_write_MAC_key`, `server_write_MAC_key`).
   * For each encrypted record (e.g., an HTTPS request), the sender:
     1. Computes `HMAC(message, MAC_key)` using SHA-256/SHA-384.
     2. Appends the MAC to the encrypted data.
@@ -354,8 +354,8 @@ Encrypted_Record = AES-CBC(plaintext) + HMAC-SHA256(plaintext, MAC_key)
 **AEAD in TLS 1.3 (Modern Approach)**
 
 * **How it works:**
-  * AEAD (e.g., AES-GCM, ChaCha20-Poly1305) **combines encryption + integrity** in one step.
-  * Instead of HMAC, the cipher itself generates an **authentication tag** (like a built-in MAC).
+  * AEAD (e.g., AES-GCM, ChaCha20-Poly1305) combines encryption + integrity in one step.
+  * Instead of HMAC, the cipher itself generates an authentication tag (like a built-in MAC).
   * The receiver decrypts and checks the tag in a single operation.
 * **Why AEAD?**
   * More efficient (no separate MAC computation).
@@ -379,9 +379,9 @@ Encrypted_Record = AES-GCM(plaintext)  # Includes auth tag
 #### III. Digital Signatures
 
 * Used in TLS handshakes (e.g., server’s CertificateVerify message). The sender hashes the handshake messages, then signs the hash with their private key. This provided integrity and authentication checks.
-* Ensures **non-repudiation**: The sender cannot later deny sending the message, as only they possess the private key.
+* Ensures non-repudiation: The sender cannot later deny sending the message, as only they possess the private key.
 
-#### **Summary:**
+**Summary:**
 
 * **Hashing** underpins all three mechanisms:
   * **Fingerprints** (authentication) rely on irreversible hashes of certificates.

@@ -1,7 +1,7 @@
 ---
 description: >-
   This section discusses replay attacks, and anti-replay methods (sequence
-  numbers, cryptographic hashes, and rotating the secret keys)
+  numbers windowing, cryptographic hashes, and rotating the secret keys)
 ---
 
 # Replay attacks and anti-replay methods
@@ -13,7 +13,7 @@ description: >-
 * Develop a basic understanding of how replay attacks can threaten SSL/TLS security
 * Develop a basic understanding of how TLS 1.3 mitigates most SSL/TLS security risks
 
-This section discusses [replay attacks and anti-replay methods](https://www.baeldung.com/cs/replay-attacks). Six anti-replay methods that are not mutually exclusive are covered, including using sequence numbers, using cryptographic hashes, and rotating the secret keys.
+This section discusses replay attacks and anti-replay methods. Five anti-replay methods that are not mutually exclusive are covered, including using sequence numbers windowing, using cryptographic hashes, and rotating the secret keys.
 
 ## Topics covered in this section
 
@@ -23,23 +23,27 @@ This section discusses [replay attacks and anti-replay methods](https://www.bael
 
 ### Replay attacks
 
-A replay attack is a type of cyberattack in which an attacker intercepts and retransmits valid data transmissions to impersonate legitimate users, disrupt services, or gain unauthorized access. For example, an attacker could capture a financial transaction approval and replay it to fraudulently withdraw funds multiple times.&#x20;
+A replay attack is a type of cyberattack in which an attacker intercepts and retransmits valid data transmissions to impersonate legitimate users, gain unauthorized access, or disrupt services. For example, an attacker could capture a financial transaction approval and replay it to fraudulently withdraw funds multiple times.
 
-Replay attacks pose a critical threat to network security, compromising systems like online banking, authentication protocols, and encrypted communications (e.g., VPNs, TLS, and SSH). Without proper protections—such as sequence numbers, cryptographic hashes, and key rotation—attackers could hijack sessions, bypass authentication, or replay old transactions, leading to financial losses, data breaches, and system compromises.
+Replay attack is an umbrella term for various techniques involving the use of previous transmissions to bypass authentication and steal data or disrupt computer systems. There are several types of replay attacks, the most common being network, wireless, session, and HTTP.
+
+Replay attacks involve three basic phases. First, the attacker waits for data transmission to begin. Next, the attackers sniffs the communication between a client and server to extract transmission packets. Third, the attacker injects the extracted transmission packets into the communication channel, thus replaying the transmission and repeating the transaction.
 
 Suppose we have some packets we want to securely transmit over the wire. We start sending the packets to their destination over the wire. The packets use a 16 bit sequence number field, allowing for sequence number range of 1 – 65536.
 
 A malicious hacker manages to capture some packets from our transmission with the sequence numbers 10,000-10,099. The malicious hacker can wait for the sequence number to loop past 65536 and restart at 0, count 9,999 packets, and then inject the replayed packets with the sequence numbers 10,000-10,099. Since the replayed packets would have arrived at the right time, they would have been accepted by the receiver.
 
-Sequence number looping vulnerability: Modern protocols (like IPSec and TLS) use larger sequence numbers (e.g., IPSec uses 32-bit), reducing rollover risk.
+Modern networking protocols use larger sequence numbers (e.g., IPSec uses 32-bit) to reduce rollover risk (sequence number looping vulnerability).
 
 ### Anti-replay methods
 
 Anti-replay methods are essential for maintaining data integrity and for preventing attackers from capturing and retransmitting legitimate data packets to gain unauthorized access or disrupt communications. Here are the common anti-replay methods:
 
-**1. Sequence numbers:**
+**1. Sequence numbers windowing:**
 
 Each packet that is sent over a secure connection is assigned a unique sequence number by the sender. The receiver maintains a window of expected sequence numbers and discards any packets with numbers outside that window or those already received.
+
+The size of the anti-replay window is the number of packets that are kept track of by the receiving end of the connection. The larger the window size, the more packets that can be protected from replay attacks. However, a larger window size also means that more memory is required to keep track of the sequence numbers. The default anti-replay window size is 64 packets. This is a good balance between security and performance. For more demanding applications, the window size can be increased.
 
 The unique sequence number typically starts at 1, and increases with every packet sent, uniquely identifying one packet from the prior one. The receiving end of the connection keeps track of the sequence numbers of the packets that it receives.
 
@@ -67,13 +71,7 @@ The sender includes a cryptographic hash of the packet’s contents (message aut
 
 The sequence number, along with the data, can be protected by a hashing algorithm to prevent a malicious user from tampering with the numbers in order to send a replayed packet. The message, the secret key, and the sequence number together are run through a hashing algorithm. In this way, any illicit modification of any of these fields will be detected.
 
-**5. Windowing:**
-
-The receiver only accepts packets within a certain window of sequence numbers, discarding those outside the window or already received.
-
-The size of the anti-replay window is the number of packets that are kept track of by the receiving end of the connection. The larger the window size, the more packets that can be protected from replay attacks. However, a larger window size also means that more memory is required to keep track of the sequence numbers. The default anti-replay window size is 64 packets. This is a good balance between security and performance. For more demanding applications, the window size can be increased.
-
-**6. Rotating the secret keys**:
+**5. Rotating the secret keys**:
 
 Keys should be rotated before sequence number exhaustion to prevent replay attacks during the reset.
 
@@ -83,11 +81,11 @@ This will allow the receiver to detect the replay attack and drop the packet. If
 
 **Common anti-replay applications**
 
-Here are some examples of how anti-replay can be used to protect against replay attacks:
+Examples of how anti-replay measures can be used to protect against replay attacks include:
 
-* To protect a financial transaction from an attacker who is trying to replay a previous transaction.
-* To protect a VPN connection from an attacker who is trying to impersonate a valid user.
-* To protect a file transfer from an attacker who is trying to steal a file.
+* Protecting a financial transaction from an attacker who is trying to replay a previous transaction.
+* Protecting a VPN connection from an attacker who is trying to impersonate a valid user.
+* Protecting a file transfer from an attacker who is trying to steal a file.
 
 **Common protocols and anti-replay methods**
 
@@ -122,17 +120,17 @@ SSL/TLS provides three core security guarantees:
 
 **Mitigation:**
 
-✅ **Ephemeral Key Exchanges (ECDHE, DHE)**
+✔ **Ephemeral Key Exchanges (ECDHE, DHE)**
 
 * Ensures **forward secrecy**—even if a session key is compromised later, past sessions remain secure.
 * Prevents replay attacks from decrypting old traffic.
 
-✅ **One-Time-Use Session Tickets (TLS 1.3)**
+✔ **One-Time-Use Session Tickets (TLS 1.3)**
 
 * Unlike TLS 1.2 (where session tickets could be reused), TLS 1.3 tickets are **single-use**.
 * Forces a full handshake if an attacker tries to replay a ticket.
 
-✅ **TLS 1.3’s One-RTT Handshake**
+✔ **TLS 1.3’s One-RTT Handshake**
 
 * Reduces the window for replay attacks by minimizing handshake steps.
 
@@ -148,11 +146,11 @@ SSL/TLS provides three core security guarantees:
 
 **Mitigation:**
 
-✅ **Strict Key Rotation (TLS 1.3)**
+✔ **Strict Key Rotation (TLS 1.3)**
 
 * Each session derives fresh keys, preventing reuse of past encryption material.
 
-✅ **Application-Layer Defenses (Required for Full Protection)**
+✔ **Application-Layer Defenses (Required for Full Protection)**
 
 * **Idempotency keys** (unique identifiers for transactions).
 * **Timestamps/nonces** to detect stale requests.
@@ -170,12 +168,12 @@ SSL/TLS provides three core security guarantees:
 
 **Mitigation:**
 
-✅ **No Replayable Messages in TLS 1.3**
+✔ **No Replayable Messages in TLS 1.3**
 
 * The `ClientHello` and `ServerHello` include **fresh randomness (nonces)**, making each handshake unique.
 * Prevents replay of handshake messages.
 
-✅ **Strict Session Resumption Rules**
+✔ **Strict Session Resumption Rules**
 
 * TLS 1.3 enforces **one-time PSKs (Pre-Shared Keys)** for session resumption.
 
@@ -203,9 +201,9 @@ However, **application-layer defenses (idempotency keys, CSRF tokens)** are stil
 
 ### Key takeaways
 
-* Major anti-replay methods include sequence numbers, timestamps, nonces, cryptographic hashes, windowing, and rotating secret keys
-* Replay attacks threaten SSL/TLS security guarantees
-* TLS 1.3 introduces robust anti-replay protections, including one-time session tickets and secret key rotation
+* Major anti-replay methods include sequence numbers, timestamps, nonces, cryptographic hashes, windowing, and rotating secret keys.
+* Replay attacks threaten SSL/TLS security guarantees.
+* TLS 1.3 introduces robust anti-replay protections, including one-time session tickets and secret key rotation.
 
 ### References
 

@@ -39,6 +39,8 @@ This chapter covers how SSL/TLS uses cryptographic tools (symmetric encryption, 
 
 [Generating and applying an RSA key](generating-and-applying-an-rsa-key.md)
 
+[The Diffie-Hellman key exchange](the-diffie-hellman-key-exchange.md)
+
 [Wireless client authentication methods](wireless-client-authentication-methods/)
 
 [Wireless privacy and integrity methods](wireless-privacy-and-integrity-methods.md)

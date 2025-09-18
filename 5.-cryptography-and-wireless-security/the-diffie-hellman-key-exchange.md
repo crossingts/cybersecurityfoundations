@@ -1,8 +1,4 @@
----
-hidden: true
----
-
-# Diffie-Hellman (DH) key exchange
+# The Diffie-Hellman key exchange
 
 Diffie-Hellman (DH) is a method for two parties to securely generate a shared secret over an insecure channel such as the Internet without ever sending the secret itself. It's used in TLS 1.3 to establish encryption session keys.
 

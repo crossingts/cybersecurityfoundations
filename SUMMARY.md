@@ -112,7 +112,7 @@
   * [How SSL/TLS uses cryptography — Quiz](5.-cryptography-and-wireless-security/how-ssl-tls-uses-cryptography/how-ssl-tls-uses-cryptography-quiz.md)
 * [Replay attacks and anti-replay methods](5.-cryptography-and-wireless-security/replay-attacks-and-anti-replay-methods.md)
 * [Generating and applying an RSA key](5.-cryptography-and-wireless-security/generating-and-applying-an-rsa-key.md)
-* [The Diffie-Hellman (DH) key exchange](5.-cryptography-and-wireless-security/the-diffie-hellman-dh-key-exchange.md)
+* [The Diffie-Hellman key exchange](5.-cryptography-and-wireless-security/the-diffie-hellman-key-exchange.md)
 * [Wireless client authentication methods](5.-cryptography-and-wireless-security/wireless-client-authentication-methods/README.md)
   * [IEEE 802.1x/EAP authentication methods](5.-cryptography-and-wireless-security/wireless-client-authentication-methods/ieee-802.1x-eap-authentication-methods.md)
 * [Wireless privacy and integrity methods](5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods.md)

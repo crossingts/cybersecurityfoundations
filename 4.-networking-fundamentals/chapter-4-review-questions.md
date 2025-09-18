@@ -13,8 +13,6 @@
 * What is the key functional difference between a bridge and a hub, and why are bridges considered an improvement?
   * Answer: A hub blindly floods all traffic to all ports, while a bridge learns which MAC addresses are on each of its two sides and can filter traffic, only forwarding frames if the destination is on the other segment. This reduces unnecessary broadcasts and improves network performance.
 
-***
-
 ### The Open Systems Interconnection (OSI) model
 
 * Briefly describe the primary function of the Physical Layer (Layer 1) in the OSI model.
@@ -31,8 +29,6 @@
     * Layer 3 (Network): IP Address - Used for end-to-end delivery to logically identify the source and destination hosts across an entire network path.
     * Layer 4 (Transport): Port Number - Used for service-to-service delivery to ensure data is delivered to the correct application or service on the destination host.
 
-***
-
 ### Host to host communication in networking
 
 * Briefly explain the difference in the ARP process when a host communicates with another host on its local network versus one on a foreign network.
@@ -46,8 +42,6 @@
 * Where does a host store the IP-to-MAC address mappings it learns from ARP responses?
   * Answer: The host stores them in its ARP cache (also called an ARP table).
 
-***
-
 ### Network protocols and their functions
 
 * What is the fundamental purpose of a network protocol?
@@ -60,8 +54,6 @@
   * Answer: DNS is an application-layer protocol that resolves a domain name (e.g., `example.com`) to an IP address. ARP is a link-layer protocol that resolves a known IP address on the local network to a MAC address.
 * What is the relationship between HTTP, SSL/TLS, and HTTPS?
   * Answer: HTTP is the protocol for transferring web content. SSL and TLS are cryptographic protocols that create a secure, encrypted tunnel between a client and server. HTTPS is not a separate protocol but is the term for conducting an HTTP communication within that secure SSL/TLS tunnel.
-
-***
 
 ### Typing www.google.com into a web browser
 
@@ -79,8 +71,6 @@
 * Once a packet arrives at the final router (e.g., R3 for host C), what two things must the router check to deliver the packet to the final destination host on its directly connected network?
   * Answer: 1) Its routing table to confirm the destination IP address is on a directly connected network. 2) Its ARP table to find the MAC address associated with the destination host's IP address so it can build a new Layer 2 header for the final hop.
 
-***
-
 ### Cisco IOS CLI and basic device security
 
 * What is the primary functional difference between User EXEC mode and Privileged EXEC mode?
@@ -93,8 +83,6 @@
   * Answer: `service password-encryption`
 * What is the specific purpose of the `show startup-config` command?
   * Answer: To display the configuration file (`startup-config`) that is stored in NVRAM. This is the configuration that the device will load and use when it boots up or is reloaded.
-
-***
 
 ### Connected and local routes
 
@@ -112,8 +100,6 @@
 * What is the single, most important rule a Cisco router uses to choose between multiple routes that all match a packet's destination IP address? What is the specific term for this rule?
   * Answer: The most important rule is to select the matching route with the longest subnet mask (highest prefix value, e.g., /32 is longer than /24). The specific term for this rule is Longest Prefix Match.
 
-***
-
 ### How to configure static routes on Cisco routers
 
 * What is the fundamental difference between how a connected route and a static route are added to a router's routing table?
@@ -127,8 +113,6 @@
 * What is a significant operational drawback of configuring a static route using only an exit interface (e.g., `ip route 192.168.1.0 255.255.255.0 GigabitEthernet0/1`) instead of a next-hop IP address?
   * Answer: The router will treat the destination network as if it is directly connected to that interface. This can cause problems because the router may rely on Proxy ARP for every destination in that network, which is inefficient and can fail if Proxy ARP is disabled on the neighboring router.
 
-***
-
 ### Comparing TCP to UDP
 
 * During the TCP connection termination process, explain why a four-way handshake is used instead of a three-way handshake.
@@ -141,8 +125,6 @@
   * Answer: Scenario: A live voice-over-IP (VoIP) phone call. Reason: Speed and low latency are more critical than 100% reliability. Dropping a few audio packets is preferable to the delay caused by TCP's retransmission, acknowledgments, and congestion control, which would result in choppy, delayed audio.
 * A packet capture shows a segment with a destination port of 443. Based on the IANA port ranges, what type of port is this, and what application-layer protocol is it almost certainly associated with?
   * Answer: Port 443 is a well-known port (0-1023 range). It is associated with the HTTPS protocol, used for secure web browsing.
-
-***
 
 ### How to configure standard ACLs on Cisco routers
 
@@ -158,8 +140,6 @@
 * You need to create a standard ACL to prevent the entire 172.16.0.0/16 network from passing through a router, but allow all other traffic. Besides the 'deny' statement for that network, what other explicit statement must you add to the ACL and why?
   * Answer: You must add an explicit `permit any` statement. If you do not, the implicit deny at the end of the ACL will block all traffic that isn't from 172.16.0.0/16, which is the opposite of the intended goal. The explicit `permit any` overrides the implicit deny for all other traffic.
 
-***
-
 ### The role of DNS within the network
 
 * What is the primary function of the Domain Name System (DNS), and why is it essential for human users?
@@ -173,8 +153,6 @@
 * What is the key functional difference between a router acting as a DNS client versus a DNS server? What is the main command to enable each role?
   * Answer: DNS Client: The router sends DNS queries to an external server to resolve names for its own use (e.g., when using the `ping` command). The main command is `ip name-server <address>`. DNS Server: The router answers DNS queries from other devices on the network. The main command to enable this is `ip dns server`.
 
-***
-
 ### Configuring and verifying DHCP client and relay
 
 * What is the primary purpose of the DHCP protocol on a network, and what are two key benefits it provides?
@@ -187,8 +165,6 @@
   * Answer: The command is `ip address dhcp`. It is entered in interface configuration mode for the specific interface (e.g., `R1(config-if)# ip address dhcp`).
 * A network administrator needs to see all active IP address leases assigned by the router's DHCP server. What is the exact command to display this information?
   * Answer: The command is `show ip dhcp binding`. This command displays the IP address, MAC address, lease expiration, and type of binding for each client.
-
-***
 
 ### Static NAT configuration
 
@@ -214,8 +190,6 @@ Router(config-if)# ip nat outside
 Router(config-if)# exit
 Router(config)# ip nat inside source static 192.168.1.10 203.0.113.10
 ```
-
-***
 
 ### OSI model layers and security threats
 

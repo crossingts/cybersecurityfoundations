@@ -87,18 +87,11 @@ Examples of how anti-replay measures can be used to protect against replay attac
 * Protecting a VPN connection from an attacker who is trying to impersonate a valid user.
 * Protecting a file transfer from an attacker who is trying to steal a file.
 
-**Common protocols and anti-replay methods**
-
-* IPSec: Implements anti-replay protection in its ESP (Encapsulating Security Payload) protocol. IPSec anti-replay uses sequence numbers and a sliding window to prevent replay attacks.
-* TLS/SSL: Uses sequence numbers and timestamps for anti-replay protection.
-* Secure Shell (SSH): Uses sequence numbers and timestamps for anti-replay protection.
-* WireGuard: Employs a cryptographic nonce system for anti-replay protection.
-
 ### Anti-replay methods and SSL/TLS security
 
-Anti-replay methods are a fundamental part of how SSL/TLS secures data. SSL/TLS relies on cryptographic tools to ensure **confidentiality, integrity, and authenticity** of data in transit. **Replay attacks** pose a threat to these guarantees, so SSL/TLS incorporates **anti-replay mechanisms** as part of its security design.&#x20;
+Anti-replay methods are a fundamental part of how SSL/TLS secures data. SSL/TLS relies on cryptographic tools to ensure **confidentiality, integrity, and authenticity** of data in transit. Replay attacks pose a threat to these guarantees, so SSL/TLS incorporates anti-replay mechanisms as part of its security design.&#x20;
 
-#### **How Replay Attacks Threaten SSL/TLS Security Guarantees – and Modern Defenses**
+#### **How Replay Attacks Threaten SSL/TLS Security Guarantees and Modern Defenses**
 
 SSL/TLS provides three core security guarantees:
 
@@ -106,28 +99,26 @@ SSL/TLS provides three core security guarantees:
 2. **Integrity** – Data cannot be altered in transit without detection.
 3. **Authenticity** – Parties can verify each other’s identity.
 
-**Replay attacks undermine these guarantees** by allowing an attacker to **reuse previously captured legitimate traffic**, potentially bypassing security controls. Below is a breakdown of how replay attacks threaten each guarantee and how modern TLS (especially TLS 1.3) mitigates them.
+Replay attacks undermine these guarantees by allowing an attacker to reuse previously captured legitimate traffic, potentially bypassing security controls. Below is a breakdown of how replay attacks threaten each guarantee and how modern TLS (especially TLS 1.3) mitigates them.
 
 #### **1. Threat to Confidentiality (Encryption Alone Isn’t Enough)**
 
-**Problem:**
-
-* Even if traffic is encrypted, replaying an old session could allow an attacker to reuse an old session key (if session resumption is insecure) or to decrypt future traffic if key material is compromised. A session in TLS refers to a temporary secure connection between a client and server, established via the TLS handshake. It includes session keys (used for encryption), and session tickets/resumption IDs (for faster reconnection). Replaying a session means reusing these components maliciously to bypass authentication or decrypt data.
+Even if traffic is encrypted, replaying an old session could allow an attacker to reuse an old session key (if session resumption is insecure) or to decrypt future traffic if key material is compromised. A session in TLS refers to a temporary secure connection between a client and server, established via the TLS handshake. It includes session keys (used for encryption), and session tickets/resumption IDs (for faster reconnection). Replaying a session means reusing these components maliciously to bypass authentication or decrypt data.
 
 **Example:**
 
-* In **TLS 1.2**, if an attacker captures a session ticket and replays it, they might resume a session without a full handshake, gaining access to encrypted data.
+* In TLS 1.2, if an attacker captures a session ticket and replays it, they might resume a session without a full handshake, gaining access to encrypted data.
 
 **Mitigation:**
 
 ✔ **Ephemeral Key Exchanges (ECDHE, DHE)**
 
-* Ensures **forward secrecy**—even if a session key is compromised later, past sessions remain secure.
+* Ensures forward secrecy—even if a session key is compromised later, past sessions remain secure.
 * Prevents replay attacks from decrypting old traffic.
 
 ✔ **One-Time-Use Session Tickets (TLS 1.3)**
 
-* Unlike TLS 1.2 (where session tickets could be reused), TLS 1.3 tickets are **single-use**.
+* Unlike TLS 1.2 (where session tickets could be reused), TLS 1.3 tickets are single-use.
 * Forces a full handshake if an attacker tries to replay a ticket.
 
 ✔ **TLS 1.3’s One-RTT Handshake**
@@ -136,9 +127,7 @@ SSL/TLS provides three core security guarantees:
 
 #### **2. Threat to Integrity (Data Can Be Replayed Without Modification)**
 
-**Problem:**
-
-* TLS ensures that **data is not modified in transit** (via MACs/AEAD ciphers), but it doesn’t inherently prevent **the same data from being retransmitted**. A replayed request (e.g., a bank transaction) could execute **the same action multiple times**.
+TLS ensures that data is not modified in transit (via MACs/AEAD ciphers), but it doesn’t inherently prevent the same data from being retransmitted. A replayed request (e.g., a bank transaction) could execute the same action multiple times.
 
 **Example:**
 
@@ -152,14 +141,12 @@ SSL/TLS provides three core security guarantees:
 
 ✔ **Application-Layer Defenses (Required for Full Protection)**
 
-* **Idempotency keys** (unique identifiers for transactions).
-* **Timestamps/nonces** to detect stale requests.
+* Idempotency keys (unique identifiers for transactions).
+* Timestamps/nonces to detect stale requests.
 
 #### **3. Threat to Authenticity (Impersonation via Replayed Sessions)**
 
-**Problem:**
-
-* If an attacker replays **authentication tokens or handshake messages**, they can **impersonate a legitimate user or server**.
+If an attacker replays authentication tokens or handshake messages, they can impersonate a legitimate user or server.
 
 **Examples:**
 
@@ -170,12 +157,12 @@ SSL/TLS provides three core security guarantees:
 
 ✔ **No Replayable Messages in TLS 1.3**
 
-* The `ClientHello` and `ServerHello` include **fresh randomness (nonces)**, making each handshake unique.
+* The `ClientHello` and `ServerHello` include fresh randomness (nonces), making each handshake unique.
 * Prevents replay of handshake messages.
 
 ✔ **Strict Session Resumption Rules**
 
-* TLS 1.3 enforces **one-time PSKs (Pre-Shared Keys)** for session resumption.
+* TLS 1.3 enforces one-time PSKs (Pre-Shared Keys) for session resumption.
 
 #### **4. TLS 1.3 Anti-Replay Mechanisms**
 
@@ -189,15 +176,22 @@ SSL/TLS provides three core security guarantees:
 | **No Static RSA Key Exchange**                 | Eliminates risk of key compromise replay.               |
 | **Mandatory Forward Secrecy**                  | Prevents decryption of past sessions even if keys leak. |
 
-#### **Conclusion: TLS 1.3 Closes Most Replay Attack Vectors**
+**Conclusion: TLS 1.3 Closes Most Replay Attack Vectors**
 
-While **TLS 1.2 had vulnerabilities** (reusable session tickets, static RSA key exchange), **TLS 1.3 introduces robust anti-replay protections**:\
-✔ **One-time session tickets**\
-✔ **Ephemeral keys for forward secrecy**\
-✔ **Non-replayable handshake messages**\
-✔ **Strict key rotation**
+While TLS 1.2 had vulnerabilities (reusable session tickets, static RSA key exchange), TLS 1.3 introduces robust anti-replay protections:\
+✔ One-time session tickets\
+✔ Ephemeral keys for forward secrecy\
+✔ Non-replayable handshake messages\
+✔ Strict key rotation
 
-However, **application-layer defenses (idempotency keys, CSRF tokens)** are still needed for full protection against duplicate transactions.
+However, application-layer defenses (idempotency keys, CSRF tokens) are still needed for full protection against duplicate transactions.
+
+**Common protocols and anti-replay methods**
+
+* IPSec: Implements anti-replay protection in its ESP (Encapsulating Security Payload) protocol. IPSec anti-replay uses sequence numbers and a sliding window to prevent replay attacks.
+* TLS/SSL: Uses sequence numbers and timestamps for anti-replay protection.
+* Secure Shell (SSH): Uses sequence numbers and timestamps for anti-replay protection.
+* WireGuard: Employs a cryptographic nonce system for anti-replay protection.
 
 ### Key takeaways
 

@@ -25,9 +25,9 @@ This section discusses replay attacks and anti-replay methods. Five anti-replay 
 
 A replay attack is a type of cyberattack in which an attacker intercepts and retransmits valid data transmissions to impersonate legitimate users, gain unauthorized access, or disrupt services. For example, an attacker could capture a financial transaction approval and replay it to fraudulently withdraw funds multiple times.
 
-Replay attack is an umbrella term for various techniques involving the use of previous transmissions to bypass authentication and steal data or disrupt computer systems. There are several types of replay attacks, the most common being network, wireless, session, and HTTP.
+A replay attack is an umbrella term for various techniques involving the use of previous transmissions or transactions to bypass authentication and steal data or disrupt computer systems. There are several types of replay attacks, the most common ones being network, wireless, session, and HTTP.
 
-Replay attacks involve three basic phases. First, the attacker waits for data transmission to begin. Next, the attackers sniffs the communication between a client and server to extract transmission packets. Third, the attacker injects the extracted transmission packets into the communication channel, thus replaying the transmission and repeating the transaction.
+Replay attacks involve three basic phases. First, the attacker waits for data transmission to begin. Next, the attackers sniffs the communication between a client and server to extract transmission packets. Third, the attacker injects the extracted transmission packets into the communication channel, thus replaying the transmission or repeating the transaction.
 
 Suppose we have some packets we want to securely transmit over the wire. We start sending the packets to their destination over the wire. The packets use a 16 bit sequence number field, allowing for sequence number range of 1 – 65536.
 

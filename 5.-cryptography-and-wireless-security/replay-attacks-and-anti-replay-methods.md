@@ -8,7 +8,7 @@ description: >-
 
 ## Learning objectives
 
-* Understand what are replay attacks and what security risks they pose
+* Understand what are replay attacks and what security risks (confidentiality, integrity, and authenticity) they pose
 * Become familiar with major anti-replay methods
 * Develop a basic understanding of how replay attacks can threaten SSL/TLS security
 * Develop a basic understanding of how TLS 1.3 mitigates most SSL/TLS security risks
@@ -49,7 +49,33 @@ The unique sequence number typically starts at 1, and increases with every packe
 
 If a packet with a sequence number that has already been received is received, then the anti-replay mechanism will drop the packet. This prevents the attacker from retransmitting a packet that has already been sent and received.
 
-<figure><img src="https://professionaludev.wordpress.com/wp-content/uploads/2023/12/anti-replay-attacks.webp?w=1024" alt="anti-replay-attacks" height="252" width="1024"><figcaption><p>Image courtesy of Practical Networking (PracNet)</p></figcaption></figure>
+```mermaid
+flowchart TD
+    subgraph Sender [Sender Timeline]
+        direction LR
+        S1[Send Packet #1] --> S2[Send Packet #2] --> S3[Send Packet #3] --> S4[Send Packet #4] --> S5[Send Packet #5]
+    end
+
+    S3 -.-> |Attacker captures Packet #3| Capture
+
+    subgraph Receiver [Receiver's Anti-Replay Window]
+        R_Window[<b>Sliding Window of Expected Packets</b><br>───────┬───────<br>... 3, <b>4</b>, <b>5</b>, 6, 7 ...<br>───────┴───────]
+        style R_Window text-align:center
+    end
+
+    Replay[Attacker replays Packet #3] --> Decision{Receiver Checks Packet}
+
+    Decision -->|Sequence Number = 3| CheckWindow[Is 3 in the current window?]
+    CheckWindow -->|Yes| CheckReceived[Has 3 been received?]
+    CheckReceived -->|<b>YES!</b> Already received| Drop[<b>❌ DROP PACKET</b><br>Replay Detected]
+
+    Decision -->|Sequence Number = 5| CheckWindow2[Is 5 in the current window?]
+    CheckWindow2 -->|Yes| CheckReceived2[Has 5 been received?]
+    CheckReceived2 -->|No| Accept[<b>✅ ACCEPT PACKET</b><br>Mark seq #5 as received]
+
+    Drop --> Final[Window remains: Expecting 5, 6, 7...]
+    Accept --> Final
+```
 
 The packet with sequence number 3 is a replayed packet. The receiver can detect this because they have already received a packet with sequence number 3, and was expecting 5 next.
 
@@ -101,7 +127,7 @@ SSL/TLS provides three core security guarantees:
 
 Replay attacks undermine these guarantees by allowing an attacker to reuse previously captured legitimate traffic, potentially bypassing security controls. Below is a breakdown of how replay attacks threaten each guarantee and how modern TLS (especially TLS 1.3) mitigates them.
 
-#### **1. Threat to Confidentiality (Encryption Alone Isn’t Enough)**
+#### **1. Threat to Data Confidentiality**
 
 Even if traffic is encrypted, replaying an old session could allow an attacker to reuse an old session key (if session resumption is insecure) or to decrypt future traffic if key material is compromised. A session in TLS refers to a temporary secure connection between a client and server, established via the TLS handshake. It includes session keys (used for encryption), and session tickets/resumption IDs (for faster reconnection). Replaying a session means reusing these components maliciously to bypass authentication or decrypt data.
 
@@ -125,9 +151,9 @@ Even if traffic is encrypted, replaying an old session could allow an attacker t
 
 * Reduces the window for replay attacks by minimizing handshake steps.
 
-#### **2. Threat to Integrity (Data Can Be Replayed Without Modification)**
+#### **2. Threat to Data Integrity**&#x20;
 
-TLS ensures that data is not modified in transit (via MACs/AEAD ciphers), but it doesn’t inherently prevent the same data from being retransmitted. A replayed request (e.g., a bank transaction) could execute the same action multiple times.
+TLS ensures that data is not modified in transit (via MACs/AEAD ciphers), but it does not inherently prevent the same data from being retransmitted (without modification). A replayed request (e.g., a bank transaction) could execute the same action multiple times.
 
 **Example:**
 
@@ -146,45 +172,43 @@ TLS ensures that data is not modified in transit (via MACs/AEAD ciphers), but it
 
 #### **3. Threat to Authenticity (Impersonation via Replayed Sessions)**
 
-If an attacker replays authentication tokens or handshake messages, they can impersonate a legitimate user or server.
+This threat occurs when an attacker captures and retransmits any piece of data that proves a user's identity or an established session. This data can take various forms, such as authentication tokens (like session cookies), handshake messages (like a TLS session ticket), or other authentication credentials. By replaying this data, the attacker bypasses login procedures and tricks the server into granting them unauthorized access as the legitimate user. The server, recognizing the valid but replayed credentials, mistakenly authenticates the attacker.
+
+The authenticity being threatened is the authenticity of the session and the identities within it:
+
+* Session authenticity: The server can no longer be sure that the entity on the other end of the session is the same user who originally authenticated.
+* Identity authenticity: The identity of the user (or server) has been successfully faked.
 
 **Examples:**
 
-* **Session Hijacking via Cookie Replay:** An attacker steals a session cookie and replays it in a new request.
-* **TLS Handshake Replay (Pre-TLS 1.3):** An attacker replays a `ClientHello` or session ticket to resume an old session.
+* Session Hijacking via Cookie Replay: An attacker steals a session cookie and replays it to gain access to the victim's account.
+* TLS Handshake Replay (Pre-TLS 1.3): An attacker replays a `ClientHello` message or a session ticket to resume an old session illicitly.
 
 **Mitigation:**
 
 ✔ **No Replayable Messages in TLS 1.3**
 
-* The `ClientHello` and `ServerHello` include fresh randomness (nonces), making each handshake unique.
-* Prevents replay of handshake messages.
+* The `ClientHello` and `ServerHello` include fresh randomness (nonces), making each handshake unique and preventing the replay of handshake messages for impersonation.
 
 ✔ **Strict Session Resumption Rules**
 
-* TLS 1.3 enforces one-time PSKs (Pre-Shared Keys) for session resumption.
+* TLS 1.3 enforces one-time PSKs (Pre-Shared Keys) for session resumption. A replayed PSK is immediately detected and rejected.
 
 #### **4. TLS 1.3 Anti-Replay Mechanisms**
 
-| **Defense**                                    | **How It Counters Replay Attacks**                      |
-| ---------------------------------------------- | ------------------------------------------------------- |
-| **Ephemeral Key Exchange (ECDHE/DHE)**         | Ensures forward secrecy; keys can’t be reused.          |
-| **One-Time-Use Session Tickets**               | Prevents session ticket replay.                         |
-| **One-RTT Handshake**                          | Reduces exposure window for attacks.                    |
-| **Strict Key Derivation**                      | Fresh keys per session, no reuse.                       |
-| **Nonces in Handshake (Client/Server Random)** | Ensures uniqueness of each handshake.                   |
-| **No Static RSA Key Exchange**                 | Eliminates risk of key compromise replay.               |
-| **Mandatory Forward Secrecy**                  | Prevents decryption of past sessions even if keys leak. |
+This table outlines key defenses in TLS 1.3 specifically designed to mitigate replay attacks that were more prevalent in previous versions like TLS 1.2.
 
-**Conclusion: TLS 1.3 Closes Most Replay Attack Vectors**
+| **Defense Mechanism**                                    | **How It Counters Replay Attacks**                                                                                                                        | **TLS 1.3 Context & Improvement**                                                                                                                                 |
+| -------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Ephemeral Key Exchange (ECDHE)**                       | Ensures forward secrecy; session keys cannot be reused as they are derived from temporary key pairs and immediately discarded.                            | **Mandatory in TLS 1.3.** Replaces the static key exchanges (e.g., RSA) allowed in TLS 1.2, which were vulnerable to replay if the long-term key was compromised. |
+| **One-Time-Use Session Tickets**                         | A session ticket (for resumption) can only be used once. A replayed ticket is rejected by the server, forcing a new full handshake.                       | **TLS 1.3 enhancement.** Unlike TLS 1.2, which allowed reusable tickets, this explicitly prevents session ticket replay attacks.                                  |
+| **Nonces in Handshake (ClientHello/ServerHello Random)** | The random values exchanged ensure each handshake is cryptographically unique. A replayed handshake message will have an invalid or stale nonce.          | **Strengthened in TLS 1.3.** The handshake is designed to be non-replayable; replayed ClientHello or ServerHello messages will fail to derive the correct keys.   |
+| **Strict, Session-Specific Key Derivation**              | Fresh encryption keys are derived for every unique session based on the latest handshake secrets. Keys from past sessions are invalid.                    | **Core to TLS 1.3 design.** This strict key rotation ensures that even if data is replayed, it was encrypted with a key that is no longer valid.                  |
+| **One-Round-Trip (1-RTT) Handshake**                     | Dramatically reduces the time window available for an attacker to intercept and replay handshake messages.                                                | **New in TLS 1.3.** The faster handshake reduces the attack surface and opportunity for replay compared to the multi-RTT handshakes of older versions.            |
+| **No Static RSA Key Exchange**                           | Eliminates the risk of an attacker recording ciphertext encrypted to a static public key and replaying it later for decryption if the key is compromised. | **Removed in TLS 1.3.** This closes a major theoretical replay vector that existed in TLS 1.2 and earlier.                                                        |
+| **Mandatory Forward Secrecy**                            | Prevents the decryption of recorded past sessions even if the server's long-term private key is compromised later.                                        | **Enforced in TLS 1.3.** This neutralizes the replay threat against data confidentiality, as an attacker cannot decrypt a replayed session stream.                |
 
-While TLS 1.2 had vulnerabilities (reusable session tickets, static RSA key exchange), TLS 1.3 introduces robust anti-replay protections:\
-✔ One-time session tickets\
-✔ Ephemeral keys for forward secrecy\
-✔ Non-replayable handshake messages\
-✔ Strict key rotation
-
-However, application-layer defenses (idempotency keys, CSRF tokens) are still needed for full protection against duplicate transactions.
+While TLS 1.2 had vulnerabilities (e.g., reusable session tickets, and static RSA key exchange), TLS 1.3 introduces robust anti-replay protections such as ephemeral keys for forward secrecy and strict key rotation. However, application-layer defenses (idempotency keys and CSRF tokens) are still needed for full protection against duplicate transactions.
 
 **Common protocols and anti-replay methods**
 

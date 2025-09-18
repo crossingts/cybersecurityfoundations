@@ -140,3 +140,25 @@ The three mechanisms are:
 **5. The text explains that TLS switches from asymmetric to symmetric encryption after the handshake. Why is symmetric encryption used for the bulk of the communication?**\
 **Answer:**\
 Symmetric encryption is used because it is **computationally much faster and more efficient** (often 100-1000x faster) than asymmetric encryption. This performance advantage is critical for encrypting large volumes of application data (like web pages, videos, or file transfers) with minimal latency impact on the user experience.
+
+### Replay attacks and anti-replay methods
+
+**1. The text describes sequence number windowing as a core anti-replay method. What is the purpose of the receiver's "sliding window" and how does it detect a replayed packet?**\
+**Answer:**\
+The sliding window is a range of expected sequence numbers the receiver is willing to accept. It detects a replayed packet by checking if an incoming packet's sequence number is already marked as received within the current window. If it has already been received, the packet is identified as a duplicate and dropped.
+
+**2. The text explains that rotating secret keys is an effective anti-replay method. How does changing the key prevent a previously captured packet from being successfully replayed?**\
+**Answer:**\
+Rotating the secret key changes the expected cryptographic hash (e.g., HMAC) value for all messages. A packet captured and encrypted with an old key will produce an incorrect hash value when the receiver validates it with the new, current key. This mismatch causes the replayed packet to be rejected.
+
+**3. The text states that TLS 1.3 uses one-time-use session tickets. How does this mechanism prevent an attacker from resuming a session by replaying a captured session ticket?**\
+**Answer:**\
+A one-time-use session ticket can only be used for a single session resumption. If an attacker replays a captured ticket, the server will reject it because it has already been marked as used. This forces a full new handshake, preventing the attacker from resuming the old session.
+
+**4. The text identifies that a replayed HTTPS request (like `POST /transfer?amount=1000`) threatens data integrity. Why doesn't TLS itself inherently prevent this type of replay?**\
+**Answer:**\
+TLS ensures the data is not modified in transit (integrity) but does not inherently add "freshness" to the application data it carries. From TLS's perspective, a perfectly replayed, unmodified request is a valid retransmission. Preventing the duplicate execution of the action (like a transfer) requires application-layer defenses.
+
+**5. The text explains that nonces are used as an anti-replay method. What is a nonce and what property does it provide to a message to make it replay-resistant?**\
+**Answer:**\
+A nonce is a random number used only once. It provides the property of freshness to a message. The receiver tracks received nonces and will discard any message containing a duplicate nonce, ensuring each message is unique and not a replay of an old one.

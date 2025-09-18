@@ -24,11 +24,11 @@ This section presents a [working example of RSA’s key generation](https://www.
 
 ### Rivest–Shamir–Adleman (RSA) introduction
 
-The initialism "RSA" comes from the surnames of Ron Rivest, Adi Shamir, and Leonard Adleman, who publicly described their public key cryptosystem in 1977. RSA is a widely used public-key encryption algorithm that enables secure data transmission over insecure channels like the Internet. RSA is the most common encryption algorithm used by SSL and TLS.
+The initialism "RSA" comes from the surnames of Ron Rivest, Adi Shamir, and Leonard Adleman, who publicly described their public key cryptosystem in 1977. RSA is a widely used public-key encryption algorithm that enables secure data transmission over insecure channels like the Internet. RSA is the most common encryption algorithm used by SSL/TLS.
 
 Asymmetric encryption uses a key pair comprised of one public key used to encrypt a text and one private key used to decrypt the cipher. Both keys are mathematically linked, what one key encrypts only the other decrypts.&#x20;
 
-**Common uses:**
+**Common RSA applications:**
 
 * Secure web browsing (HTTPS)
 * Secure email (S/MIME)
@@ -45,17 +45,12 @@ Asymmetric encryption uses a key pair comprised of one public key used to encryp
 
 ### Four key concepts
 
-We will go over the steps involved in generating an RSA key, then we will apply the key to a plain text to see how RSA encryption works.
+We will go over the steps involved in generating an RSA key, then we will apply the key to a plain text to see how RSA encryption works. First, we need to clarify four concepts.
 
-First we need to clarify four concepts.
-
-\>Prime numbers: natural numbers greater than 1 that are divisible by only two positive integers: 1 and themselves, for example, 2, 3, 5, 7, 11, 13, etc.
-
-\>Factor: a number you can multiply to get another number, for example, the factors of 12 are 1, 2, 3, 4, 6, and 12.
-
-\>Semi-prime: a natural number that has only prime factors (excluding 1 and itself), e.g., 21 (3×7). A semi-prime number is a product of two prime numbers.
-
-\>Modulus: a mathematical operation that returns the remainder of a division. It is often abbreviated as MOD. For example, 11 MOD 4 = 3 because 11 divided by 4 has a quotient of 2 and a remainder of 3.
+* Prime numbers: Natural numbers greater than 1 that are divisible by only two positive integers: 1 and themselves, for example, 2, 3, 5, 7, 11, 13, etc.
+* Factor: A number you can multiply to get another number, for example, the factors of 12 are 1, 2, 3, 4, 6, and 12.
+* Semi-prime: A natural number that has only prime factors (excluding 1 and itself), e.g., 21 (3×7). A semi-prime number is a product of two prime numbers.
+* Modulus: A mathematical operation that returns the remainder of a division. It is often abbreviated as MOD. For example, 11 MOD 4 = 3 because 11 divided by 4 has a quotient of 2 and a remainder of 3.
 
 ### RSA key generation (5 steps)
 
@@ -85,7 +80,7 @@ The value of the public key must match three requirements:
 * It must be less than T
 * It must not be a factor of the T
 
-Bard will oblige if asked: “give me a few prime numbers whose values are less than 108 and whose values are not factors of 108.”
+Next, we select a prime number that is less than 108 and whose values are not factors of 108.
 
 Let’s go with 29.
 
@@ -151,11 +146,11 @@ If we plug that into a calculator, we get:
 
 ### Key takeaways
 
-* The first step in RSA key generation is selecting two prime numbers: P and Q
-* The second step in RSA key generation is calculating N, whereby N = P\*Q
-* The third step in RSA key generation is calculating the Totient (T) of N: (P-1)\*(Q-1)
-* The fourth step in RSA key generation is selecting a public key (E)
-* The fifth step in RSA key generation is selecting a private key (D)
+* The first step in RSA key generation is selecting two prime numbers: P and Q.
+* The second step in RSA key generation is calculating N, whereby N = P\*Q.
+* The third step in RSA key generation is calculating the Totient (T) of N: (P-1)\*(Q-1).
+* The fourth step in RSA key generation is selecting a public key (E).
+* The fifth step in RSA key generation is selecting a private key (D).
 
 ### References
 

@@ -8,12 +8,12 @@ description: >-
 
 ## Learning objectives
 
-* Understand what are replay attacks and what security risks (confidentiality, integrity, and authenticity) they pose
+* Understand what are replay attacks and what security risks they pose
 * Become familiar with major anti-replay methods
 * Develop a basic understanding of how replay attacks can threaten SSL/TLS security
 * Develop a basic understanding of how TLS 1.3 closes most replay attack vectors
 
-This section discusses replay attacks and anti-replay methods. Replay attacks pose a critical threat to data confidentiality and integrity, and session and identity authenticity. This section explores key replay attack mechanisms, the risks they pose—especially to protocols like SSL/TLS—and the fundamental anti-replay methods used to mitigate them. These methods, which are often used in combination, include sequence number windowing, timestamps, nonces, cryptographic hashes, and rotating secret keys. The discussion culminates in an analysis of how modern protocols, particularly TLS 1.3, have integrated these defenses to close historic vulnerabilities.
+This section discusses the core concepts of replay attacks and the mechanisms to defend against them. Replay attacks pose a critical threat to data confidentiality and integrity, and session and identity authenticity. This section explores key replay attack mechanisms, the risks they pose—especially to protocols like SSL/TLS—and the fundamental anti-replay methods used to mitigate them. These methods, which are often used in combination, include sequence number windowing, timestamps, nonces, cryptographic hashes, and rotating secret keys. The discussion culminates in an analysis of how modern protocols, particularly TLS 1.3, have integrated these defenses to close historic vulnerabilities.
 
 ## Topics covered in this section
 
@@ -27,7 +27,7 @@ A replay attack is a type of cyberattack in which an attacker intercepts and ret
 
 While replay attacks can be categorized by their target (e.g., web sessions), they universally follow three core phases:
 
-1. **Interception:** The attacker captures ("sniffs") a legitimate transmission between a client and server. This could be a login request, a financial transaction, or an authentication handshake.
+1. **Interception:** The attacker captures a legitimate transmission between a client and server. This could be a login request, a financial transaction, or an authentication handshake.
 2. **Extraction:** The relevant data is extracted from the captured transmission. This could be an entire packet, a security token, or a specific protocol message.
 3. **Injection:** The attacker injects (replays) the captured data into the network channel. The receiving system accepts it because it appears to be a legitimate, valid message.
 
@@ -245,10 +245,20 @@ However, application-layer defenses (idempotency keys and CSRF tokens) are still
 
 ### Key takeaways
 
-* Major anti-replay methods include sequence numbers, timestamps, nonces, cryptographic hashes, windowing, and rotating secret keys.
-* Replay attacks threaten SSL/TLS security guarantees.
-* TLS 1.3 introduces robust anti-replay protections, including one-time session tickets and secret key rotation.
+* Replay attacks are a significant network threat where an adversary intercepts and retransmits valid data to gain unauthorized access, steal information, or disrupt services. They fundamentally threaten the confidentiality, integrity, and authenticity of secure communications.
+* Replay attacks follow a common pattern of interception, extraction, and injection, and can target various layers of the network stack, with session replay being a common vector for web application attacks.
+* Effective anti-replay methods are not mutually exclusive and are often used in combination. The primary techniques include:
+  * Sequence number windowing: The core method where a receiver tracks received sequence numbers within a sliding window to detect and discard duplicates.
+  * Timestamps and nonces: Adding time-sensitive or random values to messages to ensure their freshness.
+  * Cryptographic hashes (HMACs): Protecting the integrity of packets and their sequence numbers to prevent tampering.
+  * Rotating secret keys: Regularly changing cryptographic keys to invalidate any previously captured traffic.
+* Pre-TLS 1.3 SSL/TLS versions were particularly vulnerable to replay attacks, which threatened their guarantees of confidentiality (via session resumption), integrity (via duplicate transactions), and authenticity (via impersonation with replayed tokens).
+* TLS 1.3 introduces major security improvements that mitigate most historic replay attack vectors. Key defenses include mandatory ephemeral key exchange for forward secrecy, one-time-use session tickets, non-replayable handshakes, and strict key derivation. However, application-layer defenses like idempotency keys remain necessary for full protection.
 
 ### References
 
-[Ed Harmoush. (December 8, 2021). Anti-Replay. Practical Networking.](https://www.practicalnetworking.net/series/cryptography/anti-replay/)
+Kaufman, C., Perlman, R., & Speciner, M. (2002). Network Security: Private Communication in a Public World (2nd ed.). Prentice Hall.
+
+Rescorla, E. (2018). SSL and TLS: Designing and Building Secure Systems. Addison-Wesley Professional.
+
+Stallings, W. (2020). Cryptography and Network Security: Principles and Practice (8th ed.). Pearson.

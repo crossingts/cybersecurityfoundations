@@ -35,7 +35,7 @@ This chapter covers how SSL/TLS uses cryptographic tools (symmetric encryption, 
 
 [How SSL/TLS uses cryptography](how-ssl-tls-uses-cryptography/)
 
-[Replay attacks and anti-replay methods](replay-attacks-and-anti-replay-methods.md)
+[Replay attacks and anti-replay methods](replay-attacks-and-anti-replay-methods/)
 
 [Generating and applying an RSA key](generating-and-applying-an-rsa-key.md)
 

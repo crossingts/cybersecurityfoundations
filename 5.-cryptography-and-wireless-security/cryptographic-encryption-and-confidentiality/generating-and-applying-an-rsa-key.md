@@ -1,8 +1,8 @@
 # Generating and applying an RSA key
 
-This discussion presents a working example of RSA’s key generation, encryption, and signing capabilities. The discussion covers the key mathematical concepts underlying the functionality of the RSA algorithm. The discussion covers the steps involved in generating an RSA key, and then applies the key to a plain text to see how RSA encryption works.
-
 ### Rivest–Shamir–Adleman (RSA) introduction
+
+This discussion presents a working example of RSA’s key generation, encryption, and signing capabilities. The discussion covers the key mathematical concepts underlying the functionality of the RSA algorithm. The discussion covers the steps involved in generating an RSA key, and then applies the key to a plain text to see how RSA encryption works.
 
 The initialism RSA comes from the surnames of Ron Rivest, Adi Shamir, and Leonard Adleman, who publicly described their public key cryptosystem in 1977. RSA is a widely used public-key encryption algorithm that enables secure data transmission over insecure channels like the Internet. RSA is the most common encryption algorithm used by SSL/TLS.
 
@@ -21,13 +21,13 @@ To understand how RSA encryption works, we first need to clarify four concepts.
 
 ### RSA key generation (5 steps)
 
-1\) Select two prime numbers: P and Q
+**Step 1: Select two prime numbers: P and Q.**
 
 P = 7
 
 Q = 19
 
-2\) Calculate N, whereby N = P\*Q
+**Step 2: Calculate N, whereby N = P\*Q.**
 
 7 \* 19 = 133 →semi-prime
 
@@ -35,11 +35,11 @@ Note, modern RSA best practice is to use a key size of 2048 bits. This correlate
 
 To achieve a 2048-bit key, the prime numbers P and Q (used to calculate N) must be large enough to produce a modulus N that is also 2048 bits long.
 
-3\) Calculate the Totient (T) of N: (P-1)\*(Q-1)
+**Step 3: Calculate the Totient (T) of N: (P-1)\*(Q-1).**
 
 (7-1)\*(19-1) = 6 \* 18 = 108
 
-4\) Select a public key (E)
+**Step 4: Select a public key (E).**
 
 The value of the public key must match three requirements:
 
@@ -51,13 +51,13 @@ Next, we select a prime number that is less than 108 and whose values are not fa
 
 Let’s go with 29.
 
-5\) Select a private key (D)
+**Step 5: Select a private key (D).**
 
 The product of the public key and the private key when divided by the Totient must result in a remainder of 1, i.e., the following formula must be true:
 
 (D\*E) MOD T = 1
 
-Let’s go with 41 as our private key. Let’s confirm if 41 qualifies as a private key:
+Let’s go with 41 as our private key. Let’s confirm if 41 qualifies as a private key (D):
 
 (41\*29) MOD 108
 
@@ -67,9 +67,19 @@ Let’s go with 41 as our private key. Let’s confirm if 41 qualifies as a priv
 
 Yes, 41 is fine.
 
-Here are the values from the five steps:
+**Here are the values from the five steps:**
 
-<figure><img src="https://professionaludev.wordpress.com/wp-content/uploads/2023/12/riveste28093shamire28093adleman-pracnet-example.webp?w=1024" alt="Rivest–Shamir–Adleman-PracNet-example" height="241" width="1024"><figcaption><p>Image courtesy of Practical Networking (PracNet)</p></figcaption></figure>
+P = 7
+
+Q = 19
+
+N = 133
+
+T = 108
+
+E = 29
+
+D = 41
 
 ### Message encryption
 
@@ -111,14 +121,6 @@ If we plug that into a calculator, we get:
 
 36^29 MOD 133 = 99
 
-### Key takeaways
-
-* The first step in RSA key generation is selecting two prime numbers: P and Q.
-* The second step in RSA key generation is calculating N, whereby N = P\*Q.
-* The third step in RSA key generation is calculating the Totient (T) of N: (P-1)\*(Q-1).
-* The fourth step in RSA key generation is selecting a public key (E).
-* The fifth step in RSA key generation is selecting a private key (D).
-
 ### References
 
-[Ed Harmoush. (December 8, 2021). RSA Example. Practical Networking.](https://www.practicalnetworking.net/series/cryptography/rsa-example/)
+Ferguson, N., Schneier, B., & Kohno, T. (2010). Cryptography engineering: Design principles and practical applications. Wiley.

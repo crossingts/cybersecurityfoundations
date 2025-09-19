@@ -1,51 +1,18 @@
----
-description: >-
-  This section discusses the steps involved in generating an RSA key and
-  applying the key to a plain text to see how RSA encryption works
----
-
 # Generating and applying an RSA key
 
-## Learning objectives
-
-* Understand the key mathematical concepts underlying the functionality of RSA
-* Become familiar with the main steps involved in generating an RSA key
-* Develop a foundational understanding of how an RSA key can be applied to encrypt plain text
-
-This section presents a [working example of RSA’s key generation](https://www.youtube.com/watch?v=Pq8gNbvfaoM), encryption, and signing capabilities. This section explores the math behind the RSA algorithm. The discussion covers the steps involved in generating an RSA key, and then applies the key to a plain text to see how RSA encryption works.
-
-## Topics covered in this section
-
-* **Rivest–Shamir–Adleman (RSA) introduction**
-* **Four key concepts**
-* **RSA key generation (5 steps)**
-* **Message encryption**
-* **Message signing**
+This discussion presents a working example of RSA’s key generation, encryption, and signing capabilities. The discussion covers the key mathematical concepts underlying the functionality of the RSA algorithm. The discussion covers the steps involved in generating an RSA key, and then applies the key to a plain text to see how RSA encryption works.
 
 ### Rivest–Shamir–Adleman (RSA) introduction
 
-The initialism "RSA" comes from the surnames of Ron Rivest, Adi Shamir, and Leonard Adleman, who publicly described their public key cryptosystem in 1977. RSA is a widely used public-key encryption algorithm that enables secure data transmission over insecure channels like the Internet. RSA is the most common encryption algorithm used by SSL/TLS.
+The initialism RSA comes from the surnames of Ron Rivest, Adi Shamir, and Leonard Adleman, who publicly described their public key cryptosystem in 1977. RSA is a widely used public-key encryption algorithm that enables secure data transmission over insecure channels like the Internet. RSA is the most common encryption algorithm used by SSL/TLS.
 
 Asymmetric encryption uses a key pair comprised of one public key used to encrypt a text and one private key used to decrypt the cipher. Both keys are mathematically linked, what one key encrypts only the other decrypts.&#x20;
 
-**Common RSA applications:**
-
-* Secure web browsing (HTTPS)
-* Secure email (S/MIME)
-* Virtual private networks (VPNs)
-* Digital signatures
-* Software licensing
-* Data protection
-
-**Important considerations:**
-
-* Key length is crucial for security. Longer keys are more secure but slower to process.
-* RSA can be vulnerable to certain attacks, so proper implementation and key management are essential.
-* Hybrid encryption systems often combine RSA with symmetric encryption for better efficiency.
+Common RSA applications include secure web browsing (HTTPS), secure email (S/MIME), virtual private networks (VPNs), digital signatures, software licensing, and data protection. Hybrid encryption systems often combine RSA with symmetric encryption for better efficiency.
 
 ### Four key concepts
 
-We will go over the steps involved in generating an RSA key, then we will apply the key to a plain text to see how RSA encryption works. First, we need to clarify four concepts.
+To understand how RSA encryption works, we first need to clarify four concepts.
 
 * Prime numbers: Natural numbers greater than 1 that are divisible by only two positive integers: 1 and themselves, for example, 2, 3, 5, 7, 11, 13, etc.
 * Factor: A number you can multiply to get another number, for example, the factors of 12 are 1, 2, 3, 4, 6, and 12.

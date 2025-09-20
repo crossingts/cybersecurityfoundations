@@ -1,49 +1,55 @@
 # The Diffie-Hellman key exchange
 
-Diffie-Hellman (DH) is a method for two parties to securely generate a shared secret over an insecure channel such as the Internet without ever sending the secret itself. It's used in TLS 1.3 to establish encryption session keys.
+Diffie-Hellman (DH) is a key-exchange protocol that allows two parties (e.g., a client and a server) to collaboratively but independently establish a shared secret over an insecure channel. In TLS, this shared secret is called the pre-master secret.
 
-#### **How Basic Diffie-Hellman Works:**
+The most common and secure DH form used in modern TLS is Ephemeral Diffie-Hellman (DHE, ECDHE).&#x20;
 
-1. **Agree on Public Numbers**:
-   * Both parties agree on a large prime number (**p**) and a base number (**g**). These are public and can be seen by anyone.
-2. **Each Party Picks a Private Number**:
-   * Alice picks a secret number (**a**).
+The Ephemeral Diffie-Hellman key exchange process in a TLS handshake is as follows:
+
+1. For each session, both parties generate a temporary ephemeral key pair.
+2. They exchange their ephemeral public keys, with the server authenticating its key with a digital signature from its long-term certificate.
+3. Each party combines its own ephemeral private key with the other's ephemeral public key to mathematically derive the same pre-master secret.
+4. This pre-master secret is then used by a Key Derivation Function (KDF) to generate all symmetric session keys for encryption and integrity of transmitted data. The ephemeral keys are discarded after the session.
+
+This ephemeral nature is crucial as it provides Forward Secrecy. In TLS 1.2, Ephemeral Diffie-Hellman was an optional key exchange method. In TLS 1.3, it is the only allowed method, making Forward Secrecy mandatory.
+
+The following segment breaks down the fundamental mathematics behind the Diffie-Hellman key exchange and how it is specifically applied within the TLS 1.3 handshake.
+
+#### How Basic Diffie-Hellman Works
+
+1. **Agree on public parameters:**
+   * Both parties agree on a large prime number (**p**) and a base number, generator (**g**). These are public and can be seen by anyone.&#x20;
+2. **Generate private keys**:
+   * Alice picks a secret number (**a**).&#x20;
    * Bob picks a secret number (**b**).
-3. **Compute Public Values**:
-   * Alice computes **A = gᵃ mod p** and sends **A** to Bob.
-   * Bob computes **B = gᵇ mod p** and sends **B** to Alice.
-4. **Compute Shared Secret**:
-   * Alice computes **S = Bᵃ mod p** (which is **(gᵇ)ᵃ mod p**).
-   * Bob computes **S = Aᵇ mod p** (which is **(gᵇ)ᵃ mod p**).
+3. **Compute public keys**:
+   * Alice computes her public key `A = gᵃ mod p` and sends it to Bob.&#x20;
+   * Bob computes his public key `B = gᵇ mod p` and sends it to Alice.
+4. **Compute shared secret**:
+   * Alice computes the secret `S = Bᵃ mod p = (gᵇ)ᵃ mod p = gᵃᵇ mod p`.&#x20;
+   * Bob computes the secret `S = Aᵇ mod p = (gᵃ)ᵇ mod p = gᵃᵇ mod p`.&#x20;
    * Both now have the same **S** (the shared secret), but an attacker can’t easily compute it because they don’t know **a** or **b**.
 
-**Diffie-Hellman in TLS 1.3 Handshake:**
+**Ephemeral Diffie-Hellman in TLS 1.3 Handshake:**
 
-In **TLS 1.3**, DH is used to establish a secure session quickly. Here’s how it works:
+In TLS 1.3, the ephemeral form of DH (ECDHE) is used to establish a secure session. Here’s how it works:
 
-1. **Client Hello**:
-   * The client sends a list of supported DH groups (sets of **p** and **g**) and a random number.
-2. **Server Hello**:
-   * The server picks a DH group and sends:
-     * Its own random number.
-     * Its **public DH value (B = gᵇ mod p)**.
-     * A digital signature to prove its identity (optional in some cases).
-3. **Client Responds**:
-   * The client sends its **public DH value (A = gᵃ mod p)**.
-4. **Shared Secret Calculation**:
-   * Both compute the shared secret **S = gᵃᵇ mod p** using the other party’s public value.
-   * This **S** is then used to derive encryption keys for the session.
-5. **Secure Communication**:
-   * Now, all data is encrypted using keys derived from **S**.
+1. Client Hello: The client sends a list of supported DH groups (sets of `p` and `g`) and a random value.
+2. Server Hello: The server picks a DH group and sends back:
+   * Its own random value.
+   * Its ephemeral public DH value (`B = gᵇ mod p`).
+   * A digital signature over the handshake transcript to prove its identity.
+3. Client Response: The client sends its ephemeral public DH value (`A = gᵃ mod p`).
+4. Shared secret calculation: Both parties compute the shared secret `S = gᵃᵇ mod p` (the pre-master secret). This value is then used with a Key Derivation Function (KDF) to derive the symmetric encryption keys for the session.
+5. Secure communication: All subsequent application data is encrypted using the newly derived session keys.
 
 **Why It’s Secure:**
 
-* Even if an attacker sees **A** and **B**, they can’t easily compute **S** without knowing **a** or **b** (this is the **Discrete Logarithm Problem**).
-* TLS 1.3 **removes weak DH groups** and only allows strong, modern cryptography.
+* The security relies on the Discrete Logarithm Problem: it is computationally infeasible for an attacker who observes the public values `A` and `B` to calculate the private keys `a` or `b`, or the shared secret `S`.
+* Because both parties use ephemeral key pairs, the shared secret is unique to each session, providing Forward Secrecy.
+* TLS 1.3 mandates strong, modern DH parameters, removing historically weak options.
 
-***
-
-#### **Simple Diffie-Hellman (DH) Explanation**
+#### The paint color mixing analogy for the DH key exchange
 
 Imagine Alice and Bob want to agree on a secret color, but they can only send paint colors in public where eavesdroppers can see them.
 
@@ -66,10 +72,6 @@ Now both have **brown**, but nobody else can figure it out because they don’t 
 * They swap "mixed" numbers publicly.
 * Each combines them with their **private number** to get the same secret key.
 * That secret key encrypts your web traffic.
-
-**Why it’s safe?**
-
-* Even if hackers see the swapped numbers, they can’t reverse the math easily.
 
 ***
 

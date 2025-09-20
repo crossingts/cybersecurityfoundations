@@ -203,6 +203,23 @@ The client now:
 * All subsequent communication is **encrypted and protected** using these keys and the chosen cipher suite (e.g., `AES-256-GCM`).
 * Encrypted application data (like HTTP requests) can now flow securely.
 
+**The sequence for Ephemeral Diffie-Hellman in a TLS handshake:**
+
+1. The server has a long-term static key pair (usually an RSA or ECDSA certificate) used for signing, not encryption.
+2. The client and server each generate a temporary (ephemeral) key pair for this one session only.
+3. They exchange their ephemeral public keys. The server _proves it owns the ephemeral key_ by signing it with its long-term static private key.
+4. Each party combines its own ephemeral private key with the other party's ephemeral public key to mathematically derive the same Pre-Master Secret.
+5. After the session, the ephemeral private keys are deleted.
+
+This ephemeral nature is what provides Forward Secrecy.&#x20;
+
+**The hierarchy of DH key derivation in TLS:**
+
+1. Diffie-Hellman exchange: Produces the pre-master secret (a shared secret value).
+2. Key Derivation Function (KDF): The pre-master secret is then fed into a KDF along with a random value from the client and server (the random nonces exchanged in hello messages).
+3. Master secret: The KDF generates the master secret from the inputs above.
+4. Session Keys: The master secret is then fed back into the KDF (along with the same nonces) to finally generate the entire set of symmetric session keys (e.g., client\_write\_key, server\_write\_key, client\_write\_IV, server\_write\_IV).
+
 **TLS 1.3 Handshake Simplified Workflow (Diagram)**
 
 ```

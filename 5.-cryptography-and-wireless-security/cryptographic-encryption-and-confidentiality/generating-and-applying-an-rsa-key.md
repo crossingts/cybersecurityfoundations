@@ -2,9 +2,9 @@
 
 ### Rivest–Shamir–Adleman (RSA) introduction
 
-This discussion presents a working example of RSA’s key generation, encryption, and signing capabilities. The discussion covers the key mathematical concepts underlying the functionality of the RSA algorithm. The discussion covers the steps involved in generating an RSA key, and then applies the key to a plain text to see how RSA encryption works.
-
 The initialism RSA comes from the surnames of Ron Rivest, Adi Shamir, and Leonard Adleman, who publicly described their public key cryptosystem in 1977. RSA is a widely used public-key encryption algorithm that enables secure data transmission over insecure channels like the Internet. RSA is the most common encryption algorithm used by SSL/TLS.
+
+This discussion presents a working example of RSA’s key generation, encryption, and signing capabilities. The discussion covers the key mathematical concepts underlying the functionality of the RSA algorithm. The discussion covers the steps involved in generating an RSA key, and then applies the key to a plain text to see how RSA encryption works.
 
 Asymmetric encryption uses a key pair comprised of one public key used to encrypt a text and one private key used to decrypt the cipher. Both keys are mathematically linked, what one key encrypts only the other decrypts.&#x20;
 

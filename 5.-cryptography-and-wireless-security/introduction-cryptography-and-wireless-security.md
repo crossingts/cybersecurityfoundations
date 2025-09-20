@@ -17,6 +17,8 @@ This chapter covers how SSL/TLS uses cryptographic tools (symmetric encryption, 
 * Understand how symmetric encryption (e.g., AES), asymmetric encryption (e.g., RSA), and hashing (e.g., SHA-256) secure data in transit.
 * Describe how digital certificates and asymmetric keys enable authentication and message signing.
 * Develop a practical understanding of RSA’s key generation, encryption, and signing capabilities.
+* Describe the TLS handshake process, from negotiating cryptographic parameters to securely establishing a shared session key.
+* Develop a practical understanding of the Diffie-Hellman key exchange, its role in providing forward secrecy in TLS, and the underlying mathematics that make it secure.
 * Understand how the IEEE 802.11 standard provides a basis for a wireless security management framework (client authentication, message privacy, and message integrity).
 * Become familiar with key authentication methods and encryption and message integrity algorithms used in securing wireless networks.
 * Compare wireless security protocols (WPA/WPA2/WPA3) and their authentication and encryption methods.

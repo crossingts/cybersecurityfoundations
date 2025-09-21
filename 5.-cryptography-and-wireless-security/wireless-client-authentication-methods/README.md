@@ -9,7 +9,7 @@ description: >-
 ## Learning objectives
 
 * Identify IEEE 802.11 as a basis for a wireless security management framework
-* Become familiar with common wireless client authentication methods
+* Become familiar with common wireless client authentication methods (open authentication, WEP, PSK, SAE, and 802.1x/EAP)
 * Identify common EAP-based authentication methods
 
 This section has two main goals. First, this section introduces the IEEE 802.11 networking standard which provides a basis for a wireless security management framework (client authentication, message privacy, and message integrity). Second, this section introduces the wireless client authentication methods of open authentication, WEP, PSK, SAE, and 802.1x/EAP.

@@ -100,40 +100,47 @@ The Wi-Fi Protected Access (WPA) protocol was introduced by the Wi-Fi Alliance i
 
 **Comparison Table (WEP, WPA, WPA2, WPA3)**
 
-| **Protocol**        | **Authentication**                                  | **Encryption**     | **Integrity Mechanism**                             | **Key Size**      | **Introduced**        |
-| ------------------- | --------------------------------------------------- | ------------------ | --------------------------------------------------- | ----------------- | --------------------- |
-| **WEP**             | Open System or Shared Key (WEP PSK)                 | RC4 (weak)         | **CRC-32 (ICV)** – Easily forged                    | 40-bit / 104-bit  | 1997 (802.11)         |
-| **WPA**             | WPA-Personal (PSK) or WPA-Enterprise (802.1X/EAP)   | TKIP (RC4 + fixes) | **Michael MIC** – Weak, but better than WEP         | 128-bit (TKIP)    | 2003 (Wi-Fi Alliance) |
-| **WPA2**            | WPA2-Personal (PSK) or WPA2-Enterprise (802.1X/EAP) | AES-CCMP (strong)  | **CCMP (AES-CBC-MAC)** – Strong integrity           | 128-bit (AES)     | 2004 (802.11i)        |
-| **WPA3-Personal**   | **SAE (Simultaneous Authentication of Equals)**     | AES-CCMP/GCMP      | **GCMP (256-bit)** – Stronger integrity             | 128-bit / 256-bit | 2018                  |
-| **WPA3-Enterprise** | 802.1X/EAP (with stricter requirements)             | AES-256-GCMP       | **GCMP (256-bit) + CNSA Suite** – Highest integrity | 192-bit / 256-bit | 2018                  |
+|Protocol|Authentication|Encryption|Integrity Mechanism|Key Size / Security Suite|Introduced|
+|---|---|---|---|---|---|
+|**WEP**|Open System or Shared Key (WEP PSK)|RC4 (weak)|CRC-32 (ICV) – Easily forged|40-bit / 104-bit|1997 (802.11)|
+|**WPA**|WPA-Personal (PSK) or WPA-Enterprise (802.1X/EAP)|TKIP (RC4 with fixes)|Michael MIC – Weak, but better than WEP|128-bit (TKIP)|2003 (Wi-Fi Alliance)|
+|**WPA2-Personal**|PSK (Pre-Shared Key)|AES-CCMP (mandatory)|CCMP (AES-CBC-MAC) – Strong|128-bit (AES)|2004 (802.11i)|
+|**WPA2-Enterprise**|802.1X/EAP|AES-CCMP (mandatory)|CCMP (AES-CBC-MAC) – Strong|128-bit (AES)|2004 (802.11i)|
+|**WPA3-Personal**|SAE (Simultaneous Authentication of Equals)|AES-CCMP (mandatory); GCMP optional|CCMP (AES-CBC-MAC) – Strong|128-bit (AES)|2018|
+|**WPA3-Enterprise**|802.1X/EAP (with stricter requirements)|AES-CCMP or AES-256-GCMP<sup>1</sup>|CCMP or 256-bit GMAC (with GCMP)|128-bit or 192-bit mode<sup>2</sup>|2018|
 
+**Note:**
+
+1. WPA3-Enterprise Encryption: The standard mode uses AES-CCMP (128-bit). The higher-security 192-bit mode, aligned with the CNSA suite, mandates AES-256-GCMP.
+    
+2. WPA3-Enterprise Key Size / Security Suite: This column is best understood as the minimum security strength of the cryptographic suite. The standard mode offers 128-bit strength. The optional 192-bit mode uses a 256-bit AES key (and other stronger algorithms) to achieve a higher overall security strength of 192 bits.
+    
 ### Wireless client authentication methods in chronological order
 
 Wireless client authentication methods (sometimes generically referred to as IEEE 802.11 authentication methods or Wi-Fi authentication methods) can be categorized into Open System Authentication, Shared Key Authentication, and more advanced methods used in WPA/WPA2/WPA3. Follows is a list of wireless authentication methods in chronological order.
 
 #### **1. Open System Authentication (1997 – 802.11 original standard)**
 
-* **No real authentication**; any client can connect.
+* No real authentication; any client can connect.
 * Most common in public hotspots (e.g., cafes, airports).
 * Often paired with captive portals (web-based login).
 
 #### **2. Shared Key Authentication (WEP – 1997, deprecated)**
 
-* Used a static 40/104-bit **WEP key** (easily crackable).
+* Used a static 40/104-bit WEP key (easily crackable).
 * Easily crackable; deprecated by early 2000s.
 
 #### **3. WPA-Personal/WPA-Enterprise (2003 – Wi-Fi Alliance interim fix)**
 
 * Introduced TKIP (Temporal Key Integrity Protocol) as a WEP replacement.
-* WPA-PSK **(Pre-Shared Key)** for home users.
-* WPA-Enterprise **(802.1X/EAP)** for businesses. 802.1X/EAP is defined in IEEE 802.1X, not 802.11 itself. Used in WPA/WPA2/WPA3-Enterprise.
+* WPA-PSK (Pre-Shared Key) for home users.
+* WPA-Enterprise (802.1X/EAP) for businesses. 802.1X/EAP is defined in IEEE 802.1X, not 802.11 itself. Used in WPA/WPA2/WPA3-Enterprise.
 
 #### **4. WPA2-Personal/WPA2-Enterprise (2004 – 802.11i standard)**
 
 * Replaced TKIP with AES-CCMP (stronger encryption).
-* **WPA2-PSK** became the dominant Wi-Fi security method.
-* **WPA2-Enterprise** **(802.1X/EAP)**.
+* WPA2-PSK became the dominant Wi-Fi security method.
+* WPA2-Enterprise (802.1X/EAP).
 
 #### **5. Wi-Fi Protected Setup (WPS – 2006)**
 
@@ -142,12 +149,12 @@ Wireless client authentication methods (sometimes generically referred to as IEE
 
 #### **6. WPA3-Personal (2018 – Wi-Fi Alliance)**
 
-* Introduced **Simultaneous Authentication of Equals (SAE)** to replace PSK.
+* Introduced Simultaneous Authentication of Equals (SAE) to replace PSK.
 * Protects against offline dictionary attacks.
 
 #### **7. WPA3-Enterprise (2018)**
 
-* **WPA3-Enterprise** **(802.1X/EAP)**.
+* WPA3-Enterprise (802.1X/EAP).
 * Added 192-bit cryptographic suite for higher-security environments.
 * Mandates use of AES-GCMP instead of TKIP.
 
@@ -177,46 +184,47 @@ Here is a chronology of key developments within the IEEE 802.1x/EAP standard.
 
 #### **1. Initial Introduction (2001 – IEEE 802.1X standard)**
 
-* **802.1X** was originally designed for wired networks (Ethernet) but was quickly adopted for Wi-Fi security.
-* **EAP** (RFC 2284, 1998) was integrated into 802.1X to provide a flexible authentication framework.
-* Used in **early enterprise Wi-Fi networks** even before WPA/WPA2.
+* The IEEE 802.1X standard was originally ratified for port-based access control on wired Ethernet networks, providing a framework to authenticate devices before granting them network access. 
+* IEEE 802.1X was later adopted as a cornerstone of Wi-Fi authentication with the introduction of WPA-Enterprise in 2003.
+* EAP (RFC 2284, 1998) was integrated into 802.1X to provide a flexible authentication framework.
+* Used in early enterprise Wi-Fi networks even before WPA/WPA2.
 
 #### **2. Formal Wi-Fi Adoption (2003 – WPA-Enterprise)**
 
-* When **WPA** was introduced, **802.1X/EAP** became the backbone of **WPA-Enterprise**.
-* Replaced **WEP’s weak authentication** with dynamic key generation via RADIUS servers.
+* When WPA was introduced, 802.1X/EAP became the backbone of WPA-Enterprise.
+* Replaced WEP’s weak authentication with dynamic key generation via RADIUS servers.
 * Common EAP methods at the time:
-  * **EAP-TLS** (certificate-based, most secure but complex).
-  * **EAP-MD5** (deprecated, no encryption).
-  * **LEAP** (Cisco-proprietary, later found insecure).
+  * EAP-TLS (certificate-based, most secure but complex).
+  * EAP-MD5 (deprecated, no encryption).
+  * LEAP (Cisco-proprietary, later found insecure).
 
 #### **3. WPA2-Enterprise (2004 – 802.11i)**
 
-* **802.1X/EAP** became the **gold standard for enterprise Wi-Fi** under WPA2.
+* 802.1X/EAP became the gold standard for enterprise Wi-Fi under WPA2.
 * Newer EAP methods emerged:
-  * **PEAP** (Protected EAP, e.g., PEAP-MSCHAPv2 for username/password).
-  * **EAP-TTLS** (similar to PEAP but more flexible).
-  * **EAP-FAST** (Cisco’s replacement for LEAP).
+  * PEAP (Protected EAP, e.g., PEAP-MSCHAPv2 for username/password).
+  * EAP-TTLS (similar to PEAP but more flexible).
+  * EAP-FAST (Cisco’s replacement for LEAP).
 
 #### **4. WPA3-Enterprise (2018)**
 
-* Still relies on **802.1X/EAP** but with stricter security:
-  * Mandates **AES-256-GCMP** encryption (vs. AES-CCMP in WPA2).
-  * Introduces **192-bit security mode** (for governments/enterprises).
-* **EAP-TLS remains the most secure method** (certificate-based).
+* Still relies on 802.1X/EAP but with stricter security:
+  * Mandates AES-256-GCMP encryption (vs. AES-CCMP in WPA2).
+  * Introduces 192-bit security mode (for governments/enterprises).
+* EAP-TLS remains the most secure method (certificate-based).
 
 #### **5. Modern Usage (2020s)**
 
-* **802.1X/EAP is still dominant in enterprises**, universities, and large orgs.
-* **Cloud RADIUS services** (e.g., Azure AD, Okta) now integrate with 802.1X.
-* **EAP-TLS is growing** due to zero-trust security trends.
+* 802.1X/EAP is still dominant in enterprises, universities, and large orgs.
+* Cloud RADIUS services (e.g., Azure AD, Okta) now integrate with 802.1X.
+* EAP-TLS is growing due to zero-trust security trends.
 
 ### Key takeaways
 
-* 802.1X/EAP is not a Wi-Fi authentication method itself but a framework used by WPA-Enterprise (2003), WPA2-Enterprise (2004), and WPA3-Enterprise (2018)
-* Common EAP-based authentication methods include LEAP, EAP-FAST, PEAP, and EAP-TLS
-* EAP methods evolved from weak (LEAP, EAP-MD5) to robust (EAP-TLS, PEAP)
-* Still the most secure Wi-Fi authentication method when properly configured (e.g., with certificates)
+* 802.1X/EAP is not a Wi-Fi authentication method itself but a framework used by WPA-Enterprise (2003), WPA2-Enterprise (2004), and WPA3-Enterprise (2018).
+* Common EAP-based authentication methods include LEAP, EAP-FAST, PEAP, and EAP-TLS.
+* EAP methods evolved from weak (LEAP, EAP-MD5) to robust (EAP-TLS, PEAP).
+* Still the most secure Wi-Fi authentication method when properly configured (e.g., with certificates).
 
 ### References
 

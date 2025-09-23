@@ -16,11 +16,15 @@ This section has two main goals. First, this section introduces the IEEE 802.11 
 
 ## Topics covered in this section
 
-* **Introduction**
-* **The IEEE 802.11 standard as a wireless security management framework**
-* **Authentication (trust)**
-  * **Open authentication**
-  * **WEP (Wired Equivalent Privacy)**
+- **Introduction**
+- **The IEEE 802.11 standard as a wireless security management framework**
+  - **Authentication (trust)**
+   - **Open authentication**
+   - **WEP (Wired Equivalent Privacy)**
+  - **Data privacy**
+  - **Data integrity**
+- **Wireless client authentication methods in chronological order**
+* 
 * **Wireless client authentication methods in chronological order**
 * **Pre-Shared Key (PSK) and SAE (Simultaneous Authentication of Equals)**
 * **Key developments within the IEEE 802.1x/EAP standard**
@@ -34,6 +38,15 @@ This section has two main goals. First, this section introduces the IEEE 802.11 
 ### Introduction
 
 In a wireless connection, data is transmitted via radio waves that propagate in all directions, making it accessible to any nearby device within range. Unlike wired connections, which confine signals to physical cables, wireless signals are inherently broadcasted, allowing unintended recipients to potentially intercept them if not properly encrypted or secured.
+
+- Introduction
+- The IEEE 802.11 standard as a wireless security management framework
+  - Authentication (trust)
+   - Open authentication
+   - WEP (Wired Equivalent Privacy)
+  - Data privacy
+  - Data integrity
+- Wireless client authentication methods in chronological order
 
 A comprehensive approach to securing a wireless network involves:
 

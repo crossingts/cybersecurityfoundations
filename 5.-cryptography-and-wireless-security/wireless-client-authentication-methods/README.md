@@ -86,7 +86,7 @@ Only WEP (RC4-based) is defined in the original IEEE 802.11 standard. As noted, 
 
 No true message authentication existed within the original IEEE 802.11 standard. WPA introduced Michael MIC, which was better than WEP but still vulnerable to forgery.
 
-**Evolution of IEEE 802.11 Security Protocols**
+**Evolution of the IEEE 802.11 Security Protocols**
 
 | **Feature**        | **Original 802.11 (1997)**          | **Modern Fix (WPA2/WPA3)**       |
 | ------------------ | ----------------------------------- | -------------------------------- |
@@ -117,7 +117,7 @@ The Wi-Fi Protected Access (WPA) protocol was introduced by the Wi-Fi Alliance i
 
 Technically, both the WEP key and the WPA/WPA2 PSK are pre-shared secrets used for network access. However, their security differs drastically due to how they are implemented, particularly in how they handle authentication and key management.
 
-WEP uses the WEP key directly for both authentication (the client proves it knows the key by encrypting a challenge from the AP) and encryption (the same static key is used to encrypt all data packets via RC4). This direct use means compromising the key through the authentication process breaks both trust and privacy. In contrast, WPA/WPA2-Personal uses the PSK within a secure framework. The PSK itself is never used for encryption. Instead, the PSK serves as a starting point in a secure 4-Way Handshake that achieves two separate goals:
+WEP uses the WEP key directly for both authentication (the client proves it knows the key by encrypting a challenge from the AP) and encryption (the same static key is used to encrypt all data packets via RC4). This direct use means compromising the key through the authentication process breaks both trust and privacy. In contrast, in WPA/WPA2-Personal the PSK itself is never used for encryption. Instead, the PSK serves as a starting point in a secure 4-Way Handshake that achieves two separate goals:
 
 1. Secure authentication: The 4-Way Handshake mutually verifies that both the client and AP know the PSK.
     

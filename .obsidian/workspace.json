@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5.-cryptography-and-wireless-security/wireless-client-authentication-methods/README.md",
+                "file": "5.-cryptography-and-wireless-security/wireless-client-authentication-methods/ieee-802.1x-eap-authentication-methods.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "ieee-802.1x-eap-authentication-methods"
             }
           }
         ]
@@ -183,8 +183,11 @@
   },
   "active": "40c4555dcbe928f5",
   "lastOpenFiles": [
-    "5.-cryptography-and-wireless-security/wireless-client-authentication-methods/ieee-802.1x-eap-authentication-methods.md",
     "5.-cryptography-and-wireless-security/wireless-client-authentication-methods/README.md",
+    "5.-cryptography-and-wireless-security/wireless-client-authentication-methods/ieee-802.1x-eap-authentication-methods.md",
+    "5.-cryptography-and-wireless-security/replay-attacks-and-anti-replay-methods/replay-attacks-and-anti-replay-methods-quiz.md",
+    "5.-cryptography-and-wireless-security/replay-attacks-and-anti-replay-methods/README.md",
+    "5.-cryptography-and-wireless-security/message-signing-using-asymmetric-keys/message-signing-using-asymmetric-keys-quiz.md",
     "5.-cryptography-and-wireless-security/authentication-and-encryption-in-wpa-wpa2-and-wpa3.md",
     "5.-cryptography-and-wireless-security/introduction-cryptography-and-wireless-security.md",
     "5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods.md",

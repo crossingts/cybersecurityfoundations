@@ -152,15 +152,15 @@ Wireless client authentication methods (sometimes generically referred to as IEE
 
 #### **Clarifications:**
 
-1. 802.1X/EAP is not part of the original 802.11 standard
+1. 802.1X/EAP is not part of the original 802.11 standard:
    * It was introduced later (via 802.11i/WPA) for enterprise security.
    * 802.1X is a port-based authentication framework (from wired networks) adapted for Wi-Fi.
-1. EAP methods (LEAP, PEAP, EAP-TLS, etc.) are not 802.11 authentication
+1. EAP methods (LEAP, PEAP, EAP-TLS, etc.) are not 802.11 authentication:
    * They are authentication protocols running inside 802.1X.
    * The actual 802.11 layer just facilitates the exchange (EAPoL frames).
-1. Modern Wi-Fi uses a mix of 802.11 and non-802.11 auth methods
-   * WPA/WPA2-Personal (PSK/SAE) → Uses pre-shared keys, not part of original 802.11 auth.
-   * WPA/WPA2/WPA3-Enterprise → Relies on 802.1X/EAP, not native 802.11.
+1. Modern Wi-Fi uses a mix of 802.11 and non-802.11 auth methods:
+   * WPA/WPA2-Personal (PSK/SAE) uses pre-shared keys, not part of original 802.11 auth.
+   * WPA/WPA2/WPA3-Enterprise relies on 802.1X/EAP, not native 802.11.
 
 ### Pre-Shared Key (PSK) and SAE (Simultaneous Authentication of Equals)
 

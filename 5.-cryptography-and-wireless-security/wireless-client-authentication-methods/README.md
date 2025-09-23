@@ -12,11 +12,7 @@ description: >-
 * Become familiar with common wireless client authentication methods
 * Identify common EAP-based authentication methods
 
-This section has two main goals. First, this section introduces the IEEE 802.11 networking standard as providing a basis for a wireless security management framework (client authentication, message privacy, and message integrity). Second, this section introduces the wireless client authentication methods of open authentication, WEP, PSK, SAE, and 802.1x/EAP.
-
-This section has two primary goals. First, the section establishes the IEEE 802.11 standard's role in defining the original, albeit weak, security mechanisms of Open Authentication and Wired Equivalent Privacy (WEP), which managed authentication (trust), data privacy, and data integrity. The section then traces the critical evolution of these security components through modern protocols like WPA2 and WPA3.
-
-Second, the section details the chronological development of wireless client authentication methods, from the basic Open and WEP systems to Pre-Shared Key (PSK) and Simultaneous Authentication of Equals (SAE) for personal networks. Finally, the section explores the IEEE 802.1X/EAP framework for enterprise environments, including key developments and common EAP methods like LEAP, EAP-FAST, PEAP, and EAP-TLS.
+This section has two main goals. First, this section introduces the IEEE 802.11 networking standard, which provides a basis for a wireless security management framework (client authentication, message privacy, and message integrity). The section then traces the critical evolution of these security components through modern protocols like WPA2 and WPA3. Second, this section introduces the wireless client authentication methods of open authentication, WEP, PSK, SAE, and 802.1x/EAP, including LEAP, EAP-FAST, PEAP, and EAP-TLS.
 
 ## Topics covered in this section
 
@@ -328,11 +324,16 @@ EAP-TLS can only be used if the wireless clients can accept and use digital cert
 
 ### Key takeaways
 
-* IEEE 802.1X/EAP is not a Wi-Fi authentication method itself but a framework used by WPA-Enterprise (2003), WPA2-Enterprise (2004), and WPA3-Enterprise (2018).
-* Common EAP-based authentication methods include LEAP, EAP-FAST, PEAP, and EAP-TLS.
-* EAP methods evolved from weak (LEAP, EAP-MD5) to robust (EAP-TLS, PEAP).
-* Still the most secure Wi-Fi authentication method when properly configured (e.g., with certificates).
+- The original IEEE 802.11 standard provided only basic and insecure authentication methods, Open System and WEP, which used a static key for both authentication and weak RC4 encryption.
+- The modern Wi-Fi security framework is based on the IEEE 802.11i amendment, which introduced strong, dynamic encryption (AES-CCMP) and robust integrity checking, forming the basis for WPA2 and WPA3.
+- Wireless authentication evolved from Open and WEP to Pre-Shared Key (PSK) in WPA/WPA2-Personal, which uses a secure handshake to derive temporary keys, and further to Simultaneous Authentication of Equals (SAE) in WPA3-Personal to prevent offline attacks.
+- For enterprise security, the IEEE 802.1X standard provides a port-based authentication framework that leverages the Extensible Authentication Protocol (EAP). This framework underpins WPA-Enterprise, WPA2-Enterprise, and WPA3-Enterprise.
+- EAP-based methods have evolved from weak protocols like LEAP to more robust ones. PEAP creates a secure tunnel using a server-side certificate, while EAP-TLS provides the highest security through mutual certificate-based authentication.
 
 ### References
 
+Coleman, D. D., & Westcott, D. A. (2022). CWNA Certified Wireless Network Administrator Official Study Guide: Exam CWNA-109. John Wiley & Sons.
+
 Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 1. Cisco Press.
+
+Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 2. Cisco Press.

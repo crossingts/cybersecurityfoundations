@@ -24,8 +24,6 @@ This section has two main goals. First, this section introduces the IEEE 802.11 
   - **Data privacy**
   - **Data integrity**
 - **Wireless client authentication methods in chronological order**
-* 
-* **Wireless client authentication methods in chronological order**
 * **Pre-Shared Key (PSK) and SAE (Simultaneous Authentication of Equals)**
 * **Key developments within the IEEE 802.1x/EAP standard**
 * **802.1x/EAP (Extensible Authentication Protocol)**

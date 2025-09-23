@@ -42,7 +42,7 @@ A comprehensive approach to securing a wireless network involves:
 1. Identifying the endpoints (authenticating client devices) – for example, using MAC address filtering or IEEE 802.1X certificate-based device authentication.
 2. Authenticating the end user accessing the network – for example, via WPA2-Enterprise with EAP-TLS or EAP-PEAP for username/password verification.
 3. Protecting the wireless data from eavesdroppers using encryption – for example, using AES-CCMP encryption (WPA3) or TKIP (legacy WPA).
-4. Protecting the wireless data from tampering with frame authentication – for example, with 802.11’s frame integrity checks (MIC) or GCMP in WPA3.
+4. Protecting the wireless data from tampering with frame authentication – for example, with IEEE 802.11’s frame integrity checks (MIC) or GCMP in WPA3.
 
 Endpoint identification ensures only authorized devices connect, while user authentication verifies legitimate users. Together, these measures strengthen access control, while encryption and integrity checks safeguard data in transit.
 
@@ -56,17 +56,17 @@ The IEEE 802.11 standard provides a basis for a wireless security management fra
 
 #### Authentication (trust)
 
-Clients must first discover a BSS (Basic Service Set) and then request permission to associate with it. Only trusted and expected devices should be given network access. Clients should be authenticated before they are allowed to associate. Potential clients must present a form of credentials to the APs (Access Points) to identify themselves. The original 802.11 standard gave only two options to authenticate clients: open authentication and WEP.
+Clients must first discover a BSS (Basic Service Set) and then request permission to associate with it. Only trusted and expected devices should be given network access. Clients should be authenticated before they are allowed to associate. Potential clients must present a form of credentials to the APs (Access Points) to identify themselves. The original IEEE 802.11 standard gave only two options to authenticate clients: open authentication and WEP.
 
 **Open authentication**
 
-The open authentication process has only one requirement for a client wishing to access a WLAN, that they must use an 802.11 authentication request before attempting to associate with an AP. No other credentials are needed.
+The open authentication process has only one requirement for a client wishing to access a WLAN, that they must use an IEEE 802.11 authentication request before attempting to associate with an AP. No other credentials are needed.
 
-With no challenge, any 802.11 client may authenticate to access the network. That is, in fact, the whole purpose of open authentication—to validate that a client is a valid 802.11 device by authenticating the wireless hardware and the protocol. Authenticating the user’s identity is handled as a true security process through other means. (Odom, 2020, p. 710)
+With no challenge, any IEEE 802.11 client may authenticate to access the network. That is, in fact, the whole purpose of open authentication—to validate that a client is a valid IEEE 802.11 device by authenticating the wireless hardware and the protocol. Authenticating the user’s identity is handled as a true security process through other means. (Odom, 2020, p. 710)
 
 Client screening in WLANs with open authentication will often be a form of web authentication. Most client operating systems will flag WLANs with open authentication to warn you that your wireless data will not be secured in any way if you join.
 
-After the open 802.11 connection is established, the user’s identity is authenticated by higher-layer security methods. These methods include Pre-Shared Key (PSK) for personal networks (like WPA2/3-Personal), the robust IEEE 802.1X framework with EAP for enterprise environments, and captive portals for public guest access.
+After the open IEEE 802.11 connection is established, the user’s identity is authenticated by higher-layer security methods. These methods include Pre-Shared Key (PSK) for personal networks (like WPA2/3-Personal), the robust IEEE 802.1X framework with EAP for enterprise environments, and captive portals for public guest access.
 
 **WEP (Wired Equivalent Privacy)**
 
@@ -80,13 +80,13 @@ The WEP key can also be used as an optional authentication method. A client not 
 
 To protect data privacy on a wireless network, the data must be encrypted while it is traveling between clients and APs. This is done by encrypting the data payload in each wireless frame just before it is transmitted, and then decrypting it as it is received. The encryption method must be one that the transmitter and receiver share so that the data can be encrypted and decrypted successfully.
 
-Only WEP (RC4-based) is defined in the original 802.11 standard. As noted, WEP’s shared key is both the authentication secret and encryption key, making it fundamentally insecure. Modern protocols such as Wi-Fi Protected Access (WPA2 and WPA3) derive temporary keys instead. WEP’s encryption was optional – networks could run unencrypted (open authentication + no encryption is one option; open authentication + WEP encryption is another option). No other encryption options existed until TKIP (WPA, 2003) and AES-CCMP (WPA2, 2004).
+Only WEP (RC4-based) is defined in the original IEEE 802.11 standard. As noted, WEP’s shared key is both the authentication secret and encryption key, making it fundamentally insecure. Modern protocols such as Wi-Fi Protected Access (WPA2 and WPA3) derive temporary keys instead. WEP’s encryption was optional – networks could run unencrypted (open authentication + no encryption is one option; open authentication + WEP encryption is another option). No other encryption options existed until TKIP (WPA, 2003) and AES-CCMP (WPA2, 2004).
 
 #### Data integrity
 
-No true message authentication existed within the original 802.11 standard. WPA introduced Michael MIC, which was better than WEP but still vulnerable to forgery.
+No true message authentication existed within the original IEEE 802.11 standard. WPA introduced Michael MIC, which was better than WEP but still vulnerable to forgery.
 
-**Summary for Original IEEE 802.11 Standard**
+**Evolution of IEEE 802.11 Security Protocols**
 
 | **Feature**        | **Original 802.11 (1997)**          | **Modern Fix (WPA2/WPA3)**       |
 | ------------------ | ----------------------------------- | -------------------------------- |
@@ -96,7 +96,7 @@ No true message authentication existed within the original 802.11 standard. WPA 
 
 While IEEE 802.11 defines the fundamental operation of Wi-Fi, its built-in security (Open and WEP) was fundamentally weak. The modern wireless security management framework is based primarily on the IEEE 802.11i amendment (2004), which introduced the Robust Security Network (RSN) framework. This framework underpins WPA2 and WPA3, providing the basis for strong authentication, encryption, and integrity.
 
-The Wi-Fi Protected Access (WPA) protocol was introduced by the Wi-Fi Alliance in 2003 as an interim security standard to address the critical vulnerabilities of WEP, which by then were well-known. The full, robust IEEE 802.11i amendment was still under development and years away from final ratification. To provide a immediate solution, the Wi-Fi Alliance created WPA by defining a subset of the draft 802.11i specifications that were mature enough to implement. Essentially, WPA served as a "pre-standard" version of 802.11i, incorporating its key enhancements like the Temporal Key Integrity Protocol (TKIP) for dynamic encryption keys and the Michael message integrity check, thus providing a crucial stopgap of improved security while the industry awaited the stronger, final 802.11i standard (which would later be branded as WPA2).
+The Wi-Fi Protected Access (WPA) protocol was introduced by the Wi-Fi Alliance in 2003 as an interim security standard to address the critical vulnerabilities of WEP, which by then were well-known. The full, robust IEEE 802.11i amendment was still under development and years away from final ratification. To provide a immediate solution, the Wi-Fi Alliance created WPA by defining a subset of the draft IEEE 802.11i specifications that were mature enough to implement. Essentially, WPA served as a "pre-standard" version of IEEE 802.11i, incorporating its key enhancements like the Temporal Key Integrity Protocol (TKIP) for dynamic encryption keys and the Michael message integrity check, thus providing a crucial stopgap of improved security while the industry awaited the stronger, final IEEE 802.11i standard (which would later be branded as WPA2).
 
 **Comparison Table (WEP, WPA, WPA2, WPA3)**
 
@@ -129,7 +129,7 @@ This fundamental shift from a static secret to a dynamic key management system w
 
 Wireless client authentication methods (sometimes generically referred to as IEEE 802.11 authentication methods or Wi-Fi authentication methods) can be categorized into Open System Authentication, Shared Key Authentication, and more advanced methods used in WPA/WPA2/WPA3. Follows is a list of wireless authentication methods in chronological order.
 
-#### **1. Open System Authentication (1997 – 802.11 original standard)**
+#### **1. Open System Authentication (1997 – IEEE 802.11 original standard)**
 
 * No real authentication; any client can connect.
 * Most common in public hotspots (e.g., cafes, airports).
@@ -144,9 +144,9 @@ Wireless client authentication methods (sometimes generically referred to as IEE
 
 * Introduced TKIP (Temporal Key Integrity Protocol) as a WEP replacement.
 * WPA-PSK (Pre-Shared Key) for home users.
-* WPA-Enterprise (802.1X/EAP) for businesses. 802.1X/EAP is defined in IEEE 802.1X, not 802.11 itself. Used in WPA/WPA2/WPA3-Enterprise.
+* WPA-Enterprise (802.1X/EAP) for businesses. 802.1X/EAP is defined in IEEE 802.1X, not IEEE 802.11 itself. Used in WPA/WPA2/WPA3-Enterprise.
 
-#### **4. WPA2-Personal/WPA2-Enterprise (2004 – 802.11i standard)**
+#### **4. WPA2-Personal/WPA2-Enterprise (2004 – IEEE 802.11i standard)**
 
 * Replaced TKIP with AES-CCMP (stronger encryption).
 * WPA2-PSK became the dominant Wi-Fi security method.
@@ -170,15 +170,15 @@ Wireless client authentication methods (sometimes generically referred to as IEE
 
 #### **Clarifications:**
 
-1. 802.1X/EAP is not part of the original 802.11 standard:
-   * It was introduced later (via 802.11i/WPA) for enterprise security.
+1. 802.1X/EAP is not part of the original IEEE 802.11 standard:
+   * It was introduced later (via IEEE 802.11i/WPA) for enterprise security.
    * 802.1X is a port-based authentication framework (from wired networks) adapted for Wi-Fi.
-1. EAP methods (LEAP, PEAP, EAP-TLS, etc.) are not 802.11 authentication:
+1. EAP methods (LEAP, PEAP, EAP-TLS, etc.) are not IEEE 802.11 authentication:
    * They are authentication protocols running inside 802.1X.
-   * The actual 802.11 layer just facilitates the exchange (EAPoL frames).
-1. Modern Wi-Fi uses a mix of 802.11 and non-802.11 auth methods:
-   * WPA/WPA2-Personal (PSK/SAE) uses pre-shared keys, not part of original 802.11 auth.
-   * WPA/WPA2/WPA3-Enterprise relies on 802.1X/EAP, not native 802.11.
+   * The actual IEEE 802.11 layer just facilitates the exchange (EAPoL frames).
+1. Modern Wi-Fi uses a mix of IEEE 802.11 and non-802.11 auth methods:
+   * WPA/WPA2-Personal (PSK/SAE) uses pre-shared keys, not part of original IEEE 802.11 auth.
+   * WPA/WPA2/WPA3-Enterprise relies on 802.1X/EAP, not native IEEE 802.11.
 
 ### Pre-Shared Key (PSK) and SAE (Simultaneous Authentication of Equals)
 
@@ -208,7 +208,7 @@ Here is a chronology of key developments within the IEEE 802.1x/EAP standard.
   * EAP-MD5 (deprecated, no encryption).
   * LEAP (Cisco-proprietary, later found insecure).
 
-#### **3. WPA2-Enterprise (2004 – 802.11i)**
+#### **3. WPA2-Enterprise (2004 – IEEE 802.11i)**
 
 * 802.1X/EAP became the gold standard for enterprise Wi-Fi under WPA2.
 * Newer EAP methods emerged:

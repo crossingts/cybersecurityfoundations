@@ -142,15 +142,14 @@ Wireless client authentication methods (sometimes generically referred to as IEE
 
 #### **3. WPA-Personal/WPA-Enterprise (2003 – Wi-Fi Alliance interim fix)**
 
-* Introduced TKIP (Temporal Key Integrity Protocol) as a WEP replacement.
-* WPA-PSK (Pre-Shared Key) for home users.
+* Introduced WPA-PSK (Pre-Shared Key) as a WEP replacement for home users.
 * WPA-Enterprise (802.1X/EAP) for businesses. 802.1X/EAP is defined in IEEE 802.1X, not IEEE 802.11 itself. Used in WPA/WPA2/WPA3-Enterprise.
 
 #### **4. WPA2-Personal/WPA2-Enterprise (2004 – IEEE 802.11i standard)**
 
-* Replaced TKIP with AES-CCMP (stronger encryption).
 * WPA2-PSK became the dominant Wi-Fi security method.
 * WPA2-Enterprise (802.1X/EAP).
+* Replaced TKIP with AES-CCMP (stronger encryption).
 
 #### **5. Wi-Fi Protected Setup (WPS – 2006)**
 
@@ -168,7 +167,7 @@ Wireless client authentication methods (sometimes generically referred to as IEE
 * Added 192-bit cryptographic suite for higher-security environments.
 * Mandates use of AES-GCMP instead of TKIP.
 
-#### **Clarifications:**
+#### **Note:**
 
 1. 802.1X/EAP is not part of the original IEEE 802.11 standard:
    * It was introduced later (via IEEE 802.11i/WPA) for enterprise security.
@@ -184,7 +183,7 @@ Wireless client authentication methods (sometimes generically referred to as IEE
 
 There are several methods of wireless client authentication. One common method is to use a shared static text string, also known as a pre-shared key (PSK). The PSK is stored on the client device and is presented to the AP when the client attempts to connect to the network. Any user who possessed the device could authenticate to the network. More stringent authentication methods require interaction with a user database, with the end user entering a valid username and password.
 
-In WPA-Personal and WPA2-Personal, the PSK (your Wi-Fi **password**) is used to derive encryption keys. In WPA3-Personal, PSK is replaced by SAE (Simultaneous Authentication of Equals) for authentication, a more secure method for key exchange (WPA3-Enterprise uses 802.1X for authentication)—the actual encryption in WPA3 uses AES-CCMP.
+In WPA-Personal and WPA2-Personal, the PSK (your Wi-Fi password) is used to derive encryption keys. In WPA3-Personal, PSK is replaced by SAE (Simultaneous Authentication of Equals) for authentication, a more secure method for key exchange (WPA3-Enterprise uses 802.1X for authentication)—the actual encryption in WPA3 uses AES-CCMP.
 
 ### Key developments within the IEEE 802.1x/EAP standard
 

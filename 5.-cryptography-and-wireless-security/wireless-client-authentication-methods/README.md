@@ -80,7 +80,7 @@ The WEP key can also be used as an optional authentication method. A client not 
 
 To protect data privacy on a wireless network, the data must be encrypted while it is traveling between clients and APs. This is done by encrypting the data payload in each wireless frame just before it is transmitted, and then decrypting it as it is received. The encryption method must be one that the transmitter and receiver share, so that the data can be encrypted and decrypted successfully.
 
-Only WEP (RC4-based) is defined in the original 802.11 standard. As noted, WEP’s shared key is both the authentication secret and encryption key, making it fundamentally insecure. Modern protocols such as Wi-Fi Protected Access (WPA2 and WPA3) derive temporary keys instead. WEP’s encryption was optional – networks could run unencrypted (Open System). No other encryption options existed until TKIP (WPA, 2003) and AES-CCMP (WPA2, 2004).&#x20;
+Only WEP (RC4-based) is defined in the original 802.11 standard. As noted, WEP’s shared key is both the authentication secret and encryption key, making it fundamentally insecure. Modern protocols such as Wi-Fi Protected Access (WPA2 and WPA3) derive temporary keys instead. WEP’s encryption was optional – networks could run unencrypted (open authentication + no encryption is one option; open authentication + WEP encryption is another option). No other encryption options existed until TKIP (WPA, 2003) and AES-CCMP (WPA2, 2004).
 
 #### Data integrity
 

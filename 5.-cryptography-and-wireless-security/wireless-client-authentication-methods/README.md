@@ -86,13 +86,14 @@ Only WEP (RC4-based) is defined in the original 802.11 standard. As noted, WEPâ€
 
 No true message authentication (MIC) existed within the original 802.11 standard. WPA introduced Michael MIC, which was better than WEP but still vulnerable to forgery.
 
-**Summary for Original IEEE 802.11 Standard:**
+**Summary for Original IEEE 802.11 Standard**
 
 | **Feature**        | **Original 802.11 (1997)**          | **Modern Fix (WPA2/WPA3)**       |
 | ------------------ | ----------------------------------- | -------------------------------- |
 | **Privacy**        | WEP (RC4) or None (Open)            | AES-CCMP / GCMP                  |
 | **Integrity**      | CRC-32 (ICV) â€“ No security          | AES-CBC-MAC (CCMP) / GMAC (GCMP) |
 | **Authentication** | Open System or Shared Key (WEP PSK) | 802.1X/EAP or SAE (WPA3)         |
+
 While IEEE 802.11 defines the fundamental operation of Wi-Fi, its built-in security (Open and WEP) was fundamentally weak. The modern wireless security management framework is based primarily on the IEEE 802.11i amendment (2004), which introduced the Robust Security Network (RSN) framework. This framework underpins WPA2 and WPA3, providing the basis for strong authentication, encryption, and integrity.
 
 The Wi-Fi Protected Access (WPA) protocol was introduced by the Wi-Fi Alliance in 2003 as an interim security standard to address the critical vulnerabilities of WEP, which by then were well-known. The full, robust IEEE 802.11i amendment was still under development and years away from final ratification. To provide a immediate solution, the Wi-Fi Alliance created WPA by defining a subset of the draft 802.11i specifications that were mature enough to implement. Essentially, WPA served as a "pre-standard" version of 802.11i, incorporating its key enhancements like the Temporal Key Integrity Protocol (TKIP) for dynamic encryption keys and the Michael message integrity check, thus providing a crucial stopgap of improved security while the industry awaited the stronger, final 802.11i standard (which would later be branded as WPA2).

@@ -335,5 +335,3 @@ EAP-TLS can only be used if the wireless clients can accept and use digital cert
 Coleman, D. D., & Westcott, D. A. (2022). CWNA Certified Wireless Network Administrator Official Study Guide: Exam CWNA-109. John Wiley & Sons.
 
 Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 1. Cisco Press.
-
-Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 2. Cisco Press.

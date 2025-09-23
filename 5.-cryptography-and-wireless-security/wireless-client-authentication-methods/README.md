@@ -66,7 +66,7 @@ With no challenge, any 802.11 client may authenticate to access the network. Tha
 
 Client screening in WLANs with open authentication will often be a form of web authentication. Most client operating systems will flag WLANs with open authentication to warn you that your wireless data will not be secured in any way if you join.
 
-After the open 802.11 connection is established, the user’s identity is authenticated by higher-layer security methods. These include Pre-Shared Key (PSK) for personal networks (like WPA2/3-Personal), the robust IEEE 802.1X framework with EAP for enterprise environments, and captive portals for public guest access.
+After the open 802.11 connection is established, the user’s identity is authenticated by higher-layer security methods. These methods include Pre-Shared Key (PSK) for personal networks (like WPA2/3-Personal), the robust IEEE 802.1X framework with EAP for enterprise environments, and captive portals for public guest access.
 
 **WEP (Wired Equivalent Privacy)**
 
@@ -78,13 +78,13 @@ The WEP key can also be used as an optional authentication method. A client not 
 
 #### Data privacy
 
-To protect data privacy on a wireless network, the data must be encrypted while it is traveling between clients and APs. This is done by encrypting the data payload in each wireless frame just before it is transmitted, and then decrypting it as it is received. The encryption method must be one that the transmitter and receiver share, so that the data can be encrypted and decrypted successfully.
+To protect data privacy on a wireless network, the data must be encrypted while it is traveling between clients and APs. This is done by encrypting the data payload in each wireless frame just before it is transmitted, and then decrypting it as it is received. The encryption method must be one that the transmitter and receiver share so that the data can be encrypted and decrypted successfully.
 
 Only WEP (RC4-based) is defined in the original 802.11 standard. As noted, WEP’s shared key is both the authentication secret and encryption key, making it fundamentally insecure. Modern protocols such as Wi-Fi Protected Access (WPA2 and WPA3) derive temporary keys instead. WEP’s encryption was optional – networks could run unencrypted (open authentication + no encryption is one option; open authentication + WEP encryption is another option). No other encryption options existed until TKIP (WPA, 2003) and AES-CCMP (WPA2, 2004).
 
 #### Data integrity
 
-No true message authentication (MIC) existed within the original 802.11 standard. WPA introduced Michael MIC, which was better than WEP but still vulnerable to forgery.
+No true message authentication existed within the original 802.11 standard. WPA introduced Michael MIC, which was better than WEP but still vulnerable to forgery.
 
 **Summary for Original IEEE 802.11 Standard**
 
@@ -114,7 +114,19 @@ The Wi-Fi Protected Access (WPA) protocol was introduced by the Wi-Fi Alliance i
 1. WPA3-Enterprise Encryption: The standard mode uses AES-CCMP (128-bit). The higher-security 192-bit mode, aligned with the CNSA suite, mandates AES-256-GCMP.
     
 2. WPA3-Enterprise Key Size / Security Suite: This column is best understood as the minimum security strength of the cryptographic suite. The standard mode offers 128-bit strength. The optional 192-bit mode uses a 256-bit AES key (and other stronger algorithms) to achieve a higher overall security strength of 192 bits.
+
+Technically, both the WEP key and the WPA/WPA2 PSK are pre-shared secrets used for network access. However, their security differs drastically due to how they are implemented, particularly in how they handle authentication and key management.
+
+WEP uses the WEP key directly for both authentication (the client proves it knows the key by encrypting a challenge from the AP) and encryption (the same static key is used to encrypt all data packets via RC4). This direct use means compromising the key through the authentication process breaks both trust and privacy.
+
+In contrast, WPA/WPA2-Personal uses the PSK within a secure framework. The PSK itself is never used for encryption. Instead, the PSK serves as a starting point in a secure 4-Way Handshake that achieves two separate goals:
+
+1. Secure authentication: It mutually verifies that both the client and AP know the PSK.
     
+2. Dynamic key derivation: It generates unique, temporary session keys used solely for encrypting data with strong algorithms (TKIP or AES-CCMP).
+
+This fundamental shift from a static secret to a dynamic key management system was a monumental security improvement. This separation of the authentication secret from the encryption keys is why PSK is fundamentally more secure than the WEP key.
+
 ### Wireless client authentication methods in chronological order
 
 Wireless client authentication methods (sometimes generically referred to as IEEE 802.11 authentication methods or Wi-Fi authentication methods) can be categorized into Open System Authentication, Shared Key Authentication, and more advanced methods used in WPA/WPA2/WPA3. Follows is a list of wireless authentication methods in chronological order.

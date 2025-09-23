@@ -8,20 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4cc3c56fdb58995f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "5.-cryptography-and-wireless-security/wireless-client-authentication-methods/README.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "README"
-            }
-          },
-          {
             "id": "40c4555dcbe928f5",
             "type": "leaf",
             "state": {
@@ -35,8 +21,7 @@
               "title": "README"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"

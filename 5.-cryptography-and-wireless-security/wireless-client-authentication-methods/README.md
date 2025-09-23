@@ -19,8 +19,8 @@ This section has two main goals. First, this section introduces the IEEE 802.11 
 - **Introduction**
 - **The IEEE 802.11 standard as a wireless security management framework**
   - **Authentication (trust)**
-   - **Open authentication**
-   - **WEP (Wired Equivalent Privacy)**
+    - **Open authentication**
+    - **WEP (Wired Equivalent Privacy)**
   - **Data privacy**
   - **Data integrity**
 - **Wireless client authentication methods in chronological order**

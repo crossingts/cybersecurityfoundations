@@ -36,10 +36,10 @@ In a wireless connection, data is transmitted via radio waves that propagate in 
 
 A comprehensive approach to securing a wireless network involves:
 
-1. **Identifying the endpoints** (authenticating client devices) of the wireless connection – for example, using **MAC address filtering** or **IEEE 802.1X certificate-based device authentication**.
-2. **Authenticating the end user** accessing the network – for example, via **WPA2-Enterprise** with **EAP-TLS** or **EAP-PEAP** for username/password verification.
-3. **Protecting the wireless data from eavesdroppers** using encryption – for example, using **AES-CCMP encryption** (WPA3) or **TKIP** (legacy WPA).
-4. **Protecting the wireless data from tampering** with frame authentication – for example, with **802.11’s frame integrity checks (MIC)** or **GCMP** in WPA3.
+1. Identifying the endpoints (authenticating client devices) – for example, using MAC address filtering or IEEE 802.1X certificate-based device authentication.
+2. Authenticating the end user accessing the network – for example, via WPA2-Enterprise with EAP-TLS or EAP-PEAP for username/password verification.
+3. Protecting the wireless data from eavesdroppers using encryption – for example, using AES-CCMP encryption (WPA3) or TKIP (legacy WPA).
+4. Protecting the wireless data from tampering with frame authentication – for example, with 802.11’s frame integrity checks (MIC) or GCMP in WPA3.
 
 Endpoint identification ensures only authorized devices connect, while user authentication verifies legitimate users. Together, these measures strengthen access control, while encryption and integrity checks safeguard data in transit.
 

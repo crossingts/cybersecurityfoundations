@@ -18,6 +18,7 @@ This section has two main goals. First, this section introduces the IEEE 802.11 
 
 * **Introduction**
 * **The IEEE 802.11 standard as a wireless security management framework**
+* **Authentication (trust)**
   * **Open authentication**
   * **WEP (Wired Equivalent Privacy)**
 * **Wireless client authentication methods in chronological order**
@@ -49,7 +50,7 @@ The IEEE 802.11 standard provides a basis for a wireless security management fra
 
 #### Authentication (trust)
 
-Clients must first discover a BSS and then request permission to associate with it. Only trusted and expected devices should be given network access. Clients should be authenticated before they are allowed to associate. Potential clients must present a form of credentials to the APs to identify themselves. The original 802.11 standard gave only two options to authenticate clients: open authentication and WEP.
+Clients must first discover a BSS (Basic Service Set) and then request permission to associate with it. Only trusted and expected devices should be given network access. Clients should be authenticated before they are allowed to associate. Potential clients must present a form of credentials to the APs to identify themselves. The original 802.11 standard gave only two options to authenticate clients: open authentication and WEP.
 
 **Open authentication**
 

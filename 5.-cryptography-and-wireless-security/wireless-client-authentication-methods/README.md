@@ -12,7 +12,11 @@ description: >-
 * Become familiar with common wireless client authentication methods
 * Identify common EAP-based authentication methods
 
-This section has two main goals. First, this section introduces the IEEE 802.11 networking standard which provides a basis for a wireless security management framework (client authentication, message privacy, and message integrity). Second, this section introduces the wireless client authentication methods of open authentication, WEP, PSK, SAE, and 802.1x/EAP.
+This section has two main goals. First, this section introduces the IEEE 802.11 networking standard as providing a basis for a wireless security management framework (client authentication, message privacy, and message integrity). Second, this section introduces the wireless client authentication methods of open authentication, WEP, PSK, SAE, and 802.1x/EAP.
+
+This section has two primary goals. First, the section establishes the IEEE 802.11 standard's role in defining the original, albeit weak, security mechanisms of Open Authentication and Wired Equivalent Privacy (WEP), which managed authentication (trust), data privacy, and data integrity. The section then traces the critical evolution of these security components through modern protocols like WPA2 and WPA3.
+
+Second, the section details the chronological development of wireless client authentication methods, from the basic Open and WEP systems to Pre-Shared Key (PSK) and Simultaneous Authentication of Equals (SAE) for personal networks. Finally, the section explores the IEEE 802.1X/EAP framework for enterprise environments, including key developments and common EAP methods like LEAP, EAP-FAST, PEAP, and EAP-TLS.
 
 ## Topics covered in this section
 

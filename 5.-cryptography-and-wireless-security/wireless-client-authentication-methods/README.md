@@ -48,11 +48,15 @@ Endpoint identification ensures only authorized devices connect, while user auth
 
 ### The IEEE 802.11 standard as a wireless security management framework
 
+IEEE 802.11 is part of the IEEE 802 collection of technical standards for local area networks (LANs). The IEEE 802 standards are created and maintained by the Institute of Electrical and Electronics Engineers (IEEE) LAN/MAN Standards Committee (IEEE 802). 
+
+IEEE 802.11 specifies the set of protocols for the medium access control (MAC) and physical layer (PHY) that implement wireless local area network (WLAN) computer communication. This standard and its amendments are the underlying technology for Wi-Fi branded products, making them the most widely used wireless computer networking standards globally. Commonly used in home and office settings, IEEE 802.11 allows devices such as laptops, printers, and smartphones to communicate with each other and access the Internet without wires. Furthermore, IEEE 802.11 provides the foundation for vehicle-based communication networks via IEEE 802.11p.
+
 The IEEE 802.11 standard provides a basis for a wireless security management framework that can be used to add trust, privacy, and integrity to a wireless network. The following discussion gives a brief overview of the IEEE 802.11 standard.
 
 #### Authentication (trust)
 
-Clients must first discover a BSS (Basic Service Set) and then request permission to associate with it. Only trusted and expected devices should be given network access. Clients should be authenticated before they are allowed to associate. Potential clients must present a form of credentials to the APs to identify themselves. The original 802.11 standard gave only two options to authenticate clients: open authentication and WEP.
+Clients must first discover a BSS (Basic Service Set) and then request permission to associate with it. Only trusted and expected devices should be given network access. Clients should be authenticated before they are allowed to associate. Potential clients must present a form of credentials to the APs (Access Points) to identify themselves. The original 802.11 standard gave only two options to authenticate clients: open authentication and WEP.
 
 **Open authentication**
 
@@ -61,6 +65,8 @@ The open authentication process has only one requirement for a client wishing to
 With no challenge, any 802.11 client may authenticate to access the network. That is, in fact, the whole purpose of open authentication—to validate that a client is a valid 802.11 device by authenticating the wireless hardware and the protocol. Authenticating the user’s identity is handled as a true security process through other means. (Odom, 2020, p. 710)
 
 Client screening in WLANs with open authentication will often be a form of web authentication. Most client operating systems will flag WLANs with open authentication to warn you that your wireless data will not be secured in any way if you join.
+
+After the open 802.11 connection is established, the user’s identity is authenticated by higher-layer security methods. These include Pre-Shared Key (PSK) for personal networks (like WPA2/3-Personal), the robust IEEE 802.1X framework with EAP for enterprise environments, and captive portals for public guest access.
 
 **WEP (Wired Equivalent Privacy)**
 

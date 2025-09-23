@@ -117,13 +117,11 @@ The Wi-Fi Protected Access (WPA) protocol was introduced by the Wi-Fi Alliance i
 
 Technically, both the WEP key and the WPA/WPA2 PSK are pre-shared secrets used for network access. However, their security differs drastically due to how they are implemented, particularly in how they handle authentication and key management.
 
-WEP uses the WEP key directly for both authentication (the client proves it knows the key by encrypting a challenge from the AP) and encryption (the same static key is used to encrypt all data packets via RC4). This direct use means compromising the key through the authentication process breaks both trust and privacy.
+WEP uses the WEP key directly for both authentication (the client proves it knows the key by encrypting a challenge from the AP) and encryption (the same static key is used to encrypt all data packets via RC4). This direct use means compromising the key through the authentication process breaks both trust and privacy. In contrast, WPA/WPA2-Personal uses the PSK within a secure framework. The PSK itself is never used for encryption. Instead, the PSK serves as a starting point in a secure 4-Way Handshake that achieves two separate goals:
 
-In contrast, WPA/WPA2-Personal uses the PSK within a secure framework. The PSK itself is never used for encryption. Instead, the PSK serves as a starting point in a secure 4-Way Handshake that achieves two separate goals:
-
-1. Secure authentication: It mutually verifies that both the client and AP know the PSK.
+1. Secure authentication: The 4-Way Handshake mutually verifies that both the client and AP know the PSK.
     
-2. Dynamic key derivation: It generates unique, temporary session keys used solely for encrypting data with strong algorithms (TKIP or AES-CCMP).
+2. Dynamic key derivation: The 4-Way Handshake generates unique, temporary session keys used solely for encrypting data with strong algorithms (TKIP or AES-CCMP).
 
 This fundamental shift from a static secret to a dynamic key management system was a monumental security improvement. This separation of the authentication secret from the encryption keys is why PSK is fundamentally more secure than the WEP key.
 

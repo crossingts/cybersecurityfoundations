@@ -74,9 +74,7 @@ WEP uses a shared key (WEP key) that must be known to both the sender and receiv
 
 WEP uses the RC4 cipher algorithm to encrypt data that is transmitted over a wireless network. “The same algorithm encrypts data at the sender and decrypts it at the receiver. The algorithm uses a string of bits as a key, commonly called a WEP key, to derive other encryption keys—one per wireless frame” (Odom, 2020, p. 711).
 
-The WEP key can also be used as an optional authentication method. A client not using the correct WEP key cannot associate with an AP.&#x20;
-
-The AP tests the client’s knowledge of the WEP key by sending it a random challenge phrase. The client encrypts the challenge phrase with WEP and returns the result to the AP. The AP can compare the client’s encryption with its own to see whether the two WEP keys yield identical results. (Odom, 2020, p. 711)
+The WEP key can also be used as an optional authentication method. A client not using the correct WEP key cannot associate with an AP. The AP sends a random challenge phrase to the client. The client must then encrypt this phrase using its WEP key and send the encrypted result back. The AP verifies the client's key by encrypting the same challenge itself and comparing the two results.
 
 #### Data privacy
 

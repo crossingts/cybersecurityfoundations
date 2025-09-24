@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5.-cryptography-and-wireless-security/wireless-client-authentication-methods/wireless-client-authentication-methods-quiz.md",
+                "file": "5.-cryptography-and-wireless-security/replay-attacks-and-anti-replay-methods/replay-attacks-and-anti-replay-methods-quiz.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "wireless-client-authentication-methods-quiz"
+              "title": "replay-attacks-and-anti-replay-methods-quiz"
             }
           }
         ],
@@ -198,11 +198,11 @@
   },
   "active": "3cf5cd6380db943a",
   "lastOpenFiles": [
-    "5.-cryptography-and-wireless-security/wireless-client-authentication-methods/ieee-802.1x-eap-authentication-methods.md",
+    "5.-cryptography-and-wireless-security/replay-attacks-and-anti-replay-methods/README.md",
     "5.-cryptography-and-wireless-security/wireless-client-authentication-methods/wireless-client-authentication-methods-quiz.md",
+    "5.-cryptography-and-wireless-security/wireless-client-authentication-methods/ieee-802.1x-eap-authentication-methods.md",
     "5.-cryptography-and-wireless-security/wireless-client-authentication-methods/README.md",
     "5.-cryptography-and-wireless-security/replay-attacks-and-anti-replay-methods/replay-attacks-and-anti-replay-methods-quiz.md",
-    "5.-cryptography-and-wireless-security/replay-attacks-and-anti-replay-methods/README.md",
     "5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods.md",
     "5.-cryptography-and-wireless-security/introduction-cryptography-and-wireless-security.md",
     "5.-cryptography-and-wireless-security/chapter-5-review-questions.md",

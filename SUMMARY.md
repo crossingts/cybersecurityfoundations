@@ -115,7 +115,6 @@
 * [Replay attacks and anti-replay methods](5.-cryptography-and-wireless-security/replay-attacks-and-anti-replay-methods/README.md)
   * [Replay attacks and anti-replay methods — Quiz](5.-cryptography-and-wireless-security/replay-attacks-and-anti-replay-methods/replay-attacks-and-anti-replay-methods-quiz.md)
 * [Wireless client authentication methods](5.-cryptography-and-wireless-security/wireless-client-authentication-methods/README.md)
-  * [IEEE 802.1x/EAP authentication methods](5.-cryptography-and-wireless-security/wireless-client-authentication-methods/ieee-802.1x-eap-authentication-methods.md)
 * [Wireless privacy and integrity methods](5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods.md)
 * [Authentication and encryption in WPA, WPA2, and WPA3](5.-cryptography-and-wireless-security/authentication-and-encryption-in-wpa-wpa2-and-wpa3.md)
 * [Chapter 5 review questions](5.-cryptography-and-wireless-security/chapter-5-review-questions.md)

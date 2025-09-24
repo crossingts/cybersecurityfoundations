@@ -162,3 +162,20 @@ TLS ensures the data is not modified in transit (integrity) but does not inheren
 **5. The text explains that nonces are used as an anti-replay method. What is a nonce and what property does it provide to a message to make it replay-resistant?**\
 **Answer:**\
 A nonce is a random number used only once. It provides the property of freshness to a message. The receiver tracks received nonces and will discard any message containing a duplicate nonce, ensuring each message is unique and not a replay of an old one.
+
+### Wireless client authentication methods
+
+**1. The original IEEE 802.11 standard defined Open System authentication. Describe the purpose of this method and what critical security function it lacks.**  
+**Answer:** Open System authentication only validates that a client device is a valid IEEE 802.11 device capable of communicating with the protocol. It lacks any mechanism to authenticate the user's identity or verify that the client is authorized to join the network, leaving those functions to higher-layer security methods.
+
+**2. A network administrator is explaining why WPA2-Personal is more secure than WEP, even though both use a pre-shared secret. Describe the fundamental difference in how each protocol uses its secret key.**  
+**Answer:** WEP uses the static pre-shared key directly to encrypt all data packets. In contrast, WPA2-Personal uses the Pre-Shared Key (PSK) only as a starting point for the 4-Way Handshake, which generates unique, temporary session keys for encryption, keeping the master secret secure.
+
+**3. The Wi-Fi Alliance introduced WPA in 2003 before the IEEE 802.11i amendment was finalized. Describe the specific purpose of WPA as an interim standard and the key security mechanisms it implemented from the draft 802.11i specification.**  
+**Answer:** WPA served as a pre-standard stopgap to address the critical vulnerabilities of WEP immediately. It implemented the Temporal Key Integrity Protocol (TKIP) for dynamic encryption and the Michael message integrity check from the draft 802.11i specification.
+
+**4. A technician is configuring a WPA3-Enterprise network for a government agency. To meet the highest security requirements, they must enable the 192-bit mode. Name the two specific cryptographic components this mode mandates.**  
+**Answer:** The 192-bit mode mandates the use of (1) AES-256-GCMP for encryption and (2) the 256-bit GMAC for integrity protection.
+
+**5. When configuring EAP-TLS authentication, an administrator must deploy digital certificates to both the client devices and the authentication server. Explain why this requirement for mutual certificate-based authentication is more secure than a method like PEAP that only uses a server-side certificate.**  
+**Answer:** EAP-TLS requires mutual authentication, meaning both the server proves its identity to the client and the client proves its identity to the server using certificates. This is more secure than PEAP, where only the server is authenticated with a certificate, and the client authenticates with a less secure method like a username and password inside the tunnel, which can still be phished or stolen.

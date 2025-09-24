@@ -1,6 +1,6 @@
 # Wireless client authentication methods — Quiz
 
-### Wireless client authentication methods - Quiz
+### Wireless client authentication methods
 
 **1. The original IEEE 802.11 standard defined which two authentication methods? (Choose one answer)**\
 a) PSK and SAE\

@@ -6,9 +6,13 @@ description: This section covers key wireless privacy and integrity algorithms, 
 
 ## Learning objectives
 
-* Become familiar with key encryption and message integrity algorithms used in securing wireless networks
+* Explain the vulnerabilities in WEP that necessitated the development of TKIP and the Michael MIC
+- Differentiate between unkeyed hashes and keyed Message Authentication Codes (MACs) for ensuring data integrity
+- Describe the function of TKIP and the Michael MIC as interim security measures for WEP-era hardware
+- Identify AES-CCMP as the core security protocol for WPA2 and AES-GCMP for WPA3, highlighting their advantages over previous standards
+- Understand the progression from WPA to WPA3 as a response to evolving security threats and hardware capabilities
 
-This section covers key encryption and message integrity algorithms used in securing wireless networks, including TKIP (WPA), MIC (Message Integrity Check "Michael" in WPA), AES-CCMP (WPA2), and AES-GCMP (WPA3).
+This section traces the evolution of key encryption and integrity algorithms developed to protect Wi-Fi networks. It covers interim solutions like TKIP and the Michael MIC, which were designed for legacy hardware, their security limitations, and the modern, robust protocols that replaced them. More specifically, this sections cover the following encryption and integrity algorithms: TKIP (WPA), MIC (Message Integrity Check "Michael" in WPA), AES-CCMP (WPA2), and AES-GCMP (WPA3).
 
 ## Topics covered in this section
 
@@ -79,7 +83,7 @@ The Counter/CBC-MAC Protocol (CCMP) is considered more secure than TKIP. CCMP co
 
 ■ Cipher Block Chaining Message Authentication Code (CBC-MAC) used as a message integrity check (MIC).
 
-AES is open, publicly accessible, and is **the most secure encryption method** available today. AES is widely used around the world. AES is the encryption algorithm of choice for NIST and the U.S. government today.
+AES is open, publicly accessible, and is the most secure encryption method available today. AES is widely used around the world. AES is the encryption algorithm of choice for NIST and the U.S. government today.
 
 CCMP cannot be used on legacy devices that only support WEP or TKIP. For CCMP to be used in a wireless network, the client devices and APs must support the AES counter mode and CBC-MAC in hardware. 
 

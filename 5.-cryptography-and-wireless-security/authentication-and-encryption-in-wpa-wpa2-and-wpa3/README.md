@@ -18,21 +18,21 @@ This section compares WPA, WPA2, and WPA3 wireless security protocols for authen
 * **Cryptographic methods and algorithms in personal and enterprise modes**
 * **Final review**
 
-### Introduction&#x20;
+### Introduction
 
 Wi-Fi Protected Access (WPA) is a suite of security certifications for wireless networks, developed and maintained by the Wi-Fi Alliance (a nonprofit industry association that promotes Wi-Fi technology and interoperability). These certifications define security protocols to protect data transmitted over Wi-Fi. A wireless client device and an AP and its associated WLC certified by the Wi-Fi Alliance for the same WPA version are compatible and offer the same security components.
 
-There are three WPA versions: WPA, WPA2, and WPA3. The first generation WPA certification (known simply as WPA) was introduced while the IEEE 802.11i amendment for best practice security methods was still under development. The Wi-Fi Alliance based WPA on parts of 802.11i and included 802.1x authentication, TKIP, and a method for dynamic encryption key management.
+There are three WPA versions: WPA, WPA2, and WPA3. The first generation WPA certification (known simply as WPA) was introduced while the IEEE 802.11i amendment was still under development. The Wi-Fi Alliance based WPA on parts of 802.11i and included 802.1x authentication, TKIP, and a method for dynamic encryption key management.
 
 The Wi-Fi Alliance incorporated the full IEEE 802.11i standard into its WPA2 certification after it was ratified and published. WPA2 uses the superior AES CCMP algorithms instead of the deprecated TKIP algorithms from WPA. WPA2 was intended to replace WPA.
 
 The Wi-Fi Alliance introduced WPA3 in 2018, adding several important and superior security mechanisms. WPA3 uses stronger AES encryption with the Galois/Counter Mode Protocol (GCMP). WPA3 also uses Protected Management Frames (PMF) to secure important 802.11 management frames between APs and clients. This prevents malicious activity targeting a BSS’s operation.
 
-The Wi-Fi Alliance made wireless security configuration straightforward and consistent through its WPA, WPA2, and WPA3 certifications. WPA, WPA2, and WPA3 simplify wireless network configuration and compatibility because they limit which authentication and privacy/integrity methods can be used.&#x20;
+The Wi-Fi Alliance made wireless security configuration straightforward and consistent through its WPA, WPA2, and WPA3 certifications. WPA, WPA2, and WPA3 simplify wireless network configuration and compatibility because they limit which authentication and privacy/integrity methods can be used.  
 
 If you are using WPA, you should consider using WPA2 instead—at least until WPA3 becomes widely available on wireless client devices, APs, and WLCs.
 
-The three WPA versions support two client authentication modes, based on the scale of the deployment:&#x20;
+The three WPA versions support two client authentication modes, based on the scale of the deployment:  
 
 * A pre-shared key (PSK) or personal mode
 * 802.1x or enterprise mode
@@ -53,9 +53,9 @@ WPA3-Personal can defeat such an attack by strengthening the key exchange betwee
 
 WPA3-Personal offers forward secrecy, so, even if a password or key is compromised, attackers are prevented from being able to use a key to unencrypt data that has already been transmitted over the air.
 
-The Personal mode of any WPA version is easy to deploy in a small environment because a simple text key string is all that is needed to authenticate the clients.&#x20;
+The Personal mode of any WPA version is easy to deploy in a small environment because a simple text key string is all that is needed to authenticate the clients.  
 
-Note that all devices using the WLAN must be configured with an identical pre-shared key. Changing the key means every device using the WLAN must be updated.&#x20;
+Note that all devices using the WLAN must be configured with an identical pre-shared key. Changing the key means every device using the WLAN must be updated.  
 
 #### **Summary Table: WPA, WPA2, WPA3 (Personal Mode)**
 

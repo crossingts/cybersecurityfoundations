@@ -41,6 +41,6 @@ This chapter covers how SSL/TLS uses cryptographic tools (symmetric encryption, 
 
 [Wireless client authentication methods](wireless-client-authentication-methods/)
 
-[Wireless privacy and integrity methods](wireless-privacy-and-integrity-methods.md)
+[Wireless privacy and integrity methods](wireless-privacy-and-integrity-methods/)
 
-[Authentication and encryption in WPA, WPA2, and WPA3](authentication-and-encryption-in-wpa-wpa2-and-wpa3.md)
+[Authentication and encryption in WPA, WPA2, and WPA3](authentication-and-encryption-in-wpa-wpa2-and-wpa3/)

@@ -116,8 +116,10 @@
   * [Replay attacks and anti-replay methods — Quiz](5.-cryptography-and-wireless-security/replay-attacks-and-anti-replay-methods/replay-attacks-and-anti-replay-methods-quiz.md)
 * [Wireless client authentication methods](5.-cryptography-and-wireless-security/wireless-client-authentication-methods/README.md)
   * [Wireless client authentication methods — Quiz](5.-cryptography-and-wireless-security/wireless-client-authentication-methods/wireless-client-authentication-methods-quiz.md)
-* [Wireless privacy and integrity methods](5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods.md)
-* [Authentication and encryption in WPA, WPA2, and WPA3](5.-cryptography-and-wireless-security/authentication-and-encryption-in-wpa-wpa2-and-wpa3.md)
+* [Wireless privacy and integrity methods](5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods/README.md)
+  * [Wireless privacy and integrity methods — Quiz](5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods/wireless-privacy-and-integrity-methods-quiz.md)
+* [Authentication and encryption in WPA, WPA2, and WPA3](5.-cryptography-and-wireless-security/authentication-and-encryption-in-wpa-wpa2-and-wpa3/README.md)
+  * [Authentication and encryption in WPA, WPA2, and WPA3 — Quiz](5.-cryptography-and-wireless-security/authentication-and-encryption-in-wpa-wpa2-and-wpa3/authentication-and-encryption-in-wpa-wpa2-and-wpa3-quiz.md)
 * [Chapter 5 review questions](5.-cryptography-and-wireless-security/chapter-5-review-questions.md)
 
 ## 6. Practical foundations in ethical hacking

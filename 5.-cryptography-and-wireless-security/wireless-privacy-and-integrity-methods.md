@@ -113,4 +113,6 @@ GCMP is used in WPA3.
 
 ### References
 
-Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 1. Cisco Press.
+Edney, J., & Arbaugh, W. A. (2004). *Real 802.11 Security: Wi-Fi Protected Access and 802.11i*. Addison-Wesley Professional.
+
+Odom, W. (2020). *CCNA 200-301 Official Cert Guide, Volume 1*. Cisco Press.

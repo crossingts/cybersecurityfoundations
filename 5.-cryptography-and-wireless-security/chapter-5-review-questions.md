@@ -179,3 +179,20 @@ A nonce is a random number used only once. It provides the property of freshness
 
 **5. When configuring EAP-TLS authentication, an administrator must deploy digital certificates to both the client devices and the authentication server. Explain why this requirement for mutual certificate-based authentication is more secure than a method like PEAP that only uses a server-side certificate.**  
 **Answer:** EAP-TLS requires mutual authentication, meaning both the server proves its identity to the client and the client proves its identity to the server using certificates. This is more secure than PEAP, where only the server is authenticated with a certificate, and the client authenticates with a less secure method like a username and password inside the tunnel, which can still be phished or stolen.
+
+### Wireless privacy and integrity methods
+
+**1. TKIP was designed as an interim solution to replace WEP. What was the single most important design constraint that shaped its development, and what specific cipher did it reuse as a result?**
+**Answer:** The most important constraint was the need to function on legacy WEP hardware. As a result, TKIP continued to use the RC4 stream cipher.
+
+**2. The text states that a simple cryptographic hash is insufficient for protecting against a malicious attacker. What specific capability does a keyed Message Authentication Code (MAC) provide that a hash alone does not?**
+**Answer:** A MAC requires a secret key to generate the integrity value. This prevents a malicious attacker from forging a valid integrity check after tampering with the data, as they do not possess the key.
+
+**3. The Counter Mode with Cipher Block Chaining Message Authentication Code Protocol (CCMP) consists of two algorithms. Name the core encryption standard it uses and the specific algorithm it employs for the Message Integrity Check (MIC).**
+ **Answer:** CCMP uses the Advanced Encryption Standard (AES) for encryption and the Cipher Block Chaining Message Authentication Code (CBC-MAC) for the MIC.
+
+**4. The Michael MIC used in WPA was an improvement over WEP's integrity check but was still vulnerable. Identify one of the key reasons why it was considered a weak Message Authentication Code (MAC).**
+**Answer:** Michael was considered weak because it was vulnerable to forgery attacks. It was designed to be computationally simple enough to run on older hardware, which inherently limited its cryptographic strength.
+
+**5. The transition from WPA2 to WPA3 introduced a new protocol for authenticated encryption. Name this protocol and state one of its cited advantages over the CCMP protocol used in WPA2.**
+ **Answer:** The protocol is AES-GCMP (Galois/Counter Mode Protocol). One of its advantages is that it is more efficient (faster) than CCMP while also being considered more secure.

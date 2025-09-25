@@ -102,7 +102,14 @@ GCMP is an authenticated encryption suite that is more secure and more efficient
 GCMP is used in WPA3.
 ### Key takeaways
 
-* Key encryption and message integrity algorithms used in securing wireless networks include TKIP (WPA), AES-CCMP (WPA2), AES-GCMP (WPA3), and Michael (WPA)
+* The failure of WEP's weak integrity check (CRC-32) and RC4 cipher created an urgent need for new wireless security protocols.
+- TKIP and the Michael MIC were designed as interim solutions for legacy hardware, introducing key security improvements like per-packet keys and message integrity checks without requiring new hardware.
+- A keyed Message Authentication Code (MAC), unlike a simple cryptographic hash, uses a secret key to prevent malicious actors from forging data integrity checks.
+- While an improvement, both TKIP (based on RC4) and the Michael MIC had known vulnerabilities and were ultimately deprecated.
+- WPA2 established AES-CCMP as the mandatory, robust replacement, combining AES encryption for confidentiality with CBC-MAC for integrity.
+- WPA3 introduces AES-GCMP as a more efficient and secure authenticated encryption protocol, especially for enterprise networks.
+- The evolution from WPA to WPA3 represents a shift from backward-compatible patches to requiring modern, dedicated hardware for strong security.
+- Key encryption and message integrity algorithms used in securing wireless networks include TKIP (WPA), Michael MIC (WPA), AES-CCMP (WPA2), and AES-GCMP (WPA3).
 
 ### References
 

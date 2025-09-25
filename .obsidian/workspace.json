@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5.-cryptography-and-wireless-security/introduction-cryptography-and-wireless-security.md",
+                "file": "5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods/wireless-privacy-and-integrity-methods-quiz.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "introduction-cryptography-and-wireless-security"
+              "title": "wireless-privacy-and-integrity-methods-quiz"
             }
           }
         ],
@@ -198,14 +198,15 @@
   },
   "active": "3cf5cd6380db943a",
   "lastOpenFiles": [
-    "5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods.md",
-    "5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods/wireless-privacy-and-integrity-methods-quiz.md",
+    "5.-cryptography-and-wireless-security/chapter-5-review-questions.md",
     "5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods/README.md",
+    "5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods/wireless-privacy-and-integrity-methods-quiz.md",
+    "5.-cryptography-and-wireless-security/introduction-cryptography-and-wireless-security.md",
+    "5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods.md",
     "5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods",
     "5.-cryptography-and-wireless-security/authentication-and-encryption-in-wpa-wpa2-and-wpa3/authentication-and-encryption-in-wpa-wpa2-and-wpa3-quiz.md",
     "5.-cryptography-and-wireless-security/authentication-and-encryption-in-wpa-wpa2-and-wpa3/README.md",
     "5.-cryptography-and-wireless-security/authentication-and-encryption-in-wpa-wpa2-and-wpa3",
-    "5.-cryptography-and-wireless-security/introduction-cryptography-and-wireless-security.md",
     "5.-cryptography-and-wireless-security/wireless-client-authentication-methods/wireless-client-authentication-methods-quiz.md",
     "5.-cryptography-and-wireless-security/wireless-client-authentication-methods/README.md",
     "5.-cryptography-and-wireless-security/replay-attacks-and-anti-replay-methods/README.md",
@@ -214,7 +215,6 @@
     "5.-cryptography-and-wireless-security/the-ssl-tls-handshake/the-tls-1.2-handshake-key-exchange-and-derivation-process.md",
     "5.-cryptography-and-wireless-security/the-ssl-tls-handshake/the-ssl-tls-handshake-quiz.md",
     "5.-cryptography-and-wireless-security/the-ssl-tls-handshake/the-diffie-hellman-key-exchange.md",
-    "5.-cryptography-and-wireless-security/chapter-5-review-questions.md",
     "5.-cryptography-and-wireless-security/authentication-and-encryption-in-wpa-wpa2-and-wpa3.md",
     "SUMMARY.md",
     "5.-cryptography-and-wireless-security/replay-attacks-and-anti-replay-methods/replay-attacks-and-anti-replay-methods-quiz.md",

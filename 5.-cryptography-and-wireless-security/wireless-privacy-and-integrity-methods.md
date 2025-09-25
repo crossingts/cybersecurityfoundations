@@ -1,8 +1,5 @@
 ---
-description: >-
-  This section covers key wireless privacy and integrity algorithms, including
-  TKIP (WPA), AES-CCMP (WPA2), AES-GCMP (WPA3), and MIC (Message Integrity Check
-  "Michael" in WPA)
+description: This section covers key wireless privacy and integrity algorithms, including TKIP (WPA), MIC "Michael" (WPA), AES-CCMP (WPA2), and AES-GCMP (WPA3)
 ---
 
 # Wireless privacy and integrity methods
@@ -11,14 +8,14 @@ description: >-
 
 * Become familiar with key encryption and message integrity algorithms used in securing wireless networks
 
-This section covers key encryption and message integrity algorithms used in securing wireless networks, including TKIP (WPA), AES-CCMP (WPA2), AES-GCMP (WPA3), and MIC (Message Integrity Check "Michael" in WPA).
+This section covers key encryption and message integrity algorithms used in securing wireless networks, including TKIP (WPA), MIC (Message Integrity Check "Michael" in WPA), AES-CCMP (WPA2), and AES-GCMP (WPA3).
 
 ## Topics covered in this section
 
 * **TKIP (WPA)**
+* **MIC (Message Integrity Check "Michael" in WPA)**
 * **AES-CCMP (WPA2)**
 * **AES-GCMP (WPA3)**
-* **MIC (Message Integrity Check "Michael" in WPA)**
 
 ### TKIP (WPA)
 
@@ -46,6 +43,34 @@ TKIP brought the following security features using legacy hardware and the under
 
 TKIP became a stopgap measure to enable stronger encryption on WEP-supporting hardware until the 802.11i standard could be ratified. However, TKIP itself is no longer considered secure, and was deprecated in the 2012 revision of the 802.11 standard.
 
+### MIC (Message Integrity Check "Michael" in WPA)
+
+A message integrity check (MIC) is a security tool that protects against data tampering. Two main types of MICs are:
+
+1. Unkeyed Integrity Check (Cryptographic Hash): A function like SHA-256 calculates a unique "fingerprint" (a hash) of the data. A cryptographic hash protects against accidental corruption but not against a malicious attacker, because the attacker can simply alter the data and compute a new hash.
+    
+    - Example Use: Verifying a file download from a trusted website. The website displays the SHA-256 hash. You calculate the hash of the downloaded file. If they match, the file is intact. This only works because you trust the website itself not to be malicious.
+        
+2. Keyed Integrity Check (Message Authentication Code - MAC): A MAC algorithm uses a secret key known only to the sender and receiver to generate the integrity check value. An attacker cannot forge a valid MAC without knowing the secret key.
+    
+    - Examples: HMAC (Hash-based MAC), CMAC (Cipher-based MAC).
+
+In a keyed integrity check (Message Authentication Code like Michael), a cryptographic algorithm calculates a MIC value from the message data and a secret key. The sender sends this MIC along with the message. The receiver recalculates the MIC using the shared secret key and compares the result to the transmitted value. A mismatch indicates tampering. Figure 28-5 shows the MIC process.
+
+<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/5aef3-checking-message-integrity-3.webp?w=1201" alt="Checking-Message-Integrity" height="430" width="1201"><figcaption><p>Figure 28-5 Checking Message Integrity over a Wireless Network (Odom, 2020, p. 710)</p></figcaption></figure>
+
+WPA uses a specific Message Authentication Code (MAC) called Michael. It is a keyed hash function. The access point and the client share a secret key to calculate and verify the MIC, preventing anyone without the key from tampering with the message.
+
+MACs protect data in several ways:
+
+- Verify file integrity: Websites can publish a MAC alongside a software download. Users verify the file's authenticity by recomputing the MAC with the correct key, ensuring no tampering occurred during transfer.
+    
+- Protect data in transit: Network protocols such as Transport Layer Security (TLS) use MACs to integrity-check data. The receiver discards any packet with an invalid MAC, preventing the acceptance of altered data.
+    
+- Prevent unauthorized access: By ensuring the integrity of authentication tokens or commands, MACs stop attackers from altering these elements to gain unauthorized privileges. Systems typically use encryption with a MAC to provide both confidentiality and integrity.
+
+WPA introduced the Michael message integrity check (MIC) to address the critical flaws in WEP. While an improvement, Michael remained vulnerable to forgery attacks. Michael was a temporary, weak MAC designed to run on legacy WEP hardware. It was better than WEP's CRC but had known vulnerabilities, which is why WPA2 replaced it with the much stronger AES-CCMP.
+
 ### AES-CCMP (WPA2)
 
 The Counter/CBC-MAC Protocol (CCMP) is considered more secure than TKIP. CCMP consists of two algorithms:
@@ -71,37 +96,6 @@ GCMP is an authenticated encryption suite that is more secure and more efficient
 ■ Galois Message Authentication Code (GMAC) used as a message integrity check (MIC). 
 
 GCMP is used in WPA3.
-
-### MIC (Message Integrity Check "Michael" in WPA)
-
-A message integrity check (MIC) is a security tool that protects against data tampering. Two main types of MICs are:
-
-1. Unkeyed Integrity Check (Cryptographic Hash): A function like SHA-256 calculates a unique "fingerprint" (a hash) of the data. A cryptographic hash protects against accidental corruption but not against a malicious attacker, because the attacker can simply alter the data and compute a new hash.
-    
-    - Example Use: Verifying a file download from a trusted website. The website displays the SHA-256 hash. You calculate the hash of the downloaded file. If they match, the file is intact. This only works because you trust the website itself not to be malicious.
-        
-2. Keyed Integrity Check (Message Authentication Code - MAC): A MAC algorithm uses a secret key known only to the sender and receiver to generate the integrity check value. An attacker cannot forge a valid MAC without knowing the secret key.
-    
-    - Examples: HMAC (Hash-based MAC), CMAC (Cipher-based MAC).
-
-In a keyed integrity check (Message Authentication Code like Michael), a cryptographic algorithm calculates a MIC value from the message data and a secret key. The sender sends this MIC along with the message. The receiver recalculates the MIC using the shared secret key and compares the result to the transmitted value. A mismatch indicates tampering.
-
-WPA uses a specific Message Authentication Code (MAC) called Michael. It is a keyed hash function. The access point and the client share a secret key to calculate and verify the MIC, preventing anyone without the key from tampering with the message.
-
-MACs protect data in several ways:
-
-- Verify file integrity: Websites can publish a MAC alongside a software download. Users verify the file's authenticity by recomputing the MAC with the correct key, ensuring no tampering occurred during transfer.
-    
-- Protect data in transit: Network protocols such as Transport Layer Security (TLS) use MACs to integrity-check data. The receiver discards any packet with an invalid MAC, preventing the acceptance of altered data.
-    
-- Prevent unauthorized access: By ensuring the integrity of authentication tokens or commands, MACs stop attackers from altering these elements to gain unauthorized privileges. Systems typically use encryption with a MAC to provide both confidentiality and integrity.
-
-Figure 28-5 shows the MIC process.
-
-<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/5aef3-checking-message-integrity-3.webp?w=1201" alt="Checking-Message-Integrity" height="430" width="1201"><figcaption><p>Figure 28-5 Checking Message Integrity over a Wireless Network (Odom, 2020, p. 710)</p></figcaption></figure>
-
-WPA introduced the Michael message integrity check (MIC) to address the critical flaws in WEP. While an improvement, Michael remained vulnerable to forgery attacks. Michael was a temporary, weak MAC designed to run on legacy WEP hardware. It was better than WEP's CRC but had known vulnerabilities, which is why WPA2 replaced it with the much stronger AES-CCMP.
-
 ### Key takeaways
 
 * Key encryption and message integrity algorithms used in securing wireless networks include TKIP (WPA), AES-CCMP (WPA2), AES-GCMP (WPA3), and Michael (WPA)

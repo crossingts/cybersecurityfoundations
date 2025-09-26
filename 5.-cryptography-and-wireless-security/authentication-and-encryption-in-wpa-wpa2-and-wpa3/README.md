@@ -46,15 +46,13 @@ WPA3-Personal can defeat such an attack by strengthening the key exchange betwee
 
 WPA3-Personal offers forward secrecy, so, even if a password or key is compromised, attackers are prevented from being able to use a key to unencrypt data that has already been transmitted over the air.
 
-The Personal mode of any WPA version is easy to deploy in a small environment because a simple text key string is all that is needed to authenticate the clients.  
-
-Note that all devices using the WLAN must be configured with an identical pre-shared key. Changing the key means every device using the WLAN must be updated.  
+The Personal mode of any WPA version is easy to deploy in a small environment because a simple text key string is all that is needed to authenticate the clients. Note that all devices using the WLAN must be configured with an identical pre-shared key. Changing the key means every device using the WLAN must be updated.  
 
 #### **Summary Table: WPA, WPA2, WPA3 (Personal Mode)**
 
 | **Protocol** | **Authentication**   | **Encryption**                      | **Integrity Method** | **Key Derivation**                      |
 | ------------ | -------------------- | ----------------------------------- | -------------------- | --------------------------------------- |
-| **WPA**      | PSK                  | TKIP (default), AES (optional)      | TKIP (MIC)           | PBKDF2 + PSK → TKIP keys                |
+| **WPA**      | PSK                  | TKIP (default)                      | TKIP (MIC)           | PBKDF2 + PSK → TKIP keys                |
 | **WPA2**     | PSK                  | AES-CCMP (default), TKIP (fallback) | AES-CCMP (CBC-MAC)   | PBKDF2 + PSK → CCMP keys                |
 | **WPA3**     | SAE (replaces PSK\*) | AES-GCMP (default)                  | AES-GCMP (GMAC)      | SAE (Dragonfly handshake) → Robust keys |
 

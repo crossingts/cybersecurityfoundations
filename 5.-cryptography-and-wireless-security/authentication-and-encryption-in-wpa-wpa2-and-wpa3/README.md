@@ -22,7 +22,7 @@ This section compares WPA, WPA2, and WPA3 wireless security protocols for authen
 
 Wi-Fi Protected Access (WPA) is a suite of security certifications for wireless networks, developed and maintained by the Wi-Fi Alliance (a nonprofit industry association that promotes Wi-Fi technology and interoperability). These certifications define security protocols to protect data transmitted over Wi-Fi. A wireless client device and an AP and its associated WLC certified by the Wi-Fi Alliance for the same WPA version are compatible and offer the same security components.
 
-There are three WPA versions: WPA, WPA2, and WPA3. The first generation WPA certification (known simply as WPA) was introduced while the IEEE 802.11i amendment was still under development. The Wi-Fi Alliance based WPA on parts of 802.11i and included 802.1x authentication, TKIP, and a method for dynamic encryption key management.
+There are three WPA versions: WPA, WPA2, and WPA3. The first generation WPA certification (known simply as WPA) was introduced while the IEEE 802.11i amendment was still under development. The Wi-Fi Alliance based WPA on parts of 802.11i and included 802.1x authentication and TKIP. TKIP is and a method for dynamic encryption key management.
 
 The Wi-Fi Alliance incorporated the full IEEE 802.11i standard into its WPA2 certification after it was ratified and published. WPA2 uses the superior AES CCMP algorithms instead of the deprecated TKIP algorithms from WPA. WPA2 was intended to replace WPA.
 

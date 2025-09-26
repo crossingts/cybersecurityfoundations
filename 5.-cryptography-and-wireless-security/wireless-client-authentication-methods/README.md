@@ -100,20 +100,14 @@ The Wi-Fi Protected Access (WPA) protocol was introduced by the Wi-Fi Alliance i
 
 **Comparison Table (WEP, WPA, WPA2, WPA3)**
 
-|Protocol|Authentication|Encryption|Integrity Mechanism|Key Size / Security Suite|Introduced|
-|---|---|---|---|---|---|
-|**WEP**|Open System or Shared Key (WEP PSK)|RC4 (weak)|CRC-32 (ICV) – Easily forged|40-bit / 104-bit|1997 (802.11)|
-|**WPA**|WPA-Personal (PSK) or WPA-Enterprise (802.1X/EAP)|TKIP (RC4 with fixes)|Michael MIC – Weak, but better than WEP|128-bit (TKIP)|2003 (Wi-Fi Alliance)|
-|**WPA2-Personal**|PSK (Pre-Shared Key)|AES-CCMP (mandatory)|CCMP (AES-CBC-MAC) – Strong|128-bit (AES)|2004 (802.11i)|
-|**WPA2-Enterprise**|802.1X/EAP|AES-CCMP (mandatory)|CCMP (AES-CBC-MAC) – Strong|128-bit (AES)|2004 (802.11i)|
-|**WPA3-Personal**|SAE (Simultaneous Authentication of Equals)|AES-CCMP (mandatory); GCMP optional|CCMP (AES-CBC-MAC) – Strong|128-bit (AES)|2018|
-|**WPA3-Enterprise**|802.1X/EAP (with stricter requirements)|AES-CCMP or AES-256-GCMP<sup>1</sup>|CCMP or 256-bit GMAC (with GCMP)|128-bit or 192-bit mode<sup>2</sup>|2018|
-
-**Note:**
-
-1. WPA3-Enterprise Encryption: The standard mode uses AES-CCMP (128-bit). The higher-security 192-bit mode, aligned with the CNSA suite, mandates AES-256-GCMP.
-    
-2. WPA3-Enterprise Key Size / Security Suite: This column is best understood as the minimum security strength of the cryptographic suite. The standard mode offers 128-bit strength. The optional 192-bit mode uses a 256-bit AES key (and other stronger algorithms) to achieve a higher overall security strength of 192 bits.
+| Protocol            | Authentication                                    | Encryption            | Integrity Mechanism                     | Key Size / Security Suite | Introduced            |
+| ------------------- | ------------------------------------------------- | --------------------- | --------------------------------------- | ------------------------- | --------------------- |
+| **WEP**             | Open System or Shared Key (WEP PSK)               | RC4 (weak)            | CRC-32 (ICV) – Easily forged            | 40-bit / 104-bit          | 1997 (802.11)         |
+| **WPA**             | WPA-Personal (PSK) or WPA-Enterprise (802.1X/EAP) | TKIP (RC4 with fixes) | Michael MIC – Weak, but better than WEP | 128-bit (TKIP)            | 2003 (Wi-Fi Alliance) |
+| **WPA2-Personal**   | PSK (Pre-Shared Key)                              | AES-CCMP (mandatory)  | CCMP (AES-CBC-MAC) – Strong             | 128-bit (AES)             | 2004 (802.11i)        |
+| **WPA2-Enterprise** | 802.1X/EAP                                        | AES-CCMP (mandatory)  | CCMP (AES-CBC-MAC) – Strong             | 128-bit (AES)             | 2004 (802.11i)        |
+| **WPA3-Personal**   | SAE (Simultaneous Authentication of Equals)       | AES-GCMP              | GCMP (AES with GMAC)                    | 256-bit (AES)             | 2018                  |
+| **WPA3-Enterprise** | 802.1X/EAP (with stricter requirements)           | AES-256-GCMP          | 256-bit GMAC (with GCMP)                | 256-bit (AES)             | 2018                  |
 
 Technically, both the WEP key and the WPA/WPA2 PSK are pre-shared secrets used for network access. However, their security differs drastically due to how they are implemented, particularly in how they handle authentication and key management.
 

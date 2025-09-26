@@ -30,13 +30,6 @@ The Wi-Fi Alliance introduced WPA3 in 2018, adding several important and superio
 
 The Wi-Fi Alliance made wireless security configuration straightforward and consistent through its WPA, WPA2, and WPA3 certifications. WPA, WPA2, and WPA3 simplify wireless network configuration and compatibility because they limit which authentication and privacy/integrity methods can be used.  
 
-If you are using WPA, you should consider using WPA2 instead—at least until WPA3 becomes widely available on wireless client devices, APs, and WLCs.
-
-The three WPA versions support two client authentication modes, based on the scale of the deployment:  
-
-* A pre-shared key (PSK) or personal mode
-* 802.1x or enterprise mode
-
 ### Cryptographic methods and algorithms in personal and enterprise modes
 
 Table 28-2 Comparing WPA, WPA2, and WPA3 (Odom, 2020, p. 716)

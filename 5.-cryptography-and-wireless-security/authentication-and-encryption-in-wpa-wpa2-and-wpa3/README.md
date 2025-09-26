@@ -60,7 +60,7 @@ WPA3-Personal: Replaces PSK with SAE for authentication (PSK is still the "passw
 
 #### Enterprise mode
 
-Here’s a summary table for **WPA, WPA2, and WPA3 in Enterprise mode**, which replaces **PSK/SAE** with **802.1X authentication** (typically using RADIUS servers and EAP methods).
+Here’s a summary table for WPA, WPA2, and WPA3 in Enterprise mode, which replaces PSK/SAE with 802.1X authentication (typically using RADIUS servers and EAP methods).
 
 **Summary Table: WPA, WPA2, WPA3 (Enterprise Mode)**
 

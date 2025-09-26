@@ -196,3 +196,20 @@ A nonce is a random number used only once. It provides the property of freshness
 
 **5. The transition from WPA2 to WPA3 introduced a new protocol for authenticated encryption. Name this protocol and state one of its cited advantages over the CCMP protocol used in WPA2.**
  **Answer:** The protocol is AES-GCMP (Galois/Counter Mode Protocol). One of its advantages is that it is more efficient (faster) than CCMP while also being considered more secure.
+
+### Authentication and encryption in WPA, WPA2, and WPA3
+
+**1. What specific authentication protocol does WPA3-Personal use to replace the Pre-Shared Key (PSK) mechanism of WPA/WPA2-Personal, and what two key security weaknesses of the old mechanism does it defeat?**  
+**Answer:** WPA3-Personal uses Simultaneous Authentication of Equals (SAE). It defeats the 1) vulnerability to dictionary attacks on the four-way handshake and 2) provides forward secrecy, preventing the decryption of past sessions if the password is compromised.
+
+**2. What are the two core security functions that any effective wireless security strategy must provide, as reviewed in the final section?**  
+**Answer:** An effective wireless security strategy must provide 1) a method to authenticate clients and 2) a method to provide data privacy and integrity.
+
+**3. Beyond stronger encryption, what specific security feature does WPA3 introduce to protect important 802.11 management frames between APs and clients, and what type of malicious activity does this prevent?**  
+**Answer:** WPA3 introduces Protected Management Frames (PMF). This prevents malicious activity targeting a Basic Service Set's (BSS) operation.
+
+**4. In the context of WPA2, what does the pre-shared key (PSK) string itself directly create during the four-way handshake, and what is never sent over the air?**  
+**Answer:** The pre-shared key string is used to construct and exchange encryption key material. The key string itself is never sent over the air.
+
+**5. What is the fundamental authentication difference between WPA2-Personal and WPA2-Enterprise that makes Enterprise mode more complex to deploy but also more secure?**  
+**Answer:** WPA2-Personal uses a single, static Pre-Shared Key (PSK) for all users. WPA2-Enterprise uses 802.1X (EAP) authentication, which requires a RADIUS server to validate individual user or device credentials, providing dynamic, per-user keys.

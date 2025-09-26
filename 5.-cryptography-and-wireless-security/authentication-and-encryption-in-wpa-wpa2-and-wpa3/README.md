@@ -20,6 +20,8 @@ This section details the evolution of wireless security by comparing the authent
 
 * **Introduction**
 * **Cryptographic methods and algorithms in personal and enterprise modes**
+  * **Personal mode**
+  * **Enterprise mode**
 * **Final review**
 
 ### Introduction
@@ -35,10 +37,6 @@ The Wi-Fi Alliance introduced WPA3 in 2018, adding several important and superio
 The Wi-Fi Alliance made wireless security configuration straightforward and consistent through its WPA, WPA2, and WPA3 certifications. WPA, WPA2, and WPA3 simplify wireless network configuration and compatibility because they limit which authentication and privacy/integrity methods can be used.  
 
 ### Cryptographic methods and algorithms in personal and enterprise modes
-
-Table 28-2 Comparing WPA, WPA2, and WPA3 (Odom, 2020, p. 716)
-
-<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/2b141-comparing-wpa-wpa2-wpa3-5.webp?w=1201" alt="Comparing-WPA-WPA2-WPA3" height="395" width="1201"><figcaption><p>Table 28-2 Comparing WPA, WPA2, and WPA3 (Odom, 2020, p. 716)</p></figcaption></figure>
 
 #### Personal mode
 
@@ -93,6 +91,10 @@ Here’s a summary table for WPA, WPA2, and WPA3 in Enterprise mode, which repla
 
 Notice from Table 28-2 that WPA, WPA2, and WPA3 support 802.1x or enterprise authentication. This implies EAP-based authentication, but the WPA versions do not require any specific EAP method. Instead, the Wi-Fi Alliance certifies interoperability with well- known EAP methods like EAP-TLS, PEAP, EAP-TTLS, and EAP-SIM. Enterprise authentication is more complex to deploy than personal mode because authentication servers must be set up and configured as a critical enterprise resource. (p. 717)
 
+**Table 28-2 Comparing WPA, WPA2, and WPA3 (Odom, 2020, p. 716)**
+
+<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/2b141-comparing-wpa-wpa2-wpa3-5.webp?w=1201" alt="Comparing-WPA-WPA2-WPA3" height="395" width="1201"><figcaption><p>Table 28-2 Comparing WPA, WPA2, and WPA3 (Odom, 2020, p. 716)</p></figcaption></figure>
+
 ### Final review
 
 Remember that an effective wireless security strategy includes a method to authenticate clients and a method to provide data privacy and integrity. These two types of methods are listed in the leftmost column. Work your way to the right to remember what types of authentication and privacy/integrity are available. (Odom, 2020, p. 718)
@@ -103,10 +105,14 @@ Table 28-3 Review of Wireless Security Mechanisms and Options (Odom, 2020, p. 71
 
 ### Key takeaways
 
-* Key authentication methods in personal mode include PSK (WPA, WPA2) and SAE (WPA3)
-* Enterprise mode uses the 802.1X (EAP) authentication method
-* Key encryption algorithms in personal and enterprise mode include TKIP (WPA), AES-CCMP (WPA2), and AES-GCMP (WPA3)
+- Authentication Evolution: Personal mode authentication evolved from a vulnerable Pre-Shared Key (PSK) method in WPA/WPA2 to a more secure Simultaneous Authentication of Equals (SAE) in WPA3, which resists dictionary attacks. Enterprise mode consistently uses 802.1X/EAP for robust, individual user authentication.
+- Encryption Strengthening: Encryption and integrity algorithms progressed from the vulnerable TKIP in WPA to the strong AES-CCMP in WPA2. WPA3 mandates the even stronger AES-GCMP.
+- WPA3 Advancements: WPA3 introduces critical security enhancements, including forward secrecy in Personal mode to protect past sessions and Protected Management Frames (PMFs).
 
 ### References
 
-Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 1. Cisco Press.
+Coleman, D. D., & Westcott, D. A. (2021). *CWNA Certified Wireless Network Administrator Official Study Guide: Exam CWNA-108*. Sybex.
+
+Gast, M. S. (2020). _802.11 Wireless Networks: The Definitive Guide_ (2nd ed.). O'Reilly Media.
+
+Odom, W. (2020). *CCNA 200-301 Official Cert Guide, Volume 1*. Cisco Press.

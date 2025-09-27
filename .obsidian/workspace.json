@@ -183,6 +183,14 @@
   },
   "active": "3cf5cd6380db943a",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/professional-ethics-of-ethical-hackers/professional-ethics-in-progress.md",
+    "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/professional-ethics-of-ethical-hackers/privacy-act-1983-and-pipeda-2000.md",
+    "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/professional-ethics-of-ethical-hackers/README.md",
+    "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/professional-ethics-of-ethical-hackers",
+    "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/ethical-hacking-is-legal.md",
+    "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/ethical-hackers-are-trustworthy.md",
+    "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/README.md",
+    "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1",
     "5.-cryptography-and-wireless-security/authentication-and-encryption-in-wpa-wpa2-and-wpa3/authentication-and-encryption-in-wpa-wpa2-and-wpa3-quiz.md",
     "5.-cryptography-and-wireless-security/authentication-and-encryption-in-wpa-wpa2-and-wpa3/README.md",
     "5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods/README.md",
@@ -204,7 +212,6 @@
     "SUMMARY.md",
     "5.-cryptography-and-wireless-security/replay-attacks-and-anti-replay-methods/replay-attacks-and-anti-replay-methods-quiz.md",
     "5.-cryptography-and-wireless-security/wireless-client-authentication-methods/ieee-802.1x-eap-authentication-methods.md",
-    "5.-cryptography-and-wireless-security/message-signing-using-asymmetric-keys/message-signing-using-asymmetric-keys-quiz.md",
-    "README.md"
+    "5.-cryptography-and-wireless-security/message-signing-using-asymmetric-keys/message-signing-using-asymmetric-keys-quiz.md"
   ]
 }

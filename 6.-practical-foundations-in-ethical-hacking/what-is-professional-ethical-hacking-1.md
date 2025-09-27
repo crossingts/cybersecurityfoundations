@@ -1,5 +1,5 @@
 ---
-description: This section frames an understanding of penetration testing as professional ethical hacking
+description: This section frames an understanding of ethical hacking as professional ethical hacking
 hidden: true
 ---
 
@@ -16,12 +16,12 @@ step 1: ethical hackers abide by legal standards/imperative = white hat hackers.
 
 step 2: ethical hackers abide by ethical standards + are trustworthy = professionals/'s values.
 
-step 3: penetration testing is teleological/goal oriented practice, 
-to reduce/mitigation the security risk which is a manifestation of professional ethical hacking/conduct. 
-Testing emphasizes the end goal of hacking (which is not hacking per se but risk mitigation). In professional hacking (and pen testing) the end goal is never hacking per se. The end goal is mitigation (teleological/utilitarian/pragmatic = improvement/efficiency). The end goal of hacking can be testing and improvement, but the emphasis is on 
-In this sense, hacking can be contrasted with testing for efficiency or improvement, unambiguously and explicitly.  
+step 3: (eh as) penetration testing as a teleological/goal oriented practice, 
+to reduce/mitigation the information security risk which is a practice of professional ethical hacking/conduct. 
 
-the implicit more strategic motivation/goal of penetration testing is testing (system robustness) not hacking.
+Testing emphasizes the end goal of hacking (which is not hacking per se but risk mitigation). In professional hacking (pen testing) the end goal is never hacking per se. The end goal is mitigation (teleological/utilitarian/pragmatic = improvement/efficiency). The end goal of hacking can be testing and improvement, but the explicit emphasis is on defeating a system.
+
+the implicit more strategic motivation/goal of penetration testing is testing (verifying system robustness) not hacking (defeating a system).
 the implicit more strategic motivation/goal of hacking is hacking per se.
 
 

@@ -1,7 +1,5 @@
 ---
-description: >-
-  This section frames an understanding of ethical hacking (penetration testing)
-  as professional ethical hacking
+description: This section frames an understanding of penetration testing as professional ethical hacking
 hidden: true
 ---
 
@@ -10,9 +8,21 @@ hidden: true
 ## Learning objectives
 
 * Understand why ethical hackers fit within the white hat hackers group
-* Become familiar with the professional ethics of ethical hackers&#x20;
+* Become familiar with the professional ethics of ethical hackers
 
-This section frames an understanding of ethical hacking (penetration testing) as professional ethical hacking. The analysis differentiates white hat hacking from gray hat hacking, black hat hacking, and hacktivism on the basis of ethics (moral ethics), professional ethics, and legal practices.
+This section frames an understanding of penetration testing as professional ethical hacking. 
+step 1: ethical hackers abide by legal standard/imperative = white hat hackers.
+step 2: ethical hackers abide by ethical standards + are trustworthy = professionals/'s values.
+step 3: penetration testing is teleological/goal oriented practice, to reduce/mitigation the security risk which is a manifestation of professional ethical hacking/conduct. 
+Testing emphasizes the end goal (which is not hacking per se but )
+In this sense, hacking can be contrasted with testing for efficiency or improvement, unambiguously and explicitly.  
+
+
+-ethical hackers are white hat hackers: based on legal practices (legal component).
+-after fitting ethical hackers as white hat hackers, the second component is conformance with formal ethical standards 
+There are two conceptual steps involved: first, ethical hackers 
+
+The analysis differentiates white hat hacking from gray hat hacking, black hat hacking, and hacktivism on the basis of ethics (moral ethics), professional ethics, and legal practices.
 
 ## Topics covered in this section
 

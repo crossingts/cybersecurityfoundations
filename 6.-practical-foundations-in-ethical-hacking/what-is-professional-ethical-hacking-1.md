@@ -48,7 +48,8 @@ Real hackers will almost certainly never call their practice pen testing
 
 ### Introduction
 
-There are many approaches to distinguish between white hat hackers, grey hat hackers, black hat hackers, and hacktivists (see "Other perspectives on hacking/hacker ethics", below). However, we make a comparison differentiating between these four hacker groups and their hacking practices on the logic that there is only one category of white hat hacking: legal hacking. Ethical values (moral ethics) and professional ethics underlying the behaviour of white hat hackers further cement this classification of white hat hackers.
+Various approaches/perspectives can be used 
+to distinguish between white hat hackers, grey hat hackers, black hat hackers, and hacktivists (see "Other perspectives on hacking/hacker ethics" below). However, we make a comparison differentiating between these four hacker groups and their hacking practices on the logic that there is only one category of white hat hacking: legal hacking. Ethical values (moral ethics) and professional ethics underlying the behaviour of white hat hackers further cement this classification of white hat hackers.
 
 Ethical hackers (as penetration testers) necessarily fit into the white hat hackers group—there's no ambiguity regrading the legality of their practices. No greyness. In this classification scheme, the terms white hat hacking and ethical hacking can be used interchangeably. Finally, we advance an understanding that professional ethical hacking is ethical hacking (penetration testing) performed in accordance with widely accepted industry and licensing standards regarding what constitutes professional conduct.
 
@@ -157,10 +158,6 @@ Each hacker group has distinct motivations, but the legality of their practices 
 
 #### Other perspectives on hacking/hacker ethics <a href="#ember546" id="ember546"></a>
 
-Coleman and Golub (2008) offer an anthropological taxonomy of various hacker ethic (hacker groups) based on idioms and practices. Coleman and Golub (2008) see various hacker ethic as representative of the subjective self. They conceptualize three liberal moral expressions of hackers and hacking (cultural sensibilities or hacker ethics) revealed variably in the context of computer hacking: Cryptofreedom, free and open source software, and the hacker underground.
-
-[Table 14: Profiles of Hackers](https://docs.google.com/document/d/e/2PACX-1vQVQ4AWXWyM83aXg5QxKwWkl9Oi8-gfRvUh7WhrMKekgb_I8yph4dTOtQYoXjflUA_6roJD5hWRGUT5/pub)
-
 The pioneering historical work of Steven Levy (1984) on hacker culture and hacker ethic (Hackers: Heroes of the Computer Revolution) presents one of the earliest theorizations of hacker ethic (what hackers thought it meant to be a hacker), particularly in the early decades of computer technology in the 1950s and 1960s. Levy (1984) distilled the hacker ethic into six bullet points:
 
 * Access to computers—and anything that might teach you something about the way the world works—should be unlimited and total. Always yield to the Hands-On Imperative!
@@ -170,7 +167,11 @@ The pioneering historical work of Steven Levy (1984) on hacker culture and hacke
 * You can create art and beauty on a computer.
 * Computers can change your life for the better.
 
-In conclusion, the professional ethics of white hat hackers are defined by legal compliance, contractual obligations, moral responsibility, and adherence to industry standards. Unlike grey or black hat hackers, ethical hackers must successfully navigate complex ethical and legal landscapes to preserve their professional and reputational standing. By following established frameworks and maintaining public trust, ethical hackers play a crucial role in defending digital systems against malicious threats.
+Coleman and Golub (2008) offer an anthropological taxonomy of various hacker ethic (hacker groups) based on idioms and practices. Coleman and Golub (2008) see various hacker ethic as representative of the subjective self. They conceptualize three liberal moral expressions of hackers and hacking (cultural sensibilities or hacker ethics) revealed variably in the context of computer hacking: Cryptofreedom, free and open source software, and the hacker underground (see [Table 14: Profiles of Hackers](https://docs.google.com/document/d/e/2PACX-1vQVQ4AWXWyM83aXg5QxKwWkl9Oi8-gfRvUh7WhrMKekgb_I8yph4dTOtQYoXjflUA_6roJD5hWRGUT5/pub)).
+
+In conclusion, 
+
+the professional ethics of white hat hackers are defined by legal compliance, contractual obligations, moral responsibility, and adherence to industry standards. Unlike grey or black hat hackers, ethical hackers must successfully navigate complex ethical and legal landscapes to preserve their professional and reputational standing. By following established frameworks and maintaining public trust, ethical hackers play a crucial role in defending digital systems against malicious threats.
 
 ### Key takeaways
 

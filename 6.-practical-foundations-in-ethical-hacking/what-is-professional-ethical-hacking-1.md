@@ -10,19 +10,25 @@ hidden: true
 * Understand why ethical hackers fit within the white hat hackers group
 * Become familiar with the professional ethics of ethical hackers
 
-The analysis first differentiates white hat hacking from gray hat hacking, black hat hacking, and hacktivism on the basis of legal practice/imperative. Next, the discussion explains how professional ethics further cement the framing of ethical hacking as professional ethical hacking.
+First, this analysis differentiates white hat hacking from gray hat hacking, black hat hacking, and hacktivism on the basis of legal practice/imperative. Next, the discussion explains how formal professional ethics further cement the framing of ethical hacking as professional ethical hacking.
 
 This section frames an understanding of ethical hacking as professional ethical hacking. 
 
-step 1: ethical hackers abide by legal standards/imperative = white hat hackers.
+Deontology (duty, obligation, or rule-based ethics): points 1 and 2
 
-step 2: ethical hackers abide by ethical standards + are trustworthy (don't damage client system; report any damage) = professionals/'s values.
+point 1:
+ethical hackers abide by legal standards/imperative = white hat hackers.
 
-step 3: (eh as) penetration testing as a teleological practice, to reduce/mitigation the information security risk which is a practice of professional ethical hacking/conduct. 
+point 2: 
+2.1 ethical hackers abide by formal ethical standards + are trustworthy (don't damage client system; report any damage) = professionals/'s values.
+
+2.2 the goal of (eh as) penetration testing as a teleological practice is infosec risk mitigation, which is a practice of professional ethical hacking/conduct.
+
+point 3: 
+metaphor or language:
 
 Testing emphasizes the end goal of hacking (which is not hacking per se but risk mitigation). In professional hacking (pen testing) the end goal is never hacking per se. The end goal is mitigation (teleological/utilitarian/pragmatic = improvement/efficiency). The end goal of hacking can be testing and improvement, but the explicit emphasis is on defeating a system.
 
-- metaphor or language:
 the implicit more strategic motivation/goal of penetration testing is testing (verifying system robustness) not hacking (defeating a system).
 the implicit more strategic motivation/goal of hacking is hacking per se.
 

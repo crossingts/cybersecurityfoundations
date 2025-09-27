@@ -24,23 +24,22 @@ point 2:
 
 2.2 the goal of (eh as) penetration testing as a teleological practice is infosec risk mitigation, which is a practice of professional ethical hacking/conduct.
 
-point 3: 
+pragmatic ethics: point 3
+
+point 3:
+the goal of (eh as) penetration testing: improving/efficiency the system vs compromising/defeating a system
+
+point 4: 
 metaphor or language:
 
-Testing emphasizes the end goal of hacking (which is not hacking per se but risk mitigation). In professional hacking (pen testing) the end goal is never hacking per se. The end goal is mitigation (teleological/utilitarian/pragmatic = improvement/efficiency). The end goal of hacking can be testing and improvement, but the explicit emphasis is on defeating a system.
-
-the implicit more strategic motivation/goal of penetration testing is testing (verifying system robustness) not hacking (defeating a system).
-the implicit more strategic motivation/goal of hacking is hacking per se.
-
-scf values --> professional values
-deontology --> duty/rights 
-
-
+Testing emphasizes the end goal of the act (which is not hacking per se but risk mitigation/risk management through verifying effectiveness of defenses and/or improvement). 
+The end goal of hacking can be testing and improvement, but the explicit emphasis is on defeating a system.
+Real hackers will almost certainly never call their practice pen testing
 
 ## Topics covered in this section
 
 * **Introduction**
-* **Profiles of hackers**&#x20;
+* **Profiles of hackers**
   * **White Hat Hackers: The Ethical Professionals**
   * **Gray Hat Hackers: The Unauthorized Researchers**
   * **Black Hat Hackers: The Criminals**

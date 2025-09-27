@@ -181,8 +181,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3cf5cd6380db943a",
+  "active": "06ca7278ba5efd38",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1.md",
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/professional-ethics-of-ethical-hackers/professional-ethics-in-progress.md",
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/professional-ethics-of-ethical-hackers/privacy-act-1983-and-pipeda-2000.md",
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/professional-ethics-of-ethical-hackers/README.md",
@@ -211,7 +212,6 @@
     "5.-cryptography-and-wireless-security/authentication-and-encryption-in-wpa-wpa2-and-wpa3.md",
     "SUMMARY.md",
     "5.-cryptography-and-wireless-security/replay-attacks-and-anti-replay-methods/replay-attacks-and-anti-replay-methods-quiz.md",
-    "5.-cryptography-and-wireless-security/wireless-client-authentication-methods/ieee-802.1x-eap-authentication-methods.md",
-    "5.-cryptography-and-wireless-security/message-signing-using-asymmetric-keys/message-signing-using-asymmetric-keys-quiz.md"
+    "5.-cryptography-and-wireless-security/wireless-client-authentication-methods/ieee-802.1x-eap-authentication-methods.md"
   ]
 }

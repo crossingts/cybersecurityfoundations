@@ -14,7 +14,7 @@ This section frames an understanding of ethical hacking as professional ethical 
 
 step 1: ethical hackers abide by legal standards/imperative = white hat hackers.
 
-step 2: ethical hackers abide by ethical standards + are trustworthy = professionals/'s values.
+step 2: ethical hackers abide by ethical standards + are trustworthy (don't damage client system; report any damage) = professionals/'s values.
 
 step 3: (eh as) penetration testing as a teleological/goal oriented practice, 
 to reduce/mitigation the information security risk which is a practice of professional ethical hacking/conduct. 
@@ -25,11 +25,9 @@ the implicit more strategic motivation/goal of penetration testing is testing (v
 the implicit more strategic motivation/goal of hacking is hacking per se.
 
 
--ethical hackers are white hat hackers: based on legal practices (legal component).
--after fitting ethical hackers as white hat hackers, the second component is conformance with formal ethical standards 
-There are two conceptual steps involved: first, ethical hackers 
+The analysis first differentiates white hat hacking from gray hat hacking, black hat hacking, and hacktivism on the basis of legal practice/imperative. Next, 
 
-The analysis differentiates white hat hacking from gray hat hacking, black hat hacking, and hacktivism on the basis of ethics (moral ethics), professional ethics, and legal practices.
+professional ethics
 
 ## Topics covered in this section
 
@@ -55,8 +53,9 @@ Ethical hackers (as penetration testers) necessarily fit into the white hat hack
 
 ### Profiles of hackers <a href="#ember513" id="ember513"></a>
 
-Follows is an analysis of the four types of hacking/hacker groups classified based on the legality of their practices, professional ethical conduct, and moral ethics.
+The analysis differentiates white hat hacking from gray hat hacking, black hat hacking, and hacktivism on the basis of legal practices.
 
+Follows is an analysis of the four types of hacking/hacker groups classified based on the legality of their practices, professional ethical conduct, and moral ethics.
 #### White Hat Hackers: The Ethical Professionals <a href="#ember515" id="ember515"></a>
 
 White hat hackers only hack computer systems or machines with legal authorization to do so (including legal contractual agreements). So whether resident (in-house) employees of a company or hired by a company for security testing, the practices of white hat hackers would be ethical as long as hacking is performed in accordance with agreed upon terms and within the specified authorization parameters. Bug bounty hunters are ethical hackers since they work within this legal contractual framework.

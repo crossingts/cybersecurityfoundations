@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/what-do-ethical-hackers-do.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "what-is-professional-ethical-hacking-1"
+              "title": "what-do-ethical-hackers-do"
             }
           }
         ]
@@ -183,8 +183,15 @@
   },
   "active": "3cf5cd6380db943a",
   "lastOpenFiles": [
-    "5.-cryptography-and-wireless-security/chapter-5-review-questions.md",
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1.md",
+    "7.-conclusion/practical-foundations-in-ethical-hacking.md",
+    "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/ethical-hacking-is-legal.md",
+    "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/ethical-hackers-are-trustworthy.md",
+    "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/README.md",
+    "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/professional-ethics-of-ethical-hackers/professional-ethics-in-progress.md",
+    "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/professional-ethics-of-ethical-hackers/README.md",
+    "6.-practical-foundations-in-ethical-hacking/introduction-practical-foundations-in-ethical-hacking/assignment-who-are-ethical-hackers.md",
+    "5.-cryptography-and-wireless-security/chapter-5-review-questions.md",
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/professional-ethics-of-ethical-hackers/professional-ethics-in-progress.md",
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/professional-ethics-of-ethical-hackers/privacy-act-1983-and-pipeda-2000.md",
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/professional-ethics-of-ethical-hackers/README.md",
@@ -205,13 +212,6 @@
     "5.-cryptography-and-wireless-security/wireless-client-authentication-methods/wireless-client-authentication-methods-quiz.md",
     "5.-cryptography-and-wireless-security/replay-attacks-and-anti-replay-methods/README.md",
     "5.-cryptography-and-wireless-security/the-ssl-tls-handshake/README.md",
-    "5.-cryptography-and-wireless-security/the-ssl-tls-handshake/understanding-the-ec-dhe-acronym.md",
-    "5.-cryptography-and-wireless-security/the-ssl-tls-handshake/the-tls-1.2-handshake-key-exchange-and-derivation-process.md",
-    "5.-cryptography-and-wireless-security/the-ssl-tls-handshake/the-ssl-tls-handshake-quiz.md",
-    "5.-cryptography-and-wireless-security/the-ssl-tls-handshake/the-diffie-hellman-key-exchange.md",
-    "5.-cryptography-and-wireless-security/authentication-and-encryption-in-wpa-wpa2-and-wpa3.md",
-    "SUMMARY.md",
-    "5.-cryptography-and-wireless-security/replay-attacks-and-anti-replay-methods/replay-attacks-and-anti-replay-methods-quiz.md",
-    "5.-cryptography-and-wireless-security/wireless-client-authentication-methods/ieee-802.1x-eap-authentication-methods.md"
+    "5.-cryptography-and-wireless-security/the-ssl-tls-handshake/understanding-the-ec-dhe-acronym.md"
   ]
 }

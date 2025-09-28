@@ -4,7 +4,7 @@ This section explores the professional ethics of ethical hackers as stipulated/e
 
 ## Topics covered
 
-* **Introduction**&#x20;
+* **Introduction**
 * **Professional ethics**
   * **Professionalism as grounded in university training**&#x20;
   * **Professionalism as grounded in industry standards**

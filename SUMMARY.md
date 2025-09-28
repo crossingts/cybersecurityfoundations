@@ -128,7 +128,6 @@
   * [Assignment: Who are ethical hackers?](6.-practical-foundations-in-ethical-hacking/introduction-practical-foundations-in-ethical-hacking/assignment-who-are-ethical-hackers.md)
 * [What is professional ethical hacking](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/README.md)
   * [Professional ethics of ethical hackers](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/professional-ethics-of-ethical-hackers/README.md)
-    * [Professional ethics (In Progress)](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/professional-ethics-of-ethical-hackers/professional-ethics-in-progress.md)
     * [Privacy Act (1983) and PIPEDA (2000)](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/professional-ethics-of-ethical-hackers/privacy-act-1983-and-pipeda-2000.md)
   * [Ethical hacking is legal](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/ethical-hacking-is-legal.md)
   * [Ethical hackers are trustworthy](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/ethical-hackers-are-trustworthy.md)

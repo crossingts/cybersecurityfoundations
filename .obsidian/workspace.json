@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/what-do-ethical-hackers-do.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "what-do-ethical-hackers-do"
+              "title": "what-is-professional-ethical-hacking-1"
             }
           }
         ]
@@ -181,8 +181,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3cf5cd6380db943a",
+  "active": "06ca7278ba5efd38",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/professional-ethics-of-ethical-hackers.md",
+    "6.-practical-foundations-in-ethical-hacking/introduction-practical-foundations-in-ethical-hacking.md",
+    "7.-conclusion/glossary.md",
+    "README.md",
+    "6.-practical-foundations-in-ethical-hacking/what-do-ethical-hackers-do.md",
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1.md",
     "7.-conclusion/practical-foundations-in-ethical-hacking.md",
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/ethical-hacking-is-legal.md",
@@ -206,12 +211,7 @@
     "5.-cryptography-and-wireless-security/wireless-client-authentication-methods/README.md",
     "5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods/wireless-privacy-and-integrity-methods-quiz.md",
     "5.-cryptography-and-wireless-security/introduction-cryptography-and-wireless-security.md",
-    "5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods.md",
     "5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods",
-    "5.-cryptography-and-wireless-security/authentication-and-encryption-in-wpa-wpa2-and-wpa3",
-    "5.-cryptography-and-wireless-security/wireless-client-authentication-methods/wireless-client-authentication-methods-quiz.md",
-    "5.-cryptography-and-wireless-security/replay-attacks-and-anti-replay-methods/README.md",
-    "5.-cryptography-and-wireless-security/the-ssl-tls-handshake/README.md",
-    "5.-cryptography-and-wireless-security/the-ssl-tls-handshake/understanding-the-ec-dhe-acronym.md"
+    "5.-cryptography-and-wireless-security/authentication-and-encryption-in-wpa-wpa2-and-wpa3"
   ]
 }

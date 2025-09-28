@@ -24,6 +24,14 @@
 
 **NIST Special Publication 800-37 Rev2** (Risk Management Framework for Information Systems and Organizations: A System Life Cycle Approach for Security and Privacy): A risk management framework for information systems developed by the Joint Task Force Transformation Initiative Working Group. The first revision aimed to transform the traditional Certification and Accreditation (C\&A) process into the Risk Management Framework (RMF), and the second reversion addressed privacy controls in a more central manner, and added a preparatory step. The second step of the RMF is to select the appropriate subset of security controls from the control catalog in NIST Special Publication 800-53.
 
+**NIST SP 800-115:** A technical guide to information security testing and assessment by the National Institute of Standards and Technology (NIST).
+
+**PCI DSS:** The Payment Card Industry Data Security Standard ensures secure handling of credit card data.
+
+**PIPEDA (2000):** Canada’s Private Sector Privacy Law. The Personal Information Protection and Electronic Documents Act applies to private-sector organizations handling personal data.
+
+**Privacy Act (1983):** Applies to Canadian federal government institutions and regulates how they collect, use, and disclose personal information.
+
 **SSAE 16** (Statement on Standards for Attestation Engagements no. 16): An auditing standard for service organizations, produced by the American Institute of Certified Public Accountants (AICPA) Auditing Standards Board, which supersedes Statement on Auditing Standards no. 70 and has been superseded by SSAE No. 18.
 
 **Symmetric ciphers**: Also referred as secret-key ciphers, use the same key for encryption and decryption. Symmetric cryptosystems are divided into two groups: block and stream ciphers. In block ciphers, operations of encryption/decryption are performed on blocks of bits or bytes, whereas stream ciphers operate on individual bits/bytes.&#x20;

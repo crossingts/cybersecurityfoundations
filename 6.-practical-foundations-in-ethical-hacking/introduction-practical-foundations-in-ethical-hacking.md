@@ -27,26 +27,26 @@ Ethical hacking is the cornerstone of security verification within organizations
 
 ## Topics covered in this chapter
 
-[What is professional ethical hacking](../what-is-professional-ethical-hacking/)
+[What is professional ethical hacking](what-is-professional-ethical-hacking/)
 
-[The perils of unethical hacking](../the-perils-of-unethical-hacking.md)
+[The perils of unethical hacking](the-perils-of-unethical-hacking.md)
 
-[What do ethical hackers do?](../what-do-ethical-hackers-do.md)
+[What do ethical hackers do?](what-do-ethical-hackers-do.md)
 
-[Defensive security vs offensive security](../defensive-security-vs-offensive-security.md)
+[Defensive security vs offensive security](defensive-security-vs-offensive-security.md)
 
-[Defensive cybersecurity technologies](../defensive-cybersecurity-technologies/)
+[Defensive cybersecurity technologies](defensive-cybersecurity-technologies/)
 
-[Network security testing](../network-security-testing.md)
+[Network security testing](network-security-testing.md)
 
-[Phases of the penetration testing process](../phases-of-the-penetration-testing-process/)
+[Phases of the penetration testing process](phases-of-the-penetration-testing-process/)
 
-[Types of penetration testing](../types-of-penetration-testing.md)
+[Types of penetration testing](types-of-penetration-testing.md)
 
-[Penetration testing methodologies and frameworks](../penetration-testing-methodologies-and-frameworks/)
+[Penetration testing methodologies and frameworks](penetration-testing-methodologies-and-frameworks/)
 
-[Penetration testing technologies](../penetration-testing-technologies/)
+[Penetration testing technologies](penetration-testing-technologies/)
 
-[Common attack targets](../common-attack-targets/)
+[Common attack targets](common-attack-targets/)
 
-[Setting up a cybersecurity lab](../setting-up-a-cybersecurity-lab/)
+[Setting up a cybersecurity lab](setting-up-a-cybersecurity-lab/)

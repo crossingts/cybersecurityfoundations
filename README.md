@@ -67,7 +67,7 @@ This chapter covers two key foundational networking areas: host to host communic
 
 This chapter covers how SSL/TLS secures data in transit, the IEEE 802.11 wireless standard, and WPA, WPA2, and WPA3 wireless protocols.
 
-6. [Chapter 6: Practical foundations in ethical hacking ](6.-practical-foundations-in-ethical-hacking/introduction-practical-foundations-in-ethical-hacking/)
+6. [Chapter 6: Practical foundations in ethical hacking ](6.-practical-foundations-in-ethical-hacking/introduction-practical-foundations-in-ethical-hacking.md)
 
 This chapter covers ethical hacking and penetration testing - definitions, technologies, testing methodologies, and testing phases.
 

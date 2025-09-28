@@ -20,23 +20,8 @@
               "icon": "lucide-file",
               "title": "what-is-professional-ethical-hacking-1"
             }
-          },
-          {
-            "id": "58aa646e40458878",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://www.ieee.org/about/corporate/governance/p7-8",
-                "title": "IEEE Code of Ethics | IEEE",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "IEEE Code of Ethics | IEEE"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -196,7 +181,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "58aa646e40458878",
+  "active": "3cf5cd6380db943a",
   "lastOpenFiles": [
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1.md",
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/professional-ethics-of-ethical-hackers.md",

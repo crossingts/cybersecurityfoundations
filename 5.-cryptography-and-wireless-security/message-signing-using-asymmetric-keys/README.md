@@ -51,10 +51,9 @@ flowchart LR
         D --> E[Signature]
     end
 
-    E --> F{Attach}
+    E --> G[Message + Signature]
 
     subgraph Receiver [Receiver]
-        F --> G[Message + Signature]
         G --> H(Separate & Verify)
         H --> I(Hash Message)
         H --> J(Decrypt Signature<br/>with Public Key)

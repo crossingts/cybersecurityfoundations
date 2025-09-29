@@ -37,6 +37,41 @@ Digital signatures are used everywhere in modern digital life.
 
 **2. "Encrypting" the Hash:** Alice encrypts the hash with her private key. Alice takes the hash and performs a private-key operation (not classic encryption, but mathematically similar). The result is a digital signature, which is tied to both the message and Alice’s private key. This step is referred to as "signing," but technically, it’s asymmetrically encrypting the hash (with Alice's private key).
 
+```mermaid
+---
+title: Digital Signing with Asymmetric Keys
+config:
+  theme: default
+---
+flowchart LR
+    subgraph Sender [Sender]
+        A[Message] --> B(Hash Function)
+        B --> C(Digest)
+        C --> D{Sign with Private Key}
+        D --> E[Signature]
+    end
+
+    E --> F{Attach}
+
+    subgraph Receiver [Receiver]
+        F --> G[Message + Signature]
+        G --> H(Separate & Verify)
+        H --> I(Hash Message)
+        H --> J(Decrypt Signature<br/>with Public Key)
+        I --> K(New Digest)
+        J --> L(Original Digest)
+        K --> M{Match?}
+        L --> M
+        M -->|✅ Yes| N[Valid]
+        M -->|❌ No| O[Invalid]
+    end
+
+    style Sender fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    style Receiver fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px
+    style D fill:#ffcdd2
+    style J fill:#c8e6c9
+```
+
 **3. Why Hash Before Signing?** Signing the hash instead of the entire message is done for three primary reasons:
 
 * Performance: Asymmetric crypto operations (RSA, ECC) are computationally slow. Hashing is extremely fast. It's much quicker to sign a fixed-length 256-bit SHA-256 hash than a multi-gigabyte file.

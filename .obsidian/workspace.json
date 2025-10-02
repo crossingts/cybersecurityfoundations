@@ -20,20 +20,6 @@
               "icon": "lucide-file",
               "title": "what-is-professional-ethical-hacking-1"
             }
-          },
-          {
-            "id": "d9348647c3619812",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://docs.google.com/document/d/e/2PACX-1vQVQ4AWXWyM83aXg5QxKwWkl9Oi8-gfRvUh7WhrMKekgb_I8yph4dTOtQYoXjflUA_6roJD5hWRGUT5/pub",
-                "title": "Profiles of Hackers",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "Profiles of Hackers"
-            }
           }
         ]
       }
@@ -197,8 +183,8 @@
   },
   "active": "3cf5cd6380db943a",
   "lastOpenFiles": [
-    "6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking.md",
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1.md",
+    "6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking.md",
     "Untitled.md",
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/professional-ethics-of-ethical-hackers.md",
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/README.md",

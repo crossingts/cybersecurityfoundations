@@ -159,7 +159,7 @@ formal codes of ethical conduct include
 2. IEEE Std 802.10-1998 (Interoperable LAN/MAN Security)
 3. IEEE Cybersecurity Initiative & Best Practices
 
-The [**IEEE Code of Ethics**](https://www.ieee.org/about/corporate/governance/p7-8.html) provides broad ethical principles applicable to cybersecurity professionals, including penetration testers: Avoid harming privacy, confidentiality, and system integrity (Ethics 1, 2, 5).
+The IEEE Code of Ethics provides broad ethical principles applicable to cybersecurity professionals, including penetration testers: Avoid harming privacy, confidentiality, and system integrity (Ethics 1, 2, 5).
 ISO/IEC 27001: Confidentiality (A.8.2.1, A.13.2.1) – Testers must protect sensitive data discovered during testing.
 
 ISO/IEC 27001: Risk Minimization (A.6.1.3) – Testing should avoid disrupting business operations.

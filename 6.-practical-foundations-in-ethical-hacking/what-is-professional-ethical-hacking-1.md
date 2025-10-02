@@ -42,10 +42,9 @@ This analysis frames an understanding of professional ethical hackers as white h
 
 First, this analysis differentiates white hat hackers from grey hat hackers, black hat hackers, and hacktivists on the basis of **legal practice**.
 
-Next, the analysis explores the key properties/attributes (themes) of professional ethics and codes os professional ethical hackers as stipulated/enriched within various industry standards and conventions. 
+Next, the analysis explores the key properties/attributes (themes) of professional ethics and codes of ethics of professional ethical hackers as stipulated/enriched within various industry standards and conventions. 
 
-
-Next, profiles of hackers--an analysis of the four types of hacking/hacker groups classified based on the legality of their practices and professional conduct.
+Finally, the discussion presents an analysis of four types of hacker groups classified based on the legality of their practices and the imperative to professional conduct.
 
 ### Ethical hacking is legal
 
@@ -80,18 +79,13 @@ The imperative that testing must be authorized to avoid legal risks is enriched 
 Ethical hackers operate within a structured framework of professional codes of conduct, which define their responsibilities and ensure accountability. Several professional codes of conduct exist for information security professionals and ethical hackers, applicable to individuals who are members or certified professionals of the respective association. For example,
 
 * Industry certifications: CEH Code of Ethics (EC-Council), OSCP (Offensive Security Code of Conduct), (ISC)² Code of Ethics, ISACA Code of Professional Ethics.
-* Regulatory/governmental standards/guidelines: NIST SP 800-12 and NIST SP 800-53 touch on broader security and privacy principles, NIST SP 800-115 (Technical Guide to Penetration Testing) emphasizes authorized testing.
-* Industry standards/guidelines: OSSTMM, ISO/IEC 27001, OWASP (Open Web Application Security Project) Testing Guide, PCI DSS Penetration Testing Guidance.
 * Professional associations: ACM Code of Ethics (2018), IEEE standards/guidelines (IEEE Cybersecurity Initiative, IEEE Certified Ethical Hacker (CEH) resources), IEEE code of ethics, IEEE code of conduct.
+* Industry standards/guidelines: OSSTMM, ISO/IEC 27001, OWASP (Open Web Application Security Project) Testing Guide, PCI DSS Penetration Testing Guidance.
+* Regulatory/governmental standards/guidelines: NIST SP 800-12 and NIST SP 800-53 touch on broader security and privacy principles, NIST SP 800-115 (Technical Guide to Penetration Testing) emphasizes authorized testing.
 * Professional licensing/accreditation bodies: Professional Engineers Ontario (PEO)/PEO code of ethics, Canadian Engineering Accreditation Board (CEAB), Canadian Information Processing Society (CIPS).
 
-This section explores the professional ethics of ethical hackers as stipulated/enriched in several key 
-**formal** codes of ethical conduct
--Professionalism as grounded in university training
--Professionalism as grounded in industry standards
-and
-**conventional** codes of ethical conduct.
--Professionalism as grounded in industry conventions
+This segment explores the professional ethics of ethical hackers as stipulated/enriched in several key **formal** codes of ethical conduct (professionalism as grounded in university training, and professionalism as grounded in industry standards), and
+**conventional** codes of ethical conduct (professionalism as grounded in industry conventions).
 
 #### Professionalism as grounded in university training
 
@@ -114,6 +108,8 @@ It’s kind of like when software engineering became an engineering discipline. 
 PPT11 adds, ethical hacking “has become more of an engineering type of discipline now. There’s structure, there’s rigor, there’s tools out there that can be used for it … you need to systematically approach a problem, how to see if you can penetrate a system or not.” It is “that systematic nature that most of the underground ethical hackers, or the small people, don’t have because they’ve never had exposure to doing it in kind of an engineering mindset.”
 
 #### Professionalism as grounded in industry standards
+
+
 
 Unlike malicious hackers, professional ethical hackers adhere to formalized codes of conduct, often outlined by organizations such as the EC-Council (International Council of E-Commerce Consultants), Offensive Security, and (ISC)². 
 
@@ -210,7 +206,7 @@ Research by Tavani (2016) emphasizes the duty of care that ethical hackers owe t
 
 ### Profiles of hackers
 
-An analysis of the four types of hacking/hacker groups classified based on the legality of their practices and their professional conduct.
+Follows is an analysis of the four types of hacking/hacker groups classified based on the legality of their practices and their professional conduct.
 
 #### White Hat Hackers: The Ethical Professionals <a href="#ember515" id="ember515"></a>
 

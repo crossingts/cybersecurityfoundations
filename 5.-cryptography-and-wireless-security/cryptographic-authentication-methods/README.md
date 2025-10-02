@@ -13,7 +13,7 @@ description: >-
 * Develop a foundational understanding of how a Pre-Shared Key (PSK) is used for authentication
 * Develop a foundational understanding of how digital certificates can be used to authenticate servers, encrypt communications, and ensure message integrity
 
-This section explains three common [cryptographic authentication methods](https://www.bu.edu/tech/about/security-resources/bestpractice/auth/): username and password, Pre-Shared Keys (PSKs), and digital certificates. We begin by exploring the username and password method, detailing the critical role of cryptographic hashing—both on the server and client side—in protecting password integrity. Next, we examine Pre-Shared Keys (PSKs), a symmetric secret used for mutual authentication in protocols like Wi-Fi and VPNs, and discuss the process of deriving secure session keys to enhance security. Finally, we analyze digital certificates, the cornerstone of asymmetric cryptography on the web. This includes their role in authenticating servers via trusted Certificate Authorities (CAs), facilitating encrypted key exchange during the TLS handshake, and ensuring message integrity through digital signatures.
+This section explains three common cryptographic authentication methods: username and password, Pre-Shared Keys (PSKs), and digital certificates. We begin by exploring the username and password method, detailing the critical role of cryptographic hashing—both on the server and client side—in protecting password integrity. Next, we examine Pre-Shared Keys (PSKs), a symmetric secret used for mutual authentication in protocols like Wi-Fi and VPNs, and discuss the process of deriving secure session keys to enhance security. Finally, we analyze digital certificates, the cornerstone of asymmetric cryptography on the web. This includes their role in authenticating servers via trusted Certificate Authorities (CAs), facilitating encrypted key exchange during the TLS handshake, and ensuring message integrity through digital signatures.
 
 ## Topics covered in this section <a href="#topics-covered-in-this-section" id="topics-covered-in-this-section"></a>
 
@@ -71,11 +71,25 @@ In IPsec, for example, both parties generate random nonces and exchange them dur
 
 ### Digital certificates
 
-Digital certificates are a critical security technology that is used to protect communications over the Internet. Digital certificates are the primary method for authenticating servers and services on the Internet. Digital certificates form the basis of trust for secure websites, providing users with cryptographic proof of a site's identity. A digital certificate is an electronic document that binds a public key to an identity, such as a company or a server. A digital certificate is used to,
+Digital certificates are a critical security technology that is used to protect communications over the Internet. Digital certificates are the primary method for authenticating servers and services on the Internet. Digital certificates form the basis of trust for secure websites, providing users with cryptographic proof of a site's identity. A digital certificate is an electronic document that binds a public key to an identity, such as a company or a server. 
 
-* Verify the identity of the holder of the public key (e.g., a server) and optionally the client.
-* Enable encrypted communications by facilitating the secure exchange of symmetric session keys. During the TLS handshake, the client uses the public key in the server's digital certificate to encrypt the initial keying material. This ensures only the legitimate holder of the corresponding private key, the server being authenticated, can access it, allowing both parties to securely generate the same keys used for bulk encryption. This happens during the key establishment phase of the TLS handshake.&#x20;
-* Ensure message integrity and provide proof of origin (non-repudiation) through digital signatures.&#x20;
+#### Core cryptographic functions of a digital certificate
+
+A digital certificate is used in:
+
+* **Authentication**: Verify the identity of the holder of the public key (e.g., a server) and optionally the client.
+* **Encryption**: Enable encrypted communications by facilitating the secure exchange of symmetric session keys. During the TLS handshake, the client uses the public key in the server's digital certificate to encrypt the initial keying material. This ensures only the legitimate holder of the corresponding private key, the server being authenticated, can access it, allowing both parties to securely generate the same keys used for bulk encryption. This happens during the key establishment phase of the TLS handshake. 
+* **Integrity**: Ensure message integrity and provide proof of origin (non-repudiation) through digital signatures. 
+
+#### Two methods digital signatures can be used for authentication
+
+A digital certificate can only be considered proof of someone’s identity if they can provide the matching private key. Alice is presenting a digital certificate to Bob. Let’s look at two methods Alice can use to provide evidence that she is in possession of the private key and so is the true owner of the digital certificate. These two methods are the basis for how authentication works with digital signatures.
+
+1\) This is a classic challenge-response mechanism. If Alice presents Bob with her certificate, Bob can generate a random value (a challenge) and encrypt it with Alice’s public key. Alice should be the only person with the correlating private key, and therefore, Alice should be the only person that can extract (respond with) the random value. If she can then prove to Bob that she extracted the correct value, then Bob can be assured that Alice is indeed the true owner of the certificate.
+
+2\) Alice can encrypt a value known to both parties with her private key, and send the resulting cipher text to Bob. If Bob can decrypt it with Alice’s public key, it proves Alice must have had the correlating private key.
+
+#### Practical applications and use-cases of a digital certificate
 
 Digital certificates are used in a variety of applications, including:
 
@@ -122,7 +136,7 @@ There are two different integrity mechanisms at different stages of the TLS proc
 * The server signs parts of the TLS handshake messages (e.g., `ServerKeyExchange` in RSA-based key exchange or the entire handshake transcript in modern TLS 1.3), generating a digital signature using its private key. To prove it possesses the private key matching its certificate and to protect the handshake from tampering, the server generates a digital signature over critical parts of the handshake exchange. The exact content covered by this signature varies by protocol version and algorithm:
   * **In TLS 1.2 (e.g., with RSA or Diffie-Hellman key exchange):** The signature is not over the entire handshake. It typically covers a hash that includes the `ServerKeyExchange` message (which contains the server's key-sharing parameters) and the random values exchanged in the `ClientHello` and `ServerHello` messages. This crucial step binds the server's identity to the specific cryptographic parameters of this session, preventing a man-in-the-middle attacker from altering them.
   * **In Modern TLS 1.3:** The protocol is simpler and more robust. The server signs a cryptographic hash of the entire handshake transcript—meaning almost all messages sent and received by both parties up to that point. This includes the `ClientHello`, `ServerHello`, and other key-sharing messages. Signing the entire transcript provides the strongest possible integrity guarantee, ensuring that not a single byte of the negotiation was altered.
-* The client checks the signature using the server’s public key (from the digital certificate).&#x20;
+* The client checks the signature using the server’s public key (from the digital certificate). 
 * If the signature is valid, message integrity is confirmed. This ensures the handshake messages themselves were not tampered with, and authenticates the server (proves it owns the private key).
 
 **2. Integrity After the Handshake (HMAC or AEAD)**
@@ -137,7 +151,7 @@ There are two different integrity mechanisms at different stages of the TLS proc
 * Process used in older TLS (e.g., TLS 1.2 with AES-CBC + HMAC-SHA256):
   1. The sender:
      * Encrypts data with the symmetric key (e.g., AES-CBC). The output is ciphertext.
-     * Computes an HMAC (e.g., `HMAC-SHA256`) over the ciphertext using the same symmetric key (or a derived subkey). The HMAC uses a separate MAC key derived from the same symmetric session key. The output is MAC tag (integrity check value).&#x20;
+     * Computes an HMAC (e.g., `HMAC-SHA256`) over the ciphertext using the same symmetric key (or a derived subkey). The HMAC uses a separate MAC key derived from the same symmetric session key. The output is MAC tag (integrity check value). 
      * Sends ciphertext + MAC tag to the receiver.
   2. The receiver:
      * Recomputes the HMAC and checks if it matches. The receiver recomputes the HMAC over the received ciphertext using the same symmetric MAC key.
@@ -215,14 +229,6 @@ In both cases, the successful use of the public key (for either encryption or si
 * **Organization Validated (OV)** – Verifies business identity.
 * **Extended Validation (EV)** – Highest trust, shows company name in the browser.
 * **Wildcard & Multi-Domain** – Covers multiple subdomains or domains.
-
-#### Two methods digital signatures can be used for authentication
-
-A digital certificate can only be considered proof of someone’s identity if they can provide the matching private key. Alice is presenting a digital certificate to Bob. Let’s look at two methods Alice can use to provide evidence that she is in possession of the private key and so is the true owner of the digital certificate. These two methods are the basis for how authentication works with digital signatures.
-
-1\) This is a classic challenge-response mechanism. If Alice presents Bob with her certificate, Bob can generate a random value (a challenge) and encrypt it with Alice’s public key. Alice should be the only person with the correlating private key, and therefore, Alice should be the only person that can extract (respond with) the random value. If she can then prove to Bob that she extracted the correct value, then Bob can be assured that Alice is indeed the true owner of the certificate.
-
-2\) Alice can encrypt a value known to both parties with her private key, and send the resulting cipher text to Bob. If Bob can decrypt it with Alice’s public key, it proves Alice must have had the correlating private key.
 
 ### Key takeaways
 

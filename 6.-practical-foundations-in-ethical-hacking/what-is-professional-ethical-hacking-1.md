@@ -10,15 +10,23 @@ hidden: true
 * Understand why ethical hackers fit within the white hat hackers group
 * Become familiar with the professional ethics of ethical hackers and their underlying ethical perspectives 
 
-First, this analysis differentiates white hat hackers from grey hat hackers, black hat hackers, and hacktivists on the basis of **legal practice**. = regulations.
-Next, the analysis frames an understanding of professional ethical hackers as white hat hackers who abide by well established and widely accepted industry, government, and licensing standards + guidelines regarding what constitutes professional conduct.
-/formal professional ethics and ethical guidelines
-= **ethical practice**.
-/
-ethical hackers are white hat hackers who abide by well established and widely accepted industry and government standards and guidelines + licensing requirements 
+This section advances an understanding that ethical hackers are white hat hackers who abide by well established and widely accepted industry and government standards, guidelines, and licensing and accreditation requirements regarding what constitutes professional practice.
+
+First, we make the case that ethical hackers are white hat hackers (ethical hacking is legal).
+
+Next, ethical hackers abide by a professional code of ethics.
+/the practices of ethical hackers are governed by a web of professional codes of conduct.
+/Professional ethics of ethical hackers
+/Ethical hackers are trustworthy
+
+Next, profiles of hackers--an analysis of the four types of hacking/hacker groups classified based on the legality of their practices and professional conduct.
+
+Finally, ethical perspectives underlying practices of ethical hackers.
+
 ## Topics covered in this section
 
 * **Introduction**
+* **Topic 2**
 * **Profiles of hackers**
   * **White Hat Hackers: The Ethical Professionals**
   * **Grey Hat Hackers: The Unauthorized Researchers**
@@ -28,57 +36,29 @@ ethical hackers are white hat hackers who abide by well established and widely a
 
 ### Introduction
 
-ethical hackers use the same tools as hackers 
-ethical hackers are about risk mitigation
+Ethical hackers use the same tools as malicious hackers but with the strategic end of buttressing a computer system's security.  
+While ethical hackers aim principally to achieve risk mitigation, the various other hacker groups hold other priorities for their hacking activities. 
 
-First, this analysis differentiates white hat hackers from grey hat hackers, black hat hackers, and hacktivists on the basis of **legal practice**. = regulations.
-Next, the analysis frames an understanding of professional ethical hackers as white hat hackers who abide by well established and widely accepted industry, government, and licensing standards + guidelines regarding what constitutes professional conduct.
-/formal professional ethics and ethical guidelines
-= **ethical practice**.
+This analysis frames an understanding of professional ethical hackers as white hat hackers who abide by well established and widely accepted industry and government standards, guidelines, and licensing and accreditation requirements regarding what constitutes professional practice.
 
-This section frames an understanding of ethical hacking as professional ethical hacking, thus:
+First, this analysis differentiates white hat hackers from grey hat hackers, black hat hackers, and hacktivists on the basis of **legal practice**.
+=Ethical hackers are white hat hackers
 
-Point 1: ethical hackers are white hat hackers who by definition abide my legal imperatives =legal practice.
-
-Point 2: ethical hackers abide by formal ethical standards and guidelines / are trustworthy (don't damage client system; report any damage) = professionals/'s values industry + gov't = professional ethical practice/conduct.
-
-Point 3: the strategic teleological goal of (eh as) penetration testing practice is infosec risk mitigation, which is a practice of professional ethical hacking/conduct--public safety, prevention
-
-Point 4: the pragmatic goal of (eh as) penetration testing based on the language of testing used by the hacking practitioner (i.e., professional ethical hackers) is knowledge making (scientific inquiry) for the more strategic goal of security improvement/efficiency and risk mitigation.
-
-while hacking emphasizes the end goal of the act, which is utilitarian but not pragmatic (not instrumental for improving efficiency). 
-Unregulated or "real hackers" will almost certainly never call their practice penetration testing 
-
-Ethical perspectives underlying practices of ethical hackers/ethical hacking
-
-|     | Deontology/rule-based ethics | Utilitarianism/consequentialism | Pragmatism                         |
-| --- | ---------------------------- | ------------------------------- | ---------------------------------- |
-| 1   | yes                          |                                 |                                    |
-| 2   | yes                          |                                 |                                    |
-| 3   | yes                          | yes                             |                                    |
-| 4   |                              | yes (hacking)                   | yes (professional ethical hacking) |
-
-Various approaches/perspectives can be used to distinguish between white hat hackers, grey hat hackers, black hat hackers, and hacktivists (see "Other perspectives on hacking/hacker ethics" below). However, we make a comparison differentiating between these four hacker groups and their hacking practices on the logic that there is only one category of white hat hacking: legal hacking. Ethical hackers necessarily fit into the white hat hackers group—there's no ambiguity regrading the legality of their practices. No greyness. 
-
-we advance an understanding that professional ethical hacking is white hat hacking performed in accordance with 
-well established and widely accepted industry, government, and licensing standards + guidelines regarding what constitutes professional conduct.
-
-First, we make the case that ethical hackers are white hat hackers (ethical hacking is legal).
-
-Next, ethical hackers abide by a professional code of ethics.
-/Professional ethics of ethical hackers
-/Ethical hackers are trustworthy
+Next, Ethical hackers abide by professional code of ethics = **ethical practice**.
+Professional ethics of ethical hackers
+Ethical hackers are trustworthy
 
 Next, profiles of hackers--an analysis of the four types of hacking/hacker groups classified based on the legality of their practices and professional conduct.
 
-Finally, ethical analysis of various hacker groups.
-/Ethical perspectives underlying practices of ethical hackers/ethical hacking
+Next, ethical perspectives underlying the practices of professional ethical hackers
 
 ### Ethical hackers are white hat hackers
 
-First, we make the case that ethical hackers are white hat hackers (ethical hacking is legal).
+Various approaches/perspectives can be used to distinguish between white hat hackers, grey hat hackers, black hat hackers, and hacktivists (see "Other perspectives on hacking/hacker ethics" below). However, we make a comparison differentiating between these four hacker groups and their hacking practices on the logic that there is only one category of white hat hacking: legal hacking. Ethical hackers necessarily fit into the white hat hackers group—there's no ambiguity regrading the legality of their practices. No greyness. 
 
 ISO/IEC 27001: Authorization & Legal Compliance (A.18.1.4) – Testing must be authorized to avoid legal risks (e.g., unauthorized hacking).
+IEEE Code of Ethics (General Ethical Framework): Obtain proper authorization before testing (Ethics 3, 4).
+EEE Std 802.10-1998 (Interoperable LAN/MAN Security): Though withdrawn in 2006, this standard historically included security testing considerations, emphasizing: Authorized access controls (preventing unauthorized penetration attempts).
 
 Hackers can be divided into a number of groups, some of which “are clearly ethical, others are clearly unethical, and still others exist in a gray area of sorts and whose ethics can be debated”, argues Pashel (2006, p. 197). White hats use their skills “in a manner that most would clearly define as ethical". For example, white hat hackers could be employees who "with permission, attack a company’s network in order to determine weaknesses, and law enforcement and intelligence agents who use their skill in the name of national security or to investigate and solve crimes” (p. 197).
 
@@ -103,58 +83,178 @@ That ethical hacking is a legal practice is hardly a point of contention whether
 The key defining characteristic of ethical hacking in comparison to other hacking practices is the legal imperative: ethical hacking is unambiguously legal. The practices of ethical hackers are governed by a legal framework. Ethical hackers have authorization to hack the target system (Graves, 2010; Palmer, 2001). Ethical hackers need prior authorization, stipulated in a legally binding contract with the computer network owners, before attempting to breach a computer network (Bodhani, 2013; Palmer, 2001; Young, Lixuan, & Prybutok, 2007).
 
 ### Ethical hackers abide by professional code of ethics
+-Professional ethics of ethical hackers
+-Ethical hackers are trustworthy
 
-Next, ethical hackers abide by a professional code of ethics.
-/Professional ethics of ethical hackers
-/Ethical hackers are trustworthy
+This section explores the professional ethics of ethical hackers as stipulated/enriched in well established and widely accepted industry and professional certification authorities.
+
+ethical hackers abide by **formal and conventional** professional ethical standards and/or codes of ethical conduct.
+
+**formal** codes of ethical conduct -**Professional ethics of ethical hackers**
+/the practices of ethical hackers are governed by a web of professional codes of conduct.
+include 
+1-IEEE standards and ethical considerations/frameworks 
+2-ACM code of ethics...
+
+**conventional** professional codes of ethical conduct (professional ethical values) can be discussed under the heading/concept of
+**Ethical hackers are trustworthy** (don't damage client system; report any damage)
 
 **Professional ethics of ethical hackers**
-**Below are the key IEEE standards and ethical considerations related to penetration testing:**
+
+Professional ethical hackers are bound by a web of codes that govern their behavior, ensuring their work aligns with legal and societal expectations. These standards are enforced through accreditation, certification bodies, and legal systems. By adhering to these principles, ethical hackers maintain the trust of clients, the public, and the broader cybersecurity community, distinguishing themselves as true professionals in a field where the line between black and white can sometimes blur.
+
+
+#### Professionalism as grounded in university training
+
+Three Canadian university professors of computer science disciplines interviewed for a PhD thesis said professionalism, as in professional ethics or a professional code of conduct, guides the behavior of professional engineers and computer scientists (PPT11, PPT3, PPT10).
+
+As a professional engineer, said a Canadian university professor of computer science and software engineering (PPT3), he is “bound by a number of codes of practice, of ethics.” “As a professional engineer, I’m bound by the PEO code of ethics … I’m also bound by the software engineering code of ethics, the ACM code of ethics, the IEEE code of ethics, because I’m members of multiple societies that have codes.” He says he teaches “five different codes of ethics. They are all broadly the same, but I teach about them to students.” PPT3 added:
+
+That is in the course calendar descriptions and it’s also in our accreditation. We are accredited by CIPS, the Canadian Information Processing Society, and by the Canadian Engineering Accreditation Board, and both of those require us to teach students about ethics.
+
+Accreditation bodies like the Canadian Engineering Accreditation Board (CEAB) and Canadian Information Processing Society (CIPS) require ethics education as part of degree programs. This means students learn not only technical penetration testing skills but also how to apply ethical decision-making in real-world scenarios. For example, coursework may include case studies on responsible disclosure dilemmas or discussions on legal consequences of unauthorized testing, reinforcing that ethical hacking is not just about technical skill but professional responsibility.
+
+**How Ethics is Taught in Academia**
+
+- Case-Based Learning: Analyzing past breaches (e.g., Equifax, SolarWinds) to discuss ethical failures.
+    
+- Role-Playing Scenarios: Simulating situations where students must choose between profit and responsible reporting.
+    
+- Guest Lectures from Industry: Professionals share real-world ethical challenges they’ve faced.
+    
+
+[Interview Participants by Area of Expertise](https://docs.google.com/document/d/e/2PACX-1vQ5iF6m--APIZrFd9hnz1HH9zv3jJjuBjl0zGDgpviYSSMRBxpWQxCvKQmK8rrP0D5o_Hx4grwLkRcs/pub)
+
+Ethical hacking curricula should include the ethical and legal consequences of misusing hacking skills learned in university as a prevention component integrated with the technical instruction (Logan & Clarkson, 2005; Pashel, 2006).
+
+Adhering to multiple overlapping ethical guidelines, all of which reinforce the same core values, ensures that ethical hackers do not merely rely on personal judgment but follow institutionalized best practices that have been refined over decades. 
+University programs teaching ethical hacking incorporate these professional codes into their curricula to ensure graduates enter the field with a strong ethical foundation.
+
+Key assumptions involved in this perspective is that university instruction equips students with ethical, scientific, and critical thinking skills necessary for professionalism on the job.
+
+It’s kind of like when software engineering became an engineering discipline. There were a lot of coders that knew how to code, but they didn’t have the mindset to approach it as a systematic large problem. I think ethical hacking is a very similar thing. (PPT11)
+
+PPT11 adds, ethical hacking “has become more of an engineering type of discipline now. There’s structure, there’s rigor, there’s tools out there that can be used for it … you need to systematically approach a problem, how to see if you can penetrate a system or not.” It is “that systematic nature that most of the underground ethical hackers, or the small people, don’t have because they’ve never had exposure to doing it in kind of an engineering mindset.”
+
+#### Professionalism as grounded in industry standards
+
+Professional ethical hackers operate under strict ethical guidelines to ensure their actions remain legal, responsible, and beneficial to cybersecurity. Unlike malicious hackers, they adhere to formalized codes of conduct, often outlined by organizations such as the EC-Council (International Council of E-Commerce Consultants), Offensive Security, and (ISC)². These frameworks emphasize principles like authorization, confidentiality, and non-maleficence (avoiding harm).
+
+A Certified Ethical Hacker (EC-Council) is, “a skilled professional who understands and knows how to look for weaknesses and vulnerabilities in target systems and uses the same knowledge and tools as a malicious hacker, but in a lawful and legitimate manner to assess the security posture of the target system(s).” In contrast to a cracker, who is a malicious hacker, an ethical hacker “is someone who employs the same tools and techniques a criminal might use, with the customer’s full support and approval, to help secure a network or system” (Walker, 2017, p. 29).
+
+**Key Codes of Conduct for Information Security Professionals (Adapted from Thomas et al., 2018, pp. 5-6)**
+
+TABLE
+
+**Key Codes Governing Ethical Hackers:**
+
+- **ACM Code of Ethics (2018):** Prioritizes avoiding harm, respecting privacy, and honesty in disclosure.
+    
+- **IEEE Code of Ethics:** Emphasizes transparency, accountability, and rejecting bribery or conflicts of interest.
+    
+- **CEH (Certified Ethical Hacker) Code of Conduct:** Mandates legal authorization and confidentiality in testing.
+    
+- **Industry certifications** like **Certified Ethical Hacker (CEH)** and **Offensive Security Certified Professional (OSCP)** include ethics modules to reinforce professional conduct.
+    
+- **Industry standards/guidelines** such as **OWASP (Open Web Application Security Project)** provide guidelines for responsible vulnerability disclosure, ensuring ethical hackers contribute positively to the cybersecurity ecosystem.
+
+
+--
+formal codes of ethical conduct include 
+1-IEEE standards and ethical considerations/frameworks 
+2-ACM code of ethics...
+
+1-IEEE standards and ethical considerations/frameworks:
 
 1. IEEE Code of Ethics (General Ethical Framework)
-
-The [**IEEE Code of Ethics**](https://www.ieee.org/about/corporate/governance/p7-8.html) provides broad ethical principles applicable to cybersecurity professionals, including penetration testers:
-
-- **Avoid harming privacy, confidentiality, and system integrity** (Ethics 1, 2, 5).
-- **Be honest about security risks and testing limitations** (Ethics 6, 7).
-- **Obtain proper authorization before testing** (Ethics 3, 4).
-
-While not specific to penetration testing, these principles form the **ethical foundation** for security testing.
-
 2. IEEE Std 802.10-1998 (Interoperable LAN/MAN Security)
-
-Though outdated (withdrawn in 2006), this standard historically included security testing considerations, emphasizing:
-
-- **Authorized access controls** (preventing unauthorized penetration attempts).
-- **Security validation** (testing for vulnerabilities in a controlled manner).
-
-(Note: This standard is no longer active but influenced later security testing ethics.)
-
 3. IEEE Cybersecurity Initiative & Best Practices
 
-IEEE provides **guidelines** (though not formal standards) on ethical hacking:
+The [**IEEE Code of Ethics**](https://www.ieee.org/about/corporate/governance/p7-8.html) provides broad ethical principles applicable to cybersecurity professionals, including penetration testers: Avoid harming privacy, confidentiality, and system integrity (Ethics 1, 2, 5).
+ISO/IEC 27001: Confidentiality (A.8.2.1, A.13.2.1) – Testers must protect sensitive data discovered during testing.
 
-- **Ethical Hacking Education (IEEE CS)** – Encourages certifications like **Certified Ethical Hacker (CEH)**.
-- **Responsible Disclosure** – IEEE supports coordinated vulnerability disclosure (similar to ISO/IEC 29147).
+ISO/IEC 27001: Risk Minimization (A.6.1.3) – Testing should avoid disrupting business operations.
 
-4. IEEE P7001 (Standard for Transparency of Autonomous Systems)
 
-While focused on AI, this draft standard includes **security testing ethics** for autonomous systems:
+ISO/IEC 27001: Non-Disclosure (A.13.2.4) – Findings should not be disclosed without permission.
+EEE Cybersecurity Initiative & Best Practices: Responsible Disclosure – IEEE supports coordinated vulnerability disclosure (similar to ISO/IEC 29147).
 
-- **Testing must avoid unintended harm** (e.g., adversarial testing on AI systems).
-- **Disclosure of testing methodologies** for accountability.
 
-5. IEEE Security & Privacy Workshops
+Ethical hackers operate within a structured framework of professional codes of conduct, which define their responsibilities and ensure accountability. Several professional codes of conduct exist for information security professionals and ethical hackers, applicable to individuals who are members or certified professionals of the respective association. For example,
 
-IEEE conferences (e.g., **IEEE Symposium on Security & Privacy**) often publish papers on **ethical penetration testing**, covering:
+- Industry certifications: CEH Code of Ethics (EC-Council), OSCP (Offensive Security Code of Conduct), (ISC)² Code of Ethics, ISACA Code of Professional Ethics.
+    
+- Regulatory/governmental standards/guidelines: NIST SP 800-12 and NIST SP 800-53 touch on broader security and privacy principles, NIST SP 800-115 (Technical Guide to Penetration Testing) emphasizes authorized testing.
+    
+- Industry standards/guidelines: OSSTMM, ISO/IEC 27001, OWASP (Open Web Application Security Project) Testing Guide, PCI DSS Penetration Testing Guidance.
+    
+- Professional associations: ACM Code of Ethics (2018), IEEE standards/guidelines (IEEE Cybersecurity Initiative, IEEE Certified Ethical Hacker (CEH) resources), IEEE code of ethics, IEEE code of conduct.
+    
+- Professional licensing/accreditation bodies: Professional Engineers Ontario (PEO)/PEO code of ethics, Canadian Engineering Accreditation Board (CEAB), Canadian Information Processing Society (CIPS).
+    
 
-- **Legal boundaries** (e.g., differences between white-hat vs. black-hat hacking).
-- **Informed consent** in red teaming.
+While different organizations have their own codes, several underlying principles cut through them: protecting the public (or public safety), acting lawfully, acting with integrity, and maintaining trust.
+
+This universality reinforces that ethical hacking is not a subjective practice but one grounded in well-established professional norms. By internalizing these codes, ethical hackers ensure their work enhances cybersecurity without veering into ethically questionable practices. Ultimately, professionalism in ethical hacking is what separates it from malicious hacking, making it a respected and legally defensible discipline.
+
 
 **Ethical hackers are trustworthy**
-ISO/IEC 27001: Confidentiality (A.8.2.1, A.13.2.1) – Testers must protect sensitive data discovered during testing.
-ISO/IEC 27001: Non-Disclosure (A.13.2.4) – Findings should not be disclosed without permission.
-ISO/IEC 27001: Risk Minimization (A.6.1.3) – Testing should avoid disrupting business operations.
+
+Graves (2010) and Palmer (2001) agree on three key attributes of ethical hackers: trust, honouring the integrity of the client’s system, and seeking prior permission from the client. Graves refers to these traits as professional.
+
+First and foremost, ethical hackers “must be completely trustworthy. While testing the security of a client’s systems, the ethical hacker may discover information about the client that should remain secret" (Palmer, 2001, p. 771). During an evaluation, “the ethical hacker often holds the ‘keys to the company,’ and therefore must be trusted to exercise tight control over any information about a target that could be misused” (Palmer, 2001, p. 771).
+
+According to EC-Council (International Council of Electronic Commerce Consultants), an ethical hacker is “an individual who is usually employed with the organization and who can be trusted to undertake an attempt to penetrate networks and/or computer systems using the same methods and techniques as a Hacker.”
+
+Ethical hacking is typically designed to simulate real-world attacks. The ethical hacker will use the same techniques and tools of malicious hackers, target the same information and infrastructure assets, and hence might expose confidential information and even might unwillingly damage assets or disrupt the infrastructure (Harris, 2021; Palmer, 2001).
+
+Ethical hackers hold a unique position of trust, as their work involves accessing sensitive systems that could be exploited if mishandled. Ethical hackers can be trusted not to exploit findings for personal gain or malicious purposes. Further, they will report discovered vulnerabilities privately to the organization, not publicly disclose them without the client's explicit consent.
+
+One rule that IBM’s ethical hacking effort had from the very beginning was that we would not hire ex-hackers. While some will argue that only a “real hacker” would have the skill to actually do the work, we feel that the requirement for absolute trust eliminated such candidates. (Palmer, 2001, p. 772)
+
+Harper et al. (2011) are an important authority on what constitutes ethical hacking. We do not have to agree with them wholeheartedly, but their conception of ethical hackers underscores the centrality of trust in ethical hacking practices. The title of their book, _Gray Hat Hacking: The Ethical Hacker’s Handbook_, is a giveaway to their view, which is that ethical hackers are in fact grey hat hackers by necessity, by virtue of their practices.
+
+Many times, while the ethical hacker is carrying out her procedures to gain total control of the network, she will pick up significant trophies along the way. These trophies can include the CEO’s passwords, company trade-secret documentation, administrative passwords to all border routers, documents marked “confidential” held on the CFO’s and CIO’s laptops, or the combination to the company vault. The reason these trophies are collected along the way is so the decision makers understand the ramifications of these vulnerabilities … as soon as you show the CFO his next year’s projections, or show the CIO all of the blueprints to the next year’s product line, or tell the CEO that his password is “IAmWearingPanties,” they will all want to learn more about the importance of a firewall and other countermeasures that should be put into place. (Harper et al., 2011, p. 11)
+
+Andrasik (2016), and Thomas et al. (2018) make the same point as do Harper el al. (2011), that ethical hackers will sometimes unavoidably access privileged information. Underscoring the importance of trustworthiness, Andrasik (2016) proposes that organizations hiring ethical hackers need to talk to references first:
+
+If a pen-test group is going to actively try to breach your defenses, you want to know their ethics are beyond reproach. That knowledge should come from somewhere other than a well-crafted website or canned testimonials— it should come from conversations with companies that have experienced a pen test by the group in question.
+
+Thomas et al. (2018) argue that "to be effective, ethical hacking involves trying to gain access to a system to access confidential and sensitive information. This means, that a certain level of trust needs to be established between the ethical hacker and the party engaging them” (p. 3).
+
+The authors point out a fact highlighting an intrinsic grey area in the ethical hacking profession and which emphasizes the need for ethical hackers to espouse a strong moral standing.
+
+[A]n ethical hacker needs to keep their knowledge of exploits up to date, and they will likely need to go “underground” to gain this knowledge (Conran 2014). Because ethical hackers may even utilize questionable means to gain intelligence it may result in a question of their professional ethics. (Thomas et al., 2018, p. 4)
+
+Ethical hackers should take “all precautions to do no harm to their systems during a pen test” (Graves, 2010, para. 1). An ethical hacker will not damage or harm the test network infrastructure or information assets and will report on and remediate any accidental damage (Graves, 2010).
+
+In the case of computer security, these “tiger teams” or “ethical hackers” would employ the same tools and techniques as the intruders, but they would neither damage the target systems nor steal information. Instead, they would evaluate the target systems’ security and report back to the owners with the vulnerabilities they found and instructions for how to remedy them. (Palmer, 2001, p. 770)
+
+Research by Tavani (2016) emphasizes the duty of care that ethical hackers owe to organizations and end-users. This includes avoiding unnecessary disruptions (e.g., crashing production servers) and ensuring that discovered vulnerabilities are not leaked to malicious actors. Additionally, ethical hackers must avoid conflicts of interest—such as working for competing firms without transparency—to maintain professional credibility.
+
+### Ethical perspectives underlying the practices of professional ethical hackers
+
+This section frames an understanding of ethical hacking as professional ethical hacking, thus:
+
+Point 1: ethical hackers are white hat hackers who by definition abide my legal imperatives =legal practice.
+
+Point 2: ethical hackers abide by formal and conventional professional ethical standards and guidelines / are trustworthy (don't damage client system; report any damage) = professionals/'s values - e.g., ACM code of ethics...
+
+Point 3: the strategic teleological goal of (eh as) penetration testing practice is info security risk mitigation, which is a practice of professional ethical hacking/conduct--public safety, prevention
+
+Point 4: the pragmatic goal of (eh as) penetration testing based on the language/idioms of their practitioners (i.e., professional ethical hackers) is testing, which is
+knowledge making (scientific inquiry) for improvement/efficiency of defenses and risk mitigation.
+While the word "hacking" emphasizes the end goal of the act, defeating a security design, which is utilitarian but not pragmatic (not instrumental for improving efficiency). 
+Unregulated or "real hackers" will almost certainly never call their practice penetration testing. 
+
+**Ethical perspectives underlying the practices of professional ethical hackers**
+
+| point | Deontology/rule-based ethics | Utilitarianism/consequentialism | Pragmatism                         |
+| ----- | ---------------------------- | ------------------------------- | ---------------------------------- |
+| 1     | yes                          |                                 |                                    |
+| 2     | yes                          |                                 |                                    |
+| 3     | yes                          | yes                             |                                    |
+| 4     |                              | yes (hacking)                   | yes (professional ethical hacking) |
 
 ### Profiles of hackers
 

@@ -132,7 +132,9 @@ A Certified Ethical Hacker (EC-Council) is, “a skilled professional who unders
 
 **Key Codes of Conduct for Information Security Professionals (Adapted from Thomas et al., 2018, pp. 5-6)**
 
-TABLE
+
+
+
 
 
 **Key Codes Governing Ethical Hackers:**

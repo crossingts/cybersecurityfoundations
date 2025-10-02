@@ -315,7 +315,6 @@ Ethical hackers abide by a professional code of ethics:
 -Professionalism as grounded in industry standards
 -Professionalism as grounded in industry conventions
 
-
 * Professional ethical hacking is legal (authorized) and contract based
 * The practices of ethical hackers align with professional codes such as the ACM Code of Ethics and the IEEE Code of Ethics
 * White hats follow well established penetration testing industry and regulatory ethical guidelines such as EC-Council’s CEH and NIST SP 800-115

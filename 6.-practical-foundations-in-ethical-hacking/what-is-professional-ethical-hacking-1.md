@@ -9,43 +9,41 @@ hidden: true
 
 ## Learning objectives
 
-* Understand why ethical hackers fit within the white hat hackers group
+* Explain why ethical hackers fit within the white hat hackers group
 * Become familiar with the professional ethics of ethical hackers 
 
 This section advances an understanding that ethical hackers are white hat hackers who abide by well established and widely accepted industry and government standards, guidelines, and licensing and accreditation requirements regarding what constitutes professional practice.
-
-First, we make the case that ethical hackers are white hat hackers (ethical hacking is legal).
-
-Next, we demonstrate that practices of ethical hackers are governed by a web of professional codes of conduct. /ethical hackers abide by a professional code of ethics.
-/Professional ethics of ethical hackers /Ethical hackers are trustworthy
-
-Next, profiles of hackers--an analysis of the four types of hacking/hacker groups classified based on the legality of their practices and commitment to professional conduct.
+First, the discussion makes the case that ethical hackers are white hat hackers (ethical hacking is legal).
+Next, the analysis explores the web of professional codes of conduct that govern the behavior of professional ethical hackers (professional ethics of ethical hackers).
+Finally, the analysis sketches out four types of hacker groups classified based on the legality of their practices and the imperative to professional conduct.
 
 ## Topics covered in this section
 
 * **Introduction**
-* **Topic 2**
+* **Ethical hacking is legal**
+* **Professional ethics of ethical hackers**
+   * **Professionalism as grounded in university training**
+   * **Professionalism as grounded in industry standards**
+   * **Professionalism as grounded in industry conventions**
 * **Profiles of hackers**
-  * **White Hat Hackers: The Ethical Professionals**
-  * **Grey Hat Hackers: The Unauthorized Researchers**
-  * **Black Hat Hackers: The Criminals**
-  * **Hacktivists: The Politically Motivated Hackers**
-* **Other perspectives on hacking/hacker ethics**
+   * **White Hat Hackers: The Ethical Professionals**
+   * **Grey Hat Hackers: The Unauthorized Researchers**
+   * **Black Hat Hackers: The Criminals**
+   * **Hacktivists: The Politically Motivated Hackers**
+* **Other perspectives on hacker ethics**
 
 ### Introduction
 
 Ethical hackers use the same tools as malicious hackers but with the strategic end of buttressing a computer system's security.
 While ethical hackers aim principally to achieve risk mitigation, the various other hacker groups hold other priorities for their hacking activities.
-
 Professional ethical hackers operate under strict ethical guidelines to ensure their actions remain legal, responsible, and beneficial to cybersecurity. 
 
 This analysis frames an understanding of professional ethical hackers as white hat hackers who abide by well established and widely accepted industry and government standards, guidelines, and licensing and accreditation requirements regarding what constitutes professional practice.
 
-First, this analysis differentiates white hat hackers from grey hat hackers, black hat hackers, and hacktivists on the basis of **legal practice**. =Ethical hackers are white hat hackers
+First, this analysis differentiates white hat hackers from grey hat hackers, black hat hackers, and hacktivists on the basis of **legal practice**.
 
-Next, Ethical hackers abide by a professional code of ethics = **ethical practice**. 
-Professional ethics of ethical hackers 
-Ethical hackers are trustworthy
+Next, the analysis explores the key properties/attributes (themes) of professional ethics and codes os professional ethical hackers as stipulated/enriched within various industry standards and conventions. 
+
 
 Next, profiles of hackers--an analysis of the four types of hacking/hacker groups classified based on the legality of their practices and professional conduct.
 
@@ -131,7 +129,9 @@ Industry standards/guidelines: OSSTMM, ISO/IEC 27001, OWASP (Open Web Applicatio
 
 **Certification and training authorities**
 
-Industry certifications like Certified Ethical Hacker (CEH) and Offensive Security Certified Professional (OSCP) include ethics modules to reinforce professional conduct.
+Themes re required professional conduct of ethical hackers:
+
+
 
 First, the following segment sheds light on several professional codes of conduct of ethical hackers and information security professionals of key certification and training authorities:
 CEH Code of Ethics (EC-Council), OSCP (Offensive Security Code of Conduct), (ISC)² Code of Ethics, ISACA Code of Professional Ethics.
@@ -293,7 +293,7 @@ Hacktivists leverage cyber techniques for political or social causes, blurring t
 2. **WikiLeaks Supporters** – Hackers who targeted institutions to expose classified documents (e.g., _Chelsea Manning leaks_).
 3. **Phineas Fisher** – A hacktivist who breached _Hacking Team_ and _Gamma Group_, exposing surveillance tools sold to oppressive regimes.
 
-#### Hacker Profiles <a href="#ember543" id="ember543"></a>
+**Hacker Profiles Summary Table**
 
 | Type           | Legal? | Motivation              | Methods                             | Examples                        |
 | -------------- | ------ | ----------------------- | ----------------------------------- | ------------------------------- |
@@ -304,7 +304,7 @@ Hacktivists leverage cyber techniques for political or social causes, blurring t
 
 Each hacker group has distinct motivations, but the legality of their practices and their moral ethics separate them most clearly. While white hats work within the legal system, grey hats operate in a moral grey zone, black hats are outright criminals, and hacktivists prioritize ideology over law.
 
-#### Other perspectives on hacking/hacker ethics <a href="#ember546" id="ember546"></a>
+#### Other perspectives on hacker ethics <a href="#ember546" id="ember546"></a>
 
 The pioneering historical work of Steven Levy (1984) on hacker culture and hacker ethic (Hackers: Heroes of the Computer Revolution) presents one of the earliest theorizations of hacker ethic (what hackers thought it meant to be a hacker), particularly in the early decades of computer technology in the 1950s and 1960s. Levy (1984) distilled the hacker ethic into six bullet points:
 

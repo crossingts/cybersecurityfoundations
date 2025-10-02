@@ -46,6 +46,7 @@ Professional ethics of ethical hackers
 Ethical hackers are trustworthy
 
 Next, profiles of hackers--an analysis of the four types of hacking/hacker groups classified based on the legality of their practices and professional conduct.
+
 ### Ethical hackers are white hat hackers
 
 Various approaches/perspectives can be used to distinguish between white hat hackers, grey hat hackers, black hat hackers, and hacktivists (see "Other perspectives on hacking/hacker ethics" below). However, we make a comparison differentiating between these four hacker groups and their hacking practices on the logic that there is only one category of white hat hacking: legal hacking. Ethical hackers necessarily fit into the white hat hackers group—there's no ambiguity regrading the legality of their practices. No greyness.
@@ -80,6 +81,14 @@ The key defining characteristic of ethical hacking in comparison to other hackin
 
 Professional ethical hackers are bound by a web of ethical codes that govern their behavior, ensuring their work aligns with legal and societal expectations. These ethical codes are enforced through accreditation, certification bodies, and legal systems. By adhering to these principles, ethical hackers maintain the trust of clients, the public, and the broader cybersecurity community, distinguishing themselves as true professionals in a field where the line between black and white can sometimes blur.
 
+Ethical hackers operate within a structured framework of professional codes of conduct, which define their responsibilities and ensure accountability. Several professional codes of conduct exist for information security professionals and ethical hackers, applicable to individuals who are members or certified professionals of the respective association. For example,
+
+* Industry certifications: CEH Code of Ethics (EC-Council), OSCP (Offensive Security Code of Conduct), (ISC)² Code of Ethics, ISACA Code of Professional Ethics.
+* Regulatory/governmental standards/guidelines: NIST SP 800-12 and NIST SP 800-53 touch on broader security and privacy principles, NIST SP 800-115 (Technical Guide to Penetration Testing) emphasizes authorized testing.
+* Industry standards/guidelines: OSSTMM, ISO/IEC 27001, OWASP (Open Web Application Security Project) Testing Guide, PCI DSS Penetration Testing Guidance.
+* Professional associations: ACM Code of Ethics (2018), IEEE standards/guidelines (IEEE Cybersecurity Initiative, IEEE Certified Ethical Hacker (CEH) resources), IEEE code of ethics, IEEE code of conduct.
+* Professional licensing/accreditation bodies: Professional Engineers Ontario (PEO)/PEO code of ethics, Canadian Engineering Accreditation Board (CEAB), Canadian Information Processing Society (CIPS).
+
 This section explores the professional ethics of ethical hackers as stipulated/enriched in well established and widely accepted industry and professional certification authorities.
 
 ethical hackers abide by **formal and conventional** professional ethical standards or codes of ethical conduct.
@@ -89,10 +98,7 @@ ethical hackers abide by **formal and conventional** professional ethical standa
 -Professionalism as grounded in industry standards
 
 **conventional** codes of ethical conduct (professional ethical values) are discussed under the concept of **Ethical hackers are trustworthy**.
-
-**Professional ethics of ethical hackers**
-
-
+-Professionalism as grounded in industry conventions
 
 #### Professionalism as grounded in university training
 
@@ -116,9 +122,15 @@ PPT11 adds, ethical hacking “has become more of an engineering type of discipl
 
 #### Professionalism as grounded in industry standards
 
-Professional ethical hackers operate under strict ethical guidelines to ensure their actions remain legal, responsible, and beneficial to cybersecurity. Unlike malicious hackers, they adhere to formalized codes of conduct, often outlined by organizations such as the EC-Council (International Council of E-Commerce Consultants), Offensive Security, and (ISC)². These frameworks emphasize principles like authorization, confidentiality, and non-maleficence (avoiding harm).
+Professional ethical hackers operate under strict ethical guidelines to ensure their actions remain legal, responsible, and beneficial to cybersecurity. 
+
+* Industry certifications: CEH Code of Ethics (EC-Council), OSCP (Offensive Security Code of Conduct), (ISC)² Code of Ethics, ISACA Code of Professional Ethics.
+* Professional associations: ACM Code of Ethics (2018), IEEE standards/guidelines (IEEE Cybersecurity Initiative, IEEE Certified Ethical Hacker (CEH) resources), IEEE code of ethics, IEEE code of conduct.
 
 **Certification and training authorities**
+* Industry certifications: CEH Code of Ethics (EC-Council), OSCP (Offensive Security Code of Conduct), (ISC)² Code of Ethics, ISACA Code of Professional Ethics.
+
+Unlike malicious hackers, professional ethical hackers adhere to formalized codes of conduct, often outlined by organizations such as the EC-Council (International Council of E-Commerce Consultants), Offensive Security, and (ISC)². These frameworks emphasize principles like authorization, confidentiality, and non-maleficence (avoiding harm).
 
 Industry certifications like Certified Ethical Hacker (CEH) and Offensive Security Certified Professional (OSCP) include ethics modules to reinforce professional conduct.
 
@@ -134,14 +146,8 @@ A Certified Ethical Hacker (EC-Council) is, “a skilled professional who unders
 | ISACA Code of Professional Ethics<br><br>                                                                                                                                                                                                              | ISACA was established in 1969 and focuses on IT governance. It has over 140,000 members worldwide (ISACA, n.d.). ISACA provides training and certification for information security and cybersecurity professionals. The ISACA Code of Professional Ethics mandates that compliance with standards and procedures, due diligence, legal conduct and confidentiality, competency, and continuing professional development are maintained (ISACA, n.d).                                                                                                                                                                                                               |
 | ISC2 Code of Ethics - Code of Ethics Preamble: The safety and welfare of society and the common good, duty to our principals, and to each other, requires that we adhere, and be seen to adhere, to the highest ethical standards of behavior.<br><br> | The International Information System Security Certification Consortium or ISC2 – more correctly, (ISC)² – is an international, not for profit organization with over 125,000 members in the information security profession (ISC2, n.d.). ISC2’s Code of Ethics Canons consists of four directives: 1) Protect society, the common good, necessary public trust and confidence, and the infrastructure; 2) Act honorably, honestly, justly, responsibly, and legally; 3) Provide diligent and competent service to principals; and 4) Advance and protect the profession.                                                                                           |
 
-
-**Key Codes Governing Ethical Hackers:**
-
-
-
-\-- formal codes of ethical conduct include 
-1-IEEE standards and ethical considerations/frameworks 
-2-ACM code of ethics...
+**Professional associations**
+* Professional associations: ACM Code of Ethics (2018), IEEE standards/guidelines (IEEE Cybersecurity Initiative, IEEE Certified Ethical Hacker (CEH) resources), IEEE code of ethics, IEEE code of conduct.
 
 1-IEEE standards and ethical considerations/frameworks:
 
@@ -157,15 +163,9 @@ IEEE Cybersecurity Initiative & Best Practices: Responsible **Disclosure** – I
 Industry standards/guidelines such as OWASP (Open Web Application Security Project) provide guidelines for responsible vulnerability **disclosure**, ensuring ethical hackers contribute positively to the cybersecurity ecosystem.
 
 
-Ethical hackers operate within a structured framework of professional codes of conduct, which define their responsibilities and ensure accountability. Several professional codes of conduct exist for information security professionals and ethical hackers, applicable to individuals who are members or certified professionals of the respective association. For example,
 
-* Industry certifications: CEH Code of Ethics (EC-Council), OSCP (Offensive Security Code of Conduct), (ISC)² Code of Ethics, ISACA Code of Professional Ethics.
-* Regulatory/governmental standards/guidelines: NIST SP 800-12 and NIST SP 800-53 touch on broader security and privacy principles, NIST SP 800-115 (Technical Guide to Penetration Testing) emphasizes authorized testing.
-* Industry standards/guidelines: OSSTMM, ISO/IEC 27001, OWASP (Open Web Application Security Project) Testing Guide, PCI DSS Penetration Testing Guidance.
-* Professional associations: ACM Code of Ethics (2018), IEEE standards/guidelines (IEEE Cybersecurity Initiative, IEEE Certified Ethical Hacker (CEH) resources), IEEE code of ethics, IEEE code of conduct.
-* Professional licensing/accreditation bodies: Professional Engineers Ontario (PEO)/PEO code of ethics, Canadian Engineering Accreditation Board (CEAB), Canadian Information Processing Society (CIPS).
-
-While different organizations have their own codes, several underlying principles cut through them: protecting the public (or public safety), acting lawfully, acting with integrity, and maintaining trust.
+While different authorities have their own codes, 
+several underlying principles cut through the various codes regarding professional conduct: protecting the public (or public safety), acting lawfully, acting with integrity, and maintaining trust.
 
 This universality reinforces that ethical hacking is not a subjective practice but one grounded in well-established professional norms. By internalizing these codes, ethical hackers ensure their work enhances cybersecurity without veering into ethically questionable practices. Ultimately, professionalism in ethical hacking is what separates it from malicious hacking, making it a respected and legally defensible discipline.
 

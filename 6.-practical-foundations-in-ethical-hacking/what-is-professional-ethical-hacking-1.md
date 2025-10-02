@@ -103,7 +103,6 @@ include
 
 Professional ethical hackers are bound by a web of codes that govern their behavior, ensuring their work aligns with legal and societal expectations. These standards are enforced through accreditation, certification bodies, and legal systems. By adhering to these principles, ethical hackers maintain the trust of clients, the public, and the broader cybersecurity community, distinguishing themselves as true professionals in a field where the line between black and white can sometimes blur.
 
-
 #### Professionalism as grounded in university training
 
 Three Canadian university professors of computer science disciplines interviewed for a PhD thesis said professionalism, as in professional ethics or a professional code of conduct, guides the behavior of professional engineers and computer scientists (PPT11, PPT3, PPT10).
@@ -113,17 +112,6 @@ As a professional engineer, said a Canadian university professor of computer sci
 That is in the course calendar descriptions and it’s also in our accreditation. We are accredited by CIPS, the Canadian Information Processing Society, and by the Canadian Engineering Accreditation Board, and both of those require us to teach students about ethics.
 
 Accreditation bodies like the Canadian Engineering Accreditation Board (CEAB) and Canadian Information Processing Society (CIPS) require ethics education as part of degree programs. This means students learn not only technical penetration testing skills but also how to apply ethical decision-making in real-world scenarios. For example, coursework may include case studies on responsible disclosure dilemmas or discussions on legal consequences of unauthorized testing, reinforcing that ethical hacking is not just about technical skill but professional responsibility.
-
-**How Ethics is Taught in Academia**
-
-- Case-Based Learning: Analyzing past breaches (e.g., Equifax, SolarWinds) to discuss ethical failures.
-    
-- Role-Playing Scenarios: Simulating situations where students must choose between profit and responsible reporting.
-    
-- Guest Lectures from Industry: Professionals share real-world ethical challenges they’ve faced.
-    
-
-[Interview Participants by Area of Expertise](https://docs.google.com/document/d/e/2PACX-1vQ5iF6m--APIZrFd9hnz1HH9zv3jJjuBjl0zGDgpviYSSMRBxpWQxCvKQmK8rrP0D5o_Hx4grwLkRcs/pub)
 
 Ethical hacking curricula should include the ethical and legal consequences of misusing hacking skills learned in university as a prevention component integrated with the technical instruction (Logan & Clarkson, 2005; Pashel, 2006).
 
@@ -145,6 +133,7 @@ A Certified Ethical Hacker (EC-Council) is, “a skilled professional who unders
 **Key Codes of Conduct for Information Security Professionals (Adapted from Thomas et al., 2018, pp. 5-6)**
 
 TABLE
+
 
 **Key Codes Governing Ethical Hackers:**
 

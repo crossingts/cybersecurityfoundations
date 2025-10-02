@@ -124,16 +124,17 @@ The following segment/discussion covers professional ethical hacking within two 
 First, the following segment sheds light on several professional codes of conduct of ethical hackers and information security professionals of key certification and training authorities:
 CEH Code of Ethics (EC-Council), OSCP (Offensive Security Code of Conduct), (ISC)² Code of Ethics, ISACA Code of Professional Ethics.
 
-Second, several professional codes of ethics of key professional associations are covered: 
-ACM Code of Ethics (2018), IEEE standards/guidelines (IEEE Cybersecurity Initiative, IEEE Certified Ethical Hacker (CEH) resources), IEEE code of ethics, IEEE code of conduct.
+Second, several professional codes of ethics of key professional associations and industry standards/guidelines are covered: 
+Professional associations: ACM Code of Ethics (2018), IEEE standards/guidelines (IEEE Cybersecurity Initiative, IEEE Certified Ethical Hacker (CEH) resources), IEEE code of ethics, IEEE code of conduct.
 +
 Industry standards/guidelines: OSSTMM, ISO/IEC 27001, OWASP (Open Web Application Security Project) Testing Guide, PCI DSS Penetration Testing Guidance.
 
 **Certification and training authorities**
 
-CEH Code of Ethics (EC-Council), OSCP (Offensive Security Code of Conduct), (ISC)² Code of Ethics, ISACA Code of Professional Ethics.
-
 Industry certifications like Certified Ethical Hacker (CEH) and Offensive Security Certified Professional (OSCP) include ethics modules to reinforce professional conduct.
+
+First, the following segment sheds light on several professional codes of conduct of ethical hackers and information security professionals of key certification and training authorities:
+CEH Code of Ethics (EC-Council), OSCP (Offensive Security Code of Conduct), (ISC)² Code of Ethics, ISACA Code of Professional Ethics.
 
 A Certified Ethical Hacker (EC-Council) is, “a skilled professional who understands and knows how to look for weaknesses and vulnerabilities in target systems and uses the same knowledge and tools as a malicious hacker, but in a lawful and legitimate manner to assess the security posture of the target system(s).” In contrast to a cracker, who is a malicious hacker, an ethical hacker “is someone who employs the same tools and techniques a criminal might use, with the customer’s full support and approval, to help secure a network or system” (Walker, 2017, p. 29).
 
@@ -149,7 +150,10 @@ A Certified Ethical Hacker (EC-Council) is, “a skilled professional who unders
 
 **Professional associations**
 
-ACM Code of Ethics (2018), IEEE standards/guidelines (IEEE Cybersecurity Initiative, IEEE Certified Ethical Hacker (CEH) resources), IEEE code of ethics, IEEE code of conduct.
+Second, several professional codes of ethics of key professional associations and industry standards/guidelines are covered: 
+Professional associations: ACM Code of Ethics (2018), IEEE standards/guidelines (IEEE Cybersecurity Initiative, IEEE Certified Ethical Hacker (CEH) resources), IEEE code of ethics, IEEE code of conduct.
++
+Industry standards/guidelines: OSSTMM, ISO/IEC 27001, OWASP (Open Web Application Security Project) Testing Guide, PCI DSS Penetration Testing Guidance.
 
 IEEE standards and ethical considerations/frameworks:
 

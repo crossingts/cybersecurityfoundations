@@ -49,11 +49,20 @@ Next, profiles of hackers--an analysis of the four types of hacking/hacker group
 
 ### Ethical hackers are white hat hackers
 
-Various approaches/perspectives can be used to distinguish between white hat hackers, grey hat hackers, black hat hackers, and hacktivists (see "Other perspectives on hacking/hacker ethics" below). However, we make a comparison differentiating between these four hacker groups and their hacking practices on the logic that there is only one category of white hat hacking: legal hacking. Ethical hackers necessarily fit into the white hat hackers group—there's no ambiguity regrading the legality of their practices. No greyness.
+Various perspectives can be used to distinguish between white hat hackers, grey hat hackers, black hat hackers, and hacktivists (e.g., see "Other perspectives on hacking/hacker ethics"). However, we make a comparison differentiating between these four hacker groups and their hacking practices on the logic that there is only one category of legal hacking: white hat hacking. Ethical hackers necessarily fit into the white hat hackers group—there's no ambiguity regrading the legality of their practices.
+
+The imperative that testing must be authorized to avoid legal risks is enriched within industry standards/guidelines such as ISO/IEC 27001
 
 ISO/IEC 27001: Authorization & Legal Compliance (A.18.1.4) – Testing must be authorized to avoid legal risks (e.g., unauthorized hacking). 
+
 IEEE Code of Ethics (General Ethical Framework): Obtain proper authorization before testing (Ethics 3, 4). 
+
 IEEE Std 802.10-1998 (Interoperable LAN/MAN Security): Though withdrawn in 2006, this standard historically included security testing considerations, emphasizing: Authorized access controls (preventing unauthorized penetration attempts).
+
+
+Industry standards/guidelines: ISO/IEC 27001
+Professional associations: ACM Code of Ethics (2018), IEEE standards/guidelines (IEEE Cybersecurity Initiative, IEEE Certified Ethical Hacker (CEH) resources), IEEE code of ethics, IEEE code of conduct.
+
 
 Hackers can be divided into a number of groups, some of which “are clearly ethical, others are clearly unethical, and still others exist in a gray area of sorts and whose ethics can be debated”, argues Pashel (2006, p. 197). White hats use their skills “in a manner that most would clearly define as ethical". For example, white hat hackers could be employees who "with permission, attack a company’s network in order to determine weaknesses, and law enforcement and intelligence agents who use their skill in the name of national security or to investigate and solve crimes” (p. 197).
 

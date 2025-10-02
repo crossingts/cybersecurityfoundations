@@ -126,6 +126,8 @@ CEH Code of Ethics (EC-Council), OSCP (Offensive Security Code of Conduct), (ISC
 
 Second, several professional codes of ethics of key professional associations are covered: 
 ACM Code of Ethics (2018), IEEE standards/guidelines (IEEE Cybersecurity Initiative, IEEE Certified Ethical Hacker (CEH) resources), IEEE code of ethics, IEEE code of conduct.
++
+Industry standards/guidelines: OSSTMM, ISO/IEC 27001, OWASP (Open Web Application Security Project) Testing Guide, PCI DSS Penetration Testing Guidance.
 
 **Certification and training authorities**
 

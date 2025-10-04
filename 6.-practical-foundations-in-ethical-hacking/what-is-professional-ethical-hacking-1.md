@@ -307,9 +307,7 @@ Coleman and Golub (2008) offer an anthropological taxonomy of various hacker eth
 
 ### Key takeaways
 
-Ethical hackers abide by formal and conventional professional ethical standards or codes of ethical conduct. 
 
-The practices of ethical hackers align with professional codes such as the ACM Code of Ethics and the IEEE Code of Ethics
 
 ### References
 

@@ -9,7 +9,10 @@ description: >-
 ## Learning objectives
 
 * Explain why ethical hackers fit within the white hat hackers group
-* Become familiar with the professional ethics of ethical hackers
+* Become familiar with the professional ethics of ethical hackers 
+- Identify key industry standards, guidelines, and professional codes of conduct that govern the conduct of professional ethical hackers
+- Become familiar with the core ethical principles (e.g., trust, integrity, confidentiality) mandated by professional codes of conduct
+- Identify the role of university accreditation and training in instilling a professional and ethical mindset
 
 This section advances an understanding that ethical hackers are white hat hackers who abide by well established and widely accepted industry and government standards, guidelines, and licensing and accreditation requirements regarding what constitutes professional practice. First, the discussion makes the case that ethical hackers are white hat hackers (ethical hacking is a legal practice). Next, the analysis explores the web of professional codes of conduct that govern the behavior of professional ethical hackers (professional ethics of ethical hackers). Finally, the analysis sketches out four types of hacker groups classified based on the legality of their practices and the imperative of professional conduct.
 

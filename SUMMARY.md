@@ -125,7 +125,8 @@
 ## 6. Practical foundations in ethical hacking
 
 * [Introduction - Practical foundations in ethical hacking](6.-practical-foundations-in-ethical-hacking/introduction-practical-foundations-in-ethical-hacking.md)
-* [What is professional ethical hacking](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1.md)
+* [What is professional ethical hacking](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/README.md)
+  * [What is professional ethical hacking — Quiz](6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/what-is-professional-ethical-hacking-quiz.md)
 * [The perils of unethical hacking](6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking.md)
 * [What do ethical hackers do?](6.-practical-foundations-in-ethical-hacking/what-do-ethical-hackers-do.md)
 * [Defensive security vs offensive security](6.-practical-foundations-in-ethical-hacking/defensive-security-vs-offensive-security.md)

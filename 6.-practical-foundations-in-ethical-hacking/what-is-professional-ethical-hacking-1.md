@@ -310,7 +310,18 @@ Coleman and Golub (2008) offer an anthropological taxonomy of various hacker eth
 
 ### Key takeaways
 
-
+- Ethical hacking is unambiguously legal: The fundamental characteristic that distinguishes ethical (white hat) hacking from all other forms is that it is conducted with explicit, prior authorization from the system owner, within a legal and contractual framework. Without authorization, hacking is an illegal activity.
+- The legal distinction: Professional ethical hackers are classified as white hat hackers, who are distinguished from grey hats, black hats, and hacktivists by their strict adherence to the legal imperative.
+- Governed by a web of professional codes: Professional ethical hackers do not rely on personal moral judgment alone. They are bound by a structured ecosystem of ethical codes from industry certifications (e.g., EC-Council, (ISC)²), professional associations (e.g., ACM, IEEE), and technical standards (e.g., OSSTMM, OWASP).
+- Core ethical pillars are universal: Analysis of various codes and standards reveals a consistent set of core ethical principles. These include:
+    - Authorization and Legal Compliance: The absolute baseline for all activities.
+    - Trust and Integrity: Being honest and reliable, even when unobserved.
+    - Confidentiality: Protecting all client information encountered during testing.
+    - Responsible Disclosure: Reporting vulnerabilities only to authorized client contacts.
+    - Protecting System Integrity: Avoiding unnecessary damage or disruption to systems.
+    - Protecting the Public: Acknowledging a broader duty to society's safety and security.
+- Professionalism is cultivated through training: University programs accredited by bodies like the Canadian Engineering Accreditation Board (CEAB) are required to teach ethics, instilling a systematic, engineering-based mindset and the professional codes of conduct that graduates must follow in their careers.
+- Trust is paramount: Ethical hackers are granted privileged access to an organization's most sensitive systems and data. Their trustworthiness is the foundation of the client relationship, ensuring they will not exploit findings for personal gain or malicious purposes.
 
 ### References
 

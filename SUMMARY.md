@@ -172,6 +172,7 @@
   * [nftables](6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/nftables.md)
   * [OPNsense](6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/opnsense.md)
   * [OPNsense vs Zenarmor](6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/opnsense-vs-zenarmor.md)
+* [Chapter 6 review questions](6.-practical-foundations-in-ethical-hacking/chapter-6-review-questions.md)
 
 ## 7. Conclusion
 

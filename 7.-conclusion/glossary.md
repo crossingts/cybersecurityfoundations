@@ -16,7 +16,7 @@
 
 **ISO 22301**: The international standard for Business Continuity Management Systems (BCMS). It provides a framework for organizations to plan, establish, implement, operate, monitor, review, maintain, and continually improve a documented management system to protect against, reduce the likelihood of, and ensure recovery from disruptive incidents.
 
-**ISO/IEC 27001**: An information security standard. It specifies the requirements for establishing, implementing, maintaining and continually improving an information security management system (ISMS). Organizations with an ISMS that meet the standard's requirements can choose to have it certified by an accredited certification body following successful completion of an audit. ISO/IEC 27001 was originally published jointly by the International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC) in 2005, with revisions in 2013 and 2022.
+**ISO/IEC 27001**: An information security standard. It specifies the requirements for establishing, implementing, maintaining and continually improving an information security management system (ISMS). ISO/IEC 27001 was originally published jointly by the International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC) in 2005, with revisions in 2013 and 2022.
 
 **Key**: A secret string of characters or symbols that is used for the encryption/decryption of plaintext/ciphertext.
 

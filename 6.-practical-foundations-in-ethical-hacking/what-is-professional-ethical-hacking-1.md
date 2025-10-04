@@ -325,16 +325,50 @@ Coleman and Golub (2008) offer an anthropological taxonomy of various hacker eth
 
 ### References
 
+Andrasik, J. (2016). _Penetration testing: A guide for business and IT management_. CreateSpace Independent Publishing Platform.
+
+Bodhani, A. (2013). Hacking it. _Engineering & Technology, 8_(6), 64–67. [https://doi.org/10.1049/et.2013.0614](https://doi.org/10.1049/et.2013.0614)
+
 Chandler, A. (1996). The changing definition and image of hackers in popular discourse. _International Journal of the Sociology of Law, 24_(2), 229–251. [https://doi.org/10.1006/ijsl.1996.0012](https://doi.org/10.1006/ijsl.1996.0012)
+
+Coleman, E. G., & Golub, A. (2008). Hacker practice: Moral genres and the cultural articulation of liberalism. _Anthropological Theory, 8_(3), 255–277. [https://doi.org/10.1177/1463499608093814](https://doi.org/10.1177/1463499608093814)
 
 Coleman, G. (2014). _Hacker, Hoaxer, Whistleblower, Spy: The Many Faces of Anonymous_. Verso.
 
 Denning, D. (2010). "Cyber Conflict as an Emergent Social Phenomenon." _Corporate Cyber Security_.
 
+Graves, K. (2010). _Certified ethical hacker study guide_. John Wiley & Sons.
+
+Harper, A., Harris, S., Ness, J., & Eagle, C. (2011). _Gray hat hacking: The ethical hacker's handbook_ (3rd ed.). McGraw-Hill Education.
+
+Harris, A. (2021). _Penetration testing essentials_. John Wiley & Sons.
+
 Jordan, T., & Taylor, P. (2004). _Hacktivism and cyberwars: Rebels with a cause?_ Routledge. [https://doi.org/10.4324/9780203637997](https://doi.org/10.4324/9780203637997)
+
+Levy, S. (1984). _Hackers: Heroes of the computer revolution_. Anchor Press/Doubleday.
+
+Logan, P. Y., & Clarkson, A. (2005). Teaching students to hack: Curriculum issues in information security. In _Proceedings of the 36th SIGCSE technical symposium on Computer science education_ (pp. 157–161). [https://doi.org/10.1145/1047344.1047405](https://doi.org/10.1145/1047344.1047405)
+
+Palmer, C. C. (2001). Ethical hacking. _IBM Systems Journal, 40_(3), 769–780. [https://doi.org/10.1147/sj.403.0769](https://doi.org/10.1147/sj.403.0769)
+
+Pashel, B. A. (2006). Teaching students to hack: Ethical implications in teaching students to hack at the university level. In _Proceedings of the 4th annual conference on Information security curriculum development_ (pp. 197–200). [https://doi.org/10.1145/1231047.1231086](https://doi.org/10.1145/1231047.1231086)
+
+Pike, G. H. (2013). The law and ethics of hiring hackers. _Information Today, 30_(9), 1, 34.
 
 Rid, T. (2013). _Cyber War Will Not Take Place_. Oxford University Press.
 
 Samuel, A. (2004). Hacktivism and the future of political participation. _Harvard Law Review, 117_(8), 2714–2727. [https://doi.org/10.2307/4093405](https://doi.org/10.2307/4093405)
 
 Schneier, B. (2020). _Click here to kill everybody: Security and survival in a hyper-connected world._ W.W. Norton & Company.
+
+Sharma, S., & Sefchek, J. (2007). Teaching information systems security courses: A hands-on approach. _Computers & Security, 26_(4), 290–299. [https://doi.org/10.1016/j.cose.2006.11.005](https://doi.org/10.1016/j.cose.2006.11.005)
+
+Tavani, H. T. (2016). _Ethics and technology: Controversies, questions, and strategies for ethical computing_ (5th ed.). John Wiley & Sons.
+
+Thomas, T., Andrasik, F., & Morato, E. (2018). *Ethical hacking: A comprehensive beginner's guide*. CRC Press.
+
+Walker, M. (2017). _CEH certified ethical hacker all-in-one exam guide_ (4th ed.). McGraw-Hill Education.
+
+Xu, Z., Hu, Q., & Zhang, C. (2013). Why computer talents become computer hackers. _Communications of the ACM, 56_(4), 64–74. [https://doi.org/10.1145/2436256.2436272](https://doi.org/10.1145/2436256.2436272)
+
+Young, R., Lixuan, Z., & Prybutok, V. R. (2007). Hacking into the minds of hackers. _Information Systems Management, 24_(4), 281–287. [https://doi.org/10.1080/10580530701585823](https://doi.org/10.1080/10580530701585823)

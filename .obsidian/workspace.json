@@ -11,14 +11,10 @@
             "id": "3cf5cd6380db943a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "the-perils-of-unethical-hacking"
+              "title": "New tab"
             }
           }
         ]
@@ -181,8 +177,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3cf5cd6380db943a",
+  "active": "06ca7278ba5efd38",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/what-do-ethical-hackers-do/what-do-ethical-hackers-do-quiz.md",
+    "6.-practical-foundations-in-ethical-hacking/what-do-ethical-hackers-do/README.md",
+    "6.-practical-foundations-in-ethical-hacking/what-do-ethical-hackers-do",
+    "6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking/the-perils-of-unethical-hacking-quiz.md",
+    "6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking/README.md",
+    "6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking",
+    "6.-practical-foundations-in-ethical-hacking/defensive-security-vs-offensive-security/defensive-security-vs-offensive-security-quiz.md",
+    "6.-practical-foundations-in-ethical-hacking/defensive-security-vs-offensive-security/README.md",
+    "6.-practical-foundations-in-ethical-hacking/defensive-security-vs-offensive-security",
+    "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/defensive-cybersecurity-technologies-quiz.md",
     "6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking.md",
     "6.-practical-foundations-in-ethical-hacking/chapter-6-review-questions.md",
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/what-is-professional-ethical-hacking-quiz.md",
@@ -203,14 +209,7 @@
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/ethical-hacking-is-legal.md",
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/ethical-hackers-are-trustworthy.md",
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/professional-ethics-of-ethical-hackers/professional-ethics-in-progress.md",
-    "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking/professional-ethics-of-ethical-hackers/README.md",
-    "6.-practical-foundations-in-ethical-hacking/introduction-practical-foundations-in-ethical-hacking/assignment-who-are-ethical-hackers.md",
-    "5.-cryptography-and-wireless-security/chapter-5-review-questions.md",
-    "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/professional-ethics-of-ethical-hackers/professional-ethics-in-progress.md",
-    "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/professional-ethics-of-ethical-hackers/privacy-act-1983-and-pipeda-2000.md",
-    "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/professional-ethics-of-ethical-hackers/README.md",
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/professional-ethics-of-ethical-hackers",
-    "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/ethical-hacking-is-legal.md",
     "5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods",
     "5.-cryptography-and-wireless-security/authentication-and-encryption-in-wpa-wpa2-and-wpa3"
   ]

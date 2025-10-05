@@ -8,19 +8,19 @@ b) The Sarbanes-Oxley Act (SOX)
 c) **The Computer Fraud and Abuse Act (CFAA)**  
 d) The Health Insurance Portability and Accountability Act (HIPAA)
 
-**2. A key contractual element that prevents an ethical hacker from publicly revealing a client's sensitive vulnerability information is: (Choose one answer)**  
+**2. Contractual elements that prevent an ethical hacker from publicly revealing a client's sensitive vulnerability information is: (Choose two answers)**  
 a) Scope of Work  
 b) **Non-Disclosure Agreement (NDA)**  
 c) Penetration Testing Intensity Clause  
-d) Responsible Disclosure Timeline
+**d) Responsible Disclosure Timeline**
 
-**3. Which governing body can revoke a widely recognized certification like the CISSP for unethical behavior? (Choose one answer)**  
+**3. Which governing body can revoke the widely recognized CISSP certification for unethical behavior? (Choose one answer)**  
 a) The IEEE  
 b) The Department of Justice (DOJ)  
 c) **(ISC)²**  
 d) HackerOne
 
-**4. According to the lesson, what is a potential legal consequence for unethical hacking beyond fines and imprisonment? (Choose one answer)**  
+**4. What is a potential legal consequence for unethical hacking beyond fines and imprisonment? (Choose one answer)**  
 a) Mandatory retraining and certification  
 b) **Asset forfeiture and lifetime bans from technology use**  
 c) Automatic enrollment in a white-hat mentorship program  

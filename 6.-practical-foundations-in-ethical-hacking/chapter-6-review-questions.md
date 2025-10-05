@@ -29,7 +29,7 @@
 **Answer:** A significant long-term consequence is career destruction, which includes permanent blacklisting from the cybersecurity industry due to failed background checks, leading to long-term unemployment and an inability to rebuild a professional life.
 
 **4. What is the key difference between the motivation of a hacktivist and that of a traditional black hat hacker?**  
-**Answer:** The key difference is that a hacktivist is primarily motivated by political or social causes, aiming to promote their ideology, whereas a black hat hacker is primarily motivated by personal profit, criminal intent, or malicious destruction.
+**Answer:** The key difference is that a hacktivist is primarily motivated by political or social causes, e.g., promoting their ideology, whereas a black hat hacker is primarily motivated by personal profit, criminal intent, or malicious destruction.
 
 **5. How do professional bodies like (ISC)² enforce accountability for certified ethical hackers?**
 **Answer:** They enforce accountability by maintaining and upholding a strict code of ethics, and they possess the authority to revoke certifications (like the CISSP) from members who engage in unethical or illegal behavior, thereby ending their credentialed status.

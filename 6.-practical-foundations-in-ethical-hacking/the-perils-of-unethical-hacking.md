@@ -65,43 +65,25 @@ Even hackers avoiding prison struggle with permanent reputational damage, as see
 
 ### Key takeaways
 
-* Professional ethical hackers work within legal and contractual boundaries.
-* Unethical hacking can lead to loss of professional credentials/certifications.
-* Unethical hacking can result in hefty fines and imprisonment.
-* Unethical hacking can ruin careers and personal lives.
-
-
 - Ethical hacking is strictly defined by legal authorization and contractual agreements; operating without them transforms security testing into a criminal act.
-    
 - Violating ethical codes of conduct can lead to the immediate revocation of hard-earned professional credentials (e.g., CISSP, CEH) and permanent blacklisting from industry platforms and employment.
-    
 - Unethical hacking carries severe legal penalties, including felony convictions, substantial fines, and lengthy prison sentences, often accompanied by asset forfeiture and severe restrictions on technology use.
-    
 - The consequences are often irreversible, leading to total career destruction, long-term unemployment, and profound personal reputational damage that extends far beyond the legal sentence.
 
 ### References
 
+Coleman, G. (2014). _Hacker, Hoaxer, Whistleblower, Spy: The Many Faces of Anonymous._ Verso.
+
 DOJ (2021). _Report on Cybercrime Prosecutions._ \[Link]
+
+Greenberg, A. (2019, April 19). WannaCry hero pleads guilty to writing banking malware. _Wired_. [https://www.wired.com/story/marcus-hutchins-guilty-plea-kronos-malware/](https://www.wired.com/story/marcus-hutchins-guilty-plea-kronos-malware/)
 
 Martin, J. (2014). _Crime Online: Correlates, Causes, and Context._ Carolina Academic Press.
 
-Greenberg, A. (2019). _WannaCry Hero Pleads Guilty to Creating Banking Malware._ _Wired._ \[Link]
-
-Coleman, G. (2014). _Hacker, Hoaxer, Whistleblower, Spy: The Many Faces of Anonymous._ Verso.
-
-Verizon (2023). _Data Breach Investigations Report._ \[Link]
-
-
-Coleman, G. (2014). _Hacker, hoaxer, whistleblower, spy: The many faces of Anonymous_. Verso.
-
-Greenberg, A. (2019, April 19). The wannacry hero pleads guilty to writing banking malware. _Wired_. [https://www.wired.com/story/marcus-hutchins-guilty-plea-kronos-malware/](https://www.wired.com/story/marcus-hutchins-guilty-plea-kronos-malware/)
-
-Martin, J. (2014). _Crime online: Correlates, causes, and context_ (3rd ed.). Carolina Academic Press.
-
 Mitnick, K. (2005). _The art of intrusion: The real stories behind the exploits of hackers, intruders & deceivers_. Wiley.
 
-U.S. Department of Justice. (2021). _Report on cybercrime prosecutions, fiscal year 2020_. [https://www.justice.gov/archives/opa/page/file/1398901/download](https://www.justice.gov/archives/opa/page/file/1398901/download)
-
 _United States v. Gonzalez_, 2010 WL 4861565 (D. Mass. 2010).
+
+U.S. Department of Justice. (2021). _Report on cybercrime prosecutions, fiscal year 2020_. [https://www.justice.gov/archives/opa/page/file/1398901/download](https://www.justice.gov/archives/opa/page/file/1398901/download)
 
 Verizon. (2023). _2023 Data breach investigations report_. [https://www.verizon.com/business/resources/reports/dbir/](https://www.verizon.com/business/resources/reports/dbir/)

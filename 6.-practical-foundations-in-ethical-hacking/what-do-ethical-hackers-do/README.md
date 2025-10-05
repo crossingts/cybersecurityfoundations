@@ -114,4 +114,14 @@ Penetration testing may be done once a year. It identifies what data was comprom
 
 Engebretson, P. (2011). _The basics of hacking and penetration testing: Ethical hacking and penetration testing made easy_. Syngress.
 
+Harper, A., Harris, S., Ness, J., Eagle, C., Lenkey, G., & Williams, T. (2011). _Gray hat hacking: The ethical hacker’s handbook_, third edition. McGraw-Hill/Osborne. Retrieved June 7, 2013, from http://common.books24x7.com.proxy.bib.uottawa.ca/toc.aspx?bookid=40079
+
 Harris, S. (2007). _CISSP all-in-one exam guide_ (4th ed.). McGraw-Hill.
+
+Landoll, D. J., & Landoll, D. (2005). _The security risk assessment handbook: A complete guide for performing security risk assessments._ CRC Press.
+
+Palmer, C. C. (2001). Ethical hacking. IBM Systems Journal, 40(3), 769-780.
+
+Peltier, T. R. (2005). Information security risk analysis. Auerbach Publications.
+
+Rodger, J. (2013). Anatomy of vulnerability scans before a penetration test. PenTest Magazine, 3(7), pp. 41-50.

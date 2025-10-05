@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/chapter-6-review-questions.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking/the-perils-of-unethical-hacking-quiz.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "chapter-6-review-questions"
+              "title": "the-perils-of-unethical-hacking-quiz"
             }
           }
         ]
@@ -183,6 +183,7 @@
   },
   "active": "3cf5cd6380db943a",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/chapter-6-review-questions.md",
     "6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking/the-perils-of-unethical-hacking-quiz.md",
     "6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking/README.md",
     "6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking.md",
@@ -194,7 +195,6 @@
     "6.-practical-foundations-in-ethical-hacking/defensive-security-vs-offensive-security/README.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-security-vs-offensive-security",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/defensive-cybersecurity-technologies-quiz.md",
-    "6.-practical-foundations-in-ethical-hacking/chapter-6-review-questions.md",
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/what-is-professional-ethical-hacking-quiz.md",
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/README.md",
     "6.-practical-foundations-in-ethical-hacking/what-do-ethical-hackers-do.md",

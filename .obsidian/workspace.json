@@ -11,10 +11,14 @@
             "id": "3cf5cd6380db943a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking/the-perils-of-unethical-hacking-quiz.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "the-perils-of-unethical-hacking-quiz"
             }
           }
         ]
@@ -177,19 +181,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "06ca7278ba5efd38",
+  "active": "3cf5cd6380db943a",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking/README.md",
+    "6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking.md",
     "6.-practical-foundations-in-ethical-hacking/what-do-ethical-hackers-do/what-do-ethical-hackers-do-quiz.md",
     "6.-practical-foundations-in-ethical-hacking/what-do-ethical-hackers-do/README.md",
     "6.-practical-foundations-in-ethical-hacking/what-do-ethical-hackers-do",
     "6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking/the-perils-of-unethical-hacking-quiz.md",
-    "6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking/README.md",
     "6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking",
     "6.-practical-foundations-in-ethical-hacking/defensive-security-vs-offensive-security/defensive-security-vs-offensive-security-quiz.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-security-vs-offensive-security/README.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-security-vs-offensive-security",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/defensive-cybersecurity-technologies-quiz.md",
-    "6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking.md",
     "6.-practical-foundations-in-ethical-hacking/chapter-6-review-questions.md",
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/what-is-professional-ethical-hacking-quiz.md",
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/README.md",

@@ -16,3 +16,20 @@
 
 **5. The lesson states that "trust is the currency of the profession" for an ethical hacker. Why is trust considered so paramount?**  
 **Answer:** Trust is paramount because ethical hackers are granted privileged access to an organization's most sensitive systems and data; without absolute trust, clients would not provide the necessary access, and the entire professional relationship would be impossible.
+
+### The perils of unethical hacking
+
+**1. What is the primary legal function of a contract that defines the "Scope of Work" for an ethical hacker?**  
+**Answer:** The primary legal function is to provide explicit, prior authorization for the hacker's activities, creating a legal shield that distinguishes their security testing from unauthorized access, which is criminalized under laws like the CFAA.
+
+**2. How can violating a responsible disclosure timeline, as outlined in a contract, negatively impact an ethical hacker?**  
+**Answer:** Violating a responsible disclosure timeline is a breach of contract that can lead to the hacker being blacklisted from bug bounty platforms, facing civil liability for damages, and suffering severe reputational damage that ends their professional credibility.
+
+**3. Beyond fines and imprisonment, what is a significant long-term consequence of a felony conviction for unethical hacking?**  
+**Answer:** A significant long-term consequence is career destruction, which includes permanent blacklisting from the cybersecurity industry due to failed background checks, leading to long-term unemployment and an inability to rebuild a professional life.
+
+**4. What is the key difference between the motivation of a hacktivist and that of a traditional black hat hacker?**  
+**Answer:** The key difference is that a hacktivist is primarily motivated by political or social causes, aiming to promote their ideology, whereas a black hat hacker is primarily motivated by personal profit, criminal intent, or malicious destruction.
+
+**5. How do professional bodies like (ISC)² enforce accountability for certified ethical hackers?**
+**Answer:** They enforce accountability by maintaining and upholding a strict code of ethics, and they possess the authority to revoke certifications (like the CISSP) from members who engage in unethical or illegal behavior, thereby ending their credentialed status.

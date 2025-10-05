@@ -33,3 +33,20 @@
 
 **5. How do professional bodies like (ISC)² enforce accountability for certified ethical hackers?**
 **Answer:** They enforce accountability by maintaining and upholding a strict code of ethics, and they possess the authority to revoke certifications (like the CISSP) from members who engage in unethical or illegal behavior, thereby ending their credentialed status.
+
+### What do ethical hackers do?
+
+**1. Describe the purpose of a vulnerability assessment and list two key activities involved in the process.**  
+Answer: The purpose of a vulnerability assessment is to systematically identify, quantify, and prioritize vulnerabilities in a system. Two key activities involved are asset discovery (using tools like Nmap to catalog hosts and services) and active or passive scanning (using tools like Nessus or Zeek to detect known vulnerabilities and misconfigurations).
+
+**2. According to the NIST definition provided in the lesson, what are the three key elements a risk assessment process aims to identify regarding risks to system security?**  
+Answer: A risk assessment aims to identify: (1) the risks to system security, (2) the probability of their occurrence, and (3) the resulting impact of those risks.
+
+**3. A client needs to conduct a security evaluation. What are the three practical questions they must ponder, as defined by Palmer (2001), before beginning?**  
+Answer: The client must determine: (1) What they are trying to protect (critical assets), (2) What they are trying to protect against (threats and loss events), and (3) How much time, effort, and money they are willing to expend to obtain adequate protection.
+
+ **4. Explain the key difference in purpose between a vulnerability scan and a penetration test.**
+Answer: A vulnerability scan serves as a detective control, aiming to identify and list known software vulnerabilities that may be exploited. A penetration test acts as a preventative control, aiming to actually exploit vulnerabilities to demonstrate what data can be compromised and discover unknown exposures.
+
+**5. What is the role of penetration testing in relation to the findings of a vulnerability assessment, and what does this process provide for an organization?**  
+Answer: The role of penetration testing is to act as a proof of concept by actively and safely exploiting vulnerabilities discovered during the vulnerability assessment. This process validates the vulnerability assessment results and provides tangible proof of the actual risk and business impact posed by the vulnerabilities.

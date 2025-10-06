@@ -36,11 +36,9 @@ In 2FA, the user is identified by combining two authentication methods from the 
 
 ### Username and password
 
-Commonly, a username and password are used to authenticate a user to a server or a website. A user of an app/service creates a unique username and password to access a service from a server.
+Commonly, a username and password are used to authenticate a user to a server or a website. A user of an app/service creates a unique username and password to access a service from a server. The password can be hashed either on the users’ device or on the server they are connecting to. The hashing process can happen in two places: on a client (e.g., a smartphone) or on a server (e.g., an Amazon AWS server).
 
-The password can be hashed either on the users’ device or on the server they are connecting to. The hashing process can happen in two places: on a client (e.g., a smartphone) or on a server (e.g., an Amazon AWS server).
-
-The process of password hashing on a server side entails:
+The process of password hashing on the server side entails:
 
 * The user enters their username and password into the website’s login form.
 * The website sends the username and password to the server.
@@ -103,7 +101,9 @@ The digital certificate is issued by a trusted Certificate Authority (CA) after 
 
 #### The TLS Handshake Purposes
 
-The TLS handshake is a process that establishes a secure, encrypted connection between a client (e.g., a web browser) and a server (e.g., a website). Its primary purposes are:
+The TLS handshake is a process that establishes a secure, encrypted connection between a client (e.g., a web browser) and a server (e.g., a website). The TLS handshake prevents eavesdropping (via encryption), stops man-in-the-middle (MITM) attacks (via certificate verification), and ensures data integrity (via message authentication codes). 
+
+The functional purposes of the TLS Handshake are:
 
 1. **Authentication** – Verifies the server’s identity (and optionally the client’s) using digital certificates.
 2. **Key Establishment (or "Key Exchange")** – Securely negotiates a shared session key for symmetric encryption of communications using digital certificates.
@@ -124,7 +124,7 @@ After the handshake, both the client and server use the derived symmetric sessio
 
 #### Two Integrity Mechanisms
 
-There are two different integrity mechanisms at different stages of the TLS process:
+There are two different integrity mechanisms at different stages of the TLS process: integrity during the TLS handshake (using Digital Signatures), and integrity after the handshake (using HMAC or AEAD).
 
 **1. Integrity During the TLS Handshake (Digital Signatures)**
 
@@ -134,7 +134,7 @@ There are two different integrity mechanisms at different stages of the TLS proc
   * **Expiry Check:** The client confirms that the current date and time fall within the certificate's validity period, ensuring the certificate is neither not-yet-valid nor expired.
   * **Revocation Check:** The client checks that the certificate has not been prematurely revoked by its issuer. This is typically done by checking against a Certificate Revocation List (CRL) or querying an Online Certificate Status Protocol (OCSP) server.
 * The server signs parts of the TLS handshake messages (e.g., `ServerKeyExchange` in RSA-based key exchange or the entire handshake transcript in modern TLS 1.3), generating a digital signature using its private key. To prove it possesses the private key matching its certificate and to protect the handshake from tampering, the server generates a digital signature over critical parts of the handshake exchange. The exact content covered by this signature varies by protocol version and algorithm:
-  * **In TLS 1.2 (e.g., with RSA or Diffie-Hellman key exchange):** The signature is not over the entire handshake. It typically covers a hash that includes the `ServerKeyExchange` message (which contains the server's key-sharing parameters) and the random values exchanged in the `ClientHello` and `ServerHello` messages. This crucial step binds the server's identity to the specific cryptographic parameters of this session, preventing a man-in-the-middle attacker from altering them.
+  * **In TLS 1.2 (e.g., with RSA or Diffie-Hellman key exchange):** The signature typically covers a hash that includes the `ServerKeyExchange` message (which contains the server's key-sharing parameters) and the random values exchanged in the `ClientHello` and `ServerHello` messages. This crucial step binds the server's identity to the specific cryptographic parameters of this session, preventing a man-in-the-middle attacker from altering them.
   * **In Modern TLS 1.3:** The protocol is simpler and more robust. The server signs a cryptographic hash of the entire handshake transcript—meaning almost all messages sent and received by both parties up to that point. This includes the `ClientHello`, `ServerHello`, and other key-sharing messages. Signing the entire transcript provides the strongest possible integrity guarantee, ensuring that not a single byte of the negotiation was altered.
 * The client checks the signature using the server’s public key (from the digital certificate). 
 * If the signature is valid, message integrity is confirmed. This ensures the handshake messages themselves were not tampered with, and authenticates the server (proves it owns the private key).
@@ -187,12 +187,6 @@ The public key in the certificate is used in one of two ways, depending on the k
    * The client and server exchange **ephemeral (temporary) DH keys**.
    * They compute the same **shared secret** independently (never transmitted).
 3. This provides **forward secrecy** (even if the server’s private key is later compromised, past sessions remain secure).
-
-#### **Why the TLS Handshake Matters**
-
-* Prevents **eavesdropping** (via encryption).
-* Stops **man-in-the-middle (MITM) attacks** (via certificate verification).
-* Ensures **data integrity** (no tampering in transit).
 
 **How Digital Certificates Work in HTTPS**
 

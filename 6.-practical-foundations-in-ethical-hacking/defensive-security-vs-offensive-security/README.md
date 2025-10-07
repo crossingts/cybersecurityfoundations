@@ -1,8 +1,5 @@
 ---
-description: >-
-  This section explains two important concepts within the cybersecurity field,
-  defensive security and offensive security, and their importance for an
-  effective organizational security policy
+description: This section explains two important concepts within the cybersecurity field, defensive security and offensive security, and their importance for an effective organizational security strategy
 ---
 
 # Defensive security vs offensive security
@@ -10,7 +7,7 @@ description: >-
 ## Learning objectives
 
 * Become familiar with defensive security and offensive security paradigms
-* Recognize blue teams as an organization's cybersecurity defensive cadre&#x20;
+* Recognize blue teams as an organization's cybersecurity defensive cadre 
 * Recognize SOC as the operational arm of blue teams
 * Understand the focus of SIRT/CSIRT in incident response for escalated SOC events
 * Understand how the roles of ethical hackers and red teams intersect and transverse
@@ -20,14 +17,14 @@ This section explains the two important cybersecurity concepts of defensive secu
 ## Topics covered in this section
 
 * **Two key cybersecurity paradigms**
-* **Blue teaming**
+* **Blue teaming core functions**
 * **SOC (Security Operations Center)**
 * **SIRT/CSIRT (Security Incident Response Team/Computer SIRT)**
 * **Ethical hacking vs red teaming**
 
 ### Two key cybersecurity paradigms
 
-Since a malicious hacker may be an insider or an outsider, an effective cybersecurity defense strategy often necessitates a two-prone approach to security testing: outsider’s attack (more associated with offensive security and black box testing) and insider’s attack (more associated with defensive security and white box testing).&#x20;
+Since a malicious hacker may be an insider or an outsider, an effective cybersecurity defense strategy often necessitates a two-prone approach to security testing: outsider’s attack (more associated with offensive security and black box testing) and insider’s attack (more associated with defensive security and white box testing). 
 
 **Two key cybersecurity paradigms**
 
@@ -42,26 +39,21 @@ Since a malicious hacker may be an insider or an outsider, an effective cybersec
 | **Testing Approaches**    | <p>Blackbox testing, Black hat hacking </p><p></p><p>Third party audit/auditor perspective of infosec governance</p> | Whitebox testing, White hat hacking                                                                      |
 | **Authentication**        | Unauthenticated scan (outsider attack)                                                                               | Authenticated scan (simulation of insider attack)                                                        |
 
-### Blue teaming
+### Blue teaming core functions
 
-The **Blue Team** refers to the **defensive security** side of an organization, focused on:
+The blue team refers to the defensive security side of an organization. Blue teaming is a functional concept (what they do) rather than a formal team name like SOC and CSIRT. The activities of blue teams focus on preventing attacks, detecting threats, and responding to incidents.
 
-* **Preventing attacks** (hardening systems, patching).
-* **Detecting threats** (monitoring, log analysis).
-* **Responding to incidents** (containment, forensics).
+**Summary of Blue Team Activities**
 
-It’s a **functional concept** (what they do) rather than a formal team name (unlike SOC/CSIRT).
-
-**Key Blue Team Activities:**
-
-* Vulnerability management
-* Endpoint detection and response (EDR)
-* Threat hunting
-* Security tooling (firewalls, SIEM, IDS/IPS)
+|Core Function|Key Activities & Processes|Primary Security Tools|
+|---|---|---|
+|**Prevent**|**Vulnerability Management:** Identifying, prioritizing, and remediating software vulnerabilities through systematic patching.  <br>  <br>**System Hardening:** Securing systems by configuring them for maximum security and minimal attack surface (e.g., disabling unused services, enforcing least-privilege access).|Firewalls, Intrusion Prevention Systems (IPS)|
+|**Detect**|**Continuous Monitoring & Log Analysis:** Actively reviewing logs and security alerts from across the network and systems to identify potential malicious activity.  <br>  <br>**Threat Hunting:** The proactive search for hidden threats or anomalies within the environment, based on hypotheses and intelligence, rather than waiting for alerts.|SIEM, Endpoint Detection and Response (EDR), Intrusion Detection Systems (IDS)|
+|**Respond**|**Incident Response:** Containing the impact of a security incident, eradicating the threat, and recovering systems to a known good state.  <br>  <br>**Digital Forensics:** Analyzing systems and artifacts post-incident to determine the root cause, scope of the breach, and attacker tactics.|Endpoint Detection and Response (EDR), Forensics Tools|
 
 #### **How Blue Team Relates to SOC/CSIRT/SIRT**
 
-Blue Team is broader concept—it includes roles outside SOC/CSIRT (e.g., security engineers, threat hunters). The Blue Team **encompasses** SOC and CSIRT/SIRT but isn’t a direct replacement for these labels. Think of it like this:&#x20;
+Blue Team is broader concept—it includes roles outside SOC/CSIRT (e.g., security engineers, threat hunters). The Blue Team **encompasses** SOC and CSIRT/SIRT but isn’t a direct replacement for these labels. Think of it like this: 
 
 | **Team**               | **Is It Part of the Blue Team?** | **Description**                                              |
 | ---------------------- | -------------------------------- | ------------------------------------------------------------ |
@@ -79,17 +71,17 @@ Blue Team is broader concept—it includes roles outside SOC/CSIRT (e.g., securi
 
 **Small/Medium Companies:**
 
-* **"Blue Team" = SOC + IR (no formal CSIRT)**
+* **Blue Team = SOC + Incident Response (IR). (No formal CSIRT)**
   * Analysts handle both monitoring and response.
 
 **Large Enterprises:**
 
-* **Blue Team = SOC + CSIRT + Threat Intel + Vulnerability Mgmt**
+* **Blue Team = SOC + CSIRT + Threat Intel + Vulnerability Management**
   * Clear separation of duties.
 
 **Elite/Advanced Orgs (e.g., FAANG):**
 
-* **"Blue Team" = Proactive Defense Unit**
+* **Blue Team = Proactive Defense Unit**
   * Focuses on **threat hunting**, adversary simulation, and custom tooling.
 
 ### SOC (Security Operations Center)
@@ -98,7 +90,7 @@ Blue Team is broader concept—it includes roles outside SOC/CSIRT (e.g., securi
 
 **SOC as the Blue Team (Defenders)**
 
-* **Primary Role:**&#x20;
+* **Primary Role:** 
   * Monitor, detect, analyze, and respond to security incidents.
   * Handle alerts from SIEM (Security Information and Event Management), EDR (Endpoint Detection & Response), firewalls, etc.
   * Perform **threat hunting** (proactively searching for undetected threats).
@@ -190,7 +182,7 @@ In practice, the terms are often used interchangeably.
 | **Skills**         | Deep forensics, legal/PR coordination   | SOC analysts trained in basic IR         |
 | **Common in**      | Large enterprises, regulated industries | Mid-sized companies, lean security teams |
 
-**When Does a Company&#x20;**_**Need**_**&#x20;a Dedicated CSIRT?**
+**When Does a Company **_**Need**_** a Dedicated CSIRT?**
 
 1. **High Incident Volume**: SOC is overwhelmed by false positives and lacks time for deep investigations.
 2. **Regulatory Requirements**: Industries like finance/healthcare may mandate a formal IR team.

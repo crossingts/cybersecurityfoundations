@@ -139,15 +139,15 @@ SIRT and CSIRT are activated for high-severity incidents (e.g., breaches, ransom
 
 Some  organizations start with a SOC-only model, then evolve:
 
-* **Phase 1**: SOC handles everything.
-* **Phase 2**: Senior SOC members are designated as _"IRT leads"_ (still part of SOC).
-* **Phase 3**: Formal CSIRT splits off as the security program matures.
+* Phase 1: SOC handles everything.
+* Phase 2: Senior SOC members are designated as IRT leads (still part of SOC).
+* Phase 3: Formal CSIRT splits off as the security program matures.
 
 Example: A tech startup’s SOC might handle IR until a breach occurs, prompting the creation of a CSIRT.
 
 ### Ethical hacking vs red teaming cybersecurity roles/activities 
 
-Both functions aim to improve security by exposing weaknesses before malicious actors exploit them. Both roles require technical skills in penetration testing, social engineering, and attack simulations. Both roles involve authorized attempts to identify vulnerabilities in systems, networks, or organizations.
+Both ethical hacking and red teaming functions aim to improve security by exposing weaknesses before malicious actors exploit them. Both roles require technical skills in penetration testing, social engineering, and attack simulations. And both roles involve authorized attempts to identify vulnerabilities in systems, networks, or organizations.
 #### 1. White Hat Hackers (Ethical Hackers)
 
 * **Typically Contracted Professionals (but not always):**
@@ -166,14 +166,14 @@ Both functions aim to improve security by exposing weaknesses before malicious a
 * **Key Difference from White Hats:**
   * Red teams focus on **long-term, adversarial simulations** (like advanced persistent threats), whereas white hats may do shorter-term assessments (like pentests).
 
-#### **General Rule of Thumb**
+**General rule of thumb:**
 
 | Role                 | Typically Employed By             | Focus                                            |
 | -------------------- | --------------------------------- | ------------------------------------------------ |
 | **White Hat Hacker** | External (but sometimes internal) | Pentests, bug bounties, vulnerability research   |
 | **Red Team**         | Internal (but sometimes external) | Advanced attack simulations, adversary emulation |
 
-However, there are no necessarily clear cut lines distinguishing the activities or roles of ethical hackers and read teams. Some **white hats** are employees (e.g., in-house security teams). Some **red teams** are external contractors (e.g., hired for a specific engagement). Purple Teams (a blend of red + blue teams) further blur the lines, as they involve collaboration between attackers and defenders.
+However, there are no necessarily clear cut lines distinguishing the activities and roles of ethical hackers and read teams. Some white hats are employees (e.g., in-house security teams); some red teams are external contractors (e.g., hired for a specific engagement). Purple teams (a blend of red + blue teams) further blur the lines, as they involve collaboration between attackers and defenders.
 
 #### **Key Differences:**
 

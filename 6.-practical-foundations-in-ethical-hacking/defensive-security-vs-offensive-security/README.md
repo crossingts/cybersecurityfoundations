@@ -65,9 +65,7 @@ The composition and focus of a blue team vary significantly depending on the org
 
 ### SOC (Security Operations Center)
 
-SOC (Security Operations Center) analysts and engineers are essentially the operational arm of the Blue Team. A SOC is often the first line of defense, working 24/7 to identify and mitigate threats in real time. However, whether they are in-house employees or contracted depends on the organization's structure.
-
-**SOC as the Blue Team (Defenders)**
+SOC (Security Operations Center) analysts and engineers are essentially the operational arm of the Blue Team. 
 
 * **Primary Role:** 
   * Monitor, detect, analyze, and respond to security incidents.
@@ -78,42 +76,29 @@ SOC (Security Operations Center) analysts and engineers are essentially the oper
 * **Tools**: SIEM, EDR/XDR, threat intelligence feeds, and automation.
 * **Typical Output**: Alerts, tickets, and initial containment actions.
 
+A SOC is often the first line of defense, working 24/7 to identify and mitigate threats in real time. However, whether they are in-house employees or contracted depends on the organization's structure.
+
 #### **In-House vs. Contracted/MSSP SOCs**
 
-| Type                      | Description                                                            | Pros                                                                                               | Cons                                                                                |
-| ------------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| **In-House SOC**          | Employees directly hired by the company.                               | <p>- Better knowledge of internal systems.<br>- Faster coordination with IT/other teams.</p>       | <p>- Expensive to maintain 24/7.<br>- Requires hiring skilled analysts.</p>         |
-| **Contracted SOC (MSSP)** | Managed by a third-party **MSSP (Managed Security Service Provider)**. | <p>- Cost-effective (no need for full-time staff).<br>- Access to broader threat intelligence.</p> | <p>- Less familiarity with internal networks.<br>- Possible delays in response.</p> |
+| Type                      | Description                                                        | Pros                                                                                               | Cons                                                                                |
+| ------------------------- | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| **In-House SOC**          | Employees directly hired by the company.                           | <p>- Better knowledge of internal systems.<br>- Faster coordination with IT/other teams.</p>       | <p>- Expensive to maintain 24/7.<br>- Requires hiring skilled analysts.</p>         |
+| **Contracted SOC (MSSP)** | Managed by a third-party MSSP (Managed Security Service Provider). | <p>- Cost-effective (no need for full-time staff).<br>- Access to broader threat intelligence.</p> | <p>- Less familiarity with internal networks.<br>- Possible delays in response.</p> |
 
-**Key Overlaps & Clarifications**
+**Clarifications:**
 
-1. **Blue Team ≠ SOC (but SOC is a core part of Blue Team)**
-   * The **Blue Team** is a broader concept, including **SOC, Incident Response (IR), vulnerability management, and security hardening teams**.
-   * The **SOC is the 24/7 monitoring & initial response unit** within the Blue Team.
-2. **Some Companies Have Hybrid Models**
-   * Example: A company might have an **in-house SOC for critical systems** but outsource **lower-priority monitoring** to an MSSP.
-3. **Contract SOC Analysts (Staff Augmentation)**
-   * Some firms hire **temporary SOC analysts** through staffing agencies (neither fully in-house nor full MSSP).
+* The Blue Team includes SOC, Incident Response (IR), vulnerability management, and security hardening teams.
+* The SOC is the 24/7 monitoring & initial response unit within the Blue Team.
+* Some companies have hybrid models. A company might have an in-house SOC for critical systems but outsource lower-priority monitoring to an MSSP.
+* Some firms hire temporary SOC analysts through staffing agencies (neither fully in-house nor full MSSP).
 
 ### SIRT/CSIRT (Security Incident Response Team/Computer SIRT)
 
-#### **CSIRT (Computer Security Incident Response Team)**
+SIRT and CSIRT are activated for high-severity incidents (e.g., breaches, ransomware). In practice, the terms SIRT and CSIRT are often used interchangeably. However, SIRT might focus on broader security incidents (physical, insider threats) while CSIRT is more explicitly IT/digital-focused (e.g., malware, hacking).
 
-* **Primary Role**: **Incident response**—investigating, containing, and recovering from confirmed incidents.
-* **Focus**: Post-detection actions (forensics, root cause analysis, remediation).
-* **Overlap with SOC**: A SOC may escalate confirmed incidents to the CSIRT for deeper analysis.
-* **Typical Output**: Incident reports, lessons learned, and coordination with legal/PR.
-
-CSIRTs are more specialized than SOCs and are activated for high-severity incidents (e.g., breaches, ransomware).
-
-#### **SIRT (Security Incident Response Team)**
-
-* **Alternative Name**: Often synonymous with **CSIRT** (some orgs use "SIRT" instead of "CSIRT").
-* **Minor Differences**:
-  * _SIRT_ might focus on broader security incidents (physical, insider threats).
-  * _CSIRT_ is explicitly IT/digital-focused (e.g., malware, hacking).
-
-In practice, the terms are often used interchangeably.
+* Primary Role: Incident response—investigating, containing, and recovering from confirmed incidents.
+* Focus (especially CSIRT): Post-detection actions (forensics, root cause analysis, remediation).
+* Typical Output: Incident reports, lessons learned, and coordination with legal/PR.
 
 #### How SOC and CSIRT/SIRT Fit Together in Organizations:
 

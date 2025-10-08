@@ -65,7 +65,7 @@ The composition and focus of a blue team vary significantly depending on the org
 
 ### SOC (Security Operations Center)
 
-SOC (Security Operations Center) analysts and engineers are essentially the operational arm of the Blue Team. However, whether they are in-house employees or contracted depends on the organization's structure.
+SOC (Security Operations Center) analysts and engineers are essentially the operational arm of the Blue Team. A SOC is often the first line of defense, working 24/7 to identify and mitigate threats in real time. However, whether they are in-house employees or contracted depends on the organization's structure.
 
 **SOC as the Blue Team (Defenders)**
 
@@ -77,8 +77,6 @@ SOC (Security Operations Center) analysts and engineers are essentially the oper
 * **Focus**: Operational security—handling alerts, triaging threats, and performing initial analysis.
 * **Tools**: SIEM, EDR/XDR, threat intelligence feeds, and automation.
 * **Typical Output**: Alerts, tickets, and initial containment actions.
-
-A SOC is often the first line of defense, working 24/7 to identify and mitigate threats in real time.
 
 #### **In-House vs. Contracted/MSSP SOCs**
 

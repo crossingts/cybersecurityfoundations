@@ -61,7 +61,7 @@ The composition and focus of a blue team vary significantly depending on the org
 | --------------------------------------- | --------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Small / Medium Companies**            | **Blue Team = SOC + Incident Response (IR)**                          | • No formal, dedicated CSIRT.  <br>• SOC analysts handle both monitoring and response tasks.  <br>• A lean, consolidated security model.                                                                         |
 | **Large Enterprises**                   | **Blue Team = SOC + CSIRT + Threat Intel + Vulnerability Management** | • Clear separation of duties and specialized roles.  <br>• SOC handles 24/7 monitoring; CSIRT handles major incidents.  <br>• Includes dedicated functions for threat intelligence and vulnerability management. |
-| **Elite / Advanced Orgs (e.g., FAANG)** | **Blue Team = Proactive Defense Unit**                                | • Focus shifts from reactive to proactive measures.  <br>• Heavy emphasis on **threat hunting**, adversary simulation, and intelligence-led defense.  <br>• Often involves developing custom security tooling.   |
+| **Elite / Advanced  organizations (e.g., FAANG)** | **Blue Team = Proactive Defense Unit**                                | • Focus shifts from reactive to proactive measures.  <br>• Heavy emphasis on **threat hunting**, adversary simulation, and intelligence-led defense.  <br>• Often involves developing custom security tooling.   |
 
 ### SOC (Security Operations Center)
 
@@ -104,8 +104,9 @@ SIRT and CSIRT are activated for high-severity incidents (e.g., breaches, ransom
 
 * **SOC + CSIRT/SIRT**: Common in larger companies. The SOC handles day-to-day monitoring; the CSIRT/SIRT takes over for serious incidents.
   * Example: SOC detects unusual lateral movement → escalates to CSIRT for investigation.
-* **SOC Only**: Some orgs rely solely on a SOC, with analysts handling both detection and response (common in mid-sized companies).
-* **CSIRT/SIRT Only**: Rare—usually in orgs that outsource monitoring (MSSP SOC) but keep internal response.
+* **SOC Only**: Some  organizations rely solely on a SOC, with analysts handling both detection and response (common in mid-sized companies).
+* **CSIRT/SIRT Only**: Rare—usually in  organizations that outsource monitoring (MSSP SOC) but keep internal response.
+* Many companies have both SOC and C/SIRT, but smaller  organizations might only have a SOC (or outsource CSIRT functions).
 
 #### Key Differences:
 
@@ -114,12 +115,6 @@ SIRT and CSIRT are activated for high-severity incidents (e.g., breaches, ransom
 | **Scope**    | Monitoring & alerting  | Incident investigation             |
 | **Activity** | Continuous (24/7)      | On-demand (activated per incident) |
 | **Skills**   | Triage, basic analysis | Forensics, malware analysis        |
-
-#### Key Clarifications
-
-* **SOC** = "Security guard" (watches for threats).
-* **CSIRT/SIRT** = "SWAT team" (deploys when a major threat is found).
-* Many companies have both, but smaller orgs might only have a SOC (or outsource CSIRT functions).
 
 #### **When SOC Handles CSIRT/SIRT Tasks (Without a Dedicated Team)**
 
@@ -133,7 +128,7 @@ SIRT and CSIRT are activated for high-severity incidents (e.g., breaches, ransom
 3. **Why This Happens**
    * **Cost/Resources**: Maintaining a 24/7 SOC is expensive; adding a separate CSIRT isn’t always justified.
    * **Workflow Simplicity**: Smaller incident volumes may not require a specialized team.
-   * **Outsourcing**: Some orgs rely on an **MSSP’s SOC** for monitoring and keep a tiny internal team for response (effectively a mini-CSIRT without the name).
+   * **Outsourcing**: Some  organizations rely on an **MSSP’s SOC** for monitoring and keep a tiny internal team for response (effectively a mini-CSIRT without the name).
 
 #### **Key Differences: Dedicated CSIRT vs. SOC-Only Approach**
 
@@ -144,7 +139,7 @@ SIRT and CSIRT are activated for high-severity incidents (e.g., breaches, ransom
 | **Skills**         | Deep forensics, legal/PR coordination   | SOC analysts trained in basic IR         |
 | **Common in**      | Large enterprises, regulated industries | Mid-sized companies, lean security teams |
 
-**When Does a Company **_**Need**_** a Dedicated CSIRT?**
+**When Does a Company Need a Dedicated CSIRT?**
 
 1. **High Incident Volume**: SOC is overwhelmed by false positives and lacks time for deep investigations.
 2. **Regulatory Requirements**: Industries like finance/healthcare may mandate a formal IR team.
@@ -152,7 +147,7 @@ SIRT and CSIRT are activated for high-severity incidents (e.g., breaches, ransom
 
 **Hybrid Approach (Common in Growing Companies)**
 
-Some orgs start with a SOC-only model, then evolve:
+Some  organizations start with a SOC-only model, then evolve:
 
 * **Phase 1**: SOC handles everything.
 * **Phase 2**: Senior SOC members are designated as _"IRT leads"_ (still part of SOC).

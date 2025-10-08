@@ -53,3 +53,17 @@ Answer: The role of penetration testing is to act as a proof of concept by activ
 
 ### Defensive security vs offensive security
 
+**1. The lesson distinguishes between the blue team as a functional concept and more formal team structures. What is the core function that defines a blue team, and what are two examples of formal teams that fulfill this function?**  
+**Answer:** The core function is defensive security. Two examples of formal teams that fulfill this function are the Security Operations Center (SOC) and the Computer Security Incident Response Team (CSIRT/SIRT).
+
+**2. The activities of a blue team are organized around three core functions. What are these three functions?**  
+**Answer:** The three core functions are: (1) Prevent, (2) Detect, and (3) Respond.
+
+**3. According to the lesson, what is the key operational difference between a SOC and a CSIRT in terms of their activation and focus?**  
+**Answer:** The key difference is that a SOC is a continuous, 24/7 operational unit focused on monitoring and alerting, while a CSIRT is an on-demand team that is activated for specific, major incidents to perform deep investigation and response.
+
+**4. Both ethical hacking and red teaming involve authorized security testing. What is the primary objective that distinguishes a red team exercise from a standard ethical hacking engagement?**  
+**Answer:** The primary objective of a red team exercise is to test the organization's overall detection and response capabilities, whereas a standard ethical hack focuses on finding and fixing technical vulnerabilities.
+
+**5. The lesson introduces the concept of a "purple team" as an overlap between red and blue teams. What is the fundamental purpose of purple teaming?**  
+**Answer:** The fundamental purpose of Purple Teaming is to facilitate collaboration and communication between the attackers (Red Team) and defenders (Blue Team) in order to maximize improvement of the organization's security posture.

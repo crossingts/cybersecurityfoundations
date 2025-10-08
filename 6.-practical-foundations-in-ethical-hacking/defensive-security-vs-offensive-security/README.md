@@ -41,7 +41,15 @@ Since a malicious hacker may be an insider or an outsider, an effective cybersec
 
 ### Blue teaming core functions
 
-The blue team refers to the defensive security side of an organization. Blue teaming is a functional concept (what they do) rather than a formal team name like SOC and CSIRT. The activities of blue teams focus on preventing attacks, detecting threats, and responding to incidents.
+The blue team refers to the defensive security side of an organization. Blue teaming is a functional concept (what they do) rather than a formal team name like SOC and CSIRT. 
+
+Blue teaming is a broader concept that includes roles outside SOC/CSIRT, such as security engineers and threat hunters. 
+
+By analogy, the blue team is akin to Military Defense Forces (all defensive roles). SOC i
+* SOC = "Radar Operators & Patrol Units" (constant monitoring).
+* CSIRT = "SWAT Team" (activated for critical incidents).
+
+The activities of blue teams focus on preventing attacks, detecting threats, and responding to incidents.
 
 **Summary of Blue Team Activities**
 
@@ -51,21 +59,6 @@ The blue team refers to the defensive security side of an organization. Blue tea
 |**Detect**|**Continuous Monitoring & Log Analysis:** Actively reviewing logs and security alerts from across the network and systems to identify potential malicious activity.  <br>  <br>**Threat Hunting:** The proactive search for hidden threats or anomalies within the environment, based on hypotheses and intelligence, rather than waiting for alerts.|SIEM, Endpoint Detection and Response (EDR), Intrusion Detection Systems (IDS)|
 |**Respond**|**Incident Response:** Containing the impact of a security incident, eradicating the threat, and recovering systems to a known good state.  <br>  <br>**Digital Forensics:** Analyzing systems and artifacts post-incident to determine the root cause, scope of the breach, and attacker tactics.|Endpoint Detection and Response (EDR), Forensics Tools|
 
-#### **How Blue Team Relates to SOC/CSIRT/SIRT**
-
-Blue Team is broader concept—it includes roles outside SOC/CSIRT (e.g., security engineers, threat hunters). The Blue Team **encompasses** SOC and CSIRT/SIRT but isn’t a direct replacement for these labels. Think of it like this: 
-
-| **Team**               | **Is It Part of the Blue Team?** | **Description**                                              |
-| ---------------------- | -------------------------------- | ------------------------------------------------------------ |
-| **SOC**                | ✅ Yes (core component)           | Focuses on operations. Operates tools, monitors alerts 24/7. |
-| **CSIRT/SIRT**         | ✅ Yes (specialized unit)         | Focuses on incident response when SOC escalates.             |
-| **Vulnerability Mgmt** | ✅ Yes                            | Patches systems to reduce attack surface.                    |
-
-**Analogy:**
-
-* **Blue Team = "Military Defense Forces"** (all defensive roles).
-* **SOC = "Radar Operators & Patrol Units"** (constant monitoring).
-* **CSIRT = "SWAT Team"** (activated for critical incidents).
 
 #### **Typical Structure in Companies**
 

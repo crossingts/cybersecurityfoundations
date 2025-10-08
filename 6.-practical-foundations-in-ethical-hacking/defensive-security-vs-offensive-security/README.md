@@ -20,7 +20,7 @@ This section delineates the two fundamental, complementary paradigms of cybersec
 * **Blue teaming core functions**
 * **SOC (Security Operations Center)**
 * **SIRT/CSIRT (Security Incident Response Team/Computer SIRT)**
-* **Ethical hacking vs red teaming**
+* **Ethical hacking vs red teaming cybersecurity roles/activities**
 
 ### Two key cybersecurity paradigms
 
@@ -78,7 +78,7 @@ SOC (Security Operations Center) analysts and engineers are essentially the oper
 
 A SOC is often the first line of defense, working 24/7 to identify and mitigate threats in real time. However, whether they are in-house employees or contracted depends on the organization's structure.
 
-#### **In-House vs. Contracted/MSSP SOCs**
+#### In-House vs. Contracted/MSSP SOCs
 
 | Type                      | Description                                                        | Pros                                                                                               | Cons                                                                                |
 | ------------------------- | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
@@ -108,7 +108,7 @@ SIRT and CSIRT are activated for high-severity incidents (e.g., breaches, ransom
 * **CSIRT/SIRT Only**: Rare—usually in  organizations that outsource monitoring (MSSP SOC) but keep internal response.
 * Many companies have both SOC and C/SIRT, but smaller  organizations might only have a SOC (or outsource CSIRT functions).
 
-#### Key Differences:
+**Key Differences:**
 
 | Feature      | SOC                    | CSIRT/SIRT                         |
 | ------------ | ---------------------- | ---------------------------------- |
@@ -116,21 +116,21 @@ SIRT and CSIRT are activated for high-severity incidents (e.g., breaches, ransom
 | **Activity** | Continuous (24/7)      | On-demand (activated per incident) |
 | **Skills**   | Triage, basic analysis | Forensics, malware analysis        |
 
-#### **When SOC Handles CSIRT/SIRT Tasks (Without a Dedicated Team)**
+#### When SOC Handles CSIRT/SIRT Tasks (Without a Dedicated Team)
 
 1. **SOC Analysts Wear Multiple Hats**
    * Tier 1 SOC: Monitors alerts, performs initial triage.
-   * Tier 2/Tier 3 SOC: Acts as de facto **incident responders**—investigating, containing, and remediating incidents (normally CSIRT’s role).
+   * Tier 2/Tier 3 SOC: Acts as de facto *incident responders*—investigating, containing, and remediating incidents (normally CSIRT’s role).
    * Example: A SOC analyst investigates a phishing campaign, traces compromised accounts, and coordinates remediation—all without escalating to a separate CSIRT.
-2. **No Formal "CSIRT" Branding**
+1. **No Formal "CSIRT" Branding**
    * The organization may document incident response processes (e.g., playbooks) but won’t designate a standalone CSIRT.
-   * Roles like _"SOC Incident Responder"_ or _"Senior Security Analyst"_ cover CSIRT duties.
-3. **Why This Happens**
-   * **Cost/Resources**: Maintaining a 24/7 SOC is expensive; adding a separate CSIRT isn’t always justified.
-   * **Workflow Simplicity**: Smaller incident volumes may not require a specialized team.
-   * **Outsourcing**: Some  organizations rely on an **MSSP’s SOC** for monitoring and keep a tiny internal team for response (effectively a mini-CSIRT without the name).
+   * Roles like "SOC Incident Responder" or "Senior Security Analyst" cover CSIRT duties.
+1. **Why This Happens**
+   * Cost/Resources: Maintaining a 24/7 SOC is expensive; adding a separate CSIRT isn’t always justified.
+   * Workflow Simplicity: Smaller incident volumes may not require a specialized team.
+   * Outsourcing: Some  organizations rely on an MSSP’s SOC for monitoring and keep a tiny internal team for response (effectively a mini-CSIRT without the name).**
 
-#### **Key Differences: Dedicated CSIRT vs. SOC-Only Approach**
+#### Key Differences: Dedicated CSIRT vs. SOC-Only Approach
 
 |                    | Dedicated CSIRT/SIRT                    | SOC-Only (With CSIRT Responsibilities)   |
 | ------------------ | --------------------------------------- | ---------------------------------------- |
@@ -155,11 +155,10 @@ Some  organizations start with a SOC-only model, then evolve:
 
 Example: A tech startup’s SOC might handle IR until a breach occurs, prompting the creation of a CSIRT.
 
-### Ethical hacking vs red teaming
+### Ethical hacking vs red teaming cybersecurity roles/activities 
 
-#### Ethical hacking vs red teaming cybersecurity roles
-
-#### **1. White Hat Hackers (Ethical Hackers)**
+Both functions aim to improve security by exposing weaknesses before malicious actors exploit them. Both roles require technical skills in penetration testing, social engineering, and attack simulations. Both roles involve authorized attempts to identify vulnerabilities in systems, networks, or organizations.
+#### 1. White Hat Hackers (Ethical Hackers)
 
 * **Typically Contracted Professionals (but not always):**
   * Many white hat hackers work as **independent consultants** or are employed by **cybersecurity firms** that provide penetration testing, bug bounty hunting, or security audits to multiple clients.
@@ -169,7 +168,7 @@ Example: A tech startup’s SOC might handle IR until a breach occurs, prompting
   * **Penetration testers** (hired to simulate attacks).
   * **Security researchers** (may work for firms or independently).
 
-#### **2. Red Teams**
+#### 2. Red Teams
 
 * **Usually Company Employees (but not always):**
   * Red teams are often **internal teams** within an organization tasked with simulating real-world attacks to test defenses.
@@ -184,19 +183,7 @@ Example: A tech startup’s SOC might handle IR until a breach occurs, prompting
 | **White Hat Hacker** | External (but sometimes internal) | Pentests, bug bounties, vulnerability research   |
 | **Red Team**         | Internal (but sometimes external) | Advanced attack simulations, adversary emulation |
 
-#### **Overlap & Inconsistencies**
-
-* Some **white hats** are employees (e.g., in-house security teams).
-* Some **red teams** are external contractors (e.g., hired for a specific engagement).
-* **Purple Teams** (a blend of red + blue teams) further blur the lines, as they involve collaboration between attackers and defenders.
-
-#### Ethical hacking vs red teaming cybersecurity activities
-
-#### **Key Similarities:**
-
-* Both involve authorized attempts to identify vulnerabilities in systems, networks, or organizations.
-* Both aim to improve security by exposing weaknesses before malicious actors exploit them.
-* Both require technical skills in penetration testing, social engineering, and attack simulations.
+However, there are no necessarily clear cut lines distinguishing the activities or roles of ethical hackers and read teams. Some **white hats** are employees (e.g., in-house security teams). Some **red teams** are external contractors (e.g., hired for a specific engagement). Purple Teams (a blend of red + blue teams) further blur the lines, as they involve collaboration between attackers and defenders.
 
 #### **Key Differences:**
 
@@ -208,11 +195,6 @@ Example: A tech startup’s SOC might handle IR until a breach occurs, prompting
 | **Stealth**        | May or may not avoid detection.             | Often prioritizes stealth to mimic real attackers.                                |
 | **Team Structure** | Usually individual testers or small groups. | Larger, multidisciplinary teams (cyber, physical, social).                        |
 | **Reporting**      | Detailed technical remediation guidance.    | Focuses on strategic security gaps & organizational resilience.                   |
-
-#### **When Ethical Hacking and Red Teaming Overlap:**
-
-* A red team can use ethical hacking techniques (e.g., exploiting a server vulnerability).
-* Some ethical hackers perform red teaming if the engagement includes advanced adversary simulation.
 
 ### Key takeaways
 

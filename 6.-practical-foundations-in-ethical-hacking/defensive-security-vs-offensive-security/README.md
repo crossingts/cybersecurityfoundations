@@ -12,7 +12,7 @@ description: This section explains two important concepts within the cybersecuri
 * Understand the focus of SIRT/CSIRT in incident response for escalated SOC events
 * Understand how the roles of ethical hackers and red teams intersect and transverse
 
-This section explains the two important cybersecurity concepts of defensive security and offensive security and the organizational roles associated each concept.
+This section delineates the two fundamental, complementary paradigms of cybersecurity: defensive security and offensive security. Defensive security, embodied by the organization's blue team and its operational arms like the Security Operations Center (SOC) and Computer Security Incident Response Team (CSIRT), focuses on a protector's mindset to prevent, detect, and respond to threats through system hardening, continuous monitoring, and incident management. Conversely, offensive security adopts an adversarial perspective through the practices of ethical hacking and red teaming, which involve authorized, real-world attack simulations to proactively identify and exploit vulnerabilities before malicious actors can. Ultimately, understanding the distinct mindsets, skills, and organizational roles associated with each paradigm is crucial for building a robust and resilient security posture.
 
 ## Topics covered in this section
 
@@ -41,13 +41,7 @@ Since a malicious hacker may be an insider or an outsider, an effective cybersec
 
 ### Blue teaming core functions
 
-The blue team refers to the defensive security side of an organization. Blue teaming is a functional concept (what they do) rather than a formal team name like SOC and CSIRT. 
-
-Blue teaming is a broader concept that includes roles outside SOC/CSIRT, such as security engineers and threat hunters. 
-
-By analogy, the blue team is akin to Military Defense Forces (all defensive roles). SOC i
-* SOC = "Radar Operators & Patrol Units" (constant monitoring).
-* CSIRT = "SWAT Team" (activated for critical incidents).
+The blue team refers to the defensive security side of an organization. Blue teaming is a functional concept (what they do) rather than a formal team name like SOC and CSIRT. Blue teaming is a broader concept that includes roles outside SOC/CSIRT, such as security engineers and threat hunters. By analogy, the blue team is akin to Military Defense Forces (all defensive roles), SOC is akin to Radar Operators and Patrol Units (constant monitoring), and CSIRT is akin to SWAT Team (activated for critical incidents).
 
 The activities of blue teams focus on preventing attacks, detecting threats, and responding to incidents.
 
@@ -59,27 +53,19 @@ The activities of blue teams focus on preventing attacks, detecting threats, and
 |**Detect**|**Continuous Monitoring & Log Analysis:** Actively reviewing logs and security alerts from across the network and systems to identify potential malicious activity.  <br>  <br>**Threat Hunting:** The proactive search for hidden threats or anomalies within the environment, based on hypotheses and intelligence, rather than waiting for alerts.|SIEM, Endpoint Detection and Response (EDR), Intrusion Detection Systems (IDS)|
 |**Respond**|**Incident Response:** Containing the impact of a security incident, eradicating the threat, and recovering systems to a known good state.  <br>  <br>**Digital Forensics:** Analyzing systems and artifacts post-incident to determine the root cause, scope of the breach, and attacker tactics.|Endpoint Detection and Response (EDR), Forensics Tools|
 
+#### Typical Blue Team Structure in Companies
 
-#### **Typical Structure in Companies**
+The composition and focus of a blue team vary significantly depending on the organization's size, maturity, and security needs.
 
-**Small/Medium Companies:**
-
-* **Blue Team = SOC + Incident Response (IR). (No formal CSIRT)**
-  * Analysts handle both monitoring and response.
-
-**Large Enterprises:**
-
-* **Blue Team = SOC + CSIRT + Threat Intel + Vulnerability Management**
-  * Clear separation of duties.
-
-**Elite/Advanced Orgs (e.g., FAANG):**
-
-* **Blue Team = Proactive Defense Unit**
-  * Focuses on **threat hunting**, adversary simulation, and custom tooling.
+| Organization Size / Type                | Team Composition & Focus                                              | Key Characteristics                                                                                                                                                                                              |
+| --------------------------------------- | --------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Small / Medium Companies**            | **Blue Team = SOC + Incident Response (IR)**                          | • No formal, dedicated CSIRT.  <br>• SOC analysts handle both monitoring and response tasks.  <br>• A lean, consolidated security model.                                                                         |
+| **Large Enterprises**                   | **Blue Team = SOC + CSIRT + Threat Intel + Vulnerability Management** | • Clear separation of duties and specialized roles.  <br>• SOC handles 24/7 monitoring; CSIRT handles major incidents.  <br>• Includes dedicated functions for threat intelligence and vulnerability management. |
+| **Elite / Advanced Orgs (e.g., FAANG)** | **Blue Team = Proactive Defense Unit**                                | • Focus shifts from reactive to proactive measures.  <br>• Heavy emphasis on **threat hunting**, adversary simulation, and intelligence-led defense.  <br>• Often involves developing custom security tooling.   |
 
 ### SOC (Security Operations Center)
 
-**SOC (Security Operations Center) analysts and engineers are essentially the operational arm of the Blue Team.** However, whether they are **in-house employees or contracted** depends on the organization's structure.
+SOC (Security Operations Center) analysts and engineers are essentially the operational arm of the Blue Team. However, whether they are in-house employees or contracted depends on the organization's structure.
 
 **SOC as the Blue Team (Defenders)**
 

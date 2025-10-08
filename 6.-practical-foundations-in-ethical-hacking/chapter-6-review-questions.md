@@ -50,3 +50,6 @@ Answer: A vulnerability scan serves as a detective control, aiming to identify a
 
 **5. What is the role of penetration testing in relation to the findings of a vulnerability assessment, and what does this process provide for an organization?**  
 Answer: The role of penetration testing is to act as a proof of concept by actively and safely exploiting vulnerabilities discovered during the vulnerability assessment. This process validates the vulnerability assessment results and provides tangible proof of the actual risk and business impact posed by the vulnerabilities.
+
+### Defensive security vs offensive security
+

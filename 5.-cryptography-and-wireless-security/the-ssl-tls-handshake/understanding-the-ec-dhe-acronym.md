@@ -4,11 +4,11 @@
 
 (EC)DHE is an acronym that combines three main related concepts. (EC)DHE stands for:
 
-* **(EC)** : **Elliptic Curve**
-* **DH** : **Diffie-Hellman**
-* **E** : **Ephemeral**
+* (EC): Elliptic Curve
+* DH: Diffie-Hellman
+* E: Ephemeral
 
-So, **(EC)DHE** means **"Elliptic Curve Diffie-Hellman Ephemeral"** or **"Diffie-Hellman Ephemeral"** with the option for Elliptic Curves.
+So, (EC)DHE means "Elliptic Curve Diffie-Hellman Ephemeral" or "Diffie-Hellman Ephemeral" with the option for Elliptic Curves.
 
 Let's break down what each part means:
 

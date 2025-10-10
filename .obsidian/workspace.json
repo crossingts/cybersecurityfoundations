@@ -181,8 +181,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "47d382666f0061a3",
+  "active": "06ca7278ba5efd38",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/wireshark-tcpdump-vs-burp-suite-owasp-zap.md",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing/network-security-testing-quiz.md",
     "1.-it-career-planning/it-career-paths/README.md",
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/README.md",
@@ -214,7 +215,6 @@
     "7.-conclusion/glossary.md",
     "README.md",
     "SUMMARY.md",
-    "Untitled.md",
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/professional-ethics-of-ethical-hackers",
     "5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods",
     "5.-cryptography-and-wireless-security/authentication-and-encryption-in-wpa-wpa2-and-wpa3"

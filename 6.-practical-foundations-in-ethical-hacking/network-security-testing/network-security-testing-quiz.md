@@ -25,7 +25,7 @@ d) **tcpdump**
 **4. Which of the following tasks is a primary function of a protocol analyzer like Wireshark, as opposed to a software analyzer like Ghidra? (Choose one answer)**  
 a) Disassembling machine code into assembly language.  
 b) Identifying a buffer overflow vulnerability in a compiled binary.  
-c) **Decoding and analyzing the contents of an HTTP session to identify cleartext passwords.**  d) Step-by-step debugging of a program's execution flow.
+c) **Decoding and analyzing the contents of an HTTP session to identify cleartext passwords.** d) Step-by-step debugging of a program's execution flow.
 
 **5. Deep Packet Inspection (DPI) primarily involves the analysis of which layers of the OSI model to understand application-specific data? (Choose one answer)**  
 a) **Layers 5-7**  

@@ -10,8 +10,8 @@ description: >-
 
 * Understand the practical use of network scanners like Nmap and OpenVAS in network security testing
 * Understand the practical use of packet analyzers like Wireshark and tcpdump in network security testing
-- Differentiate between active scanning and passive packet analysis
-- Develop a practical understanding of how protocol analyzers and software analyzers differ
+* Differentiate between active network scanning and passive packet analysis
+* Develop a practical understanding of how protocol analyzers and software analyzers differ
 
 This section covers the use of network scanners (Nmap and OpenVAS) and packet analyzers (Wireshark and tcpdump) in network security testing. The discussion explores the role of network and vulnerability scanners, specifically Nmap and OpenVAS, in actively probing a network, mapping its assets, and identifying potential vulnerabilities. Furthermore, the discussion examines the role of packet analyzers like Wireshark and tcpdump in passively capturing and dissecting network traffic. This dual approach allows security professionals to not only discover what is on the network and what weaknesses may exist but also to gain deep visibility into the actual data traversing the network for verification, troubleshooting, and forensic analysis. The discussion will highlight how these tools work together within the "Test" phase of the security cycle to help monitor and improve an organization's overall security posture.
 
@@ -53,7 +53,7 @@ The most common parameters for monitoring network performance are throughput (kb
 
 Network security is an ongoing process that can be described by the Cisco security wheel. The security wheel consists of the following four phases: Secure, Monitor, Test, and Improve. In the third phase, Test, or network security testing, netadmins verify the security design and discover vulnerabilities within the network.
 
-<figure><img src="https://dti-techs.gitbook.io/practical-foundations-in-cybersecurity/~gitbook/image?url=https%3A%2F%2F3800590736-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252Fbt139QivYIJ8rAS9v8zR%252Fuploads%252FDBNAlxOLPPAvy0HB4QvD%252Fcisco-security-wheel.jpg%3Falt%3Dmedia%26token%3D34ef6a3b-decb-43ef-8acd-318e74e54230&width=768&dpr=2&quality=100&sign=15b8c83c&sv=2" alt="Cisco-security-wheel"><figcaption><p>Cisco Security Wheel (image courtesy of Deveriya, 2005, p. 362)</p></figcaption></figure>
+<figure><img src="https://dti-techs.gitbook.io/practical-foundations-in-cybersecurity/~gitbook/image?url=https%3A%2F%2F3800590736-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252Fbt139QivYIJ8rAS9v8zR%252Fuploads%252FDBNAlxOLPPAvy0HB4QvD%252Fcisco-security-wheel.jpg%3Falt%3Dmedia%26token%3D34ef6a3b-decb-43ef-8acd-318e74e54230&#x26;width=768&#x26;dpr=2&#x26;quality=100&#x26;sign=15b8c83c&#x26;sv=2" alt="Cisco-security-wheel"><figcaption><p>Cisco Security Wheel (image courtesy of Deveriya, 2005, p. 362)</p></figcaption></figure>
 
 Network security testing is also commonly referred to as security audit, security assessment, posture assessment, vulnerability assessment, penetration testing, and ethical hacking. All these terms are invoked to refer to "a legitimate process of attacking, discovering, and reporting security holes in a network" (Deveriya, 2005, p. 362).
 
@@ -135,8 +135,8 @@ tcpdump cannot decrypt modern encrypted traffic (e.g., HTTPS), but it _can_ expo
 
 Wireshark excels at deep L5-L7 analysis (e.g., "Decode this HTTP/2 stream" or "Find malformed DNS packets"). For example,
 
-  * Right-click a packet → Follow → TCP Stream (reconstructs sessions).
-  * Statistics → Protocol Hierarchy (shows traffic breakdown by protocol).
+* Right-click a packet → Follow → TCP Stream (reconstructs sessions).
+* Statistics → Protocol Hierarchy (shows traffic breakdown by protocol).
 
 ### Protocol analyzers vs software analyzers
 
@@ -144,53 +144,47 @@ Wireshark excels at deep L5-L7 analysis (e.g., "Decode this HTTP/2 stream" or "F
 
 This is the domain of network traffic inspection. Wireshark and tcpdump are protocol analyzers (or packet sniffers). They see everything on the wire at the network and transport layers (e.g., IP, TCP, UDP, ICMP). They are passive observers. In comparison, Burp Suite and OWASP ZAP are Web Application Security Proxies. They operate as a man-in-the-middle between your browser and the web server, specifically for HTTP/HTTPS traffic. They are active manipulators.
 
-- **Wireshark:** The industry-standard protocol analyzer. It captures network traffic and allows the network admin/analyst to dissect hundreds of different protocols to see exactly what's happening on the wire.
-- **tcpdump:** A command-line packet analyzer, often used on servers and for remote capture sessions.
-- **Burp Suite / OWASP ZAP:** Specifically for web applications. These tools act as a proxy to intercept, analyze, and manipulate HTTP/HTTPS traffic between a browser and a web server. They are essential for finding web app vulnerabilities.
+* **Wireshark:** The industry-standard protocol analyzer. It captures network traffic and allows the network admin/analyst to dissect hundreds of different protocols to see exactly what's happening on the wire.
+* **tcpdump:** A command-line packet analyzer, often used on servers and for remote capture sessions.
+* **Burp Suite / OWASP ZAP:** Specifically for web applications. These tools act as a proxy to intercept, analyze, and manipulate HTTP/HTTPS traffic between a browser and a web server. They are essential for finding web app vulnerabilities.
 
 #### Software analyzers
 
 While a protocol analyzer is a tool for analyzing communications protocols, analyzing the software itself requires a different toolkit.
 
-- Protocol analyzers like Wireshark and tcpdump are used to understand the "**conversation**" between different components. They answer: "What data is being sent, in what order, and in what format?"
-- Understanding the "**brain**" having the conversation—the software itself—requires a different set of tools to take the software apart and examine its internals.
+* Protocol analyzers like Wireshark and tcpdump are used to understand the "**conversation**" between different components. They answer: "What data is being sent, in what order, and in what format?"
+* Understanding the "**brain**" having the conversation—the software itself—requires a different set of tools to take the software apart and examine its internals.
 
 Analyzing software products to determine the product architecture and security vulnerabilities is the core activity of **reverse engineering** and **vulnerability research**. The goal is to understand how a product works from the inside out, without necessarily having access to its original blueprints (source code). This process involves:
 
 1. **Determining product architecture:** How do the different components of the software or device fit together? How do they communicate? What libraries do they use? What is the data flow?
 2. **Identifying security vulnerabilities:** Once you understand how it's built, you look for flaws in that design or implementation—places where the logic can be broken, commands can be injected, or memory can be corrupted to take control of the device.
 
-- **Disassemblers & Decompilers:**
-    
-    - **Ghidra:** A powerful, open-source tool from the NSA. It takes compiled software (binary/executable) and translates it back into a human-readable form (assembly code, and even partial C code) so an analyst can figure out what the program does.
-    - **IDA Pro:** The long-time commercial industry standard for disassembly. It's incredibly powerful for interactive, deep-dive reverse engineering.
-    - **Binary Ninja:** A newer, modern disassembler that is gaining popularity for its API and usability.
+* **Disassemblers & Decompilers:**
+  * **Ghidra:** A powerful, open-source tool from the NSA. It takes compiled software (binary/executable) and translates it back into a human-readable form (assembly code, and even partial C code) so an analyst can figure out what the program does.
+  * **IDA Pro:** The long-time commercial industry standard for disassembly. It's incredibly powerful for interactive, deep-dive reverse engineering.
+  * **Binary Ninja:** A newer, modern disassembler that is gaining popularity for its API and usability.
 
 Disassemblers convert machine code (1s and 0s) to Assembly Language (human-readable processor instructions, e.g., `MOV EAX, 0x42`, `CALL printf`, `JMP loop_start`). Decompilers convert machine code (1s and 0s) to High-Level Language (C-like code with variables, functions, loops, and conditionals).
 
-- **Debuggers:**
-    
-    - **x64dbg / WinDbg / GDB:** These tools allow the analyst to run the program and control its execution. They can pause it, inspect the state of the CPU's memory and registers at any given moment, and step through code line-by-line to understand its logic and find flaws. This is crucial for crafting exploits.
-        
-- **Binary Analysis Frameworks:**
-    
-    - **radare2:** An open-source, command-line framework for reverse engineering. It's very powerful but has a steep learning curve.
-    - **Cutter:** A graphical user interface for radare2, making it more accessible.
-        
-- **Fuzzers (Fuzzing Tools):**
-    
-    - **AFL (American Fuzzy Lop)** and its derivatives.
-    - **Peach Fuzzer.**
-    - **Boofuzz.**  
+* **Debuggers:**
+  * **x64dbg / WinDbg / GDB:** These tools allow the analyst to run the program and control its execution. They can pause it, inspect the state of the CPU's memory and registers at any given moment, and step through code line-by-line to understand its logic and find flaws. This is crucial for crafting exploits.
+* **Binary Analysis Frameworks:**
+  * **radare2:** An open-source, command-line framework for reverse engineering. It's very powerful but has a steep learning curve.
+  * **Cutter:** A graphical user interface for radare2, making it more accessible.
+* **Fuzzers (Fuzzing Tools):**
+  * **AFL (American Fuzzy Lop)** and its derivatives.
+  * **Peach Fuzzer.**
+  * **Boofuzz.**
 
 Fuzzing tools automatically throw malformed, unexpected, or random data at a program or protocol to try and crash it. A crash often indicates a discoverable security vulnerability.
 
 **Summary**
 
-| If you are analyzing...      | Concrete Analysis Goals & Examples                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Primary Tools                                              |
-| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
-| **Communications Protocols** | **Goal:** To understand the _external_ communication behavior and find flaws in the protocol implementation.  <br>  <br>**Specific Examples:**  <br>• **Authentication:** Can I replay a login session packet to bypass authentication?  <br>• **Data Exposure:** Is sensitive data (passwords, keys, PII) sent in cleartext?  <br>• **Input Validation:** If I send a malformed, oversized, or unexpected packet, does the service crash or behave unexpectedly?  <br>• **Protocol Logic:** Can I manipulate sequence numbers or session IDs to hijack a connection?                                                                                 | **Wireshark, tcpdump, Burp Suite, OWASP ZAP**              |
-| **Software (Binaries)**      | **Goal:** To understand the _internal_ logic and code execution to find memory corruption and logic flaws.  <br>  <br>**Specific Examples:**  <br>• **Memory Corruption:** Is there a place where user input is copied into a fixed-size buffer without checking the length, causing a buffer overflow?  <br>• **Command Injection:** Can user-controlled input be passed, unsanitized, to a system shell command?  <br>• **Backdoor Functions:** Are there hidden, undocumented commands or functions that bypass security?  <br>• **Cryptographic Flaws:** Are weak or custom encryption algorithms used? Are random number generators predictable? | **Ghidra, IDA Pro, Debuggers (x64dbg, GDB), Binary Ninja** |
+| If you are analyzing...      | Concrete Analysis Goals & Examples                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Primary Tools                                              |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| **Communications Protocols** | <p><strong>Goal:</strong> To understand the <em>external</em> communication behavior and find flaws in the protocol implementation.<br><br><strong>Specific Examples:</strong><br>• <strong>Authentication:</strong> Can I replay a login session packet to bypass authentication?<br>• <strong>Data Exposure:</strong> Is sensitive data (passwords, keys, PII) sent in cleartext?<br>• <strong>Input Validation:</strong> If I send a malformed, oversized, or unexpected packet, does the service crash or behave unexpectedly?<br>• <strong>Protocol Logic:</strong> Can I manipulate sequence numbers or session IDs to hijack a connection?</p>                                                                                 | **Wireshark, tcpdump, Burp Suite, OWASP ZAP**              |
+| **Software (Binaries)**      | <p><strong>Goal:</strong> To understand the <em>internal</em> logic and code execution to find memory corruption and logic flaws.<br><br><strong>Specific Examples:</strong><br>• <strong>Memory Corruption:</strong> Is there a place where user input is copied into a fixed-size buffer without checking the length, causing a buffer overflow?<br>• <strong>Command Injection:</strong> Can user-controlled input be passed, unsanitized, to a system shell command?<br>• <strong>Backdoor Functions:</strong> Are there hidden, undocumented commands or functions that bypass security?<br>• <strong>Cryptographic Flaws:</strong> Are weak or custom encryption algorithms used? Are random number generators predictable?</p> | **Ghidra, IDA Pro, Debuggers (x64dbg, GDB), Binary Ninja** |
 
 #### Compiled software vs source code
 
@@ -198,23 +192,19 @@ When software is developed, programmers write **source code** in human-readable 
 
 c
 
-// This is source code - humans can read it
-#include <stdio.h>
+// This is source code - humans can read it #include \<stdio.h>
 
-int main() {
-    printf("Hello, World!");
-    return 0;
-}
+int main() { printf("Hello, World!"); return 0; }
 
 **Compilation** is the process of translating this human-readable source code into **machine code** - the raw 1s and 0s that the computer's processor understands directly. The result is a **binary executable** file (like `.exe` on Windows, or no extension on macOS/Linux). (An interpreter is a program that reads and executes source code such as .py files directly, line by line, without compiling it to machine code first.)
 
 Security researchers do not have the source code for Windows, Pages, or any other commercial product. They only have the compiled binary. Their job is to work backwards:
 
-- **Input:** Compiled binary (machine code)
-- **Process:** Use Ghidra/IDA Pro to **reverse engineer** it
-- **Output:** Understand what the program does, find security flaws
+* **Input:** Compiled binary (machine code)
+* **Process:** Use Ghidra/IDA Pro to **reverse engineer** it
+* **Output:** Understand what the program does, find security flaws
 
-**Security Testing vs Vulnerability Analysis** 
+**Security Testing vs Vulnerability Analysis**
 
 | Aspect                     | Penetration Testing                                                                           | Vulnerability Research                                                                               |
 | -------------------------- | --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |

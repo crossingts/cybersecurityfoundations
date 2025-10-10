@@ -182,16 +182,21 @@ Fuzzing tools automatically throw malformed, unexpected, or random data at a pro
 
 **Summary**
 
-|If you are analyzing...|Concrete Analysis Goals & Examples|Primary Tools|
-|---|---|---|
-|**Communications Protocols**|**Goal:** To understand the _external_ communication behavior and find flaws in the protocol implementation.  <br>  <br>**Specific Examples:**  <br>• **Authentication:** Can I replay a login session packet to bypass authentication?  <br>• **Data Exposure:** Is sensitive data (passwords, keys, PII) sent in cleartext?  <br>• **Input Validation:** If I send a malformed, oversized, or unexpected packet, does the service crash or behave unexpectedly?  <br>• **Protocol Logic:** Can I manipulate sequence numbers or session IDs to hijack a connection?|**Wireshark, tcpdump, Burp Suite, OWASP ZAP**|
-|**Software (Binaries)**|**Goal:** To understand the _internal_ logic and code execution to find memory corruption and logic flaws.  <br>  <br>**Specific Examples:**  <br>• **Memory Corruption:** Is there a place where user input is copied into a fixed-size buffer without checking the length, causing a buffer overflow?  <br>• **Command Injection:** Can user-controlled input be passed, unsanitized, to a system shell command?  <br>• **Backdoor Functions:** Are there hidden, undocumented commands or functions that bypass security?  <br>• **Cryptographic Flaws:** Are weak or custom encryption algorithms used? Are random number generators predictable?|**Ghidra, IDA Pro, Debuggers (x64dbg, GDB), Binary Ninja**|
+| If you are analyzing...      | Concrete Analysis Goals & Examples                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Primary Tools                                              |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| **Communications Protocols** | **Goal:** To understand the _external_ communication behavior and find flaws in the protocol implementation.  <br>  <br>**Specific Examples:**  <br>• **Authentication:** Can I replay a login session packet to bypass authentication?  <br>• **Data Exposure:** Is sensitive data (passwords, keys, PII) sent in cleartext?  <br>• **Input Validation:** If I send a malformed, oversized, or unexpected packet, does the service crash or behave unexpectedly?  <br>• **Protocol Logic:** Can I manipulate sequence numbers or session IDs to hijack a connection?                                                                                 | **Wireshark, tcpdump, Burp Suite, OWASP ZAP**              |
+| **Software (Binaries)**      | **Goal:** To understand the _internal_ logic and code execution to find memory corruption and logic flaws.  <br>  <br>**Specific Examples:**  <br>• **Memory Corruption:** Is there a place where user input is copied into a fixed-size buffer without checking the length, causing a buffer overflow?  <br>• **Command Injection:** Can user-controlled input be passed, unsanitized, to a system shell command?  <br>• **Backdoor Functions:** Are there hidden, undocumented commands or functions that bypass security?  <br>• **Cryptographic Flaws:** Are weak or custom encryption algorithms used? Are random number generators predictable? | **Ghidra, IDA Pro, Debuggers (x64dbg, GDB), Binary Ninja** |
 
-Compiled software vs source code
+#### Disassemblers and decompilers
 
-What is "Compiled Software"?
+**Disassembler:** Converts machine code (1s and 0s) → **Assembly Language** (human-readable processor instructions, e.g., `MOV EAX, 0x42`, `CALL printf`, `JMP loop_start`).
 
-When software is developed, programmers write source code in human-readable languages like C, C++, Swift, or Rust. This looks like:
+**Decompiler:** Converts machine code (1s and 0s) → **High-Level Language** (C-like code with variables, functions, loops, and conditionals).
+
+#### Compiled software vs source code
+
+When software is developed, programmers write **source code** in human-readable languages like C, C++, Swift, or Rust. This looks like:
+
 c
 
 // This is source code - humans can read it
@@ -202,11 +207,13 @@ int main() {
     return 0;
 }
 
-Compilation is the process of translating this human-readable source code into machine code - the raw 1s and 0s that the computer's processor understands directly.
+**Compilation** is the process of translating this human-readable source code into **machine code** - the raw 1s and 0s that the computer's processor understands directly. The result is a **binary executable** file (like `.exe` on Windows, or no extension on macOS/Linux). (An interpreter is a program that reads and executes source code such as .py files directly, line by line, without compiling it to machine code first.)
 
-The result is a binary executable file (like .exe on Windows, or no extension on macOS/Linux).
+Security researchers do not have the source code for Windows, Pages, or any other commercial product. They only have the compiled binary. Their job is to work backwards:
 
-
+- **Input:** Compiled binary (machine code)
+- **Process:** Use Ghidra/IDA Pro to **reverse engineer** it
+- **Output:** Understand what the program does, find security flaws
 
 **Security Testing vs Vulnerability Analysis** 
 

@@ -50,7 +50,7 @@ The most common parameters for monitoring network performance are throughput (kb
 
 Network security is an ongoing process that can be described by the Cisco security wheel. The security wheel consists of the following four phases: Secure, Monitor, Test, and Improve. In the third phase, Test, or network security testing, netadmins verify the security design and discover vulnerabilities within the network.
 
-<figure><img src="../../.gitbook/assets/cisco-security-wheel.jpg" alt="Cisco-security-wheel"><figcaption><p>Cisco Security Wheel (image courtesy of Deveriya, 2005, p. 362)</p></figcaption></figure>
+<figure><img src="https://dti-techs.gitbook.io/practical-foundations-in-cybersecurity/~gitbook/image?url=https%3A%2F%2F3800590736-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252Fbt139QivYIJ8rAS9v8zR%252Fuploads%252FDBNAlxOLPPAvy0HB4QvD%252Fcisco-security-wheel.jpg%3Falt%3Dmedia%26token%3D34ef6a3b-decb-43ef-8acd-318e74e54230&width=768&dpr=2&quality=100&sign=15b8c83c&sv=2" alt="Cisco-security-wheel"><figcaption><p>Cisco Security Wheel (image courtesy of Deveriya, 2005, p. 362)</p></figcaption></figure>
 
 Network security testing is also commonly referred to as security audit, security assessment, posture assessment, vulnerability assessment, penetration testing, and ethical hacking. All these terms are invoked to refer to "a legitimate process of attacking, discovering, and reporting security holes in a network" (Deveriya, 2005, p. 362).
 
@@ -87,11 +87,11 @@ Packet analyzers are software or hardware devices that capture and analyze the d
 
 • **tcpdump**: A powerful command-line packet analyzer that captures and displays network traffic in real time, allowing deep inspection of packets for troubleshooting or security analysis.
 
-Deep inspection involves analyzing not just Layer 3 (IP) and Layer 4 (TCP/UDP) headers, but also higher-layer protocols (L5-L7)—like HTTP requests, DNS queries, TLS handshakes, or even application-specific data (e.g., SSH encryption types, SMB file-sharing commands).
+#### Basic vs deep packet inspection
 
 Layers 3-4 basic inspection of packets includes source/destination IPs, ports, TCP flags (SYN/ACK), packet size, and TTL (e.g., `tcpdump -i eth0 'tcp port 80'` shows HTTP traffic metadata).
 
-Layers 5-7 deep inspection of packets includes:
+Deep inspection involves analyzing not just Layer 3 (IP) and Layer 4 (TCP/UDP) headers, but also higher-layer protocols (L5-L7)—like HTTP requests, DNS queries, TLS handshakes, or even application-specific data (e.g., SSH encryption types, SMB file-sharing commands). Layers 5-7 deep inspection of packets includes:
 
 * **Protocol dissection**: Decodes protocols like HTTP (`Host:` headers), DNS (`A? example.com`), FTP/SSH commands.
 * **Payload analysis**: Displays partial/full payloads (e.g., `-X` flag for hex/ASCII output).
@@ -138,10 +138,10 @@ Wireshark excels at deep L5-L7 analysis (e.g., "Decode this HTTP/2 stream" or "F
 
 ### Key takeaways
 
-* Tools used for network security testing can be loosely classified into two categories: network scanners and packet analyzers
-* Nmap and OpenVAS are two popular and complementary open source network scanners—Nmap identifies live hosts, open ports, and what services are running and OpenVAS automatically scans those hosts, ports, and services for known vulnerabilities
-* tcpdump is a powerful command-line packet analyzer that captures and displays network traffic in real time, allowing deep inspection of packets for troubleshooting or security analysis
-* While Nmap discovers hosts and services and OpenVAS scans for vulnerabilities, tcpdump provides visibility into the raw network traffic between them
+* Tools used for network security testing can be loosely classified into two categories: network scanners and packet analyzers.
+* Nmap and OpenVAS are two popular and complementary open source network scanners—Nmap identifies live hosts, open ports, and what services are running and OpenVAS automatically scans those hosts, ports, and services for known vulnerabilities.
+* tcpdump is a powerful command-line packet analyzer that captures and displays network traffic in real time, allowing deep inspection of packets for troubleshooting or security analysis.
+* While Nmap discovers hosts and services and OpenVAS scans for vulnerabilities, tcpdump provides visibility into the raw network traffic between them.
 
 ### References
 

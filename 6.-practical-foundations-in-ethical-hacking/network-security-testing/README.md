@@ -48,9 +48,9 @@ The most common parameters for monitoring network performance are throughput (kb
 
 “Every organization on the planet that has any concern whatsoever for the security of its resources must perform various security assessments—and some don’t have a choice, if they need to comply with FISMA or other various government standards" (Walker, 2012, p. 312).
 
-Network security is an ongoing process that can be described by the Cisco security wheel. The security wheel (Figure 7-1) consists of the following four phases: Secure, Monitor, Test, and Improve. In the third phase, Test, or network security testing, netadmins verify the security design and discover vulnerabilities within the network.
+Network security is an ongoing process that can be described by the Cisco security wheel. The security wheel consists of the following four phases: Secure, Monitor, Test, and Improve. In the third phase, Test, or network security testing, netadmins verify the security design and discover vulnerabilities within the network.
 
-<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption><p>Cisco Security Wheel (image courtesy of Deveriya, 2005, p. 362)</p></figcaption></figure>
+
 
 The process of network security testing is also commonly known as security audit, security assessment, posture assessment, vulnerability assessment, penetration testing, and ethical hacking. All these terms are invoked to refer to "a legitimate process of attacking, discovering, and reporting security holes in a network" (Deveriya, 2005, p. 362).
 
@@ -61,11 +61,11 @@ Tools used for network security testing can be loosely classified into the follo
 
 **This section focuses on the following tools and methodologies of network security testing:**
 
-• Network scanners - Nmap
+• Network scanners - Nmap
 
-• Vulnerability scanners - OpenVAS (forked Nessus)
+• Vulnerability scanners - OpenVAS (forked Nessus)
 
-• Packet analyzers (sniffers) - tcpdump and Wireshark
+• Packet analyzers (sniffers) - tcpdump and Wireshark
 
 \*Nmap, OpenVAS, and tcpdump are covered in the section [Penetration testing technologies](../penetration-testing-technologies/). Wireshark is covered in the section [Defensive cybersecurity technologies](../defensive-cybersecurity-technologies/).
 
@@ -78,7 +78,7 @@ identify the OS, the services that are running, and the associated security vuln
 present on the discovered hosts. Some scanners can also display the results in the form of\
 graphical reports. (Deveriya, 2005, p. 365)
 
-• **Nmap** (Network Mapper): The Swiss army knife of network scanners; a popular and versatile tool. Nmap identifies live hosts, open ports, and what services are running.&#x20;
+• **Nmap** (Network Mapper): The Swiss army knife of network scanners; a popular and versatile tool. Nmap identifies live hosts, open ports, and what services are running.
 
 • **Nessus**: A popular **vulnerability scanner** with the ability to regularly update the vulnerability database; comes preinstalled with many Linux live CD-ROMs; and has good reporting capability. Nessus turned commercial in October 2005 but a limited feature version is available (Nessus Essentials provides vulnerability scanning for up to 16 IP addresses per scanner).
 

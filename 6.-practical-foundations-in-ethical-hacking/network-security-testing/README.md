@@ -237,3 +237,7 @@ Security researchers do not have the source code for Windows, Pages, or any othe
 ### References
 
 Deveriya, A. (2005). Network Administrators Survival Guide. Pearson Education.
+
+Lyon, G. F. (2009). _Nmap Network Scanning: The Official Nmap Project Guide to Network Discovery and Security Scanning_. Insecure Press.
+
+Sanders, C. (2017). _Practical Packet Analysis: Using Wireshark to Solve Real-World Network Problems_ (3rd ed.). No Starch Press.

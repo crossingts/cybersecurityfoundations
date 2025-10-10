@@ -135,10 +135,17 @@ Wireshark excels at deep L5-L7 analysis (e.g., "Decode this HTTP/2 stream" or "F
   * Right-click a packet → Follow → TCP Stream (reconstructs sessions).
   * Statistics → Protocol Hierarchy (shows traffic breakdown by protocol).
 
-#### Communications protocols analyzers
+#### Protocol analyzers vs software analyzers
 
+##### Communications protocols analyzers
 
-#### Software analyzers
+This is the domain of network traffic inspection.
+
+- **Wireshark:** The industry-standard protocol analyzer. It captures network traffic and allows you to dissect hundreds of different protocols to see exactly what's happening on the wire.
+- **tcpdump:** A command-line packet analyzer, often used on servers and for remote capture sessions.
+- **Burp Suite / OWASP ZAP:** Specifically for web applications. These tools act as a proxy to intercept, analyze, and manipulate HTTP/HTTPS traffic between a browser and a web server. They are essential for finding web app vulnerabilities.
+
+##### Software analyzers
 
 While a protocol analyzer is a tool for analyzing communications protocols, analyzing the software itself requires a different toolkit.
 
@@ -149,6 +156,69 @@ Analyzing software products to determine the product architecture and security v
 
 1. **Determining product architecture:** How do the different components of the software or device fit together? How do they communicate? What libraries do they use? What is the data flow?
 2. **Identifying security vulnerabilities:** Once you understand how it's built, you look for flaws in that design or implementation—places where the logic can be broken, commands can be injected, or memory can be corrupted to take control of the device.
+
+- **Disassemblers & Decompilers:**
+    
+    - **Ghidra:** A powerful, open-source tool from the NSA. It takes compiled software (binary/executable) and translates it back into a human-readable form (assembly code, and even partial C code) so an analyst can figure out what the program does.
+    - **IDA Pro:** The long-time commercial industry standard for disassembly. It's incredibly powerful for interactive, deep-dive reverse engineering.
+    - **Binary Ninja:** A newer, modern disassembler that is gaining popularity for its API and usability.
+        
+- **Debuggers:**
+    
+    - **x64dbg / WinDbg / GDB:** These tools allow the analyst to run the program and control its execution. They can pause it, inspect the state of the CPU's memory and registers at any given moment, and step through code line-by-line to understand its logic and find flaws. This is crucial for crafting exploits.
+        
+- **Binary Analysis Frameworks:**
+    
+    - **radare2:** An open-source, command-line framework for reverse engineering. It's very powerful but has a steep learning curve.
+    - **Cutter:** A graphical user interface for radare2, making it more accessible.
+        
+- **Fuzzers (Fuzzing Tools):**
+    
+    - **AFL (American Fuzzy Lop)** and its derivatives.
+    - **Peach Fuzzer.**
+    - **Boofuzz.**  
+
+Fuzzing tools automatically throw malformed, unexpected, or random data at a program or protocol to try and crash it. A crash often indicates a discoverable security vulnerability.
+
+**Summary**
+
+|If you are analyzing...|Concrete Analysis Goals & Examples|Primary Tools|
+|---|---|---|
+|**Communications Protocols**|**Goal:** To understand the _external_ communication behavior and find flaws in the protocol implementation.  <br>  <br>**Specific Examples:**  <br>• **Authentication:** Can I replay a login session packet to bypass authentication?  <br>• **Data Exposure:** Is sensitive data (passwords, keys, PII) sent in cleartext?  <br>• **Input Validation:** If I send a malformed, oversized, or unexpected packet, does the service crash or behave unexpectedly?  <br>• **Protocol Logic:** Can I manipulate sequence numbers or session IDs to hijack a connection?|**Wireshark, tcpdump, Burp Suite, OWASP ZAP**|
+|**Software (Binaries)**|**Goal:** To understand the _internal_ logic and code execution to find memory corruption and logic flaws.  <br>  <br>**Specific Examples:**  <br>• **Memory Corruption:** Is there a place where user input is copied into a fixed-size buffer without checking the length, causing a buffer overflow?  <br>• **Command Injection:** Can user-controlled input be passed, unsanitized, to a system shell command?  <br>• **Backdoor Functions:** Are there hidden, undocumented commands or functions that bypass security?  <br>• **Cryptographic Flaws:** Are weak or custom encryption algorithms used? Are random number generators predictable?|**Ghidra, IDA Pro, Debuggers (x64dbg, GDB), Binary Ninja**|
+
+Compiled software vs source code
+
+What is "Compiled Software"?
+
+When software is developed, programmers write source code in human-readable languages like C, C++, Swift, or Rust. This looks like:
+c
+
+// This is source code - humans can read it
+#include <stdio.h>
+
+int main() {
+    printf("Hello, World!");
+    return 0;
+}
+
+Compilation is the process of translating this human-readable source code into machine code - the raw 1s and 0s that the computer's processor understands directly.
+
+The result is a binary executable file (like .exe on Windows, or no extension on macOS/Linux).
+
+
+
+**Security Testing vs Vulnerability Analysis** 
+
+| Aspect                     | Penetration Testing                                                                           | Vulnerability Research                                                                               |
+| -------------------------- | --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| **Primary Goal**           | Find and exploit **known vulnerabilities** using established methodologies                    | Discover **previously unknown vulnerabilities** (zero-days) by analyzing products from the ground up |
+| **Mindset**                | "How can I break into this network/system using existing tools and techniques?"               | "How does this software/protocol actually work, and where are the design/implementation flaws?"      |
+| **Tools Used**             | Mostly **pre-built tools** (Metasploit, Burp Suite, nmap, etc.)                               | **Deep reverse engineering tools** (Ghidra, IDA Pro, debuggers), fuzzers, protocol analyzers         |
+| **Vulnerability Research** | Limited to identifying **publicly known vulnerabilities** and applying them                   | Creating **new vulnerability discovery techniques**, not just applying known ones                    |
+| **Depth**                  | **Broad but shallow** - know about many attack vectors, but not necessarily deepest internals | **Narrow but extremely deep** - might spend weeks/months understanding one product                   |
+| **Scripting**              | **Basic scripting** to automate tasks or modify existing exploits                             | **Advanced scripting** to build custom analysis tools and automation                                 |
+
 
 
 ### Key takeaways

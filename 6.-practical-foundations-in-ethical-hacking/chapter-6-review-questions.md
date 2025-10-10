@@ -49,7 +49,7 @@ Answer: The client must determine: (1) What they are trying to protect (critical
 **5. What is the role of penetration testing in relation to the findings of a vulnerability assessment, and what does this process provide for an organization?**
 Answer: The role of penetration testing is to act as a proof of concept by actively and safely exploiting vulnerabilities discovered during the vulnerability assessment. This process validates the vulnerability assessment results and provides tangible proof of the actual risk and business impact posed by the vulnerabilities.
 
-Network security testing
+### Network security testing
 
 1. The tools used for network security testing are loosely classified into two fundamental categories based on how they interact with the network. What are these two categories?  
     **Answer:** The two categories are (1) active scanners that send probe packets, and (2) passive packet analyzers that capture and analyze traffic.
@@ -66,7 +66,7 @@ Network security testing
 5. The lesson differentiates between Penetration Testing and Vulnerability Research. What is the primary goal of each activity?  
     **Answer:** The primary goal of Penetration Testing is to find and exploit _known vulnerabilities_ using established methodologies, while the primary goal of Vulnerability Research is to discover _previously unknown vulnerabilities_ (zero-days) by deeply analyzing products.
 
-Defensive security vs offensive security
+### Defensive security vs offensive security
 
 **1. The lesson distinguishes between the blue team as a functional concept and more formal team structures. What is the core function that defines a blue team, and what are two examples of formal teams that fulfill this function?**
 **Answer:** The core function is defensive security. Two examples of formal teams that fulfill this function are the Security Operations Center (SOC) and the Computer Security Incident Response Team (CSIRT/SIRT).

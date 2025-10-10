@@ -13,8 +13,6 @@ Burp Suite and OWASP ZAP are specialized tools designed for the **Application La
 
 **Their Core Function:** They act as an intercepting proxy. You configure your web browser to send all its traffic through Burp or ZAP. This allows the tool to capture, display, modify, and re-issue any HTTP/S request you make.
 
-***
-
 #### What Burp Suite / ZAP Can Do That Wireshark/tcpdump Cannot
 
 The key difference is **active interaction and manipulation** versus **passive observation**.
@@ -46,8 +44,6 @@ The key difference is **active interaction and manipulation** versus **passive o
 
 * **Burp/ZAP:** Can automatically explore a website by following every link, form, and JavaScript action to build a site map of the entire application. This is the first step in any security assessment.
 * **Wireshark/tcpdump:** Cannot actively crawl a site. It can only record the traffic that is generated while you manually browse.
-
-***
 
 #### Comparison Table
 

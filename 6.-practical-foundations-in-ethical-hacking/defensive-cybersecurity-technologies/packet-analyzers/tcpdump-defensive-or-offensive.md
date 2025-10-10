@@ -1,6 +1,6 @@
 # tcpdump: Defensive or offensive?
 
-tcpdump is primarily an offensive technology, but it can also be used in defensive scenarios, depending on the context. Here’s a breakdown:
+tcpdump is primarily a defensive technology, but it can also be used in offensive scenarios, depending on the context. Here’s a breakdown:
 
 #### **Defensive Use Cases**
 

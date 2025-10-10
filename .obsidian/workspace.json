@@ -11,14 +11,12 @@
             "id": "47d382666f0061a3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/network-security-testing/README.md",
-                "mode": "source",
-                "source": false
+                "file": "Pasted image 20251010134024.png"
               },
-              "icon": "lucide-file",
-              "title": "README"
+              "icon": "lucide-image",
+              "title": "Pasted image 20251010134024"
             }
           }
         ]
@@ -183,9 +181,9 @@
   },
   "active": "47d382666f0061a3",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/network-security-testing/README.md",
     "Pasted image 20251010134024.png",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing/network-security-testing-quiz.md",
-    "6.-practical-foundations-in-ethical-hacking/network-security-testing/README.md",
     "conflict-files-obsidian-git.md",
     "5.-cryptography-and-wireless-security/the-ssl-tls-handshake/understanding-the-ec-dhe-acronym.md",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing.md",

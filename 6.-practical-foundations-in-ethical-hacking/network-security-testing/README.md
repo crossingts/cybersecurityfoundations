@@ -139,13 +139,11 @@ Wireshark excels at deep L5-L7 analysis (e.g., "Decode this HTTP/2 stream" or "F
 
 ##### Communications protocols analyzers
 
-This is the domain of network traffic inspection.
+This is the domain of network traffic inspection. Wireshark and tcpdump are protocol analyzers (or packet sniffers). They see everything on the wire at the network and transport layers (e.g., IP, TCP, UDP, ICMP). They are passive observers. In comparison, Burp Suite and OWASP ZAP are Web Application Security Proxies. They operate as a man-in-the-middle between your browser and the web server, specifically for HTTP/HTTPS traffic. They are active manipulators.
 
-- **Wireshark:** The industry-standard protocol analyzer. It captures network traffic and allows you to dissect hundreds of different protocols to see exactly what's happening on the wire.
+- **Wireshark:** The industry-standard protocol analyzer. It captures network traffic and allows the network admin/analyst to dissect hundreds of different protocols to see exactly what's happening on the wire.
 - **tcpdump:** A command-line packet analyzer, often used on servers and for remote capture sessions.
 - **Burp Suite / OWASP ZAP:** Specifically for web applications. These tools act as a proxy to intercept, analyze, and manipulate HTTP/HTTPS traffic between a browser and a web server. They are essential for finding web app vulnerabilities.
-
-Wireshark and tcpdump are protocol analyzers (or packet sniffers). They see everything on the wire at the network and transport layers (e.g., IP, TCP, UDP, ICMP). They are passive observers. In comparison, Burp Suite and OWASP ZAP are Web Application Security Proxies. They operate as a man-in-the-middle between your browser and the web server, specifically for HTTP/HTTPS traffic. They are active manipulators.
 
 ##### Software analyzers
 

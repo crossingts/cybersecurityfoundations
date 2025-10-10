@@ -145,6 +145,8 @@ This is the domain of network traffic inspection.
 - **tcpdump:** A command-line packet analyzer, often used on servers and for remote capture sessions.
 - **Burp Suite / OWASP ZAP:** Specifically for web applications. These tools act as a proxy to intercept, analyze, and manipulate HTTP/HTTPS traffic between a browser and a web server. They are essential for finding web app vulnerabilities.
 
+Wireshark and tcpdump are protocol analyzers (or packet sniffers). They see everything on the wire at the network and transport layers (e.g., IP, TCP, UDP, ICMP). They are passive observers. In comparison, Burp Suite and OWASP ZAP are Web Application Security Proxies. They operate as a man-in-the-middle between your browser and the web server, specifically for HTTP/HTTPS traffic. They are active manipulators.
+
 ##### Software analyzers
 
 While a protocol analyzer is a tool for analyzing communications protocols, analyzing the software itself requires a different toolkit.
@@ -225,8 +227,6 @@ Security researchers do not have the source code for Windows, Pages, or any othe
 | **Vulnerability Research** | Limited to identifying **publicly known vulnerabilities** and applying them                   | Creating **new vulnerability discovery techniques**, not just applying known ones                    |
 | **Depth**                  | **Broad but shallow** - know about many attack vectors, but not necessarily deepest internals | **Narrow but extremely deep** - might spend weeks/months understanding one product                   |
 | **Scripting**              | **Basic scripting** to automate tasks or modify existing exploits                             | **Advanced scripting** to build custom analysis tools and automation                                 |
-
-
 
 ### Key takeaways
 

@@ -20,7 +20,7 @@ This section covers the use of network scanners (Nmap and OpenVAS) and packet an
 
 ### Introduction
 
-Network administrators configure various monitoring tools and perform various testing activities to ensure smooth and secure network operation. These activities include:
+Network administrators configure various monitoring tools and perform various testing activities to ensure smooth and secure network operation. Such activities and tools include:
 
 • **Connectivity testing/troubleshooting** (basic netadmin) using such tools/technologies as ping, traceroute, whois, nslookup, dig, netstat, nbtstat, arp, and syslog.
 
@@ -30,7 +30,7 @@ Typically, a network-monitoring system is comprised of Windows- or UNIX-based ne
 
 Key concepts related to network availability monitoring include SLAs (Service-Level Agreements), MTTR (mean time to repair), and Five Nines.
 
-• **Network performance monitoring** (part of NMS) to determine the adequacy of key performance parameters of network devices and links, using such tools as MRTG and Cacti. Network performance monitoring is "the process of collecting, storing, and analyzing network statistics" (Deveriya, 2005, p. 314).
+• **Network performance monitoring** (part of NMS) to determine the adequacy of key performance parameters of network devices and links, using such tools as MRTG, Cacti, and Nagios. Network performance monitoring is "the process of collecting, storing, and analyzing network statistics" (Deveriya, 2005, p. 314).
 
 Typically, performance-monitoring systems use the Simple Network Management Protocol (SNMP) to communicate with the monitored hosts. Using SNMP, the performance-monitoring system regularly polls the monitored hosts and collects performance-parameter samples. The samples are then stored in a central database for analysis and reporting, such as historical trending. (Deveriya, 2005, p. 314)
 
@@ -42,13 +42,13 @@ The most common parameters for monitoring network performance are throughput (kb
 
 • **Host and network firewalls** using such tools as ufw, iptables, nftables, pf (packet filter), OPNsense, and pfsense.
 
-• **Network security testing** is performed to assess and verify threats and vulnerabilities of a network using such tools as Nmap, Nessus, OpenVAS, Netcat, Wireshark, and tcpdump.
+• **Network security testing** performed to assess and verify threats and vulnerabilities of a network, using such tools as Nmap, Nessus, OpenVAS, Netcat, Wireshark, and tcpdump.
 
 ### Network security testing
 
 “Every organization on the planet that has any concern whatsoever for the security of its resources must perform various security assessments—and some don’t have a choice, if they need to comply with FISMA or other various government standards" (Walker, 2012, p. 312).
 
-Network security is an ongoing process that can be described by the Cisco security wheel. The security wheel (Figure 7-1) consists of the following four phases: Secure, Monitor, Test, and Improve. The third phase, Test, or network security testing, helps netadmins verify the security design and discover vulnerabilities within a network.
+Network security is an ongoing process that can be described by the Cisco security wheel. The security wheel (Figure 7-1) consists of the following four phases: Secure, Monitor, Test, and Improve. In the third phase, Test, or network security testing, netadmins verify the security design and discover vulnerabilities within the network.
 
 <figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption><p>Cisco Security Wheel (image courtesy of Deveriya, 2005, p. 362)</p></figcaption></figure>
 

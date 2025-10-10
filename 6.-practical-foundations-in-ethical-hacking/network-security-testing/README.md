@@ -67,7 +67,7 @@ Tools used for network security testing can be loosely classified into the follo
 
 • Packet analyzers (sniffers): tcpdump and Wireshark.
 
-Nmap, OpenVAS, and tcpdump are covered in the section [Penetration testing technologies](../penetration-testing-technologies/). Wireshark is covered in the section [Defensive cybersecurity technologies](../defensive-cybersecurity-technologies/).
+Nmap and OpenVAS are covered in the section [Penetration testing technologies](../penetration-testing-technologies/). tcpdump and Wireshark are covered in the section [Defensive cybersecurity technologies](../defensive-cybersecurity-technologies/).
 
 #### Network Scanners
 

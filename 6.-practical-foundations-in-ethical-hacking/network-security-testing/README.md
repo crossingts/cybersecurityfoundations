@@ -130,11 +130,26 @@ tcpdump cannot decrypt modern encrypted traffic (e.g., HTTPS), but it _can_ expo
 * Protocol anomalies (e.g., suspicious TCP retransmissions).
 * Metadata (e.g., TLS ClientHello SNI, DNS exfiltration).
 
-Wireshark excels at deep L5-L7 analysis (e.g., "Decode this HTTP/2 stream" or "Find malformed DNS packets").
+Wireshark excels at deep L5-L7 analysis (e.g., "Decode this HTTP/2 stream" or "Find malformed DNS packets"). For example,
 
-* Example:
   * Right-click a packet → Follow → TCP Stream (reconstructs sessions).
   * Statistics → Protocol Hierarchy (shows traffic breakdown by protocol).
+
+#### Communications protocols analyzers
+
+
+#### Software analyzers
+
+While a protocol analyzer is a tool for analyzing communications protocols, analyzing the software itself requires a different toolkit.
+
+- Protocol analyzers like Wireshark and tcpdump are used to understand the "**conversation**" between different components. They answer: "What data is being sent, in what order, and in what format?"
+- Understanding the "**brain**" having the conversation—the software itself—requires a different set of tools to take the software apart and examine its internals.
+
+Analyzing software products to determine the product architecture and security vulnerabilities is the core activity of **reverse engineering** and **vulnerability research**. The goal is to understand how a product works from the inside out, without necessarily having access to its original blueprints (source code). This process involves:
+
+1. **Determining product architecture:** How do the different components of the software or device fit together? How do they communicate? What libraries do they use? What is the data flow?
+2. **Identifying security vulnerabilities:** Once you understand how it's built, you look for flaws in that design or implementation—places where the logic can be broken, commands can be injected, or memory can be corrupted to take control of the device.
+
 
 ### Key takeaways
 

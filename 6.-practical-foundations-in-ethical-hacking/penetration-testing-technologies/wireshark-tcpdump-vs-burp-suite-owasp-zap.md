@@ -4,12 +4,12 @@ hidden: true
 
 # Wireshark/tcpdump vs Burp Suite/OWASP ZAP
 
-#### Burp Suite and OWASP ZAP?
+#### Burp Suite and OWASP ZAP
 
-These are specialized tools designed for the **Application Layer** (Layer 7 of the OSI model), specifically for web traffic (HTTP/HTTPS).
+Burp Suite and OWASP ZAP are specialized tools designed for the **Application Layer** (Layer 7 of the OSI model), specifically for web traffic (HTTP/HTTPS).
 
-* **Burp Suite:** The industry-standard, commercial-grade tool for web application security testing. It has a free version (Burp Suite Community) with powerful core features and a more advanced professional version.
-* **OWASP ZAP (Zed Attack Proxy):** A free, open-source, and community-driven alternative from the Open Web Application Security Project (OWASP). It is incredibly powerful and often considered the primary competitor to Burp Suite.
+* **Burp Suite:** The industry-standard, commercial-grade tool for web application security testing. It has a free version (Burp Suite Community) with powerful core features, and a more advanced professional version.
+* **OWASP ZAP (Zed Attack Proxy):** A free, open-source, and community-driven alternative from the Open Web Application Security Project (OWASP). It is a powerful tool and often considered the primary competitor to Burp Suite.
 
 **Their Core Function:** They act as an intercepting proxy. You configure your web browser to send all its traffic through Burp or ZAP. This allows the tool to capture, display, modify, and re-issue any HTTP/S request you make.
 
@@ -17,7 +17,7 @@ These are specialized tools designed for the **Application Layer** (Layer 7 of t
 
 #### What Burp Suite / ZAP Can Do That Wireshark/tcpdump Cannot
 
-This is the crux of your question. The key difference is **active interaction and manipulation** versus **passive observation**.
+The key difference is **active interaction and manipulation** versus **passive observation**.
 
 **1. Intercept and Actively Modify Traffic in Real-Time**
 

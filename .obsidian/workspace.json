@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/network-security-testing/README.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/wireshark-tcpdump-vs-burp-suite-owasp-zap.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "wireshark-tcpdump-vs-burp-suite-owasp-zap"
             }
           }
         ]
@@ -181,13 +181,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "06ca7278ba5efd38",
+  "active": "47d382666f0061a3",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/packet-analyzers/tcpdump-defensive-or-offensive.md",
+    "6.-practical-foundations-in-ethical-hacking/network-security-testing/README.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/wireshark-tcpdump-vs-burp-suite-owasp-zap.md",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing/network-security-testing-quiz.md",
     "1.-it-career-planning/it-career-paths/README.md",
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/README.md",
-    "6.-practical-foundations-in-ethical-hacking/network-security-testing/README.md",
     "1.-it-career-planning/alternative-chapter-1-review-questions.md",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing/Pasted image 20251010134024.png",
     "conflict-files-obsidian-git.md",
@@ -214,7 +215,6 @@
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1",
     "7.-conclusion/glossary.md",
     "README.md",
-    "SUMMARY.md",
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/professional-ethics-of-ethical-hackers",
     "5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods",
     "5.-cryptography-and-wireless-security/authentication-and-encryption-in-wpa-wpa2-and-wpa3"

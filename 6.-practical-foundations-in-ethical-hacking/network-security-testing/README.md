@@ -52,31 +52,26 @@ Network security is an ongoing process that can be described by the Cisco securi
 
 <figure><img src="../../.gitbook/assets/cisco-security-wheel.jpg" alt="Cisco-security-wheel"><figcaption><p>Cisco Security Wheel (image courtesy of Deveriya, 2005, p. 362)</p></figcaption></figure>
 
-The process of network security testing is also commonly known as security audit, security assessment, posture assessment, vulnerability assessment, penetration testing, and ethical hacking. All these terms are invoked to refer to "a legitimate process of attacking, discovering, and reporting security holes in a network" (Deveriya, 2005, p. 362).
+Network security testing is also commonly referred to as security audit, security assessment, posture assessment, vulnerability assessment, penetration testing, and ethical hacking. All these terms are invoked to refer to "a legitimate process of attacking, discovering, and reporting security holes in a network" (Deveriya, 2005, p. 362).
 
 Tools used for network security testing can be loosely classified into the following two categories:
 
-* Scanners - Active tools that send out probe packets to the target host or network to attack or gather information.
-* Packet analyzers - Passive in their operation because they do not send probe packets. Instead, packet analyzers work by capturing and analyzing the data that is flowing across the network.
+* Scanners: Active tools that send out probe packets to the target host or network to attack or gather information.
+* Packet analyzers: Passive in their operation because they do not send probe packets. Instead, packet analyzers work by capturing and analyzing the data that is flowing across the network.
 
-**This section focuses on the following tools and methodologies of network security testing:**
+**This discussion focuses on the following tools and methodologies of network security testing:**
 
-• Network scanners - Nmap
+• Network scanners: Nmap.
 
-• Vulnerability scanners - OpenVAS (forked Nessus)
+• Vulnerability scanners: OpenVAS (forked Nessus).
 
-• Packet analyzers (sniffers) - tcpdump and Wireshark
+• Packet analyzers (sniffers): tcpdump and Wireshark.
 
-\*Nmap, OpenVAS, and tcpdump are covered in the section [Penetration testing technologies](../penetration-testing-technologies/). Wireshark is covered in the section [Defensive cybersecurity technologies](../defensive-cybersecurity-technologies/).
+Nmap, OpenVAS, and tcpdump are covered in the section [Penetration testing technologies](../penetration-testing-technologies/). Wireshark is covered in the section [Defensive cybersecurity technologies](../defensive-cybersecurity-technologies/).
 
 #### Network Scanners
 
-Network scanners are software tools that probe a network to determine the hosts present on\
-the network. Network scanners also probe the discovered hosts to determine the TCP and\
-UDP ports that are open. Furthermore, based on the response of the probes, scanners can\
-identify the OS, the services that are running, and the associated security vulnerabilities\
-present on the discovered hosts. Some scanners can also display the results in the form of\
-graphical reports. (Deveriya, 2005, p. 365)
+Network scanners are software tools that probe a network to determine the hosts present on the network. Network scanners also probe the discovered hosts to determine the TCP and UDP ports that are open. Furthermore, based on the response of the probes, scanners can identify the OS, the services that are running, and the associated security vulnerabilities present on the discovered hosts. Some scanners can also display the results in the form of graphical reports. (Deveriya, 2005, p. 365)
 
 • **Nmap** (Network Mapper): The Swiss army knife of network scanners; a popular and versatile tool. Nmap identifies live hosts, open ports, and what services are running.
 

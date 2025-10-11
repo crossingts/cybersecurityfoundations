@@ -84,7 +84,7 @@ The `ClientHello` and `ServerHello` are the foundation for the entire secure ses
    * **Bulk Encryption Algorithm:** The symmetric cipher (like `AES_256_GCM` or `CHACHA20_POLY1305`) that will be used to encrypt the actual application data.
    * **Message Authentication Code (MAC) Algorithm:** How message integrity is verified. In modern cipher suites (like those using AES-GCM), this is a built-in part of the encryption mode.
 3. **Session ID / Resumption Parameters:** Mechanisms for resuming a previous session to save on future handshake overhead.
-4. **(Extensions) Key Share Parameters:** In TLS 1.3, the client often sends its Diffie-Hellman key share in the `ClientHello`,
+4. **(Extensions) Key Share Parameters:** In TLS 1.3, the client often sends its Diffie-Hellman key share in the `ClientHello`.
 
 #### How the Negotiation Works:
 

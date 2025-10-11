@@ -1,5 +1,7 @@
 # What is professional ethical hacking — Quiz
 
+### What is professional ethical hacking
+
 **1. What is the single most important factor that distinguishes professional ethical hackers (white hats) from grey hat and black hat hackers? (Choose one answer)** \
 a) Their level of technical skill and the tools they use \
 b) Their underlying motivation to improve security \

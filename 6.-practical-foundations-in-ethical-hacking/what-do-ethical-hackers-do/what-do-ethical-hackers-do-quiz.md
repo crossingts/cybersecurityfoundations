@@ -1,5 +1,7 @@
 # What do ethical hackers do? — Quiz
 
+### What do ethical hackers do?
+
 **1. According to the ASIS International guidelines discussed in the lesson, which of the following is an essential component of a risk assessment plan? (Choose one answer)**\
 a) Creating a comprehensive security policy for the organization \
 **b) Conducting a cost/benefit analysis of mitigation options** \

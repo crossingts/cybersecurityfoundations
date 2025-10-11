@@ -124,7 +124,7 @@ Technology focus: nftables and OPNsense.
 
 Popular open source NIDS and HIDS include Suricata, Snort, Wazuh, OSSEC, Fail2Ban, Zeek (formerly Bro), Security Onion, and OpenWIPS-NG.
 
-Technology focus: Suricata and Zeek.
+Technology focus: Suricata and Zeek (Bro).
 
 #### IDS/IPS Key features
 

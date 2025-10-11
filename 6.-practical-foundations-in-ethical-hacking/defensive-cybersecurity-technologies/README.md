@@ -340,8 +340,9 @@ Technology focus: Wazuh (SIEM/XDR).
 | **Suricata**     | NIDS/NIPS          | Signature/anomaly detection     | High-speed, file extraction, IPS mode | Via logs         | No           | Network traffic analysis           |
 | **Velociraptor** | EDR                | Endpoint forensics, hunting     | Live querying, memory analysis        | Via APIs         | Yes          | Threat hunting, IR                 |
 
-SIEM/EDR Selection Matrix
+**SIEM/EDR Selection Guide**
 
+This segment provides a practical guide to help you select the most appropriate open-source tool based on your specific needs and context.
 
 |Your Primary Need|Recommended Tool(s)|Key Reason|
 |---|---|---|
@@ -430,8 +431,9 @@ Technology focus: Wireshark and tcpdump.
 | **Snort**     | NIDS             | CLI       | Yes          | Limited           | Rule-based detection, PCAP dumping   | Security monitoring              |
 | **Arkime**    | PCAP Storage     | Web GUI   | Yes          | 100+ protocols    | Scalable, long-term packet retention | SOCs, large networks             |
 
-Packet Analyzers Selection Matrix
+**Packet Analyzers Selection Guide**
 
+This segment provides a practical guide to help you select the most appropriate open-source tool based on your specific needs and context.
 
 |Your Primary Need|Recommended Tool(s)|Key Reason|
 |---|---|---|

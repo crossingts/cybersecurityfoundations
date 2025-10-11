@@ -173,7 +173,7 @@ Stateless firewalls (ACLs) are simpler and faster but lack intelligence. They ar
 ```
 Linux Kernel:
   └─ Netfilter (Framework)
-      ├─ iptables (Legacy)
+      ├─ iptables → firewalld/UFW (Frontends) (Legacy)
       └─ nftables (Modern Replacement)
 
 BSD Kernel:
@@ -194,21 +194,6 @@ Windows:
 | **ipfw**     | BSD Kernel        | FreeBSD/macOS   | Older, simpler than PF.           |
 | **WFP**      | Windows Kernel    | Windows         | Native firewall for Windows.      |
 
-**Diagram: Firewall Tech Tree**
-
-```
-Netfilter (Linux)
-├─ iptables → firewalld/UFW (Frontends)
-└─ nftables (Future-proof)
-
-BSD Kernel
-├─ PF → OPNsense/pfSense
-└─ ipfw (Legacy)
-
-Windows
-└─ WFP (Integrated)
-```
-
 **Summary**
 
 1. **Stateful Firewalls:** Open-source examples include iptables/nftables (Linux), PF (BSD), and OPNsense.
@@ -217,13 +202,11 @@ Windows
 
 ### Web Application Firewalls (WAFs)
 
-**Characteristics?**
+**WAF key characteristics:**
 
 * Scope: Inspects payloads (e.g., "Block HTTP requests with SQLi").
 * L7 Awareness: Understands HTTP, DNS, etc. (deep packet inspection)
 * Performance Impact: High (parses full packets).
-
-**Are WAFs Host-Based or Network-Based?**
 
 WAFs can be **host-based and network-based**, depending on deployment:
 

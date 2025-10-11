@@ -463,3 +463,11 @@ This segment provides a practical guide to help you select the most appropriate 
 * Popular open source NIDS include Suricata and Snort.
 * Popular open source SIEM include Wazuh and TheHive.
 * Popular open source packet analyzers include Wireshark and tcpdump.
+
+### References
+
+Bejtlich, R. (2013). _The practice of network security monitoring: Understanding incident detection and response_. No Starch Press.
+
+Chapple, M., Seidl, D., & Stewart, J. M. (2022). _CISSP (ISC)2 certified information systems security professional official study guide_ (9th ed.). Sybex.
+
+Sanders, C. (2017). _Practical packet analysis: Using Wireshark to solve real-world network problems_ (3rd ed.). No Starch Press.

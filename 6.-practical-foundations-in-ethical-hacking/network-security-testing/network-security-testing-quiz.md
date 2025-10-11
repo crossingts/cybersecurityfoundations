@@ -1,5 +1,7 @@
 # Network security testing — Quiz
 
+### Network security testing
+
 **1. During the "Test" phase of the Cisco Security Wheel, a security professional uses a tool that sends probe packets to identify active hosts and open services on a network. This tool is most accurately classified as a(n): (Choose one answer)** \
 a) Packet Analyzer \
 b) **Network Scanner** \

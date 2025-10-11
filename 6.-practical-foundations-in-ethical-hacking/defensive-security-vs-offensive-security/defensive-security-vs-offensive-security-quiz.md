@@ -1,5 +1,7 @@
 # Defensive security vs offensive security — Quiz
 
+### Defensive security vs offensive security
+
 **1. According to the lesson, what is the fundamental distinction between a blue team and more formal teams like a SOC or CSIRT? (Choose one answer)**\
 a) Blue Teams are always in-house employees, while SOCs are always outsourced to an MSSP\
 **b) Blue team is a functional concept describing defensive activities, while SOC and CSIRT are formal team names** \

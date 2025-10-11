@@ -14,6 +14,8 @@ description: This section focuses on popular open source defensive cybersecurity
 
 This section explores major defensive cybersecurity technologies, including firewalls, IDS/IPS, SIEM/EDR, and packet analyzers. The discussion focuses on popular open-source tools used to implement these technologies, exploring their key characteristics and deployment (use cases). Key categories of defensive cybersecurity technologies discussed include host/network firewalls (e.g., UFW, iptables, nftables, PF, OPNsense, and pfSense), IDS/IPS (e.g., Suricata and Snort), network security monitoring/SIEM (e.g., Wazuh and OSSEC), and packet analyzers (e.g., Wireshark and tcpdump).
 
+Note that many powerful open-source security tools have overlapping capabilities and can span multiple functional categories. A tool primarily classified as a Network Intrusion Detection System (NIDS), like Suricata, might also provide critical log data for a Security Information and Event Management (SIEM) system. This lesson categorizes tools by their primary function, but their real-world value often lies in how they are integrated into a broader security architecture.
+
 ## Topics covered in this section
 
 * **Firewalls**

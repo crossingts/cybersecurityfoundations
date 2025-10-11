@@ -206,14 +206,14 @@ Security researchers do not have the source code for Windows, Pages, or any othe
 
 **Security Testing vs Vulnerability Analysis**
 
-| Aspect                     | Penetration Testing                                                                           | Vulnerability Research                                                                               |
-| -------------------------- | --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| **Primary Goal**           | Find and exploit **known vulnerabilities** using established methodologies                    | Discover **previously unknown vulnerabilities** (zero-days) by analyzing products from the ground up |
-| **Mindset**                | "How can I break into this network/system using existing tools and techniques?"               | "How does this software/protocol actually work, and where are the design/implementation flaws?"      |
-| **Tools Used**             | Mostly **pre-built tools** (Metasploit, Burp Suite, nmap, etc.)                               | **Deep reverse engineering tools** (Ghidra, IDA Pro, debuggers), fuzzers, protocol analyzers         |
-| **Vulnerability Research** | Limited to identifying **publicly known vulnerabilities** and applying them                   | Creating **new vulnerability discovery techniques**, not just applying known ones                    |
-| **Depth**                  | **Broad but shallow** - know about many attack vectors, but not necessarily deepest internals | **Narrow but extremely deep** - might spend weeks/months understanding one product                   |
-| **Scripting**              | **Basic scripting** to automate tasks or modify existing exploits                             | **Advanced scripting** to build custom analysis tools and automation                                 |
+| Aspect                     | Penetration Testing                                                                       | Vulnerability Research                                                                           |
+| -------------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| **Primary Goal**           | Find and exploit known vulnerabilities using established methodologies                    | Discover previously unknown vulnerabilities (zero-days) by analyzing products from the ground up |
+| **Mindset**                | "How can I break into this network/system using existing tools and techniques?"           | "How does this software/protocol actually work, and where are the design/implementation flaws?"  |
+| **Tools Used**             | Mostly pre-built tools (Metasploit, Burp Suite, Nmap, etc.)                               | Deep reverse engineering tools (Ghidra, IDA Pro, debuggers), fuzzers, protocol analyzers         |
+| **Vulnerability Research** | Typically limited to identifying publicly known vulnerabilities and applying them         | Creating new vulnerability discovery techniques, not just applying known ones                    |
+| **Depth**                  | Broad but shallow - know about many attack vectors, but not necessarily deepest internals | Narrow but extremely deep - might spend weeks/months understanding one product                   |
+| **Scripting**              | Basic scripting to automate tasks or modify existing exploits                             | Advanced scripting to build custom analysis tools and automation                                 |
 
 ### Key takeaways
 

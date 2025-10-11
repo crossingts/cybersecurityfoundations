@@ -10,7 +10,7 @@
 
 ### Core packet-filtering firewall technologies
 
-Packet-filtering firewall technologies such as iptables and pfilter (PF) operate at the network level (Layer 3/4). These tools allow administrators to define rules for allowing, blocking, or modifying traffic based on IPs, ports, protocols, and connection states.
+Packet-filtering firewall technologies such as iptables and pfilter (PF) operate at the network level (Layer 3/4). These tools allow network administrators to define rules for allowing, blocking, or modifying traffic based on IPs, ports, protocols, and connection states.
 
 **Core Packet-Filtering Firewall Technologies (Open Source Except WFP)**
 
@@ -26,7 +26,7 @@ Packet-filtering firewall technologies such as iptables and pfilter (PF) operate
 
 **BSD-Based Firewalls**
 
-BSD-based firewalls use networking and security tools native to BSD systems. BSD stands for Berkeley Software Distribution, a family of **Unix-like operating systems** derived from the original Berkeley Unix (developed at UC Berkeley).&#x20;
+BSD-based firewalls use networking and security tools native to BSD systems. BSD stands for Berkeley Software Distribution, a family of **Unix-like operating systems** derived from the original Berkeley Unix (developed at UC Berkeley).
 
 **Key BSD Variants in Firewalling**
 
@@ -61,7 +61,7 @@ Stateful firewalls primarily operate at **L3 (Network) and L4 (Transport)**, tra
 
 **1. Stateless firewall**: Filters packets individually (no memory of past packets). Example: Traditional ACLs.
 
-**2. Stateful firewall**: Tracks connections and makes decisions based on the full session state (auto-allows valid follow-up traffic). Example: PF, iptables (with conntrack).&#x20;
+**2. Stateful firewall**: Tracks connections and makes decisions based on the full session state (auto-allows valid follow-up traffic). Example: PF, iptables (with conntrack).
 
 **3. Connection Tracking (`conntrack`)**
 

@@ -111,6 +111,17 @@ Technology focus: nftables and OPNsense.
 | **OPNsense**     | Network      | FreeBSD  | Yes (Web) | Easy        | Yes      | Yes | OpenVPN/WireGuard | Suricata     | Yes             | Yes  |
 | **pfSense CE**   | Network      | FreeBSD  | Yes (Web) | Easy        | Yes      | Yes | OpenVPN/IPsec     | Snort        | Yes             | Yes  |
 
+**Firewall Selection Guide**
+
+This section provides a practical guide to help you select the most appropriate open-source tool based on your specific needs and context.
+
+| Your Primary Need                                       | Recommended Tool(s)          | Key Reason                                                                                                                                                     |
+| ------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **A simple host firewall for a Linux desktop/server**   | **UFW**                      | Uncomplicated CLI, pre-configured profiles, and user-friendly.                                                                                                 |
+| **Granular, expert-level control on a Linux system**    | **iptables** or **nftables** | Kernel-level power; choose `nftables` for a modern, unified syntax.                                                                                            |
+| **A powerful firewall for a BSD-based system or macOS** | **PF (Packet Filter)**       | Clean syntax, stateful filtering, and integrated into the OS.                                                                                                  |
+| **A full network security appliance with a web GUI**    | **OPNsense** or **pfSense**  | All-in-one solution (VPN, IDS/IPS, traffic shaping). Choose OPNsense for frequent updates and a modern approach, or pfSense for a vast, established community. |
+
 **Summary**
 
 * **UFW**: Best for Linux beginners needing simplicity.
@@ -224,6 +235,19 @@ Technology focus: Suricata and Zeek (Bro).
 | **Security Onion** | NIDS/HIDS/SIEM | Multiple engines       | All-in-one SOC platform                     | Via Suricata       | Yes (Kibana)       | Elasticsearch, PCAP | Security Operations Centers  |
 | **OpenWIPS-NG**    | Wireless IDS   | Wi-Fi-specific attacks | Rogue AP detection                          | Limited            | No (CLI)           | Text logs           | Wi-Fi security monitoring    |
 
+IDS/IPS Selection Matrix
+
+
+|Your Primary Need|Recommended Tool(s)|Key Reason|
+|---|---|---|
+|**High-speed network intrusion detection/prevention (NIDS/NIPS)**|**Suricata**|Multi-threaded, high performance, and compatible with Snort rules.|
+|**A lightweight, well-known NIDS for smaller networks**|**Snort**|The industry standard for decades, with extensive community support.|
+|**Deep network traffic analysis and forensics**|**Zeek (Bro)**|Generates rich, structured logs of network protocols for behavioral analysis.|
+|**Host-based monitoring (HIDS) and compliance**|**Wazuh**|Combines log analysis, FIM, vulnerability detection, and a central dashboard.|
+|**A lightweight HIDS for servers with active response**|**OSSEC**|Lightweight, efficient, and can trigger actions like blocking IPs.|
+|**Protection against brute-force attacks on services**|**Fail2Ban**|Scans logs and automatically blocks malicious IPs via the local firewall.|
+|**An all-in-one distributed security monitoring platform**|**Security Onion**|Bundles Suricata, Zeek, Wazuh, and Elasticsearch for a complete SOC experience.|
+
 **Summary**
 
 * **For Networks**: **Suricata** (best performance), **Snort** (legacy), **Zeek** (deep analysis).
@@ -315,17 +339,27 @@ Technology focus: Wazuh (SIEM/XDR).
 | **Suricata**     | NIDS/NIPS          | Signature/anomaly detection     | High-speed, file extraction, IPS mode | Via logs         | No           | Network traffic analysis           |
 | **Velociraptor** | EDR                | Endpoint forensics, hunting     | Live querying, memory analysis        | Via APIs         | Yes          | Threat hunting, IR                 |
 
+SIEM/EDR Selection Matrix
+
+
+|Your Primary Need|Recommended Tool(s)|Key Reason|
+|---|---|---|
+|**A unified SIEM with HIDS, compliance, and a dashboard**|**Wazuh**|All-in-one open-source SIEM/XDR platform with strong integration capabilities.|
+|**Endpoint hunting, forensics, and live response**|**Velociraptor**|Powerful query language (VQL) for deep investigation and artifact collection on endpoints.|
+|**Collaborative incident response and case management**|**TheHive**|Manages security incidents, integrates with MISP, and streamlines SOC workflows.|
+|**To feed network traffic logs into your SIEM**|**Zeek** or **Suricata**|Both generate structured logs (e.g., EVE JSON) that can be ingested by SIEMs like Wazuh.|
+
+**Best Combinations**:
+
+* **Wazuh + TheHive + Suricata** → Full SIEM + IR (Incident Response) + NIDS.
+* **Velociraptor + Zeek** → Advanced EDR + network forensics.
+
 **Summary**
 
 * **SIEM**: **Wazuh** (best all-in-one), **OSSEC** (lightweight HIDS).
 * **EDR**: **Velociraptor** (advanced forensics), **Wazuh** (basic endpoint protection).
 * **Network Analysis**: **Zeek** (deep inspection), **Suricata** (real-time IPS).
 * **Incident Response**: **TheHive** (case management).
-
-**Best Combinations**:
-
-* **Wazuh + TheHive + Suricata** → Full SIEM + IR (Incident Response) + NIDS.
-* **Velociraptor + Zeek** → Advanced EDR + network forensics.
 
 ***
 
@@ -412,6 +446,8 @@ Technology focus: Wireshark and tcpdump.
 1. **Capture with tcpdump** → Analyze in Wireshark.
 2. **Zeek for traffic logs** + Arkime for PCAP retention.
 3. **Snort for alerts** → Inspect PCAPs in Wireshark.
+
+**Summary**
 
 ***
 

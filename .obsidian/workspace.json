@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/defensive-cybersecurity-technologies-quiz.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "defensive-cybersecurity-technologies-quiz"
+              "title": "README"
             }
           }
         ]
@@ -183,6 +183,7 @@
   },
   "active": "47d382666f0061a3",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/defensive-cybersecurity-technologies-quiz.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md",
     "6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing.md",
     "6.-practical-foundations-in-ethical-hacking/introduction-practical-foundations-in-ethical-hacking.md",
@@ -211,7 +212,6 @@
     "6.-practical-foundations-in-ethical-hacking/what-do-ethical-hackers-do",
     "6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking",
     "6.-practical-foundations-in-ethical-hacking/defensive-security-vs-offensive-security",
-    "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/defensive-cybersecurity-technologies-quiz.md",
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/what-is-professional-ethical-hacking-quiz.md",
     "6.-practical-foundations-in-ethical-hacking/what-do-ethical-hackers-do.md",
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1",

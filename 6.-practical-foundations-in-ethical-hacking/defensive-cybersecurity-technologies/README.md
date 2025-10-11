@@ -349,11 +349,6 @@ SIEM/EDR Selection Matrix
 |**Collaborative incident response and case management**|**TheHive**|Manages security incidents, integrates with MISP, and streamlines SOC workflows.|
 |**To feed network traffic logs into your SIEM**|**Zeek** or **Suricata**|Both generate structured logs (e.g., EVE JSON) that can be ingested by SIEMs like Wazuh.|
 
-**Best Combinations**:
-
-* **Wazuh + TheHive + Suricata** → Full SIEM + IR (Incident Response) + NIDS.
-* **Velociraptor + Zeek** → Advanced EDR + network forensics.
-
 **Summary**
 
 * **SIEM**: **Wazuh** (best all-in-one), **OSSEC** (lightweight HIDS).
@@ -434,20 +429,22 @@ Technology focus: Wireshark and tcpdump.
 | **Snort**     | NIDS             | CLI       | Yes          | Limited           | Rule-based detection, PCAP dumping   | Security monitoring              |
 | **Arkime**    | PCAP Storage     | Web GUI   | Yes          | 100+ protocols    | Scalable, long-term packet retention | SOCs, large networks             |
 
-**Key Takeaways**
+Packet Analyzers Selection Matrix
+
+
+|Your Primary Need|Recommended Tool(s)|Key Reason|
+|---|---|---|
+|**Deep, interactive protocol analysis with a GUI**|**Wireshark**|The definitive tool for deep packet inspection, decryption, and visualization.|
+|**Quick, scriptable packet capture from the command line**|**tcpdump**|Lightweight, ubiquitous, and perfect for capturing traffic on servers or for automation.|
+|**Behavioral analysis and structured logging of network traffic**|**Zeek (Bro)**|Doesn't inspect packets live but generates comprehensive protocol logs for forensic review.|
+|**Large-scale, indexed packet capture and retention**|**Arkime**|Designed for storing and quickly searching PCAPs across high-traffic networks.|
+
+**Summary**
 
 * **For deep analysis**: **Wireshark** (GUI) or **tcpdump** (CLI).
 * **For traffic logging**: **Zeek** (creates structured logs).
 * **For security monitoring**: **Snort** (NIDS mode).
 * **For large-scale PCAP storage**: **Arkime** (web-based).
-
-**Workflow Examples**:
-
-1. **Capture with tcpdump** → Analyze in Wireshark.
-2. **Zeek for traffic logs** + Arkime for PCAP retention.
-3. **Snort for alerts** → Inspect PCAPs in Wireshark.
-
-**Summary**
 
 ***
 

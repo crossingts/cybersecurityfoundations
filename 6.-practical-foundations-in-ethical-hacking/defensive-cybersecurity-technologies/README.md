@@ -1,5 +1,5 @@
 ---
-description: This section focuses on popular open source defensive cybersecurity tools used as firewalls, IDS/IPS, SIEM/EDR, and packet analyzers
+description: This section focuses on popular open source defensive cybersecurity tools used for firewalls, IDS/IPS, SIEM/EDR, and packet analyzers
 ---
 
 # Defensive cybersecurity technologies
@@ -12,9 +12,7 @@ description: This section focuses on popular open source defensive cybersecurity
 * Become familiar with popular open source security event management technologies, their key features, and their common use cases
 * Become familiar with popular open source packet analyzers, their key features, and their common use cases
 
-This section explores major defensive cybersecurity technologies, including firewalls, IDS/IPS, SIEM/EDR, and packet analyzers. The discussion focuses on popular open-source tools used to implement them.
-
-This section looks at popular open source defensive cybersecurity technologies, exploring their key characteristics and deployment (use cases). Key categories of defensive cybersecurity technologies discussed include host/network firewalls (e.g., UFW, iptables, nftables, PF, OPNsense, and pfSense), IDS/IPS (e.g., Suricata and Snort), network security monitoring/SIEM (e.g., Wazuh and OSSEC), and packet analyzers (e.g., Wireshark and tcpdump).
+This section explores major defensive cybersecurity technologies, including firewalls, IDS/IPS, SIEM/EDR, and packet analyzers. The discussion focuses on popular open-source tools used to implement these technologies, exploring their key characteristics and deployment (use cases). Key categories of defensive cybersecurity technologies discussed include host/network firewalls (e.g., UFW, iptables, nftables, PF, OPNsense, and pfSense), IDS/IPS (e.g., Suricata and Snort), network security monitoring/SIEM (e.g., Wazuh and OSSEC), and packet analyzers (e.g., Wireshark and tcpdump).
 
 ## Topics covered in this section
 
@@ -126,7 +124,7 @@ Technology focus: nftables and OPNsense.
 
 Popular open source NIDS and HIDS include Suricata, Snort, Wazuh, OSSEC, Fail2Ban, Zeek (formerly Bro), Security Onion, and OpenWIPS-NG.
 
-Technology focus: Suricata.
+Technology focus: Suricata and Zeek.
 
 #### IDS/IPS Key features
 
@@ -419,11 +417,11 @@ Technology focus: Wireshark and tcpdump.
 
 ### Key takeaways
 
-* Popular open source host-based firewalls include nftables and pf&#x20;
-* Popular open source network-based firewalls include OPNsense and pfSense (CE)
-* Packet-filtering firewall technologies such as iptables and pfilter (PF) operate at the network level (Layer 3/4)
-* WAFs operate at the Application level (L7) and can be host- and network-based
-* Popular open source HIDS include Wazuh and OSSEC
-* Popular open source NIDS include Suricata and Snort
-* Popular open source SIEM include Wazuh and TheHive
-* Popular open source packet analyzers include Wireshark and tcpdump
+* Popular open source host-based firewalls include nftables and pf.
+* Popular open source network-based firewalls include OPNsense and pfSense (CE).
+* Packet-filtering firewall technologies such as iptables and pfilter (PF) operate at the network level (Layer 3/4).
+* WAFs operate at the Application level (L7) and can be host- and network-based.
+* Popular open source HIDS include Wazuh and OSSEC.
+* Popular open source NIDS include Suricata and Snort.
+* Popular open source SIEM include Wazuh and TheHive.
+* Popular open source packet analyzers include Wireshark and tcpdump.

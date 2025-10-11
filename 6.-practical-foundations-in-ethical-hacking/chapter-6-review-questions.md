@@ -84,3 +84,20 @@
 
 **5. The lesson introduces the concept of a "purple team" as an overlap between red and blue teams. What is the fundamental purpose of purple teaming?** \
 **Answer:** The fundamental purpose of purple teaming is to facilitate collaboration and communication between the attackers (red team) and defenders (blue team) in order to maximize improvement of the organization's security posture.
+
+### Defensive cybersecurity technologies
+
+**1. Both UFW and iptables/nftables are host-based firewalls for Linux. What is the key characteristic that makes UFW the recommended choice for beginners over iptables?**\
+**Answer:** The key characteristic is UFW's simplified command-line interface, which is designed to be uncomplicated and easier to use than the complex, granular syntax of iptables/nftables.
+
+**2. Both Suricata and Zeek are popular open-source tools for analyzing network traffic. What is the primary functional objective that distinguishes Zeek from Suricata?**\
+**Answer:** The primary objective of Zeek is to perform deep traffic analysis and generate structured logs for forensic analysis, whereas Suricata is focused on real-time intrusion detection and prevention (IDS/IPS).
+
+**3. Both Wazuh and Velociraptor provide capabilities for endpoint security. What is the primary focus that distinguishes Velociraptor's EDR functionality from Wazuh's?**\
+**Answer:** The primary focus of Velociraptor is on endpoint hunting and live forensic investigation, while Wazuh focuses on being a unified SIEM platform with log analysis, file integrity monitoring, and compliance.
+
+**4. Both Wireshark and tcpdump can be used for packet capture and analysis. What is the key operational difference that distinguishes tcpdump from Wireshark?**\
+**Answer:** The key operational difference is that tcpdump is a lightweight, command-line-only tool, whereas Wireshark provides a rich Graphical User Interface (GUI) for deep protocol dissection and visualization.
+
+**5. Both packet-filtering firewalls (like iptables) and Web Application Firewalls (WAFs) control traffic. What is the key operational difference in the network layer at which they primarily operate?**\
+**Answer:** Packet-filtering firewalls operate primarily at the network and transport layers (L3/L4), while WAFs operate at the application layer (L7) to protect specific web applications.

@@ -91,7 +91,7 @@
 **Answer:** The key characteristic is UFW's simplified command-line interface, which is designed to be uncomplicated and easier to use than the complex, granular syntax of iptables/nftables.
 
 **2. Both Suricata and Zeek are popular open-source tools for analyzing network traffic. What is the primary functional objective that distinguishes Zeek from Suricata?**\
-**Answer:** The primary objective of Zeek is to perform deep traffic analysis and generate structured logs for forensic analysis, whereas Suricata is focused on real-time intrusion detection and prevention (IDS/IPS).
+**Answer:** The primary objective of Zeek is to perform deep traffic analysis and generate detailed logs for forensic analysis, whereas Suricata is focused on real-time intrusion detection and prevention (IDS/IPS).
 
 **3. Both Wazuh and Velociraptor provide capabilities for endpoint security. What is the primary focus that distinguishes Velociraptor's EDR functionality from Wazuh's?**\
 **Answer:** The primary focus of Velociraptor is on endpoint hunting and live forensic investigation, while Wazuh focuses on being a unified SIEM platform with log analysis, file integrity monitoring, and compliance.

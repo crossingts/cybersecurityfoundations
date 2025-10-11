@@ -113,7 +113,7 @@ Technology focus: nftables and OPNsense.
 
 **Firewall Selection Guide**
 
-This section provides a practical guide to help you select the most appropriate open-source tool based on your specific needs and context.
+This segment provides a practical guide to help you select the most appropriate open-source tool based on your specific needs and context.
 
 | Your Primary Need                                       | Recommended Tool(s)          | Key Reason                                                                                                                                                     |
 | ------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -235,8 +235,9 @@ Technology focus: Suricata and Zeek (Bro).
 | **Security Onion** | NIDS/HIDS/SIEM | Multiple engines       | All-in-one SOC platform                     | Via Suricata       | Yes (Kibana)       | Elasticsearch, PCAP | Security Operations Centers  |
 | **OpenWIPS-NG**    | Wireless IDS   | Wi-Fi-specific attacks | Rogue AP detection                          | Limited            | No (CLI)           | Text logs           | Wi-Fi security monitoring    |
 
-IDS/IPS Selection Matrix
+**IDS/IPS Selection Guide**
 
+This segment provides a practical guide to help you select the most appropriate open-source tool based on your specific needs and context.
 
 |Your Primary Need|Recommended Tool(s)|Key Reason|
 |---|---|---|

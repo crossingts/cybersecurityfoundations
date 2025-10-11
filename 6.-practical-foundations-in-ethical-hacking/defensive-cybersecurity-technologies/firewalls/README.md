@@ -39,7 +39,7 @@ BSD-based firewalls use networking and security tools native to BSD systems. BSD
 
 **Characteristics of BSD Firewalls**
 
-* **Stability & Security:** OpenBSD is famously secure (used in critical infra).
+* **Stability & Security:** OpenBSD is famously secure (used in critical infrastructure).
 * **Performance:** PF handles high traffic efficiently (better than iptables in some cases).
 * **Features:** Built-in QoS, SYN proxy, and cleaner syntax than iptables.
 
@@ -117,7 +117,7 @@ This rule **allows** packets that are part of an existing or related connection.
 
 ### Stateless vs stateful firewalls
 
-**Stateless vs. Stateful (Diagram)**
+**Stateless vs. Stateful Diagram**
 
 ```
 Stateless Firewall:
@@ -131,6 +131,8 @@ Stateful Firewall:
 Stateful and stateless firewalls serve different purposes in network security, each with its own advantages. Here’s a comparison highlighting the **advantages of stateful firewalls over stateless firewalls**:
 
 #### **Advantages of Stateful Firewalls:**
+
+Most modern firewalls (e.g., NGFW) are stateful by default due to their security advantages.
 
 1. **Context-Aware Traffic Filtering**
    * Stateful firewalls track the **state** of active connections (e.g., TCP handshakes, UDP sessions), allowing them to make smarter decisions.
@@ -161,8 +163,6 @@ Stateless firewalls (ACLs) are simpler and faster but lack intelligence. They ar
 
 * **Use stateful firewalls** when you need **stronger security**, session awareness, and protection against modern threats.
 * **Use stateless firewalls** for **raw speed** or when dealing with simple, static filtering.
-
-Most modern firewalls (e.g., NGFW) are stateful by default due to their security advantages.
 
 ***
 

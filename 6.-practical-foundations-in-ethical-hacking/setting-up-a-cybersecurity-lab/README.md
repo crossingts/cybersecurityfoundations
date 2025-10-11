@@ -1,6 +1,6 @@
 # Setting up a cybersecurity lab
 
-This exercise will guide you through setting up a fully functional cybersecurity virtual lab using exclusively open source technologies.&#x20;
+This exercise will guide you through setting up a fully functional cybersecurity virtual lab using exclusively open source technologies.
 
 ## Setting up a cybersecurity lab steps
 
@@ -62,11 +62,6 @@ pfSense (firewall) + Snort (IDS/IPS) + web server (Apache) and/or database serve
 | **UFW**       | ✔ (Native)           | ✕                  | ✕                  | ✕                | Ubuntu/Debian simplified firewall.                                 |
 | **Firewalld** | ✔ (Native)           | ✕                  | ✕                  | ✕                | RHEL/CentOS frontend for IPTables/nftables.                        |
 | **macOS PF**  | ✕                    | ✕                  | ✔ (Native)         | ✔ (Native)       | Built-in BSD `pf` firewall (CLI-only).                             |
-
-**Notable Combinations**:
-
-* **Wazuh + TheHive + Suricata** → Full SIEM + IR (Incident Response) + NIDS.
-* **Velociraptor + Zeek** → Advanced EDR + network forensics.
 
 **Clarifications:**
 

@@ -1,13 +1,5 @@
 # Firewalls
 
-## Topics covered
-
-* **Core packet-filtering firewall technologies**
-* **Stateful firewalls: Definition and open source examples**
-* **Stateless vs stateful firewalls**
-* **Web Application Firewalls (WAFs)**
-* **Host-based, network-based, and hybrid firewalls**
-
 ### Core packet-filtering firewall technologies
 
 Packet-filtering firewall technologies such as iptables and pfilter (PF) operate at the network level (Layer 3/4). These tools allow network administrators to define rules for allowing, blocking, or modifying traffic based on IPs, ports, protocols, and connection states.

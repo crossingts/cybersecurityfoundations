@@ -156,8 +156,6 @@ Stateless firewalls (ACLs) are simpler and faster but lack intelligence. They ar
 * **Use stateful firewalls** when you need **stronger security**, session awareness, and protection against modern threats.
 * **Use stateless firewalls** for **raw speed** or when dealing with simple, static filtering.
 
-***
-
 **Roots of Common Packet-Filtering Firewalls (Table + Diagram)**
 
 **Lineage of Firewall Technologies**

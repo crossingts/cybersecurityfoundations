@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/firewalls/README.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/firewalls/opnsense.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "opnsense"
             }
           }
         ]
@@ -183,9 +183,11 @@
   },
   "active": "47d382666f0061a3",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/firewalls/nftables.md",
+    "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/firewalls/README.md",
+    "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/firewalls/opnsense.md",
     "5.-cryptography-and-wireless-security/the-ssl-tls-handshake/README.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md",
-    "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/firewalls/README.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/defensive-cybersecurity-technologies-quiz.md",
     "6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing.md",
     "6.-practical-foundations-in-ethical-hacking/introduction-practical-foundations-in-ethical-hacking.md",
@@ -209,8 +211,6 @@
     "6.-practical-foundations-in-ethical-hacking/what-do-ethical-hackers-do/README.md",
     "6.-practical-foundations-in-ethical-hacking/what-do-ethical-hackers-do/what-do-ethical-hackers-do-quiz.md",
     "6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking/the-perils-of-unethical-hacking-quiz.md",
-    "6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking/README.md",
-    "6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking.md",
     "6.-practical-foundations-in-ethical-hacking/what-do-ethical-hackers-do",
     "6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking",
     "6.-practical-foundations-in-ethical-hacking/defensive-security-vs-offensive-security",

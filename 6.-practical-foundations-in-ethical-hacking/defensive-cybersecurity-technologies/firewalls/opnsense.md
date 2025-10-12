@@ -1,6 +1,6 @@
 # OPNsense
 
-Introduction to OPNsense: What is OPNsense, a short historical background, common use cases, and popular integrations in system security design.
+This segment introduces OPNsense, exploring what is OPNsense, a short historical background, common use cases, and popular integrations in system security design.
 
 #### **OPNsense: The Open-Source Next-Gen Firewall**
 
@@ -34,7 +34,7 @@ In a defense-in-depth architecture, OPNsense plays multiple roles:
 
 OPNsense’s plugin ecosystem (e.g., CrowdSec, Nginx, ClamAV) allows it to function as a unified security gateway, rivaling commercial UTM (Unified Threat Management) appliances while remaining open-source.
 
-#### **Key Takeaways**
+**Summary**
 
 * OPNsense is a full-featured, FreeBSD-based firewall distro competing with pfSense, with stronger emphasis on usability and integrations like Suricata/WireGuard.
 * OPNsense excels in layered defense for network-wide UTM capabilities.

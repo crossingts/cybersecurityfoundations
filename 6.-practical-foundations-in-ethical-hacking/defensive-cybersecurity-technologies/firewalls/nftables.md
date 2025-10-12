@@ -1,6 +1,6 @@
 # nftables
 
-Introduction to nftables: What is nftables, a short historical background, common use cases, and popular integrations in system security design.
+This segment introduces nftables, exploring what is nftables, a short historical background, common use cases, and popular integrations in system security design.
 
 #### **nftables: The Modern Linux Firewall Framework**
 
@@ -32,7 +32,7 @@ In a layered security model, nftables fits into multiple stages:
 3. **Threat Intelligence**: Automating blocklists via integrations with `Suricata` (IDS) or MISP (threat feeds).
 4. **Cloud Security**: AWS/GCP Linux instances often use `nftables` for custom VPC flow log enforcement.
 
-#### **Key Takeaways**
+**Summary**
 
 * nftables is the modern, efficient replacement for `iptables` on Linux, ideal for automation and cloud-native security.
 * nftables excels in layered defense for host/cloud enforcement.

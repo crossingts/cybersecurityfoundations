@@ -50,7 +50,7 @@ Suricata’s flexibility—running on bare metal, virtual appliances, or embedde
 | **Hardware Usage**   | Lower RAM/CPU                        | Higher RAM (due to multithreading)  |
 | **Best For**         | Small/medium networks, legacy setups | High-speed networks, modern threats |
 
-#### **Key Takeaways**
+**Key Differences**
 
 * **Snort** is simpler, lightweight, and ideal for smaller deployments.
 * **Suricata** is more scalable, with modern protocol support and better SIEM integration.

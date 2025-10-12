@@ -1,14 +1,5 @@
 # Packet analyzers
 
-## Topics covered
-
-* **Introduction**
-* **BPF (Berkeley Packet Filter) syntax in tcpdump**
-* **Decryption for TLS/SSL traffic using Wireshark**
-* **Packet filter recommendations based on use cases**
-
-### Introduction
-
 Packet analyzers, also known as network sniffers or protocol analyzers or network analyzers, are essential tools for monitoring, troubleshooting, and securing network traffic. Packet analyzers capture raw data packets traversing a network, decode their headers and payloads, and present them in a human-readable format.&#x20;
 
 Effective network security requires real time awareness of the activities taking place on the network, to verify that the network policy is not being violated by any user or misconfiguration. A network can be periodically scanned to obtain real-time awareness.&#x20;

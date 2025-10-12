@@ -11,7 +11,7 @@
 | **Scope**                 | Network perimeter/internal segmentation    | Network-focused                     | Broad (entire infrastructure)         | Endpoint-focused (workstations, servers)     |
 | **Best For**              | Access control, network segmentation       | Real-time threat blocking           | Incident investigation, compliance    | Advanced malware, lateral movement detection |
 
-A mature security stack combines:
+**A mature security stack combines:**
 
 1. **Firewall** → Blocks unauthorized access.
 2. **IDS/IPS** → Stops known attacks in traffic.

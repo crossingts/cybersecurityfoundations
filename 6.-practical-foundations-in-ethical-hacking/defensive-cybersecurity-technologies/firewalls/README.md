@@ -212,6 +212,8 @@ WAFs can be **host-based and network-based**, depending on deployment:
 
 ### Host-based, network-based, and hybrid firewalls
 
+While host firewalls are ideal for endpoints (e.g., blocking malware on your laptop), network firewalls protect multiple devices (e.g., home/router security). Hybrid tools like Suricata are flexible but require manual setup to act as both.
+
 The following firewall technologies (except WFP) are open source: iptables, nftables, ufw, PF (Packet Filter), ipfw, firewalld, OPNsense, and pfSense (CE), Snort, Suricata, Zeek, Windows Filtering Platform (WFP).
 
 **1. Host-Based Firewalls**
@@ -255,16 +257,10 @@ _(Can function as both host or network firewalls, or have multi-purpose roles.)_
 * **PF** and **ipfw** are flexible (used in both host and network contexts).
 * **OPNsense/pfSense** are full firewall distros (network-focused but can run as VMs).
 
-**Key Differences**
+**Typical Deployment Scenarios**
 
 | **Type**    | **Scope**               | **Typical Use Case**  | **Example**                               |
 | ----------- | ----------------------- | --------------------- | ----------------------------------------- |
 | **Host**    | Single machine          | Laptops, workstations | macOS PF, LuLu, UFW                       |
 | **Network** | Entire subnet           | Routers, gateways     | OPNsense, OpenWRT                         |
 | **Hybrid**  | Both (config-dependent) | Security appliances   | Suricata (if integrated with PF/nftables) |
-
-**Why the Distinction Matters**
-
-* **Host firewalls** are ideal for endpoints (e.g., blocking malware on your laptop).
-* **Network firewalls** protect multiple devices (e.g., home/router security).
-* **Hybrid tools** like Suricata are flexible but require manual setup to act as both.

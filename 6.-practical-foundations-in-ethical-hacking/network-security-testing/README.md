@@ -150,10 +150,7 @@ This is the domain of network traffic inspection. Wireshark and tcpdump are prot
 
 #### Software analyzers
 
-
-
-* Protocol analyzers like Wireshark and tcpdump are used to understand the "**conversation**" between different components. They answer: "What data is being sent, in what order, and in what format?"
-* Understanding the "**brain**" having the conversation—the software itself—requires a different set of tools to take the software apart and examine its internals.
+Protocol analyzers like Wireshark and tcpdump are used to understand the "conversation" between different components. They answer: "What data is being sent, in what order, and in what format?" Understanding the "brain" having the conversation—the software itself—requires a different set of tools to take the software apart and examine its internals.
 
 Analyzing software products to determine the product architecture and security vulnerabilities is the core activity of **reverse engineering** and **vulnerability research**. The goal is to understand how a product works from the inside out, without necessarily having access to its original blueprints (source code). This process involves:
 
@@ -162,24 +159,24 @@ Analyzing software products to determine the product architecture and security v
 
 While a protocol analyzer is a tool for analyzing communications protocols, analyzing the software itself requires a different toolkit.
 
-* **Disassemblers & Decompilers:**
+* **Disassemblers and Decompilers:**
   * **Ghidra:** A powerful, open-source tool from the NSA. It takes compiled software (binary/executable) and translates it back into a human-readable form (assembly code, and even partial C code) so an analyst can figure out what the program does.
   * **IDA Pro:** The long-time commercial industry standard for disassembly. It's incredibly powerful for interactive, deep-dive reverse engineering.
   * **Binary Ninja:** A newer, modern disassembler that is gaining popularity for its API and usability.
 
-Disassemblers convert machine code (1s and 0s) to Assembly Language (human-readable processor instructions, e.g., `MOV EAX, 0x42`, `CALL printf`, `JMP loop_start`). Decompilers convert machine code (1s and 0s) to High-Level Language (C-like code with variables, functions, loops, and conditionals).
-
 * **Debuggers:**
   * **x64dbg / WinDbg / GDB:** These tools allow the analyst to run the program and control its execution. They can pause it, inspect the state of the CPU's memory and registers at any given moment, and step through code line-by-line to understand its logic and find flaws. This is crucial for crafting exploits.
+
 * **Binary Analysis Frameworks:**
   * **radare2:** An open-source, command-line framework for reverse engineering. It's very powerful but has a steep learning curve.
   * **Cutter:** A graphical user interface for radare2, making it more accessible.
+
 * **Fuzzers (Fuzzing Tools):**
   * **AFL (American Fuzzy Lop)** and its derivatives.
   * **Peach Fuzzer.**
   * **Boofuzz.**
 
-Fuzzing tools automatically throw malformed, unexpected, or random data at a program or protocol to try and crash it. A crash often indicates a discoverable security vulnerability.
+Disassemblers convert machine code (1s and 0s) to Assembly Language (human-readable processor instructions, e.g., `MOV EAX, 0x42`, `CALL printf`, `JMP loop_start`). Decompilers convert machine code (1s and 0s) to High-Level Language (C-like code with variables, functions, loops, and conditionals). Fuzzing tools automatically throw malformed, unexpected, or random data at a program or protocol to try and crash it. A crash often indicates a discoverable security vulnerability.
 
 **Summary**
 
@@ -194,9 +191,13 @@ When software is developed, programmers write **source code** in human-readable 
 
 c
 
-// This is source code - humans can read it #include \<stdio.h>
+// This is source code - humans can read it 
+#include \<stdio.h>
 
-int main() { printf("Hello, World!"); return 0; }
+int main() { 
+printf("Hello, World!"); 
+return 0; 
+}
 
 **Compilation** is the process of translating this human-readable source code into **machine code** - the raw 1s and 0s that the computer's processor understands directly. The result is a **binary executable** file (like `.exe` on Windows, or no extension on macOS/Linux). (An interpreter is a program that reads and executes source code such as .py files directly, line by line, without compiling it to machine code first.)
 

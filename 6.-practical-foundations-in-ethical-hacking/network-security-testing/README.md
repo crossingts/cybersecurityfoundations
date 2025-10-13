@@ -150,7 +150,7 @@ This is the domain of network traffic inspection. Wireshark and tcpdump are prot
 
 #### Software analyzers
 
-While a protocol analyzer is a tool for analyzing communications protocols, analyzing the software itself requires a different toolkit.
+
 
 * Protocol analyzers like Wireshark and tcpdump are used to understand the "**conversation**" between different components. They answer: "What data is being sent, in what order, and in what format?"
 * Understanding the "**brain**" having the conversation—the software itself—requires a different set of tools to take the software apart and examine its internals.
@@ -159,6 +159,8 @@ Analyzing software products to determine the product architecture and security v
 
 1. **Determining product architecture:** How do the different components of the software or device fit together? How do they communicate? What libraries do they use? What is the data flow?
 2. **Identifying security vulnerabilities:** Once you understand how it's built, you look for flaws in that design or implementation—places where the logic can be broken, commands can be injected, or memory can be corrupted to take control of the device.
+
+While a protocol analyzer is a tool for analyzing communications protocols, analyzing the software itself requires a different toolkit.
 
 * **Disassemblers & Decompilers:**
   * **Ghidra:** A powerful, open-source tool from the NSA. It takes compiled software (binary/executable) and translates it back into a human-readable form (assembly code, and even partial C code) so an analyst can figure out what the program does.

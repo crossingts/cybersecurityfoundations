@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Wireshark/tcpdump vs Burp Suite/OWASP ZAP
 
 #### Burp Suite and OWASP ZAP

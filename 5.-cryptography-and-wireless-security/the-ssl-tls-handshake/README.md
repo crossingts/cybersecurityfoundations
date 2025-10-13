@@ -93,14 +93,12 @@ The `ClientHello` and `ServerHello` are the foundation for the entire secure ses
 
 ### The TLS handshake key exchange
 
-This part of the handshake is version-dependent. In TLS 1.2, server authentication (the Certificate message) and the key exchange (e.g., RSA or Diffie-Hellman) were distinct sequential phases, often requiring multiple round trips. The handshake flow was:
+The client-server key exchange method is version-dependent, with a major evolution occurring in TLS 1.3. In TLS 1.2, server authentication and the key exchange were distinct sequential phases, often requiring multiple round trips. The handshake flow was:
 
 * Authentication: The server sends a Certificate message. This structured TLS protocol message contains the server's digital certificate chain. This chain includes the server's own certificate plus any intermediate certificates required to connect the server's certificate to a trusted root certificate.
 * Key Exchange: Depending on the cipher suite, this is followed by a ServerKeyExchange message (e.g., containing its Diffie-Hellman parameters) or the client simply uses the RSA public key from the received certificate to encrypt the pre-master secret.
 
 In TLS 1.3, the protocol was simplified for performance and security by integrating server authentication and the key exchange into a single, cryptographically bound process. This process begins with the Diffie-Hellman key exchange, which is performed immediately within the first round trip using the key\_share extension. In a DH exchange, shares are the individual pieces of information that each party contributes, which are then used to calculate the final shared session key. In this context, a share is the DH public key that each party contributes to calculate the pre-master secret. After the DH key exchange, the server uses its certificate to generate a digital signature over the entire handshake transcript, which includes the key exchange shares. This signature proves the server's identity and cryptographically binds that identity to the specific key exchange and the generated session keys. This design guarantees Forward Secrecy and prevents downgrade attacks.
-
-The client-server key exchange method is version-dependent, with a major evolution occurring in TLS 1.3.
 
 **TLS 1.2 and Earlier (The "Classic" Handshake)**
 

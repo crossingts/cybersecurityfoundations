@@ -73,7 +73,13 @@ SSL/TLS uses hashing for fingerprint verification, Message Authentication Codes 
 
 **Hashing's role in the TLS handshake:**
 
-1\. Digital signatures (asymmetric encryption + hashing): Authenticating the server's identity (ensuring the server is trusted). Examples of algorithm combinations used to create digital signatures include RSA + SHA-256, and ECDSA + SHA-256. The process of using digital signatures for server authentication occurs during the TLS handshake in two distinct phases:
+1\. Digital signatures (asymmetric encryption + hashing): Authenticating the server's identity (ensuring the server is trusted). Examples of algorithm combinations used to create digital signatures include RSA + SHA-256, and ECDSA + SHA-256. 
+
+2\. Integrity checks: Verifying data integrity (preventing data alteration in transit). Examples of algorithms used to verify data integrity include SHA-256 and HMAC.
+
+**Hashing in Digital Signatures** 
+
+The process of using digital signatures for server authentication occurs during the TLS handshake in two distinct phases:
 
 **A. Certificate Verification (TLS 1.2 and TLS 1.3)**:
 
@@ -92,9 +98,7 @@ To derive the actual session keys (for encryption and integrity checking) from t
 
 * In ECDHE (TLS 1.2), the server signs its ephemeral public key (e.g., using ECDSA+SHA-256 or RSA-PSS+SHA-256) to prove it owns the certificate. 
 
-Hashing's role: The signature includes a hash (e.g., SHA-256) of the handshake messages (for integrity). The pre-master secret is combined with nonces to derive the master secret (then session key). Hashing's role: SHA-256 is used in the PRF (Pseudo-Random Function) to derive master secret (e.g., combining pre-master secret + nonces). 
-
-2\. Integrity checks: Verifying data integrity (preventing data alteration in transit). Examples of algorithms used to verify data integrity include SHA-256 and HMAC.
+The signature includes a hash (e.g., SHA-256) of the handshake messages (for integrity). The pre-master secret is combined with nonces to derive the master secret (then the session key). SHA-256 is used in the PRF to derive the master secret (e.g., combining pre-master secret + nonces). 
 
 **Hashing for Integrity Checks**
 

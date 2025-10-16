@@ -52,7 +52,6 @@ HTTPS (Hypertext Transfer Protocol Secure) is the standard HTTP protocol, but it
 | **Data Encryption**     | No. Data is sent in plain text.                           | Yes. Data is encrypted.                               |
 | **Authentication**      | No identity verification.                                 | Yes, verifies server identity with a certificate.     |
 | **Data Integrity**      | No protection from tampering.                             | Data is protected from modification in transit.       |
-| **Use Case**            | Non-sensitive information (e.g., reading a news article). | Any sensitive data (logins, payments, personal data). |
 
 While commonly associated with HTTPS (securing web traffic), SSL/TLS is widely used in many other applications, including:
 

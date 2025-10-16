@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/network-security-testing/README.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -183,8 +183,9 @@
   },
   "active": "47d382666f0061a3",
   "lastOpenFiles": [
-    "5.-cryptography-and-wireless-security/the-ssl-tls-handshake/README.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/firewalls/README.md",
+    "6.-practical-foundations-in-ethical-hacking/network-security-testing/README.md",
+    "5.-cryptography-and-wireless-security/the-ssl-tls-handshake/README.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/defensive-security-pipeline.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/packet-analyzers/README.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/ids-ips-suricata.md",
@@ -196,7 +197,6 @@
     "6.-practical-foundations-in-ethical-hacking/introduction-practical-foundations-in-ethical-hacking.md",
     "6.-practical-foundations-in-ethical-hacking/chapter-6-review-questions.md",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing/network-security-testing-quiz.md",
-    "6.-practical-foundations-in-ethical-hacking/network-security-testing/README.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/packet-analyzers/tcpdump-defensive-or-offensive.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/wireshark-tcpdump-vs-burp-suite-owasp-zap.md",
     "1.-it-career-planning/it-career-paths/README.md",

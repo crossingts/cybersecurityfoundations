@@ -104,18 +104,26 @@ Technology focus: nftables and OPNsense.
 
 **Firewall Comparison Table**
 
-| Firewall         | Type         | Platform | GUI       | Ease of Use | Stateful | NAT | VPN Support       | IDS/IPS      | Traffic Shaping | IPv6 |
-| ---------------- | ------------ | -------- | --------- | ----------- | -------- | --- | ----------------- | ------------ | --------------- | ---- |
-| **UFW**          | Host         | Linux    | No (CLI)  | Very Easy   | Yes      | Yes | Limited           | No           | No              | Yes  |
-| **iptables**     | Host/Network | Linux    | No (CLI)  | Complex     | Yes      | Yes | Manual            | No (add-ons) | Yes             | Yes  |
-| **nftables**     | Host/Network | Linux    | No (CLI)  | Moderate    | Yes      | Yes | Manual            | No (add-ons) | Yes             | Yes  |
-| **PF (pfilter)** | Host/Network | BSD      | No (CLI)  | Moderate    | Yes      | Yes | Manual            | No (add-ons) | Yes             | Yes  |
-| **OPNsense**     | Network      | FreeBSD  | Yes (Web) | Easy        | Yes      | Yes | OpenVPN/WireGuard | Suricata     | Yes             | Yes  |
-| **pfSense CE**   | Network      | FreeBSD  | Yes (Web) | Easy        | Yes      | Yes | OpenVPN/IPsec     | Snort        | Yes             | Yes  |
+| Firewall         | Type         | Platform       | GUI       | Ease of Use | Stateful | NAT | VPN Support       | IDS/IPS      | Traffic Shaping (QoS) | IPv6 |
+| ---------------- | ------------ | -------------- | --------- | ----------- | -------- | --- | ----------------- | ------------ | --------------------- | ---- |
+| **UFW**          | Host         | Linux          | No (CLI)  | Very Easy   | Yes      | Yes | Limited           | No           | No                    | Yes  |
+| **iptables**     | Host/Network | Linux          | No (CLI)  | Complex     | Yes      | Yes | Manual            | No (add-ons) | Yes                   | Yes  |
+| **nftables**     | Host/Network | Linux          | No (CLI)  | Moderate    | Yes      | Yes | Manual            | No (add-ons) | Yes                   | Yes  |
+| **PF (pfilter)** | Host/Network | OpenBSD, macOS | No (CLI)  | Moderate    | Yes      | Yes | Manual            | No (add-ons) | Yes                   | Yes  |
+| **OPNsense**     | Network      | FreeBSD        | Yes (Web) | Easy        | Yes      | Yes | OpenVPN/WireGuard | Suricata     | Yes                   | Yes  |
+| **pfSense CE**   | Network      | FreeBSD        | Yes (Web) | Easy        | Yes      | Yes | OpenVPN/IPsec     | Snort        | Yes                   | Yes  |
+
+#### Stateless vs Stateful Firewalls
+
+A stateless firewall performs packet filtering based solely on the static rule set and the headers of the individual packet in question, with no memory of prior packets. This necessitates explicit, bidirectional rules for any permitted communication. For example, to allow outbound HTTP, you would need one rule permitting TCP from an internal network to port 80 on any host, and a corresponding rule permitting TCP from any host on port 80 back to the internal network. This model cannot distinguish a legitimate HTTP response from an unsolicited incoming connection attempt, creating a larger attack surface. While stateless filtering is computationally cheaper and thus persists in high-throughput core routing (e.g., basic ACLs on Cisco IOS) or specific DDoS mitigation layers, its inherent limitations in security and administrative overhead have relegated it to niche roles.
+
+In comparison, a stateful firewall operates at the network and transport layers but maintains a dynamic state table, often implemented within the kernel's connection tracking subsystem (`conntrack` in Linux, `pfstate` in OpenBSD). This table holds entries for each active session (e.g., source/destination IP, source/destination port, and protocol) and the TCP state (e.g., SYN_SENT, ESTABLISHED, and FIN_WAIT). For a TCP handshake, the firewall inspects the initial SYN packet, creates a state, and then validates the returning SYN-ACK against that state before permitting it. This allows for a fundamental rule simplification: a single `pass out` rule for an outgoing connection implicitly creates a temporary, dynamic `pass in` rule for the return traffic. Stateful inspection is the de facto standard in modern firewalls like PF (where `keep state` is the default on `pass` rules) and nftables (which leverages the `ct` expression for state matching).
+
+#### Traffic Shaping
+
+Traffic shaping is the active control of network traffic characteristics to enforce QoS policies, primarily implemented through queuing disciplines (qdiscs) and schedulers that manage packet buffers on egress interfaces. The core algorithmic model is the token bucket filter, which defines a bucket that fills with tokens at a specified rate (the committed information rate, or CIR) up to a defined burst capacity. Each packet requires a token of size proportional to its length to be transmitted; if the bucket is empty, the packet is delayed in a queue rather than immediately dropped (which would be policing). This mechanism smooths traffic bursts and enforces bandwidth ceilings.
 
 **Firewall Selection Guide**
-
-This segment provides a practical guide to help you select the most appropriate open-source tool based on your specific needs and context.
 
 | Your Primary Need                                       | Recommended Tool(s)          | Key Reason                                                                                                                                                     |
 | ------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -135,7 +143,7 @@ This segment provides a practical guide to help you select the most appropriate 
 
 ### IDS/IPS
 
-Popular open source NIDS and HIDS include Suricata, Snort, Wazuh, OSSEC, Fail2Ban, Zeek (formerly Bro), Security Onion, and OpenWIPS-NG.
+Popular open source NIDS (Network IDS) and HIDS (Host IDS) include Suricata, Snort, Wazuh, OSSEC, Fail2Ban, Zeek (formerly Bro), Security Onion, and OpenWIPS-NG.
 
 Technology focus: Suricata and Zeek (Bro).
 
@@ -239,17 +247,15 @@ Technology focus: Suricata and Zeek (Bro).
 
 **IDS/IPS Selection Guide**
 
-This segment provides a practical guide to help you select the most appropriate open-source tool based on your specific needs and context.
-
-|Your Primary Need|Recommended Tool(s)|Key Reason|
-|---|---|---|
-|**High-speed network intrusion detection/prevention (NIDS/NIPS)**|**Suricata**|Multi-threaded, high performance, and compatible with Snort rules.|
-|**A lightweight, well-known NIDS for smaller networks**|**Snort**|The industry standard for decades, with extensive community support.|
-|**Deep network traffic analysis and forensics**|**Zeek (Bro)**|Generates rich, structured logs of network protocols for behavioral analysis.|
-|**Host-based monitoring (HIDS) and compliance**|**Wazuh**|Combines log analysis, FIM, vulnerability detection, and a central dashboard.|
-|**A lightweight HIDS for servers with active response**|**OSSEC**|Lightweight, efficient, and can trigger actions like blocking IPs.|
-|**Protection against brute-force attacks on services**|**Fail2Ban**|Scans logs and automatically blocks malicious IPs via the local firewall.|
-|**An all-in-one distributed security monitoring platform**|**Security Onion**|Bundles Suricata, Zeek, Wazuh, and Elasticsearch for a complete SOC experience.|
+| Your Primary Need                                                 | Recommended Tool(s) | Key Reason                                                                      |
+| ----------------------------------------------------------------- | ------------------- | ------------------------------------------------------------------------------- |
+| **High-speed network intrusion detection/prevention (NIDS/NIPS)** | **Suricata**        | Multi-threaded, high performance, and compatible with Snort rules.              |
+| **A lightweight, well-known NIDS for smaller networks**           | **Snort**           | The industry standard for decades, with extensive community support.            |
+| **Deep network traffic analysis and forensics**                   | **Zeek (Bro)**      | Generates rich, structured logs of network protocols for behavioral analysis.   |
+| **Host-based monitoring (HIDS) and compliance**                   | **Wazuh**           | Combines log analysis, FIM, vulnerability detection, and a central dashboard.   |
+| **A lightweight HIDS for servers with active response**           | **OSSEC**           | Lightweight, efficient, and can trigger actions like blocking IPs.              |
+| **Protection against brute-force attacks on services**            | **Fail2Ban**        | Scans logs and automatically blocks malicious IPs via the local firewall.       |
+| **An all-in-one distributed security monitoring platform**        | **Security Onion**  | Bundles Suricata, Zeek, Wazuh, and Elasticsearch for a complete SOC experience. |
 
 **Summary**
 
@@ -344,14 +350,12 @@ Technology focus: Wazuh (SIEM/XDR).
 
 **SIEM/EDR Selection Guide**
 
-This segment provides a practical guide to help you select the most appropriate open-source tool based on your specific needs and context.
-
-|Your Primary Need|Recommended Tool(s)|Key Reason|
-|---|---|---|
-|**A unified SIEM with HIDS, compliance, and a dashboard**|**Wazuh**|All-in-one open-source SIEM/XDR platform with strong integration capabilities.|
-|**Endpoint hunting, forensics, and live response**|**Velociraptor**|Powerful query language (VQL) for deep investigation and artifact collection on endpoints.|
-|**Collaborative incident response and case management**|**TheHive**|Manages security incidents, integrates with MISP, and streamlines SOC workflows.|
-|**To feed network traffic logs into your SIEM**|**Zeek** or **Suricata**|Both generate structured logs (e.g., EVE JSON) that can be ingested by SIEMs like Wazuh.|
+| Your Primary Need                                         | Recommended Tool(s)      | Key Reason                                                                                 |
+| --------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------------------------ |
+| **A unified SIEM with HIDS, compliance, and a dashboard** | **Wazuh**                | All-in-one open-source SIEM/XDR platform with strong integration capabilities.             |
+| **Endpoint hunting, forensics, and live response**        | **Velociraptor**         | Powerful query language (VQL) for deep investigation and artifact collection on endpoints. |
+| **Collaborative incident response and case management**   | **TheHive**              | Manages security incidents, integrates with MISP, and streamlines SOC workflows.           |
+| **To feed network traffic logs into your SIEM**           | **Zeek** or **Suricata** | Both generate structured logs (e.g., EVE JSON) that can be ingested by SIEMs like Wazuh.   |
 
 **Summary**
 
@@ -435,14 +439,12 @@ Technology focus: Wireshark and tcpdump.
 
 **Packet Analyzers Selection Guide**
 
-This segment provides a practical guide to help you select the most appropriate open-source tool based on your specific needs and context.
-
-|Your Primary Need|Recommended Tool(s)|Key Reason|
-|---|---|---|
-|**Deep, interactive protocol analysis with a GUI**|**Wireshark**|The definitive tool for deep packet inspection, decryption, and visualization.|
-|**Quick, scriptable packet capture from the command line**|**tcpdump**|Lightweight, ubiquitous, and perfect for capturing traffic on servers or for automation.|
-|**Behavioral analysis and structured logging of network traffic**|**Zeek (Bro)**|Doesn't inspect packets live but generates comprehensive protocol logs for forensic review.|
-|**Large-scale, indexed packet capture and retention**|**Arkime**|Designed for storing and quickly searching PCAPs across high-traffic networks.|
+| Your Primary Need                                                 | Recommended Tool(s) | Key Reason                                                                                  |
+| ----------------------------------------------------------------- | ------------------- | ------------------------------------------------------------------------------------------- |
+| **Deep, interactive protocol analysis with a GUI**                | **Wireshark**       | The definitive tool for deep packet inspection, decryption, and visualization.              |
+| **Quick, scriptable packet capture from the command line**        | **tcpdump**         | Lightweight, ubiquitous, and perfect for capturing traffic on servers or for automation.    |
+| **Behavioral analysis and structured logging of network traffic** | **Zeek (Bro)**      | Doesn't inspect packets live but generates comprehensive protocol logs for forensic review. |
+| **Large-scale, indexed packet capture and retention**             | **Arkime**          | Designed for storing and quickly searching PCAPs across high-traffic networks.              |
 
 **Summary**
 

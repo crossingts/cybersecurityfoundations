@@ -109,7 +109,7 @@ This rule **allows** packets that are part of an existing or related connection.
 
 ### Stateless vs stateful firewalls
 
-**Stateless vs. Stateful Diagram**
+**Stateless vs Stateful Firewalls Diagram**
 
 ```
 Stateless Firewall:

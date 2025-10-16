@@ -84,17 +84,15 @@ SSL/TLS uses hashing for fingerprint verification, Message Authentication Codes 
 
 **B. Key Exchange (e.g., RSA or ECDHE)**:
 
-* In RSA key exchange (deprecated in TLS 1.3), the client encrypts the pre-master secret with the server's public key.
+* In RSA key exchange (deprecated in TLS 1.3), the client encrypts the pre-master secret with the server's public key. 
 
-Explicit server authentication is optional in TLS 1.2: The server may send a `CertificateVerify` message (signed with RSA+hash) to prove it owns the private key.
-
-Both the client and the server independently combine the pre-master secret with the exchanged nonces (client random and server random) to derive a master secret. Hashing's role in this process: both parties use a Pseudo-Random Function (PRF) built on a hash algorithm like SHA-256. This function actively expands the pre-master secret by mixing it with the nonces to generate the unique master secret.
+Explicit server authentication is optional in TLS 1.2: The server may send a `CertificateVerify` message (signed with RSA+hash) to prove it owns the private key. Both the client and the server independently combine the pre-master secret with the exchanged nonces (client random and server random) to derive a master secret. Hashing's role in this process: both parties use a Pseudo-Random Function (PRF) built on a hash algorithm like SHA-256. This function actively expands the pre-master secret by mixing it with the nonces to generate the unique master secret.
 
 To derive the actual session keys (for encryption and integrity checking) from the master secret, both parties perform a process called key expansion. They again use the PRF, but this time they use the master secret as the seed and mix it with the same handshake transcript (a record of all messages sent and received) to generate a block of key material. This block is then split into the specific symmetric session keys.
 
-* In ECDHE (TLS 1.2), the server signs its ephemeral public key (e.g., using ECDSA+SHA-256 or RSA-PSS+SHA-256) to prove it owns the certificate.&#x20;
+* In ECDHE (TLS 1.2), the server signs its ephemeral public key (e.g., using ECDSA+SHA-256 or RSA-PSS+SHA-256) to prove it owns the certificate. 
 
-Hashing's role: The signature includes a hash (e.g., SHA-256) of the handshake messages (for integrity). The pre-master secret is combined with nonces to derive the master secret (then session key). Hashing's role: SHA-256 is used in the PRF (Pseudo-Random Function) to derive master secret (e.g., combining pre-master secret + nonces).&#x20;
+Hashing's role: The signature includes a hash (e.g., SHA-256) of the handshake messages (for integrity). The pre-master secret is combined with nonces to derive the master secret (then session key). Hashing's role: SHA-256 is used in the PRF (Pseudo-Random Function) to derive master secret (e.g., combining pre-master secret + nonces). 
 
 2\. Integrity checks: Verifying data integrity (preventing data alteration in transit). Examples of algorithms used to verify data integrity include SHA-256 and HMAC.
 
@@ -293,11 +291,11 @@ TLS provides integrity protection at two distinct layers of the protocol—durin
 
 **First, during the handshake phase**, which handles authentication and key exchange, integrity is ensured through digital signatures like RSA or ECDSA. The primary purpose of this is to verify the server's identity and guarantee that the critical handshake messages themselves have not been tampered with. This works through several steps: the server's certificate, signed by a Certificate Authority (CA), is validated; for certain cipher suites, the `ServerKeyExchange` message is signed; and in TLS 1.3, a `CertificateVerify` message is always signed to provide explicit proof that the server possesses the private key. It is important to note that the mechanisms for encrypted data exchange, HMAC or AEAD, are not used during this initial phase.
 
-**Second, during the encrypted data exchange phase (record layer integrity):** TLS ensures the integrity of encrypted data through Message Authentication Codes (MACs), though the specific mechanism depends on the version.&#x20;
+**Second, during the encrypted data exchange phase (record layer integrity):** TLS ensures the integrity of encrypted data through Message Authentication Codes (MACs), though the specific mechanism depends on the version. 
 
 **HMAC in TLS 1.2 (Legacy Approach)**
 
-TLS 1.2 ensures the integrity of encrypted data using a Hash-Based MAC (HMAC). For every block of data, the sender computes an HMAC—which combines a cryptographic hash function like SHA-256 with a session-specific secret key—and appends this value to the encrypted message. The receiver independently performs the same calculation; if the computed HMAC does not match the one that was sent, it indicates the data was tampered with in transit and the connection is terminated.&#x20;
+TLS 1.2 ensures the integrity of encrypted data using a Hash-Based MAC (HMAC). For every block of data, the sender computes an HMAC—which combines a cryptographic hash function like SHA-256 with a session-specific secret key—and appends this value to the encrypted message. The receiver independently performs the same calculation; if the computed HMAC does not match the one that was sent, it indicates the data was tampered with in transit and the connection is terminated. 
 
 * **How it works:**
   * After the handshake, both client and server derive session keys (e.g., `client_write_MAC_key`, `server_write_MAC_key`).

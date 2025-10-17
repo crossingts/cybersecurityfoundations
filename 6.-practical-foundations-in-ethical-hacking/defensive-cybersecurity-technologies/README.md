@@ -6,7 +6,7 @@ description: This section focuses on popular open source defensive cybersecurity
 
 ## Learning objectives
 
-* Become familiar with popular open source host- and network-based firewalls, their key features, and their common use cases
+* Become familiar with popular open source host and network firewalls, their key features, and their common use cases
 * Become familiar with popular open source host- and network-based IDS, their key features, and their common use cases
 * Become familiar with popular open source security event management technologies, their key features, and their common use cases
 * Become familiar with popular open source packet analyzers, their key features, and their common use cases
@@ -25,9 +25,11 @@ Note that many powerful open-source security tools have overlapping capabilities
 
 ### Firewalls
 
-Popular open source host and network firewalls include UFW (Uncomplicated Firewall), iptables, nftables, PF or pfilter (packet filter), OPNsense, and pfSense (Community Edition).
+Popular open source host and network firewalls include UFW (Uncomplicated Firewall), iptables, nftables, PF (pfilter or packet filter), OPNsense, and pfSense (Community Edition).
 
 Technology focus: nftables and OPNsense.
+
+Key concepts: packet filtering firewalls, BSD (Berkeley Software Distribution), 
 
 #### Firewalls Key features
 
@@ -61,8 +63,8 @@ Technology focus: nftables and OPNsense.
 * **Platform**: Linux (kernel ≥ 3.13).
 * **Key Features**:
   * Unified framework replacing `iptables`, `ip6tables`, `arptables`, etc.
-  * Simpler syntax with JSON support.
-  * Faster rule processing and better scalability.
+  * Simplified syntax with JSON support.
+  * Faster rule processing and better scalability (than iptables).
   * Supports sets and maps for dynamic rules.
   * Backward-compatible with `iptables` via translation tools.
 * **Use Case:** Modern Linux firewall unifying and simplifying `iptables` rules.

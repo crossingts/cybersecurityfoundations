@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md",
+                "file": "5.-cryptography-and-wireless-security/how-ssl-tls-uses-cryptography/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -183,8 +183,8 @@
   },
   "active": "47d382666f0061a3",
   "lastOpenFiles": [
-    "5.-cryptography-and-wireless-security/how-ssl-tls-uses-cryptography/README.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md",
+    "5.-cryptography-and-wireless-security/how-ssl-tls-uses-cryptography/README.md",
     "Pasted image 20251017114230.png",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/firewalls/README.md",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing/README.md",

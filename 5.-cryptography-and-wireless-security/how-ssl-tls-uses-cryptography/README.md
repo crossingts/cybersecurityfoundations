@@ -26,11 +26,7 @@ This section explains how cryptographic tools (hashing, asymmetric encryption, a
 * **How SSL/TLS uses asymmetric cryptography**
 * **How SSL/TLS uses symmetric cryptography**
 
-
-
-<figure><img src="https://dti-techs.gitbook.io/practical-foundations-in-cybersecurity/~gitbook/image?url=https%3A%2F%2F3800590736-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252Fbt139QivYIJ8rAS9v8zR%252Fuploads%252FhZsS8unR9Da3FYTqM2Ji%252Fimage.png%3Falt%3Dmedia%26token%3D7de125b0-7e26-486d-860d-412d0fd55ee9&width=768&dpr=2&quality=100&sign=ad4f0ed3&sv=2" alt="How-SSL-TLS-uses-Cryptography"><figcaption><p>How SSL/TLS uses cryptographic tools to secure data transmission (image courtesy of Ed Harmoush, Practical Networking)</p></figcaption></figure>
-
-How SSL/TLS uses cryptographic tools to secure data transmission (image courtesy of Ed Harmoush, Practical Networking)
+<figure><img src="../../.gitbook/assets/ssl-tls-cryptography-2.jpg" alt="ssl-tls-cryptography"><figcaption><p>How SSL/TLS uses cryptographic tools to secure data transmission (image adapted from Ed Harmoush, Practical Networking)</p></figcaption></figure>
 
 ### SSL/TLS use cases
 
@@ -48,14 +44,14 @@ HTTPS (Hypertext Transfer Protocol Secure) is the standard HTTP protocol, but it
 
 **HTTP vs HTTPS**
 
-| Feature                 | HTTP                                                      | HTTPS                                                 |
-| ----------------------- | --------------------------------------------------------- | ----------------------------------------------------- |
-| **Protocol**            | Hypertext Transfer Protocol                               | Hypertext Transfer Protocol Secure                    |
-| **Underlying Security** | None                                                      | SSL/TLS Protocol                                      |
-| **Default Port**        | 80                                                        | 443                                                   |
-| **Data Encryption**     | No. Data is sent in plain text.                           | Yes. Data is encrypted.                               |
-| **Authentication**      | No identity verification.                                 | Yes, verifies server identity with a certificate.     |
-| **Data Integrity**      | No protection from tampering.                             | Data is protected from modification in transit.       |
+| Feature                 | HTTP                            | HTTPS                                             |
+| ----------------------- | ------------------------------- | ------------------------------------------------- |
+| **Protocol**            | Hypertext Transfer Protocol     | Hypertext Transfer Protocol Secure                |
+| **Underlying Security** | None                            | SSL/TLS Protocol                                  |
+| **Default Port**        | 80                              | 443                                               |
+| **Data Encryption**     | No. Data is sent in plain text. | Yes. Data is encrypted.                           |
+| **Authentication**      | No identity verification.       | Yes, verifies server identity with a certificate. |
+| **Data Integrity**      | No protection from tampering.   | Data is protected from modification in transit.   |
 
 While commonly associated with HTTPS (securing web traffic), SSL/TLS is widely used in many other applications, including:
 
@@ -77,11 +73,11 @@ SSL/TLS uses hashing for fingerprint verification, Message Authentication Codes 
 
 **Hashing's role in the TLS handshake:**
 
-1\. Digital signatures (asymmetric encryption + hashing): Authenticating the server's identity (ensuring the server is trusted). Examples of algorithm combinations used to create digital signatures include RSA + SHA-256, and ECDSA + SHA-256. 
+1\. Digital signatures (asymmetric encryption + hashing): Authenticating the server's identity (ensuring the server is trusted). Examples of algorithm combinations used to create digital signatures include RSA + SHA-256, and ECDSA + SHA-256.
 
 2\. Integrity checks: Verifying data integrity (preventing data alteration in transit). Examples of algorithms used to verify data integrity include SHA-256 and HMAC.
 
-**Hashing in Digital Signatures** 
+**Hashing in Digital Signatures**
 
 The process of using digital signatures for server authentication occurs during the TLS handshake in two distinct phases:
 
@@ -94,15 +90,15 @@ The process of using digital signatures for server authentication occurs during 
 
 **B. Key Exchange (e.g., RSA or ECDHE)**:
 
-* In RSA key exchange (deprecated in TLS 1.3), the client encrypts the pre-master secret with the server's public key. 
+* In RSA key exchange (deprecated in TLS 1.3), the client encrypts the pre-master secret with the server's public key.
 
 Explicit server authentication is optional in TLS 1.2: The server may send a `CertificateVerify` message (signed with RSA+hash) to prove it owns the private key. Both the client and the server independently combine the pre-master secret with the exchanged nonces (client random and server random) to derive a master secret. Hashing's role in this process: both parties use a Pseudo-Random Function (PRF) built on a hash algorithm like SHA-256. This function actively expands the pre-master secret by mixing it with the nonces to generate the unique master secret.
 
 To derive the actual session keys (for encryption and integrity checking) from the master secret, both parties perform a process called key expansion. They again use the PRF, but this time they use the master secret as the seed and mix it with the same handshake transcript (a record of all messages sent and received) to generate a block of key material. This block is then split into the specific symmetric session keys.
 
-* In ECDHE (TLS 1.2), the server signs its ephemeral public key (e.g., using ECDSA+SHA-256 or RSA-PSS+SHA-256) to prove it owns the certificate. 
+* In ECDHE (TLS 1.2), the server signs its ephemeral public key (e.g., using ECDSA+SHA-256 or RSA-PSS+SHA-256) to prove it owns the certificate.
 
-The signature includes a hash (e.g., SHA-256) of the handshake messages (for integrity). The pre-master secret is combined with nonces to derive the master secret (then the session key). SHA-256 is used in the PRF to derive the master secret (e.g., combining pre-master secret + nonces). 
+The signature includes a hash (e.g., SHA-256) of the handshake messages (for integrity). The pre-master secret is combined with nonces to derive the master secret (then the session key). SHA-256 is used in the PRF to derive the master secret (e.g., combining pre-master secret + nonces).
 
 **Hashing for Integrity Checks**
 
@@ -294,11 +290,11 @@ TLS provides integrity protection at two distinct layers of the protocol—durin
 
 **First, during the handshake phase**, which handles authentication and key exchange, integrity is ensured through digital signatures like RSA or ECDSA. The primary purpose of this is to verify the server's identity and guarantee that the critical handshake messages themselves have not been tampered with. This works through several steps: the server's certificate, signed by a Certificate Authority (CA), is validated; for certain cipher suites, the `ServerKeyExchange` message is signed; and in TLS 1.3, a `CertificateVerify` message is always signed to provide explicit proof that the server possesses the private key. It is important to note that the mechanisms for encrypted data exchange, HMAC or AEAD, are not used during this initial phase.
 
-**Second, during the encrypted data exchange phase (record layer integrity):** TLS ensures the integrity of encrypted data through Message Authentication Codes (MACs), though the specific mechanism depends on the version. 
+**Second, during the encrypted data exchange phase (record layer integrity):** TLS ensures the integrity of encrypted data through Message Authentication Codes (MACs), though the specific mechanism depends on the version.
 
 **HMAC in TLS 1.2 (Legacy Approach)**
 
-TLS 1.2 ensures the integrity of encrypted data using a Hash-Based MAC (HMAC). For every block of data, the sender computes an HMAC—which combines a cryptographic hash function like SHA-256 with a session-specific secret key—and appends this value to the encrypted message. The receiver independently performs the same calculation; if the computed HMAC does not match the one that was sent, it indicates the data was tampered with in transit and the connection is terminated. 
+TLS 1.2 ensures the integrity of encrypted data using a Hash-Based MAC (HMAC). For every block of data, the sender computes an HMAC—which combines a cryptographic hash function like SHA-256 with a session-specific secret key—and appends this value to the encrypted message. The receiver independently performs the same calculation; if the computed HMAC does not match the one that was sent, it indicates the data was tampered with in transit and the connection is terminated.
 
 * **How it works:**
   * After the handshake, both client and server derive session keys (e.g., `client_write_MAC_key`, `server_write_MAC_key`).

@@ -220,9 +220,9 @@ The following table summarizes how TLS uses hashing for fingerprint verification
 
 | **TLS Hashing Application**            | **Security Parameter** | **Explanation**                                                                                                                                                               |
 | -------------------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Digital Signatures**                 | **Non-Repudiation**    | TLS uses hashing (e.g., SHA-256) in digital signatures (e.g., RSA/ECDSA). The sender signs a hash of the message, proving their identity and preventing denial of sending.    |
 | **Fingerprint Verification**           | **Authentication**     | Public key certificates (e.g., server’s certificate) are hashed to produce fingerprints. Clients verify these fingerprints against trusted stores to authenticate the server. |
 | **Message Authentication Codes (MAC)** | **Data Integrity**     | TLS uses hash-based MACs (HMAC) or authenticated encryption (AEAD) to ensure transmitted data is unaltered. The hash ensures any tampering is detectable.                     |
-| **Digital Signatures**                 | **Non-Repudiation**    | TLS uses hashing (e.g., SHA-256) in digital signatures (e.g., RSA/ECDSA). The sender signs a hash of the message, proving their identity and preventing denial of sending.    |
 
 #### I. Fingerprint Verification
 
@@ -246,17 +246,13 @@ The following table summarizes how TLS uses hashing for fingerprint verification
      a. **Validates the certificate chain**: Checks if the certificate is issued by a trusted CA (traversing the chain up to a root CA in its trust store).\
      b. **Decrypts the signature:** Uses the CA's public key (from the CA's own certificate) to decrypt the signature, obtaining the original fingerprint.\
      c. **Recomputes the fingerprint**: Hashes the certificate's contents (excluding the signature) using the same hash algorithm the CA used.\
-     d. **Compares fingerprints**: Checks if the decrypted fingerprint matches the recomputed fingerprint.
-3. **Authentication Outcomes:**
-   * **Match**: The certificate is authentic (not tampered with) and was signed by the trusted CA.
-     * The client now trusts the server's public key in the certificate.
-     * The client proceeds with key exchange (e.g., generating a pre-master secret encrypted with the server's public key).
-   * **Mismatch**: The certificate is invalid (possibly tampered with or corrupted): the handshake fails.
-4. **Additional Checks (Beyond the Signature):**
+     d. **Compares fingerprints**: Checks if the decrypted fingerprint matches the recomputed fingerprint. Matches? The certificate is authentic (not tampered with) and was signed by the trusted CA. The client now trusts the server's public key in the certificate. The client proceeds with key exchange (e.g., generating a pre-master secret encrypted with the server's public key). Mismatches? The certificate is invalid (possibly tampered with or corrupted): the handshake fails.
+1. **Additional Checks (Beyond the Signature):**
    * The client also verifies:
      * The certificate's validity period (not expired/not yet valid).
      * The server's identity (e.g., domain name matches the certificate's `Subject` or `SAN`).
      * The certificate hasn't been revoked (via CRL or OCSP, though modern TLS often uses OCSP stapling).
+
 
 The mechanism of using a CA's digital signature to authenticate a server fulfils its purpose for the following reasons:
 

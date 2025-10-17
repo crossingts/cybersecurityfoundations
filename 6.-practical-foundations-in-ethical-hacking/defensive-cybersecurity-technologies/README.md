@@ -36,7 +36,7 @@ connection-oriented vs connectionless transmission (communication)
 stateful vs stateless communication/firewalls
 traffic shaping
 
-#### Firewalls Key features
+#### Firewalls key features
 
 #### **1. UFW (Uncomplicated Firewall)**
 
@@ -154,7 +154,7 @@ Popular open source NIDS (Network IDS) and HIDS (Host IDS) include Suricata, Sno
 
 Technology focus: Suricata and Zeek (Bro).
 
-#### IDS/IPS Key features
+#### IDS/IPS key features
 
 #### **1. Suricata**
 
@@ -279,7 +279,7 @@ Popular open source SIEM/EDR (Security Information and Event Management/Endpoint
 
 Technology focus: Wazuh (SIEM/XDR).
 
-#### SIEM/EDR Key features
+#### SIEM/EDR key features
 
 #### **1. Wazuh**
 
@@ -379,7 +379,7 @@ Popular open source packet analyzers include Wireshark, tcpdump, Zeek, Snort, an
 
 Technology focus: Wireshark and tcpdump.
 
-#### Packet analyzers Key features
+#### Packet analyzers key features
 
 #### **1. Wireshark**
 

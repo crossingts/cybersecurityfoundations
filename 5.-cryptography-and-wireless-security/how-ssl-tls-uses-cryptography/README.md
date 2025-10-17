@@ -26,7 +26,7 @@ This section explains how cryptographic tools (hashing, asymmetric encryption, a
 * **How SSL/TLS uses asymmetric cryptography**
 * **How SSL/TLS uses symmetric cryptography**
 
-
+![[Pasted image 20251017114230.png]]
 
 <figure><img src="https://dti-techs.gitbook.io/practical-foundations-in-cybersecurity/~gitbook/image?url=https%3A%2F%2F3800590736-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252Fbt139QivYIJ8rAS9v8zR%252Fuploads%252FhZsS8unR9Da3FYTqM2Ji%252Fimage.png%3Falt%3Dmedia%26token%3D7de125b0-7e26-486d-860d-412d0fd55ee9&width=768&dpr=2&quality=100&sign=ad4f0ed3&sv=2" alt="How-SSL-TLS-uses-Cryptography"><figcaption><p>How SSL/TLS uses cryptographic tools to secure data transmission (image courtesy of Ed Harmoush, Practical Networking)</p></figcaption></figure>
 

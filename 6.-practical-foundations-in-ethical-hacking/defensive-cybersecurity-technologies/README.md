@@ -29,7 +29,12 @@ Popular open source host and network firewalls include UFW (Uncomplicated Firewa
 
 Technology focus: nftables and OPNsense.
 
-Key concepts: packet filtering firewalls, BSD (Berkeley Software Distribution), 
+Key concepts: 
+packet filtering firewalls
+BSD (Berkeley Software Distribution) firewalls
+connection-oriented vs connectionless transmission (communication)
+stateful vs stateless communication/firewalls
+traffic shaping
 
 #### Firewalls Key features
 

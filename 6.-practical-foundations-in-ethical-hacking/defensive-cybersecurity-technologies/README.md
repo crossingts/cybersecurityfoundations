@@ -96,7 +96,6 @@ Let's break it down:
     - A rule like `-A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT` is what makes the firewall **stateful**. This is considered a best practice and is how iptables is almost always used in modern configurations.
         
 - **UFW (Uncomplicated Firewall):** As a front-end for iptables/nftables, UFW simplifies this. **By default, UFW is configured to be stateful.** Its default rules and profile setup heavily rely on tracking connection states for ease of use and security.
-    
 
 ### Summary Table
 
@@ -133,7 +132,10 @@ Contrast: A proxy firewall terminates the client connection and initiates a new 
 
 **Next-Generation Firewalls (NGFWs)**
 
-Packet filtering firewalls are the oldest and most basic type. They are primarily contrasted with firewalls that operate at higher layers of the OSI model and make more intelligent decisions.
+Packet filtering firewalls are the oldest and most basic type. 
+Packet filtering firewalls can be contrasted with firewalls that operate at higher layers of the OSI model and make more intelligent packet filtering decisions.
+
+
 
 NGFWs can perform stateful and Application layer packet filtering, in addition to:
 

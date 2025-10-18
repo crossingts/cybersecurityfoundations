@@ -25,7 +25,7 @@ BSD-based firewalls use networking and security tools native to BSD systems. BSD
 
 ### Stateful firewalls: Definition and open source examples
 
-Stateful firewalls primarily operate at **L3 (Network) and L4 (Transport)**, tracking connections (e.g., TCP/UDP sessions). A stateful firewall tracks the state of active connections (e.g., TCP handshakes, UDP streams) to make dynamic decisions. Unlike stateless filters (which check only individual packets), it understands sessions.
+Stateful firewalls primarily operate at **L3 (Network) and L4 (Transport)**, tracking connections (e.g., TCP/UDP sessions). A stateful firewall tracks the state of active connections (e.g., TCP handshakes, UDP streams) to make dynamic decisions. Unlike stateless filters (which check only individual packets), a stateful firewall understands sessions.
 
 **Open-Source Stateful Firewalls (Open Source)**
 

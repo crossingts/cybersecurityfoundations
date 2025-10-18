@@ -55,7 +55,7 @@ UFW, iptables, nftables, PF, ipfw, OPNsense, and pfSense (CE) are all considered
 
 **nftables:** This is the modern successor to iptables in the Linux kernel. While it is fundamentally a packet filtering engine, it is more than _just_ a packet filter. It unifies various network filtering frameworks into a single, more efficient tool and has a more flexible syntax. For all intents and purposes, it performs the same core function as a stateful packet filter but is considered its evolution.
 
-**pfSense and OPNsense:** These are complete, GUI-based firewall _distributions_ (operating systems). They use **PF (Packet Filter)** as their core _packet filtering engine_. However, the systems themselves are full-featured **Next-Generation Firewalls (NGFWs)** because they include many features beyond simple packet filtering (see below).
+**pfSense and OPNsense:** These are complete, GUI-based firewall _distributions_ (operating systems). They use **PF (Packet Filter)** as their core _packet filtering engine_. However, the systems themselves are full-featured **Next-Generation Firewalls (NGFWs)** because they include many features beyond simple packet filtering.
 
 **Stateful Inspection Firewalls**  
 

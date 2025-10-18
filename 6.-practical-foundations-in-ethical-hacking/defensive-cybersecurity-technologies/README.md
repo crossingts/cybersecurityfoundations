@@ -68,13 +68,13 @@ We've established that UFW, iptables, nftables, PF, ipfw, OPNsense, and pfSense 
 Statefulness is not an inherent property of the basic technology in all cases. Statefulness is a key feature that these systems implement.
 
 Let's break it down:
-### The Stateful vs. Stateless Distinction
+#### The Stateful vs. Stateless Distinction
 
 - **Stateless Firewall:** Looks at each network packet in isolation. It doesn't remember previous packets. A rule like "allow TCP port 80" means _all_ packets to port 80 are allowed, regardless of whether they are part of a new connection or a random malicious packet.
     
 - **Stateful Firewall:** Tracks the state of active connections (e.g., SYN, SYN-ACK, ESTABLISHED, RELATED, FIN) to make dynamic decisions. A stateful firewall understands sessions. It can tell the difference between an outgoing request to a web server and the returning traffic, and it can automatically allow the return traffic for an established session. This is a fundamental security improvement.
 
-### Analysis of Each Firewall
+#### Analysis of Each Firewall
 
 **Yes, These are Inherently Stateful:**
 
@@ -109,7 +109,7 @@ Let's break it down:
 |**OPNsense**|**Yes (inherently)**|Built on PF, so stateful inspection is a core, non-optional feature.|
 |**pfSense**|**Yes (inherently)**|Built on PF, so stateful inspection is a core, non-optional feature.|
 
-### Conclusion
+**Conclusion**
 
 To be precise:
 
@@ -155,6 +155,19 @@ NGFWs can perform stateful and Application layer packet filtering, in addition t
 |**Additional Features**|Basic NAT, basic logging|**IPS, Anti-Virus, Threat Intelligence, Identity Awareness**|
 
 In conclusion, while tools like `iptables` and `PF` are powerful and effective stateful packet filters, they are contrasted with more advanced firewalls that can see and control _what_ is inside the traffic, not just _where_ it's coming from and going to.
+
+**BSD-Based Firewalls**
+
+BSD-based firewalls use networking and security tools native to BSD systems. BSD stands for Berkeley Software Distribution, a family of **Unix-like operating systems** derived from the original Berkeley Unix (developed at UC Berkeley).
+
+**Key BSD Variants in Firewalling**
+
+| BSD OS             | Firewall Used                          | Notes                                                                           |
+| ------------------ | -------------------------------------- | ------------------------------------------------------------------------------- |
+| **OpenBSD**        | **PF (Packet Filter)**                 | Famously secure/the gold standard for BSD firewalls (used in OPNsense/pfSense). |
+| **FreeBSD**        | **PF** or **ipfw**                     | Supports both, but PF is more modern.                                           |
+| **NetBSD**         | **NPF** or **IPFilter**                | Less common in firewalls.                                                       |
+| **macOS (Darwin)** | **ipfw (legacy)** / **PF (partially)** | macOS inherited some BSD firewall tools.                                        |
 
 #### Firewalls key features
 
@@ -207,6 +220,7 @@ Modern successor to iptables, more flexible syntax. Also part of Linux (Netfilte
   * Integrated in OpenBSD (security-focused).
 * **Use Case:** Powerful BSD firewall with clean syntax for servers/networks.
 More advanced than iptables, used in BSD-based firewalls. Originally from OpenBSD, now also in FreeBSD and others, BSD license. CLI based macOS built-in Unix firewall.
+PF handles high traffic efficiently (better than iptables in some cases).
 
 **ipfw**: Older BSD firewall, mostly replaced by PF. Found in FreeBSD (and older macOS versions), BSD license. OS/platform: FreeBSD, macOS (legacy)
 

@@ -4,24 +4,7 @@
 
 Windows Filtering Platform (WFP) is Microsoft’s built-in firewall (CLI: `netsh advfirewall`).
 
-**BSD-Based Firewalls**
 
-BSD-based firewalls use networking and security tools native to BSD systems. BSD stands for Berkeley Software Distribution, a family of **Unix-like operating systems** derived from the original Berkeley Unix (developed at UC Berkeley).
-
-**Key BSD Variants in Firewalling**
-
-| BSD OS             | Firewall Used                          | Notes                                                           |
-| ------------------ | -------------------------------------- | --------------------------------------------------------------- |
-| **OpenBSD**        | **PF (Packet Filter)**                 | The gold standard for BSD firewalls (used in OPNsense/pfSense). |
-| **FreeBSD**        | **PF** or **ipfw**                     | Supports both, but PF is more modern.                           |
-| **NetBSD**         | **NPF** or **IPFilter**                | Less common in firewalls.                                       |
-| **macOS (Darwin)** | **ipfw (legacy)** / **PF (partially)** | macOS inherited some BSD firewall tools.                        |
-
-**Characteristics of BSD Firewalls**
-
-* **Stability & Security:** OpenBSD is famously secure (used in critical infrastructure).
-* **Performance:** PF handles high traffic efficiently (better than iptables in some cases).
-* **Features:** Built-in QoS, SYN proxy, and cleaner syntax than iptables.
 
 ### Stateful firewalls: Definition and open source examples
 

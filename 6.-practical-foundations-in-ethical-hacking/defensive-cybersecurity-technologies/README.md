@@ -72,7 +72,7 @@ Let's break it down:
 
 - **Stateless Firewall:** Looks at each network packet in isolation. It doesn't remember previous packets. A rule like "allow TCP port 80" means _all_ packets to port 80 are allowed, regardless of whether they are part of a new connection or a random malicious packet.
     
-- **Stateful Firewall:** Tracks the state of active connections (e.g., SYN, SYN-ACK, ESTABLISHED, RELATED, FIN). It can tell the difference between an outgoing request to a web server and the returning traffic, and it can automatically allow the return traffic for an established session. This is a fundamental security improvement.
+- **Stateful Firewall:** Tracks the state of active connections (e.g., SYN, SYN-ACK, ESTABLISHED, RELATED, FIN) to make dynamic decisions. A stateful firewall understands sessions. It can tell the difference between an outgoing request to a web server and the returning traffic, and it can automatically allow the return traffic for an established session. This is a fundamental security improvement.
 
 ### Analysis of Each Firewall
 

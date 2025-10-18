@@ -25,8 +25,6 @@ BSD-based firewalls use networking and security tools native to BSD systems. BSD
 
 ### Stateful firewalls: Definition and open source examples
 
-Stateful firewalls primarily operate at **L3 (Network) and L4 (Transport)**, tracking connections (e.g., TCP/UDP sessions). A stateful firewall tracks the state of active connections (e.g., TCP handshakes, UDP streams) to make dynamic decisions. Unlike stateless filters (which check only individual packets), a stateful firewall understands sessions.
-
 **Open-Source Stateful Firewalls (Open Source)**
 
 | Firewall                                    | OS/Platform         | Notes                                                     |
@@ -139,10 +137,8 @@ Stateless firewalls (ACLs) are simpler and faster but lack intelligence. They ar
 * Simple packet filtering based on static rules (e.g., IP/port blocking).
 * Environments where connection tracking isn’t needed.
 
-#### **Summary:**
 
-* **Use stateful firewalls** when you need **stronger security**, session awareness, and protection against modern threats.
-* **Use stateless firewalls** for **raw speed** or when dealing with simple, static filtering.
+
 
 **Roots of Common Packet-Filtering Firewalls (Table + Diagram)**
 
@@ -172,11 +168,8 @@ Windows:
 | **ipfw**     | BSD Kernel        | FreeBSD/macOS   | Older, simpler than PF.           |
 | **WFP**      | Windows Kernel    | Windows         | Native firewall for Windows.      |
 
-**Summary**
 
-1. **Stateful Firewalls:** Open-source examples include iptables/nftables (Linux), PF (BSD), and OPNsense.
-2. **WAFs:** Can be host-based (ModSecurity) or network-based (Cloudflare WAF).
-3. **Firewall Roots:** Linux uses Netfilter (iptables/nftables), BSD uses PF/ipfw, Windows uses WFP.
+
 
 ### Web Application Firewalls (WAFs)
 
@@ -193,62 +186,13 @@ WAFs can be **host-based and network-based**, depending on deployment:
 | **Host-Based WAF**    | ModSecurity (Apache/Nginx plugin)     | Runs on the web server (e.g., as a module).                     |
 | **Network-Based WAF** | Cloudflare WAF, HAProxy + ModSecurity | Standalone appliance/cloud service (protects multiple servers). |
 
-**Key Difference**
+**Key takeaways**
 
-* **Host WAF:** Protects a single service (e.g., one NGINX instance).
-* **Network WAF:** Protects all traffic before it reaches servers (e.g., a reverse proxy).
+**Stateful Firewalls:** Open-source examples include iptables/nftables (Linux), PF (BSD), and OPNsense.
+* **Use stateful firewalls** when you need **stronger security**, session awareness, and protection against modern threats.
+* **Use stateless firewalls** for **raw speed** or when dealing with simple, static filtering.
 
-### Host-based, network-based, and hybrid firewalls
+**Firewall Roots:** Linux uses Netfilter (iptables/nftables), BSD uses PF/ipfw, Windows uses WFP.
 
-While host firewalls are ideal for endpoints (e.g., blocking malware on your laptop), network firewalls protect multiple devices (e.g., home/router security). Hybrid tools like Suricata are flexible but require manual setup to act as both.
+**WAFs:** Can be host-based (ModSecurity) or network-based (Cloudflare WAF). Host WAF: Protects a single service (e.g., one NGINX instance). Network WAF: Protects all traffic before it reaches servers (e.g., a reverse proxy).
 
-The following firewall technologies (except WFP) are open source: iptables, nftables, ufw, PF (Packet Filter), ipfw, firewalld, OPNsense, and pfSense (CE), Snort, Suricata, Zeek, Windows Filtering Platform (WFP).
-
-**1. Host-Based Firewalls**
-
-_(Run on individual systems to filter traffic to/from that host.)_
-
-| **Firewall**                                                 | **Key Characteristics**                                                                                   |
-| ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
-| **iptables**                                                 | Traditional Linux packet filtering/NAT, uses Netfilter hooks, rule-based.                                 |
-| **nftables**                                                 | Successor to iptables, unified syntax, supports sets/maps, more efficient.                                |
-| **ufw**                                                      | User-friendly frontend for iptables/nftables (Ubuntu default).                                            |
-| **ipfw**                                                     | FreeBSD firewall, supports stateful filtering, NAT, and traffic shaping.                                  |
-| **PF (Packet Filter)**                                       | OpenBSD’s firewall, powerful syntax, supports ALTQ for QoS, used in macOS.                                |
-| **firewalld**                                                | Dynamic daemon for Linux with zones/services, uses iptables/nftables backend.                             |
-| **Windows Filtering Platform (WFP) (Microsoft proprietary)** | Operates at multiple network layers (Layer 2–7) via filtering layers (e.g., packet, stream, application). |
-
-**2. Network-Based Firewalls**
-
-_(Designed to protect entire networks, often running on dedicated hardware/appliances.)_
-
-| **Firewall**     | **Key Characteristics**                                                         |
-| ---------------- | ------------------------------------------------------------------------------- |
-| **OPNsense**     | FreeBSD-based, fork of pfSense, focuses on usability & plugins (e.g., IDS/IPS). |
-| **pfSense (CE)** | FreeBSD-based, derived from m0n0wall, GUI, VPN, traffic shaping.                |
-| **Snort**        | Primarily an IDS/IPS, but can do inline blocking (network-level).               |
-| **Suricata**     | Modern IDS/IPS with firewall capabilities (e.g., NFQUEUE integration).          |
-
-**3. Hybrid Firewalls**
-
-_(Can function as both host or network firewalls, or have multi-purpose roles.)_
-
-| **Firewall**           | **Key Characteristics**                                                                                         |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------- |
-| **Suricata**           | Primarily an IDS/IPS, but can enforce host _or_ network-level rules via integration with `pf`/`nftables`.       |
-| **Zeek (Bro)**         | Primarily a network monitor/IDS, but can enforce policies (trigger host-level scripts), e.g., block IPs via PF. |
-| **PF (Packet Filter)** | Can be used on both hosts (OpenBSD/macOS) and gateways (network).                                               |
-
-**Notes:**
-
-* **Snort/Suricata/Zeek** are primarily IDS/IPS tools but can act like firewalls in specific setups.
-* **PF** and **ipfw** are flexible (used in both host and network contexts).
-* **OPNsense/pfSense** are full firewall distros (network-focused but can run as VMs).
-
-**Typical Deployment Scenarios**
-
-| **Type**    | **Scope**               | **Typical Use Case**  | **Example**                               |
-| ----------- | ----------------------- | --------------------- | ----------------------------------------- |
-| **Host**    | Single machine          | Laptops, workstations | macOS PF, LuLu, UFW                       |
-| **Network** | Entire subnet           | Routers, gateways     | OPNsense, OpenWRT                         |
-| **Hybrid**  | Both (config-dependent) | Security appliances   | Suricata (if integrated with PF/nftables) |

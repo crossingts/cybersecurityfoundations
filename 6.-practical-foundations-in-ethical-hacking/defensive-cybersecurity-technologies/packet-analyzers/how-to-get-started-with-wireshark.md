@@ -88,7 +88,7 @@ You can also see the sequence number, acknowledgment number, and window length.
 
 <figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
-We learned in the previous lesson on TCP and UDP ([Comparing TCP to UDP](https://itnetworkingskills.wordpress.com/2023/04/06/compare-tcp-udp/)) that the initial sequence number is randomly selected. So you may be thinking it is a big coincidence that 0 was randomly selected as the sequence number.
+We learned in the section [Comparing TCP to UDP](../../../4.-networking-fundamentals/comparing-tcp-to-udp/) that the initial sequence number is randomly selected. So you may be thinking it is a big coincidence that 0 was randomly selected as the sequence number.
 
 In Wireshark it is displayed as 0 here to make it easier to look at and understand, but that’s not the actual sequence number.
 
@@ -106,7 +106,7 @@ Finally, you can see the exchange of FINs and ACKs to terminate the connection a
 
 <figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
-You probably noticed that the flags are a little different than as introduced in the [TCP and UDP lesson](https://itnetworkingskills.wordpress.com/2023/04/06/compare-tcp-udp/) - there is an extra ACK in the first and third messages. There are some nuances to the connection termination process which you don’t need to worry about at the CCNA level. But remember the basic FIN, ACK, FIN, ACK sequence.
+You probably noticed that the flags are a little different than as introduced in section [Comparing TCP to UDP](../../../4.-networking-fundamentals/comparing-tcp-to-udp/) - there is an extra ACK in the first and third messages. There are some nuances to the connection termination process which you don’t need to worry about at the CCNA level. But remember the basic FIN, ACK, FIN, ACK sequence.
 
 ### TCP SYN message <a href="#ember112" id="ember112"></a>
 
@@ -146,7 +146,7 @@ Within the segment you can indeed see that a DNS message is encapsulated inside.
 
 ### Getting started with Wireshark exercise <a href="#ember130" id="ember130"></a>
 
-Here is a practice exercise for you to get familiar with Wireshark. Look inside some packet captures and see some of the things we studied in the TCP and UDP lesson.
+Here is a practice exercise for you to get familiar with Wireshark. Look inside some packet captures and see some of the concepts covered in [Comparing TCP to UDP](../../../4.-networking-fundamentals/comparing-tcp-to-udp/).
 
 1\) Download Wireshark from wireshark.org.
 

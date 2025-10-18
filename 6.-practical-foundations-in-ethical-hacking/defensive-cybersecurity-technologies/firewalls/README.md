@@ -1,20 +1,8 @@
 # Firewalls
 
-### Core packet-filtering firewall technologies
-
-Packet-filtering firewall technologies such as iptables and pfilter (PF) operate at the network level (Layer 3/4). These tools allow network administrators to define rules for allowing, blocking, or modifying traffic based on IPs, ports, protocols, and connection states.
-
 **Core Packet-Filtering Firewall Technologies (Open Source Except WFP)**
 
-| Firewall                             | OS/Platform                              | Notes                                                                                                                                                                   |
-| ------------------------------------ | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **iptables**                         | Linux                                    | Predecessor to nftables. Part of the Linux kernel (Netfilter project), licensed under GPL.                                                                              |
-| **nftables**                         | Linux (replaces iptables)                | Modern successor to iptables, more flexible syntax. Also part of Linux (Netfilter), GPL-licensed.                                                                       |
-| **PF (Packet Filter)**               | BSD (OpenBSD, FreeBSD, OPNsense/pfSense) | More advanced than iptables, used in BSD-based firewalls. Originally from OpenBSD, now also in FreeBSD and others, BSD license. CLI based macOS built-in Unix firewall. |
-| **ipfw**                             | FreeBSD, macOS (legacy)                  | Older BSD firewall, mostly replaced by PF. Found in FreeBSD (and older macOS versions), BSD license.                                                                    |
-| **firewalld**                        | Linux (RHEL/Fedora)                      | Frontend for iptables/nftables, uses zones for simplicity. Developed by Red Hat, GPL.                                                                                   |
-| **UFW (Uncomplicated Firewall)**     | Linux (Debian/Ubuntu)                    | Simplified iptables wrapper for beginners, GPL-licensed.                                                                                                                |
-| **Windows Filtering Platform (WFP)** | Windows                                  | Microsoft’s built-in firewall (CLI: `netsh advfirewall`).                                                                                                               |
+Windows Filtering Platform (WFP) is Microsoft’s built-in firewall (CLI: `netsh advfirewall`).
 
 **BSD-Based Firewalls**
 

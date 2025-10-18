@@ -67,6 +67,8 @@ Windows:
   └─ Windows Filtering Platform (WFP)
 ```
 
+Windows Filtering Platform (WFP) is Microsoft’s built-in firewall (CLI: `netsh advfirewall`).
+
 **Underlying Systems Summary Table**
 
 | Firewall     | Underlying System | OS Family       | Notes                             |

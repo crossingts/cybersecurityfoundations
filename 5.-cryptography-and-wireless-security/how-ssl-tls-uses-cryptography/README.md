@@ -429,28 +429,27 @@ Analogy:
 
 Asymmetric encryption is computationally expensive, so it is only used for initial setup before switching to symmetric encryption for bulk data transfer. Once the handshake is complete, SSL/TLS switches to symmetric encryption (e.g., AES or ChaCha20) for encrypting actual application data. Symmetric encryption is used to encrypt the actual data transmitted between a client (e.g., a web browser) and a server (e.g., a website). Both parties derive the same session keys from the pre-master secret to encrypt and decrypt transmitted data efficiently. Symmetric encryption is faster than asymmetric encryption and provides confidentiality for the bulk of the communication. The keys are ephemeral, generated per session, and never reused, mitigating risks from key compromise. Integrity is further enforced using HMAC or AEAD (Authenticated Encryption with Additional Data) modes like AES-GCM.
 
-#### Role of Symmetric Encryption in SSL/TLS
+**How TLS Uses Symmetric Encryption**:
 
-* Purpose: Confidentiality of bulk data
-* Common algorithms: AES (128/256-bit), ChaCha20
-* **How TLS Uses Symmetric Encryption**:
-  1. **Bulk Data Encryption**:
-     * Encrypts all application data (web pages, files, etc.) after the handshake
-     * Processes millions of bits efficiently with minimal overhead
-  2. **Session Keys**:
-     * Unique keys generated for each session via the handshake
-     * Typically 128-256 bit keys (e.g., AES-256-GCM in TLS 1.3)
-  3. **Performance Advantage**:
-     * 100-1,000x faster than asymmetric cryptography for data transfer
-     * Enables high-speed secure communication (e.g., video streaming, large downloads)
-  4. **Cipher Modes**:
-     * Authenticated Encryption (AEAD): Combines encryption + integrity (e.g., AES-GCM)
-     * CBC mode (older TLS versions) with HMAC for integrity
-* Key characteristics:
-  * Fast processing (optimized for hardware/software)
-  * Suitable for large amounts of data
-  * Minimal latency impact on user experience
-  * Perfect for protecting the actual content of communications
+1. **Bulk Data Encryption**:
+   * Encrypts all application data (web pages, files, etc.) after the handshake
+   * Processes millions of bits efficiently with minimal overhead
+2. **Session Keys**:
+   * Unique keys generated for each session via the handshake
+   * Typically 128-256 bit keys (e.g., AES-256-GCM in TLS 1.3)
+3. **Performance Advantage**:
+   * 100-1,000x faster than asymmetric cryptography for data transfer
+   * Enables high-speed secure communication (e.g., video streaming, large downloads)
+4. **Cipher Modes**:
+   * Authenticated Encryption (AEAD): Combines encryption + integrity (e.g., AES-GCM)
+   * CBC mode (older TLS versions) with HMAC for integrity
+
+**Key characteristics:**
+
+* Fast processing (optimized for hardware/software)
+* Suitable for large amounts of data
+* Minimal latency impact on user experience
+* Perfect for protecting the actual content of communications
 
 ### Key takeaways <a href="#key-takeaways" id="key-takeaways"></a>
 

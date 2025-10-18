@@ -85,7 +85,24 @@ Let's break it down:
 - **ipfw:** Has a built-in stateful mechanism using the `check-state`, `keep-state`, and `limit` keywords in its rules.
     
 - **OPNsense & pfSense (CE):** As firewall distributions built on top of **PF**, they inherit and fully utilize its stateful capabilities. Stateful inspection is a core, non-negotiable part of their operation.
-    
+
+**keep state in PF (OpenBSD Packet Filter)**
+
+**`keep state` (PF) or `--ctstate` (iptables)** = Enables stateful filtering.
+
+*   When PF sees a rule like:
+
+    sh
+
+    ```
+    pass in proto tcp from any to 192.168.1.1 port 22 keep state
+    ```
+
+    * It **allows** the initial packet (e.g., TCP SYN).
+    * Then, it **automatically permits** subsequent packets in the same flow (ACKs, data, etc.) without requiring additional rules.
+    * It also **blocks** packets that don’t match a known state (e.g., unsolicited responses).
+
+
 
 **Yes, But Requires Explicit Configuration (Stateful by Use):**
 
@@ -96,6 +113,38 @@ Let's break it down:
     - A rule like `-A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT` is what makes the firewall **stateful**. This is considered a best practice and is how iptables is almost always used in modern configurations.
         
 - **UFW (Uncomplicated Firewall):** As a front-end for iptables/nftables, UFW simplifies this. **By default, UFW is configured to be stateful.** Its default rules and profile setup heavily rely on tracking connection states for ease of use and security.
+
+**Connection Tracking (`conntrack`)**
+
+* **Definition:** `conntrack` (connection tracking) is a subsystem in the Linux kernel (part of Netfilter) that monitors and records the state of network connections (e.g., TCP, UDP, ICMP).
+* **Purpose:** It allows iptables/nftables to make decisions based on the **state** of a connection rather than just individual packets.
+
+**How It Works**
+
+* When a packet arrives, `conntrack` checks if it belongs to an **existing connection** (e.g., an ongoing TCP session).
+* If it's a **new connection**, it gets logged in a connection tracking table (`/proc/net/nf_conntrack`).
+* Subsequent packets are matched against this table to determine if they are part of an established, related, or invalid connection.
+
+**Common States in `conntrack`**
+
+| State           | Meaning                                                                          |
+| --------------- | -------------------------------------------------------------------------------- |
+| **NEW**         | First packet of a new connection (e.g., TCP SYN).                                |
+| **ESTABLISHED** | Packets belonging to an already-seen connection (e.g., TCP handshake completed). |
+| **RELATED**     | Packets related to an existing connection (e.g., FTP data connection).           |
+| **INVALID**     | Malformed or suspicious packets (e.g., TCP RST without prior connection).        |
+
+**Example Rule (iptables)**
+
+sh
+
+```
+iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+```
+
+This rule **allows** packets that are part of an existing or related connection.
+
+
 
 ### Summary Table
 

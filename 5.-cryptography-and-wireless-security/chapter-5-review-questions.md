@@ -40,7 +40,7 @@
 **Answer:**\
 Non-repudiation relies on the fundamental assumption that the sender's private key has been kept secure and is solely in the possession of the sender. If the private key is compromised or shared, the sender could legitimately deny having signed the message, as someone else could have used the key.
 
-**2. The lesson explains that the process of creating a digital signature involves a hashing step. Why is the message hashed first, rather than signing the entire message directly with the private key?**\
+**2. The process of creating a digital signature involves a hashing step. Why is the message hashed first, rather than signing the entire message directly with the private key?**\
 **Answer:**\
 Hashing the message first is done for three primary reasons: 1) Performance: Asymmetric encryption operations are computationally slow, and hashing is very fast. Signing a small, fixed-length hash is much more efficient than signing a large message. 2) Security: Some asymmetric algorithms have input size limits. 3) Compatibility: The resulting signature is a predictable, manageable size regardless of the original message's length.
 
@@ -50,7 +50,7 @@ Hashing the message first is done for three primary reasons: 1) Performance: Asy
 * Message encryption is used to provide confidentiality. It ensures that only the intended recipient can read the message by encrypting it with the recipient's public key, so that only the holder of the corresponding private key can decrypt it.
 * Message signing is used to provide authentication, integrity, and non-repudiation. It proves the message came from a specific sender and was not altered by signing a hash of the message with the sender's private key, so that anyone with the sender's public key can verify it.
 
-**4. According to the lesson, what critical problem does a Public Key Infrastructure (PKI) solve in the process of message signing?**\
+**4. What critical problem does a Public Key Infrastructure (PKI) solve in the process of message signing?**\
 **Answer:**\
 PKI solves the problem of trust and secure key distribution. It answers the question: "How does the verifier (Bob) obtain the sender's (Alice's) public key with confidence that it is genuine and not a forgery from an attacker?" PKI uses digital certificates, issued by a trusted Certificate Authority (CA), to bind a public key to an identity, allowing a verifier to trust the public key they are using.
 
@@ -64,7 +64,7 @@ A key practical advantage of elliptic curve-based algorithms (ECDSA, EdDSA) over
 **Answer:**\
 When a user creates an account, the server takes the plaintext password and processes it through a cryptographic hashing algorithm. This generates a unique, fixed-length string of characters (a hash digest). The server then stores only this hash in its database, not the plaintext password. The purpose is to ensure that even if the password database is stolen, an attacker cannot easily obtain the original passwords, as hashing is a one-way function that is computationally infeasible to reverse.
 
-**2. The lesson states that a Pre-Shared Key (PSK) must be initially shared "out-of-band." What does this mean, and why is this step critical for security?**\
+**2. A Pre-Shared Key (PSK) must be initially shared "out-of-band." What does this mean, and why is this step critical for security?**\
 **Answer:**\
 "Out-of-band" means the PSK is shared through a communication channel separate from the one it will be used to secure. For example, a Wi-Fi password might be told to a guest in person or printed on a receipt, not sent over the unsecured Wi-Fi network itself. This is critical because it prevents an eavesdropper from intercepting the key during the initial exchange. If the key were shared "in-band" over the untrusted network, an attacker could capture it and immediately compromise all future communications.
 
@@ -165,51 +165,46 @@ A nonce is a random number used only once. It provides the property of freshness
 
 ### Wireless client authentication methods
 
-**1. The original IEEE 802.11 standard defined Open System authentication. Describe the purpose of this method and what critical security function it lacks.**  
+**1. The original IEEE 802.11 standard defined Open System authentication. Describe the purpose of this method and what critical security function it lacks.**\
 **Answer:** Open System authentication only validates that a client device is a valid IEEE 802.11 device capable of communicating with the protocol. It lacks any mechanism to authenticate the user's identity or verify that the client is authorized to join the network, leaving those functions to higher-layer security methods.
 
-**2. A network administrator is explaining why WPA2-Personal is more secure than WEP, even though both use a pre-shared secret. Describe the fundamental difference in how each protocol uses its secret key.**  
+**2. A network administrator is explaining why WPA2-Personal is more secure than WEP, even though both use a pre-shared secret. Describe the fundamental difference in how each protocol uses its secret key.**\
 **Answer:** WEP uses the static pre-shared key directly to encrypt all data packets. In contrast, WPA2-Personal uses the Pre-Shared Key (PSK) only as a starting point for the 4-Way Handshake, which generates unique, temporary session keys for encryption, keeping the master secret secure.
 
-**3. The Wi-Fi Alliance introduced WPA in 2003 before the IEEE 802.11i amendment was finalized. Describe the specific purpose of WPA as an interim standard and the key security mechanisms it implemented from the draft 802.11i specification.**  
+**3. The Wi-Fi Alliance introduced WPA in 2003 before the IEEE 802.11i amendment was finalized. Describe the specific purpose of WPA as an interim standard and the key security mechanisms it implemented from the draft 802.11i specification.**\
 **Answer:** WPA served as a pre-standard stopgap to address the critical vulnerabilities of WEP immediately. It implemented the Temporal Key Integrity Protocol (TKIP) for dynamic encryption and the Michael message integrity check from the draft 802.11i specification.
 
-**4. A technician is configuring a WPA3-Enterprise network for a government agency. To meet the highest security requirements, they must enable the 192-bit mode. Name the two specific cryptographic components this mode mandates.**  
+**4. A technician is configuring a WPA3-Enterprise network for a government agency. To meet the highest security requirements, they must enable the 192-bit mode. Name the two specific cryptographic components this mode mandates.**\
 **Answer:** The 192-bit mode mandates the use of (1) AES-256-GCMP for encryption and (2) the 256-bit GMAC for integrity protection.
 
-**5. When configuring EAP-TLS authentication, an administrator must deploy digital certificates to both the client devices and the authentication server. Explain why this requirement for mutual certificate-based authentication is more secure than a method like PEAP that only uses a server-side certificate.**  
+**5. When configuring EAP-TLS authentication, an administrator must deploy digital certificates to both the client devices and the authentication server. Explain why this requirement for mutual certificate-based authentication is more secure than a method like PEAP that only uses a server-side certificate.**\
 **Answer:** EAP-TLS requires mutual authentication, meaning both the server proves its identity to the client and the client proves its identity to the server using certificates. This is more secure than PEAP, where only the server is authenticated with a certificate, and the client authenticates with a less secure method like a username and password inside the tunnel, which can still be phished or stolen.
 
 ### Wireless privacy and integrity methods
 
-**1. TKIP was designed as an interim solution to replace WEP. What was the single most important design constraint that shaped its development, and what specific cipher did it reuse as a result?**
-**Answer:** The most important constraint was the need to function on legacy WEP hardware. As a result, TKIP continued to use the RC4 stream cipher.
+**1. TKIP was designed as an interim solution to replace WEP. What was the single most important design constraint that shaped its development, and what specific cipher did it reuse as a result?** **Answer:** The most important constraint was the need to function on legacy WEP hardware. As a result, TKIP continued to use the RC4 stream cipher.
 
-**2. The text states that a simple cryptographic hash is insufficient for protecting against a malicious attacker. What specific capability does a keyed Message Authentication Code (MAC) provide that a hash alone does not?**
-**Answer:** A MAC requires a secret key to generate the integrity value. This prevents a malicious attacker from forging a valid integrity check after tampering with the data, as they do not possess the key.
+**2. The text states that a simple cryptographic hash is insufficient for protecting against a malicious attacker. What specific capability does a keyed Message Authentication Code (MAC) provide that a hash alone does not?** **Answer:** A MAC requires a secret key to generate the integrity value. This prevents a malicious attacker from forging a valid integrity check after tampering with the data, as they do not possess the key.
 
-**3. The Counter Mode with Cipher Block Chaining Message Authentication Code Protocol (CCMP) consists of two algorithms. Name the core encryption standard it uses and the specific algorithm it employs for the Message Integrity Check (MIC).**
- **Answer:** CCMP uses the Advanced Encryption Standard (AES) for encryption and the Cipher Block Chaining Message Authentication Code (CBC-MAC) for the MIC.
+**3. The Counter Mode with Cipher Block Chaining Message Authentication Code Protocol (CCMP) consists of two algorithms. Name the core encryption standard it uses and the specific algorithm it employs for the Message Integrity Check (MIC).** **Answer:** CCMP uses the Advanced Encryption Standard (AES) for encryption and the Cipher Block Chaining Message Authentication Code (CBC-MAC) for the MIC.
 
-**4. The Michael MIC used in WPA was an improvement over WEP's integrity check but was still vulnerable. Identify one of the key reasons why it was considered a weak Message Authentication Code (MAC).**
-**Answer:** Michael was considered weak because it was vulnerable to forgery attacks. It was designed to be computationally simple enough to run on older hardware, which inherently limited its cryptographic strength.
+**4. The Michael MIC used in WPA was an improvement over WEP's integrity check but was still vulnerable. Identify one of the key reasons why it was considered a weak Message Authentication Code (MAC).** **Answer:** Michael was considered weak because it was vulnerable to forgery attacks. It was designed to be computationally simple enough to run on older hardware, which inherently limited its cryptographic strength.
 
-**5. The transition from WPA2 to WPA3 introduced a new protocol for authenticated encryption. Name this protocol and state one of its cited advantages over the CCMP protocol used in WPA2.**
- **Answer:** The protocol is AES-GCMP (Galois/Counter Mode Protocol). One of its advantages is that it is more efficient (faster) than CCMP while also being considered more secure.
+**5. The transition from WPA2 to WPA3 introduced a new protocol for authenticated encryption. Name this protocol and state one of its cited advantages over the CCMP protocol used in WPA2.** **Answer:** The protocol is AES-GCMP (Galois/Counter Mode Protocol). One of its advantages is that it is more efficient (faster) than CCMP while also being considered more secure.
 
 ### Authentication and encryption in WPA, WPA2, and WPA3
 
-**1. What specific authentication protocol does WPA3-Personal use to replace the Pre-Shared Key (PSK) mechanism of WPA/WPA2-Personal, and what two key security weaknesses of the old mechanism does it defeat?**  
+**1. What specific authentication protocol does WPA3-Personal use to replace the Pre-Shared Key (PSK) mechanism of WPA/WPA2-Personal, and what two key security weaknesses of the old mechanism does it defeat?**\
 **Answer:** WPA3-Personal uses Simultaneous Authentication of Equals (SAE). It defeats the 1) vulnerability to dictionary attacks on the four-way handshake and 2) provides forward secrecy, preventing the decryption of past sessions if the password is compromised.
 
-**2. What are the two core security functions that any effective wireless security strategy must provide, as reviewed in the final section?**  
+**2. What are the two core security functions that any effective wireless security strategy must provide, as reviewed in the final section?**\
 **Answer:** An effective wireless security strategy must provide 1) a method to authenticate clients and 2) a method to provide data privacy and integrity.
 
-**3. Beyond stronger encryption, what specific security feature does WPA3 introduce to protect important 802.11 management frames between APs and clients, and what type of malicious activity does this prevent?**  
+**3. Beyond stronger encryption, what specific security feature does WPA3 introduce to protect important 802.11 management frames between APs and clients, and what type of malicious activity does this prevent?**\
 **Answer:** WPA3 introduces Protected Management Frames (PMF). This prevents malicious activity targeting a Basic Service Set's (BSS) operation.
 
-**4. In the context of WPA2, what does the pre-shared key (PSK) string itself directly create during the four-way handshake, and what is never sent over the air?**  
+**4. In the context of WPA2, what does the pre-shared key (PSK) string itself directly create during the four-way handshake, and what is never sent over the air?**\
 **Answer:** The pre-shared key string is used to construct and exchange encryption key material. The key string itself is never sent over the air.
 
-**5. What is the fundamental authentication difference between WPA2-Personal and WPA2-Enterprise that makes Enterprise mode more complex to deploy but also more secure?**  
+**5. What is the fundamental authentication difference between WPA2-Personal and WPA2-Enterprise that makes Enterprise mode more complex to deploy but also more secure?**\
 **Answer:** WPA2-Personal uses a single, static Pre-Shared Key (PSK) for all users. WPA2-Enterprise uses 802.1X (EAP) authentication, which requires a RADIUS server to validate individual user or device credentials, providing dynamic, per-user keys.

@@ -20,13 +20,13 @@ b) Authentication of the sender\
 c) **Confidentiality of the message**\
 d) Non-repudiation
 
-**4. The lesson states that the process of "encrypting the hash" is technically not classic encryption. Why is this distinction important? (Choose one answer)**\
+**4. The process of "encrypting the hash" is technically not classic encryption. Why is this distinction important? (Choose one answer)**\
 a) Because it uses a different mathematical operation that is impossible to reverse.\
 b) **Because the goals of signing (authentication/integrity) are different from the goals of encryption (confidentiality).**\
 c) Because only hashing algorithms are used, not encryption algorithms.\
 d) Because it requires the use of a symmetric key instead of an asymmetric key.
 
-**5. Which of the following algorithms is explicitly mentioned in the lesson as being deprecated and should be considered legacy? (Choose one answer)**\
+**5. Which of the following algorithms is explicitly mentioned in the discussion as being deprecated and should be considered legacy? (Choose one answer)**\
 a) RSA-PSS\
 b) ECDSA\
 c) EdDSA\

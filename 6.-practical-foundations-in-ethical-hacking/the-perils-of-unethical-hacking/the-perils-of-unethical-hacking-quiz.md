@@ -2,7 +2,7 @@
 
 ### The perils of unethical hacking
 
-**1. Which of the following is a primary U.S. law that criminalizes unauthorized access to computer systems, as discussed in the lesson? (Choose one answer)**\
+**1. Which of the following is a primary U.S. law that criminalizes unauthorized access to computer systems, as discussed in the section? (Choose one answer)**\
 a) The Digital Millennium Copyright Act (DMCA)\
 b) The Sarbanes-Oxley Act (SOX)\
 c) **The Computer Fraud and Abuse Act (CFAA)**\
@@ -26,7 +26,7 @@ b) **Asset forfeiture and lifetime bans from technology use**\
 c) Automatic enrollment in a white-hat mentorship program\
 d) Permanent exile from the United States
 
-**5. The case of Marcus Hutchins, the "WannaCry hero," is used in the lesson to illustrate what primary concept? (Choose one answer)**\
+**5. The case of Marcus Hutchins, the "WannaCry hero," is used in the section to illustrate what primary concept? (Choose one answer)**\
 a) How all hackers are eventually caught and prosecuted \
 b) The financial rewards available for finding vulnerabilities \
 c) **That even positive contributions cannot fully erase the consequences of prior unethical hacking**\

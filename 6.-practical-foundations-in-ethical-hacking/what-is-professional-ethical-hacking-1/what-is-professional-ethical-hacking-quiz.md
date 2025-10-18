@@ -20,7 +20,7 @@ b) **Integrity**\
 c) Protecting the Public\
 d) Best Practices
 
-**4. The lesson discusses how university training instills professionalism in ethical hackers. What is a key reason why accreditation bodies like the Canadian Engineering Accreditation Board (CEAB) require ethics to be taught in relevant degree programs? (Choose one answer)** \
+**4. The section discusses how university training instills professionalism in ethical hackers. What is a key reason why accreditation bodies like the Canadian Engineering Accreditation Board (CEAB) require ethics to be taught in relevant degree programs? (Choose one answer)** \
 a) To ensure graduates can write more effective penetration testing reports \
 b) To teach students the specific legal statutes of the Computer Fraud and Abuse Act (CFAA) \
 c) **To equip students with a systematic, engineering-based mindset and the ethical frameworks they are bound by as professionals**\

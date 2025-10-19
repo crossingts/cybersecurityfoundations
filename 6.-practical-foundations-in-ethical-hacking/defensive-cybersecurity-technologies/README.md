@@ -32,30 +32,28 @@ Technology focus: nftables and OPNsense.
 Key concepts: 
 packet filtering firewalls
 BSD (Berkeley Software Distribution) firewalls
-connection-oriented vs connectionless transmission (communication)
-stateful vs stateless communication/firewalls
+connection-oriented vs connectionless transmission/communication
+stateful vs stateless firewalls
 Next-Generation Firewalls (NGFWs)
 traffic shaping
 
 **Packet Filtering Firewalls**
 
-Packet-filtering firewall technologies such as iptables and pfilter (PF) operate at the network level (Layer 3/4). Packet-filtering firewalls allow network administrators to define rules for allowing, blocking, or modifying traffic based on IPs, ports, protocols, and connection states.
+Packet-filtering firewall technologies operate at the network level (Layer 3/4). Packet-filtering firewalls allow network administrators to define rules for allowing, blocking, or modifying traffic based on IPs, ports, protocols, and connection states.
 
 UFW, iptables, nftables, PF, ipfw, OPNsense, and pfSense (CE) are all considered packet filtering firewalls, but some have evolved into more sophisticated frameworks.
 
-**Primarily packet filtering firewalls:**
+Furthermore, UFW, iptables, nftables, PF, ipfw, OPNsense, and pfSense (CE) are all considered stateful packet filtering firewalls, but with nuanced facts:
+- **nftables, PF, ipfw, OPNsense, and pfSense** are architected as **stateful packet filters**.
+- **iptables** is a framework that is almost universally **used as a stateful firewall**, but the statefulness comes from its connection tracking module, not the `iptables` command itself.
+- **UFW** is a tool that **configures a stateful firewall** by default.
 
-**iptables:** This is the classic Linux packet filter. It operates at layers 3 and 4, making decisions based on IP addresses, ports, protocols, and connection state (stateful packet filtering).
 
-**PF (Packet Filter):** Originally from OpenBSD, it is a core stateful packet filter. Like iptables, it forms the foundation for firewalling on systems that use it (OpenBSD, FreeBSD, etc.).
+Packet filtering firewalls can be contrasted with:
 
-**UFW (Uncomplicated Firewall):** This is not a new firewall itself, but a user-friendly front-end (a wrapper) for `iptables` (and on newer systems, `nftables`). It simplifies the process of creating packet filtering rules.
-
-**Evolved successors/systems with broader capabilities:**
-
-**nftables:** This is the modern successor to iptables in the Linux kernel. While it is fundamentally a packet filtering engine, it is more than _just_ a packet filter. It unifies various network filtering frameworks into a single, more efficient tool and has a more flexible syntax. For all intents and purposes, it performs the same core function as a stateful packet filter but is considered its evolution.
-
-**pfSense and OPNsense:** These are complete, GUI-based firewall _distributions_ (operating systems). They use **PF (Packet Filter)** as their core _packet filtering engine_. However, the systems themselves are full-featured **Next-Generation Firewalls (NGFWs)** because they include many features beyond simple packet filtering.
+1. Stateful Inspection Firewalls
+2. Application-Level Gateways (Proxy Firewalls)
+3. Next-Generation Firewalls (NGFWs)
 
 **Stateful Inspection Firewalls**  
 
@@ -74,9 +72,6 @@ Stateful Firewall:
           ↳ (e.g., "Is this a reply to an existing SSH session?")
 ```
 
-
-
-We've established that UFW, iptables, nftables, PF, ipfw, OPNsense, and pfSense (CE) are all considered packet filtering firewalls. Are they all also considered stateful ?
 
 Statefulness is not an inherent property of the basic technology in all cases. Statefulness is a key feature that these systems implement.
 
@@ -168,28 +163,6 @@ This rule **allows** packets that are part of an existing or related connection.
 |**OPNsense**|**Yes (inherently)**|Built on PF, so stateful inspection is a core, non-optional feature.|
 |**pfSense**|**Yes (inherently)**|Built on PF, so stateful inspection is a core, non-optional feature.|
 
-**Conclusion**
-
-To be precise:
-
-- **nftables, PF, ipfw, OPNsense, and pfSense** are architected as **stateful packet filters**.
-    
-- **iptables** is a framework that is almost universally **used as a stateful firewall**, but the statefulness comes from its connection tracking module, not the `iptables` command itself.
-    
-- **UFW** is a tool that **configures a stateful firewall** by default.
-    
-
-Therefore, in modern practical terms, **yes, they are all considered stateful packet filtering firewalls.** You would have to go out of your way to configure iptables in a purely stateless manner, and it's not recommended.
-
----
-
-Packet filtering firewalls can be contrasted with:
-
-1. Stateful Inspection Firewalls
-2. Application-Level Gateways (Proxy Firewalls)
-3. Next-Generation Firewalls (NGFWs)
-
-
 **Application-Level Gateways (Proxy Firewalls)**  
 
 These operate at Layer 7 (the Application layer). Instead of just forwarding packets, they act as an intermediary.
@@ -202,7 +175,6 @@ Most firewalls now have some form of proxy server architecture.
 
 Packet filtering firewalls are the oldest and most basic type. 
 Packet filtering firewalls can be contrasted with firewalls that operate at higher layers of the OSI model and make more intelligent packet filtering decisions.
-
 
 NGFWs can perform stateful and Application layer packet filtering, in addition to:
 
@@ -223,18 +195,7 @@ NGFWs can perform stateful and Application layer packet filtering, in addition t
 
 In conclusion, while tools like `iptables` and `PF` are powerful and effective stateful packet filters, they are contrasted with more advanced firewalls that can see and control _what_ is inside the traffic, not just _where_ it's coming from and going to.
 
-**BSD-Based Firewalls**
 
-BSD-based firewalls use networking and security tools native to BSD systems. BSD stands for Berkeley Software Distribution, a family of **Unix-like operating systems** derived from the original Berkeley Unix (developed at UC Berkeley).
-
-**Key BSD Variants in Firewalling**
-
-| BSD OS             | Firewall Used                          | Notes                                                                           |
-| ------------------ | -------------------------------------- | ------------------------------------------------------------------------------- |
-| **OpenBSD**        | **PF (Packet Filter)**                 | Famously secure/the gold standard for BSD firewalls (used in OPNsense/pfSense). |
-| **FreeBSD**        | **PF** or **ipfw**                     | Supports both, but PF is more modern.                                           |
-| **NetBSD**         | **NPF** or **IPFilter**                | Less common in firewalls.                                                       |
-| **macOS (Darwin)** | **ipfw (legacy)** / **PF (partially)** | macOS inherited some BSD firewall tools.                                        |
 
 ### Stateless vs stateful firewalls pros and cons
 
@@ -288,6 +249,20 @@ Stateless firewalls (ACLs) are simpler and faster but lack intelligence. They ar
 | **WFP**      | Windows Kernel    | Windows         | Native firewall for Windows.      |
 
 Windows Filtering Platform (WFP) is Microsoft’s built-in firewall (CLI: `netsh advfirewall`).
+
+**BSD-Based Firewalls**
+
+BSD-based firewalls use networking and security tools native to BSD systems. BSD stands for Berkeley Software Distribution, a family of **Unix-like operating systems** derived from the original Berkeley Unix (developed at UC Berkeley).
+
+**Key BSD Variants in Firewalling**
+
+| BSD OS             | Firewall Used                          | Notes                                                                           |
+| ------------------ | -------------------------------------- | ------------------------------------------------------------------------------- |
+| **OpenBSD**        | **PF (Packet Filter)**                 | Famously secure/the gold standard for BSD firewalls (used in OPNsense/pfSense). |
+| **FreeBSD**        | **PF** or **ipfw**                     | Supports both, but PF is more modern.                                           |
+| **NetBSD**         | **NPF** or **IPFilter**                | Less common in firewalls.                                                       |
+| **macOS (Darwin)** | **ipfw (legacy)** / **PF (partially)** | macOS inherited some BSD firewall tools.                                        |
+
 
 ### Web Application Firewalls (WAFs)
 

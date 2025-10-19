@@ -15,7 +15,7 @@ Stateful Firewall:
 
 Stateful and stateless firewalls serve different purposes in network security, each with its own advantages. Here’s a comparison highlighting the **advantages of stateful firewalls over stateless firewalls**:
 
-#### **Advantages of Stateful Firewalls:**
+**Advantages of Stateful Firewalls:**
 
 Most modern firewalls (e.g., NGFW) are stateful by default due to their security advantages.
 
@@ -42,7 +42,7 @@ Most modern firewalls (e.g., NGFW) are stateful by default due to their security
 ✅ **Security**: Blocks unsolicited/invalid packets (e.g., spoofed ACKs).\
 ✅ **Performance**: Faster than checking every packet against all rules.
 
-#### **When Stateless Firewalls Are Better:**
+**When Stateless Firewalls Are Better:**
 
 Stateless firewalls (ACLs) are simpler and faster but lack intelligence. They are useful for:
 
@@ -95,7 +95,7 @@ WAFs can be **host-based and network-based**, depending on deployment:
 | **Host-Based WAF**    | ModSecurity (Apache/Nginx plugin)     | Runs on the web server (e.g., as a module).                     |
 | **Network-Based WAF** | Cloudflare WAF, HAProxy + ModSecurity | Standalone appliance/cloud service (protects multiple servers). |
 
-**Key takeaways**
+### Key takeaways
 
 **Stateful Firewalls:** Open-source examples include iptables/nftables (Linux), PF (BSD), and OPNsense.
 * **Use stateful firewalls** when you need **stronger security**, session awareness, and protection against modern threats.

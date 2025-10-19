@@ -74,8 +74,6 @@ Let's break it down:
     
 - **Stateful Firewall:** Tracks the state of active connections (e.g., SYN, SYN-ACK, ESTABLISHED, RELATED, FIN) to make dynamic decisions. A stateful firewall understands sessions. It can tell the difference between an outgoing request to a web server and the returning traffic, and it can automatically allow the return traffic for an established session. This is a fundamental security improvement.
 
-#### Analysis of Each Firewall
-
 **Yes, These are Inherently Stateful:**
 
 - **nftables:** Has a built-in state machine (`ct state`) and connection tracking is a core part of its design.
@@ -103,8 +101,7 @@ Let's break it down:
     * It also **blocks** packets that don’t match a known state (e.g., unsolicited responses).
 
 
-
-**Yes, But Requires Explicit Configuration (Stateful by Use):**
+**Stateful by Use (Requires Explicit Configuration):**
 
 - **iptables:** This is the most important case. iptables itself is a framework that _can_ be stateful, but it requires the connection tracking module (`conntrack`) and rules that use the `--state` or `--ctstate` match.
     
@@ -177,13 +174,14 @@ Therefore, in modern practical terms, **yes, they are all considered stateful pa
 
 These operate at Layer 7 (the Application layer). Instead of just forwarding packets, they act as an intermediary.
 
-Contrast: A proxy firewall terminates the client connection and initiates a new one to the server on its behalf. It can inspect the actual content of the traffic (e.g., specific HTTP commands, SQL queries, etc.), which a Layer 3/4 packet filter is completely blind to.
+A proxy firewall terminates the client connection and initiates a new one to the server on its behalf. It can inspect the actual content of the traffic (e.g., specific HTTP commands, SQL queries, etc.), which a Layer 3/4 packet filter is completely blind to.
+
+Most firewalls now have some form of proxy server architecture. 
 
 **Next-Generation Firewalls (NGFWs)**
 
 Packet filtering firewalls are the oldest and most basic type. 
 Packet filtering firewalls can be contrasted with firewalls that operate at higher layers of the OSI model and make more intelligent packet filtering decisions.
-
 
 
 NGFWs can perform stateful and Application layer packet filtering, in addition to:

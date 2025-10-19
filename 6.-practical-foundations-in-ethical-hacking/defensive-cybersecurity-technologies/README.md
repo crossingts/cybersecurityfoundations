@@ -67,14 +67,15 @@ We've established that UFW, iptables, nftables, PF, ipfw, OPNsense, and pfSense 
 
 Statefulness is not an inherent property of the basic technology in all cases. Statefulness is a key feature that these systems implement.
 
-Let's break it down:
-#### The Stateful vs. Stateless Distinction
+Let's break it down.
+
+**The Stateful vs. Stateless Distinction**
 
 - **Stateless Firewall:** Looks at each network packet in isolation. It doesn't remember previous packets. A rule like "allow TCP port 80" means _all_ packets to port 80 are allowed, regardless of whether they are part of a new connection or a random malicious packet.
     
 - **Stateful Firewall:** Tracks the state of active connections (e.g., SYN, SYN-ACK, ESTABLISHED, RELATED, FIN) to make dynamic decisions. A stateful firewall understands sessions. It can tell the difference between an outgoing request to a web server and the returning traffic, and it can automatically allow the return traffic for an established session. This is a fundamental security improvement.
 
-**Yes, These are Inherently Stateful:**
+**These are Inherently Stateful:**
 
 - **nftables:** Has a built-in state machine (`ct state`) and connection tracking is a core part of its design.
     
@@ -140,7 +141,6 @@ iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 ```
 
 This rule **allows** packets that are part of an existing or related connection.
-
 
 
 ### Summary Table
@@ -294,7 +294,6 @@ Windows Filtering Platform (WFP) is Microsoft’s built-in firewall (CLI: `netsh
 | **PF**       | BSD Kernel        | OpenBSD/FreeBSD | Powers OPNsense/pfSense.          |
 | **ipfw**     | BSD Kernel        | FreeBSD/macOS   | Older, simpler than PF.           |
 | **WFP**      | Windows Kernel    | Windows         | Native firewall for Windows.      |
-
 
 ### Web Application Firewalls (WAFs)
 

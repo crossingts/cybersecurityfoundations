@@ -97,17 +97,8 @@ UFW, iptables, nftables, PF, ipfw, OPNsense, and pfSense (CE) are all considered
 
 #### **3. Beyond Packet Filtering: Advanced Firewall Types**
 
-While powerful, packet filtering firewalls are primarily concerned with _where_ traffic is going (IPs and ports). They are contrasted with more advanced firewalls that operate at higher layers and can inspect _what_ is inside the traffic. **Application-Level Gateways**, or **proxy firewalls**, operate at the Application Layer (Layer 7). Instead of simply forwarding packets, they act as an intermediary, terminating client connections and making new ones to the server. This allows them to inspect the actual content of the traffic, such as specific HTTP commands or SQL queries.
+While powerful, packet filtering firewalls are primarily concerned with _where_ traffic is going (IPs and ports). They are contrasted with more advanced firewalls that operate at higher layers and can inspect _what_ is inside the traffic. **Application-Level Gateways**, or **proxy firewalls**, operate at the Application Layer (Layer 7). Instead of simply forwarding packets, they act as an intermediary, terminating client connections and initiating new ones to the server. This allows them to inspect the actual content of the traffic, such as specific HTTP commands, SQL queries or malicious URLs, which a Layer 3/4 packet filter is blind to.
 
-Packet filtering firewalls (even stateful ones) are contrasted with more advanced firewalls that operate at higher layers and make more intelligent decisions.
-
-**Application-Level Gateways (Proxy Firewalls)**  
-These operate at the Application Layer (OSI Layer 7). Instead of just forwarding packets, they act as an intermediary.
-
-- **How it works:** The proxy terminates the client connection and initiates a new, separate connection to the server.
-    
-- **Key Advantage:** It can inspect the actual _content_ of the traffic (e.g., specific HTTP commands, SQL queries, malicious URLs), which a Layer 3/4 packet filter is blind to.
-    
 
 **Next-Generation Firewalls (NGFWs)**  
 NGFWs represent the modern evolution, incorporating the features of all previous types and adding advanced security integrations.

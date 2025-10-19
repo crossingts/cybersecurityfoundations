@@ -41,19 +41,7 @@ traffic shaping
 
 #### **1. Core Concept: The Packet Filtering Firewall**
 
-At its most basic, a firewall is a gatekeeper for network traffic. The simplest and oldest type is the **Packet Filtering Firewall**.
-
-- **Operation Layer:** Network and Transport Layers (OSI Layers 3 & 4).
-    
-- **Decision Basis:** Rules are defined to allow or block packets based on:
-    
-    - **Source and Destination IP Addresses**
-        
-    - **Source and Destination Ports**
-        
-    - **Network Protocol** (e.g., TCP, UDP, ICMP)
-
-Packet-filtering firewall technologies operate at the network level (Layer 3/4). Packet-filtering firewalls allow network administrators to define rules for allowing, blocking, or modifying traffic based on IPs, ports, protocols, and connection states.
+At its most basic, a firewall is a gatekeeper for network traffic. The simplest and oldest type is the packet filtering firewall. Packet-filtering firewall technologies operate at the network level (Layer 3/4). They allow network administrators to define rules for allowing, blocking, or modifying traffic based on IPs, ports, protocols, and connection states.
 
 Packet filtering firewalls can be contrasted with:
 
@@ -61,42 +49,24 @@ Packet filtering firewalls can be contrasted with:
 2. Application-Level Gateways (Proxy Firewalls)
 3. Next-Generation Firewalls (NGFWs)
 
+#### **2. Stateless vs. Stateful Firewalls**
 
-#### **2. The Critical Evolution: Stateless vs. Stateful Firewalls**
+A critical evolution in firewall technology was the shift from stateless to stateful inspection. A **stateless firewall** treats each network packet in isolation, with no memory of previous packets. A rule like "allow TCP port 80" would permit all traffic to that port, regardless of whether it is a legitimate new connection or a random, malicious packet. 
 
-A critical evolution in firewall technology was the shift from stateless to stateful inspection. A **stateless firewall** treats each network packet in isolation, with no memory of previous packets. A rule like "allow TCP port 80" would permit all traffic to that port, regardless of whether it is a legitimate new connection or a random, malicious packet. In contrast, a **stateful firewall** tracks the state of active network connections—such as NEW, ESTABLISHED, or RELATED—dramatically improving security. It can dynamically allow returning traffic for an outgoing connection it previously permitted, while blocking unsolicited incoming requests. While all modern firewalls are used in a stateful manner, their implementation differs. Some, like nftables, PF, and ipfw, are inherently stateful, with connection tracking as a core feature. Others, like the Linux iptables framework, achieve statefulness through the addition of the `conntrack` module and specific rules, which is considered a standard practice. Tools like UFW and systems like OPNsense/pfSense configure their underlying engines to be stateful by default.
+A stateful firewall tracks the state of active connections (e.g., SYN, SYN-ACK, ESTABLISHED, RELATED, FIN) to make dynamic decisions. A stateful firewall understands sessions. It can tell the difference between an outgoing request to a web server and the returning traffic, and it can automatically allow the return traffic for an established session. This is a fundamental security improvement.
 
-A major security advancement was the move from stateless to stateful inspection.
-
-**Stateless Firewalls: The Basic Gatekeeper**  
-A stateless firewall examines each packet in isolation, with no memory of previous packets.
-
-- **Analogy:** A bouncer who only checks the date on your ID, but doesn't remember if he just saw you leave the building.
-    
-- **Example Rule:** `Allow TCP port 80`. This rule allows _all_ traffic to port 80, whether it's a legitimate web request or a random malicious packet. It cannot distinguish between a new connection and a response to an existing one.
-    
-
-**Stateful Firewalls: The Intelligent Tracker**  
-A stateful firewall tracks the state of active network connections (e.g., NEW, ESTABLISHED, RELATED). It makes dynamic decisions based on the context of the entire conversation.
-
-- **Analogy:** The same bouncer who now remembers you just went outside for a phone call and lets you back in without checking your ID again.
-    
-- **Example Rule:** A stateful firewall can be configured to "allow outgoing traffic to port 80" and then **automatically allow the returning traffic** because it is part of an `ESTABLISHED` session. It blocks unsolicited incoming traffic that doesn't match a known, active connection.
-    
+In contrast, a **stateful firewall** tracks the state of active network connections—such as NEW, ESTABLISHED, or RELATED—dramatically improving security. A **stateful firewall** can dynamically allow returning traffic for an outgoing connection it previously permitted, while blocking unsolicited incoming requests. While all modern firewalls are used in a stateful manner, their implementation differs. Some, like nftables, PF, and ipfw, are inherently stateful, with connection tracking as a core feature. Others, like the Linux iptables framework, achieve statefulness through the addition of the `conntrack` module and specific rules, which is considered a standard practice. Tools like UFW and systems like OPNsense/pfSense configure their underlying engines to be stateful by default.
 
 **How Statefulness is Implemented in Common Tools**
 
-While all modern firewalls are stateful, the way they achieve this varies:
+| Firewall               | Stateful?            | Key Detail & Example                                                                                                                |
+| ---------------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| **nftables, PF, ipfw** | **Inherently**       | Stateful tracking is a built-in, core feature. (e.g., PF uses `pass in proto tcp to port 22 keep state`)                            |
+| **OPNsense / pfSense** | **Inherently**       | As distributions built on PF, statefulness is a fundamental, non-optional feature.                                                  |
+| **iptables**           | **By Configuration** | Relies on the `conntrack` module. A rule like `-A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT` enables statefulness. |
+| **UFW**                | **By Default**       | As a front-end, it configures the underlying engine (iptables/nftables) to be stateful by default for ease of use.                  |
 
-|Firewall|Stateful?|Key Detail & Example|
-|---|---|---|
-|**nftables, PF, ipfw**|**Inherently**|Stateful tracking is a built-in, core feature. (e.g., PF uses `pass in proto tcp to port 22 **keep state**`)|
-|**OPNsense / pfSense**|**Inherently**|As distributions built on PF, statefulness is a fundamental, non-optional feature.|
-|**iptables**|**By Configuration**|Relies on the `conntrack` module. A rule like `-A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT` enables statefulness.|
-|**UFW**|**By Default**|As a front-end, it configures the underlying engine (iptables/nftables) to be stateful by default for ease of use.|
-
-
-**Stateless vs Stateful Firewalls Diagram**
+**Stateless vs Stateful Firewalls**
 
 ```
 Stateless Firewall:
@@ -108,15 +78,6 @@ Stateful Firewall:
 ```
 
 
-Statefulness is not an inherent property of the basic technology in all cases. Statefulness is a key feature that these systems implement.
-
-**The Stateful vs. Stateless Distinction**
-
-- **Stateless Firewall:** Looks at each network packet in isolation. It doesn't remember previous packets. A rule like "allow TCP port 80" means _all_ packets to port 80 are allowed, regardless of whether they are part of a new connection or a random malicious packet.
-    
-- **Stateful Firewall:** Tracks the state of active connections (e.g., SYN, SYN-ACK, ESTABLISHED, RELATED, FIN) to make dynamic decisions. A stateful firewall understands sessions. It can tell the difference between an outgoing request to a web server and the returning traffic, and it can automatically allow the return traffic for an established session. This is a fundamental security improvement.
-
-
 **Common States in `conntrack`**
 
 | State           | Meaning                                                                          |
@@ -125,18 +86,6 @@ Statefulness is not an inherent property of the basic technology in all cases. S
 | **ESTABLISHED** | Packets belonging to an already-seen connection (e.g., TCP handshake completed). |
 | **RELATED**     | Packets related to an existing connection (e.g., FTP data connection).           |
 | **INVALID**     | Malformed or suspicious packets (e.g., TCP RST without prior connection).        |
-
-#### Summary Table
-
-|Firewall|Stateful?|Key Detail|
-|---|---|---|
-|**iptables**|**Yes (by configuration)**|Requires `conntrack` module and rules using `--state`/`--ctstate`. This is the standard way it's used.|
-|**nftables**|**Yes (inherently)**|Connection tracking (`ct`) is a core component of the modern nftables framework.|
-|**PF**|**Yes (inherently)**|Stateful filtering (`keep state`) is a default and fundamental feature.|
-|**ipfw**|**Yes (inherently)**|Uses `keep-state` and `check-state` commands for stateful inspection.|
-|**UFW**|**Yes (by default)**|As a wrapper, it configures the underlying iptables/nftables to be stateful by default.|
-|**OPNsense**|**Yes (inherently)**|Built on PF, so stateful inspection is a core, non-optional feature.|
-|**pfSense**|**Yes (inherently)**|Built on PF, so stateful inspection is a core, non-optional feature.|
 
 
 UFW, iptables, nftables, PF, ipfw, OPNsense, and pfSense (CE) are all considered packet filtering firewalls, but some have evolved into more sophisticated frameworks.

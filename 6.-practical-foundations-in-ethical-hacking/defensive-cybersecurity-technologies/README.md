@@ -131,10 +131,6 @@ The key differences between a traditional packet filtering firewall and an NGFW 
 |**Traffic Inspection**|Header-only|**Deep Packet Inspection (DPI)** of payload|
 |**Additional Features**|Basic NAT, basic logging|**IPS, Anti-Virus, Threat Intelligence, Identity Awareness**|
 
-#### Traffic Shaping
-
-Traffic shaping is the active control of network traffic characteristics to enforce QoS policies, primarily implemented through queuing disciplines (qdiscs) and schedulers that manage packet buffers on egress interfaces. The core algorithmic model is the token bucket filter, which defines a bucket that fills with tokens at a specified rate (the committed information rate, or CIR) up to a defined burst capacity. Each packet requires a token of size proportional to its length to be transmitted; if the bucket is empty, the packet is delayed in a queue rather than immediately dropped (which would be policing). This mechanism smooths traffic bursts and enforces bandwidth ceilings.
-
 ---
 ### Stateless vs stateful firewalls pros and cons
 

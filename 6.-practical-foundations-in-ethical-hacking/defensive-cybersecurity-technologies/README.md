@@ -115,6 +115,17 @@ UFW, iptables, nftables, PF, ipfw, OPNsense, and pfSense (CE) are all considered
 | **RELATED**     | Packets related to an existing connection (e.g., FTP data connection).           |
 | **INVALID**     | Malformed or suspicious packets (e.g., TCP RST without prior connection).        |
 
+**Stateless vs. Stateful Firewalls: A Summary**
+
+| Feature                               | Stateless Firewall                                                                                                 | Stateful Firewall                                                                                                                                                              |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Context-Aware Traffic Filtering**   | **None.** Examines each packet in isolation with no memory of previous packets.                                    | **Full.** Tracks the state of active connections (e.g., ESTABLISHED, RELATED) to make dynamic decisions.                                                                       |
+| **Security Against Attacks**          | **Limited.** Cannot detect or block protocol-based attacks like TCP SYN floods or session hijacking.               | **Advanced.** Can identify and block malicious traffic that abuses protocol states and unauthorized packets not part of a valid session.                                       |
+| **Protection Against Spoofing & DoS** | **Basic.** Can only block based on static IP/port rules, offering minimal protection against spoofing or flooding. | **Robust.** Recognizes abnormal traffic patterns (e.g., unexpected RST packets) and can enforce rate limiting per connection.                                                  |
+| **Granular Control Over Sessions**    | **Static.** Rules are fixed; cannot dynamically adjust for multi-stage protocols.                                  | **Dynamic.** Can enforce policies based on connection state (e.g., allow only "established" or "related" traffic) and temporarily open ports for related sessions (e.g., FTP). |
+| **Support of Complex Protocols**      | **Poor.** Cannot handle protocols like FTP, SIP, or VoIP that require dynamic port negotiation.                    | **Excellent.** Tracks control sessions to automatically manage the data channels for complex protocols.                                                                        |
+| **Performance**                       | **Lower resource usage** per packet, making it suitable for very high-speed, simple filtering tasks.               | **Higher initial resource overhead** for connection tracking, but more efficient for managing traffic within established sessions.                                             |
+
 #### Advanced firewall types
 
 **Proxy Firewalls**
@@ -154,49 +165,7 @@ The key differences between a traditional packet filtering firewall and an NGFW 
 UFW, iptables, nftables, PF, ipfw, OPNsense, and pfSense (CE) all have their foundation in packet filtering, and they can all be considered stateful packet filtering firewalls,
 but some have evolved into more sophisticated frameworks, notably:
 
-- **pfSense and OPNsense:** These are complete, GUI-based firewall _distributions_ (operating systems). They use **PF (Packet Filter)** as their core _packet filtering engine_. However, the systems themselves are full-featured **Next-Generation Firewalls (NGFWs)** because they include many features beyond simple packet filtering (see below).
-
----
-**Stateless vs stateful firewalls pros and cons**
-
-Stateful and stateless firewalls serve different purposes in network security, each with its own advantages. Here’s a comparison highlighting the **advantages of stateful firewalls over stateless firewalls**:
-
-**Advantages of Stateful Firewalls:**
-
-Most modern firewalls (e.g., NGFW) are stateful by default due to their security advantages.
-
-1. **Context-Aware Traffic Filtering**
-   * Stateful firewalls track the **state** of active connections (e.g., TCP handshakes, UDP sessions), allowing them to make smarter decisions.
-   * Example: Only allows inbound traffic if it’s part of an established outbound connection.
-2. **Better Security Against Attacks**
-   * Can detect and block malicious traffic that abuses protocol states (e.g., TCP SYN floods, session hijacking).
-   * Prevents unauthorized traffic that doesn’t match an existing connection.
-3. **Granular Control Over Sessions**
-   * Can enforce policies based on connection state (e.g., allow only "established" or "related" traffic).
-   * Supports dynamic rule adjustments (e.g., temporarily opening ports for FTP data connections).
-4. **Protection Against Spoofing & DoS**
-   * Recognizes abnormal traffic patterns (e.g., unexpected RST or FIN packets).
-   * Can enforce rate limiting per connection.
-5. **Supports Complex Protocols**
-   * Handles protocols like FTP, SIP, and VoIP that use dynamic ports by tracking their control sessions.
-6. **Logging & Monitoring**
-   * Provides detailed logs of connection states, aiding in forensic analysis and troubleshooting.
-
-**Why Stateful Filtering is Useful**
-
-✅ **Simpler Rules**: No need to manually allow reply traffic.\
-✅ **Security**: Blocks unsolicited/invalid packets (e.g., spoofed ACKs).\
-✅ **Performance**: Faster than checking every packet against all rules.
-
-**When Stateless Firewalls Are Better:**
-
-Stateless firewalls (ACLs) are simpler and faster but lack intelligence. They are useful for:
-
-* High-speed networks where performance is critical (e.g., backbone routers).
-* Simple packet filtering based on static rules (e.g., IP/port blocking).
-* Environments where connection tracking isn’t needed.
-
-
+- **pfSense and OPNsense:** These are complete, GUI-based firewall _distributions_ (operating systems). They use **PF (Packet Filter)** as their core _packet filtering engine_. However, the systems themselves are full-featured **Next-Generation Firewalls (NGFWs)** because they include many features beyond simple packet filtering.
 
 #### Firewalls key features
 

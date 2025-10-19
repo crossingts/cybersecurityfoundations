@@ -57,6 +57,10 @@ A stateful firewall tracks the state of active connections (e.g., SYN, SYN-ACK, 
 
 In contrast, a **stateful firewall** tracks the state of active network connections—such as NEW, ESTABLISHED, or RELATED—dramatically improving security. A **stateful firewall** can dynamically allow returning traffic for an outgoing connection it previously permitted, while blocking unsolicited incoming requests. While all modern firewalls are used in a stateful manner, their implementation differs. Some, like nftables, PF, and ipfw, are inherently stateful, with connection tracking as a core feature. Others, like the Linux iptables framework, achieve statefulness through the addition of the `conntrack` module and specific rules, which is considered a standard practice. Tools like UFW and systems like OPNsense/pfSense configure their underlying engines to be stateful by default.
 
+A stateless firewall performs packet filtering based solely on the static rule set and the headers of the individual packet in question, with no memory of prior packets. This necessitates explicit, bidirectional rules for any permitted communication. For example, to allow outbound HTTP, you would need one rule permitting TCP from an internal network to port 80 on any host, and a corresponding rule permitting TCP from any host on port 80 back to the internal network. This model cannot distinguish a legitimate HTTP response from an unsolicited incoming connection attempt, creating a larger attack surface. While stateless filtering is computationally cheaper and thus persists in high-throughput core routing (e.g., basic ACLs on Cisco IOS) or specific DDoS mitigation layers, its inherent limitations in security and administrative overhead have relegated it to niche roles.
+
+In comparison, a stateful firewall operates at the network and transport layers but maintains a dynamic state table, often implemented within the kernel's connection tracking subsystem (`conntrack` in Linux, `pfstate` in OpenBSD). This table holds entries for each active session (e.g., source/destination IP, source/destination port, and protocol) and the TCP state (e.g., SYN_SENT, ESTABLISHED, and FIN_WAIT). For a TCP handshake, the firewall inspects the initial SYN packet, creates a state, and then validates the returning SYN-ACK against that state before permitting it. This allows for a fundamental rule simplification: a single `pass out` rule for an outgoing connection implicitly creates a temporary, dynamic `pass in` rule for the return traffic. Stateful inspection is the de facto standard in modern firewalls like PF (where `keep state` is the default on `pass` rules) and nftables (which leverages the `ct` expression for state matching).
+
 **How Statefulness is Implemented in Common Tools**
 
 | Firewall               | Stateful?            | Key Detail & Example                                                                                                                |
@@ -86,7 +90,6 @@ Stateful Firewall:
 | **ESTABLISHED** | Packets belonging to an already-seen connection (e.g., TCP handshake completed). |
 | **RELATED**     | Packets related to an existing connection (e.g., FTP data connection).           |
 | **INVALID**     | Malformed or suspicious packets (e.g., TCP RST without prior connection).        |
-
 
 UFW, iptables, nftables, PF, ipfw, OPNsense, and pfSense (CE) are all considered packet filtering firewalls, but some have evolved into more sophisticated frameworks.
 Furthermore, 
@@ -127,6 +130,10 @@ The key differences between a traditional packet filtering firewall and an NGFW 
 |**Connection Awareness**|Stateless or Stateful|**Stateful** by default|
 |**Traffic Inspection**|Header-only|**Deep Packet Inspection (DPI)** of payload|
 |**Additional Features**|Basic NAT, basic logging|**IPS, Anti-Virus, Threat Intelligence, Identity Awareness**|
+
+#### Traffic Shaping
+
+Traffic shaping is the active control of network traffic characteristics to enforce QoS policies, primarily implemented through queuing disciplines (qdiscs) and schedulers that manage packet buffers on egress interfaces. The core algorithmic model is the token bucket filter, which defines a bucket that fills with tokens at a specified rate (the committed information rate, or CIR) up to a defined burst capacity. Each packet requires a token of size proportional to its length to be transmitted; if the bucket is empty, the packet is delayed in a queue rather than immediately dropped (which would be policing). This mechanism smooths traffic bursts and enforces bandwidth ceilings.
 
 ---
 ### Stateless vs stateful firewalls pros and cons

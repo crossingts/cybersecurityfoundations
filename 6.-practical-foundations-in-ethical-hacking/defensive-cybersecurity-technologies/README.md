@@ -55,11 +55,6 @@ Packet filtering firewalls can be contrasted with:
 2. Application-Level Gateways (Proxy Firewalls)
 3. Next-Generation Firewalls (NGFWs)
 
-**Stateful Inspection Firewalls**  
-
-While basic packet filters look at each packet in isolation, stateful firewalls track the state of active connections.
-
-A packet filter might have a rule "Allow incoming traffic to port 80." A stateful firewall understands if the traffic on port 80 is a response to an internal request (part of an established connection) or an unsolicited new connection, providing much stronger security.
 
 **Stateless vs Stateful Firewalls Diagram**
 
@@ -75,61 +70,12 @@ Stateful Firewall:
 
 Statefulness is not an inherent property of the basic technology in all cases. Statefulness is a key feature that these systems implement.
 
-Let's break it down.
-
 **The Stateful vs. Stateless Distinction**
 
 - **Stateless Firewall:** Looks at each network packet in isolation. It doesn't remember previous packets. A rule like "allow TCP port 80" means _all_ packets to port 80 are allowed, regardless of whether they are part of a new connection or a random malicious packet.
     
 - **Stateful Firewall:** Tracks the state of active connections (e.g., SYN, SYN-ACK, ESTABLISHED, RELATED, FIN) to make dynamic decisions. A stateful firewall understands sessions. It can tell the difference between an outgoing request to a web server and the returning traffic, and it can automatically allow the return traffic for an established session. This is a fundamental security improvement.
 
-**These are Inherently Stateful:**
-
-- **nftables:** Has a built-in state machine (`ct state`) and connection tracking is a core part of its design.
-    
-- **PF (Packet Filter):** Stateful filtering is a fundamental and default feature. The `keep state` and `modulate state` options are central to its rule syntax.
-    
-- **ipfw:** Has a built-in stateful mechanism using the `check-state`, `keep-state`, and `limit` keywords in its rules.
-    
-- **OPNsense & pfSense (CE):** As firewall distributions built on top of **PF**, they inherit and fully utilize its stateful capabilities. Stateful inspection is a core, non-negotiable part of their operation.
-
-**keep state in PF (OpenBSD Packet Filter)**
-
-**`keep state` (PF) or `--ctstate` (iptables)** = Enables stateful filtering.
-
-*   When PF sees a rule like:
-
-    sh
-
-    ```
-    pass in proto tcp from any to 192.168.1.1 port 22 keep state
-    ```
-
-    * It **allows** the initial packet (e.g., TCP SYN).
-    * Then, it **automatically permits** subsequent packets in the same flow (ACKs, data, etc.) without requiring additional rules.
-    * It also **blocks** packets that don’t match a known state (e.g., unsolicited responses).
-
-
-**Stateful by Use (Requires Explicit Configuration):**
-
-- **iptables:** This is the most important case. iptables itself is a framework that _can_ be stateful, but it requires the connection tracking module (`conntrack`) and rules that use the `--state` or `--ctstate` match.
-    
-    - A rule like `-A INPUT -p tcp --dport 80 -j ACCEPT` is **stateless**.
-        
-    - A rule like `-A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT` is what makes the firewall **stateful**. This is considered a best practice and is how iptables is almost always used in modern configurations.
-        
-- **UFW (Uncomplicated Firewall):** As a front-end for iptables/nftables, UFW simplifies this. **By default, UFW is configured to be stateful.** Its default rules and profile setup heavily rely on tracking connection states for ease of use and security.
-
-**Connection Tracking (`conntrack`)**
-
-* **Definition:** `conntrack` (connection tracking) is a subsystem in the Linux kernel (part of Netfilter) that monitors and records the state of network connections (e.g., TCP, UDP, ICMP).
-* **Purpose:** It allows iptables/nftables to make decisions based on the **state** of a connection rather than just individual packets.
-
-**How It Works**
-
-* When a packet arrives, `conntrack` checks if it belongs to an **existing connection** (e.g., an ongoing TCP session).
-* If it's a **new connection**, it gets logged in a connection tracking table (`/proc/net/nf_conntrack`).
-* Subsequent packets are matched against this table to determine if they are part of an established, related, or invalid connection.
 
 **Common States in `conntrack`**
 
@@ -140,18 +86,7 @@ Let's break it down.
 | **RELATED**     | Packets related to an existing connection (e.g., FTP data connection).           |
 | **INVALID**     | Malformed or suspicious packets (e.g., TCP RST without prior connection).        |
 
-**Example Rule (iptables)**
-
-sh
-
-```
-iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
-```
-
-This rule **allows** packets that are part of an existing or related connection.
-
-
-### Summary Table
+#### Summary Table
 
 |Firewall|Stateful?|Key Detail|
 |---|---|---|
@@ -165,11 +100,6 @@ This rule **allows** packets that are part of an existing or related connection.
 
 **Application-Level Gateways (Proxy Firewalls)**  
 
-These operate at Layer 7 (the Application layer). Instead of just forwarding packets, they act as an intermediary.
-
-A proxy firewall terminates the client connection and initiates a new one to the server on its behalf. It can inspect the actual content of the traffic (e.g., specific HTTP commands, SQL queries, etc.), which a Layer 3/4 packet filter is completely blind to.
-
-Most firewalls now have some form of proxy server architecture. 
 
 **Next-Generation Firewalls (NGFWs)**
 
@@ -193,10 +123,10 @@ NGFWs can perform stateful and Application layer packet filtering, in addition t
 |**Traffic Inspection**|Header-only|**Deep Packet Inspection (DPI)** of payload|
 |**Additional Features**|Basic NAT, basic logging|**IPS, Anti-Virus, Threat Intelligence, Identity Awareness**|
 
-In conclusion, while tools like `iptables` and `PF` are powerful and effective stateful packet filters, they are contrasted with more advanced firewalls that can see and control _what_ is inside the traffic, not just _where_ it's coming from and going to.
 
 
 
+---
 ### Stateless vs stateful firewalls pros and cons
 
 Stateful and stateless firewalls serve different purposes in network security, each with its own advantages. Here’s a comparison highlighting the **advantages of stateful firewalls over stateless firewalls**:

@@ -97,38 +97,15 @@ UFW, iptables, nftables, PF, ipfw, OPNsense, and pfSense (CE) are all considered
 
 #### **3. Beyond Packet Filtering: Advanced Firewall Types**
 
+**Proxy Firewalls**
+
 While powerful, packet filtering firewalls are primarily concerned with _where_ traffic is going (IPs and ports). They are contrasted with more advanced firewalls that operate at higher layers and can inspect _what_ is inside the traffic. **Application-Level Gateways**, or **proxy firewalls**, operate at the Application Layer (Layer 7). Instead of simply forwarding packets, they act as an intermediary, terminating client connections and initiating new ones to the server. This allows them to inspect the actual content of the traffic, such as specific HTTP commands, SQL queries or malicious URLs, which a Layer 3/4 packet filter is blind to.
 
-
 **Next-Generation Firewalls (NGFWs)**  
+
+The modern evolution is the **Next-Generation Firewall (NGFW)**, which incorporates and expands upon all previous capabilities. An NGFW performs stateful packet inspection but also integrates features like **Deep Packet Inspection (DPI)** to identify specific applications (e.g., "This is Facebook," not just "HTTP on port 80"), **Intrusion Prevention Systems (IPS)** to block known attack patterns, and identity awareness to enforce policies based on users, not just IP addresses.
+
 NGFWs represent the modern evolution, incorporating the features of all previous types and adding advanced security integrations.
-
-An NGFW includes everything a stateful packet filter does, but also adds:
-
-- **Deep Packet Inspection (DPI):** Looks _inside_ the packet payload to identify specific applications (e.g., "This is Facebook," not just "HTTP traffic on port 80").
-    
-- **Integrated Intrusion Prevention System (IPS):** Actively blocks known attack patterns and vulnerabilities within the traffic flow.
-    
-- **Identity & User Awareness:** Enforces policies based on user or group identity (e.g., from Active Directory), not just IP addresses.
-    
-- **Threat Intelligence Feeds:** Leverages cloud-based data to block traffic from known malicious sources in real-time.
-    
-
-**Summary & Comparison**
-
-|Feature|Packet Filtering Firewall|Next-Generation Firewall (NGFW)|
-|---|---|---|
-|**Primary OSI Layer**|**Layers 3 & 4**|**Layers 3-7**|
-|**Decision Basis**|IP, Port, Protocol|**IP, Port, Protocol, Application, User, Content**|
-|**Connection Awareness**|Stateless or Stateful|**Stateful by default**|
-|**Traffic Inspection**|Header-only|**Deep Packet Inspection (DPI)**|
-|**Advanced Features**|Basic NAT, Logging|**IPS, Anti-Virus, Threat Intelligence, Identity Awareness**|
-
-
-**Next-Generation Firewalls (NGFWs)**
-
-Packet filtering firewalls are the oldest and most basic type. 
-Packet filtering firewalls can be contrasted with firewalls that operate at higher layers of the OSI model and make more intelligent packet filtering decisions.
 
 NGFWs provide a more comprehensive, intelligent, and application-aware security posture for modern networks.
 
@@ -137,13 +114,11 @@ NGFWs can perform stateful and Application layer packet filtering, in addition t
 - **Deep Packet Inspection (DPI):** Looking _inside_ the packet payload (like a proxy) to identify applications (e.g., "This is Facebook traffic," not just "HTTP traffic on port 80").
 - **Integrated Intrusion Prevention Systems (IPS):** Actively blocking known threats and attack patterns within the traffic flow.
 - **User & Group Identity Integration:** Blocking or allowing traffic based on user identity (e.g., from Active Directory), not just IP address.
-- **Threat Intelligence Feeds:** Leveraging cloud-based data to block traffic from known malicious sources.
+- **Threat Intelligence Feeds:** Leveraging cloud-based data to block traffic from known malicious sources in real time.
 
-The modern evolution is the **Next-Generation Firewall (NGFW)**, which incorporates and expands upon all previous capabilities. An NGFW performs stateful packet inspection but also integrates features like **Deep Packet Inspection (DPI)** to identify specific applications (e.g., "This is Facebook," not just "HTTP on port 80"), **Intrusion Prevention Systems (IPS)** to block known attack patterns, and identity awareness to enforce policies based on users, not just IP addresses.
+**Summary & Comparison**
 
 The key differences between a traditional packet filtering firewall and an NGFW can be summarized as follows:
-
-**Summary Table**
 
 |Feature|Packet Filtering Firewall|Next-Generation Firewall (NGFW)|
 |---|---|---|
@@ -192,7 +167,6 @@ Stateless firewalls (ACLs) are simpler and faster but lack intelligence. They ar
 * High-speed networks where performance is critical (e.g., backbone routers).
 * Simple packet filtering based on static rules (e.g., IP/port blocking).
 * Environments where connection tracking isn’t needed.
-
 
 
 **Underlying Systems of Common Packet-Filtering Firewalls (Summary Table)**
@@ -326,16 +300,6 @@ PF handles high traffic efficiently (better than iptables in some cases).
 | **PF (pfilter)** | Host/Network | OpenBSD, macOS | No (CLI)  | Moderate    | Yes      | Yes | Manual            | No (add-ons) | Yes                   | Yes  |
 | **OPNsense**     | Network      | FreeBSD        | Yes (Web) | Easy        | Yes      | Yes | OpenVPN/WireGuard | Suricata     | Yes                   | Yes  |
 | **pfSense CE**   | Network      | FreeBSD        | Yes (Web) | Easy        | Yes      | Yes | OpenVPN/IPsec     | Snort        | Yes                   | Yes  |
-
-#### Stateless vs Stateful Firewalls
-
-A stateless firewall performs packet filtering based solely on the static rule set and the headers of the individual packet in question, with no memory of prior packets. This necessitates explicit, bidirectional rules for any permitted communication. For example, to allow outbound HTTP, you would need one rule permitting TCP from an internal network to port 80 on any host, and a corresponding rule permitting TCP from any host on port 80 back to the internal network. This model cannot distinguish a legitimate HTTP response from an unsolicited incoming connection attempt, creating a larger attack surface. While stateless filtering is computationally cheaper and thus persists in high-throughput core routing (e.g., basic ACLs on Cisco IOS) or specific DDoS mitigation layers, its inherent limitations in security and administrative overhead have relegated it to niche roles.
-
-In comparison, a stateful firewall operates at the network and transport layers but maintains a dynamic state table, often implemented within the kernel's connection tracking subsystem (`conntrack` in Linux, `pfstate` in OpenBSD). This table holds entries for each active session (e.g., source/destination IP, source/destination port, and protocol) and the TCP state (e.g., SYN_SENT, ESTABLISHED, and FIN_WAIT). For a TCP handshake, the firewall inspects the initial SYN packet, creates a state, and then validates the returning SYN-ACK against that state before permitting it. This allows for a fundamental rule simplification: a single `pass out` rule for an outgoing connection implicitly creates a temporary, dynamic `pass in` rule for the return traffic. Stateful inspection is the de facto standard in modern firewalls like PF (where `keep state` is the default on `pass` rules) and nftables (which leverages the `ct` expression for state matching).
-
-#### Traffic Shaping
-
-Traffic shaping is the active control of network traffic characteristics to enforce QoS policies, primarily implemented through queuing disciplines (qdiscs) and schedulers that manage packet buffers on egress interfaces. The core algorithmic model is the token bucket filter, which defines a bucket that fills with tokens at a specified rate (the committed information rate, or CIR) up to a defined burst capacity. Each packet requires a token of size proportional to its length to be transmitted; if the bucket is empty, the packet is delayed in a queue rather than immediately dropped (which would be policing). This mechanism smooths traffic bursts and enforces bandwidth ceilings.
 
 **Firewall Selection Guide**
 

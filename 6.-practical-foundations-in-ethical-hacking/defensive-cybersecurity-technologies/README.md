@@ -63,6 +63,19 @@ While basic packet filters look at each packet in isolation, stateful firewalls 
 
 A packet filter might have a rule "Allow incoming traffic to port 80." A stateful firewall understands if the traffic on port 80 is a response to an internal request (part of an established connection) or an unsolicited new connection, providing much stronger security.
 
+**Stateless vs Stateful Firewalls Diagram**
+
+```
+Stateless Firewall:
+  [Packet] → [Check Rules] → Allow/Drop
+
+Stateful Firewall:
+  [Packet] → [Check State Table] → [Update State] → Allow/Drop
+          ↳ (e.g., "Is this a reply to an existing SSH session?")
+```
+
+
+
 We've established that UFW, iptables, nftables, PF, ipfw, OPNsense, and pfSense (CE) are all considered packet filtering firewalls. Are they all also considered stateful ?
 
 Statefulness is not an inherent property of the basic technology in all cases. Statefulness is a key feature that these systems implement.
@@ -170,6 +183,13 @@ Therefore, in modern practical terms, **yes, they are all considered stateful pa
 
 ---
 
+Packet filtering firewalls can be contrasted with:
+
+1. Stateful Inspection Firewalls
+2. Application-Level Gateways (Proxy Firewalls)
+3. Next-Generation Firewalls (NGFWs)
+
+
 **Application-Level Gateways (Proxy Firewalls)**  
 
 These operate at Layer 7 (the Application layer). Instead of just forwarding packets, they act as an intermediary.
@@ -216,18 +236,7 @@ BSD-based firewalls use networking and security tools native to BSD systems. BSD
 | **NetBSD**         | **NPF** or **IPFilter**                | Less common in firewalls.                                                       |
 | **macOS (Darwin)** | **ipfw (legacy)** / **PF (partially)** | macOS inherited some BSD firewall tools.                                        |
 
-### Stateless vs stateful firewalls
-
-**Stateless vs Stateful Firewalls Diagram**
-
-```
-Stateless Firewall:
-  [Packet] → [Check Rules] → Allow/Drop
-
-Stateful Firewall:
-  [Packet] → [Check State Table] → [Update State] → Allow/Drop
-          ↳ (e.g., "Is this a reply to an existing SSH session?")
-```
+### Stateless vs stateful firewalls pros and cons
 
 Stateful and stateless firewalls serve different purposes in network security, each with its own advantages. Here’s a comparison highlighting the **advantages of stateful firewalls over stateless firewalls**:
 
@@ -267,25 +276,8 @@ Stateless firewalls (ACLs) are simpler and faster but lack intelligence. They ar
 * Environments where connection tracking isn’t needed.
 
 
-**Roots of Common Packet-Filtering Firewalls**
 
-```
-Linux Kernel:
-  └─ Netfilter (Framework)
-      ├─ iptables → firewalld/UFW (Frontends) (Legacy)
-      └─ nftables (Modern Replacement)
-
-BSD Kernel:
-  └─ PF (OpenBSD) → Used in OPNsense/pfSense
-  └─ ipfw (FreeBSD) → Legacy
-
-Windows:
-  └─ Windows Filtering Platform (WFP)
-```
-
-Windows Filtering Platform (WFP) is Microsoft’s built-in firewall (CLI: `netsh advfirewall`).
-
-**Underlying Systems Summary Table**
+**Underlying Systems of Common Packet-Filtering Firewalls (Summary Table)**
 
 | Firewall     | Underlying System | OS Family       | Notes                             |
 | ------------ | ----------------- | --------------- | --------------------------------- |
@@ -294,6 +286,8 @@ Windows Filtering Platform (WFP) is Microsoft’s built-in firewall (CLI: `netsh
 | **PF**       | BSD Kernel        | OpenBSD/FreeBSD | Powers OPNsense/pfSense.          |
 | **ipfw**     | BSD Kernel        | FreeBSD/macOS   | Older, simpler than PF.           |
 | **WFP**      | Windows Kernel    | Windows         | Native firewall for Windows.      |
+
+Windows Filtering Platform (WFP) is Microsoft’s built-in firewall (CLI: `netsh advfirewall`).
 
 ### Web Application Firewalls (WAFs)
 

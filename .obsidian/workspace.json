@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/nftables.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "nftables"
+              "title": "README"
             }
           }
         ]
@@ -185,9 +185,9 @@
   "lastOpenFiles": [
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/firewalls.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md",
+    "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/nftables.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/firewalls/README.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/opnsense.md",
-    "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/nftables.md",
     "5.-cryptography-and-wireless-security/how-ssl-tls-uses-cryptography/README.md",
     "Pasted image 20251017114230.png",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing/README.md",

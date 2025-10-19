@@ -29,46 +29,51 @@ Popular open source host and network firewalls include UFW (Uncomplicated Firewa
 
 Technology focus: nftables and OPNsense.
 
-Key concepts: 
-packet filtering firewalls
-BSD (Berkeley Software Distribution) firewalls
-connection-oriented vs connectionless transmission/communication
-stateful vs stateless firewalls
-Next-Generation Firewalls (NGFWs)
-traffic shaping
+Key firewall concepts include packet filtering firewalls, BSD (Berkeley Software Distribution) firewalls, stateful vs stateless firewalls, and Next-Generation Firewalls (NGFWs).
 
----
+At its most basic, a firewall is a gatekeeper for network traffic. The simplest and oldest type is the packet filtering firewall. 
+Packet-filtering firewall technologies operate at the network level (Layer 3/4). They allow network administrators to define rules for allowing, blocking, or modifying traffic based on IPs, ports, protocols, and connection states.
 
-#### **1. Core Concept: The Packet Filtering Firewall**
-
-At its most basic, a firewall is a gatekeeper for network traffic. The simplest and oldest type is the packet filtering firewall. Packet-filtering firewall technologies operate at the network level (Layer 3/4). They allow network administrators to define rules for allowing, blocking, or modifying traffic based on IPs, ports, protocols, and connection states.
-
-Packet filtering firewalls can be contrasted with:
-
-1. Stateful Inspection Firewalls
-2. Application-Level Gateways (Proxy Firewalls)
-3. Next-Generation Firewalls (NGFWs)
-
-#### **2. Stateless vs. Stateful Firewalls**
+Packet filtering firewalls can be contrasted with stateful inspection firewalls, application-level gateways (proxy firewalls), and Next-Generation Firewalls (NGFWs).
 
 A critical evolution in firewall technology was the shift from stateless to stateful inspection. A **stateless firewall** treats each network packet in isolation, with no memory of previous packets. A rule like "allow TCP port 80" would permit all traffic to that port, regardless of whether it is a legitimate new connection or a random, malicious packet. 
 
-A stateful firewall tracks the state of active connections (e.g., SYN, SYN-ACK, ESTABLISHED, RELATED, FIN) to make dynamic decisions. A stateful firewall understands sessions. It can tell the difference between an outgoing request to a web server and the returning traffic, and it can automatically allow the return traffic for an established session. This is a fundamental security improvement.
+Proxy firewalls...
 
-In contrast, a **stateful firewall** tracks the state of active network connections—such as NEW, ESTABLISHED, or RELATED—dramatically improving security. A **stateful firewall** can dynamically allow returning traffic for an outgoing connection it previously permitted, while blocking unsolicited incoming requests. While all modern firewalls are used in a stateful manner, their implementation differs. Some, like nftables, PF, and ipfw, are inherently stateful, with connection tracking as a core feature. Others, like the Linux iptables framework, achieve statefulness through the addition of the `conntrack` module and specific rules, which is considered a standard practice. Tools like UFW and systems like OPNsense/pfSense configure their underlying engines to be stateful by default.
+NGFWs represent the modern evolution of firewall technologies, incorporating the capabilities of all previous types and adding advanced security integrations. NGFWs can perform stateful and Application layer packet filtering, in addition to more advanced inspection capabilities. 
+
+#### Packet filtering firewalls
+
+UFW, iptables, nftables, PF, ipfw, OPNsense, and pfSense (CE) all have their foundation in packet filtering.
+
+**Underlying Systems of Common Packet-Filtering Firewalls (Summary Table)**
+
+| Firewall                             | Underlying System | OS Family       | Notes                             |
+| ------------------------------------ | ----------------- | --------------- | --------------------------------- |
+| **iptables**                         | Netfilter (Linux) | Linux           | Legacy, replaced by nftables.     |
+| **nftables**                         | Netfilter (Linux) | Linux           | Unifies IPv4/IPv6, better syntax. |
+| **PF**                               | BSD Kernel        | OpenBSD/FreeBSD | Powers OPNsense/pfSense.          |
+| **ipfw**                             | BSD Kernel        | FreeBSD/macOS   | Older, simpler than PF.           |
+| **WFP (Windows Filtering Platform)** | Windows Kernel    | Windows         | Native firewall for Windows.      |
+
+**BSD-Based Firewalls**
+
+BSD-based firewalls use networking and security tools native to BSD systems. BSD stands for Berkeley Software Distribution, a family of **Unix-like operating systems** derived from the original Berkeley Unix (developed at UC Berkeley).
+
+**Key BSD Variants in Firewalling**
+
+| BSD OS             | Firewall Used                          | Notes                                                                           |
+| ------------------ | -------------------------------------- | ------------------------------------------------------------------------------- |
+| **OpenBSD**        | **PF (Packet Filter)**                 | Famously secure/the gold standard for BSD firewalls (used in OPNsense/pfSense). |
+| **FreeBSD**        | **PF** or **ipfw**                     | Supports both, but PF is more modern.                                           |
+| **NetBSD**         | **NPF** or **IPFilter**                | Less common in firewalls.                                                       |
+| **macOS (Darwin)** | **ipfw (legacy)** / **PF (partially)** | macOS inherited some BSD firewall tools.                                        |
+
+#### Stateless vs stateful firewalls
 
 A stateless firewall performs packet filtering based solely on the static rule set and the headers of the individual packet in question, with no memory of prior packets. This necessitates explicit, bidirectional rules for any permitted communication. For example, to allow outbound HTTP, you would need one rule permitting TCP from an internal network to port 80 on any host, and a corresponding rule permitting TCP from any host on port 80 back to the internal network. This model cannot distinguish a legitimate HTTP response from an unsolicited incoming connection attempt, creating a larger attack surface. While stateless filtering is computationally cheaper and thus persists in high-throughput core routing (e.g., basic ACLs on Cisco IOS) or specific DDoS mitigation layers, its inherent limitations in security and administrative overhead have relegated it to niche roles.
 
 In comparison, a stateful firewall operates at the network and transport layers but maintains a dynamic state table, often implemented within the kernel's connection tracking subsystem (`conntrack` in Linux, `pfstate` in OpenBSD). This table holds entries for each active session (e.g., source/destination IP, source/destination port, and protocol) and the TCP state (e.g., SYN_SENT, ESTABLISHED, and FIN_WAIT). For a TCP handshake, the firewall inspects the initial SYN packet, creates a state, and then validates the returning SYN-ACK against that state before permitting it. This allows for a fundamental rule simplification: a single `pass out` rule for an outgoing connection implicitly creates a temporary, dynamic `pass in` rule for the return traffic. Stateful inspection is the de facto standard in modern firewalls like PF (where `keep state` is the default on `pass` rules) and nftables (which leverages the `ct` expression for state matching).
-
-**How Statefulness is Implemented in Common Tools**
-
-| Firewall               | Stateful?            | Key Detail & Example                                                                                                                |
-| ---------------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| **nftables, PF, ipfw** | **Inherently**       | Stateful tracking is a built-in, core feature. (e.g., PF uses `pass in proto tcp to port 22 keep state`)                            |
-| **OPNsense / pfSense** | **Inherently**       | As distributions built on PF, statefulness is a fundamental, non-optional feature.                                                  |
-| **iptables**           | **By Configuration** | Relies on the `conntrack` module. A rule like `-A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT` enables statefulness. |
-| **UFW**                | **By Default**       | As a front-end, it configures the underlying engine (iptables/nftables) to be stateful by default for ease of use.                  |
 
 **Stateless vs Stateful Firewalls**
 
@@ -81,6 +86,25 @@ Stateful Firewall:
           ↳ (e.g., "Is this a reply to an existing SSH session?")
 ```
 
+A stateful firewall tracks the state of active connections (e.g., SYN, SYN-ACK, ESTABLISHED, RELATED, FIN) to make dynamic decisions. A stateful firewall understands sessions. It can tell the difference between an outgoing request to a web server and the returning traffic, and it can automatically allow the return traffic for an established session. This is a fundamental security improvement.
+
+In contrast, a **stateful firewall** tracks the state of active network connections—such as NEW, ESTABLISHED, or RELATED—dramatically improving security. A **stateful firewall** can dynamically allow returning traffic for an outgoing connection it previously permitted, while blocking unsolicited incoming requests. 
+
+While all modern firewalls are used in a stateful manner, their implementation differs. Some, like nftables, PF, and ipfw, are inherently stateful, with connection tracking as a core feature. Others, like the Linux iptables framework, achieve statefulness through the addition of the `conntrack` module and specific rules, which is considered a standard practice. Tools like UFW and systems like OPNsense/pfSense configure their underlying engines to be stateful by default.
+
+UFW, iptables, nftables, PF, ipfw, OPNsense, and pfSense (CE) are all considered stateful packet filtering firewalls, but with nuanced facts:
+- **nftables, PF, ipfw, OPNsense, and pfSense** are architected as **stateful packet filters**.
+- **iptables** is a framework that is almost universally **used as a stateful firewall**, but the statefulness comes from its connection tracking module, not the `iptables` command itself.
+- **UFW** is a tool that **configures a stateful firewall** by default.
+
+**How Statefulness is Implemented in Common Tools**
+
+| Firewall               | Stateful?            | Key Detail & Example                                                                                                                |
+| ---------------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| **nftables, PF, ipfw** | **Inherently**       | Stateful tracking is a built-in, core feature. (e.g., PF uses `pass in proto tcp to port 22 keep state`)                            |
+| **OPNsense / pfSense** | **Inherently**       | As distributions built on PF, statefulness is a fundamental, non-optional feature.                                                  |
+| **iptables**           | **By Configuration** | Relies on the `conntrack` module. A rule like `-A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT` enables statefulness. |
+| **UFW**                | **By Default**       | As a front-end, it configures the underlying engine (iptables/nftables) to be stateful by default for ease of use.                  |
 
 **Common States in `conntrack`**
 
@@ -91,25 +115,23 @@ Stateful Firewall:
 | **RELATED**     | Packets related to an existing connection (e.g., FTP data connection).           |
 | **INVALID**     | Malformed or suspicious packets (e.g., TCP RST without prior connection).        |
 
-UFW, iptables, nftables, PF, ipfw, OPNsense, and pfSense (CE) are all considered packet filtering firewalls, but some have evolved into more sophisticated frameworks.
-Furthermore, 
-UFW, iptables, nftables, PF, ipfw, OPNsense, and pfSense (CE) are all considered stateful packet filtering firewalls, but with nuanced facts:
-- **nftables, PF, ipfw, OPNsense, and pfSense** are architected as **stateful packet filters**.
-- **iptables** is a framework that is almost universally **used as a stateful firewall**, but the statefulness comes from its connection tracking module, not the `iptables` command itself.
-- **UFW** is a tool that **configures a stateful firewall** by default.
-
-#### **3. Beyond Packet Filtering: Advanced Firewall Types**
+#### Advanced firewall types
 
 **Proxy Firewalls**
 
 While powerful, packet filtering firewalls are primarily concerned with _where_ traffic is going (IPs and ports). They are contrasted with more advanced firewalls that operate at higher layers and can inspect _what_ is inside the traffic. **Application-Level Gateways**, or **proxy firewalls**, operate at the Application Layer (Layer 7). Instead of simply forwarding packets, they act as an intermediary, terminating client connections and initiating new ones to the server. This allows them to inspect the actual content of the traffic, such as specific HTTP commands, SQL queries or malicious URLs, which a Layer 3/4 packet filter is blind to.
 
+**Web Application Firewalls (WAFs):**
+A Web Application Firewall (WAF) operates with a specialized focus, distinct from traditional network firewalls. Its key characteristics include a scope centered on inspecting the actual payload of web traffic to block specific attack patterns like SQL injection (SQLi) or cross-site scripting (XSS). This is enabled by its deep Layer 7 awareness, as it performs deep packet inspection to understand protocols like HTTP and DNS. This granular analysis, however, typically comes with a higher performance impact compared to packet filters, as it requires parsing the full contents of packets. WAFs can be deployed in different forms to suit various architectural needs, as shown in the table below.
+
+| Type                  | Example Tools                         | Deployment                                                                                |
+| --------------------- | ------------------------------------- | ----------------------------------------------------------------------------------------- |
+| **Host-Based WAF**    | ModSecurity (Apache/Nginx plugin)     | Runs directly on the web server itself (e.g., as a module).                               |
+| **Network-Based WAF** | Cloudflare WAF, HAProxy + ModSecurity | Deployed as a standalone appliance or cloud service, protecting multiple backend servers. |
+
 **Next-Generation Firewalls (NGFWs)**  
 
-The modern evolution is the **Next-Generation Firewall (NGFW)**, which incorporates and expands upon all previous capabilities. An NGFW performs stateful packet inspection but also integrates features like **Deep Packet Inspection (DPI)** to identify specific applications (e.g., "This is Facebook," not just "HTTP on port 80"), **Intrusion Prevention Systems (IPS)** to block known attack patterns, and identity awareness to enforce policies based on users, not just IP addresses.
-
-NGFWs represent the modern evolution, incorporating the features of all previous types and adding advanced security integrations.
-
+The modern evolution is the **Next-Generation Firewall (NGFW)**, which incorporates and expands upon all previous capabilities. 
 NGFWs provide a more comprehensive, intelligent, and application-aware security posture for modern networks.
 
 NGFWs can perform stateful and Application layer packet filtering, in addition to:
@@ -118,8 +140,6 @@ NGFWs can perform stateful and Application layer packet filtering, in addition t
 - **Integrated Intrusion Prevention Systems (IPS):** Actively blocking known threats and attack patterns within the traffic flow.
 - **User & Group Identity Integration:** Blocking or allowing traffic based on user identity (e.g., from Active Directory), not just IP address.
 - **Threat Intelligence Feeds:** Leveraging cloud-based data to block traffic from known malicious sources in real time.
-
-**Summary & Comparison**
 
 The key differences between a traditional packet filtering firewall and an NGFW can be summarized as follows:
 
@@ -131,8 +151,13 @@ The key differences between a traditional packet filtering firewall and an NGFW 
 |**Traffic Inspection**|Header-only|**Deep Packet Inspection (DPI)** of payload|
 |**Additional Features**|Basic NAT, basic logging|**IPS, Anti-Virus, Threat Intelligence, Identity Awareness**|
 
+UFW, iptables, nftables, PF, ipfw, OPNsense, and pfSense (CE) all have their foundation in packet filtering, and they can all be considered stateful packet filtering firewalls,
+but some have evolved into more sophisticated frameworks, notably:
+
+- **pfSense and OPNsense:** These are complete, GUI-based firewall _distributions_ (operating systems). They use **PF (Packet Filter)** as their core _packet filtering engine_. However, the systems themselves are full-featured **Next-Generation Firewalls (NGFWs)** because they include many features beyond simple packet filtering (see below).
+
 ---
-### Stateless vs stateful firewalls pros and cons
+**Stateless vs stateful firewalls pros and cons**
 
 Stateful and stateless firewalls serve different purposes in network security, each with its own advantages. Here’s a comparison highlighting the **advantages of stateful firewalls over stateless firewalls**:
 
@@ -171,47 +196,6 @@ Stateless firewalls (ACLs) are simpler and faster but lack intelligence. They ar
 * Simple packet filtering based on static rules (e.g., IP/port blocking).
 * Environments where connection tracking isn’t needed.
 
-
-**Underlying Systems of Common Packet-Filtering Firewalls (Summary Table)**
-
-| Firewall     | Underlying System | OS Family       | Notes                             |
-| ------------ | ----------------- | --------------- | --------------------------------- |
-| **iptables** | Netfilter (Linux) | Linux           | Legacy, replaced by nftables.     |
-| **nftables** | Netfilter (Linux) | Linux           | Unifies IPv4/IPv6, better syntax. |
-| **PF**       | BSD Kernel        | OpenBSD/FreeBSD | Powers OPNsense/pfSense.          |
-| **ipfw**     | BSD Kernel        | FreeBSD/macOS   | Older, simpler than PF.           |
-| **WFP**      | Windows Kernel    | Windows         | Native firewall for Windows.      |
-
-Windows Filtering Platform (WFP) is Microsoft’s built-in firewall (CLI: `netsh advfirewall`).
-
-**BSD-Based Firewalls**
-
-BSD-based firewalls use networking and security tools native to BSD systems. BSD stands for Berkeley Software Distribution, a family of **Unix-like operating systems** derived from the original Berkeley Unix (developed at UC Berkeley).
-
-**Key BSD Variants in Firewalling**
-
-| BSD OS             | Firewall Used                          | Notes                                                                           |
-| ------------------ | -------------------------------------- | ------------------------------------------------------------------------------- |
-| **OpenBSD**        | **PF (Packet Filter)**                 | Famously secure/the gold standard for BSD firewalls (used in OPNsense/pfSense). |
-| **FreeBSD**        | **PF** or **ipfw**                     | Supports both, but PF is more modern.                                           |
-| **NetBSD**         | **NPF** or **IPFilter**                | Less common in firewalls.                                                       |
-| **macOS (Darwin)** | **ipfw (legacy)** / **PF (partially)** | macOS inherited some BSD firewall tools.                                        |
-
-
-### Web Application Firewalls (WAFs)
-
-**WAF key characteristics:**
-
-* Scope: Inspects payloads (e.g., "Block HTTP requests with SQLi").
-* L7 Awareness: Understands HTTP, DNS, etc. (deep packet inspection)
-* Performance Impact: High (parses full packets).
-
-WAFs can be **host-based and network-based**, depending on deployment:
-
-| Type                  | Example Tools                         | Deployment                                                      |
-| --------------------- | ------------------------------------- | --------------------------------------------------------------- |
-| **Host-Based WAF**    | ModSecurity (Apache/Nginx plugin)     | Runs on the web server (e.g., as a module).                     |
-| **Network-Based WAF** | Cloudflare WAF, HAProxy + ModSecurity | Standalone appliance/cloud service (protects multiple servers). |
 
 
 #### Firewalls key features

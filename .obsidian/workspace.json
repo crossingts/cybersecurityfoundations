@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/firewalls/README.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/nftables.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "nftables"
             }
           }
         ]
@@ -183,8 +183,11 @@
   },
   "active": "47d382666f0061a3",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/firewalls.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/firewalls/README.md",
+    "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/opnsense.md",
+    "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/nftables.md",
     "5.-cryptography-and-wireless-security/how-ssl-tls-uses-cryptography/README.md",
     "Pasted image 20251017114230.png",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing/README.md",
@@ -208,10 +211,7 @@
     "conflict-files-obsidian-git.md",
     "5.-cryptography-and-wireless-security/the-ssl-tls-handshake/understanding-the-ec-dhe-acronym.md",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing.md",
-    "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/phases-of-the-penetration-testing-process-quiz.md",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing",
-    "6.-practical-foundations-in-ethical-hacking/defensive-security-vs-offensive-security/README.md",
-    "6.-practical-foundations-in-ethical-hacking/defensive-security-vs-offensive-security/defensive-security-vs-offensive-security-quiz.md",
     "6.-practical-foundations-in-ethical-hacking/what-do-ethical-hackers-do",
     "6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking",
     "6.-practical-foundations-in-ethical-hacking/defensive-security-vs-offensive-security",

@@ -114,6 +114,7 @@ While all modern firewalls are used in a stateful manner, their implementation d
 
 **Proxy Firewalls**
 
+
 While powerful, packet filtering firewalls are primarily concerned with where traffic is going (IPs and ports). They are contrasted with more advanced firewalls that operate at higher layers and can inspect what is inside the traffic. *Application-Level Gateways*, or *proxy firewalls*, operate at the Application Layer (Layer 7). Instead of simply forwarding packets, they act as an intermediary, terminating client connections and initiating new ones to the server. This allows them to inspect the actual content of the traffic, such as specific HTTP commands, SQL queries or malicious URLs, which a Layer 3/4 packet filter is blind to.
 
 **Web Application Firewalls (WAFs):**

@@ -136,18 +136,12 @@ A Web Application Firewall (WAF) operates with a specialized focus, distinct fro
 The modern evolution is the **Next-Generation Firewall (NGFW)**, which incorporates and expands upon all previous capabilities. 
 NGFWs provide a more comprehensive, intelligent, and application-aware security posture for modern networks.
 
-NGFWs can perform stateful and Application layer packet filtering, in addition to:
+NGFWs can perform stateful and Application layer packet filtering, in addition to more advanced inspection capabilities such as:
 
-- **Deep Packet Inspection (DPI):** Looking _inside_ the packet payload (like a proxy) to identify applications (e.g., "This is Facebook traffic," not just "HTTP traffic on port 80").
-- **Integrated Intrusion Prevention Systems (IPS):** Actively blocking known threats and attack patterns within the traffic flow.
-- **User & Group Identity Integration:** Blocking or allowing traffic based on user identity (e.g., from Active Directory), not just IP address.
-- **Threat Intelligence Feeds:** Leveraging cloud-based data to block traffic from known malicious sources in real time.
-
-- **Deep Packet Inspection (DPI):** Unlike basic packet filtering which looks only at headers, DPI examines the actual _data_ within the packet payload to identify, classify, and block malicious content.
-    
-- **Intrusion Prevention Systems (IPS):** Integrated IPS actively scans for and blocks known attack patterns and vulnerabilities in network traffic.
-    
-- **Application Awareness and Control:** The ability to identify and control traffic based on the specific application (e.g., Facebook, Spotify) or service, regardless of the port it uses.
+- **Deep Packet Inspection (DPI) & Application Awareness:** Unlike basic firewalls that only inspect packet headers, DPI examines the actual _data_ within the packet payload. This allows the NGFW to identify and control traffic based on the specific application (e.g., Facebook, Spotify) or service, regardless of the port it uses, and to classify and block malicious content.
+- **Integrated Intrusion Prevention System (IPS):** This feature actively scans for, blocks, and prevents known attack patterns, exploits, and vulnerabilities within the network traffic flow in real-time.
+- **User & Group Identity Integration:** Rules can be created to allow or block traffic based on a user's or group's identity (e.g., from Active Directory), moving beyond simple IP address-based filtering for more precise access control.
+- **Threat Intelligence Feeds:** NGFWs leverage dynamic, cloud-based threat intelligence to automatically block traffic to and from known malicious IP addresses, domains, and botnets.
 
 The key differences between a traditional packet filtering firewall and an NGFW can be summarized as follows:
 

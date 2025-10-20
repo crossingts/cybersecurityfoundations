@@ -38,13 +38,13 @@ While replay attacks can be categorized by their target (e.g., web sessions), th
 2. **Extraction:** The relevant data is extracted from the captured transmission. This could be an entire packet, a security token, or a specific protocol message.
 3. **Injection:** The attacker injects (replays) the captured data into the network channel. The receiving system accepts it because it appears to be a legitimate, valid message.
 
-This section delves into SSL/TLS, session tickets, and authentication tokens. The primary type of replay attack it focuses on is the session replay attack (and its specific method, HTTP replay). The section's emphasis on threats to authenticity via replayed authentication tokens or handshake messages directly maps to the session hijacking and TLS handshake replay scenarios, which are the most relevant and common replay threats in modern web security.
+This section delves into SSL/TLS, session tickets, and authentication tokens. The primary type of replay attack this section focuses on is the session replay attack (and its specific method, HTTP replay). The section's emphasis on threats to authenticity via replayed authentication tokens or handshake messages directly maps to the session hijacking and TLS handshake replay scenarios, which are the most relevant and common replay threats in modern web security.
+
+### Anti-replay methods
 
 Suppose we have some packets we want to securely transmit over the wire. We start sending the packets to their destination over the wire. The packets use a 16 bit sequence number field, allowing for sequence number range of 1 – 65536.
 
-A malicious hacker manages to capture some packets from our transmission with the sequence numbers 10,000-10,099. The malicious hacker can wait for the sequence number to loop past 65536 and restart at 0, count 9,999 packets, and then inject the replayed packets with the sequence numbers 10,000-10,099. Since the replayed packets would have arrived at the right time, they would have been accepted by the receiver.&#x20;
-
-### Anti-replay methods
+A malicious hacker manages to capture some packets from our transmission with the sequence numbers 10,000-10,099. The malicious hacker can wait for the sequence number to loop past 65536 and restart at 0, count 9,999 packets, and then inject the replayed packets with the sequence numbers 10,000-10,099. Since the replayed packets would have arrived at the right time, they would have been accepted by the receiver. 
 
 Anti-replay methods are essential for maintaining data integrity and for preventing attackers from capturing and retransmitting legitimate data packets to gain unauthorized access or disrupt communications. Here are the common anti-replay methods:
 
@@ -126,7 +126,7 @@ Examples of how anti-replay measures can be used to protect against replay attac
 
 ### Anti-replay methods and SSL/TLS security
 
-Anti-replay methods are a fundamental part of how SSL/TLS secures data. SSL/TLS relies on cryptographic tools to ensure **confidentiality, integrity, and authenticity** of data in transit. Replay attacks pose a threat to these guarantees, so SSL/TLS incorporates anti-replay mechanisms as part of its security design.&#x20;
+Anti-replay methods are a fundamental part of how SSL/TLS secures data. SSL/TLS relies on cryptographic tools to ensure **confidentiality, integrity, and authenticity** of data in transit. Replay attacks pose a threat to these guarantees, so SSL/TLS incorporates anti-replay mechanisms as part of its security design. 
 
 #### **How Replay Attacks Threaten SSL/TLS Security Guarantees and Modern Defenses**
 
@@ -162,7 +162,7 @@ Even if traffic is encrypted, replaying an old session could allow an attacker t
 
 * Reduces the window for replay attacks by minimizing handshake steps.
 
-#### **2. Threat to Data Integrity**&#x20;
+#### **2. Threat to Data Integrity** 
 
 TLS ensures that data is not modified in transit (via MACs/AEAD ciphers), but it does not inherently prevent the same data from being retransmitted (without modification). A replayed request (e.g., a bank transaction) could execute the same action multiple times.
 

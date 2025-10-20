@@ -1,6 +1,18 @@
 # Packet analyzers
 
-Packet analyzers, also known as network sniffers or protocol analyzers or network analyzers, are essential tools for monitoring, troubleshooting, and securing network traffic. Packet analyzers capture raw data packets traversing a network, decode their headers and payloads, and present them in a human-readable format. 
+## Learning objectives
+
+* Point 1
+* Point 2
+
+This section covers...
+
+## Topics covered in this section
+
+* **Point 1**
+* **Point 2**
+
+Packet analyzers, also known as network sniffers or protocol analyzers or network analyzers, are essential tools for monitoring, troubleshooting, and securing network traffic. Packet analyzers capture raw data packets traversing a network, decode their headers and payloads, and present them in a human-readable format.
 
 Effective network security requires real time awareness of the activities taking place on the network, to verify that the network policy is not being violated by any user or misconfiguration.
 
@@ -31,7 +43,6 @@ tcpdump 'tcp port 80 and host 192.168.1.1'  # Captures HTTP traffic to/from 192.
 tcpdump 'icmp'                              # Captures only ICMP (ping) packets  
 tcpdump 'udp and not port 53'               # Captures UDP traffic except DNS  
 ```
-
 
 ### Packet analyzers
 

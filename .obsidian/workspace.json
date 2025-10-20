@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/packet-analyzers/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -181,16 +181,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "06ca7278ba5efd38",
+  "active": "47d382666f0061a3",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md",
+    "6.-practical-foundations-in-ethical-hacking/packet-analyzers/README.md",
     "6.-practical-foundations-in-ethical-hacking/packet-analyzers/wireshark-defensive-or-offensive.md",
     "6.-practical-foundations-in-ethical-hacking/packet-analyzers/using-wireshark-to-identify-non-secure-network-traffic.md",
     "6.-practical-foundations-in-ethical-hacking/packet-analyzers/tcpdump-defensive-or-offensive.md",
     "6.-practical-foundations-in-ethical-hacking/packet-analyzers/how-to-get-started-with-wireshark.md",
-    "6.-practical-foundations-in-ethical-hacking/packet-analyzers/README.md",
     "6.-practical-foundations-in-ethical-hacking/packet-analyzers",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/packet-analyzers/README.md",
-    "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md",
     "5.-cryptography-and-wireless-security/how-ssl-tls-uses-cryptography/README.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/firewalls.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/nftables.md",

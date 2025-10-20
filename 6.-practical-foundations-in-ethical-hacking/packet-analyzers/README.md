@@ -10,61 +10,8 @@ Understanding packet analyzers is crucial for diagnosing connectivity issues, ve
 
 Modern packet analyzers support filtering (e.g., BPF syntax in tcpdump), decryption (for TLS/SSL traffic with the right keys), and statistical analysis (e.g., throughput, latency). Some packet analyzers, like Wireshark, provide deep protocol dissection, while others, like Zeek and Suricata, focus on behavioral analysis and intrusion detection. Whether used for network forensics, performance tuning, or security auditing, packet analyzers are indispensable for network engineers, cybersecurity professionals, and system administrators.
 
-### **BPF (Berkeley Packet Filter) syntax in tcpdump**
 
-BPF is a highly efficient packet-filtering mechanism used by tools like `tcpdump`, Wireshark, and Linux's `libpcap` to capture only the network traffic that matches specific criteria. Instead of capturing all packets and filtering them later (which is resource-intensive), BPF applies filters at the kernel level, reducing CPU and memory usage.
 
-**Key Features of BPF Syntax in tcpdump:**
-
-* **Expressive filtering**: Can match packets based on protocols (e.g., `tcp`, `udp`), IPs (`host 192.168.1.1`), ports (`port 80`), and even byte-level offsets.
-* **Logical operators**: Supports `and` (`&&`), `or` (`||`), and `not` (`!`).
-* **Directional filters**: Can filter by source/destination (`src`, `dst`).
-
-**Example BPF Filters in tcpdump:**
-
-sh
-
-```
-tcpdump 'tcp port 80 and host 192.168.1.1'  # Captures HTTP traffic to/from 192.168.1.1  
-tcpdump 'icmp'                              # Captures only ICMP (ping) packets  
-tcpdump 'udp and not port 53'               # Captures UDP traffic except DNS  
-```
-
-BPF is crucial for efficient packet analysis, especially in high-traffic networks.
-
-### **Decryption for TLS/SSL traffic using Wireshark**
-
-Modern encrypted protocols like **TLS (used in HTTPS, VPNs, etc.)** prevent packet analyzers from inspecting payloads by default. However, some tools such as Wireshark can **decrypt TLS/SSL traffic** if provided with the necessary decryption keys.
-
-**What Are The Necessary Decryption Keys?**
-
-* **Pre-master secret key (for RSA-based TLS)**: If you have the server’s private key, Wireshark can decrypt traffic.
-* **Session keys (for TLS 1.3 and forward)**: Requires logging the session keys during the handshake (e.g., via `SSLKEYLOGFILE` in browsers).
-* **PSK (Pre-Shared Key)**: Used in some VPNs or custom encrypted apps.
-
-**How It Works in Wireshark:**
-
-1. **Configure Wireshark** to use the `SSLKEYLOGFILE` (exported by Chrome/Firefox).
-2. **Provide the server’s private key** (if decrypting RSA-based HTTPS).
-3. Wireshark **automatically decrypts** TLS traffic in real-time.
-
-**Example Setup:**
-
-sh
-
-```
-# Set SSLKEYLOGFILE in Linux/Mac before opening a browser  
-export SSLKEYLOGFILE=/tmp/sslkeys.log  
-```
-
-Then, in Wireshark:\
-`Edit → Preferences → Protocols → TLS → (Pre)-Master-Secret log filename` → Point to `sslkeys.log`.
-
-**Limitations:**
-
-* Decrypts HTTPS traffic only if session keys or private keys are available.
-* **Cannot decrypt without keys**: If traffic uses **perfect forward secrecy (PFS)**, you must capture keys live (not retroactively).
-* **Not all protocols supported**: Some custom encryption (e.g., proprietary VPNs) may not be decryptable.
 
 ### **Packet filter recommendations based on use cases**
 

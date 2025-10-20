@@ -1,7 +1,3 @@
----
-hidden: false
----
-
 # Defensive cybersecurity technologies — Quiz
 
 ### Defensive cybersecurity technologies
@@ -18,11 +14,11 @@ b) Suricata focuses on real-time intrusion prevention, while Zeek specializes in
 **c) Suricata focuses on real-time intrusion prevention, while Zeek specializes in generating detailed logs for forensic analysis**\
 d) Zeek can actively block threats, while Suricata cannot
 
-**3. A security analyst needs to perform a deep, protocol-level inspection of live network traffic with the ability to decrypt TLS sessions. Which tool is the most suitable for this task? (Choose one answer)**\
-a) tcpdump\
-**b) Wireshark**\
-c) Snort\
-d) Fail2Ban
+**3. Your Security Operations Center (SOC) needs a platform specifically for collaborative incident response and case management, but does not require built-in detection capabilities. Which tool is the best fit for this need? (Choose one answer)**\
+a) **TheHive**\
+b) Suricata\
+c) Wazuh\
+d) Zeek
 
 **4. Which open-source tool provides a comprehensive all-in-one platform that combines HIDS, SIEM, and compliance monitoring features, often integrated with the Elastic Stack? (Choose one answer)**\
 a) TheHive\

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/packet-analyzers/README.md",
+                "file": "5.-cryptography-and-wireless-security/replay-attacks-and-anti-replay-methods/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -181,8 +181,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "06ca7278ba5efd38",
+  "active": "47d382666f0061a3",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/packet-analyzers/README.md",
     "6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing/README.md",
     "6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing/types-of-penetration-testing-quiz.md",
     "6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing",
@@ -194,7 +195,6 @@
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/defensive-cybersecurity-technologies-quiz.md",
     "Pasted image 20251017114230.png",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md",
-    "6.-practical-foundations-in-ethical-hacking/packet-analyzers/README.md",
     "6.-practical-foundations-in-ethical-hacking/packet-analyzers/tcpdump-defensive-or-offensive.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/tcpdump-cheat-sheet-for-netadmins-sysadmins.md",
     "6.-practical-foundations-in-ethical-hacking/packet-analyzers/how-to-get-started-with-wireshark.md",

@@ -13,7 +13,7 @@ description: >-
 * Develop a basic understanding of how replay attacks can threaten SSL/TLS security
 * Develop a basic understanding of how TLS 1.3 closes most replay attack vectors
 
-This section discusses the core concepts of replay attacks and the mechanisms to defend against them. Replay attacks pose a critical threat to data confidentiality and integrity, and session and identity authenticity. This section explores key replay attack mechanisms, the risks they pose—especially to protocols like SSL/TLS—and the fundamental anti-replay methods used to mitigate them. These methods, which are often used in combination, include sequence number windowing, timestamps, nonces, cryptographic hashes, and rotating secret keys. The discussion culminates in an analysis of how modern protocols, particularly TLS 1.3, have integrated these defenses to close historic vulnerabilities.
+This section discusses the core concepts of replay attacks and the mechanisms to defend against them. Replay attacks pose a critical threat to data confidentiality and integrity, and session and identity authenticity. This section explores key replay attack mechanisms, the risks they pose—especially to protocols like SSL/TLS—and the fundamental anti-replay methods used to mitigate them. These anti-replay methods, which are often used in combination, include sequence number windowing, timestamps, nonces, cryptographic hashes, and rotating secret keys. The discussion culminates in an analysis of how modern protocols, particularly TLS 1.3, have integrated these defenses to close historic vulnerabilities.
 
 ## Topics covered in this section
 
@@ -24,12 +24,6 @@ This section discusses the core concepts of replay attacks and the mechanisms to
 ### Replay attacks
 
 A replay attack is a type of cyberattack in which an attacker intercepts and retransmits valid data transmissions to gain unauthorized access, steal information, or disrupt services. Replay attacks exploit the inherent trust systems have in properly formatted messages, bypassing authentication by repeating it rather than breaking it. For example, an attacker could capture a financial transaction approval and replay it to fraudulently withdraw funds multiple times.
-
-While replay attacks can be categorized by their target (e.g., web sessions), they universally follow three core phases:
-
-1. **Interception:** The attacker captures a legitimate transmission between a client and server. This could be a login request, a financial transaction, or an authentication handshake.
-2. **Extraction:** The relevant data is extracted from the captured transmission. This could be an entire packet, a security token, or a specific protocol message.
-3. **Injection:** The attacker injects (replays) the captured data into the network channel. The receiving system accepts it because it appears to be a legitimate, valid message.
 
 A replay attack is an umbrella term for various techniques involving various attack vectors. Here’s a breakdown:
 
@@ -45,6 +39,12 @@ A replay attack is an umbrella term for various techniques involving various att
 * **HTTP Replay (a method for Session Replay):**
   * Nature: This isn't a separate type but rather the method used for a session replay attack. The attacker replays an entire HTTP request (e.g., `POST /transfer?amount=1000`). If the request lacks freshness (like a nonce or timestamp), the server will process it again.
   * Commonality: The mechanism behind most session and transaction replay attacks on the web.
+
+While replay attacks can be categorized by their target (e.g., web sessions), they universally follow three core phases:
+
+1. **Interception:** The attacker captures a legitimate transmission between a client and server. This could be a login request, a financial transaction, or an authentication handshake.
+2. **Extraction:** The relevant data is extracted from the captured transmission. This could be an entire packet, a security token, or a specific protocol message.
+3. **Injection:** The attacker injects (replays) the captured data into the network channel. The receiving system accepts it because it appears to be a legitimate, valid message.
 
 This section delves into SSL/TLS, session tickets, and authentication tokens. The primary type of replay attack it focuses on is the session replay attack (and its specific method, HTTP replay). The section's emphasis on threats to authenticity via replayed authentication tokens or handshake messages directly maps to the session hijacking and TLS handshake replay scenarios, which are the most relevant and common replay threats in modern web security.
 

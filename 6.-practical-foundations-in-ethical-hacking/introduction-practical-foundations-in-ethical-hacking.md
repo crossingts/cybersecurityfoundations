@@ -41,7 +41,7 @@ Ethical hacking is the cornerstone of security verification within organizations
 
 [Phases of the penetration testing process](phases-of-the-penetration-testing-process/)
 
-[Types of penetration testing](types-of-penetration-testing.md)
+[Types of penetration testing](types-of-penetration-testing/)
 
 [Penetration testing methodologies and frameworks](penetration-testing-methodologies-and-frameworks/)
 

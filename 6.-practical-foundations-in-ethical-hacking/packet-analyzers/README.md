@@ -118,13 +118,13 @@ Technology focus: Wireshark and tcpdump.
 
 **Summary**
 
-* **For deep analysis**: **Wireshark** (GUI) or **tcpdump** (CLI).
-* **For traffic logging**: **Zeek** (creates structured logs).
-* **For security monitoring**: **Snort** (NIDS mode).
-* **For large-scale PCAP storage**: **Arkime** (web-based).
-* For **enterprise-scale analysis**, **Arkime + Suricata** is a powerful combo.
-* For **low-level debugging**, **tcpdump + Wireshark** is the gold standard.
-* For **threat hunting**, **Zeek + Suricata** provides both logging and real-time detection.
+* For deep analysis: Wireshark (GUI) or tcpdump (CLI).
+* For traffic logging: Zeek (creates structured logs).
+* For security monitoring: Snort (NIDS mode).
+* For large-scale PCAP storage: Arkime (web-based).
+* For enterprise-scale analysis, Arkime + Suricata is a powerful combo.
+* For low-level debugging, tcpdump + Wireshark is the gold standard.
+* For threat hunting, Zeek + Suricata provides both logging and real-time detection.
 
 ### References
 

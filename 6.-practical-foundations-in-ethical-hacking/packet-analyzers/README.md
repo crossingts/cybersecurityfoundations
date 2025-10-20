@@ -109,11 +109,11 @@ Technology focus: Wireshark and tcpdump.
 | Your Primary Need                                                 | Recommended Tool(s) | Key Reason                                                                                                                                                        |
 | ----------------------------------------------------------------- | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Deep, interactive protocol analysis with a GUI**                | **Wireshark**       | The definitive tool for deep packet inspection, decryption, and visualization. Ideal for **general troubleshooting** and detailed **network forensics**.          |
+| **Automation & scripting with structured output (JSON/CSV)**      | **TShark**          | The command-line version of Wireshark, easily integrated into scripts for **automation** and outputs in JSON/CSV for easy parsing.                                |
 | **Quick, scriptable packet capture from the command line**        | **tcpdump**         | Lightweight, ubiquitous, and perfect for capturing traffic on servers or for **automation**. Excellent for **high-speed packet capture** due to its low overhead. |
 | **Behavioral analysis and structured logging of network traffic** | **Zeek (Bro)**      | Generates high-level, structured logs (e.g., HTTP sessions) instead of raw packets, perfect for **behavioral analysis** and **security monitoring**.              |
 | **Large-scale, indexed packet capture and retention**             | **Arkime (Moloch)** | Designed for storing and quickly searching PCAPs across high-traffic networks. The best choice for long-term storage in **network forensics**.                    |
 | **High-speed packet capture and real-time threat detection**      | **Suricata**        | Multi-threaded for performance, offering **high-speed capture** and **real-time threat detection** via signature and anomaly-based analysis (IDS/IPS).            |
-| **Automation & scripting with structured output (JSON/CSV)**      | **TShark**          | The command-line version of Wireshark, easily integrated into scripts for **automation** and outputs in JSON/CSV for easy parsing.                                |
 | **Established, open-source intrusion detection/prevention**       | **Snort**           | A widely-deployed and robust engine for **security monitoring (IDS/IPS)** using signature, protocol, and anomaly-based inspection.                                |
 
 **Summary**
@@ -122,25 +122,10 @@ Technology focus: Wireshark and tcpdump.
 * **For traffic logging**: **Zeek** (creates structured logs).
 * **For security monitoring**: **Snort** (NIDS mode).
 * **For large-scale PCAP storage**: **Arkime** (web-based).
-
-
----
-### **Packet filter recommendations based on use cases**
-
-| **Use Case**                      | **Best Tool(s)**           | **Why?**                                                                         |
-| --------------------------------- | -------------------------- | -------------------------------------------------------------------------------- |
-| **General Troubleshooting**       | Wireshark, TShark          | Deep protocol inspection, user-friendly GUI (Wireshark), CLI scripting (TShark). |
-| **High-Speed Packet Capture**     | tcpdump, Suricata          | Low overhead (tcpdump), multi-threaded analysis (Suricata).                      |
-| **Security Monitoring (IDS/IPS)** | Suricata, Zeek, Snort      | Real-time threat detection, signature & anomaly-based analysis.                  |
-| **Network Forensics**             | Arkime (Moloch), Wireshark | Long-term packet storage (Arkime), detailed analysis (Wireshark).                |
-| **Automation & Scripting**        | TShark, tcpdump            | Easily integrated into scripts (TShark for JSON/CSV, tcpdump for BPF).           |
-| **Behavioral Analysis**           | Zeek (Bro)                 | Generates high-level logs (e.g., HTTP sessions) instead of raw packets.          |
-
-**Additional Notes:**
-
 * For **enterprise-scale analysis**, **Arkime + Suricata** is a powerful combo.
 * For **low-level debugging**, **tcpdump + Wireshark** is the gold standard.
 * For **threat hunting**, **Zeek + Suricata** provides both logging and real-time detection.
 
+### References
 
 Sanders, C. (2017). _Practical packet analysis: Using Wireshark to solve real-world network problems_ (3rd ed.). No Starch Press.

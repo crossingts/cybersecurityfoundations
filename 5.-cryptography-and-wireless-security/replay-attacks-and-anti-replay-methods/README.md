@@ -27,18 +27,10 @@ A replay attack is a type of cyberattack in which an attacker intercepts and ret
 
 A replay attack is an umbrella term for various techniques involving various attack vectors. Here’s a breakdown:
 
-* **Network Replay:**
-  * Nature: Attacks low-level network protocols (e.g., TCP sequence numbers, IPSec AH/ESP packets, WPA2 handshakes). The goal is often to hijack a connection, disrupt service (DoS), or decrypt traffic.
-  * Commonality: Highly common in academic research and targeted attacks against specific infrastructure (e.g., VPNs, Wi-Fi networks). Less common for broad, untargeted cybercrime.
-* **Wireless Replay:**
-  * Nature: Specifically targets wireless protocols like Wi-Fi (e.g., replaying WPA2 handshake messages to crack the password) or Bluetooth. The wireless medium makes interception trivial.
-  * Commonality: Very common. Tools like Wireshark and Aircrack-ng automate the capture and replay of Wi-Fi handshakes, making this a standard technique in wireless penetration testing and attacks.
-* **Session Replay (often over HTTP):**
-  * Nature: Attacks the application layer. The attacker steals a session token (like a cookie) and replays it in their own browser to impersonate a logged-in user and hijack their session. This is the most straightforward impersonation attack.
-  * Commonality: Extremely common. This is one of the most prevalent web application security issues. It's the primary reason websites use short-lived sessions and CSRF tokens.
-* **HTTP Replay (a method for Session Replay):**
-  * Nature: This isn't a separate type but rather the method used for a session replay attack. The attacker replays an entire HTTP request (e.g., `POST /transfer?amount=1000`). If the request lacks freshness (like a nonce or timestamp), the server will process it again.
-  * Commonality: The mechanism behind most session and transaction replay attacks on the web.
+* **Network replay:** Attacks low-level network protocols (e.g., TCP sequence numbers, IPSec AH/ESP packets, WPA2 handshakes). The goal is often to hijack a connection, disrupt service (DoS), or decrypt traffic. Network replay attacks are common in academic research and targeted attacks against specific infrastructure (e.g., VPNs, Wi-Fi networks). 
+* **Wireless replay:** Specifically targets wireless protocols like Wi-Fi (e.g., replaying WPA2 handshake messages to crack the password) or Bluetooth. The wireless medium makes interception trivial. Wireless replay attacks are common. Tools like Wireshark and Aircrack-ng automate the capture and replay of Wi-Fi handshakes, making this a standard technique in wireless penetration testing and attacks.
+* **Session replay (often over HTTP):** Attacks the application layer. The attacker steals a session token (like a cookie) and replays it in their own browser to impersonate a logged-in user and hijack their session. This is the most straightforward impersonation attack. Web session attacks are very common. This is one of the most prevalent web application security issues. It's the primary reason websites use short-lived sessions and CSRF tokens.
+* **HTTP replay (a method for Session Replay):** This isn't a separate type but rather the method used for a session replay attack. The attacker replays an entire HTTP request (e.g., `POST /transfer?amount=1000`). If the request lacks freshness (like a nonce or timestamp), the server will process it again. HTTP replay is the mechanism behind most session and transaction replay attacks on the web.
 
 While replay attacks can be categorized by their target (e.g., web sessions), they universally follow three core phases:
 

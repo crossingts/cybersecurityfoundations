@@ -11,26 +11,20 @@ description: This section focuses on popular open source defensive cybersecurity
 * Become familiar with popular open source host- and network-based IDS, their key features, and their common use cases
 * Become familiar with popular open source security event management technologies (SIEM/EDR), their key features, and their common use cases
 
-This section explores major defensive cybersecurity technologies, including firewalls, IDS/IPS, and SIEM/EDR (Security Information and Event Management/Endpoint Detection and Response).
+This section explores major defensive cybersecurity technologies, including firewalls, IDS/IPS, and SIEM/EDR (Security Information and Event Management/Endpoint Detection and Response). The discussion focuses on popular open-source tools used to implement these technologies, exploring their key features and deployment (use cases). Key categories of defensive cybersecurity technologies discussed include host and network firewalls (e.g., UFW, iptables, nftables, PF, OPNsense, and pfSense), IDS/IPS (e.g., Suricata and Snort), and network security monitoring/SIEM (e.g., Wazuh and OSSEC).
 
-The discussion focuses on popular open-source tools used to implement these technologies, exploring their key characteristics and deployment (use cases). Key categories of defensive cybersecurity technologies discussed include host/network firewalls (e.g., UFW, iptables, nftables, PF, OPNsense, and pfSense), IDS/IPS (e.g., Suricata and Snort), network security monitoring/SIEM (e.g., Wazuh and OSSEC), and packet analyzers (e.g., Wireshark and tcpdump).
-
-Note that many powerful open-source security tools have overlapping capabilities and can span multiple functional categories. A tool primarily classified as a Network Intrusion Detection System (NIDS), like Suricata, might also provide critical log data for a Security Information and Event Management (SIEM) system. This discussion categorizes tools by their primary function, but their real-world value often lies in how they are integrated into a broader security architecture.
+Note that many powerful open source security tools have overlapping capabilities and can span multiple functional categories. A tool primarily classified as a Network Intrusion Detection System (NIDS), like Suricata, might also provide critical log data for a Security Information and Event Management (SIEM) system. This discussion categorizes tools by their primary function, but their real-world value often lies in how they are integrated into a broader security architecture.
 
 ## Topics covered in this section
 
 * **Firewalls**
 * **IDS/IPS**
 * **SIEM/EDR**
-* **Packet analyzers**
 
 ### Firewalls
 
-Popular open source host and network firewalls include UFW (Uncomplicated Firewall), iptables, nftables, PF (pfilter or packet filter), ipfw, OPNsense, and pfSense (Community Edition).
+Popular open source host and network firewalls include UFW (Uncomplicated Firewall), iptables, nftables, PF (pfilter or packet filter), ipfw, OPNsense, and pfSense (Community Edition). Key firewall concepts discussed in this section include packet filtering firewalls, BSD (Berkeley Software Distribution) firewalls, stateful vs stateless firewalls, and Next-Generation Firewalls (NGFWs). Key firewall technologies elaborated in this section include nftables and OPNsense.
 
-Technology focus: nftables and OPNsense.
-
-Key firewall concepts include packet filtering firewalls, BSD (Berkeley Software Distribution) firewalls, stateful vs stateless firewalls, and Next-Generation Firewalls (NGFWs).
 
 At its most basic, a firewall is a gatekeeper for network traffic. The simplest and oldest type is the packet filtering firewall. 
 Packet-filtering firewall technologies operate at the network level (Layer 3/4). They allow network administrators to define rules for allowing, blocking, or modifying traffic based on IPs, ports, protocols, and connection states.

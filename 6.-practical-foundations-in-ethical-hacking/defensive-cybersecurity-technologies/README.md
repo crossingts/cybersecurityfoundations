@@ -504,19 +504,13 @@ Technology focus: Wazuh (SIEM/XDR).
 * Popular open source host-based firewalls include nftables and pf.
 * Popular open source network-based firewalls include OPNsense and pfSense (CE).
 * Packet-filtering firewall technologies such as iptables and pfilter (PF) operate at the network level (Layer 3/4).
-* WAFs operate at the Application level (L7) and can be host- and network-based.
+* Firewall Roots: Linux uses Netfilter (iptables/nftables), BSD uses PF/ipfw, Windows uses WFP.
+* Use stateful firewalls when you need stronger security, session awareness, and protection against modern threats.
+* Use stateless firewalls for raw speed or when dealing with simple, static filtering.
+* WAFs operate at the Application level (L7) and can be host-based (ModSecurity) or network-based (Cloudflare WAF). Host WAF: Protects a single service (e.g., one NGINX instance). Network WAF: Protects all traffic before it reaches servers (e.g., a reverse proxy).
 * Popular open source HIDS include Wazuh and OSSEC.
 * Popular open source NIDS include Suricata and Snort.
 * Popular open source SIEM include Wazuh and TheHive.
-* Popular open source packet analyzers include Wireshark and tcpdump.
-
-**Stateful Firewalls:** Open-source examples include iptables/nftables (Linux), PF (BSD), and OPNsense.
-* **Use stateful firewalls** when you need **stronger security**, session awareness, and protection against modern threats.
-* **Use stateless firewalls** for **raw speed** or when dealing with simple, static filtering.
-
-**Firewall Roots:** Linux uses Netfilter (iptables/nftables), BSD uses PF/ipfw, Windows uses WFP.
-
-**WAFs:** Can be host-based (ModSecurity) or network-based (Cloudflare WAF). Host WAF: Protects a single service (e.g., one NGINX instance). Network WAF: Protects all traffic before it reaches servers (e.g., a reverse proxy).
 
 ### References
 

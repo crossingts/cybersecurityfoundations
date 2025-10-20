@@ -25,17 +25,13 @@ Note that many powerful open source security tools have overlapping capabilities
 
 Popular open source host and network firewalls include UFW (Uncomplicated Firewall), iptables, nftables, PF (pfilter or packet filter), ipfw, OPNsense, and pfSense (Community Edition). Key firewall concepts discussed in this section include packet filtering firewalls, BSD (Berkeley Software Distribution) firewalls, stateful vs stateless firewalls, and Next-Generation Firewalls (NGFWs). Key firewall technologies elaborated in this section include nftables and OPNsense.
 
+At its most basic, a firewall is a gatekeeper for network traffic. The simplest and oldest type is the packet filtering firewall. Packet-filtering firewall technologies operate at the network level (Layer 3/4). They allow network administrators to define rules for allowing, blocking, or modifying traffic based on IPs, ports, protocols, and connection states. Packet filtering firewalls can be contrasted with stateful inspection firewalls, application-level gateways (proxy firewalls), and Next-Generation Firewalls (NGFWs).
 
-At its most basic, a firewall is a gatekeeper for network traffic. The simplest and oldest type is the packet filtering firewall. 
-Packet-filtering firewall technologies operate at the network level (Layer 3/4). They allow network administrators to define rules for allowing, blocking, or modifying traffic based on IPs, ports, protocols, and connection states.
+A critical evolution in firewall technology was the shift from stateless to stateful inspection. A stateless firewall treats each network packet in isolation, with no memory of previous packets. A rule like "allow TCP port 80" would permit all traffic to that port, regardless of whether it is a legitimate new connection or a random, malicious packet. 
 
-Packet filtering firewalls can be contrasted with stateful inspection firewalls, application-level gateways (proxy firewalls), and Next-Generation Firewalls (NGFWs).
+Proxy firewalls operate as an intermediary between two end systems. Instead of allowing direct communication, the proxy firewall establishes two separate connections: one from the client to the proxy and another from the proxy to the server. This allows it to perform deep inspection of the application-layer traffic (like HTTP or FTP), filter specific content, and hide the internal client's IP address, providing a high level of security at the cost of increased latency and processing overhead.
 
-A critical evolution in firewall technology was the shift from stateless to stateful inspection. A **stateless firewall** treats each network packet in isolation, with no memory of previous packets. A rule like "allow TCP port 80" would permit all traffic to that port, regardless of whether it is a legitimate new connection or a random, malicious packet. 
-
-Proxy firewalls...
-
-NGFWs represent the modern evolution of firewall technologies, incorporating the capabilities of all previous types and adding advanced security integrations. NGFWs can perform stateful and Application layer packet filtering, in addition to more advanced inspection capabilities. 
+NGFWs represent the modern evolution of firewall technologies, incorporating the capabilities of all previous types and adding advanced security integrations. NGFWs can perform stateful and Application layer packet filtering, in addition to more advanced inspection capabilities such as Deep Packet Inspection (DPI) and Intrusion Prevention Systems (IPS).
 
 #### Packet filtering firewalls
 
@@ -146,6 +142,12 @@ NGFWs can perform stateful and Application layer packet filtering, in addition t
 - **Integrated Intrusion Prevention Systems (IPS):** Actively blocking known threats and attack patterns within the traffic flow.
 - **User & Group Identity Integration:** Blocking or allowing traffic based on user identity (e.g., from Active Directory), not just IP address.
 - **Threat Intelligence Feeds:** Leveraging cloud-based data to block traffic from known malicious sources in real time.
+
+- **Deep Packet Inspection (DPI):** Unlike basic packet filtering which looks only at headers, DPI examines the actual _data_ within the packet payload to identify, classify, and block malicious content.
+    
+- **Intrusion Prevention Systems (IPS):** Integrated IPS actively scans for and blocks known attack patterns and vulnerabilities in network traffic.
+    
+- **Application Awareness and Control:** The ability to identify and control traffic based on the specific application (e.g., Facebook, Spotify) or service, regardless of the port it uses.
 
 The key differences between a traditional packet filtering firewall and an NGFW can be summarized as follows:
 

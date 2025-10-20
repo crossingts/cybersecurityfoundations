@@ -10,6 +10,8 @@ Understanding packet analyzers is crucial for diagnosing connectivity issues, ve
 
 Modern packet analyzers support filtering (e.g., BPF syntax in tcpdump), decryption (for TLS/SSL traffic with the right keys), and statistical analysis (e.g., throughput, latency). Some packet analyzers, like Wireshark, provide deep protocol dissection, while others, like Zeek and Suricata, focus on behavioral analysis and intrusion detection. Whether used for network forensics, performance tuning, or security auditing, packet analyzers are indispensable for network engineers, cybersecurity professionals, and system administrators.
 
+* Become familiar with popular open source packet analyzers, their key features, and their common use cases
+
 ### **BPF (Berkeley Packet Filter) syntax in tcpdump**
 
 BPF is a highly efficient packet-filtering mechanism used by tools like `tcpdump`, Wireshark, and Linux's `libpcap` to capture only the network traffic that matches specific criteria. Instead of capturing all packets and filtering them later (which is resource-intensive), BPF applies filters at the kernel level, reducing CPU and memory usage.
@@ -30,6 +32,95 @@ tcpdump 'icmp'                              # Captures only ICMP (ping) packets
 tcpdump 'udp and not port 53'               # Captures UDP traffic except DNS  
 ```
 
+
+### Packet analyzers
+
+Popular open source packet analyzers include Wireshark, tcpdump, Zeek, Snort, and Arkime.
+
+Technology focus: Wireshark and tcpdump.
+
+#### Packet analyzers key features
+
+#### **1. Wireshark**
+
+* **Type**: GUI-based packet analyzer
+* **Key Features**:
+  * **Deep protocol dissection** (supports 3,000+ protocols).
+  * **Live capture** + **offline analysis** (PCAP files).
+  * **Filtering** (BPF syntax, e.g., `tcp.port == 443`).
+  * **Visualization** (flow graphs, I/O graphs).
+  * **Decryption** (TLS/SSL with keys, WEP/WPA).
+  * **Cross-platform** (Windows, Linux, macOS).
+* **Use Case**: Deep protocol inspection and troubleshooting via GUI.
+
+#### **2. tcpdump**
+
+* **Type**: CLI packet analyzer
+* **Key Features**:
+  * **Lightweight**, low-overhead capture.
+  * **BPF filtering** (e.g., `tcpdump -i eth0 'port 80'`).
+  * **Save to PCAP** for later analysis.
+  * **No GUI** (often used with Wireshark for analysis).
+  * **Ubiquitous** (preinstalled on most Unix-like systems).
+* **Use Case**: Lightweight CLI packet capture for quick traffic analysis.
+
+#### **3. Zeek (formerly Bro)**
+
+* **Type**: Network Traffic Analyzer (NTA)
+* **Key Features**:
+  * **Protocol-aware logging** (generates `.log` files for HTTP, DNS, SSL, etc.).
+  * **Behavioral analysis** (e.g., detecting C2 traffic).
+  * **No live packet inspection** (post-capture analysis).
+  * **Custom scripting** (Zeek scripts for advanced detection).
+* **Use Case**: Generates structured network logs for forensic analysis.
+
+#### **4. Snort**
+
+* **Type**: NIDS (Network Intrusion Detection System)
+* **Key Features**:
+  * **Packet capture + rule-based detection** (signatures).
+  * **Real-time traffic analysis** (alerts on malicious activity).
+  * **Can dump PCAPs** of suspicious traffic.
+  * **CLI-based** (no native GUI).
+* **Use Case**: Rule-based NIDS for real-time traffic inspection and alerting.
+
+#### **5. Arkime** (formerly Moloch)
+
+* **Type**: Large-scale packet capture + analysis
+* **Key Features**:
+  * **Indexes and stores PCAPs** for long-term analysis.
+  * **Web GUI** for searching/filtering traffic.
+  * **Scalable** (handles multi-gigabit traffic).
+  * **Integrates with Suricata/Wazuh** for alerts.
+* **Use Case**: Large-scale PCAP storage and indexed traffic analysis.
+
+**Packet Analyzers Comparison Table**
+
+| Tool          | Type             | Interface | Live Capture | Protocol Decoding | Key Strengths                        | Best For                         |
+| ------------- | ---------------- | --------- | ------------ | ----------------- | ------------------------------------ | -------------------------------- |
+| **Wireshark** | Packet Analyzer  | GUI       | Yes          | 3,000+ protocols  | Deep inspection, visualization       | Troubleshooting, forensics       |
+| **tcpdump**   | Packet Sniffer   | CLI       | Yes          | Basic protocols   | Lightweight, scripting-friendly      | Quick captures, server debugging |
+| **Zeek**      | Traffic Analyzer | CLI/Logs  | No\*         | 50+ protocols     | Behavioral analysis, logging         | Network forensics, research      |
+| **Snort**     | NIDS             | CLI       | Yes          | Limited           | Rule-based detection, PCAP dumping   | Security monitoring              |
+| **Arkime**    | PCAP Storage     | Web GUI   | Yes          | 100+ protocols    | Scalable, long-term packet retention | SOCs, large networks             |
+
+**Packet Analyzers Selection Guide**
+
+| Your Primary Need                                                 | Recommended Tool(s) | Key Reason                                                                                  |
+| ----------------------------------------------------------------- | ------------------- | ------------------------------------------------------------------------------------------- |
+| **Deep, interactive protocol analysis with a GUI**                | **Wireshark**       | The definitive tool for deep packet inspection, decryption, and visualization.              |
+| **Quick, scriptable packet capture from the command line**        | **tcpdump**         | Lightweight, ubiquitous, and perfect for capturing traffic on servers or for automation.    |
+| **Behavioral analysis and structured logging of network traffic** | **Zeek (Bro)**      | Doesn't inspect packets live but generates comprehensive protocol logs for forensic review. |
+| **Large-scale, indexed packet capture and retention**             | **Arkime**          | Designed for storing and quickly searching PCAPs across high-traffic networks.              |
+
+**Summary**
+
+* **For deep analysis**: **Wireshark** (GUI) or **tcpdump** (CLI).
+* **For traffic logging**: **Zeek** (creates structured logs).
+* **For security monitoring**: **Snort** (NIDS mode).
+* **For large-scale PCAP storage**: **Arkime** (web-based).
+
+---
 ### **Packet filter recommendations based on use cases**
 
 | **Use Case**                      | **Best Tool(s)**           | **Why?**                                                                         |
@@ -46,3 +137,5 @@ tcpdump 'udp and not port 53'               # Captures UDP traffic except DNS
 * For **enterprise-scale analysis**, **Arkime + Suricata** is a powerful combo.
 * For **low-level debugging**, **tcpdump + Wireshark** is the gold standard.
 * For **threat hunting**, **Zeek + Suricata** provides both logging and real-time detection.
+
+Sanders, C. (2017). _Practical packet analysis: Using Wireshark to solve real-world network problems_ (3rd ed.). No Starch Press.

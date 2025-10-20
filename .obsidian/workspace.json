@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/packet-analyzers/README.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -183,8 +183,8 @@
   },
   "active": "47d382666f0061a3",
   "lastOpenFiles": [
-    "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md",
     "6.-practical-foundations-in-ethical-hacking/packet-analyzers/README.md",
+    "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md",
     "6.-practical-foundations-in-ethical-hacking/packet-analyzers/tcpdump-defensive-or-offensive.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/tcpdump-cheat-sheet-for-netadmins-sysadmins.md",
     "6.-practical-foundations-in-ethical-hacking/packet-analyzers/how-to-get-started-with-wireshark.md",

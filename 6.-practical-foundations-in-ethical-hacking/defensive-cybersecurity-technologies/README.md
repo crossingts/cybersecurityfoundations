@@ -1,5 +1,5 @@
 ---
-description: This section focuses on popular open source defensive cybersecurity tools used for firewalls, IDS/IPS, SIEM/EDR, and packet analyzers
+description: This section focuses on popular open source defensive cybersecurity tools used for firewalls, IDS/IPS, and SIEM/EDR
 ---
 
 # Defensive cybersecurity technologies
@@ -7,11 +7,13 @@ description: This section focuses on popular open source defensive cybersecurity
 ## Learning objectives
 
 * Become familiar with popular open source host and network firewalls, their key features, and their common use cases
-* Become familiar with popular open source host- and network-based IDS, their key features, and their common use cases
-* Become familiar with popular open source security event management technologies, their key features, and their common use cases
 * Understand the difference between Web Application Firewalls (WAFs) and packet-filtering firewalls
+* Become familiar with popular open source host- and network-based IDS, their key features, and their common use cases
+* Become familiar with popular open source security event management technologies (SIEM/EDR), their key features, and their common use cases
 
-This section explores major defensive cybersecurity technologies, including firewalls, IDS/IPS, SIEM/EDR, and packet analyzers. The discussion focuses on popular open-source tools used to implement these technologies, exploring their key characteristics and deployment (use cases). Key categories of defensive cybersecurity technologies discussed include host/network firewalls (e.g., UFW, iptables, nftables, PF, OPNsense, and pfSense), IDS/IPS (e.g., Suricata and Snort), network security monitoring/SIEM (e.g., Wazuh and OSSEC), and packet analyzers (e.g., Wireshark and tcpdump).
+This section explores major defensive cybersecurity technologies, including firewalls, IDS/IPS, and SIEM/EDR (Security Information and Event Management/Endpoint Detection and Response).
+
+The discussion focuses on popular open-source tools used to implement these technologies, exploring their key characteristics and deployment (use cases). Key categories of defensive cybersecurity technologies discussed include host/network firewalls (e.g., UFW, iptables, nftables, PF, OPNsense, and pfSense), IDS/IPS (e.g., Suricata and Snort), network security monitoring/SIEM (e.g., Wazuh and OSSEC), and packet analyzers (e.g., Wireshark and tcpdump).
 
 Note that many powerful open-source security tools have overlapping capabilities and can span multiple functional categories. A tool primarily classified as a Network Intrusion Detection System (NIDS), like Suricata, might also provide critical log data for a Security Information and Event Management (SIEM) system. This discussion categorizes tools by their primary function, but their real-world value often lies in how they are integrated into a broader security architecture.
 
@@ -499,95 +501,6 @@ Technology focus: Wazuh (SIEM/XDR).
 
 ***
 
-### Packet analyzers
-
-Popular open source packet analyzers include Wireshark, tcpdump, Zeek, Snort, and Arkime.
-
-Technology focus: Wireshark and tcpdump.
-
-#### Packet analyzers key features
-
-#### **1. Wireshark**
-
-* **Type**: GUI-based packet analyzer
-* **Key Features**:
-  * **Deep protocol dissection** (supports 3,000+ protocols).
-  * **Live capture** + **offline analysis** (PCAP files).
-  * **Filtering** (BPF syntax, e.g., `tcp.port == 443`).
-  * **Visualization** (flow graphs, I/O graphs).
-  * **Decryption** (TLS/SSL with keys, WEP/WPA).
-  * **Cross-platform** (Windows, Linux, macOS).
-* **Use Case**: Deep protocol inspection and troubleshooting via GUI.
-
-#### **2. tcpdump**
-
-* **Type**: CLI packet analyzer
-* **Key Features**:
-  * **Lightweight**, low-overhead capture.
-  * **BPF filtering** (e.g., `tcpdump -i eth0 'port 80'`).
-  * **Save to PCAP** for later analysis.
-  * **No GUI** (often used with Wireshark for analysis).
-  * **Ubiquitous** (preinstalled on most Unix-like systems).
-* **Use Case**: Lightweight CLI packet capture for quick traffic analysis.
-
-#### **3. Zeek (formerly Bro)**
-
-* **Type**: Network Traffic Analyzer (NTA)
-* **Key Features**:
-  * **Protocol-aware logging** (generates `.log` files for HTTP, DNS, SSL, etc.).
-  * **Behavioral analysis** (e.g., detecting C2 traffic).
-  * **No live packet inspection** (post-capture analysis).
-  * **Custom scripting** (Zeek scripts for advanced detection).
-* **Use Case**: Generates structured network logs for forensic analysis.
-
-#### **4. Snort**
-
-* **Type**: NIDS (Network Intrusion Detection System)
-* **Key Features**:
-  * **Packet capture + rule-based detection** (signatures).
-  * **Real-time traffic analysis** (alerts on malicious activity).
-  * **Can dump PCAPs** of suspicious traffic.
-  * **CLI-based** (no native GUI).
-* **Use Case**: Rule-based NIDS for real-time traffic inspection and alerting.
-
-#### **5. Arkime** (formerly Moloch)
-
-* **Type**: Large-scale packet capture + analysis
-* **Key Features**:
-  * **Indexes and stores PCAPs** for long-term analysis.
-  * **Web GUI** for searching/filtering traffic.
-  * **Scalable** (handles multi-gigabit traffic).
-  * **Integrates with Suricata/Wazuh** for alerts.
-* **Use Case**: Large-scale PCAP storage and indexed traffic analysis.
-
-**Packet Analyzers Comparison Table**
-
-| Tool          | Type             | Interface | Live Capture | Protocol Decoding | Key Strengths                        | Best For                         |
-| ------------- | ---------------- | --------- | ------------ | ----------------- | ------------------------------------ | -------------------------------- |
-| **Wireshark** | Packet Analyzer  | GUI       | Yes          | 3,000+ protocols  | Deep inspection, visualization       | Troubleshooting, forensics       |
-| **tcpdump**   | Packet Sniffer   | CLI       | Yes          | Basic protocols   | Lightweight, scripting-friendly      | Quick captures, server debugging |
-| **Zeek**      | Traffic Analyzer | CLI/Logs  | No\*         | 50+ protocols     | Behavioral analysis, logging         | Network forensics, research      |
-| **Snort**     | NIDS             | CLI       | Yes          | Limited           | Rule-based detection, PCAP dumping   | Security monitoring              |
-| **Arkime**    | PCAP Storage     | Web GUI   | Yes          | 100+ protocols    | Scalable, long-term packet retention | SOCs, large networks             |
-
-**Packet Analyzers Selection Guide**
-
-| Your Primary Need                                                 | Recommended Tool(s) | Key Reason                                                                                  |
-| ----------------------------------------------------------------- | ------------------- | ------------------------------------------------------------------------------------------- |
-| **Deep, interactive protocol analysis with a GUI**                | **Wireshark**       | The definitive tool for deep packet inspection, decryption, and visualization.              |
-| **Quick, scriptable packet capture from the command line**        | **tcpdump**         | Lightweight, ubiquitous, and perfect for capturing traffic on servers or for automation.    |
-| **Behavioral analysis and structured logging of network traffic** | **Zeek (Bro)**      | Doesn't inspect packets live but generates comprehensive protocol logs for forensic review. |
-| **Large-scale, indexed packet capture and retention**             | **Arkime**          | Designed for storing and quickly searching PCAPs across high-traffic networks.              |
-
-**Summary**
-
-* **For deep analysis**: **Wireshark** (GUI) or **tcpdump** (CLI).
-* **For traffic logging**: **Zeek** (creates structured logs).
-* **For security monitoring**: **Snort** (NIDS mode).
-* **For large-scale PCAP storage**: **Arkime** (web-based).
-
-***
-
 ### Key takeaways
 
 * Popular open source host-based firewalls include nftables and pf.
@@ -612,5 +525,3 @@ Technology focus: Wireshark and tcpdump.
 Bejtlich, R. (2013). _The practice of network security monitoring: Understanding incident detection and response_. No Starch Press.
 
 Chapple, M., Seidl, D., & Stewart, J. M. (2022). _CISSP (ISC)2 certified information systems security professional official study guide_ (9th ed.). Sybex.
-
-Sanders, C. (2017). _Practical packet analysis: Using Wireshark to solve real-world network problems_ (3rd ed.). No Starch Press.

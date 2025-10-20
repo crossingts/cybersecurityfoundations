@@ -140,7 +140,7 @@
   * [Firewalls—OPNsense](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/opnsense.md)
   * [IDS/IPS—Network-based IDS (NIDS) vs host-based IDS (HIDS)](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/ids-ips-network-based-ids-nids-vs-host-based-ids-hids.md)
   * [IDS/IPS—Zeek (NIDS)](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/ids-ips-zeek-nids.md)
-  * [IDS/IPS—Suricata](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/ids-ips-suricata.md)
+  * [IDS/IPS—Suricata (NIDS)](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/ids-ips-suricata.md)
   * [SIEM/EDR—Wazuh (SEIM/XDR)](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/siem-edr-wazuh-seim-xdr.md)
   * [Defensive security pipeline](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/defensive-security-pipeline.md)
   * [NIST SP 800-61 (IR framework)](6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/nist-sp-800-61-ir-framework.md)

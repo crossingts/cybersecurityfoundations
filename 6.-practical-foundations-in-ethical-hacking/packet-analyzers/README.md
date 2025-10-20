@@ -2,7 +2,7 @@
 
 ## Learning objectives
 
-* Point 1
+* Become familiar with popular open source packet analyzers, their key features, and their common use cases
 * Point 2
 
 This section covers...
@@ -21,8 +21,6 @@ Active techniques to periodically scan the network have two disadvantages. First
 Understanding packet analyzers is crucial for diagnosing connectivity issues, verifying routing and switching behavior, and detecting security threats such as unauthorized access or malware. Packet analyzers operate at different layers of the OSI model, with some focusing on low-level frame analysis (Ethernet, ARP) while others specialize in application-layer protocols (HTTP, DNS, VoIP).
 
 Modern packet analyzers support filtering (e.g., BPF syntax in tcpdump), decryption (for TLS/SSL traffic with the right keys), and statistical analysis (e.g., throughput, latency). Some packet analyzers, like Wireshark, provide deep protocol dissection, while others, like Zeek and Suricata, focus on behavioral analysis and intrusion detection. Whether used for network forensics, performance tuning, or security auditing, packet analyzers are indispensable for network engineers, cybersecurity professionals, and system administrators.
-
-* Become familiar with popular open source packet analyzers, their key features, and their common use cases
 
 ### **BPF (Berkeley Packet Filter) syntax in tcpdump**
 

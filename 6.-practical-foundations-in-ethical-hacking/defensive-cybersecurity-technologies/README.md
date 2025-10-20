@@ -137,10 +137,7 @@ In summary, a network firewall secures the network infrastructure by controlling
 
 **Next-Generation Firewalls (NGFWs)**  
 
-The modern evolution is the **Next-Generation Firewall (NGFW)**, which incorporates and expands upon all previous capabilities. 
-NGFWs provide a more comprehensive, intelligent, and application-aware security posture for modern networks.
-
-NGFWs can perform stateful and Application layer packet filtering, in addition to more advanced inspection capabilities such as:
+The modern evolution is the Next-Generation Firewall (NGFW), which incorporates and expands upon all previous capabilities. NGFWs provide a more comprehensive, intelligent, and application-aware security posture for modern networks. NGFWs can perform stateful and Application layer packet filtering, in addition to more advanced inspection capabilities such as:
 
 - **Deep Packet Inspection (DPI) & Application Awareness:** Unlike basic firewalls that only inspect packet headers, DPI examines the actual _data_ within the packet payload. This allows the NGFW to identify and control traffic based on the specific application (e.g., Facebook, Spotify) or service, regardless of the port it uses, and to classify and block malicious content.
 - **Integrated Intrusion Prevention System (IPS):** This feature actively scans for, blocks, and prevents known attack patterns, exploits, and vulnerabilities within the network traffic flow in real-time.
@@ -206,14 +203,26 @@ Modern successor to iptables, more flexible syntax. Also part of Linux (Netfilte
 * **Key Features**:
   * Stateful firewall with advanced features (NAT, QoS, traffic shaping).
   * Clean, readable rule syntax (e.g., `pass in on eth0 proto tcp to port 22`).
+  * Handles high traffic efficiently (better than iptables in some cases).
   * Supports logging, SYN proxy, and scrubbing.
   * Integrated in OpenBSD (security-focused).
 * **Use Case:** Powerful BSD firewall with clean syntax for servers/networks.
 More advanced than iptables, used in BSD-based firewalls. Originally from OpenBSD, now also in FreeBSD and others, BSD license. CLI based macOS built-in Unix firewall.
 
-**ipfw**: Older BSD firewall, mostly replaced by PF. Found in FreeBSD (and older macOS versions), BSD license. OS/platform: FreeBSD, macOS (legacy)
+#### **5. ipfw**
 
-#### **5. OPNsense**
+- **Type**: Host/network firewall.
+- **Platform**: FreeBSD (legacy), macOS (legacy, pre-macOS Sierra).
+- **Key Features**:
+   - Traditional, stateful packet filter for BSD-based systems.
+   - Uses a sequential rule numbering system and a consistent, predictable syntax.
+   - Integrated with `dummynet` for advanced traffic shaping, bandwidth management, and network emulation.
+   - Provides a robust set of features for packet filtering, NAT, and logging.
+   - Largely superseded by PF (`pfilter`) on modern FreeBSD and macOS.
+- **Use Case:** Managing firewalls on legacy FreeBSD systems or older macOS versions, or for leveraging its integrated `dummynet` traffic-shaping capabilities.
+Older BSD firewall, mostly replaced by PF. Found in FreeBSD (and older macOS versions), BSD license. OS/platform: FreeBSD, macOS (legacy)
+
+#### **6. OPNsense**
 
 * **Type**: Network firewall/router (open-source fork of pfSense).
 * **Platform**: FreeBSD-based (dedicated appliance/VM).
@@ -225,7 +234,7 @@ More advanced than iptables, used in BSD-based firewalls. Originally from OpenBS
   * Community and commercial support options.
 * **Use Case:** Feature-rich open-source firewall with frequent updates for SMBs/enterprises.
 
-#### **6. pfSense (Community Edition)**
+#### **7. pfSense (Community Edition)**
 
 * **Type**: Network firewall/router.
 * **Platform**: FreeBSD-based (dedicated appliance/VM).
@@ -239,14 +248,15 @@ More advanced than iptables, used in BSD-based firewalls. Originally from OpenBS
 
 **Firewall Comparison Table**
 
-| Firewall         | Type         | Platform       | GUI       | Ease of Use | Stateful | NAT | VPN Support       | IDS/IPS      | Traffic Shaping (QoS) | IPv6 |
-| ---------------- | ------------ | -------------- | --------- | ----------- | -------- | --- | ----------------- | ------------ | --------------------- | ---- |
-| **UFW**          | Host         | Linux          | No (CLI)  | Very Easy   | Yes      | Yes | Limited           | No           | No                    | Yes  |
-| **iptables**     | Host/Network | Linux          | No (CLI)  | Complex     | Yes      | Yes | Manual            | No (add-ons) | Yes                   | Yes  |
-| **nftables**     | Host/Network | Linux          | No (CLI)  | Moderate    | Yes      | Yes | Manual            | No (add-ons) | Yes                   | Yes  |
-| **PF (pfilter)** | Host/Network | OpenBSD, macOS | No (CLI)  | Moderate    | Yes      | Yes | Manual            | No (add-ons) | Yes                   | Yes  |
-| **OPNsense**     | Network      | FreeBSD        | Yes (Web) | Easy        | Yes      | Yes | OpenVPN/WireGuard | Suricata     | Yes                   | Yes  |
-| **pfSense CE**   | Network      | FreeBSD        | Yes (Web) | Easy        | Yes      | Yes | OpenVPN/IPsec     | Snort        | Yes                   | Yes  |
+|Firewall|Type|Platform|GUI|Ease of Use|Stateful|NAT|VPN Support|IDS/IPS|Traffic Shaping (QoS)|IPv6|
+|---|---|---|---|---|---|---|---|---|---|---|
+|**UFW**|Host|Linux|No (CLI)|Very Easy|Yes|Yes|Limited|No|No|Yes|
+|**iptables**|Host/Network|Linux|No (CLI)|Complex|Yes|Yes|Manual|No (add-ons)|Yes|Yes|
+|**nftables**|Host/Network|Linux|No (CLI)|Moderate|Yes|Yes|Manual|No (add-ons)|Yes|Yes|
+|**ipfw**|Host/Network|FreeBSD, macOS (legacy)|No (CLI)|Complex|Yes|Yes|Manual|No (add-ons)|Yes (via dummynet)|Yes|
+|**PF (pfilter)**|Host/Network|OpenBSD, FreeBSD, macOS|No (CLI)|Moderate|Yes|Yes|Manual|No (add-ons)|Yes|Yes|
+|**OPNsense**|Network|FreeBSD|Yes (Web)|Easy|Yes|Yes|OpenVPN/WireGuard|Suricata|Yes|Yes|
+|**pfSense CE**|Network|FreeBSD|Yes (Web)|Easy|Yes|Yes|OpenVPN/IPsec|Snort|Yes|Yes|
 
 **Firewall Selection Guide**
 

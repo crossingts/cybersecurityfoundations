@@ -96,8 +96,8 @@
 **3. Both Wazuh and Velociraptor provide capabilities for endpoint security. What is the primary focus that distinguishes Velociraptor's EDR functionality from Wazuh's?**\
 **Answer:** The primary focus of Velociraptor is on endpoint hunting and live forensic investigation, while Wazuh focuses on being a unified SIEM platform with log analysis, file integrity monitoring, and compliance.
 
-**4. Both Wireshark and tcpdump can be used for packet capture and analysis. What is the key operational difference that distinguishes tcpdump from Wireshark?**\
-**Answer:** The key operational difference is that tcpdump is a lightweight, command-line-only tool, whereas Wireshark provides a rich Graphical User Interface (GUI) for deep protocol dissection and visualization.
+**4. Both Suricata and Zeek are used for network traffic analysis. What is the key operational difference in their real-time response capability that distinguishes Suricata from Zeek?**\
+**Answer:** The key operational difference is that Suricata can function as an Intrusion Prevention System (IPS) for real-time, inline traffic blocking, whereas Zeek is primarily a passive Network Security Monitoring (NSM) tool for logging and analysis.
 
 **5. Both packet-filtering firewalls (like iptables) and Web Application Firewalls (WAFs) control traffic. What is the key operational difference in the network layer at which they primarily operate?**\
 **Answer:** Packet-filtering firewalls operate primarily at the network and transport layers (L3/L4), while WAFs operate at the application layer (L7) to protect specific web applications.

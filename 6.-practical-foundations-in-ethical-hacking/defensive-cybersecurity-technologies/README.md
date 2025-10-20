@@ -114,17 +114,21 @@ While all modern firewalls are used in a stateful manner, their implementation d
 
 **Proxy Firewalls**
 
-A proxy firewall is the most secure type of firewall, acting as a dedicated gateway or intermediary between an internal network and the internet. Unlike traditional firewalls, it operates at the Application layer, filtering messages for specific protocols like HTTP, FTP, and SMTP. Its core security principle is preventing direct contact between internal systems and external servers; every connection is brokered by the proxy, which has its own IP address, effectively isolating the internal network. Instead of simply forwarding packets, a proxy firewall acts as an intermediary, terminating client connections and initiating new ones to the server. This allows a proxy firewall to inspect the actual content of the traffic, such as specific HTTP commands, SQL queries or malicious URLs, which a Layer 3/4 packet filter is blind to.
+A proxy firewall is the most secure type of firewall, acting as a dedicated gateway or intermediary between an internal network and the internet. Unlike traditional firewalls, it operates at the Application layer, filtering messages for specific protocols like HTTP, FTP, and SMTP. Its core security principle is preventing direct contact between internal systems and external servers; every connection is brokered by the proxy, which has its own IP address, effectively isolating the internal network. Instead of simply forwarding packets, the proxy firewall terminates client connections and initiates new ones to the server. This allows the proxy firewall to inspect the actual content of the traffic, such as specific HTTP commands, SQL queries or malicious URLs, which a Layer 3/4 packet filter is blind to.
 
 The high level of security is achieved through deep inspection techniques. The proxy firewall doesn't just look at packet headers; it performs deep packet inspection (DPI) to analyze the actual contents of every packet flowing in and out. This allows it to assess threats, detect malware, validate data, and enforce corporate security policies at the application level. By centralizing all application activity through a single point, it provides a comprehensive view and control over network traffic that simpler firewalls cannot.
 
 The connection process illustrates this intermediary role. When a user requests an external resource, their computer connects only to the proxy, not the final destination. The proxy then establishes a separate, independent connection to the external server on the user's behalf. It continuously analyzes all communication passing through these two connections, ensuring compliance and security before any data is relayed. This meticulous, application-aware process makes proxy firewalls extremely effective at preventing unauthorized access and advanced cyberattacks, though it can impact network speed and functionality due to the intensive inspection.
 
+**Web Application Firewalls (WAFs)**
 
+A Web Application Firewall (WAF) is a specialized security tool designed to protect web applications and APIs by inspecting Hypertext Transfer Protocol (HTTP/HTTPS) traffic. Its primary focus is on the application layer (Layer 7) of the OSI model, where it performs deep packet inspection to understand the actual content and intent of web requests. This allows it to identify and block sophisticated attack patterns that target application vulnerabilities, such as SQL Injection (SQLi), cross-site scripting (XSS), and other zero-day threats, before they reach the web server or users.
 
+In contrast, a traditional network firewall operates at a broader level, typically controlling traffic between network segments based on IP addresses, ports, and protocols (Layers 3 and 4). Its main function is to establish a barrier between a trusted internal network and untrusted external networks, like the internet, by enforcing access control policies. It acts as a gatekeeper for all network traffic but lacks the granularity to inspect the contents of web traffic for application-specific attacks.
 
-**Web Application Firewalls (WAFs):**
-A Web Application Firewall (WAF) operates with a specialized focus, distinct from traditional network firewalls. Its key characteristics include a scope centered on inspecting the actual payload of web traffic to block specific attack patterns like SQL injection (SQLi) or cross-site scripting (XSS). This is enabled by its deep Layer 7 awareness, as it performs deep packet inspection to understand protocols like HTTP and DNS. This granular analysis, however, typically comes with a higher performance impact compared to packet filters, as it requires parsing the full contents of packets. WAFs can be deployed in different forms to suit various architectural needs, as shown in the table below.
+The need for a WAF has grown with the adoption of modern IT practices, including cloud services, SaaS, and BYOD policies, which expand the attack surface for web applications. While a network firewall is essential for foundational network perimeter security, it is not designed to understand the structure of web communications and therefore cannot defend against attacks embedded within legitimate web traffic. Consequently, these two firewalls are not replacements for each other but are complementary, layered defenses.
+
+In summary, a network firewall secures the network infrastructure by controlling which traffic can enter or leave, whereas a WAF specifically secures business-critical web applications by analyzing the behavior and payload of web requests. For comprehensive protection, organizations require both: the network firewall to guard the network perimeter and the WAF to protect the applications exposed to the internet from targeted layer-7 attacks.
 
 | Type                  | Example Tools                         | Deployment                                                                                |
 | --------------------- | ------------------------------------- | ----------------------------------------------------------------------------------------- |
@@ -153,10 +157,7 @@ The key differences between a traditional packet filtering firewall and an NGFW 
 |**Traffic Inspection**|Header-only|**Deep Packet Inspection (DPI)** of payload|
 |**Additional Features**|Basic NAT, basic logging|**IPS, Anti-Virus, Threat Intelligence, Identity Awareness**|
 
-UFW, iptables, nftables, PF, ipfw, OPNsense, and pfSense (CE) all have their foundation in packet filtering, and they can all be considered stateful packet filtering firewalls,
-but some have evolved into more sophisticated frameworks, notably:
-
-- **pfSense and OPNsense:** These are complete, GUI-based firewall _distributions_ (operating systems). They use **PF (Packet Filter)** as their core _packet filtering engine_. However, the systems themselves are full-featured **Next-Generation Firewalls (NGFWs)** because they include many features beyond simple packet filtering.
+UFW, iptables, nftables, PF, ipfw, OPNsense, and pfSense (CE) all have their foundation in packet filtering, and they can all be considered stateful packet filtering firewalls, but some have evolved into more sophisticated frameworks. For example, pfSense and OPNsense are complete, GUI-based firewall distributions (operating systems). They use PF (Packet Filter) as their core packet filtering engine. However, the systems themselves are full-featured NGFWs) because they include many features beyond simple packet filtering.
 
 #### Firewalls key features
 
@@ -209,7 +210,6 @@ Modern successor to iptables, more flexible syntax. Also part of Linux (Netfilte
   * Integrated in OpenBSD (security-focused).
 * **Use Case:** Powerful BSD firewall with clean syntax for servers/networks.
 More advanced than iptables, used in BSD-based firewalls. Originally from OpenBSD, now also in FreeBSD and others, BSD license. CLI based macOS built-in Unix firewall.
-PF handles high traffic efficiently (better than iptables in some cases).
 
 **ipfw**: Older BSD firewall, mostly replaced by PF. Found in FreeBSD (and older macOS versions), BSD license. OS/platform: FreeBSD, macOS (legacy)
 

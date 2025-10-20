@@ -181,8 +181,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "47d382666f0061a3",
+  "active": "06ca7278ba5efd38",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/packet-analyzers/wireshark-defensive-or-offensive.md",
+    "6.-practical-foundations-in-ethical-hacking/packet-analyzers/using-wireshark-to-identify-non-secure-network-traffic.md",
+    "6.-practical-foundations-in-ethical-hacking/packet-analyzers/tcpdump-defensive-or-offensive.md",
+    "6.-practical-foundations-in-ethical-hacking/packet-analyzers/how-to-get-started-with-wireshark.md",
+    "6.-practical-foundations-in-ethical-hacking/packet-analyzers/README.md",
+    "6.-practical-foundations-in-ethical-hacking/packet-analyzers",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/packet-analyzers/README.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md",
     "5.-cryptography-and-wireless-security/how-ssl-tls-uses-cryptography/README.md",
@@ -205,12 +211,7 @@
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/packet-analyzers/tcpdump-defensive-or-offensive.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/wireshark-tcpdump-vs-burp-suite-owasp-zap.md",
     "1.-it-career-planning/it-career-paths/README.md",
-    "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/README.md",
-    "1.-it-career-planning/alternative-chapter-1-review-questions.md",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing/Pasted image 20251010134024.png",
-    "conflict-files-obsidian-git.md",
-    "5.-cryptography-and-wireless-security/the-ssl-tls-handshake/understanding-the-ec-dhe-acronym.md",
-    "6.-practical-foundations-in-ethical-hacking/network-security-testing.md",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing",
     "6.-practical-foundations-in-ethical-hacking/what-do-ethical-hackers-do",
     "6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking",

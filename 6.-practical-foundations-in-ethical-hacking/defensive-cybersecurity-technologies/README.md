@@ -77,16 +77,9 @@ Stateful Firewall:
           ↳ (e.g., "Is this a reply to an existing SSH session?")
 ```
 
-A stateful firewall tracks the state of active connections (e.g., SYN, SYN-ACK, ESTABLISHED, RELATED, FIN) to make dynamic decisions. A stateful firewall understands sessions. It can tell the difference between an outgoing request to a web server and the returning traffic, and it can automatically allow the return traffic for an established session. This is a fundamental security improvement.
+A stateful firewall can tell the difference between an outgoing request to a web server and the returning traffic, and it can automatically allow the return traffic for an established session. This is a fundamental security improvement.
 
-In contrast, a **stateful firewall** tracks the state of active network connections—such as NEW, ESTABLISHED, or RELATED—dramatically improving security. A **stateful firewall** can dynamically allow returning traffic for an outgoing connection it previously permitted, while blocking unsolicited incoming requests. 
-
-While all modern firewalls are used in a stateful manner, their implementation differs. Some, like nftables, PF, and ipfw, are inherently stateful, with connection tracking as a core feature. Others, like the Linux iptables framework, achieve statefulness through the addition of the `conntrack` module and specific rules, which is considered a standard practice. Tools like UFW and systems like OPNsense/pfSense configure their underlying engines to be stateful by default.
-
-UFW, iptables, nftables, PF, ipfw, OPNsense, and pfSense (CE) are all considered stateful packet filtering firewalls, but with nuanced facts:
-- **nftables, PF, ipfw, OPNsense, and pfSense** are architected as **stateful packet filters**.
-- **iptables** is a framework that is almost universally **used as a stateful firewall**, but the statefulness comes from its connection tracking module, not the `iptables` command itself.
-- **UFW** is a tool that **configures a stateful firewall** by default.
+While all modern firewalls are used in a stateful manner, their implementation differs. Some, like nftables, PF, ipfw, OPNsense, and pfSense are inherently stateful, with connection tracking as a core feature. Others like the Linux iptables framework achieve statefulness through the addition of the `conntrack` module and specific rules, which is considered a standard practice (statefulness comes from its connection tracking module, not the `iptables` command itself). Tools like UFW configure their underlying engines to be stateful by default.
 
 **How Statefulness is Implemented in Common Tools**
 
@@ -121,7 +114,7 @@ UFW, iptables, nftables, PF, ipfw, OPNsense, and pfSense (CE) are all considered
 
 **Proxy Firewalls**
 
-While powerful, packet filtering firewalls are primarily concerned with _where_ traffic is going (IPs and ports). They are contrasted with more advanced firewalls that operate at higher layers and can inspect _what_ is inside the traffic. **Application-Level Gateways**, or **proxy firewalls**, operate at the Application Layer (Layer 7). Instead of simply forwarding packets, they act as an intermediary, terminating client connections and initiating new ones to the server. This allows them to inspect the actual content of the traffic, such as specific HTTP commands, SQL queries or malicious URLs, which a Layer 3/4 packet filter is blind to.
+While powerful, packet filtering firewalls are primarily concerned with where traffic is going (IPs and ports). They are contrasted with more advanced firewalls that operate at higher layers and can inspect what is inside the traffic. *Application-Level Gateways*, or *proxy firewalls*, operate at the Application Layer (Layer 7). Instead of simply forwarding packets, they act as an intermediary, terminating client connections and initiating new ones to the server. This allows them to inspect the actual content of the traffic, such as specific HTTP commands, SQL queries or malicious URLs, which a Layer 3/4 packet filter is blind to.
 
 **Web Application Firewalls (WAFs):**
 A Web Application Firewall (WAF) operates with a specialized focus, distinct from traditional network firewalls. Its key characteristics include a scope centered on inspecting the actual payload of web traffic to block specific attack patterns like SQL injection (SQLi) or cross-site scripting (XSS). This is enabled by its deep Layer 7 awareness, as it performs deep packet inspection to understand protocols like HTTP and DNS. This granular analysis, however, typically comes with a higher performance impact compared to packet filters, as it requires parsing the full contents of packets. WAFs can be deployed in different forms to suit various architectural needs, as shown in the table below.

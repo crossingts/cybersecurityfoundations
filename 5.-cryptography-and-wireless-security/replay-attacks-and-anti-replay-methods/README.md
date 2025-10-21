@@ -13,7 +13,7 @@ description: >-
 * Develop a basic understanding of how replay attacks can threaten SSL/TLS security
 * Develop a basic understanding of how TLS 1.3 closes most replay attack vectors
 
-This section discusses the core concepts of replay attacks and the mechanisms to defend against them. Replay attacks pose a critical threat to data confidentiality and integrity, and session and identity authenticity. This section explores key replay attack mechanisms, the risks they pose—especially to protocols like SSL/TLS—and the fundamental anti-replay methods used to mitigate them. These anti-replay methods, which are often used in combination, include sequence number windowing, timestamps, nonces, cryptographic hashes, and rotating secret keys. The discussion culminates in an analysis of how modern protocols, particularly TLS 1.3, have integrated these defenses to close historic vulnerabilities.
+This section discusses replay attacks and the mechanisms to defend against them. Replay attacks pose a critical threat to data confidentiality and integrity, and session and identity authenticity. This section explores key replay attack mechanisms, the risks they pose—especially to protocols like SSL/TLS—and the fundamental anti-replay methods used to mitigate them. Anti-replay measures are deployed to protect against various types of cybersecurity threats. For example, they are deployed to secure financial transactions, where they block attackers from intercepting and re-playing a transaction authorization to drain funds multiple times. They are also essential for hardening VPN tunnels, preventing an adversary from capturing and injecting old packets to hijack a secure connection or impersonate an authorized user. Furthermore, these measures are key to protecting sensitive data transfers, ensuring that a file can't be stolen by an attacker who simply replays the request for it after the initial transfer. Anti-replay methods are often used in combination and include sequence number windowing, timestamps, nonces, cryptographic hashes, and rotating secret keys. This discussion culminates in an analysis of how modern protocols, particularly TLS 1.3, have integrated these defenses to close historic vulnerabilities.
 
 ## Topics covered in this section
 
@@ -42,9 +42,7 @@ This section delves into SSL/TLS, session tickets, and authentication tokens. Th
 
 ### Anti-replay methods
 
-Suppose we have some packets we want to securely transmit over the wire. We start sending the packets to their destination over the wire. The packets use a 16 bit sequence number field, allowing for sequence number range of 1 – 65536.
-
-A malicious hacker manages to capture some packets from our transmission with the sequence numbers 10,000-10,099. The malicious hacker can wait for the sequence number to loop past 65536 and restart at 0, count 9,999 packets, and then inject the replayed packets with the sequence numbers 10,000-10,099. Since the replayed packets would have arrived at the right time, they would have been accepted by the receiver. 
+Suppose we have some packets we want to securely transmit over the wire. We start sending the packets to their destination over the wire. The packets use a 16 bit sequence number field, allowing for sequence number range of 1 – 65536. A malicious hacker manages to capture some packets from our transmission with the sequence numbers 10,000-10,099. The malicious hacker can wait for the sequence number to loop past 65536 and restart at 0, count 9,999 packets, and then inject the replayed packets with the sequence numbers 10,000-10,099. Since the replayed packets would have arrived at the right time, they would have been accepted by the receiver. 
 
 Anti-replay methods are essential for maintaining data integrity and for preventing attackers from capturing and retransmitting legitimate data packets to gain unauthorized access or disrupt communications. Here are the common anti-replay methods:
 
@@ -115,14 +113,6 @@ Keys should be rotated before sequence number exhaustion to prevent replay attac
 Rotating the secret keys used in the hashing algorithms is a way to prevent replayed packets. When the secret keys are rotated, the hash values of the packets will also change. This is because the secret keys are used to encrypt the data before it is hashed. If an attacker tries to replay a packet that was encrypted with the expired secret keys, the hash value of the packet will not match the hash value that is expected by the receiver.
 
 This will allow the receiver to detect the replay attack and drop the packet. If the secret keys are rotated when the sequence number resets to zero, replayed packets injected after the reset are identified by their sequence numbers (these replayed packets, with their specific sequence numbers, have an old/wrong hash value than legitimate packets).
-
-**Common anti-replay applications**
-
-Examples of how anti-replay measures can be used to protect against replay attacks include:
-
-* Protecting a financial transaction from an attacker who is trying to replay a previous transaction.
-* Protecting a VPN connection from an attacker who is trying to impersonate a valid user.
-* Protecting a file transfer from an attacker who is trying to steal a file.
 
 ### Anti-replay methods and SSL/TLS security
 
@@ -227,13 +217,6 @@ TLS 1.3 closes most replay attack vectors. While TLS 1.2 had vulnerabilities (e.
 * Strict key rotation
 
 However, application-layer defenses (idempotency keys and CSRF tokens) are still needed for full protection against duplicate transactions.
-
-**Common protocols and anti-replay methods**
-
-* IPSec: Implements anti-replay protection in its ESP (Encapsulating Security Payload) protocol. IPSec anti-replay uses sequence numbers and a sliding window to prevent replay attacks.
-* TLS/SSL: Uses sequence numbers and timestamps for anti-replay protection.
-* Secure Shell (SSH): Uses sequence numbers and timestamps for anti-replay protection.
-* WireGuard: Employs a cryptographic nonce system for anti-replay protection.
 
 ### Key takeaways
 

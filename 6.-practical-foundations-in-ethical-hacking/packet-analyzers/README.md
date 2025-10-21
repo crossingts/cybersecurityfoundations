@@ -5,9 +5,7 @@
 * Become familiar with popular open source packet analyzers, their key features, and their common use cases
 * Become familiar with the BPF (Berkeley Packet Filter) syntax
 
-This section covers features and uses cases of popular open source packet analyzers, including Wireshark, tcpdump, Zeek, Snort, and Arkime, focusing on the d
-
-focusing on 
+This section covers key features and use cases of popular open source packet analyzers, including Wireshark, tcpdump, Zeek, Snort, and Arkime. The discussion focuses on the deployment of Wireshark and tcpdump in key defensive and offensive scenarios. Further, the section covers the BPF (Berkeley Packet Filter) syntax and packet-filtering mechanism, which is used by major tools like `tcpdump`and Wireshark to capture network traffic efficiently.
 
 ## Topics covered in this section
 

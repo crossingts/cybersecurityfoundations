@@ -116,6 +116,8 @@ This will allow the receiver to detect the replay attack and drop the packet. If
 
 ### Anti-replay methods and SSL/TLS security
 
+Robust security protocols implement anti-replay measures as a core part of their design. For instance, modern protocols like WireGuard employ a cryptographic nonce system to guarantee message freshness and prevent replays. IPSec implements anti-replay measures within its ESP protocol, using sequence numbers and a sliding window, while SSH and TLS/SSL leverage sequence numbers and timestamps. 
+
 Anti-replay methods are a fundamental part of how SSL/TLS secures data. SSL/TLS relies on cryptographic tools to ensure **confidentiality, integrity, and authenticity** of data in transit. Replay attacks pose a threat to these guarantees, so SSL/TLS incorporates anti-replay mechanisms as part of its security design. 
 
 #### **How Replay Attacks Threaten SSL/TLS Security Guarantees and Modern Defenses**

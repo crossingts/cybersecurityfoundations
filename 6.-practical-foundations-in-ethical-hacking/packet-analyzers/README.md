@@ -1,3 +1,9 @@
+---
+description: >-
+  This section covers key features and use cases of popular open source packet
+  analyzers, including Wireshark, tcpdump, Zeek, Snort, and Arkime
+---
+
 # Packet analyzers
 
 ## Learning objectives

@@ -12,7 +12,7 @@ description: >-
 * Become familiar with common wireless client authentication methods
 * Identify common EAP-based authentication methods
 
-This section has two main goals. First, this section introduces the IEEE 802.11 networking standard, which provides a basis for a wireless security management framework (client authentication, message privacy, and message integrity). The section then traces the critical evolution of these security components through modern protocols like WPA2 and WPA3. Second, this section introduces the wireless client authentication methods of open authentication, WEP, PSK, SAE, and 802.1x/EAP, including LEAP, EAP-FAST, PEAP, and EAP-TLS.
+This section has two main goals. First, this section introduces the IEEE 802.11 networking standard, which provides a basis for a wireless security management framework: client authentication, message privacy, and message integrity. The section then traces the critical evolution of these security components through modern protocols like WPA2 and WPA3. Second, this section introduces the wireless client authentication methods of open authentication, WEP, PSK, SAE, and 802.1x/EAP, including LEAP, EAP-FAST, PEAP, and EAP-TLS.
 
 ## Topics covered in this section
 

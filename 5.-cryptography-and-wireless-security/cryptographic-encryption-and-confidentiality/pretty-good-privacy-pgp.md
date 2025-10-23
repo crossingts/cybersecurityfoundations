@@ -23,7 +23,7 @@ The OpenPGP standard (RFC 4880) is an open standard for encrypting and decryptin
 
 User A wants to send User B an encrypted email.
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt="How PGP Encryption Works" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/PGP-GPG-encryption-steps.jpg" alt="PGP-GPG-encryption-steps"><figcaption><p>How PGP encryption works (diagram created using DeepSeek)</p></figcaption></figure>
 
 * First, using GPG, User A generates a random symmetric session key using AES or 3DES (GPG defaults to AES-256 since \~2014). This key is only used once.
 * User A encrypts their message to User B using the session key.

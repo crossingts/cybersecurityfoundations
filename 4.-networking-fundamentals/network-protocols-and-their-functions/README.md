@@ -80,8 +80,6 @@ The Internet Protocol (IP) is the Internet layer (TCP/IP model) or network layer
 
 There are two main versions of IP: IPv4 and IPv6 (v equals version). IPv4 uses 32 bit addresses which limits the address space to 2 to the power of 32 unique IP addresses. This is equal to 4,294,967,296 IP addresses. IPv6 uses 128 bit addresses allowing for 2 to the power of 128 (about 3.4 x 10 to the power of 38) unique IP addresses. This is equal to 340 trillion trillion trillion IP addresses. The addressing architecture of IPv4 is defined in IETF publication RFC 791 (September 1981). IPv6 is defined in IETF publication RFC 4291 (July 2017). IPv4 is used by 99% of the networks, while IPv6 is used by less than 1% of the networks.
 
-We elaborated the OSI model in section 2 The Open Systems Interconnection (OSI) model, and there we discussed the functions of network protocols not discussed in this section such as TCP and UDP. So feel free to review section 2 of this chapter.
-
 ### The DHCP protocol
 
 Every host needs four items for Internet connectivity. Anytime a host connects to a network there are four parameters that need to be configured on this host to achieve Internet connectivity.

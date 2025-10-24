@@ -218,9 +218,9 @@ We’ve been talking about IP addresses and MAC addresses as independent functio
 * Layer 4: Transport layer – service to service delivery:
   * distinguish data streams.
   * addressing scheme – ports – 0-65535, TCP or UDP.
-  * 0-65535 – TCP – favours reliability.
-  * 0-65535 – UDP – favours efficiency.
-  * servers listen for requests to pre-defined ports.
+  * 0-65535 – TCP – favors reliability.
+  * 0-65535 – UDP – favors efficiency.
+  * servers listen for requests to predefined ports.
   * clients select random port for each connection – response traffic will arrive on this port.
 * Layers 5, 6, 7 – Session, Presentation, Application:
   * the distinction between these layers is somewhat vague.

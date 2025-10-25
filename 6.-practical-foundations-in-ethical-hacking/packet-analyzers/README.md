@@ -144,8 +144,18 @@ tcpdump 'udp and not port 53'               # Captures UDP traffic except DNS
 
 ### Key takeaways
 
-
+- Purpose of Packet Analyzers: They are essential passive monitoring tools used for network security, troubleshooting, and forensics. They capture and decode raw network traffic without introducing additional traffic onto the network.
+- Tool Specialization: Different open-source packet analyzers are designed for specific use cases:
+    - Wireshark: The premier GUI tool for deep, interactive protocol inspection and analysis.
+    - tcpdump: A lightweight, ubiquitous CLI tool ideal for quick captures and scripting.
+    - Zeek: A network traffic analyzer focused on behavioral analysis and generating structured logs for forensic review.
+    - Snort: A primary tool for real-time Network Intrusion Detection (NIDS) using rule-based signatures.
+    - Arkime: A large-scale solution for indexing, storing, and searching packet captures (PCAPs) over long periods.
+- The Role of BPF: The Berkeley Packet Filter (BPF) syntax is a critical, efficient packet-filtering mechanism. It allows tools like tcpdump and Wireshark to capture only relevant traffic at the kernel level, conserving system resources.
+- Selection is Context-Dependent: The choice of tool depends on the specific need—deep analysis (Wireshark), automation (tcpdump), security monitoring (Snort), or large-scale retention (Arkime). Tools are often used in combination (e.g., tcpdump for capture and Wireshark for analysis).
 
 ### References
+
+Orebaugh, A., & Pinkard, B. (2008). _Nmap in the enterprise: Your guide to network scanning_. Syngress.
 
 Sanders, C. (2017). _Practical packet analysis: Using Wireshark to solve real-world network problems_ (3rd ed.). No Starch Press.

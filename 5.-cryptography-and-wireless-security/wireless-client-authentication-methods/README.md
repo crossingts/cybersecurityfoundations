@@ -80,13 +80,13 @@ The WEP key can also be used as an optional authentication method. A client not 
 
 To protect data privacy on a wireless network, the data must be encrypted while it is traveling between clients and APs. This is done by encrypting the data payload in each wireless frame just before it is transmitted, and then decrypting it as it is received. The encryption method must be one that the transmitter and receiver share so that the data can be encrypted and decrypted successfully.
 
-Only WEP (RC4-based) is defined in the original IEEE 802.11 standard. As noted, WEP’s shared key is both the authentication secret and encryption key, making it fundamentally insecure. Modern protocols such as Wi-Fi Protected Access (WPA2 and WPA3) derive temporary keys instead. WEP’s encryption was optional – networks could run unencrypted (open authentication + no encryption is one option; open authentication + WEP encryption is another option). No other encryption options existed until TKIP (WPA, 2003) and AES-CCMP (WPA2, 2004).
+Only WEP (RC4-based) is defined in the original IEEE 802.11 standard. As noted, WEP’s shared key is both the authentication secret and encryption key, making it fundamentally insecure. Modern protocols such as Wi-Fi Protected Access (WPA2 and WPA3) derive temporary keys instead. WEP’s encryption was optional – networks could run without encryption (open authentication + no encryption was one option; open authentication + WEP encryption was another option). No other encryption options existed until TKIP (WPA, 2003) and AES-CCMP (WPA2, 2004).
 
 #### Data integrity
 
 No true message authentication existed within the original IEEE 802.11 standard. WPA introduced Michael MIC (Message Integrity Check), which was better than WEP but still vulnerable to forgery.
 
-To address the critical weaknesses in WEP and the interim fixes in WPA, modern Wi-Fi security standards employ robust cryptographic suites. The **Counter/CBC-MAC Protocol (CCMP)**, which is mandatory for WPA2 certification, is a fundamental advance. CCMP combines two strong algorithms: the **Advanced Encryption Standard (AES)** in counter mode for data confidentiality, and the **Cipher Block Chaining Message Authentication Code (CBC-MAC)** for data integrity, providing a much more secure alternative to TKIP. The subsequent **Galois/Counter Mode Protocol (GCMP)**, used in WPA3, offers even greater security and efficiency. GCMP also uses AES counter mode for encryption but employs the **Galois Message Authentication Code (GMAC)** for integrity, making it a more advanced authenticated encryption suite than CCMP.
+To address the critical weaknesses in WEP and the interim fixes in WPA, modern Wi-Fi security standards employ robust cryptographic suites. The Counter/CBC-MAC Protocol (CCMP), which is mandatory for WPA2 certification, is a fundamental advance. CCMP combines two strong algorithms: the Advanced Encryption Standard (AES) in counter mode for data confidentiality, and the Cipher Block Chaining Message Authentication Code (CBC-MAC) for data integrity, providing a much more secure alternative to TKIP. The subsequent Galois/Counter Mode Protocol (GCMP), used in WPA3, offers even greater security and efficiency. GCMP also uses AES counter mode for encryption but employs the Galois Message Authentication Code (GMAC) for integrity, making it a more advanced authenticated encryption suite than CCMP.
 
 **Evolution of the IEEE 802.11 Security Protocols**
 
@@ -108,15 +108,14 @@ The Wi-Fi Protected Access (WPA) protocol was introduced by the Wi-Fi Alliance i
 | **WPA**             | WPA-Personal (PSK) or WPA-Enterprise (802.1X/EAP) | TKIP (RC4 with fixes) | Michael MIC – Weak, but better than WEP | 128-bit (TKIP)            | 2003 (Wi-Fi Alliance) |
 | **WPA2-Personal**   | PSK (Pre-Shared Key)                              | AES-CCMP (mandatory)  | CCMP (AES-CBC-MAC) – Strong             | 128-bit (AES)             | 2004 (802.11i)        |
 | **WPA2-Enterprise** | 802.1X/EAP                                        | AES-CCMP (mandatory)  | CCMP (AES-CBC-MAC) – Strong             | 128-bit (AES)             | 2004 (802.11i)        |
-| **WPA3-Personal**   | SAE (Simultaneous Authentication of Equals)       | AES-GCMP              | GCMP (AES with GMAC)                    | 256-bit (AES)             | 2018                  |
-| **WPA3-Enterprise** | 802.1X/EAP (with stricter requirements)           | AES-GCMP              | GCMP                                    | 256-bit (AES)             | 2018                  |
+| **WPA3-Personal**   | SAE (Simultaneous Authentication of Equals)       | AES-GCMP              | GCMP (AES-GMAC)                         | 256-bit (AES)             | 2018                  |
+| **WPA3-Enterprise** | 802.1X/EAP (with stricter requirements)           | AES-GCMP              | GCMP (AES-GMAC)                         | 256-bit (AES)             | 2018                  |
 
 Technically, both the WEP key and the WPA/WPA2 PSK are pre-shared secrets used for network access. However, their security differs drastically due to how they are implemented, particularly in how they handle authentication and key management.
 
 WEP uses the WEP key directly for both authentication (the client proves it knows the key by encrypting a challenge from the AP) and encryption (the same static key is used to encrypt all data packets via RC4). This direct use means compromising the key through the authentication process breaks both trust and privacy. In contrast, in WPA/WPA2-Personal the PSK itself is never used for encryption. Instead, the PSK serves as a starting point in a secure 4-Way Handshake that achieves two separate goals:
 
 1. Secure authentication: The 4-Way Handshake mutually verifies that both the client and AP know the PSK.
-    
 2. Dynamic key derivation: The 4-Way Handshake generates unique, temporary session keys used solely for encrypting data with strong algorithms (TKIP or AES-CCMP).
 
 This fundamental shift from a static secret to a dynamic key management system was a monumental security improvement. This separation of the authentication secret from the encryption keys is why PSK is fundamentally more secure than the WEP key.

@@ -84,7 +84,9 @@ Only WEP (RC4-based) is defined in the original IEEE 802.11 standard. As noted, 
 
 #### Data integrity
 
-No true message authentication existed within the original IEEE 802.11 standard. WPA introduced Michael MIC, which was better than WEP but still vulnerable to forgery.
+No true message authentication existed within the original IEEE 802.11 standard. WPA introduced Michael MIC (Message Integrity Check), which was better than WEP but still vulnerable to forgery.
+
+To address the critical weaknesses in WEP and the interim fixes in WPA, modern Wi-Fi security standards employ robust cryptographic suites. The **Counter/CBC-MAC Protocol (CCMP)**, which is mandatory for WPA2 certification, is a fundamental advance. CCMP combines two strong algorithms: the **Advanced Encryption Standard (AES)** in counter mode for data confidentiality, and the **Cipher Block Chaining Message Authentication Code (CBC-MAC)** for data integrity, providing a much more secure alternative to TKIP. The subsequent **Galois/Counter Mode Protocol (GCMP)**, used in WPA3, offers even greater security and efficiency. GCMP also uses AES counter mode for encryption but employs the **Galois Message Authentication Code (GMAC)** for integrity, making it a more advanced authenticated encryption suite than CCMP.
 
 **Evolution of the IEEE 802.11 Security Protocols**
 
@@ -107,7 +109,7 @@ The Wi-Fi Protected Access (WPA) protocol was introduced by the Wi-Fi Alliance i
 | **WPA2-Personal**   | PSK (Pre-Shared Key)                              | AES-CCMP (mandatory)  | CCMP (AES-CBC-MAC) – Strong             | 128-bit (AES)             | 2004 (802.11i)        |
 | **WPA2-Enterprise** | 802.1X/EAP                                        | AES-CCMP (mandatory)  | CCMP (AES-CBC-MAC) – Strong             | 128-bit (AES)             | 2004 (802.11i)        |
 | **WPA3-Personal**   | SAE (Simultaneous Authentication of Equals)       | AES-GCMP              | GCMP (AES with GMAC)                    | 256-bit (AES)             | 2018                  |
-| **WPA3-Enterprise** | 802.1X/EAP (with stricter requirements)           | AES-256-GCMP          | 256-bit GMAC (with GCMP)                | 256-bit (AES)             | 2018                  |
+| **WPA3-Enterprise** | 802.1X/EAP (with stricter requirements)           | AES-GCMP              | GCMP                                    | 256-bit (AES)             | 2018                  |
 
 Technically, both the WEP key and the WPA/WPA2 PSK are pre-shared secrets used for network access. However, their security differs drastically due to how they are implemented, particularly in how they handle authentication and key management.
 
@@ -224,7 +226,7 @@ Here is a chronology of key developments within the IEEE 802.1x/EAP standard.
 
 ### IEEE 802.1x/EAP (Extensible Authentication Protocol)
 
-When 802.1x is enabled, for a wireless client to gain access to the network, the client must first associate with an AP and then successfully authenticate. The client uses open authentication to associate with the AP, and then the actual client authentication occurs at a dedicated authentication server.  This is different from open and WEP authentication where wireless clients are authenticated locally at the AP without further intervention.&#x20;
+When 802.1x is enabled, for a wireless client to gain access to the network, the client must first associate with an AP and then successfully authenticate. The client uses open authentication to associate with the AP, and then the actual client authentication occurs at a dedicated authentication server.  This is different from open and WEP authentication where wireless clients are authenticated locally at the AP without further intervention. 
 
 The three-party 802.1x arrangement involves of the following entities:
 
@@ -238,7 +240,7 @@ The three-party 802.1x arrangement involves of the following entities:
 
 The WLC acts as a middleman in the client authentication process, controlling user access according to 802.1x and communicating with the authentication server using the EAP framework.
 
-The **Extensible Authentication Protocol (EAP)** is a flexible and scalable authentication framework. “EAP defines a set of common functions that actual authentication methods can use to authenticate users” (p. 712). EAP is commonly integrated with the **IEEE 802.1x** port-based access control standard.&#x20;
+The **Extensible Authentication Protocol (EAP)** is a flexible and scalable authentication framework. “EAP defines a set of common functions that actual authentication methods can use to authenticate users” (p. 712). EAP is commonly integrated with the **IEEE 802.1x** port-based access control standard. 
 
 The client authentication process involving a WLC is as follows:
 
@@ -261,7 +263,7 @@ Benefits of using a WLC for client authentication include:
 
 When configuring user authentication on a WLAN, you do not need to select a specific authentication method. Instead, you select 802.1x on the WLC. This will allow the WLC to handle a variety of EAP methods. The client and authentication server will then use a compatible method. Once 802.1X is enabled on the WLC, the client and authentication server will negotiate a method to use.
 
-The following discussion gives an overview of some common EAP-based authentication methods.&#x20;
+The following discussion gives an overview of some common EAP-based authentication methods. 
 
 * LEAP (Lightweight EAP)
 * EAP-FAST (Flexible Authentication by Secure Tunneling)
@@ -282,7 +284,7 @@ Wireless clients and controllers may still offer LEAP, but you should not use it
 
 #### EAP-FAST (EAP Flexible Authentication by Secure Tunneling)
 
-In Cisco’s more secure authentication method called EAP Flexible Authentication by Secure Tunneling (**EAP-FAST**), authentication credentials are protected by passing a protected access credential (**PAC**) between the AS and the supplicant. The PAC is a shared secret generated by the AS and used for mutual authentication.&#x20;
+In Cisco’s more secure authentication method called EAP Flexible Authentication by Secure Tunneling (**EAP-FAST**), authentication credentials are protected by passing a protected access credential (**PAC**) between the AS and the supplicant. The PAC is a shared secret generated by the AS and used for mutual authentication. 
 
 EAP-FAST constitutes of a sequence of three phases:
 

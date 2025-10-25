@@ -2,14 +2,14 @@
 
 tcpdump is primarily a defensive technology, but it can also be used in offensive scenarios, depending on the context. Here’s a breakdown:
 
-#### **Defensive Use Cases**
+#### tcpdump Defensive Use Cases
 
 * **Network Monitoring & Troubleshooting**: Administrators use tcpdump to diagnose connectivity issues, analyze traffic patterns, and detect anomalies.
 * **Intrusion Detection**: Security teams capture and inspect packets to identify malicious activity (e.g., port scans, DDoS attacks, or unauthorized connections).
 * **Forensics & Incident Response**: After a breach, tcpdump logs help reconstruct attack vectors and identify compromised systems.
 * **Policy Enforcement**: Verify firewall rules, VPN integrity, and encryption compliance by inspecting traffic.
 
-#### **Offensive Use Cases**
+#### tcpdump Offensive Use Cases
 
 * **Reconnaissance**: Attackers may use tcpdump to sniff unencrypted traffic (e.g., plaintext credentials, sensitive data) on compromised systems.
 * **Man-in-the-Middle (MitM) Attacks**: If an attacker gains access to a network segment, tcpdump could capture traffic for later analysis.

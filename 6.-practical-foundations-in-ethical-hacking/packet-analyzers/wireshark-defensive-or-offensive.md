@@ -2,7 +2,7 @@
 
 Wireshark is primarily a defensive (security monitoring) tool, but it can also be used in offensive security (ethical hacking) scenarios.
 
-**Wireshark Defensive Uses:**
+#### Wireshark Defensive Use Cases
 
 1. **Traffic Analysis for Security Monitoring**
    * Wireshark’s core function is capturing and analyzing network traffic, which is essential for detecting anomalies, intrusions, and malicious activity (e.g., malware C2 traffic, suspicious connections).
@@ -15,7 +15,7 @@ Wireshark is primarily a defensive (security monitoring) tool, but it can also b
 4. **Passive Tool (No Active Exploitation)**
    * Wireshark doesn’t send packets or exploit vulnerabilities; it only observes traffic. Offensive tools (e.g., Metasploit, Nmap) actively interact with targets.
 
-**Wireshark Offensive Uses (Secondary Role):**
+#### Wireshark Offensive Use Cases
 
 While defensive use is primary, ethical hackers and attackers can leverage Wireshark for:
 

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/chapter-6-review-questions.md",
+                "file": "4.-networking-fundamentals/cisco-ios-cli-and-basic-device-security/README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "chapter-6-review-questions"
+              "title": "README"
             }
           }
         ]
@@ -183,9 +183,12 @@
   },
   "active": "47d382666f0061a3",
   "lastOpenFiles": [
+    "4.-networking-fundamentals/how-to-configure-static-routes-on-cisco-routers/README.md",
+    "5.-cryptography-and-wireless-security/hashing-algorithms-and-message-integrity/README.md",
+    "5.-cryptography-and-wireless-security/cryptographic-encryption-and-confidentiality/README.md",
+    "6.-practical-foundations-in-ethical-hacking/chapter-6-review-questions.md",
     "6.-practical-foundations-in-ethical-hacking/packet-analyzers/packet-analyzers-quiz.md",
     "6.-practical-foundations-in-ethical-hacking/packet-analyzers/README.md",
-    "6.-practical-foundations-in-ethical-hacking/chapter-6-review-questions.md",
     "6.-practical-foundations-in-ethical-hacking/packet-analyzers/tcpdump-defensive-or-offensive.md",
     "6.-practical-foundations-in-ethical-hacking/packet-analyzers/wireshark-defensive-or-offensive.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/nist-sp-800-61-ir-framework.md",
@@ -209,9 +212,6 @@
     "5.-cryptography-and-wireless-security/how-ssl-tls-uses-cryptography/README.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/firewalls.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/nftables.md",
-    "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/firewalls/README.md",
-    "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/opnsense.md",
-    "6.-practical-foundations-in-ethical-hacking/network-security-testing/README.md",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing/Pasted image 20251010134024.png",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing",
     "6.-practical-foundations-in-ethical-hacking/what-do-ethical-hackers-do",

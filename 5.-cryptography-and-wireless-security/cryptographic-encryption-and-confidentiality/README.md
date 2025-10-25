@@ -11,7 +11,7 @@ description: >-
 * Develop a foundational understanding of how cryptographic encryption works
 * Understand why symmetric encryption is a preferred choice for bulk data encryption
 
-This section sheds light on how cryptographic encryption can be used to achieve data confidentiality. This discussion looks at how scrambling plain text according to some mathematical logic encrypts plain text into cipher text. We will dissect the core principles, algorithms, and practical applications of both symmetric encryption (e.g., AES) and asymmetric encryption (e.g., RSA). The lesson will compare their strengths and weaknesses, explain why symmetric encryption is favored for bulk data processing, and introduce hybrid encryption as a solution to the key exchange problem, combining the best attributes of both cryptographic systems.
+This section sheds light on how cryptographic encryption can be used to achieve data confidentiality. This discussion looks at how scrambling plain text according to some mathematical logic encrypts plain text into cipher text. We will dissect the core principles, algorithms, and practical applications of both symmetric encryption (e.g., AES) and asymmetric encryption (e.g., RSA). The section will compare their strengths and weaknesses, explain why symmetric encryption is favored for bulk data processing, and introduce hybrid encryption as a solution to the key exchange problem, combining the best attributes of both cryptographic systems.
 
 ## Topics covered in this section
 

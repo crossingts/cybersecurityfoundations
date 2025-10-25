@@ -13,7 +13,7 @@ description: >-
 * Develop a foundational understanding of how hashing can be used to ensure message integrity
 * Develop a foundational understanding of how hashing can be used to authenticate someone
 
-This section discusses [hashing algorithms and message integrity](https://builtin.com/cybersecurity/what-is-hashing). This section begins by explaining hashing's mechanism of action through a simplified example. It then explains the characteristics (properties) of industry grade hashing algorithms. It then explores how basic hashing can be used to ensure the integrity of messages exchanged between a client and a server. Finally, the lesson introduces the concept of message authentication, demonstrating how a shared secret key is combined with a hash function to create a Hash-Based Message Authentication Code (HMAC). You will learn how HMAC provides a robust defense against tampering by ensuring both data integrity and authenticity.
+This section discusses [hashing algorithms and message integrity](https://builtin.com/cybersecurity/what-is-hashing). This section begins by explaining hashing's mechanism of action through a simplified example. It then explains the characteristics (properties) of industry grade hashing algorithms. It then explores how basic hashing can be used to ensure the integrity of messages exchanged between a client and a server. Finally, the section introduces the concept of message authentication, demonstrating how a shared secret key is combined with a hash function to create a Hash-Based Message Authentication Code (HMAC). You will learn how HMAC provides a robust defense against tampering by ensuring both data integrity and authenticity.
 
 ## Topics covered in this section
 

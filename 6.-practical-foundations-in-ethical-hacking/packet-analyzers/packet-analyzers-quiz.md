@@ -26,7 +26,7 @@ b) tcpdump 'not udp and not port 53'\
 c) **tcpdump 'udp and not port 53'**\
 d) tcpdump 'udp or port 53'
 
-**5. According to the lesson, what is a key advantage of using passive techniques like packet sniffers for network monitoring, as opposed to active scanning techniques? (Choose one answer)**\
+**5. What is a key advantage of using passive techniques like packet sniffers for network monitoring, as opposed to active scanning techniques? (Choose one answer)**\
 a) They can automatically block malicious traffic in real-time\
 b) They are better at probing specific ports and protocols on demand\
 c) **They are non-intrusive and do not introduce additional traffic onto the network**\

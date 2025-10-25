@@ -104,7 +104,7 @@
 
 ### Packet analyzers
 
-**1. The lesson groups packet analyzers like Wireshark and tcpdump under a specific category of network monitoring technique. What is the fundamental characteristic of this technique that distinguishes it from active methods like port scanning?**\
+**1. The section groups packet analyzers like Wireshark and tcpdump under a specific category of network monitoring technique. What is the fundamental characteristic of this technique that distinguishes it from active methods like port scanning?**\
 **Answer:** The fundamental characteristic is that they are **passive** techniques; they capture and analyze traffic as it passes by on the network without introducing any probe packets or additional traffic.
 
 **2. Wireshark and Zeek are both powerful analysis tools, but they have different primary outputs. What is the key difference in the analysis data each tool typically provides?**\

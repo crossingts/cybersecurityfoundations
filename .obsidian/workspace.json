@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/packet-analyzers/packet-analyzers-quiz.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/chapter-6-review-questions.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "packet-analyzers-quiz"
+              "title": "chapter-6-review-questions"
             }
           }
         ]
@@ -183,9 +183,9 @@
   },
   "active": "47d382666f0061a3",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/packet-analyzers/packet-analyzers-quiz.md",
     "6.-practical-foundations-in-ethical-hacking/packet-analyzers/README.md",
     "6.-practical-foundations-in-ethical-hacking/chapter-6-review-questions.md",
-    "6.-practical-foundations-in-ethical-hacking/packet-analyzers/packet-analyzers-quiz.md",
     "6.-practical-foundations-in-ethical-hacking/packet-analyzers/tcpdump-defensive-or-offensive.md",
     "6.-practical-foundations-in-ethical-hacking/packet-analyzers/wireshark-defensive-or-offensive.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/nist-sp-800-61-ir-framework.md",

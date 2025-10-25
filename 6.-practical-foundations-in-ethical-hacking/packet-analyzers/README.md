@@ -159,3 +159,5 @@ tcpdump 'udp and not port 53'               # Captures UDP traffic except DNS
 Orebaugh, A., & Pinkard, B. (2008). _Nmap in the enterprise: Your guide to network scanning_. Syngress.
 
 Sanders, C. (2017). _Practical packet analysis: Using Wireshark to solve real-world network problems_ (3rd ed.). No Starch Press.
+
+Treurniet, J. (2004). An Overview of Passive Information Gathering Techniques for Network Security. *Defence R&D Canada*, Technical Memorandum DRDC TM 2004-073. Retrieved August 20, 2019, from http://cradpdf.drdc-rddc.gc.ca/PDFS/unc30/p521745.pdf

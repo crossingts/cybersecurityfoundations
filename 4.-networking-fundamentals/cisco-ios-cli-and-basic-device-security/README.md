@@ -78,7 +78,7 @@ Once you connect to the Cisco device (e.g., a Cisco ISR router) you will be gree
 
 Since this is the first time booting the device, you are asked to enter the initial configuration dialogue. Answer no. As per the screen instructions, press the enter key (RETURN) to get started. Now you can start typing commands in the CLI.
 
-The tasks discussed in this lesson can be done with **Packet Tracer** to an adequate approximation to real, physical Cisco devices being configured by a Terminal Emulator/PuTTY.
+The tasks discussed in this section can be done with **Packet Tracer** to an adequate approximation to real, physical Cisco devices being configured by a Terminal Emulator/PuTTY.
 
 ### CLI command modes
 

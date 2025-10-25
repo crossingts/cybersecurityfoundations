@@ -1,6 +1,6 @@
 # NIST SP 800-61 (IR framework)
 
-NIST Special Publication 800-61 Rev. 2: "Computer Security Incident Handling Guide" is a widely cited and adopted standard for IR. It provides a comprehensive set of guidelines and best practices for building and managing an IR capability.
+NIST Special Publication 800-61 Rev. 2: "Computer Security Incident Handling Guide" is a widely cited and adopted standard for Incident Response (IR). It provides a comprehensive set of guidelines and best practices for building and managing an IR capability.
 
 **IR open source stack: Wazuh + TheHive + Suricata → Full SIEM + IR + NIDS.**
 

@@ -101,3 +101,20 @@
 
 **5. Both packet-filtering firewalls (like iptables) and Web Application Firewalls (WAFs) control traffic. What is the key operational difference in the network layer at which they primarily operate?**\
 **Answer:** Packet-filtering firewalls operate primarily at the network and transport layers (L3/L4), while WAFs operate at the application layer (L7) to protect specific web applications.
+
+### Packet analyzers
+
+**1. The lesson groups packet analyzers like Wireshark and tcpdump under a specific category of network monitoring technique. What is the fundamental characteristic of this technique that distinguishes it from active methods like port scanning?**\
+**Answer:** The fundamental characteristic is that they are **passive** techniques; they capture and analyze traffic as it passes by on the network without introducing any probe packets or additional traffic.
+
+**2. Wireshark and Zeek are both powerful analysis tools, but they have different primary outputs. What is the key difference in the analysis data each tool typically provides?**\
+**Answer:** Wireshark's primary output is **raw or deeply dissected packets** (PCAP data), while Zeek's primary output is **structured, high-level log files** (e.g., for HTTP sessions, DNS queries) that summarize network activity.
+
+**3. Both tcpdump and Snort can capture and analyze packets, but they are designed for different primary purposes. What is the primary function of each tool?**\
+**Answer:** tcpdump's primary function is as a **packet sniffer** for capture and basic analysis, while Snort's primary function is as a **Network Intrusion Detection System (NIDS)** for real-time, rule-based threat detection and alerting.
+
+**4. The Berkeley Packet Filter (BPF) syntax is a key feature for efficient packet capture. What is the primary performance benefit of using BPF filters during capture instead of applying filters afterward?**\
+**Answer:** The primary benefit is **reduced CPU and memory usage** because BPF applies the filters at the kernel level, discarding unwanted packets before they are copied to user space, rather than capturing all packets and then filtering them.
+
+**5. For a security team focused on threat hunting, a combination of Zeek and Suricata is recommended. What is the primary function of each tool in this complementary pairing?**\
+**Answer:** Zeek's primary function is **behavioral analysis and structured traffic logging** for forensic investigation, while Suricata's primary function is **high-speed, real-time intrusion detection (IDS/IPS)** to alert on malicious activity.

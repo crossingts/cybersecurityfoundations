@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5.-cryptography-and-wireless-security/wireless-client-authentication-methods/README.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -183,6 +183,7 @@
   },
   "active": "47d382666f0061a3",
   "lastOpenFiles": [
+    "5.-cryptography-and-wireless-security/wireless-client-authentication-methods/README.md",
     "4.-networking-fundamentals/cisco-ios-cli-and-basic-device-security/README.md",
     "4.-networking-fundamentals/how-to-configure-static-routes-on-cisco-routers/README.md",
     "5.-cryptography-and-wireless-security/hashing-algorithms-and-message-integrity/README.md",
@@ -193,7 +194,6 @@
     "6.-practical-foundations-in-ethical-hacking/packet-analyzers/tcpdump-defensive-or-offensive.md",
     "6.-practical-foundations-in-ethical-hacking/packet-analyzers/wireshark-defensive-or-offensive.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/nist-sp-800-61-ir-framework.md",
-    "5.-cryptography-and-wireless-security/wireless-client-authentication-methods/README.md",
     "5.-cryptography-and-wireless-security/replay-attacks-and-anti-replay-methods/README.md",
     "6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing/README.md",
     "6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing/types-of-penetration-testing-quiz.md",

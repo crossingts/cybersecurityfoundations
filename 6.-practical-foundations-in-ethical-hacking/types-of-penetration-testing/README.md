@@ -13,33 +13,57 @@ description: >-
 * Compare black box and white box penetration testing methods
 * Identify the possible risks of penetration testing
 
-This section explores six types of penetration testing, compares between black box and white box penetration testing, and sheds light on possible risks of penetration testing to the client organization.
-
-## Topics covered in this section
-
-* **Types of penetration testing**
-* **Black box penetration testing and white box penetration testing**
-* **Possible risks of penetration testing**
-
-### Types of penetration testing
-
-• Network penetration testing
-
-• Wireless network penetration testing
-
-• Website/web application penetration testing
+This section explores six types of penetration testing (network penetration testing, wireless network penetration testing, website/web application penetration testing,
 
 • Physical penetration testing
 
 • Social engineering
 
-• Cloud penetration testing
+and cloud penetration testing),
+
+compares between black box and white box penetration testing, and sheds light on possible risks of penetration testing to the client organization.
+
+## Topics covered in this section
+
+* **Types of penetration testing**
+* **Black box penetration testing and white box penetration testing**
+* **Risks of penetration testing**
+
+### Types of penetration testing
+
+Penetration testing is scoped to target specific segments of an organization's attack surface. A comprehensive security program employs a variety of tests, each designed to identify vulnerabilities in different technologies and environments. 
 
 Network penetration testing and exploitation techniques typically include bypassing firewalls, router testing, IPS/IDS evasion, DNS footprinting, open port scanning and testing, SSH attacks, proxy servers, network vulnerabilities, and application penetration testing (Cipher, n.d.).
 
+The following outlines six common types of penetration tests, detailing their technical focus and objectives.
+
+**Network Penetration Testing** 
+
+This test targets an organization's network infrastructure, assessing both perimeter and internal defenses. The methodology involves reconnaissance, service enumeration, vulnerability scanning, and exploitation of identified weaknesses in network devices (routers, switches), servers, and network services. Testers aim to bypass security controls like firewalls and Intrusion Prevention Systems (IPS), often using techniques like protocol manipulation and credential brute-forcing. The goal is to map attack paths, demonstrate lateral movement potential, and identify misconfigurations that could lead to a full network compromise.
+
+**Wireless Network Penetration Testing**  
+
+This assessment focuses on the security of an organization's radio frequency (RF) communications. It involves enumerating all wireless SSIDs, testing the strength of encryption protocols (e.g., WPA2-Enterprise, WPA3), and attempting to exploit weaknesses in authentication mechanisms like 802.1X. The scope extends beyond corporate Wi-Fi to include guest networks, Bluetooth Low Energy (BLE) devices, and Zigbee systems, identifying if they can be used as a vector to gain a foothold on the wired network.
+
+**Website/Web Application Penetration Testing**  
+
+This is a code-level assessment of web applications and the services they depend on. It involves manually probing for the OWASP Top Ten vulnerabilities, including injection flaws (SQLi, OS command injection), broken access controls, and security misconfigurations. Testers analyze the application's logic, input validation, session management, and backend API interactions to find vulnerabilities that automated scanners might miss, providing a realistic view of the application's resilience to targeted attack.
+
+**Physical Penetration Testing**  
+
+This assessment evaluates the effectiveness of physical security controls as a barrier to digital assets. Testers use lock picking, tailgating, badge cloning, and other pretexting techniques to bypass physical barriers and gain access to secure areas. The objective is often to connect a rogue device to the internal network, access unattended workstations, or exfiltrate physical hardware, demonstrating the direct impact of a physical breach on information security.
+
+**Social Engineering Penetration Testing**  
+
+This test quantitatively assesses the human layer of security by simulating real-world attack techniques. Technical execution includes crafting and deploying targeted phishing campaigns with malicious payloads or credential harvesters, conducting vishing (voice phishing) calls to extract sensitive information, and testing physical pretexting. The results measure the organization's susceptibility to manipulation and the effectiveness of its security awareness training in a controlled, measurable way.
+
+**Cloud Penetration Testing**  
+
+This specialized assessment targets cloud-specific infrastructure and services (IaaS, PaaS, SaaS). The focus is on identifying misconfigurations in services like S3 buckets, IAM roles and policies, serverless functions, and cloud management consoles. Testing must be conducted within the scope of the cloud provider's shared responsibility model and specific compliance requirements (e.g., AWS Customer Penetration Testing Policy). The goal is to prevent data exposure and resource hijacking resulting from improper cloud configuration.
+
 ### Black box penetration testing and white box penetration testing
 
-**White box** and **black box penetration testing** are two fundamental approaches to security assessments, differing in the level of knowledge and access given to the testers. Broadly, white box penetration testing and black box penetration testing simulate an insider's and an outsider's attack types, respectively. Based on the type of auditing required, there are two main penetration testing types. In black box testing, the penetration tester has no prior knowledge of a company’s network, more closely resembling remote attacks. In white box testing, the penetration tester typically has complete access to information about the application or system he is attacking, that is, complete knowledge of the network. White box testing represents a worst-case scenario where the attacker has a complete knowledge of the network.
+White box and black box penetration testing are two fundamental approaches to security assessments, differing in the level of knowledge and access given to the testers. Broadly, white box penetration testing and black box penetration testing simulate an insider's and an outsider's attack types, respectively. Based on the type of auditing required, there are two main penetration testing types. In black box testing, the penetration tester has no prior knowledge of a company’s network, more closely resembling remote attacks. In white box testing, the penetration tester typically has complete access to information about the application or system he is attacking, that is, complete knowledge of the network. White box testing represents a worst-case scenario where the attacker has a complete knowledge of the network.
 
 White box penetration testing, also referred to as "clear box" or "full knowledge" testing, is a security assessment where the tester is granted full access to the target system's internal information. This includes source code, architecture diagrams, network configurations, and even credentials. With this level of transparency, the primary advantage is the ability to conduct a more thorough examination, uncovering logic flaws, complex misconfigurations, and hidden vulnerabilities that other methods might miss. Because testers do not need to spend time on reconnaissance, the process is also significantly faster. However, this approach is less realistic, as real-world attackers typically do not start with such extensive internal knowledge. Consequently, it is ideally suited for secure code reviews, testing internal applications before release, and meeting specific compliance audit requirements like those for PCI DSS.
 
@@ -94,7 +118,7 @@ The following table summarizes the evolution from the 2001 concepts to their mod
 |_(Not explicitly covered)_|**Wireless & IoT Testing**|A critical modern addition. This involves assessing the security of **Wi-Fi networks (corporate/guest), Bluetooth, and IoT devices** that create a large, often insecure, attack surface.|
 |_(Not explicitly covered)_|**API Security Testing**|APIs are the core of modern web and mobile applications. They represent a massive and critical attack surface that did not have the same prominence in 2001 and now requires dedicated testing.|
 
-### Possible risks of penetration testing
+### Risks of penetration testing
 
 Penetration testing involves “launching real attacks on real systems and data using tools and techniques commonly used by hackers” (NIST SP 800-115, p. 5-2).  
 

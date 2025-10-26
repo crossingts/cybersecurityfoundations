@@ -56,35 +56,63 @@ Bridging the gap between these two methodologies is grey box penetration testing
 | **Realism**   | Low                                           | High                                       | Medium                          |
 | **Best For**  | Code review, pre-release audits, blue teaming | External security assessments, red teaming | A balanced approach, compliance |
 
-**Testing from an outsider vs insider perspective**
+#### Testing from an outsider vs insider perspective: A historical emphasis
 
 There are several kinds of testing—each of which can be performed from an outsider or insider perspective (Palmer, 2001, pp. 777-778):
 
-• Remote network. This test simulates the intruder launching an attack across the Internet. The primary defenses that must be defeated here are border firewalls, filtering routers, and Web servers.
+* Remote network. This test simulates the intruder launching an attack across the Internet. The primary defenses that must be defeated here are border firewalls, filtering routers, and Web servers.
+* Remote dial-up network. This test simulates the intruder launching an attack against the client’s modem pools. The primary defenses that must be defeated here are user authentication schemes. These kinds of tests should be coordinated with the local telephone company. 
+* Local network. This test simulates an employee or other authorized person who has a legal connection to the organization’s network. The primary defenses that must be defeated here are intranet firewalls, internal Web servers, server security measures, and e-mail systems.
+* Stolen laptop computer. In this test, the laptop computer of a key employee, such as an upper-level manager or strategist, is taken by the client without warning and given to the ethical hackers.
+* Social engineering. This test evaluates the target organization’s staff as to whether it would leak information to someone. A typical example of this would be an intruder calling the organization’s computer help line and asking for the external telephone numbers of the modem pool. Defending against this kind of attack is the hardest, because people and personalities are involved. Most people are basically helpful, so it seems harmless to tell someone who appears to be lost where the computer room is located, or to let someone into the building who “forgot” his or her badge. The only defense against this is to raise security awareness.
+* Physical entry. This test acts out a physical penetration of the organization's building.
 
-• Remote dial-up network. This test simulates the intruder launching an attack against the client’s modem pools. The primary defenses that must be defeated here are user authentication schemes. These kinds of tests should be coordinated with the local telephone company.&#x20;
+#### Testing from an outsider vs insider perspective: A modern emphasis
 
-• Local network. This test simulates an employee or other authorized person who has a legal connection to the organization’s network. The primary defenses that must be defeated here are intranet firewalls, internal Web servers, server security measures, and e-mail systems.
+The classification of penetration tests by entry point as noted by Palmer (2001) remains a useful way to scope assessments. However, the specific vectors have evolved with technology. Modern tests can be categorized from both outsider (no initial access) and insider (some level of initial access) perspectives:
 
-• Stolen laptop computer. In this test, the laptop computer of a key employee, such as an upper-level manager or strategist, is taken by the client without warning and given to the ethical hackers.
+- External network testing: This simulates an attacker from the internet targeting an organization's public-facing presence. The scope has expanded from just border firewalls and web servers to include cloud workloads, APIs, and misconfigured public cloud storage (e.g., S3 buckets). The goal is to breach the external perimeter and gain an initial foothold.
+- Internal network testing: This simulates an attack from inside the network, such as from a compromised employee device or a malicious insider. In a modern context, this tests the principles of Zero-Trust architecture. The objective is to defeat internal segmentation, lateral movement controls, and privilege escalation mechanisms to access critical data and systems.
+- Physical and social engineering: These tests evaluate the human and physical security layers.
+    - Social engineering remains a highly effective vector, now conducted through phishing emails, vishing (voice phishing), and SMS phishing (smishing) to steal credentials or deploy malware.
+    - Physical entry tests the security of offices, data centers, and other facilities, attempting to gain unauthorized access to connect devices to the internal network or steal equipment.
+- Modern "stolen asset" scenarios: This category has evolved beyond a single laptop. It now includes testing the security of mobile devices (BYOD), tablets, and the data accessible from them, often through cloud synchronization (e.g., OneDrive, Google Drive). The test focuses on disk encryption, biometric bypasses, cached credentials, and the ability to remotely wipe the device.
+- Wireless and IoT testing: A modern addition, this assesses the security of Wi-Fi networks (corporate and guest), Bluetooth implementations, and Internet of Things (IoT) devices that could serve as a pivot point into the core network.
 
-• Social engineering. This test evaluates the target organization’s staff as to whether it would leak information to someone. A typical example of this would be an intruder calling the organization’s computer help line and asking for the external telephone numbers of the modem pool. Defending against this kind of attack is the hardest, because people and personalities are involved. Most people are basically helpful, so it seems harmless to tell someone who appears to be lost where the computer room is located, or to let someone into the building who “forgot” his or her badge. The only defense against this is to raise security awareness.
 
-• Physical entry. This test acts out a physical penetration of the organization's building.
+This table illustrates that while the foundational _perspectives_ (outsider vs. insider) remain valid, the specific _attack vectors_ and _technological context_ have evolved dramatically. A modern framework must de-emphasize obsolete technologies and incorporate the complex, cloud-centric, and API-driven nature of today's digital environments.
+
+Here is a table that summarizes the evolution from the 2001 concepts to their modern equivalents, highlighting the key shifts in emphasis.
+
+### Evolution of Penetration Testing Vectors: From 2001 to Modern Day
+
+|Palmer (2001) Concept|Modern Equivalent / Updated Emphasis|Rationale for the Shift|
+|---|---|---|
+|**Remote Network**|**External Network Testing**|The focus has expanded from simple "border firewalls" and web servers to include **cloud workloads, APIs, serverless functions, and misconfigured public cloud storage.** The perimeter is no longer a single, defined boundary.|
+|**Remote Dial-Up Network**|**(Largely Deprecated)**|Modem pools are an obsolete attack vector for most organizations. The resources are better allocated to testing more prevalent external threats.|
+|**Local Network**|**Internal Network Testing & Zero-Trust Validation**|The core concept remains, but the context has shifted. The test now evaluates how well an organization implements **Zero-Trust principles** (e.g., micro-segmentation, lateral movement controls) after an initial breach.|
+|**Stolen Laptop Computer**|**Endpoint & Mobile Device Compromise**|The scenario is broader than a single physical theft. It now emphasizes **mobile device management (MDM) security, disk encryption, cloud-synced data theft, and credential caching** on a wide range of corporate and BYOD devices.|
+|**Social Engineering**|**Social Engineering & Phishing Campaigns**|The human element is constant, but the primary methods have moved from phone calls (**vishing**) to large-scale, automated **phishing, smishing (SMS), and sophisticated spear-phishing** campaigns.|
+|**Physical Entry**|**Physical Entry & Security Bypass**|This remains highly relevant, especially for red team engagements. The goals are unchanged: to access secure areas, plant devices, or connect to the internal network.|
+|_(Not explicitly covered)_|**Wireless & IoT Testing**|A critical modern addition. This involves assessing the security of **Wi-Fi networks (corporate/guest), Bluetooth, and IoT devices** that create a large, often insecure, attack surface.|
+|_(Not explicitly covered)_|**API Security Testing**|APIs are the core of modern web and mobile applications. They represent a massive and critical attack surface that did not have the same prominence in 2001 and now requires dedicated testing.|
+
+This table illustrates that while the foundational _perspectives_ (outsider vs. insider) remain valid, the specific _attack vectors_ and _technological context_ have evolved dramatically. A modern framework must de-emphasize obsolete technologies and incorporate the complex, cloud-centric, and API-driven nature of today's digital environments.
+
 
 ### Possible risks of penetration testing
 
-There are risks inherent to ethical hacker evaluations and the client should be made fully aware of them. Organizations must weigh potential benefits vs possible risks when deciding the details of the penetration test. Organizations must decide what devices and applications to test and when and how to test them--and the risks involved in performing the security testing.&#x20;
+There are risks inherent to ethical hacker evaluations and the client should be made fully aware of them. Organizations must weigh potential benefits vs possible risks when deciding the details of the penetration test. Organizations must decide what devices and applications to test and when and how to test them--and the risks involved in performing the security testing. 
 
 "These risks include alarmed staff and unintentional system crashes, degraded network or system performance, denial of service, and log-file size explosions" (Palmer, 2001, p. 776).
 
-The risk of serious side effects from performing penetration testing will inform the specific tests to be made and how on a live system.&#x20;
+The risk of serious side effects from performing penetration testing will inform the specific tests to be made and how on a live system. 
 
 The best evaluation is done under a “no-holds-barred” approach. This means that the ethical hacker can try anything he or she can think of to attempt to gain access to or disrupt the target system. While this is the most realistic and useful, some clients balk at this level of testing. Clients have several reasons for this, the most common of which is that the target systems are “in production” and interference with their operation could be damaging to the organization’s interests. (Palmer, 2001, pp. 775-776)
 
 Once the contractual agreement is in place, the testing may begin as defined in the agreement. It should be noted that the testing itself poses some risk to the client, since a criminal hacker monitoring the transmissions of the ethical hackers could learn the same information. If the ethical hackers identify a weakness in the client’s security, the criminal hacker could potentially attempt to exploit that vulnerability. This is especially vexing since the activities of the ethical hackers might mask those of the criminal hackers. The best approach to this dilemma is to maintain several addresses around the Internet from which the ethical hacker’s transmissions will emanate, and to switch origin addresses often. Complete logs of the tests performed by the ethical hackers are always maintained, both for the final report and in the event that something unusual occurs. In extreme cases, additional intrusion monitoring software can be deployed at the target to ensure that all the tests are coming from the ethical hacker’s machines. (Palmer, 2001, p. 777)
 
-Penetration testing involves “launching real attacks on real systems and data using tools and techniques commonly used by hackers” (NIST SP 800-115, p. 5-2). &#x20;
+Penetration testing involves “launching real attacks on real systems and data using tools and techniques commonly used by hackers” (NIST SP 800-115, p. 5-2).  
 
 Performing real attacks on real systems carries a higher risk that must be weighed carefully against the intended benefits. It must be justified on a cost-benefit basis by a security analyst with broad and interdisciplinary knowledge about the social threat landscape, human behavior, sociopolitical conflicts, in addition to the technical knowledge. Penetration testing can compromise data integrity or availability (accidental damage) or confidentiality (the penetration tester sees confidential information just by virtue of performing the test).
 

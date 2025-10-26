@@ -13,15 +13,7 @@ description: >-
 * Compare black box and white box penetration testing methods
 * Identify the possible risks of penetration testing
 
-This section explores six types of penetration testing (network penetration testing, wireless network penetration testing, website/web application penetration testing,
-
-• Physical penetration testing
-
-• Social engineering
-
-and cloud penetration testing),
-
-compares between black box and white box penetration testing, and sheds light on possible risks of penetration testing to the client organization.
+This section explores six types of penetration testing (network penetration testing, wireless network penetration testing, website/web application penetration testing, physical penetration testing, social engineering, and cloud penetration testing), compares between black box and white box penetration testing, and sheds light on possible risks of penetration testing to the client organization.
 
 ## Topics covered in this section
 
@@ -31,11 +23,7 @@ compares between black box and white box penetration testing, and sheds light on
 
 ### Types of penetration testing
 
-Penetration testing is scoped to target specific segments of an organization's attack surface. A comprehensive security program employs a variety of tests, each designed to identify vulnerabilities in different technologies and environments. 
-
-Network penetration testing and exploitation techniques typically include bypassing firewalls, router testing, IPS/IDS evasion, DNS footprinting, open port scanning and testing, SSH attacks, proxy servers, network vulnerabilities, and application penetration testing (Cipher, n.d.).
-
-The following outlines six common types of penetration tests, detailing their technical focus and objectives.
+Penetration testing is scoped to target specific segments of an organization's attack surface. A comprehensive security program employs a variety of tests, each designed to identify vulnerabilities in different technologies and environments. Network penetration testing and exploitation techniques typically include bypassing firewalls, router testing, IPS/IDS evasion, DNS footprinting, open port scanning and testing, SSH attacks, proxy servers, network vulnerabilities, and application penetration testing (Cipher, n.d.). The following outlines six common types of penetration tests, detailing their technical focus and objectives.
 
 **Network Penetration Testing** 
 
@@ -133,6 +121,18 @@ The risk of serious side effects from performing penetration testing will inform
 Once the contractual agreement is in place, the testing may begin as defined in the agreement. It should be noted that the testing itself poses some risk to the client, since a criminal hacker monitoring the transmissions of the ethical hackers could learn the same information. If the ethical hackers identify a weakness in the client’s security, the criminal hacker could potentially attempt to exploit that vulnerability. This is especially vexing since the activities of the ethical hackers might mask those of the criminal hackers. The best approach to this dilemma is to maintain several addresses around the Internet from which the ethical hacker’s transmissions will emanate, and to switch origin addresses often. Complete logs of the tests performed by the ethical hackers are always maintained, both for the final report and in the event that something unusual occurs. In extreme cases, additional intrusion monitoring software can be deployed at the target to ensure that all the tests are coming from the ethical hacker’s machines. (Palmer, 2001, p. 777)
 
 The technical risks of penetration testing on computer systems to an organization include damaging the system infrastructure or data assets, or exposing confidential information, downtime, and exploits may remain in the system. Given the potential side effects of penetration testing, the work of penetration testers is often conducted on a defined schedule and focuses on specific aspects of a network or computer infrastructure rather than being an ongoing overall security. The penetration tester may have only limited access to the system that is subject to testing and only for the duration of the testing.
+
+--
+Penetration testing involves “launching real attacks on real systems and data using tools and techniques commonly used by hackers” (NIST SP 800-115, p. 5-2). While invaluable for security, performing real attacks on live systems carries inherent risks that must be carefully weighed against the intended benefits.
+
+**These risks can be broadly categorized into operational and data-related impacts.** The primary operational risks include "alarmed staff and unintentional system crashes, degraded network or system performance, denial of service, and log-file size explosions" (Palmer, 2001, p. 776). **Furthermore,** penetration testing can directly compromise data integrity or availability through accidental damage, or breach confidentiality simply because the tester sees sensitive information during the assessment.
+
+**Given these potential side effects, the approach to testing must be carefully negotiated.** The most thorough evaluation is done under a “no-holds-barred” approach, where the ethical hacker can try any conceivable technique to gain access. **However, this level of aggression is often tempered by operational constraints.** Clients may balk at this approach because target systems are “in production,” and interference could damage the organization’s interests (Palmer, 2001, pp. 775-776). **Consequently,** the risk of serious side effects directly informs which specific tests are approved and how they are executed on a live system.
+
+**Beyond technical disruptions, there are also strategic security risks to consider.** Once the contractual agreement is in place and testing begins, a criminal hacker monitoring the network transmissions of the ethical hackers could learn the same information. If a weakness is identified, a malicious actor could attempt to exploit it simultaneously, with the ethical hackers' activities potentially masking the attack. **To mitigate this,**  
+ethical hackers maintain logs and may use a variety of source addresses. In extreme cases, additional intrusion monitoring can be deployed to ensure all activity originates from the testers' machines (Palmer, 2001, p. 777).
+
+**Ultimately, due to these potential side effects, penetration testing is often a scheduled activity** that focuses on specific aspects of the infrastructure rather than being an ongoing process. The tester's access is typically limited to defined systems and a specific duration to control the risk exposure. A security analyst must justify the exercise on a cost-benefit basis, requiring broad interdisciplinary knowledge to navigate these risks effectively.
 
 ### Key takeaways
 

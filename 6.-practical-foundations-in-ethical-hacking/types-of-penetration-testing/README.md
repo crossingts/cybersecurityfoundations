@@ -69,7 +69,7 @@ There are several kinds of testing—each of which can be performed from an outs
 
 #### Testing from an outsider vs insider perspective: A modern emphasis
 
-The classification of penetration tests by entry point as noted by Palmer (2001) remains a useful way to scope assessments. However, the specific vectors have evolved with technology. Modern tests can be categorized from both outsider (no initial access) and insider (some level of initial access) perspectives:
+The classification of penetration tests by entry point as noted by Palmer (2001) remains a useful way to scope assessments. However, the specific attack vectors have evolved with technology. Modern tests can be categorized from both outsider (no initial access) and insider (some level of initial access) perspectives:
 
 - External network testing: This simulates an attacker from the internet targeting an organization's public-facing presence. The scope has expanded from just border firewalls and web servers to include cloud workloads, APIs, and misconfigured public cloud storage (e.g., S3 buckets). The goal is to breach the external perimeter and gain an initial foothold.
 - Internal network testing: This simulates an attack from inside the network, such as from a compromised employee device or a malicious insider. In a modern context, this tests the principles of Zero-Trust architecture. The objective is to defeat internal segmentation, lateral movement controls, and privilege escalation mechanisms to access critical data and systems.
@@ -79,12 +79,9 @@ The classification of penetration tests by entry point as noted by Palmer (2001)
 - Modern "stolen asset" scenarios: This category has evolved beyond a single laptop. It now includes testing the security of mobile devices (BYOD), tablets, and the data accessible from them, often through cloud synchronization (e.g., OneDrive, Google Drive). The test focuses on disk encryption, biometric bypasses, cached credentials, and the ability to remotely wipe the device.
 - Wireless and IoT testing: A modern addition, this assesses the security of Wi-Fi networks (corporate and guest), Bluetooth implementations, and Internet of Things (IoT) devices that could serve as a pivot point into the core network.
 
+The following table summarizes the evolution from the 2001 concepts to their modern equivalents, highlighting the key shifts in emphasis. A modern framework should incorporate the complex, cloud-centric, and API-driven nature of today's digital environments. 
 
-This table illustrates that while the foundational _perspectives_ (outsider vs. insider) remain valid, the specific _attack vectors_ and _technological context_ have evolved dramatically. A modern framework must de-emphasize obsolete technologies and incorporate the complex, cloud-centric, and API-driven nature of today's digital environments.
-
-Here is a table that summarizes the evolution from the 2001 concepts to their modern equivalents, highlighting the key shifts in emphasis.
-
-### Evolution of Penetration Testing Vectors: From 2001 to Modern Day
+**Evolution of Penetration Testing Vectors: From 2001 to Modern Day**
 
 |Palmer (2001) Concept|Modern Equivalent / Updated Emphasis|Rationale for the Shift|
 |---|---|---|
@@ -96,9 +93,6 @@ Here is a table that summarizes the evolution from the 2001 concepts to their mo
 |**Physical Entry**|**Physical Entry & Security Bypass**|This remains highly relevant, especially for red team engagements. The goals are unchanged: to access secure areas, plant devices, or connect to the internal network.|
 |_(Not explicitly covered)_|**Wireless & IoT Testing**|A critical modern addition. This involves assessing the security of **Wi-Fi networks (corporate/guest), Bluetooth, and IoT devices** that create a large, often insecure, attack surface.|
 |_(Not explicitly covered)_|**API Security Testing**|APIs are the core of modern web and mobile applications. They represent a massive and critical attack surface that did not have the same prominence in 2001 and now requires dedicated testing.|
-
-This table illustrates that while the foundational _perspectives_ (outsider vs. insider) remain valid, the specific _attack vectors_ and _technological context_ have evolved dramatically. A modern framework must de-emphasize obsolete technologies and incorporate the complex, cloud-centric, and API-driven nature of today's digital environments.
-
 
 ### Possible risks of penetration testing
 

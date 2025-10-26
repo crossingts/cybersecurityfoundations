@@ -96,27 +96,25 @@ The following table summarizes the evolution from the 2001 concepts to their mod
 
 ### Possible risks of penetration testing
 
-There are risks inherent to ethical hacker evaluations and the client should be made fully aware of them. Organizations must weigh potential benefits vs possible risks when deciding the details of the penetration test. Organizations must decide what devices and applications to test and when and how to test them--and the risks involved in performing the security testing. 
-
-"These risks include alarmed staff and unintentional system crashes, degraded network or system performance, denial of service, and log-file size explosions" (Palmer, 2001, p. 776).
-
-The risk of serious side effects from performing penetration testing will inform the specific tests to be made and how on a live system. 
-
-The best evaluation is done under a “no-holds-barred” approach. This means that the ethical hacker can try anything he or she can think of to attempt to gain access to or disrupt the target system. While this is the most realistic and useful, some clients balk at this level of testing. Clients have several reasons for this, the most common of which is that the target systems are “in production” and interference with their operation could be damaging to the organization’s interests. (Palmer, 2001, pp. 775-776)
-
-Once the contractual agreement is in place, the testing may begin as defined in the agreement. It should be noted that the testing itself poses some risk to the client, since a criminal hacker monitoring the transmissions of the ethical hackers could learn the same information. If the ethical hackers identify a weakness in the client’s security, the criminal hacker could potentially attempt to exploit that vulnerability. This is especially vexing since the activities of the ethical hackers might mask those of the criminal hackers. The best approach to this dilemma is to maintain several addresses around the Internet from which the ethical hacker’s transmissions will emanate, and to switch origin addresses often. Complete logs of the tests performed by the ethical hackers are always maintained, both for the final report and in the event that something unusual occurs. In extreme cases, additional intrusion monitoring software can be deployed at the target to ensure that all the tests are coming from the ethical hacker’s machines. (Palmer, 2001, p. 777)
-
 Penetration testing involves “launching real attacks on real systems and data using tools and techniques commonly used by hackers” (NIST SP 800-115, p. 5-2).  
 
 Performing real attacks on real systems carries a higher risk that must be weighed carefully against the intended benefits. It must be justified on a cost-benefit basis by a security analyst with broad and interdisciplinary knowledge about the social threat landscape, human behavior, sociopolitical conflicts, in addition to the technical knowledge. Penetration testing can compromise data integrity or availability (accidental damage) or confidentiality (the penetration tester sees confidential information just by virtue of performing the test).
+
+There are risks inherent to ethical hacker evaluations and the client should be made fully aware of them. Organizations must weigh potential benefits vs possible risks when deciding the details of the penetration test. Organizations must decide what devices and applications to test and when and how to test them--and the risks involved in performing the security testing. The risks include "alarmed staff and unintentional system crashes, degraded network or system performance, denial of service, and log-file size explosions" (Palmer, 2001, p. 776).
+
+The best evaluation is done under a “no-holds-barred” approach. This means that the ethical hacker can try anything he or she can think of to attempt to gain access to or disrupt the target system. While this is the most realistic and useful, some clients balk at this level of testing. Clients have several reasons for this, the most common of which is that the target systems are “in production” and interference with their operation could be damaging to the organization’s interests. (Palmer, 2001, pp. 775-776)
+
+The risk of serious side effects from performing penetration testing will inform the specific tests to be made and how on a live system. 
+
+Once the contractual agreement is in place, the testing may begin as defined in the agreement. It should be noted that the testing itself poses some risk to the client, since a criminal hacker monitoring the transmissions of the ethical hackers could learn the same information. If the ethical hackers identify a weakness in the client’s security, the criminal hacker could potentially attempt to exploit that vulnerability. This is especially vexing since the activities of the ethical hackers might mask those of the criminal hackers. The best approach to this dilemma is to maintain several addresses around the Internet from which the ethical hacker’s transmissions will emanate, and to switch origin addresses often. Complete logs of the tests performed by the ethical hackers are always maintained, both for the final report and in the event that something unusual occurs. In extreme cases, additional intrusion monitoring software can be deployed at the target to ensure that all the tests are coming from the ethical hacker’s machines. (Palmer, 2001, p. 777)
 
 The technical risks of penetration testing on computer systems to an organization include damaging the system infrastructure or data assets, or exposing confidential information, downtime, and exploits may remain in the system. Given the potential side effects of penetration testing, the work of penetration testers is often conducted on a defined schedule and focuses on specific aspects of a network or computer infrastructure rather than being an ongoing overall security. The penetration tester may have only limited access to the system that is subject to testing and only for the duration of the testing.
 
 ### Key takeaways
 
-* Types of penetration testing include network, wireless, web application, physical, social engineering, and cloud
-* Black box penetration testing and white box penetration testing methods broadly simulate an insider's and outsider's attack types
-* Organizations must weigh potential benefits vs possible risks when deciding the details of the penetration test
+* Types of penetration testing include network, wireless, web application, physical, social engineering, and cloud.
+* Black box penetration testing and white box penetration testing methods broadly simulate an insider's and outsider's attack types.
+* Organizations must weigh potential benefits vs possible risks when deciding the details of the penetration test.
 
 ### References
 

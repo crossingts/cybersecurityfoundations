@@ -119,7 +119,11 @@
 **5. For a security team focused on threat hunting, a combination of Zeek and Suricata is recommended. What is the primary function of each tool in this complementary pairing?**\
 **Answer:** Zeek's primary function is **behavioral analysis and structured traffic logging** for forensic investigation, while Suricata's primary function is **high-speed, real-time intrusion detection (IDS/IPS)** to alert on malicious activity.
 
+### Phases of the penetration testing process
 
+
+
+### Types of penetration testing
 
 **1. The approaches to penetration testing are often defined by the level of knowledge provided to the tester. What are the three primary categories based on this criterion?**\
 **Answer:** The three primary categories are (1) White Box (full knowledge), (2) Black Box (zero knowledge), and (3) Grey Box (partial knowledge).

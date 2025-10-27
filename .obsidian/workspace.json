@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/README.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -183,8 +183,9 @@
   },
   "active": "47d382666f0061a3",
   "lastOpenFiles": [
-    "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/nmap-and-openvas.md",
+    "6.-practical-foundations-in-ethical-hacking/common-attack-targets/README.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/README.md",
+    "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/nmap-and-openvas.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-methodologies-and-frameworks/README.md",
     "6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing/types-of-penetration-testing-quiz.md",
     "6.-practical-foundations-in-ethical-hacking/chapter-6-review-questions.md",
@@ -210,7 +211,6 @@
     "Pasted image 20251017114230.png",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/tcpdump-cheat-sheet-for-netadmins-sysadmins.md",
-    "6.-practical-foundations-in-ethical-hacking/packet-analyzers/how-to-get-started-with-wireshark.md",
     "6.-practical-foundations-in-ethical-hacking/packet-analyzers",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing/Pasted image 20251010134024.png",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing",

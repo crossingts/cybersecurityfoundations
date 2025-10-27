@@ -1,16 +1,14 @@
 ---
-description: >-
-  This section explains common cyber attack targets and associated attack
-  vectors and vulnerabilities
+description: This section explores common cyber attack targets and associated attack vectors and vulnerabilities
 ---
 
 # Common attack targets
 
 ## Learning objectives <a href="#learning-objectives" id="learning-objectives"></a>
 
-* Become familiar with...
+* Become familiar with common cyber attack targets and associated attack vectors and vulnerabilities
 
-This section discusses
+This section explores common cyber attack targets and associated attack vectors and vulnerabilities.
 
 ## Topics covered in this section
 

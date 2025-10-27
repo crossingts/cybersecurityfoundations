@@ -194,5 +194,5 @@ The framework organizes threats into **matrices** for different environments:
 
 ### Key takeaways
 
-* Major penetration testing methodologies include OSSTMM, NIST SP 800-115, PTES, and ISSAF
-* Major penetration testing frameworks include OWASP Testing Guide and MITRE ATT\&CK/cyber kill chain
+* Major penetration testing methodologies include OSSTMM, NIST SP 800-115, PTES, and ISSAF.
+* Major penetration testing frameworks include OWASP Testing Guide and MITRE ATT\&CK/cyber kill chain.

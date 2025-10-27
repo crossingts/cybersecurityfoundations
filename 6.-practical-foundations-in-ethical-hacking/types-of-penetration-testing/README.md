@@ -23,11 +23,13 @@ This section explores six types of penetration testing (network penetration test
 
 ### Types of penetration testing
 
-Penetration testing is scoped to target specific segments of an organization's attack surface. A comprehensive security program employs a variety of tests, each designed to identify vulnerabilities in different technologies and environments. Network penetration testing and exploitation techniques typically include bypassing firewalls, router testing, IPS/IDS evasion, DNS footprinting, open port scanning and testing, SSH attacks, proxy servers, network vulnerabilities, and application penetration testing (Cipher, n.d.). The following outlines six common types of penetration tests, detailing their technical focus and objectives.
+Penetration testing is scoped to target specific segments of an organization's attack surface. A comprehensive security program employs a variety of tests, each designed to identify vulnerabilities in different technologies and environments. The following outlines six common types of penetration tests, detailing their technical focus and objectives.
 
 **Network Penetration Testing** 
 
 This test targets an organization's network infrastructure, assessing both perimeter and internal defenses. The methodology involves reconnaissance, service enumeration, vulnerability scanning, and exploitation of identified weaknesses in network devices (routers, switches), servers, and network services. Testers aim to bypass security controls like firewalls and Intrusion Prevention Systems (IPS), often using techniques like protocol manipulation and credential brute-forcing. The goal is to map attack paths, demonstrate lateral movement potential, and identify misconfigurations that could lead to a full network compromise.
+
+Network penetration testing typically includes bypassing firewalls, router testing, IPS/IDS evasion, DNS footprinting, open port scanning and testing, SSH attacks, proxy servers, network vulnerabilities, and application penetration testing (Cipher, n.d.). 
 
 **Wireless Network Penetration Testing**  
 
@@ -51,7 +53,7 @@ This specialized assessment targets cloud-specific infrastructure and services (
 
 ### Black box penetration testing and white box penetration testing
 
-White box and black box penetration testing are two fundamental approaches to security assessments, differing in the level of knowledge and access given to the testers. Broadly, white box penetration testing and black box penetration testing simulate an insider's and an outsider's attack types, respectively. Based on the type of auditing required, there are two main penetration testing types. In black box testing, the penetration tester has no prior knowledge of a company’s network, more closely resembling remote attacks. In white box testing, the penetration tester typically has complete access to information about the application or system he is attacking, that is, complete knowledge of the network. White box testing represents a worst-case scenario where the attacker has a complete knowledge of the network.
+White box and black box penetration testing are two fundamental approaches to security assessments, differing in the level of knowledge and access given to the testers. These methods broadly simulate an insider's and an outsider's attack types, respectively. In black box testing, the penetration tester has no prior knowledge of a company’s network, more closely resembling remote attacks. In white box testing, the penetration tester has complete knowledge of the network, representing a worst-case scenario where the attacker has full internal access.
 
 White box penetration testing, also referred to as "clear box" or "full knowledge" testing, is a security assessment where the tester is granted full access to the target system's internal information. This includes source code, architecture diagrams, network configurations, and even credentials. With this level of transparency, the primary advantage is the ability to conduct a more thorough examination, uncovering logic flaws, complex misconfigurations, and hidden vulnerabilities that other methods might miss. Because testers do not need to spend time on reconnaissance, the process is also significantly faster. However, this approach is less realistic, as real-world attackers typically do not start with such extensive internal knowledge. Consequently, it is ideally suited for secure code reviews, testing internal applications before release, and meeting specific compliance audit requirements like those for PCI DSS.
 
@@ -120,9 +122,10 @@ Ultimately, due to these potential side effects, penetration testing is often a 
 
 ### Key takeaways
 
-* Types of penetration testing include network, wireless, web application, physical, social engineering, and cloud.
-* Black box penetration testing and white box penetration testing methods broadly simulate an insider's and outsider's attack types.
-* Organizations must weigh potential benefits vs possible risks when deciding the details of the penetration test.
+- Penetration testing is categorized into several types, each targeting a specific part of the modern attack surface, including network, wireless, web application, cloud, social engineering, and physical security.
+- The approach to testing is defined by the tester's knowledge: White box (full knowledge) is thorough and fast, black box (zero knowledge) is realistic but slower, and grey box (partial knowledge) offers a balanced hybrid.
+- The perspective of testing is crucial, with external tests simulating an outside attacker and internal tests assessing the risks of a compromised device or malicious insider, often validating Zero-Trust controls.
+- Penetration testing carries inherent operational risks (like system crashes or performance degradation) and strategic risks (like eavesdropping on the test itself), which must be carefully managed through scoping, scheduling, and mitigation strategies.
 
 ### References
 

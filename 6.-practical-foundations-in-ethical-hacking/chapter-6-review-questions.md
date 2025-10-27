@@ -137,5 +137,5 @@
 **4. The "Internal Network Testing" of a modern penetration test has a specific objective that differs from its external counterpart. What is the primary security goal of an internal network test?**\
 **Answer:** The primary goal is to test the principles of Zero-Trust architecture by attempting to defeat internal segmentation, lateral movement controls, and privilege escalation mechanisms.
 
-**5. The risks of penetration testing can be broadly categorized. Name the two main categories of risk discussed in the lesson.**\
+**5. The risks of penetration testing can be broadly categorized. Name the two main categories of risk discussed in the section.**\
 **Answer:** The two main categories are (1) operational and data-related impacts (e.g., system crashes, data compromise), and (2) strategic risks (e.g., criminal eavesdropping on the test itself).

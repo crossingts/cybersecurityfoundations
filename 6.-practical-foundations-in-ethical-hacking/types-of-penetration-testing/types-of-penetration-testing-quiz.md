@@ -2,7 +2,7 @@
 
 ### Types of penetration testing
 
-**1. During a security assessment, the testers are provided with source code, network architecture diagrams, and user credentials. This scenario best describes which penetration testing approach?**\
+**1. During a security assessment, the penetration testers are provided with source code, network architecture diagrams, and user credentials. This scenario best describes which penetration testing approach?**\
 a) Black Box\
 b) **White Box**\
 c) Grey Box\
@@ -20,7 +20,7 @@ b) Network Penetration Testing\
 c) **Cloud Penetration Testing**\
 d) Social Engineering Penetration Testing
 
-**4. According to the lesson, which of the following is identified as a "strategic risk" associated with the penetration testing process itself?**\
+**4. Which of the following is identified in the section as a "strategic risk" associated with the penetration testing process itself?**\
 a) Unintentional system crashes or denial of service\
 b) **A criminal hacker eavesdropping on the tester's activities**\
 c) The penetration tester seeing confidential data\

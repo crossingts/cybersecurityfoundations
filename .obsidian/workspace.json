@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/README.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -183,8 +183,8 @@
   },
   "active": "47d382666f0061a3",
   "lastOpenFiles": [
-    "6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing/README.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/README.md",
+    "6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing/README.md",
     "5.-cryptography-and-wireless-security/wireless-client-authentication-methods/README.md",
     "4.-networking-fundamentals/cisco-ios-cli-and-basic-device-security/README.md",
     "4.-networking-fundamentals/how-to-configure-static-routes-on-cisco-routers/README.md",

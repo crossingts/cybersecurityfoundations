@@ -6,6 +6,12 @@ description: >-
 
 # Common attack targets
 
+## Learning objectives <a href="#learning-objectives" id="learning-objectives"></a>
+
+* Become familiar with...
+
+This section discusses
+
 ## Topics covered in this section
 
 * **NIST SP 800-115's attack categories**

@@ -4,6 +4,19 @@ description: This section discusses major open source penetration testing techno
 
 # Penetration testing technologies
 
+## Learning objectives <a href="#learning-objectives" id="learning-objectives"></a>
+
+* Become familiar with major penetration testing technologies
+
+This section discusses major penetration testing technologies...
+
+## Topics covered in this section <a href="#topics-covered-in-this-section" id="topics-covered-in-this-section"></a>
+
+* **Point 1**
+* **Point 2**
+
+
+
 This section discusses major open source penetration testing technologies, specifically, Nmap, OpenVAS, tcpdump, Metasploit, and Burp Suite.
 
 #### **Penetration Testing Technologies: Core Tools and Their Roles**
@@ -62,6 +75,6 @@ Mastering these tools requires understanding their **strengths** and **limitatio
 
 * A skilled pentester chains these tools strategically, simulating real-world attacks to harden defenses.
 
-### References 
+### References
 
 Stuttard, D., & Pinto, M. (2011). _The Web Application Hacker's Handbook: Finding and Exploiting Security Flaws_ (2nd ed.). Wiley.

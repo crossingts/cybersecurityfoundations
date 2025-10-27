@@ -6,20 +6,20 @@ description: This section discusses major open source penetration testing techno
 
 ## Learning objectives <a href="#learning-objectives" id="learning-objectives"></a>
 
-* Become familiar with major penetration testing technologies
+* Become familiar with major open source penetration testing technologies
 
-This section discusses major penetration testing technologies...
+This section discusses major open source penetration testing technologies, specifically, Nmap, OpenVAS, tcpdump, Metasploit, and Burp Suite/OWASP ZAP.
 
 ## Topics covered in this section <a href="#topics-covered-in-this-section" id="topics-covered-in-this-section"></a>
 
-* **Point 1**
-* **Point 2**
+* **Penetration testing technologies: Core tools and their roles**
+* **Nmap**
+* **OpenVAS**
+* **tcpdump**
+* **Metasploit**
+* **Burp Suite/OWASP ZAP**
 
-
-
-This section discusses major open source penetration testing technologies, specifically, Nmap, OpenVAS, tcpdump, Metasploit, and Burp Suite.
-
-#### **Penetration Testing Technologies: Core Tools and Their Roles**
+### Penetration testing technologies: Core tools and their roles
 
 Penetration testing relies on a suite of specialized tools to identify vulnerabilities, exploit weaknesses, and validate security postures. Among these, **Nmap**, **OpenVAS**, **tcpdump**, **Metasploit**, and **Burp Suite** serve as foundational technologies, each addressing distinct phases of a penetration test—from reconnaissance to exploitation and post-exploitation.
 
@@ -66,8 +66,6 @@ For instance, a tester might:
 * Run OpenVAS to detect CVE-2022-3590 (SQLi in a plugin).
 * Craft an exploit with **Metasploit’s** `wp_admin_shell_upload`.
 * Capture session cookies via **Burp Proxy** to hijack an admin account.
-
-**Conclusion**
 
 Mastering these tools requires understanding their **strengths** and **limitations**. Nmap and OpenVAS excel at discovery, while Metasploit and Burp Suite drive exploitation. tcpdump provides low-level insights for advanced attacks. Together, they enable comprehensive security assessments, from **external network scans** to **web app hijacking**, aligning with **CEH** and **OSCP** methodologies.
 

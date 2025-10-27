@@ -2,12 +2,6 @@
 
 Nmap and OpenVAS are two popular and complementary open source network scanners—Nmap identifies live hosts, open ports, and what services are running and OpenVAS automatically scans those hosts, ports, and services for known vulnerabilities.
 
-### Topics covered
-
-* **Technology focus: Nmap**
-* **Technology focus: OpenVAS**
-* **Using Nmap and OpenVAS in vulnerability assessment and penetration testing**
-
 ### Technology focus: Nmap
 
 Nmap is highly versatile tool for scanning and enumerating networks. Nmap also looks for\

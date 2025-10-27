@@ -58,4 +58,10 @@ For instance, a tester might:
 
 Mastering these tools requires understanding their **strengths** and **limitations**. Nmap and OpenVAS excel at discovery, while Metasploit and Burp Suite drive exploitation. tcpdump provides low-level insights for advanced attacks. Together, they enable comprehensive security assessments, from **external network scans** to **web app hijacking**, aligning with **CEH** and **OSCP** methodologies.
 
-**Key Takeaway:** A skilled pentester chains these tools strategically, simulating real-world attacks to harden defenses.
+### Key takeaways
+
+* A skilled pentester chains these tools strategically, simulating real-world attacks to harden defenses.
+
+### References 
+
+Stuttard, D., & Pinto, M. (2011). _The Web Application Hacker's Handbook: Finding and Exploiting Security Flaws_ (2nd ed.). Wiley.

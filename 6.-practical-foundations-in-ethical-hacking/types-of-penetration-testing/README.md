@@ -132,3 +132,5 @@ Ultimately, due to these potential side effects, penetration testing is often a 
 Cipher. (n.d.). The types of pentests you must know about. Retrieved January 21, 2020, from https://cipher.com/blog/the-types-of-pentests-you-must-know-about/
 
 Palmer, C. C. (2001). Ethical hacking. _IBM Systems Journal, 40_(3), 769-780.
+
+Weidman, G. (2014). _Penetration Testing: A Hands-On Introduction to Hacking_. No Starch Press.

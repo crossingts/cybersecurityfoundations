@@ -121,8 +121,6 @@
 
 ### Phases of the penetration testing process
 
-
-
 ### Types of penetration testing
 
 **1. The approaches to penetration testing are often defined by the level of knowledge provided to the tester. What are the three primary categories based on this criterion?**\
@@ -139,3 +137,20 @@
 
 **5. The risks of penetration testing can be broadly categorized. Name the two main categories of risk discussed in the section.**\
 **Answer:** The two main categories are (1) operational and data-related impacts (e.g., system crashes, data compromise), and (2) strategic risks (e.g., criminal eavesdropping on the test itself).
+
+### Penetration testing methodologies and frameworks
+
+**1. The OSSTMM 3.0 methodology moves away from "solution-based testing." What is its primary, alternative focus?**\
+**Answer:** Its primary focus is on measuring the operational attack surface to generate a factual, data-driven security metric, rather than assuming the presence of specific security solutions.
+
+**2. The NIST SP 800-115 methodology is structured around four main phases. Name them.**\
+**Answer:** The four main phases are: (1) Planning, (2) Discovery, (3) Attack, and (4) Reporting.
+
+**3. What is the specific and primary scope of the OWASP Web Security Testing Guide (WSTG), distinguishing it from broader methodologies?**\
+**Answer:** Its specific scope is testing the security of web applications, APIs, and related services, providing a detailed checklist for vulnerabilities like the OWASP Top 10.
+
+**4. The MITRE ATT\&CK framework is a knowledge base, not a full penetration testing methodology. What is its core purpose?**\
+**Answer:** Its core purpose is to describe and categorize the real-world Tactics, Techniques, and Procedures (TTPs) used by adversaries.
+
+**5. A penetration tester needs to conduct an assessment specifically to meet the mandatory requirements for protecting payment card data. Which standard or methodology must they follow?**\
+**Answer:** They must follow the requirements outlined in the Payment Card Industry Data Security Standard (PCI-DSS).

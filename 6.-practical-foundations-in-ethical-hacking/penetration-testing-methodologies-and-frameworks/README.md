@@ -6,102 +6,38 @@ description: This section discusses major penetration testing methodologies and 
 
 ## Learning objectives
 
-* Become familiar with major penetration testing methodologies and frameworks
+* Become familiar with major penetration testing methodologies, including OSSTMM 3.0, NIST SP 800-115, and CSE/RCMP, 2007
+* Become familiar with the OWASP Testing Guide 
+* Become familiar with the MITRE ATT&CK framework
 
-This section discusses major penetration testing methodologies (e.g., OSSTMM, NIST SP 800-115, PTES, and ISSAF) and frameworks (e.g., OWASP Testing Guide and MITRE ATT\&CK/cyber kill chain).
+This section discusses major penetration testing methodologies and frameworks. The most widely used penetration testing methodologies include OSSTMM, NIST SP 800-115, PTES, ISSAF, and PCI-DSS. Common penetration testing frameworks include OWASP Testing Guide, MITRE ATT&CK, and cyber kill chain.
+
+This section first elaborates the deployment and main features of OSSTMM, NIST SP 800-115, and Communications Security Establishment/Royal Canadian Mounted Police, Harmonized Threat and Risk Assessment Methodology (CSE/RCMP, 2007). It then discusses other major penetration testing methodologies - PTES, ISSAF, and PCI-DSS. It then looks at the OWASP Testing Guide. Finally, the MITRE ATT\&CK® framework is discussed.
 
 ### Topics covered in this section
 
-* **Major penetration testing methodologies**
+* **Introduction**
+* **OSSTMM, NIST SP 800-115, and CSE/RCMP**
+* **Other major penetration testing methodologies**
+* **OWASP Testing Guide**
 * **MITRE ATT\&CK® framework**
+* **Penetration testing methodologies and frameworks comparison**
 
-### Major penetration testing methodologies
+### Introduction
 
-Security assessments follow structured methodologies to ensure thorough testing. Below are the most widely used penetration testing frameworks and their key features and use cases.
+Security assessments follow structured methodologies to ensure thorough and reliable testing. Key penetration testing methodologies include Open Source Security Testing Methodology Manual (OSSTMM) (Herzog, 2010), NIST Special Publication 800-115 (2008) Technical Guide to Information Security Testing and Assessment, The Penetration Testing Execution Standard (PTES), The Information System Security Assessment Framework (ISSAF), PCI-DSS (2015) Penetration Testing Guide, and Communications Security Establishment/Royal Canadian Mounted Police, Harmonized Threat and Risk Assessment Methodology (CSE/RCMP, 2007). Key penetration testing frameworks include The Open Web Application Security Project (OWASP Testing Guide), and MITRE ATT&CK® framework.
 
-#### OSSTMM (Open Source Security Testing Methodology Manual)
+### OSSTMM, NIST SP 800-115, and CSE/RCMP
 
-* **Focus:** Scientific, rules-based security testing (not just pentesting).
-* **Key Features:**
-  * Covers **operational security (OpSec), physical, wireless, networks, and human security**.
-  * Uses **RAV (Risk Assessment Values)** for measurable risk scoring.
-  * Emphasizes **legal compliance and safety**.
-* **Best For:** Comprehensive audits beyond just hacking (e.g., compliance, physical security).
+A comparative analysis of three penetration testing methodologies—OSSTMM 3.0, NIST 800-115, and CSE/RCMP Harmonized Threat and Risk Assessment Methodology (2007)—offers insights into establishing a harmonized penetration testing methodology (see Table: Information Security Assessment Methodologies).
 
-#### NIST SP 800-115 (Technical Guide to Information Security Testing)
+The original Open Source Security Testing Methodology Manual (OSSTMM), published on December 18, 2000, is a peer-reviewed manual of security testing and analysis, “a methodology for a thorough security test, known as an OSSTMM audit” by the Institute for Security and Open Methodologies (ISECOM). OSSTMM version 3.0 was published on August 2, 2008. In version 3, OSSTMM encompasses tests from all channels: Human, Physical, Wireless, Telecommunications, and Data Networks. A set of security metrics, Risk Assessment Values (RAVs), provide a tool that can provide a graphical representation of changes in state over time. The primary focus in version 3 has been to move away from solution-based testing, which assumes specific security solutions will be found in a scope and are required for security (like a firewall). Instead, the focus is on a metric for the attack surface (the exposure) of a target or scope, allowing for a factual metric with no bias (the risk-based approach). 
 
-* **Focus:** Aligns with **NIST Cybersecurity Framework (CSF)**.
-* **Key Features:**
-  * Covers **vulnerability scanning, pentesting, and social engineering**.
-  * Used heavily in **government and compliance (e.g., FISMA)**.
-* **Best For:** Organizations needing **regulatory compliance**.
+The OSSTMM structures its audit process not around linear phases, but through a set of modules corresponding to its core channels: Human, Physical, Wireless, Telecommunications, and Data Networks. The OSSTMM methodology features a single security testing methodology for all the channels. For each module, the manual provides a detailed "task list" that guides the tester on what specific security properties to verify. These tasks are not exploitation steps but are designed to measure the operational security of each channel by checking for specific attributes like trust levels, access controls, security processes, and human vulnerabilities. This modular approach ensures a comprehensive assessment that covers the entire operational attack surface, from social engineering and physical intrusion to network penetration.
 
-#### PTES (Penetration Testing Execution Standard)
+The OSSTMM methodology features a battery of security parameters for each channel. These parameters include Posture Review, Logistics, Active Detection Verification, Visibility Audit, Access Verification, Trust Verification, Controls Verification, etc. The actual "testing" is a systematic process of measuring these defined security parameters against each channel. Measurements feed into the Risk Assessment Values (RAVs), as a larger "visibility" score increases the measurable attack surface. By applying this consistent set of operational checks to every channel, OSSTMM generates a factual, data-driven snapshot of security that is agnostic to any specific technology or assumed solution.
 
-* **Focus:** Standardized phases for pentesting.
-* **7 Phases:**
-  1. **Pre-engagement** (Scope, contracts).
-  2. **Intelligence Gathering** (Recon).
-  3. **Threat Modeling** (Identify attack vectors).
-  4. **Vulnerability Analysis** (Scanning).
-  5. **Exploitation** (Gaining access).
-  6. **Post-Exploitation** (Persistence, pivoting).
-  7. **Reporting** (Remediation guidance).
-* **Best For:** General pentesting (network, web, cloud).
-
-#### ISSAF (Information Systems Security Assessment Framework)
-
-* **Focus:** Step-by-step pentesting (older but still referenced).
-* **Key Features:**
-  * Detailed **exploitation techniques** (now outdated in parts).
-  * Covers **network, web apps, and databases**.
-* **Best For:** Learning historical pentesting methods.
-
-#### OWASP Testing Guide
-
-* **Focus:** Web application security.
-* **Key Features:**
-  * Detailed checklist for **OWASP Top 10 vulnerabilities** (SQLi, XSS, CSRF, etc.).
-  * Covers **APIs, serverless, and cloud apps**.
-* **Best For:** Web app pentesters, DevSecOps teams.
-
-#### MITRE ATT\&CK-Based Testing
-
-* **Focus:** Emulating **real-world adversary TTPs** (Tactics, Techniques, Procedures).
-* **Key Features:**
-  * Maps attacks to **threat groups (APT29, Lazarus, etc.)**.
-  * Used for **red teaming, purple teaming, and detection engineering**.
-* **Best For:** Advanced adversary simulation.
-
-**Comparison Table**
-
-| Methodology       | Scope                             | Strengths                   | Weaknesses                 | Best Used For                    |
-| ----------------- | --------------------------------- | --------------------------- | -------------------------- | -------------------------------- |
-| **OSSTMM**        | Broad (physical, networks, human) | Scientific, measurable      | Less focus on exploitation | Compliance, full-spectrum audits |
-| **NIST 800-115**  | Compliance-focused                | Aligns with NIST CSF        | Less technical depth       | Government/regulated industries  |
-| **PTES**          | General pentesting                | Structured phases           | Not industry-enforced      | Network/web pentests             |
-| **ISSAF**         | Historical pentesting             | Detailed exploitation steps | Outdated in parts          | Learning basics                  |
-| **OWASP**         | Web apps                          | Covers OWASP Top 10         | Limited to apps            | Web security                     |
-| **MITRE ATT\&CK** | Adversary emulation               | Real-world TTPs             | Not a full methodology     | Red teaming, threat hunting      |
-
-**Which Should You Use?**
-
-* **For compliance?** → **OSSTMM, NIST SP 800-115**
-* **For web apps?** → **OWASP Testing Guide**
-* **For general pentesting?** → **PTES**
-* **For red teaming?** → **MITRE ATT\&CK**
-
-#### Open source penetration testing methodologies
-
-Key open source penetration testing methodologies include Open Source Security Testing Methodology Manual (OSSTMM) (Herzog, 2006), NIST 800-115 (2008) Technical Guide to Information Security Testing and Assessment, The Open Web Application Security Project (OWASP), The Penetration Testing Execution Standard (PTES), The Information System Security Assessment Framework (ISSAF), PCI-DSS v.1 2015 Penetration Testing Guide, and Communications Security Establishment/Royal Canadian Mounted Police, Harmonized Threat and Risk Assessment Methodology (CSE/RCMP, 2007) (see Bradbury, 2010; Faircloth, 2011; Goel & Mehtre, 2015; Shah & Mehtre, 2015; Valvis & Polemi, 2005).
-
-Key open source penetration testing methodologies discussed here are Open Source Security Testing Methodology Manual (**OSSTMM 3.0**), NIST Special Publication 800-115: Technical Guide to Information Security Testing and Assessment (**NIST 800-115**), and Communications Security Establishment/Royal Canadian Mounted Police, Harmonized Threat and Risk Assessment Methodology (**CSE/RCMP, 2007**).&#x20;
-
-_A comparative analysis of three open source methodologies—OSSTMM 3.0, NIST 800-115, and CSE/RCMP Harmonized Threat and Risk Assessment Methodology (2007)—offers insights into establishing a harmonized penetration testing methodology (see Table 20: Information Security Assessment Methodologies)._
-
-The original Open Source Security Testing Methodology Manual (OSSTMM) is a peer-reviewed manual of security testing and analysis, “a methodology for a thorough security test, known as an OSSTMM audit” by the Institute for Security and Open Methodologies (ISECOM), was published on December 18, 2000. The current version OSSTMM 3.0 was published on August 2, 2008. In version 3, OSSTMM encompasses tests from all channels: Human, Physical, Wireless, Telecommunications, and Data Networks. A set of security metrics used, Risk Assessment Values (RAVs), provide a tool that can provide a graphical representation of changes in state over time. The primary focus in version 3 has been to move away from solution-based testing, which assumes specific security solutions will be found in a scope and are required for security (like a firewall). Instead, the focus is on a metric for the attack surface (the exposure) of a target or scope, allowing for a factual metric with no bias (the risk-based approach).&#x20;
-
-The purpose of NIST SP 800-115: Technical Guide to Information Security Testing and Assessment (September 2008) is “to provide guidelines for organizations on planning and conducting technical information security testing and assessments, analyzing findings, and developing mitigation strategies” (NIST, 2008, p. ES-1). NIST SP 800-115 divides penetration testing into four main phases: Planning phase, Discovery phase (addressing Target Identification and Analysis Techniques), Attack phase (addressing Target Vulnerability Validation Techniques), and Reporting. NIST SP 800-115 Section 4 Target Identification and Analysis Techniques focuses on “identifying active devices and their associated ports and services, and analyzing them for potential vulnerabilities” (p. 4-1). It includes Network Discovery which “uses a number of methods to discover active and responding hosts on a network, identify weaknesses, and learn how the network operates.”&#x20;
+The purpose of NIST SP 800-115: Technical Guide to Information Security Testing and Assessment (September 2008) is “to provide guidelines for organizations on planning and conducting technical information security testing and assessments, analyzing findings, and developing mitigation strategies” (NIST, 2008, p. ES-1). NIST SP 800-115 divides penetration testing into four main phases: Planning phase, Discovery phase (addressing Target Identification and Analysis Techniques), Attack phase (addressing Target Vulnerability Validation Techniques), and Reporting. NIST SP 800-115 Section 4 Target Identification and Analysis Techniques focuses on “identifying active devices and their associated ports and services, and analyzing them for potential vulnerabilities” (p. 4-1). It includes Network Discovery which “uses a number of methods to discover active and responding hosts on a network, identify weaknesses, and learn how the network operates.” 
 
 Passive (examination) and active (testing) techniques discover devices and active hosts on a network. Passive techniques can use a network sniffer to monitor network traffic and record the IP addresses of the active hosts, and they can report which ports are in use and which operating systems on the network have been discovered–without sending out a single probing packet (p. 4-1). Section 4 also covers Network Port and Service Identification. “Some scanners can help identify the application running on a particular port through a process called service identification” (p. 4-3). Banner grabbing involves “capturing banner information transmitted by the remote port when a connection is initiated. This information can include the application type, application version, and even OS type and version.” The result of network discovery and network port and service identification is “a list of all active devices operating in the address space that responded to the port scanning tool, along with responding ports” (NIST, 2008, p. 4-3). Port scanners can identify active hosts, operating systems, ports, services, and applications, but they can not identify vulnerabilities. “To identify vulnerable services, the assessor compares identified version numbers of services with a list of known vulnerable versions, or performs automated vulnerability scanning” (p. 4-4).
 
@@ -109,15 +45,48 @@ Vulnerability scanners can be broadly divided in to two categories: Web applicat
 
 The Harmonized Threat and Risk Assessment Methodology (TRA-1) by the Communications Security Establishment (CSE) and the Royal Canadian Mounted Police (RCMP) (CSE/RCMP, 2007) presents a flexible approach which can be automated and serves as a general framework for a harmonized penetration testing methodology by applying a project management frame. The TRA approach provides “a clear rationale for cost-effective risk mitigation strategies and safeguards to meet business requirements; and a transparent audit trail and record of risk management decisions to demonstrate due diligence and accountability, thereby satisfying statutory obligations and policy requirements” (CSE/RCMP, 2007, p. EO-2).
 
-**Table 20: Information Security Assessment Methodologies**
+**Table: Information Security Assessment Methodologies**
 
-<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">OSSTMM 3.0</td><td valign="top"> NIST 800-115</td><td valign="top">TRA-1 (CSE/RCMP, 2007)</td></tr><tr><td valign="top"><p>Background:</p><p><br></p><p>This current version is published on Saturday, August 2, 2008.</p><p><br></p><p>The OSSTMM is for free dissemination under the Open Methodology License (OML) 3.0 and CC Creative Commons 2.5 Attribution-NoDerivs.</p><p><br></p><p>OSSTMM 3.0 “is maintained by the Institute for Security and Open Methodologies (ISECOM), developed in an open community, and subjected to peer and cross-disciplinary review.”</p><p><br></p><p>“Financing for all ISECOM projects is provided through partnerships, subscriptions, certifications, licensing, and case-study-based research. ISECOM is registered in Catalonia, Spain as a Non-Profit Organization and maintains a business office in New York, USA. p.1</p></td><td valign="top"><p>Background:</p><p><br></p><p>Federal (US) sponsorship   </p><p>September 2008</p><p><br></p><p>Section 2 Security Testing and Examination Overview</p><p>presents an overview of information security assessments, including policies, roles and responsibilities, methodologies, and techniques.</p><p><br></p><p>􀀟Section 3 Review Techniques</p><p>provides a detailed description of several technical examination techniques, including documentation review, log review, network sniffing, and file integrity checking.</p><p><br></p></td><td valign="top"><p>Background:</p><p><br></p><p>At the highest level, the Government Security Policy (GSP) prescribes two complementary approaches to security risk management.</p><p><br></p><p>The first is “the application of baseline security requirements, or minimum security standards, specified in the policy itself and other supporting documentation, specifically the operational security standards and technical documentation described in section 9 of the GSP.”</p><p><br></p><p>The second approach is to “address these issues, the GSP provides for continuous risk management in the form of a threat and risk assessment (TRA) as an effective supplement” (p. MS-1).</p><p><br></p><p>The Harmonized TRA Methodology presents the TRA as a project conducted in five distinct phases (TRA phases).</p><p><br></p><p>1) Preparation: Obtain Management Commitment, Establish Project Mandate, Determine Scope of Assessment</p><p><br></p><p>2) Asset Identification: Identify Assets, Assess Injuries, Assign Asset Values</p></td></tr><tr><td valign="top"><p>11.2 Logistics:</p><p>This is the preparation of the channel test environment needed to prevent false positives and false negatives which lead to inaccurate test results. Framework and Network Quality.</p><p><br></p><p>Framework:</p><p>activities similar to recon information gathering,</p><p>e.g., (a) Verify the scope and the owner of the targets outlined for the audit.</p><p>(b) Determine the property location and the owner of the property housing the targets.</p><p>(c) Verify the owner of the targets from network registration.</p></td><td valign="top"><p>Section 4 Target Identification and Analysis Techniques</p><p>describes several techniques for identifying targets and analyzing them for potential vulnerabilities.</p><p><br></p><p>Examples of these techniques include network discovery and vulnerability scanning.</p><p>􀀟</p></td><td valign="top"><p>3) Threat Assessment: Identify Threats, Assess Threat Likelihood, Assess Threat Gravity, Assign Threat Levels</p><p><br></p><p>4) Risk Assessment: Identify Existing Safeguards, Assess Safeguard Effectiveness, Determine Vulnerabilities, Assess Vulnerability Impact, Assign Vulnerability Values</p><p><br></p><p><br></p></td></tr><tr><td valign="top"><p>11.3 Active Detection Verification</p><p>11.3.1 Filtering</p><p>11.3.2 Active Detection</p></td><td valign="top"><br></td><td valign="top"><br></td></tr><tr><td valign="top"><p>11.4 Visibility Audit</p><p>Enumeration and indexing of the targets in the scope through direct and indirect interaction with or</p><p>between live systems.</p><p>11.4.1 Network Surveying -- activities similar to recon footprinting</p><p>e.g., (a) Identify the perimeter of the network segment.</p><p>11.4.2 Enumeration - activities similar to scanning and enumeration (Faircloth 2011</p><p>e.g., Examine target web-based application source code and scripts to determine the</p><p>existence of additional targets in the network.</p></td><td valign="top"><br></td><td valign="top"><br></td></tr><tr><td valign="top"><p>11.5 Access Verification</p><p>Tests for the enumeration of access points leading within the scope.</p><p><br></p><p>- activities similar to port scanning (Faircloth 2011</p><p><br></p><p>11.5.1 Access Process</p><p>(a) Request known, common services which utilize UDP for connections from all addresses.</p><p>(b) Request known, common VPN services including those which utilize IPSEC and IKE for</p><p>connections from all addresses.</p><p><br></p><p>11.5.2 Services</p><p>(a) Request all discovered TCP ports for service banners (flags).</p><p><br></p><p>11.5.3 Authentication</p><p><br></p></td><td valign="top"><p>Section 6 Security Assessment Planning</p><p>presents an approach and process for planning a security assessment.</p><p><br></p></td><td valign="top"><br></td></tr><tr><td valign="top"><p>11.6 Trust Verification</p><p>Tests for trusts between systems within the scope where trust refers to access to information or physical</p><p>property without the need for identification or authentication.</p><p>11.6.1 Spoofing</p><p>11.6.2 Phishing</p><p><br></p></td><td valign="top"><p>Section 5 Target Vulnerability Validation Techniques</p><p>explains techniques commonly used to validate the existence of vulnerabilities, such as password cracking and penetration testing.</p></td><td valign="top"><br></td></tr><tr><td valign="top"><p>11.7 Controls Verification</p><p>Tests to enumerate and verify the operational functionality of safety measures for assets and services.</p><p><br></p></td><td valign="top"><br></td><td valign="top"><br></td></tr><tr><td valign="top"><p>11.8 Process Verification</p><p>11.9 Configuration Verification</p><p>11.10 Property Validation</p><p>11.11 Segregation Review</p><p>11.12 Exposure Verification</p><p>11.13 Competitive Intelligence Scouting</p><p>11.14 Quarantine Verification</p><p>11.15 Privileges Audit</p><p>11.16 Survivability Validation</p><p>11.17 Alert and Log Review</p></td><td valign="top"><p>Section 7 Security Assessment Execution</p><p>discusses factors that are key to the execution of security assessments, including coordination, the assessment itself, analysis, and data handling.</p><p>􀀟</p><p>Section 8 Post-Testing Activities</p><p>presents an approach for reporting assessment findings, and provides an overview of remediation activities.</p></td><td valign="top">5) Recommendations: Identify Unacceptable Risks, Select Potential Safeguards, Identify Safeguard Costs, Assess Projected Risk</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">OSSTMM 3.0</td><td valign="top"> NIST 800-115</td><td valign="top">TRA-1 (CSE/RCMP, 2007)</td></tr><tr><td valign="top"><p>Background:</p><p><br></p><p>This current version is published on Saturday, August 2, 2008.</p><p><br></p><p>The OSSTMM is for free dissemination under the Open Methodology License (OML) 3.0 and CC Creative Commons 2.5 Attribution-NoDerivs.</p><p><br></p><p>OSSTMM 3.0 “is maintained by the Institute for Security and Open Methodologies (ISECOM), developed in an open community, and subjected to peer and cross-disciplinary review.”</p><p><br></p><p>“Financing for all ISECOM projects is provided through partnerships, subscriptions, certifications, licensing, and case-study-based research. ISECOM is registered in Catalonia, Spain as a Non-Profit Organization and maintains a business office in New York, USA. p.1</p></td><td valign="top"><p>Background:</p><p><br></p><p>Federal (US) sponsorship   </p><p>September 2008</p><p><br></p><p>Section 2 Security Testing and Examination Overview</p><p>presents an overview of information security assessments, including policies, roles and responsibilities, methodologies, and techniques.</p><p><br></p><p>Section 3 Review Techniques</p><p>provides a detailed description of several technical examination techniques, including documentation review, log review, network sniffing, and file integrity checking.</p><p><br></p></td><td valign="top"><p>Background:</p><p><br></p><p>At the highest level, the Government Security Policy (GSP) prescribes two complementary approaches to security risk management.</p><p><br></p><p>The first is “the application of baseline security requirements, or minimum security standards, specified in the policy itself and other supporting documentation, specifically the operational security standards and technical documentation described in section 9 of the GSP.”</p><p><br></p><p>The second approach is to “address these issues, the GSP provides for continuous risk management in the form of a threat and risk assessment (TRA) as an effective supplement” (p. MS-1).</p><p><br></p><p>The Harmonized TRA Methodology presents the TRA as a project conducted in five distinct phases (TRA phases).</p><p><br></p><p>1) Preparation: Obtain Management Commitment, Establish Project Mandate, Determine Scope of Assessment</p><p><br></p><p>2) Asset Identification: Identify Assets, Assess Injuries, Assign Asset Values</p></td></tr><tr><td valign="top"><p>11.2 Logistics:</p><p>This is the preparation of the channel test environment needed to prevent false positives and false negatives which lead to inaccurate test results. Framework and Network Quality.</p><p><br></p><p>Framework:</p><p>activities similar to recon information gathering,</p><p>e.g., (a) Verify the scope and the owner of the targets outlined for the audit.</p><p>(b) Determine the property location and the owner of the property housing the targets.</p><p>(c) Verify the owner of the targets from network registration.</p></td><td valign="top"><p>Section 4 Target Identification and Analysis Techniques</p><p>describes several techniques for identifying targets and analyzing them for potential vulnerabilities.</p><p><br></p><p>Examples of these techniques include network discovery and vulnerability scanning.</p><p></p></td><td valign="top"><p>3) Threat Assessment: Identify Threats, Assess Threat Likelihood, Assess Threat Gravity, Assign Threat Levels</p><p><br></p><p>4) Risk Assessment: Identify Existing Safeguards, Assess Safeguard Effectiveness, Determine Vulnerabilities, Assess Vulnerability Impact, Assign Vulnerability Values</p><p><br></p><p><br></p></td></tr><tr><td valign="top"><p>11.3 Active Detection Verification</p><p>11.3.1 Filtering</p><p>11.3.2 Active Detection</p></td><td valign="top"><br></td><td valign="top"><br></td></tr><tr><td valign="top"><p>11.4 Visibility Audit</p><p>Enumeration and indexing of the targets in the scope through direct and indirect interaction with or</p><p>between live systems.</p><p>11.4.1 Network Surveying -- activities similar to recon footprinting</p><p>e.g., (a) Identify the perimeter of the network segment.</p><p>11.4.2 Enumeration - activities similar to scanning and enumeration (Faircloth 2011</p><p>e.g., Examine target web-based application source code and scripts to determine the</p><p>existence of additional targets in the network.</p></td><td valign="top"><br></td><td valign="top"><br></td></tr><tr><td valign="top"><p>11.5 Access Verification</p><p>Tests for the enumeration of access points leading within the scope.</p><p><br></p><p>- activities similar to port scanning (Faircloth 2011</p><p><br></p><p>11.5.1 Access Process</p><p>(a) Request known, common services which utilize UDP for connections from all addresses.</p><p>(b) Request known, common VPN services including those which utilize IPSEC and IKE for</p><p>connections from all addresses.</p><p><br></p><p>11.5.2 Services</p><p>(a) Request all discovered TCP ports for service banners (flags).</p><p><br></p><p>11.5.3 Authentication</p><p><br></p></td><td valign="top"><p>Section 6 Security Assessment Planning</p><p>presents an approach and process for planning a security assessment.</p><p><br></p></td><td valign="top"><br></td></tr><tr><td valign="top"><p>11.6 Trust Verification</p><p>Tests for trusts between systems within the scope where trust refers to access to information or physical</p><p>property without the need for identification or authentication.</p><p>11.6.1 Spoofing</p><p>11.6.2 Phishing</p><p><br></p></td><td valign="top"><p>Section 5 Target Vulnerability Validation Techniques</p><p>explains techniques commonly used to validate the existence of vulnerabilities, such as password cracking and penetration testing.</p></td><td valign="top"><br></td></tr><tr><td valign="top"><p>11.7 Controls Verification</p><p>Tests to enumerate and verify the operational functionality of safety measures for assets and services.</p><p><br></p></td><td valign="top"><br></td><td valign="top"><br></td></tr><tr><td valign="top"><p>11.8 Process Verification</p><p>11.9 Configuration Verification</p><p>11.10 Property Validation</p><p>11.11 Segregation Review</p><p>11.12 Exposure Verification</p><p>11.13 Competitive Intelligence Scouting</p><p>11.14 Quarantine Verification</p><p>11.15 Privileges Audit</p><p>11.16 Survivability Validation</p><p>11.17 Alert and Log Review</p></td><td valign="top"><p>Section 7 Security Assessment Execution</p><p>discusses factors that are key to the execution of security assessments, including coordination, the assessment itself, analysis, and data handling.</p><p></p><p>Section 8 Post-Testing Activities</p><p>presents an approach for reporting assessment findings, and provides an overview of remediation activities.</p></td><td valign="top">5) Recommendations: Identify Unacceptable Risks, Select Potential Safeguards, Identify Safeguard Costs, Assess Projected Risk</td></tr></tbody></table>
 
-### MITRE ATT\&CK® framework
+### Other major penetration testing methodologies
 
-MITRE ATT\&CK® (Adversarial Tactics, Techniques, and Common Knowledge) is a globally accessible knowledge base of adversary behaviors, based on real-world cyber threats. MITRE ATT\&CK is an "encyclopedia of hacking"—helping defenders understand attackers and build better defenses. It serves as a foundation for threat intelligence, detection, red teaming, and defense strategies.
+#### PTES (Penetration Testing Execution Standard)
 
-#### 1. What is MITRE ATT\&CK?
+The Penetration Testing Execution Standard (PTES) was developed to provide a consistent and comprehensive framework for conducting penetration tests. Its core contribution is the definition of seven distinct phases that guide the entire engagement, from initial contact to final reporting: Pre-engagement (Scope, contracts), Intelligence Gathering (Recon), Threat Modeling (Identify attack vectors), Vulnerability Analysis (Scanning), Exploitation (Gaining access), Post-Exploitation (Persistence, pivoting), and Reporting (Remediation guidance). The penetration testing phases begin with Pre-engagement, where scope and rules of engagement are formally established, and proceed through Intelligence Gathering, Threat Modeling, and Vulnerability Analysis to build a deep understanding of the target environment before any exploitation is attempted. This structured approach ensures that testing is methodical, repeatable, and aligns with client expectations from the outset.
+
+PTES extends its methodology beyond mere technical execution to cover the full lifecycle of an attack. The Exploitation phase focuses on gaining initial access, while the Post-Exploitation phase involves actions like maintaining persistence, lateral movement, and determining the value of the compromised assets. The process culminates in the Reporting phase, which is designed to provide clear, actionable remediation guidance tailored to both technical teams and business stakeholders. This end-to-end standard is particularly well-suited for general penetration testing across network, web, and cloud environments, offering a common language and process for testers and clients alike. PTES was developed by a consortium of security professionals and consultants from various organizations in the industry. The effort was led by a core team including individuals from companies like NetSPI, Chromium Security, and the security consulting firm, The Aperture Labs. The current version is PTES 1.0, which was released in 2011. It is important to note that while PTES remains a highly influential and referenced standard, it has not seen a formal version update since its initial release.
+
+#### ISSAF (Information Systems Security Assessment Framework)
+
+The Information Systems Security Assessment Framework (ISSAF) is a specialized, step-by-step approach to penetration testing developed by the Open Information Systems Security Group (OISSU) in 2006. Its extensive guidebook—which clocks in at over 1,200 pages—lays out a comprehensive framework for assessing network, web application, and database security. The ISSAF’s comprehensible and highly structured approach is easily customizable for individual organizations and testers, allowing for the creation of personalized testing plans and making it a practical choice for those using multiple tools in a coordinated manner.
+
+It is important to note that the ISSAF goes well beyond simple penetration testing. ISSAF details exploitation techniques and covers network, web apps, and databases. The framework also encompasses the creation of educational tools for training individuals with network access and ensures that all testing activities adhere to appropriate legal standards. ISSAF remains a valuable resource for understanding the foundational, step-by-step processes of early penetration testing methodologies.
+
+#### PCI-DSS (Payment Card Industry Data Security Standard)
+
+The Payment Card Industry Data Security Standard (PCI-DSS) Version 4.0 is fundamentally a security standard, not a penetration testing methodology itself. However, it mandates a strict set of testing requirements for any entity that stores, processes, or transmits payment card data. Its focus is the protection of cardholder data and the Cardholder Data Environment (CDE). The standard requires both annual penetration tests and tests following any significant change to the CDE, ensuring that security assessments are a recurring and integral part of the compliance lifecycle.
+
+The PCI-DSS standard specifies the scope and nature of these required tests. Penetration testing must cover all network, application, and segmentation controls, verifying that isolation mechanisms effectively protect the CDE. Furthermore, it requires external vulnerability scans to be performed by an Approved Scanning Vendor (ASV). This prescriptive approach ensures a baseline of security testing rigor across the payment ecosystem, making compliance with PCI-DSS v4.0 non-negotiable for merchants and payment processors, who must adhere to its requirements to operate legally and securely.
+
+### OWASP Testing Guide (Web Security Testing Guide) 
+
+* **Focus:** Web application security.
+* **Key Features:**
+  * Detailed checklist for **OWASP Top 10 vulnerabilities** (SQLi, XSS, CSRF, etc.).
+  * Covers **APIs, serverless, and cloud apps**.
+* **Best For:** Web app pentesters, DevSecOps teams.
+current 4.2
+
+OWASP Foundation. (2020). OWASP web security testing guide (WSTG). _https://owasp.org/www-project-web-security-testing-guide/_
+
+### MITRE ATT&CK® framework
+
+MITRE ATT&CK® (Adversarial Tactics, Techniques, and Common Knowledge) is a globally accessible knowledge base of adversary behaviors, based on real-world cyber threats. MITRE ATT&CK is an "encyclopedia of hacking"—helping defenders understand attackers and build better defenses. It serves as a foundation for threat intelligence, detection, red teaming, and defense strategies. MITRE ATT&CK is comparable to/an alternative to the cyber kill chain developed by Lockheed Martin.
+
+1. What is MITRE ATT\&CK?
+
+MITRE ATT&CK is a guideline for classifying and describing cyberattacks and intrusions. It was created by the Mitre Corporation and released in 2013. (Wikipedia)
 
 * A **structured framework** mapping how attackers operate, from initial access to data exfiltration.
 * Used by **security teams, threat hunters, red teams, and SOC analysts** to:
@@ -126,7 +95,7 @@ MITRE ATT\&CK® (Adversarial Tactics, Techniques, and Common Knowledge) is a glo
   * Conduct **red team exercises** (simulating real attacks).
   * Benchmark security controls (**"How well can we detect Technique X?"**).
 
-#### 2. ATT\&CK Matrices: Breaking Down the Structure
+2. ATT\&CK Matrices: Breaking Down the Structure
 
 The framework organizes threats into **matrices** for different environments:
 
@@ -136,20 +105,20 @@ The framework organizes threats into **matrices** for different environments:
 | **Mobile ATT\&CK**     | Android & iOS threats (e.g., spyware, malicious apps).               |
 | **ICS ATT\&CK**        | Industrial Control Systems (OT/SCADA environments).                  |
 
-#### **Core Components:**
+**Core Components:**
 
-1. **Tactics** (The "Why" – Attacker Goals)
+- **Tactics** (The "Why" – Attacker Goals)
    * High-level objectives (e.g., _Initial Access, Execution, Persistence, Privilege Escalation_).
    * Example: **Lateral Movement** (TA0008).
-2. **Techniques** (The "How" – Methods Used)
+- **Techniques** (The "How" – Methods Used)
    * Specific methods attackers use (e.g., _Pass the Hash, Spearphishing, DLL Side-Loading_).
    * Example: **Phishing (T1566)** → Spearphishing Link (T1566.002).
-3. **Sub-Techniques** (More Granular Details)
+- **Sub-Techniques** (More Granular Details)
    * Variations of techniques (e.g., _Spearphishing Attachment vs. Link_).
-4. **Procedures (Real-World Examples)**
+- **Procedures (Real-World Examples)**
    * How threat groups (e.g., APT29, Lazarus) use these techniques.
 
-#### 3. How Organizations Use MITRE ATT\&CK
+3. How Organizations Use MITRE ATT\&CK
 
 **Defensive Use Cases (Blue Team/SOC)**
 
@@ -157,26 +126,26 @@ The framework organizes threats into **matrices** for different environments:
 ✔ **Gap Analysis** – "Can we detect **Credential Dumping (T1003)?"**\
 ✔ **Incident Response** – Investigate breaches using ATT\&CK as a playbook.
 
-#### **Offensive Use Cases (Red Team/Pentesters)**
+**Offensive Use Cases (Red Team/Pentesters)**
 
 ✔ **Simulate Real Attacks** – Test defenses against known TTPs.\
 ✔ **Purple Teaming** – Collaborate with defenders to improve detection.
 
-#### **Threat Intelligence**
+**Threat Intelligence**
 
 ✔ **Track Threat Actors** – Compare APT groups (e.g., _Russian Cozy Bear uses T1195.002_).
 
-#### 4. Example: Mapping an Attack with ATT\&CK
+4. Example: Mapping an Attack with ATT\&CK
 
 **Scenario:** Ransomware Attack
 
-1. **Initial Access (TA0001)** → Phishing (T1566).
-2. **Execution (TA0002)** → PowerShell (T1059.001).
-3. **Persistence (TA0003)** → Registry Run Keys (T1547.001).
-4. **Lateral Movement (TA0008)** → Pass the Hash (T1550.002).
-5. **Impact (TA0040)** → Data Encrypted for Ransom (T1486).
+- **Initial Access (TA0001)** → Phishing (T1566).
+- **Execution (TA0002)** → PowerShell (T1059.001).
+- **Persistence (TA0003)** → Registry Run Keys (T1547.001).
+- **Lateral Movement (TA0008)** → Pass the Hash (T1550.002).
+- **Impact (TA0040)** → Data Encrypted for Ransom (T1486).
 
-#### 5. ATT\&CK vs. Other Frameworks
+5. ATT&CK vs. Other Frameworks
 
 | Framework                            | Purpose                                  | Comparison                     |
 | ------------------------------------ | ---------------------------------------- | ------------------------------ |
@@ -184,7 +153,7 @@ The framework organizes threats into **matrices** for different environments:
 | **Lockheed Martin Cyber Kill Chain** | Focuses on **stages** of an attack.      | Less detailed than ATT\&CK.    |
 | **NIST CSF**                         | Risk management framework.               | High-level, not TTP-focused.   |
 
-#### 6. Getting Started with ATT\&CK
+6. Getting Started with ATT\&CK
 
 * **Explore:** [MITRE ATT\&CK Website](https://attack.mitre.org/)
 * **Tools:**
@@ -192,7 +161,43 @@ The framework organizes threats into **matrices** for different environments:
   * **CALDERA** (Automated adversary simulation).
   * **Atomic Red Team** (Test detections for ATT\&CK techniques).
 
+### Penetration testing methodologies and frameworks comparison
+
+Below are the most widely used penetration testing methodologies and frameworks and their key features and use cases.
+
+**Penetration Testing Methodologies and Frameworks Comparison Table**
+
+| Methodology             | Scope                                                  | Strengths                                             | Weaknesses                                                               | Best Used For                                                                          |
+| ----------------------- | ------------------------------------------------------ | ----------------------------------------------------- | ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- |
+| **OSSTMM v3**           | Operational security (OpSec)—physical, networks, human | Scientific testing, provides measurable metrics (RAV) | Steeper learning curve, less focused on specific exploitation techniques | Compliance, measuring operational security posture, resilience testing                 |
+| **NIST SP 800-115**     | Compliance testing—vulnerability scanning, pentesting  | Aligns with NIST CSF                                  | Technical testing emphasis                                               | Regulatory compliance (e.g., FISMA)                                                    |
+| **PTES**                | General pentesting                                     | Structured phases                                     | Not industry-enforced                                                    | Network/web pentests                                                                   |
+| **ISSAF**               | Historical pentesting                                  | Detailed exploitation steps                           | Outdated in parts                                                        | Learning basics                                                                        |
+| **PCI-DSS v4.0**        | Cardholder Data Environment (CDE)                      | Mandatory, clear compliance requirements              | Narrow (specialized), prescriptive scope                                 | Merchants and processors handling payment cards                                        |
+| **OWASP Testing Guide** | Web apps                                               | Covers OWASP Top 10                                   | Limited to apps                                                          | Web security                                                                           |
+| **MITRE ATT&CK v18**    | Maps attacks to threat groups (APT29, Lazarus, etc.)   | Real-world TTPs                                       | Not a full methodology                                                   | Red teaming, threat hunting, advanced adversary emulation of real-world adversary TTPs |
+
 ### Key takeaways
 
-* Major penetration testing methodologies include OSSTMM, NIST SP 800-115, PTES, and ISSAF.
+* Major penetration testing methodologies include OSSTMM, NIST SP 800-115, PTES, and ISSAF. 
 * Major penetration testing frameworks include OWASP Testing Guide and MITRE ATT\&CK/cyber kill chain.
+
+### References
+
+ATT&CK v18 https://attack.mitre.org/
+
+Communications Security Establishment/Royal Canadian Mounted Police, Harmonized Threat and Risk Assessment Methodology (TRA-1, 2007). Retrieved January 4, 2017, from http://www.rcmp-grc.gc.ca/ts-st/pubs/tra-emr/index-eng.htm
+ 
+Faircloth, J. (2011). _Penetration tester’s open source toolkit_. Penetration tester’s open source toolkit. Retrieved from www.scopus.com
+
+Herzog, P. (2010). OSSTMM 3–The open source security testing methodology manual. Barcelona, España: ISECOM. https://www.isecom.org/OSSTMM.3.pdf
+
+ISSAF (Information Systems Security Assessment Framework). Retrieved January 21, 2020, from http://www.oissg.org/information-systems-security-assessment-framework-issaf.html
+
+NIST Special Publication 800-115: Technical Guide to Information Security Testing and Assessment (NIST 800-115). Retrieved January 21, 2020, from http://csrc.nist.gov/publications/nistpubs/800-115/SP800-115.pdf
+
+OWASP Foundation. (2020). OWASP web security testing guide (WSTG). _https://owasp.org/www-project-web-security-testing-guide/_
+
+PCI-DSS v.1 2015 Penetration Testing Guide. Retrieved January 21, 2020, from https://www.pcisecuritystandards.org/documents/Penetration_Testing_Guidance_March_2015.pdf
+
+PTES (The Penetration Testing Execution Standard). Retrieved January 21, 2020, from http://www.pentest-standard.org/index.php/Main_Page

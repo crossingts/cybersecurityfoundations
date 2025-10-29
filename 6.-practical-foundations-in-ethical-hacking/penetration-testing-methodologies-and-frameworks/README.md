@@ -12,14 +12,14 @@ description: This section discusses major penetration testing methodologies and 
 
 This section discusses major penetration testing methodologies and frameworks. The most widely used penetration testing methodologies include OSSTMM, NIST SP 800-115, PTES, ISSAF, and PCI-DSS. Common penetration testing frameworks include OWASP Testing Guide, MITRE ATT&CK, and cyber kill chain.
 
-This section first elaborates the deployment and main features of OSSTMM, NIST SP 800-115, and Communications Security Establishment/Royal Canadian Mounted Police, Harmonized Threat and Risk Assessment Methodology (CSE/RCMP, 2007). It then discusses other major penetration testing methodologies - PTES, ISSAF, and PCI-DSS. It then looks at the OWASP Testing Guide. Finally, the MITRE ATT\&CK® framework is discussed.
+This section first elaborates the deployment and main features of OSSTMM, NIST SP 800-115, and Communications Security Establishment/Royal Canadian Mounted Police, Harmonized Threat and Risk Assessment Methodology (CSE/RCMP, 2007). It then discusses other major penetration testing methodologies - PTES, ISSAF, and PCI-DSS. It then looks at the OWASP Testing Guide. Finally, the MITRE ATT&CK® framework is discussed.
 
 ### Topics covered in this section
 
 * **Introduction**
 * **OSSTMM, NIST SP 800-115, and CSE/RCMP**
 * **Other major penetration testing methodologies**
-* **OWASP Testing Guide**
+* **OWASP Testing Guide (Web Security Testing Guide)** 
 * **MITRE ATT\&CK® framework**
 * **Penetration testing methodologies and frameworks comparison**
 
@@ -71,14 +71,11 @@ The PCI-DSS standard specifies the scope and nature of these required tests. Pen
 
 ### OWASP Testing Guide (Web Security Testing Guide) 
 
-* **Focus:** Web application security.
-* **Key Features:**
-  * Detailed checklist for **OWASP Top 10 vulnerabilities** (SQLi, XSS, CSRF, etc.).
-  * Covers **APIs, serverless, and cloud apps**.
-* **Best For:** Web app pentesters, DevSecOps teams.
-current 4.2
+The OWASP Web Security Testing Guide (WSTG) is a comprehensive resource curated by the OWASP Foundation, specifically designed for testing the security of web applications and services. Unlike broader methodologies like OSSTMM or NIST SP 800-115, the WSTG has a sharp focus on the application layer, providing a detailed, actionable checklist for testers, developers, and security professionals. Its primary goal is to produce a standardized and complete framework for testing web application security, ensuring that common and critical vulnerabilities are systematically identified.
 
-OWASP Foundation. (2020). OWASP web security testing guide (WSTG). _https://owasp.org/www-project-web-security-testing-guide/_
+The guide is structured to mirror the phases of a typical application penetration test. It begins with preliminary steps like information gathering and configuration management testing, then moves into a thorough examination of identity management, authentication, and session management controls. The core of the WSTG is its extensive coverage of specific vulnerability classes, most notably the **OWASP Top 10** risks such as SQL Injection (SQLi), Cross-Site Scripting (XSS), and Cross-Site Request Forgery (CSRF). For each testing area, the guide provides a clear objective, descriptions of how to test for weaknesses, and guidance on how to interpret the results.
+
+A key strength of the OWASP Testing Guide is its evolution to keep pace with modern application architectures. While it thoroughly covers traditional web applications, it also includes critical testing procedures for **APIs (REST and SOAP), serverless architectures, and cloud-native applications**. This makes it an indispensable tool not only for dedicated penetration testers but also for DevSecOps teams integrating security into the development lifecycle. By providing a community-driven, open-source set of best practices, the OWASP WSTG establishes a common language and baseline for web application security testing across the industry.
 
 ### MITRE ATT&CK® framework
 
@@ -167,24 +164,25 @@ Below are the most widely used penetration testing methodologies and frameworks 
 
 **Penetration Testing Methodologies and Frameworks Comparison Table**
 
-| Methodology             | Scope                                                  | Strengths                                             | Weaknesses                                                               | Best Used For                                                                          |
-| ----------------------- | ------------------------------------------------------ | ----------------------------------------------------- | ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- |
-| **OSSTMM v3**           | Operational security (OpSec)—physical, networks, human | Scientific testing, provides measurable metrics (RAV) | Steeper learning curve, less focused on specific exploitation techniques | Compliance, measuring operational security posture, resilience testing                 |
-| **NIST SP 800-115**     | Compliance testing—vulnerability scanning, pentesting  | Aligns with NIST CSF                                  | Technical testing emphasis                                               | Regulatory compliance (e.g., FISMA)                                                    |
-| **PTES**                | General pentesting                                     | Structured phases                                     | Not industry-enforced                                                    | Network/web pentests                                                                   |
-| **ISSAF**               | Historical pentesting                                  | Detailed exploitation steps                           | Outdated in parts                                                        | Learning basics                                                                        |
-| **PCI-DSS v4.0**        | Cardholder Data Environment (CDE)                      | Mandatory, clear compliance requirements              | Narrow (specialized), prescriptive scope                                 | Merchants and processors handling payment cards                                        |
-| **OWASP Testing Guide** | Web apps                                               | Covers OWASP Top 10                                   | Limited to apps                                                          | Web security                                                                           |
-| **MITRE ATT&CK v18**    | Maps attacks to threat groups (APT29, Lazarus, etc.)   | Real-world TTPs                                       | Not a full methodology                                                   | Red teaming, threat hunting, advanced adversary emulation of real-world adversary TTPs |
+| Methodology                         | Scope                                                  | Strengths                                             | Weaknesses                                                               | Best Used For                                                                          |
+| ----------------------------------- | ------------------------------------------------------ | ----------------------------------------------------- | ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- |
+| **OSSTMM v3**                       | Operational security (OpSec)—physical, networks, human | Scientific testing, provides measurable metrics (RAV) | Steeper learning curve, less focused on specific exploitation techniques | Compliance, measuring operational security posture, resilience testing                 |
+| **NIST SP 800-115**                 | Compliance testing—vulnerability scanning, pentesting  | Aligns with NIST CSF                                  | Technical testing emphasis                                               | Regulatory compliance (e.g., FISMA)                                                    |
+| **PTES v1.0**                       | General pentesting                                     | Structured phases                                     | Not industry-enforced                                                    | Network/web pentests                                                                   |
+| **ISSAF**                           | Historical pentesting                                  | Detailed exploitation steps                           | Outdated in parts                                                        | Learning basics                                                                        |
+| **PCI-DSS v4.0**                    | Cardholder Data Environment (CDE)                      | Mandatory, clear compliance requirements              | Narrow (specialized), prescriptive scope                                 | Merchants and processors handling payment cards                                        |
+| **OWASP Testing Guide (WSTG) v4.2** | Web apps                                               | Covers OWASP Top 10                                   | Limited to apps                                                          | Web security                                                                           |
+| **MITRE ATT&CK v18**                | Maps attacks to threat groups (APT29, Lazarus, etc.)   | Real-world TTPs                                       | Not a full methodology                                                   | Red teaming, threat hunting, advanced adversary emulation of real-world adversary TTPs |
 
 ### Key takeaways
 
-* Major penetration testing methodologies include OSSTMM, NIST SP 800-115, PTES, and ISSAF. 
-* Major penetration testing frameworks include OWASP Testing Guide and MITRE ATT\&CK/cyber kill chain.
+- Penetration testing is guided by both methodologies, which provide a process for the entire engagement (e.g., OSSTMM, NIST SP 800-115, PTES), and frameworks, which provide knowledge bases of attacker behaviors (e.g., MITRE ATT&CK) or specialized checklists (e.g., OWASP WSTG).
+- OSSTMM 3.0 provides a scientific, metrics-focused approach to operational security across multiple channels (human, physical, network), generating factual data about an organization's attack surface.
+- NIST SP 800-115 offers a high-level, phased approach (Plan, Discover, Attack, Report) that aligns with broader U.S. federal compliance standards and is strong on vulnerability assessment.
+- The OWASP Testing Guide (WSTG) is the definitive standard for web application security testing, offering a detailed, phase-based checklist for finding critical vulnerabilities like those in the OWASP Top 10.
+- The MITRE ATT&CK® framework is not a testing methodology but a knowledge base of real-world adversary TTPs (Tactics, Techniques, and Procedures), essential for red teaming, threat hunting, and improving defensive detection capabilities.
 
 ### References
-
-ATT&CK v18 https://attack.mitre.org/
 
 Communications Security Establishment/Royal Canadian Mounted Police, Harmonized Threat and Risk Assessment Methodology (TRA-1, 2007). Retrieved January 4, 2017, from http://www.rcmp-grc.gc.ca/ts-st/pubs/tra-emr/index-eng.htm
  
@@ -193,6 +191,8 @@ Faircloth, J. (2011). _Penetration tester’s open source toolkit_. Penetration 
 Herzog, P. (2010). OSSTMM 3–The open source security testing methodology manual. Barcelona, España: ISECOM. https://www.isecom.org/OSSTMM.3.pdf
 
 ISSAF (Information Systems Security Assessment Framework). Retrieved January 21, 2020, from http://www.oissg.org/information-systems-security-assessment-framework-issaf.html
+
+MITRE. (2024). ATT&CK: Adversarial tactics, techniques, and common knowledge. MITRE Corporation. https://attack.mitre.org/
 
 NIST Special Publication 800-115: Technical Guide to Information Security Testing and Assessment (NIST 800-115). Retrieved January 21, 2020, from http://csrc.nist.gov/publications/nistpubs/800-115/SP800-115.pdf
 

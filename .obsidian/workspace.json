@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/penetration-testing-methodologies-and-frameworks/penetration-testing-methodologies-and-frameworks-quiz.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/chapter-6-review-questions.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "penetration-testing-methodologies-and-frameworks-quiz"
+              "title": "chapter-6-review-questions"
             }
           }
         ]
@@ -181,8 +181,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "06ca7278ba5efd38",
+  "active": "47d382666f0061a3",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/penetration-testing-methodologies-and-frameworks/penetration-testing-methodologies-and-frameworks-quiz.md",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing/vulnerability-assessment-integration-with-threat-intelligence.md",
     "6.-practical-foundations-in-ethical-hacking/chapter-6-review-questions.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-methodologies-and-frameworks/README.md",
@@ -207,7 +208,6 @@
     "6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing",
     "6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/setting-up-a-cybersecurity-lab-quiz.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/penetration-testing-technologies-quiz.md",
-    "6.-practical-foundations-in-ethical-hacking/penetration-testing-methodologies-and-frameworks/penetration-testing-methodologies-and-frameworks-quiz.md",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets/common-attack-targets-quiz.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/defensive-cybersecurity-technologies-quiz.md",
     "Pasted image 20251017114230.png",

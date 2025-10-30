@@ -50,7 +50,24 @@ The **Metasploit Framework** automates exploitation and **post-exploitation work
 
 For example, Burp can intercept a JWT token, decode it in **Decoder**, and test for algorithm-switching attacks. Its **Collaborator** feature (Pro) helps detect blind SSRF or out-of-band (OOB) vulnerabilities.
 
-**Integration in a Penetration Test**
+**OWASP ZAP: Web Application Testing**
+
+**OWASP ZAP** (Zed Attack Proxy) is a leading open-source web application security scanner, maintained under the **Open Web Application Security Project (OWASP)** umbrella. It is designed to be a comprehensive and accessible tool for finding vulnerabilities in web applications during both development and testing phases. Key features include an **intercepting proxy** for manual testing, **automated scanners** for passive and active vulnerability detection, and a suite of tools for fuzzing and spidering. For example, its **AJAX Spider** can effectively crawl modern, dynamic applications, while the **active scanner** can automatically test for flaws like SQL Injection and Cross-Site Scripting (XSS). ZAP's "heads-up display" (HUD) introduces a novel, integrated approach by providing security information and testing capabilities directly within the browser. Its open-source nature and strong community support make it a popular alternative to commercial scanners, especially for automated security testing in CI/CD pipelines.
+
+**Comparison of Burp Suite and OWASP ZAP**
+
+|Feature/Capability|Burp Suite|OWASP ZAP|
+|---|---|---|
+|**Licensing & Cost**|Professional version is commercial; a feature-limited **Community Edition** is free.|**Fully open-source** and free to use.|
+|**Primary Use Case**|Industry-standard for manual, **tester-driven** web app penetration testing.|Comprehensive security tool for both **manual testing** and **automated scanning**.|
+|**Automated Scanning**|Available in the **Pro version**; highly configurable and sophisticated.|Built-in automated (active & passive) scanner is **free and fully featured**.|
+|**Extensibility**|Extensive **BApp Store** for community-developed extensions.|Strong support for **scripts and add-ons** via a vibrant community marketplace.|
+|**Ease of Use**|Steeper learning curve, but powerful workflow for professional testers.|Generally considered more **accessible for beginners** with a less complex interface.|
+|**CI/CD Integration**|Pro version is designed for integration into development pipelines.|Excellent, native support for **automation and CI/CD pipelines** due to its open-source nature.|
+|**Unique Features**|**Collaborator** for detecting out-of-band vulnerabilities; **Sequencer** for session token analysis.|**Integrated HUD** for in-browser testing; **Traditional and AJAX Spidering** combined.|
+
+
+**Integration of the core tools in a Penetration Test**
 
 These tools form a **kill chain**:
 
@@ -58,7 +75,7 @@ These tools form a **kill chain**:
 2. **OpenVAS** pinpoints vulnerabilities.
 3. **tcpdump** monitors traffic during exploits.
 4. **Metasploit** delivers payloads.
-5. **Burp Suite** tests web apps.
+5. **Burp Suite/OWASP ZAP** tests web apps.
 
 For instance, a tester might:
 

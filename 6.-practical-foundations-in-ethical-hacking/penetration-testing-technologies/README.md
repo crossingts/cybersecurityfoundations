@@ -50,22 +50,33 @@ The **Metasploit Framework** automates exploitation and **post-exploitation work
 
 For example, Burp can intercept a JWT token, decode it in **Decoder**, and test for algorithm-switching attacks. Its **Collaborator** feature (Pro) helps detect blind SSRF or out-of-band (OOB) vulnerabilities.
 
+**Burp Suite Professional vs. Community Edition**
+
+Burp Suite is available in two versions: Burp Suite Professional (paid) and Community Edition.
+
+- **Automated Scanning:** The core differentiator. **Pro has an automated active vulnerability scanner; Community does not.**
+- **Manual Testing Tools:** **Pro offers unlimited use** of Intruder (fuzzing) and Repeater; Community's versions are rate-limited and lack advanced features.
+- **Out-of-Band Testing:** **Pro includes Burp Collaborator** for detecting blind vulnerabilities; Community has no equivalent.
+- **Workflow & Reporting:** **Pro has advanced workflow features** (task scheduler, saved configurations) and detailed reporting; Community's workflow is entirely manual.
+- **Use Case:** **Pro is for professional, efficient testing;** Community is for learning, simple tasks, or manual-only testing.
+
 **OWASP ZAP: Web Application Testing**
 
 **OWASP ZAP** (Zed Attack Proxy) is a leading open-source web application security scanner, maintained under the **Open Web Application Security Project (OWASP)** umbrella. It is designed to be a comprehensive and accessible tool for finding vulnerabilities in web applications during both development and testing phases. Key features include an **intercepting proxy** for manual testing, **automated scanners** for passive and active vulnerability detection, and a suite of tools for fuzzing and spidering. For example, its **AJAX Spider** can effectively crawl modern, dynamic applications, while the **active scanner** can automatically test for flaws like SQL Injection and Cross-Site Scripting (XSS). ZAP's "heads-up display" (HUD) introduces a novel, integrated approach by providing security information and testing capabilities directly within the browser. Its open-source nature and strong community support make it a popular alternative to commercial scanners, especially for automated security testing in CI/CD pipelines.
 
-**Comparison of Burp Suite and OWASP ZAP**
+**Comparison of Web Application Testing Tools**
 
-|Feature/Capability|Burp Suite|OWASP ZAP|
-|---|---|---|
-|**Licensing & Cost**|Professional version is commercial; a feature-limited **Community Edition** is free.|**Fully open-source** and free to use.|
-|**Primary Use Case**|Industry-standard for manual, **tester-driven** web app penetration testing.|Comprehensive security tool for both **manual testing** and **automated scanning**.|
-|**Automated Scanning**|Available in the **Pro version**; highly configurable and sophisticated.|Built-in automated (active & passive) scanner is **free and fully featured**.|
-|**Extensibility**|Extensive **BApp Store** for community-developed extensions.|Strong support for **scripts and add-ons** via a vibrant community marketplace.|
-|**Ease of Use**|Steeper learning curve, but powerful workflow for professional testers.|Generally considered more **accessible for beginners** with a less complex interface.|
-|**CI/CD Integration**|Pro version is designed for integration into development pipelines.|Excellent, native support for **automation and CI/CD pipelines** due to its open-source nature.|
-|**Unique Features**|**Collaborator** for detecting out-of-band vulnerabilities; **Sequencer** for session token analysis.|**Integrated HUD** for in-browser testing; **Traditional and AJAX Spidering** combined.|
-
+| Feature/Capability                                   | Burp Suite Professional                                                                      | Burp Suite Community                    | OWASP ZAP                                                                                    |
+| ---------------------------------------------------- | -------------------------------------------------------------------------------------------- | --------------------------------------- | -------------------------------------------------------------------------------------------- |
+| **Licensing & Cost**                                 | Commercial (Paid)                                                                            | Free (Feature-Limited)                  | Fully Open-Source and Free                                                                   |
+| **Primary Use Case**                                 | Professional, efficient manual & automated testing                                           | Learning and manual-only testing        | Manual testing, automated scanning, and CI/CD                                                |
+| **Automated Scanning**                               | Yes (Advanced and configurable)                                                              | No                                      | Built-in automated (active & passive) scanner is fully featured                              |
+| **Manual Testing Tools (Proxy, Repeater, Intruder)** | Full-Featured & Unlimited                                                                    | Basic & Rate-Limited (e.g., Intruder)   | Full-Featured & Unlimited (Comparable functionality)                                         |
+| **Vulnerability Detection (e.g., SQLi, XSS)**        | Yes (Automated via Scanner)                                                                  | Manual discovery only                   | Yes (Automated via Scanner)                                                                  |
+| **Out-of-Band Testing**                              | Yes (Burp Collaborator)                                                                      | No                                      | Via community scripts or external tools                                                      |
+| **Extensibility**                                    | Extensive BApp Store for community-developed extensions                                      | BApp Store                              | Strong support for scripts and add-ons via a vibrant community marketplace                   |
+| **CI/CD Integration**                                | Yes (Powerful APIs and scheduling)                                                           | Limited                                 | Yes (Strong native support for automation and CI/CD pipelines due to its open-source nature) |
+| **Unique Features**                                  | Collaborator for detecting out-of-band vulnerabilities; Sequencer for session token analysis | Entry-point to Burp's core manual tools | Integrated HUD for in-browser testing; Traditional and AJAX Spidering combined               |
 
 **Integration of the core tools in a Penetration Test**
 

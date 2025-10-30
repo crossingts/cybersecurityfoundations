@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/chapter-6-review-questions.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/wireshark-tcpdump-vs-burp-suite-owasp-zap.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "chapter-6-review-questions"
+              "title": "wireshark-tcpdump-vs-burp-suite-owasp-zap"
             }
           }
         ]
@@ -183,9 +183,9 @@
   },
   "active": "47d382666f0061a3",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/chapter-6-review-questions.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-methodologies-and-frameworks/penetration-testing-methodologies-and-frameworks-quiz.md",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing/vulnerability-assessment-integration-with-threat-intelligence.md",
-    "6.-practical-foundations-in-ethical-hacking/chapter-6-review-questions.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-methodologies-and-frameworks/README.md",
     "6.-practical-foundations-in-ethical-hacking/packet-analyzers/README.md",
     "6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing/types-of-penetration-testing-quiz.md",

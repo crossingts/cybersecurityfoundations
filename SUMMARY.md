@@ -171,7 +171,7 @@
   * [tcpdump cheat sheet for netadmins/sysadmins](6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/tcpdump-cheat-sheet-for-netadmins-sysadmins.md)
   * [Metasploit cheat sheet for netadmins/sysadmins](6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/metasploit-cheat-sheet-for-netadmins-sysadmins.md)
   * [Burp Suite cheat sheet for netadmins/sysadmins](6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/burp-suite-cheat-sheet-for-netadmins-sysadmins.md)
-  * [Wireshark/tcpdump vs Burp Suite/OWASP ZAP](6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/wireshark-tcpdump-vs-burp-suite-owasp-zap.md)
+  * [Burp Suite/OWASP ZAP vs Wireshark/tcpdump](6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/wireshark-tcpdump-vs-burp-suite-owasp-zap.md)
   * [Penetration testing technologies — Quiz](6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/penetration-testing-technologies-quiz.md)
 * [Common attack targets](6.-practical-foundations-in-ethical-hacking/common-attack-targets/README.md)
   * [Attack types (CEH/EC-Council)](6.-practical-foundations-in-ethical-hacking/common-attack-targets/attack-types-ceh-ec-council.md)

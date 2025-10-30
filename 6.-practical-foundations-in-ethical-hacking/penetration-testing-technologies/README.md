@@ -52,7 +52,7 @@ For example, Burp can intercept a JWT token, decode it in **Decoder**, and test 
 
 **Burp Suite Professional vs. Community Edition**
 
-Burp Suite is available in two versions: Burp Suite Professional (paid) and Community Edition.
+Burp Suite is available in two versions: Burp Suite Professional (paid) and Community Edition. The key differences pertain to the following features:
 
 - **Automated Scanning:** The core differentiator. **Pro has an automated active vulnerability scanner; Community does not.**
 - **Manual Testing Tools:** **Pro offers unlimited use** of Intruder (fuzzing) and Repeater; Community's versions are rate-limited and lack advanced features.
@@ -80,7 +80,7 @@ Burp Suite is available in two versions: Burp Suite Professional (paid) and Comm
 
 **Integration of the core tools in a Penetration Test**
 
-These tools form a **kill chain**:
+The integration of these tools forms a **kill chain**:
 
 1. **Nmap** scouts the network.
 2. **OpenVAS** pinpoints vulnerabilities.

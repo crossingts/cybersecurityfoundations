@@ -118,15 +118,11 @@ The following table clarifies how these tools are typically used in each phase:
 |**Vulnerability Assessment (VA)**|Initial discovery and network mapping. Lightweight, script-based vulnerability checks.|**Primary Tool.** Comprehensive, credentialed scanning to identify and report on known vulnerabilities for patching and compliance.|
 |**Penetration Testing (PT)**|**Reconnaissance.** Discovers targets and identifies potential attack vectors (open ports, services).|**Vulnerability Identification.** Pinpoints specific, exploitable vulnerabilities to guide the exploitation phase.|
 
-
-
-
 **5. Integration**
 
-* **Nmap + OpenVAS**:
-  * Use Nmap for **initial scanning**, then OpenVAS for **deep VA**.
-  *   Example:
-
+- **Nmap + OpenVAS:**
+    - Use Nmap for initial scanning, then OpenVAS for deep VA. Use Nmap to find live hosts with open ports. Import the Nmap results into OpenVAS for a targeted vulnerability scan.
+    - Example:
       bash
 
       ```
@@ -136,7 +132,7 @@ The following table clarifies how these tools are typically used in each phase:
 
 **Conclusion**
 
-* **Nmap** = **Network scanner + light VA** (best for recon).
-* **OpenVAS** = **Full vulnerability assessment** (best for compliance/PT prep).
-* **For PT**: Use **both** (Nmap → OpenVAS → Metasploit/Burp Suite).
-* Nmap finds the doors; OpenVAS checks if they’re unlocked. 
+- **Nmap** = Network scanner + light VA (best for recon).
+- **OpenVAS** = Full vulnerability assessment (best for compliance/PT prep).
+- For PT: Use both (Nmap → OpenVAS → Metasploit/Burp Suite).
+- **Nmap** finds the doors; **OpenVAS** checks which ones are unlocked and reports on the weak locks; **Metasploit** picks the locks.

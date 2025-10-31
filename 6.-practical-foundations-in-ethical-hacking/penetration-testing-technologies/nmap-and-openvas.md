@@ -84,8 +84,10 @@ Nmap and OpenVAS serve complementary roles in **vulnerability assessment (VA) an
 
 **Example Use Case**:
 
-* **Nmap**: Quickly find open ports (`nmap -sV 192.168.1.0/24`).
-* **OpenVAS**: Scan for **CVE-2023-1234** in a web app (`openvas-cli --target=192.168.1.10`).
+- **Nmap:** Quickly find open ports (`nmap -sV 192.168.1.0/24`).
+- **OpenVAS:** Scan for a specific vulnerability like **CVE-2021-44228 (Log4Shell)** in a web app. This is a critical Remote Code Execution vulnerability in the Apache Log4j library.
+
+The CVE (Common Vulnerabilities and Exposures) Database is managed by MITRE Corporation. You can browse it at [https://cve.mitre.org/](https://cve.mitre.org/). The U.S. National Institute of Standards and Technology (NIST) provides the National Vulnerability Database (NVD), which enriches CVE entries with severity scores and patch information: [https://nvd.nist.gov/](https://nvd.nist.gov/). OpenVAS/GVM uses these sources to update its own database.
 
 **3. Penetration Testing (PT)**
 
@@ -97,24 +99,27 @@ Nmap and OpenVAS serve complementary roles in **vulnerability assessment (VA) an
 
 **OpenVAS in PT**
 
-* **Not an exploitation tool**, but identifies **exploitable weaknesses**.
-* Often used **before Metasploit** to find targets.
+- Not an exploitation tool, but identifies exploitable weaknesses.
+- Often used before Metasploit to find high-value targets.
+- OpenVAS does not feed data directly into Metasploit in the same automated way as Nmap's `db_nmap`. However, its reports are crucial for manually selecting and configuring exploits in Metasploit. A tester reads the OpenVAS report to find a confirmed vulnerability and then manually launches the corresponding Metasploit module.
 
 **PT Workflow Example**:
 
 1. **Nmap** → Find open ports (`nmap -A -T4 target.com`).
-2. **OpenVAS** → Deep scan for vulnerabilities (`openvas-scan target.com`).
-3. **Metasploit** → Exploit flaws (e.g., `use exploit/multi/http/struts2_code_exec`).
+2. **OpenVAS** → Deep scan for vulnerabilities, identifying a specific exploitable CVE.
+3. **Metasploit** → Manually select and launch the exploit based on the OpenVAS finding (e.g., `use exploit/multi/http/struts2_code_exec`).
 
-**4. When to Use Each**
+**4. Comparison of Roles in VA vs PT**
 
-| **Scenario**            | **Nmap**  | **OpenVAS**        |
-| ----------------------- | --------- | ------------------ |
-| Quick network mapping   | ✅ Best    | ❌ Overkill         |
-| Finding live hosts      | ✅ Fast    | ❌ Slow             |
-| Deep vulnerability scan | ❌ Basic   | ✅ Best             |
-| Compliance auditing     | ❌ Limited | ✅ (PCI-DSS, HIPAA) |
-| Pre-exploitation recon  | ✅ Good    | ✅ Best             |
+The following table clarifies how these tools are typically used in each phase:
+
+|Phase|Nmap Role|OpenVAS Role|
+|---|---|---|
+|**Vulnerability Assessment (VA)**|Initial discovery and network mapping. Lightweight, script-based vulnerability checks.|**Primary Tool.** Comprehensive, credentialed scanning to identify and report on known vulnerabilities for patching and compliance.|
+|**Penetration Testing (PT)**|**Reconnaissance.** Discovers targets and identifies potential attack vectors (open ports, services).|**Vulnerability Identification.** Pinpoints specific, exploitable vulnerabilities to guide the exploitation phase.|
+
+
+
 
 **5. Integration**
 

@@ -75,6 +75,16 @@ While Nmap excels at discovering live hosts and mapping network services, OpenVA
 |**Example Finding**|"Port 443/https is open on host 192.168.1.10."|"Host 192.168.1.10 is vulnerable to CVE-2017-0144 (EternalBlue) due to a missing MS17-010 patch."|
 |**Typical Use Case**|Initial reconnaissance, network inventory, security auditing.|Vulnerability management, compliance auditing (e.g., PCI-DSS), and penetration testing.|
 
+**When to Use Each**
+
+| **Scenario**            | **Nmap**  | **OpenVAS**        |
+| ----------------------- | --------- | ------------------ |
+| Quick network mapping   | ✅ Best    | ❌ Overkill         |
+| Finding live hosts      | ✅ Fast    | ❌ Slow             |
+| Deep vulnerability scan | ❌ Basic   | ✅ Best             |
+| Compliance auditing     | ❌ Limited | ✅ (PCI-DSS, HIPAA) |
+| Pre-exploitation recon  | ✅ Good    | ✅ Best             |
+
 In a typical workflow, a security professional might use Nmap first to find active hosts and open ports, and then use OpenVAS to perform a deep vulnerability scan against those discovered targets.
 
 **tcpdump: Traffic Analysis and Forensics**

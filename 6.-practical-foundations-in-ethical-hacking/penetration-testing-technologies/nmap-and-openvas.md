@@ -4,18 +4,15 @@ Nmap and OpenVAS are two popular and complementary open source network scanners�
 
 ### Technology focus: Nmap
 
-Nmap is highly versatile tool for scanning and enumerating networks. Nmap also looks for\
-services that are running on hosts by scanning TCP and UDP ports. Often referred to as the\
-Swiss army knife of security tools, Nmap is an integral part of every network security\
-professional's tool kit. (Deveriya, 2005, p. 366)
+Nmap is highly versatile tool for scanning and enumerating networks. Nmap also looks for services that are running on hosts by scanning TCP and UDP ports. Often referred to as the Swiss army knife of security tools, Nmap is an integral part of every network security professional's tool kit. (Deveriya, 2005, p. 366)
 
-Some of the routine (and cumbersome) netadmin tasks that Nmap can do are as follows:
+Netadmins routinely use Nmap to perform the following tasks:
 
-* Verify unused IP addresses in a network&#x20;
-* Verify available hosts in a network&#x20;
-* Verify services running on a host in a network&#x20;
-* Verify the firewall security configurations&#x20;
-* Verify the OS running on a remote host&#x20;
+* Verify unused IP addresses in a network 
+* Verify available hosts in a network 
+* Verify services running on a host in a network 
+* Verify the firewall security configurations 
+* Verify the OS running on a remote host 
 
 Nmap uses Internet Control Message Protocol (ICMP) ping scans for network discovery as well as other scanning techniques using TCP and UDP packets. These techniques enable network scanning even if ICMP traffic is blocked in a network.
 
@@ -144,4 +141,4 @@ Nmap and OpenVAS serve different but complementary roles in **vulnerability asse
 * **Nmap** = **Network scanner + light VA** (best for recon).
 * **OpenVAS** = **Full vulnerability assessment** (best for compliance/PT prep).
 * **For PT**: Use **both** (Nmap → OpenVAS → Metasploit/Burp Suite).
-* Nmap finds the doors; OpenVAS checks if they’re unlocked.&#x20;
+* Nmap finds the doors; OpenVAS checks if they’re unlocked. 

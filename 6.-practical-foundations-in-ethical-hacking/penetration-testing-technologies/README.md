@@ -31,6 +31,31 @@ Nmap (_Network Mapper_) is the de facto standard for **host discovery**, **port 
 
 While Nmap identifies live hosts and services, **OpenVAS** (Greenbone Vulnerability Management) specializes in **deep vulnerability scanning**. It leverages a continuously updated database of **CVEs** and **misconfigurations** to detect weaknesses like unpatched software (e.g., outdated Apache versions), default credentials, or SSL/TLS flaws. For instance, an OpenVAS scan might reveal a Windows host missing MS17-010 patches (EternalBlue), prompting further exploitation with Metasploit. Unlike Nmap’s lightweight scripts, OpenVAS performs **authenticated scans** (the vulnerability scanner logs into the target system using user credentials, e.g., a Windows domain account or local Linux user) for higher accuracy and deeper access, making it critical for compliance audits (e.g., PCI-DSS).
 
+**Nmap vs OpenVAS: Functionality/capability comparison** 
+
+Both Nmap and OpenVAS perform authenticated and unauthenticated scans.
+But Nmap performs authenticated scans in a more limited, script-driven capacity.
+Nmap's authenticated scanning is an extension of its scripting engine, not its core purpose, used for targeted information gathering.
+Many of the advanced scripts of the Nmap Scripting Engine (NSE) can perform authenticated checks. For example, scripts can use provided credentials to log into a service (e.g., SSH, SMB, or HTTP) to gather more detailed information like system users, shared folders, or application configurations.
+
+
+Both Nmap and OpenVAS use scripts, but OpenVAS's scripts are more comprehensive than Nmap's.
+OpenVAS uses a system of Network Vulnerability Tests (NVTs). Think of NVTs as highly specialized, powerful scripts, each designed to check for a specific vulnerability (CVE), misconfiguration, or compliance policy. Its entire scanning engine is built upon executing these tens of thousands of NVTs from its continuously updated database.
+
+**Nmap and OpenVAS Functionality/Capability Summary Table**
+
+While Nmap excels at discovering live hosts and mapping network services, OpenVAS specializes in deep vulnerability assessment.
+
+|Feature|Nmap|OpenVAS (GVM)|
+|---|---|---|
+|**Primary Purpose**|Network discovery, port scanning, service fingerprinting.|In-depth vulnerability detection and management.|
+|**Scan Types**|Primarily **unauthenticated**. Supports limited **authenticated** checks via its scripting engine.|Comprehensive **unauthenticated** and **authenticated** scanning.|
+|**"Scripting"**|Uses the **Nmap Scripting Engine (NSE)** for targeted tasks like banner grabbing or basic auth checks.|Uses **Network Vulnerability Tests (NVTs)**—a massive database of scripts for specific CVEs and misconfigurations.|
+|**Example Finding**|"Port 443/https is open on host 192.168.1.10."|"Host 192.168.1.10 is vulnerable to CVE-2017-0144 (EternalBlue) due to a missing MS17-010 patch."|
+|**Typical Use Case**|Initial reconnaissance, network inventory, security auditing.|Vulnerability management, compliance auditing (e.g., PCI-DSS), and penetration testing.|
+
+In a typical workflow, a security professional might use Nmap first to find active hosts and open ports, and then use OpenVAS to perform a deep vulnerability scan against those discovered targets.
+
 **tcpdump: Traffic Analysis and Forensics**
 
 **tcpdump** provides **packet-level visibility** into network traffic, essential for **debugging attacks** or **monitoring suspicious activity**. During a penetration test, a tester might use `tcpdump -i eth0 port 80 -w http.pcap` to capture HTTP traffic for analysis (e.g., finding cleartext passwords). It’s also invaluable for **MITM (Man-in-the-Middle) attacks**—filtering ARP spoofing traffic (`tcpdump arp`) or extracting DNS queries (`port 53`). Unlike GUI tools like Wireshark, tcpdump is lightweight and scriptable, ideal for remote servers or stealthy operations.

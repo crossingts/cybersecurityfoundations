@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/nmap-and-openvas.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "nmap-and-openvas"
+              "title": "README"
             }
           }
         ]
@@ -183,6 +183,7 @@
   },
   "active": "47d382666f0061a3",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/nmap-and-openvas.md",
     "5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods/README.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/README.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/wireshark-tcpdump-vs-burp-suite-owasp-zap.md",
@@ -195,7 +196,6 @@
     "6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing/types-of-penetration-testing-quiz.md",
     "6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/README.md",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets/README.md",
-    "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/nmap-and-openvas.md",
     "6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing/README.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md",
     "5.-cryptography-and-wireless-security/wireless-client-authentication-methods/README.md",

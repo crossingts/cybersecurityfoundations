@@ -62,25 +62,12 @@ Nmap and OpenVAS serve complementary roles in **vulnerability assessment (VA) an
 
 **2. Vulnerability Assessment (VA)**
 
-**Nmap**
+Here is a comparison of the two tools in the context of a Vulnerability Assessment:
 
-* **Strengths**:
-  * Fast network reconnaissance (host discovery, open ports).
-  * Can detect **potential vulnerabilities** using **NSE scripts** (e.g., `--script vuln`).
-  * Useful for **initial scanning** before deeper VA.
-* **Limitations**:
-  * No built-in CVE database (relies on manual scripting).
-  * Limited to **known service vulnerabilities** (e.g., outdated FTP/SSH versions).
-
-**OpenVAS/GVM**
-
-* **Strengths**:
-  * **Comprehensive vulnerability database** (updated daily via NVT feeds).
-  * Tests for **thousands of CVEs** (e.g., SQLi, XSS, misconfigurations).
-  * Provides **risk scores (CVSS)** and remediation advice.
-* **Limitations**:
-  * Slower (performs deep scans).
-  * Requires more resources (best for scheduled scans).
+| Aspect          | Nmap                                                                                                                                                                                                    | OpenVAS/GVM                                                                                                                                                                                               |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Strengths**   | - Fast network reconnaissance (host discovery, open ports).  <br>- Can detect potential vulnerabilities using NSE scripts (e.g., `--script vuln`).  <br>- Useful for initial scanning before deeper VA. | - Comprehensive vulnerability database (updated daily via NVT feeds).  <br>- Tests for thousands of CVEs (e.g., SQLi, XSS, misconfigurations).  <br>- Provides risk scores (CVSS) and remediation advice. |
+| **Limitations** | - No built-in CVE database (relies on manual scripting).  <br>- Limited to known service vulnerabilities (e.g., outdated FTP/SSH versions).                                                             | - Slower (performs deep scans).  <br>- Requires more resources (best for scheduled scans).                                                                                                                |
 
 **Example Use Case**:
 
@@ -90,6 +77,14 @@ Nmap and OpenVAS serve complementary roles in **vulnerability assessment (VA) an
 The CVE (Common Vulnerabilities and Exposures) Database is managed by MITRE Corporation. You can browse it at [https://cve.mitre.org/](https://cve.mitre.org/). The U.S. National Institute of Standards and Technology (NIST) provides the National Vulnerability Database (NVD), which enriches CVE entries with severity scores and patch information: [https://nvd.nist.gov/](https://nvd.nist.gov/). OpenVAS/GVM uses these sources to update its own database.
 
 **3. Penetration Testing (PT)**
+
+|Aspect|Nmap|OpenVAS/GVM|
+|---|---|---|
+|**Strengths**|- **Excellent Reconnaissance:** Rapidly discovers attack surfaces (hosts, ports, services).  <br>- **Evasion Capabilities:** Offers techniques for stealthy scanning and firewall bypass.  <br>- **Seamless Integration:** Can feed scan data directly into exploitation frameworks like Metasploit (e.g., `db_nmap`).|- **Vulnerability Identification:** Specializes in finding specific, exploitable weaknesses and CVEs.  <br>- **Target Prioritization:** Provides detailed reports that help pinpoint high-value targets for exploitation.|
+|**Limitations**|- **No Exploitation:** Cannot itself exploit the vulnerabilities it finds.  <br>- **Limited Depth:** Lacks the deep vulnerability database to identify many specific security flaws.|- **No Exploitation:** Is a scanner, not an exploitation tool.  <br>- **Indirect Workflow:** Does not automatically feed data into Metasploit; requires manual analysis of reports to guide the next steps.|
+
+**PT Workflow Insight:** In a typical penetration test, **Nmap** is used first for initial reconnaissance to map the network. **OpenVAS** then performs a deep scan to identify specific vulnerabilities. Finally, a tester manually uses the OpenVAS report to select and launch the appropriate exploits in a tool like **Metasploit**.
+
 
 **Nmap in PT**
 

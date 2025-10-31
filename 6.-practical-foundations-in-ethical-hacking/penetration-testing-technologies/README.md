@@ -33,14 +33,11 @@ While Nmap identifies live hosts and services, **OpenVAS** (Greenbone Vulnerabil
 
 **Nmap vs OpenVAS: Functionality/capability comparison** 
 
-Both Nmap and OpenVAS perform authenticated and unauthenticated scans.
-But Nmap performs authenticated scans in a more limited, script-driven capacity.
-Nmap's authenticated scanning is an extension of its scripting engine, not its core purpose, used for targeted information gathering.
-Many of the advanced scripts of the Nmap Scripting Engine (NSE) can perform authenticated checks. For example, scripts can use provided credentials to log into a service (e.g., SSH, SMB, or HTTP) to gather more detailed information like system users, shared folders, or application configurations.
+Both Nmap and OpenVAS perform authenticated and unauthenticated scans. But Nmap performs authenticated scans in a more limited, script-driven capacity. Nmap's authenticated scanning is an extension of its scripting engine, not its core purpose, used for targeted information gathering. Many of the advanced scripts of the Nmap Scripting Engine (NSE) can perform authenticated checks. For example, scripts can use provided credentials to log into a service (e.g., SSH, SMB, or HTTP) to gather more detailed information like system users, shared folders, or application configurations.
 
+The majority of OpenVAS's checks are performed remotely without credentials. This includes testing for unpatched services (e.g., an outdated Apache version), checking for default credentials on network services, and identifying SSL/TLS flaws. OpenVAS can also be configured with credentials to perform deeper, more accurate checks. This is a separate, powerful feature that allows it to find vulnerabilities like missing software patches (e.g., the MS17-010 EternalBlue patch) by checking the system's internal version data, rather than relying on external probes alone.
 
-Both Nmap and OpenVAS use scripts, but OpenVAS's scripts are more comprehensive than Nmap's.
-OpenVAS uses a system of Network Vulnerability Tests (NVTs). Think of NVTs as highly specialized, powerful scripts, each designed to check for a specific vulnerability (CVE), misconfiguration, or compliance policy. Its entire scanning engine is built upon executing these tens of thousands of NVTs from its continuously updated database.
+Both Nmap and OpenVAS use scripts, but OpenVAS's scripts are more comprehensive than Nmap's. OpenVAS uses a system of Network Vulnerability Tests (NVTs). Think of NVTs as highly specialized, powerful scripts, each designed to check for a specific vulnerability (CVE), misconfiguration, or compliance policy. Its entire scanning engine is built upon executing these tens of thousands of NVTs from its continuously updated database.
 
 **Nmap and OpenVAS Functionality/Capability Summary Table**
 

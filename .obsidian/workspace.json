@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/nmap-and-openvas.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "nmap-and-openvas"
+              "title": "README"
             }
           }
         ]
@@ -183,8 +183,8 @@
   },
   "active": "47d382666f0061a3",
   "lastOpenFiles": [
-    "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/README.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/nmap-and-openvas.md",
+    "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/README.md",
     "5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods/README.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/wireshark-tcpdump-vs-burp-suite-owasp-zap.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/tcpdump-cheat-sheet-for-netadmins-sysadmins.md",

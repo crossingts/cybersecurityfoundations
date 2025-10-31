@@ -29,7 +29,7 @@ Nmap (_Network Mapper_) is the de facto standard for **host discovery**, **port 
 
 **OpenVAS: Vulnerability Assessment**
 
-While Nmap identifies live hosts and services, **OpenVAS** (Greenbone Vulnerability Management) specializes in **deep vulnerability scanning**. It leverages a continuously updated database of **CVEs** and **misconfigurations** to detect weaknesses like unpatched software (e.g., outdated Apache versions), default credentials, or SSL/TLS flaws. For instance, an OpenVAS scan might reveal a Windows host missing MS17-010 patches (EternalBlue), prompting further exploitation with Metasploit. Unlike Nmap’s lightweight scripts, OpenVAS performs **authenticated scans** (the vulnerability scanner logs into the target system using user credentials, e.g., a Windows domain account or local Linux user) for higher accuracy and deeper access, making it critical for compliance audits (e.g., PCI-DSS).
+While Nmap identifies live hosts and services, **OpenVAS** specializes in **deep vulnerability scanning**. It leverages a continuously updated database of **CVEs** and **misconfigurations** to detect weaknesses like unpatched software (e.g., outdated Apache versions), default credentials, or SSL/TLS flaws. For instance, an OpenVAS scan might reveal a Windows host missing MS17-010 patches (EternalBlue), prompting further exploitation with Metasploit. Unlike Nmap’s lightweight scripts, OpenVAS performs **authenticated scans** (the vulnerability scanner logs into the target system using user credentials, e.g., a Windows domain account or local Linux user) for higher accuracy and deeper access, making it critical for compliance audits (e.g., PCI-DSS).
 
 **Nmap vs OpenVAS: Functionality/capability comparison** 
 
@@ -67,13 +67,13 @@ Nmap's core is unauthenticated, but its optional NSE script system is what allow
 
 While Nmap excels at discovering live hosts and mapping network services, OpenVAS specializes in deep vulnerability assessment.
 
-|Feature|Nmap|OpenVAS (GVM)|
-|---|---|---|
-|**Primary Purpose**|Network discovery, port scanning, service fingerprinting.|In-depth vulnerability detection and management.|
-|**Scan Types**|Primarily **unauthenticated**. Supports limited **authenticated** checks via its scripting engine.|Comprehensive **unauthenticated** and **authenticated** scanning.|
-|**"Scripting"**|Uses the **Nmap Scripting Engine (NSE)** for targeted tasks like banner grabbing or basic auth checks.|Uses **Network Vulnerability Tests (NVTs)**—a massive database of scripts for specific CVEs and misconfigurations.|
-|**Example Finding**|"Port 443/https is open on host 192.168.1.10."|"Host 192.168.1.10 is vulnerable to CVE-2017-0144 (EternalBlue) due to a missing MS17-010 patch."|
-|**Typical Use Case**|Initial reconnaissance, network inventory, security auditing.|Vulnerability management, compliance auditing (e.g., PCI-DSS), and penetration testing.|
+| Feature              | Nmap                                                                                                   | OpenVAS                                                                                                            |
+| -------------------- | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| **Primary Purpose**  | Network discovery, port scanning, service fingerprinting.                                              | In-depth vulnerability detection and management.                                                                   |
+| **Scan Types**       | Primarily **unauthenticated**. Supports limited **authenticated** checks via its scripting engine.     | Comprehensive **unauthenticated** and **authenticated** scanning.                                                  |
+| **"Scripting"**      | Uses the **Nmap Scripting Engine (NSE)** for targeted tasks like banner grabbing or basic auth checks. | Uses **Network Vulnerability Tests (NVTs)**—a massive database of scripts for specific CVEs and misconfigurations. |
+| **Example Finding**  | "Port 443/https is open on host 192.168.1.10."                                                         | "Host 192.168.1.10 is vulnerable to CVE-2017-0144 (EternalBlue) due to a missing MS17-010 patch."                  |
+| **Typical Use Case** | Initial reconnaissance, network inventory, security auditing.                                          | Vulnerability management, compliance auditing (e.g., PCI-DSS), and penetration testing.                            |
 
 **When to Use Each**
 

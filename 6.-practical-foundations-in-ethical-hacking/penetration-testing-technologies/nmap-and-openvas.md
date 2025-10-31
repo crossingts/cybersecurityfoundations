@@ -49,7 +49,7 @@ While Nmap excels at fast, efficient network mapping and service enumeration, Op
 
 ### Using Nmap and OpenVAS in vulnerability assessment and penetration testing
 
-Nmap and OpenVAS serve different but complementary roles in **vulnerability assessment (VA) and penetration testing (PT)**. Here’s a detailed comparison:
+Nmap and OpenVAS serve complementary roles in **vulnerability assessment (VA) and penetration testing (PT)**. Here’s a detailed comparison:
 
 **1. Core Functionality**
 

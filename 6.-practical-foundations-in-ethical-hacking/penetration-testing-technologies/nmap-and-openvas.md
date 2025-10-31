@@ -16,7 +16,7 @@ Netadmins routinely use Nmap to perform the following tasks:
 
 Nmap uses Internet Control Message Protocol (ICMP) ping scans for network discovery as well as other scanning techniques using TCP and UDP packets. These techniques enable network scanning even if ICMP traffic is blocked in a network.
 
-**Nmap** is best described as a **network scanning tool**, but it also functions as a **network security auditing and reconnaissance tool**. Here's why:
+Nmap is a powerful open-source network scanner used for discovery, security auditing, reconnaissance, and diagnostics. While used heavily in cybersecurity, Nmap is also employed by sysadmins for routine network management.
 
 #### 1. **Primarily a Network Scanner**
 
@@ -34,13 +34,6 @@ Nmap uses Internet Control Message Protocol (ICMP) ping scans for network discov
 
 * Nmap can also perform **network inventory, monitoring, and troubleshooting**.
 * Advanced uses include **firewall evasion, IDS testing, and raw packet manipulation**.
-
-#### **Why Not Just a "Security Tool"?**
-
-* While used heavily in cybersecurity, Nmap is also employed by **sysadmins for routine network management**, making "scanner" a more universal label.
-* It doesn’t exploit vulnerabilities (like Metasploit) but provides data for further analysis.
-
-**Best Description:** _Nmap is a powerful open-source network scanner used for discovery, security auditing, and network diagnostics._ This covers its primary role (scanning) while acknowledging its importance in security and administration.
 
 ### Technology focus: OpenVAS
 

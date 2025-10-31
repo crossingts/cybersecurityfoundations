@@ -24,7 +24,7 @@ Nmap is a powerful open-source network scanner used for discovery, security audi
 * It excels at mapping networks, identifying live hosts, and determining what services are running.
 * Example commands like `nmap -sS 192.168.1.1` highlight its scanning nature.
 
-#### 2. **Security Testing & Auditing Capabilities**
+#### 2. **Security Testing and Auditing Capabilities**
 
 * While not solely a security tool, Nmap is widely used for **vulnerability assessment and penetration testing**.
 * Features like **NSE (Nmap Scripting Engine)** allow security-focused scans (e.g., detecting vulnerabilities with `nmap --script vuln`).
@@ -78,31 +78,18 @@ The CVE (Common Vulnerabilities and Exposures) Database is managed by MITRE Corp
 
 **3. Penetration Testing (PT)**
 
-|Aspect|Nmap|OpenVAS/GVM|
-|---|---|---|
-|**Strengths**|- **Excellent Reconnaissance:** Rapidly discovers attack surfaces (hosts, ports, services).  <br>- **Evasion Capabilities:** Offers techniques for stealthy scanning and firewall bypass.  <br>- **Seamless Integration:** Can feed scan data directly into exploitation frameworks like Metasploit (e.g., `db_nmap`).|- **Vulnerability Identification:** Specializes in finding specific, exploitable weaknesses and CVEs.  <br>- **Target Prioritization:** Provides detailed reports that help pinpoint high-value targets for exploitation.|
-|**Limitations**|- **No Exploitation:** Cannot itself exploit the vulnerabilities it finds.  <br>- **Limited Depth:** Lacks the deep vulnerability database to identify many specific security flaws.|- **No Exploitation:** Is a scanner, not an exploitation tool.  <br>- **Indirect Workflow:** Does not automatically feed data into Metasploit; requires manual analysis of reports to guide the next steps.|
-
-**PT Workflow Insight:** In a typical penetration test, **Nmap** is used first for initial reconnaissance to map the network. **OpenVAS** then performs a deep scan to identify specific vulnerabilities. Finally, a tester manually uses the OpenVAS report to select and launch the appropriate exploits in a tool like **Metasploit**.
-
-
-**Nmap in PT**
-
-* Used for **reconnaissance** (finding attack surfaces).
-* Helps with **firewall evasion** (`-f`, `--script firewall-bypass`).
-* Can feed data into **Metasploit** (e.g., `db_nmap`).
-
-**OpenVAS in PT**
-
-- Not an exploitation tool, but identifies exploitable weaknesses.
-- Often used before Metasploit to find high-value targets.
-- OpenVAS does not feed data directly into Metasploit in the same automated way as Nmap's `db_nmap`. However, its reports are crucial for manually selecting and configuring exploits in Metasploit. A tester reads the OpenVAS report to find a confirmed vulnerability and then manually launches the corresponding Metasploit module.
+| Aspect          | Nmap                                                                                                                                                                                                                                                                                                                                                    | OpenVAS/GVM                                                                                                                                                                                                               |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Strengths**   | - **Excellent Reconnaissance:** Rapidly discovers attack surfaces (hosts, ports, services).  <br>- **Evasion Capabilities:** Offers techniques for stealthy scanning and firewall bypass (`-f`, `--script firewall-bypass`).<br>- **Seamless Integration:** Can feed scan data directly into exploitation frameworks like Metasploit (e.g., `db_nmap`). | - **Vulnerability Identification:** Specializes in finding specific, exploitable weaknesses and CVEs.  <br>- **Target Prioritization:** Provides detailed reports that help pinpoint high-value targets for exploitation. |
+| **Limitations** | - **No Exploitation:** Cannot itself exploit the vulnerabilities it finds.  <br>- **Limited Depth:** Lacks the deep vulnerability database to identify many specific security flaws.                                                                                                                                                                    | - **No Exploitation:** Is a scanner, not an exploitation tool.  <br>- **Indirect Workflow:** Does not automatically feed data into Metasploit; requires manual analysis of reports to guide the next steps.               |
 
 **PT Workflow Example**:
 
 1. **Nmap** → Find open ports (`nmap -A -T4 target.com`).
 2. **OpenVAS** → Deep scan for vulnerabilities, identifying a specific exploitable CVE.
 3. **Metasploit** → Manually select and launch the exploit based on the OpenVAS finding (e.g., `use exploit/multi/http/struts2_code_exec`).
+
+In a typical penetration test, **Nmap** is used first for initial reconnaissance to map the network. **OpenVAS** then performs a deep scan to identify specific vulnerabilities. Finally, a tester manually uses the OpenVAS report to select and launch the appropriate exploits in a tool like **Metasploit**.
 
 **4. Comparison of Roles in VA vs PT**
 

@@ -23,24 +23,17 @@ This section traces the evolution of key encryption and integrity algorithms dev
 
 ### TKIP (WPA)
 
-WEP (Wired Equivalent Privacy) was included as the privacy component of the original IEEE 802.11 standard ratified in 1997. WEP uses the stream cipher RC4 for confidentiality, and the CRC-32 checksum for integrity. 
-After a major design flaw in the algorithm was disclosed in 2001, WEP was no longer considered secure. 
+WEP (Wired Equivalent Privacy) was included as the privacy component of the original IEEE 802.11 standard ratified in 1997. WEP uses the stream cipher RC4 for confidentiality, and the CRC-32 checksum for integrity. After a major design flaw in the algorithm was disclosed in 2001, WEP was no longer considered secure. 
 
 In August 2001, Scott Fluhrer, Itsik Mantin, and Adi Shamir published a cryptanalysis of WEP that exploited the way RC4 and IVs were used, enabling a passive attack that could recover the RC4 key after eavesdropping on network traffic. Depending on traffic volume, a successful key recovery could take as little as one minute. If insufficient packets were available, attackers could stimulate traffic by sending packets to the network and analyzing the replies. The attack was quickly implemented, and automated tools were released. With a personal computer, standard hardware, and freely available software such as aircrack-ng, WEP keys can be cracked in minutes. (Wikipedia)
 
-Under WEP it was possible to alter a packet whose content was known even if it had not been decrypted. 
-An attacker who knows the original plaintext of a packet can alter it to say anything they want, and then create a valid checksum for the modified packet, all without knowing the WEP key or decrypting the packet.
+Under WEP it was possible to alter a packet whose content was known even if it had not been decrypted. An attacker who knows the original plaintext of a packet can alter it to say anything they want, and then create a valid checksum for the modified packet, all without knowing the WEP key or decrypting the packet.
 
-WEP suffered two major security flaws that led to its demise. The fundamental cryptographic weakness that allowed the key to be recovered in minutes was the fatal blow. It transformed WEP from a privacy tool into a wide-open door. Further, the integrity flaw (ICV) was a critical enabler for attacks.
+In short, WEP suffered two major security flaws that led to its demise. The fundamental cryptographic weakness that allowed the key to be recovered in minutes was the fatal blow. It transformed WEP from a privacy tool into a wide-open door. Further, the integrity flaw (flawed integrity check) was a critical enabler for attacks.
 
+WEP was deprecated in 2004. The breaking of WEP had left Wi-Fi networks without viable link-layer security, and a solution was required for already deployed hardware. Temporal Key Integrity Protocol (TKIP) was designed by the IEEE 802.11i task group and the Wi-Fi Alliance as an interim solution to replace WEP without requiring the replacement of legacy hardware. 
 
-
-
-WEP was deprecated in 2004. The breaking of WEP had left Wi-Fi networks without viable link-layer security, and a solution was required for already deployed hardware.
-Temporal Key Integrity Protocol (TKIP) was designed by the IEEE 802.11i task group and the Wi-Fi Alliance as an interim solution to replace WEP without requiring the replacement of legacy hardware. 
-
-WPA (2003) primarily used TKIP as its encryption method. WPA2 (2004) made AES-CCMP mandatory as the encryption method, with TKIP as an optional fallback for backward compatibility. WPA3 mandated AES-256-GCMP for WPA3-Personal and WPA3-Enterprise.
-In WPA-Personal and WPA2-Personal, the PSK (your Wi-Fi password) is used to derive encryption keys. In WPA3-Personal, PSK is replaced by SAE for authentication but the actual encryption in WPA3 uses AES-GCMP for enterprise.
+WPA (2003) primarily used TKIP as its encryption method. WPA2 (2004) made AES-CCMP mandatory as the encryption method, with TKIP as an optional fallback for backward compatibility. WPA3 mandated AES-256-GCMP for WPA3-Personal and WPA3-Enterprise. In WPA-Personal and WPA2-Personal, the PSK (your Wi-Fi password) is used to derive encryption keys. In WPA3-Personal, PSK is replaced by SAE for authentication but the actual encryption in WPA3 uses AES-GCMP for enterprise.
 
 To be able to run on legacy WEP hardware with minor upgrades, TKIP uses RC4 as its cipher. TKIP also provides a rekeying mechanism. TKIP ensures that every data packet is sent with a unique encryption key (Interim Key/Temporal Key + Packet Sequence Counter). Key mixing increases the complexity of decoding the keys by giving an attacker substantially less data that has been encrypted using any one key.
 

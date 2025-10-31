@@ -39,6 +39,30 @@ The majority of OpenVAS's checks are performed remotely without credentials. Thi
 
 Both Nmap and OpenVAS use scripts, but OpenVAS's scripts are more comprehensive than Nmap's. OpenVAS uses a system of Network Vulnerability Tests (NVTs). Think of NVTs as highly specialized, powerful scripts, each designed to check for a specific vulnerability (CVE), misconfiguration, or compliance policy. Its entire scanning engine is built upon executing these tens of thousands of NVTs from its continuously updated database.
 
+**Nmap's two-layer capabilities**
+
+To understand Nmap's capabilities, it's helpful to think of it in two layers:
+
+1. **The Core Engine**: This is Nmap's fundamental functionality for **unauthenticated** scanning:
+- Host Discovery (`-sn`)
+- Port Scanning (`-sS`, `-sT`, etc.)
+- Service & Version Detection (`-sV`)
+- OS Fingerprinting (`-O`)
+
+2. **The Nmap Scripting Engine (NSE)**: This is an _add-on system_ that extends the core engine. It allows users to run scripts for more advanced, specific tasks. The NSE is where Nmap's **authenticated** scanning happens.
+
+**How NSE Enables Authenticated Scans:**
+
+The NSE provides a framework where scripts can be passed credentials (usernames/passwords/keys) via command-line arguments. These scripts then use those credentials to log into services and perform deeper checks.
+
+**Examples of NSE Scripts Doing Authenticated Scanning:**
+
+- **`smb-brute`**: Takes a list of usernames and passwords to brute-force SMB (Windows file sharing) logins.
+- **`http-auth-finder`**: Can use provided credentials to access protected web pages and look for authentication forms.
+- **`ssh-auth-methods`**: Can use an SSH key to log in and check which authentication methods are supported.
+
+Nmap's core is unauthenticated, but its optional NSE script system is what allows it to perform authenticated checks.
+
 **Nmap and OpenVAS Functionality/Capability Summary Table**
 
 While Nmap excels at discovering live hosts and mapping network services, OpenVAS specializes in deep vulnerability assessment.

@@ -26,7 +26,7 @@ Nmap is a powerful open-source network scanner used for discovery, security audi
 
 #### 2. **Security Testing and Auditing Capabilities**
 
-* While not solely a security tool, Nmap is widely used for **vulnerability assessment and penetration testing**.
+* Nmap is widely used for **vulnerability assessment and penetration testing**.
 * Features like **NSE (Nmap Scripting Engine)** allow security-focused scans (e.g., detecting vulnerabilities with `nmap --script vuln`).
 * It helps auditors check for misconfigurations (e.g., open ports, outdated services).
 

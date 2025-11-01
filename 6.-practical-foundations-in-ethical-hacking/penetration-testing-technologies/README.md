@@ -12,16 +12,16 @@ This section discusses major open source penetration testing technologies, speci
 
 ## Topics covered in this section <a href="#topics-covered-in-this-section" id="topics-covered-in-this-section"></a>
 
-* **Penetration testing technologies: Core tools and their roles**
+* **Core penetration testing technologies**
 * **Nmap**
 * **OpenVAS**
 * **tcpdump**
 * **Metasploit**
 * **Burp Suite/OWASP ZAP**
 
-### Penetration testing technologies: Core tools and their roles
+### Core penetration testing technologies
 
-Penetration testing relies on a suite of specialized tools to identify vulnerabilities, exploit weaknesses, and validate security postures. Among these, **Nmap**, **OpenVAS**, **tcpdump**, **Metasploit**, and **Burp Suite/OWASP ZAP** serve as foundational technologies, each addressing distinct phases of the penetration test—from reconnaissance to exploitation and post-exploitation.
+Penetration testing relies on a suite of specialized tools to identify vulnerabilities, exploit weaknesses, and validate security postures. Among these, **Nmap**, **OpenVAS**, **tcpdump**, **Metasploit**, and **Burp Suite/OWASP ZAP** serve as core technologies, each addressing distinct phases of the penetration test—from reconnaissance to exploitation and post-exploitation.
 
 **Nmap: Network Reconnaissance and Enumeration**
 
@@ -29,7 +29,7 @@ Nmap (_Network Mapper_) is the de facto standard for **host discovery**, **port 
 
 **OpenVAS: Vulnerability Assessment**
 
-While Nmap identifies live hosts and services, **OpenVAS** specializes in **deep vulnerability scanning**. It leverages a continuously updated database of **CVEs** and **misconfigurations** to detect weaknesses like unpatched software (e.g., outdated Apache versions), default credentials, or SSL/TLS flaws. For instance, an OpenVAS scan might reveal a Windows host missing MS17-010 patches (EternalBlue), prompting further exploitation with Metasploit. Unlike Nmap’s lightweight scripts, OpenVAS performs **authenticated scans** (the vulnerability scanner logs into the target system using user credentials, e.g., a Windows domain account or local Linux user) for higher accuracy and deeper access, making it critical for compliance audits (e.g., PCI-DSS).
+While Nmap identifies live hosts and services, **OpenVAS** specializes in **deep vulnerability scanning**. It leverages a continuously updated database of **CVEs** and **misconfigurations** to detect weaknesses like unpatched software (e.g., outdated Apache versions), default credentials, or SSL/TLS flaws. For instance, an OpenVAS scan might reveal a Windows host missing MS17-010 patches (EternalBlue), prompting further exploitation with Metasploit. Unlike Nmap’s lightweight scripts, OpenVAS can perform **authenticated scans** (the vulnerability scanner logs into the target system using user credentials, e.g., a Windows domain account or local Linux user) for higher accuracy and deeper access, making it critical for compliance audits (e.g., PCI-DSS).
 
 **Nmap vs OpenVAS: Functionality/capability comparison** 
 

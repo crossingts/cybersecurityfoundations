@@ -4,7 +4,7 @@ A concise guide to vulnerability scanning, assessment, and management with OpenV
 
 This cheat sheet covers:
 
-✔ **Installation & initial setup**\
+✔ **OpenVAS installation & setup**\
 ✔ **Scanning targets & scheduling tasks**\
 ✔ **Report analysis & vulnerability management**\
 ✔ **CLI usage & troubleshooting tips**
@@ -15,7 +15,7 @@ _Vulnerability Scanning, Reporting, and Management_
 
 ***
 
-### **1. Installation & Setup**
+### **1. OpenVAS Installation & Setup**
 
 #### **Install OpenVAS (Debian/Ubuntu)**
 

@@ -4,10 +4,11 @@ The ultimate reference for network exploration, security auditing, and system en
 
 This cheat sheet covers:
 
-✔ **Host discovery techniques**\
-✔ **Port scanning & service detection**\
-✔ **OS fingerprinting & script automation**\
-✔ **Stealth & evasion tactics**
+**✔ Nmap installation & setup**\
+**✔ Host discovery techniques**\
+**✔ Port scanning & service detection**\
+**✔ OS fingerprinting & script automation**\
+**✔ Stealth & evasion tactics**
 
 ## **Nmap Cheat Sheet for NetAdmins & SysAdmins**
 

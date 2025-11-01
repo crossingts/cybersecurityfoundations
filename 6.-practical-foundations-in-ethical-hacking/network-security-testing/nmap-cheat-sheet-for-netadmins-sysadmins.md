@@ -15,7 +15,38 @@ _Active Host Discovery, Port Scanning, and Enumeration_
 
 ***
 
-### **1. Host Discovery**
+### **1. Nmap Installation & Setup**
+
+bash
+
+```
+# Install on Ubuntu/Debian
+sudo apt install nmap
+
+# Install on CentOS/RHEL
+sudo yum install nmap
+# or for newer versions:
+sudo dnf install nmap
+
+# Install on macOS
+brew install nmap
+
+# Install on Windows
+# Download from: https://nmap.org/download.html
+
+# Check installation and version
+nmap --version
+
+# Update Nmap (on Kali/Ubuntu/Debian)
+sudo apt update && sudo apt upgrade nmap
+
+# Update NSE scripts
+nmap --script-updatedb
+```
+
+***
+
+### **2. Host Discovery**
 
 Find live hosts in a network without port scanning.
 
@@ -92,7 +123,7 @@ nmap -sL 192.168.1.0/24
 
 ***
 
-### **2. Port Scanning**
+### **3. Port Scanning**
 
 Identify open ports and services.
 
@@ -178,7 +209,7 @@ nmap -O 192.168.1.100
 
 ***
 
-### **3. Enumeration & Scripting**
+### **4. Enumeration & Scripting**
 
 Gather detailed info using NSE (Nmap Scripting Engine).
 
@@ -237,7 +268,7 @@ nmap --script=dns-brute example.com
 
 ***
 
-### **4. Performance & Output**
+### **5. Performance & Output**
 
 #### **Adjust Timing (Speed)**
 
@@ -265,7 +296,7 @@ nmap -oA output 192.168.1.100          # All formats
 
 ***
 
-### **5. Advanced Techniques**
+### **6. Advanced Techniques**
 
 #### **Spoof Source IP (Decoy Scan)**
 

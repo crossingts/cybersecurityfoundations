@@ -1,6 +1,6 @@
 # Lab: Getting started with Cisco Packet Tracer
 
-We will be using Packet Tracer in this course to get hands on practice building networks and configuring network devices.&#x20;
+We will be using Packet Tracer in this course to get hands on practice building networks and configuring network devices.
 
 Packet Tracer is a network simulator. It does not run real network devices. It runs software designed to simulate network devices.
 
@@ -8,15 +8,15 @@ Packet Tracer is free and easy to set up. To download Packet Tracer, first you n
 
 Go to [https://www.netacad.com](https://www.netacad.com) > Login > Sign up
 
-After you sign up and log in, go to [https://legacy.netacad.com/portal/node/488](https://legacy.netacad.com/portal/node/488)&#x20;
+After you sign up and log in, go to [https://legacy.netacad.com/portal/node/488](https://legacy.netacad.com/portal/node/488)
 
 You should see the following download page.
 
-<figure><img src="../../.gitbook/assets/image (20).png" alt="Cisco Packet Tracer Download Page"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (19) (1).png" alt="Cisco Packet Tracer Download Page"><figcaption></figcaption></figure>
 
 Scroll down to “Download” and choose the version compatible with your operating system. Windows, Ubuntu, or macOS.
 
-As you scroll down (just under the heading “Learn more on how to use Packet Tracer” you will see free short training courses for using Packet Tracer.&#x20;
+As you scroll down (just under the heading “Learn more on how to use Packet Tracer” you will see free short training courses for using Packet Tracer.
 
 Consider taking a free course, e.g., Getting Started with Cisco Packet Tracer (2 hours). It is probably worth it since you will be using it from now on.
 
@@ -34,7 +34,7 @@ Before we go through the lab instructions, you may want to look at the preferenc
 
 <figure><img src="../../.gitbook/assets/image (22).png" alt="Packet Tracer Preferences"><figcaption></figcaption></figure>
 
-In the Interface tab, you can select whether to show device model labels. In the Font tab, you can change the font size. A suggestion is to set the Application font size to 12, and the CLI font size to 14.&#x20;
+In the Interface tab, you can select whether to show device model labels. In the Font tab, you can change the font size. A suggestion is to set the Application font size to 12, and the CLI font size to 14.
 
 To place a device in Packet Tracer, go to the bottom left of the screen (the icons shown under Time in the above image), choose the type of network device you want by clicking on the icons (e.g., Network Devices), then click on a device type (e.g., Routers) from the submenu below it, and then select a model (e.g., ISR 4331) by clicking on it. Finally, to release the selected device inside the network design screen, click somewhere inside the network design screen.
 
@@ -48,7 +48,7 @@ When you open the Packet Tracer file of the section, you will immediately see th
 
 **LAB 1 INSTRUCTIONS**
 
-Recreate the network diagram shown in the lecture.&#x20;
+Recreate the network diagram shown in the lecture.
 
 Use the following devices:
 

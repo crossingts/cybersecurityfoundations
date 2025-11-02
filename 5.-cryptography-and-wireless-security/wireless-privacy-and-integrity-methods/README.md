@@ -29,11 +29,11 @@ In August 2001, Scott Fluhrer, Itsik Mantin, and Adi Shamir published a cryptana
 
 Under WEP it was possible to alter a packet whose content was known even if it had not been decrypted. An attacker who knows the original plaintext of a packet can alter it to say anything they want, and then create a valid checksum for the modified packet, all without knowing the WEP key or decrypting the packet.
 
-In short, WEP suffered two major security flaws that led to its demise. The fundamental cryptographic weakness that allowed the key to be recovered in minutes was the fatal blow. It transformed WEP from a privacy tool into a wide-open door. Further, the integrity flaw (flawed integrity check) was a critical enabler for attacks.
+In short, WEP suffered two major security flaws that led to its demise. The fundamental cryptographic weakness that allowed the key to be recovered in minutes was the fatal blow. It transformed WEP from a privacy tool into a wide-open door. Further, the integrity flaw (flawed integrity check) was a critical enabler for attacks. WEP was deprecated in 2004. 
 
-WEP was deprecated in 2004. The breaking of WEP had left Wi-Fi networks without viable link-layer security, and a solution was required for already deployed hardware. Temporal Key Integrity Protocol (TKIP) was designed by the IEEE 802.11i task group and the Wi-Fi Alliance as an interim solution to replace WEP without requiring the replacement of legacy hardware. 
+The breaking of WEP left Wi-Fi networks without viable link-layer security, and a solution was required for already deployed hardware. Temporal Key Integrity Protocol (TKIP) was designed by the IEEE 802.11i task group and the Wi-Fi Alliance as an interim solution to replace WEP without requiring the replacement of legacy hardware. 
 
-WPA (2003) primarily used TKIP as its encryption method. WPA2 (2004) made AES-CCMP mandatory as the encryption method, with TKIP as an optional fallback for backward compatibility. WPA3 mandated AES-256-GCMP for WPA3-Personal and WPA3-Enterprise. In WPA-Personal and WPA2-Personal, the PSK (your Wi-Fi password) is used to derive encryption keys. In WPA3-Personal, PSK is replaced by SAE for authentication but the actual encryption in WPA3 uses AES-GCMP for enterprise.
+The Wi-Fi Protected Access (WPA) protocol was introduced by the Wi-Fi Alliance in 2003 as an interim security standard to address the critical vulnerabilities of WEP. WPA implemented TKIP as its encryption method and Michael MIC as its integrity mechanism. WPA2 (2004) made AES-CCMP mandatory as the encryption method, with TKIP as an optional fallback for backward compatibility. WPA3 mandated AES-256-GCMP for WPA3-Personal and WPA3-Enterprise. In WPA-Personal and WPA2-Personal, the PSK (your Wi-Fi password) is used to derive encryption keys. In WPA3-Personal, PSK is replaced by SAE for authentication but the actual encryption in WPA3 uses AES-GCMP for enterprise.
 
 To be able to run on legacy WEP hardware with minor upgrades, TKIP uses RC4 as its cipher. TKIP also provides a rekeying mechanism. TKIP ensures that every data packet is sent with a unique encryption key (Interim Key/Temporal Key + Packet Sequence Counter). Key mixing increases the complexity of decoding the keys by giving an attacker substantially less data that has been encrypted using any one key.
 
@@ -58,11 +58,9 @@ TKIP became a stopgap measure to enable stronger encryption on WEP-supporting ha
 A message integrity check (MIC) is a security tool that protects against data tampering. Two main types of MICs are:
 
 1. Unkeyed Integrity Check (Cryptographic Hash): A function like SHA-256 calculates a unique "fingerprint" (a hash) of the data. A cryptographic hash protects against accidental corruption but not against a malicious attacker, because the attacker can simply alter the data and compute a new hash.
-    
     - Example Use: Verifying a file download from a trusted website. The website displays the SHA-256 hash. You calculate the hash of the downloaded file. If they match, the file is intact. This only works because you trust the website itself not to be malicious.
         
 2. Keyed Integrity Check (Message Authentication Code - MAC): A MAC algorithm uses a secret key known only to the sender and receiver to generate the integrity check value. An attacker cannot forge a valid MAC without knowing the secret key.
-    
     - Examples: HMAC (Hash-based MAC), CMAC (Cipher-based MAC).
 
 In a keyed integrity check (Message Authentication Code like Michael), a cryptographic algorithm calculates a MIC value from the message data and a secret key. The sender sends this MIC along with the message. The receiver recalculates the MIC using the shared secret key and compares the result to the transmitted value. A mismatch indicates tampering. Figure 28-5 shows the MIC process.

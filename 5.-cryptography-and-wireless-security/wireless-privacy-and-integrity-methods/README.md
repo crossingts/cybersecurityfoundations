@@ -54,7 +54,7 @@ A message integrity check (MIC) is a security tool that protects against data ta
 
 1. Unkeyed Integrity Check (Cryptographic Hash): A function like SHA-256 calculates a unique "fingerprint" (a hash) of the data. A cryptographic hash protects against accidental corruption but not against a malicious attacker, because the attacker can simply alter the data and compute a new hash.
 - Example Use: Verifying a file download from a trusted website. The website displays the SHA-256 hash. You calculate the hash of the downloaded file. If they match, the file is intact. This only works because you trust the website itself not to be malicious.
-1. Keyed Integrity Check (Message Authentication Code - MAC): A MAC algorithm uses a secret key known only to the sender and receiver to generate the integrity check value. An attacker cannot forge a valid MAC without knowing the secret key.
+2. Keyed Integrity Check (Message Authentication Code - MAC): A MAC algorithm uses a secret key known only to the sender and receiver to generate the integrity check value. An attacker cannot forge a valid MAC without knowing the secret key.
 - Examples: HMAC (Hash-based MAC), CMAC (Cipher-based MAC).
 
 In a keyed integrity check (Message Authentication Code like Michael), a cryptographic algorithm calculates a MIC value from the message data and a secret key. The sender sends this MIC along with the message. The receiver recalculates the MIC using the shared secret key and compares the result to the transmitted value. A mismatch indicates tampering. Figure 28-5 shows the MIC process.

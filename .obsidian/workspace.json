@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/nmap-cheat-sheet-for-vulnerability-assessment-va-and-penetration-testing-pt.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/metasploit-cheat-sheet-for-penetration-testing-pt.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "nmap-cheat-sheet-for-vulnerability-assessment-va-and-penetration-testing-pt"
+              "title": "metasploit-cheat-sheet-for-penetration-testing-pt"
             }
           }
         ]
@@ -183,13 +183,13 @@
   },
   "active": "47d382666f0061a3",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/nmap-cheat-sheet-for-vulnerability-assessment-va-and-penetration-testing-pt.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/burp-suite-community-edition-cheat-sheet-for-web-application-testing.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/metasploit-cheat-sheet-for-penetration-testing-pt.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/README.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/tcpdump-cheat-sheet-for-vulnerability-assessment-va-and-penetration-testing-pt.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/burp-suite-owasp-zap-vs-wireshark-tcpdump.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/owasp-zap-cheat-sheet-for-vulnerability-assessment-va-and-penetration-testing-pt.md",
-    "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/nmap-cheat-sheet-for-vulnerability-assessment-va-and-penetration-testing-pt.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/openvas-cheat-sheet-for-vulnerability-assessment-va-and-penetration-testing-pt.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/nmap-and-openvas.md",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing/tcpdump-cheat-sheet-for-netadmins-sysadmins.md",

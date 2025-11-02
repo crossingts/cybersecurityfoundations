@@ -62,9 +62,7 @@ A message integrity check (MIC) is a security tool that protects against data ta
 
 * Examples: HMAC (Hash-based MAC), CMAC (Cipher-based MAC).
 
-In a keyed integrity check (Message Authentication Code like Michael), a cryptographic algorithm calculates a MIC value from the message data and a secret key. The sender sends this MIC along with the message. The receiver recalculates the MIC using the shared secret key and compares the result to the transmitted value. A mismatch indicates tampering. The following figure shows the MIC process.
-
-
+In a keyed integrity check (Message Authentication Code like Michael), a cryptographic algorithm calculates a MIC value from the message data and a secret key. The sender sends this MIC along with the message. The receiver recalculates the MIC using the shared secret key and compares the result to the transmitted value. A mismatch indicates tampering. The following figure (Checking Message Integrity over a Wireless Network) shows the MIC process.
 
 ```mermaid
 graph TB
@@ -115,8 +113,6 @@ class Wireless decision
 
 class Results results
 ```
-
-Figure 28-5 Checking Message Integrity over a Wireless Network (Odom, 2020, p. 710)
 
 WPA uses a specific Message Authentication Code (MAC) called Michael. It is a keyed hash function. The access point and the client share a secret key to calculate and verify the MIC, preventing anyone without the key from tampering with the message.
 

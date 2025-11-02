@@ -12,14 +12,14 @@ This section discusses major open source penetration testing technologies, speci
 
 ## Topics covered in this section <a href="#topics-covered-in-this-section" id="topics-covered-in-this-section"></a>
 
-* **Core penetration testing technologies**
+* **Introduction**
 * **Nmap**
 * **OpenVAS**
 * **tcpdump**
 * **Metasploit**
 * **Burp Suite/OWASP ZAP**
 
-### Core penetration testing technologies
+### Introduction
 
 Penetration testing relies on a suite of specialized tools to identify vulnerabilities, exploit weaknesses, and validate security postures. Among these, **Nmap**, **OpenVAS**, **tcpdump**, **Metasploit**, and **Burp Suite/OWASP ZAP** serve as core technologies, each addressing distinct phases of the penetration test—from reconnaissance to exploitation and post-exploitation.
 

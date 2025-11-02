@@ -57,22 +57,65 @@ A message integrity check (MIC) is a security tool that protects against data ta
 2. Keyed Integrity Check (Message Authentication Code - MAC): A MAC algorithm uses a secret key known only to the sender and receiver to generate the integrity check value. An attacker cannot forge a valid MAC without knowing the secret key.
 - Examples: HMAC (Hash-based MAC), CMAC (Cipher-based MAC).
 
-In a keyed integrity check (Message Authentication Code like Michael), a cryptographic algorithm calculates a MIC value from the message data and a secret key. The sender sends this MIC along with the message. The receiver recalculates the MIC using the shared secret key and compares the result to the transmitted value. A mismatch indicates tampering. Figure 28-5 shows the MIC process.
+In a keyed integrity check (Message Authentication Code like Michael), a cryptographic algorithm calculates a MIC value from the message data and a secret key. The sender sends this MIC along with the message. The receiver recalculates the MIC using the shared secret key and compares the result to the transmitted value. 
+A mismatch indicates tampering. 
+The following figure shows the MIC process.
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/5aef3-checking-message-integrity-3.webp?w=1201" alt="Checking-Message-Integrity" height="430" width="1201"><figcaption><p>Figure 28-5 Checking Message Integrity over a Wireless Network (Odom, 2020, p. 710)</p></figcaption></figure>
 
 
-```mermaid
+```mermaid 
 graph TB
-    Client[Client Device] --> Data1[Original Data: nihao123]
-    Data1 --> ComputeMIC[Compute MIC<br/>nihao123 + f7]
-    ComputeMIC --> Encrypt[Encrypt Data + MIC]
-    Encrypt --> Wireless{Wireless Transmission}
-    Wireless --> AP[Access Point]
-    AP --> Decrypt[Decrypt Data + MIC<br/>nihao123 + f7]
-    Decrypt --> ComputeMIC2[Compute MIC: f7]
-    ComputeMIC2 -->|Compare MICs| Results[Match: Message Accepted<br/>Mismatch: Message Rejected]
+
+%% Client Side Process
+
+Client[Client Device] --> Data1[Original Data: nihao123]
+
+Data1 --> ComputeMIC[Compute MIC<br/>nihao123 + f7]
+
+ComputeMIC --> Encrypt[Encrypt Data + MIC]
+
+%% Transmission to AP
+
+Encrypt --> Wireless{Wireless Transmission}
+
+%% AP Side Process
+
+Wireless --> AP[Access Point]
+
+AP --> Decrypt[Decrypt<br/>nihao123 + f7]
+
+Decrypt --> ComputeMIC2[Compute MIC: f7]
+
+%% Comparison and Results
+
+ComputeMIC2 -->|Compare MICs| Results[Match: Message Accepted<br/>Mismatch: Mssg Rejected]
+
+%% Styling for LinkedIn featured image
+
+classDef client fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+
+classDef ap fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
+
+classDef process fill:#f3e5f5,stroke:#4a148c,stroke-width:1px
+
+classDef decision fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
+
+classDef results fill:#ffebee,stroke:#c62828,stroke-width:2px
+
+class Client,Data1,ComputeMIC,Encrypt client
+
+class AP,Decrypt,ComputeMIC2 ap
+
+class ComputeMIC,Encrypt,Decrypt,ComputeMIC2 process
+
+class Wireless decision
+
+class Results results
 ```
+
+
+Figure 28-5 Checking Message Integrity over a Wireless Network (Odom, 2020, p. 710)
 
 WPA uses a specific Message Authentication Code (MAC) called Michael. It is a keyed hash function. The access point and the client share a secret key to calculate and verify the MIC, preventing anyone without the key from tampering with the message.
 

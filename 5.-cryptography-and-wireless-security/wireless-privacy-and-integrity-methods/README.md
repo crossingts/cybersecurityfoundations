@@ -25,9 +25,7 @@ This section traces the evolution of key encryption and integrity algorithms dev
 
 WEP (Wired Equivalent Privacy) was included as the privacy component of the original IEEE 802.11 standard ratified in 1997. WEP uses the stream cipher RC4 for confidentiality, and the CRC-32 checksum for integrity. After a major design flaw in the algorithm was disclosed in 2001, WEP was no longer considered secure. 
 
-In August 2001, researchers published a devastating cryptanalysis of WEP. They exploited a weakness in how the RC4 cipher used Initialization Vectors (IVs), which are random values intended to make each encryption unique. This flaw allowed an attacker to passively eavesdrop on traffic and recover the WEP key in a matter of minutes, a attack that was quickly automated and made publicly available.
-
-In August 2001, Scott Fluhrer, Itsik Mantin, and Adi Shamir published a cryptanalysis of WEP that exploited the way RC4 and IVs were used, enabling a passive attack that could recover the RC4 key after eavesdropping on network traffic. Depending on traffic volume, a successful key recovery could take as little as one minute. If insufficient packets were available, attackers could stimulate traffic by sending packets to the network and analyzing the replies. The attack was quickly implemented, and automated tools were released. With a personal computer, standard hardware, and freely available software such as aircrack-ng, WEP keys can be cracked in minutes. (Wikipedia)
+In August 2001, Scott Fluhrer, Itsik Mantin, and Adi Shamir published a critical cryptanalysis of WEP. They exploited a weakness in how the RC4 cipher used Initialization Vectors (IVs), which are random values intended to make each encryption unique. This flaw allowed an attacker to passively eavesdrop on network traffic and recover the WEP key in a matter of minutes, an attack that was quickly automated and made publicly available.
 
 Under WEP it was possible to alter a packet whose content was known even if it had not been decrypted. An attacker who knows the original plaintext of a packet can alter it to say anything they want, and then create a valid checksum for the modified packet, all without knowing the WEP key or decrypting the packet.
 
@@ -39,7 +37,7 @@ The Wi-Fi Protected Access (WPA) protocol was introduced by the Wi-Fi Alliance i
 
 To be able to run on legacy WEP hardware with minor upgrades, TKIP uses RC4 as its cipher. TKIP also provides a rekeying mechanism. TKIP ensures that every data packet is sent with a unique encryption key (Interim Key/Temporal Key + Packet Sequence Counter). Key mixing increases the complexity of decoding the keys by giving an attacker substantially less data that has been encrypted using any one key.
 
-TKIP brought the following security features using legacy hardware and the underlying WEP encryption (pp. 714-715):
+WPA brought the following security features using legacy hardware and the underlying WEP encryption (Odom, 2020, pp. 714-715):
 
 ■ MIC: This efficient algorithm adds a hash value to each frame as a message integrity check to prevent tampering; commonly called “Michael” as an informal reference to MIC.
 

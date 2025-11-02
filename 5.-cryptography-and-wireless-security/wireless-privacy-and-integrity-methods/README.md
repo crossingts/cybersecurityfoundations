@@ -39,17 +39,12 @@ To be able to run on legacy WEP hardware with minor upgrades, TKIP uses RC4 as i
 
 To function on legacy hardware, WPA introduced the following security features while still using the RC4 cipher (Odom, 2020, pp. 714-715):
 
-■ MIC: This efficient algorithm adds a hash value to each frame as a message integrity check to prevent tampering; commonly called “Michael” as an informal reference to MIC.
-
-■ Time stamp: A time stamp is added into the MIC to prevent replay attacks that attempt to reuse or replay frames that have already been sent.
-
-■ Sender’s MAC address: The MIC also includes the sender’s MAC address as evidence of the frame source.
-
-■ TKIP sequence counter: This feature provides a record of frames sent by a unique MAC address, to prevent frames from being replayed as an attack.
-
-■ Key mixing algorithm: This algorithm computes a unique 128-bit WEP key for each frame.
-
-■ Longer initialization vector (IV): The IV size is doubled from 24 to 48 bits, making it virtually impossible to exhaust all WEP keys by brute-force calculation.
+- MIC: This efficient algorithm adds a hash value to each frame as a message integrity check to prevent tampering; commonly called “Michael” as an informal reference to MIC.
+- Time stamp: A time stamp is added into the MIC to prevent replay attacks that attempt to reuse or replay frames that have already been sent.
+- Sender’s MAC address: The MIC also includes the sender’s MAC address as evidence of the frame source.
+- TKIP sequence counter: This feature provides a record of frames sent by a unique MAC address, to prevent frames from being replayed as an attack.
+- Key mixing algorithm: This algorithm computes a unique 128-bit WEP key for each frame.
+- Longer initialization vector (IV): The IV size is doubled from 24 to 48 bits, making it virtually impossible to exhaust all WEP keys by brute-force calculation.
 
 TKIP became a stopgap measure to enable stronger encryption on WEP-supporting hardware until the 802.11i standard could be ratified. However, TKIP itself is no longer considered secure, and was deprecated in the 2012 revision of the 802.11 standard.
 
@@ -71,9 +66,7 @@ WPA uses a specific Message Authentication Code (MAC) called Michael. It is a ke
 MACs protect data in several ways:
 
 - Verify file integrity: Websites can publish a MAC alongside a software download. Users verify the file's authenticity by recomputing the MAC with the correct key, ensuring no tampering occurred during transfer.
-    
 - Protect data in transit: Network protocols such as Transport Layer Security (TLS) use MACs to integrity-check data. The receiver discards any packet with an invalid MAC, preventing the acceptance of altered data.
-    
 - Prevent unauthorized access: By ensuring the integrity of authentication tokens or commands, MACs stop attackers from altering these elements to gain unauthorized privileges. Systems typically use encryption with a MAC to provide both confidentiality and integrity.
 
 WPA introduced the Michael message integrity check (MIC) to address the critical flaws in WEP. While an improvement, Michael remained vulnerable to forgery attacks. Michael was a temporary, weak MAC designed to run on legacy WEP hardware. It was better than WEP's CRC but had known vulnerabilities, which is why WPA2 replaced it with the much stronger AES-CCMP.
@@ -82,9 +75,8 @@ WPA introduced the Michael message integrity check (MIC) to address the critical
 
 The Counter/CBC-MAC Protocol (CCMP) is considered more secure than TKIP. CCMP consists of two algorithms:
 
-■ AES (Advanced Encryption Standard) counter mode encryption.
-
-■ Cipher Block Chaining Message Authentication Code (CBC-MAC) used as a message integrity check (MIC).
+- AES (Advanced Encryption Standard) counter mode encryption.
+- Cipher Block Chaining Message Authentication Code (CBC-MAC) used as a message integrity check (MIC).
 
 AES is open, publicly accessible, and is the most secure encryption method available today. AES is widely used around the world. AES is the encryption algorithm of choice for NIST and the U.S. government today.
 
@@ -98,9 +90,8 @@ The Galois/Counter Mode Protocol (GCMP) is a cryptographic protocol that provide
 
 GCMP is an authenticated encryption suite that is more secure and more efficient than CCMP. GCMP consists of two algorithms:
 
-■ AES counter mode encryption.
-
-■ Galois Message Authentication Code (GMAC) used as a message integrity check (MIC). 
+- AES counter mode encryption.
+- Galois Message Authentication Code (GMAC) used as a message integrity check (MIC). 
 
 GCMP is used in WPA3.
 ### Key takeaways

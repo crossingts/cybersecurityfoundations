@@ -93,8 +93,6 @@ Notice from Evolution of Wi-Fi Security in WPA, WPA2, and WPA3 Table that WPA, W
 
 This implies EAP-based authentication, but the WPA versions do not require any specific EAP method. Instead, the Wi-Fi Alliance certifies interoperability with well- known EAP methods like EAP-TLS, PEAP, EAP-TTLS, and EAP-SIM. Enterprise authentication is more complex to deploy than personal mode because authentication servers must be set up and configured as a critical enterprise resource. (Odom, 2020, p. 717)
 
-***
-
 ### Evolution of Wi-Fi Security: WPA, WPA2, and WPA3
 
 This table compares the key authentication and encryption features across the three major Wi-Fi security certifications, highlighting the progressive improvements in protecting wireless networks.

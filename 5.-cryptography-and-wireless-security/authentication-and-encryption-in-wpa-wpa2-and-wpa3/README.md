@@ -58,7 +58,7 @@ The Personal mode of any WPA version is easy to deploy in a small environment be
 | **WPA2**     | PSK                  | AES-CCMP (default), TKIP (fallback) | AES-CCMP (CBC-MAC)   | PBKDF2 + PSK → CCMP keys                |
 | **WPA3**     | SAE (replaces PSK\*) | AES-GCMP (default)                  | AES-GCMP (GMAC)      | SAE (Dragonfly handshake) → Robust keys |
 
-WPA3-Personal: Replaces PSK with SAE for authentication (PSK is still the "password," but SAE is the protocol for key derivation). Uses AES-GCMP (or AES-CCMP in some early implementations) for encryption and integrity.
+WPA3-Personal replaces PSK with SAE for authentication (PSK is still the "password," but SAE is the protocol for key derivation), and uses AES-GCMP for encryption and integrity.
 
 #### Enterprise mode
 

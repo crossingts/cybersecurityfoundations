@@ -13,25 +13,25 @@ This section discusses major open source penetration testing technologies, speci
 ## Topics covered in this section <a href="#topics-covered-in-this-section" id="topics-covered-in-this-section"></a>
 
 * **Introduction**
-* **Nmap**
-* **OpenVAS**
-* **tcpdump**
-* **Metasploit**
+* **Nmap: Network reconnaissance and enumeration**
+* **OpenVAS: Vulnerability assessment**
+* **tcpdump: Traffic analysis and forensics**
+* **Metasploit: Exploitation and post-exploitation**
 * **Burp Suite/OWASP ZAP**
 
 ### Introduction
 
 Penetration testing relies on a suite of specialized tools to identify vulnerabilities, exploit weaknesses, and validate security postures. Among these, **Nmap**, **OpenVAS**, **tcpdump**, **Metasploit**, and **Burp Suite/OWASP ZAP** serve as core technologies, each addressing distinct phases of the penetration test—from reconnaissance to exploitation and post-exploitation.
 
-**Nmap: Network Reconnaissance and Enumeration**
+### Nmap: Network reconnaissance and enumeration
 
 Nmap (_Network Mapper_) is the de facto standard for **host discovery**, **port scanning**, and **service enumeration**. Using techniques like SYN scans (`-sS`), OS fingerprinting (`-O`), and version detection (`-sV`), Nmap provides a detailed map of network assets. For example, during the **initial reconnaissance phase**, a pentester might use `nmap -A -T4 192.168.1.0/24` to aggressively scan a subnet, identifying open ports (e.g., SSH on 22, HTTP on 80) and potential attack vectors. Its scripting engine (`--script`) further automates tasks like vulnerability detection (e.g., `http-vuln-cve2021-44228` for Log4j).
 
-**OpenVAS: Vulnerability Assessment**
+### OpenVAS: Vulnerability assessment
 
 While Nmap identifies live hosts and services, **OpenVAS** specializes in **deep vulnerability scanning**. It leverages a continuously updated database of **CVEs** and **misconfigurations** to detect weaknesses like unpatched software (e.g., outdated Apache versions), default credentials, or SSL/TLS flaws. For instance, an OpenVAS scan might reveal a Windows host missing MS17-010 patches (EternalBlue), prompting further exploitation with Metasploit. Unlike Nmap’s lightweight scripts, OpenVAS can perform **authenticated scans** (the vulnerability scanner logs into the target system using user credentials, e.g., a Windows domain account or local Linux user) for higher accuracy and deeper access, making it critical for compliance audits (e.g., PCI-DSS).
 
-**Nmap vs OpenVAS: Functionality/capability comparison** 
+#### Nmap vs OpenVAS: Functionality/capability comparison 
 
 Both Nmap and OpenVAS perform authenticated and unauthenticated scans. But Nmap performs authenticated scans in a more limited, script-driven capacity. Nmap's authenticated scanning is an extension of its scripting engine, not its core purpose, used for targeted information gathering. Many of the advanced scripts of the Nmap Scripting Engine (NSE) can perform authenticated checks. For example, scripts can use provided credentials to log into a service (e.g., SSH, SMB, or HTTP) to gather more detailed information like system users, shared folders, or application configurations.
 
@@ -87,13 +87,15 @@ While Nmap excels at discovering live hosts and mapping network services, OpenVA
 
 In a typical workflow, a security professional might use Nmap first to find active hosts and open ports, and then use OpenVAS to perform a deep vulnerability scan against those discovered targets.
 
-**tcpdump: Traffic Analysis and Forensics**
+### tcpdump: Traffic analysis and forensics
 
 **tcpdump** provides **packet-level visibility** into network traffic, essential for **debugging attacks** or **monitoring suspicious activity**. During a penetration test, a tester might use `tcpdump -i eth0 port 80 -w http.pcap` to capture HTTP traffic for analysis (e.g., finding cleartext passwords). It’s also invaluable for **MITM (Man-in-the-Middle) attacks**—filtering ARP spoofing traffic (`tcpdump arp`) or extracting DNS queries (`port 53`). Unlike GUI tools like Wireshark, tcpdump is lightweight and scriptable, ideal for remote servers or stealthy operations.
 
-**Metasploit: Exploitation and Post-Exploitation**
+### Metasploit: Exploitation and post-exploitation
 
 The **Metasploit Framework** automates exploitation and **post-exploitation workflows**. Its modular design includes **exploits** (e.g., `multi/handler` for reverse shells), **payloads** (e.g., Meterpreter), and **auxiliary modules** (e.g., SMB brute-forcing). For example, after identifying an unpatched SMB service via Nmap, a pentester could deploy `exploit/windows/smb/ms17_010_eternalblue` to gain a shell. Metasploit’s **post-modules** (e.g., `hashdump`, `mimikatz`) enable lateral movement, privilege escalation, and data exfiltration, simulating advanced persistent threats (APTs).
+
+### Burp Suite/OWASP ZAP
 
 **Burp Suite: Web Application Testing**
 

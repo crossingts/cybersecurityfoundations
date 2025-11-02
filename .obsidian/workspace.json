@@ -181,8 +181,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "47d382666f0061a3",
+  "active": "06ca7278ba5efd38",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/burp-suite-community-edition-cheat-sheet-for-web-application-testing.md",
+    "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/metasploit-cheat-sheet-for-penetration-testing-pt.md",
+    "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/burp-suite-owasp-zap-vs-wireshark-tcpdump.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/owasp-zap-cheat-sheet-for-vulnerability-assessment-va-and-penetration-testing-pt.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/tcpdump-cheat-sheet-for-vulnerability-assessment-va-and-penetration-testing-pt.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/nmap-cheat-sheet-for-vulnerability-assessment-va-and-penetration-testing-pt.md",
@@ -206,9 +209,6 @@
     "6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing/README.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md",
     "5.-cryptography-and-wireless-security/wireless-client-authentication-methods/README.md",
-    "4.-networking-fundamentals/cisco-ios-cli-and-basic-device-security/README.md",
-    "4.-networking-fundamentals/how-to-configure-static-routes-on-cisco-routers/README.md",
-    "5.-cryptography-and-wireless-security/hashing-algorithms-and-message-integrity/README.md",
     "6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing",
     "Pasted image 20251017114230.png",
     "6.-practical-foundations-in-ethical-hacking/packet-analyzers",

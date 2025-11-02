@@ -2,11 +2,9 @@
 
 This Burp Suite Community Edition cheat sheet provides comprehensive guidance for manual web application security testing, leveraging the tool's powerful features while working within the limitations of the free version.
 
-## Burp Suite Community Edition Cheat Sheet for Web Application Testing
-
 ### Installation & Setup
 
-**Installing Burp Suite Community Edition and initial configuration for web testing**
+Installing Burp Suite Community Edition and initial configuration for web testing.
 
 bash
 
@@ -39,11 +37,9 @@ java -Xmx4G -jar burpsuite_community.jar
 # Import certificate into browser trust store
 ```
 
-***
-
 ### Project Configuration & Workspace Setup
 
-**Creating projects, configuring scope, and setting up the testing environment**
+Creating projects, configuring scope, and setting up the testing environment.
 
 bash
 
@@ -71,11 +67,9 @@ https://*.target.com
 # Project options → HTTP → Redirections: Always follow
 ```
 
-***
-
 ### Proxy & Interception Phase
 
-**Intercepting and analyzing HTTP/S traffic between browser and target**
+Intercepting and analyzing HTTP/S traffic between browser and target.
 
 bash
 
@@ -106,11 +100,9 @@ Proxy → HTTP history → Select items → Right click → Save items
 # Filter by: Method, Status, MIME type, Search term, etc.
 ```
 
-***
-
 ### Spidering & Content Discovery
 
-**Automatically discovering application content and functionality**
+Automatically discovering application content and functionality.
 
 bash
 
@@ -137,11 +129,9 @@ Target → Site map → Right click → Engagement tools → Discover content
 # Set file extensions: .php, .html, .jsp, .asp, etc.
 ```
 
-***
-
 ### Manual Testing with Repeater
 
-**Manually manipulating and reissuing requests for targeted testing**
+Manually manipulating and reissuing requests for targeted testing.
 
 bash
 
@@ -169,11 +159,9 @@ Repeater → Right click → Show response in browser
 Repeater → Right click → Save item
 ```
 
-***
-
 ### Automated Scanning (Limited in Community)
 
-**Using Burp's limited automated scanning capabilities in Community Edition**
+Using Burp's limited automated scanning capabilities in Community Edition.
 
 bash
 
@@ -200,11 +188,9 @@ Dashboard → Issue activity → Select issues → Report issues
 Scanner → Live Passive Scanning → Enable
 ```
 
-***
-
 ### Intruder for Fuzzing & Brute Force
 
-**Automated attack tool for parameter fuzzing, enumeration, and brute force**
+Automated attack tool for parameter fuzzing, enumeration, and brute force.
 
 bash
 
@@ -242,11 +228,9 @@ Intruder → Start attack
 # Save results to file
 ```
 
-***
-
 ### Sequencer for Session Token Analysis
 
-**Analyzing randomness and predictability of session tokens**
+Analyzing randomness and predictability of session tokens.
 
 bash
 
@@ -273,11 +257,9 @@ Sequencer → Start live capture
 # Use previously captured tokens from file
 ```
 
-***
-
 ### Decoder & Comparer Utilities
 
-**Encoding/decoding data and comparing request/response differences**
+Encoding/decoding data and comparing request/response differences.
 
 bash
 
@@ -306,11 +288,9 @@ bash
 # Synchronized scrolling between compared items
 ```
 
-***
-
 ### Extender for Custom Functionality
 
-**Extending Burp functionality with BApps and custom extensions**
+Extending Burp functionality with BApps and custom extensions.
 
 bash
 
@@ -337,11 +317,9 @@ Extender → Options
 Extender → Extensions → Select extension → Output
 ```
 
-***
-
 ### Manual Testing Techniques
 
-**Step-by-step manual testing approaches for common vulnerabilities**
+Step-by-step manual testing approaches for common vulnerabilities.
 
 bash
 
@@ -373,11 +351,9 @@ bash
 # 3. Test for path traversal in file names
 ```
 
-***
-
 ### Workflow Optimization Tips
 
-**Optimizing the testing workflow within Community Edition limitations**
+Optimizing the testing workflow within Community Edition limitations.
 
 bash
 
@@ -407,8 +383,6 @@ bash
 # Generate payloads and monitor for callbacks
 ```
 
-***
-
 ### Common Keyboard Shortcuts
 
 bash
@@ -425,8 +399,6 @@ Ctrl+S - Save project
 Space - Forward intercepted request
 Ctrl+Shift+E - Encode/decode selected text
 ```
-
-***
 
 ### Useful Extensions for Community Edition
 
@@ -446,11 +418,9 @@ bash
 - Content Type Converter - Content type manipulation
 ```
 
-***
-
 ### Reporting & Documentation
 
-**Generating reports and documenting findings in Community Edition**
+Generating reports and documenting findings in Community Edition.
 
 bash
 
@@ -474,4 +444,3 @@ Target → Site map → Right click → Save selected items
 # Combine with other tools for comprehensive reporting
 ```
 
-This Burp Suite Community Edition cheat sheet provides comprehensive guidance for manual web application security testing, leveraging the tool's powerful features while working within the limitations of the free version.

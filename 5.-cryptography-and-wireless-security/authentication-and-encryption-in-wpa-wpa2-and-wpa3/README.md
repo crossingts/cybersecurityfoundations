@@ -89,7 +89,9 @@ Here’s a summary table for WPA, WPA2, and WPA3 in Enterprise mode, which repla
    * **WPA3-Enterprise**: Adds forward secrecy and stronger key derivation (e.g., CNSA-compliant for gov/military).
    * **WPA2/WPA3-Enterprise** are the only modes compliant with modern security standards (e.g., PCI-DSS).
 
-Notice from Table 28-2 that WPA, WPA2, and WPA3 support 802.1x or enterprise authentication. This implies EAP-based authentication, but the WPA versions do not require any specific EAP method. Instead, the Wi-Fi Alliance certifies interoperability with well- known EAP methods like EAP-TLS, PEAP, EAP-TTLS, and EAP-SIM. Enterprise authentication is more complex to deploy than personal mode because authentication servers must be set up and configured as a critical enterprise resource. (p. 717)
+Notice from Evolution of Wi-Fi Security in WPA, WPA2, and WPA3 Table that WPA, WPA2, and WPA3 support 802.1x or enterprise authentication. 
+
+This implies EAP-based authentication, but the WPA versions do not require any specific EAP method. Instead, the Wi-Fi Alliance certifies interoperability with well- known EAP methods like EAP-TLS, PEAP, EAP-TTLS, and EAP-SIM. Enterprise authentication is more complex to deploy than personal mode because authentication servers must be set up and configured as a critical enterprise resource. (Odom, 2020, p. 717)
 
 **Table 28-2 Comparing WPA, WPA2, and WPA3 (Odom, 2020, p. 716)**
 
@@ -99,6 +101,8 @@ Notice from Table 28-2 that WPA, WPA2, and WPA3 support 802.1x or enterprise aut
 ### Evolution of Wi-Fi Security: WPA, WPA2, and WPA3
 
 This table compares the key authentication and encryption features across the three major Wi-Fi security certifications, highlighting the progressive improvements in protecting wireless networks.
+
+**Evolution of Wi-Fi Security in WPA, WPA2, and WPA3 Table**
 
 | Feature                                           | WPA                               | WPA2                                 | WPA3                                                  |
 | ------------------------------------------------- | --------------------------------- | ------------------------------------ | ----------------------------------------------------- |
@@ -115,16 +119,13 @@ This table compares the key authentication and encryption features across the th
 | • **Simultaneous Authentication of Equals (SAE)** | ❌ No                              | ❌ No                                 | ✅ Yes (Replaces PSK, resists offline attacks)         |
 | • **Forward Secrecy**                             | ❌ No                              | ❌ No                                 | ✅ Yes                                                 |
 | • **Protected Management Frames (PMF)**           | ❌ No                              | ✅ Optional                           | ✅ Mandatory                                           |
-| **Overall Security Assessment**                   | **Legacy/Weak**                   | **Strong (Current Minimum)**         | **Most Robust (Recommended)**                         |
+| **Overall Security Assessment**                   | Legacy/Weak                       | Strong (Current Minimum)             | Most Robust (Recommended)                             |
 
 **Key explanations:**
 
-- **SAE (Simultaneous Authentication of Equals):** The WPA3 replacement for the older PSK "handshake." It provides stronger protection against password-guessing (dictionary) attacks, making it much harder for an attacker to crack your Wi-Fi password, even if they capture the network traffic.
-- **Forward Secrecy:** Ensures that even if an attacker captures your encrypted data today and later discovers your password, they _cannot_ decrypt the data they already captured. Each session is uniquely protected.
-- **Protected Management Frames (PMF):** Prevents "deauthentication" attacks, where a hacker can easily kick a device off your network, causing disruptions.
-- **AES-GCMP:** A more efficient and cryptographically stronger encryption algorithm than AES-CCMP, better suited for high-throughput networks.
-
-> **Note:** WPA3-Enterprise mode also offers an optional 192-bit cryptographic suite for environments with higher security requirements (e.g., government, finance).
+- SAE is the WPA3 replacement for the older PSK "handshake." It provides stronger protection against password-guessing (dictionary) attacks, making it much harder for an attacker to crack your Wi-Fi password, even if they capture the network traffic.
+- Forward Secrecy ensures that even if an attacker captures your encrypted data today and later discovers your password, they cannot decrypt the data they already captured. Each session is uniquely protected.
+- Protected Management Frames (PMF) prevent "deauthentication" attacks, where a hacker can easily kick a device off your network, causing disruptions.
 
 ### Final review
 
@@ -136,7 +137,7 @@ Table 28-3 Review of Wireless Security Mechanisms and Options (Odom, 2020, p. 71
 
 ### Key takeaways
 
-- Authentication Evolution: Personal mode authentication evolved from a vulnerable Pre-Shared Key (PSK) method in WPA/WPA2 to a more secure Simultaneous Authentication of Equals (SAE) in WPA3, which resists dictionary attacks. Enterprise mode consistently uses 802.1X/EAP for robust, individual user authentication.
+- Authentication Evolution: Personal mode authentication evolved from a vulnerable Pre-Shared Key (PSK) method in WPA/WPA2 to a more secure SAE in WPA3, which resists dictionary attacks. Enterprise mode consistently uses 802.1X/EAP for robust, individual user authentication.
 - Encryption Strengthening: Encryption and integrity algorithms progressed from the vulnerable TKIP in WPA to the strong AES-CCMP in WPA2. WPA3 mandates the even stronger AES-GCMP.
 - WPA3 Advancements: WPA3 introduces critical security enhancements, including forward secrecy in Personal mode to protect past sessions and Protected Management Frames (PMFs).
 

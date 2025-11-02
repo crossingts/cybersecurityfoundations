@@ -37,7 +37,7 @@ The Wi-Fi Protected Access (WPA) protocol was introduced by the Wi-Fi Alliance i
 
 To be able to run on legacy WEP hardware with minor upgrades, TKIP uses RC4 as its cipher. TKIP also provides a rekeying mechanism. TKIP ensures that every data packet is sent with a unique encryption key (Interim Key/Temporal Key + Packet Sequence Counter). Key mixing increases the complexity of decoding the keys by giving an attacker substantially less data that has been encrypted using any one key.
 
-WPA brought the following security features using legacy hardware and the underlying WEP encryption (Odom, 2020, pp. 714-715):
+To function on legacy hardware, WPA introduced the following security features while still using the RC4 cipher (Odom, 2020, pp. 714-715):
 
 ■ MIC: This efficient algorithm adds a hash value to each frame as a message integrity check to prevent tampering; commonly called “Michael” as an informal reference to MIC.
 
@@ -58,10 +58,9 @@ TKIP became a stopgap measure to enable stronger encryption on WEP-supporting ha
 A message integrity check (MIC) is a security tool that protects against data tampering. Two main types of MICs are:
 
 1. Unkeyed Integrity Check (Cryptographic Hash): A function like SHA-256 calculates a unique "fingerprint" (a hash) of the data. A cryptographic hash protects against accidental corruption but not against a malicious attacker, because the attacker can simply alter the data and compute a new hash.
-    - Example Use: Verifying a file download from a trusted website. The website displays the SHA-256 hash. You calculate the hash of the downloaded file. If they match, the file is intact. This only works because you trust the website itself not to be malicious.
-        
-2. Keyed Integrity Check (Message Authentication Code - MAC): A MAC algorithm uses a secret key known only to the sender and receiver to generate the integrity check value. An attacker cannot forge a valid MAC without knowing the secret key.
-    - Examples: HMAC (Hash-based MAC), CMAC (Cipher-based MAC).
+- Example Use: Verifying a file download from a trusted website. The website displays the SHA-256 hash. You calculate the hash of the downloaded file. If they match, the file is intact. This only works because you trust the website itself not to be malicious.
+1. Keyed Integrity Check (Message Authentication Code - MAC): A MAC algorithm uses a secret key known only to the sender and receiver to generate the integrity check value. An attacker cannot forge a valid MAC without knowing the secret key.
+- Examples: HMAC (Hash-based MAC), CMAC (Cipher-based MAC).
 
 In a keyed integrity check (Message Authentication Code like Michael), a cryptographic algorithm calculates a MIC value from the message data and a secret key. The sender sends this MIC along with the message. The receiver recalculates the MIC using the shared secret key and compares the result to the transmitted value. A mismatch indicates tampering. Figure 28-5 shows the MIC process.
 
@@ -113,7 +112,7 @@ GCMP is used in WPA3.
 - WPA2 established AES-CCMP as the mandatory, robust replacement, combining AES encryption for confidentiality with CBC-MAC for integrity.
 - WPA3 introduces AES-GCMP as a more efficient and secure authenticated encryption protocol, especially for enterprise networks.
 - The evolution from WPA to WPA3 represents a shift from backward-compatible patches to requiring modern, dedicated hardware for strong security.
-- Key encryption and message integrity algorithms used in securing wireless networks include TKIP (WPA), Michael MIC (WPA), AES-CCMP (WPA2), and AES-GCMP (WPA3).
+- The progression from TKIP/Michael to AES-CCMP and finally to AES-GCMP illustrates a clear evolution towards more robust, efficient, and hardware-dependent security for Wi-Fi.
 
 ### References
 

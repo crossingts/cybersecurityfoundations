@@ -19,10 +19,9 @@ This section details the evolution of wireless security by comparing the authent
 ## Topics covered in this section
 
 * **Introduction**
-* **Cryptographic methods and algorithms in personal and enterprise modes**
-  * **Personal mode**
-  * **Enterprise mode**
-* **Final review**
+* **Cryptographic methods and algorithms in personal mode**
+* **Cryptographic methods and algorithms in enterprise mode**
+* **Wireless authentication, privacy, and integrity methods: Final review**
 
 ### Introduction
 
@@ -36,9 +35,7 @@ The Wi-Fi Alliance introduced WPA3 in 2018, adding several important and superio
 
 The Wi-Fi Alliance made wireless security configuration straightforward and consistent through its WPA, WPA2, and WPA3 certifications. WPA, WPA2, and WPA3 simplify wireless network configuration and compatibility because they limit which authentication and privacy/integrity methods can be used.
 
-### Cryptographic methods and algorithms in personal and enterprise modes
-
-#### Personal mode
+### Cryptographic methods and algorithms in personal mode
 
 With personal mode, a key string must be shared or configured on every client and AP before the clients can connect to the wireless network. The pre-shared key is normally kept confidential so that unauthorized users have no knowledge of it. The key string is never sent over the air. Instead, clients and APs work through a four-way handshake procedure that uses the pre-shared key string to construct and exchange encryption key material that can be openly exchanged. Once that process is successful, the AP can authenticate the client and the two can secure data frames that are sent over the air. (p. 717)
 
@@ -50,7 +47,7 @@ WPA3-Personal offers forward secrecy, so, even if a password or key is compromis
 
 The Personal mode of any WPA version is easy to deploy in a small environment because a simple text key string is all that is needed to authenticate the clients. Note that all devices using the WLAN must be configured with an identical pre-shared key. Changing the key means every device using the WLAN must be updated.
 
-#### **Summary Table: WPA, WPA2, WPA3 (Personal Mode)**
+**Summary Table: WPA, WPA2, WPA3 (Personal Mode)**
 
 | **Protocol** | **Authentication** | **Encryption**                      | **Integrity Method** | **Key Derivation**                      |
 | ------------ | ------------------ | ----------------------------------- | -------------------- | --------------------------------------- |
@@ -60,7 +57,7 @@ The Personal mode of any WPA version is easy to deploy in a small environment be
 
 WPA3-Personal replaces PSK with SAE for authentication (PSK is still the "password," but SAE is the protocol for key derivation), and uses AES-GCMP for encryption and integrity.
 
-#### Enterprise mode
+### Cryptographic methods and algorithms in enterprise mode
 
 Here’s a summary table for WPA, WPA2, and WPA3 in Enterprise mode, which replaces PSK/SAE with 802.1X authentication (typically using RADIUS servers and EAP methods).
 
@@ -89,9 +86,7 @@ Here’s a summary table for WPA, WPA2, and WPA3 in Enterprise mode, which repla
    * **WPA3-Enterprise**: Adds forward secrecy and stronger key derivation (e.g., CNSA-compliant for gov/military).
    * **WPA2/WPA3-Enterprise** are the only modes compliant with modern security standards (e.g., PCI-DSS).
 
-Notice from Evolution of Wi-Fi Security in WPA, WPA2, and WPA3 Table that WPA, WPA2, and WPA3 support 802.1x or enterprise authentication.
-
-This implies EAP-based authentication, but the WPA versions do not require any specific EAP method. Instead, the Wi-Fi Alliance certifies interoperability with well- known EAP methods like EAP-TLS, PEAP, EAP-TTLS, and EAP-SIM. Enterprise authentication is more complex to deploy than personal mode because authentication servers must be set up and configured as a critical enterprise resource. (Odom, 2020, p. 717)
+Notice from Evolution of Wi-Fi Security in WPA, WPA2, and WPA3 Table that WPA, WPA2, and WPA3 support 802.1x or enterprise authentication, which implies EAP-based authentication. However, the WPA versions do not require any specific EAP method. Instead, "the Wi-Fi Alliance certifies interoperability with well-known EAP methods like EAP-TLS, PEAP, EAP-TTLS, and EAP-SIM" (Odom, 2020, p. 717).
 
 ### Evolution of Wi-Fi Security: WPA, WPA2, and WPA3
 
@@ -122,7 +117,7 @@ This table compares the key authentication and encryption features across the th
 * Forward Secrecy ensures that even if an attacker captures your encrypted data today and later discovers your password, they cannot decrypt the data they already captured. Each session is uniquely protected.
 * Protected Management Frames (PMF) prevent "deauthentication" attacks, where a hacker can easily kick a device off your network, causing disruptions.
 
-### Final review
+### Wireless authentication, privacy, and integrity methods: Final review
 
 Remember that an effective wireless security strategy includes a method to authenticate clients and a method to provide data privacy and integrity. These two types of methods are listed in the leftmost column. Work your way to the right to remember what types of authentication and privacy/integrity are available. (Odom, 2020, p. 718)
 

@@ -111,7 +111,7 @@ This table compares the key authentication and encryption features across the th
 | • **Protected Management Frames (PMF)**           | ❌ No                              | ✅ Optional                           | ✅ Mandatory                                           |
 | **Overall Security Assessment**                   | Legacy/Weak                       | Strong (Current Minimum)             | Most Robust (Recommended)                             |
 
-**Key explanations:**
+**Note:**
 
 * SAE is the WPA3 replacement for the older PSK "handshake." It provides stronger protection against password-guessing (dictionary) attacks, making it much harder for an attacker to crack your Wi-Fi password, even if they capture the network traffic.
 * Forward Secrecy ensures that even if an attacker captures your encrypted data today and later discovers your password, they cannot decrypt the data they already captured. Each session is uniquely protected.
@@ -124,6 +124,30 @@ Remember that an effective wireless security strategy includes a method to authe
 Table 28-3 Review of Wireless Security Mechanisms and Options (Odom, 2020, p. 718)
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/0f424-wireless-security-mechanisms-7.webp?w=849" alt="Wireless-Security-Mechanisms" height="675" width="849"><figcaption><p>Table 28-3 Review of Wireless Security Mechanisms and Options (Odom, 2020, p. 718)</p></figcaption></figure>
+
+--
+### **Wireless Security Mechanisms: Authentication, Privacy, and Integrity**
+
+The following table breaks down the core components of Wi-Fi security, explaining common methods for verifying identity (authentication) and for protecting data (privacy and integrity).
+
+| Category                          | Mechanism      | Full Name & Description                                                                                                                                 | Key Characteristics & Security Assessment                                                                                              |
+| --------------------------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| **Authentication Methods**        | **Open**       | **Open Authentication**  <br>No real authentication. The network is publicly accessible.                                                                | • **No Verification.**  <br>• **Use Case:** Public hotspots. Often used with a captive portal (e.g., a login web page).                |
+|                                   | **WEP**        | **Wired Equivalent Privacy**  <br>Uses a static, pre-shared key for both authentication and encryption.                                                 | • **Deeply Flawed & Deprecated.**  <br>• **Weakness:** Static keys are easily cracked. **Never use.**                                  |
+|                                   | **802.1X/EAP** | **Extensible Authentication Protocol**  <br>A framework for strong authentication, often using a RADIUS server.                                         | • **Enterprise-Grade.**  <br>• Provides centralized user authentication. Various EAP types exist, with different security properties.  |
+|                                   | ↳ **LEAP**     | **Lightweight EAP**  <br>An early Cisco protocol.                                                                                                       | • **Deprecated & Vulnerable.** <br>• Uses dynamic WEP keys, but is susceptible to dictionary attacks.                                  |
+|                                   | ↳ **EAP-FAST** | **EAP Flexible Authentication by Secure Tunneling**  <br>Uses a Protected Access Credential (PAC) for fast, secure authentication without certificates. | • **Secure.**  <br>• Good for environments where deploying client certificates is difficult.                                           |
+|                                   | ↳ **PEAP**     | **Protected EAP**  <br>Creates a TLS tunnel to protect the inner authentication method (e.g., MS-CHAPv2).                                               | • **Very Common & Secure.**  <br>• Only the server is authenticated with a digital certificate, simplifying client setup.              |
+|                                   | ↳ **EAP-TLS**  | **EAP Transport Layer Security**  <br>Uses TLS with digital certificates on both the client and server.                                                 | • **Gold Standard for Security.**  <br>• Provides mutual authentication. Most secure but requires a PKI to manage client certificates. |
+| **Privacy & Integrity Protocols** | **TKIP**       | **Temporal Key Integrity Protocol**  <br>Was a temporary wrapper to fix WEP's flaws without new hardware.                                               | • **Deprecated.**  <br>• Used in WPA. Now considered weak and has been phased out in modern standards.                                 |
+|                                   | **CCMP**       | **Counter Mode with Cipher Block Chaining Message Authentication Code Protocol**  <br>Based on the robust AES cipher.                                   | • **Strong & Widely Used.**  <br>• The mandatory security protocol for WPA2. Provides confidentiality and integrity.                   |
+|                                   | **GCMP**       | **Galois/Counter Mode Protocol**  <br>A more efficient and secure cipher suite.                                                                         | • **Modern & Robust.**  <br>• The preferred protocol for WPA3. Offers better performance and security than CCMP.                       |
+
+**Note:**
+
+- Authentication: The process of verifying the identity of a user or device trying to join the network.
+- Privacy (encryption): Scrambles the data to prevent eavesdropping.
+- Integrity: Ensures that the data has not been tampered with in transit.
 
 ### Key takeaways
 

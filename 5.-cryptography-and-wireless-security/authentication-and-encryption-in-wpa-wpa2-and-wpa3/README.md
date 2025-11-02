@@ -21,7 +21,8 @@ This section details the evolution of wireless security by comparing the authent
 * **Introduction**
 * **Cryptographic methods and algorithms in personal mode**
 * **Cryptographic methods and algorithms in enterprise mode**
-* **Wireless authentication, privacy, and integrity methods: Final review**
+* **Evolution of Wi-Fi security: WPA, WPA2, and WPA3**
+* **Wireless security mechanisms: Authentication, privacy, and integrity**
 
 ### Introduction
 
@@ -88,7 +89,7 @@ Here’s a summary table for WPA, WPA2, and WPA3 in Enterprise mode, which repla
 
 Notice from Evolution of Wi-Fi Security in WPA, WPA2, and WPA3 Table that WPA, WPA2, and WPA3 support 802.1x or enterprise authentication, which implies EAP-based authentication. However, the WPA versions do not require any specific EAP method. Instead, "the Wi-Fi Alliance certifies interoperability with well-known EAP methods like EAP-TLS, PEAP, EAP-TTLS, and EAP-SIM" (Odom, 2020, p. 717).
 
-### Evolution of Wi-Fi Security: WPA, WPA2, and WPA3
+### Evolution of Wi-Fi security: WPA, WPA2, and WPA3
 
 This table compares the key authentication and encryption features across the three major Wi-Fi security certifications, highlighting the progressive improvements in protecting wireless networks.
 
@@ -117,7 +118,7 @@ This table compares the key authentication and encryption features across the th
 * Forward Secrecy ensures that even if an attacker captures your encrypted data today and later discovers your password, they cannot decrypt the data they already captured. Each session is uniquely protected.
 * Protected Management Frames (PMF) prevent "deauthentication" attacks, where a hacker can easily kick a device off your network, causing disruptions.
 
-### Wireless authentication, privacy, and integrity methods: Final review
+### Wireless security mechanisms: Authentication, privacy, and integrity
 
 Remember that an effective wireless security strategy includes a method to authenticate clients and a method to provide data privacy and integrity. These two types of methods are listed in the leftmost column. Work your way to the right to remember what types of authentication and privacy/integrity are available. (Odom, 2020, p. 718)
 
@@ -126,7 +127,7 @@ Table 28-3 Review of Wireless Security Mechanisms and Options (Odom, 2020, p. 71
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/0f424-wireless-security-mechanisms-7.webp?w=849" alt="Wireless-Security-Mechanisms" height="675" width="849"><figcaption><p>Table 28-3 Review of Wireless Security Mechanisms and Options (Odom, 2020, p. 718)</p></figcaption></figure>
 
 --
-### **Wireless Security Mechanisms: Authentication, Privacy, and Integrity**
+Wireless security mechanisms: Authentication, privacy, and integrity
 
 The following table breaks down the core components of Wi-Fi security, explaining common methods for verifying identity (authentication) and for protecting data (privacy and integrity).
 

@@ -8,7 +8,7 @@ description: >-
 
 ## Learning objectives
 
-* Explain the vulnerabilities in WEP that necessitated the development of TKIP and the Michael MIC
+* Identify the vulnerabilities in WEP that necessitated the development of TKIP and the Michael MIC
 * Differentiate between unkeyed hashes and keyed Message Authentication Codes (MACs) for ensuring data integrity
 * Describe the function of TKIP and the Michael MIC as interim security measures for WEP-era hardware
 * Identify AES-CCMP as the core security protocol for WPA2 and AES-GCMP for WPA3, highlighting their advantages over previous standards

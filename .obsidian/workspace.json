@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5.-cryptography-and-wireless-security/authentication-and-encryption-in-wpa-wpa2-and-wpa3/README.md",
+                "file": "5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -183,6 +183,7 @@
   },
   "active": "47d382666f0061a3",
   "lastOpenFiles": [
+    "5.-cryptography-and-wireless-security/authentication-and-encryption-in-wpa-wpa2-and-wpa3/README.md",
     "5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods/README.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/metasploit-cheat-sheet-for-penetration-testing-pt.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/nmap-cheat-sheet-for-vulnerability-assessment-va-and-penetration-testing-pt.md",
@@ -208,7 +209,6 @@
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets/README.md",
     "6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing/README.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md",
-    "5.-cryptography-and-wireless-security/wireless-client-authentication-methods/README.md",
     "6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing",
     "Pasted image 20251017114230.png",
     "6.-practical-foundations-in-ethical-hacking/packet-analyzers",

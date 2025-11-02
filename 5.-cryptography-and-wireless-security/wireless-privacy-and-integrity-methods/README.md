@@ -12,7 +12,7 @@ description: This section covers key wireless privacy and integrity algorithms, 
 - Identify AES-CCMP as the core security protocol for WPA2 and AES-GCMP for WPA3, highlighting their advantages over previous standards
 - Understand the progression from WPA to WPA3 as a response to evolving security threats and hardware capabilities
 
-This section traces the evolution of key encryption and integrity algorithms developed to protect Wi-Fi networks. It covers interim solutions like TKIP and the Michael MIC, which were designed for legacy hardware, their security limitations, and the modern, robust protocols that replaced them. More specifically, this sections cover the following encryption and integrity algorithms: TKIP (WPA), MIC (Message Integrity Check "Michael" in WPA), AES-CCMP (WPA2), and AES-GCMP (WPA3).
+This section traces the evolution of key encryption and integrity algorithms developed to protect Wi-Fi networks. It covers interim solutions like TKIP and the Michael MIC, which were designed for legacy hardware, their security limitations, and the modern, robust protocols that replaced them. More specifically, this section cover the following encryption and integrity algorithms: TKIP (WPA), MIC (Message Integrity Check "Michael" in WPA), AES-CCMP (WPA2), and AES-GCMP (WPA3).
 
 ## Topics covered in this section
 

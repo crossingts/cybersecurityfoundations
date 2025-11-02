@@ -52,11 +52,11 @@ The Personal mode of any WPA version is easy to deploy in a small environment be
 
 #### **Summary Table: WPA, WPA2, WPA3 (Personal Mode)**
 
-| **Protocol** | **Authentication**   | **Encryption**                      | **Integrity Method** | **Key Derivation**                      |
-| ------------ | -------------------- | ----------------------------------- | -------------------- | --------------------------------------- |
-| **WPA**      | PSK                  | TKIP (default)                      | TKIP (MIC)           | PBKDF2 + PSK → TKIP keys                |
-| **WPA2**     | PSK                  | AES-CCMP (default), TKIP (fallback) | AES-CCMP (CBC-MAC)   | PBKDF2 + PSK → CCMP keys                |
-| **WPA3**     | SAE (replaces PSK\*) | AES-GCMP (default)                  | AES-GCMP (GMAC)      | SAE (Dragonfly handshake) → Robust keys |
+| **Protocol** | **Authentication** | **Encryption**                      | **Integrity Method** | **Key Derivation**                      |
+| ------------ | ------------------ | ----------------------------------- | -------------------- | --------------------------------------- |
+| **WPA**      | PSK                | TKIP (default)                      | TKIP (MIC)           | PBKDF2 + PSK → TKIP keys                |
+| **WPA2**     | PSK                | AES-CCMP (default), TKIP (fallback) | AES-CCMP (CBC-MAC)   | PBKDF2 + PSK → CCMP keys                |
+| **WPA3**     | SAE (replaces PSK) | AES-GCMP (default)                  | AES-GCMP (GMAC)      | SAE (Dragonfly handshake) → Robust keys |
 
 WPA3-Personal replaces PSK with SAE for authentication (PSK is still the "password," but SAE is the protocol for key derivation), and uses AES-GCMP for encryption and integrity.
 
@@ -94,6 +94,37 @@ Notice from Table 28-2 that WPA, WPA2, and WPA3 support 802.1x or enterprise aut
 **Table 28-2 Comparing WPA, WPA2, and WPA3 (Odom, 2020, p. 716)**
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/2b141-comparing-wpa-wpa2-wpa3-5.webp?w=1201" alt="Comparing-WPA-WPA2-WPA3" height="395" width="1201"><figcaption><p>Table 28-2 Comparing WPA, WPA2, and WPA3 (Odom, 2020, p. 716)</p></figcaption></figure>
+
+---
+### Evolution of Wi-Fi Security: WPA, WPA2, and WPA3
+
+This table compares the key authentication and encryption features across the three major Wi-Fi security certifications, highlighting the progressive improvements in protecting wireless networks.
+
+| Feature                                           | WPA                               | WPA2                                 | WPA3                                                  |
+| ------------------------------------------------- | --------------------------------- | ------------------------------------ | ----------------------------------------------------- |
+| **Introduced**                                    | 2003                              | 2004                                 | 2018                                                  |
+| **Core Purpose**                                  | Interim fix for severe WEP flaws. | Mandatory, robust security standard. | Modern security for the IoT era and password attacks. |
+| **Authentication Methods**                        |                                   |                                      |                                                       |
+| • Pre-Shared Key (PSK)                            | ✅ Yes                             | ✅ Yes                                | ✅ Yes (Upgraded to SAE)                               |
+| • 802.1X (Enterprise)                             | ✅ Yes                             | ✅ Yes                                | ✅ Yes                                                 |
+| **Encryption Protocols**                          |                                   |                                      |                                                       |
+| • **TKIP** (Temporal Key Integrity Protocol)      | ✅ Yes (Default)                   | ❌ No (Deprecated)                    | ❌ No                                                  |
+| • **AES-CCMP** (Advanced Encryption Standard)     | ✅ Yes (Optional)                  | ✅ Yes (Default)                      | ❌ No*                                                 |
+| • **AES-GCMP** (Galois/Counter Mode Protocol)     | ❌ No                              | ❌ No                                 | ✅ Yes (Stronger default)                              |
+| **Key Security Advancements**                     |                                   |                                      |                                                       |
+| • **Simultaneous Authentication of Equals (SAE)** | ❌ No                              | ❌ No                                 | ✅ Yes (Replaces PSK, resists offline attacks)         |
+| • **Forward Secrecy**                             | ❌ No                              | ❌ No                                 | ✅ Yes                                                 |
+| • **Protected Management Frames (PMF)**           | ❌ No                              | ✅ Optional                           | ✅ Mandatory                                           |
+| **Overall Security Assessment**                   | **Legacy/Weak**                   | **Strong (Current Minimum)**         | **Most Robust (Recommended)**                         |
+
+**Key explanations:**
+
+- **SAE (Simultaneous Authentication of Equals):** The WPA3 replacement for the older PSK "handshake." It provides stronger protection against password-guessing (dictionary) attacks, making it much harder for an attacker to crack your Wi-Fi password, even if they capture the network traffic.
+- **Forward Secrecy:** Ensures that even if an attacker captures your encrypted data today and later discovers your password, they _cannot_ decrypt the data they already captured. Each session is uniquely protected.
+- **Protected Management Frames (PMF):** Prevents "deauthentication" attacks, where a hacker can easily kick a device off your network, causing disruptions.
+- **AES-GCMP:** A more efficient and cryptographically stronger encryption algorithm than AES-CCMP, better suited for high-throughput networks.
+
+> **Note:** WPA3-Enterprise mode also offers an optional 192-bit cryptographic suite for environments with higher security requirements (e.g., government, finance).
 
 ### Final review
 

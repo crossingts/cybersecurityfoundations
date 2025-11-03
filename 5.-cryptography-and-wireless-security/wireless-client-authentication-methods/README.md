@@ -300,8 +300,7 @@ The digital certificate of the AS consists of data in a standard format that ide
 In this process, only the AS has a certificate for PEAP, so the supplicant can readily authenticate the AS. Since the client does not use a certificate of its own, the client must be authenticated within the TLS tunnel via one of the following two methods:
 
 - MSCHAPv2: Microsoft Challenge Authentication Protocol version 2.
-
-■ GTC: Generic Token Card; a hardware device that generates one-time passwords for the user or a manually generated password.
+- GTC: Generic Token Card; a hardware device that generates one-time passwords for the user or a manually generated password.
 
 #### EAP-TLS (EAP Transport Layer Security)
 

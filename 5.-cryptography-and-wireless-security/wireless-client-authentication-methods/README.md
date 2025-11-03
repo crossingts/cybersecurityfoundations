@@ -239,8 +239,6 @@ The three-party 802.1x arrangement involves of the following entities:
 
 <figure><img src="../../.gitbook/assets/Client-Authentication-Roles.webp" alt="802.1x-Client-Authentication-Roles"><figcaption><p>802.1x Client Authentication Roles</p></figcaption></figure>
 
-Figure 28-6 802.1x Client Authentication Roles (Odom, 2020, p. 712)
-
 The WLC acts as a middleman in the client authentication process, controlling user access according to 802.1x and communicating with the authentication server using the EAP framework.
 
 The **Extensible Authentication Protocol (EAP)** is a flexible and scalable authentication framework. “EAP defines a set of common functions that actual authentication methods can use to authenticate users” (p. 712). EAP is commonly integrated with the **IEEE 802.1x** port-based access control standard.

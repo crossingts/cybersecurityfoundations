@@ -233,7 +233,7 @@ The three-party 802.1x arrangement involves of the following entities:
 * Authenticator: The network device providing (controlling) access to the network, a LAN switch or a WLC.
 * Authentication server (AS): The device that takes client credentials and permits or denies network access based on a user database and policies (usually a RADIUS server).
 
-<figure><img src="../../.gitbook/assets/Client-Authentication-Roles.webp" alt="802.1x-Client-Authentication-Roles"><figcaption><p>802.1x Client Authentication Roles</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Client-Authentication-Roles.webp" alt="802.1x-Client-Authentication-Roles"><figcaption><p>IEEE 802.1x Client authentication roles (image adapted from Odom, 2020. Image created using draw.io)</p></figcaption></figure>
 
 The WLC acts as a middleman in the client authentication process, controlling user access according to 802.1x and communicating with the authentication server using the EAP framework.
 

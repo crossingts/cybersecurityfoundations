@@ -48,7 +48,7 @@ Cisco IOS is the operating system used on Cisco devices. IOS stands for Internet
 
 There are a couple of methods to connect to a Cisco device to configure it with the CLI. First, remotely via [Telnet or SSH](https://itnetworkingskills.wordpress.com/2023/04/12/how-configure-ssh-cisco-devices/). Second, locally via the console port. Here we will discuss connecting via the console port. Connecting to a Cisco device via the console port typically involves bringing your laptop to the device and connecting to the console port of the device.
 
-This is a Cisco Catalyst switch. Notice the two console ports: one is an RJ45 (Registered Jack), the other is a USB Mini-B.&#x20;
+This is a Cisco Catalyst switch. Notice the two console ports: one is an RJ45 (Registered Jack), the other is a USB Mini-B.
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/a0e21-rj45-cisco-catalyst.webp?w=1051" alt="RJ45-cisco-catalyst" height="676" width="1051"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Intro to the CLI | Day 4)</p></figcaption></figure>
 
@@ -62,7 +62,7 @@ So we’ve connected a laptop/computer to a Cisco Catalyst device via the device
 
 ### Terminal Emulator (PuTTY)
 
-Once you have connected your computer to the device you can access the CLI using a Terminal Emulator. PuTTY is a popular choice. You can get PuTTY at[ ](https://www.google.com/url?q=http://putty.org\&sa=D\&source=editors\&ust=1694043778222797\&usg=AOvVaw0afc3nKW8nyq0IeiHdARxL)[putty.org](https://www.google.com/url?q=http://putty.org\&sa=D\&source=editors\&ust=1694043778222916\&usg=AOvVaw3KVjZjjLvW7-QiamfJvmYx)
+Once you have connected your computer to the device you can access the CLI using a Terminal Emulator. PuTTY is a popular choice. You can get PuTTY at [putty.software](https://putty.software/).
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/047a8-putty-cli.webp?w=1201" alt="PuTTY-CLI" height="529" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Intro to the CLI | Day 4)</p></figcaption></figure>
 
@@ -72,7 +72,7 @@ These settings match the defaults on Cisco devices. Try to remember the defaults
 
 Understanding data bits and stop bits is outside the scope of the CCNA, but the idea is that for each 8 bits of data 1 stop bit is sent to mark the end of the 8 bits. Parity is used to detect errors. Flow control pertains to the flow of data from transmitter to receiver.
 
-Once you connect to the Cisco device (e.g., a Cisco ISR router) you will be greeted with a screen like this:&#x20;
+Once you connect to the Cisco device (e.g., a Cisco ISR router) you will be greeted with a screen like this:
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/aa87b-cisco-device-login-screen.webp?w=1177" alt="cisco-device-login-screen" height="675" width="1177"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Intro to the CLI | Day 4)</p></figcaption></figure>
 
@@ -187,7 +187,7 @@ Router>e (and we press enter) we get a message:
 
 % Ambiguous command: “e”
 
-Router>&#x20;
+Router>
 
 There is more than one command that begins with e. We can view the commands that begin with e by using the question mark:
 
@@ -213,7 +213,7 @@ Router(config)# (now we are in global configuration mode)
 
 In global configuration mode, config is inserted after the host name.
 
-### Command syntax conventions&#x20;
+### Command syntax conventions
 
 Cisco IOS Command Reference uses certain conventions to present command syntax. Cisco IOS documentation uses the following command syntax conventions:
 
@@ -250,7 +250,7 @@ We will type CCNA all capitals as the password. Passwords are case sensitive. We
 
 To return to privileged EXEC mode, type exit:
 
-Router(config)#exit&#x20;
+Router(config)#exit
 
 Router#
 
@@ -258,7 +258,7 @@ From privileged EXEC mode, another exit command will log us out and back to the 
 
 Router>enable
 
-Password:&#x20;
+Password:
 
 Router#
 
@@ -297,8 +297,8 @@ We have confirmed the function of the password, but let’s check the configurat
 
 There are two separate configuration files kept on a Cisco device at once:
 
-* **running-config** – the current active configuration file. As you enter commands in the CLI, you edit the active configuration.&#x20;
-* **startup-config** – the configuration file that will be loaded upon restarting the device.&#x20;
+* **running-config** – the current active configuration file. As you enter commands in the CLI, you edit the active configuration.
+* **startup-config** – the configuration file that will be loaded upon restarting the device.
 
 Use the **show running-config** command in privileged EXEC mode to view the running configuration file. The IOS CLI will return several results among them the command we entered, i.e., enable password CCNA.
 
@@ -346,13 +346,13 @@ Then we can review the running configuration again, but we can do this from with
 
 Router(config)#do sh run (i.e., do show running-config)
 
-Using “do” allows us to execute privileged EXEC mode commands like show running-config in other configuration levels.&#x20;
+Using “do” allows us to execute privileged EXEC mode commands like show running-config in other configuration levels.
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/91cae-enable-secret-command-12.webp?w=974" alt="enable-secret-command" height="676" width="974"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Intro to the CLI | Day 4)</p></figcaption></figure>
 
-You can see the enable secret in the running configuration. The number 5 indicates MD5 type encryption which is much more secure than what we get with the service password-encryption command. The enable password command remains and is not replaced. If both commands (enable password and enable secret) are configured, the enable password will be ignored.&#x20;
+You can see the enable secret in the running configuration. The number 5 indicates MD5 type encryption which is much more secure than what we get with the service password-encryption command. The enable password command remains and is not replaced. If both commands (enable password and enable secret) are configured, the enable password will be ignored.
 
-The service password-encryption command has no effect on the enable secret command. The enable secret command is always encrypted whether or not you entered the service password-encryption command.&#x20;
+The service password-encryption command has no effect on the enable secret command. The enable secret command is always encrypted whether or not you entered the service password-encryption command.
 
 So you should always use the enable secret and not the enable password, as it is always more secure.
 
@@ -370,11 +370,11 @@ Router(config)#enable secret ?
 
 The **enable algorithm-type** command can be used to set the algorithm type used to hash a user password configured using the **enable secret** command. For example, the following command configures an enable secret and secures it with type 9 hashing (scrypt):
 
-**enable algorithm-type scrypt secret** _password_&#x20;
+**enable algorithm-type scrypt secret** _password_
 
 ### Canceling commands
 
-How to cancel a command:&#x20;
+How to cancel a command:
 
 Router(config)#**no service password-encryption**
 
@@ -386,29 +386,29 @@ Thus future passwords will no longer be encrypted. But passwords already encrypt
 
 ### Command review
 
-Router> \
+Router>\
 →user EXEC mode
 
-Router# \
+Router#\
 →privileged EXEC mode
 
-Router(config)# \
+Router(config)#\
 →global configuration mode
 
 Router>**enable**\
 →to enter privileged EXEC mode
 
-Router#**configure terminal** \
+Router#**configure terminal**\
 →to enter global configuration mode
 
-Router(config)#**enable password** _password_ \
+Router(config)#**enable password** _password_\
 →to configure a password to protect privileged EXEC mode
 
-Router(config)#**service password-encryption** \
+Router(config)#**service password-encryption**\
 →to encrypt the enable password (and other passwords)
 
 Router(config)#**enable secret** _password_\
-→to configure a more secure enable password&#x20;
+→to configure a more secure enable password
 
 Router(config)#**do** _privileged-exec-level-command_\
 →to execute a privileged EXEC level command from global configuration mode
@@ -422,7 +422,7 @@ Router#**show running-config**\
 Router#**show startup-config**\
 →to display the saved configuration file which will be loaded if the device is restarted
 
-Router#**write** \
+Router#**write**\
 →to save the current running configuration and make it the startup configuration
 
 Router#**write memory**\

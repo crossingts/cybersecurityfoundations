@@ -109,21 +109,7 @@ The flawed ICV didn't just fail to detect tampering; it actively enabled an atta
 
 ---
 
-So WEP also had another problem beside integrity, that its keys could be cracked within minutes.
-
-Okay, the user mentioned that WEP had another problem besides integrity, specifically that its keys could be cracked within minutes. Let me break this down.
-
-First, I need to confirm the user's understanding—they're right, and I should reinforce that. The key point here is the RC4 keystream reuse due to weak IVs. The user might be familiar with basic WEP flaws but wants deeper technical details on why the cracking process is so fast.
-
-They might be studying network security or preparing for a certification, needing clear examples of WEP's vulnerabilities. Their deep need could be understanding how theoretical flaws translate into practical attacks, like using tools such as aircrack-ng.
-
-I should explain the IV collision and the FMS attack, but keep it concise. Highlight the steps of an actual attack to show how minutes are enough. Also, connect it to real-world implications, like why this makes WEP unusable today.
-
-Avoid jargon but don’t oversimplify—assume they have some technical background. Make sure to link the weakness (short IV) to the exploit (statistical attacks) clearly, and emphasize the practical ease of cracking.
-
-You are absolutely right. That's the central, catastrophic failure of WEP.
-
-While the integrity flaw allowed for packet manipulation, the **ease and speed of cracking the secret key itself** is what truly killed WEP. The claim that it can be cracked "within minutes" is not an exaggeration; it's a routine reality.
+So, WEP also had another problem beside integrity, that its keys could be cracked within minutes. That's the central, catastrophic failure of WEP. While the integrity flaw allowed for packet manipulation, the **ease and speed of cracking the secret key itself** is what truly killed WEP. The claim that it can be cracked "within minutes" is not an exaggeration; it's a routine reality.
 
 Here’s a breakdown of _why_ the key cracking is so fast and how it works in practice.
 
@@ -168,7 +154,3 @@ This is the most famous and efficient method:
 3. The attacker captures this new response, which has a new IV.
 4. They immediately take this new response packet, modify it slightly, and re-inject it as _another_ new ARP request.
 5. This process runs in a loop, thousands of times per minute, generating the IVs needed for the crack at an explosive rate.
-
-**Conclusion:**
-
-You are correct to separate the two major flaws. The integrity flaw (ICV) was a critical enabler for attacks, but the **fundamental cryptographic weakness that allowed the key to be recovered in minutes** was the fatal blow. It transformed WEP from a privacy tool into a wide-open door, making the "W" in WEP ("Wired Equivalent Privacy") utterly meaningless.

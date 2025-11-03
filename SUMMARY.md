@@ -117,6 +117,7 @@
 * [Wireless client authentication methods](5.-cryptography-and-wireless-security/wireless-client-authentication-methods/README.md)
   * [Wireless client authentication methods — Quiz](5.-cryptography-and-wireless-security/wireless-client-authentication-methods/wireless-client-authentication-methods-quiz.md)
 * [Wireless privacy and integrity methods](5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods/README.md)
+  * [WEP's weaknesses and how TKIP addressed them](5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods/weps-weaknesses-and-how-tkip-addressed-them.md)
   * [Wireless privacy and integrity methods — Quiz](5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods/wireless-privacy-and-integrity-methods-quiz.md)
 * [Authentication and encryption in WPA, WPA2, and WPA3](5.-cryptography-and-wireless-security/authentication-and-encryption-in-wpa-wpa2-and-wpa3/README.md)
   * [Authentication and encryption in WPA, WPA2, and WPA3 — Quiz](5.-cryptography-and-wireless-security/authentication-and-encryption-in-wpa-wpa2-and-wpa3/authentication-and-encryption-in-wpa-wpa2-and-wpa3-quiz.md)

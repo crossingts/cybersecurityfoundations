@@ -16,14 +16,14 @@ This section has two main goals. First, this section introduces the IEEE 802.11 
 
 ## Topics covered in this section
 
-- **Introduction**
-- **The IEEE 802.11 standard as a wireless security management framework**
-  - **Authentication (trust)**
-    - **Open authentication**
-    - **WEP (Wired Equivalent Privacy)**
-  - **Data privacy**
-  - **Data integrity**
-- **Wireless client authentication methods in chronological order**
+* **Introduction**
+* **The IEEE 802.11 standard as a wireless security management framework**
+  * **Authentication (trust)**
+    * **Open authentication**
+    * **WEP (Wired Equivalent Privacy)**
+  * **Data privacy**
+  * **Data integrity**
+* **Wireless client authentication methods in chronological order**
 * **Pre-Shared Key (PSK) and SAE (Simultaneous Authentication of Equals)**
 * **Key developments within the IEEE 802.1x/EAP standard**
 * **IEEE 802.1x/EAP (Extensible Authentication Protocol)**
@@ -48,7 +48,7 @@ Endpoint identification ensures only authorized devices connect, while user auth
 
 ### The IEEE 802.11 standard as a wireless security management framework
 
-IEEE 802.11 is part of the IEEE 802 collection of technical standards for local area networks (LANs). The IEEE 802 standards are created and maintained by the Institute of Electrical and Electronics Engineers (IEEE) LAN/MAN Standards Committee (IEEE 802). 
+IEEE 802.11 is part of the IEEE 802 collection of technical standards for local area networks (LANs). The IEEE 802 standards are created and maintained by the Institute of Electrical and Electronics Engineers (IEEE) LAN/MAN Standards Committee (IEEE 802).
 
 IEEE 802.11 specifies the set of protocols for the medium access control (MAC) and physical layer (PHY) that implement wireless local area network (WLAN) computer communication. This standard and its amendments are the underlying technology for Wi-Fi branded products, making them the most widely used wireless computer networking standards globally. Commonly used in home and office settings, IEEE 802.11 allows devices such as laptops, printers, and smartphones to communicate with each other and access the Internet without wires. Furthermore, IEEE 802.11 provides the foundation for vehicle-based communication networks via IEEE 802.11p.
 
@@ -167,10 +167,10 @@ Wireless client authentication methods (sometimes generically referred to as IEE
 1. 802.1X/EAP is not part of the original IEEE 802.11 standard:
    * It was introduced later (via IEEE 802.11i/WPA) for enterprise security.
    * 802.1X is a port-based authentication framework (from wired networks) adapted for Wi-Fi.
-1. EAP methods (LEAP, PEAP, EAP-TLS, etc.) are not IEEE 802.11 authentication:
+2. EAP methods (LEAP, PEAP, EAP-TLS, etc.) are not IEEE 802.11 authentication:
    * They are authentication protocols running inside 802.1X.
    * The actual IEEE 802.11 layer just facilitates the exchange (EAPoL frames).
-1. Modern Wi-Fi uses a mix of IEEE 802.11 and non-802.11 auth methods:
+3. Modern Wi-Fi uses a mix of IEEE 802.11 and non-802.11 auth methods:
    * WPA/WPA2-Personal (PSK/SAE) uses pre-shared keys, not part of original IEEE 802.11 auth.
    * WPA/WPA2/WPA3-Enterprise relies on 802.1X/EAP, not native IEEE 802.11.
 
@@ -188,7 +188,7 @@ Here is a chronology of key developments within the IEEE 802.1x/EAP standard.
 
 #### **1. Initial Introduction (2001 – IEEE 802.1X standard)**
 
-* The IEEE 802.1X standard was originally ratified for port-based access control on wired Ethernet networks, providing a framework to authenticate devices before granting them network access. 
+* The IEEE 802.1X standard was originally ratified for port-based access control on wired Ethernet networks, providing a framework to authenticate devices before granting them network access.
 * IEEE 802.1X was later adopted as a cornerstone of Wi-Fi authentication with the introduction of WPA-Enterprise in 2003.
 * EAP (RFC 2284, 1998) was integrated into 802.1X to provide a flexible authentication framework.
 * Used in early enterprise Wi-Fi networks even before WPA/WPA2.
@@ -225,19 +225,25 @@ Here is a chronology of key developments within the IEEE 802.1x/EAP standard.
 
 ### IEEE 802.1x/EAP (Extensible Authentication Protocol)
 
-When 802.1x is enabled, for a wireless client to gain access to the network, the client must first associate with an AP and then successfully authenticate. The client uses open authentication to associate with the AP, and then the actual client authentication occurs at a dedicated authentication server.  This is different from open and WEP authentication where wireless clients are authenticated locally at the AP without further intervention. 
+When 802.1x is enabled, for a wireless client to gain access to the network, the client must first associate with an AP and then successfully authenticate. The client uses open authentication to associate with the AP, and then the actual client authentication occurs at a dedicated authentication server. This is different from open and WEP authentication where wireless clients are authenticated locally at the AP without further intervention.
 
 The three-party 802.1x arrangement involves of the following entities:
 
-- Supplicant: The client device requesting access. The client is the device that is trying to connect to the network, while the supplicant is the software on the client that is responsible for actually authenticating with the network.
-- Authenticator: The network device providing (controlling) access to the network, a LAN switch or a WLC.
-- Authentication server (AS): The device that takes client credentials and permits or denies network access based on a user database and policies (usually a **RADIUS** server).
+* Supplicant: The client device requesting access. The client is the device that is trying to connect to the network, while the supplicant is the software on the client that is responsible for actually authenticating with the network.
+* Authenticator: The network device providing (controlling) access to the network, a LAN switch or a WLC.
+* Authentication server (AS): The device that takes client credentials and permits or denies network access based on a user database and policies (usually a RADIUS server).
 
-<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/dbe52-802.1x-client-authentication-roles-4.webp?w=1201" alt="802.1x-Client-Authentication-Roles" height="395" width="1201"><figcaption><p>Figure 28-6 802.1x Client Authentication Roles (Odom, 2020, p. 712)</p></figcaption></figure>
+
+
+
+
+<figure><img src="../../.gitbook/assets/Client-Authentication-Roles.webp" alt="802.1x-Client-Authentication-Roles"><figcaption><p>802.1x Client Authentication Roles</p></figcaption></figure>
+
+Figure 28-6 802.1x Client Authentication Roles (Odom, 2020, p. 712)
 
 The WLC acts as a middleman in the client authentication process, controlling user access according to 802.1x and communicating with the authentication server using the EAP framework.
 
-The **Extensible Authentication Protocol (EAP)** is a flexible and scalable authentication framework. “EAP defines a set of common functions that actual authentication methods can use to authenticate users” (p. 712). EAP is commonly integrated with the **IEEE 802.1x** port-based access control standard. 
+The **Extensible Authentication Protocol (EAP)** is a flexible and scalable authentication framework. “EAP defines a set of common functions that actual authentication methods can use to authenticate users” (p. 712). EAP is commonly integrated with the **IEEE 802.1x** port-based access control standard.
 
 The client authentication process involving a WLC is as follows:
 
@@ -260,7 +266,7 @@ Benefits of using a WLC for client authentication include:
 
 When configuring user authentication on a WLAN, you do not need to select a specific authentication method. Instead, you select 802.1x on the WLC. This will allow the WLC to handle a variety of EAP methods. The client and authentication server will then use a compatible method. Once 802.1X is enabled on the WLC, the client and authentication server will negotiate a method to use.
 
-The following discussion gives an overview of some common EAP-based authentication methods. 
+The following discussion gives an overview of some common EAP-based authentication methods.
 
 * LEAP (Lightweight EAP)
 * EAP-FAST (Flexible Authentication by Secure Tunneling)
@@ -281,13 +287,13 @@ Wireless clients and controllers may still offer LEAP, but you should not use it
 
 #### EAP-FAST (EAP Flexible Authentication by Secure Tunneling)
 
-In Cisco’s more secure authentication method called EAP Flexible Authentication by Secure Tunneling (**EAP-FAST**), authentication credentials are protected by passing a protected access credential (**PAC**) between the AS and the supplicant. The PAC is a shared secret generated by the AS and used for mutual authentication. 
+In Cisco’s more secure authentication method called EAP Flexible Authentication by Secure Tunneling (**EAP-FAST**), authentication credentials are protected by passing a protected access credential (**PAC**) between the AS and the supplicant. The PAC is a shared secret generated by the AS and used for mutual authentication.
 
 EAP-FAST constitutes of a sequence of three phases:
 
-- Phase 0: The PAC is generated by the AS and installed on the client.
-- Phase 1: The supplicant and AS authenticate each other and then they negotiate a Transport Layer Security (TLS) tunnel.
-- Phase 2: The end user can then be authenticated through the TLS tunnel.
+* Phase 0: The PAC is generated by the AS and installed on the client.
+* Phase 1: The supplicant and AS authenticate each other and then they negotiate a Transport Layer Security (TLS) tunnel.
+* Phase 2: The end user can then be authenticated through the TLS tunnel.
 
 Like in other EAP-based authentication, a RADIUS server (AS) is required. However, the RADIUS server must also operate as an EAP-FAST server to be able to generate PACs, one per user.
 
@@ -299,8 +305,8 @@ The digital certificate of the AS consists of data in a standard format that ide
 
 In this process, only the AS has a certificate for PEAP, so the supplicant can readily authenticate the AS. Since the client does not use a certificate of its own, the client must be authenticated within the TLS tunnel via one of the following two methods:
 
-- MSCHAPv2: Microsoft Challenge Authentication Protocol version 2.
-- GTC: Generic Token Card; a hardware device that generates one-time passwords for the user or a manually generated password.
+* MSCHAPv2: Microsoft Challenge Authentication Protocol version 2.
+* GTC: Generic Token Card; a hardware device that generates one-time passwords for the user or a manually generated password.
 
 #### EAP-TLS (EAP Transport Layer Security)
 
@@ -314,11 +320,11 @@ EAP-TLS can only be used if the wireless clients can accept and use digital cert
 
 ### Key takeaways
 
-- The original IEEE 802.11 standard provided only basic and insecure authentication methods, Open System and WEP, which used a static key for both authentication and weak RC4 encryption.
-- The modern Wi-Fi security framework is based on the IEEE 802.11i amendment, which introduced strong, dynamic encryption (AES-CCMP) and robust integrity checking, forming the basis for WPA2 and WPA3.
-- Wireless authentication evolved from Open and WEP to Pre-Shared Key (PSK) in WPA/WPA2-Personal, which uses a secure handshake to derive temporary keys, and further to Simultaneous Authentication of Equals (SAE) in WPA3-Personal to prevent offline attacks.
-- For enterprise security, the IEEE 802.1X standard provides a port-based authentication framework that leverages the Extensible Authentication Protocol (EAP). This framework underpins WPA-Enterprise, WPA2-Enterprise, and WPA3-Enterprise.
-- EAP-based methods have evolved from weak protocols like LEAP to more robust ones. PEAP creates a secure tunnel using a server-side certificate, while EAP-TLS provides the highest security through mutual certificate-based authentication.
+* The original IEEE 802.11 standard provided only basic and insecure authentication methods, Open System and WEP, which used a static key for both authentication and weak RC4 encryption.
+* The modern Wi-Fi security framework is based on the IEEE 802.11i amendment, which introduced strong, dynamic encryption (AES-CCMP) and robust integrity checking, forming the basis for WPA2 and WPA3.
+* Wireless authentication evolved from Open and WEP to Pre-Shared Key (PSK) in WPA/WPA2-Personal, which uses a secure handshake to derive temporary keys, and further to Simultaneous Authentication of Equals (SAE) in WPA3-Personal to prevent offline attacks.
+* For enterprise security, the IEEE 802.1X standard provides a port-based authentication framework that leverages the Extensible Authentication Protocol (EAP). This framework underpins WPA-Enterprise, WPA2-Enterprise, and WPA3-Enterprise.
+* EAP-based methods have evolved from weak protocols like LEAP to more robust ones. PEAP creates a secure tunnel using a server-side certificate, while EAP-TLS provides the highest security through mutual certificate-based authentication.
 
 ### References
 

@@ -59,7 +59,7 @@ TKIP was designed as a firmware upgrade for WEP-capable hardware. It couldn't ch
 * **Fixes Integrity:** TKIP replaced CRC-32 with **Michael (MIC)**, a cryptographically secure Message Integrity Code. It also includes countermeasures—if two MIC failures are detected within 60 seconds, the network disassociates the client and rekeys.
 * **Adds Re-keying:** TKIP includes a mechanism to automatically change the base key (the Pairwise Transient Key) periodically, further limiting exposure.
 
-**Conclusion:** While TKIP was a massive improvement over WEP and served its purpose well for several years, it was still built on the fragile RC4 foundation. It has since been **deprecated** in favor of **CCMP** (based on the robust AES cipher), which is used by WPA2 and WPA3. You should never use WEP or TKIP on a modern network.
+While TKIP was a massive improvement over WEP and served its purpose well for several years, it was still built on the fragile RC4 foundation. It has since been deprecated in favor of AES-CCMP, which is used by WPA2.
 
 ---
 

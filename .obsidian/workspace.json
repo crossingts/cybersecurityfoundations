@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods/weps-weaknesses-and-how-tkip-addressed-them.md",
+                "file": "5.-cryptography-and-wireless-security/wireless-client-authentication-methods/README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "weps-weaknesses-and-how-tkip-addressed-them"
+              "title": "README"
             }
           }
         ]
@@ -183,8 +183,8 @@
   },
   "active": "47d382666f0061a3",
   "lastOpenFiles": [
-    "5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods/README.md",
     "5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods/weps-weaknesses-and-how-tkip-addressed-them.md",
+    "5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods/README.md",
     "5.-cryptography-and-wireless-security/authentication-and-encryption-in-wpa-wpa2-and-wpa3/README.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/metasploit-cheat-sheet-for-penetration-testing-pt.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/nmap-cheat-sheet-for-vulnerability-assessment-va-and-penetration-testing-pt.md",

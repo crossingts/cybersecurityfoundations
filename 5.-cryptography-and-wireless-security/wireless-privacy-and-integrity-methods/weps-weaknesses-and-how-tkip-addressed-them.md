@@ -2,6 +2,8 @@
 
 #### The Weakness of WEP (Wired Equivalent Privacy)
 
+An explanation of the cryptographic flaws in WEP and the practical attack methods, followed by how TKIP mitigated them.
+
 WEP was the original security protocol for Wi-Fi, introduced in 1999. Its fundamental flaws were architectural and rendered it completely insecure. The main weaknesses were:
 
 **1. The Short and Static Initialization Vector (IV)**

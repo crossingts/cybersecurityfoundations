@@ -1,7 +1,5 @@
 ---
-description: >-
-  This section describes phases of the penetration testing process, the goals of
-  each phase, and key technologies used
+description: This section describes the phases of the penetration testing process, the goals of each phase, and key technologies used
 ---
 
 # Phases of the penetration testing process
@@ -11,7 +9,7 @@ description: >-
 * Describe the phases of the penetration testing process
 * Describe best practices for writing the penetration test report
 
-This section describes phases of the penetration testing process—planning, reconnaissance, scanning and enumeration, exploitation (gaining access and privilege escalation), and post-exploitation (maintaining access and covering tracks)—including the goals of each phase and key technologies used. Finally, this section covers best practices for writing the penetration test report.
+This section describes the phases of the penetration testing process—planning, reconnaissance, scanning and enumeration, exploitation (gaining access and privilege escalation), and post-exploitation (maintaining access and covering tracks)—including the goals of each phase and key technologies used. Finally, this section describes best practices for writing the penetration test report.
 
 ## Topics covered in this section
 

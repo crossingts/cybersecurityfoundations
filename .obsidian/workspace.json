@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5.-cryptography-and-wireless-security/wireless-client-authentication-methods/README.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -183,6 +183,7 @@
   },
   "active": "47d382666f0061a3",
   "lastOpenFiles": [
+    "5.-cryptography-and-wireless-security/wireless-client-authentication-methods/README.md",
     "5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods/weps-weaknesses-and-how-tkip-addressed-them.md",
     "5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods/README.md",
     "5.-cryptography-and-wireless-security/authentication-and-encryption-in-wpa-wpa2-and-wpa3/README.md",
@@ -208,7 +209,6 @@
     "6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing/types-of-penetration-testing-quiz.md",
     "6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/README.md",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets/README.md",
-    "6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing/README.md",
     "6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing",
     "Pasted image 20251017114230.png",
     "6.-practical-foundations-in-ethical-hacking/packet-analyzers",

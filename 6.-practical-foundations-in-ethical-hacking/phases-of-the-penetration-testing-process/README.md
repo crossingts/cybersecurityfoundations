@@ -57,7 +57,7 @@ OSINT involves collating technical information on an organization’s public-fac
 
 Automated OSINT is used by hackers and penetration testers to gather and analyze intelligence about a specific target from social networks, including names, online handles, jobs, friends, likes/dislikes/interactions, locations, pictures, etc. (McLaughlin, 2012). Recon-ng and Maltego are intelligence gathering tools designed to facilitate the process of gathering, analyzing, and organizing OSINT.
 
-Faircloth (2011) proposes an iterative five stage reconnaissance phase: Intelligence Gathering, Footprinting, Human Recon, Verification, and Vitality. Table: Five Phases of Reconnaissance outlines the intelligence objectives, output, and intelligence resources and tools for each phase. The last phase (Vitality) can be omitted in passive reconnaissance.
+Faircloth (2011) proposes an iterative five stage reconnaissance phase: Intelligence Gathering, Footprinting, Human Recon, Verification, and Vitality. Building on Faircloth (2011), follows is a table summarizing the stages of the reconnaissance phase. The Verification phase is implied, and the Vitality phase can be omitted in passive reconnaissance.
 
 **Table: Five Phases of Reconnaissance (Adapted from Faircloth, 2011)**
 
@@ -205,3 +205,5 @@ Shah, S., & Mehtre, B. M. (2015). An overview of vulnerability assessment and pe
 Walker, M. (2012). Certified Ethical Hacker Exam Guide. Columbus: McGraw-Hill Osborne.
 
 Walker, M. (2017). CEH Certified Ethical Hacker All-in-One Exam Guide, Second Edition. New York, NY: McGraw-Hill Education.
+
+Wheeler (2011)

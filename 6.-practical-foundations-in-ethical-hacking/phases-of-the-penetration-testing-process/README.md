@@ -51,7 +51,7 @@ For the purposes of this section, ethical hacking refers to the overarching proc
 
 Penetration tests begin with an extensive information gathering phase to build a profile of the target user or system to determine entry points.
 
-Reconnaissance can be passive or active. Passive recon involves gathering information from the public domain (OSINT) in places like Internet registries, Google, newspapers, and public records. At this stage “the target does not even know generally that they are the subject of surveillance.” Active recon involves social engineering and “anything that requires the hacker to interact with the organization” (Walker, 2017, p. 45). Most reconnaissance activities are passive in nature.
+Reconnaissance can be passive or active. Passive reconnaissance involves gathering information from the public domain (OSINT) in places like Internet registries, Google, newspapers, and public records. At this stage “the target does not even know generally that they are the subject of surveillance.” Active reconnaissance involves social engineering and “anything that requires the hacker to interact with the organization” (Walker, 2017, p. 45). Most reconnaissance activities are passive in nature.
 
 OSINT involves collating technical information on an organization’s public-facing systems. “Internet registries, coupled with services such as Shodan or VPN Hunter, can highlight and identify an organization’s Web servers, mail servers, remote access endpoints and many other Internet-facing devices.” During OSINT, the penetration tester "uncovers possible weaknesses and entry points within the security posture of the organization, including the network, applications, website and wireless networks, physical facilities, cloud-based systems, and employees” (cipher.com).
 
@@ -67,13 +67,13 @@ A key argument is that there is no clear cutoff point between passive and active
 
 ### Scanning and enumeration
 
-Security analysts now apply the information they gathered in recon towards gathering more in-depth information on the targets.
+Security analysts now apply the information they gathered in reconnaissance towards gathering more in-depth information on the targets. Both passive and active techniques exist for scanning and enumeration. There are three major types of scanning—network scanning, port scanning, and vulnerability scanning. Enumeration techniques include Banner Grabbing, NetBIOS Enumeration, SNMP Enumeration, using LDAP, and using NTP and SMTP.
 
-Both passive and active techniques exist for scanning and enumeration. There are three major types of scanning—network scanning, port scanning, and vulnerability scanning. Enumeration techniques include Banner Grabbing, NetBIOS Enumeration, SNMP Enumeration, using LDAP, and using NTP and SMTP.
+Scanning and enumeration can be,
 
-This can be something as simple as running a ping sweep or a network mapper to see what systems are on the network, or as complex as running a vulnerability scanner to determine which ports may be open on a particular system. For example, whereas recon may have shown the network to have 500 or so machines connected to a single subnet inside a building, scanning and enumeration would tell me which ones are Windows machines and which ones are running FTP. (Walker, 2012, p. 9)
+something as simple as running a ping sweep or a network mapper to see what systems are on the network, or as complex as running a vulnerability scanner to determine which ports may be open on a particular system. For example, whereas recon may have shown the network to have 500 or so machines connected to a single subnet inside a building, scanning and enumeration would tell me which ones are Windows machines and which ones are running FTP. (Walker, 2012, p. 9)
 
-A tool like Nmap usually performs enumeration and scanning by launching custom TCP, UDP or ICMP packets against a given target. The target responds to the information requests in the form of a digital signature. This signature is key to identifying what software, protocols and OS is running the target device. Nmap scans can identify network services, OS number and version, software applications, databases, and configurations, all with high probability.
+A tool like Nmap usually performs scanning and enumeration by launching custom TCP, UDP or ICMP packets against a given target. The target responds to the information requests in the form of a digital signature. This signature is key to identifying what software, protocols and OS is running the target device. Nmap scans can identify network services, OS number and version, software applications, databases, and configurations, all with high probability.
 
 p0f is a passive monitoring Nmap alternative. p0f is a passive fingerprinting tool that does not generate network traffic. It is used to analyze network traffic and identify patterns behind TCP/IP-based communications often blocked for Nmap active fingerprinting techniques. Passive fingerprinting uses sniffer traces from the remote system to determine the operating system of the remote host. p0f uses a fingerprinting technique based on analyzing the structure of a TCP/IP packet to determine the OS and other configuration properties of a remote host. It includes powerful network-level fingerprinting features, and the ability to analyze application-level payloads such as HTTP, and can be used for detecting NAT, proxy and load balancing setups.
 
@@ -84,13 +84,11 @@ p0f is a passive monitoring Nmap alternative. p0f is a passive fingerprinting to
 | **Interaction**    | No direct contact            | Direct probes         |
 | **Detection Risk** | Low                          | High                  |
 | **Speed/Accuracy** | Slower, less precise         | Faster, more detailed |
-| **Use Case**       | Early recon, avoiding alerts | Post-recon deep dive  |
+| **Use Case**       | Early recon, avoiding alerts | Post-recon, deep dive |
 
-***
+The following table, Pen Source/Free Tools—for Network Penetration Testing (Shah & Mehtre, 2015, p. 45), offers a summary of common open source network penetration testing tools, including their function and operating system compatibility. 
 
-Table 18: Pen Source/Free Tools—for Network Penetration Testing (Shah & Mehtre, 2015, p. 45)
-
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt="Network-Penetration-Testing-Tools"><figcaption><p>Table 18: Pen Source/Free Tools—for Network Penetration Testing (Shah &#x26; Mehtre, 2015, p. 45)</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt="Network-Penetration-Testing-Tools"><figcaption><p>Pen Source/Free Tools—for Network Penetration Testing (Shah &#x26; Mehtre, 2015, p. 45)</p></figcaption></figure>
 
 Passive network sniffers can monitor and capture data packets passing through a given network in real time. “Sniffers operate at the data link layer of the network. Any data sent across the LAN is actually sent to each and every machine connected to the LAN. This is called passive since sniffers placed by the attackers passively wait for the data to be sent and capture them.” Placing a packet sniffer on a network in promiscuous mode allows a malicious intruder to capture and analyze all of the network traffic such as payloads containing confidential information.
 

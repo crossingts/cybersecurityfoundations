@@ -94,10 +94,6 @@ p0f is a passive monitoring Nmap alternative. p0f is a passive fingerprinting to
 | **Speed/Accuracy** | Slower, less precise         | Faster, more detailed |
 | **Use Case**       | Early recon, avoiding alerts | Post-recon, deep dive |
 
-
-
-
-
 Passive network sniffers can monitor and capture data packets passing through a given network in real time. “Sniffers operate at the data link layer of the network. Any data sent across the LAN is actually sent to each and every machine connected to the LAN. This is called passive since sniffers placed by the attackers passively wait for the data to be sent and capture them.” Placing a packet sniffer on a network in promiscuous mode allows a malicious intruder to capture and analyze all of the network traffic such as payloads containing confidential information.
 
 **Network Sniffers in the Penetration Testing Process**

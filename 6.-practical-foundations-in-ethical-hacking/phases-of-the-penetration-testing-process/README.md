@@ -46,7 +46,7 @@ See Figure 1-2 Phases of ethical hacking (Walker, 2012, p. 8).
 
 <figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt="EC-Council-Phases-Ethical-Hacking"><figcaption><p>Figure 1-2 Phases of ethical hacking (Walker, 2012, p. 8)</p></figcaption></figure>
 
-For the purposes of this section, ethical hacking refers to the overarching process of preparing for, performing a test, and reporting 
+For the purposes of this section, ethical hacking refers to the overarching process of preparing for, performing a test, and reporting on the findings 
 
 ### Reconnaissance
 

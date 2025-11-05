@@ -27,10 +27,14 @@ The penetration testing **process** can be broken down into several **phases**: 
 
 In the planning phase, rules are identified, management approval is finalized and documented, and testing goals are set. The planning phase sets the groundwork for a successful penetration test. No actual testing occurs in this phase. (NIST SP 800-115, 2008, p. 5-2)
 
-In the words of Walker (2012, 2017), taken a whole, a penetration test has three chronological **steps**: preparation, assessment, and conclusion. Preparation defines the timeline of the penetration test. This step defines
+In the words of Walker (2012, 2017), 
 
-The scope of the test, the types of attacks allowed, and the individuals assigned to perform the activity are all agreed upon in this phase. The assessment phase (sometimes also known as the security evaluation phase) is exactly what it sounds like—the actual assaults on the security controls are conducted during this time. Lastly, the conclusion (or post-assessment) phase defines the time when final reports are prepared for the customer, detailing the findings of the tests (including the types of tests performed) and many times even providing recommendations to improve security. (Walker, 2012, p. 8)
+There are three main phases to a pen test—preparation, assessment, and conclusion—
+and they are fairly easy to define and understand. (Walker, 2012, p. 8)
 
+Taken a whole, a penetration test has three chronological **steps**: preparation, assessment, and conclusion. Preparation defines the timeline of the penetration test. This step defines the scope of the test, "the types of attacks allowed, and the individuals assigned to perform the activity".
+
+The assessment phase (sometimes also known as the security evaluation phase) is exactly what it sounds like—the actual assaults on the security controls are conducted during this time. Lastly, the conclusion (or post-assessment) phase defines the time when final reports are prepared for the customer, detailing the findings of the tests (including the types of tests performed) and many times even providing recommendations to improve security. (Walker, 2012, p. 8)
 
 Penetration tests should be seen as targeted exercises. Test objectives and the specific machines or applications to be tested are all specified upfront in a contractual agreement between the client and the ethical hacker during the planning phase. Each test objective will have its own set of parameters and processes. The agreement provides a precise description, typically in the form of specific IP addresses, domain names, or cloud instance identifiers, of the systems to be evaluated. 
 
@@ -41,6 +45,8 @@ For Walker (2017), the the assessment step or “act of hacking” is comprised 
 See Figure 1-2 Phases of ethical hacking (Walker, 2012, p. 8).
 
 <figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt="EC-Council-Phases-Ethical-Hacking"><figcaption><p>Figure 1-2 Phases of ethical hacking (Walker, 2012, p. 8)</p></figcaption></figure>
+
+For the purposes of this section, ethical hacking refers to the overarching process of preparing for, performing a test, and reporting 
 
 ### Reconnaissance
 

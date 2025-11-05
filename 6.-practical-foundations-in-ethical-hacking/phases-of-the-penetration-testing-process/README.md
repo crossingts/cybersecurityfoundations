@@ -11,7 +11,7 @@ description: >-
 * Describe the phases of the penetration testing process
 * Describe best practices for writing the penetration test report
 
-This section describes the **phases** of the penetration testing **process**—planning, reconnaissance, scanning and enumeration, gaining access (exploitation) and privilege escalation, maintaining access, covering tracks, and reporting—including the goals of each phase and key technologies used. Further, this section describes best practices for writing the penetration test report.
+This section describes the phases of the penetration testing process—planning, reconnaissance, scanning and enumeration, gaining access (exploitation) and privilege escalation, maintaining access, covering tracks, and reporting—including the goals of each phase and key technologies used. Further, this section describes best practices for writing the penetration test report.
 
 ### Topics covered in this section <a href="#topics-covered-in-this-section" id="topics-covered-in-this-section"></a>
 
@@ -25,7 +25,7 @@ This section describes the **phases** of the penetration testing **process**—p
 
 #### Introduction <a href="#phases-of-the-penetration-testing-process" id="phases-of-the-penetration-testing-process"></a>
 
-The penetration testing **process** can be broken down into several **phases**: planning or preparation, reconnaissance, scanning and enumeration, gaining access (exploitation) and privilege escalation, post-exploitation (maintaining access and covering tracks), and reporting (NIST SP 800-115, 2008; Walker, 2012, 2017).
+The penetration testing process can be broken down into several phases: planning or preparation, reconnaissance, scanning and enumeration, gaining access (exploitation) and privilege escalation, post-exploitation (maintaining access and covering tracks), and reporting (NIST SP 800-115, 2008; Walker, 2012, 2017).
 
 <figure><img src="../../.gitbook/assets/Ethical-hacking-phases.jpg" alt="Ethical-hacking-phases"><figcaption><p>Ethical hacking phases</p></figcaption></figure>
 
@@ -41,15 +41,11 @@ The assessment phase (sometimes also known as the security evaluation phase) is 
 
 Penetration tests should be seen as targeted exercises. Test objectives and the specific machines or applications to be tested are all specified upfront in a contractual agreement between the client and the ethical hacker during the planning phase. Each test objective will have its own set of parameters and processes. The agreement provides a precise description, typically in the form of specific IP addresses, domain names, or cloud instance identifiers, of the systems to be evaluated.
 
-Penetration tests should be seen as targeted exercises. Test objectives and the specific machines or applications to be tested are all specified upfront in a contractual agreement between the client and the ethical hacker during the planning phase. Each test objective will have its own set of parameters and processes. The agreement provides a precise description, typically in the form of specific IP addresses, domain names, or cloud instance identifiers, of the systems to be evaluated.
-
 Precision is critical, as a minor error could lead to testing the wrong system or, in the worst case, the systems of an unrelated organization. (Palmer, 2001, p. 775)
 
 For Walker (2017), the the assessment step or “act of hacking” is comprised of five main phases: 1) Reconnaissance, which involves the steps taken to gather evidence and information on the target; 2) scanning and enumeration, which takes the information gathered in reconnaissance and applies tools and techniques to gather more in-depth information on the targets; 3) gaining access, where “true attacks are leveled against the targets enumerated in the second phase”; 4) maintaining access, where hackers attempt to ensure they have a way back into the compromised system; and 5) covering tracks, where “attackers attempt to conceal their success and avoid detection by security professionals” (p. 36). In practice, assessment phases run concurrently and continuously throughout a penetration test (Walker, 2017).
 
-See Figure 1-2 Phases of ethical hacking (Walker, 2012, p. 8).
-
-For the purposes of this section, ethical hacking refers to the overarching process of preparing for or planning for a penetration test, performing a penetration test (what Walker, 2012, and EC-Council identify as the assessment step or assessment phase or the standard hack and which is common to both malicious and ethical hackers), and reporting on the findings of the penetration test.
+For the purposes of this section, ethical hacking refers to the overarching process of 1) preparing for or planning for a penetration test, 2) performing a penetration test (what Walker, 2012/2017, and EC-Council identify as the assessment phase of the penetration test and which is common to both malicious and ethical hackers), and 3) reporting on the findings of the penetration test.
 
 **Reconnaissance**
 
@@ -57,101 +53,15 @@ Penetration tests begin with an extensive information gathering phase to build a
 
 Reconnaissance can be passive or active. Passive recon involves gathering information from the public domain (OSINT) in places like Internet registries, Google, newspapers, and public records. At this stage “the target does not even know generally that they are the subject of surveillance.” Active recon involves **social engineering** and “anything that requires the hacker to interact with the organization” (Walker, 2017, p. 45). Most reconnaissance activities are passive in nature.
 
-OSINT involves collating technical information on an organization’s public-facing systems. “Internet registries, coupled with services such as Shodan or VPN Hunter, can highlight and identify an organization’s Web servers, mail servers, remote access endpoints and many other Internet-facing devices.” The penetration tester "uncovers possible weaknesses and entry points within the security posture of the organization, including the network, applications, website and wireless networks, physical facilities, cloud-based systems, and employees” (cipher.com).
+OSINT involves collating technical information on an organization’s public-facing systems. “Internet registries, coupled with services such as Shodan or VPN Hunter, can highlight and identify an organization’s Web servers, mail servers, remote access endpoints and many other Internet-facing devices.” During OSINT, the penetration tester "uncovers possible weaknesses and entry points within the security posture of the organization, including the network, applications, website and wireless networks, physical facilities, cloud-based systems, and employees” (cipher.com).
 
 Automated OSINT is used by hackers and penetration testers to gather and analyze intelligence about a specific target from social networks, including names, online handles, jobs, friends, likes/dislikes/interactions, locations, pictures, etc. (McLaughlin, 2012). Recon-ng and Maltego are intelligence gathering tools designed to facilitate the process of gathering, analyzing, and organizing OSINT.
 
-Faircloth (2011) proposes an iterative five stage reconnaissance phase: Intelligence Gathering, Footprinting, Human Recon, Verification, and Vitality. Table: Five Phases of Reconnaissance outlines the intelligence objectives, output (deliverables), and intelligence resources and tools for each phase. The last phase (Vitality) can be omitted in passive reconnaissance.
+Faircloth (2011) proposes an iterative five stage reconnaissance phase: Intelligence Gathering, Footprinting, Human Recon, Verification, and Vitality. Table: Five Phases of Reconnaissance outlines the intelligence objectives, output, and intelligence resources and tools for each phase. The last phase (Vitality) can be omitted in passive reconnaissance.
 
 **Table: Five Phases of Reconnaissance (Adapted from Faircloth, 2011)**
 
-Phase
-
-Objectives
-
-Output
-
-Tools
-
-Intelligence
-
-Gathering
-
-To learn as much about the target, its business, its organizational structure, and its business partners as possible.
-
-The output of this phase is a list of company names, partner organization names, and DNS names which reflect the entire target organization including all of its brands, divisions, and local representations.
-
-\# Search engines
-
-\# Financial databases
-
-\# Business reports
-
-\# WHOIS
-
-\# RWHOIS
-
-\# Domain name registries and registrars
-
-\# Web archives
-
-\# Data mining tools
-
-Footprinting
-
-To mine as many DNS host names as possible from the domains or company names collected and translate those into IP addresses or IP address ranges.
-
-The output of this phase is a list of DNS host names, IP addresses, and IP address ranges.
-
-\# DNS
-
-\# WHOIS
-
-\# DIG
-
-\# SMTP
-
-\# Data mining tools
-
-Human
-
-Recon
-
-To analyze the human perspective of the target and gain as much intelligence as possible about the people associated with the organization.
-
-The output of this phase is a list of names, job titles, contact information, and other personal details about the people associated with the organization.
-
-\# Search engines
-
-\# Email lists and web site posts
-
-\# Social networking services
-
-\# Publicly available records
-
-Verification
-
-To confirm the validity of information collected in the prior phases.
-
-This phase rarely produces new output, but can clean up existing output by removing invalid data. Some additional information can sometimes be gathered as a side-product of the verification.
-
-\# DNS
-
-\# WHOIS
-
-\# DIG
-
-Vitality
-
-To confirm the reachability of the IP addresses identified in prior phases. This is a phase which spreads between reconnaissance and enumeration.
-
-The output of this phase is a list of IP addresses from prior phases which have been confirmed as reachable.
-
-\# PING
-
-\# Port scanners
-
-\# Mapping tools
+<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Phase</td><td valign="top">Objectives</td><td valign="top">Output</td><td valign="top">Tools</td></tr><tr><td valign="top"><p>Intelligence</p><p>Gathering</p></td><td valign="top">To learn as much about the target, its business, its organizational structure, and its business partners as possible.</td><td valign="top">The output of this phase is a list of company names, partner organization names, and DNS names which reflect the entire target organization including all of its brands, divisions, and local representations.</td><td valign="top"><p># Search engines</p><p># Financial databases</p><p># Business reports</p><p># WHOIS</p><p># RWHOIS</p><p># Domain name registries and registrars</p><p># Web archives</p><p># Data mining tools</p></td></tr><tr><td valign="top">Footprinting</td><td valign="top">To mine as many DNS host names as possible from the domains or company names collected and translate those into IP addresses or IP address ranges.</td><td valign="top">The output of this phase is a list of DNS host names, IP addresses, and IP address ranges.</td><td valign="top"><p># DNS</p><p># WHOIS</p><p># DIG</p><p># SMTP</p><p># Data mining tools</p></td></tr><tr><td valign="top"><p>Human</p><p>Recon</p></td><td valign="top">To analyze the human perspective of the target and gain as much intelligence as possible about the people associated with the organization.</td><td valign="top">The output of this phase is a list of names, job titles, contact information, and other personal details about the people associated with the organization.</td><td valign="top"><p># Search engines</p><p># Email lists and web site posts</p><p># Social networking services</p><p># Publicly available records</p></td></tr><tr><td valign="top">Verification</td><td valign="top">To confirm the validity of information collected in the prior phases.</td><td valign="top">This phase rarely produces new output, but can clean up existing output by removing invalid data. Some additional information can sometimes be gathered as a side-product of the verification.</td><td valign="top"><p># DNS</p><p># WHOIS</p><p># DIG</p></td></tr><tr><td valign="top">Vitality</td><td valign="top">To confirm the reachability of the IP addresses identified in prior phases. This is a phase which spreads between reconnaissance and enumeration.</td><td valign="top">The output of this phase is a list of IP addresses from prior phases which have been confirmed as reachable.</td><td valign="top"><p># PING</p><p># Port scanners</p><p># Mapping tools</p></td></tr></tbody></table>
 
 A key argument is that there is no clear cutoff point between passive and active intelligence gathering techniques. Wheeler (2011) writes, “beware that the definition of passive is not always consistent across the field. There are definitely gray areas to be aware of". The confusion includes whether the information gathering can be performed without the knowledge of the organization under investigation (i.e., remains stealthy), and whether the process of testing can be traced back to the tester's location or IP address.
 

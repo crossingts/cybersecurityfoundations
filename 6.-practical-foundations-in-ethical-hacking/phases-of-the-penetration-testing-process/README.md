@@ -1,5 +1,7 @@
 ---
-description: This section describes the phases of the penetration testing process, the goals of each phase, and key technologies used
+description: >-
+  This section describes the phases of the penetration testing process, the
+  goals of each phase, and key technologies used
 ---
 
 # Phases of the penetration testing process
@@ -25,18 +27,23 @@ This section describes the **phases** of the penetration testing **process**—p
 
 The penetration testing **process** can be broken down into several **phases**: planning or preparation, reconnaissance, scanning and enumeration, gaining access (exploitation) and privilege escalation, post-exploitation (maintaining access and covering tracks), and reporting (NIST SP 800-115, 2008; Walker, 2012, 2017).
 
+<figure><img src="../../.gitbook/assets/Ethical-hacking-phases.jpg" alt="Ethical-hacking-phases"><figcaption><p>Ethical hacking phases</p></figcaption></figure>
+
+
+
+
+
 In the planning phase, rules are identified, management approval is finalized and documented, and testing goals are set. The planning phase sets the groundwork for a successful penetration test. No actual testing occurs in this phase. (NIST SP 800-115, 2008, p. 5-2)
 
 In the words of Walker (2012, 2017), taken a whole, a penetration test has three chronological **steps**: preparation, assessment, and conclusion. Preparation defines the timeline of the penetration test. This step defines
 
 The scope of the test, the types of attacks allowed, and the individuals assigned to perform the activity are all agreed upon in this phase. The assessment phase (sometimes also known as the security evaluation phase) is exactly what it sounds like—the actual assaults on the security controls are conducted during this time. Lastly, the conclusion (or post-assessment) phase defines the time when final reports are prepared for the customer, detailing the findings of the tests (including the types of tests performed) and many times even providing recommendations to improve security. (Walker, 2012, p. 8)
 
-
-Penetration tests should be seen as targeted exercises. Test objectives and the specific machines or applications to be tested are all specified upfront in a contractual agreement between the client and the ethical hacker during the planning phase. Each test objective will have its own set of parameters and processes. The agreement provides a precise description, typically in the form of specific IP addresses, domain names, or cloud instance identifiers, of the systems to be evaluated. 
+Penetration tests should be seen as targeted exercises. Test objectives and the specific machines or applications to be tested are all specified upfront in a contractual agreement between the client and the ethical hacker during the planning phase. Each test objective will have its own set of parameters and processes. The agreement provides a precise description, typically in the form of specific IP addresses, domain names, or cloud instance identifiers, of the systems to be evaluated.
 
 Precision is critical, as a minor error could lead to testing the wrong system or, in the worst case, the systems of an unrelated organization. (Palmer, 2001, p. 775)
 
-For Walker (2017), the the assessment step or “act of hacking” is comprised of five main phases: 1) Reconnaissance, which involves the steps taken to gather evidence and information on the target; 2) scanning and enumeration, which takes the information gathered in reconnaissance and applies tools and techniques to gather more in-depth information on the targets; 3) gaining access, where “true attacks are leveled against the targets enumerated in the second phase”; 4) maintaining access, where hackers attempt to ensure they have a way back into the compromised system; and 5) covering tracks, where “attackers attempt to conceal their success and avoid detection by security professionals” (p. 36). In practice, assessment phases run concurrently and continuously throughout a penetration test (Walker, 2017). 
+For Walker (2017), the the assessment step or “act of hacking” is comprised of five main phases: 1) Reconnaissance, which involves the steps taken to gather evidence and information on the target; 2) scanning and enumeration, which takes the information gathered in reconnaissance and applies tools and techniques to gather more in-depth information on the targets; 3) gaining access, where “true attacks are leveled against the targets enumerated in the second phase”; 4) maintaining access, where hackers attempt to ensure they have a way back into the compromised system; and 5) covering tracks, where “attackers attempt to conceal their success and avoid detection by security professionals” (p. 36). In practice, assessment phases run concurrently and continuously throughout a penetration test (Walker, 2017).
 
 See Figure 1-2 Phases of ethical hacking (Walker, 2012, p. 8).
 
@@ -44,11 +51,11 @@ See Figure 1-2 Phases of ethical hacking (Walker, 2012, p. 8).
 
 ### Reconnaissance
 
-Penetration tests begin with an extensive information gathering phase to build a profile of the target user or system to determine entry points. 
+Penetration tests begin with an extensive information gathering phase to build a profile of the target user or system to determine entry points.
 
 Reconnaissance can be passive or active. Passive recon involves gathering information from the public domain (OSINT) in places like Internet registries, Google, newspapers, and public records. At this stage “the target does not even know generally that they are the subject of surveillance.” Active recon involves **social engineering** and “anything that requires the hacker to interact with the organization” (Walker, 2017, p. 45). Most reconnaissance activities are passive in nature.
 
-OSINT involves collating technical information on an organization’s public-facing systems. “Internet registries, coupled with services such as Shodan or VPN Hunter, can highlight and identify an organization’s Web servers, mail servers, remote access endpoints and many other Internet-facing devices.” The penetration tester "uncovers possible weaknesses and entry points within the security posture of the organization, including the network, applications, website and wireless networks, physical facilities, cloud-based systems, and employees” (cipher.com).  
+OSINT involves collating technical information on an organization’s public-facing systems. “Internet registries, coupled with services such as Shodan or VPN Hunter, can highlight and identify an organization’s Web servers, mail servers, remote access endpoints and many other Internet-facing devices.” The penetration tester "uncovers possible weaknesses and entry points within the security posture of the organization, including the network, applications, website and wireless networks, physical facilities, cloud-based systems, and employees” (cipher.com).
 
 Automated OSINT is used by hackers and penetration testers to gather and analyze intelligence about a specific target from social networks, including names, online handles, jobs, friends, likes/dislikes/interactions, locations, pictures, etc. (McLaughlin, 2012). Recon-ng and Maltego are intelligence gathering tools designed to facilitate the process of gathering, analyzing, and organizing OSINT.
 
@@ -68,7 +75,7 @@ Both passive and active techniques exist for scanning and enumeration. There are
 
 This can be something as simple as running a ping sweep or a network mapper to see what systems are on the network, or as complex as running a vulnerability scanner to determine which ports may be open on a particular system. For example, whereas recon may have shown the network to have 500 or so machines connected to a single subnet inside a building, scanning and enumeration would tell me which ones are Windows machines and which ones are running FTP. (Walker, 2012, p. 9)
 
-A tool like Nmap usually performs enumeration and scanning by launching custom TCP, UDP or ICMP packets against a given target. The target responds to the information requests in the form of a digital signature. This signature is key to identifying what software, protocols and OS is running the target device. Nmap scans can identify network services, OS number and version, software applications, databases, and configurations, all with high probability.  
+A tool like Nmap usually performs enumeration and scanning by launching custom TCP, UDP or ICMP packets against a given target. The target responds to the information requests in the form of a digital signature. This signature is key to identifying what software, protocols and OS is running the target device. Nmap scans can identify network services, OS number and version, software applications, databases, and configurations, all with high probability.
 
 p0f is a passive monitoring Nmap alternative. p0f is a passive fingerprinting tool that does not generate network traffic. It is used to analyze network traffic and identify patterns behind TCP/IP-based communications often blocked for Nmap active fingerprinting techniques. Passive fingerprinting uses sniffer traces from the remote system to determine the operating system of the remote host. p0f uses a fingerprinting technique based on analyzing the structure of a TCP/IP packet to determine the OS and other configuration properties of a remote host. It includes powerful network-level fingerprinting features, and the ability to analyze application-level payloads such as HTTP, and can be used for detecting NAT, proxy and load balancing setups.
 
@@ -87,7 +94,7 @@ Table 18: Pen Source/Free Tools—for Network Penetration Testing (Shah & Mehtre
 
 <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt="open-source-penetration-testing-tools"><figcaption><p>Table 18: Pen Source/Free Tools—for Network Penetration Testing (Shah &#x26; Mehtre, 2015, p. 45)</p></figcaption></figure>
 
-Passive network sniffers can monitor and capture data packets passing through a given network in real time. “Sniffers operate at the data link layer of the network. Any data sent across the LAN is actually sent to each and every machine connected to the LAN. This is called passive since sniffers placed by the attackers passively wait for the data to be sent and capture them.” Placing a packet sniffer on a network in promiscuous mode allows a malicious intruder to capture and analyze all of the network traffic such as payloads containing confidential information.  
+Passive network sniffers can monitor and capture data packets passing through a given network in real time. “Sniffers operate at the data link layer of the network. Any data sent across the LAN is actually sent to each and every machine connected to the LAN. This is called passive since sniffers placed by the attackers passively wait for the data to be sent and capture them.” Placing a packet sniffer on a network in promiscuous mode allows a malicious intruder to capture and analyze all of the network traffic such as payloads containing confidential information.
 
 #### **Scanning vs Enumeration**
 
@@ -150,8 +157,7 @@ The final report is typically delivered directly to an officer of the client org
   * Email lists (harvested from exposed directories or breaches).
   * Results in a refined target list (e.g., vulnerable services, weak credentials).
 
-In practice, assessment phases run concurrently and continuously throughout a penetration test (Walker, 2017). 
-A key argument is that there is no clear cutoff point between passive and active intelligence gathering techniques.
+In practice, assessment phases run concurrently and continuously throughout a penetration test (Walker, 2017). A key argument is that there is no clear cutoff point between passive and active intelligence gathering techniques.
 
 ### References
 

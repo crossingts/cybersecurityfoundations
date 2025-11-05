@@ -25,6 +25,8 @@ This section describes the **phases** of the penetration testing **process**—p
 
 The penetration testing **process** can be broken down into several **phases**: planning or preparation, reconnaissance, scanning and enumeration, gaining access (exploitation) and privilege escalation, post-exploitation (maintaining access and covering tracks), and reporting (NIST SP 800-115, 2008; Walker, 2012, 2017).
 
+
+
 In the planning phase, rules are identified, management approval is finalized and documented, and testing goals are set. The planning phase sets the groundwork for a successful penetration test. No actual testing occurs in this phase. (NIST SP 800-115, 2008, p. 5-2)
 
 In the words of Walker (2012, 2017), 
@@ -46,7 +48,7 @@ See Figure 1-2 Phases of ethical hacking (Walker, 2012, p. 8).
 
 <figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt="EC-Council-Phases-Ethical-Hacking"><figcaption><p>Figure 1-2 Phases of ethical hacking (Walker, 2012, p. 8)</p></figcaption></figure>
 
-For the purposes of this section, ethical hacking refers to the overarching process of preparing for, performing a test, and reporting on the findings 
+For the purposes of this section, ethical hacking refers to the overarching process of preparing for or planning for a penetration test, performing a penetration test (what Walker, 2012, and EC-Council identify as the assessment step or assessment phase or the standard hack and which is common to both malicious and ethical hackers), and reporting on the findings of the penetration test. 
 
 ### Reconnaissance
 

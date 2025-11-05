@@ -156,7 +156,7 @@
   * [Using Wireshark to identify non-secure network traffic](6.-practical-foundations-in-ethical-hacking/packet-analyzers/using-wireshark-to-identify-non-secure-network-traffic.md)
   * [How to get started with Wireshark](6.-practical-foundations-in-ethical-hacking/packet-analyzers/how-to-get-started-with-wireshark.md)
   * [Packet analyzers — Quiz](6.-practical-foundations-in-ethical-hacking/packet-analyzers/packet-analyzers-quiz.md)
-* [Phases of the penetration testing process](6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md)
+* [Phases of the penetration testing process-](6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md)
   * [Reconnaissance (footprinting)](6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/reconnaissance-footprinting.md)
   * [Scanning and enumeration](6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/scanning-and-enumeration/README.md)
     * [Scanning and enumeration tools](6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/scanning-and-enumeration/scanning-and-enumeration-tools.md)
@@ -191,6 +191,7 @@
   * [OPNsense vs Zenarmor](6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/opnsense-vs-zenarmor.md)
   * [Setting up a cybersecurity lab — Quiz](6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/setting-up-a-cybersecurity-lab-quiz.md)
 * [Chapter 6 review questions](6.-practical-foundations-in-ethical-hacking/chapter-6-review-questions.md)
+* [Phases of the penetration testing process](6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process-1.md)
 
 ## 7. Conclusion
 

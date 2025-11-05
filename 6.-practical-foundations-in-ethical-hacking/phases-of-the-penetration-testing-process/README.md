@@ -6,14 +6,14 @@ description: >-
 
 # Phases of the penetration testing process
 
-### Learning objectives <a href="#learning-objectives" id="learning-objectives"></a>
+## Learning objectives <a href="#learning-objectives" id="learning-objectives"></a>
 
 * Describe the phases of the penetration testing process
 * Describe best practices for writing the penetration test report
 
 This section describes the phases of the penetration testing process—planning, reconnaissance, scanning and enumeration, gaining access (exploitation) and privilege escalation, maintaining access, covering tracks, and reporting—including the goals of each phase and key technologies used. Further, this section describes best practices for writing the penetration test report.
 
-### Topics covered in this section <a href="#topics-covered-in-this-section" id="topics-covered-in-this-section"></a>
+## Topics covered in this section <a href="#topics-covered-in-this-section" id="topics-covered-in-this-section"></a>
 
 * **Introduction**
 * **Reconnaissance**
@@ -23,7 +23,7 @@ This section describes the phases of the penetration testing process—planning,
 * **Covering tracks**
 * **The penetration test report**
 
-#### Introduction <a href="#phases-of-the-penetration-testing-process" id="phases-of-the-penetration-testing-process"></a>
+### Introduction <a href="#phases-of-the-penetration-testing-process" id="phases-of-the-penetration-testing-process"></a>
 
 The penetration testing process can be broken down into several phases: planning or preparation, reconnaissance, scanning and enumeration, gaining access (exploitation) and privilege escalation, post-exploitation (maintaining access and covering tracks), and reporting (NIST SP 800-115, 2008; Walker, 2012, 2017).
 
@@ -47,11 +47,11 @@ For Walker (2017), the the assessment step or “act of hacking” is comprised 
 
 For the purposes of this section, ethical hacking refers to the overarching process of 1) preparing for or planning for a penetration test, 2) performing a penetration test (what Walker, 2012/2017, and EC-Council identify as the assessment phase of the penetration test and which is common to both malicious and ethical hackers), and 3) reporting on the findings of the penetration test.
 
-**Reconnaissance**
+### Reconnaissance
 
 Penetration tests begin with an extensive information gathering phase to build a profile of the target user or system to determine entry points.
 
-Reconnaissance can be passive or active. Passive recon involves gathering information from the public domain (OSINT) in places like Internet registries, Google, newspapers, and public records. At this stage “the target does not even know generally that they are the subject of surveillance.” Active recon involves **social engineering** and “anything that requires the hacker to interact with the organization” (Walker, 2017, p. 45). Most reconnaissance activities are passive in nature.
+Reconnaissance can be passive or active. Passive recon involves gathering information from the public domain (OSINT) in places like Internet registries, Google, newspapers, and public records. At this stage “the target does not even know generally that they are the subject of surveillance.” Active recon involves social engineering and “anything that requires the hacker to interact with the organization” (Walker, 2017, p. 45). Most reconnaissance activities are passive in nature.
 
 OSINT involves collating technical information on an organization’s public-facing systems. “Internet registries, coupled with services such as Shodan or VPN Hunter, can highlight and identify an organization’s Web servers, mail servers, remote access endpoints and many other Internet-facing devices.” During OSINT, the penetration tester "uncovers possible weaknesses and entry points within the security posture of the organization, including the network, applications, website and wireless networks, physical facilities, cloud-based systems, and employees” (cipher.com).
 
@@ -59,13 +59,13 @@ Automated OSINT is used by hackers and penetration testers to gather and analyze
 
 Faircloth (2011) proposes an iterative five stage reconnaissance phase: Intelligence Gathering, Footprinting, Human Recon, Verification, and Vitality. Building on Faircloth (2011), follows is a table summarizing the stages of the reconnaissance phase. The Verification phase is implied, and the Vitality phase can be omitted in passive reconnaissance.
 
-**Table: Five Phases of Reconnaissance (Adapted from Faircloth, 2011)**
+**Table: Phases of Reconnaissance (Adapted from Faircloth, 2011)**
 
 <table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Phase</td><td valign="top">Objectives</td><td valign="top">Output</td><td valign="top">Tools</td></tr><tr><td valign="top"><p>Intelligence</p><p>Gathering</p></td><td valign="top">To learn as much about the target, its business, its organizational structure, and its business partners as possible.</td><td valign="top">The output of this phase is a list of company names, partner organization names, and DNS names which reflect the entire target organization including all of its brands, divisions, and local representations.</td><td valign="top"><p># Search engines</p><p># Financial databases</p><p># Business reports</p><p># WHOIS</p><p># RWHOIS</p><p># Domain name registries and registrars</p><p># Web archives</p><p># Data mining tools</p></td></tr><tr><td valign="top">Footprinting</td><td valign="top">To mine as many DNS host names as possible from the domains or company names collected and translate those into IP addresses or IP address ranges.</td><td valign="top">The output of this phase is a list of DNS host names, IP addresses, and IP address ranges.</td><td valign="top"><p># DNS</p><p># WHOIS</p><p># DIG</p><p># SMTP</p><p># Data mining tools</p></td></tr><tr><td valign="top"><p>Human</p><p>Recon</p></td><td valign="top">To analyze the human perspective of the target and gain as much intelligence as possible about the people associated with the organization.</td><td valign="top">The output of this phase is a list of names, job titles, contact information, and other personal details about the people associated with the organization.</td><td valign="top"><p># Search engines</p><p># Email lists and web site posts</p><p># Social networking services</p><p># Publicly available records</p></td></tr><tr><td valign="top">Vitality</td><td valign="top">To confirm the reachability of the IP addresses identified in prior phases. This is a phase which spreads between reconnaissance and enumeration.</td><td valign="top">The output of this phase is a list of IP addresses from prior phases which have been confirmed as reachable.</td><td valign="top"><p># PING</p><p># Port scanners</p><p># Mapping tools</p></td></tr></tbody></table>
 
-A key argument is that there is no clear cutoff point between passive and active intelligence gathering techniques. Wheeler (2011) writes, “beware that the definition of passive is not always consistent across the field. There are definitely gray areas to be aware of". The confusion includes whether the information gathering can be performed without the knowledge of the organization under investigation (i.e., remains stealthy), and whether the process of testing can be traced back to the tester's location or IP address.
+A key argument is that there is no clear cutoff point between passive and active intelligence gathering techniques. The definition of passive is not always consistent across the field. The confusion includes whether the information gathering can be performed without the knowledge of the organization under investigation (i.e., remains stealthy), and whether the process of testing can be traced back to the tester's location or IP address.
 
-**Scanning and enumeration**
+### Scanning and enumeration
 
 Security analysts now apply the information they gathered in recon towards gathering more in-depth information on the targets.
 
@@ -133,13 +133,13 @@ Tools: `nmap`, `masscan`, `arp-scan`
 
 Tools: `enum4linux`, `Metasploit aux modules`, `ldapsearch`
 
-**Gaining access**
+### Gaining access
 
 Now true attacks are leveled against the targets enumerated in the second phase.
 
 These attacks can be as simple as accessing an open and nonsecured wireless access point and then manipulating it for whatever purpose, or as complex as writing and delivering a buffer overflow or SQL injection against a web application. (Walker, 2012, p. 10)
 
-**Maintaining access**
+### Maintaining access
 
 Now hackers attempt to ensure they have a way back into the compromised system.
 
@@ -147,13 +147,13 @@ Back doors are left open by the attacker for future use—especially if the syst
 
 The concept of “escalation of privileges” between phases 3 and 4 refers to actions taken by a hacker to promote his access to root or administrative levels.
 
-**Covering tracks**
+### Covering tracks
 
 Now, in the final phase of security assessment, hackers attempt to conceal their presence in the compromised machines to avoid detection.
 
 Steps taken here consist of removing or altering log files, hiding files with hidden attributes or directories, and even using tunneling protocols to communicate with the system. If auditing is even turned on and monitored, and often it is not, log files are an indicator of attacks on a machine. Clearing the log file completely is just as big an indicator to the security administrator watching the machine, so sometimes selective editing is your best bet. Another great method to use here is simply corrupting the log file itself—whereas a completely empty log file screams an attack is in progress, files get corrupted all the time and, chances are, the administrator won’t bother to try to rebuild it. In any case, good pen testers are truly defined in this phase. (Walker, 2012, p. 10)
 
-**The penetration test report**
+### The penetration test report
 
 A vulnerability scanner “actively communicates with the target system, sends the malicious packets and analyses the results, which can then be exported to PDF, HTML, CSV and other formats” (Rasskazov, 2013, p. 58). Typical vulnerability management software obtains the results and provides a comprehensive dashboard to present the results. “It can build trends, sort the results by criticality, and keep additional records, for example business purpose of the system or location” (Rodger, 2013, p. 48). The software’s reporting component can generate the compliance reports against widely used standards, for example PCI DSS, ISO 27001, or against the corporate policies, for example the percentage of computers with outdated software or weak password policy. Nexpose and other vendors include the vulnerability management software in the package with vulnerability scanners, while other vendors (e.g., Nessus) sell the software separately.
 
@@ -163,7 +163,7 @@ The final report is a collection of all of the ethical hacker’s discoveries ma
 
 The final report is typically delivered directly to an officer of the client organization in hard-copy form. The ethical hackers would have an ongoing responsibility to ensure the safety of any information they retain, so in most cases all information related to the work is destroyed at the end of the contract. (Palmer, 2001, p. 779)
 
-**Key takeaways**
+### Key takeaways
 
 * Phases of the penetration testing process are planning, reconnaissance, scanning and enumeration, exploitation, post-exploitation, and reporting
 * The two phases of reconnaissance, and scanning and enumeration are intelligence gathering phases that serve to prepare for an exploit strategy against a target. Each of the two phases can be either passive or active
@@ -190,7 +190,7 @@ In practice, assessment phases run concurrently and continuously throughout a pe
 
 A key argument is that there is no clear cutoff point between passive and active intelligence gathering techniques.
 
-**References**
+### References
 
 Cipher. (n.d.). Reconnaissance, Intelligence Gathering or Open Source Intelligence (OSINT) Gathering. Retrieved January 21, 2020, from https://cipher.com/blog/the-types-of-pentests-you-must-know-about/
 
@@ -205,5 +205,3 @@ Shah, S., & Mehtre, B. M. (2015). An overview of vulnerability assessment and pe
 Walker, M. (2012). Certified Ethical Hacker Exam Guide. Columbus: McGraw-Hill Osborne.
 
 Walker, M. (2017). CEH Certified Ethical Hacker All-in-One Exam Guide, Second Edition. New York, NY: McGraw-Hill Education.
-
-Wheeler (2011)

@@ -121,14 +121,14 @@
 
 ### Phases of the penetration testing process
 
-**1. According to the lesson, what is the single most important characteristic that distinguishes the Reconnaissance phase from the Scanning and Enumeration phase?**\
-**Answer:** The single most important characteristic is the objective: Reconnaissance aims to build a profile of the target and identify entry points (the "what"), while Scanning and Enumeration aims to gather in-depth information on those specific targets to understand their characteristics and weaknesses (the "how" and "what can be extracted").
+**1. According to the lesson, what is the single most important characteristic that distinguishes the reconnaissance phase from the scanning and enumeration phase?**\
+**Answer:** The single most important characteristic is the objective: reconnaissance aims to build a profile of the target and identify entry points (the "what"), while scanning and enumeration aims to gather in-depth information on those specific targets to understand their characteristics and weaknesses (the "how" and "what can be extracted").
 
 **2. The lesson describes two broad categories of intelligence gathering techniques. Name these two categories and the key behavioral characteristic that defines each.**\
 **Answer:** The two categories are (1) Passive techniques, defined by gathering information without direct interaction with the target, and (2) Active techniques, defined by any activity that requires the hacker to interact with the target's systems or organization.
 
-**3. A network sniffer is described as a tool that spans two phases. For what primary purpose is it used in the Reconnaissance phase, and for what primary purpose is it used in the Scanning and Enumeration phase?**\
-**Answer:** In the Reconnaissance phase, it is used for footprinting and fingerprinting to map the network's structure (hosts, IPs, OS). In the Scanning and Enumeration phase, it is used to analyze packet payloads to extract sensitive information like credentials and identify specific vulnerabilities.
+**3. A network sniffer is described as a tool that spans two phases. For what primary purpose is it used in the reconnaissance phase, and for what primary purpose is it used in the scanning and enumeration phase?**\
+**Answer:** In the reconnaissance phase, it is used for footprinting and fingerprinting to map the network's structure (hosts, IPs, OS). In the scanning and enumeration phase, it is used to analyze packet payloads to extract sensitive information like credentials and identify specific vulnerabilities.
 
 **4. The tool p0f is highlighted as a powerful alternative to active scanning. What specific type of technique does it represent, and what is one key advantage it holds over active tools like Nmap?**\
 **Answer:** p0f represents a passive fingerprinting technique. A key advantage is that it does not generate any network traffic, making it undetectable to the target and allowing it to operate with a very low risk of detection.

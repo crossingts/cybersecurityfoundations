@@ -72,11 +72,15 @@ something as simple as running a ping sweep or a network mapper to see what syst
 
 **Scanning vs Enumeration**
 
-| **Scanning**                              | **Enumeration**                                             |
-| ----------------------------------------- | ----------------------------------------------------------- |
-| "What's alive and what ports are open?" | "What can I extract from those services?"                 |
-| Broad, network-level discovery            | Targeted, service-specific probing                          |
-| Tools: `nmap`, `masscan`, `arp-scan`      | Tools: `enum4linux`, `Metasploit aux modules`, `ldapsearch` |
+| **Scanning**                            | **Enumeration**                                             |
+| --------------------------------------- | ----------------------------------------------------------- |
+| "What's alive and what ports are open?" | "What can I extract from those services?"                   |
+| Broad, network-level discovery          | Targeted, service-specific probing                          |
+| Tools: `nmap`, `masscan`, `arp-scan`    | Tools: `enum4linux`, `Metasploit aux modules`, `ldapsearch` |
+
+The core technical activities of the scanning and enumeration phase are to move from identifying potential targets to actively discovering and cataloging detailed information about them. This phase begins with network and port scanning, which involves using tools like Nmap to discover live hosts on a network and then probing those hosts to identify which network ports are open. These open ports represent potential communication channels to running services.
+
+Once open ports are identified, the focus shifts to service and OS version detection. This process involves interacting with the discovered services to determine exactly what they are (e.g., SSH, HTTP, RDP) and their specific version numbers, as well as fingerprinting the underlying operating system. The final critical activity is vulnerability identification, where the tester analyzes the gathered information—such as service versions and configurations—to pinpoint potential security weaknesses, misconfigurations, and known vulnerabilities that could be exploited in the next phase.
 
 Both passive and active techniques exist for scanning and enumeration. There are three major types of scanning—network scanning, port scanning, and vulnerability scanning. Enumeration techniques include Banner Grabbing, NetBIOS Enumeration, SNMP Enumeration, using LDAP, and using NTP and SMTP.
 

@@ -18,6 +18,7 @@ This section describes the phases of the penetration testing process—planning,
 * **Introduction**
 * **Reconnaissance**
 * **Scanning and enumeration**
+* **Network sniffers in the penetration testing process**
 * **Gaining access**
 * **Maintaining access**
 * **Covering tracks**
@@ -93,20 +94,21 @@ p0f is a passive monitoring Nmap alternative. p0f is a passive fingerprinting to
 | **Detection Risk** | Low                          | High                  |
 | **Speed/Accuracy** | Slower, less precise         | Faster, more detailed |
 | **Use Case**       | Early recon, avoiding alerts | Post-recon, deep dive |
+|                    |                              |                       |
 
-Passive network sniffers can monitor and capture data packets passing through a given network in real time. “Sniffers operate at the data link layer of the network. Any data sent across the LAN is actually sent to each and every machine connected to the LAN. This is called passive since sniffers placed by the attackers passively wait for the data to be sent and capture them.” Placing a packet sniffer on a network in promiscuous mode allows a malicious intruder to capture and analyze all of the network traffic such as payloads containing confidential information.
+### Network sniffers in the penetration testing process
 
-**Network Sniffers in the Penetration Testing Process**
+Passive network sniffers can monitor and capture data packets passing through a given network in real time. Sniffers operate at the data link layer of the network. Data sent across the LAN is actually sent to every machine connected to the LAN. This is a passive technique since sniffers placed by the attackers passively wait for the data to be sent and capture them. Placing a packet sniffer on a network in promiscuous mode allows a malicious intruder to capture and analyze all of the network traffic such as payloads containing confidential information.
 
-Network sniffers are versatile tools whose function evolves across the penetration testing lifecycle, providing critical intelligence in both the Reconnaissance and Scanning & Enumeration phases. The same sniffer, deployed once, can fulfill different roles based on the analyst's focus—shifting from mapping the network's structure to probing its deepest vulnerabilities, all without sending a single packet and thus maintaining complete stealth.
+The function of sniffers evolves across the penetration testing lifecycle, providing critical intelligence in both the reconnaissance and scanning and enumeration phases. The same sniffer, deployed once, can fulfill different roles based on the analyst's focus—shifting from mapping the network's structure to probing its deepest vulnerabilities, all without sending a single packet and thus maintaining complete stealth.
 
-During the **Reconnaissance** phase, a passively deployed sniffer acts as a powerful **footprinting** tool. It builds a foundational profile of the target by listening to network traffic, which allows the tester to compile a map of active hosts, their IP and MAC addresses, and the core network protocols in use. Furthermore, sniffers can also be deployed as powerful **fingerprinting** tools. Techniques used by tools like p0f analyze the subtle characteristics of TCP/IP packets—such as TCP window sizes and TTL values—to determine the operating system and other configuration properties of the communicating hosts. This passive fingerprinting can even detect network setups like NAT, proxy servers, and load balancers, significantly enriching the reconnaissance profile without any direct interaction.
+During the reconnaissance phase, a passively deployed sniffer acts as a powerful footprinting tool. It builds a foundational profile of the target by listening to network traffic, which allows the tester to compile a map of active hosts, their IP and MAC addresses, and the core network protocols in use. Furthermore, sniffers can also be deployed as powerful fingerprinting tools. Techniques used by tools like p0f analyze the subtle characteristics of TCP/IP packets—such as TCP window sizes and TTL values—to determine the operating system and other configuration properties of the communicating hosts. This passive fingerprinting can even detect network setups like NAT, proxy servers, and load balancers, significantly enriching the reconnaissance profile without any direct interaction.
 
-As the assessment progresses into the **Scanning & Enumeration** phase, the sniffer's role deepens from mapping to detailed investigation. The analyst shifts from identifying _what assets exist_ to enumerating _what weaknesses and data they expose_. This involves a detailed analysis of the captured packet payloads to extract sensitive information like cleartext credentials, confidential data in transit, or specific application commands. The discovery of an unencrypted password within a packet, for instance, is no longer just information gathering; it is the direct identification of a critical vulnerability. This passive form of enumeration provides definitive evidence of security failures and often directly enables the subsequent phase of gaining access.
+As the assessment progresses into the scanning and enumeration phase, the sniffer's role deepens from mapping to detailed investigation. The analyst shifts from identifying what assets exist to enumerating what weaknesses and data they expose. This involves a detailed analysis of the captured packet payloads to extract sensitive information like cleartext credentials, confidential data in transit, or specific application commands. The discovery of an unencrypted password within a packet, for instance, is no longer just information gathering; it is the direct identification of a critical vulnerability. This passive form of enumeration provides definitive evidence of security failures and often directly enables the subsequent phase of gaining access.
 
 ### Gaining access
 
-Now true attacks are leveled against the targets enumerated in the second phase.
+Now true attacks are leveled against the targets enumerated in the third phase of the ethical hacking process.
 
 These attacks can be as simple as accessing an open and nonsecured wireless access point and then manipulating it for whatever purpose, or as complex as writing and delivering a buffer overflow or SQL injection against a web application. (Walker, 2012, p. 10)
 
@@ -153,12 +155,12 @@ The final report is typically delivered directly to an officer of the client org
 * Scanning is more intrusive than reconnaissance, often active. Scanning techniques include:
   * Host discovery (ICMP, ARP, TCP/UDP probes).
   * Port scanning (TCP SYN, Connect, UDP scans).
-  * OS & service fingerprinting (banner grabbing, version detection).
+  * OS and service fingerprinting (banner grabbing, version detection).
   * Vulnerability scanning (automated tools like Nessus, OpenVAS).
 * Scanning discovers live hosts, open ports, running services, and potential vulnerabilities
 * Enumeration represents deeper probing to extract usable attack surfaces:
   * User accounts (via LDAP, SMB, SMTP, RPC).
-  * Network shares & services (NFS, Samba, NetBIOS).
+  * Network shares and services (NFS, Samba, NetBIOS).
   * Application-specific data (SQL databases, SNMP, DNS records).
   * Email lists (harvested from exposed directories or breaches).
   * Results in a refined target list (e.g., vulnerable services, weak credentials).

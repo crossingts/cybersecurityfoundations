@@ -1,5 +1,5 @@
 ---
-hidden: true
+hidden: false
 ---
 
 # Phases of the penetration testing process — Quiz

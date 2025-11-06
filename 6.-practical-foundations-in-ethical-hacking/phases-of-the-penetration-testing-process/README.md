@@ -74,7 +74,7 @@ something as simple as running a ping sweep or a network mapper to see what syst
 
 | **Scanning**                              | **Enumeration**                                             |
 | ----------------------------------------- | ----------------------------------------------------------- |
-| _"What's alive and what ports are open?"_ | _"What can I extract from those services?"_                 |
+| "What's alive and what ports are open?" | "What can I extract from those services?"                 |
 | Broad, network-level discovery            | Targeted, service-specific probing                          |
 | Tools: `nmap`, `masscan`, `arp-scan`      | Tools: `enum4linux`, `Metasploit aux modules`, `ldapsearch` |
 

@@ -118,19 +118,17 @@ Now hackers attempt to ensure they have a way back into the compromised system.
 
 Back doors are left open by the attacker for future use—especially if the system in question has been turned into a zombie (a machine used to launch further attacks from) or if the system is used for further information gathering—for example, a sniffer can be placed on a compromised machine to watch traffic on a specific subnet. Access can be maintained through the use of Trojans, rootkits, or any number of other methods. (Walker, 2012, p. 10)
 
-The concept of “escalation of privileges” between phases 3 and 4 refers to actions taken by a hacker to promote his access to root or administrative levels.
+The concept of “escalation of privileges” between phases 4 and 5 of the ethical hacking process refers to actions taken by a hacker to promote his access to root or administrative levels.
 
 ### Covering tracks
 
-Now, in the final phase of security assessment, hackers attempt to conceal their presence in the compromised machines to avoid detection.
+Now, in the final phase of a security assessment, hackers attempt to conceal their presence in the compromised machines to avoid detection.
 
 Steps taken here consist of removing or altering log files, hiding files with hidden attributes or directories, and even using tunneling protocols to communicate with the system. If auditing is even turned on and monitored, and often it is not, log files are an indicator of attacks on a machine. Clearing the log file completely is just as big an indicator to the security administrator watching the machine, so sometimes selective editing is your best bet. Another great method to use here is simply corrupting the log file itself—whereas a completely empty log file screams an attack is in progress, files get corrupted all the time and, chances are, the administrator won’t bother to try to rebuild it. In any case, good pen testers are truly defined in this phase. (Walker, 2012, p. 10)
 
 The following table, Pen Source/Free Tools—for Network Penetration Testing (Shah & Mehtre, 2015, p. 45), offers a summary of common open source network penetration testing tools, including their function and operating system compatibility.
 
 <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt="Open-Source-Network-Penetration-Testing-Tools"><figcaption><p>Pen Source/Free Tools—for Network Penetration Testing (Shah &#x26; Mehtre, 2015, p. 45)</p></figcaption></figure>
-
-
 
 ### The penetration test report
 

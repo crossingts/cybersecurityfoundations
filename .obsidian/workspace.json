@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/phases-of-the-penetration-testing-process-quiz.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "phases-of-the-penetration-testing-process-quiz"
             }
           }
         ]
@@ -183,9 +183,9 @@
   },
   "active": "06a011ac2e27949f",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing/README.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/README.md",
-    "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/reconnaissance-footprinting.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/phases-of-the-penetration-testing-process-quiz.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/passive-discovery-method.md",

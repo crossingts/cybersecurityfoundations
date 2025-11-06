@@ -133,7 +133,7 @@
 **4. The tool p0f is highlighted as a powerful alternative to active scanning. What specific type of technique does it represent, and what is one key advantage it holds over active tools like Nmap?**\
 **Answer:** p0f represents a passive fingerprinting technique. A key advantage is that it does not generate any network traffic, making it undetectable to the target and allowing it to operate with a very low risk of detection.
 
-**5. The Penetration Test Report is the main deliverable of the entire process. What are the two primary sections this report is typically divided into?**\
+**5. The penetration test report is the main deliverable of the entire process. What are the two primary sections this report is typically divided into?**\
 **Answer:** The two primary sections are the Executive Summary, intended for management, and the Technical Report, which contains detailed findings for the IT staff.
 
 ### Types of penetration testing

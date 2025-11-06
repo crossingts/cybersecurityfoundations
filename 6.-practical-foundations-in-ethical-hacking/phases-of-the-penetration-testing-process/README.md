@@ -36,7 +36,7 @@ In the words of Walker (2012, 2017),
 
 There are three main phases to a pen test—preparation, assessment, and conclusion—and they are fairly easy to define and understand. (Walker, 2012, p. 8)
 
-The preparation step defines the timeline and scope of the penetration test, "the types of attacks allowed, and the individuals assigned to perform the activity" (Walker, 2012, p. 8).
+The preparation phase defines the timeline and scope of the penetration test, "the types of attacks allowed, and the individuals assigned to perform the activity" (Walker, 2012, p. 8).
 
 The assessment phase (sometimes also known as the security evaluation phase) is exactly what it sounds like—the actual assaults on the security controls are conducted during this time. Lastly, the conclusion (or post-assessment) phase defines the time when final reports are prepared for the customer, detailing the findings of the tests (including the types of tests performed) and many times even providing recommendations to improve security. (Walker, 2012, p. 8)
 
@@ -44,21 +44,19 @@ Penetration tests should be seen as targeted exercises. Test objectives and the 
 
 Precision is critical, as a minor error could lead to testing the wrong system or, in the worst case, the systems of an unrelated organization. (Palmer, 2001, p. 775)
 
-For Walker (2017), the the assessment step or “act of hacking” is comprised of five main phases: 1) Reconnaissance, which involves the steps taken to gather evidence and information on the target; 2) scanning and enumeration, which takes the information gathered in reconnaissance and applies tools and techniques to gather more in-depth information on the targets; 3) gaining access, where “true attacks are leveled against the targets enumerated in the second phase”; 4) maintaining access, where hackers attempt to ensure they have a way back into the compromised system; and 5) covering tracks, where “attackers attempt to conceal their success and avoid detection by security professionals” (p. 36). In practice, assessment phases run concurrently and continuously throughout a penetration test (Walker, 2017).
+For Walker (2017), the the assessment phase or “act of hacking” is comprised of five main phases: 1) Reconnaissance, which involves the steps taken to gather evidence and information on the target; 2) scanning and enumeration, which takes the information gathered in reconnaissance and applies tools and techniques to gather more in-depth information on the targets; 3) gaining access, where “true attacks are leveled against the targets enumerated in the second phase”; 4) maintaining access, where hackers attempt to ensure they have a way back into the compromised system; and 5) covering tracks, where “attackers attempt to conceal their success and avoid detection by security professionals” (p. 36). In practice, assessment phases run concurrently and continuously throughout a penetration test (Walker, 2017).
 
 For the purposes of this section, ethical hacking refers to the overarching process of 1) preparing for or planning for a penetration test, 2) performing a penetration test (what Walker, 2012/2017, and EC-Council identify as the assessment phase of the penetration test and which is common to both malicious and ethical hackers), and 3) reporting on the findings of the penetration test.
 
 ### Reconnaissance
 
-Penetration tests begin with an extensive information gathering phase to build a profile of the target user or system to determine entry points.
-
-Reconnaissance can be passive or active. Passive reconnaissance involves gathering information from the public domain (OSINT) in places like Internet registries, Google, newspapers, and public records. At this stage “the target does not even know generally that they are the subject of surveillance.” Active reconnaissance involves social engineering and “anything that requires the hacker to interact with the organization” (Walker, 2017, p. 45). Most reconnaissance activities are passive in nature.
+Penetration tests begin with an extensive information gathering phase to build a profile of the target user or system to determine entry points. Reconnaissance can be passive or active. Passive reconnaissance involves gathering information from the public domain (OSINT) in places like Internet registries, Google, newspapers, and public records. At this stage “the target does not even know generally that they are the subject of surveillance.” Active reconnaissance involves social engineering and “anything that requires the hacker to interact with the organization” (Walker, 2017, p. 45). Most reconnaissance activities are passive in nature.
 
 OSINT involves collating technical information on an organization’s public-facing systems. “Internet registries, coupled with services such as Shodan or VPN Hunter, can highlight and identify an organization’s Web servers, mail servers, remote access endpoints and many other Internet-facing devices.” During OSINT, the penetration tester "uncovers possible weaknesses and entry points within the security posture of the organization, including the network, applications, website and wireless networks, physical facilities, cloud-based systems, and employees” (cipher.com).
 
 Automated OSINT is used by hackers and penetration testers to gather and analyze intelligence about a specific target from social networks, including names, online handles, jobs, friends, likes/dislikes/interactions, locations, pictures, etc. (McLaughlin, 2012). Recon-ng and Maltego are intelligence gathering tools designed to facilitate the process of gathering, analyzing, and organizing OSINT.
 
-Faircloth (2011) proposes an iterative five stage reconnaissance phase: Intelligence Gathering, Footprinting, Human Recon, Verification, and Vitality. Building on Faircloth (2011), follows is a table summarizing the stages of the reconnaissance phase. The Verification phase is implied, and the Vitality phase can be omitted in passive reconnaissance.
+Faircloth (2011) proposes an iterative five stage reconnaissance phase: Intelligence Gathering, Footprinting, Human Recon, Verification, and Vitality. Building on Faircloth (2011), follows is a table summarizing the stages of the reconnaissance phase. The Verification phase is implied, and the Vitality phase can be "omitted" in passive reconnaissance (the actvities of the Vitality phase
 
 **Table: Phases of Reconnaissance (Adapted from Faircloth, 2011)**
 

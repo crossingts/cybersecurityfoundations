@@ -6,8 +6,8 @@ hidden: false
 
 ### Phases of the penetration testing process
 
-**1. During the Reconnaissance phase, what is the primary goal of the Footprinting stage, as adapted from Faircloth (2011)?**\
-a) To learn about the target's business structure and partners.\
+**1. During the Reconnaissance phase, what is the primary goal of the Footprinting stage, as adapted from Faircloth (2011)? (Choose one answer)**\
+a) To learn about the target's business structure and partners\
 b) To analyze the personal details of employees associated with the organization.\
 c) **To translate DNS host names into IP addresses and IP address ranges.**\
 d) To confirm the reachability of identified IP addresses using active probes.

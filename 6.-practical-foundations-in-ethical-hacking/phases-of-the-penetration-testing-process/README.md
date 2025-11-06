@@ -164,6 +164,8 @@ The final report is typically delivered directly to an officer of the client org
 
 ### References
 
+Chaudhary, H. (2013). Writing an effective penetration testing report. _PenTest Magazine, 3_(7), pp. 18-29.
+
 Cipher. (n.d.). Reconnaissance, Intelligence Gathering or Open Source Intelligence (OSINT) Gathering. Retrieved January 21, 2020, from https://cipher.com/blog/the-types-of-pentests-you-must-know-about/
 
 Faircloth, J. (2011). _Penetration tester’s open source toolkit_. Penetration tester’s open source toolkit. Retrieved from www.scopus.com
@@ -172,7 +174,13 @@ NIST Special Publication 800-115: Technical Guide to Information Security Testin
 
 Palmer, C. C. (2001). Ethical hacking. _IBM Systems Journal, 40_(3), 769-780.
 
+Rasskazov, V. (2013). Analysing vulnerability scanning reports. _PenTest Magazine, 3_(7), pp. 51-60.
+
+Rodger, J. (2013). Anatomy of vulnerability scans before a penetration test. _PenTest Magazine, 3(_7), pp. 41-50.
+
 Shah, S., & Mehtre, B. M. (2015). An overview of vulnerability assessment and penetration testing techniques. _Journal of Computer Virology and Hacking Techniques, 11_(1), 27-49. doi:10.1007/s11416-014-0231-x
+
+Velu, V. (2013). 200 OK on Audience. _PenTest Magazine, 3_(7), pp. 7-16.
 
 Walker, M. (2012). Certified Ethical Hacker Exam Guide. Columbus: McGraw-Hill Osborne.
 

@@ -8,13 +8,13 @@ description: >-
 
 ## Learning objectives
 
-* Differentiate between the authentication methods used in Personal mode (PSK vs SAE) and Enterprise mode (802.1X/EAP) across WPA, WPA2, and WPA3
-* Compare the encryption and integrity algorithms, including TKIP, AES-CCMP, and AES-GCMP, and their evolution through each WPA version
+* Differentiate between the authentication methods used in Personal mode (PSK and SAE) and Enterprise mode (802.1X/EAP) across WPA, WPA2, and WPA3
+* Compare the encryption and integrity algorithms, including TKIP, Michael MIC, AES-CCMP, and AES-GCMP, and their evolution through each WPA version
 * Identify key vulnerabilities in WPA/WPA2-Personal and the security enhancements provided by WPA3-Personal, such as resistance to dictionary attacks and forward secrecy
 * Identify the mandatory security requirements for WPA3-Enterprise, including AES-256-GCMP and enhanced key derivation
 * Become familiar with key authentication and encryption methods and algorithms used in WPA, WPA2, and WPA3
 
-This section details the evolution of wireless security by comparing the authentication and encryption methods in WPA, WPA2, and WPA3. It breaks down the distinct approaches for Personal (Pre-Shared Key) and Enterprise (802.1X) modes, highlighting the progression from the deprecated TKIP to the robust AES-CCMP and AES-GCMP algorithms. The analysis covers specific vulnerabilities, such as the dictionary attack in WPA2-Personal, and the corresponding solutions introduced in WPA3, like Simultaneous Authentication of Equals (SAE) and forward secrecy. The section concludes by summarizing the key differentiators (Personal mode vs Enterprise mode) to inform secure protocol selection.
+This section studies the evolution of wireless security by comparing the authentication and encryption methods in WPA, WPA2, and WPA3. It breaks down the distinct approaches for Personal (PSK and SAE) and Enterprise (802.1X) modes, highlighting the progression from the deprecated TKIP to the robust AES-CCMP and AES-GCMP algorithms. The analysis covers specific vulnerabilities, such as the dictionary attack in WPA2-Personal, and the corresponding solutions introduced in WPA3, like Simultaneous Authentication of Equals (SAE) and forward secrecy. The section concludes by summarizing the key differentiators (Personal mode vs Enterprise mode) to inform secure protocol selection.
 
 ## Topics covered in this section
 

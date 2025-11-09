@@ -14,13 +14,13 @@ description: >-
 * Identify the mandatory security requirements for WPA3-Enterprise, including AES-256-GCMP and enhanced key derivation
 * Become familiar with key authentication and encryption methods and algorithms used in WPA, WPA2, and WPA3
 
-This section studies the evolution of wireless security by comparing the authentication and encryption methods in WPA, WPA2, and WPA3. It breaks down the distinct approaches for Personal (PSK and SAE) and Enterprise (802.1X) modes, highlighting the progression from the deprecated TKIP to the robust AES-CCMP and AES-GCMP algorithms. The analysis covers specific vulnerabilities, such as the dictionary attack in WPA2-Personal, and the corresponding solutions introduced in WPA3, like Simultaneous Authentication of Equals (SAE) and forward secrecy. The section concludes by summarizing the key differentiators (Personal mode vs Enterprise mode) to inform secure protocol selection.
+This section studies the evolution of wireless security by comparing the authentication and encryption methods in WPA, WPA2, and WPA3. The discussion breaks down the distinct approaches for Personal (PSK and SAE) and Enterprise (802.1X) modes, highlighting the progression from the deprecated TKIP to the robust AES-CCMP and AES-GCMP algorithms. The discussion covers specific vulnerabilities, such as the dictionary attack in WPA2-Personal, and the corresponding solutions introduced in WPA3, like Simultaneous Authentication of Equals (SAE) and forward secrecy. The section concludes by summarizing the key differentiators (Personal mode vs Enterprise mode) to inform secure protocol selection.
 
 ## Topics covered in this section
 
 * **Introduction**
-* **Cryptographic methods and algorithms in personal mode**
-* **Cryptographic methods and algorithms in enterprise mode**
+* **Cryptographic methods and algorithms in Personal mode**
+* **Cryptographic methods and algorithms in Enterprise mode**
 * **Evolution of Wi-Fi security: WPA, WPA2, and WPA3**
 * **Wireless security mechanisms: Authentication, privacy, and integrity**
 

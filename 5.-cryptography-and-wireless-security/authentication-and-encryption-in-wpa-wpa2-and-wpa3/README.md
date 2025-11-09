@@ -62,6 +62,17 @@ WPA3-Personal replaces PSK with SAE for authentication (PSK is still the "passwo
 
 Here’s a summary table for WPA, WPA2, and WPA3 in Enterprise mode, which replaces PSK/SAE with 802.1X authentication (typically using RADIUS servers and EAP methods).
 
+**The Relationship Between 802.1X and EAP**
+
+It is common to see the terms "802.1X" and "EAP" used together, as the complete Enterprise authentication system is more accurately described as "802.1X/EAP." 
+This is because 802.1X controls access and EAP performs the authentication.
+
+This is because 802.1X and EAP are two distinct components that work in tandem. 
+802.1X is the _framework_ for port-based access control. It defines the structure of the authentication conversation, specifying the roles of the Supplicant (client), Authenticator (AP/WLC), and Authentication Server (RADIUS), and it enforces the rule that the network port remains closed until authentication is successful.
+
+EAP (Extensible Authentication Protocol) is the set of methods that run _within_ the 802.1X framework to perform the actual credential verification. The 802.1X framework doesn't care _how_ you authenticate; it simply provides the secure container for an EAP method—such as EAP-TLS, PEAP, or EAP-TTLS—to do its work. 
+
+
 **Summary Table: WPA, WPA2, WPA3 (Enterprise Mode)**
 
 | **Protocol**        | **Authentication** | **Encryption**                 | **Integrity Method** | **Key Management**                                         |

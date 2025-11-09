@@ -87,7 +87,7 @@ Here’s a summary table for WPA, WPA2, and WPA3 in Enterprise mode, which repla
    * **WPA3-Enterprise**: Adds forward secrecy and stronger key derivation (e.g., CNSA-compliant for gov/military).
    * **WPA2/WPA3-Enterprise** are the only modes compliant with modern security standards (e.g., PCI-DSS).
 
-Notice from Evolution of Wi-Fi Security in WPA, WPA2, and WPA3 Table that WPA, WPA2, and WPA3 support 802.1x or enterprise authentication, which implies EAP-based authentication. However, the WPA versions do not require any specific EAP method. Instead, "the Wi-Fi Alliance certifies interoperability with well-known EAP methods like EAP-TLS, PEAP, EAP-TTLS, and EAP-SIM" (Odom, 2020, p. 717).
+Notice from Evolution of Wi-Fi Security in WPA, WPA2, and WPA3 Table that WPA, WPA2, and WPA3 support 802.1x or enterprise authentication, which implies EAP-based authentication. However, the WPA versions do not require any specific EAP method. Instead, "the Wi-Fi Alliance certifies interoperability with well-known EAP methods like EAP-TLS, PEAP, EAP-TTLS, and EAP-SIM" (Odom, 2020, p. 663).
 
 ### Evolution of Wi-Fi security: WPA, WPA2, and WPA3
 

@@ -19,8 +19,8 @@ This section studies the evolution of wireless security by comparing the authent
 ## Topics covered in this section
 
 * **Introduction**
-* **Cryptographic methods and algorithms in Personal mode**
-* **Cryptographic methods and algorithms in Enterprise mode**
+* **Cryptographic methods in Personal mode of WPA versions**
+* **Cryptographic methods in Enterprise mode of WPA versions**
 * **Evolution of Wi-Fi security: WPA, WPA2, and WPA3**
 * **Wireless security mechanisms: Authentication, privacy, and integrity**
 
@@ -36,9 +36,9 @@ The Wi-Fi Alliance introduced WPA3 in 2018, adding several important and superio
 
 The Wi-Fi Alliance made wireless security configuration straightforward and consistent through its WPA, WPA2, and WPA3 certifications. WPA, WPA2, and WPA3 simplify wireless network configuration and compatibility because they limit which authentication and privacy/integrity methods can be used.
 
-### Cryptographic methods and algorithms in personal mode
+### Cryptographic methods in Personal mode of WPA versions
 
-With personal mode, a key string must be shared or configured on every client and AP before the clients can connect to the wireless network. The pre-shared key is normally kept confidential so that unauthorized users have no knowledge of it. The key string is never sent over the air. Instead, clients and APs work through a four-way handshake procedure that uses the pre-shared key string to construct and exchange encryption key material that can be openly exchanged. Once that process is successful, the AP can authenticate the client and the two can secure data frames that are sent over the air. (p. 717)
+With personal mode, a key string must be shared or configured on every client and AP before the clients can connect to the wireless network. The pre-shared key is normally kept confidential so that unauthorized users have no knowledge of it. The key string is never sent over the air. Instead, clients and APs work through a four-way handshake procedure that uses the pre-shared key string to construct and exchange encryption key material that can be openly exchanged. Once that process is successful, the AP can authenticate the client and the two can secure data frames that are sent over the air. (Odom, 2020, p. 663)
 
 With WPA-Personal and WPA2-Personal modes, a malicious user can intercept the four-way handshake between a client and an AP and then use a dictionary attack to guess the pre-shared key. If successful, the malicious user can then decrypt the wireless data or join the network as if a legitimate user.
 
@@ -58,7 +58,7 @@ The Personal mode of any WPA version is easy to deploy in a small environment be
 
 WPA3-Personal replaces PSK with SAE for authentication (PSK is still the "password," but SAE is the protocol for key derivation), and uses AES-GCMP for encryption and integrity.
 
-### Cryptographic methods and algorithms in enterprise mode
+### Cryptographic methods in Enterprise mode of WPA versions
 
 Here’s a summary table for WPA, WPA2, and WPA3 in Enterprise mode, which replaces PSK/SAE with 802.1X authentication (typically using RADIUS servers and EAP methods).
 

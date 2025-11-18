@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -183,14 +183,14 @@
   },
   "active": "06a011ac2e27949f",
   "lastOpenFiles": [
-    "5.-cryptography-and-wireless-security/authentication-and-encryption-in-wpa-wpa2-and-wpa3/README.md",
+    "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/README.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md",
+    "5.-cryptography-and-wireless-security/authentication-and-encryption-in-wpa-wpa2-and-wpa3/README.md",
     "5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods/README.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/reconnaissance-footprinting.md",
     "6.-practical-foundations-in-ethical-hacking/chapter-6-review-questions.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/phases-of-the-penetration-testing-process-quiz.md",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing/README.md",
-    "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/README.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/passive-discovery-method.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/scanning-and-enumeration/scanning-and-enumeration-tools.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/scanning-and-enumeration/scanning-and-enumeration-techniques-and-tools.md",

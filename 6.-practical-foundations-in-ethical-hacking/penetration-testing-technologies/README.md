@@ -103,6 +103,7 @@ Burp Suite dominates web app penetration testing, offering tools like:
 * **Scanner** (Pro) to automate detection of SQLi, XSS, and CSRF.
 * **Intruder** for brute-forcing logins or fuzzing endpoints.
 * **Repeater** to manually test API vulnerabilities (e.g., insecure direct object references).
+* **Collaborator** (Pro) for detecting blind SSRF or out-of-band (OOB) vulnerabilities.
 
 For example, Burp can intercept a JWT token, decode it in Decoder, and test for algorithm-switching attacks. 
 
@@ -112,13 +113,13 @@ Burp Suite is available in two versions: Burp Suite Professional (paid) and Comm
 
 - **Automated Scanning:** The core differentiator. Pro has an automated active vulnerability scanner; Community does not.
 - **Manual Testing Tools:** **Pro offers unlimited use** of Intruder (fuzzing) and Repeater; Community's versions are rate-limited and lack advanced features.
-- **Out-of-Band Testing:** **Pro includes Burp Collaborator** for detecting blind SSRF or out-of-band (OOB)  vulnerabilities; Community has no equivalent.
+- **Out-of-Band Testing:** **Pro includes Burp Collaborator** for detecting blind SSRF or out-of-band (OOB) vulnerabilities; Community has no equivalent.
 - **Workflow & Reporting:** **Pro has advanced workflow features** (task scheduler, saved configurations) and detailed reporting; Community's workflow is entirely manual.
 - **Use Case:** **Pro is for professional, efficient testing;** Community is for learning, simple tasks, or manual-only testing.
 
 **OWASP ZAP: Web Application Testing**
 
-**OWASP ZAP** (Zed Attack Proxy) is a leading open-source web application security scanner, maintained under the **Open Web Application Security Project (OWASP)** umbrella. It is designed to be a comprehensive and accessible tool for finding vulnerabilities in web applications during both development and testing phases. Key features include an **intercepting proxy** for manual testing, **automated scanners** for passive and active vulnerability detection, and a suite of tools for fuzzing and spidering. For example, its **AJAX Spider** can effectively crawl modern, dynamic applications, while the **active scanner** can automatically test for flaws like SQL Injection and Cross-Site Scripting (XSS). ZAP's "heads-up display" (HUD) introduces a novel, integrated approach by providing security information and testing capabilities directly within the browser. Its open-source nature and strong community support make it a popular alternative to commercial scanners, especially for automated security testing in CI/CD pipelines.
+OWASP ZAP (Zed Attack Proxy) is a leading open-source web application security scanner, maintained under the Open Web Application Security Project (OWASP) umbrella. It is designed to be a comprehensive and accessible tool for finding vulnerabilities in web applications during both development and testing phases. Key features include an intercepting proxy for manual testing, automated scanners for passive and active vulnerability detection, and a suite of tools for fuzzing and spidering. For example, its AJAX Spider can effectively crawl modern, dynamic applications, while the active scanner can automatically test for flaws like SQL Injection and Cross-Site Scripting (XSS). ZAP's "heads-up display" (HUD) introduces a novel, integrated approach by providing security information and testing capabilities directly within the browser. Its open-source nature and strong community support make it a popular alternative to commercial scanners, especially for automated security testing in CI/CD pipelines.
 
 **Comparison of Web Application Testing Tools**
 
@@ -134,9 +135,7 @@ Burp Suite is available in two versions: Burp Suite Professional (paid) and Comm
 | **CI/CD Integration**                                | Yes (Powerful APIs and scheduling)                                                           | Limited                                 | Yes (Strong native support for automation and CI/CD pipelines due to its open-source nature) |
 | **Unique Features**                                  | Collaborator for detecting out-of-band vulnerabilities; Sequencer for session token analysis | Entry-point to Burp's core manual tools | Integrated HUD for in-browser testing; Traditional and AJAX Spidering combined               |
 
-**Integration of the core tools in a Penetration Test**
-
-The integration of these tools forms a **kill chain**:
+The integration of these core tools in a penetration test forms a kill chain:
 
 1. **Nmap** scouts the network.
 2. **OpenVAS** pinpoints vulnerabilities.
@@ -148,10 +147,10 @@ For instance, a tester might:
 
 * Use Nmap to find an exposed WordPress site (`port 80`).
 * Run OpenVAS to detect CVE-2022-3590 (SQLi in a plugin).
-* Craft an exploit with **Metasploit’s** `wp_admin_shell_upload`.
-* Capture session cookies via **Burp Proxy** to hijack an admin account.
+* Craft an exploit with Metasploit’s `wp_admin_shell_upload`.
+* Capture session cookies via Burp Proxy to hijack an admin account.
 
-Mastering these tools requires understanding their **strengths** and **limitations**. Nmap and OpenVAS excel at discovery, while Metasploit and Burp Suite drive exploitation. tcpdump provides low-level insights for advanced attacks. Together, they enable comprehensive security assessments, from **external network scans** to **web app hijacking**, aligning with **CEH** and **OSCP** methodologies.
+Mastering these tools requires understanding their strengths and limitations. Nmap and OpenVAS excel at discovery, while Metasploit and Burp Suite/ZAP drive exploitation. tcpdump provides low-level insights for advanced attacks. Together, they enable comprehensive security assessments, from external network scans to web app hijacking, aligning with CEH and OSCP methodologies.
 
 ### Key takeaways
 

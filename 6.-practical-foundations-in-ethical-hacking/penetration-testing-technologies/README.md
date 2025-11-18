@@ -91,28 +91,28 @@ tcpdump provides packet-level visibility into network traffic, essential for deb
 
 ### Metasploit: Exploitation and post-exploitation
 
-The **Metasploit Framework** automates exploitation and **post-exploitation workflows**. Its modular design includes **exploits** (e.g., `multi/handler` for reverse shells), **payloads** (e.g., Meterpreter), and **auxiliary modules** (e.g., SMB brute-forcing). For example, after identifying an unpatched SMB service via Nmap, a pentester could deploy `exploit/windows/smb/ms17_010_eternalblue` to gain a shell. Metasploit’s **post-modules** (e.g., `hashdump`, `mimikatz`) enable lateral movement, privilege escalation, and data exfiltration, simulating advanced persistent threats (APTs).
+The Metasploit Framework automates exploitation and post-exploitation workflows. Its modular design includes exploits (e.g., `multi/handler` for reverse shells), payloads (e.g., Meterpreter), and auxiliary modules (e.g., SMB brute-forcing). For example, after identifying an unpatched SMB service via Nmap, a pentester could deploy `exploit/windows/smb/ms17_010_eternalblue` to gain a shell. Metasploit’s post-modules (e.g., `hashdump`, `mimikatz`) enable lateral movement, privilege escalation, and data exfiltration, simulating advanced persistent threats (APTs).
 
 ### Burp Suite/OWASP ZAP
 
 **Burp Suite: Web Application Testing**
 
-**Burp Suite** dominates **web app penetration testing**, offering tools like:
+Burp Suite dominates web app penetration testing, offering tools like:
 
 * **Proxy** for intercepting/modifying requests (e.g., bypassing client-side validation).
 * **Scanner** (Pro) to automate detection of SQLi, XSS, and CSRF.
 * **Intruder** for brute-forcing logins or fuzzing endpoints.
 * **Repeater** to manually test API vulnerabilities (e.g., insecure direct object references).
 
-For example, Burp can intercept a JWT token, decode it in **Decoder**, and test for algorithm-switching attacks. Its **Collaborator** feature (Pro) helps detect blind SSRF or out-of-band (OOB) vulnerabilities.
+For example, Burp can intercept a JWT token, decode it in Decoder, and test for algorithm-switching attacks. 
 
 **Burp Suite Professional vs. Community Edition**
 
 Burp Suite is available in two versions: Burp Suite Professional (paid) and Community Edition. The key differences pertain to the following features:
 
-- **Automated Scanning:** The core differentiator. **Pro has an automated active vulnerability scanner; Community does not.**
+- **Automated Scanning:** The core differentiator. Pro has an automated active vulnerability scanner; Community does not.
 - **Manual Testing Tools:** **Pro offers unlimited use** of Intruder (fuzzing) and Repeater; Community's versions are rate-limited and lack advanced features.
-- **Out-of-Band Testing:** **Pro includes Burp Collaborator** for detecting blind vulnerabilities; Community has no equivalent.
+- **Out-of-Band Testing:** **Pro includes Burp Collaborator** for detecting blind SSRF or out-of-band (OOB)  vulnerabilities; Community has no equivalent.
 - **Workflow & Reporting:** **Pro has advanced workflow features** (task scheduler, saved configurations) and detailed reporting; Community's workflow is entirely manual.
 - **Use Case:** **Pro is for professional, efficient testing;** Community is for learning, simple tasks, or manual-only testing.
 

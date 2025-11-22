@@ -6,14 +6,11 @@ description: This section discusses major open source penetration testing techno
 
 ## Learning objectives <a href="#learning-objectives" id="learning-objectives"></a>
 
-- Become familiar with the core features and primary use cases of major open source penetration testing technologies
-    
-- Differentiate between the functionalities of key tools, such as network mapping (Nmap) versus in-depth vulnerability assessment (OpenVAS), to apply the right tool for each phase of a penetration test.
-    
+- Become familiar with core features and primary use cases of major open source penetration testing technologies
+- Differentiate between the functionalities of key tools, such as network mapping (Nmap) and vulnerability scanning (OpenVAS)
 - Understand how these technologies integrate to form a comprehensive penetration testing kill chain
 
-
-This section discusses major open source penetration testing technologies, specifically, Nmap, OpenVAS, tcpdump, Metasploit, and Burp Suite/OWASP ZAP.
+This section provides a comprehensive overview of the major open source technologies that form the backbone of modern penetration testing. We explore the core features and practical applications of essential tools, including Nmap for network discovery, OpenVAS for vulnerability scanning, tcpdump for traffic analysis, Metasploit for exploitation, and Burp Suite/OWASP ZAP for web application security. Understanding the distinct role of each tool as well as how tools complement each other is fundamental to executing a systematic and effective security assessment.
 
 ## Topics covered in this section <a href="#topics-covered-in-this-section" id="topics-covered-in-this-section"></a>
 
@@ -26,7 +23,7 @@ This section discusses major open source penetration testing technologies, speci
 
 ### Introduction
 
-Penetration testing relies on a suite of specialized tools to identify vulnerabilities, exploit weaknesses, and validate security postures. Among these, **Nmap**, **OpenVAS**, **tcpdump**, **Metasploit**, and **Burp Suite/OWASP ZAP** serve as core technologies, each addressing distinct phases of the penetration test—from reconnaissance to exploitation and post-exploitation.
+Penetration testing relies on a suite of specialized tools to systematically identify vulnerabilities, exploit weaknesses, and validate an organization's security posture. This process, often conceptualized as a "kill chain", involves "sequential" phases such as reconnaissance, scanning and enumeration, gaining access, and maintaining access. Among the vast array of available utilities, Nmap, OpenVAS, tcpdump, Metasploit, and Burp Suite/OWASP ZAP serve as core technologies, each addressing distinct phases of the penetration test lifecycle. Mastering this toolkit is not just about learning individual commands but understanding how to strategically chain these tools together to simulate sophisticated attacks and provide actionable insights for hardening defenses.
 
 ### Nmap: Network reconnaissance and enumeration
 

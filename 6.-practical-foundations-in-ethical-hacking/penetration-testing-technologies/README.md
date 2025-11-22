@@ -6,7 +6,12 @@ description: This section discusses major open source penetration testing techno
 
 ## Learning objectives <a href="#learning-objectives" id="learning-objectives"></a>
 
-* Become familiar with major open source penetration testing technologies
+- Become familiar with the core features and primary use cases of major open source penetration testing technologies
+    
+- Differentiate between the functionalities of key tools, such as network mapping (Nmap) versus in-depth vulnerability assessment (OpenVAS), to apply the right tool for each phase of a penetration test.
+    
+- Understand how these technologies integrate to form a comprehensive penetration testing kill chain
+
 
 This section discusses major open source penetration testing technologies, specifically, Nmap, OpenVAS, tcpdump, Metasploit, and Burp Suite/OWASP ZAP.
 

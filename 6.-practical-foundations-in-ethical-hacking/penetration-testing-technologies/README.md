@@ -154,7 +154,7 @@ Mastering these tools requires understanding their strengths and limitations. Nm
 
 ### Key takeaways
 
-* A skilled pentester chains these tools strategically, simulating real-world attacks to harden defenses.
+* A skilled pentester chains testing tools strategically, simulating real-world attacks to harden defenses.
 
 ### References
 

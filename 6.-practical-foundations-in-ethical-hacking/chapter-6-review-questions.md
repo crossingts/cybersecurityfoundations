@@ -181,8 +181,8 @@
 **3. Beyond simple traffic capture, what two key strengths of tcpdump make it indispensable for penetration testers, according to the section?**\
 **Answer:** Two key strengths of tcpdump are its sophisticated filtering capabilities for isolating specific traffic from a high-volume stream, and its indispensability for forensic analysis and validating exploit delivery by capturing the exact sequence of network events.
 
-**4. The Metasploit Framework is described as automating exploitation and post-exploitation workflows. What are the two key phases this involves, and what is a core feature of the Meterpreter payload that aids in the second phase?**\
-**Answer:** The two key phases are exploitation (gaining initial access) and post-exploitation (activities after access is gained). A core feature of the Meterpreter payload that aids in post-exploitation is that it is a robust, in-memory agent that avoids writing to the disk, reducing the chance of detection.
+**4. The Metasploit Framework is described as automating exploitation and post-exploitation workflows. What is a core feature of the Meterpreter payload that aids in the second phase?**\
+**Answer:** A core feature of the Meterpreter payload that aids in post-exploitation is that it is a robust, in-memory agent that avoids writing to the disk, reducing the chance of detection.
 
 **5. Based on the section's comparison, what are three key feature limitations of Burp Suite Community Edition when compared to Burp Suite Professional?**\
 **Answer:** Three key limitations of Burp Suite Community Edition are: (1) it lacks an automated active vulnerability scanner, (2) its manual tools like Intruder are rate-limited, and (3) it does not include Burp Collaborator for detecting out-of-band vulnerabilities.

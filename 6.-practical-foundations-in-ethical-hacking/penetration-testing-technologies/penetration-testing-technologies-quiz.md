@@ -14,7 +14,7 @@ b) **TCP packets with only the SYN flag set, indicating potential port scanning*
 c) DNS query and response packets\
 d) HTTP traffic containing cleartext passwords
 
-**3. What is the primary differentiator between Burp Suite Professional and the Community Edition that makes the Pro version essential for efficient professional testing? (Choose one answer)**\
+**3. What is the primary differentiator between Burp Suite Professional and the Community Edition? (Choose one answer)**\
 a) The presence of an intercepting Proxy tool\
 b) The ability to manually send requests with the Repeater tool\
 c) **The inclusion of an automated, active vulnerability scanner**\
@@ -29,5 +29,5 @@ d) Weaponization
 **5. According to the section's comparison, what is the fundamental difference in how Nmap and OpenVAS approach authenticated scanning? (Choose one answer)**\
 a) Only Nmap is capable of performing any form of authenticated scan\
 b) OpenVAS uses its core engine for authenticated checks, while Nmap relies on a separate scripting system\
-c) **Authenticated scanning is a core, integrated feature of OpenVAS, while in Nmap it is a limited capability provided by its Nmap Scripting Engine (NSE)**\
+c) **Authenticated scanning is a core, integrated feature of OpenVAS, while in Nmap it is a limited capability powered by its Nmap Scripting Engine (NSE)**\
 d) Nmap's authenticated scans are more comprehensive and are used for compliance auditing

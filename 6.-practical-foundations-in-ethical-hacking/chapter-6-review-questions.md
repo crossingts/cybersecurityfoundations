@@ -183,3 +183,6 @@
 
 **4. The Metasploit Framework is described as automating exploitation and post-exploitation workflows. What is a core feature of the Meterpreter payload that aids in the second phase?**\
 **Answer:** A core feature of the Meterpreter payload that aids in post-exploitation is that it is a robust, in-memory agent that avoids writing to the disk, reducing the chance of detection.
+
+**5. What is the primary advantage of OWASP ZAP's "heads-up display" (HUD) feature, and what specific testing environment makes ZAP a popular choice?**\
+**Answer:** The primary advantage of the HUD is that it provides security information and testing capabilities directly within the browser, offering a novel, integrated approach to testing. ZAP is a popular choice for automated security testing in CI/CD pipelines due to its open-source nature and strong native support for automation.

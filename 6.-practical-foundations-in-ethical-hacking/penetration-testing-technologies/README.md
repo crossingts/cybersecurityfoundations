@@ -19,7 +19,8 @@ This section provides a comprehensive overview of the major open source technolo
 * **OpenVAS: Vulnerability assessment**
 * **tcpdump: Traffic analysis and forensics**
 * **Metasploit: Exploitation and post-exploitation**
-* **Burp Suite/OWASP ZAP**
+* **Burp Suite**
+* **OWASP ZAP**
 
 ### Introduction
 
@@ -107,9 +108,9 @@ A typical exploitation workflow within Metasploit follows a structured sequence.
 
 Beyond initial access, Metasploit's true power is its extensive post-exploitation capabilities, largely delivered through the Meterpreter payload. Meterpreter provides a robust, in-memory command-and-control agent that avoids writing to the disk, reducing the chance of detection. From a Meterpreter session, a tester can perform a wide array of actions, such as keylogging, taking screenshots, pivoting to other networks, and maintaining persistence. Furthermore, the `load` command within Meterpreter can extend its functionality on-the-fly, for instance by loading the `kiwi` module to interface with the Mimikatz tool for credential dumping directly from memory. This makes Metasploit an all-in-one platform for not just breaking in, but for thoroughly exploring what an attacker can accomplish once inside a network.
 
-### Burp Suite/OWASP ZAP
+### Burp Suite
 
-**Burp Suite: Web Application Testing**
+Burp Suite is available in two versions: Burp Suite Professional (paid) and Burp Suite Community Edition. 
 
 Burp Suite dominates web app penetration testing, offering tools like:
 
@@ -121,9 +122,9 @@ Burp Suite dominates web app penetration testing, offering tools like:
 
 For example, Burp can intercept a JWT token, decode it in Decoder, and test for algorithm-switching attacks. 
 
-**Burp Suite Professional vs. Community Edition**
+#### Burp Suite Professional vs. Community Edition
 
-Burp Suite is available in two versions: Burp Suite Professional (paid) and Community Edition. The key differences pertain to the following features:
+The key differences between Burp Suite Professional and Burp Suite Community Edition pertain to the following features:
 
 - **Automated Scanning:** The core differentiator. Pro has an automated active vulnerability scanner; Community does not.
 - **Manual Testing Tools:** **Pro offers unlimited use** of Intruder (fuzzing) and Repeater; Community's versions are rate-limited and lack advanced features.
@@ -131,7 +132,7 @@ Burp Suite is available in two versions: Burp Suite Professional (paid) and Comm
 - **Workflow & Reporting:** **Pro has advanced workflow features** (task scheduler, saved configurations) and detailed reporting; Community's workflow is entirely manual.
 - **Use Case:** **Pro is for professional, efficient testing;** Community is for learning, simple tasks, or manual-only testing.
 
-**OWASP ZAP: Web Application Testing**
+### OWASP ZAP
 
 OWASP ZAP (Zed Attack Proxy) is a leading open-source web application security scanner, maintained under the Open Web Application Security Project (OWASP) umbrella. It is designed to be a comprehensive and accessible tool for finding vulnerabilities in web applications during both development and testing phases. Key features include an intercepting proxy for manual testing, automated scanners for passive and active vulnerability detection, and a suite of tools for fuzzing and spidering. For example, its AJAX Spider can effectively crawl modern, dynamic applications, while the active scanner can automatically test for flaws like SQL Injection and Cross-Site Scripting (XSS). ZAP's "heads-up display" (HUD) introduces a novel, integrated approach by providing security information and testing capabilities directly within the browser. Its open-source nature and strong community support make it a popular alternative to commercial scanners, especially for automated security testing in CI/CD pipelines.
 

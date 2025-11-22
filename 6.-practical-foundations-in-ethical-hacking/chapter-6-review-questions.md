@@ -183,6 +183,3 @@
 
 **4. The Metasploit Framework is described as automating exploitation and post-exploitation workflows. What is a core feature of the Meterpreter payload that aids in the second phase?**\
 **Answer:** A core feature of the Meterpreter payload that aids in post-exploitation is that it is a robust, in-memory agent that avoids writing to the disk, reducing the chance of detection.
-
-**5. Based on the section's comparison, what are three key feature limitations of Burp Suite Community Edition when compared to Burp Suite Professional?**\
-**Answer:** Three key limitations of Burp Suite Community Edition are: (1) it lacks an automated active vulnerability scanner, (2) its manual tools like Intruder are rate-limited, and (3) it does not include Burp Collaborator for detecting out-of-band vulnerabilities.

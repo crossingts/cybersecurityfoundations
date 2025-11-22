@@ -169,3 +169,20 @@
 
 **5. A penetration tester needs to conduct an assessment specifically to meet the mandatory requirements for protecting payment card data. Which standard or methodology must they follow?**\
 **Answer:** They must follow the requirements outlined in the Payment Card Industry Data Security Standard (PCI-DSS).
+
+### Penetration testing technologies
+
+**1. Describe the primary purpose of the Nmap tool and list two of its core scanning capabilities.**\
+**Answer:** The primary purpose of Nmap is network discovery, port scanning, and service enumeration. Two of its core capabilities are host discovery (using techniques like `-sn`) and service/version detection (using the `-sV` flag).
+
+**2. According to the section's comparison, what are the primary purposes of OpenVAS and Nmap, and how do they complement each other in a typical workflow?**\
+**Answer:** The primary purpose of Nmap is network discovery and service fingerprinting, while the primary purpose of OpenVAS is in-depth vulnerability detection and management. They complement each other as a security professional would use Nmap first for initial reconnaissance to find active hosts and open ports, and then use OpenVAS to perform a deep vulnerability scan against those discovered targets.
+
+**3. Beyond simple traffic capture, what two key strengths of tcpdump make it indispensable for penetration testers, according to the section?**\
+**Answer:** Two key strengths of tcpdump are its sophisticated filtering capabilities for isolating specific traffic from a high-volume stream, and its indispensability for forensic analysis and validating exploit delivery by capturing the exact sequence of network events.
+
+**4. The Metasploit Framework is described as automating exploitation and post-exploitation workflows. What are the two key phases this involves, and what is a core feature of the Meterpreter payload that aids in the second phase?**\
+**Answer:** The two key phases are exploitation (gaining initial access) and post-exploitation (activities after access is gained). A core feature of the Meterpreter payload that aids in post-exploitation is that it is a robust, in-memory agent that avoids writing to the disk, reducing the chance of detection.
+
+**5. Based on the section's comparison, what are three key feature limitations of Burp Suite Community Edition when compared to Burp Suite Professional?**\
+**Answer:** Three key limitations of Burp Suite Community Edition are: (1) it lacks an automated active vulnerability scanner, (2) its manual tools like Intruder are rate-limited, and (3) it does not include Burp Collaborator for detecting out-of-band vulnerabilities.

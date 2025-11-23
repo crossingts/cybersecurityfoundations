@@ -13,7 +13,7 @@ This section teaches how to set up a fully functional cybersecurity virtual lab 
 ## Topics covered in this section
 
 * **Setting up a cybersecurity lab steps**
-* **Design the lab - choose a design pipeline**
+* **Designing the cybersecurity lab (choosing a design pipeline)**
 
 ### Setting up a cybersecurity lab steps
 
@@ -29,7 +29,7 @@ This section teaches how to set up a fully functional cybersecurity virtual lab 
   * Configure and verify Kali Linux
 * Launch attacks from Kali Linux and document the project
 
-### Design the lab - choose a design pipeline  
+### Designing the cybersecurity lab (choosing a design pipeline)
 
 **Design pipeline 1 (ARM64):**  
 

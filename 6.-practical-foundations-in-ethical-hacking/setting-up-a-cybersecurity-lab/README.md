@@ -1,7 +1,5 @@
 ---
-description: >-
-  This exercise will guide you through setting up a fully functional
-  cybersecurity virtual lab using exclusively open source technologies
+description: This guide will walk you through setting up a fully functional cybersecurity virtual lab using exclusively open source technologies
 ---
 
 # Setting up a cybersecurity lab

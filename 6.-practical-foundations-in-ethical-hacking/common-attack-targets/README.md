@@ -45,8 +45,8 @@ Most vulnerabilities exploited by penetration testing fall into the following ca
 
 1. **Focus on Exploitability**:
    * These vulnerabilities are prioritized because they’re **frequently exploitable** during pentests (e.g., misconfigurations are low-hanging fruit).
-   * Many stem from **poor system hygiene** (defaults, permissions).
-2. **Attack Surface Coverage**:
+   * Many stem from **poor system administration** (defaults, permissions).
+1. **Attack Surface Coverage**:
    * **Kernel flaws** → OS-level compromise.
    * **Input validation** → Web app breaches (OWASP Top 10 overlap).
    * **Race conditions/symlinks** → Advanced privilege escalation.

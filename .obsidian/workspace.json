@@ -32,20 +32,6 @@
               "icon": "lucide-book-up",
               "title": "Release Notes 1.10.6"
             }
-          },
-          {
-            "id": "2853a061a632aa08",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://obsidian.md/changelog/",
-                "title": "Obsidian Changelog - Obsidian",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "Obsidian Changelog - Obsidian"
-            }
           }
         ],
         "currentTab": 1

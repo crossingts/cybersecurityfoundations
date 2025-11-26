@@ -20,8 +20,35 @@
               "icon": "lucide-file",
               "title": "README"
             }
+          },
+          {
+            "id": "8d1af660eaf26a91",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.10.6"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.10.6"
+            }
+          },
+          {
+            "id": "2853a061a632aa08",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://obsidian.md/changelog/",
+                "title": "Obsidian Changelog - Obsidian",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "Obsidian Changelog - Obsidian"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -181,8 +208,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "06a011ac2e27949f",
+  "active": "8d1af660eaf26a91",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/README.md",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets/README.md",
     "6.-practical-foundations-in-ethical-hacking/chapter-6-review-questions.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/penetration-testing-technologies-quiz.md",
@@ -211,7 +239,6 @@
     "6.-practical-foundations-in-ethical-hacking/passive-discovery-method.md",
     "6.-practical-foundations-in-ethical-hacking/gaining-access-attacking-a-system.md",
     "5.-cryptography-and-wireless-security/wireless-client-authentication-methods/README.md",
-    "5.-cryptography-and-wireless-security/wireless-privacy-and-integrity-methods/weps-weaknesses-and-how-tkip-addressed-them.md",
     "6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing",
     "Pasted image 20251017114230.png",
     "6.-practical-foundations-in-ethical-hacking/packet-analyzers",

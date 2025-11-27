@@ -12,14 +12,17 @@ This section teaches how to set up a fully functional cybersecurity virtual lab 
 
 ## Topics covered in this section
 
-* **Setting up a cybersecurity lab steps**
-* **Designing the cybersecurity lab (choosing a design pipeline)**
+* **Setting up a cybersecurity lab - steps**
+* **Design the cybersecurity lab (choose a design pipeline)**
+* **Choose a virtualization environment**
+* **Choose a project documentation platform**
+* **Build the lab**
 
-### Setting up a cybersecurity lab steps
+### Setting up a cybersecurity lab - steps
 
-* Design the lab - choose a design pipeline  
-* Choose a virtualization environment/tool
-* Choose a project documentation platform/method
+* Design the cybersecurity lab (choose a design pipeline) 
+* Choose a virtualization environment
+* Choose a project documentation platform
 * Build the lab  
   * Configure subnet interfaces and verify connectivity
   * Configure and verify the firewall
@@ -29,7 +32,7 @@ This section teaches how to set up a fully functional cybersecurity virtual lab 
   * Configure and verify Kali Linux
 * Launch attacks from Kali Linux and document the project
 
-### Designing the cybersecurity lab (choosing a design pipeline)
+### Design the cybersecurity lab (choose a design pipeline)
 
 **Design pipeline 1 (ARM64):**  
 
@@ -112,7 +115,7 @@ pfSense (firewall) + Snort (IDS/IPS) + web server (Apache) and/or database serve
 
 ***
 
-### Choose a virtualization environment/tool
+### Choose a virtualization environment
 
 **Open source and free virtualization tools**
 
@@ -129,7 +132,7 @@ pfSense (firewall) + Snort (IDS/IPS) + web server (Apache) and/or database serve
 * **For macOS-only free use** → **VMware Fusion Player** (better performance than VirtualBox but single-VM limit).
 * **For lightweight Windows/Linux use** → **VMware Workstation Player** (free but single-VM limit).
 
-#### **QEMU: Emulation vs. Virtualization**
+#### QEMU: Emulation vs. Virtualization
 
 * **QEMU by itself** is primarily an **emulator**—it can simulate entire systems (CPU, memory, devices) even on different architectures (e.g., running ARM on x86). This makes it flexible but slower than hardware-assisted virtualization.
 * **QEMU + KVM (Kernel-based Virtual Machine)** enables **full hardware-assisted virtualization** (like VMware or VirtualBox) when running on Linux.  
@@ -139,7 +142,7 @@ pfSense (firewall) + Snort (IDS/IPS) + web server (Apache) and/or database serve
 
 ***
 
-### Choose a project documentation platform/method
+### Choose a project documentation platform
 
 **Comparison Table: Documentation Platforms**
 
@@ -172,7 +175,7 @@ _SSGs = Static Site Generators (e.g., Jekyll, MkDocs, Docusaurus)._
    * **Draw.io** (integrate with all platforms).
    * Store Draw.io source files (.xml/.drawio) in your repo for version control.
 
-#### **How to Embed Draw.io Diagrams & Mermaid.js Support**
+#### How to Embed Draw.io Diagrams & Mermaid.js Support
 
 | Platform         | Draw.io Embed Method                                                                                                         | Live Updates? | Mermaid.js?                        | Best Use Case                               |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------- | ------------- | ---------------------------------- | ------------------------------------------- |
@@ -213,3 +216,13 @@ _SSGs = Static Site Generators (e.g., Jekyll, MkDocs, Docusaurus)._
 | **Best for**   | Simple, version-controlled diagrams in docs. | Complex designs (e.g., network topologies). |
 
 ***
+
+### Build the lab
+
+  * Configure subnet interfaces and verify connectivity
+  * Configure and verify the firewall
+  * Configure and verify the IDS/IPS
+  * Configure and verify a web server (e.g., nginx or Apache) and/or a database server (e.g., MySQL)
+  * Configure and verify SIEM/EDR (e.g., Wazuh)
+  * Configure and verify Kali Linux
+* Launch attacks from Kali Linux and document the project

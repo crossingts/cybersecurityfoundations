@@ -25,12 +25,14 @@
             "id": "8d1af660eaf26a91",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.10.6"
+                "file": "6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/README.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.10.6"
+              "icon": "lucide-file",
+              "title": "README"
             }
           }
         ],

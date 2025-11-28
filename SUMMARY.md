@@ -178,7 +178,7 @@
   * [OWASP ZAP cheat sheet for vulnerability assessment and penetration testing](6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/owasp-zap-cheat-sheet-for-vulnerability-assessment-va-and-penetration-testing-pt.md)
   * [Burp Suite/OWASP ZAP vs Wireshark/tcpdump](6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/burp-suite-owasp-zap-vs-wireshark-tcpdump.md)
   * [Penetration testing technologies — Quiz](6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/penetration-testing-technologies-quiz.md)
-* [Copy of Common attack targets-2](6.-practical-foundations-in-ethical-hacking/common-attack-targets.md)
+* [Common attack targets-2](6.-practical-foundations-in-ethical-hacking/common-attack-targets.md)
 * [Common attack targets](6.-practical-foundations-in-ethical-hacking/common-attack-targets-1/README.md)
   * [Attack types (CEH/EC-Council)](6.-practical-foundations-in-ethical-hacking/common-attack-targets-1/attack-types-ceh-ec-council.md)
   * [Attack target vs attack vector](6.-practical-foundations-in-ethical-hacking/common-attack-targets-1/attack-target-vs-attack-vector.md)

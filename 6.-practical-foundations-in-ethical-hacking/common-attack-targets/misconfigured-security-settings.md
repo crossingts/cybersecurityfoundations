@@ -2,12 +2,78 @@
 
 ## Topics covered
 
-* **Misconfigured security settings**
-* **Insecure default settings**
+* Insecure default settings
+* Misconfigured security settings
+
+### Insecure default settings
+
+Misconfigurations occur when systems, applications, or networks are improperly set up, often due to reliance on default settings that prioritize ease of deployment over security. Here are common examples:
+
+**1. Default Credentials**
+
+* Many devices (routers, IoT devices, servers) ship with **default usernames and passwords** (e.g., `admin:admin`).
+* **Example:** Attackers scan for devices with unchanged default logins (e.g., Mirai botnet exploited default IoT credentials).
+
+**2. Open or Unrestricted Ports & Services**
+
+* Unnecessary services (e.g., Telnet, FTP, SMB) left enabled by default.
+* **Example:** EternalBlue exploited open SMB ports in Windows systems.
+
+**3. Excessive Permissions**
+
+* Default configurations granting **unnecessary privileges** (e.g., "Everyone: Full Control" in file shares).
+* **Example:** AWS S3 buckets set to **public by default**, leading to data leaks.
+
+**4. Debug Mode Enabled in Production**
+
+* Web applications/frameworks (e.g., Django, Flask) sometimes run in **debug mode by default**, exposing sensitive data.
+
+**5. Directory Listing Enabled**
+
+* Web servers (e.g., Apache, Nginx) may allow **directory traversal**, exposing files unintentionally.
+
+**6. Unpatched or Outdated Default Software**
+
+* Some systems ship with **old, vulnerable software versions** (e.g., outdated PHP, WordPress plugins).
+
+**7. Default Cryptographic Keys/Certificates**
+
+* Devices (e.g., routers, IoT) sometimes use **hardcoded encryption keys**, making decryption easy for attackers.
+
+**8. Cloud Misconfigurations**
+
+* **Example:**
+  * Publicly accessible **Kubernetes dashboards**.
+  * **Overprivileged IAM roles** in AWS/Azure.
+  * **Unencrypted storage** (e.g., databases/blobs set to public).
+
+**9. Unsecured APIs**
+
+* APIs with **no authentication**, **exposed admin endpoints**, or **excessive data exposure** by default.
+
+**10. Lack of Logging/Monitoring**
+
+* Many systems **do not log security events by default**, allowing attackers to operate undetected.
+
+**Real-World Exploits Due to Misconfigurations:**
+
+* **MongoDB ransomware attacks** (databases left exposed without authentication).
+* **Citrix ADC (CVE-2019-19781)** – Default settings allowed remote code execution.
+* **Elasticsearch data leaks** – No authentication enabled by default.
+
+**How to Prevent Misconfiguration Vulnerabilities:**
+
+✔ **Change default credentials** immediately.\
+✔ **Disable unnecessary services/ports**.\
+✔ **Follow least-privilege principles** (restrict permissions).\
+✔ **Enable security features** (encryption, logging, WAFs).\
+✔ **Regularly audit configurations** (using tools like **Nessus, OpenVAS, AWS Config**).
 
 ### Misconfigured security settings
 
-Misconfigured security settings occur when systems, applications, or networks are set up insecurely, leaving them vulnerable to attacks. Unlike simple **default settings issues**, misconfigurations can arise from **human error, lack of security awareness, or poor maintenance**.
+Misconfigured security settings occur when systems, applications, or networks are set up insecurely, leaving them vulnerable to attacks. 
+
+Unlike simple default settings issues, misconfigurations can arise from configuration or coding errors, lack of security awareness, and poor maintenance.
 
 **Common Examples of Security Misconfigurations**
 
@@ -73,7 +139,7 @@ Misconfigured security settings occur when systems, applications, or networks ar
 * **Example:**
   * Attackers upload a `.php` shell to gain remote control (e.g., **Alibaba Cloud (2020)**).
 
-**How to Prevent Security Misconfigurations?**
+**How to Prevent Security Misconfigurations:**
 
 ✅ **Disable admin interfaces from public access** (use VPNs or IP whitelisting).\
 ✅ **Follow the principle of least privilege** (restrict permissions).\
@@ -82,69 +148,3 @@ Misconfigured security settings occur when systems, applications, or networks ar
 ✅ **Remove default/sample files** and disable debug modes in production.\
 ✅ **Implement proper CORS & security headers**.\
 ✅ **Regularly audit configurations** (using **OWASP ZAP, Burp Suite**).
-
-***
-
-### Insecure default settings
-
-Misconfigurations occur when systems, applications, or networks are improperly set up, often due to reliance on **default settings** that prioritize ease of deployment over security. Here are common examples:
-
-**1. Default Credentials**
-
-* Many devices (routers, IoT devices, servers) ship with **default usernames and passwords** (e.g., `admin:admin`).
-* **Example:** Attackers scan for devices with unchanged default logins (e.g., Mirai botnet exploited default IoT credentials).
-
-**2. Open or Unrestricted Ports & Services**
-
-* Unnecessary services (e.g., Telnet, FTP, SMB) left enabled by default.
-* **Example:** EternalBlue exploited open SMB ports in Windows systems.
-
-**3. Excessive Permissions**
-
-* Default configurations granting **unnecessary privileges** (e.g., "Everyone: Full Control" in file shares).
-* **Example:** AWS S3 buckets set to **public by default**, leading to data leaks.
-
-**4. Debug Mode Enabled in Production**
-
-* Web applications/frameworks (e.g., Django, Flask) sometimes run in **debug mode by default**, exposing sensitive data.
-
-**5. Directory Listing Enabled**
-
-* Web servers (e.g., Apache, Nginx) may allow **directory traversal**, exposing files unintentionally.
-
-**6. Unpatched or Outdated Default Software**
-
-* Some systems ship with **old, vulnerable software versions** (e.g., outdated PHP, WordPress plugins).
-
-**7. Default Cryptographic Keys/Certificates**
-
-* Devices (e.g., routers, IoT) sometimes use **hardcoded encryption keys**, making decryption easy for attackers.
-
-**8. Cloud Misconfigurations**
-
-* **Example:**
-  * Publicly accessible **Kubernetes dashboards**.
-  * **Overprivileged IAM roles** in AWS/Azure.
-  * **Unencrypted storage** (e.g., databases/blobs set to public).
-
-**9. Unsecured APIs**
-
-* APIs with **no authentication**, **exposed admin endpoints**, or **excessive data exposure** by default.
-
-**10. Lack of Logging/Monitoring**
-
-* Many systems **do not log security events by default**, allowing attackers to operate undetected.
-
-#### **Real-World Exploits Due to Misconfigurations**
-
-* **MongoDB ransomware attacks** (databases left exposed without authentication).
-* **Citrix ADC (CVE-2019-19781)** – Default settings allowed remote code execution.
-* **Elasticsearch data leaks** – No authentication enabled by default.
-
-#### **How to Prevent Misconfiguration Vulnerabilities?**
-
-✔ **Change default credentials** immediately.\
-✔ **Disable unnecessary services/ports**.\
-✔ **Follow least-privilege principles** (restrict permissions).\
-✔ **Enable security features** (encryption, logging, WAFs).\
-✔ **Regularly audit configurations** (using tools like **Nessus, OpenVAS, AWS Config**).

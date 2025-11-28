@@ -65,8 +65,6 @@ Misconfigurations occur when systems, applications, or networks are improperly s
 
 ### Misconfigured security settings
 
-Misconfigured security settings occur when systems, applications, or networks are set up insecurely, leaving them vulnerable to attacks. 
-
 Unlike simple default settings issues, misconfigurations can arise from configuration or coding errors, lack of security awareness, and poor maintenance.
 
 **Common Examples of Security Misconfigurations**

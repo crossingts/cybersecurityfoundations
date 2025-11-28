@@ -2,8 +2,9 @@
 
 ## Topics covered
 
-* Insecure default settings
-* Misconfigured security settings
+* **Insecure default settings**
+* **Misconfigured security settings**
+* **How to prevent misconfiguration vulnerabilities**
 
 ### Insecure default settings
 
@@ -55,19 +56,12 @@ Misconfigurations occur when systems, applications, or networks are improperly s
 
 * Many systems **do not log security events by default**, allowing attackers to operate undetected.
 
-**Real-World Exploits Due to Misconfigurations:**
+**11. Services with No Default Authentication**
 
-* **MongoDB ransomware attacks** (databases left exposed without authentication).
-* **Citrix ADC (CVE-2019-19781)** – Default settings allowed remote code execution.
-* **Elasticsearch data leaks** – No authentication enabled by default.
-
-**How to Prevent Misconfiguration Vulnerabilities:**
-
-✔ **Change default credentials** immediately.\
-✔ **Disable unnecessary services/ports**.\
-✔ **Follow least-privilege principles** (restrict permissions).\
-✔ **Enable security features** (encryption, logging, WAFs).\
-✔ **Regularly audit configurations** (using tools like **Nessus, OpenVAS, AWS Config**).
+- Some databases and search engines historically shipped with no authentication mechanism enabled by default, assuming they would be placed in a trusted network.
+- **Examples:**
+   - **MongoDB ransomware attacks:** Thousands of databases were left exposed to the public internet, leading to mass data theft and ransomware campaigns where attackers deleted data and demanded payment for its return.
+   - **Elasticsearch data leaks:** Similarly, exposed clusters without authentication have led to numerous large-scale leaks of sensitive user data.
 
 ### Misconfigured security settings
 
@@ -139,12 +133,16 @@ Unlike simple default settings issues, misconfigurations can arise from configur
 * **Example:**
   * Attackers upload a `.php` shell to gain remote control (e.g., **Alibaba Cloud (2020)**).
 
-**How to Prevent Security Misconfigurations:**
+**11. Vulnerable Network Appliances with Default Deployment Settings**
 
-✅ **Disable admin interfaces from public access** (use VPNs or IP whitelisting).\
-✅ **Follow the principle of least privilege** (restrict permissions).\
-✅ **Automate security checks** (use tools like **AWS Config, Nessus, OpenVAS**).\
-✅ **Disable directory listing & unnecessary HTTP methods**.\
-✅ **Remove default/sample files** and disable debug modes in production.\
-✅ **Implement proper CORS & security headers**.\
-✅ **Regularly audit configurations** (using **OWASP ZAP, Burp Suite**).
+- **Content:** Network appliances like ADCs, VPN gateways, and firewalls are often deployed using vendor templates that may not follow security best practices, leaving them vulnerable to widespread attacks.
+- **Real-world example:**
+   - **Citrix ADC (CVE-2019-19781):** While this was a code vulnerability, its impact was magnified because default configuration settings and common deployment patterns allowed for unauthenticated remote code execution, leading to the compromise of thousands of companies.
+
+### How to prevent misconfiguration vulnerabilities
+
+✔ **Eliminate Defaults:** Change default credentials and remove default/sample files immediately.  
+✔ **Minimize Attack Surface:** Disable unnecessary services, ports, admin interfaces from public access (use VPNs/IP whitelisting), and unnecessary HTTP methods (e.g., PUT, DELETE).  
+✔ **Enforce Least Privilege:** Follow the principle of least privilege for users, services, and cloud permissions (e.g., IAM roles, file shares).  
+✔ **Harden Configurations:** Enable security features (encryption, WAFs), disable debug mode and directory listing in production, and implement proper security headers (e.g., CSP, HSTS) and CORS policies.  
+✔ **Automate Security & Audit Continuously:** Use security tools (e.g., **Nessus, OpenVAS, AWS Config, OWASP ZAP, Burp Suite**) to automate checks and regularly audit configurations and permissions.

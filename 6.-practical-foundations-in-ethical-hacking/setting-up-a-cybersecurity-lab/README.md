@@ -1,5 +1,7 @@
 ---
-description: This guide will walk you through setting up a fully functional cybersecurity virtual lab using exclusively open source technologies
+description: >-
+  This guide will walk you through setting up a fully functional cybersecurity
+  virtual lab using exclusively open source technologies
 ---
 
 # Setting up a cybersecurity lab
@@ -20,10 +22,10 @@ This section teaches how to set up a fully functional cybersecurity virtual lab 
 
 ### Setting up a cybersecurity lab - steps
 
-* Design the cybersecurity lab (choose a design pipeline) 
+* Design the cybersecurity lab (choose a design pipeline)
 * Choose a virtualization environment
 * Choose a project documentation platform
-* Build the lab  
+* Build the lab
   * Configure subnet interfaces and verify connectivity
   * Configure and verify the firewall
   * Configure and verify the IDS/IPS
@@ -34,7 +36,7 @@ This section teaches how to set up a fully functional cybersecurity virtual lab 
 
 ### Design the cybersecurity lab (choose a design pipeline)
 
-**Design pipeline 1 (ARM64):**  
+**Design pipeline 1 (ARM64):**
 
 nftables (firewall) + Suricata (IDS/IPS) + web server (Apache) + database server (MySQL) + Wazuh (SIEM/XDR) + Kali Linux
 
@@ -51,7 +53,7 @@ Cybersecurity virtual lab in VMware Fusion on M1 Mac
 * [Setting up Wazuh (SIEM/XDR) on Ubuntu server](https://drive.proton.me/urls/R74XWK7XSW#7x1OsbPmpCmr)
 * Setting up Kali Linux for security testing
 
-**Design pipeline 2 (AMD64):**  
+**Design pipeline 2 (AMD64):**
 
 OPNsense (firewall) + Suricata (IDS/IPS) + web server (Apache) and/or database server (MySQL) + Wazuh (SIEM/XDR) + Kali Linux
 
@@ -61,7 +63,7 @@ Inspiration/example set up (YouTube playlist. 16 videos):
 
 <figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption><p>Cybersecurity virtual lab design (courtesy of LS111 Cyber Security Education)</p></figcaption></figure>
 
-**Design pipeline 3 (AMD64):**  
+**Design pipeline 3 (AMD64):**
 
 pfSense (firewall) + Snort (IDS/IPS) + web server (Apache) and/or database server (MySQL) + Wazuh (SIEM/XDR) + Kali Linux
 
@@ -105,7 +107,7 @@ pfSense (firewall) + Snort (IDS/IPS) + web server (Apache) and/or database serve
 * **Windows Subsystem for Linux (WSL)**
   * Lets you run Linux binaries natively on Windows.
   * ⚠️ Limited networking (WSL2 uses a virtual NIC).
-* **x86-64**  
+* **x86-64**
   * x86-64 is also known as x64, x86\_64, AMD64, and Intel 64.
   * x86-64 is a CPU architecture. It is used by:
     * Windows (e.g., Windows 10/11 x64).
@@ -135,7 +137,7 @@ pfSense (firewall) + Snort (IDS/IPS) + web server (Apache) and/or database serve
 #### QEMU: Emulation vs. Virtualization
 
 * **QEMU by itself** is primarily an **emulator**—it can simulate entire systems (CPU, memory, devices) even on different architectures (e.g., running ARM on x86). This makes it flexible but slower than hardware-assisted virtualization.
-* **QEMU + KVM (Kernel-based Virtual Machine)** enables **full hardware-assisted virtualization** (like VMware or VirtualBox) when running on Linux.  
+* **QEMU + KVM (Kernel-based Virtual Machine)** enables **full hardware-assisted virtualization** (like VMware or VirtualBox) when running on Linux.
   * KVM is a Linux kernel module that turns the host OS into a Type-1 hypervisor (bare-metal virtualization). It allows QEMU to run VMs with near-native performance by using CPU virtualization extensions (Intel VT-x / AMD-V).
 * **On Windows**, QEMU can use **WHPX (Windows Hypervisor Platform)** for acceleration, but performance may not be as good as KVM on Linux or dedicated hypervisors like VMware/Hyper-V.
   * WHPX is a hypervisor-based acceleration feature on Windows 10/11 Pro and Enterprise editions. It allows virtualization software (like QEMU) to use hardware-assisted virtualization (Intel VT-x / AMD-V).
@@ -177,14 +179,14 @@ _SSGs = Static Site Generators (e.g., Jekyll, MkDocs, Docusaurus)._
 
 #### How to Embed Draw.io Diagrams & Mermaid.js Support
 
-| Platform         | Draw.io Embed Method                                                                                                         | Live Updates? | Mermaid.js?                        | Best Use Case                               |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------------------- | ------------- | ---------------------------------- | ------------------------------------------- |
-| **GitHub Wiki**  | <p>1. Export as <code>.png</code>/<code>.svg</code> → upload.<br>2. Use <code>![alt](path/image.png)</code> in Markdown.</p> | ❌ No          | ❌ No (Markdown-only)               | Static diagrams (simple networks).          |
-| **GitHub Pages** | <p>1. Export as <code>.svg</code> → place in <code>docs/images/</code>.<br>2. Embed with HTML/Markdown.</p>                  | ❌ No          | ✅ Yes (with MkDocs/Jekyll plugins) | Scalable docs with auto-generated diagrams. |
-| **GitBook**      | <p>1. Export as <code>.png</code>/<code>.svg</code> → upload.<br>2. Or embed cloud links: <code>![diagram](URL)</code></p>   | ❌ No          | ✅ Yes (native support)             | Versioned docs with dynamic diagrams.       |
-| **Notion**       | <p>1. Copy-paste directly.<br>2. Or embed cloud links.</p>                                                                   | ✅ Yes (cloud) | ❌ No (but supports Draw.io embeds) | Real-time collaborative diagrams.           |
-| **VS Code**      | <p>1. Use Draw.io extension.<br>2. Edit <code>.drawio</code> files directly.</p>                                             | ✅ Yes         | ✅ Yes (with Mermaid extension)     | Local editing with live preview.            |
-| **MkDocs**       | <p>1. Export as <code>.svg</code> → embed.<br>2. Or use <code>plantuml</code> plugin for Draw.io XML.</p>                    | ❌ No          | ✅ Yes (native support)             | Automated docs with code-based diagrams.    |
+| Platform         | Draw.io Embed Method                                                                                        | Live Updates? | Mermaid.js?                        | Best Use Case                               |
+| ---------------- | ----------------------------------------------------------------------------------------------------------- | ------------- | ---------------------------------- | ------------------------------------------- |
+| **GitHub Wiki**  | <p>1. Export as <code>.png</code>/<code>.svg</code> → upload.<br>2. Use  in Markdown.</p>                   | ❌ No          | ❌ No (Markdown-only)               | Static diagrams (simple networks).          |
+| **GitHub Pages** | <p>1. Export as <code>.svg</code> → place in <code>docs/images/</code>.<br>2. Embed with HTML/Markdown.</p> | ❌ No          | ✅ Yes (with MkDocs/Jekyll plugins) | Scalable docs with auto-generated diagrams. |
+| **GitBook**      | <p>1. Export as <code>.png</code>/<code>.svg</code> → upload.<br>2. Or embed cloud links: </p>              | ❌ No          | ✅ Yes (native support)             | Versioned docs with dynamic diagrams.       |
+| **Notion**       | <p>1. Copy-paste directly.<br>2. Or embed cloud links.</p>                                                  | ✅ Yes (cloud) | ❌ No (but supports Draw.io embeds) | Real-time collaborative diagrams.           |
+| **VS Code**      | <p>1. Use Draw.io extension.<br>2. Edit <code>.drawio</code> files directly.</p>                            | ✅ Yes         | ✅ Yes (with Mermaid extension)     | Local editing with live preview.            |
+| **MkDocs**       | <p>1. Export as <code>.svg</code> → embed.<br>2. Or use <code>plantuml</code> plugin for Draw.io XML.</p>   | ❌ No          | ✅ Yes (native support)             | Automated docs with code-based diagrams.    |
 
 **Clarification Notes**
 
@@ -219,10 +221,10 @@ _SSGs = Static Site Generators (e.g., Jekyll, MkDocs, Docusaurus)._
 
 ### Build the lab
 
-  * Configure subnet interfaces and verify connectivity
-  * Configure and verify the firewall
-  * Configure and verify the IDS/IPS
-  * Configure and verify a web server (e.g., nginx or Apache) and/or a database server (e.g., MySQL)
-  * Configure and verify SIEM/EDR (e.g., Wazuh)
-  * Configure and verify Kali Linux
+* Configure subnet interfaces and verify connectivity
+* Configure and verify the firewall
+* Configure and verify the IDS/IPS
+* Configure and verify a web server (e.g., nginx or Apache) and/or a database server (e.g., MySQL)
+* Configure and verify SIEM/EDR (e.g., Wazuh)
+* Configure and verify Kali Linux
 * Launch attacks from Kali Linux and document the project

@@ -12,7 +12,7 @@ After you sign up and log in, go to [https://legacy.netacad.com/portal/node/488]
 
 You should see the following download page.
 
-<figure><img src="../../.gitbook/assets/image (19) (1).png" alt="Cisco Packet Tracer Download Page"><figcaption></figcaption></figure>
+<figure><img src="/broken/files/s3gV6sul18eOZFP2ZVuX" alt="Cisco Packet Tracer Download Page"><figcaption></figcaption></figure>
 
 Scroll down to “Download” and choose the version compatible with your operating system. Windows, Ubuntu, or macOS.
 

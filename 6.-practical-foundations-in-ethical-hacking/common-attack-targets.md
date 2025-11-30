@@ -25,10 +25,8 @@ This section explores common cyber attack targets and associated attack vectors 
 
 ### Introduction
 
-When it comes to categorizing common vulnerabilities targeted by penetration testers (and malicious hackers), NIST's 2008 categories of vulnerabilities (attack targets) is a logical starting point. 
-NIST SP 800-115 (Technical Guide to Information Security Testing and Assessment) was published in 2008 but it has not been formally updated. 
-While the high-level principles and methodology of penetration testing in the guide are still sound, the taxonomy of vulnerabilities is significantly outdated. 
-The attack landscape has evolved dramatically, primarily towards web applications, identity-based attacks, APIs, and cloud services. 
+When it comes to categorizing common vulnerabilities targeted by penetration testers (and malicious hackers), NIST's 2008 categories of vulnerabilities (attack targets) is a logical starting point. NIST SP 800-115 (Technical Guide to Information Security Testing and Assessment) was published in 2008 but it has not been formally updated. While the high-level principles and methodology of penetration testing in the guide are still sound, the taxonomy of vulnerabilities is significantly outdated. The attack landscape has evolved dramatically, primarily towards web applications, identity-based attacks, APIs, and cloud services. 
+
 A modern, practical taxonomy of attack categories can be anchored in the following three frameworks:
 
 - **OWASP Top 10:** The de facto standard for categorizing critical risks in web applications.
@@ -71,20 +69,17 @@ The majority of vulnerabilities exploited by penetration testing fall into the f
 
 ### OWASP Top 10
 
-reword:
+The **Open Worldwide Application Security Project (OWASP)** is a non-profit foundation that works to improve the security of software through community-led open-source projects. Its flagship project is the **OWASP Top 10**, a regularly updated document that raises awareness about the most critical security risks to web applications.
 
-OWASP, the Open Worldwide Application Security Project (formerly Open Web Application Security Project), is an online community that publishes open-source information and resources on IoT, system software and web application security. It is led by a non-profit called The OWASP Foundation. 
+While NIST SP 800-115 offers a general, system-level view of vulnerabilities, the OWASP Top 10 provides a specialized, application-centric focus. First published in 2003, the OWASP Top 10 is based on real-world data from thousands of applications and vulnerabilities. The OWASP Top 10 serves as a vital benchmark for developers, auditors, and penetration testers, and is referenced by many standards, including the Payment Card Industry Data Security Standard (PCI DSS) and U.S. government frameworks.
 
-The "Top Ten", first published in 2003, is an annual listing of critical application security risks. Many standards, books, tools, and many organizations reference the Top 10 project, including MITRE, PCI DSS, the Defense Information Systems Agency (DISA-STIG), and the United States Federal Trade Commission.
+For penetration testers, the OWASP Top 10 provides a prioritized checklist of what to look for. This is operationalized through the **OWASP Web Security Testing Guide (WSTG)**, a comprehensive manual that outlines how to test for each category of vulnerability. The testing methodology in the WSTG mirrors a real-world engagement, starting with information gathering and configuration management testing, then moving into deep assessments of authentication, authorization, and business logic, with dedicated sections for testing each Top 10 risk.
 
-The OWASP Testing Guide (Web Security Testing Guide) is structured to mirror the phases of a typical application penetration test. 
-It begins with preliminary steps like information gathering and configuration management testing, then moves into a thorough examination of identity management, authentication, and session management controls. 
-The core of the WSTG is its extensive coverage of specific vulnerability classes, most notably the OWASP Top 10 risks such as SQL Injection (SQLi), Cross-Site Scripting (XSS), and Cross-Site Request Forgery (CSRF). For each testing area, the guide provides a clear objective, descriptions of how to test for weaknesses, and guidance on how to interpret the results.
+Both the OWASP Top 10 and NIST SP 800-115 frameworks share several core themes, notably,
 
-Comparison of OWASP Top 10 and NIST SP 800-115 Frameworks / Shared themes
-
-Shared themes: 
-* Input validation, misconfigurations appear in both OWASP Top 10 and NIST SP 800-115.
+- **Input Validation:** NIST's "Insufficient Input Validation" category is directly reflected in OWASP's A03:2021-Injection and A03:2021-Server-Side Request Forgery (SSRF).
+- **Misconfigurations:** NIST's "Misconfigurations" are a primary focus of OWASP A05:2021-Security Misconfiguration.
+- **Access Control:** The principle behind NIST's "Incorrect File and Directory Permissions" is expanded in the web context by OWASP A01:2021-Broken Access Control.
 
 ### Common Weakness Enumeration (CWE™)
 

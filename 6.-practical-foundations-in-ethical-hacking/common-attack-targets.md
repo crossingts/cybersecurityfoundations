@@ -5,7 +5,7 @@ description: >-
 hidden: true
 ---
 
-# Copy of Common attack targets-2
+# Common attack targets-2
 
 ## Learning objectives <a href="#learning-objectives" id="learning-objectives"></a>
 
@@ -41,7 +41,6 @@ These three frameworks reflect an evolving attack landscape pointing to the foll
 - **Security Misconfigurations:** Cloud storage (S3) buckets, default credentials, unnecessary services.
 - **Identity & Access Issues:** Weak passwords, lack of multi-factor authentication, privilege escalation.
 - **Outdated Software:** Unpatched systems with known CVEs.
-- **Network-Level Attacks:** VLAN hopping, switch spoofing, insecure network device management (SNMP, Telnet).
 
 ### NIST SP 800-115's attack categories
 
@@ -56,32 +55,19 @@ The majority of vulnerabilities exploited by penetration testing fall into the f
 * Race Conditions. Race conditions can occur during the time a program or process has entered into a privileged mode. A user can time an attack to take advantage of elevated privileges while the program or process is still in the privileged mode.
 * Incorrect File and Directory Permissions. File and directory permissions control the access assigned to users and processes. Poor permissions could allow many types of attacks, including the reading or writing of password files or additions to the list of trusted remote hosts.
 
-**NIST SP 800-115 vulnerabilities mapped to their typical attack targets, vectors, and exploits:**
+**NIST SP 800-115 Vulnerabilities Mapped to Their Typical Attack Targets**
 
-| **Vulnerability (NIST SP 800-115)** | **Attack Target**                                   | **Attack Vector**                                               | **Example Exploit**                                   |
-| ----------------------------------- | --------------------------------------------------- | --------------------------------------------------------------- | ----------------------------------------------------- |
-| **Misconfigurations**               | OS, Cloud, Network Devices, Databases, Applications | Exploiting insecure default credentials/settings and open ports | Accessing admin panels with `admin:admin` credentials |
-| **Kernel Flaws**                    | Operating System                                    | Privilege escalation via kernel exploits                        | Dirty Pipe (CVE-2022-0847) for root access            |
-| **Buffer Overflows**                | Applications, Services                              | Overflowing memory to execute shellcode                         | Stack-based overflow in legacy FTP servers            |
-| **Insufficient Input Validation**   | Web Applications                                    | SQLi, XSS, Command Injection                                    | Bypassing login forms with `' OR 1=1 --`              |
-| **Symbolic Link (Symlink) Issues**  | File Systems                                        | Tricking privileged processes to write files                    | Symlink attacks in `/tmp` directories                 |
-| **File Descriptor Leaks**           | Running Processes                                   | Accessing sensitive files left open                             | Reading `/etc/passwd` from a crashed service          |
-| **Race Conditions**                 | Concurrent Systems                                  | TOCTOU (Time-of-Check to Time-of-Use) attacks                   | Changing file permissions between check and use       |
-| **Incorrect File/Directory Perms**  | File Systems                                        | Reading/writing restricted files                                | `chmod 777` exposing SSH private keys                 |
-
-merge:
-
-| **Vulnerability Category**                | **Attack Target**             | **Attack Vector**                                   | **Example Exploit**                                                                             |
-| ----------------------------------------- | ----------------------------- | --------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| **Security Misconfigurations**            | Cloud, Servers, Containers    | Exposed admin interfaces, verbose errors            | **Kubernetes dashboard exposed** (CVE-2018-18264), **Jenkins RCE** (misconfigured scripts)      |
-| **Misconfigurations (Insecure Defaults)** | Servers, Cloud, IoT, APIs     | Default credentials, open ports, exposed interfaces | **Mirai botnet** (exploited default IoT passwords), **AWS S3 bucket leaks** (public-by-default) |
-| **Kernel Flaws**                          | OS (Linux/Windows/macOS)      | Privilege escalation via kernel bugs                | **Dirty Pipe** (CVE-2022-0847), **Dirty COW** (CVE-2016-5195)                                   |
-| **Buffer Overflows**                      | Applications, OS, Services    | Crafted input overflowing memory                    | **EternalBlue** (MS17-010), **Code Red worm** (IIS buffer overflow)                             |
-| **Insufficient Input Validation**         | Web apps, APIs, Databases     | SQLi, XSS, Command Injection                        | **Equifax breach** (SQLi, CVE-2017-5638), **Log4Shell** (CVE-2021-44228)                        |
-| **Symbolic Links (Symlink)**              | File systems, Privileged apps | Tricking apps into writing to sensitive files       | **Docker symlink escape** (CVE-2018-15664)                                                      |
-| **File Descriptor Issues**                | OS, Applications              | Exploiting unclosed file handles                    | **Heartbleed** (CVE-2014-0160) via OpenSSL file descriptor leaks                                |
-| **Race Conditions (TOCTOU)**              | OS, Applications              | Timing attacks to bypass checks                     | Linux `ptrace` race condition (CVE-2019-13272)                                                  |
-| **Incorrect File/Directory Permissions**  | OS, Databases, Apps           | Unauthorized access/modification                    | **MongoDB ransomware attacks** (exposed databases with weak permissions)                        |
+| **Vulnerability Category**                | **Attack Target**                                       | **Attack Vector**                                                                           | **Example Exploit**                                                                                                                               |
+| ----------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Security Misconfigurations**            | Cloud, Servers, Containers, OS, Databases, Applications | Exposed admin interfaces, verbose errors, insecure settings                                 | **Kubernetes dashboard exposed** (CVE-2018-18264), **Jenkins RCE** (misconfigured scripts), Accessing admin panels with `admin:admin` credentials |
+| **Misconfigurations (Insecure Defaults)** | Servers, Cloud, IoT, APIs, Network Devices              | Default credentials, open ports, exposed interfaces, insecure default settings              | **Mirai botnet** (exploited default IoT passwords), **AWS S3 bucket leaks** (public-by-default)                                                   |
+| **Kernel Flaws**                          | OS (Linux/Windows/macOS), Operating System              | Privilege escalation via kernel bugs, kernel exploits                                       | **Dirty Pipe** (CVE-2022-0847) for root access, **Dirty COW** (CVE-2016-5195)                                                                     |
+| **Buffer Overflows**                      | Applications, OS, Services, Applications, Services      | Crafted input overflowing memory, overflowing memory to execute shellcode                   | **EternalBlue** (MS17-010), **Code Red worm** (IIS buffer overflow), Stack-based overflow in legacy FTP servers                                   |
+| **Insufficient Input Validation**         | Web apps, APIs, Databases, Web Applications             | SQLi, XSS, Command Injection                                                                | **Equifax breach** (SQLi, CVE-2017-5638), **Log4Shell** (CVE-2021-44228), Bypassing login forms with `' OR 1=1 --`                                |
+| **Symbolic Links (Symlink)**              | File systems, Privileged apps, File Systems             | Tricking apps into writing to sensitive files, tricking privileged processes to write files | **Docker symlink escape** (CVE-2018-15664), Symlink attacks in `/tmp` directories                                                                 |
+| **File Descriptor Issues**                | OS, Applications, Running Processes                     | Exploiting unclosed file handles, accessing sensitive files left open                       | **Heartbleed** (CVE-2014-0160) via OpenSSL file descriptor leaks, Reading `/etc/passwd` from a crashed service                                    |
+| **Race Conditions (TOCTOU)**              | OS, Applications, Concurrent Systems                    | Timing attacks to bypass checks, TOCTOU (Time-of-Check to Time-of-Use) attacks              | Linux `ptrace` race condition (CVE-2019-13272), Changing file permissions between check and use                                                   |
+| **Incorrect File/Directory Permissions**  | OS, Databases, Apps, File Systems                       | Unauthorized access/modification, reading/writing restricted files                          | **MongoDB ransomware attacks** (exposed databases with weak permissions), `chmod 777` exposing SSH private keys                                   |
 
 ### OWASP Top 10
 
@@ -92,7 +78,8 @@ OWASP, the Open Worldwide Application Security Project (formerly Open Web Applic
 The "Top Ten", first published in 2003, is an annual listing of critical application security risks. Many standards, books, tools, and many organizations reference the Top 10 project, including MITRE, PCI DSS, the Defense Information Systems Agency (DISA-STIG), and the United States Federal Trade Commission.
 
 The OWASP Testing Guide (Web Security Testing Guide) is structured to mirror the phases of a typical application penetration test. 
-It begins with preliminary steps like information gathering and configuration management testing, then moves into a thorough examination of identity management, authentication, and session management controls. The core of the WSTG is its extensive coverage of specific vulnerability classes, most notably the OWASP Top 10 risks such as SQL Injection (SQLi), Cross-Site Scripting (XSS), and Cross-Site Request Forgery (CSRF). For each testing area, the guide provides a clear objective, descriptions of how to test for weaknesses, and guidance on how to interpret the results.
+It begins with preliminary steps like information gathering and configuration management testing, then moves into a thorough examination of identity management, authentication, and session management controls. 
+The core of the WSTG is its extensive coverage of specific vulnerability classes, most notably the OWASP Top 10 risks such as SQL Injection (SQLi), Cross-Site Scripting (XSS), and Cross-Site Request Forgery (CSRF). For each testing area, the guide provides a clear objective, descriptions of how to test for weaknesses, and guidance on how to interpret the results.
 
 Comparison of OWASP Top 10 and NIST SP 800-115 Frameworks / Shared themes
 

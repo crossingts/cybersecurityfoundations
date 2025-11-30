@@ -114,7 +114,7 @@ When a penetration tester exploits a vulnerability (e.g., a CWE), he then use te
 
 ### Prioritized attack categories 
 
-**Vulnerability table** based on **exploitability (ease of attack)** and **impact (potential damage)**, using **CVSS v3.0 scores** (where applicable) and real-world prevalence.
+Vulnerability table based on exploitability (ease of attack) and impact (potential damage), using CVSS v3.0 scores (where applicable) and real-world prevalence.
 
 #### Prioritized Vulnerability Table With Mitigation Strategies
 

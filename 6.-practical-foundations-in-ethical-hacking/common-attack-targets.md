@@ -27,19 +27,17 @@ This section explores common cyber attack targets and associated attack vectors 
 
 When it comes to categorizing common vulnerabilities targeted by penetration testers (and malicious hackers), NIST's 2008 categories of vulnerabilities (attack targets) is a logical starting point.
 
-NIST SP 800-115, "Technical Guide to Information Security Testing and Assessment", was published in 2008 but has not been formally updated. 
-While the high-level principles and methodology of penetration testing in this guide are still sound, the taxonomy of vulnerabilities is significantly outdated.
+NIST SP 800-115, "Technical Guide to Information Security Testing and Assessment", was published in 2008 but has not been formally updated. While the high-level principles and methodology of penetration testing in this guide are still sound, the taxonomy of vulnerabilities is significantly outdated.
 
-The attack landscape has evolved dramatically, primarily towards web applications, identity-based attacks, APIs, and cloud services.
-
-A modern, practical taxonomy of attack categories can be anchored in the following two/three frameworks:
+The attack landscape has evolved dramatically, primarily towards web applications, identity-based attacks, APIs, and cloud services. A modern, practical taxonomy of attack categories can be anchored in the following three frameworks:
 
 - **CWE Top 25:** This is now the standard for categorizing the root cause of a vulnerability.
 - **CVE/NVD:** This is how we track specific instances of vulnerabilities in software (what is exploited).
+- **OWASP Top 10**: add a few explanatory words here
 
-- **OWASP Top 10**
 
-These two/three frameworks reflect an evolving attack landscape pointing to the following categories of vulnerabilities:
+
+These three frameworks reflect an evolving attack landscape pointing to the following categories of vulnerabilities:
 
 - **Web Application Flaws:** Injection (SQLi, OS Command), XSS, Broken Access Control (IDOR).
 - **Security Misconfigurations:** Cloud storage (S3) buckets, default credentials, unnecessary services.
@@ -96,6 +94,10 @@ OWASP Testing Guide (Web Security Testing Guide)
 "The guide is structured to mirror the phases of a typical application penetration test. It begins with preliminary steps like information gathering and configuration management testing, then moves into a thorough examination of identity management, authentication, and session management controls. The core of the WSTG is its extensive coverage of specific vulnerability classes, most notably the OWASP Top 10 risks such as SQL Injection (SQLi), Cross-Site Scripting (XSS), and Cross-Site Request Forgery (CSRF). For each testing area, the guide provides a clear objective, descriptions of how to test for weaknesses, and guidance on how to interpret the results."
 
 OWASP Top 10 emphasizes web-specific risks.
+
+OWASP Top Ten
+
+The "Top Ten", first published in 2003, is an annual listing of critical application security risks.[11][12][13][14][15] Many standards, books, tools, and many organizations reference the Top 10 project, including MITRE, PCI DSS,[16] the Defense Information Systems Agency (DISA-STIG), and the United States Federal Trade Commission.[17][18]
 
 **Comparison of Frameworks / Shared themes**
 

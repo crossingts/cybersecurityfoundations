@@ -25,17 +25,17 @@ This section explores common cyber attack targets and associated attack vectors 
 
 ### Introduction
 
-When it comes to categorizing common vulnerabilities targeted by penetration testers (and malicious hackers), NIST's 2008 categories of vulnerabilities (attack targets) is a logical starting point.
+When it comes to categorizing common vulnerabilities targeted by penetration testers (and malicious hackers), NIST's 2008 categories of vulnerabilities (attack targets) is a logical starting point. 
+NIST SP 800-115 (Technical Guide to Information Security Testing and Assessment) was published in 2008 but it has not been formally updated. 
+While the high-level principles and methodology of penetration testing in the guide are still sound, the taxonomy of vulnerabilities is significantly outdated. 
+The attack landscape has evolved dramatically, primarily towards web applications, identity-based attacks, APIs, and cloud services. 
+A modern, practical taxonomy of attack categories can be anchored in the following three frameworks:
 
-NIST SP 800-115, "Technical Guide to Information Security Testing and Assessment", was published in 2008 but has not been formally updated. While the high-level principles and methodology of penetration testing in this guide are still sound, the taxonomy of vulnerabilities is significantly outdated.
+- **OWASP Top 10:** The de facto standard for categorizing critical risks in web applications.
+- **Common Weakness Enumeration (CWE):** The authoritative list for classifying the root cause of software vulnerabilities.
+- **Common Vulnerabilities and Exposures (CVE) & the National Vulnerability Database (NVD):** The systems for tracking specific, instances of vulnerabilities in software products.
 
-The attack landscape has evolved dramatically, primarily towards web applications, identity-based attacks, APIs, and cloud services. A modern, practical taxonomy of attack categories can be anchored in the following three frameworks:
-
-- **CWE Top 25:** This is now the standard for categorizing the root cause of a vulnerability.
-- **CVE/NVD:** This is how we track specific instances of vulnerabilities in software (what is exploited).
-- **OWASP Top 10**: 
-
-These three frameworks reflect an evolving attack landscape pointing to the following categories of vulnerabilities:
+These three frameworks reflect an evolving attack landscape prioritizing the following categories of vulnerabilities:
 
 - **Web Application Flaws:** Injection (SQLi, OS Command), XSS, Broken Access Control (IDOR).
 - **Security Misconfigurations:** Cloud storage (S3) buckets, default credentials, unnecessary services.

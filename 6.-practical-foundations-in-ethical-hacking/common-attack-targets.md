@@ -116,44 +116,36 @@ When a penetration tester exploits a vulnerability (e.g., a CWE), he then use te
 
 Vulnerability table based on exploitability (ease of attack) and impact (potential damage), using CVSS v3.0 scores (where applicable) and real-world prevalence.
 
-#### Prioritized Vulnerability Table With Mitigation Strategies
+This integrated table provides a comprehensive view of prioritized vulnerabilities with complete context including attack targets, vectors, risk scoring, and mitigation strategies - making it ideal for CCNA/CEH-level instruction on vulnerability prioritization and management.
 
-merge:
+**Prioritized Vulnerability Table With Mitigation Strategies**
 
-| **Vulnerability Category**             | **Attack Target**        | **Attack Vector**                      | **Example Exploit**                                              |
-| -------------------------------------- | ------------------------ | -------------------------------------- | ---------------------------------------------------------------- |
-| **Broken Authentication**              | Web apps, APIs           | Credential stuffing, session hijacking | **Facebook token hijacking** (2018), **OAuth misconfigurations** |
-| **Use of Vulnerable Components**       | Libraries, Frameworks    | Exploiting known CVEs in dependencies  | **Apache Struts** (Equifax breach), **Log4j** (Log4Shell)        |
-| **Insecure Direct Object Refs.**       | Web apps, APIs           | Manipulating object references         | **Accessing other users’ data** via ID parameter tampering       |
-| **Server-Side Request Forgery (SSRF)** | Cloud, Internal Networks | Forging requests from the server       | **Capital One breach** (CVE-2019-19781), **AWS metadata theft**  |
-| **Unrestricted File Uploads**          | Web apps                 | Uploading malicious executables        | **Web shell uploads** (e.g., PHP shells in CMS plugins)          |
-| **Missing Encryption**                 | Databases, Networks      | Sniffing plaintext data                | **FTP credentials intercepted**, **unencrypted medical records** |
-
-| **Vulnerability**                 | **CVSS**       | **Exploitability** | **Impact** | **Example Exploit**         | **Mitigation Strategies**                                                                                                        |
-| --------------------------------- | -------------- | ------------------ | ---------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| **Buffer Overflows**              | 9.8 (Critical) | Moderate-High      | Critical   | EternalBlue (WannaCry)      | <p>▶ Use memory-safe languages (Rust, Go).<br>▶ Enable DEP/ASLR.<br>▶ Patch OS/libc regularly.</p>                               |
-| **Injection Flaws** (SQLi, XSS)   | 9.8 (Critical) | High               | Critical   | Equifax (SQLi), Log4Shell   | <p>▶ Parameterized queries.<br>▶ Input sanitization.<br>▶ WAF rules (e.g., ModSecurity).</p>                                     |
-| **Misconfigurations**             | 9.0 (High)     | **Very High**      | High       | AWS S3 leaks, Jenkins RCE   | <p>▶ Automated scanning (Chef, Ansible).<br>▶ Least-privilege access.<br>▶ Disable default credentials.</p>                      |
-| **Kernel Flaws**                  | 8.8 (High)     | Moderate           | Critical   | Dirty Pipe (CVE-2022-0847)  | <p>▶ Immediate kernel patching.<br>▶ Restrict root access.<br>▶ Use SELinux/AppArmor.</p>                                        |
-| **Vulnerable Components**         | 9.1 (Critical) | **Very High**      | Critical   | Log4Shell, Struts (Equifax) | <p>▶ SBOM (Software Bill of Materials).<br>▶ Automated dependency updates (Dependabot).</p>                                      |
-| **Security Misconfigurations**    | 8.5 (High)     | High               | High       | Kubernetes API exposure     | <p>▶ CIS benchmarks.<br>▶ Regular audits with OpenSCAP.<br>▶ Disable debug modes.</p>                                            |
-| **Broken Authentication**         | 8.8 (High)     | High               | High       | Facebook token hijacking    | <p>▶ MFA enforcement.<br>▶ Rate-limiting login attempts.<br>▶ OAuth 2.0 hardening.</p>                                           |
-| **SSRF**                          | 8.7 (High)     | Moderate-High      | High       | Capital One breach          | <p>▶ Network segmentation.<br>▶ Block internal IPs in requests.<br>▶ Use allowlists for URLs.</p>                                |
-| **Insufficient Input Validation** | 8.1 (High)     | High               | High       | Heartbleed (OpenSSL)        | <p>▶ Input length/type checks.<br>▶ Fuzz testing (AFL).<br>▶ Zero-trust input models.</p>                                        |
-| **Race Conditions**               | 7.5 (High)     | Hard               | High       | Dirty COW (Linux)           | <p>▶ Atomic operations.<br>▶ File-locking mechanisms.<br>▶ TOCTOU checks.</p>                                                    |
-| **Unrestricted File Uploads**     | 8.0 (High)     | Moderate           | High       | WordPress malware uploads   | <p>▶ File type verification (magic numbers).<br>▶ Store uploads outside webroot.<br>▶ Scan with ClamAV.</p>                      |
-| **XSS**                           | 7.5 (High)     | **Very High**      | Moderate   | Tesla infotainment XSS      | <p>▶ CSP headers.<br>▶ Output encoding (OWASP ESAPI).<br>▶ DOM sanitization.</p>                                                 |
-| **Symbolic Links**                | 7.1 (High)     | Moderate           | High       | Docker breakout             | <p>▶ Disable symlink following.<br>▶ chroot/jail environments.<br>▶ Use <code>openat()</code> safely.</p>                        |
-| **Weak Credentials**              | 7.5 (High)     | **Very High**      | High       | Mirai botnet (IoT)          | <p>▶ Password policies (12+ chars).<br>▶ Block common passwords.<br>▶ Certificate-based auth.</p>                                |
-| **Incorrect File Permissions**    | 7.8 (High)     | Moderate           | High       | MongoDB ransomware          | <p>▶ <code>chmod 600</code> for sensitive files.<br>▶ Regular <code>auditd</code> checks.<br>▶ Principle of least privilege.</p> |
-| **File Descriptor Leaks**         | 6.5 (Medium)   | Low                | High       | Heartbleed                  | <p>▶ Secure coding (close handles).<br>▶ Static analysis (Coverity).<br>▶ Memory-safe languages.</p>                             |
-| **Missing Encryption**            | 6.8 (Medium)   | Low                | High       | HIPAA violations            | <p>▶ TLS 1.3+ enforcement.<br>▶ Encrypt data at rest (AES-256).<br>▶ HSM for keys.</p>                                           |
+|**Vulnerability**|**Attack Target**|**Attack Vector**|**CVSS**|**Exploitability**|**Impact**|**Example Exploit**|**Mitigation Strategies**|
+|---|---|---|---|---|---|---|---|
+|**Buffer Overflows**|Applications, OS, Services|Crafted input overflowing memory, executing shellcode|9.8 (Critical)|Moderate-High|Critical|EternalBlue (WannaCry)|<p>▶ Use memory-safe languages (Rust, Go).  <br>▶ Enable DEP/ASLR.  <br>▶ Patch OS/libc regularly.</p>|
+|**Injection Flaws** (SQLi, XSS)|Web apps, APIs, Databases|SQLi, XSS, Command Injection|9.8 (Critical)|High|Critical|Equifax (SQLi), Log4Shell|<p>▶ Parameterized queries.  <br>▶ Input sanitization.  <br>▶ WAF rules (e.g., ModSecurity).</p>|
+|**Misconfigurations**|Servers, Cloud, IoT, APIs, Network Devices|Default credentials, open ports, exposed interfaces|9.0 (High)|**Very High**|High|AWS S3 leaks, Jenkins RCE|<p>▶ Automated scanning (Chef, Ansible).  <br>▶ Least-privilege access.  <br>▶ Disable default credentials.</p>|
+|**Kernel Flaws**|OS (Linux/Windows/macOS)|Privilege escalation via kernel bugs, exploits|8.8 (High)|Moderate|Critical|Dirty Pipe (CVE-2022-0847)|<p>▶ Immediate kernel patching.  <br>▶ Restrict root access.  <br>▶ Use SELinux/AppArmor.</p>|
+|**Vulnerable Components**|Libraries, Frameworks|Exploiting known CVEs in dependencies|9.1 (Critical)|**Very High**|Critical|Log4Shell, Struts (Equifax)|<p>▶ SBOM (Software Bill of Materials).  <br>▶ Automated dependency updates (Dependabot).</p>|
+|**Security Misconfigurations**|Cloud, Servers, Containers|Exposed admin interfaces, verbose errors|8.5 (High)|High|High|Kubernetes API exposure|<p>▶ CIS benchmarks.  <br>▶ Regular audits with OpenSCAP.  <br>▶ Disable debug modes.</p>|
+|**Broken Authentication**|Web apps, APIs|Credential stuffing, session hijacking|8.8 (High)|High|High|Facebook token hijacking, OAuth misconfigurations|<p>▶ MFA enforcement.  <br>▶ Rate-limiting login attempts.  <br>▶ OAuth 2.0 hardening.</p>|
+|**SSRF**|Cloud, Internal Networks|Forging requests from the server|8.7 (High)|Moderate-High|High|Capital One breach, AWS metadata theft|<p>▶ Network segmentation.  <br>▶ Block internal IPs in requests.  <br>▶ Use allowlists for URLs.</p>|
+|**Insufficient Input Validation**|Web apps, APIs, Databases|SQLi, XSS, Command Injection|8.1 (High)|High|High|Heartbleed (OpenSSL)|<p>▶ Input length/type checks.  <br>▶ Fuzz testing (AFL).  <br>▶ Zero-trust input models.</p>|
+|**Race Conditions**|OS, Applications, Concurrent Systems|TOCTOU (Time-of-Check to Time-of-Use) attacks|7.5 (High)|Hard|High|Dirty COW (Linux)|<p>▶ Atomic operations.  <br>▶ File-locking mechanisms.  <br>▶ TOCTOU checks.</p>|
+|**Unrestricted File Uploads**|Web apps|Uploading malicious executables|8.0 (High)|Moderate|High|WordPress malware uploads, Web shell uploads|<p>▶ File type verification (magic numbers).  <br>▶ Store uploads outside webroot.  <br>▶ Scan with ClamAV.</p>|
+|**XSS**|Web apps, APIs|Cross-site scripting attacks|7.5 (High)|**Very High**|Moderate|Tesla infotainment XSS|<p>▶ CSP headers.  <br>▶ Output encoding (OWASP ESAPI).  <br>▶ DOM sanitization.</p>|
+|**Symbolic Links**|File systems, Privileged apps|Tricking apps into writing to sensitive files|7.1 (High)|Moderate|High|Docker breakout|<p>▶ Disable symlink following.  <br>▶ chroot/jail environments.  <br>▶ Use <code>openat()</code> safely.</p>|
+|**Weak Credentials**|IoT, Web apps, Systems|Default/weak password exploitation|7.5 (High)|**Very High**|High|Mirai botnet (IoT)|<p>▶ Password policies (12+ chars).  <br>▶ Block common passwords.  <br>▶ Certificate-based auth.</p>|
+|**Incorrect File Permissions**|OS, Databases, Apps, File Systems|Unauthorized access/modification, reading restricted files|7.8 (High)|Moderate|High|MongoDB ransomware|<p>▶ <code>chmod 600</code> for sensitive files.  <br>▶ Regular <code>auditd</code> checks.  <br>▶ Principle of least privilege.</p>|
+|**Insecure Direct Object Refs.**|Web apps, APIs|Manipulating object references|_Not Rated_|High|High|Accessing other users' data via ID parameter tampering|_Mitigation strategies to be added_|
+|**File Descriptor Leaks**|OS, Applications, Running Processes|Exploiting unclosed file handles|6.5 (Medium)|Low|High|Heartbleed|<p>▶ Secure coding (close handles).  <br>▶ Static analysis (Coverity).  <br>▶ Memory-safe languages.</p>|
+|**Missing Encryption**|Databases, Networks|Sniffing plaintext data|6.8 (Medium)|Low|High|FTP credentials intercepted, unencrypted medical records|<p>▶ TLS 1.3+ enforcement.  <br>▶ Encrypt data at rest (AES-256).  <br>▶ HSM for keys.</p>|
 
 **High-Risk Focus Areas:**
 
-* **Critical (9.0+ CVSS)**: Patch buffers/injection flaws within 24hrs of CVE disclosure.
-* **High (7.0–8.9 CVSS)**: Automate scans for misconfigurations/weak credentials weekly.
-* **Medium (5.0–6.9 CVSS)**: Enforce encryption/MFA by policy.
+- **Critical (9.0+ CVSS)**: Patch buffers/injection flaws within 24hrs of CVE disclosure.
+- **High (7.0–8.9 CVSS)**: Automate scans for misconfigurations/weak credentials weekly.
+- **Medium (5.0–6.9 CVSS)**: Enforce encryption/MFA by policy.
 
 ### Detection, exploitation, and mitigation of prioritized vulnerabilities 
 

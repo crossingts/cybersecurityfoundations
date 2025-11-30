@@ -15,12 +15,43 @@ This section explores common cyber attack targets and associated attack vectors 
 
 ## Topics covered in this section
 
-* **NIST SP 800-115's attack categories**
-* **Expanded attack categories**
+* Introduction
+* NIST SP 800-115's attack categories
+* OWASP Top 10
+* Common Weakness Enumeration (CWE™)
+* Common Vulnerabilities and Exposures (CVE®) & NVD
+* Prioritized attack categories 
+* Detection, exploitation, and mitigation of prioritized vulnerabilities 
+
+### Introduction
+
+When it comes to categorizing common vulnerabilities targeted by penetration testers (and malicious hackers), NIST's 2008 categories of vulnerabilities (attack targets) is a logical starting point.
+
+NIST SP 800-115, "Technical Guide to Information Security Testing and Assessment", was published in 2008 but has not been formally updated. 
+While the high-level principles and methodology of penetration testing in this guide are still sound, the taxonomy of vulnerabilities is significantly outdated.
+
+The attack landscape has evolved dramatically, primarily towards web applications, identity-based attacks, APIs, and cloud services.
+
+A modern, practical taxonomy of attack categories can be anchored in the following two/three frameworks:
+
+- **CWE Top 25:** This is now the standard for categorizing the root cause of a vulnerability.
+- **CVE/NVD:** This is how we track specific instances of vulnerabilities in software (what is exploited).
+/
+- **OWASP Top 10**
+
+These two/three frameworks reflect an evolving attack landscape pointing to the following categories of vulnerabilities:
+
+- **Web Application Flaws:** Injection (SQLi, OS Command), XSS, Broken Access Control (IDOR).
+- **Security Misconfigurations:** Cloud storage (S3) buckets, default credentials, unnecessary services.
+- **Identity & Access Issues:** Weak passwords, lack of multi-factor authentication, privilege escalation.
+- **Outdated Software:** Unpatched systems with known CVEs.
+- **Network-Level Attacks:** VLAN hopping, switch spoofing, insecure network device management (SNMP, Telnet).
 
 ### NIST SP 800-115's attack categories
 
-Most vulnerabilities exploited by penetration testing fall into the following categories (NIST SP 800-115, 2008, pp. 5-4-5-5):
+The majority of vulnerabilities exploited by penetration testing fall into the following categories (NIST SP 800-115, 2008, pp. 5-4-5-5):
+
+**verbatim:**
 
 * Misconfigurations. Misconfigured security settings, particularly insecure default settings, are usually easily exploitable.
 * Kernel Flaws. Kernel code is the core of an OS, and enforces the overall security model for the system—so any security flaw in the kernel puts the entire system in danger.
@@ -44,28 +75,7 @@ Most vulnerabilities exploited by penetration testing fall into the following ca
 | **Race Conditions**                 | Concurrent Systems                                  | TOCTOU (Time-of-Check to Time-of-Use) attacks                   | Changing file permissions between check and use       |
 | **Incorrect File/Directory Perms**  | File Systems                                        | Reading/writing restricted files                                | `chmod 777` exposing SSH private keys                 |
 
-**Key Insights from NIST SP 800-115**
-
-1. **Focus on Exploitability**:
-   * These vulnerabilities are prioritized because they’re **frequently exploitable** during pentests (e.g., misconfigurations are low-hanging fruit).
-   * Many stem from **poor system administration** (insecure defaults, permissions).
-2. **Attack Surface Coverage**:
-   * **Kernel flaws** → OS-level compromise.
-   * **Input validation** → Web app breaches (OWASP Top 10 overlap).
-   * **Race conditions/symlinks** → Advanced privilege escalation.
-3. **Mitigation Examples**:
-   * **Patch management** (kernel flaws, buffer overflows).
-   * **Least privilege** (permissions, file descriptors).
-   * **Input sanitization** (SQLi/XSS prevention).
-
-**Comparison to OWASP/Other Frameworks**
-
-* **NIST SP 800-115** focuses on **technical vulnerabilities** (e.g., kernel flaws), while OWASP Top 10 emphasizes **web-specific risks**.
-* **Shared themes**: Input validation, misconfigurations appear in both.
-
-### Expanded attack categories
-
-_(Vulnerability vs. Attack Target vs. Attack Vector vs. Example Exploit)_
+merge:
 
 | **Vulnerability Category**                | **Attack Target**             | **Attack Vector**                                   | **Example Exploit**                                                                             |
 | ----------------------------------------- | ----------------------------- | --------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
@@ -78,18 +88,67 @@ _(Vulnerability vs. Attack Target vs. Attack Vector vs. Example Exploit)_
 | **File Descriptor Issues**                | OS, Applications              | Exploiting unclosed file handles                    | **Heartbleed** (CVE-2014-0160) via OpenSSL file descriptor leaks                                |
 | **Race Conditions (TOCTOU)**              | OS, Applications              | Timing attacks to bypass checks                     | Linux `ptrace` race condition (CVE-2019-13272)                                                  |
 | **Incorrect File/Directory Permissions**  | OS, Databases, Apps           | Unauthorized access/modification                    | **MongoDB ransomware attacks** (exposed databases with weak permissions)                        |
-| **Broken Authentication**                 | Web apps, APIs                | Credential stuffing, session hijacking              | **Facebook token hijacking** (2018), **OAuth misconfigurations**                                |
-| **Use of Vulnerable Components**          | Libraries, Frameworks         | Exploiting known CVEs in dependencies               | **Apache Struts** (Equifax breach), **Log4j** (Log4Shell)                                       |
-| **Insecure Direct Object Refs.**          | Web apps, APIs                | Manipulating object references                      | **Accessing other users’ data** via ID parameter tampering                                      |
-| **Server-Side Request Forgery (SSRF)**    | Cloud, Internal Networks      | Forging requests from the server                    | **Capital One breach** (CVE-2019-19781), **AWS metadata theft**                                 |
-| **Unrestricted File Uploads**             | Web apps                      | Uploading malicious executables                     | **Web shell uploads** (e.g., PHP shells in CMS plugins)                                         |
-| **Missing Encryption**                    | Databases, Networks           | Sniffing plaintext data                             | **FTP credentials intercepted**, **unencrypted medical records**                                |
 
-***
+### OWASP Top 10
 
-**Vulnerability table** based on **exploitability (Ease of Attack)** and **impact (Potential Damage)**, using **CVSS v3.0 scores** (where applicable) and real-world prevalence:
+OWASP Testing Guide (Web Security Testing Guide)
 
-#### **Prioritized Vulnerability Table With Mitigation Strategies**
+"The guide is structured to mirror the phases of a typical application penetration test. It begins with preliminary steps like information gathering and configuration management testing, then moves into a thorough examination of identity management, authentication, and session management controls. The core of the WSTG is its extensive coverage of specific vulnerability classes, most notably the OWASP Top 10 risks such as SQL Injection (SQLi), Cross-Site Scripting (XSS), and Cross-Site Request Forgery (CSRF). For each testing area, the guide provides a clear objective, descriptions of how to test for weaknesses, and guidance on how to interpret the results."
+
+OWASP Top 10 emphasizes web-specific risks.
+
+**Comparison of Frameworks / Shared themes**
+
+Shared themes: 
+* Input validation, misconfigurations appear in both OWASP Top 10 and NIST SP 800-115.
+
+### Common Weakness Enumeration (CWE™)
+
+NIST itself now primarily uses the **CWE List** as the authoritative source for types of software weaknesses. This is a much more granular and detailed community-developed list of common software and hardware security weaknesses which serves as a common language for describing vulnerabilities. Penetration testers use the CWE to classify the root cause of the flaws they find. The **CWE Top 25 Most Dangerous Software Weaknesses** is the spiritual successor to NIST's 2008 list and it is updated regularly based on real-world data.
+
+**Mapping the 2008 List to the 2023 CWE Top 25**
+
+| 2008 Category (NIST SP 800-115)   | Modern Equivalent (CWE Top 25, 2023)                                                                                                                                                                                                                                                                                           | Why it's Updated / Refined                                         |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| **Insufficient Input Validation** | **[CWE-79: Improper Neutralization of Input During Web Page Generation (XSS)](https://cwe.mitre.org/data/definitions/79.html)**                                                                                                                                                                                                | This is more specific. "Input Validation" is too broad.            |
+| **Buffer Overflows**              | **[CWE-787: Out-of-bounds Write](https://cwe.mitre.org/data/definitions/787.html)** & **[CWE-125: Out-of-bounds Read](https://cwe.mitre.org/data/definitions/125.html)**                                                                                                                                                       | The modern, more precise terminology for memory safety violations. |
+| **Misconfigurations**             | **[CWE-16: Configuration](https://cwe.mitre.org/data/definitions/16.html)** (parent category). More specifically:  <br>- **[[CWE-798] Use of Hard-coded Credentials](https://cwe.mitre.org/data/definitions/798.html)**  <br>- **[[CWE-942] Permissive Cross-domain Policy](https://cwe.mitre.org/data/definitions/942.html)** | This is broken into many specific, common misconfigurations.       |
+| _(Not well covered in 2008)_      | **[[CWE-89] SQL Injection](https://cwe.mitre.org/data/definitions/89.html)**                                                                                                                                                                                                                                                   | Was an example in 2008; now a top-tier category of its own.        |
+| _(Not well covered in 2008)_      | **[[CWE-22] Improper Limitation of a Pathname to a Restricted Directory (Path Traversal)](https://cwe.mitre.org/data/definitions/22.html)**                                                                                                                                                                                    | A classic flaw that's still very common.                           |
+| _(Not well covered in 2008)_      | **[[CWE-78] Improper Neutralization of Special Elements used in an OS Command (OS Command Injection)](https://cwe.mitre.org/data/definitions/78.html)**                                                                                                                                                                        | Another critical web app flaw.                                     |
+| **Incorrect File Permissions**    | **[CWE-732: Incorrect Permission Assignment for Critical Resource](https://cwe.mitre.org/data/definitions/732.html)**                                                                                                                                                                                                          | The modern, broader classification.                                |
+
+NIST's 2008 list is very OS and application-centric. The modern CWE Top 25 includes critical weaknesses that, while absent from NIST's 2008 list, are dominant today, such as:
+
+- **[[CWE-352] Cross-Site Request Forgery (CSRF)](https://cwe.mitre.org/data/definitions/352.html)**
+- **[[CWE-434] Unrestricted Upload of File with Dangerous Type](https://cwe.mitre.org/data/definitions/434.html)**
+- **[[CWE-862] Missing Authorization](https://cwe.mitre.org/data/definitions/862.html)** (a big part of modern API testing)
+
+### Common Vulnerabilities and Exposures (CVE®) & NVD
+
+While CWE is about the type of flaw, CVE Records are about specific instances of flaws in specific products.
+
+- The **National Vulnerability Database (NVD)**, run by NIST, is the U.S. government repository of CVE records.
+- Penetration testers use this database to find and exploit known vulnerabilities (e.g., using a scanner like Nessus or OpenVAS which cross-references findings with the CVE list).
+
+When a penetration tester exploits a vulnerability (e.g., a CWE), he then use techniques mapped in ATT&CK (e.g., Credential Dumping [T1003], Lateral Movement [TA0008]). MITRE ATT&CK is a framework that describes the tactics and techniques adversaries use during an attack.
+
+### Prioritized attack categories 
+
+**Vulnerability table** based on **exploitability (ease of attack)** and **impact (potential damage)**, using **CVSS v3.0 scores** (where applicable) and real-world prevalence.
+
+#### Prioritized Vulnerability Table With Mitigation Strategies
+
+merge:
+
+| **Vulnerability Category**             | **Attack Target**        | **Attack Vector**                      | **Example Exploit**                                              |
+| -------------------------------------- | ------------------------ | -------------------------------------- | ---------------------------------------------------------------- |
+| **Broken Authentication**              | Web apps, APIs           | Credential stuffing, session hijacking | **Facebook token hijacking** (2018), **OAuth misconfigurations** |
+| **Use of Vulnerable Components**       | Libraries, Frameworks    | Exploiting known CVEs in dependencies  | **Apache Struts** (Equifax breach), **Log4j** (Log4Shell)        |
+| **Insecure Direct Object Refs.**       | Web apps, APIs           | Manipulating object references         | **Accessing other users’ data** via ID parameter tampering       |
+| **Server-Side Request Forgery (SSRF)** | Cloud, Internal Networks | Forging requests from the server       | **Capital One breach** (CVE-2019-19781), **AWS metadata theft**  |
+| **Unrestricted File Uploads**          | Web apps                 | Uploading malicious executables        | **Web shell uploads** (e.g., PHP shells in CMS plugins)          |
+| **Missing Encryption**                 | Databases, Networks      | Sniffing plaintext data                | **FTP credentials intercepted**, **unencrypted medical records** |
 
 | **Vulnerability**                 | **CVSS**       | **Exploitability** | **Impact** | **Example Exploit**         | **Mitigation Strategies**                                                                                                        |
 | --------------------------------- | -------------- | ------------------ | ---------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
@@ -111,28 +170,21 @@ _(Vulnerability vs. Attack Target vs. Attack Vector vs. Example Exploit)_
 | **File Descriptor Leaks**         | 6.5 (Medium)   | Low                | High       | Heartbleed                  | <p>▶ Secure coding (close handles).<br>▶ Static analysis (Coverity).<br>▶ Memory-safe languages.</p>                             |
 | **Missing Encryption**            | 6.8 (Medium)   | Low                | High       | HIPAA violations            | <p>▶ TLS 1.3+ enforcement.<br>▶ Encrypt data at rest (AES-256).<br>▶ HSM for keys.</p>                                           |
 
-#### **Key Mitigation Themes**:
+**High-Risk Focus Areas:**
 
-1. **Automation**
-   * Use tools like **Terraform for configs**, **Dependabot for dependencies**, and **OpenSCAP for audits**.
-2. **Secure Defaults**
-   * **CIS benchmarks** for OS/apps, **disable debug modes**, and **least-privilege access**.
-3. **Zero-Trust Principles**
-   * **Input validation**, **output encoding**, and **network segmentation** for SSRF/XSS.
-4. **Patch Management**
-   * Prioritize **kernel/libc updates** and **vulnerable component patches** (e.g., Log4j).
+* **Critical (9.0+ CVSS)**: Patch buffers/injection flaws within 24hrs of CVE disclosure.
+* **High (7.0–8.9 CVSS)**: Automate scans for misconfigurations/weak credentials weekly.
+* **Medium (5.0–6.9 CVSS)**: Enforce encryption/MFA by policy.
 
-#### **High-Risk Focus Areas**:
+### Detection, exploitation, and mitigation of prioritized vulnerabilities 
 
-* **Critical (9.0+ CVSS)**: Patch buffers/injection flaws **within 24hrs** of CVE disclosure.
-* **High (7.0–8.9 CVSS)**: Automate scans for **misconfigs/weak creds** weekly.
-* **Medium (5.0–6.9 CVSS)**: Enforce encryption/MFA **by policy**.
+**Response playbook / mitigation of prioritized vulnerabilities**
 
-***
+A consolidated toolkit and response playbook for each vulnerability category, combining automated tools and manual testing techniques. 
 
-A consolidated **toolkit and response playbook** for each vulnerability category, combining **automated tools**, **manual testing techniques**, and **incident response steps**:
+**merge section/content "Key Tools by Function" below into the following table**
 
-#### **Vulnerability Response Toolkit & Playbook**
+#### Vulnerability Response Toolkit & Playbook
 
 | **Vulnerability**         | **Detection Tools**                                 | **Exploitation Tools**                                        | **Response Playbook**                                                                                                                                   |
 | ------------------------- | --------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -147,7 +199,23 @@ A consolidated **toolkit and response playbook** for each vulnerability category
 | **Unrestricted Uploads**  | <p>▶ ClamAV (malware scan)<br>▶ Metasploit</p>      | ▶ Web shells (e.g., JSP/PHP)                                  | <p><strong>1.</strong> Validate file types.<br><strong>2.</strong> Store outside webroot.<br><strong>3.</strong> Scan uploaded files.</p>               |
 | **Symbolic Links**        | ▶ `find / -type l` (manual check)                   | ▶ Symlink race exploits                                       | <p><strong>1.</strong> Disable symlink following.<br><strong>2.</strong> Use <code>openat()</code>.<br><strong>3.</strong> Audit <code>/tmp</code>.</p> |
 
-#### **Key Tools by Function**
+#### Key Mitigation Themes:
+
+1. **Automation**
+   * Use tools like **Terraform for configs**, **Dependabot for dependencies**, and **OpenSCAP for audits**.
+2. **Secure Defaults**
+   * **CIS benchmarks** for OS/apps, **disable debug modes**, and **least-privilege access**.
+3. **Zero-Trust Principles**
+   * **Input validation**, **output encoding**, and **network segmentation** for SSRF/XSS.
+4. **Patch Management**
+   * Prioritize **kernel/libc updates** and **vulnerable component patches** (e.g., Log4j).
+
+**Mitigation Examples**:
+   * **Patch management** (kernel flaws, buffer overflows).
+   * **Least privilege access** (permissions, file descriptors).
+   * **Input sanitization** (SQLi/XSS prevention).
+
+#### Key Tools by Function
 
 **Detection & Scanning**
 
@@ -178,26 +246,6 @@ A consolidated **toolkit and response playbook** for each vulnerability category
 | **SELinux**     | Linux MAC enforcement   | `setenforce 1` (enforcing mode)  |
 | **ClamAV**      | Malware scanning        | `clamscan /var/www/uploads`      |
 | **Dependabot**  | Dependency updates      | Auto-PR for vulnerable libraries |
-
-#### **Incident Response Workflow**
-
-1. **Detection**
-   * Use **SIEM** (Splunk, ELK) to alert on anomalies (e.g., `sudo` failures, unexpected outbound traffic).
-2. **Containment**
-   * **Isolate** affected systems (network segmentation).
-   * **Revoke** compromised credentials/API keys.
-3. **Eradication**
-   * Apply **patches** (e.g., `apt-get update && apt-get upgrade`).
-   * **Reimage** systems if rootkits are suspected.
-4. **Recovery**
-   * **Restore** from clean backups.
-   * **Audit** logs for persistence (e.g., cronjobs, SSH keys).
-
-#### **Note:**
-
-* **For DevOps**: Embed **Trivy** in CI/CD to scan containers for CVEs.
-* **For Cloud**: Use **AWS GuardDuty** or **Azure Defender** for misconfig monitoring.
-* **For Red Teams**: Chain vulnerabilities (e.g., **XSS → Cookie theft → SSRF**).
 
 ### References
 

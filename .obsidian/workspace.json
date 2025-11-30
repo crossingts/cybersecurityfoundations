@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/common-attack-targets/misconfigured-security-settings.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/common-attack-targets.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "misconfigured-security-settings"
+              "title": "common-attack-targets"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 240.5
+    "width": 273.5
   },
   "right": {
     "id": "9ebf813ca15a7ea0",
@@ -183,10 +183,22 @@
   },
   "active": "8d1af660eaf26a91",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/penetration-testing-methodologies-and-frameworks/README.md",
+    "6.-practical-foundations-in-ethical-hacking/common-attack-targets.md",
+    "6.-practical-foundations-in-ethical-hacking/chapter-6-review-questions.md",
+    "6.-practical-foundations-in-ethical-hacking/common-attack-targets-1/misconfigured-security-settings.md",
+    "6.-practical-foundations-in-ethical-hacking/common-attack-targets-1/common-attack-targets-quiz.md",
+    "6.-practical-foundations-in-ethical-hacking/common-attack-targets-1/attack-types-ceh-ec-council.md",
+    "6.-practical-foundations-in-ethical-hacking/common-attack-targets-1/attack-target-vs-attack-vector.md",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets/README.md",
+    "6.-practical-foundations-in-ethical-hacking/common-attack-targets-1/kernel-flaws-and-buffer-overflows/buffer-overflows-deep-dive.md",
+    "6.-practical-foundations-in-ethical-hacking/common-attack-targets-1/kernel-flaws-and-buffer-overflows/README.md",
+    "6.-practical-foundations-in-ethical-hacking/common-attack-targets-1/kernel-flaws-and-buffer-overflows",
+    "6.-practical-foundations-in-ethical-hacking/common-attack-targets-1/README.md",
+    "6.-practical-foundations-in-ethical-hacking/common-attack-targets-1",
+    "6.-practical-foundations-in-ethical-hacking/common-attack-targets/misconfigured-security-settings.md",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing/README.md",
     "6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/README.md",
-    "6.-practical-foundations-in-ethical-hacking/chapter-6-review-questions.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/penetration-testing-technologies-quiz.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/README.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md",
@@ -201,25 +213,13 @@
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/scanning-and-enumeration",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/gaining-access-attacking-a-system.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process",
-    "conflict-files-obsidian-git.md",
-    "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process.md",
-    "6.-practical-foundations-in-ethical-hacking/scanning-and-enumeration/scanning-and-enumeration-tools.md",
-    "6.-practical-foundations-in-ethical-hacking/scanning-and-enumeration/scanning-and-enumeration-techniques-and-tools.md",
-    "6.-practical-foundations-in-ethical-hacking/scanning-and-enumeration/README.md",
     "6.-practical-foundations-in-ethical-hacking/scanning-and-enumeration",
-    "6.-practical-foundations-in-ethical-hacking/reconnaissance-footprinting.md",
-    "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process-quiz.md",
-    "6.-practical-foundations-in-ethical-hacking/passive-discovery-method.md",
-    "6.-practical-foundations-in-ethical-hacking/gaining-access-attacking-a-system.md",
-    "5.-cryptography-and-wireless-security/wireless-client-authentication-methods/README.md",
     "6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing",
     "Pasted image 20251017114230.png",
     "6.-practical-foundations-in-ethical-hacking/packet-analyzers",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing/Pasted image 20251010134024.png",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing",
     "6.-practical-foundations-in-ethical-hacking/what-do-ethical-hackers-do",
-    "6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking",
-    "6.-practical-foundations-in-ethical-hacking/defensive-security-vs-offensive-security",
-    "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1"
+    "6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking"
   ]
 }

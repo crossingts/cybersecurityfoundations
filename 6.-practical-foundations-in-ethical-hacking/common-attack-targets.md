@@ -33,9 +33,7 @@ The attack landscape has evolved dramatically, primarily towards web application
 
 - **CWE Top 25:** This is now the standard for categorizing the root cause of a vulnerability.
 - **CVE/NVD:** This is how we track specific instances of vulnerabilities in software (what is exploited).
-- **OWASP Top 10**: add a few explanatory words here
-
-
+- **OWASP Top 10**: 
 
 These three frameworks reflect an evolving attack landscape pointing to the following categories of vulnerabilities:
 
@@ -48,8 +46,6 @@ These three frameworks reflect an evolving attack landscape pointing to the foll
 ### NIST SP 800-115's attack categories
 
 The majority of vulnerabilities exploited by penetration testing fall into the following categories (NIST SP 800-115, 2008, pp. 5-4-5-5):
-
-**verbatim:**
 
 * Misconfigurations. Misconfigured security settings, particularly insecure default settings, are usually easily exploitable.
 * Kernel Flaws. Kernel code is the core of an OS, and enforces the overall security model for the system—so any security flaw in the kernel puts the entire system in danger.
@@ -89,17 +85,16 @@ merge:
 
 ### OWASP Top 10
 
-OWASP Testing Guide (Web Security Testing Guide)
+reword:
 
-"The guide is structured to mirror the phases of a typical application penetration test. It begins with preliminary steps like information gathering and configuration management testing, then moves into a thorough examination of identity management, authentication, and session management controls. The core of the WSTG is its extensive coverage of specific vulnerability classes, most notably the OWASP Top 10 risks such as SQL Injection (SQLi), Cross-Site Scripting (XSS), and Cross-Site Request Forgery (CSRF). For each testing area, the guide provides a clear objective, descriptions of how to test for weaknesses, and guidance on how to interpret the results."
+OWASP, the Open Worldwide Application Security Project (formerly Open Web Application Security Project), is an online community that publishes open-source information and resources on IoT, system software and web application security. It is led by a non-profit called The OWASP Foundation. 
 
-OWASP Top 10 emphasizes web-specific risks.
+The "Top Ten", first published in 2003, is an annual listing of critical application security risks. Many standards, books, tools, and many organizations reference the Top 10 project, including MITRE, PCI DSS, the Defense Information Systems Agency (DISA-STIG), and the United States Federal Trade Commission.
 
-OWASP Top Ten
+The OWASP Testing Guide (Web Security Testing Guide) is structured to mirror the phases of a typical application penetration test. 
+It begins with preliminary steps like information gathering and configuration management testing, then moves into a thorough examination of identity management, authentication, and session management controls. The core of the WSTG is its extensive coverage of specific vulnerability classes, most notably the OWASP Top 10 risks such as SQL Injection (SQLi), Cross-Site Scripting (XSS), and Cross-Site Request Forgery (CSRF). For each testing area, the guide provides a clear objective, descriptions of how to test for weaknesses, and guidance on how to interpret the results.
 
-The "Top Ten", first published in 2003, is an annual listing of critical application security risks.[11][12][13][14][15] Many standards, books, tools, and many organizations reference the Top 10 project, including MITRE, PCI DSS,[16] the Defense Information Systems Agency (DISA-STIG), and the United States Federal Trade Commission.[17][18]
-
-**Comparison of Frameworks / Shared themes**
+Comparison of OWASP Top 10 and NIST SP 800-115 Frameworks / Shared themes
 
 Shared themes: 
 * Input validation, misconfigurations appear in both OWASP Top 10 and NIST SP 800-115.

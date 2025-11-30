@@ -20,6 +20,20 @@
               "icon": "lucide-file",
               "title": "common-attack-targets"
             }
+          },
+          {
+            "id": "39d0bf74be78b3a7",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://cwe.mitre.org/data/definitions/89.html",
+                "title": "CWE - CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') (4.18)",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "CWE - CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') (4.18)"
+            }
           }
         ]
       }
@@ -183,8 +197,8 @@
   },
   "active": "8d1af660eaf26a91",
   "lastOpenFiles": [
-    "6.-practical-foundations-in-ethical-hacking/penetration-testing-methodologies-and-frameworks/README.md",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets.md",
+    "6.-practical-foundations-in-ethical-hacking/penetration-testing-methodologies-and-frameworks/README.md",
     "6.-practical-foundations-in-ethical-hacking/chapter-6-review-questions.md",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets-1/misconfigured-security-settings.md",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets-1/common-attack-targets-quiz.md",

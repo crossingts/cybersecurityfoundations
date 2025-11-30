@@ -36,7 +36,7 @@ A modern, practical taxonomy of attack categories can be anchored in the followi
 
 - **CWE Top 25:** This is now the standard for categorizing the root cause of a vulnerability.
 - **CVE/NVD:** This is how we track specific instances of vulnerabilities in software (what is exploited).
-/
+
 - **OWASP Top 10**
 
 These two/three frameworks reflect an evolving attack landscape pointing to the following categories of vulnerabilities:

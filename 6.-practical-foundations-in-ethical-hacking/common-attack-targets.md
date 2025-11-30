@@ -15,13 +15,13 @@ This section explores common cyber attack targets and associated attack vectors 
 
 ## Topics covered in this section
 
-* Introduction
-* NIST SP 800-115's attack categories
-* OWASP Top 10
-* Common Weakness Enumeration (CWE™)
-* Common Vulnerabilities and Exposures (CVE®) & NVD
-* Prioritized attack categories 
-* Detection, exploitation, and mitigation of prioritized vulnerabilities 
+* **Introduction**
+* **NIST SP 800-115's attack categories**
+* **OWASP Top 10**
+* **Common Weakness Enumeration (CWE™)**
+* **Common Vulnerabilities and Exposures (CVE®) & NVD**
+* **Prioritized attack categories** 
+* **Detection, exploitation, and mitigation of prioritized vulnerabilities** 
 
 ### Introduction
 

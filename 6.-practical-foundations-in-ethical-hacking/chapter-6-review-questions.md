@@ -121,10 +121,10 @@
 
 ### Phases of the penetration testing process
 
-**1. According to the lesson, what is the single most important characteristic that distinguishes the reconnaissance phase from the scanning and enumeration phase?**\
+**1. According to the section, what is the single most important characteristic that distinguishes the reconnaissance phase from the scanning and enumeration phase?**\
 **Answer:** The single most important characteristic is the objective: reconnaissance aims to build a profile of the target and identify entry points (the "what"), while scanning and enumeration aims to gather in-depth information on those specific targets to understand their characteristics and weaknesses (the "how" and "what can be extracted").
 
-**2. The lesson describes two broad categories of intelligence gathering techniques. Name these two categories and the key behavioral characteristic that defines each.**\
+**2. The section describes two broad categories of intelligence gathering techniques. Name these two categories and the key behavioral characteristic that defines each.**\
 **Answer:** The two categories are (1) Passive techniques, defined by gathering information without direct interaction with the target, and (2) Active techniques, defined by any activity that requires the hacker to interact with the target's systems or organization.
 
 **3. A network sniffer is described as a tool that spans two phases. For what primary purpose is it used in the reconnaissance phase, and for what primary purpose is it used in the scanning and enumeration phase?**\
@@ -186,3 +186,20 @@
 
 **5. What is the primary advantage of OWASP ZAP's "heads-up display" (HUD) feature, and what specific testing environment makes ZAP a popular choice?**\
 **Answer:** The primary advantage of the HUD is that it provides security information and testing capabilities directly within the browser, offering a novel, integrated approach to testing. ZAP is a popular choice for automated security testing in CI/CD pipelines due to its open-source nature and strong native support for automation.
+
+### Common attack targets
+
+**1. The section states that the vulnerability taxonomy in NIST SP 800-115 is "significantly outdated." What is the primary reason for this?**\
+**Answer:** The primary reason is that it was published in 2008 and does not adequately cover the modern attack landscape, which is dominated by web application flaws, cloud services, APIs, and identity-based attacks.
+
+**2. The section presents a modern, practical taxonomy anchored in three community-driven frameworks. Name these three frameworks.**\
+**Answer:** The three frameworks are: (1) the OWASP Top 10, (2) the Common Weakness Enumeration (CWE), and (3) the Common Vulnerabilities and Exposures (CVE) system & National Vulnerability Database (NVD).
+
+**3. What is the fundamental distinction between a CWE and a CVE?**\
+**Answer:** A CWE describes a general _type_ or category of software weakness (the "what kind"), while a CVE identifies a _specific instance_ of a vulnerability in a particular product or system (the "what" and "where").
+
+**4. In the "Prioritized Vulnerability Table With Mitigation Strategies", scores are based on exploitability and impact using the CVSS. Why would this standardized scoring system be helpful for penetration testers?**\
+**Answer:** The primary purpose is to provide an objective, consistent method to triage and prioritize which vulnerabilities to remediate first, typically by categorizing them as Critical, High, or Medium risk.
+
+**5. The "Response Playbook" for each vulnerability follows a consistent, three-step structure. What are the three high-level phases of this response process?**\
+**Answer:** The three phases are: (1) CONTAIN the incident to prevent further damage, (2) ERADICATE the root cause from the environment, and (3) RECOVER by restoring systems and implementing measures to prevent recurrence.

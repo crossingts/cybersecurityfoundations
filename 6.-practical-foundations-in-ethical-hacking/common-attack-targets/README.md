@@ -9,8 +9,14 @@ description: >-
 ## Learning objectives <a href="#learning-objectives" id="learning-objectives"></a>
 
 * Become familiar with common cyber attack targets and associated attack vectors and vulnerabilities
+- Compare historical and modern vulnerability taxonomies, including NIST SP 800-115, OWASP Top 10, and CWE
+- Analyze common vulnerability types, their attack vectors, and real-world exploits
+- Distinguish between the roles of CWE, CVE, and NVD in categorizing and tracking vulnerabilities
+- Prioritize attack targets based on CVSS severity, exploitability, and potential impact
+- Identify key tools for detecting, exploiting, and mitigating prioritized vulnerabilities
+- Develop a structured response playbook for addressing critical security flaws
 
-This section explores common cyber attack targets and associated attack vectors and vulnerabilities.
+This section provides a comprehensive overview of the most common and critical cybersecurity attack targets. We begin by examining the historical foundation of NIST SP 800-115's vulnerability categories, then transition to modern, community-driven frameworks that define today's attack landscape: the OWASP Top 10 for web application risks, the Common Weakness Enumeration (CWE) for root-cause flaws, and the Common Vulnerabilities and Exposures (CVE) system alongside the National Vulnerability Database (NVD) for tracking specific instances. By understanding the evolution and current state of these frameworks, you will learn to prioritize vulnerabilities based on severity and exploitability, and develop practical strategies for their detection, exploitation, and mitigation.
 
 ## Topics covered in this section
 

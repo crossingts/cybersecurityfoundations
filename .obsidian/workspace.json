@@ -20,20 +20,6 @@
               "icon": "lucide-file",
               "title": "README"
             }
-          },
-          {
-            "id": "93c571ec08044321",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://cwe.mitre.org/index.html",
-                "title": "CWE - Common Weakness Enumeration",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "CWE - Common Weakness Enumeration"
-            }
           }
         ]
       }
@@ -195,7 +181,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "39d0bf74be78b3a7",
+  "active": "06ca7278ba5efd38",
   "lastOpenFiles": [
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets/README.md",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets/attack-target-vs-attack-vector.md",

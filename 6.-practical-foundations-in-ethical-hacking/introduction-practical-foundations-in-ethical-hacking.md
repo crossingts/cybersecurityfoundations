@@ -49,6 +49,6 @@ Ethical hacking is the cornerstone of security verification within organizations
 
 [Penetration testing technologies](penetration-testing-technologies/)
 
-[Common attack targets](common-attack-targets-1/)
+[Common attack targets](/broken/pages/lDhGgkst9amIM3WIYKMy)
 
 [Setting up a cybersecurity lab](setting-up-a-cybersecurity-lab/)

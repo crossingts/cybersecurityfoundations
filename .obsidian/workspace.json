@@ -11,14 +11,10 @@
             "id": "39d0bf74be78b3a7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/common-attack-targets/attack-target-vs-attack-vector.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "attack-target-vs-attack-vector"
+              "title": "New tab"
             }
           }
         ]
@@ -183,6 +179,7 @@
   },
   "active": "39d0bf74be78b3a7",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/common-attack-targets/attack-target-vs-attack-vector.md",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets/README.md",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets.md",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets/kernel-flaws-and-buffer-overflows/buffer-overflows-deep-dive.md",
@@ -191,7 +188,6 @@
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets/kernel-flaws-and-buffer-overflows",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets/common-attack-targets-quiz.md",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets/attack-types-ceh-ec-council.md",
-    "6.-practical-foundations-in-ethical-hacking/common-attack-targets/attack-target-vs-attack-vector.md",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets-1/README.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-methodologies-and-frameworks/README.md",

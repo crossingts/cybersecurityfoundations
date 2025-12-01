@@ -68,7 +68,7 @@ The majority of vulnerabilities exploited by penetration testing fall into the f
 
 ### OWASP Top 10
 
-The **Open Worldwide Application Security Project (OWASP)** is a non-profit foundation that works to improve the security of software through community-led open-source projects. Its flagship project is the **OWASP Top 10**, a regularly updated document that raises awareness about the most critical security risks to web applications.
+The **Open Worldwide Application Security Project (OWASP)** is a non-profit foundation that works to improve the security of software through community-led open-source projects. Its flagship project is the **OWASP Top 10**, a regularly updated document that catalogues the most critical security risks to web applications.
 
 While NIST SP 800-115 offers a general, system-level view of vulnerabilities, the OWASP Top 10 provides a specialized, application-centric focus. First published in 2003, the OWASP Top 10 is based on real-world data from thousands of applications and vulnerabilities. The OWASP Top 10 serves as a vital benchmark for developers, auditors, and penetration testers, and is referenced by many standards, including the Payment Card Industry Data Security Standard (PCI DSS) and U.S. government frameworks.
 
@@ -82,7 +82,11 @@ Both the OWASP Top 10 and NIST SP 800-115 frameworks share several core themes, 
 
 ### Common Weakness Enumeration (CWE™)
 
-NIST itself now primarily uses the **CWE List** as the authoritative source for types of software weaknesses. This is a much more granular and detailed community-developed list of common software and hardware security weaknesses which serves as a common language for describing vulnerabilities. Penetration testers use the CWE to classify the root cause of the flaws they find. The **CWE Top 25 Most Dangerous Software Weaknesses** is the spiritual successor to NIST's 2008 list and it is updated regularly based on real-world data.
+NIST itself now primarily uses the **CWE list** as the authoritative source for types of software weaknesses. This is a much more granular and detailed community-developed list of common software and hardware security weaknesses which serves as a common language for describing vulnerabilities. 
+
+MITRE maintains and hosts the official CWE list (on cwe.mitre.org). It owns the intellectual property and is responsible for its structure and integrity.
+
+Penetration testers use the CWE to classify the root cause of the flaws they find. The **CWE Top 25 Most Dangerous Software Weaknesses** is the spiritual successor to NIST's 2008 list and it is updated regularly based on real-world data.
 
 **Mapping NIST's 2008 List to the 2023 CWE Top 25**
 
@@ -108,6 +112,11 @@ While CWE is about the type of flaw, CVE Records are about specific instances of
 
 * The **National Vulnerability Database (NVD)**, run by NIST, is the U.S. government repository of CVE records.
 * Penetration testers use this database to find and exploit known vulnerabilities (e.g., using a scanner like Nessus or OpenVAS which cross-references findings with the CVE list).
+
+Note:
+
+- The CVE List (a simple catalog of IDs and brief descriptions) is managed by MITRE under contract from the U.S. Cybersecurity and Infrastructure Security Agency (CISA). 
+- The National Vulnerability Database (NVD) is the U.S. government repository built upon the CVE List. It is managed by NIST.
 
 When a penetration tester exploits a vulnerability (e.g., a CWE), he then use techniques mapped in ATT\&CK (e.g., Credential Dumping \[T1003], Lateral Movement \[TA0008]). MITRE ATT\&CK is a framework that describes the tactics and techniques adversaries use during an attack.
 

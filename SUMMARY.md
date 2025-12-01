@@ -179,8 +179,6 @@
   * [Burp Suite/OWASP ZAP vs Wireshark/tcpdump](6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/burp-suite-owasp-zap-vs-wireshark-tcpdump.md)
   * [Penetration testing technologies — Quiz](6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/penetration-testing-technologies-quiz.md)
 * [Common attack targets](6.-practical-foundations-in-ethical-hacking/common-attack-targets/README.md)
-  * [Attack types (CEH/EC-Council)](6.-practical-foundations-in-ethical-hacking/common-attack-targets/attack-types-ceh-ec-council.md)
-  * [Attack target vs attack vector](6.-practical-foundations-in-ethical-hacking/common-attack-targets/attack-target-vs-attack-vector.md)
   * [Misconfigured security settings](6.-practical-foundations-in-ethical-hacking/common-attack-targets/misconfigured-security-settings.md)
   * [Kernel flaws and buffer overflows](6.-practical-foundations-in-ethical-hacking/common-attack-targets/kernel-flaws-and-buffer-overflows/README.md)
     * [Buffer overflows deep dive](6.-practical-foundations-in-ethical-hacking/common-attack-targets/kernel-flaws-and-buffer-overflows/buffer-overflows-deep-dive.md)

@@ -88,9 +88,7 @@ Both the OWASP Top 10 and NIST SP 800-115 frameworks share several core themes, 
 
 ### Common Weakness Enumeration (CWE™)
 
-NIST itself now primarily uses the **CWE list** as the authoritative source for types of software weaknesses. This is a much more granular and detailed community-developed list of common software and hardware security weaknesses which serves as a common language for describing vulnerabilities. 
-
-MITRE maintains and hosts the official CWE list (on cwe.mitre.org). It owns the intellectual property and is responsible for its structure and integrity.
+NIST itself now primarily uses the **CWE list** as the authoritative source for types of software weaknesses. This is a much more granular and detailed community-developed list of common software and hardware security weaknesses which serves as a common language for describing vulnerabilities. MITRE maintains and hosts the official CWE list (on cwe.mitre.org). It owns the intellectual property and is responsible for its structure and integrity.
 
 Penetration testers use the CWE to classify the root cause of the flaws they find. The **CWE Top 25 Most Dangerous Software Weaknesses** is the spiritual successor to NIST's 2008 list and it is updated regularly based on real-world data.
 

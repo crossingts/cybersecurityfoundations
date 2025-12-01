@@ -208,8 +208,10 @@ A consolidated toolkit and response playbook for each vulnerability category, co
 
 ### References
 
+https://cwe.mitre.org/index.html
+
 NIST Special Publication 800-115: Technical Guide to Information Security Testing and Assessment (NIST 800-115). Retrieved January 21, 2020, from http://csrc.nist.gov/publications/nistpubs/800-115/SP800-115.pdf
 
-The OWASP® Foundation. OWASP Top Ten. https://owasp.org/www-project-top-ten/
-
 The Mitre Corporation. MITRE ATT&CK. https://x.com/MITREattack
+
+The OWASP® Foundation. OWASP Top Ten. https://owasp.org/www-project-top-ten/

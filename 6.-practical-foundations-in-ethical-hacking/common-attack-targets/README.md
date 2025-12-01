@@ -213,7 +213,9 @@ A consolidated toolkit and response playbook for each vulnerability category, co
 
 ### References
 
-NIST Special Publication 800-115: Technical Guide to Information Security Testing and Assessment (NIST 800-115). Retrieved January 21, 2020, from http://csrc.nist.gov/publications/nistpubs/800-115/SP800-115.pdf
+NIST. National Vulnerability Database. https://nvd.nist.gov/
+
+NIST. NIST Special Publication 800-115: Technical Guide to Information Security Testing and Assessment (NIST 800-115). Retrieved January 21, 2020, from http://csrc.nist.gov/publications/nistpubs/800-115/SP800-115.pdf
 
 The MITRE Corporation (MITRE). (2025). Common Weakness Enumeration (CWE™). https://cwe.mitre.org/index.html
 

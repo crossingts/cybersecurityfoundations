@@ -116,16 +116,18 @@ When a penetration tester exploits a vulnerability (e.g., a CWE), he then use te
 
 While CWE is about the type of flaw, CVE Records are about specific instances of flaws in specific products. Penetration testers use this resource to find and exploit known vulnerabilities (e.g., using a scanner like Nessus or OpenVAS which cross-references findings with the CVE list).
 
-Note:
+For the penetration tester, the CVE system and the enriched NVD database are fundamental to the "low-hanging fruit" phase of an assessment. During reconnaissance and initial scanning, tools automatically fingerprint operating systems, software versions, and services. These fingerprints are matched against the CVE database to identify known, unpatched vulnerabilities on the target. A single CVE ID, such as CVE-2021-44228 (Log4Shell), provides a precise target for exploitation, complete with known attack vectors, proof-of-concept code, and patch information. This transforms a broad system scan into a prioritized list of actionable, exploitable entry points.
 
-- The CVE List (a simple catalog of IDs and brief descriptions) is managed by MITRE under contract from the U.S. Cybersecurity and Infrastructure Security Agency (CISA). 
-- The National Vulnerability Database (NVD), managed by NIST, is the U.S. government repository of CVE records.
+Furthermore, the NVD's role in enriching CVE records with **CVSS scores** and **CWE mappings** is critical for professional testing and reporting. A CVSS score helps a tester quickly triage findings—prioritizing a critical 9.8 vulnerability over a medium 5.0 one during a time-limited engagement. Mapping a CVE to a CWE (e.g., linking a specific buffer overflow CVE to CWE-787) allows the tester to report not just the _what_, but the underlying _why_, informing the client of systemic development or configuration issues. In essence, CVE/NVD provides the catalog of known weaponry, while NVD's analysis offers the intelligence on each weapon's range and impact, enabling efficient and effective attacks during a penetration test.
+
+**Note:**
+
+- The **CVE List** (a simple catalog of IDs and brief descriptions) is managed by MITRE under contract from the U.S. Cybersecurity and Infrastructure Security Agency (CISA).
+- The **National Vulnerability Database (NVD)**, managed by NIST, is the U.S. government repository that analyzes and enriches CVE records with severity scores, impact details, and patch links.
 
 ### Prioritized attack categories
 
-The following table provides a comprehensive overview of prioritized vulnerabilities contextualized within attack targets, attack vectors, risk scoring, and mitigation strategies - making it ideal for CCNA/CEH-level instruction on vulnerability prioritization and management.
-
-The vulnerability scores are based on exploitability (ease of attack) and impact (potential damage), using CVSS v3.0 scores (where applicable) and real-world prevalence.
+The following table provides a comprehensive overview of prioritized vulnerabilities contextualized within attack targets, attack vectors, risk scoring, and mitigation strategies - making it ideal for CCNA/CEH-level instruction on vulnerability prioritization and management. The vulnerability scores are based on exploitability (ease of attack) and impact (potential damage), using CVSS v3.0 scores (where applicable) and real-world prevalence.
 
 **Prioritized Vulnerability Table With Mitigation Strategies**
 
@@ -158,7 +160,7 @@ The vulnerability scores are based on exploitability (ease of attack) and impact
 
 ### Detection, exploitation, and mitigation of prioritized vulnerabilities
 
-A consolidated toolkit and response playbook for each vulnerability category, combining the practical tools and high-level response steps security professionals use.
+The following table presents a consolidated toolkit and response playbook for each vulnerability category, combining the practical tools and high-level response steps security professionals use.
 
 **Vulnerability Response Toolkit and Playbook**
 

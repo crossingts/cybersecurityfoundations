@@ -32,7 +32,7 @@ This section teaches how to set up a fully functional cybersecurity virtual lab 
   * Configure and verify a web server (e.g., nginx or Apache) and/or a database server (e.g., MySQL)
   * Configure and verify SIEM/EDR (e.g., Wazuh)
   * Configure and verify Kali Linux
-* Launch attacks from Kali Linux and document the project
+  * Launch attacks from Kali Linux and publish the project
 
 ### Design the cybersecurity lab (choose a design pipeline)
 
@@ -221,10 +221,20 @@ _SSGs = Static Site Generators (e.g., Jekyll, MkDocs, Docusaurus)._
 
 ### Build the lab
 
-* Configure subnet interfaces and verify connectivity
-* Configure and verify the firewall
-* Configure and verify the IDS/IPS
-* Configure and verify a web server (e.g., nginx or Apache) and/or a database server (e.g., MySQL)
-* Configure and verify SIEM/EDR (e.g., Wazuh)
-* Configure and verify Kali Linux
-* Launch attacks from Kali Linux and document the project
+#### Walk through/example 1 using **design pipeline 1 (ARM64):**
+
+Design pipline 1: nftables (firewall) + Suricata (IDS/IPS) + web server (Apache) + database server (MySQL) + Wazuh (SIEM/XDR) + Kali Linux
+
+Cybersecurity virtual lab in VMware Fusion on M1 Mac
+
+* [Lab design and configuring interfaces](https://drive.proton.me/urls/TM4PKAVGM4#48yHrBXTk0nA)
+* [Testing/troubleshooting network connectivity](https://drive.proton.me/urls/VRKY3A12FC#Vjc5DoAfwaHh)
+* [Configuring nftables on the Debian firewall](https://drive.proton.me/urls/6CWHJ0269M#Se4xqwyz4UNv)
+* [Configuring Suricata on the Debian IDS/IPS](https://drive.proton.me/urls/NH9SG0ZZW4#QOf2lieJuOTS)
+* [Setting up Apache HTTP Server on Ubuntu](https://drive.proton.me/urls/9NJRE0HBNR#V6Lb057YQUeF)
+* [Setting up MySQL Server on Ubuntu](https://drive.proton.me/urls/XG01TWTEX0#R4dutVB8XUq5)
+* [Setting up Wazuh (SIEM/XDR) on Ubuntu server](https://drive.proton.me/urls/R74XWK7XSW#7x1OsbPmpCmr)
+* Setting up Kali Linux for security testing
+
+#### Walk through/example 2 using x**design pipeline 1 (ARM64):**
+

@@ -44,7 +44,7 @@ nftables (firewall) + Suricata (IDS/IPS) + web server (Apache) + database server
 
 OPNsense (firewall) + Suricata (IDS/IPS) + web server (Apache) and/or database server (MySQL) + Wazuh (SIEM/XDR) + Kali Linux
 
-Inspiration/example set up (YouTube playlist. 16 videos):
+Example set up (YouTube playlist. 16 videos):
 
 [Virtual Cyber Security Lab Building Series by LS111 Cyber Security Education](https://www.youtube.com/playlist?list=PLjjkJroii8DDb0QZpWLo978VXcLp8-xW3)
 
@@ -212,7 +212,7 @@ _SSGs = Static Site Generators (e.g., Jekyll, MkDocs, Docusaurus)._
 
 nftables (firewall) + Suricata (IDS/IPS) + web server (Apache) + database server (MySQL) + Wazuh (SIEM/XDR) + Kali Linux
 
-Cybersecurity virtual lab in VMware Fusion on M1 Mac
+Cybersecurity virtual lab in VMware Fusion on M1 Mac:
 
 * [Lab design and configuring interfaces](https://drive.proton.me/urls/TM4PKAVGM4#48yHrBXTk0nA)
 * [Testing/troubleshooting network connectivity](https://drive.proton.me/urls/VRKY3A12FC#Vjc5DoAfwaHh)
@@ -227,10 +227,9 @@ Cybersecurity virtual lab in VMware Fusion on M1 Mac
 
 OPNsense (firewall) + Suricata (IDS/IPS) + web server (Apache) and/or database server (MySQL) + Wazuh (SIEM/XDR) + Kali Linux
 
-Inspiration/example set up (YouTube playlist. 16 videos):
+Cybersecurity virtual lab example set up (YouTube playlist. 16 videos):
 
 [Virtual Cyber Security Lab Building Series by LS111 Cyber Security Education](https://www.youtube.com/playlist?list=PLjjkJroii8DDb0QZpWLo978VXcLp8-xW3)
 
 <figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption><p>Cybersecurity virtual lab design (courtesy of LS111 Cyber Security Education)</p></figcaption></figure>
-
 

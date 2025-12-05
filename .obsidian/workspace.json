@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/common-attack-targets/README.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -181,7 +181,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "06ca7278ba5efd38",
+  "active": "39d0bf74be78b3a7",
   "lastOpenFiles": [
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets/README.md",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets/attack-target-vs-attack-vector.md",

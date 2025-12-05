@@ -36,11 +36,11 @@ This section teaches how to set up a fully functional cybersecurity virtual lab 
 
 ### Design the cybersecurity lab (choose a design pipeline)
 
-**Design pipeline 1 (ARM64):**
+**Design Pipeline 1 (ARM64):**
 
 nftables (firewall) + Suricata (IDS/IPS) + web server (Apache) + database server (MySQL) + Wazuh (SIEM/XDR) + Kali Linux
 
-**Design pipeline 2 (AMD64):**
+**Design Pipeline 2 (AMD64):**
 
 OPNsense (firewall) + Suricata (IDS/IPS) + web server (Apache) and/or database server (MySQL) + Wazuh (SIEM/XDR) + Kali Linux
 
@@ -50,7 +50,7 @@ Example set up (YouTube playlist. 16 videos):
 
 <figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption><p>Cybersecurity virtual lab design (courtesy of LS111 Cyber Security Education)</p></figcaption></figure>
 
-**Design pipeline 3 (AMD64):**
+**Design Pipeline 3 (AMD64):**
 
 pfSense (firewall) + Snort (IDS/IPS) + web server (Apache) and/or database server (MySQL) + Wazuh (SIEM/XDR) + Kali Linux
 
@@ -106,7 +106,7 @@ pfSense (firewall) + Snort (IDS/IPS) + web server (Apache) and/or database serve
 
 ### Choose a virtualization environment
 
-**Open source and free virtualization tools**
+**Open Source and Free Virtualization Tools**
 
 | **Virtual Machine**           | **Host OS**            | **License**        | **Multiple VMs** | **Snapshots** | **Cloning** | **Notes**                                                         |
 | ----------------------------- | ---------------------- | ------------------ | ---------------- | ------------- | ----------- | ----------------------------------------------------------------- |
@@ -121,7 +121,7 @@ pfSense (firewall) + Snort (IDS/IPS) + web server (Apache) and/or database serve
 * **For macOS-only free use** → **VMware Fusion Player** (better performance than VirtualBox but single-VM limit).
 * **For lightweight Windows/Linux use** → **VMware Workstation Player** (free but single-VM limit).
 
-#### QEMU: Emulation vs. Virtualization
+**QEMU: Emulation vs. Virtualization**
 
 * **QEMU by itself** is primarily an **emulator**—it can simulate entire systems (CPU, memory, devices) even on different architectures (e.g., running ARM on x86). This makes it flexible but slower than hardware-assisted virtualization.
 * **QEMU + KVM (Kernel-based Virtual Machine)** enables **full hardware-assisted virtualization** (like VMware or VirtualBox) when running on Linux.
@@ -164,7 +164,7 @@ _SSGs = Static Site Generators (e.g., Jekyll, MkDocs, Docusaurus)._
    * **Draw.io** (integrate with all platforms).
    * Store Draw.io source files (.xml/.drawio) in your repo for version control.
 
-#### How to Embed Draw.io Diagrams & Mermaid.js Support
+**How to Embed Draw.io Diagrams & Mermaid.js Support**
 
 | Platform         | Draw.io Embed Method                                                                                        | Live Updates? | Mermaid.js?                        | Best Use Case                               |
 | ---------------- | ----------------------------------------------------------------------------------------------------------- | ------------- | ---------------------------------- | ------------------------------------------- |
@@ -208,7 +208,7 @@ _SSGs = Static Site Generators (e.g., Jekyll, MkDocs, Docusaurus)._
 
 ### Build the lab
 
-#### Walk through/example 1 using design pipeline 1 (ARM64):
+#### Walk through/example 1 using Design Pipeline 1 (ARM64):
 
 nftables (firewall) + Suricata (IDS/IPS) + web server (Apache) + database server (MySQL) + Wazuh (SIEM/XDR) + Kali Linux
 
@@ -223,7 +223,7 @@ Cybersecurity virtual lab in VMware Fusion on M1 Mac:
 * [Setting up Wazuh (SIEM/XDR) on Ubuntu server](https://drive.proton.me/urls/R74XWK7XSW#7x1OsbPmpCmr)
 * Setting up Kali Linux for security testing
 
-#### Walk through/example 2 using design pipeline 2 (AMD64):
+#### Walk through/example 2 using Design Pipeline 2 (AMD64):
 
 OPNsense (firewall) + Suricata (IDS/IPS) + web server (Apache) and/or database server (MySQL) + Wazuh (SIEM/XDR) + Kali Linux
 

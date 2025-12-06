@@ -9,8 +9,15 @@ description: >-
 ## Learning objectives <a href="#learning-objectives" id="learning-objectives"></a>
 
 * Learn how to design, configure, verify, and operate a fully functional virtual cybersecurity lab using exclusively open source technologies
+- Compare open-source virtualization tools and select one appropriate for your host system and lab design
+- Design a multi-component cybersecurity lab architecture by following a provided design pipeline
+- Build a virtual network with functional security layers, including firewall, IDS/IPS, and monitoring (SIEM)
+- Configure target systems (web/database servers) and an attack platform (Kali Linux) to validate the lab
+- Document the lab setup and findings using a suitable open-source platform
 
 This section teaches how to set up a fully functional cybersecurity virtual lab using exclusively open source technologies.
+
+This section provides a comprehensive, hands-on guide to constructing a complete cybersecurity lab environment from the ground up using only free and open-source software. You will learn to architect a realistic network containing defensive security controls—such as firewalls (like nftables or OPNsense), intrusion detection/prevention systems (like Suricata), and security monitoring (like Wazuh SIEM)—alongside both target services (like Apache and MySQL) and an offensive security workstation (Kali Linux). The guide walks you through the entire process: from selecting a virtualization platform (like VirtualBox or QEMU) that matches your host hardware, to designing your lab's topology, implementing and configuring each component, verifying connectivity and functionality, and finally documenting the entire project. By the end, you will have a fully isolated, functional virtual lab where you can safely launch simulated attacks, observe defensive telemetry, and develop practical cybersecurity skills.
 
 ## Topics covered in this section
 
@@ -115,10 +122,10 @@ pfSense (firewall) + Snort (IDS/IPS) + web server (Apache) and/or database serve
 
 **QEMU: Emulation vs. Virtualization**
 
-* **QEMU by itself** is primarily an **emulator**—it can simulate entire systems (CPU, memory, devices) even on different architectures (e.g., running ARM on x86). This makes it flexible but slower than hardware-assisted virtualization.
-* **QEMU + KVM (Kernel-based Virtual Machine)** enables **full hardware-assisted virtualization** (like VMware or VirtualBox) when running on Linux.
+* QEMU by itself is primarily an emulator—it can emulate entire systems (CPU, memory, devices) even on different architectures (e.g., running ARM on x86). This makes it flexible but slower than hardware-assisted virtualization.
+* QEMU + KVM (Kernel-based Virtual Machine) enables full hardware-assisted virtualization (like VMware or VirtualBox) when running on Linux.
   * KVM is a Linux kernel module that turns the host OS into a Type-1 hypervisor (bare-metal virtualization). It allows QEMU to run VMs with near-native performance by using CPU virtualization extensions (Intel VT-x / AMD-V).
-* **On Windows**, QEMU can use **WHPX (Windows Hypervisor Platform)** for acceleration, but performance may not be as good as KVM on Linux or dedicated hypervisors like VMware/Hyper-V.
+* On Windows, QEMU can use WHPX (Windows Hypervisor Platform) for acceleration, but performance may not be as good as KVM on Linux or dedicated hypervisors like VMware/Hyper-V.
   * WHPX is a hypervisor-based acceleration feature on Windows 10/11 Pro and Enterprise editions. It allows virtualization software (like QEMU) to use hardware-assisted virtualization (Intel VT-x / AMD-V).
 
 ### Choose a project documentation platform
@@ -173,7 +180,7 @@ _SSGs = Static Site Generators (e.g., Jekyll, MkDocs, Docusaurus)._
 
 **What Is Mermaid.js**
 
-* A **JavaScript-based** diagramming tool that lets you create diagrams **using text** (Markdown-like syntax).
+* A JavaScript-based diagramming tool that lets you create diagrams using text (Markdown-like syntax).
 * Runs in browsers/docs that support it (e.g., GitHub Pages, GitBook, VS Code).
 
 **Key Features**

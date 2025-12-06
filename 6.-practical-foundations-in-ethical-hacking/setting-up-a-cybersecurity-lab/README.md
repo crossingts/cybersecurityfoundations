@@ -44,12 +44,6 @@ nftables (firewall) + Suricata (IDS/IPS) + web server (Apache) + database server
 
 OPNsense (firewall) + Suricata (IDS/IPS) + web server (Apache) and/or database server (MySQL) + Wazuh (SIEM/XDR) + Kali Linux
 
-Example set up (YouTube playlist. 16 videos):
-
-[Virtual Cyber Security Lab Building Series by LS111 Cyber Security Education](https://www.youtube.com/playlist?list=PLjjkJroii8DDb0QZpWLo978VXcLp8-xW3)
-
-<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption><p>Cybersecurity virtual lab design (courtesy of LS111 Cyber Security Education)</p></figcaption></figure>
-
 **Design Pipeline 3 (AMD64):**
 
 pfSense (firewall) + Snort (IDS/IPS) + web server (Apache) and/or database server (MySQL) + Wazuh (SIEM/XDR) + Kali Linux
@@ -102,8 +96,6 @@ pfSense (firewall) + Snort (IDS/IPS) + web server (Apache) and/or database serve
     * FreeBSD (OPNsense’s base).
     * macOS (Intel Macs).
 
-***
-
 ### Choose a virtualization environment
 
 **Open Source and Free Virtualization Tools**
@@ -128,8 +120,6 @@ pfSense (firewall) + Snort (IDS/IPS) + web server (Apache) and/or database serve
   * KVM is a Linux kernel module that turns the host OS into a Type-1 hypervisor (bare-metal virtualization). It allows QEMU to run VMs with near-native performance by using CPU virtualization extensions (Intel VT-x / AMD-V).
 * **On Windows**, QEMU can use **WHPX (Windows Hypervisor Platform)** for acceleration, but performance may not be as good as KVM on Linux or dedicated hypervisors like VMware/Hyper-V.
   * WHPX is a hypervisor-based acceleration feature on Windows 10/11 Pro and Enterprise editions. It allows virtualization software (like QEMU) to use hardware-assisted virtualization (Intel VT-x / AMD-V).
-
-***
 
 ### Choose a project documentation platform
 
@@ -204,8 +194,6 @@ _SSGs = Static Site Generators (e.g., Jekyll, MkDocs, Docusaurus)._
 | **Complexity** | Limited to supported diagrams.               | More flexible (custom shapes).              |
 | **Best for**   | Simple, version-controlled diagrams in docs. | Complex designs (e.g., network topologies). |
 
-***
-
 ### Build the lab
 
 #### Walk through/example 1 using Design Pipeline 1 (ARM64):
@@ -227,7 +215,7 @@ Cybersecurity virtual lab in VMware Fusion on M1 Mac:
 
 OPNsense (firewall) + Suricata (IDS/IPS) + web server (Apache) and/or database server (MySQL) + Wazuh (SIEM/XDR) + Kali Linux
 
-Cybersecurity virtual lab example set up (YouTube playlist. 16 videos):
+Cybersecurity virtual lab in VirtualBox on Windows (YouTube playlist. 16 videos):
 
 [Virtual Cyber Security Lab Building Series by LS111 Cyber Security Education](https://www.youtube.com/playlist?list=PLjjkJroii8DDb0QZpWLo978VXcLp8-xW3)
 

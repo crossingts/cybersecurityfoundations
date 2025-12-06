@@ -50,7 +50,7 @@ pfSense (firewall) + Snort (IDS/IPS) + web server (Apache) and/or database serve
 
 **🔥 Open Source Firewall Compatibility Table**
 
-**Key:** ✔ = Supported | ✕ = Not Supported | _Bare Metal = replaces host OS_
+**Key:** ✔ = Supported | ✕ = Not Supported | Bare Metal = replaces host OS
 
 | Firewall      | Linux Host (x86/ARM) | Windows Host (x86) | macOS Host (Intel) | macOS Host (ARM) | Notes                                                              |
 | ------------- | -------------------- | ------------------ | ------------------ | ---------------- | ------------------------------------------------------------------ |
@@ -64,7 +64,7 @@ pfSense (firewall) + Snort (IDS/IPS) + web server (Apache) and/or database serve
 
 **Clarifications:**
 
-1. **OPNsense/pfSense:**
+- **OPNsense/pfSense:** 
    * **VM Support:** Works on x86 hosts (Linux/Windows/Intel macOS).
    * **macOS ARM:** ✕ No VM support (FreeBSD lacks ARM virtualization drivers).
    * **Bare Metal:** x86 only (wipes host OS).
@@ -83,7 +83,7 @@ pfSense (firewall) + Snort (IDS/IPS) + web server (Apache) and/or database serve
 | **Zeek (Bro)** | ✔ (Native)           | ⚠ (WSL2/Cygwin)    | ✔ (Native)             | Network analysis, not real-time IPS. ARM64 supported via source builds. |
 | **Snort**      | ✔ (Native)           | ✔ (Native)         | ✔ (Native)             | Legacy IDS/IPS. ARM support limited.                                    |
 
-**Clarifications**
+**Clarifications:**
 
 * **Windows Subsystem for Linux (WSL)**
   * Lets you run Linux binaries natively on Windows.
@@ -107,7 +107,7 @@ pfSense (firewall) + Snort (IDS/IPS) + web server (Apache) and/or database serve
 | **VMware Fusion Player**      | macOS (Intel/ARM) only | Free (Proprietary) | ✅ Yes            | ✅ Yes         | ✅ Yes       | Better macOS integration.                                         |
 | **QEMU**                      | macOS, Windows, Linux  | GPLv2              | ✅ Yes (via CLI)  | ❌ No\*        | ✅ (Manual)  | Advanced, needs KVM for best performance. No native snapshot UI.  |
 
-**Clarifying Notes:**
+**Clarifications:**
 
 * **For open-source & full features** → **VirtualBox** (cross-platform, supports multiple VMs, snapshots, cloning).
 * **For macOS-only free use** → **VMware Fusion Player** (better performance than VirtualBox but single-VM limit).
@@ -140,7 +140,7 @@ pfSense (firewall) + Snort (IDS/IPS) + web server (Apache) and/or database serve
 
 _SSGs = Static Site Generators (e.g., Jekyll, MkDocs, Docusaurus)._
 
-**Clarification Notes**
+**Clarifications:**
 
 1. **For pure documentation:**
    * **GitHub Wiki** (simple, free, Git-backed).
@@ -165,7 +165,7 @@ _SSGs = Static Site Generators (e.g., Jekyll, MkDocs, Docusaurus)._
 | **VS Code**      | <p>1. Use Draw.io extension.<br>2. Edit <code>.drawio</code> files directly.</p>                            | ✅ Yes         | ✅ Yes (with Mermaid extension)     | Local editing with live preview.            |
 | **MkDocs**       | <p>1. Export as <code>.svg</code> → embed.<br>2. Or use <code>plantuml</code> plugin for Draw.io XML.</p>   | ❌ No          | ✅ Yes (native support)             | Automated docs with code-based diagrams.    |
 
-**Clarification Notes**
+**Clarifications:**
 
 * **Mermaid.js works best in**: GitBook, GitHub Pages (with plugins), MkDocs, and VS Code.
 * **Draw.io is better for**: Platforms without Mermaid support (e.g., GitHub Wiki, Notion).

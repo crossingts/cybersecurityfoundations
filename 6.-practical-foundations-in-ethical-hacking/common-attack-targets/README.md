@@ -217,6 +217,13 @@ The following table presents a consolidated toolkit and response playbook for ea
 | **ClamAV**      | Malware scanning        | `clamscan /var/www/uploads`      |
 | **Dependabot**  | Dependency updates      | Auto-PR for vulnerable libraries |
 
+### Key takeaways
+
+- Modern vulnerability frameworks have evolved beyond older system-centric models. While foundational, historical taxonomies like NIST SP 800-115 are outdated. The current landscape is defined by specialized, community-driven frameworks: the OWASP Top 10 for web application risks, CWE for root-cause software weaknesses, and CVE/NVD for tracking specific vulnerabilities.
+- Vulnerabilities are categorized and tracked through complementary systems. CWE classifies the general type of software flaw (the "why"), CVE identifies a specific instance in a product (the "what"), and the NVD enriches CVEs with severity scores and remediation details to enable prioritization.
+- Prioritization is critical and is guided by exploitability and impact. Vulnerabilities are evaluated and ranked using metrics like CVSS scores, prevalence, and potential business impact. This allows security teams to focus on addressing critical risks, such as Injection flaws or Buffer Overflows, first.
+- Each major vulnerability category has associated tools for detection, exploitation, and mitigation. A practical security workflow involves using specific tools (e.g., Burp Suite for detection, Metasploit for exploitation, WAFs for mitigation) tailored to the vulnerability type, forming a structured response cycle.
+- Developing a structured response playbook is essential for handling critical flaws. For each prioritized vulnerability category, a standardized response process—following phases like Contain, Eradicate, and Recover—ensures efficient and effective mitigation of security incidents.
 ### References
 
 NIST. National Vulnerability Database. https://nvd.nist.gov/

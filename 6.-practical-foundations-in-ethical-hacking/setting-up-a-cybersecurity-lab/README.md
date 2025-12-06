@@ -68,9 +68,9 @@ pfSense (firewall) + Snort (IDS/IPS) + web server (Apache) and/or database serve
    * **VM Support:** Works on x86 hosts (Linux/Windows/Intel macOS).
    * **macOS ARM:** ✕ No VM support (FreeBSD lacks ARM virtualization drivers).
    * **Bare Metal:** x86 only (wipes host OS).
-2. **Linux Firewalls (IPTables/nftables/UFW/Firewalld):**
+- **Linux Firewalls (IPTables/nftables/UFW/Firewalld):**
    * **Native to Linux** (no VM or cross-platform support).
-3. **macOS PF:**
+- **macOS PF:**
    * Native on both Intel/ARM Macs (CLI-only).
 
 **🛡️ Open Source IDS/IPS Compatibility Table**
@@ -142,15 +142,15 @@ _SSGs = Static Site Generators (e.g., Jekyll, MkDocs, Docusaurus)._
 
 **Clarifications:**
 
-1. **For pure documentation:**
+- **For pure documentation:**
    * **GitHub Wiki** (simple, free, Git-backed).
    * **GitHub Pages + MkDocs** (polished, searchable, free).
-2. **For collaborative notes:**
+- **For collaborative notes:**
    * **Notion** (best for non-tech users).
    * **Slite** (alternative to Notion, team-focused).
-3. **For developer-friendly docs:**
+- **For developer-friendly docs:**
    * **GitBook** (API docs, versioning).
-4. **For diagrams:**
+- **For diagrams:**
    * **Draw.io** (integrate with all platforms).
    * Store Draw.io source files (.xml/.drawio) in your repo for version control.
 

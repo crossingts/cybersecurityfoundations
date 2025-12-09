@@ -13,7 +13,7 @@ description: >-
 * Develop a foundational understanding of how hashing can be used to ensure message integrity
 * Develop a foundational understanding of how hashing can be used to authenticate someone
 
-This section discusses [hashing algorithms and message integrity](https://builtin.com/cybersecurity/what-is-hashing). This section begins by explaining hashing's mechanism of action through a simplified example. It then explains the characteristics (properties) of industry grade hashing algorithms. It then explores how basic hashing can be used to ensure the integrity of messages exchanged between a client and a server. Finally, the section introduces the concept of message authentication, demonstrating how a shared secret key is combined with a hash function to create a Hash-Based Message Authentication Code (HMAC). You will learn how HMAC provides a robust defense against tampering by ensuring both data integrity and authenticity.
+This section discusses hashing algorithms and message integrity. This section begins by explaining hashing's mechanism of action through a simplified example. It then explains the characteristics (properties) of industry grade hashing algorithms. It then explores how basic hashing can be used to ensure the integrity of messages exchanged between a client and a server. Finally, the section introduces the concept of message authentication, demonstrating how a shared secret key is combined with a hash function to create a Hash-Based Message Authentication Code (HMAC). You will learn how HMAC provides a robust defense against tampering by ensuring both data integrity and authenticity.
 
 ## Topics covered in this section
 
@@ -48,7 +48,7 @@ Industry grade hashing algorithms have five key characteristics or properties. P
 
 **1. Pre-image Resistance (One-Wayness)**
 
-* **Definition:** Given a hash value `h`, it is computationally infeasible to find any input `m` such that `hash(m) = h`. Hashing is a one-way function, meaning that it is computationally infeasible to reverse the hash function to know the original input.&#x20;
+* **Definition:** Given a hash value `h`, it is computationally infeasible to find any input `m` such that `hash(m) = h`. Hashing is a one-way function, meaning that it is computationally infeasible to reverse the hash function to know the original input.
 * **Analogy:** If you are given a fingerprint, you cannot reconstruct the person it came from.
 * **Why it matters:** This ensures an attacker cannot reverse-engineer the original data/message from its digest.
 
@@ -71,7 +71,7 @@ Industry grade hashing algorithms have five key characteristics or properties. P
 
 **5. The Avalanche Effect (A critical design mechanism)**
 
-* **Definition:** A hashing algorithm is a series of calculations done iteratively. As a result, a small change to the input (e.g., flipping a single bit) produces a drastic change in the output, such that the new hash appears uncorrelated to the old hash.&#x20;
+* **Definition:** A hashing algorithm is a series of calculations done iteratively. As a result, a small change to the input (e.g., flipping a single bit) produces a drastic change in the output, such that the new hash appears uncorrelated to the old hash.
 * **Why it matters:** This is not a standalone security property but the mechanism that makes the three properties above possible. It ensures the hash function's output is unpredictable and random-looking.
 
 **The Three Core Security Properties of Cryptographic Hash Functions (Hashing Algorithms)**
@@ -114,7 +114,7 @@ When exchanging messages between a client and a server, hashing algorithms can h
 * Upon receiving the message, the receiver independently recomputes the hash and compares it to the received digest.
 * If they match, the message has not been altered or corrupted.
 
-**Problem:** This method alone is vulnerable to active attacks. If a man-in-the-middle (MITM) intercepts the message, they could:
+However, this method alone is vulnerable to active attacks. If a man-in-the-middle (MITM) intercepts the message, they could:
 
 1. Modify the message.
 2. Compute a new hash of the altered message.

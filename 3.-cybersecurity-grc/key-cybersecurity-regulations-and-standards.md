@@ -15,16 +15,15 @@ hidden: true
 - Describe the Payment Card Industry Data Security Standard (PCI DSS)
 - Describe the differences between basic, foundational, and organizational Center for Internet Security (CIS) controls
 
-Cybersecurity regulations and standards are designed to protect sensitive data and ensure organizational compliance. This section looks at some of the most important ones across different industries.
+Cybersecurity regulations and standards are designed to protect sensitive data and ensure organizational compliance. 
 
-This section covers salient cybersecurity regulations, such as GDPR (privacy), HIPAA (healthcare), and SOX (financial), and industry standards, such as PCI DSS (payment card industry).
+This section covers salient cybersecurity regulations and standards.
+
+Key cybersecurity **regulations (statutory and regulatory)** include HIPAA/HITECH, FACTA, GLBA, CCPA, SOX, Data Protection Act (UK), NIST800-171/CMMC (FAR & DFARS), FedRAMP, EU GDPR, and other data protection regulations. 
+
+Key cybersecurity **industry standards (contractual requirements or legally-binding obligations)** include CMMC (CMMC can be both contractual and regulatory), PCI DSS, SOC2 Certification, ISO27001 Certification, NIST Cybersecurity Framework, and other contractual requirements.
 
 This section covers salient cybersecurity regulations and standards, including NIST, GDPR, ISO, SOC, HIPAA, and PCI.
-
-Key cybersecurity **regulations (statutory and regulatory)** include HIPAA/HITECH, FACTA, GLBA, CCPA, SOX, Data Protection Act (UK), 
-NIST800-171/CMMC (FAR & DFARS), FedRAMP, EUGDPR, and other data protection regulations. 
-
-Key cybersecurity **industry standards (contractual requirements or legally-binding obligations)** include CMMC (CMMC can be both contractual and regulatory), PCI DSS, SOC2 Certification, ISO27001 Certification, NISTCybersecurity Framework, and other contractual requirements.
 
 ## Topics covered in this section
 
@@ -33,37 +32,22 @@ Key cybersecurity **industry standards (contractual requirements or legally-bind
 - **Lesson 3. Industry Standards**
 - **Lesson 4. Critical Security Controls**
 
-### [](https://app.gitbook.com/o/k1fuuJaFWWicTY3ugC1D/s/YlzIciIbPynYR0eIjD7t/cybersecurity-grc/compliance-frameworks-and-industry-standards#lesson-1.-compliance-and-regulation-for-cybersecurity)Lesson 1. Compliance and Regulation for Cybersecurity
+### Lesson 1. Compliance and Regulation for Cybersecurity
 
 - What Cybersecurity Challenges do Organizations Face?
-    
-
 - Compliance Basics
-    
-
 - Overview of US Cybersecurity Federal Law
-    
-
 - National Institute of Standards and Technology (NIST) Overview
-    
-
 - National Institute of Standards and Technology (NIST) Special Publication 800-53 Catalog of Security Controls
-    
-
 - General Data Protection Regulation (GDPR) Overview
-    
-
 - Examples of GDPR Fines
-    
-
 - International Organization for Standardization (ISO) 2700x
-    
 
-#### [](https://app.gitbook.com/o/k1fuuJaFWWicTY3ugC1D/s/YlzIciIbPynYR0eIjD7t/cybersecurity-grc/compliance-frameworks-and-industry-standards#id-1.1.-what-cybersecurity-challenges-do-organizations-face)1.1. What Cybersecurity Challenges do Organizations Face?
+#### 1.1. What Cybersecurity Challenges do Organizations Face?
 
 About 45% of hackers are outsiders. The other 55% represent insiders comprised of malicious insiders and inadvertent actors. To manage hacking risks, organizations design and implement procedural, technological, and physical controls. “We need security protocols, and controls, and tooling, and processes in place to try to address the different types of security incidents we can have, as well as the different sources they can come from.”
 
-#### [](https://app.gitbook.com/o/k1fuuJaFWWicTY3ugC1D/s/YlzIciIbPynYR0eIjD7t/cybersecurity-grc/compliance-frameworks-and-industry-standards#id-1.2.-compliance-basics)1.2. Compliance Basics
+#### 1.2. Compliance Basics
 
 Security, privacy, and compliance.
 
@@ -91,7 +75,7 @@ A typical compliance process
 
 *Recertifying: “then you’ll be recertifying, right? So depending on the nature of the certification sometimes you’re recertifying quarterly, recertifying annually.”
 
-1.3. Overview of U.S. Cybersecurity Federal Law
+#### 1.3. Overview of U.S. Cybersecurity Federal Law
 
 Describe the Computer Fraud and Abuse Act (CFAA).
 
@@ -99,7 +83,7 @@ Describe the Computer Fraud and Abuse Act (CFAA).
 
 U.S. federal laws, such as CFAA, FISMA, and FedRAMP “will base their subset of their requirements off of something called NIST, the National Institute of Standards and Technology.”
 
-1.4. National Institute of Standards and Technology (NIST) Overview
+#### 1.4. National Institute of Standards and Technology (NIST) Overview
 
 Describe the importance of the National Institute of Standards and Technology, NIST.
 
@@ -107,11 +91,11 @@ Describe the importance of the National Institute of Standards and Technology, N
 
 “There is not generally an expectation that you will implement how many (standards) … but that you’ll institute a practice within your business to do as many of them as makes sense for your business.”
 
-1.5. National Institute of Standards and Technology (NIST) Special Publication 800-53 Catalog of Security Controls
+#### 1.5. National Institute of Standards and Technology (NIST) Special Publication 800-53 Catalog of Security Controls
 
 Security and Privacy Controls for Information Systems and Organizations SP 800-53 Rev. 5
 
-1.6. General Data Protection Regulation (GDPR) Overview
+#### 1.6. General Data Protection Regulation (GDPR) Overview
 
 Describe the General Data Protection Regulation, GDPR. Describe the key privacy and data protection requirements of GDPR.
 
@@ -125,7 +109,7 @@ Understanding the 7 Principles of the GDPR
 
 “Key terms here that you’ll want to understand is the data subject – must be an identifiable, natural living person, so that’s the EU resident.” Personal data is any information related to the subjects. “The controller, this is the person or entity that is responsible for the handling of that data … The processor could be an actor on behalf of the controller that is processing the data.”
 
-1.7. Examples of GDPR Fines
+#### 1.7. Examples of GDPR Fines
 
 ICO statement: Intention to fine British Airways £183.39m under GDPR for data breach
 
@@ -133,7 +117,7 @@ Marriott Faces $123 Million GDPR Fine for 2018 Data Breach
 
 Polish DPA fines Virgin Mobile Polska €460,000: Incidental safeguards review is not regular testing of technical measures
 
-1.8. International Organization for Standardization (ISO) 2700x
+#### 1.8. International Organization for Standardization (ISO) 2700x
 
 Describe the basics of the ISO 27001 standards.
 
@@ -141,15 +125,13 @@ ISO has many different standards, several of them are applicable for cyber secur
 
 “ISO does develop standards but they don’t themselves issue the certification. You find an authorized, qualified, accredited, certified auditor to come in and perform that assessment on your behalf.”
 
-Lesson 2. System and Organization Controls Report (SOC) Overview
+### Lesson 2. System and Organization Controls Report (SOC) Overview
 
-SOC Reports
+- SOC Reports
+- SOC Reports – Auditor Process Overview
+- American Institute of CPAs (AICPA) Website research
 
-SOC Reports – Auditor Process Overview
-
-American Institute of CPAs (AICPA) Website research
-
-2.1. SOC Reports
+#### 2.1. SOC Reports
 
 Describe the differences between SOC 1, SOC 2 and SOC 3 controls. Describe the benefits of SOC Reports.
 
@@ -173,15 +155,15 @@ Describe the differences between SOC 1, SOC 2 and SOC 3 controls. Describe the b
 
 “On top of the complexity of Type 1s and Type 2s and SOC 1s and SOC 2s, there are different principles or chapters within SOC 2 and they each come with a set of controls or requirements. The most typical and sort of the foundational one that everybody would get would be security and they’re looking specifically at how you’re protecting your physical and logical access and systems. So they have controls related to user provisioning, change management, inventory management, things like that.”
 
-SOC 2 trust service principles (image courtesy of
 
-imperva.com
+IMAGE
 
-)
+SOC 2 trust service principles (image courtesy of imperva.com)
+
 
 SOC 2 defines criteria for managing customer data based on five trust service principles – security, availability, processing integrity, confidentiality, and privacy.
 
-2.2. SOC Reports – Auditor Process Overview
+#### 2.2. SOC Reports – Auditor Process Overview
 
 Describe the audit elements for SOC reporting.
 
@@ -197,31 +179,23 @@ Describe the audit elements for SOC reporting.
 
 “They’re looking for consistency. So they want to ensure that there’s no gaps introduced by having too much variability. So often they’ll look at a primary control, they’ll test the primary control. They’re looking to ensure that you provide features, functions of the control. If for any reason that’s not working, they’re looking for support or backup to ensure that the primary control is effective.”
 
-2.3. American Institute of CPAs (AICPA) Website research
+#### 2.3. American Institute of CPAs (AICPA) Website research
 
 AICPA develops the guidelines for SOC reporting. Explore some of the resources available on the AICPA website for CPAs, users, and organizations.
 
-Introduction to the AICPA’s Cybersecurity Risk Management Framework
+​[Introduction to the AICPA’s Cybersecurity Risk Management Framework](https://www.aicpa.org/interestareas/frc/assuranceadvisoryservices/aicpacybersecurityinitiative.html) (video)
 
-(video)
+​[SOC for Cybersecurity](https://www.aicpa.org/content/dam/aicpa/interestareas/frc/assuranceadvisoryservices/downloadabledocuments/soc-for-cybersecurity-brochure.pdf) (brochure)
 
-SOC for Cybersecurity
+​[SOC 2® examinations and SOC for Cybersecurity examinations: Understanding the key distinctions](https://www.aicpa.org/content/dam/aicpa/interestareas/frc/assuranceadvisoryservices/downloadabledocuments/cybersecurity/soc-2-vs-cyber-whitepaper-web-final.pdf) (report)
 
-(brochure)
+### Lesson 3. Industry Standards
 
-SOC 2® examinations and SOC for Cybersecurity examinations: Understanding the key distinctions
+- Health Insurance Portability and Accountability Act (HIPAA)
+- HIPAA Cybersecurity guidance
+- Payment Card Industry Data Security Standard (PCI DSS)
 
-(report)
-
-Lesson 3. Industry Standards
-
-Health Insurance Portability and Accountability Act (HIPAA)
-
-HIPAA Cybersecurity guidance
-
-Payment Card Industry Data Security Standard (PCI DSS)
-
-3.1. Health Insurance Portability and Accountability Act (HIPAA)
+#### 3.1. Health Insurance Portability and Accountability Act (HIPAA)
 
 Describe key HIPAA terms. Describe why HIPAA compliance is important to an organization. Define the three rules established as standards for HIPAA.
 
@@ -245,13 +219,11 @@ First, “there’s the covered entity. So this is the company that manages the 
 
 “Then the physical safeguards are around the facility access that where the devices are. So if your data is stored on disk somewhere, where are those disks, are they appropriately under access control and are they secure?”
 
-3.2. HIPAA Cybersecurity guidance
+#### 3.2. HIPAA Cybersecurity guidance
 
-Cyber-Attack Quick Response Guide
+[Cyber-Attack Quick Response Guide](https://www.hhs.gov/sites/default/files/cyber-attack-quick-response-infographic.gif) (U.S. Department of Health & Human Services)
 
-(U.S. Department of Health & Human Services)
-
-3.3. Payment Card Industry Data Security Standard (PCI DSS)
+#### 3.3. Payment Card Industry Data Security Standard (PCI DSS)
 
 Describe the Payment Card Industry Data Standard Security, PCI DSS. Describe the goals and requirements of PCI DSS. Describe the scope of PCI DSS as it relates to people, process, and technology. Highlight new and key requirements for PCI DSS.
 
@@ -271,15 +243,13 @@ The Payment Card Industry Data Security Standard (PCI DSS) is an information sec
 
 “One of the document that gets produced from PCI is the responsibility matrix and that’s a really good document for you to review, because it clarifies what are the responsibilities of the entity providing the PCI support and the consumer.”
 
-Lesson 4. Critical Security Controls
+### Lesson 4. Critical Security Controls
 
-Center for Internet Security (CIS) Critical Security Controls
+- Center for Internet Security (CIS) Critical Security Controls
+- Compliance and Industry Standards Summary
+- Center for Internet Security (CIS) Critical Security Controls Research
 
-Compliance and Industry Standards Summary
-
-Center for Internet Security (CIS) Critical Security Controls Research
-
-4.1. Center for Internet Security (CIS) Critical Security Controls
+#### 4.1. Center for Internet Security (CIS) Critical Security Controls
 
 Describe the Center for Internet Security, CIS, Critical Security Controls. Describe the differences between basic, foundational, and organizational CIS controls.
 
@@ -289,45 +259,29 @@ CIS has a set of configuration benchmarks and one of the things they would gover
 
 “CIS breaks their controls up into three implementation groups. They base them on the maturity or the significance of the controls and of the organizations using it. So if you’re a mature organization, enterprise, you’re going to look at group three. Small, single storefront, maybe group one is more appropriate to your business. Each of the controls is documented as to why you’re doing the control, what the different parts are, what the tools and procedures would be, and an example of how you would organize it.”
 
-4.2. Compliance and Industry Standards Summary
+#### 4.2. Compliance and Industry Standards Summary
+
+
+IMAGE
 
 Cybersecurity compliance and industry standards summary (courtesy of IBM Security Learning Services)
 
-4.3. Center for Internet Security (CIS) Critical Security Controls Research
+
+#### 4.3. Center for Internet Security (CIS) Critical Security Controls Research
 
 The CIS Critical Security Controls – CIS Controls V7.1
 
 The CIS Critical Security Controls (CIS Controls) are internationally-recognized cybersecurity best practices for defense against common threats. They are a consensus-developed resource that brings together expert insight about cyber threats, business technology, and security. The CIS Controls are used by organizations with varying resources and risk exposure to build an effective cyber defense program.
 
-Footnote/FYI
+### Footnote/FYI
 
-This discussion focused on module 1 (week 1) of the Coursera course
+This discussion focused on module 1 (week 1) of the Coursera course [Cybersecurity Compliance Framework & System Administration](https://www.coursera.org/learn/cybersecurity-compliance-framework-system-administration), course 3 of 4 of [IT Fundamentals for Cybersecurity Specialization](https://www.coursera.org/specializations/it-fundamentals-cybersecurity). The course also covers the following three modules:
 
-Cybersecurity Compliance Framework & System Administration
-
-, course 3 of 4 of
-
-IT Fundamentals for Cybersecurity Specialization
-
-. The course also covers the following three modules:
-
-Module 2: Client System Administration, Endpoint Protection and Patching
-
-Module 3: Server and User Administration
-
-Module 4: Cryptography and Compliance Pitfalls
+- Module 2: Client System Administration, Endpoint Protection and Patching
+- Module 3: Server and User Administration
+- Module 4: Cryptography and Compliance Pitfalls
 
 Modules 2, 3, and 4 focus on how technical and administrative controls and processes can help achieve compliance.
-
-Key references
-
-ComplianceForge Reference Model: Hierarchical Cybersecurity Governance Framework (HCGF)
-
-Cybersecurity Compliance Framework & System Administration
-
-IT Fundamentals for Cybersecurity Specialization
-
-
 
 --
 #### **1. General Data Protection Regulation (GDPR)**
@@ -423,8 +377,13 @@ IT Fundamentals for Cybersecurity Specialization
   * Five maturity levels (basic to advanced cybersecurity)
 
 
-
 --
 ### Key takeaways
 
+
 ### References
+
+​[ComplianceForge Reference Model: Hierarchical Cybersecurity Governance Framework (HCGF)](https://graphics.complianceforge.com/graphics/ComplianceForge%20Hierarchical%20Cybersecurity%20Governance%20Framework.pdf)​
+​[Cybersecurity Compliance Framework & System Administration](https://www.coursera.org/learn/cybersecurity-compliance-framework-system-administration)​
+
+​[IT Fundamentals for Cybersecurity Specialization](https://www.coursera.org/specializations/it-fundamentals-cybersecurity)

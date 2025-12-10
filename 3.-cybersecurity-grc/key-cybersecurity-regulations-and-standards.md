@@ -5,11 +5,27 @@ hidden: true
 
 # Key cybersecurity regulations and standards
 
+## Learning objectives
+
+- Point1
+- Point2
+
+xIT career paths – everything you need to know to plan, kick-start, and level up your IT career: job roles, job titles, specializations, skills, certifications, salaries, and training resources, from entry level positions to senior level positions.
+
+## Topics covered in this section
+
+- Point1
+- Point2
+
+
+
+--
 This section covers salient cybersecurity regulations, such as GDPR (privacy), HIPAA (healthcare), and SOX (financial), and industry standards, such as PCI DSS (payment card industry).
 
 Understand the strategic, ethical, and legal importance of cybersecurity regulations and standards for businesses.
 
-Cybersecurity regulations and frameworks are designed to protect sensitive data and ensure organizational compliance. Here are some of the most important ones across different industries:
+Cybersecurity regulations and frameworks are designed to protect sensitive data and ensure organizational compliance. 
+This section looks at some of the most important ones across different industries.
 
 #### **1. General Data Protection Regulation (GDPR)**
 

@@ -25,6 +25,9 @@ Key cybersecurity **industry standards (contractual requirements or legally-bind
 
 This section covers salient cybersecurity regulations and standards, including NIST, GDPR, ISO, SOC, HIPAA, and PCI.
 
+Distinguishing Industry Standards from Regulations
+@ https://chat.deepseek.com/a/chat/s/80bcb424-15fc-47ac-887b-0a08b184e83c
+
 ## Topics covered in this section
 
 - **Lesson 1. Compliance and Regulation for Cybersecurity**

@@ -7,17 +7,31 @@ hidden: true
 
 ## Learning objectives
 
-- Point1
-- Point2
+- Understand the strategic, ethical, and legal importance of cybersecurity regulations and standards for businesses
+- Describe the challenges organizations face which require compliance and regulation
+- Describe the key privacy and data protection requirements of GDPR
+- Describe the differences between SOC1, SOC2, and SOC3 controls and reporting
+- Define the three rules established as standards for the Health Insurance Portability and Accountability Act (HIPAA)
+- Describe the Payment Card Industry Data Security Standard (PCI DSS)
+- Describe the differences between basic, foundational, and organizational Center for Internet Security (CIS) controls
 
-Cybersecurity regulations and frameworks are designed to protect sensitive data and ensure organizational compliance. This section looks at some of the most important ones across different industries. This section covers salient cybersecurity regulations, such as GDPR (privacy), HIPAA (healthcare), and SOX (financial), and industry standards, such as PCI DSS (payment card industry).
+Cybersecurity regulations and frameworks are designed to protect sensitive data and ensure organizational compliance. This section looks at some of the most important ones across different industries.
+
+This section covers salient cybersecurity regulations, such as GDPR (privacy), HIPAA (healthcare), and SOX (financial), and industry standards, such as PCI DSS (payment card industry).
+
+This section covers key cybersecurity regulations and standards, including NIST, GDPR, ISO, SOC, HIPAA, and PCI.
+
+Key cybersecurity **regulations (statutory and regulatory)** include HIPAA/HITECH, FACTA, GLBA, CCPA, SOX, Data Protection Act (UK), 
+NIST800-171/CMMC (FAR & DFARS), FedRAMP, EUGDPR, and other data protection regulations. 
+
+Key cybersecurity **industry standards (contractual requirements or legally-binding obligations)** include CMMC (CMMC can be both contractual and regulatory), PCI DSS, SOC2 Certification, ISO27001 Certification, NISTCybersecurity Framework, and other contractual requirements.
 
 ## Topics covered in this section
 
-- **Understand the strategic, ethical, and legal importance of cybersecurity regulations and standards for businesses**
-- **Point2**
-
-
+- **Lesson 1. Compliance and Regulation for Cybersecurity**
+- **Lesson 2. System and Organization Controls Report (SOC) Overview**
+- **Lesson 3. Industry Standards**
+- **Lesson 4. Critical Security Controls**
 
 --
 #### **1. General Data Protection Regulation (GDPR)**

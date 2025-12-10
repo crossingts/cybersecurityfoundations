@@ -63,7 +63,7 @@ Security, privacy, and compliance.
 
 There are two main categories for compliances. First, foundational or general. “They’re not specific to any particular industry. They are broad spectrum. They go over a number of different topics be it physical or the technical or the operational examples. Like that would be ISO 27001, SOC.” Second, “classifications that are more industry-specific or governmental even. And they are particular to a specific subject matter … we’ve got HIPAA which focuses on U.S. Healthcare. We have PCI DSS which focuses on payment card information, so credit card data storage.”
 
-A typical compliance process
+**A typical compliance process**
 
 *The scope: “you want to establish the scope – very clear boundaries of what is in your compliance and what is not.” “So if we want to go after ISO, I want to go after this particular set of systems.”
 
@@ -93,9 +93,18 @@ Describe the importance of the National Institute of Standards and Technology, N
 
 #### 1.5. National Institute of Standards and Technology (NIST) Special Publication 800-53 Catalog of Security Controls
 
-Security and Privacy Controls for Information Systems and Organizations SP 800-53 Rev. 5
+[Security and Privacy Controls for Information Systems and Organizations SP 800-53 Rev. 5](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final)
 
 #### 1.6. General Data Protection Regulation (GDPR) Overview
+
+* **Region**: EU (applies globally to organizations handling EU citizens' data)
+* **Focus**: Privacy and data protection
+* **Key Requirements**:
+  * Consent for data collection
+  * Right to access, correct, and delete personal data
+  * Data breach notifications within 72 hours
+  * Privacy by design
+* **Penalties**: Up to **€20 million or 4% of global revenue**
 
 Describe the General Data Protection Regulation, GDPR. Describe the key privacy and data protection requirements of GDPR.
 
@@ -105,17 +114,17 @@ Describe the General Data Protection Regulation, GDPR. Describe the key privacy 
 
 “Fines can be huge, four percent or up to €20 million depending on your company’s revenue … I’ve seen fines in excessive €100 million.”
 
-Understanding the 7 Principles of the GDPR
+​[Understanding the 7 Principles of the GDPR](https://www.onetrust.com/blog/gdpr-principles/)​
 
-“Key terms here that you’ll want to understand is the data subject – must be an identifiable, natural living person, so that’s the EU resident.” Personal data is any information related to the subjects. “The controller, this is the person or entity that is responsible for the handling of that data … The processor could be an actor on behalf of the controller that is processing the data.”
+“Key terms here that you’ll want to understand is the data **subject** – must be an identifiable, natural living person, so that’s the EU resident.” Personal data is any information related to the subjects. “The **controller**, this is the person or entity that is responsible for the handling of that data … The **processor** could be an actor on behalf of the controller that is processing the data.”
 
 #### 1.7. Examples of GDPR Fines
 
-ICO statement: Intention to fine British Airways £183.39m under GDPR for data breach
+​[ICO statement: Intention to fine British Airways £183.39m under GDPR for data breach](https://www.databreaches.net/ico-statement-intention-to-fine-british-airways-183-39m-under-gdpr-for-data-breach/)​
 
-Marriott Faces $123 Million GDPR Fine for 2018 Data Breach
+​[Marriott Faces $123 Million GDPR Fine for 2018 Data Breach](https://www.bleepingcomputer.com/news/security/marriott-faces-123-million-gdpr-fine-for-2018-data-breach/)​
 
-Polish DPA fines Virgin Mobile Polska €460,000: Incidental safeguards review is not regular testing of technical measures
+​[Polish DPA fines Virgin Mobile Polska €460,000: Incidental safeguards review is not regular testing of technical measures](https://www.databreaches.net/polish-dpa-fines-virgin-mobile-polska-e460000-incidental-safeguards-review-is-not-regular-testing-of-technical-measures/)
 
 #### 1.8. International Organization for Standardization (ISO) 2700x
 
@@ -156,7 +165,7 @@ Describe the differences between SOC 1, SOC 2 and SOC 3 controls. Describe the b
 “On top of the complexity of Type 1s and Type 2s and SOC 1s and SOC 2s, there are different principles or chapters within SOC 2 and they each come with a set of controls or requirements. The most typical and sort of the foundational one that everybody would get would be security and they’re looking specifically at how you’re protecting your physical and logical access and systems. So they have controls related to user provisioning, change management, inventory management, things like that.”
 
 
-IMAGE
+IMAGE 1
 
 SOC 2 trust service principles (image courtesy of imperva.com)
 
@@ -197,6 +206,14 @@ AICPA develops the guidelines for SOC reporting. Explore some of the resources a
 
 #### 3.1. Health Insurance Portability and Accountability Act (HIPAA)
 
+* **Region**: U.S. (applies to healthcare providers, insurers, and business associates)
+* **Focus**: Protection of healthcare data
+* **Key Requirements**:
+  * Safeguarding **Protected Health Information (PHI)**
+  * Administrative, physical, and technical safeguards
+  * Breach notification within 60 days
+* **Penalties**: Up to **$1.5 million per violation**
+
 Describe key HIPAA terms. Describe why HIPAA compliance is important to an organization. Define the three rules established as standards for HIPAA.
 
 “HIPAA is the U.S. federal law that identifies the control of personal healthcare information. So PHI, personal healthcare information, and it’s also related to the other law in this space called HITECH.”
@@ -224,6 +241,14 @@ First, “there’s the covered entity. So this is the company that manages the 
 [Cyber-Attack Quick Response Guide](https://www.hhs.gov/sites/default/files/cyber-attack-quick-response-infographic.gif) (U.S. Department of Health & Human Services)
 
 #### 3.3. Payment Card Industry Data Security Standard (PCI DSS)
+
+* **Region**: Global (applies to organizations handling credit card data)
+* **Focus**: Securing cardholder data
+* **Key Requirements**:
+  * Encryption of stored card data
+  * Regular vulnerability scans
+  * Access controls and network segmentation
+* **Penalties**: Fines up to **$100,000/month** for non-compliance
 
 Describe the Payment Card Industry Data Standard Security, PCI DSS. Describe the goals and requirements of PCI DSS. Describe the scope of PCI DSS as it relates to people, process, and technology. Highlight new and key requirements for PCI DSS.
 
@@ -262,14 +287,14 @@ CIS has a set of configuration benchmarks and one of the things they would gover
 #### 4.2. Compliance and Industry Standards Summary
 
 
-IMAGE
+IMAGE 2
 
 Cybersecurity compliance and industry standards summary (courtesy of IBM Security Learning Services)
 
 
 #### 4.3. Center for Internet Security (CIS) Critical Security Controls Research
 
-The CIS Critical Security Controls – CIS Controls V7.1
+​[The CIS Critical Security Controls – CIS Controls V7.1](https://www.cisecurity.org/blog/v7-1-introduces-implementation-groups-cis-controls/)​
 
 The CIS Critical Security Controls (CIS Controls) are internationally-recognized cybersecurity best practices for defense against common threats. They are a consensus-developed resource that brings together expert insight about cyber threats, business technology, and security. The CIS Controls are used by organizations with varying resources and risk exposure to build an effective cyber defense program.
 
@@ -286,24 +311,7 @@ Modules 2, 3, and 4 focus on how technical and administrative controls and proce
 --
 #### **1. General Data Protection Regulation (GDPR)**
 
-* **Region**: EU (applies globally to organizations handling EU citizens' data)
-* **Focus**: Privacy and data protection
-* **Key Requirements**:
-  * Consent for data collection
-  * Right to access, correct, and delete personal data
-  * Data breach notifications within 72 hours
-  * Privacy by design
-* **Penalties**: Up to **€20 million or 4% of global revenue**
-
 #### **2. Health Insurance Portability and Accountability Act (HIPAA)**
-
-* **Region**: U.S. (applies to healthcare providers, insurers, and business associates)
-* **Focus**: Protection of healthcare data
-* **Key Requirements**:
-  * Safeguarding **Protected Health Information (PHI)**
-  * Administrative, physical, and technical safeguards
-  * Breach notification within 60 days
-* **Penalties**: Up to **$1.5 million per violation**
 
 #### **3. California Consumer Privacy Act (CCPA) & CPRA (amendment)**
 
@@ -326,14 +334,6 @@ Modules 2, 3, and 4 focus on how technical and administrative controls and proce
 * **Penalties**: Fines and **criminal charges** for executives
 
 #### **5. Payment Card Industry Data Security Standard (PCI DSS)**
-
-* **Region**: Global (applies to organizations handling credit card data)
-* **Focus**: Securing cardholder data
-* **Key Requirements**:
-  * Encryption of stored card data
-  * Regular vulnerability scans
-  * Access controls and network segmentation
-* **Penalties**: Fines up to **$100,000/month** for non-compliance
 
 #### **6. Federal Information Security Management Act (FISMA)**
 
@@ -361,21 +361,12 @@ Modules 2, 3, and 4 focus on how technical and administrative controls and proce
   * Identify, Protect, Detect, Respond, Recover
   * Used alongside regulations like HIPAA & FISMA
 
-#### **9. General Data Protection Law (LGPD)**
-
-* **Region**: Brazil (similar to GDPR)
-* **Focus**: Data privacy for Brazilian citizens
-* **Key Requirements**:
-  * Consent for data processing
-  * Data breach notifications
-
-#### **10. Cybersecurity Maturity Model Certification (CMMC)**
+#### **9. Cybersecurity Maturity Model Certification (CMMC)**
 
 * **Region**: U.S. (Defense contractors)
 * **Focus**: Protecting Controlled Unclassified Information (CUI)
 * **Key Requirements**:
   * Five maturity levels (basic to advanced cybersecurity)
-
 
 --
 ### Key takeaways

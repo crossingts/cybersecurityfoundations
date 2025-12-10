@@ -1,11 +1,11 @@
 ---
-description: >-
-  This section covers salient cybersecurity regulations, such as GDPR (privacy),
-  HIPAA (healthcare), and SOX (financial)
+description: This section covers salient cybersecurity regulations, such as GDPR and HIPAA, and industry standards, such as PCI DSS
 hidden: true
 ---
 
 # Key cybersecurity regulations and standards
+
+This section covers salient cybersecurity regulations, such as GDPR (privacy), HIPAA (healthcare), and SOX (financial), and industry standards, such as PCI DSS (payment card industry).
 
 Understand the strategic, ethical, and legal importance of cybersecurity regulations and standards for businesses.
 

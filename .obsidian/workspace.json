@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2.-introduction-to-cybersecurity/common-cyber-attacks/README.md",
+                "file": "3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "key-cybersecurity-regulations-and-standards"
             }
           }
         ]
@@ -183,6 +183,7 @@
   },
   "active": "39d0bf74be78b3a7",
   "lastOpenFiles": [
+    "2.-introduction-to-cybersecurity/common-cyber-attacks/README.md",
     "3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards.md",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing/README.md",
     "3.-cybersecurity-grc/introduction-cybersecurity-grc.md",
@@ -210,7 +211,6 @@
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets-1/common-attack-targets-quiz.md",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets-1/attack-types-ceh-ec-council.md",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets-1/attack-target-vs-attack-vector.md",
-    "6.-practical-foundations-in-ethical-hacking/common-attack-targets-1/kernel-flaws-and-buffer-overflows/buffer-overflows-deep-dive.md",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets-1/kernel-flaws-and-buffer-overflows",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets-1",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/scanning-and-enumeration",

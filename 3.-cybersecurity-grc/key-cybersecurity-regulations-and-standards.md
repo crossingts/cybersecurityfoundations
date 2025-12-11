@@ -33,16 +33,11 @@ This section covers salient cybersecurity regulations and standards, including N
 
 ### Formal Regulations vs Industry Standards
 
-This section differentiates between formal regulations (laws and government rules) and industry standards and frameworks based on their source of legal authority and enforceability. 
-Regulations derive force from law, while standards derive force from contract or voluntary commitment. 
+This section differentiates between formal regulations (laws and government rules) and industry standards and frameworks based on their source of legal authority and enforceability. Regulations derive force from law, while standards derive force from contract or voluntary commitment. 
 
 Formal Regulations are statutory and regulatory. They are created and enforced by a legislative or government body (e.g., EU Parliament, U.S. Congress, State of California). Non-compliance can result in legal penalties, fines, or criminal charges.
 
-Industry Standards are typically developed by industry consortia or standards bodies (e.g., PCI SSC, NIST), but they can be governmental in origin and adopted by industry.
-Compliance is often enforced through contractual obligations (PCI DSS) or adopted voluntarily as best practice (NIST CSF). 
-
-Standards are defined by their mechanism of enforcement as contractual requirements or legally-binding obligations.
-
+Industry Standards are typically developed by industry consortia or standards bodies (e.g., PCI SSC, NIST), but they can also be governmental in origin and adopted by industry. Compliance is often enforced through contractual obligations (PCI DSS) or adopted voluntarily as best practice (NIST CSF). 
 
 CMMC is a special case where a government agency mandates a specific certification standard for its contractors.
 
@@ -62,12 +57,12 @@ CMMC is a special case where a government agency mandates a specific certificati
 - **Enforcement:** They become legally binding when incorporated into a **contract**. Compliance is enforced through contractual agreements (e.g., with a business partner, a credit card company, or the government as a condition of a contract).
 - **Examples:** PCI DSS (required by contract with credit card companies), ISO 27001 (often a contractual requirement for vendors), SOC 2 (requested by clients in contracts).
 
-**Primary Industry Standards:**
+**Primary Industry Standards**
 
 1. **Payment Card Industry Data Security Standard (PCI DSS):** This is the quintessential industry standard. It is created and maintained by the **PCI Security Standards Council** (founded by major credit card companies like Visa, MasterCard, etc.). Compliance is enforced through contracts with the card brands, not by a government legislature. While it has global reach, its authority comes from the private sector.
 2. **NIST Cybersecurity Framework (CSF):** This is a **voluntary framework** of best practices published by the U.S. National Institute of Standards and Technology (a government agency). It is not a law or regulation itself. However, it is frequently _referenced by_ or _incorporated into_ laws and regulations (like FISMA). Its adoption is industry-driven for improving cybersecurity risk management.
 
-#### Special Case / Hybrid: CMMC
+**Special Case / Hybrid: CMMC**
 
 The hybrid case of **CMMC** (Cybersecurity Maturity Model Certification). It appears in **both** lists because:
 
@@ -75,12 +70,6 @@ The hybrid case of **CMMC** (Cybersecurity Maturity Model Certification). It app
 2. **As a Standard:** The CMMC model itself is a detailed set of security controls (a standard). For other contexts, it could be adopted as a _contractual_ requirement between private parties.
 
 **Cybersecurity Maturity Model Certification (CMMC):** This is a **mandatory requirement** for U.S. Defense Industrial Base contractors, but it is a **certification program** built upon NIST standards (specifically NIST SP 800-171). It is administered by the Department of Defense. While it has the force of a federal contractual requirement, it is technically a standardized certification framework rather than a public law passed by Congress. It sits in a gray area but leans more toward a government-mandated standard than a purely industry-driven one.
-
-#### Summary:
-
-- **Industry Standards:** **PCI DSS** and **NIST CSF**. They are developed by industry/government bodies as best practice guides and are adopted **voluntarily or via contract**.
-- **Laws/Regulations:** GDPR, HIPAA, CCPA, SOX, FISMA, NYDFS 500, LGPD. These are created by legislative or executive government bodies and carry the force of law.
-- **Mandatory Certification Framework (Gov't Contracting):** **CMMC.**
 
 Here is a table categorizing the items from your list into **Formal Regulations** and **Industry Standards**.
 
@@ -93,6 +82,12 @@ Here is a table categorizing the items from your list into **Formal Regulations*
 | **Federal Information Security Management Act (FISMA)**  <br>_U.S. federal law for government agencies & contractors._ |                                                                                                                                                      |
 | **NYDFS Cybersecurity Regulation (23 NYCRR 500)**  <br>_New York state regulation for financial services._             |                                                                                                                                                      |
 | **General Data Protection Law (LGPD)**  <br>_Brazilian federal data privacy law._                                      |                                                                                                                                                      |
+
+**Summary:**
+
+- **Industry Standards:** **PCI DSS** and **NIST CSF**. They are developed by industry/government bodies as best practice guides and are adopted **voluntarily or via contract**.
+- **Laws/Regulations:** GDPR, HIPAA, CCPA, SOX, FISMA, NYDFS 500, LGPD. These are created by legislative or executive government bodies and carry the force of law.
+- **Mandatory Certification Framework (Gov't Contracting):** **CMMC.**
 
 ### Lesson 1. Compliance and Regulation for Cybersecurity
 

@@ -25,7 +25,7 @@ Specifically, this section covers the following cybersecurity regulations: CFAA,
 - **Cybersecurity regulations**
 - **Cybersecurity industry standards**
 - **Cybersecurity Maturity Model Certification (CMMC)**
-- **Compliance and Industry Standards Summary**
+- **Compliance and industry standards summary**
 
 ### The strategic importance of cybersecurity regulation
 
@@ -195,15 +195,13 @@ Describe the General Data Protection Regulation, GDPR. Describe the key privacy 
 
 ​[Polish DPA fines Virgin Mobile Polska €460,000: Incidental safeguards review is not regular testing of technical measures](https://www.databreaches.net/polish-dpa-fines-virgin-mobile-polska-e460000-incidental-safeguards-review-is-not-regular-testing-of-technical-measures/)
 
-***
-
 ### Cybersecurity industry standards
 
 - International Organization for Standardization (ISO) 2700x
 - System and Organization Controls Report (SOC)
 - Payment Card Industry Data Security Standard (PCI DSS)
 - NIST Cybersecurity Framework (CSF)
-- Center for Internet Security (CIS) Critical Security Controls
+- CIS Critical Security Controls
 
 #### International Organization for Standardization (ISO) 2700x
 
@@ -240,11 +238,9 @@ ISO has many different standards, several of them are applicable for cyber secur
 
 “On top of the complexity of Type 1s and Type 2s and SOC 1s and SOC 2s, there are different principles or chapters within SOC 2 and they each come with a set of controls or requirements. The most typical and sort of the foundational one that everybody would get would be security and they’re looking specifically at how you’re protecting your physical and logical access and systems. So they have controls related to user provisioning, change management, inventory management, things like that.”
 
-
 IMAGE 1
 
 SOC 2 trust service principles (image courtesy of imperva.com)
-
 
 SOC 2 defines criteria for managing customer data based on five trust service principles – security, availability, processing integrity, confidentiality, and privacy.
 
@@ -313,7 +309,7 @@ The Payment Card Industry Data Security Standard (PCI DSS) is an information sec
   * Identify, Protect, Detect, Respond, Recover
   * Used alongside regulations like HIPAA & FISMA
 
-#### Center for Internet Security (CIS) Critical Security Controls
+#### CIS Critical Security Controls
 
 - Describe the Center for Internet Security (CIS) Critical Security Controls
 - Describe the structure of the CIS Critical Security Controls, including the relationship between its 18 Controls and three Implementation Groups
@@ -340,7 +336,7 @@ To prioritize their adoption, the 18 Controls are organized into three **Impleme
 
 Each Control is thoroughly documented, explaining its purpose, components, suggested tools, and implementation guidance.
 
-**Center for Internet Security (CIS) Critical Security Controls Research**
+**CIS Critical Security Controls Research**
 
 ​[The CIS Critical Security Controls – CIS Controls V7.1](https://www.cisecurity.org/blog/v7-1-introduces-implementation-groups-cis-controls/)​
 
@@ -360,8 +356,7 @@ CMMC can appear in both lists (regulations and standards) because:
 - **As a Regulation (NIST 800-171/CMMC under FAR & DFARS):** For U.S. Department of Defense contractors, the requirement to implement NIST 800-171 and achieve CMMC certification is embedded in federal acquisition regulations (**DFARS**). This makes it a _regulatory_ requirement.
 - **As a Standard:** The CMMC model itself is a detailed set of security controls (a standard). For other contexts, it could be adopted as a _contractual_ requirement between private parties.
 
-### Compliance and Industry Standards Summary
-
+### Compliance and industry standards summary
 
 IMAGE 2
 
@@ -379,9 +374,9 @@ Modules 2, 3, and 4 focus on how technical and administrative controls and proce
 
 ### Key takeaways
 
-- **Industry Standards:** **PCI DSS** and **NIST CSF**. They are developed by industry/government bodies as best practice guides and are adopted **voluntarily or via contract**.
-- **Laws/Regulations:** GDPR, HIPAA, CCPA, SOX, FISMA, NYDFS 500, LGPD. These are created by legislative or executive government bodies and carry the force of law.
-- **Mandatory Certification Framework (Gov't Contracting):** **CMMC.**
+- Industry Standards: PCI DSS and NIST CSF. They are developed by industry/government bodies as best practice guides and are adopted voluntarily or via contract.
+- Laws/Regulations: GDPR, HIPAA, CCPA, SOX, FISMA, NYDFS 500, LGPD. These are created by legislative or executive government bodies and carry the force of law.
+- Mandatory Certification Framework (Gov't Contracting): CMMC.
 
 ### References
 

@@ -1,5 +1,7 @@
 ---
-description: This section covers salient cybersecurity regulations, such as GDPR and HIPAA, and industry standards, such as PCI DSS
+description: >-
+  This section covers salient cybersecurity regulations, such as GDPR and HIPAA,
+  and industry standards, such as PCI DSS
 hidden: true
 ---
 
@@ -7,25 +9,25 @@ hidden: true
 
 ## Learning objectives
 
-- Understand the strategic, ethical, and legal importance of cybersecurity regulations and standards for businesses
+* Understand the strategic, ethical, and legal importance of cybersecurity regulations and standards for businesses
 
 This section covers salient cybersecurity regulations and standards. Cybersecurity regulations and standards regulate the creation, processing, and management of data to ensure certain security or privacy requirements or expectations are met.
 
-Key cybersecurity **regulations (statutory and regulatory)** include CFAA (Computer Fraud and Abuse Act), HIPAA/HITECH (Health Insurance Portability and Accountability Act/Health Information Technology for Economic and Clinical Health Act), FACTA (Fair and Accurate Credit Transactions Act), FISMA (Federal Information Security Management Act), GLBA (Gramm-Leach-Bliley Act), CCPA (California Consumer Privacy Act), SOX (Sarbanes-Oxley Act), NYDFS-23 NYCRR 500 (New York Department of Financial Services - Title 23, New York Codes, Rules and Regulations, Part 500), NIST SP 800-53 (National Institute of Standards and Technology Special Publication 800-53), FedRAMP (Federal Risk and Authorization Management Program), EU GDPR (European Union General Data Protection Regulation), and Data Protection Act (UK).
+Key cybersecurity **regulations (statutory and regulatory)** include CFAA (Computer Fraud and Abuse Act), HIPAA/HITECH (Health Insurance Portability and Accountability Act/Health Information Technology for Economic and Clinical Health Act), FACTA (Fair and Accurate Credit Transactions Act), FISMA (Federal Information Security Management Act), GLBA (Gramm-Leach-Bliley Act), CCPA (California Consumer Privacy Act), SOX (Sarbanes-Oxley Act), NYDFS-23 NYCRR 500 (New York Department of Financial Services - Title 23, New York Codes, Rules and Regulations, Part 500), NIST SP 800-53 (National Institute of Standards and Technology Special Publication 800-53), FedRAMP (Federal Risk and Authorization Management Program), EU GDPR (European Union General Data Protection Regulation), and Data Protection Act (UK).
 
-Key cybersecurity **industry standards (contractual requirements or legally-binding obligations)** include PCI DSS (Payment Card Industry Data Security Standard), SOC2 (Service Organization Control Type 2), ISO 2700x (International Organization for Standardization), NIST CSF (National Institute of Standards and Technology Cybersecurity Framework), and CIS (Center for Internet Security) Critical Security Controls.
+Key cybersecurity **industry standards (contractual requirements or legally-binding obligations)** include PCI DSS (Payment Card Industry Data Security Standard), SOC2 (Service Organization Control Type 2), ISO 2700x (International Organization for Standardization), NIST CSF (National Institute of Standards and Technology Cybersecurity Framework), and CIS (Center for Internet Security) Critical Security Controls.
 
 Specifically, this section covers the following cybersecurity regulations: CFAA, FISMA, NIST SP 800-53 Catalog of Security Controls, HIPAA, and GDPR; and the following cybersecurity industry standards: ISO 27001, SOC (System and Organization Controls Report), PCI DSS, NIST CSF, and CIS Critical Security Controls. Finally, this section covers CMMC (Cybersecurity Maturity Model Certification), which can be both contractual and regulatory.
 
 ## Topics covered in this section
 
-- **The strategic importance of cybersecurity regulation**
-- **Formal regulations vs industry standards**
-- **Compliance basics**
-- **Cybersecurity regulations**
-- **Cybersecurity industry standards**
-- **Cybersecurity Maturity Model Certification (CMMC)**
-- **Compliance and industry standards summary**
+* **The strategic importance of cybersecurity regulation**
+* **Formal regulations vs industry standards**
+* **Compliance basics**
+* **Cybersecurity regulations**
+* **Cybersecurity industry standards**
+* **Cybersecurity Maturity Model Certification (CMMC)**
+* **Compliance and industry standards summary**
 
 ### The strategic importance of cybersecurity regulation
 
@@ -39,11 +41,11 @@ Ultimately, these dimensions are not isolated; they converge to define modern co
 
 ### Formal regulations vs industry standards
 
-This section differentiates between formal regulations (laws and government rules) and industry standards and frameworks based on their source of legal authority and enforceability. Regulations derive force from law, while standards derive force from contract or voluntary commitment. 
+This section differentiates between formal regulations (laws and government rules) and industry standards and frameworks based on their source of legal authority and enforceability. Regulations derive force from law, while standards derive force from contract or voluntary commitment.
 
 Formal regulations are statutory or regulatory. They are created and enforced by a legislative or government body (e.g., EU Parliament, U.S. Congress, and State of California). Non-compliance can result in legal penalties, fines, or criminal charges.
 
-Industry standards are typically developed by industry consortia or standards bodies (e.g., PCI SSC, NIST), but they can also be governmental in origin and adopted by industry. Compliance is often enforced through contractual obligations (PCI DSS) or adopted voluntarily as best practice (NIST CSF). 
+Industry standards are typically developed by industry consortia or standards bodies (e.g., PCI SSC, NIST), but they can also be governmental in origin and adopted by industry. Compliance is often enforced through contractual obligations (PCI DSS) or adopted voluntarily as best practice (NIST CSF).
 
 CMMC is a special case where a government agency (U.S. Department of Defense) mandates a specific certification standard for its contractors.
 
@@ -53,7 +55,7 @@ CMMC is a special case where a government agency (U.S. Department of Defense) ma
 | **Descriptor**          | Statutory and Regulatory                                                                                                                             | Contractual Requirements or Legally-Binding Obligations                                                                                                                                                   |
 | **What This Means**     | Legal mandates created and enforced by a governmental or legislative body (e.g., U.S. Congress, EU Parliament, a federal agency, state legislature). | Frameworks, controls, or specifications developed by industry groups or standards bodies (e.g., ISO, PCI SSC, NIST). They are not law by themselves.                                                      |
 | **Enforcement**         | Compliance is mandatory because it is the law. Non-compliance can result in fines, penalties, lawsuits, or other legal actions from the government.  | They become legally binding when incorporated into a contract. Compliance is enforced through contractual agreements (e.g., with a business partner, client, or as a condition of a government contract). |
-| **Examples**            | HIPAA (U.S. law)  <br>GDPR (EU law)  <br>CCPA (California state law)  <br>SOX (U.S. law)                                                             | PCI DSS (required by contract with payment card brands)  <br>ISO 27001 (often a contractual requirement for vendors)  <br>SOC 2 (frequently requested by clients in contracts)                            |
+| **Examples**            | <p>HIPAA (U.S. law)<br>GDPR (EU law)<br>CCPA (California state law)<br>SOX (U.S. law)</p>                                                            | <p>PCI DSS (required by contract with payment card brands)<br>ISO 27001 (often a contractual requirement for vendors)<br>SOC 2 (frequently requested by clients in contracts)</p>                         |
 
 ### Compliance basics
 
@@ -85,11 +87,11 @@ There are two main categories for compliances. First, foundational or general. �
 
 ### Cybersecurity regulations
 
-- The Computer Fraud and Abuse Act (CFAA)
-- Federal Information Security Management Act (FISMA)
-- NIST Special Publication 800-53 Catalog of Security Controls
-- Health Insurance Portability and Accountability Act (HIPAA)
-- General Data Protection Regulation (GDPR)
+* The Computer Fraud and Abuse Act (CFAA)
+* Federal Information Security Management Act (FISMA)
+* NIST Special Publication 800-53 Catalog of Security Controls
+* Health Insurance Portability and Accountability Act (HIPAA)
+* General Data Protection Regulation (GDPR)
 
 #### The Computer Fraud and Abuse Act (CFAA)
 
@@ -108,7 +110,7 @@ Describe the Computer Fraud and Abuse Act (CFAA).
 
 #### NIST Special Publication 800-53 Catalog of Security Controls
 
-- Describe the importance of the National Institute of Standards and Technology, NIST
+* Describe the importance of the National Institute of Standards and Technology, NIST
 
 “The National Institute of Standards and Technology is focused on cyber security and privacy. They will identify literally hundreds of individual standards that are related. There will be pages and pages of details on passwords, on encryption, on network communications, and how to assure security and privacy.”
 
@@ -122,8 +124,7 @@ National Institute of Standards and Technology (NIST) Special Publication 800-53
 
 #### Health Insurance Portability and Accountability Act (HIPAA)
 
-- Define the three rules established as standards for the Health Insurance Portability and Accountability Act (HIPAA)
-
+* Define the three rules established as standards for the Health Insurance Portability and Accountability Act (HIPAA)
 * **Region**: U.S. (applies to healthcare providers, insurers, and business associates)
 * **Focus**: Protection of healthcare data
 * **Key Requirements**:
@@ -137,8 +138,9 @@ Describe key HIPAA terms. Describe why HIPAA compliance is important to an organ
 “HIPAA is the U.S. federal law that identifies the control of personal healthcare information. So PHI, personal healthcare information, and it’s also related to the other law in this space called HITECH.”
 
 Health Information Technology for Economic and Clinical Health Act.
-- **HIPAA (1996)** set the foundational rules for protecting health information (PHI), but its enforcement was initially seen as relatively weak.
-- **HITECH (2009)** significantly **amended and strengthened HIPAA** to address the new digital age. It plugged gaps and added much more teeth to the law.
+
+* **HIPAA (1996)** set the foundational rules for protecting health information (PHI), but its enforcement was initially seen as relatively weak.
+* **HITECH (2009)** significantly **amended and strengthened HIPAA** to address the new digital age. It plugged gaps and added much more teeth to the law.
 
 HIPAA is defined and overseen by the U.S. Department of Health and Human Services, Office of Civil Rights, and they identify two main actors in this space.
 
@@ -164,8 +166,7 @@ First, “there’s the covered entity. So this is the company that manages the 
 
 #### General Data Protection Regulation (GDPR)
 
-- Describe the key privacy and data protection requirements of GDPR
-
+* Describe the key privacy and data protection requirements of GDPR
 * **Region**: EU (applies globally to organizations handling EU citizens' data)
 * **Focus**: Privacy and data protection
 * **Key Requirements**:
@@ -197,15 +198,15 @@ Describe the General Data Protection Regulation, GDPR. Describe the key privacy 
 
 ### Cybersecurity industry standards
 
-- International Organization for Standardization (ISO) 2700x
-- System and Organization Controls Report (SOC)
-- Payment Card Industry Data Security Standard (PCI DSS)
-- NIST Cybersecurity Framework (CSF)
-- CIS Critical Security Controls
+* International Organization for Standardization (ISO) 2700x
+* System and Organization Controls Report (SOC)
+* Payment Card Industry Data Security Standard (PCI DSS)
+* NIST Cybersecurity Framework (CSF)
+* CIS Critical Security Controls
 
 #### International Organization for Standardization (ISO) 2700x
 
-- Describe the basics of the ISO 27001 standards
+* Describe the basics of the ISO 27001 standards
 
 ISO has many different standards, several of them are applicable for cyber security. The most common one is ISO 27001, an information security management standard. “It focuses on requirements for establishing and implementing, maintaining and improving your security management system. It’s risk-based.” ISO 27018 is focused on privacy and ISO 27017 is focused on Cloud security. A combination of these three standards could be used in an enterprise information assurance strategy or information security risk management strategy.
 
@@ -213,8 +214,8 @@ ISO has many different standards, several of them are applicable for cyber secur
 
 ### System and Organization Controls Report (SOC)
 
-- Describe the differences between SOC1, SOC2, and SOC3 controls and reports
-- Describe the audit elements for SOC reporting
+* Describe the differences between SOC1, SOC2, and SOC3 controls and reports
+* Describe the audit elements for SOC reporting
 
 #### SOC reports
 
@@ -270,7 +271,7 @@ AICPA develops the guidelines for SOC reporting. Explore some of the resources a
 
 #### Payment Card Industry Data Security Standard (PCI DSS)
 
-- Describe the Payment Card Industry Data Security Standard (PCI DSS)
+* Describe the Payment Card Industry Data Security Standard (PCI DSS)
 
 Describe the Payment Card Industry Data Standard Security, PCI DSS. Describe the goals and requirements of PCI DSS. Describe the scope of PCI DSS as it relates to people, process, and technology. Highlight new and key requirements for PCI DSS.
 
@@ -281,8 +282,7 @@ Describe the Payment Card Industry Data Standard Security, PCI DSS. Describe the
   * Regular vulnerability scans
   * Access controls and network segmentation
 * **Penalties**: Fines up to **$100,000/month** for non-compliance
-
-- **Payment Card Industry Data Security Standard (PCI DSS):** This is the quintessential industry standard. It is created and maintained by the **PCI Security Standards Council** (founded by major credit card companies like Visa, MasterCard, etc.). Compliance is enforced through contracts with the card brands, not by a government legislature. While it has global reach, its authority comes from the private sector.
+* **Payment Card Industry Data Security Standard (PCI DSS):** This is the quintessential industry standard. It is created and maintained by the **PCI Security Standards Council** (founded by major credit card companies like Visa, MasterCard, etc.). Compliance is enforced through contracts with the card brands, not by a government legislature. While it has global reach, its authority comes from the private sector.
 
 The Payment Card Industry Data Security Standard (PCI DSS) is an information security standard for organizations that issue credit cards or process credit card payments.
 
@@ -302,7 +302,7 @@ The Payment Card Industry Data Security Standard (PCI DSS) is an information sec
 
 #### NIST Cybersecurity Framework (CSF)
 
-- **NIST Cybersecurity Framework (CSF):** This is a **voluntary framework** of best practices published by the U.S. National Institute of Standards and Technology (a government agency). It is not a law or regulation itself. However, it is frequently _referenced by_ or _incorporated into_ laws and regulations (like FISMA). Its adoption is industry-driven for improving cybersecurity risk management.
+* **NIST Cybersecurity Framework (CSF):** This is a **voluntary framework** of best practices published by the U.S. National Institute of Standards and Technology (a government agency). It is not a law or regulation itself. However, it is frequently _referenced by_ or _incorporated into_ laws and regulations (like FISMA). Its adoption is industry-driven for improving cybersecurity risk management.
 * **Region**: U.S. (widely adopted globally)
 * **Focus**: Risk management best practices
 * **Key Requirements**:
@@ -311,28 +311,28 @@ The Payment Card Industry Data Security Standard (PCI DSS) is an information sec
 
 #### CIS Critical Security Controls
 
-- Describe the Center for Internet Security (CIS) Critical Security Controls
-- Describe the structure of the CIS Critical Security Controls, including the relationship between its 18 Controls and three Implementation Groups
-- Determine which CIS Implementation Group (IG1, IG2, or IG3) is most appropriate for an organization based on its size and complexity
+* Describe the Center for Internet Security (CIS) Critical Security Controls
+* Describe the structure of the CIS Critical Security Controls, including the relationship between its 18 Controls and three Implementation Groups
+* Determine which CIS Implementation Group (IG1, IG2, or IG3) is most appropriate for an organization based on its size and complexity
 
 The Center for Internet Security (CIS) is a U.S. based non-profit organization composed of a global community of cybersecurity professionals from both public and private sectors. These experts collaborate through a consensus-driven process to develop its widely adopted security standards and controls.
 
-The CIS publishes the **CIS Critical Security Controls**, a prioritized set of best practices designed to mitigate the most common cyber attacks against systems and networks. A primary focus is secure configuration. 
+The CIS publishes the **CIS Critical Security Controls**, a prioritized set of best practices designed to mitigate the most common cyber attacks against systems and networks. A primary focus is secure configuration.
 
 The CIS provides two key resources: the high-level **Controls** for strategic guidance and specific **Configuration Benchmarks** (such as settings for password complexity) that detail the technical implementation for systems, especially those exposed to the public Internet. These Controls are widely adopted across industries like retail, manufacturing, and healthcare. Examples of fundamental control categories include:
 
-- Password policies and management
-- Vulnerability management
-- Boundary (network) defense
-- Application security
-- Incident response
+* Password policies and management
+* Vulnerability management
+* Boundary (network) defense
+* Application security
+* Incident response
 
-The current CIS Critical Security Controls (CIS Controls v8, released in 2021), often called CIS Safeguards, consist of 18 overarching control categories (the logical grouping of Safeguards). These 18 categories are the high-level, strategic security practices designed to stop today's most pervasive and dangerous attacks, providing the essential security framework. 
+The current CIS Critical Security Controls (CIS Controls v8, released in 2021), often called CIS Safeguards, consist of 18 overarching control categories (the logical grouping of Safeguards). These 18 categories are the high-level, strategic security practices designed to stop today's most pervasive and dangerous attacks, providing the essential security framework.
 
 To prioritize their adoption, the 18 Controls are organized into three **Implementation Groups (IG1, IG2, IG3)**, which align with an organization's resources and risk profile:
 
-- **IG1:** Suitable for smaller, less complex organizations (e.g., a small business).
-- **IG3:** Designed for mature, enterprise-level organizations.
+* **IG1:** Suitable for smaller, less complex organizations (e.g., a small business).
+* **IG3:** Designed for mature, enterprise-level organizations.
 
 Each Control is thoroughly documented, explaining its purpose, components, suggested tools, and implementation guidance.
 
@@ -348,13 +348,12 @@ The CIS Critical Security Controls (CIS Controls) are internationally-recognized
 * **Focus**: Protecting Controlled Unclassified Information (CUI)
 * **Key Requirements**:
   * Five maturity levels (basic to advanced cybersecurity)
-
-- **Cybersecurity Maturity Model Certification (CMMC):** This is a **mandatory requirement** for U.S. Defense Industrial Base contractors, but it is a **certification program** built upon NIST standards (specifically NIST SP 800-171). It is administered by the Department of Defense. 
+* **Cybersecurity Maturity Model Certification (CMMC):** This is a **mandatory requirement** for U.S. Defense Industrial Base contractors, but it is a **certification program** built upon NIST standards (specifically NIST SP 800-171). It is administered by the Department of Defense.
 
 CMMC can appear in both lists (regulations and standards) because:
 
-- **As a Regulation (NIST 800-171/CMMC under FAR & DFARS):** For U.S. Department of Defense contractors, the requirement to implement NIST 800-171 and achieve CMMC certification is embedded in federal acquisition regulations (**DFARS**). This makes it a _regulatory_ requirement.
-- **As a Standard:** The CMMC model itself is a detailed set of security controls (a standard). For other contexts, it could be adopted as a _contractual_ requirement between private parties.
+* **As a Regulation (NIST 800-171/CMMC under FAR & DFARS):** For U.S. Department of Defense contractors, the requirement to implement NIST 800-171 and achieve CMMC certification is embedded in federal acquisition regulations (**DFARS**). This makes it a _regulatory_ requirement.
+* **As a Standard:** The CMMC model itself is a detailed set of security controls (a standard). For other contexts, it could be adopted as a _contractual_ requirement between private parties.
 
 ### Compliance and industry standards summary
 
@@ -366,21 +365,20 @@ Cybersecurity compliance and industry standards summary (courtesy of IBM Securit
 
 This discussion focused on module 1 (week 1) of the Coursera course [Cybersecurity Compliance Framework & System Administration](https://www.coursera.org/learn/cybersecurity-compliance-framework-system-administration), course 3 of 4 of [IT Fundamentals for Cybersecurity Specialization](https://www.coursera.org/specializations/it-fundamentals-cybersecurity). The course also covers the following three modules:
 
-- Module 2: Client System Administration, Endpoint Protection and Patching
-- Module 3: Server and User Administration
-- Module 4: Cryptography and Compliance Pitfalls
+* Module 2: Client System Administration, Endpoint Protection and Patching
+* Module 3: Server and User Administration
+* Module 4: Cryptography and Compliance Pitfalls
 
 Modules 2, 3, and 4 focus on how technical and administrative controls and processes can help achieve compliance.
 
 ### Key takeaways
 
-- Industry Standards: PCI DSS and NIST CSF. They are developed by industry/government bodies as best practice guides and are adopted voluntarily or via contract.
-- Laws/Regulations: GDPR, HIPAA, CCPA, SOX, FISMA, NYDFS 500, LGPD. These are created by legislative or executive government bodies and carry the force of law.
-- Mandatory Certification Framework (Gov't Contracting): CMMC.
+* Industry Standards: PCI DSS and NIST CSF. They are developed by industry/government bodies as best practice guides and are adopted voluntarily or via contract.
+* Laws/Regulations: GDPR, HIPAA, CCPA, SOX, FISMA, NYDFS 500, LGPD. These are created by legislative or executive government bodies and carry the force of law.
+* Mandatory Certification Framework (Gov't Contracting): CMMC.
 
 ### References
 
-​[ComplianceForge Reference Model: Hierarchical Cybersecurity Governance Framework (HCGF)](https://graphics.complianceforge.com/graphics/ComplianceForge%20Hierarchical%20Cybersecurity%20Governance%20Framework.pdf)​
-​[Cybersecurity Compliance Framework & System Administration](https://www.coursera.org/learn/cybersecurity-compliance-framework-system-administration)​
+​[ComplianceForge Reference Model: Hierarchical Cybersecurity Governance Framework (HCGF)](https://graphics.complianceforge.com/graphics/ComplianceForge%20Hierarchical%20Cybersecurity%20Governance%20Framework.pdf)​ ​[Cybersecurity Compliance Framework & System Administration](https://www.coursera.org/learn/cybersecurity-compliance-framework-system-administration)​
 
 ​[IT Fundamentals for Cybersecurity Specialization](https://www.coursera.org/specializations/it-fundamentals-cybersecurity)

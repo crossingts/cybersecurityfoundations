@@ -62,7 +62,7 @@ The ipconfig /all command provides a detailed configuration report for every net
 
 Here is the raw ipconfig /all command output on a Windows 10 machine.
 
-<figure><img src="/broken/files/dPSxIKWIdm9fAUNzu2NY" alt="ipconfig-all-1"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt="ipconfig-all-1"><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (2).png" alt="ipconfig-all-2"><figcaption></figcaption></figure>
 

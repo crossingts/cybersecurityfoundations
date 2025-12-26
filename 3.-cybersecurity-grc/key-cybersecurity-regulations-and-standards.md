@@ -14,15 +14,6 @@ hidden: true
 - Describe key cybersecurity industry standards ISO 2700x, SOC, PCI DSS, NIST SP 800-53, NIST CSF, and CIS Critical Security Controls
 - Explain the applicability of Cybersecurity Maturity Model Certification (CMMC)
 
-Per regulation/standard:
-year issued or enacted
-authority/owner/managing body
-compliance requirements (content), including scope (e.g., physical, technical, and procedural/operational controls, or similar, if any; people, process, technology, or similar, if any)
-audit frequency 
-reporting requirements (including key reporting audit elements or similar, if any) 
-region and relevant industry (industry focus)
-non-compliance penalties/fines
-
 This section covers salient cybersecurity regulations and standards. Cybersecurity regulations and standards govern the creation, processing, and management of data to ensure certain security or privacy requirements or expectations are met.
 
 Key cybersecurity **regulations (statutory and regulatory)** include CFAA (Computer Fraud and Abuse Act), HIPAA/HITECH (Health Insurance Portability and Accountability Act/Health Information Technology for Economic and Clinical Health Act), FISMA (Federal Information Security Management Act), GLBA (Gramm-Leach-Bliley Act), SOX (Sarbanes-Oxley Act), FACTA (Fair and Accurate Credit Transactions Act), FedRAMP (Federal Risk and Authorization Management Program), CCPA (California Consumer Privacy Act), NYDFS-23 NYCRR 500 (New York Department of Financial Services - Title 23, New York Codes, Rules and Regulations, Part 500), EU GDPR (European Union General Data Protection Regulation), and Data Protection Act (UK).

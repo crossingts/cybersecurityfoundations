@@ -47,7 +47,6 @@
 * [Foundational GRC concepts](3.-cybersecurity-grc/foundational-grc-concepts.md)
 * [Risk assessment phases](3.-cybersecurity-grc/risk-assessment-phases.md)
 * [FISMA compliance roadmap](3.-cybersecurity-grc/fisma-compliance-roadmap.md)
-* [Key cybersecurity regulations and standards](3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards.md)
 * [GRC as a risk management framework (RMF)](3.-cybersecurity-grc/grc-as-a-risk-management-framework-rmf.md)
 * [NIST SP 800-37, NIST CSF, and ISO/IEC 27001](3.-cybersecurity-grc/nist-sp-800-37-nist-csf-and-iso-iec-27001.md)
 * [Common combinations of cybersecurity RMFs](3.-cybersecurity-grc/common-combinations-of-cybersecurity-rmfs.md)

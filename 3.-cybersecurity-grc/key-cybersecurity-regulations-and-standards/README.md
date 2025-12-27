@@ -32,7 +32,6 @@ Specifically, this section covers the following cybersecurity regulations: CFAA,
 * **Cybersecurity regulations**
   * **The Computer Fraud and Abuse Act (CFAA)**
   * **Federal Information Security Management Act (FISMA)**
-  * **NIST Special Publication 800-53 Catalog of Security Controls**
   * **Health Insurance Portability and Accountability Act (HIPAA)**
   * **General Data Protection Regulation (GDPR)**
 * **Cybersecurity industry standards**

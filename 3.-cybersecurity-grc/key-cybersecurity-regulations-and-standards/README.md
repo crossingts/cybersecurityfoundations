@@ -163,20 +163,6 @@ The CFAA is a **U.S. federal law** with a **global impact** due to the interconn
   * Continuous monitoring
   * Incident reporting
 
-#### NIST Special Publication 800-53 Catalog of Security Controls
-
-* Describe the importance of the National Institute of Standards and Technology, NIST
-
-“The National Institute of Standards and Technology is focused on cyber security and privacy. They will identify literally hundreds of individual standards that are related. There will be pages and pages of details on passwords, on encryption, on network communications, and how to assure security and privacy.”
-
-U.S. federal laws, such as CFAA, FISMA, and x FedRAMP “will base their subset of their requirements off of NIST, the National Institute of Standards and Technology.”
-
-“There is not generally an expectation that you will implement how many (standards) … but that you’ll institute a practice within your business to do as many of them as makes sense for your business.”
-
-National Institute of Standards and Technology (NIST) Special Publication 800-53 Catalog of Security Controls
-
-[Security and Privacy Controls for Information Systems and Organizations SP 800-53 Rev. 5](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final)
-
 #### Health Insurance Portability and Accountability Act (HIPAA)
 
 * Define the three rules established as standards for the Health Insurance Portability and Accountability Act (HIPAA)

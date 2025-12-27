@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3.-cybersecurity-grc/review-questions-and-exercises.md",
+                "file": "3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards/README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "review-questions-and-exercises"
+              "title": "README"
             }
           }
         ]
@@ -181,14 +181,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "06ca7278ba5efd38",
+  "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
+    "3.-cybersecurity-grc/review-questions-and-exercises.md",
     "3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards/fisma-compliance-roadmap.md",
     "3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards/README.md",
     "3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards",
     "3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards.md",
     "conflict-files-obsidian-git.md",
-    "3.-cybersecurity-grc/review-questions-and-exercises.md",
     "3.-cybersecurity-grc/risk-assessment-phases.md",
     "3.-cybersecurity-grc/nist-sp-800-37-nist-csf-and-iso-iec-27001.md",
     "3.-cybersecurity-grc/introduction-cybersecurity-grc.md",

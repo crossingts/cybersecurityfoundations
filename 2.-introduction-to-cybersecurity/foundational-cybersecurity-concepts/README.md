@@ -10,7 +10,7 @@ description: >-
 
 * Become familiar with key cybersecurity concepts and practices
 * Learn key cybersecurity definitions
-* Describe where cybersecurity fits within corporate organizational structures&#x20;
+* Describe where cybersecurity fits within corporate organizational structures
 * Understand how cybersecurity is practiced within organizations
 
 This section introduces cybersecurity concepts and practices germane to any instruction aiming to establish a practical understanding of the goals of cybersecurity and how it is practiced within organizations. This section covers definitions of information security, the CIA triad, risk, threat, vulnerability, mitigation, and the AAA framework (Authentication, Authorization, and Accounting).
@@ -42,7 +42,7 @@ Information security,
 * is concerned with access to information (CNSS, 201; ISACA, 2008); and
 * aims to provide assurance “that information risks and controls are in balance” (Anderson, J., 2003).
 
-Key information security concepts include privacy, authenticity and trustworthiness, non-repudiation, accountability and auditability, and reliability (Cherdantseva & Hilton, 2013; ISO/IEC 27000:2009).&#x20;
+Key information security concepts include privacy, authenticity and trustworthiness, non-repudiation, accountability and auditability, and reliability (Cherdantseva & Hilton, 2013; ISO/IEC 27000:2009).
 
 The broad pragmatic goal of information security is to reduce the probability of unauthorized access or damage to the confidentiality, integrity, and availability of valued information assets to an acceptable risk level through risk mitigation strategies that involve management controls (e.g., security policies), technical controls (e.g., intrusion detection techniques), and operational controls (best practices/standard operating procedures).
 
@@ -50,13 +50,13 @@ Information security threats most commonly rated as a concern in higher educatio
 
 ### The place of information security in enterprise IT governance
 
-Information security governance is the top-level enterprise business function accountable for information security under the rubric of IT governance (NCC 2005 IT Governance). The IT department is a customer of the information security governance function or service, (e.g., HR, Finance).&#x20;
+Information security governance is the top-level enterprise business function accountable for information security under the rubric of IT governance (NCC 2005 IT Governance). The IT department is a customer of the information security governance function or service, (e.g., HR, Finance).
 
 IT security as integrated with enterprise-wide risk management policy operates within the information security governance framework. Information security is a specialized function within business organizations focused on securing an organization’s information assets against unauthorized access or damage. An information security professional from IT ensures an institution’s IT system is operating in a way that meets varied regulatory requirements and stakeholder needs.
 
-IT security is a stakeholder level concern within enterprises and is concerned with Internet access and identity and access management, and the technological infrastructure of the IT network and its smooth operation. Information security governance is concerned with defining security policy and aligning security strategy with business strategy.&#x20;
+IT security is a stakeholder level concern within enterprises and is concerned with Internet access and identity and access management, and the technological infrastructure of the IT network and its smooth operation. Information security governance is concerned with defining security policy and aligning security strategy with business strategy.
 
-Information Systems are comprised of hardware, software, and communications “with the purpose to help identify and apply information security industry standards, as mechanisms of protection and prevention, at three levels or layers: Physical, personal and organizational” (Cherdantseva & Hilton, 2013).&#x20;
+Information Systems are comprised of hardware, software, and communications “with the purpose to help identify and apply information security industry standards, as mechanisms of protection and prevention, at three levels or layers: Physical, personal and organizational” (Cherdantseva & Hilton, 2013).
 
 Areas for which central IT most commonly has primary responsibility in higher education are Network security (94%), Monitoring (88%), Communications security (86%), and Identity management (83%) (EDUCAUSE Information Security Almanac, April 2019).
 
@@ -68,11 +68,11 @@ The most concrete (as opposed to abstract) and tactical (as opposed to strategic
 * Integrity denotes an imperative that data should not be changed or modified by unauthorized users. Data should be correct and authentic.
 * Availability denotes an imperative that an information system should be operational and accessible to authorized users. For example, staff should be able to access the internal resources they need to perform their duties, and the company’s website should be up and running and available to customers.
 
-In addition to the CIA triad, closely related and foundational information security concepts include:&#x20;
+In addition to the CIA triad, closely related and foundational information security concepts include:
 
-* A vulnerability is any potential weakness that can compromise the CIA of information assets. A window in a house is a vulnerability burglars can exploit to enter the house.&#x20;
+* A vulnerability is any potential weakness that can compromise the CIA of information assets. A window in a house is a vulnerability burglars can exploit to enter the house.
 * An exploit is something that can potentially be used to exploit the vulnerability. A rock can exploit the weakness of glass windows and may be used to enter a house.
-* A threat is the potential of a vulnerability to be exploited. The threat of house burglary is the potential a burglar will exploit the glass window vulnerability using a rock (or other exploits) to gain entry into a house.&#x20;
+* A threat is the potential of a vulnerability to be exploited. The threat of house burglary is the potential a burglar will exploit the glass window vulnerability using a rock (or other exploits) to gain entry into a house.
 * A threat vector is a means or method a threat actor can use or follow to exploit a vulnerability. A glass window a burglar can use to gain entry into a house can be considered a threat vector.
 * A mitigation technique is something that can protect against threats. Appropriate mitigation techniques should be implemented everywhere a vulnerability can be exploited, for example, devices, servers, switches, and routers. In our window example, adding welded metallic bars would be a mitigation technique.
 
@@ -84,11 +84,11 @@ Risk management requires understanding **threats, vulnerabilities, and mitigatio
 * A risk arises when a threat exploits a vulnerability.
 * Related concepts: **exploit** (how the attack happens) and **threat vector** (the pathway of the attack).
 
-Risk is “a threat that exploits some vulnerability that could cause harm to an asset” (Peltier, 2005, p.16). “One instance of risk within a system is represented by the formula (asset\*threat\*vulnerability)” (Landoll & Landoll, 2005, p. 8).&#x20;
+Risk is “a threat that exploits some vulnerability that could cause harm to an asset” (Peltier, 2005, p.16). “One instance of risk within a system is represented by the formula (asset\*threat\*vulnerability)” (Landoll & Landoll, 2005, p. 8).
 
 The Risk Management Guide of the National Institute of Standards and Technology defines risk assessment as “the process of identifying the risks to system security and determining the probability of occurrence, the resulting impact, and additional safeguards that would mitigate this impact” (Landoll & Landoll, 2005, p. 10).
 
-According to the General Security Risk Assessment Guidelines, ASIS International (2003), the basic components of a risk assessment plan include, identifying assets, specifying loss events (threats), assessing the frequency and impact of events, recommending mitigation options, conducting a cost/benefit analysis, and making decisions.&#x20;
+According to the General Security Risk Assessment Guidelines, ASIS International (2003), the basic components of a risk assessment plan include, identifying assets, specifying loss events (threats), assessing the frequency and impact of events, recommending mitigation options, conducting a cost/benefit analysis, and making decisions.
 
 **Sources of Vulnerabilities**
 
@@ -107,9 +107,9 @@ Pragmatically, organizations approach information security in terms of risk, thr
 
 A standard definition of risk is the potential to lose something of value. Another definition involves the exposure to danger. In information security, risk is typically understood as threat times vulnerability times impact (the likelihood that a threat will exploit a vulnerability resulting in a business impact), or threat times vulnerability with an overlay of control effectiveness. The cybersecurity risk manager should determine what is the suitable definition of risk.
 
-A risk-based approach allows an organization to prioritize the vulnerabilities identified and focus its efforts on the risks that are the most significant to its operations. The first step in identifying business risks should be to understand the business as a social system—its identity, corporate vision, social/community relations, and values. Clause 4 of ISO 22301 calls for understanding internal and external environments, including an organization’s activities, functions, services, and the organization’s risk appetite (ISO 22301 Portal: Societal security – Business continuity management system, 2015). Businesses need to evaluate information security risks for the purposes of insurance underwriting and resource allocation; or if they are attempting to comply with HIPAA, PCI, and other regulations, they will perform a risk assessment periodically.&#x20;
+A risk-based approach allows an organization to prioritize the vulnerabilities identified and focus its efforts on the risks that are the most significant to its operations. The first step in identifying business risks should be to understand the business as a social system—its identity, corporate vision, social/community relations, and values. Clause 4 of ISO 22301 calls for understanding internal and external environments, including an organization’s activities, functions, services, and the organization’s risk appetite (ISO 22301 Portal: Societal security – Business continuity management system, 2015). Businesses need to evaluate information security risks for the purposes of insurance underwriting and resource allocation; or if they are attempting to comply with HIPAA, PCI, and other regulations, they will perform a risk assessment periodically.
 
-Risk assessment “identifies risks generated by the possibility of threats acting on vulnerabilities, and what can be done to mitigate each one” (PCI DSS Risk Assessment Guidelines, 2005). Several major regulatory frameworks, including HIPAA, PCI, and SSAE 16, require businesses to perform periodic risk assessment. As such, risk assessments are usually performed in the context of compliance with standards or regulations.&#x20;
+Risk assessment “identifies risks generated by the possibility of threats acting on vulnerabilities, and what can be done to mitigate each one” (PCI DSS Risk Assessment Guidelines, 2005). Several major regulatory frameworks, including HIPAA, PCI, and SSAE 16, require businesses to perform periodic risk assessment. As such, risk assessments are usually performed in the context of compliance with standards or regulations.
 
 In order to properly secure data, an organization should develop clear and precise standards of data classification. To simplify data governance, information should be segregated by levels of importance and risk, since it is impractical to safeguard all the data in an organization using the same standards. Sensitive data should be protected by more security measures in order to safeguard it.
 
@@ -127,7 +127,7 @@ After a risk assessment, a risk can be accepted (this involves an evaluation of 
 
 The goal of risk assessment is “to identify which investments of time and resources will best protect the organization from its most likely and serious threats” (Reynolds, 2012, p. 103).
 
-Systems can be more secure or less secure, but there is no absolute security. For example, you can implement malware detection on your network firewall and have the best antivirus software on client PCs, but the chance of the PCs getting infected with malware is never zero.&#x20;
+Systems can be more secure or less secure, but there is no absolute security. For example, you can implement malware detection on your network firewall and have the best antivirus software on client PCs, but the chance of the PCs getting infected with malware is never zero.
 
 **Security vs functionality**
 
@@ -180,11 +180,11 @@ An information availability attack aims to disrupt access to data, systems, or s
 
 #### **Technologies for Confidentiality, Integrity, and Availability**
 
-| **Security Objective** | **Key Technologies**                                                                                                                                                                                                                                                           | **Purpose**                                      | **Notes**                                                    |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------------------ |
-| **Confidentiality**    | <p>Data Loss Prevention (DLP)</p><p><br>Encryption (AES, TLS, PGP)</p><p><br>Access Controls (IAM, RBAC, AAA)</p><p><br>Tokenization</p><p><br>SIEM </p><p></p><p>Backups</p><p></p><p>Rate Limiting (prevents brute-force attacks)</p>                                        | Protects data from unauthorized access and leaks | SIEM provides monitoring for all three pillars               |
-| **Integrity**          | <p>Hashing (SHA-256, HMAC)</p><p><br>Digital Signatures</p><p><br>Version Control (Git, SVN)</p><p><br>SIEM + Centralized Logging</p><p><br>Access Controls (audit logs track changes)</p><p><br>Backups (ensure clean restore points)</p>                                     | Ensures data accuracy and prevents tampering     | Access controls support integrity through audit trails       |
-| **Availability**       | <p>DDoS Protection (Cloudflare, AWS Shield)</p><p></p><p>Backups (recovery, 3-2-1 Rule, immutable backups)</p><p><br>Load Balancers (Nginx, F5)</p><p><br>High Availability systems</p><p><br>SIEM </p><p><br>Access Controls (MFA)</p><p><br>Rate Limiting (secures APIs)</p> | Maintains system uptime and access               | Rate limiting protects both availability and confidentiality |
+| **Security Objective** | **Key Technologies**                                                                                                                                                                                                                                                   | **Purpose**                                      | **Notes**                                                    |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------ |
+| **Confidentiality**    | <p>Data Loss Prevention (DLP)</p><p><br>Encryption (AES, TLS, PGP)</p><p><br>Access Controls (IAM, RBAC, AAA)</p><p><br>Tokenization</p><p><br>SIEM</p><p>Backups</p><p>Rate Limiting (prevents brute-force attacks)</p>                                               | Protects data from unauthorized access and leaks | SIEM provides monitoring for all three pillars               |
+| **Integrity**          | <p>Hashing (SHA-256, HMAC)</p><p><br>Digital Signatures</p><p><br>Version Control (Git, SVN)</p><p><br>SIEM + Centralized Logging</p><p><br>Access Controls (audit logs track changes)</p><p><br>Backups (ensure clean restore points)</p>                             | Ensures data accuracy and prevents tampering     | Access controls support integrity through audit trails       |
+| **Availability**       | <p>DDoS Protection (Cloudflare, AWS Shield)</p><p>Backups (recovery, 3-2-1 Rule, immutable backups)</p><p><br>Load Balancers (Nginx, F5)</p><p><br>High Availability systems</p><p><br>SIEM</p><p><br>Access Controls (MFA)</p><p><br>Rate Limiting (secures APIs)</p> | Maintains system uptime and access               | Rate limiting protects both availability and confidentiality |
 
 See [CIA attacks mitigation technologies](cia-attacks-mitigation-technologies.md)
 
@@ -310,8 +310,8 @@ Availability attacks, such as Distributed Denial of Service (DDoS) attacks, aim 
 AAA stands for Authentication, Authorization, and Accounting. It’s a framework for controlling and monitoring users of a computer system such as a network.
 
 * Authentication is the process of verifying a user’s identity. When a user logs in, ideally using multi-factor authentication, that’s authentication. In other words, Authentication is how you control access to your network and prevent intrusions, data loss, and unauthorized users.
-* Authorization is the process of granting the user the appropriate access and permissions. So, granting the user access to some files and services, but restricting access to other files and services, is authorization.&#x20;
-* Accounting is the process of recording the user’s activities on the system. For example, logging when a user makes a change to a file, or recording when a user logs in or logs out, is accounting.&#x20;
+* Authorization is the process of granting the user the appropriate access and permissions. So, granting the user access to some files and services, but restricting access to other files and services, is authorization.
+* Accounting is the process of recording the user’s activities on the system. For example, logging when a user makes a change to a file, or recording when a user logs in or logs out, is accounting.
 
 Enterprises typically use an AAA server to provide AAA services. ISE (Identity Services Engine) is Cisco’s AAA server. AAA servers typically support the following two AAA protocols for network access control: 1) RADIUS (Remote Authentication Dial-In User System), which is an open standard protocol and uses UDP ports 1812 and 1813; and 2) TACACS+ (Terminal Access Controller Access-Control System Plus), which is also an open standard (that was developed by Cisco) and uses TCP port 49.
 
@@ -348,7 +348,7 @@ Bishop, M. (2003). _Computer security: art and science_. Addison-Wesley Professi
 
 Blakley, B., McDermott, E., & Geer, D. (2001, September). Information security is information risk management. In _Proceedings of the 2001 workshop on New security paradigms_ (pp. 97-104). ACM.
 
-Cherdantseva, Y. & Hilton, J. (2013). Information security and information assurance. The discussion about the meaning, scope and goals. In: _Organizational, Legal, and Technological Dimensions of Information System Administrator._ Almeida F., Portela, I. (eds.). IGI Global Publishing.&#x20;
+Cherdantseva, Y. & Hilton, J. (2013). Information security and information assurance. The discussion about the meaning, scope and goals. In: _Organizational, Legal, and Technological Dimensions of Information System Administrator._ Almeida F., Portela, I. (eds.). IGI Global Publishing.
 
 CNSS (Committee on National Security Systems). (2010). National Information Assurance (IA) Glossary, CNSS Instruction No. 4009, 26 April 2010.
 
@@ -362,7 +362,7 @@ ISO/IEC 27000:2009. _Information technology — Security techniques — Informat
 
 ISO 22301 Portal. (2015). _Societal security – Business continuity management system._
 
-ISO Risk Management Guide. (2009). _Risk management — Vocabulary_ (ISO Guide 73:2009).&#x20;
+ISO Risk Management Guide. (2009). _Risk management — Vocabulary_ (ISO Guide 73:2009).
 
 Landoll, D. J., & Landoll, D. (2005). _The security risk assessment handbook: A complete guide for performing security risk assessments._ CRC Press.
 
@@ -383,3 +383,5 @@ Stallings, W., & Brown, L. (2018). _Computer security: Principles and practice_ 
 Stewart, J. (2012). CISSP Certified Information Systems Security Professional Study Guide Sixth Edition. Canada: John Wiley & Sons, Inc. pp. 255–257. ISBN 978-1-118-31417-3.
 
 Venter, H. S., & Eloff, J. H. (2003). A taxonomy for information security technologies. _Computers & Security, 22(_&#x34;), 299-307.
+
+Whitman, M. E., & Mattord, H. J. (2014). Principles of information security (p. 656). Boston, MA: Thomson Course Technology.

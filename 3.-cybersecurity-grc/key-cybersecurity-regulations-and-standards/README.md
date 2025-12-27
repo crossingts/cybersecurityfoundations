@@ -2,6 +2,7 @@
 description: >-
   This section covers salient cybersecurity regulations, such as HIPAA and GDPR,
   and industry standards, such as PCI DSS
+hidden: true
 ---
 
 # Key cybersecurity regulations and standards

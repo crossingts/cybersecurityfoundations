@@ -91,7 +91,8 @@
               "title": "Understanding the 7 Principles of the GDPR  | Blog | OneTrust"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -251,11 +252,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1e65107a9a5d3b6c",
+  "active": "391bfc4fdcbdba4d",
   "lastOpenFiles": [
+    "3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards/README.md",
     "3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards/key-cybersecurity-regulations-and-standards-quiz.md",
     "3.-cybersecurity-grc/chapter-3-review-questions.md",
-    "3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards/README.md",
     "2.-introduction-to-cybersecurity/common-cyber-attacks/README.md",
     "3.-cybersecurity-grc/review-questions-and-exercises.md",
     "3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards/fisma-compliance-roadmap.md",

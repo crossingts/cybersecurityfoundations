@@ -168,25 +168,30 @@ HIPAA is a **U.S. federal regulation** with a primary **industry focus on hea
 
 #### General Data Protection Regulation (GDPR)
 
-* Describe the key privacy and data protection requirements of GDPR
-* **Region**: EU (applies globally to organizations handling EU citizens' data)
-* **Focus**: Privacy and data protection
-* **Key Requirements**:
-  * Consent for data collection
-  * Right to access, correct, and delete personal data
-  * Data breach notifications within 72 hours
-  * Privacy by design
-* **Penalties**: Up to **€20 million or 4% of global revenue**
+The General Data Protection Regulation (GDPR) is a comprehensive data privacy law enacted by the **European Parliament and Council in 2016**, which became **enforceable on May 25, 2018**. It supersedes the 1995 Data Protection Directive. The authority is decentralized, with overarching governance by the **European Commission** and direct enforcement by **national Data Protection Authorities (DPAs)** in each EU member state (e.g., the CNIL in France, the ICO in the UK). The **European Data Protection Board (EDPB)** ensures consistent application across the Union.
 
-“The General Data Protection Regulation laws are a European standard that came out recently. They are laws governed at privacy of European data. So they focus on compliance, data protection, and personal data of EU residents in particular. So if your business is going to host EU residents data or do business with the EU then this is an important regulation for you to understand.”
+GDPR's **compliance requirements** are principle-based and focus on the lawful, fair, and transparent processing of **personal data** (any information relating to an identifiable person). Its core is built on **seven key principles**: lawfulness, fairness and transparency; purpose limitation; data minimization; accuracy; storage limitation; integrity and confidentiality; and accountability. Compliance mandates a holistic approach across **people, process, and technology**:
 
-“From a compliance perspective, they’re looking at regulating how you manage the data associated with people, and making sure you have policies and processes in place. They are specifically looking at data encryption, data security, access and monitoring … and how to ensure that the data is there lawfully. You’ll also see laws here around the right to forget. They also come with incredibly stiff penalties.”
+- **Lawful Basis**: Requiring a justified legal ground (e.g., consent, contractual necessity, legitimate interest) for all processing.
+- **Data Subject Rights**: Empowering individuals with rights to access, rectification, erasure ("right to be forgotten"), portability, and objection.
+- **Privacy by Design and by Default**: Requiring data protection to be integrated into the development of business processes and systems.
+- **Organizational Measures**: Implementing appropriate technical controls (e.g., encryption, pseudonymization) and robust internal policies, while maintaining detailed records of processing activities (ROPA).
 
-“Fines can be huge, four percent or up to €20 million depending on your company’s revenue … I’ve seen fines in excessive €100 million.”
+The regulation does not prescribe a specific **audit frequency**. Instead, it operates on a principle of **demonstrable accountability**, where organizations must be able to prove compliance at all times. **Supervisory authorities (DPAs)** have the power to conduct investigations and audits based on complaints, data breaches, or sectoral inquiries. The key reporting requirement is for **personal data breaches**. Controllers must notify the relevant DPA of a breach **within 72 hours of becoming aware of it**, unless the breach is unlikely to result in a risk to individuals. If the breach poses a high risk to individuals' rights, they must also be notified without undue delay.
+
+While the GDPR is an **EU regulation**, its **scope is global** due to its extraterritorial principle. It applies to all organizations that process the personal data of individuals in the EU, regardless of the organization's physical location. This means a company based in the U.S., Asia, or elsewhere must comply if it offers goods/services to, or monitors the behavior of, EU data subjects. There is no single **industry focus**; it applies universally to all sectors, including technology, finance, retail, healthcare, and beyond. Its core focus is the **protection of personal data and privacy of EU residents**.
+
+**Non-compliance penalties and fines** are the most stringent globally, designed to be "effective, proportionate, and dissuasive." Infringements can result in administrative fines of up to **€20 million or 4% of the company's total global annual revenue of the preceding financial year, whichever is higher**. As evidenced by major enforcement actions, such as the **€183 million (later reduced) fine against British Airways** and the **€99 million fine against Marriott** for insufficient security measures leading to data breaches, these provisions are actively enforced. Beyond fines, DPAs hold corrective powers, including ordering data processing to cease.
+
+
+
+
+
 
 ​[Understanding the 7 Principles of the GDPR](https://www.onetrust.com/blog/gdpr-principles/)​
 
-“Key terms here that you’ll want to understand is the data **subject** – must be an identifiable, natural living person, so that’s the EU resident.” Personal data is any information related to the subjects. “The **controller**, this is the person or entity that is responsible for the handling of that data … The **processor** could be an actor on behalf of the controller that is processing the data.”
+
+
 
 **Examples of GDPR Fines**
 

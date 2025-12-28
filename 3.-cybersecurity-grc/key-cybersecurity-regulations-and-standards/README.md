@@ -427,8 +427,6 @@ The following table summarizes the three levels of CMMC 2.0:
 |**Level 3**|CUI from High-Priority Programs|NIST SP 800-171 + subset from NIST SP 800-172|Government-Led Assessment|Triennial|
 
 
-
-
 * **Region**: U.S. (Defense contractors)
 * **Focus**: Protecting Controlled Unclassified Information (CUI)
 * **Key Requirements**:

@@ -20,79 +20,8 @@
               "icon": "lucide-file",
               "title": "README"
             }
-          },
-          {
-            "id": "43383838eb59313b",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://www.aicpa-cima.com/resources/download/learn-about-the-key-distinctions-between-a-soc-2-examination-and-a-soc-for-cybersecurity-examination",
-                "title": "Learn about the key distinctions between a SOC 2 examination and a SOC for Cybersecurity examination. | Resources | AICPA & CIMA",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "Learn about the key distinctions between a SOC 2 examination and a SOC for Cybersecurity examination. | Resources | AICPA & CIMA"
-            }
-          },
-          {
-            "id": "391bfc4fdcbdba4d",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-for-cybersecurity",
-                "title": "SOC for Cybersecurity | AICPA & CIMA",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "SOC for Cybersecurity | AICPA & CIMA"
-            }
-          },
-          {
-            "id": "dcde8c2e815e560b",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://www.aicpa-cima.com/content/dam/aicpa/interestareas/frc/assuranceadvisoryservices/downloadabledocuments/soc-for-cybersecurity-brochure.pdf",
-                "title": "AICPA & CIMA | AICPA & CIMA",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "AICPA & CIMA | AICPA & CIMA"
-            }
-          },
-          {
-            "id": "b435a9acff29b8c9",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://www.aicpa-cima.com/interestareas/frc/assuranceadvisoryservices/aicpacybersecurityinitiative.html",
-                "title": "AICPA & CIMA | AICPA & CIMA",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "AICPA & CIMA | AICPA & CIMA"
-            }
-          },
-          {
-            "id": "c07897248bada363",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://www.onetrust.com/blog/gdpr-principles/",
-                "title": "Understanding the 7 Principles of the GDPR  | Blog | OneTrust",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "Understanding the 7 Principles of the GDPR  | Blog | OneTrust"
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -252,7 +181,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "391bfc4fdcbdba4d",
+  "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
     "3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards/README.md",
     "3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards/key-cybersecurity-regulations-and-standards-quiz.md",

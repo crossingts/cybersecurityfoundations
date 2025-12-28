@@ -130,50 +130,42 @@ The CFAA is a **U.S. federal law** with a **global impact** due to the interconn
 
 #### Federal Information Security Management Act (FISMA)
 
-* **Region**: U.S. (applies to federal agencies & contractors)
-* **Focus**: Government IT security
-* **Key Requirements**:
-  * Risk assessments & security controls
-  * Continuous monitoring
-  * Incident reporting
-
 The Federal Information Security Management Act (FISMA) is a cornerstone U.S. federal law enacted in 2002, with significant modernization through the Federal Information Security Modernization Act of 2014. Its primary authority rests with the U.S. federal government, specifically managed and overseen by the Office of Management and Budget (OMB). The law delegates the development of specific security standards and guidelines to the National Institute of Standards and Technology (NIST), making NIST Special Publication 800-53 the foundational control catalog for FISMA compliance.
 
-FISMA's **compliance requirements** mandate a comprehensive, risk-based approach to securing federal information systems. Agencies must implement security programs that span **people, process, and technology**, organized around key families of controls. These include conducting regular risk assessments, selecting and implementing appropriate security controls from frameworks like NIST SP 800-53, and maintaining continuous monitoring of system security. A core procedural requirement is the development and maintenance of a System Security Plan (SSP) for each information system, along with a structured process for authorizing systems to operate (Authorization to Operate - ATO). 
-As highlighted in your materials, **continuous monitoring** and **incident reporting** are critical, ongoing operational requirements under this framework.
+FISMA's **compliance requirements** mandate a comprehensive, risk-based approach to securing federal information systems. Agencies must implement security programs that span **people, process, and technology**, organized around key families of controls. These include conducting regular risk assessments, selecting and implementing appropriate security controls from frameworks like NIST SP 800-53, and maintaining continuous monitoring of system security. A core procedural requirement is the development and maintenance of a System Security Plan (SSP) for each information system, along with a structured process for authorizing systems to operate (Authorization to Operate - ATO). Continuous monitoring and incident reporting are critical, ongoing operational requirements under this framework.
 
 Regarding **audit frequency and reporting**, FISMA requires annual evaluations. Federal agencies must conduct yearly assessments of their security programs and report their compliance status to OMB. OMB then consolidates this information and reports on the government-wide state of cybersecurity to Congress. This cycle ensures ongoing oversight. The key reporting artifacts include the Agency Head's Annual FISMA Report, which details the agency's security posture, the results of continuous monitoring activities, and a summary of security incidents as part of the incident reporting mandate.
 
-In terms of **region and relevant industry**, FISMA's scope is explicitly defined. As noted in your stub, it is a **U.S.** regulation that applies principally to all federal executive branch agencies. Crucially, its reach also extends to **third-party contractors, state agencies, and other entities** that manage federal information or operate systems on behalf of the government. Therefore, while its **industry focus** is government IT security, its impact is felt across the private sector technology and defense industrial base that supports federal operations.
+In terms of **region and relevant industry**, FISMA's scope is explicitly defined. FISMA is a **U.S.** regulation that applies principally to all federal executive branch agencies. Crucially, its reach also extends to **third-party contractors, state agencies, and other entities** that manage federal information or operate systems on behalf of the government. Therefore, while its **industry focus** is government IT security, its impact is felt across the private sector technology and defense industrial base that supports federal operations.
 
 **Non-compliance penalties and fines** under FISMA are not typically monetary fines levied on agencies. Instead, consequences are operational and strategic. Non-compliance can result in failing an agency's annual FISMA audit score, which is publicly reported. This can lead to reduced funding for IT programs, increased oversight from OMB and Congress, and the withholding of an Authorization to Operate (ATO) for critical systems, effectively shutting them down. For contractors, failure to meet FISMA requirements can result in loss of current contracts and disqualification from future federal business.
 
-
 #### Health Insurance Portability and Accountability Act (HIPAA)
 
-* Define the three rules established as standards for the Health Insurance Portability and Accountability Act (HIPAA)
-* **Region**: U.S. (applies to healthcare providers, insurers, and business associates)
-* **Focus**: Protection of healthcare data
-* **Key Requirements**:
-  * Safeguarding **Protected Health Information (PHI)**
-  * Administrative, physical, and technical safeguards
-  * Breach notification within 60 days
-* **Penalties**: Up to **$1.5 million per violation**
+The Health Insurance Portability and Accountability Act (HIPAA) was enacted as a U.S. federal law in **1996**. Its security and privacy provisions were significantly strengthened by the **Health Information Technology for Economic and Clinical Health (HITECH) Act in 2009**, which introduced stricter enforcement and higher penalties. The primary authority and managing body for HIPAA is the **U.S. Department of Health and Human Services (HHS)**, specifically through its **Office for Civil Rights (OCR)**, which is responsible for enforcing the rules and investigating complaints.
 
-“HIPAA is the U.S. federal law that identifies the control of personal healthcare information. So PHI, personal healthcare information, and it’s also related to the other law in this space called HITECH.”
+HIPAA's **compliance requirements** are centered on protecting **Protected Health Information (PHI)**—any individually identifiable health information. The law establishes three primary rules that dictate comprehensive safeguards across people, processes, and technology:
 
-Health Information Technology for Economic and Clinical Health Act.
+- **The Privacy Rule**: Governs the use and disclosure of PHI.
+- **The Security Rule**: Mandates specific administrative, physical, and technical safeguards to ensure the confidentiality, integrity, and availability of electronic PHI (ePHI).
+- **The Breach Notification Rule**: Requires notification to individuals, HHS, and sometimes the media following a breach of unsecured PHI.  
+    These rules apply to two key entities: **"covered entities"** (healthcare providers, health plans, clearinghouses) and their **"business associates"** (any vendor or contractor that handles PHI). Compliance requires a holistic program involving workforce training (people), policies like access management and incident response (process), and controls like encryption and audit logs (technology).
 
-* **HIPAA (1996)** set the foundational rules for protecting health information (PHI), but its enforcement was initially seen as relatively weak.
-* **HITECH (2009)** significantly **amended and strengthened HIPAA** to address the new digital age. It plugged gaps and added much more teeth to the law.
+There is no mandated annual **audit frequency** for all entities. Instead, enforcement is primarily driven by **complaint investigations** and the OCR's **random audit program**. When audits or investigations occur, they examine the entity's compliance with all HIPAA Rules, requiring evidence of risk assessments, implemented safeguards, and documentation of policies and training. The OCR provides protocols that serve as de facto audit guides for these assessments.
 
-HIPAA is defined and overseen by the U.S. Department of Health and Human Services, Office of Civil Rights, and they identify two main actors in this space.
+A critical **reporting requirement** is for breaches of unsecured PHI. Covered entities must notify:
 
-First, “there’s the covered entity. So this is the company that manages the healthcare data for the customer, so it would be a hospital, it would be an insurance company, it could be your doctor’s office.” Second, “a business associate is any vendor that supports the covered entity. So if you are providing an application, if you are providing a cloud environment to the hospital, then you are a business associate of that covered entity.” “The protected health information is any information about the health status of the individual, and it is the responsibility of the covered entity or on their behalf through the business associates to ensure its safety and confidentiality.”
+- **Affected individuals** without unreasonable delay, and no later than **60 days** after discovery.
+- **The Secretary of HHS** annually for smaller breaches, or within 60 days for breaches affecting 500 or more individuals.
+- **The media** for breaches affecting 500+ residents of a state or jurisdiction.  
+    Key internal reporting elements include maintaining an **incident log** and documentation of all breach risk assessments, even for incidents determined not to be reportable breaches.
 
-“In the case of GDPR, we talked about large fines, there are absolutely large fines here for violations of HIPAA. There’s also a Wall of Shame. You can go to the website there and they will produce that. So why is compliance here essential? So they’re our laws, the U.S. federal laws, and they have teeth and the HHS will come in and do unannounced audit either on the BA or the CE, the covered entity or the business associate. One or the other or both could find themselves under an audit situation. The fines can be in the millions of dollars. You can face criminal prosecution.”
+HIPAA is a **U.S. federal regulation** with a primary **industry focus on healthcare**. However, its extraterritorial effect and broad definition of business associates mean it impacts a wide ecosystem, including cloud service providers, software developers, and billing companies that serve the healthcare industry. Many U.S. states also have laws that may impose stricter requirements. **Non-compliance penalties** are severe and tiered based on the level of negligence, ranging from **$100 to $50,000 per violation**, with an annual maximum of **$1.5 million for repeated violations of the same provision**. Penalties can reach into the millions. Willful neglect can also lead to **criminal penalties**, including fines and imprisonment.
 
-“So although it’s a U.S. regulation, the other thing to be aware of is that other countries will have a similar law. We talked about GDPR. In Canada, there’s the Personal Information Protection and Electronic Documents Act (**PIPEDA**). So just about every geography is going to have a similar law or regulation on the books. Many states in the U.S. will have even more strict laws or additional requirements that are laid out on top of the U.S. federal law for HIPAA. So you need to be aware of that as you’re choosing your jurisdictions who you’re doing business in and the types of compliances that you’re aligning with.
+
+
+
+
 
 **The Three Rules Established as Standards for HIPAA**
 

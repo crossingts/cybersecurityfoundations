@@ -20,6 +20,20 @@
               "icon": "lucide-file",
               "title": "README"
             }
+          },
+          {
+            "id": "a0bcc692b912cce6",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://www.hhs.gov/sites/default/files/cyber-attack-quick-response-infographic.gif",
+                "title": "cyber-attack-quick-response-infographic.gif (2550×3300)",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "cyber-attack-quick-response-infographic.gif (2550×3300)"
+            }
           }
         ]
       }
@@ -183,8 +197,8 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
-    "2.-introduction-to-cybersecurity/common-cyber-attacks/README.md",
     "3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards/README.md",
+    "2.-introduction-to-cybersecurity/common-cyber-attacks/README.md",
     "3.-cybersecurity-grc/review-questions-and-exercises.md",
     "3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards/fisma-compliance-roadmap.md",
     "3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards",

@@ -393,6 +393,42 @@ The CIS Critical Security Controls (CIS Controls) are internationally-recognized
 
 ### Cybersecurity Maturity Model Certification (CMMC)
 
+The **Cybersecurity Maturity Model Certification (CMMC)** is a mandatory **unified security standard for the U.S. Defense Industrial Base (DIB)**. The Department of Defense (DoD) introduced the initial model in **January 2020**, and following an intensive review, announced a streamlined **CMMC 2.0 framework in November 2021**. Final rulemaking to implement CMMC 2.0 is in progress. The sole authority and managing body is the U.S. **Department of Defense (DoD)**, specifically through the **Office of the Under Secretary of Defense for Acquisition and Sustainment (OUSD(A&S))**. Its authority is enforced by being embedded into the **Federal Acquisition Regulation (FAR)** and the **Defense Federal Acquisition Regulation Supplement (DFARS)**, making it a **legally binding contractual requirement**.
+
+**Compliance requirements** are tiered and designed to protect sensitive defense information. CMMC 2.0 consolidates the model into three clear maturity levels, each requiring the implementation of specific security practices from established NIST standards:
+
+- **Level 1 (Foundational):** Requires the implementation of **17 basic cybersecurity hygiene practices** from FAR 52.204-21 to protect **Federal Contract Information (FCI)**. Annual self-assessment is required.
+- **Level 2 (Advanced):** The core level for most contractors, requiring implementation of **110 security controls** from **NIST SP 800-171** to protect **Controlled Unclassified Information (CUI)**. Compliance can be validated via **self-assessment (for select programs)** or, for priority acquisitions, a **triennial third-party assessment** by a C3PAO.
+- **Level 3 (Expert):** For contractors supporting the highest-priority programs, requiring implementation of **110+ controls** from **NIST SP 800-171**, plus a subset from **NIST SP 800-172** to reduce risk from advanced persistent threats (APTs). Requires triennial **government-led assessments**.
+
+The **audit frequency** depends on the required CMMC Level and the associated assessment method:
+
+- **Self-Assessments (Level 1 & some Level 2):** Must be conducted **annually** and affirmed by a company executive.
+- **Third-Party Assessments (Majority of Level 2):** Conducted by an accredited **CMMC Third-Party Assessment Organization (C3PAO)**, with certification valid for **three years**.
+- **Government-Led Assessments (Level 3):** Conducted by DoD assessors, also valid for **three years**.
+
+The primary **reporting requirement** is the formal **CMMC Certification** issued by a C3PAO or the DoD following a successful assessment. For self-assessed levels, the key requirement is the annual submission of a **self-assessment score** into the DoD's **Supplier Performance Risk System (SPRS)**. All contractors must also flow down CMMC requirements to their **subcontractors** in the supply chain.
+
+CMMC is a **U.S. regulation and certification standard** with a tightly defined **industry focus**: it applies exclusively to all **non-federal organizations** that are part of the **Defense Industrial Base (DIB)**. This includes **prime contractors, subcontractors, and suppliers** at any tier that handle FCI or CUI as part of a DoD contract.
+
+**Non-compliance penalties** are severe and contractual in nature. Failure to meet the CMMC level specified in a contract can result in:
+
+- **Loss of current and future DoD contracts.**
+- Being deemed **ineligible for contract award**.
+- **Breach of contract** allegations and associated legal remedies.
+- Potential liability under the **False Claims Act** for falsely representing compliance, which can lead to treble damages and significant fines.
+
+The following table summarizes the three levels of CMMC 2.0:
+
+|CMMC Level|Protects|Required Controls|Assessment Method|Certification Frequency|
+|---|---|---|---|---|
+|**Level 1**|Federal Contract Information (FCI)|17 basic practices from FAR 52.204-21|Annual Self-Assessment|Annual Affirmation|
+|**Level 2**|Controlled Unclassified Information (CUI)|110 controls from NIST SP 800-171|Self-Assessment **or** Third-Party Assessment (C3PAO)|Annual (Self) or Triennial (Third-Party)|
+|**Level 3**|CUI from High-Priority Programs|NIST SP 800-171 + subset from NIST SP 800-172|Government-Led Assessment|Triennial|
+
+
+
+
 * **Region**: U.S. (Defense contractors)
 * **Focus**: Protecting Controlled Unclassified Information (CUI)
 * **Key Requirements**:

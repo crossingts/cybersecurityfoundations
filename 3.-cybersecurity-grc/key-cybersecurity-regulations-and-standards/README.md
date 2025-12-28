@@ -162,24 +162,7 @@ A critical **reporting requirement** is for breaches of unsecured PHI. Covered
 
 HIPAA is a **U.S. federal regulation** with a primary **industry focus on healthcare**. However, its extraterritorial effect and broad definition of business associates mean it impacts a wide ecosystem, including cloud service providers, software developers, and billing companies that serve the healthcare industry. Many U.S. states also have laws that may impose stricter requirements. **Non-compliance penalties** are severe and tiered based on the level of negligence, ranging from **$100 to $50,000 per violation**, with an annual maximum of **$1.5 million for repeated violations of the same provision**. Penalties can reach into the millions. Willful neglect can also lead to **criminal penalties**, including fines and imprisonment.
 
-
-
-
-
-
-**The Three Rules Established as Standards for HIPAA**
-
-“**The privacy rule** associated with HIPAA (identifies) the right to an individual’s medical records and health information that is accessed … It applies to health insurance companies to healthcare providers, and anyone who might have access or need to share healthcare records.” **The security rule** establishes “a set of standards for protecting that data, and they must be in place in both the covered entity and the business associate.” **The third rule** is the breach notification rule.
-
-“HIPAA security rule will cover physical entities, technical controls, administrative safeguards, all with that focus on protecting health information. They look at confidentiality, integrity, availability, and they want to ensure that we’ve taken all stuff and actions to reasonably anticipate threats to the security and integrity of the information. You want to protect against impermissible uses, accidental disclosures, and ensure compliance by all of the workforce.”
-
-“Administrative Safeguards ... these are the non-technical, or operational controls, you’re looking at your management process, your personnel process, you’ll look at hiring practices, workforce training, background checks.”
-
-“Technical Safeguards, again like the general term, technical, they’re looking at access control, audit control, integrity control, transmission, encryption, in use … at rest, in transit. You use different technical controls to make sure that the software is performing as it’s expected.”
-
-“Then the physical safeguards are around the facility access that where the devices are. So if your data is stored on disk somewhere, where are those disks, are they appropriately under access control and are they secure?”
-
-**HIPAA Cybersecurity guidance**
+**HIPAA Cybersecurity Guide**
 
 [Cyber-Attack Quick Response Guide](https://www.hhs.gov/sites/default/files/cyber-attack-quick-response-infographic.gif) (U.S. Department of Health & Human Services)
 

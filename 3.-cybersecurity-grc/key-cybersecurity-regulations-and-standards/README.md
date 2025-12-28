@@ -137,6 +137,17 @@ The CFAA is a **U.S. federal law** with a **global impact** due to the interconn
   * Continuous monitoring
   * Incident reporting
 
+The Federal Information Security Management Act (FISMA) is a cornerstone U.S. federal law enacted in 2002, with significant modernization through the Federal Information Security Modernization Act of 2014. Its primary authority rests with the U.S. federal government, specifically managed and overseen by the Office of Management and Budget (OMB). The law delegates the development of specific security standards and guidelines to the National Institute of Standards and Technology (NIST), making NIST Special Publication 800-53 the foundational control catalog for FISMA compliance.
+
+FISMA's **compliance requirements** mandate a comprehensive, risk-based approach to securing federal information systems. Agencies must implement security programs that span **people, process, and technology**, organized around key families of controls. These include conducting regular risk assessments, selecting and implementing appropriate security controls from frameworks like NIST SP 800-53, and maintaining continuous monitoring of system security. A core procedural requirement is the development and maintenance of a System Security Plan (SSP) for each information system, along with a structured process for authorizing systems to operate (Authorization to Operate - ATO). As highlighted in your materials, **continuous monitoring** and **incident reporting** are critical, ongoing operational requirements under this framework.
+
+Regarding **audit frequency and reporting**, FISMA requires annual evaluations. Federal agencies must conduct yearly assessments of their security programs and report their compliance status to OMB. OMB then consolidates this information and reports on the government-wide state of cybersecurity to Congress. This cycle ensures ongoing oversight. The key reporting artifacts include the Agency Head's Annual FISMA Report, which details the agency's security posture, the results of continuous monitoring activities, and a summary of security incidents as part of the incident reporting mandate.
+
+In terms of **region and relevant industry**, FISMA's scope is explicitly defined. As noted in your stub, it is a **U.S.** regulation that applies principally to all federal executive branch agencies. Crucially, its reach also extends to **third-party contractors, state agencies, and other entities** that manage federal information or operate systems on behalf of the government. Therefore, while its **industry focus** is government IT security, its impact is felt across the private sector technology and defense industrial base that supports federal operations.
+
+**Non-compliance penalties and fines** under FISMA are not typically monetary fines levied on agencies. Instead, consequences are operational and strategic. Non-compliance can result in failing an agency's annual FISMA audit score, which is publicly reported. This can lead to reduced funding for IT programs, increased oversight from OMB and Congress, and the withholding of an Authorization to Operate (ATO) for critical systems, effectively shutting them down. For contractors, failure to meet FISMA requirements can result in loss of current contracts and disqualification from future federal business.
+
+
 #### Health Insurance Portability and Accountability Act (HIPAA)
 
 * Define the three rules established as standards for the Health Insurance Portability and Accountability Act (HIPAA)

@@ -195,11 +195,7 @@ While the GDPR is an **EU regulation**, its **scope is global** due to its ex
 
 ### Cybersecurity industry standards
 
-* International Organization for Standardization (ISO) 2700x
-* System and Organization Controls Report (SOC)
-* Payment Card Industry Data Security Standard (PCI DSS)
-* NIST Cybersecurity Framework (CSF)
-* CIS Critical Security Controls
+Cybersecurity industry standards are established through consensus by expert bodies, consortia, or government technical agencies to define best practices, processes, and technical controls. Their authority is primarily contractual or market-driven, becoming binding when stipulated in agreements with clients, partners, or government entities. These standards can be broadly categorized by their origin and purpose: international consensus-based standards (e.g., the ISO/IEC 27000 series) that provide certifiable management system frameworks; industry-consortium standards (e.g., PCI DSS) created to protect specific data types across a sector; government-developed frameworks (e.g., NIST SP 800-53, NIST CSF) that are often adopted voluntarily or by reference for their comprehensive control catalog and risk management structure; and audit and assurance frameworks (e.g., SOC 2) that generate standardized reports for stakeholder trust. Adherence to these standards demonstrates security maturity, fulfills due diligence requirements, and serves as a key competitive differentiator in the marketplace.
 
 #### International Organization for Standardization (ISO) 2700x
 

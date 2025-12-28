@@ -257,9 +257,9 @@ The following table summarizes the key differences between SOC report types to a
 
 AICPA develops the guidelines for SOC reporting. Explore some of the resources available on the AICPA website for CPAs, users, and organizations.
 
-SOC for Cybersecurity
+[SOC for Cybersecurity](https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-for-cybersecurity)
 
-​SOC 2® examinations and SOC for Cybersecurity examinations: Understanding the key distinctions (report)
+[​SOC 2® examinations and SOC for Cybersecurity examinations: Understanding the key distinctions](https://www.aicpa-cima.com/resources/download/learn-about-the-key-distinctions-between-a-soc-2-examination-and-a-soc-for-cybersecurity-examination) (report)
 
 #### Payment Card Industry Data Security Standard (PCI DSS)
 

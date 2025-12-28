@@ -226,8 +226,33 @@ As a voluntary standard, there are no direct regulatory **penalties or fines**�
 
 #### System and Organization Controls Report (SOC)
 
-* Describe the differences between SOC1, SOC2, and SOC3 controls and reports
-* Describe the audit elements for SOC reporting
+The **System and Organization Controls (SOC)** framework is not a single standard but a suite of **voluntary audit standards** developed and maintained by the **American Institute of Certified Public Accountants (AICPA)**. The most relevant for cybersecurity is the **SOC 2** examination, established under the AICPA's existing **Trust Services Criteria**. The authority and management of the framework reside entirely with the AICPA, and audits must be performed by licensed **CPA (Certified Public Accountant)** firms.
+
+SOC compliance is **driven by contractual and market demands** rather than law. The core requirement for a SOC 2 examination is for a service organization to design and operate effective controls relevant to one or more of the five **Trust Services Criteria (TSCs)**: Security, Availability, Processing Integrity, Confidentiality, and Privacy. "Security" (common criteria) is mandatory for any SOC 2 audit, while the others are optional based on the service commitment. The framework mandates a comprehensive system description and evidence that controls are suitably designed (**Type I**) and operating effectively over a specified period (**Type II**).
+
+The **audit frequency** is typically **annual**. A SOC 2 **Type II** report covers a continuous period of operation, almost always **6 to 12 months**. During this period, the CPA firm tests the operating effectiveness of the controls. Organizations undergo this annual audit cycle to produce a current report for their customers and stakeholders. There is no permanent "certification"; instead, assurance is provided through the successive issuance of periodic audit reports.
+
+**Reporting requirements** are formalized through the CPA firm's opinion and the detailed description of the system and controls. A key distinction exists between report types:
+
+- **SOC 2 Type I**: Reports on the **design suitability** of controls at a specific point in time.
+- **SOC 2 Type II**: Reports on the **operational effectiveness** of controls over a minimum 6-month period.  
+    Crucially, the **SOC 2 report is a restricted-use document** intended for the organization's management, existing customers, and prospective customers under NDA. It contains detailed information on the control environment, tests performed, and results, which is considered sensitive. For public consumption, organizations can obtain a **SOC 3 report**, which is a general-use seal that provides the auditor's opinion without the detailed testing information.
+
+As an **industry standard**, SOC 2 has a **global reach** but is most prevalent in **North America**. Its primary **industry focus** is **technology and cloud service providers** (e.g., SaaS, IaaS, data centers) that need to demonstrate security and compliance to enterprise clients. It is also widely adopted by financial services, healthcare tech, and any B2B company handling sensitive client data. Demand is driven by client due diligence and procurement requirements.
+
+There are no direct governmental **penalties or fines** for not obtaining a SOC report, as it is not a regulation. However, the **business consequences of non-compliance** with client contractual requirements can be severe. These include **loss of current and future business**, failure during security procurement reviews, significant reputational damage, and a competitive disadvantage in markets where SOC 2 is a baseline expectation. The "penalty" is commercial, not legal.
+
+The following table summarizes the key differences between SOC report types to aid in understanding their application:
+
+|Report Type|Purpose & Focus|Key Deliverable|Primary Audience|
+|---|---|---|---|
+|**SOC 2 Type I**|Assess **design** of controls relevant to security, availability, etc., **at a point in time**.|Auditor's opinion on design suitability.|Management, clients (under NDA).|
+|**SOC 2 Type II**|Assess **operational effectiveness** of controls over a **period of time** (6-12 months).|Detailed report on design, tests, and effectiveness.|Management, clients, prospects (under NDA).|
+|**SOC 3**|Provide a **general assurance seal** for public distribution.|Brief seal or report with auditor's opinion only.|Public, website visitors, general stakeholders.|
+
+
+
+
 
 **SOC Reports**
 
@@ -250,6 +275,7 @@ As a voluntary standard, there are no direct regulatory **penalties or fines**�
 “The Type 2 is now looking at operational effectiveness over a period of time. Typically, that is six months or 12 months. The auditor will come in and they will test over the interval of that period of time.”
 
 “On top of the complexity of Type 1s and Type 2s and SOC 1s and SOC 2s, there are different principles or chapters within SOC 2 and they each come with a set of controls or requirements. The most typical and sort of the foundational one that everybody would get would be security and they’re looking specifically at how you’re protecting your physical and logical access and systems. So they have controls related to user provisioning, change management, inventory management, things like that.”
+
 
 IMAGE 1
 

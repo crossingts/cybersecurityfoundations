@@ -240,6 +240,12 @@ The **audit frequency** is typically **annual**. A SOC 2 **Type II** report
 
 As an **industry standard**, SOC 2 has a **global reach** but is most prevalent in **North America**. Its primary **industry focus** is **technology and cloud service providers** (e.g., SaaS, IaaS, data centers) that need to demonstrate security and compliance to enterprise clients. It is also widely adopted by financial services, healthcare tech, and any B2B company handling sensitive client data. Demand is driven by client due diligence and procurement requirements.
 
+IMAGE 1
+
+SOC 2 trust service principles (image courtesy of imperva.com)
+
+SOC 2 defines criteria for managing customer data based on five trust service principles – security, availability, processing integrity, confidentiality, and privacy.
+
 There are no direct governmental **penalties or fines** for not obtaining a SOC report, as it is not a regulation. However, the **business consequences of non-compliance** with client contractual requirements can be severe. These include **loss of current and future business**, failure during security procurement reviews, significant reputational damage, and a competitive disadvantage in markets where SOC 2 is a baseline expectation. The "penalty" is commercial, not legal.
 
 The following table summarizes the key differences between SOC report types to aid in understanding their application:
@@ -249,53 +255,6 @@ The following table summarizes the key differences between SOC report types to a
 |**SOC 2 Type I**|Assess **design** of controls relevant to security, availability, etc., **at a point in time**.|Auditor's opinion on design suitability.|Management, clients (under NDA).|
 |**SOC 2 Type II**|Assess **operational effectiveness** of controls over a **period of time** (6-12 months).|Detailed report on design, tests, and effectiveness.|Management, clients, prospects (under NDA).|
 |**SOC 3**|Provide a **general assurance seal** for public distribution.|Brief seal or report with auditor's opinion only.|Public, website visitors, general stakeholders.|
-
-
-
-
-
-**SOC Reports**
-
-“if I compare with ISO … SOC 2 is focused on fiscal, logical security and, in specific … do what you say you’ll do, whereas the ISO 27001 is a little bit more focused on risk”; “a little more focused on best practices.”
-
-“ISO is focusing on the design effectiveness at a point in time whereas the SOC 2 also looks at operating effectiveness over a period of time. So Type 2 would be 6-12 months and would look at how effective you are in performing those functions over that entire period of time.”
-
-“You get a single page from an ISO certification, there’s a detailed report that’s considered confidential, internal, but otherwise, it’s a single-page and doesn’t provide a lot of detail to the reader or to your customer about what you’re doing. In the case of SOC 2, you get a fairly detailed report. It can be many pages long. It describes the controls, it describes how they tested them, it describes the results or the testing. So it’s very detailed and can provide a lot of insight for your customers and confidence your customers that of how you operate.”
-
-“ISO is managed by the ISO, and an ISO accredited agency would do the consulting and certifying.” SOC 2 is “almost always performed by CPA because it’s governed, inspected by the AICPA.” “ISO is internationally recognized. SOC 2 has traditionally been more North American but it is becoming more known internationally.” Some organizations prefer SOC 2 over ISO. “Some organizations, or some clients, or some industries will accept SOC 2 in lieu of the right to audit.”
-
-“There’s actually three SOC reports. SOC 1, 2, and 3 … they’re all based on the same core set of controls but they subset it out and report it differently. So SOC 1 uses a subset of the controls, and it specifically is looking at situations where your system is being used for financial reporting. So if you are using your system to hold your sales ledger data and you then are going to turn around and use that data to generate reports for your financial reporting.”
-
-“SOC 2 is a little more general, and it’s going to look at more controls, superset of the ones that are looked at for SOC 1. The SOC 2 report is restricted “because of the detail that is in there around the system, the security, processes, and methodologies. If you achieve this for your environment, you would get to a keep a copy of it yourself. You would only send it to clients or prospective clients under a non-disclosure agreement, because of the level of detail in there. If it fell into the wrong hands, somebody could use that to try to mount a malicious attack.”
-
-“For people who do want to have something short and sweet and something you can put on your web page, like the ISO certification, there is a SOC 3 report. It is considered an executive summary of your SOC 2. It provides the opinion and the description of the system but it does not get into the details of the security practices or the testing methodology results. It’s just a high level one.”
-
-“A Type 1 report, consider that as your starting line. That is the closest equivalent to an ISO as well. So basically, it tests the design effectiveness of your controls and that you have performed those controls at least once.”
-
-“The Type 2 is now looking at operational effectiveness over a period of time. Typically, that is six months or 12 months. The auditor will come in and they will test over the interval of that period of time.”
-
-“On top of the complexity of Type 1s and Type 2s and SOC 1s and SOC 2s, there are different principles or chapters within SOC 2 and they each come with a set of controls or requirements. The most typical and sort of the foundational one that everybody would get would be security and they’re looking specifically at how you’re protecting your physical and logical access and systems. So they have controls related to user provisioning, change management, inventory management, things like that.”
-
-
-IMAGE 1
-
-SOC 2 trust service principles (image courtesy of imperva.com)
-
-SOC 2 defines criteria for managing customer data based on five trust service principles – security, availability, processing integrity, confidentiality, and privacy.
-
-**SOC Audit Elements**
-
-“This is a summary listing of the different controls that are used for audit. When auditors are testing … they’re testing for **five main elements**.”
-
-“They’re looking at **accuracy**, or all the controls being addressed, looking for passes and fails and very clear distinction about whether or not the control is being completed.”
-
-“**Completeness**. Do the controls cover the entire offering? So if, in case of a control looking at your systems, does it cover all your systems and all your inventory? If you’re looking at access management, does it cover all personnel, all people?”
-
-“Looking at **timeliness**. Timeliness is a really big challenge for some teams. Making sure the controls are performed on time or early and that there’s no gaps in coverage.”
-
-“**Resiliency**. They’re looking for checks and balances, so that if the control did fail, is there some secondary way that you can ensure that something happens on time.”
-
-“They’re looking for **consistency**. So they want to ensure that there’s no gaps introduced by having too much variability. So often they’ll look at a primary control, they’ll test the primary control. They’re looking to ensure that you provide features, functions of the control. If for any reason that’s not working, they’re looking for support or backup to ensure that the primary control is effective.”
 
 **American Institute of CPAs (AICPA) Website Research**
 
@@ -309,35 +268,46 @@ AICPA develops the guidelines for SOC reporting. Explore some of the resources a
 
 #### Payment Card Industry Data Security Standard (PCI DSS)
 
-* Describe the Payment Card Industry Data Security Standard (PCI DSS)
+The **Payment Card Industry Data Security Standard (PCI DSS)** is a **global, industry-mandated security standard** established in **2004** by the founding payment card brands (Visa, Mastercard, American Express, Discover, JCB). It is managed and developed by the **PCI Security Standards Council (PCI SSC)**, an independent body formed by these brands. While not a government law, its authority is derived from **contractual agreements** between merchants, payment processors, and the card brands.
 
-Describe the Payment Card Industry Data Standard Security, PCI DSS. Describe the goals and requirements of PCI DSS. Describe the scope of PCI DSS as it relates to people, process, and technology. Highlight new and key requirements for PCI DSS.
+**Compliance requirements** are highly prescriptive and technical, focusing on protecting **Cardholder Data (CHD)**, primarily the Primary Account Number (PAN). Its 12 high-level requirements, encompassing over **200 specific controls**, mandate a comprehensive security program:
 
-* **Region**: Global (applies to organizations handling credit card data)
-* **Focus**: Securing cardholder data
-* **Key Requirements**:
-  * Encryption of stored card data
-  * Regular vulnerability scans
-  * Access controls and network segmentation
-* **Penalties**: Fines up to **$100,000/month** for non-compliance
+- **Build and Maintain a Secure Network**: Require firewalls and secure system configurations.
+- **Protect Cardholder Data**: Mandate encryption of transmitted data and secure storage.
+- **Maintain a Vulnerability Management Program**: Require anti-virus software and secure development practices.
+- **Implement Strong Access Control Measures**: Enforce strict access controls via unique IDs, least privilege, and physical security.
+- **Regularly Monitor and Test Networks**: Mandate tracking of all access, regular security testing, and **quarterly external vulnerability scans by an Approved Scanning Vendor (ASV)**
+- **Maintain an Information Security Policy**.
 
-**Payment Card Industry Data Security Standard (PCI DSS):** This is the quintessential industry standard. It is created and maintained by the **PCI Security Standards Council** (founded by major credit card companies like Visa, MasterCard, etc.). Compliance is enforced through contracts with the card brands, not by a government legislature. While it has global reach, its authority comes from the private sector.
+Compliance scope is defined by the **Cardholder Data Environment (CDE)**—any system, process, or person that stores, processes, or transmits CHD. A core strategy is **network segmentation** to isolate the CDE and reduce audit scope.
 
-The Payment Card Industry Data Security Standard (PCI DSS) is an information security standard for organizations that issue credit cards or process credit card payments.
+**Audit frequency and validation requirements** are stratified based on an organization's **merchant level** (determined by transaction volume). Key validation methods include:
 
-“In 2004, the largest credit card companies, American Express, Discovery, Mastercard, Visa, they banded together to define **a standard for data security**. The security standard gets revised periodically over the years as new standards and new technology become available.”
+- **Report on Compliance (ROC)**: An annual on-site audit conducted by a **PCI SSC Qualified Security Assessor (QSA)** for the highest-level merchants (Level 1).
+- **Self-Assessment Questionnaire (SAQ)**: An annual self-assessment for smaller merchants (Levels 2-4), with the specific SAQ type dependent on payment channel.
+- **Quarterly ASV Scans**: Required for all externally-facing systems.
+- **Attestation of Compliance (AOC)**: The formal document submitted to acquirers to validate compliance status.
 
-“These companies will require, if you’re going to be engaged in any business and involves storage or transmission of credit card data that you secure that data to these standards. So store process or transmit credit cardholder data, that’s credit card numbers, any of that sort of thing. It covers both technical and operational practices.”
+The primary **reporting requirement** is the submission of the **AOC and either the ROC or appropriate SAQ** to the acquiring bank (merchant bank) annually. Organizations must also provide evidence of passing quarterly ASV scans. These reports are confidential documents shared between the merchant, its acquirer, and the QSA.
 
-“There are a total of **264 different individual requirements in 12 different groupings**. If you’re engaged in an audit for PCI, one of the first things they do … **defining scope, what is the scope of your environment, and how many of these 264 apply to you.** So you’d go through the 12 different categories of these requirements from building and maintaining a secure network, protecting cardholder data, vulnerability management program, access control, monitoring, and testing your networks, and maintaining information security policy. You go through all of these different categories. You’ll do an assessment that’s that whole readiness assessment we talked about in the scope, where you identify these different requirements and say how many of them are applicable to your environment.”
+PCI DSS is a **global standard** enforced worldwide. Its **industry focus** is any entity involved in payment card processing, including **merchants (retail, e-commerce), financial institutions, payment processors, and any third-party service provider** that handles CHD. Its applicability is defined by function, not geographic location.
 
-“Cardholder data environment is the people, process, and technologies that store (cardholder data). In particular, looking at the primary account number or PAN data and it can be the cardholder name, the expiry date, the service code. They’re also looking at sensitive authentication data, so PINs … or anything else that is used to authenticate a credit card transaction. They’re looking at … ensuring that anything that processes, transmits, or stores this data, is considered in scope.”
+**Non-compliance penalties** are not direct fines from the PCI SSC but are levied by **payment card brands and acquiring banks**. They can include:
 
-“One of the things that’s unique about PCI is they have this concept of an Approved Scanning Vendor that scans quarterly, usually quarterly, and it’s usually an external third policy. It’s similar but not the same as a vulnerability scan or the penetration testing you might see, but it is a very specific.”
+- Significant **monthly fines** (e.g., $5,000 to $100,000+) imposed by card brands on the acquiring bank, often passed on to the non-compliant merchant.
+- Increased **transaction fees**.
+- Placing the merchant on a **remediation plan** or **terminating the merchant account**, effectively halting the ability to process card payments.
+- Liability for **fraud-related losses** and costs associated with a data breach, including forensic investigations, card re-issuance, and potential regulatory fines.
 
-“One of the other things that we consider somewhat unique relative to other requirements are the details around Nessus, there’s particular configurations if you’re doing scanning for vulnerability for Nessus, and file integrity monitoring. File integrity monitoring is when you ensure that all the files that are running on your system are the ones that you intended to be there, and nobody’s replaced an executable with a different executable … So the checking for skimmers as an example here. Firewall review frequency is increased to six months. Some other certifications might only require once a year.”
+The following table summarizes the validation paths based on merchant level, which directly determines audit rigor:
 
-“One of the document that gets produced from PCI is the responsibility matrix and that’s a really good document for you to review, because it clarifies what are the responsibilities of the entity providing the PCI support and the consumer.”
+| Merchant Level (Based on Transaction Volume) | Primary Validation Requirement                 | Conducted By                          |
+| -------------------------------------------- | ---------------------------------------------- | ------------------------------------- |
+| **Level 1** (Over 6M transactions/year)      | Annual **Report on Compliance (ROC)**          | External **QSA**                      |
+| **Level 2 & 3** (1M to 6M transactions/year) | Annual **Self-Assessment Questionnaire (SAQ)** | Internal Staff (may require QSA help) |
+| **Level 4** (Under 1M transactions/year)     | Annual **Self-Assessment Questionnaire (SAQ)** | Internal Staff                        |
+
+
 
 #### NIST Special Publication 800-53 Catalog of Security Controls
 
@@ -350,6 +320,8 @@ Framework, required for U.S. federal agencies.
 U.S. federal laws, such as CFAA, FISMA, and x FedRAMP “will base their subset of their requirements off of NIST, the National Institute of Standards and Technology.”
 
 “There is not generally an expectation that you will implement how many (standards) … but that you’ll institute a practice within your business to do as many of them as makes sense for your business.”
+
+
 
 National Institute of Standards and Technology (NIST) Special Publication 800-53 Catalog of Security Controls
 

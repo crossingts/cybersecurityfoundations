@@ -48,10 +48,12 @@
 * [Risk assessment phases](3.-cybersecurity-grc/risk-assessment-phases.md)
 * [Key cybersecurity regulations and standards](3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards/README.md)
   * [FISMA compliance roadmap](3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards/fisma-compliance-roadmap.md)
+  * [Key cybersecurity regulations and standards — Quiz](3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards/key-cybersecurity-regulations-and-standards-quiz.md)
 * [GRC as a risk management framework (RMF)](3.-cybersecurity-grc/grc-as-a-risk-management-framework-rmf.md)
 * [NIST SP 800-37, NIST CSF, and ISO/IEC 27001](3.-cybersecurity-grc/nist-sp-800-37-nist-csf-and-iso-iec-27001.md)
 * [Common combinations of cybersecurity RMFs](3.-cybersecurity-grc/common-combinations-of-cybersecurity-rmfs.md)
 * [Review questions and exercises](3.-cybersecurity-grc/review-questions-and-exercises.md)
+* [Chapter 3 review questions](3.-cybersecurity-grc/chapter-3-review-questions.md)
 
 ## 4. Networking fundamentals
 

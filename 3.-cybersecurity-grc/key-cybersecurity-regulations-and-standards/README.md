@@ -409,6 +409,8 @@ The **audit frequency** depends on the required CMMC Level and the associated 
 
 The primary **reporting requirement** is the formal **CMMC Certification** issued by a C3PAO or the DoD following a successful assessment. For self-assessed levels, the key requirement is the annual submission of a **self-assessment score** into the DoD's **Supplier Performance Risk System (SPRS)**. All contractors must also flow down CMMC requirements to their **subcontractors** in the supply chain.
 
+CMMC is both a regulation and a standard. CMMC is a mandatory requirement for U.S. Defense Industrial Base contractors, but it is a certification program built upon NIST standards (specifically NIST SP 800-171). For U.S. Department of Defense contractors, the requirement to implement NIST 800-171 and achieve CMMC certification is embedded in federal acquisition regulations (DFARS). This makes it a regulatory requirement. The CMMC model itself is a detailed set of security controls (a standard). For other contexts, it could be adopted as a contractual requirement between private parties.
+
 CMMC is a **U.S. regulation and certification standard** with a tightly defined **industry focus**: it applies exclusively to all **non-federal organizations** that are part of the **Defense Industrial Base (DIB)**. This includes **prime contractors, subcontractors, and suppliers** at any tier that handle FCI or CUI as part of a DoD contract.
 
 **Non-compliance penalties** are severe and contractual in nature. Failure to meet the CMMC level specified in a contract can result in:
@@ -425,19 +427,6 @@ The following table summarizes the three levels of CMMC 2.0:
 |**Level 1**|Federal Contract Information (FCI)|17 basic practices from FAR 52.204-21|Annual Self-Assessment|Annual Affirmation|
 |**Level 2**|Controlled Unclassified Information (CUI)|110 controls from NIST SP 800-171|Self-Assessment **or** Third-Party Assessment (C3PAO)|Annual (Self) or Triennial (Third-Party)|
 |**Level 3**|CUI from High-Priority Programs|NIST SP 800-171 + subset from NIST SP 800-172|Government-Led Assessment|Triennial|
-
-
-* **Region**: U.S. (Defense contractors)
-* **Focus**: Protecting Controlled Unclassified Information (CUI)
-* **Key Requirements**:
-  * Five maturity levels (basic to advanced cybersecurity)
-
-Cybersecurity Maturity Model Certification (CMMC) is a mandatory requirement for U.S. Defense Industrial Base contractors, but it is a certification program built upon NIST standards (specifically NIST SP 800-171). It is administered by the Department of Defense.
-
-CMMC can appear in both lists (regulations and standards) because:
-
-* **As a Regulation (NIST 800-171/CMMC under FAR & DFARS):** For U.S. Department of Defense contractors, the requirement to implement NIST 800-171 and achieve CMMC certification is embedded in federal acquisition regulations (**DFARS**). This makes it a _regulatory_ requirement.
-* **As a Standard:** The CMMC model itself is a detailed set of security controls (a standard). For other contexts, it could be adopted as a _contractual_ requirement between private parties.
 
 ### Regulations and industry standards summary
 

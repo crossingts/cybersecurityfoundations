@@ -24,7 +24,7 @@ This section explores cybersecurity threats at the individual, business, and soc
 
 **Societal level threats**
 
-Cyberwarfare/cyberattacks on critical infrastructure such as power grids, defence facilities, and health services: “As the number and variety of devices used to support, monitor, and control critical infrastructure become more interconnected, the likelihood of cyber threat actors disrupting critical infrastructure has increased” (CSE, 2018, p. 23).
+Cyberwarfare/cyberattacks on critical infrastructure such as power grids, defence facilities, and health services: “As the number and variety of devices used to support, monitor, and control critical infrastructure become more interconnected, the likelihood of cyber threat actors disrupting critical infrastructure has increased” (Communications Security Establishment \[CSE], 2018, p. 23).
 
 Cyberwarfare/cyberattacks on public institutions and sensitive information: Cyber threat activity “against public institutions—such as government departments, universities, and hospitals—is likely to persist because of the essential nature of the services and the sensitivity of the information they manage” (CSE, 2018, p. 26).
 

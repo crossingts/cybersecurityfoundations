@@ -237,9 +237,7 @@ The **audit frequency** is typically **annual**. A SOC 2 **Type II** report cove
 
 As an **industry standard**, SOC 2 has a **global reach** but is most prevalent in **North America**. Its primary **industry focus** is **technology and cloud service providers** (e.g., SaaS, IaaS, data centers) that need to demonstrate security and compliance to enterprise clients. It is also widely adopted by financial services, healthcare tech, and any B2B company handling sensitive client data. Demand is driven by client due diligence and procurement requirements.
 
-IMAGE 1
-
-SOC 2 trust service principles (image courtesy of imperva.com)
+<figure><img src="../../.gitbook/assets/SOC2-certification.webp" alt="soc2-certification"><figcaption><p>SOC 2 trust service principles (image courtesy of imperva.com)</p></figcaption></figure>
 
 SOC 2 defines criteria for managing customer data based on five trust service principles – security, availability, processing integrity, confidentiality, and privacy.
 
@@ -422,9 +420,7 @@ The following table summarizes the three levels of CMMC 2.0:
 
 ### Regulations and industry standards summary
 
-IMAGE 2
-
-Cybersecurity regulations and industry standards summary (courtesy of IBM Security Learning Services)
+<figure><img src="../../.gitbook/assets/Cybersecurity-compliance-frameworks.webp" alt="Cybersecurity-compliance-frameworks"><figcaption><p>Cybersecurity regulations and industry standards summary (courtesy of IBM Security Learning Services)</p></figcaption></figure>
 
 ### Key takeaways
 

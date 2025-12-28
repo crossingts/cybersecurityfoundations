@@ -256,8 +256,6 @@ The following table summarizes the key differences between SOC report types to a
 
 AICPA develops the guidelines for SOC reporting. Explore some of the resources available on the AICPA website for CPAs, users, and organizations.
 
-​[Introduction to the AICPA’s Cybersecurity Risk Management Framework](https://www.aicpa.org/interestareas/frc/assuranceadvisoryservices/aicpacybersecurityinitiative.html) (video)
-
 ​[SOC for Cybersecurity](https://www.aicpa.org/content/dam/aicpa/interestareas/frc/assuranceadvisoryservices/downloadabledocuments/soc-for-cybersecurity-brochure.pdf) (brochure)
 
 ​[SOC 2® examinations and SOC for Cybersecurity examinations: Understanding the key distinctions](https://www.aicpa.org/content/dam/aicpa/interestareas/frc/assuranceadvisoryservices/downloadabledocuments/cybersecurity/soc-2-vs-cyber-whitepaper-web-final.pdf) (report)
@@ -429,9 +427,29 @@ Cybersecurity regulations and industry standards summary (courtesy of IBM Securi
 
 ### Key takeaways
 
-* Industry Standards: PCI DSS and NIST CSF. They are developed by industry/government bodies as best practice guides and are adopted voluntarily or via contract.
-* Laws/Regulations: GDPR, HIPAA, CCPA, SOX, FISMA, NYDFS 500, LGPD. These are created by legislative or executive government bodies and carry the force of law.
-* Mandatory Certification Framework (Government Contracting): CMMC.
+- Strategic & Legal Foundation: Compliance is a strategic business enabler that manages risk, protects reputation, and avoids severe financial penalties, whereas non-compliance can result in massive fines, legal action, and loss of competitive advantage.
+- Regulations vs. Standards: The fundamental distinction lies in their source of authority.
+    - Regulations (e.g., HIPAA, GDPR, FISMA, CFAA) are statutory laws. Compliance is mandatory, enforced by government bodies, with penalties for non-compliance including fines and criminal charges.
+    - Industry Standards (e.g., ISO 27001, PCI DSS, SOC 2, NIST CSF) are contractual or voluntary frameworks. Their authority comes from business agreements or adoption as best practices, with enforcement through market forces (e.g., loss of contracts or certification).
+- The Compliance Process: Achieving and maintaining compliance is a structured, cyclical process involving five key phases:
+    1. Scope Definition
+    2. Readiness/Gap Assessment
+    3. Gap Remediation
+    4. Testing and Validation (often via audit)
+    5. Ongoing Recertification and Monitoring
+- Salient Regulation Profiles:
+    - CFAA: A U.S. criminal statute prohibiting unauthorized computer access; compliance focuses on implementing preventive controls and reporting incidents to law enforcement.
+    - FISMA: Mandates a risk-based security program for U.S. federal agencies and their contractors, centered on NIST SP 800-53 controls, continuous monitoring, and annual reporting.
+    - HIPAA: Protects Protected Health Information (PHI) through Privacy, Security, and Breach Notification Rules, applying to covered entities and business associates in healthcare.
+    - GDPR: A principles-based EU regulation with global reach, protecting personal data through stringent requirements for lawful processing, data subject rights, and breach notification within 72 hours.
+- Salient Industry Standard Profiles:
+    - ISO 27001: A certifiable international standard for an Information Security Management System (ISMS), focused on risk management and continuous improvement.
+    - SOC 2: A voluntary audit framework (not a certification) for service organizations, reporting on the design and operating effectiveness of controls related to Security, Availability, Confidentiality, Processing Integrity, and Privacy.
+    - PCI DSS: A prescriptive, global standard mandated by payment card brands to protect cardholder data, requiring strict controls, defined validation methods (ROC/SAQ), and quarterly ASV scans.
+    - NIST SP 800-53: A comprehensive catalog of security and privacy controls that forms the technical foundation for U.S. federal systems (via FISMA) and is widely adopted as a best-practice framework.
+    - NIST CSF: A voluntary risk management framework (Identify, Protect, Detect, Respond, Recover, Govern) used to align cybersecurity activities with business needs and communicate posture.
+    - CIS Critical Security Controls: A prioritized set of actionable best practices (Safeguards) designed to mitigate the most common cyber attacks, organized by Implementation Groups for organizations of different sizes and maturities.
+- The Hybrid Case - CMMC: The Cybersecurity Maturity Model Certification is a mandatory certification program for U.S. Defense Industrial Base contractors. It is a unique hybrid where a government regulation (DFARS) mandates adherence to a specific standard (based on NIST SP 800-171), with tiered levels and required third-party or government assessments.
 
 ### References
 

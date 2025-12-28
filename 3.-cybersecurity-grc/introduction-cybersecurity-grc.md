@@ -24,9 +24,9 @@ This chapter introduces the principles of Governance, Risk, and Compliance (GRC)
 
 Foundational GRC concepts
 
-Risk assessment phases&#x20;
+Risk assessment phases
 
-Key cybersecurity regulations and standards
+[Key cybersecurity regulations and standards](key-cybersecurity-regulations-and-standards/)
 
 GRC as a risk management framework (RMF)
 

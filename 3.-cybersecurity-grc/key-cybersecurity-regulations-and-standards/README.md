@@ -133,7 +133,7 @@ The Federal Information Security Management Act (FISMA) is a cornerstone U.S. fe
 
 FISMA's **compliance requirements** mandate a comprehensive, risk-based approach to securing federal information systems. Agencies must implement security programs that span **people, process, and technology**, organized around key families of controls. These include conducting regular risk assessments, selecting and implementing appropriate security controls from frameworks like NIST SP 800-53, and maintaining continuous monitoring of system security. A core procedural requirement is the development and maintenance of a System Security Plan (SSP) for each information system, along with a structured process for authorizing systems to operate (Authorization to Operate - ATO). Continuous monitoring and incident reporting are critical, ongoing operational requirements under this framework.
 
-FISMA compliance roadmap (example)
+[FISMA compliance roadmap](fisma-compliance-roadmap.md) (example)
 
 Regarding **audit frequency and reporting**, FISMA requires annual evaluations. Federal agencies must conduct yearly assessments of their security programs and report their compliance status to OMB. OMB then consolidates this information and reports on the government-wide state of cybersecurity to Congress. This cycle ensures ongoing oversight. The key reporting artifacts include the Agency Head's Annual FISMA Report, which details the agency's security posture, the results of continuous monitoring activities, and a summary of security incidents as part of the incident reporting mandate.
 
@@ -257,9 +257,9 @@ The following table summarizes the key differences between SOC report types to a
 
 AICPA develops the guidelines for SOC reporting. Explore some of the resources available on the AICPA website for CPAs, users, and organizations.
 
-​[SOC for Cybersecurity](https://www.aicpa.org/content/dam/aicpa/interestareas/frc/assuranceadvisoryservices/downloadabledocuments/soc-for-cybersecurity-brochure.pdf) (brochure)
+SOC for Cybersecurity
 
-​[SOC 2® examinations and SOC for Cybersecurity examinations: Understanding the key distinctions](https://www.aicpa.org/content/dam/aicpa/interestareas/frc/assuranceadvisoryservices/downloadabledocuments/cybersecurity/soc-2-vs-cyber-whitepaper-web-final.pdf) (report)
+​SOC 2® examinations and SOC for Cybersecurity examinations: Understanding the key distinctions (report)
 
 #### Payment Card Industry Data Security Standard (PCI DSS)
 

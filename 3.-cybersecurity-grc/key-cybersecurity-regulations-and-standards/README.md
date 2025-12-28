@@ -56,9 +56,7 @@ From a **strategic and financial perspective**, compliance is a critical busines
 
 This section differentiates between formal regulations (laws and government rules) and industry standards and frameworks based on their source of legal authority and enforceability. Regulations derive force from law, while standards derive force from contract or voluntary commitment.
 
-Formal regulations are statutory or regulatory. They are created and enforced by a legislative or government body (e.g., EU Parliament, U.S. Congress, and State of California). Non-compliance can result in legal penalties, fines, or criminal charges.
-
-Industry standards are typically developed by industry consortia or standards bodies (e.g., PCI SSC, NIST), but they can also be governmental in origin and adopted by industry. Compliance is often enforced through contractual obligations (PCI DSS) or adopted voluntarily as best practice (NIST CSF).
+Formal regulations are statutory or regulatory. They are created and enforced by a legislative or government body (e.g., EU Parliament, U.S. Congress, and State of California). Non-compliance can result in legal penalties, fines, or criminal charges. Industry standards are typically developed by industry consortia or standards bodies (e.g., PCI SSC, NIST), but they can also be governmental in origin and adopted by industry. Compliance is often enforced through contractual obligations (PCI DSS) or adopted voluntarily as best practice (NIST CSF).
 
 CMMC is a special case where a government agency (U.S. Department of Defense) mandates a specific certification standard for its contractors.
 
@@ -70,7 +68,7 @@ CMMC is a special case where a government agency (U.S. Department of Defense) ma
 | **Enforcement**         | Compliance is mandatory because it is the law. Non-compliance can result in fines, penalties, lawsuits, or other legal actions from the government.  | They become legally binding when incorporated into a contract. Compliance is enforced through contractual agreements (e.g., with a business partner, client, or as a condition of a government contract). |
 | **Examples**            | <p>HIPAA (U.S. law)<br>GDPR (EU law)<br>CCPA (California state law)<br>SOX (U.S. law)</p>                                                            | <p>PCI DSS (required by contract with payment card brands)<br>ISO 27001 (often a contractual requirement for vendors)<br>SOC 2 (frequently requested by clients in contracts)</p>                         |
 
-Finally, a distinction can be made between standards and frameworks. Standards are typically specific low level requirements, while frameworks are typically high level categories or criteria that can be used to streamline the implementation of standards.
+Finally, a distinction can be made between standards and frameworks. Standards are typically specific low level requirements, while frameworks are typically high level categories or criteria that can be used to streamline the implementation of standards and controls.
 
 ### Compliance basics
 
@@ -94,33 +92,9 @@ A structured compliance process typically follows these key phases:
 
 ### Cybersecurity regulations
 
-There are three broad categories under this label.
+There are three broad categories under this label. First, truly mandatory U.S. federal laws and regulations (statutory/regulatory), which are laws passed by Congress or specific regulations issued by agencies with the force of law for their defined scope. Examples under this category include CFAA, HIPAA/HITECH, and FISMA. Second, U.S. state-level laws (statutory/regulatory), which are mandatory for organizations operating in those states and meeting specific criteria. Examples under this category include CCPA and NYDFS 23 NYCRR 500. Third, international laws (statutory/regulatory), which are mandatory for organizations processing the data of individuals in those jurisdictions, often with extraterritorial reach. Examples under this category include EU GDPR and UK Data Protection Act 2018.
 
-**1. Truly Mandatory U.S. Federal Laws & Regulations (Statutory/Regulatory)**
-
-These are laws passed by Congress or specific regulations issued by agencies with the force of law for their defined scope.
-
-* **CFAA:** A federal criminal statute. **Mandatory** (prohibits specific unauthorized access).
-* **HIPAA/HITECH:** Federal law with implementing regulations. **Mandatory** for covered entities (healthcare providers, plans, clearinghouses) and their business associates.
-* **FISMA:** Federal law. **Mandatory** for U.S. federal government agencies and systems. (Its modernized version is the Federal Information Security Modernization Act, FISMA 2014).
-* **GLBA:** Federal law. **Mandatory** for financial institutions (broadly defined).
-* **SOX:** Federal law. **Mandatory** for all publicly traded companies in the U.S. (Sections 302 and 404 impose internal control requirements that heavily drive cybersecurity programs).
-
-**2. U.S. State-Level Laws (Statutory/Regulatory)**
-
-These are mandatory for organizations operating in those states and meeting specific criteria.
-
-* **CCPA (as amended by CPRA):** A California state statute. **Mandatory** for businesses that meet its thresholds (e.g., revenue, data volume).
-* **NYDFS 23 NYCRR 500:** A regulation from New York's Department of Financial Services. **Mandatory** for covered entities (DFS-regulated banks, insurers, etc.) operating in New York.
-
-**3. Foreign Laws (Statutory/Regulatory)**
-
-These are mandatory for organizations processing the data of individuals in those jurisdictions, often with extraterritorial reach.
-
-* **EU GDPR:** European Union regulation. **Mandatory** for organizations processing personal data of individuals in the EU.
-* **UK Data Protection Act 2018:** The UK's national law that incorporates the GDPR into UK law post-Brexit. **Mandatory** for organizations processing personal data of individuals in the UK.
-
-**Summary & Accuracy Check**
+**Scope of Cybersecurity Regulations**
 
 | Item                       | Mandatory Regulation?      | Scope / Key Note                                                                      |
 | -------------------------- | -------------------------- | ------------------------------------------------------------------------------------- |

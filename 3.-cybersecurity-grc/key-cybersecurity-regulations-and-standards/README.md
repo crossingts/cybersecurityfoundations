@@ -179,19 +179,11 @@ GDPR's **compliance requirements** are principle-based and focus on the lawful
 
 The regulation does not prescribe a specific **audit frequency**. Instead, it operates on a principle of **demonstrable accountability**, where organizations must be able to prove compliance at all times. **Supervisory authorities (DPAs)** have the power to conduct investigations and audits based on complaints, data breaches, or sectoral inquiries. The key reporting requirement is for **personal data breaches**. Controllers must notify the relevant DPA of a breach **within 72 hours of becoming aware of it**, unless the breach is unlikely to result in a risk to individuals. If the breach poses a high risk to individuals' rights, they must also be notified without undue delay.
 
+​[Understanding the 7 Principles of the GDPR](https://www.onetrust.com/blog/gdpr-principles/)​
+
 While the GDPR is an **EU regulation**, its **scope is global** due to its extraterritorial principle. It applies to all organizations that process the personal data of individuals in the EU, regardless of the organization's physical location. This means a company based in the U.S., Asia, or elsewhere must comply if it offers goods/services to, or monitors the behavior of, EU data subjects. There is no single **industry focus**; it applies universally to all sectors, including technology, finance, retail, healthcare, and beyond. Its core focus is the **protection of personal data and privacy of EU residents**.
 
 **Non-compliance penalties and fines** are the most stringent globally, designed to be "effective, proportionate, and dissuasive." Infringements can result in administrative fines of up to **€20 million or 4% of the company's total global annual revenue of the preceding financial year, whichever is higher**. As evidenced by major enforcement actions, such as the **€183 million (later reduced) fine against British Airways** and the **€99 million fine against Marriott** for insufficient security measures leading to data breaches, these provisions are actively enforced. Beyond fines, DPAs hold corrective powers, including ordering data processing to cease.
-
-
-
-
-
-
-​[Understanding the 7 Principles of the GDPR](https://www.onetrust.com/blog/gdpr-principles/)​
-
-
-
 
 **Examples of GDPR Fines**
 
@@ -211,11 +203,26 @@ While the GDPR is an **EU regulation**, its **scope is global** due to its ex
 
 #### International Organization for Standardization (ISO) 2700x
 
-* Describe the basics of the ISO 27001 standards
+The **ISO/IEC 27000 series** is a family of international standards for information security management, with the cornerstone **ISO/IEC 27001** first published in **2005** and most recently revised in **2022**. The standards are developed and maintained by the **International Organization for Standardization (ISO)** and the **International Electrotechnical Commission (IEC)** through a global consensus process involving national standards bodies. A critical distinction is that **ISO itself does not certify organizations**; certification is conducted by independent, accredited third-party audit firms.
 
-ISO has many different standards, several of them are applicable for cyber security. The most common one is ISO 27001, an information security management standard. “It focuses on requirements for establishing and implementing, maintaining and improving your security management system. It’s risk-based.” ISO 27018 is focused on privacy and ISO 27017 is focused on Cloud security. A combination of these three standards could be used in an enterprise information assurance strategy or information security risk management strategy.
+As a **voluntary industry standard**, ISO 27001's **compliance requirements** center on establishing, implementing, maintaining, and continually improving an **Information Security Management System (ISMS)**. Its core mandate is a systematic, risk-driven approach to managing people, processes, and technology:
 
-“ISO does develop standards but they don’t themselves issue the certification. You find an authorized, qualified, accredited, certified auditor to come in and perform that assessment on your behalf.”
+- **The ISMS Framework**: Organizations must define the scope of their ISMS and systematically manage information security risks through the **Plan-Do-Check-Act (PDCA)** cycle.
+- **Risk Assessment & Treatment**: A formal risk assessment process is required to identify threats and vulnerabilities, leading to a risk treatment plan that selects appropriate controls from **Annex A** (which contains 93 controls grouped into 4 themes: organizational, people, physical, and technological).
+- **Management System Requirements**: The standard requires documented policies, defined roles and responsibilities, and comprehensive internal audits and management reviews to ensure ongoing effectiveness.
+
+The **audit and certification process** is rigorous and multi-staged. An organization seeking certification undergoes:
+
+1. **Stage 1 Audit (Document Review)**: Auditors review the ISMS documentation for completeness and compliance with the standard's requirements.
+2. **Stage 2 Audit (Main Audit)**: Auditors perform an on-site assessment to verify that the ISMS is properly implemented and operational.
+3. **Certification Decision**: Upon successful completion, the certification body issues an ISO 27001 certificate, typically valid for **three years**.
+4. **Surveillance Audits**: To maintain certification, **annual surveillance audits** are required to confirm the ISMS is maintained and continually improved.
+
+**Reporting requirements** are primarily internal and procedural. Key outputs include the **Statement of Applicability (SoA)**, which documents the Annex A controls selected and justified for the ISMS, and the **risk treatment plan**. The main external report is the **certification audit report** from the accredited body, culminating in the certificate itself. Certified organizations often use the certificate and the SoA (under NDA) to demonstrate assurance to clients and partners.
+
+The **ISO 27001 standard is globally applicable and not industry-specific**. Its adoption is driven by contractual requirements, competitive advantage, and the need for a structured risk management framework. While universal, it is particularly prevalent in the **technology, cloud services, finance, and healthcare sectors**, where demonstrating security maturity to clients is crucial. Related standards in the series include **ISO 27002** (guidance on controls), **ISO 27017** (cloud security), and **ISO 27018** (protection of personal data in the cloud).
+
+As a voluntary standard, there are no direct regulatory **penalties or fines** for non-compliance from a governing body. However, the consequences of failing an audit or having a certification withdrawn are significant in the marketplace. They include **loss of the certification status**, damage to reputation and client trust, potential **breach of contractual obligations** with partners who require certification, and loss of competitive edge in procurement processes. The primary enforcement is market-driven, not legal.
 
 #### System and Organization Controls Report (SOC)
 

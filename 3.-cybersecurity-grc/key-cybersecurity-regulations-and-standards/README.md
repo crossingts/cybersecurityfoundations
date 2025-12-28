@@ -357,9 +357,6 @@ The table below illustrates how the CSF's core functions translate into actionab
 
 #### CIS Critical Security Controls
 
-* Describe the structure of the CIS Critical Security Controls, including the relationship between its 18 Controls and three Implementation Groups
-* Determine which CIS Implementation Group (IG1, IG2, or IG3) is most appropriate for an organization based on its size and complexity
-
 The Center for Internet Security (CIS) is a U.S. based non-profit organization composed of a global community of cybersecurity professionals from both public and private sectors. These experts collaborate through a consensus-driven process to develop its widely adopted security standards and controls.
 
 The CIS publishes the **CIS Critical Security Controls**, a prioritized set of best practices designed to mitigate the most common cyber attacks against systems and networks. A primary focus is secure configuration.

@@ -6,9 +6,7 @@ hidden: true
 
 Define the concepts of Governance, Risk, and Compliance, and explain their role in IT governance.
 
-Foundational GRC concepts and terminology (governance, risk, compliance, controls, due diligence, policies, audits, reporting).
-
-Definitions of GRC, NIST CSF, ISO 27001, Risk Appetite, ISMS, Control, Compliance, etc.
+Foundational GRC concepts and terminology (governance, risk, compliance audits, security controls, due diligence, policies, reporting).
 
 **Introduction**
 

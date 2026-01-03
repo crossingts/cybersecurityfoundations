@@ -15,21 +15,19 @@ This chapter introduces the principles of Governance, Risk, and Compliance (GRC)
 
 * Understand the strategic, ethical, and legal importance of cybersecurity regulations and standards for businesses.
 * Define the concepts of Governance, Risk, and Compliance, and explain their role in IT governance.
-* Understand key phases and terminology of information security risk assessments.
-* Identify key cybersecurity regulations (e.g., GGDPR, HIPAA, and SOX) and industry standards (e.g., PCI DSS).
-* Explain how GRC can be used as a cybersecurity risk management framework (RMF).
-* Become familiar with popular information security RMFs, including NIST SP 800-37, NIST CSF, and ISO/IEC 27001, and how they can be combined.
+* Describe key phases and terminology of information security risk assessments.
+* Describe key phases and terminology of compliance audits.
+* Identify key cybersecurity regulations (e.g., CFAA, FISMA, and GDPR) and industry standards (e.g., PCI DSS).
+* Explain how GRC concepts can be operationalized for enterprise cybersecurity management.
 
 ## Topics covered in this chapter
 
 Foundational GRC concepts
 
-Risk assessment phases
+The information security risk assessment
+
+The compliance audit
 
 [Key cybersecurity regulations and standards](key-cybersecurity-regulations-and-standards/)
 
-GRC as a risk management framework (RMF)
-
-NIST SP 800-37, NIST CSF, and ISO/IEC 27001
-
-Common combinations of cybersecurity RMFs
+The GRC approach to cybersecurity management

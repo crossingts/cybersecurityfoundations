@@ -21,8 +21,8 @@ The global demand for skilled cybersecurity professionals has never been higher.
 * Describe common cyber attacks and malware types.
 * Describe cybersecurity risk mitigation methods.
 * Describe network security risk mitigation best practices.
-* Explain how Governance, Risk, and Compliance (GRC) frameworks (e.g., NIST SP 800-37, NIST CSF, and ISO/IEC 27001) align security with business goals.
-* Identify key cybersecurity regulations (e.g., GDPR and HIPAA) and industry standards (e.g., PCI DSS).
+* Explain how Governance, Risk, and Compliance (GRC) frameworks (e.g., NIST SP 800-37, NIST CSF, and ISO/IEC 27001) can align cybersecurity with business goals.
+* Identify key cybersecurity regulations (e.g., HIPAA and GDPR) and industry standards (e.g., PCI DSS).
 
 ### Part 2: Networking & Cryptography (Chapters 4–5)
 
@@ -57,7 +57,7 @@ This chapter covers key aspects of cybersecurity fundamentals, including foundat
 
 3. [Chapter 3: Cybersecurity GRC](3.-cybersecurity-grc/introduction-cybersecurity-grc.md)
 
-This chapter covers Governance, Risk, and Compliance as a risk management framework (RMF) and using RMFs such as NIST SP 800-37, NIST CSF, and ISO/IEC 27001 to align cybersecurity policy with business goals.
+This chapter covers Governance, Risk, and Compliance as a cybersecurity risk management framework (RMF) and using RMFs such as NIST SP 800-37, NIST CSF, and ISO/IEC 27001 to align cybersecurity policy with business goals.
 
 4. [Chapter 4: Networking fundamentals](4.-networking-fundamentals/introduction-networking-fundamentals.md)
 
@@ -67,7 +67,7 @@ This chapter covers two key foundational networking areas: host to host communic
 
 This chapter covers how SSL/TLS secures data in transit, the IEEE 802.11 wireless standard, and WPA, WPA2, and WPA3 wireless protocols.
 
-6. [Chapter 6: Practical foundations in ethical hacking ](6.-practical-foundations-in-ethical-hacking/introduction-practical-foundations-in-ethical-hacking.md)
+6. [Chapter 6: Practical foundations in ethical hacking](6.-practical-foundations-in-ethical-hacking/introduction-practical-foundations-in-ethical-hacking.md)
 
 This chapter covers ethical hacking and penetration testing - definitions, technologies, testing methodologies, and testing phases.
 

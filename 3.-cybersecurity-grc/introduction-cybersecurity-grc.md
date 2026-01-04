@@ -14,7 +14,7 @@ This chapter introduces the principles of Governance, Risk, and Compliance (GRC)
 **This chapter will help students:**
 
 * Understand the strategic, ethical, and legal importance of cybersecurity regulations and standards for businesses.
-* Define the concepts of Governance, Risk, and Compliance, and explain their role in IT governance.
+* Define the concepts of Governance, Risk, and Compliance, and explain their role in cybersecurity management.
 * Describe key phases and terminology of information security risk assessments.
 * Describe key phases and terminology of compliance audits.
 * Identify key cybersecurity regulations (e.g., CFAA, FISMA, and GDPR) and industry standards (e.g., PCI DSS).

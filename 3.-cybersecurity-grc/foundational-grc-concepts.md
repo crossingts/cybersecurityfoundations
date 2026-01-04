@@ -4,14 +4,7 @@ hidden: true
 
 # Foundational GRC concepts
 
-Define the concepts of Governance, Risk, and Compliance, and explain their role in IT governance.
-
-Foundational GRC concepts and terminology (governance, risk, compliance audits, security controls, due diligence, policies, reporting).
-
 **Introduction**
-
-* The critical need to move cybersecurity from a technical function to a strategic business enabler.
-* Introducing GRC as the framework for integrating cybersecurity into enterprise risk management.
 
 **1. The Pillars of GRC: Defining Governance, Risk, and Compliance**
 

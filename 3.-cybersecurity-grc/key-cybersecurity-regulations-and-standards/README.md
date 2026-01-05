@@ -454,8 +454,8 @@ The following table summarizes the three levels of CMMC 2.0:
 
 ### References
 
-[Cybersecurity Compliance Framework & System Administration](https://www.coursera.org/learn/cybersecurity-compliance-framework-system-administration)​
+[Cybersecurity Compliance Framework & System Administration](https://www.coursera.org/learn/cybersecurity-compliance-framework-system-administration) (Coursera course)​
 
-​[IT Fundamentals for Cybersecurity Specialization](https://www.coursera.org/specializations/it-fundamentals-cybersecurity)
+​[IT Fundamentals for Cybersecurity Specialization](https://www.coursera.org/specializations/it-fundamentals-cybersecurity) (Coursera)
 
 [NIST Special Publications](https://itlaw.fandom.com/wiki/NIST_Special_Publications) (Repo by The IT Law Wiki)

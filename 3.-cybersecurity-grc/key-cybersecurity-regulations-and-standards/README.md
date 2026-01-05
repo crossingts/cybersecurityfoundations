@@ -412,15 +412,19 @@ CMMC is a **U.S. regulation and certification standard** with a tightly defined 
 
 The following table summarizes the three levels of CMMC 2.0:
 
-| CMMC Level  | Protects                                  | Required Controls                             | Assessment Method                                     | Certification Frequency                  |
-| ----------- | ----------------------------------------- | --------------------------------------------- | ----------------------------------------------------- | ---------------------------------------- |
-| **Level 1** | Federal Contract Information (FCI)        | 17 basic practices from FAR 52.204-21         | Annual Self-Assessment                                | Annual Affirmation                       |
-| **Level 2** | Controlled Unclassified Information (CUI) | 110 controls from NIST SP 800-171             | Self-Assessment **or** Third-Party Assessment (C3PAO) | Annual (Self) or Triennial (Third-Party) |
-| **Level 3** | CUI from High-Priority Programs           | NIST SP 800-171 + subset from NIST SP 800-172 | Government-Led Assessment                             | Triennial                                |
+| CMMC Level  | Protects                                  | Required Controls                             | Assessment Method                                 | Certification Frequency                  |
+| ----------- | ----------------------------------------- | --------------------------------------------- | ------------------------------------------------- | ---------------------------------------- |
+| **Level 1** | Federal Contract Information (FCI)        | 17 basic practices from FAR 52.204-21         | Annual Self-Assessment                            | Annual Affirmation                       |
+| **Level 2** | Controlled Unclassified Information (CUI) | 110 controls from NIST SP 800-171             | Self-Assessment or Third-Party Assessment (C3PAO) | Annual (Self) or Triennial (Third-Party) |
+| **Level 3** | CUI from High-Priority Programs           | NIST SP 800-171 + subset from NIST SP 800-172 | Government-Led Assessment                         | Triennial                                |
 
 ### Regulations and industry standards summary
 
 <figure><img src="../../.gitbook/assets/Cybersecurity-compliance-frameworks.webp" alt="Cybersecurity-compliance-frameworks"><figcaption><p>Cybersecurity regulations and industry standards summary (courtesy of IBM Security Learning Services)</p></figcaption></figure>
+
+**An overview of the Canadian cybersecurity legal landscape:**
+
+[Cybersecurity – The Legal Landscape in Canada](https://mcmillan.ca/insights/publications/cybersecurity-the-legal-landscape-in-canada/) (McMillan LLP: Mitch Koczerginski, Lyndsay A. Wasser, and Carol Lyons, 2017)
 
 ### Key takeaways
 

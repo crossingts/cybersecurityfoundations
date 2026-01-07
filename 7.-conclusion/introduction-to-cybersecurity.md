@@ -8,7 +8,7 @@ Through an exploration of key concepts and practices, this chapter will help stu
 
 ### The goals of cybersecurity
 
-At the most tactical level, the goals of cybersecurity are to protect the CIA of information assets. At the most strategic level, the goals of cybersecurity are to advance the strategic goals of the corporation. This likely involves creating value for stakeholders and/or serving the interests of stakeholders by aligning cybersecurity practices with the strategic goals of the corporation using QA models/certification standards/industry standards/governmental regulations or organizational policy. In other words, compliance, which typically involves risk assessment, security auditing, and security testing.&#x20;
+At the most tactical level, the goals of cybersecurity are to protect the CIA of information assets. At the most strategic level, the goals of cybersecurity are to advance the strategic goals of the corporation. This likely involves creating value for stakeholders and/or serving the interests of stakeholders by aligning cybersecurity practices with the strategic goals of the corporation using QA models/certification standards/industry standards/governmental regulations or organizational policy. In other words, compliance, which typically involves risk assessment, security auditing, and security testing.
 
 ### How cybersecurity is defined
 
@@ -20,6 +20,4 @@ Information security,
 
 ### How cybersecurity is practiced
 
-Organizations take a risk-based approach to managing cybersecurity risk.&#x20;
-
-An organization's information security goals and how to achieve them are typically articulated in a policy document that can be framed as an action plan. Achieving the goals are typically understood in terms of compliance requirements. Defensive and defensive practices are implemented to achieve compliance.
+Organizations take a risk-based approach to managing cybersecurity risk. An organization's information security goals and how to achieve them are typically articulated in a policy document. Achieving the goals are typically understood in terms of compliance requirements.

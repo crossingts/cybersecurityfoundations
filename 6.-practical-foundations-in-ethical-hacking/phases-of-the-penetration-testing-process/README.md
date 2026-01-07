@@ -174,13 +174,15 @@ Cipher. (n.d.). Reconnaissance, Intelligence Gathering or Open Source Intelligen
 
 Faircloth, J. (2011). _Penetration tester’s open source toolkit_. Penetration tester’s open source toolkit. Retrieved from www.scopus.com
 
+Graves, K. (2010). _CEH: Certified Ethical Hacker Study Guide_. Wiley Publishing.
+
 NIST Special Publication 800-115: Technical Guide to Information Security Testing and Assessment (NIST 800-115). Retrieved January 21, 2020, from http://csrc.nist.gov/publications/nistpubs/800-115/SP800-115.pdf
 
 Palmer, C. C. (2001). Ethical hacking. _IBM Systems Journal, 40_(3), 769-780.
 
 Rasskazov, V. (2013). Analysing vulnerability scanning reports. _PenTest Magazine, 3_(7), pp. 51-60.
 
-Rodger, J. (2013). Anatomy of vulnerability scans before a penetration test. \_PenTest Magazine, 3(\_7), pp. 41-50.
+Rodger, J. (2013). Anatomy of vulnerability scans before a penetration test. *PenTest Magazine, 3*(7), pp. 41-50.
 
 Shah, S., & Mehtre, B. M. (2015). An overview of vulnerability assessment and penetration testing techniques. _Journal of Computer Virology and Hacking Techniques, 11_(1), 27-49. doi:10.1007/s11416-014-0231-x
 

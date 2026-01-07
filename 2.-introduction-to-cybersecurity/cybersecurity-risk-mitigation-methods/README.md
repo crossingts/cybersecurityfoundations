@@ -505,7 +505,7 @@ Information security organizational policies can include Usage Policy, Informati
 
 #### Key components of an information security policy
 
-Here is a basic information security policy framework, aligned with current best practices and international standards like ISO/IEC 27001, covering key components of an information security policy.
+Here is a basic information security policy framework, aligned with industry best practices and international standards like ISO/IEC 27001, covering key components of an information security policy.
 
 **1. Governance & Framework**
 
@@ -600,14 +600,4 @@ User training programs are more formal than user awareness programs. For example
 
 Engebretson, P. (2011). _The Basics of Hacking and Penetration Testing: Ethical Hacking and Penetration Testing Made Easy_. Syngress.
 
-Graves, K. (2010). _CEH: Certified Ethical Hacker Study Guide_. Wiley Publishing.
-
-Harper, A., Harris, S., Ness, J., Eagle, C., Lenkey, G., & Williams, T. (2011). _Gray Hat Hacking: The Ethical Hacker's Handbook, Third Edition_. McGraw-Hill Osborne Media.
-
-Harris, S., Harper, A., Eagle, C., & Ness, J. (2007). _Gray Hat Hacking: The Ethical Hacker's Handbook, Second Edition_. McGraw-Hill Osborne Media.
-
-Landoll, D. J., & Landoll, D. (2005). _The Security Risk Assessment Handbook: A Complete Guide for Performing Security Risk Assessments_. CRC Press.
-
 Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 2. Cisco Press.
-
-

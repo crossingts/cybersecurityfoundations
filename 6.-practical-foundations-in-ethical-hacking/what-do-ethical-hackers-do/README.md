@@ -116,6 +116,8 @@ Engebretson, P. (2011). _The basics of hacking and penetration testing: Ethical 
 
 Harper, A., Harris, S., Ness, J., Eagle, C., Lenkey, G., & Williams, T. (2011). _Gray hat hacking: The ethical hacker’s handbook_, third edition. McGraw-Hill/Osborne. Retrieved June 7, 2013, from http://common.books24x7.com.proxy.bib.uottawa.ca/toc.aspx?bookid=40079
 
+Harris, S., Harper, A., Eagle, C., & Ness, J. (2007). _Gray Hat Hacking: The Ethical Hacker's Handbook, Second Edition_. McGraw-Hill Osborne Media.
+
 Harris, S. (2007). _CISSP all-in-one exam guide_ (4th ed.). McGraw-Hill.
 
 Landoll, D. J., & Landoll, D. (2005). _The security risk assessment handbook: A complete guide for performing security risk assessments._ CRC Press.

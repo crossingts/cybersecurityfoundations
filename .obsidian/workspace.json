@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2.-introduction-to-cybersecurity/cybersecurity-risk-mitigation-methods/README.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -183,6 +183,8 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/what-do-ethical-hackers-do/README.md",
+    "2.-introduction-to-cybersecurity/cybersecurity-risk-mitigation-methods/README.md",
     "3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards/README.md",
     "3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards/key-cybersecurity-regulations-and-standards-quiz.md",
     "3.-cybersecurity-grc/chapter-3-review-questions.md",
@@ -208,9 +210,7 @@
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets.md",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets/kernel-flaws-and-buffer-overflows/buffer-overflows-deep-dive.md",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets/kernel-flaws-and-buffer-overflows/README.md",
-    "6.-practical-foundations-in-ethical-hacking/common-attack-targets/misconfigured-security-settings.md",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets/kernel-flaws-and-buffer-overflows",
-    "6.-practical-foundations-in-ethical-hacking/common-attack-targets/common-attack-targets-quiz.md",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets-1/kernel-flaws-and-buffer-overflows",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets-1",

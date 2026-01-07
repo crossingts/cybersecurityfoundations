@@ -216,7 +216,7 @@ In summary, both VPN types are essential tools for modern business, leveraging t
 
 Encryption transforms readable data (plaintext) into a scrambled, unreadable format (ciphertext) using algorithms and cryptographic keys to protect it from unauthorized access. Encryption is a fundamental security measure designed to protect data confidentiality for data at rest (on storage devices), in transit (across networks), and in use (during processing). Strong encryption standards can be implemented to secure sensitive information, enforce data protection policies, and ensure privacy for communications and stored files across individual, corporate, and government use.
 
-#### Web Filters&#x20;
+#### Web Filters 
 
 Web Filters prevent users’ browsers from loading certain pages from particular websites. There are different web filters designed for individual, family, institutional, and enterprise use. Web domain whitelisting can be implemented using a web filter that can make web access policies and perform web site monitoring.
 
@@ -235,7 +235,7 @@ A well designed network supports efficient Internet usage and device communicati
 Effective cybersecurity risk mitigation begins with a well-designed network architecture that prioritizes security at every layer. By strategically segmenting networks, organizations can limit the spread of malware and unauthorized access, ensuring that breaches in one area do not compromise the entire system. Network segmentation involves segregating a network into logical or functional zones. For\
 example, you might have a zone for sales, a zone for technical support, and a zone for research, with each zone having different technical needs. You can separate zones using routers or switches or using virtual local area networks (VLANs).
 
-Segmentation limits the potential damage of a compromise to whatever is in the compromised zone. Segmentation divides one target into many, which forces attackers to interact with each segment as a separate network. This creates a great deal of additional work for the attacker, since the attacker must compromise each segment individually. Further, this approach dramatically increases the attacker’s exposure to being discovered.&#x20;
+Segmentation limits the potential damage of a compromise to whatever is in the compromised zone. Segmentation divides one target into many, which forces attackers to interact with each segment as a separate network. This creates a great deal of additional work for the attacker, since the attacker must compromise each segment individually. Further, this approach dramatically increases the attacker’s exposure to being discovered. 
 
 Segmentation also helps enforce data protection by applying different security rules to each zone based on sensitivity. In extreme cases, critical systems can be air-gapped (disconnected entirely) to prevent attacks, such as with backup servers.
 
@@ -310,7 +310,7 @@ VLANs are used to segment portions of a network at layer two and differentiate d
 
 #### Security zones using VLANs
 
-VLANs can be used to define security zones to regulate traffic flow within and between network segments.&#x20;
+VLANs can be used to define security zones to regulate traffic flow within and between network segments. 
 
 * **Traffic Management and Access Control**:\
   While security zones primarily focus on internal traffic, it’s crucial to plan for how external devices or traffic will integrate into the network. For example:
@@ -323,7 +323,7 @@ VLANs can be used to define security zones to regulate traffic flow within and b
   * Compliance standards.
   * Technical controls (e.g., firewalls, NAC).
 
-The next step is applying these principles to practical VLAN deployment and policy enforcement. Follows is a summary table of commonly standardized security zones.&#x20;
+The next step is applying these principles to practical VLAN deployment and policy enforcement. Follows is a summary table of commonly standardized security zones. 
 
 #### Security Zones
 
@@ -373,10 +373,10 @@ Set up QoS (Quality of Service) policies on routers, switches, and firewalls to 
 
 **Network Segmentation vs Micro-Segmentation**
 
-While traditional network segmentation can use VLANs and subnets as its primary tool, micro-segmentation often bypasses or works on top of these constructs.&#x20;
+While traditional network segmentation can use VLANs and subnets as its primary tool, micro-segmentation often bypasses or works on top of these constructs. 
 
 * **Network Segmentation**: Dividing the network into smaller, isolated zones (e.g., VLANs, subnets) to contain breaches.
-* **Micro-Segmentation**: Applying granular **security policies** to individual workloads or applications for enhanced protection.&#x20;
+* **Micro-Segmentation**: Applying granular **security policies** to individual workloads or applications for enhanced protection. 
 
 A micro-segmentation policy could be applied to two VMs that are on the _same VLAN and subnet_, preventing them from talking to each other unless explicitly allowed. A traditional network firewall at the VLAN boundary would be blind to this East-West traffic.
 
@@ -407,7 +407,7 @@ In a modern security architecture, you would often use both:
 
 #### Honeypots
 
-A honeypot is a security mechanism designed to detect, deflect, or study unauthorized access attempts in a network. It acts as a decoy system, appearing to be a legitimate target (e.g., a server, database, or IoT device) but is actually isolated and monitored to gather information about attackers. For example, you might set up a server that appears to be a financial database but actually has only fake records.&#x20;
+A honeypot is a security mechanism designed to detect, deflect, or study unauthorized access attempts in a network. It acts as a decoy system, appearing to be a legitimate target (e.g., a server, database, or IoT device) but is actually isolated and monitored to gather information about attackers. For example, you might set up a server that appears to be a financial database but actually has only fake records. 
 
 Honeypots can exhaust attackers by making them interact with phoney systems. Further, since honeypots are not real systems, legitimate users do not ever access them and therefore you can turn on extremely detailed monitoring and logging there. When an attacker does access a honeypot, you can gather a lot of evidence to aid in your investigation. When properly deployed, honeypots enhance threat detection and incident response capabilities.
 
@@ -469,7 +469,7 @@ In summary, **network automation transforms cybersecurity from a manual, reactiv
 
 When designing a network segregation strategy, device placement is critical. The simplest device to position is the firewall: it should be deployed at every network zone junction, ensuring each segment is protected. Fortunately, this is easier than it sounds—modern switches and routers include built-in firewall capabilities that only need activation and proper configuration. Another essential perimeter device is an anti-DDoS solution, which mitigates attacks before they impact the entire network. Behind the primary public-facing firewall, a web filter proxy should also be implemented.
 
-For other devices, placement depends on the network’s structure. Load balancers, for example, should reside in the same segment as the servers they manage—whether in a DMZ for web servers or a private segment for database clusters.&#x20;
+For other devices, placement depends on the network’s structure. Load balancers, for example, should reside in the same segment as the servers they manage—whether in a DMZ for web servers or a private segment for database clusters. 
 
 Network aggregation switches lack a fixed placement rule but are commonly used to consolidate bandwidth streams—for instance, optimizing throughput to and from a server cluster.
 
@@ -493,21 +493,19 @@ Network security protocols are essentially the security guards of the data trave
 
 • Authentication protocols: These verify the identity of users or devices trying to access a network resource. For example, RADIUS (Remote Authentication Dial-In User Service) is a client-server protocol often used for managing network access.
 
-• Integrity protocols: These make sure data has not been tampered with during transmission. They act like checksums, ensuring the data received is exactly what was sent. For example, HMAC (Hash-Based Message Authentication Code) is a specific mechanism used by other protocols such as TLS and IPsec to guarantee integrity.&#x20;
+• Integrity protocols: These make sure data has not been tampered with during transmission. They act like checksums, ensuring the data received is exactly what was sent. For example, HMAC (Hash-Based Message Authentication Code) is a specific mechanism used by other protocols such as TLS and IPsec to guarantee integrity. 
 
-• Tunneling protocols: These encapsulate and encrypt data packets to create a secure "tunnel" across an untrusted network. For example, IPsec (Internet Protocol Security) operates at the network layer (Layer 3) of the OSI model, securing all communication between two points (e.g., two offices, a remote worker and a central server).&#x20;
+• Tunneling protocols: These encapsulate and encrypt data packets to create a secure "tunnel" across an untrusted network. For example, IPsec (Internet Protocol Security) operates at the network layer (Layer 3) of the OSI model, securing all communication between two points (e.g., two offices, a remote worker and a central server). 
 
-• Wireless network security protocols such as WPA and WPA2 are considered more secure than WEP. For example, WPA2 uses AES for encryption and 802.1X for authentication.&#x20;
+• Wireless network security protocols such as WPA and WPA2 are considered more secure than WEP. For example, WPA2 uses AES for encryption and 802.1X for authentication. 
 
 ### Organizational policies
 
-Relevant information security organizational policies can include Usage Policy, Information Security Policy, and Privacy Policy. Such policies can be articulated separately or as provisions within a master policy (e.g., Security Policy) or as part of an organization's security program, which is an enterprise’s set of security policies and procedures.&#x20;
+Information security organizational policies can include Usage Policy, Information Security Policy, and Privacy Policy. Such policies can be articulated separately or as provisions within a master policy (e.g., Security Policy) or as part of a broader security governance program or framework, such as a GRC program, detailing an enterprise’s set of security policies and procedures to achieve them. An organization’s information security policy has to be clear—and regularly updated. Employee’s knowledge of and adherence to information security policy are critical to robust data security. 
 
-An organization’s risk management goals, guidelines, procedures, and employee responsibilities are typically detailed in an information security policy (Engebretson, 2011; Graves, 2010; Harper et al., 2011; Harris, Harper, Eagle, & Ness, 2007; Landoll & Landoll, 2005; Reynolds, 2012). An organization’s information security policy has to be clear—and regularly updated. Employee’s knowledge of and adherence to information security policy are critical to robust data security.&#x20;
+#### Key components of an information security policy
 
-A typical information security policy will cover such aspects as software development/software security, network security, hardware security, standard operating procedures, ethical code of conduct, security awareness training, usage policies (AUP), and backup and disaster recovery. Here is a basic framework, aligned with current best practices and international standards like ISO/IEC 27001, covering key components of an information security policy.
-
-**Key Components of an Information Security Policy**
+Here is a basic information security policy framework, aligned with current best practices and international standards like ISO/IEC 27001, covering key components of an information security policy.
 
 **1. Governance & Framework**
 
@@ -566,18 +564,18 @@ In an audit, testing provides the evidence that an auditor will examine to verif
 
 There are a variety of information security testing methods that can be used, including:
 
-* Vulnerability scanning: This method scans an organization's systems and networks for known vulnerabilities.&#x20;
-* Penetration testing: This method simulates an attack on an organization's systems and networks to identify and exploit vulnerabilities.&#x20;
-* Social engineering testing: This method tests the effectiveness of an organization's security controls against social engineering attacks.&#x20;
-* Physical security testing: This method tests the security of an organization's physical assets, such as its buildings and data centers.&#x20;
+* Vulnerability scanning: This method scans an organization's systems and networks for known vulnerabilities. 
+* Penetration testing: This method simulates an attack on an organization's systems and networks to identify and exploit vulnerabilities. 
+* Social engineering testing: This method tests the effectiveness of an organization's security controls against social engineering attacks. 
+* Physical security testing: This method tests the security of an organization's physical assets, such as its buildings and data centers. 
 
 The specific information security testing methods that are used will vary depending on the organization's specific risk assessment and compliance requirements.
 
 Some of the benefits of information security testing include:
 
-* It helps to identify and assess risks to an organization's information assets.&#x20;
-* It helps to verify that an organization's information security controls are effective and are in compliance with applicable regulations.&#x20;
-* It helps to identify and fix security vulnerabilities before they are exploited by attackers.&#x20;
+* It helps to identify and assess risks to an organization's information assets. 
+* It helps to verify that an organization's information security controls are effective and are in compliance with applicable regulations. 
+* It helps to identify and fix security vulnerabilities before they are exploited by attackers. 
 * It helps to improve an organization's overall security posture.
 
 ### Security training
@@ -612,4 +610,4 @@ Landoll, D. J., & Landoll, D. (2005). _The Security Risk Assessment Handbook: A 
 
 Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 2. Cisco Press.
 
-Reynolds, G. (2012). _Ethics in Information Technology, Fourth Edition_. Course Technology, Cengage Learning.
+

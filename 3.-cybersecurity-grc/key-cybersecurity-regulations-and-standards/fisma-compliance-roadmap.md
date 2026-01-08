@@ -13,7 +13,7 @@ Here are the key compliance frameworks and publications, categorized by their ro
 This is the non-negotiable core. You build your technical controls directly from here.
 
 * **NIST SP 800-53 (Security and Privacy Controls for Information Systems and Organizations):** This is the **master control catalog**. It contains hundreds of specific, actionable technical, operational, and management controls (e.g., AC-2: Account Management, SI-4: System Monitoring). FISMA compliance requires agencies to select and implement the appropriate controls from SP 800-53 based on their system's categorization.
-* **NIST SP 800-37 (Risk Management Framework for Information Systems and Organizations):** This is the **implementation process**. It provides the step-by-step lifecycle (Categorize, Select, Implement, Assess, Authorize, Monitor) for applying the controls from SP 800-53. It's the "how-to" guide for achieving and maintaining compliance.
+* **NIST SP 800-37 Rev2 (Risk Management Framework for Information Systems and Organizations):** This is the **implementation process**. It provides the step-by-step lifecycle (Prepare, Categorize, Select, Implement, Assess, Authorize, Monitor) for applying the controls from SP 800-53. It's the "how-to" guide for achieving and maintaining compliance.
 * **NIST SP 800-60 (Guide for Mapping Types of Information and Information Systems to Security Categories):** This is the **starting point**. It helps you categorize your information systems as Low, Moderate, or High impact—a critical step that determines the stringency of controls required from SP 800-53.
 
 **2. The Primary Organizing & Communication Framework: NIST Cybersecurity Framework (CSF)**

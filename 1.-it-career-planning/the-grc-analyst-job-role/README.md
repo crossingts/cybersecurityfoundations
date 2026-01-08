@@ -40,7 +40,7 @@ As a GRC professional, you’re interacting and coordinating regulatory complian
 ### Salient risk management frameworks <a href="#ember516" id="ember516"></a>
 
 * NIST Cybersecurity Framework (CSF) as an information security program framework and NIST SP 800-30 (Guide for Conducting Risk Assessments) to risk assess it
-* NIST SP 800-37 (Risk Management Framework for Information Systems and Organizations: A System Life Cycle Approach for Security and Privacy) and the appropriate subset of security controls from the control catalog in NIST SP 800-53 (Security and Privacy Controls for Information Systems and Organizations)
+* NIST SP 800-37 Rev2 (Risk Management Framework for Information Systems and Organizations: A System Life Cycle Approach for Security and Privacy) and the appropriate subset of security controls from the control catalog in NIST SP 800-53 (Security and Privacy Controls for Information Systems and Organizations)
 * SOC 2 Cybersecurity Framework as a RMF – AICPA (American Institute of Certified Public Accountants) maps SOC 2 to various other frameworks
 * Other: ISO/IEC 27001 Information Security Management System (ISMS), CMMC (DoD)
 

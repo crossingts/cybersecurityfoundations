@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "README"
             }
+          },
+          {
+            "id": "c704a52efe6d5514",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.11.4"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -181,7 +194,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1e65107a9a5d3b6c",
+  "active": "c704a52efe6d5514",
   "lastOpenFiles": [
     "SUMMARY.md",
     "1.-it-career-planning/the-grc-analyst-job-role/README.md",

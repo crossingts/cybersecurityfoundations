@@ -1,6 +1,6 @@
 # FISMA compliance roadmap
 
-What compliance frameworks can be helpful for organizations who want to comply with FISMA (to help them translate requirements into actionable technical controls)?
+What compliance frameworks can be helpful for organizations who want to comply with FISMA (to help them translate requirements into actionable controls)?
 
 For organizations needing to comply with the **Federal Information Security Management Act (FISMA)**, the primary goal is to protect federal information and systems. FISMA itself doesn't provide a detailed checklist; it mandates the use of **standards and guidelines developed by the National Institute of Standards and Technology (NIST)**.
 
@@ -10,7 +10,7 @@ Here are the key compliance frameworks and publications, categorized by their ro
 
 **1. The Mandatory & Foundational Framework: NIST Special Publication (SP) 800 Series**
 
-This is the non-negotiable core. You build your technical controls directly from here.
+This is the non-negotiable core. You build your controls directly from here.
 
 * **NIST SP 800-53 (Security and Privacy Controls for Information Systems and Organizations):** This is the **master control catalog**. It contains hundreds of specific, actionable technical, operational, and management controls (e.g., AC-2: Account Management, SI-4: System Monitoring). FISMA compliance requires agencies to select and implement the appropriate controls from SP 800-53 based on their system's categorization.
 * **NIST SP 800-37 Rev2 (Risk Management Framework for Information Systems and Organizations):** This is the **implementation process**. It provides the step-by-step lifecycle (Prepare, Categorize, Select, Implement, Assess, Authorize, Monitor) for applying the controls from SP 800-53. It's the "how-to" guide for achieving and maintaining compliance.
@@ -37,7 +37,7 @@ These can help structure the broader compliance program and are often used in pa
 
 **Summary & Practical Application:**
 
-To translate FISMA requirements into actionable technical controls, an organization would typically:
+To translate FISMA requirements into actionable controls, an organization would typically:
 
 1. **Start with the Law:** Understand FISMA's mandate.
 2. **Follow the Mandatory Path:** Use **NIST SP 800-60** to categorize systems, then apply the **NIST RMF (SP 800-37)** process to select and implement controls from the **NIST SP 800-53** catalog. This is the core compliance work.

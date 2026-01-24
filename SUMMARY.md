@@ -47,6 +47,8 @@
 * [Key cybersecurity regulations and standards](3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards/README.md)
   * [FISMA compliance roadmap](3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards/fisma-compliance-roadmap.md)
   * [Key cybersecurity regulations and standards — Quiz](3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards/key-cybersecurity-regulations-and-standards-quiz.md)
+* [The GRC approach to cybersecurity management](3.-cybersecurity-grc/the-grc-approach-to-cybersecurity-management/README.md)
+  * [The GRC approach to cybersecurity management — Quiz](3.-cybersecurity-grc/the-grc-approach-to-cybersecurity-management/the-grc-approach-to-cybersecurity-management-quiz.md)
 * [Review questions and exercises](3.-cybersecurity-grc/review-questions-and-exercises.md)
 * [Chapter 3 review questions](3.-cybersecurity-grc/chapter-3-review-questions.md)
 

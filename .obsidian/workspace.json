@@ -22,18 +22,19 @@
             }
           },
           {
-            "id": "c704a52efe6d5514",
+            "id": "59e24868ecd5f685",
             "type": "leaf",
             "state": {
               "type": "release-notes",
               "state": {
-                "currentVersion": "1.11.4"
+                "currentVersion": "1.11.5"
               },
               "icon": "lucide-book-up",
-              "title": "Release Notes 1.11.4"
+              "title": "Release Notes 1.11.5"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -193,8 +194,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1e65107a9a5d3b6c",
+  "active": "59e24868ecd5f685",
   "lastOpenFiles": [
+    "README.md",
     "SUMMARY.md",
     "1.-it-career-planning/the-grc-analyst-job-role/README.md",
     "1.-it-career-planning/the-grc-analyst-job-role/the-grc-analyst-job-role-quiz.md",
@@ -219,7 +221,6 @@
     "3.-cybersecurity-grc/common-combinations-of-cybersecurity-rmfs.md",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing/README.md",
     "7.-conclusion/introduction-conclusion.md",
-    "README.md",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets/README.md",
     "6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/README.md",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets/kernel-flaws-and-buffer-overflows",

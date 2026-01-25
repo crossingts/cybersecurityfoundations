@@ -283,6 +283,18 @@ Performance measures are integral to the "Check" and "Act" components of the Pla
 
 Performance measures close the loop in the continuous GRC process. They provide the evidence needed to move from simply **having** a program to **continuously improving** one, ensuring that cybersecurity GRC remains aligned with, and responsive to, the evolving business and threat landscape.
 
+### Key takeaways
+
+- Cybersecurity GRC is an integrated management model that aligns security with business strategy, systematically treats risk, and validates adherence to obligations.
+- Governance establishes the strategic direction, rules, and accountability, primarily through the NIST CSF GOVERN function and concrete artifacts like policies, standards, and procedures.
+- Risk Management involves identifying, assessing, treating, and monitoring cyber risks within the organization's risk appetite, using frameworks like the NIST RMF (SP 800-37).
+- Compliance validates that controls meet legal, regulatory, and policy requirements through a structured lifecycle of gap assessment, remediation, and audit.
+- The actionable GRC program framework has three phases: Foundation (Governance), Risk Execution, and Implementation/Validation (Compliance).
+- This framework is operationalized through a continuous Plan, Assess, Implement, Monitor, Review lifecycle, ensuring the program adapts to change.
+- Frameworks like NIST CSF, ISO 27001, and the NIST RMF are often combined and integrated to streamline controls and meet multiple requirements.
+- Performance measures (KPIs and KRIs) are essential for assessing program effectiveness and enabling data-driven improvement in the Review phase.
+- Effective GRC closes the loop between strategic objectives and daily operations, making cybersecurity a managed, risk-informed business process.
+
 ### References
 
 CIS Center for Internet Security. (2024). NIST Cybersecurity Framework: Policy Template Guide. Retrieved January 24, 2026, from https://www.cisecurity.org/-/media/project/cisecurity/cisecurity/data/media/files/uploads/2024/08/cis-ms-isac-nist-cybersecurity-framework-policy-template-guide-2024.pdf

@@ -24,23 +24,23 @@ This lesson explains the Governance, Risk, and Compliance (GRC) approach to cybe
 
 ## Topics covered in this lesson
 
-* **Introduction**&#x20;
-* **Cybersecurity governance (G)**&#x20;
-* **Cybersecurity risk management (R)**&#x20;
-* **Cybersecurity compliance (C)**&#x20;
-* **The GRC program framework**&#x20;
-* **The GRC lifecycle in practice: A continuous process**&#x20;
+* **Introduction** 
+* **Cybersecurity governance (G)** 
+* **Cybersecurity risk management (R)** 
+* **Cybersecurity compliance (C)** 
+* **The GRC program framework** 
+* **The GRC lifecycle in practice: A continuous process** 
 * **The role of performance measures in GRC programs**
 
-#### Introduction
+### Introduction
 
 GRC is an integrated capability that enables an organization to effectively achieve its strategic objectives (governance), address uncertainty (risk management), and act with integrity (compliance). GRC ensures that daily activities and strategic decisions are aligned with business goals through a structured, risk-informed approach to prioritizing and managing all risks, while simultaneously meeting legal and regulatory obligations. GRC is a comprehensive framework for enterprise risk management, of which cybersecurity risk is one critical category. Other categories include operational, financial, legal, and strategic risk.
 
 The GRC approach to cybersecurity management (cybersecurity GRC) means applying this integrated enterprise model specifically to the domain of cybersecurity. It ensures cybersecurity activities are aligned with business strategy (Governance), that cyber risks are identified and treated in context with other business risks (Risk Management), and that security practices meet legal, regulatory, and internal policy obligations (Compliance).
 
-#### Cybersecurity governance (G)
+### Cybersecurity governance (G)
 
-Cybersecurity governance defines the strategic direction, policies, and decision-making structures to ensure cybersecurity efforts—IT infrastructure, operations, and services—are aligned with business objectives and properly overseen.&#x20;
+Cybersecurity governance defines the strategic direction, policies, and decision-making structures to ensure cybersecurity efforts—IT infrastructure, operations, and services—are aligned with business objectives and properly overseen. 
 
 Via the executive leadership, cybersecurity governance defines roles and responsibilities and oversight mechanism to ensure that an organization's cybersecurity strategy, investments, and operations are aligned with business objectives, manage cyber risk to an acceptable level, and comply with relevant laws and regulations.
 
@@ -58,7 +58,7 @@ Governance answers the questions: "Who decides what? How do we ensure it happens
 | Strategic planning: Ensures that security strategies are aligned with business objectives and consistent with regulations | Project planning: Recommends security strategies                         |
 | Resource allocation                                                                                                       | Resource utilization                                                     |
 
-**Governance aligned with NIST CSF 2.0**
+#### Governance aligned with NIST CSF 2.0
 
 In the context of cybersecurity GRC, governance is the function of establishing, communicating, and monitoring the strategy, policy, and oversight mechanisms to ensure an organization's cybersecurity risk management decisions align with its business objectives and risk appetite.
 
@@ -87,7 +87,7 @@ The NIST 800 series is a set of documents that describe U.S. federal government 
 
 [Which of the NIST SP 800-Series Publications Should You Follow?](https://www.schellman.com/blog/nist-sp-800-series-publications-follow) (Doug Stonier and Tim Walsh, 2022)
 
-**From strategic outcomes to concrete artifacts**
+#### From strategic outcomes to concrete artifacts
 
 NIST SP 800-53 (the controls) and NIST SP 800-37 (the process for implementing them) are the two frameworks that provide the critical bridge from CSF's strategic governance to the tangible, actionable artifacts.
 
@@ -115,7 +115,7 @@ In practice, governance is the process of defining requirements and commitments,
 
 This flow creates a clear governance cascade: from the strategic outcomes of the NIST CSF GOVERN function, to a written policy, to chosen control standards, and finally to implemented procedures. This entire process—selecting control catalogs, tailoring them, and defining implementation steps—is itself governed by the structured workflow of the NIST SP 800-37 Risk Management Framework. Thus, governance encompasses the full spectrum from declaring a commitment to protecting data, to defining the exact rules and configurations that make that commitment a reality.
 
-#### Cybersecurity risk management (R)
+### Cybersecurity risk management (R)
 
 Managing cybersecurity is about managing risk to information assets valued by an organization. Risk can be understood as the likelihood of a security breach compromising the confidentiality, integrity, or availability of information assets multiplied by the potential impact of the breach.
 
@@ -143,13 +143,13 @@ NIST SP 800-30 and NIST SP 800-115 (Technical Guide to Information Security Test
 
 Risk management frameworks (RMFs) are frequently combined to streamline and integrate compliance controls into daily operations and the organizational structure. For example, organizations often implement the NIST SP 800-37 RMF process and select the appropriate subset of security controls from the NIST SP 800-53 control catalog. Others use the NIST Cybersecurity Framework (CSF) as their overarching RMF and employ NIST SP 800-30 to conduct the detailed risk assessments that inform it. Similarly, a common approach is to adopt ISO/IEC 27001 as the certifiable RMF and use ISO/IEC 27002 as the essential reference guide for implementing its required controls. Frameworks can also be integrated with industry standards, such as aligning an ISO/IEC 27001 Information Security Management System (ISMS) with the requirements of the Payment Card Industry Data Security Standard (PCI DSS).
 
-#### Cybersecurity compliance (C)
+### Cybersecurity compliance (C)
 
 Compliance is the function of developing and implementing procedures and controls to ensure that business activities adhere to external regulations, industry standards, and internal policies. In cybersecurity GRC, this specifically means validating that IT systems and data are secured according to these mandated requirements. For example, a healthcare organization must comply with laws like HIPAA to protect patient privacy, while a retailer processing credit cards must follow the PCI DSS standard.
 
 Compliance is demonstrated and assured through systematic auditing and reporting. These processes provide evidence of due care to oversight bodies—such as an internal board or external regulators—and help the organization avoid legal penalties and reputational damage. Compliance audits verify that the defined controls and procedures are correctly implemented and effective. In essence, while governance sets the rules and risk management identifies the threats, compliance answers the critical question: "Are we following the rules effectively?" Compliance determines: "We have audited the 157 controls for Regulation X. 150 are operating effectively and 7 are failing. Here is the report for the board."
 
-**The compliance audit process**
+#### The compliance audit process
 
 A compliance audit is a formal, structured review to verify that security controls are **correctly implemented and operating effectively**. The process typically follows a cycle aligned with general audit standards and frameworks such as NIST SP 800-53A (Assessing Security and Privacy Controls) and ISO/IEC 27007 (Guidelines for Information Security Management Systems Auditing). The key steps are:
 
@@ -161,7 +161,7 @@ A compliance audit is a formal, structured review to verify that security contro
 
 This cyclical process transforms compliance from a static checklist into a dynamic mechanism for continuous validation and improvement, closing the loop within the broader GRC lifecycle.
 
-**The compliance management lifecycle**
+#### The compliance management lifecycle
 
 Achieving compliance is a continuous cycle integrated into business operations. This lifecycle manages compliance from initial scoping through to ongoing maintenance:
 
@@ -173,44 +173,35 @@ Achieving compliance is a continuous cycle integrated into business operations. 
 
 This lifecycle is formalized in standards like **ISO/IEC 27001**, which requires establishing, implementing, maintaining, and continually improving an Information Security Management System (ISMS). It demonstrates that compliance is a managed business process within the GRC model, directly informed by governance rules and driven by risk management priorities.
 
-#### The GRC program framework
+### The GRC program framework
 
 The first, foundational step in risk management is establishing the GRC program framework. Here are the three main phases of the framework.
 
-**Phase 1: Foundation & Strategy (Governance)**
+#### Phase 1: Foundation & Strategy (Governance)
 
-• Define who is involved/stakeholders: Oversight (Board), decision makers (CISO, Risk Committee), employees, IT crew, etc.). Their input is critical for defining what is valuable and what level of risk is acceptable.
-
-• Set the organization's risk appetite. Leadership defines "how much risk are we willing to accept?"
-
-• Identify relevant regulations and standards. Based on business model and geography (e.g., GDPR, HIPAA, NIST CSF, PCI DSS). This defines the "rules of the road" you must follow. This identifies the mandatory and voluntary frameworks that will shape the program.
-
-• Define commitment in policy ("We shall protect data in accordance with FISMA and design a risk management program guided by NIST CSF").
-
-• Set the organization's risk tier:
-
-* Risk Appetite & Tolerance: Define the amount and type of risk the organization is willing to accept. This sets the bar for all subsequent risk evaluations.
-* Taxonomy & Criteria: Agree on definitions (e.g., scales for impact and likelihood) so a "High" risk means the same thing to everyone.
-
-• Select the assessment methodology, e.g., NIST RMF (NIST SP 800-37 Rev2).
+- Define who is involved/stakeholders: Oversight (Board), decision makers (CISO, Risk Committee), employees, IT crew, etc.). Their input is critical for defining what is valuable and what level of risk is acceptable.
+- Set the organization's risk appetite. Leadership defines "how much risk are we willing to accept?"
+- Identify relevant regulations and standards. Based on business model and geography (e.g., GDPR, HIPAA, NIST CSF, PCI DSS). This defines the "rules of the road" you must follow. This identifies the mandatory and voluntary frameworks that will shape the program.
+- Define commitment in policy ("We shall protect data in accordance with FISMA and design a risk management program guided by NIST CSF").
+- Set the organization's risk tier:
+   - Risk Appetite & Tolerance: Define the amount and type of risk the organization is willing to accept. This sets the bar for all subsequent risk evaluations.
+   - Taxonomy & Criteria: Agree on definitions (e.g., scales for impact and likelihood) so a "High" risk means the same thing to everyone.
+- Select the assessment methodology, e.g., NIST RMF (NIST SP 800-37 Rev2).
 
 At this phase, you select the overarching methodology (e.g., the NIST RMF) and identify the control catalogs you will reference (e.g., NIST SP 800-53). You are not yet choosing specific controls.
 
-**Phase 2: Risk Management Execution (The "R" Cycle)**
+#### Phase 2: Risk Management Execution (The "R" Cycle)
 
-• Assess risk. Using your chosen methodology, identify and analyze risks (threats & vulnerabilities). Prioritize them using your risk tiers and appetite.
+- Assess risk. Using your chosen methodology, identify and analyze risks (threats & vulnerabilities). Prioritize them using your risk tiers and appetite.
+- Treat risk: mitigate, accept, avoid, transfer. If mitigating:
+- Select suitable controls (e.g., "To mitigate this data breach risk, we will implement specific controls so and so from the NIST SP 800-53").
 
-• Treat risk: mitigate, accept, avoid, transfer. If mitigating:
-
-• Select suitable controls (e.g., "To mitigate this data breach risk, we will implement specific controls so and so from the NIST SP 800-53").
-
-**Phase 3: Implementation & Validation (Compliance)**
+#### Phase 3: Implementation & Validation (Compliance)
 
 This is the execution and verification of risk treatment decisions.
 
-• Implement controls (technical, procedural, physical).
-
-• Audit compliance (compliance is one way to treat risks; compliance validates a subset of the risk appetite).
+- Implement controls (technical, procedural, physical).
+- Audit compliance (compliance is one way to treat risks; compliance validates a subset of the risk appetite).
 
 Monitor and test that the implemented controls are working as designed. Internal or external audits validate that your controls meet the requirements of the relevant regulations/standards, thereby proving you are operating within your risk appetite.
 
@@ -247,7 +238,7 @@ In essence:
 * Phase 2 (Risk Management) is the core of the RMF SELECT and IMPLEMENT steps, guided by the CSF IDENTIFY function.
 * Phase 3 (Validation) is realized through the RMF ASSESS, AUTHORIZE, and MONITOR steps, achieving outcomes in the CSF PROTECT, DETECT, and GOVERN functions.
 
-#### The GRC lifecycle in practice: A continuous process
+### The GRC lifecycle in practice: A continuous process
 
 The GRC lifecycle can be seen as a Plan-Do-Check-Act (PDCA) model. A more concrete way to view this is as a process of "plan, assess, implement, monitor, review".
 
@@ -265,7 +256,7 @@ These phases can be mapped to the risk assessment process within the cybersecuri
 | **4. Monitor (Monitor, Test, Report)**    | **Ensure defenses are working.** Detect incidents and provide assurance.              | <p>• <strong>24/7 Security Operations Center (SOC) monitoring</strong><br>• <strong>SIEM alerts and dashboards</strong><br>• <strong>Regular control testing</strong> (e.g., phishing simulations)<br>• <strong>Compliance audit reports &#x26; KRIs</strong> (e.g., mean time to detect).</p>                                 |
 | **5. Review (Review, Optimize, Improve)** | **Learn and adapt.** Evolve your program based on lessons learned and new threats.    | <p>• <strong>Post-Incident Review (PIR) reports</strong><br>• <strong>Updates to the IRP based on tabletop exercises</strong><br>• <strong>Adjusting risk ratings after a major new vulnerability</strong> (e.g., Log4Shell)<br>• <strong>Maturity assessments against frameworks like NIST CSF or CMMC.</strong></p>          |
 
-#### The role of performance measures in GRC programs
+### The role of performance measures in GRC programs
 
 An effective GRC program requires continuous evaluation and refinement. Performance measures serve as the essential feedback mechanism, providing quantifiable data to assess the effectiveness of the program. They are the critical link between daily activities and strategic objectives, enabling informed decision-making during the Review (Review, Optimize, Improve) phase of the GRC lifecycle.
 
@@ -292,7 +283,7 @@ Performance measures are integral to the "Check" and "Act" components of the Pla
 
 Performance measures close the loop in the continuous GRC process. They provide the evidence needed to move from simply **having** a program to **continuously improving** one, ensuring that cybersecurity GRC remains aligned with, and responsive to, the evolving business and threat landscape.
 
-#### References
+### References
 
 CIS Center for Internet Security. (2024). NIST Cybersecurity Framework: Policy Template Guide. Retrieved January 24, 2026, from https://www.cisecurity.org/-/media/project/cisecurity/cisecurity/data/media/files/uploads/2024/08/cis-ms-isac-nist-cybersecurity-framework-policy-template-guide-2024.pdf
 

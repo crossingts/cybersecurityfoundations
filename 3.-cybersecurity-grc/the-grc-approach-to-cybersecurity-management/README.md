@@ -56,11 +56,9 @@ Governance answers the questions: "Who decides what? How do we ensure it happens
 
 #### Governance aligned with NIST CSF 2.0
 
-In the context of cybersecurity GRC, governance is the function of establishing, communicating, and monitoring the strategy, policy, and oversight mechanisms to ensure an organization's cybersecurity risk management decisions align with its business objectives and risk appetite.
+The NIST Cybersecurity Framework (CSF) 2.0 is structured around a core hierarchy of outcomes to help organizations manage cybersecurity risk. At the highest level are six Functions—Govern, Identify, Protect, Detect, Respond, and Recover—which represent the highest-level cybersecurity tasks. Each Function is divided into Categories (e.g., GV.OC for Organizational Context), which are discrete outcomes aligned to programmatic needs. Categories are further broken down into Subcategories, which are outcome-driven statements providing specific guidance for achieving the Category outcomes. This section focuses primarily on the GOVERN Function and its Categories to explain the foundation of cybersecurity GRC.
 
-The NIST Cybersecurity Framework (CSF) 2.0 defines this as the **GOVERN (GV)** Function, which is the foundation for all other functions (Identify, Protect, Detect, Respond, Recover). Its core purpose is to inform how an organization will make and execute its risk management decisions.
-
-The NIST Cybersecurity Framework (CSF) 2.0 is structured around a core hierarchy of outcomes to help organizations manage cybersecurity risk. At the highest level are six Functions—GOVERN, IDENTIFY, PROTECT, DETECT, RESPOND, and RECOVER—which represent the highest-level cybersecurity tasks. Each Function is divided into Categories (e.g., GV.OC for Organizational Context), which are discrete outcomes aligned to programmatic needs. Categories are further broken down into Subcategories, which are outcome-driven statements providing specific guidance for achieving the Category outcomes. This section focuses primarily on the GOVERN Function and its Categories to explain the foundation of cybersecurity GRC.
+In the context of cybersecurity GRC, governance is the function of establishing, communicating, and monitoring the strategy, policy, and oversight mechanisms to ensure an organization's cybersecurity risk management decisions align with its business objectives and risk appetite. The NIST Cybersecurity Framework (CSF) 2.0 defines this as the **GOVERN (GV)** Function, which is the foundation for all other functions (Identify, Protect, Detect, Respond, Recover). Its core purpose is to inform how an organization will make and execute its risk management decisions.
 
 **Key NIST CSF Governance Categories:**
 

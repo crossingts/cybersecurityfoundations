@@ -23,7 +23,7 @@ This chapter introduces the principles of Governance, Risk, and Compliance (GRC)
 
 [Key cybersecurity regulations and standards](key-cybersecurity-regulations-and-standards/)
 
-The GRC approach to cybersecurity management
+[The GRC approach to cybersecurity management](the-grc-approach-to-cybersecurity-management/)
 
 The information security risk assessment
 

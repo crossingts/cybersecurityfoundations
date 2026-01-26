@@ -133,7 +133,7 @@ Risk management is a process of identifying, assessing, prioritizing, and treati
 
 A NIST Risk Management Framework (RMF) is commonly used to quantify operational risk – to help “ensure that an enterprise understands the true risks to the key assets behind its day-to-day operations and how best to mitigate them” (Cobb, 2019).
 
-The RMF NIST SP 800-37 was developed to provide federal agencies and contractors with guidance on implementing risk management programs. NIST Special Publication 800-37 Rev2 (Risk Management Framework for Information Systems and Organizations: A System Life Cycle Approach for Security and Privacy) provides a structured seven-step process for integrating security and privacy into enterprise systems: Prepare, Categorize, Select, Implement, Assess, Authorize, and Monitor.
+The RMF NIST SP 800-37 was developed to provide federal agencies and contractors with guidance on implementing risk management programs. NIST SP 800-37 Rev2 (Risk Management Framework for Information Systems and Organizations: A System Life Cycle Approach for Security and Privacy) provides a structured seven-step process for integrating security and privacy into enterprise systems: Prepare, Categorize, Select, Implement, Assess, Authorize, and Monitor.
 
 NIST SP 800-37 Rev2 is a prime example of a structured methodology that operationalizes the principles of Governance, Risk Management, and Compliance (GRC) for cybersecurity. NIST SP 800-53 provides the catalog of security and privacy controls that are selected in Step 3 (Select) of NIST SP 800-37 Rev2.
 

@@ -1,5 +1,8 @@
 ---
-description: This section provides an implementable framework for designing an enterprise cybersecurity risk management program, the GRC program framework, based on the GRC governance framework
+description: >-
+  This section provides an implementable framework for designing an enterprise
+  cybersecurity risk management program, the GRC program framework, based on the
+  GRC governance framework
 ---
 
 # The GRC approach to cybersecurity management
@@ -38,7 +41,7 @@ The GRC approach to cybersecurity management (cybersecurity GRC) means applying 
 
 Cybersecurity governance defines the strategic direction, policies, and decision-making structures to ensure cybersecurity efforts—IT infrastructure, operations, and services—are aligned with business objectives and properly overseen.
 
-Via the executive leadership, cybersecurity governance defines roles and responsibilities and oversight mechanism to ensure that an organization's cybersecurity strategy, investments, and operations are aligned with business objectives, manage cyber risk to an acceptable level, and comply with relevant laws and regulations.
+Via the executive leadership, cybersecurity governance defines roles and responsibilities and oversight mechanisms to ensure that an organization's cybersecurity strategy, investments, and operations are aligned with business objectives, manage cyber risk to an acceptable level, and comply with relevant laws and regulations.
 
 Governance answers the questions: "Who decides what? How do we ensure it happens? And how do we know it's working?" In this vein, it helps to outline key differences between governance and management.
 
@@ -56,13 +59,13 @@ Governance answers the questions: "Who decides what? How do we ensure it happens
 
 #### Governance aligned with NIST CSF 2.0
 
-In the context of cybersecurity GRC, governance is the function of establishing, communicating, and monitoring the strategy, policy, and oversight mechanisms to ensure an organization's cybersecurity risk management decisions align with its business objectives and risk appetite. The NIST Cybersecurity Framework (CSF) 2.0 formalizes this as the GOVERN (GV) Function, the essential foundation for all other cybersecurity activities. The core purpose of the GOVERN (GV) Function is to inform how an organization makes and executes its risk management decisions.
+In the context of cybersecurity GRC, governance is the function of establishing, communicating, and monitoring the strategy, policy, and oversight mechanisms to ensure an organization's cybersecurity risk management decisions align with its business objectives and risk appetite. The NIST Cybersecurity Framework (CSF) 2.0 formalizes this as the GOVERN (GV) Function, the essential foundation for all other cybersecurity activities. The core purpose of the GOVERN (GV) Function is to inform how an organization makes and executes its risk management decisions.
 
 To provide clear guidance, the NIST CSF is structured around a core hierarchy:
 
-- **Functions** represent the highest-level cybersecurity tasks. The six Functions are: **GOVERN, IDENTIFY, PROTECT, DETECT, RESPOND, and RECOVER**.
-- **Categories** are discrete outcomes within each Function, aligned to programmatic needs (e.g., `GV.OC` for Organizational Context).
-- **Subcategories** are outcome-driven statements that provide specific guidance for achieving the Category outcomes.
+* **Functions** represent the highest-level cybersecurity tasks. The six Functions are: **GOVERN, IDENTIFY, PROTECT, DETECT, RESPOND, and RECOVER**.
+* **Categories** are discrete outcomes within each Function, aligned to programmatic needs (e.g., `GV.OC` for Organizational Context).
+* **Subcategories** are outcome-driven statements that provide specific guidance for achieving the Category outcomes.
 
 This section focuses on the GOVERN Function and its key Categories, which establish the direction, rules, and accountability for the entire cybersecurity program.
 
@@ -198,7 +201,7 @@ At this phase, you select the overarching methodology (e.g., the NIST RMF) and i
 * Treat risk: mitigate, accept, avoid, transfer. If mitigating:
 * Select suitable controls (e.g., "To mitigate this data breach risk, we will implement specific controls so and so from the NIST SP 800-53").
 
-**Mitigate** involves implementing security controls to reduce the likelihood or impact of the risk. **Accept** is the conscious decision to take no action after determining the risk falls within the organization's established risk appetite. **Avoid** entails eliminating the risk entirely by discontinuing the risky activity. **Transfer** shifts the financial burden of the risk to a third party, typically through cybersecurity insurance.
+**Mitigate** involves implementing security controls to reduce the likelihood or impact of the risk. **Accept** is the conscious decision to take no action after determining the risk falls within the organization's established risk appetite. **Avoid** entails eliminating the risk entirely by discontinuing the risky activity. **Transfer** shifts the financial burden of the risk to a third party, typically through cybersecurity insurance.
 
 #### Phase 3: Implementation & Validation (Compliance)
 

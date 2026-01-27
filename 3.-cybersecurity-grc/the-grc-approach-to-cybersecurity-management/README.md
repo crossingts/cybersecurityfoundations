@@ -212,7 +212,7 @@ This is the execution and verification of risk treatment decisions.
 
 Monitor and test that the implemented controls are working as designed. Internal or external audits validate that your controls meet the requirements of the relevant regulations/standards, thereby proving you are operating within your risk appetite.
 
-Here is a mapping of the GRC management framework phases to the NIST CSF 2.0 and the NIST SP 800-37 Rev2 RMF.
+Here is a mapping of the GRC program framework phases to the NIST CSF 2.0 and the NIST SP 800-37 Rev2 RMF.
 
 | **GRC Framework Phase & Step**                                                       | **Mapping to NIST CSF (Functions & Categories)**                                                | **Mapping to NIST SP 800-37 RMF (Steps)**                                                         |
 | ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |

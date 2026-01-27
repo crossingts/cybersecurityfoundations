@@ -276,9 +276,8 @@ Defined metrics allow an organization to objectively determine if its GRC progra
 
 Two primary categories of metrics are used to assess GRC programs:
 
-Key Performance Indicators (KPIs): Measure the performance and efficiency of security processes and controls. They indicate how well the organization is executing its GRC activities. Example: Percentage of systems configured according to security baselines, mean time to patch critical vulnerabilities, employee completion rate for security awareness training.
-
-Key Risk Indicators (KRIs): Measure changes in the organization's risk exposure. They are forward-looking metrics that signal a potential increase in risk likelihood or impact, serving as an early warning system. Example: Number of high-risk vulnerabilities exceeding Service Level Agreement (SLA) for remediation, volume of phishing attempts detected, frequency of policy exceptions requested.
+* Key Performance Indicators (KPIs): Measure the performance and efficiency of security processes and controls. They indicate how well the organization is executing its GRC activities. Example: Percentage of systems configured according to security baselines, mean time to patch critical vulnerabilities, employee completion rate for security awareness training.
+* Key Risk Indicators (KRIs): Measure changes in the organization's risk exposure. They are forward-looking metrics that signal a potential increase in risk likelihood or impact, serving as an early warning system. Example: Number of high-risk vulnerabilities exceeding Service Level Agreement (SLA) for remediation, volume of phishing attempts detected, frequency of policy exceptions requested.
 
 Performance measures are integral to the "Check" and "Act" components of the Plan-Do-Check-Act (PDCA) model embodied in the GRC lifecycle.
 

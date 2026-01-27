@@ -288,7 +288,7 @@ Performance measures are integral to the "Check" and "Act" components of the Pla
   * **Identify Gaps:** Pinpoint ineffective controls, inefficient processes, or emerging risk trends.
   * **Optimize & Improve:** Make data-driven decisions to reallocate resources, update policies, enhance controls, or revise the risk management strategy. For instance, a consistent KPI showing slow patch deployment would trigger a review and improvement of the vulnerability management process.
 
-Performance measures close the loop in the continuous GRC process. They provide the evidence needed to move from simply **having** a program to **continuously improving** one, ensuring that cybersecurity GRC remains aligned with, and responsive to, the evolving business and threat landscape.
+Performance measures close the loop in the continuous GRC process. They provide the evidence needed to move from simply having a program to continuously improving one, ensuring that cybersecurity GRC remains aligned with, and responsive to, the evolving business and threat landscape.
 
 ### Key takeaways
 

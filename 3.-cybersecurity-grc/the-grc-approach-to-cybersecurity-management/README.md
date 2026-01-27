@@ -308,12 +308,8 @@ CIS Center for Internet Security. (2024). NIST Cybersecurity Framework: Policy T
 
 Cobb, M. (June 2019). 5 ways to achieve a risk-based security strategy. Retrieved December 20, 2019, from https://searchsecurity.techtarget.com/tip/5-ways-to-achieve-a-risk-basedsecurity-strategy
 
-[GRACE-IT – The “Critical Six” disciplines of GRC](https://www.oceg.org/about/people-like-you/) (oceg.org)
-
 [Information Security Governance](https://www.educause.edu/focus-areas-and-initiatives/policy-and-security/cybersecurity-program/resources/information-security-guide/toolkits/information-security-governance) (EDUCAUSE, 2022)
 
 [NIST SP 800-37 Rev. 2](https://csrc.nist.gov/pubs/sp/800/37/r2/final) (Risk Management Framework)
-
-[NIST Special Publications](https://itlaw.fandom.com/wiki/NIST_Special_Publications) (Repo by The IT Law Wiki)
 
 [The GRC approach to managing cybersecurity](https://www.coursera.org/learn/grc-approach-to-managing-cybersecurity) (Coursera course)

@@ -45,7 +45,7 @@ Via the executive leadership, cybersecurity governance defines roles and respons
 
 Governance answers the questions: "Who decides what? How do we ensure it happens? And how do we know it's working?" In this vein, it helps to outline key differences between governance and management.
 
-**GRC Governance vs Management (Adapted From Educause.edu)**
+**GRC Governance vs Management (Adapted From EDUCAUSE, 2022)**
 
 | GRC Governance                                                                                                            | GRC Management                                                           |
 | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |

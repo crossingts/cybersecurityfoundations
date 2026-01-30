@@ -24,15 +24,15 @@ This section describes the information security risk assessment. It moves from t
 
 ## Topics covered in this section
 
-* Risk assessment as the foundation of risk management
-* Key concepts: Assets, threats, vulnerabilities, likelihood, and impact
-* The role of security testing in informing risk assessment (NIST SP 800-115)
-* The risk assessment process: A step-by-step model
-* Methodologies: Qualitative vs quantitative approaches
-* Analyzing and evaluating risk: Matrices and scoring
-* Risk treatment: Determining the path forward
-* The risk register: Documenting and managing risks
-* Integrating risk assessment with frameworks and the GRC lifecycle
+* **Risk assessment as the foundation of risk management**
+* **Key concepts: Assets, threats, vulnerabilities, likelihood, and impact**
+* **The role of security testing in informing risk assessment (NIST SP 800-115)**
+* **The risk assessment process: A step-by-step model**
+* **Methodologies: Qualitative vs quantitative approaches**
+* **Analyzing and evaluating risk: Matrices and scoring**
+* **Risk treatment: Determining the path forward**
+* **The risk register: Documenting and managing risks**
+* **Integrating risk assessment with frameworks and the GRC lifecycle**
 
 ### Risk assessment as the foundation of risk management
 
@@ -44,7 +44,7 @@ The risk assessment is not a one-time project but a recurring analytical activit
 
 The risk assessment process is built upon a standardized lexicon, central to frameworks like **NIST SP 800-30 (Guide for Conducting Risk Assessments)**.
 
-* **Asset:** Anything of value that requires protection. This includes data (e.g., customer PII, intellectual property), systems (e.g., ERP servers, domain controllers), hardware, software, people, and reputation.
+* **Asset:** Anything of value that requires protection. This includes data (e.g., customer PII, intellectual property), systems (e.g., ERP servers, domain controllers), hardware, software, and reputation.
 * **Threat:** Any circumstance or event with the potential to adversely impact organizational operations, assets, or individuals through unauthorized access, destruction, disclosure, or modification of information, or denial of service. Threat sources can be adversarial (hackers, insiders), accidental (user error), structural (hardware failure), or environmental (natural disaster).
 * **Vulnerability:** A weakness in an information system, security procedure, internal control, or implementation that could be exploited by a threat source. Examples include an unpatched software flaw, a misconfigured firewall rule, or a lack of employee security awareness.
 * **Likelihood:** The probability that a given threat source will exploit a specific vulnerability. It is often rated on scales like Low/Medium/High, considering factors such as threat capability, intent, and the effectiveness of existing controls.
@@ -56,7 +56,7 @@ The risk assessment process is built upon a standardized lexicon, central to fra
 
 The GRC approach establishes a continuous, closed-loop process for risk management. Governance provides the strategic mandate and framework for managing risk. This directive triggers the risk assessment phase, which systematically identifies security needs and priorities. Based on these findings, appropriate controls are selected and implemented as treatment measures. Security testing then serves the critical function of validating that these controls are operating effectively, with the empirical results feeding directly back into subsequent risk assessment cycles, ensuring the process adapts to a changing threat landscape.
 
-The theoretical framework of risk assessment requires concrete, empirical data to produce accurate and actionable results. This data is gathered through systematic information security testing and assessment, a discipline formally detailed in **NIST SP 800-115, _Technical Guide to Information Security Testing and Assessment_**. While NIST SP 800-30 defines the _risk management process_, SP 800-115 provides the _practical methodologies_ for executing the technical activities that feed vital evidence into that process. Security testing transforms abstract "potential weaknesses" into validated, prioritized findings, forming the evidentiary backbone of a credible risk analysis.
+Risk assessment data is gathered through systematic information security testing and assessment, a discipline formally detailed in **NIST SP 800-115, _Technical Guide to Information Security Testing and Assessment_**. While NIST SP 800-30 defines the _risk management process_, SP 800-115 provides the _practical methodologies_ for executing the technical activities that feed vital evidence into that process. Security testing transforms abstract "potential weaknesses" into validated, prioritized findings, forming the evidentiary backbone of a credible risk analysis.
 
 **Security Testing as the Engine of Evidence Gathering**  
 
@@ -65,24 +65,23 @@ NIST SP 800-115 structures assessment activities into three core techniques, eac
 1. **Testing:** The process of exercising one or more assessment objects under specified conditions to compare actual with expected behavior. This is the most hands-on, technical source of vulnerability data.
     - **Examples:** Vulnerability scanning, penetration testing, social engineering (phishing campaigns), web application security testing, password cracking, network discovery scanning.
     - **GRC/Risk Link:** Provides direct evidence of _vulnerabilities_ (e.g., CVE-2023-XXXXX is present and exploitable) and tests the _effectiveness of implemented controls_ (e.g., does the Intrusion Prevention System actually block the attack?).
-        
 2. **Examination:** The process of checking, inspecting, reviewing, observing, or studying one or more assessment objects to facilitate understanding, achieve clarification, or obtain evidence. This technique validates the existence and configuration of controls.
     - **Examples:** Reviewing firewall rule sets, analyzing system configurations against STIG/CIS benchmarks, auditing access control lists, studying architecture diagrams, reviewing policy documents.
     - **GRC/Risk Link:** Provides evidence for _asset identification_ and _control analysis_. It answers whether controls are _present_ and _designed correctly_.
-        
 3. **Interviewing:** The process of conducting discussions with individuals or groups within an organization to facilitate understanding, achieve clarification, or identify evidence. This technique gathers contextual and procedural knowledge.
     - **Examples:** Interviewing system administrators about patch management procedures, discussing incident response playbooks with the SOC team, questioning developers about secure coding practices.
     - **GRC/Risk Link:** Informs the understanding of _threat sources_ (e.g., insider risks), _likelihood_ (e.g., how often procedures are followed), and operational _impact_.
 
 **Mapping Testing Activities to the Risk Assessment Process**  
+
 The outputs of SP 800-115 activities directly populate specific phases of the SP 800-30 risk assessment model:
 
-|**Risk Assessment Step**|**Relevant SP 800-115 Techniques & Examples**|**Output Fed Into Risk Assessment**|
-|---|---|---|
-|**Identify Vulnerabilities**|**Testing:** Network vulnerability scan, credentialed patch audit, DAST/SAST of an application.  <br>**Examination:** Review of cloud storage bucket permissions (e.g., S3 bucket misconfiguration).|A list of technical vulnerabilities, each with a severity rating (e.g., CVSS score), specific to identified assets.|
-|**Analyze Controls**|**Testing:** Penetration test attempting to bypass WAF, phishing simulation to test user awareness.  <br>**Examination:** Audit of log management configuration to ensure it meets NIST AU family requirements.  <br>**Interviewing:** Discussing the change management process with the IT lead.|Evidence of control effectiveness or failure. Determines if a vulnerability is _theoretical_ or _exploitable in the current environment_.|
-|**Determine Likelihood**|**Testing:** Ease of exploitation demonstrated in a pen test report.  <br>**Examination:** Finding that vulnerability scanning is only performed quarterly vs. continuously.  <br>**Interviewing:** Learning that admin credentials are shared for convenience.|Data points to judge if a threat-source is _capable_ and has _opportunity_, increasing or decreasing the probability rating.|
-|**Determine Impact**|**Testing:** A pen test showing successful lateral movement from a test server to a domain controller.  <br>**Examination:** Data flow diagram review revealing that a vulnerable API has direct access to the primary database.|Concrete evidence of _blast radius_ and _attack paths_, informing the potential magnitude of business impact.|
+| **Risk Assessment Step**     | **Relevant SP 800-115 Techniques & Examples**                                                                                                                                                                                                                                                     | **Output Fed Into Risk Assessment**                                                                                                       |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| **Identify Vulnerabilities** | **Testing:** Network vulnerability scan, credentialed patch audit, DAST/SAST of an application.  <br>**Examination:** Review of cloud storage bucket permissions (e.g., S3 bucket misconfiguration).                                                                                              | A list of technical vulnerabilities, each with a severity rating (e.g., CVSS score), specific to identified assets.                       |
+| **Analyze Controls**         | **Testing:** Penetration test attempting to bypass WAF, phishing simulation to test user awareness.  <br>**Examination:** Audit of log management configuration to ensure it meets NIST AU family requirements.  <br>**Interviewing:** Discussing the change management process with the IT lead. | Evidence of control effectiveness or failure. Determines if a vulnerability is _theoretical_ or _exploitable in the current environment_. |
+| **Determine Likelihood**     | **Testing:** Ease of exploitation demonstrated in a pen test report. <br>**Examination:** Finding that vulnerability scanning is only performed quarterly vs. continuously.  <br>**Interviewing:** Learning that admin credentials are shared for convenience.                                    | Data points to judge if a threat-source is _capable_ and has _opportunity_, increasing or decreasing the probability rating.              |
+| **Determine Impact**         | **Testing:** A pen test showing successful lateral movement from a test server to a domain controller.  <br>**Examination:** Data flow diagram review revealing that a vulnerable API has direct access to the primary database.                                                                  | Concrete evidence of _blast radius_ and _attack paths_, informing the potential magnitude of business impact.                             |
 
 **From Test Findings to Risk Register Entries**  
 
@@ -96,15 +95,9 @@ A critical vulnerability discovered by a scanner (e.g., a critical remote code e
 6. **Risk Rating:** **Critical** (High Likelihood x Critical Impact).
 7. **Treatment:** **Mitigate** by applying patch immediately (Procedure P-XXX). This action becomes a line item in the Risk Register, with the test report as the source evidence.
 
-**Conclusion: An Integrated Cycle**  
+Information security testing is a core component of risk assessment. NIST SP 800-115 provides the practical, technical methods to execute key parts of the risk assessment process (specifically, identifying vulnerabilities and analyzing control effectiveness). NIST SP 800-115 feeds the risk assessment with empirical data. NIST SP 800-115 techniques (vulnerability scanning, penetration testing) generate the objective, technical evidence needed to accurately assess likelihood (e.g., how exploitable is this flaw?) and impact (e.g., how far can an attacker pivot from this entry point?).
 
-Information security testing is not a parallel or separate track from risk assessment; it is a core component. NIST SP 800-115 provides the toolkit that enables the "Identify Vulnerabilities" and "Analyze Controls" steps of the NIST SP 800-30 risk assessment to be performed with objectivity and rigor. For the technical practitioner (CEH, CCNA), this is the daily work that fuels the risk management engine. For the security manager (CISSP), it is the essential practice that ensures risk decisions are based on factual evidence rather than conjecture, thereby validating the effectiveness of the entire GRC program and enabling true risk-informed decision-making.
-
-NIST SP 800-115 provides the practical, technical methods to execute key parts of the risk assessment process (specifically, identifying vulnerabilities and analyzing control effectiveness). 
-
-NIST SP 800-115 feeds the risk assessment with empirical data. NIST SP 800-115 techniques (vulnerability scanning, penetration testing) generate the objective, technical evidence needed to accurately assess likelihood (e.g., how exploitable is this flaw?) and impact (e.g., how far can an attacker pivot from this entry point?).
-
-NIST SP 800-115 aligns with the GRC framework. Testing is the primary tool for the Compliance (C) function to validate the controls implemented as Risk (R) treatments. 
+NIST SP 800-115 provides the toolkit that enables the "Identify Vulnerabilities" and "Analyze Controls" steps of the NIST SP 800-30 risk assessment to be performed with objectivity and rigor. For the technical practitioner, this is the daily work that fuels the risk management engine. For the security manager, it is the essential practice that ensures risk decisions are based on factual evidence, thereby validating the effectiveness of the entire GRC program and enabling true risk-informed decision-making. Testing is the primary tool for the Compliance (C) function to validate the controls implemented as Risk (R) treatments. 
 
 ### The risk assessment process: A step-by-step model
 
@@ -194,7 +187,7 @@ The **Risk Register** is the central repository for all information related to i
 * Inherent Risk Rating
 * Existing Controls
 * Residual Likelihood & Impact (after controls)
-* **Residual Risk Rating**
+* Residual Risk Rating
 * Risk Owner (assigned per governance GV.RR)
 * Recommended Treatment
 * Treatment Action Plan & Due Date

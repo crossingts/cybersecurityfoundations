@@ -49,6 +49,8 @@
   * [Key cybersecurity regulations and standards — Quiz](3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards/key-cybersecurity-regulations-and-standards-quiz.md)
 * [The GRC approach to cybersecurity management](3.-cybersecurity-grc/the-grc-approach-to-cybersecurity-management/README.md)
   * [The GRC approach to cybersecurity management — Quiz](3.-cybersecurity-grc/the-grc-approach-to-cybersecurity-management/the-grc-approach-to-cybersecurity-management-quiz.md)
+* [The information security risk assessment](3.-cybersecurity-grc/the-information-security-risk-assessment/README.md)
+  * [The information security risk assessment — Quiz](3.-cybersecurity-grc/the-information-security-risk-assessment/the-information-security-risk-assessment-quiz.md)
 * [The compliance audit](3.-cybersecurity-grc/the-compliance-audit/README.md)
   * [The compliance audit — Quiz](3.-cybersecurity-grc/the-compliance-audit/the-compliance-audit-quiz.md)
 * [Review questions and exercises](3.-cybersecurity-grc/review-questions-and-exercises.md)

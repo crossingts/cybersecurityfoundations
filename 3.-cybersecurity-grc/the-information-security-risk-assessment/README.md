@@ -25,6 +25,7 @@ This section details the core analytical process at the heart of cybersecurity r
 
 * Introduction: Risk Assessment as the Foundation of Risk Management
 * Key Concepts: Assets, Threats, Vulnerabilities, Likelihood, and Impact
+* 
 * The Risk Assessment Process: A Step-by-Step Model
 * Methodologies: Qualitative vs. Quantitative Approaches
 * Analyzing and Evaluating Risk: Matrices and Scoring
@@ -177,3 +178,15 @@ The risk assessment process is not standalone; it is embedded within larger fram
 * NIST SP 800-30 Rev. 1. _Guide for Conducting Risk Assessments._
 * ISO/IEC 27005:2022. _Information security, cybersecurity and privacy protection — Guidance on managing information security risks._
 * ISACA. _The Risk IT Framework._
+
+--
+NIST SP 800-115 provides the practical, technical methods to execute key parts of the risk assessment process (specifically, identifying vulnerabilities and analyzing control effectiveness). 
+
+NIST SP 800-115 feeds the risk assessment with empirical data. NIST SP 800-115 techniques (vulnerability scanning, penetration testing) generate the objective, technical evidence needed to accurately assess likelihood (e.g., how exploitable is this flaw?) and impact (e.g., how far can an attacker pivot from this entry point?).
+
+NIST SP 800-115 aligns with the GRC framework. 
+Testing is the primary tool for the Compliance (C) function to validate the controls implemented as Risk (R) treatments. 
+
+The GRC approach to risk management process 
+Placing it here shows the integrated flow: Governance mandates risk management -> Risk assessment identifies needs -> Controls are implemented -> Testing validates those controls, feeding data back into the next risk assessment cycle.
+

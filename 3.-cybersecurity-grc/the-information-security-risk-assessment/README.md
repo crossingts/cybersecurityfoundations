@@ -7,33 +7,34 @@ hidden: true
 
 # The information security risk assessment
 
-This section details the core analytical process at the heart of cybersecurity risk management: the information security risk assessment. It moves from the strategic principles of governance into the practical, systematic identification, analysis, and evaluation of risks to an organization's information assets. The risk assessment provides the essential evidence-based foundation for making informed decisions about where to allocate security resources and how to prioritize treatment actions.
+## Learning objectives
 
-**Learning Objectives**
+* Define information security risk in the context of confidentiality, integrity, and availability (CIA triad) and business impact
+* Describe the fundamental purpose and business value of conducting a risk assessment within a GRC program
+* Describe how methods from NIST SP 800-115 (testing, examination, interviewing) can be used to collect technical evidence for risk assessment phases
+* Outline the key steps in a standardized risk assessment process, from scoping and asset identification to risk evaluation and treatment planning
+* Distinguish between qualitative and quantitative risk assessment methodologies and identify scenarios for their use
+* Identify common threat sources, threat events, vulnerabilities, and likelihood/impact criteria used in risk analysis
+* Explain the four primary risk treatment options: mitigate, accept, avoid, and transfer
+* Map the risk assessment process to established frameworks, including NIST SP 800-30 and ISO/IEC 27005
+* Articulate how the risk assessment directly informs control selection (e.g., from NIST SP 800-53) and prioritizes compliance efforts
+* Describe the role of the risk register as the central artifact for tracking and managing risks through their lifecycle
 
-* Define information security risk in the context of confidentiality, integrity, and availability (CIA triad) and business impact.
-* Describe the fundamental purpose and business value of conducting a risk assessment within a GRC program.
-* Outline the key steps in a standardized risk assessment process, from scoping and asset identification to risk evaluation and treatment planning.
-* Distinguish between qualitative and quantitative risk assessment methodologies and identify scenarios for their use.
-* Identify common threat sources, threat events, vulnerabilities, and likelihood/impact criteria used in risk analysis.
-* Explain the four primary risk treatment options: mitigate, accept, avoid, and transfer.
-* Map the risk assessment process to established frameworks, including NIST SP 800-30 and ISO/IEC 27005.
-* Articulate how the risk assessment directly informs control selection (e.g., from NIST SP 800-53) and prioritizes compliance efforts.
-* Describe the role of the risk register as the central artifact for tracking and managing risks through their lifecycle.
+This section describes the information security risk assessment. It moves from the strategic principles of governance into the practical, systematic identification, analysis, and evaluation of risks to an organization's information assets. The risk assessment provides the essential evidence-based foundation for making informed decisions about where to allocate security resources and how to prioritize treatment actions.
 
-**Topics Covered in This Section**
+## Topics covered in this section
 
-* Introduction: Risk Assessment as the Foundation of Risk Management
-* Key Concepts: Assets, Threats, Vulnerabilities, Likelihood, and Impact
-* The Role of Security Testing in Informing Risk Assessment (NIST SP 800-115)
-* The Risk Assessment Process: A Step-by-Step Model
-* Methodologies: Qualitative vs. Quantitative Approaches
-* Analyzing and Evaluating Risk: Matrices and Scoring
-* Risk Treatment: Determining the Path Forward
-* The Risk Register: Documenting and Managing Risks
-* Integrating Risk Assessment with Frameworks and the GRC Lifecycle
+* Risk assessment as the foundation of risk management
+* Key concepts: Assets, threats, vulnerabilities, likelihood, and impact
+* The role of security testing in informing risk assessment (NIST SP 800-115)
+* The risk assessment process: A step-by-step model
+* Methodologies: Qualitative vs quantitative approaches
+* Analyzing and evaluating risk: Matrices and scoring
+* Risk treatment: Determining the path forward
+* The risk register: Documenting and managing risks
+* Integrating risk assessment with frameworks and the GRC lifecycle
 
-#### **Introduction: Risk Assessment as the Foundation of Risk Management**
+### Risk assessment as the foundation of risk management
 
 An information security risk assessment is a systematic process of identifying, analyzing, and evaluating risks to an organization's information assets. It answers the critical questions: "What do we have that is valuable?" "What could go wrong?" "How bad would it be if it did?" and "What should we do about it?" This process transforms the abstract concept of "cyber risk" into a prioritized list of actionable items that can be managed within the strategic context set by governance and the risk appetite.
 

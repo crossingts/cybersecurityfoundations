@@ -12,13 +12,13 @@ Most people will make their passwords the exact length of the minimum required. 
 
 ECC defines four main attack types for password cracking: passive online, active online, offline, and non-electronic (social engineering).
 
-• Passive online attack: This essentially boils down to sniffing a wire in an attempt to either intercept a password in clear text or execute a replay attack or a man-in-the-middle (MITM) attack. A password sent in clear text using Telnet, for example, can be easily discovered using a packet analyzer. A password sent hashed or encrypted, can be uncovered by comparing the hash or cipher to a dictionary list or by trying a password cracker on the captured value.&#x20;
+• Passive online attack: This essentially boils down to sniffing a wire in an attempt to either intercept a password in clear text or execute a replay attack or a man-in-the-middle (MITM) attack. A password sent in clear text using Telnet, for example, can be easily discovered using a packet analyzer. A password sent hashed or encrypted, can be uncovered by comparing the hash or cipher to a dictionary list or by trying a password cracker on the captured value. 
 
 During the man-in-the-middle attack, the hacker will attempt to re-send the authentication request to the server for the client, effectively routing all traffic through the attacker’s machine. In a replay attack, however, the entire authentication process is captured and replayed at a later time—the client isn’t even part of the session. (Walker, 2012, p. 158)
 
-Some tools such as Cain and Abel, a Windows-based sniffer/password cracker, can be used to automate passive online password hacking. Cain will capture all the clear-text passwords, along with any hashes. You can then use Cain to execute some offline brute-force or dictionary attacks on the password hashes.&#x20;
+Some tools such as Cain and Abel, a Windows-based sniffer/password cracker, can be used to automate passive online password hacking. Cain will capture all the clear-text passwords, along with any hashes. You can then use Cain to execute some offline brute-force or dictionary attacks on the password hashes. 
 
-• Active online attack: This entails the attacker guessing passwords. This includes dictionary and brute-force attacks, hash injections, phishing, Trojans, spyware, keyloggers, and password guessing. In a hash injection attack, the attacker injects a stolen hash into a local session in hopes of accessing something. Trojans or spyware can be installed on the system to steal passwords.&#x20;
+• Active online attack: This entails the attacker guessing passwords. This includes dictionary and brute-force attacks, hash injections, phishing, Trojans, spyware, keyloggers, and password guessing. In a hash injection attack, the attacker injects a stolen hash into a local session in hopes of accessing something. Trojans or spyware can be installed on the system to steal passwords. 
 
 Active online attacks take a much longer time than passive attacks, and are also much easier to detect. These attacks try to take advantage of bad passwords and security practices by individuals on a network. (Walker, 2012, p. 163)
 
@@ -85,7 +85,7 @@ The **C$ share** is another **hidden administrative share** that grants access t
   * Restrict SMB access via firewall rules.
   * Use **LAPS (Local Admin Password Solution)** to randomize local admin passwords.
 
-Note — Passwords on Windows systems are found in the SAM file, located in c:\windows\system32\config (you may also find one in c:\windows\repair folder). Passwords for Linux are found in /etc/shadow.&#x20;
+Note — Passwords on Windows systems are found in the SAM file, located in c:\windows\system32\config (you may also find one in c:\windows\repair folder). Passwords for Linux are found in /etc/shadow. 
 
 **Keyloggers and Screen Capture**
 
@@ -149,7 +149,7 @@ Here’s a table summarizing which free/open-source keylogger detection tools wo
 | **Spybot S\&D**      | ✅           | ❌         | ❌         | Windows-only.                                                            |
 | **RKill**            | ✅           | ❌         | ❌         | Windows-only (terminates malware processes).                             |
 
-#### **Key Takeaways**:
+#### Key Takeaways:
 
 * **Cross-Platform Tools**:
   * **ClamAV** (antivirus) and **Wireshark** (network analysis) work on all three OSes.
@@ -160,9 +160,9 @@ Here’s a table summarizing which free/open-source keylogger detection tools wo
 * **Linux**:
   * Relies on **ClamAV** or manual inspection (e.g., `ps aux`, `netstat`).
 
-• Offline attack: This happens when an attacker steals a password database (like Windows' **SAM file** or a Linux **/etc/shadow**) and cracks it offline on their own system using such tools as Hashcat or John the Ripper—without interacting with the target. When an attacker **"cracks"** a stolen password file, they use computational methods to convert the scrambled (hashed) passwords back into plaintext.&#x20;
+• Offline attack: This happens when an attacker steals a password database (like Windows' **SAM file** or a Linux **/etc/shadow**) and cracks it offline on their own system using such tools as Hashcat or John the Ripper—without interacting with the target. When an attacker **"cracks"** a stolen password file, they use computational methods to convert the scrambled (hashed) passwords back into plaintext. 
 
-There are three main methods of offline password cracking: dictionary attack, hybrid attack, and brute-force attack.&#x20;
+There are three main methods of offline password cracking: dictionary attack, hybrid attack, and brute-force attack. 
 
 1. **Dictionary Attack**\
    Uses a pre-made list of passwords (e.g., common words, leaked passwords). Each entry is hashed and compared to the stolen hash. If matched, the password is cracked.
@@ -185,7 +185,7 @@ Precomputed tables of hashes of every password imaginable for quick lookups. Fas
 | **THC Hydra**       | Linux/Windows | Online services (SSH, FTP, RDP, etc.)            | Dictionary, Brute-force                     | Not strictly offline but useful for credential stuffing.                                         |
 | **RainbowCrack**    | Linux/Windows | Generic hashes (with rainbow tables)             | Rainbow tables                              | Precomputed hashes for faster cracking. Limited to supported algorithms.                         |
 
-#### **Clarification Notes**
+#### Clarification Notes
 
 * **Fastest method**: Dictionary attacks (using tools like John or Hashcat).
 * **Most thorough**: Brute-force (but slow; Hashcat’s GPU support speeds this up).
@@ -193,9 +193,9 @@ Precomputed tables of hashes of every password imaginable for quick lookups. Fas
 * **For versatility**: Hashcat (supports almost every hash type).
 * **Not open-source**: Ophcrack (proprietary but free). LC5/L0phtCrack, Cain, KerbCrack, and Legion are proprietary tools.
 
-#### **Escalating Privileges and Maintaining Stealth**
+#### Escalating Privileges and Maintaining Stealth
 
-Gaining administrator (or root) privileges is a critical step in penetration testing. Attackers typically rely on four main methods to achieve privilege escalation, each with its own advantages and challenges. A skilled ethical hacker will use a combination of these methods, adapting based on the target’s defenses.&#x20;
+Gaining administrator (or root) privileges is a critical step in penetration testing. Attackers typically rely on four main methods to achieve privilege escalation, each with its own advantages and challenges. A skilled ethical hacker will use a combination of these methods, adapting based on the target’s defenses. 
 
 **1. Cracking the Password of a Privileged Account**
 
@@ -276,9 +276,9 @@ Each privilege escalation method has its strengths:
 * **Metasploit** automates exploitation but has a learning curve.
 * **Social engineering** is the easiest but relies on human error.
 
-#### **Stealth: Before, During, and After**
+#### Stealth: Before, During, and After
 
-After gaining access to a machine, a hacker must remain stealthy. There’s stealth involved in hiding files, covering tracks, and maintaining access on the machine. To operate undetected during a penetration test or malicious attack, adversaries employ various techniques to hide files, evade logging, and cover their tracks.&#x20;
+After gaining access to a machine, a hacker must remain stealthy. There’s stealth involved in hiding files, covering tracks, and maintaining access on the machine. To operate undetected during a penetration test or malicious attack, adversaries employ various techniques to hide files, evade logging, and cover their tracks. 
 
 * Hiding Files on Windows Systems
 * Data Concealment via Steganography
@@ -305,7 +305,7 @@ Alternate Data Streams (ADS) is a feature of the NTFS file system that allows fi
     ```
 * The hidden file does not appear in directory listings (`dir`) or Windows Explorer unless explicitly checked.
 
-Hands on NTFS File Streaming exercise: See Walker (2012, p. 172, Exercise 6-2: NTFS File Streaming). In the first part of this exercise, you want to hide the contents of a file named wanttohide.txt. To do this, you’re going to hide it behind a normal file that anyone browsing the directory would see. In the second part, you’ll hide an executable behind a file.&#x20;
+Hands on NTFS File Streaming exercise: See Walker (2012, p. 172, Exercise 6-2: NTFS File Streaming). In the first part of this exercise, you want to hide the contents of a file named wanttohide.txt. To do this, you’re going to hide it behind a normal file that anyone browsing the directory would see. In the second part, you’ll hide an executable behind a file. 
 
 **Detection & Limitations:**
 
@@ -460,9 +460,9 @@ There are three main types of rootkits (Walker, 2012, p. 175):
 
 • Kernel level: These rootkits attack the boot sectors and kernel level of the operating systems themselves, replacing kernel code with backdoor code. These are by far the most dangerous and are difficult to detect and remove.
 
-• Library level: These rootkits basically make use of system-level calls to hide their existence.&#x20;
+• Library level: These rootkits basically make use of system-level calls to hide their existence. 
 
-#### **The Evolution of Linux Rootkits**
+#### The Evolution of Linux Rootkits
 
 Rootkits first emerged in the Linux environment, primarily taking two distinct forms:
 
@@ -484,6 +484,34 @@ This progression from user-space binary replacement to kernel-level integration 
 
 Rootkits are exponentially more complicated than your typical malware application and reflect significant sophistication. If your company detects a customized rootkit and thinks they were targeted, it’s time to get the FBI involved. And to truly scare the wits out of you, check out what a truly sophisticated rootkit can do: http://en.wikipedia.org/wiki/Blue\_ Pill\_(malware). (Walker, 2012, p. 177)
 
-### Key takeaways
+Privilege escalation relies on weak credentials, unpatched vulnerabilities, exploitation tools like Metasploit, or social engineering.
 
-Privilege escalation relies on weak credentials, unpatched vulnerabilities, exploitation tools like Metasploit, or social engineering
+#### Lateral Movement
+
+**RDP vs. SMB: A Pentester's Comparison**
+
+|Feature|**RDP (Remote Desktop Protocol)**|**SMB (Server Message Block)**|
+|---|---|---|
+|**Primary Purpose**|**Remote Access & Graphical Control.** Provides a user with a full graphical desktop interface to a remote computer.|**File, Printer, & Resource Sharing.** Enables shared access to files, printers, and serial ports over a network.|
+|**OSI Layer**|Application Layer (Layer 7)|Presentation/Application Layer (Layers 6/7)|
+|**Default Port**|**TCP 3389** (can be changed)|**TCP 445** (modern, direct). Historically used NetBIOS over TCP (ports 139, 137, 138).|
+|**Core Function**|**"I want to use that computer as if I'm sitting in front of it."**|**"I want to read/write files or use a printer on that computer."**|
+|**Pentesting Value (Why it's a target)**|**Direct pathway to user interaction and credential theft.** Provides a login portal. Compromise can lead to full GUI control of the host.|**Pathway to sensitive data and lateral movement.** Often exposes file shares with sensitive info and can be exploited for code execution.|
+|**Common Enumeration Info**|Version, whether NLA (Network Level Authentication) is enabled, login banner, supported encryption.|**Share names** (e.g., `C$`, `ADMIN$`, `Data`), user/group lists via null/guest sessions, OS version, file listings.|
+|**Key Attack Vectors**|• Brute-force/Password Spraying  <br>• Credential Theft (via keylogger on host)  <br>• BlueKeep (CVE-2019-0708) & other RDP-specific vulns  <br>• Session Hijacking|• **Pass-the-Hash** / **NTLM Relay** attacks  <br>• Exploiting weak share permissions (e.g., "Everyone: Full Control")  <br>• **EternalBlue** (CVE-2017-0144) & other SMBv1 vulns  <br>• SMB-based data exfiltration|
+|**Typical Pentesting Workflow**|1. Discover port 3389 open.  <br>2. Check for NLA.  <br>3. Attempt brute-force or password spray.  <br>4. Exploit known RDP vulnerabilities.  <br>5. Gain a user's desktop session.|1. Discover port 445 open.  <br>2. Enumerate shares (`net view`, `smbclient`).  <br>3. Attempt anonymous/null session access.  <br>4. Exploit SMB protocol vulnerabilities.  <br>5. Use shares for lateral movement (e.g., PSExec).|
+
+**Key Relationship & Strategic Importance**
+
+In a network attack chain, these protocols often work in tandem for **lateral movement**:
+
+1. **Initial Compromise:** An attacker might first exploit a vulnerability via **SMB** (e.g., EternalBlue) to get a shell on a host.
+2. **Credential Harvesting:** They then dump credentials (like NTLM hashes) from that host's memory.
+3. **Lateral Movement:** Using these credentials, they attempt to authenticate via **RDP** to a more critical server (like a domain controller) or use SMB again (via Pass-the-Hash) to access administrative shares (`C$`, `ADMIN$`) on another machine.
+
+**In summary:**
+
+- **RDP** is your **gateway to a user's session and direct control**. It's a primary target for gaining interactive access.
+- **SMB** is your **gateway to the network's file system and a major vector for credential-based attacks**. It's a primary target for stealing data and moving sideways.
+
+For a pentester, finding either protocol exposed, especially with weak authentication or known vulnerabilities, is a significant finding. Finding both on key systems often defines the path to full domain compromise.

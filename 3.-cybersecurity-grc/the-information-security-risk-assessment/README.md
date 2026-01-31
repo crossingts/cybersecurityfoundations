@@ -54,9 +54,7 @@ The risk assessment process is built upon a standardized lexicon, central to fra
 
 ### The role of security testing in informing risk assessment (NIST SP 800-115)
 
-The GRC approach establishes a continuous, closed-loop process for risk management. Governance provides the strategic mandate and framework for managing risk. This directive triggers the risk assessment phase, which systematically identifies security needs and priorities. Based on these findings, appropriate controls are selected and implemented as treatment measures. Security testing then serves the critical function of validating that these controls are operating effectively, with the empirical results feeding directly back into subsequent risk assessment cycles, ensuring the process adapts to a changing threat landscape.
-
-Risk assessment data is gathered through systematic information security testing and assessment, a discipline formally detailed in **NIST SP 800-115, _Technical Guide to Information Security Testing and Assessment_**. While NIST SP 800-30 defines the _risk management process_, SP 800-115 provides the _practical methodologies_ for executing the technical activities that feed vital evidence into that process. Security testing transforms abstract "potential weaknesses" into validated, prioritized findings, forming the evidentiary backbone of a credible risk analysis.
+Risk assessment data is gathered through systematic information security testing and assessment, a discipline formally detailed in NIST SP 800-115, Technical Guide to Information Security Testing and Assessment. While NIST SP 800-30 defines the risk management process, SP 800-115 provides the practical methodologies for executing the technical activities that feed vital evidence into that process. Security testing transforms abstract "potential weaknesses" into validated, prioritized findings, forming the evidentiary backbone of a credible risk analysis.
 
 **Security Testing as the Engine of Evidence Gathering**  
 
@@ -214,7 +212,7 @@ The risk assessment process is not standalone; it is embedded within larger fram
 ### Key takeaways
 
 * The information security risk assessment is a systematic process to identify, analyze, and evaluate risks to information assets, forming the evidence-based core of risk management.
-* Risk is a function of threats exploiting vulnerabilities, weighed by likelihood and impact on the CIA triad and business operations.
+* Risk is a function of threats exploiting vulnerabilities, assessed based on likelihood and impact on the CIA triad and business operations.
 * A standardized process involves preparation, asset/threat/vulnerability identification, control analysis, likelihood/impact determination, risk calculation, and treatment recommendation.
 * Qualitative methods use subjective scales for speed and communication, while quantitative methods use financial calculations for precise cost-benefit analysis.
 * Risks are evaluated using a risk matrix and treated via mitigate, accept, avoid, or transfer strategies.

@@ -88,3 +88,28 @@ The Risk Register is the central, living document that tracks identified risks t
 1. Risk Description (including affected assets and threat-vulnerability pair).
 2. Risk Rating (both Inherent and Residual, based on likelihood and impact).
 3. Risk Owner and Recommended Treatment/Action Plan.
+
+### The compliance audit
+
+**1. Define a cybersecurity compliance audit and explain how it differs fundamentally from a risk assessment.**  
+**Answer:**  
+A cybersecurity compliance audit is a systematic, independent process for obtaining and evaluating objective evidence to determine the extent to which an organization meets defined compliance criteria (e.g., regulations, standards, internal policies). Unlike a risk assessment, which is forward-looking to _identify_ potential vulnerabilities and threats, an audit is backward-looking to _validate_ that specific, mandated controls are correctly implemented and operating effectively.
+
+**2. Describe the key difference between an internal audit and a third-party audit, including a typical objective for each.**  
+**Answer:**  
+An internal audit is conducted by or for the organization itself (e.g., by an internal audit department) to provide management with independent assurance and to prepare for external scrutiny. A third-party audit is performed by an independent, accredited organization (e.g., a PCI QSA) to provide objective certification or attestation to external stakeholders. An internal audit's objective might be to evaluate control effectiveness for management review, while a third-party audit's objective is often to achieve a formal certification like ISO 27001.
+
+**3. Outline the five-phase audit process and state the primary goal of the "Follow-up" phase.** 
+**Answer:**  
+The five-phase audit process is: 1) Planning & Scoping, 2) Evidence Collection, 3) Testing & Evaluation, 4) Reporting & Documentation, and 5) Management Response & Follow-up. The primary goal of the "Follow-up" phase is to verify that the corrective actions outlined in the management's Corrective Action Plan (CAP) have been effectively implemented, thereby closing the audit loop and ensuring findings are remediated.
+
+**4. Explain two common methodologies an auditor uses during the Evidence Collection phase and provide an example of each.**  
+**Answer:**  
+Two common methodologies are:
+
+- **Document Review:** Examining written records for evidence of control operation. _Example:_ Reviewing system configuration change logs to verify a formal change management process was followed.
+- **Technical Testing:** Using tools to independently verify control settings. _Example:_ Running a CIS-CAT benchmark scan on a server to confirm its configuration matches the hardened security baseline.
+
+**5. Explain the role of the Corrective Action Plan (CAP) and why it must include Preventive Actions, not just Corrective Actions.**  
+**Answer:**  
+The Corrective Action Plan (CAP) is the auditee's formal project plan for addressing audit findings. It must include Preventive Actions to address the root cause of a finding and prevent its recurrence, rather than just Corrective Actions which fix the immediate symptom. For example, a CAP would not only correct a specific orphaned user account (corrective action) but also implement an automated user lifecycle management tool to prevent future orphaned accounts (preventive action). This ensures long-term compliance and closes the control gap.

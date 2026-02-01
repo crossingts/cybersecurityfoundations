@@ -13,7 +13,7 @@ hidden: true
 * Distinguish between internal, external, and third-party audit types and explain their respective roles in the compliance ecosystem
 * Identify common audit methodologies, including the use of sampling, interviews, technical testing, and document review to gather objective evidence
 * Explain the role of the Corrective Action Plan (CAP) and the importance of audit follow-up and management response in closing the compliance loop
-* Analyze common challenges in compliance audits, such as scope creep, evidence collection difficulties, and managing auditor-findings
+* Analyze common challenges in compliance audits, such as scope creep, evidence collection difficulties, and managing auditor findings
 * Articulate how the compliance audit process integrates with and validates the broader GRC lifecycle and risk management framework
 
 This section details the formal process of verifying and validating that an organization’s cybersecurity controls are correctly implemented, operating effectively, and aligned with external regulations, internal policies, and industry standards. It explores the compliance audit as the critical assurance mechanism within the GRC framework, transforming written policies and implemented controls into demonstrable evidence of due care and adherence.
@@ -29,7 +29,7 @@ This section details the formal process of verifying and validating that an orga
 
 ### Introduction: The role of audit in GRC
 
-Within the integrated GRC model, governance sets the rules (policies and standards), risk management identifies what needs to be protected and how, and compliance provides the verification. The compliance audit is the formal engine of this verification. It is a systematic, independent, and documented process for obtaining audit evidence and evaluating it objectively to determine the extent to which compliance criteria—be they from GDPR, HIPAA, PCI DSS, or internal policies—are fulfilled.
+Within the integrated GRC model, governance sets the rules (policies and standards), risk management identifies what needs to be protected and how, and compliance provides the verification. The compliance audit is the formal mechanism of this verification. It is a systematic, independent, and documented process for obtaining audit evidence and evaluating it objectively to determine the extent to which compliance criteria—be they from GDPR, HIPAA, PCI DSS, or internal policies—are fulfilled.
 
 An audit answers the fundamental question for leadership and regulators: "How do we _know_ we are secure and compliant?" It moves assertions from theory to proven practice. While a risk assessment might identify a vulnerability, and governance might mandate a control to mitigate it, only an audit can independently confirm that the control is in place, functioning as designed, and effective over time. This process provides the assurance necessary for management to authorize systems (as in the NIST SP 800-37 Rev2 RMF Authorize step) and for boards to fulfill their oversight duties.
 
@@ -66,7 +66,7 @@ Auditors gather objective evidence to evaluate against the criteria. Evidence mu
 
 * **Interviews:** Discussing processes with control owners (e.g., the system administrator responsible for access reviews).
 * **Document Review:** Examining policies, procedures, system configurations, logs, training records, and previous audit reports.
-* **Technical Testing:** Observing control operation, performing configuration reviews against baselines (e.g., using CIS-CAT), analyzing log outputs, or conducting vulnerability scans (Note: deep penetration testing is often a separate, specialized activity).
+* **Technical Testing:** Observing control operation, performing configuration reviews against baselines (e.g., using CIS-CAT), analyzing log outputs, or conducting vulnerability scans (note that deep penetration testing is typically a separate, specialized activity beyond standard audit testing).
 * **Observation:** Witnessing a process in action (e.g., observing a disaster recovery drill).
 
 **3. Testing & Evaluation**\

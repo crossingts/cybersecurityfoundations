@@ -50,40 +50,39 @@ A Key Performance Indicator (KPI) measures the performance and efficiency of sec
 
 ### The information security risk assessment
 
-**1. Describe the fundamental purpose of an information security risk assessment and explain its value within a GRC program.**  
-**Answer:**  
+**1. Describe the fundamental purpose of an information security risk assessment and explain its value within a GRC program.**\
+**Answer:**\
 The fundamental purpose of a risk assessment is to systematically identify, analyze, and evaluate risks to information assets to answer key questions about what is valuable, what could go wrong, how bad it would be, and what to do about it. Its value within a GRC program is that it provides the evidence-based foundation for informed decision-making, guiding control selection, prioritizing compliance efforts, justifying security investments, and measuring changes in risk posture over time.
 
-**2. Compare and contrast qualitative and quantitative risk assessment methodologies, including one primary advantage of each.**  
-**Answer:**  
+**2. Compare and contrast qualitative and quantitative risk assessment methodologies, including one primary advantage of each.**\
+**Answer:**\
 Qualitative risk assessment uses subjective scales (e.g., High, Medium, Low) based on expert judgment and consensus. Its primary advantage is that it is faster and easier to perform, making it effective for communication. Quantitative risk assessment uses numerical values and calculations (e.g., financial loss expectations). Its primary advantage is that it provides objective data for cost-benefit analysis, which is useful for justifying budgets and making precise financial decisions.
 
-**3. List and briefly define the four primary risk treatment options. Provide a distinct example for the "Mitigate" option.**  
-**Answer:**  
+**3. List and briefly define the four primary risk treatment options. Provide a distinct example for the "Mitigate" option.**\
+**Answer:**\
 The four primary risk treatment options are:
 
-- **Mitigate:** Implement controls to reduce the likelihood or impact of the risk.
-- **Accept:** Formally acknowledge and consciously take no action, as the risk falls within the organization's risk appetite.
-- **Avoid:** Eliminate the risk entirely by discontinuing the risky activity.
-- **Transfer:** Shift the financial burden to a third party (e.g., via cyber insurance).  
-    **Example of Mitigate:** To mitigate the risk of credential theft from phishing, implement a mandatory multi-factor authentication (MFA) control.
+* **Mitigate:** Implement controls to reduce the likelihood or impact of the risk.
+* **Accept:** Formally acknowledge and consciously take no action, as the risk falls within the organization's risk appetite.
+* **Avoid:** Eliminate the risk entirely by discontinuing the risky activity.
+* **Transfer:** Shift the financial burden to a third party (e.g., via cyber insurance).\
+  **Example of Mitigate:** To mitigate the risk of credential theft from phishing, implement a mandatory multi-factor authentication (MFA) control.
 
-**4. Outline the key steps in a standardized risk assessment process, from preparation through to treatment recommendation.**  
-**Answer:**  
+**4. Outline the key steps in a standardized risk assessment process, from preparation through to treatment recommendation.**\
+**Answer:**\
 A standardized risk assessment process typically includes these key steps:
 
-1. Prepare for Assessment (scoping, planning, and team assembly).
-2. Identify Assets and characterize the system.
+1. Prepare for Assessment (Scoping & Planning).
+2. Identify Assets & System Characterization.
 3. Identify Threats and Vulnerabilities.
-4. Analyze existing or planned Controls.
-5. Determine the Likelihood and Impact for each threat-vulnerability pair.
-6. Calculate and Prioritize the level of risk.
-7. Recommend and Document risk Treatment options.
+4. Analyze Controls.
+5. Determine Likelihood & Impact.
+6. Calculate & Prioritize Risk.
+7. Recommend & Document Treatment.
 
-**5. Explain the role of the Risk Register in the risk management lifecycle and list three key pieces of information it should contain for a documented risk.**  
-**Answer:**  
-The Risk Register is the central, living document that tracks identified risks through their entire lifecycle. It connects the assessment phase to treatment and monitoring, enabling continuous risk management by recording a risk's status, owner, and treatment plan over time.  
-**Three key pieces of information it contains for a risk are:**
+**5. Explain the role of the Risk Register in the risk management lifecycle and list three key pieces of information it should contain for a documented risk.**\
+**Answer:**\
+The Risk Register is the central, living document that tracks identified risks through their entire lifecycle. It connects the assessment phase to treatment and monitoring, enabling continuous risk management by recording a risk's status, owner, and treatment plan over time. Three key pieces of information it contains for a risk are:
 
 1. Risk Description (including affected assets and threat-vulnerability pair).
 2. Risk Rating (both Inherent and Residual, based on likelihood and impact).
@@ -91,25 +90,24 @@ The Risk Register is the central, living document that tracks identified risks t
 
 ### The compliance audit
 
-**1. Define a cybersecurity compliance audit and explain how it differs fundamentally from a risk assessment.**  
-**Answer:**  
-A cybersecurity compliance audit is a systematic, independent process for obtaining and evaluating objective evidence to determine the extent to which an organization meets defined compliance criteria (e.g., regulations, standards, internal policies). Unlike a risk assessment, which is forward-looking to _identify_ potential vulnerabilities and threats, an audit is backward-looking to _validate_ that specific, mandated controls are correctly implemented and operating effectively.
+**1. Define a cybersecurity compliance audit and explain how it differs fundamentally from a risk assessment.**\
+**Answer:**\
+A cybersecurity compliance audit is a systematic, independent process for obtaining and evaluating objective evidence to determine the extent to which an organization meets defined compliance criteria (e.g., regulations, standards, internal policies). Unlike a risk assessment, which is forward-looking to identify potential vulnerabilities and threats, an audit is backward-looking to validate that specific, mandated controls are correctly implemented and operating effectively.
 
-**2. Describe the key difference between an internal audit and a third-party audit, including a typical objective for each.**  
-**Answer:**  
+**2. Describe the key difference between an internal audit and a third-party audit, including a typical objective for each.**\
+**Answer:**\
 An internal audit is conducted by or for the organization itself (e.g., by an internal audit department) to provide management with independent assurance and to prepare for external scrutiny. A third-party audit is performed by an independent, accredited organization (e.g., a PCI QSA) to provide objective certification or attestation to external stakeholders. An internal audit's objective might be to evaluate control effectiveness for management review, while a third-party audit's objective is often to achieve a formal certification like ISO 27001.
 
-**3. Outline the five-phase audit process and state the primary goal of the "Follow-up" phase.** 
-**Answer:**  
+**3. Outline the five-phase audit process and state the primary goal of the "Follow-up" phase.** **Answer:**\
 The five-phase audit process is: 1) Planning & Scoping, 2) Evidence Collection, 3) Testing & Evaluation, 4) Reporting & Documentation, and 5) Management Response & Follow-up. The primary goal of the "Follow-up" phase is to verify that the corrective actions outlined in the management's Corrective Action Plan (CAP) have been effectively implemented, thereby closing the audit loop and ensuring findings are remediated.
 
-**4. Explain two common methodologies an auditor uses during the Evidence Collection phase and provide an example of each.**  
-**Answer:**  
+**4. Explain two common methodologies an auditor uses during the Evidence Collection phase and provide an example of each.**\
+**Answer:**\
 Two common methodologies are:
 
-- **Document Review:** Examining written records for evidence of control operation. _Example:_ Reviewing system configuration change logs to verify a formal change management process was followed.
-- **Technical Testing:** Using tools to independently verify control settings. _Example:_ Running a CIS-CAT benchmark scan on a server to confirm its configuration matches the hardened security baseline.
+* **Document Review:** Examining written records for evidence of control operation. _Example:_ Reviewing system configuration change logs to verify a formal change management process was followed.
+* **Technical Testing:** Using tools to independently verify control settings. _Example:_ Running a CIS-CAT benchmark scan on a server to confirm its configuration matches the hardened security baseline.
 
-**5. Explain the role of the Corrective Action Plan (CAP) and why it must include Preventive Actions, not just Corrective Actions.**  
-**Answer:**  
+**5. Explain the role of the Corrective Action Plan (CAP) and why it must include Preventive Actions, not just Corrective Actions.**\
+**Answer:**\
 The Corrective Action Plan (CAP) is the auditee's formal project plan for addressing audit findings. It must include Preventive Actions to address the root cause of a finding and prevent its recurrence, rather than just Corrective Actions which fix the immediate symptom. For example, a CAP would not only correct a specific orphaned user account (corrective action) but also implement an automated user lifecycle management tool to prevent future orphaned accounts (preventive action). This ensures long-term compliance and closes the control gap.

@@ -43,7 +43,6 @@
 ## 3. Cybersecurity GRC
 
 * [Introduction - Cybersecurity GRC](3.-cybersecurity-grc/introduction-cybersecurity-grc.md)
-* [Cybersecurity GRC](https://dti-techs.gitbook.io/cybersecurity-grc)
 * [Key cybersecurity regulations and standards](3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards/README.md)
   * [FISMA compliance roadmap](3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards/fisma-compliance-roadmap.md)
   * [Key cybersecurity regulations and standards — Quiz](3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards/key-cybersecurity-regulations-and-standards-quiz.md)

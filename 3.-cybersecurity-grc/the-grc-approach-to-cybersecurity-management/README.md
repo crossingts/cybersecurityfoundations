@@ -39,9 +39,7 @@ The GRC approach to cybersecurity management (cybersecurity GRC) means applying 
 
 ### Cybersecurity governance (G)
 
-Cybersecurity governance defines the strategic direction, policies, and decision-making structures to ensure cybersecurity efforts—IT infrastructure, operations, and services—are aligned with business objectives and properly overseen.
-
-Via the executive leadership, cybersecurity governance defines roles and responsibilities and oversight mechanisms to ensure that an organization's cybersecurity strategy, investments, and operations are aligned with business objectives, manage cyber risk to an acceptable level, and comply with relevant laws and regulations.
+Cybersecurity governance establishes the strategic direction, policies, decision-making structures, and clear roles and responsibilities. It implements oversight mechanisms to ensure that all cybersecurity activities—IT infrastructure, operations, and services—are aligned with business objectives. This ensures that cyber risk is managed to an acceptable level and that the organization complies with relevant laws and regulations.
 
 Governance answers the questions: "Who decides what? How do we ensure it happens? And how do we know it's working?" In this vein, it helps to outline key differences between governance and management.
 

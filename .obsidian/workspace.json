@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3.-cybersecurity-grc/the-compliance-audit/the-compliance-audit-quiz.md",
+                "file": "7.-conclusion/cryptography-and-wireless-security.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "the-compliance-audit-quiz"
+              "title": "cryptography-and-wireless-security"
             }
           }
         ]
@@ -183,11 +183,11 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
+    "3.-cybersecurity-grc/the-compliance-audit/the-compliance-audit-quiz.md",
     "3.-cybersecurity-grc/the-compliance-audit/README.md",
     "3.-cybersecurity-grc/the-grc-approach-to-cybersecurity-management/README.md",
     "3.-cybersecurity-grc/chapter-3-review-questions.md",
     "3.-cybersecurity-grc/introduction-cybersecurity-grc.md",
-    "3.-cybersecurity-grc/the-compliance-audit/the-compliance-audit-quiz.md",
     "3.-cybersecurity-grc/the-information-security-risk-assessment/README.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/gaining-access-attacking-a-system.md",
     "3.-cybersecurity-grc/review-questions-and-exercises.md",

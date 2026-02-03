@@ -24,6 +24,7 @@ This section details the formal process of verifying and validating that an orga
 * **Drivers and types of compliance audits**
 * **The audit process: A phase-by-phase breakdown**
 * **Audit methodologies and evidence collection**
+* **Common challenges in the audit process**
 * **From findings to remediation: The corrective action plan**
 * **Integrating audits into the continuous GRC lifecycle**
 
@@ -47,7 +48,7 @@ Audits are not conducted in a vacuum; they are initiated by specific needs and s
 **Audit Types:**
 
 * **Internal Audit:** Conducted by or on behalf of the organization itself (e.g., by an internal audit department) to provide management with an independent evaluation of control effectiveness and to prepare for external scrutiny. Focuses on _assurance and improvement_.
-* **External Audit (Second-Party):** Conducted by a customer or partner against their specific contractual requirements (e.g., a vendor security audit by a major client).
+* **External Audit (Second-Party):** Conducted by a customer or partner against their specific contractual requirements. For example, a major client may perform a vendor security audit on a supplier to ensure that the supplier meets the security standards stipulated in the supplier's service agreement.
 * **Third-Party Audit:** Performed by an independent, accredited auditing organization (e.g., a PCI QSA, an ISO 27001 Lead Auditor, or a CPA firm for a SOC 2 report). Provides the highest level of objectivity and is often required for formal certification or attestation reports.
 
 ### The audit process: A phase-by-phase breakdown
@@ -106,6 +107,17 @@ Effective auditors employ a mixed-methods approach to gain a comprehensive view.
 | **3. Testing & Evaluation** | Core Compliance activity.                             | Constitutes the control assessment in **ASSESS** Step.                                     |
 | **4. Reporting**            | Provides oversight (Governance) with assurance.       | Input for the **AUTHORIZE** decision (Step 6).                                             |
 | **5. Follow-up**            | Ensures continuous improvement (GRC Review phase).    | Integral to the **MONITOR** step (Step 7).                                                 |
+
+### Common challenges in the audit process
+
+While structured, the audit process faces several common challenges that can impact its efficiency and effectiveness. Such challenges often become apparent during evidence collection and testing, and are then managed through the CAP.
+
+- **Scope Creep:** The uncontrolled expansion of the audit's boundaries beyond the originally agreed-upon systems, controls, or locations. This often occurs when new systems or data flows are discovered during evidence collection. Managing scope creep requires strict change control and formal re-approval from audit sponsors to prevent timeline overruns and resource strain.
+- **Evidence Collection Difficulties:** Auditees may struggle to produce sufficient, appropriate, and timely evidence. This can be due to poor documentation, fragmented tooling that lacks comprehensive logs, or control owners who are unavailable or unprepared. This challenge underscores the need for ongoing evidence management as part of routine operations.
+- **Managing Auditor Findings:** Disagreements can arise over the severity, classification, or even the validity of a finding. Auditees may perceive findings as overly critical or based on misunderstandings. Effective management requires professional, evidence-based dialogue during the evaluation phase and formal channels for response within the CAP process.
+- **Resource Constraints:** Both auditors and auditees may face limitations in personnel, time, or tools, which can lead to rushed sampling, superficial testing, or delayed remediation.  
+
+Proactively addressing these challenges—through clear scoping, maintaining an audit-ready posture with continuous evidence, and fostering a collaborative (not adversarial) audit culture—is key to a successful compliance program.
 
 ### From findings to remediation: The corrective action plan
 

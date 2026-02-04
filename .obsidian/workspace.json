@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7.-conclusion/cryptography-and-wireless-security.md",
+                "file": "7.-conclusion/introduction-conclusion.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "cryptography-and-wireless-security"
+              "title": "introduction-conclusion"
             }
           }
         ]
@@ -183,6 +183,7 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
+    "7.-conclusion/cryptography-and-wireless-security.md",
     "3.-cybersecurity-grc/the-compliance-audit/the-compliance-audit-quiz.md",
     "3.-cybersecurity-grc/the-compliance-audit/README.md",
     "3.-cybersecurity-grc/the-grc-approach-to-cybersecurity-management/README.md",
@@ -212,7 +213,6 @@
     "2.-introduction-to-cybersecurity/common-cyber-attacks/README.md",
     "3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards",
     "3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards.md",
-    "conflict-files-obsidian-git.md",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets/kernel-flaws-and-buffer-overflows",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets-1/kernel-flaws-and-buffer-overflows",

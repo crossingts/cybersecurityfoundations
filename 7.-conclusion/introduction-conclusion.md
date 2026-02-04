@@ -1,16 +1,16 @@
 ---
-description: This chapter reviews salient topics and concepts covered in each chapter
+description: This chapter reviews key topics and concepts covered in each chapter
 ---
 
 # Introduction - Conclusion
 
 ## Chapter 7: Conclusion <a href="#chapter-2-introduction-to-cybersecurity" id="chapter-2-introduction-to-cybersecurity"></a>
 
-Through a review of key topics discussed in each chapter, this chapter gives students an opportunity to cement a practical understanding of cybersecurity's role, practices, and value (benefits and risks) within organizations.
+Through a review of key topics and concepts discussed in each chapter, this chapter gives readers an opportunity to cement a practical understanding of cybersecurity...
 
-**This chapter will help students:**
+**This chapter will help readers:**
 
-• Review key concepts covered in each chapter
+• Review key topics and concepts covered in each chapter
 
 • Point 2
 

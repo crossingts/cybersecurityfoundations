@@ -11,11 +11,14 @@ Through a review of key topics and concepts discussed in each chapter, this chap
 **This chapter will help students:**
 
 - Review key topics and concepts covered in each chapter
-- Point 2
-- Point 3
+- Point2
+- Point3
 
 ## Topics covered in this chapter
 
-- Point 1
-- Point 2
-- Point 3
+- IT career planning
+- Introduction to cybersecurity
+- Cybersecurity GRC
+- Networking fundamentals
+- Cryptography and wireless security
+- Practical foundations in ethical hacking

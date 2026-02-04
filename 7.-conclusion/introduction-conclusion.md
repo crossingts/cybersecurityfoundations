@@ -10,16 +10,12 @@ Through a review of key topics and concepts discussed in each chapter, this chap
 
 **This chapter will help readers:**
 
-• Review key topics and concepts covered in each chapter
+- Review key topics and concepts covered in each chapter
+- Point 2
+- Point 3
 
-• Point 2
+## Topics covered in this chapter
 
-• Point 3
-
-## Topics covered in this chapter <a href="#topics-covered-in-this-chapter" id="topics-covered-in-this-chapter"></a>
-
-Point 1
-
-Point 2
-
-Point 3
+- Point 1
+- Point 2
+- Point 3

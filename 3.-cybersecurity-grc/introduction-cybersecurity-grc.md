@@ -27,4 +27,4 @@ This chapter introduces the principles of Governance, Risk, and Compliance (GRC)
 
 [The information security risk assessment](the-information-security-risk-assessment/)
 
-[The compliance audit](the-compliance-audit/)
+[The information security compliance audit](the-information-security-compliance-audit/)

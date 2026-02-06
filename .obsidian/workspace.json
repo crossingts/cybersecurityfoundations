@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7.-conclusion/introduction-to-cybersecurity.md",
+                "file": "7.-conclusion/cybersecurity-grc.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "introduction-to-cybersecurity"
+              "title": "cybersecurity-grc"
             }
           }
         ]
@@ -183,6 +183,7 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
+    "7.-conclusion/introduction-to-cybersecurity.md",
     "7.-conclusion/it-career-planning.md",
     "7.-conclusion/introduction-conclusion.md",
     "7.-conclusion/cybersecurity-grc.md",
@@ -211,7 +212,6 @@
     "6.-practical-foundations-in-ethical-hacking/what-do-ethical-hackers-do/README.md",
     "2.-introduction-to-cybersecurity/cybersecurity-risk-mitigation-methods/README.md",
     "3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards/key-cybersecurity-regulations-and-standards-quiz.md",
-    "2.-introduction-to-cybersecurity/common-cyber-attacks/README.md",
     "3.-cybersecurity-grc/key-cybersecurity-regulations-and-standards",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets/kernel-flaws-and-buffer-overflows",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets",

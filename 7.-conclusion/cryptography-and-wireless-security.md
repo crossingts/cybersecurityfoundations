@@ -2,8 +2,6 @@
 
 ## Chapter 5: Cryptography and wireless security <a href="#chapter-5-wireless-security-and-cryptography" id="chapter-5-wireless-security-and-cryptography"></a>
 
-This chapter covers how SSL/TLS uses cryptographic tools to secure data, and how the IEEE 802.11 wireless standard enforces security through authentication, encryption, and integrity mechanisms
-
 This chapter covers how SSL/TLS uses cryptographic tools (symmetric encryption, asymmetric encryption, and hashing) to secure data over the Internet, and how the IEEE 802.11 wireless standard enforces security through authentication, encryption, and integrity mechanisms.
 
 ***

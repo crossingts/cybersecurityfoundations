@@ -2,9 +2,7 @@
 
 ## Chapter 2: Introduction to cybersecurity
 
-This chapter introduces students to the goals of cybersecurity and how it is defined and practiced within organizations.
-
-Through an exploration of key concepts and practices, this chapter will help students develop a practical understanding of the goals of cybersecurity and how it is defined and practiced within organizations.
+Through an exploration of key concepts and practices, this chapter introduced students to the goals of cybersecurity and how it is defined and practiced within organizations.
 
 ### The goals of cybersecurity
 
@@ -20,4 +18,4 @@ Information security,
 
 ### How cybersecurity is practiced
 
-Organizations take a risk-based approach to managing cybersecurity risk. An organization's information security goals and how to achieve them are typically articulated in a policy document. Achieving the goals are typically understood in terms of compliance requirements.
+Organizations take a risk-based approach to managing cybersecurity. An organization's information security goals and how to achieve them are typically articulated in a policy document. Achieving the goals are typically understood in terms of compliance requirements.

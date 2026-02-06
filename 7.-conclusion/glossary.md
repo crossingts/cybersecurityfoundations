@@ -2,8 +2,6 @@
 
 **Asymmetric ciphers**: Alternatively named public-key ciphers, use two keys, one for encryption and another for decryption.
 
-**Attack**: A specific malicious action (e.g., ICMP flooding).
-
 **CFAA**: Computer Fraud and Abuse Act.
 
 **Cipher**: An algorithm that performs encryption/decryption. Sometimes, the term **cryptosystem** is used instead of cipher. There are two types of ciphers depending on the use of keys: symmetric and asymmetric.
@@ -22,7 +20,7 @@
 
 **NIST Cybersecurity Framework (CSF)**: A set of voluntary guidelines developed by the U.S. National Institute of Standards and Technology (NIST) designed to help organizations assess and improve their ability to prevent, detect, and respond to cybersecurity risks.&#x20;
 
-**NIST Special Publication 800-37 Rev2** (Risk Management Framework for Information Systems and Organizations: A System Life Cycle Approach for Security and Privacy): A risk management framework for information systems developed by the Joint Task Force Transformation Initiative Working Group. The first revision aimed to transform the traditional Certification and Accreditation (C\&A) process into the Risk Management Framework (RMF), and the second reversion addressed privacy controls in a more central manner, and added a preparatory step. The second step of the RMF is to select the appropriate subset of security controls from the control catalog in NIST Special Publication 800-53.
+**NIST Special Publication 800-37 Rev2** (Risk Management Framework for Information Systems and Organizations: A System Life Cycle Approach for Security and Privacy): A risk management framework for information systems developed by the Joint Task Force Transformation Initiative Working Group.
 
 **NIST SP 800-115:** A technical guide to information security testing and assessment by the National Institute of Standards and Technology (NIST).
 

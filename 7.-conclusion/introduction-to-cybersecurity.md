@@ -2,13 +2,13 @@
 
 ## Chapter 2: Introduction to cybersecurity
 
-This chapter introduces students to the goals of cybersecurity and how it is defined and practiced within organizations
+This chapter introduces students to the goals of cybersecurity and how it is defined and practiced within organizations.
 
 Through an exploration of key concepts and practices, this chapter will help students develop a practical understanding of the goals of cybersecurity and how it is defined and practiced within organizations.
 
 ### The goals of cybersecurity
 
-At the most tactical level, the goals of cybersecurity are to protect the CIA of information assets. At the most strategic level, the goals of cybersecurity are to advance the strategic goals of the corporation. This likely involves creating value for stakeholders and/or serving the interests of stakeholders by aligning cybersecurity practices with the strategic goals of the corporation using QA models/certification standards/industry standards/governmental regulations or organizational policy. In other words, compliance, which typically involves risk assessment, security auditing, and security testing.
+At the most tactical level, the goal of cybersecurity is to protect the CIA of information assets. At the most strategic level, the goal of cybersecurity is to advance the strategic interests of the corporation. This involves creating value for stakeholders by aligning cybersecurity practices with the strategic goals of the corporation using QA paradigms/frameworks. 
 
 ### How cybersecurity is defined
 

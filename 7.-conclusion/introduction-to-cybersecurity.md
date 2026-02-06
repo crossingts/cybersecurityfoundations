@@ -17,3 +17,14 @@ Practically, organizations implement these concepts through a risk management a
 - **Business/Organizational:** Enterprises face cyber espionage for intellectual property theft, disruptive ransomware attacks, and sophisticated social engineering schemes like phishing that target human vulnerabilities.
 
 These threats are being amplified and accelerated by powerful, interconnected drivers. Technological advances such as the Internet of Things (IoT), Artificial Intelligence (AI), and the convergence of digital systems exponentially expand the attack surface, while also providing adversaries with more potent tools. Concurrently, sociopolitical forces, most notably the U.S.-China strategic rivalry and the expansion of the digital military-industrial complex, fuel state-sponsored espionage, sabotage, and the global commercialization of offensive cyber capabilities. This creates a dangerous feedback loop: geopolitical tension escalates cyber conflict, which a growing private threat intelligence and spyware industry monetizes, leading to a more dynamic and perilous environment for all digital actors.
+
+
+This section detailed the diverse array of tactics and tools used by cyber adversaries, which can be broadly categorized into two groups: attacks that target human behavior and those that exploit technical vulnerabilities. Social engineering attacks, such as phishing, vishing, and tailgating, manipulate psychology to bypass technical defenses entirely. Concurrently, technical attacks like Denial-of-Service (DoS/DDoS), Man-in-the-Middle (MITM), and various spoofing techniques directly assault system integrity and availability. Core to many of these is the concept of spoofing—using fake IP or MAC addresses—which enables threats from TCP SYN floods to ARP poisoning.
+
+To combat these threats, a defense-in-depth strategy is essential, pairing user awareness with specific technical controls. Defenses against these common attacks include:
+
+- **Strong password policies** and multi-factor authentication to thwart credential theft.
+- **Network security measures** like **DHCP snooping**, **Dynamic ARP Inspection (DAI)**, and **rate limiting** to neutralize spoofing, poisoning, and flooding attacks.
+- **Proactive monitoring and filtering** to identify and block malicious traffic patterns.
+
+Furthermore, the section outlined common malware types—including viruses, worms, Trojan horses, and ransomware—each with distinct propagation methods and payloads, from data theft to system-wide encryption. Ultimately, protecting against this landscape requires a layered approach that strengthens both the human element through training and the technical infrastructure through robust, well-configured security controls.

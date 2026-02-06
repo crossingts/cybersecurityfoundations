@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7.-conclusion/it-career-planning.md",
+                "file": "7.-conclusion/introduction-to-cybersecurity.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "it-career-planning"
+              "title": "introduction-to-cybersecurity"
             }
           }
         ]
@@ -183,8 +183,8 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
-    "7.-conclusion/introduction-to-cybersecurity.md",
     "7.-conclusion/it-career-planning.md",
+    "7.-conclusion/introduction-to-cybersecurity.md",
     "3.-cybersecurity-grc/introduction-cybersecurity-grc.md",
     "3.-cybersecurity-grc/the-information-security-compliance-audit/the-information-security-compliance-audit-quiz.md",
     "3.-cybersecurity-grc/the-information-security-compliance-audit/the-compliance-audit-quiz.md",

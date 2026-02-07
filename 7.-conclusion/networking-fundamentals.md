@@ -1,3 +1,10 @@
+---
+description: >-
+  This chapter covered networking fundamentals by way of tracing the movement of
+  a data packet from one host to another across the Internet - highlighting key
+  network devices and protocols involved
+---
+
 # Networking fundamentals
 
 ## Chapter 4: Networking fundamentals <a href="#chapter-4-networking-fundamentals" id="chapter-4-networking-fundamentals"></a>

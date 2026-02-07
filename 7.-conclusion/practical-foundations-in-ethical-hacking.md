@@ -1,3 +1,9 @@
+---
+description: >-
+  This chapter covered the theoretical and practical foundations defining who
+  are ethical hackers and what they do
+---
+
 # Practical foundations in ethical hacking
 
 ## Chapter 6: Practical foundations in ethical hacking <a href="#chapter-6-practical-foundations-in-ethical-hacking" id="chapter-6-practical-foundations-in-ethical-hacking"></a>

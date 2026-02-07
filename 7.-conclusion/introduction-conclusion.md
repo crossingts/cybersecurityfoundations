@@ -16,9 +16,14 @@ This concluding chapter brings together the journey you have undertaken through 
 
 ## Topics covered in this chapter
 
-- IT career planning
-- Introduction to cybersecurity
-- Cybersecurity GRC
-- Networking fundamentals
-- Cryptography and wireless security
-- Practical foundations in ethical hacking
+IT career planning
+
+Introduction to cybersecurity
+
+Cybersecurity GRC
+
+Networking fundamentals
+
+Cryptography and wireless security
+
+Practical foundations in ethical hacking

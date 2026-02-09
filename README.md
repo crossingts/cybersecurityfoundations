@@ -1,8 +1,7 @@
 ---
 description: >-
-  This book covers key theoretical and practical foundations designed to equip
-  students with the necessary skills to launch and plan a successful career in
-  cybersecurity
+  © 2026 Baha Abu-Shaqra. This technical book is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). Code examples are provided under the MIT License.
+
 ---
 
 # 🖌️ Practical Foundations in Cybersecurity

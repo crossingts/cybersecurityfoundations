@@ -191,6 +191,7 @@
   * [OPNsense](6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/opnsense.md)
   * [OPNsense vs Zenarmor](6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/opnsense-vs-zenarmor.md)
   * [Setting up a cybersecurity lab — Quiz](6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/setting-up-a-cybersecurity-lab-quiz.md)
+  * [Choosing a project documentation platform](6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/choosing-a-project-documentation-platform.md)
 * [Chapter 6 review questions](6.-practical-foundations-in-ethical-hacking/chapter-6-review-questions.md)
 
 ## 7. Conclusion

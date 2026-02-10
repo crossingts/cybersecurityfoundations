@@ -10,20 +10,20 @@ This book covered key theoretical and practical foundations designed to equip st
 
 **This chapter will help students:**
 
-- Reinforce the foundational concepts and practical skills acquired across all six core chapters.
-- Integrate knowledge from discrete domains—such as networking, GRC, and cryptography—into a unified understanding of cybersecurity defense and offense.
-- Apply a structured framework for continuing their educational and professional journey in information security.
+* Reinforce the foundational concepts and practical skills acquired across all six core chapters.
+* Integrate knowledge from discrete domains—such as networking, GRC, and cryptography—into a unified understanding of cybersecurity defense and offense.
+* Apply a structured framework for continuing their educational and professional journey in information security.
 
 ## Topics covered in this chapter
 
-IT career planning
+[IT career planning](it-career-planning.md)
 
-Introduction to cybersecurity
+[Introduction to cybersecurity](introduction-to-cybersecurity.md)
 
-Cybersecurity GRC
+[Cybersecurity GRC](cybersecurity-grc.md)
 
-Networking fundamentals
+[Networking fundamentals](networking-fundamentals.md)
 
-Cryptography and wireless security
+[Cryptography and wireless security](cryptography-and-wireless-security.md)
 
-Practical foundations in ethical hacking
+[Practical foundations in ethical hacking](practical-foundations-in-ethical-hacking.md)

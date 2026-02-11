@@ -69,7 +69,7 @@ Most enterprises will enforce rules like these on their employees, but it’s al
 
 #### Denial of service (DoS)
 
-There are many types of DoS attacks, such as TCP SYN flood, DHCP exhaustion attack, UDP flood, HTTP flood, and Ping of death. DoS and DDoS attacks threaten the availability of information systems. A prime mitigation method for DoS attacks is network segmentation.
+There are many types of DoS attacks, such as TCP SYN flood, DHCP exhaustion attack, UDP flood, HTTP flood, and Ping of death. DoS and DDoS attacks threaten the availability of information. A prime mitigation method for DoS attacks is network segmentation.
 
 **TCP SYN flood**
 

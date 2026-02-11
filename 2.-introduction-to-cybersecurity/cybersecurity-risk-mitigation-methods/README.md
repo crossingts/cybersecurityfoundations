@@ -93,7 +93,7 @@ Proxies act as intermediaries between clients and servers, but their roles diffe
 
 The choice between forward and reverse proxies depends on the use case. Forward proxies are ideal for user privacy and bypassing restrictions, while reverse proxies excel in optimizing server performance and security. For instance, a company might use a forward proxy to monitor employee internet traffic, while a high-traffic website would deploy a reverse proxy like Nginx to balance loads between servers. Both types can coexist—Cloudflare, for example, acts as a reverse proxy for websites while also offering forward proxy-like features (e.g., WARP VPN). Understanding these distinctions helps in designing scalable, secure, and efficient network infrastructures.
 
-#### **When to Use Each?**
+**When to Use Each?**
 
 | **Scenario**                    | **Solution**          | **Example Tools**                                                                               |
 | ------------------------------- | --------------------- | ----------------------------------------------------------------------------------------------- |

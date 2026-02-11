@@ -115,7 +115,7 @@ Mitigating TCP SYN flood attacks requires a layered approach that begins with ho
 
 1. **Operating System Hardening**
 
-    - **SYN Cookies:** Stateless encoding of connection info in the sequence number; no backlog entry until the final ACK is received (Linux: `net.ipv4.tcp_syncookies=1`; Windows: default from Vista/2008).
+    - **SYN Cookies:** Stateless encoding of connection information in the sequence number; no backlog entry until the final ACK is received (Linux: `net.ipv4.tcp_syncookies=1`; Windows: default from Vista/2008).
     - **Increase SYN Backlog:** Expands the queue for half-open connections (`tcp_max_syn_backlog`).
     - **Reduce Retries/Timeouts:** Shortens SYN-ACK retries (`tcp_synack_retries=1`) and wait times (Cisco: `ip tcp synwait-time`).
 

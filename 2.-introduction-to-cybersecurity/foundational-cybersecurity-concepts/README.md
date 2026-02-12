@@ -42,9 +42,7 @@ Information security,
 
 Key information security concepts include privacy, authenticity and trustworthiness, non-repudiation, accountability and auditability, and reliability (Cherdantseva & Hilton, 2013; ISO/IEC 27000:2009).
 
-The broad pragmatic goal of information security is to reduce the probability of unauthorized access or damage to the confidentiality, integrity, and availability of valued information assets to an acceptable risk level through risk mitigation strategies that involve management controls (e.g., security policies), technical controls (e.g., intrusion detection techniques), and operational controls (best practices/standard operating procedures).
-
-The broad pragmatic goal of information security is to reduce the probability of unauthorized access or damage to the confidentiality, integrity, and availability of valued information assets to an acceptable risk level through risk mitigation strategies that involve management controls (e.g., security policies), technical controls (e.g., intrusion detection techniques), and operational controls (best practices/standard operating procedures).
+The broad pragmatic goal of information security is to reduce the likelihood of unauthorized access or damage to valued information assets to an acceptable level through risk mitigation strategies that involve management controls (e.g., security policies), technological controls (e.g., intrusion detection techniques), and procedural/operational controls (best practices/standard operating procedures).
 
 Information security threats most commonly rated as a concern in higher education in North America are as follows. Confidentiality attacks: Exposure of confidential or sensitive information (79%); Integrity attacks: Unauthorized or accidental modification of data (29%); Availability attacks: Loss of availability or sabotage of systems (16%); Mixed threat attacks: Email viruses, ransomware, or other malware (31%); and Unauthorized, malicious network/system access (27%) (EDUCAUSE Information Security Almanac, April 2019, p. 2).
 

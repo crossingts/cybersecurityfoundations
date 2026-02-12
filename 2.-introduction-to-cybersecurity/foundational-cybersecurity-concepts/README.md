@@ -1,7 +1,5 @@
 ---
-description: >-
-  This sections introduces core and foundational cybersecurity concepts and
-  practices such as confidentiality, integrity, and availability (the CIA triad)
+description: This sections introduces core and foundational cybersecurity concepts such as the CIA triad, risk, threat, vulnerability, mitigation, and the AAA framework
 ---
 
 # Foundational cybersecurity concepts

@@ -70,21 +70,15 @@ The most concrete (as opposed to abstract) and tactical (as opposed to strategic
 * Integrity denotes an imperative that data should not be changed or modified by unauthorized users. Data should be correct and authentic.
 * Availability denotes an imperative that an information system should be operational and accessible to authorized users. For example, staff should be able to access the internal resources they need to perform their duties, and the company’s website should be up and running and available to customers.
 
-In addition to the CIA triad, closely related and foundational information security concepts include:
+### Information security risk management
+
+Risk management requires understanding the key concepts of vulnerabilities, exploits, threats, threat vectors, and mitigation. 
 
 * A vulnerability is any potential weakness that can compromise the CIA of information assets. A window in a house is a vulnerability burglars can exploit to enter the house.
 * An exploit is something that can potentially be used to exploit the vulnerability. A rock can exploit the weakness of glass windows and may be used to enter a house.
 * A threat is the potential of a vulnerability to be exploited. The threat of house burglary is the potential a burglar will exploit the glass window vulnerability using a rock (or other exploits) to gain entry into a house.
-* A threat vector is a means or method a threat actor can use or follow to exploit a vulnerability. A glass window a burglar can use to gain entry into a house can be considered a threat vector.
+* A threat vector is a means or method a threat actor can use or follow to exploit a vulnerability (i.e., the pathway of an attack). A glass window a burglar can use to gain entry into a house can be considered a threat vector.
 * A mitigation technique is something that can protect against threats. Appropriate mitigation techniques should be implemented everywhere a vulnerability can be exploited, for example, devices, servers, switches, and routers. In our glass window example, adding welded metallic bars would be a mitigation technique.
-
-### Information security risk management
-
-Risk management requires understanding **threats, vulnerabilities, and mitigation** strategies.
-
-* **Risk = Threat × Vulnerability (with consideration of mitigation)**
-* A risk arises when a threat exploits a vulnerability.
-* Related concepts: **exploit** (how the attack happens) and **threat vector** (the pathway of the attack).
 
 Risk is “a threat that exploits some vulnerability that could cause harm to an asset” (Peltier, 2005, p.16). “One instance of risk within a system is represented by the formula (asset\*threat\*vulnerability)” (Landoll & Landoll, 2005, p. 8).
 

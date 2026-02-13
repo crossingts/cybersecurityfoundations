@@ -84,25 +84,17 @@ Risk is “a threat that exploits some vulnerability that could cause harm to an
 
 The Risk Management Guide of the National Institute of Standards and Technology defines risk assessment as “the process of identifying the risks to system security and determining the probability of occurrence, the resulting impact, and additional safeguards that would mitigate this impact” (Landoll & Landoll, 2005, p. 10). According to the General Security Risk Assessment Guidelines, ASIS International (2003), the basic components of a risk assessment plan include, identifying assets, specifying loss events (threats), assessing the frequency and impact of events, recommending mitigation options, conducting a cost/benefit analysis, and making decisions.
 
-**Sources of Vulnerabilities**
+#### Sources of vulnerabilities
 
 Computer system vulnerabilities can be categorized based on their origin. Understanding these root causes is essential for effective risk assessment and control selection.
 
-- **Software infrastructure:** Insecure code (e.g., buffer overflows, SQL injection flaws, business logic errors) and unpatched software (e.g., missing vendor security updates for operating systems, applications, or firmware). This also includes vulnerabilities introduced by third-party libraries and end-of-life software no longer supported by the vendor.
-- **Network infrastructure:** Weaknesses arising from misconfigured protocols and IP services (e.g., unnecessary open ports, default SNMP community strings, weak VPN ciphers), inherent flaws in network protocol designs (e.g., ARP spoofing, DNS cache poisoning), or insecure device configurations (e.g., lack of access control lists, default administrative credentials).
-- **Hardware:** Physical security flaws (e.g., exposed debugging interfaces, lack of tamper resistance), hardware-based side-channel attacks (e.g., speculative execution vulnerabilities like Meltdown and Spectre), or insecure device design and supply chain integrity issues (e.g., implanted backdoors in manufacturing).
-- **Organizational and network policies:** Absence of, or poorly defined, security policies, standards, and procedures that govern system use. This includes a lack of acceptable use policies, missing data classification guidelines, or the absence of formal change management processes, all of which create exploitable security gaps.
-- **Human factors:** The susceptibility of users and administrators to social engineering tactics (e.g., phishing, pretexting, baiting), errors in judgment, lack of security awareness and training, or negligent behavior such as writing down passwords or mishandling sensitive data.
-- **Configuration mistakes:** The failure to securely configure systems and devices. This includes unsecured endpoints (e.g., disabled host firewalls), failure to change default passwords, overly permissive file shares, misconfigured cloud storage buckets, or the unintentional exposure of administrative interfaces to the public internet. These errors often violate the principle of least privilege.
-
-Computer system vulnerabilities can be categorized based on their origin:
-
-* **Software infrastructure:** Flaws in applications, operating systems, or firmware.
-* **Network infrastructure:** Weaknesses in network devices, network protocols, or configurations.
-* **Hardware:** Physical security flaws or insecure device designs.
-* **Organizational and network policies:** Poorly defined security policies that create security gaps.
-* **Human factors:** Susceptibility to social engineering or lack of security awareness.
-* **Configuration mistakes:** Unsecured endpoints, default passwords, or misconfigured devices.
+- **Software infrastructure:** Insecure code embedded within operating systems, applications, or firmware (e.g., buffer overflows, SQL injection flaws, business logic errors, or race conditions) and unpatched software (e.g., missing vendor security updates for operating systems, applications, or firmware). This also includes vulnerabilities introduced by third-party libraries, software dependencies, and end-of-life software no longer supported by the vendor.
+- **Network infrastructure:** Weaknesses arising from misconfigured protocols and IP services (e.g., unnecessary open ports, default SNMP community strings, weak VPN ciphers), inherent flaws in network protocol designs (e.g., ARP spoofing, DNS cache poisoning, TCP/IP stack vulnerabilities), or insecure device configurations (e.g., lack of access control lists, default administrative credentials on routers and switches).
+- **Hardware:** Physical security flaws (e.g., exposed debugging interfaces like JTAG, lack of tamper resistance), hardware-based side-channel attacks (e.g., speculative execution vulnerabilities like Meltdown and Spectre, power analysis attacks), or insecure device design and supply chain integrity issues (e.g., implanted backdoors during manufacturing, counterfeit components).
+- **Organizational policies:** The absence of, or poorly defined, enterprise-level security policies, standards, and procedures. This includes a lack of acceptable use policies, missing data classification and handling guidelines, inadequate background check processes, or the absence of formal security awareness training—all of which create exploitable gaps in the security culture.
+- **Network policies:** Weak or missing technical policies governing network behavior and access. This includes poorly designed firewall rulebases that violate least privilege, lack of network segmentation between trusted and untrusted zones, missing access control lists on critical network devices, or the absence of standard, secure configuration templates for network infrastructure.
+- **Human factors:** The susceptibility of users and administrators to social engineering tactics (e.g., phishing, pretexting, baiting, vishing), errors in judgment, lack of security awareness and training, or negligent behavior such as writing down passwords, reusing credentials across systems, or mishandling sensitive data.
+- **Configuration mistakes:** The failure to securely configure systems and devices during deployment or maintenance. This includes unsecured endpoints (e.g., disabled host firewalls, unnecessary services running), failure to change default passwords on any asset (servers, databases, IoT devices), overly permissive file shares or cloud storage buckets, misconfigured cloud security groups, or the unintentional exposure of administrative interfaces to the public internet. These errors often directly violate the principle of least privilege and represent one of the most common and preventable vulnerability classes.
 
 #### Information security in practice
 

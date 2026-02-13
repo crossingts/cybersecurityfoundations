@@ -72,6 +72,11 @@ The most concrete (as opposed to abstract) and tactical (as opposed to strategic
 
 ### Information security risk management
 
+Businesses need to evaluate information security risks for the purposes of insurance underwriting and resource allocation; or if they are attempting to comply with HIPAA, PCI, and other regulations, they will perform a risk assessment periodically.
+
+The first step in identifying business risks should be to understand the business as a social system—its identity, corporate vision, social/community relations, and values. For example, Clause 4 of ISO 22301 BCMS (Business Continuity Management System) 2015 calls for understanding internal and external environments, including an organization’s activities, functions, services, and the organization’s risk appetite (ISO 22301 Portal: Societal security). 
+
+Once a risk appetite is established by senior management...
 #### Foundational definitions in information security risk management
 
 Risk management requires understanding the key concepts of vulnerabilities, exploits, threats, threat vectors, and mitigation. 
@@ -104,7 +109,7 @@ This relationship is often expressed as:
 
 **Risk = Likelihood × Impact**
 
-A risk-based approach allows an organization to prioritize the vulnerabilities identified and focus its efforts on the risks that are the most significant to its operations. The first step in identifying business risks should be to understand the business as a social system—its identity, corporate vision, social/community relations, and values. For example, Clause 4 of ISO 22301 BCMS (Business Continuity Management System) 2015 calls for understanding internal and external environments, including an organization’s activities, functions, services, and the organization’s risk appetite (ISO 22301 Portal: Societal security). Businesses need to evaluate information security risks for the purposes of insurance underwriting and resource allocation; or if they are attempting to comply with HIPAA, PCI, and other regulations, they will perform a risk assessment periodically.
+A risk-based approach allows an organization to prioritize the vulnerabilities identified and focus its efforts on the risks that are the most significant to its operations. 
 
 Risk is “a threat that exploits some vulnerability that could cause harm to an asset” (Peltier, 2005, p.16). “One instance of risk within a system is represented by the formula (asset\*threat\*vulnerability)” (Landoll & Landoll, 2005, p. 8).
 
@@ -120,8 +125,6 @@ A key risk management challenge is prioritizing risk for optimal investment in c
 
 In ideal risk management, a prioritization process is followed whereby the risks with the greatest loss (or impact) and the greatest probability of occurring are handled first, and risks with lower probability of occurrence and lower loss are handled in descending order. In practice the process of assessing overall risk can be difficult, and balancing resources used to mitigate between risks with a high probability of occurrence but lower loss versus a risk with high loss but lower probability of occurrence can often be mishandled.
 
-**Acceptable risk**
-
 In the context of assessing information security risk, risk level is assessed (or scored) based on likelihood and impact - meaning, the higher the probability of an attack or breach, the higher the risk; and the higher the potential impact of an attack or breach, the higher the risk.
 
 Risk assessments outlines what threats exist to specific assets and the associated risk levels. Risk mangers use risk levels to select appropriate security defenses and countermeasures to lower the risk to an acceptable level (Engebretson, 2011; Landoll & Landoll, 2005; Peltier, 2005).
@@ -132,9 +135,7 @@ The goal of risk assessment is “to identify which investments of time and reso
 
 Systems can be more secure or less secure, but there is no absolute security. For example, you can implement malware detection on your network firewall and have the best antivirus software on client PCs, but the chance of the PCs getting infected with malware is never zero.
 
-**Security vs functionality**
-
-Data that is not accessible to anyone may be perfectly secure, but it’s worthless to an enterprise if it cannot be seen and used. A security access policy is always trying to balance security and functionality (or access privileges).
+Data that is not accessible to anyone may be perfectly secure, but it’s worthless to an enterprise if it cannot be seen and used. A security access policy is always trying to balance security with functionality (or access privileges).
 
 ### Techniques of CIA attacks
 

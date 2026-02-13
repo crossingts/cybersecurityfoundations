@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7.-conclusion/practical-foundations-in-ethical-hacking.md",
+                "file": "2.-introduction-to-cybersecurity/foundational-cybersecurity-concepts/README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "practical-foundations-in-ethical-hacking"
+              "title": "README"
             }
           }
         ]
@@ -183,9 +183,11 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
+    "2.-introduction-to-cybersecurity/foundational-cybersecurity-concepts/foundational-cybersecurity-concepts-quiz.md",
+    "2.-introduction-to-cybersecurity/foundational-cybersecurity-concepts/cia-attacks-mitigation-technologies.md",
     "2.-introduction-to-cybersecurity/foundational-cybersecurity-concepts/README.md",
-    "2.-introduction-to-cybersecurity/common-cyber-attacks/README.md",
     "7.-conclusion/practical-foundations-in-ethical-hacking.md",
+    "2.-introduction-to-cybersecurity/common-cyber-attacks/README.md",
     "7.-conclusion/cryptography-and-wireless-security.md",
     "2.-introduction-to-cybersecurity/common-cyber-attacks/common-cyber-attacks-quiz.md",
     "2.-introduction-to-cybersecurity/cybersecurity-risk-mitigation-methods/README.md",
@@ -209,8 +211,6 @@
     "3.-cybersecurity-grc/the-information-security-compliance-audit",
     "3.-cybersecurity-grc/chapter-3-review-questions.md",
     "2.-introduction-to-cybersecurity/introduction-introduction-to-cybersecurity.md",
-    "3.-cybersecurity-grc/the-compliance-audit/the-compliance-audit-quiz.md",
-    "3.-cybersecurity-grc/the-compliance-audit/README.md",
     "3.-cybersecurity-grc/the-information-security-risk-assessment",
     "3.-cybersecurity-grc/the-compliance-audit",
     "3.-cybersecurity-grc/the-grc-approach-to-cybersecurity-management",

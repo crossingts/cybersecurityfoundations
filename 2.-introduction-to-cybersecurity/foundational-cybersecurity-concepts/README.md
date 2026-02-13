@@ -72,16 +72,17 @@ The most concrete (as opposed to abstract) and tactical (as opposed to strategic
 
 ### Information security risk management
 
-Businesses need to evaluate information security risks for the purposes of insurance underwriting and resource allocation; or if they are attempting to comply with HIPAA, PCI, and other regulations, they will perform a risk assessment periodically.
+Organizations evaluate information security risks for multiple drivers: insurance underwriting requires quantified risk profiles, resource allocation demands prioritized investments, and regulatory frameworks such as HIPAA, PCI DSS, and SSAE 16 mandate periodic risk assessments. Before these assessments can begin, however, the organization must first understand itself.
 
-The first step in identifying business risks should be to understand the business as a social system—its identity, corporate vision, social/community relations, and values. For example, Clause 4 of ISO 22301 BCMS (Business Continuity Management System) 2015 calls for understanding internal and external environments, including an organization’s activities, functions, services, and the organization’s risk appetite (ISO 22301 Portal: Societal security). 
+The essential first step in identifying business risks is understanding the organization as a social and operational system—its identity, corporate vision, stakeholder relationships, and core values. This contextual foundation is formalized in Clause 4 of ISO 22301 (Business Continuity Management System), which requires organizations to analyze their internal and external environments, including their activities, functions, services, and—critically—their risk appetite (ISO 22301 Portal, 2015). Risk appetite represents the amount and type of risk senior management is willing to accept in pursuit of strategic objectives. Once this appetite is established, it becomes the benchmark against which all identified risks are evaluated.
 
-Once a risk appetite is established by senior management...
+The following three subsections build upon this foundation. First, we establish the core vocabulary of risk management—vulnerabilities, threats, exploits, and mitigation. Second, we examine the specific sources from which vulnerabilities arise in modern networks and systems. Finally, we explore how organizations translate these concepts into practice through structured risk management approaches.
+
 #### Foundational definitions in information security risk management
 
 Risk management requires understanding the key concepts of vulnerabilities, exploits, threats, threat vectors, and mitigation. 
 
-* A vulnerability is any potential weakness that can compromise the CIA of information assets. A window in a house is a vulnerability burglars can exploit to enter the house.
+* A vulnerability is any potential weakness that can compromise the CIA of information assets. A glass window in a house is a vulnerability burglars can exploit to enter the house.
 * An exploit is something that can potentially be used to exploit the vulnerability. A rock can exploit the weakness of glass windows and may be used to enter a house.
 * A threat is the potential of a vulnerability to be exploited. The threat of house burglary is the potential a burglar will exploit the glass window vulnerability using a rock (or other exploits) to gain entry into a house.
 * A threat vector is a means or method a threat actor can use or follow to exploit a vulnerability (i.e., the pathway of an attack). A glass window a burglar can use to gain entry into a house can be considered a threat vector.
@@ -101,41 +102,47 @@ Computer system vulnerabilities can be categorized based on their origin. Unders
 
 #### Information security risk management in practice
 
-Pragmatically, organizations take a risk-based approach to information security management, approaching information security in terms of risk, threat, vulnerability, and mitigation. A standard definition of risk is the potential to lose something of value. Another definition involves the exposure to danger. 
+Organizations take a risk-based approach to information security, meaning that decisions about controls and investments are driven by a structured understanding of risk. In practice, risk is most usefully defined as a function of likelihood and impact.
 
-In information security, risk is most practically understood as a function of likelihood and impact. Likelihood represents the probability that a given threat will exploit a vulnerability, considering the effectiveness of existing security controls. Impact represents the magnitude of harm that would result to the organization if the event occurred—measured in terms of financial loss, operational disruption, regulatory penalties, or reputational damage.
-
-This relationship is often expressed as:
+**Likelihood** represents the probability that a given threat will exploit a vulnerability, taking into account the effectiveness of existing security controls. **Impact** represents the magnitude of harm that would result to the organization if the event occurred—measured in financial loss, operational disruption, regulatory penalties, or reputational damage. This relationship is expressed as:
 
 **Risk = Likelihood × Impact**
 
-A risk-based approach allows an organization to prioritize the vulnerabilities identified and focus its efforts on the risks that are the most significant to its operations. 
+While theoretical models sometimes frame risk as "threat × vulnerability × asset value" (Landoll & Landoll, 2005, p. 8) or "a threat that exploits some vulnerability that could cause harm to an asset" (Peltier, 2005, p. 16), these factors ultimately resolve into the two core dimensions that organizations can assess and act upon: the probability of an adverse event and the severity of its consequences.
 
-Risk is “a threat that exploits some vulnerability that could cause harm to an asset” (Peltier, 2005, p.16). “One instance of risk within a system is represented by the formula (asset\*threat\*vulnerability)” (Landoll & Landoll, 2005, p. 8).
+**The Risk Assessment Process**
 
-The Risk Management Guide of the National Institute of Standards and Technology defines risk assessment as “the process of identifying the risks to system security and determining the probability of occurrence, the resulting impact, and additional safeguards that would mitigate this impact” (Landoll & Landoll, 2005, p. 10). 
+Risk assessment is "the process of identifying the risks to system security and determining the probability of occurrence, the resulting impact, and additional safeguards that would mitigate this impact" (NIST, as cited in Landoll & Landoll, 2005, p. 10). According to the ASIS International General Security Risk Assessment Guidelines (2003), a comprehensive risk assessment includes:
 
-According to the General Security Risk Assessment Guidelines, ASIS International (2003), the basic components of a risk assessment plan include, identifying assets, specifying loss events (threats), assessing the frequency and impact of events, recommending mitigation options, conducting a cost/benefit analysis, and making decisions.
+- Identifying assets requiring protection
+- Specifying potential loss events (threats)
+- Assessing the frequency and impact of those events
+- Recommending mitigation options
+- Conducting cost/benefit analysis
+- Supporting management decision-making
 
-Risk assessment “identifies risks generated by the possibility of threats acting on vulnerabilities, and what can be done to mitigate each one” (PCI DSS Risk Assessment Guidelines, 2005). Several major regulatory frameworks, including HIPAA, PCI, and SSAE 16, require businesses to perform periodic risk assessment. As such, risk assessments are usually performed in the context of compliance with standards or regulations.
+The PCI DSS Risk Assessment Guidelines (2005) similarly define risk assessment as a process that "identifies risks generated by the possibility of threats acting on vulnerabilities, and what can be done to mitigate each one." Because multiple regulatory frameworks—including HIPAA, PCI DSS, and SSAE 16—require periodic assessments, many organizations conduct them within a compliance context. However, effective risk management extends beyond compliance to genuinely inform security strategy.
 
-In order to properly secure data, an organization should develop clear and precise standards of data classification. To simplify data governance, information should be segregated by levels of importance and risk, since it is impractical to safeguard all the data in an organization using the same standards. Sensitive data should be protected by more security measures in order to safeguard it.
+A critical prerequisite to meaningful risk assessment is **data classification**. Organizations cannot protect what they do not understand. To simplify data governance, information assets should be segregated by levels of importance and risk, as it is impractical—and inefficient—to apply uniform controls to all data. Sensitive data warrants greater protection, and classification standards make those distinctions operational.
 
-A key risk management challenge is prioritizing risk for optimal investment in countermeasures. A well-understood list of risks must be matched with a list of suitable mitigations for those risks. ISO Risk Management Guide 73:2009 defines risk management as follows:
+**Risk Prioritization and Treatment**
 
-In ideal risk management, a prioritization process is followed whereby the risks with the greatest loss (or impact) and the greatest probability of occurring are handled first, and risks with lower probability of occurrence and lower loss are handled in descending order. In practice the process of assessing overall risk can be difficult, and balancing resources used to mitigate between risks with a high probability of occurrence but lower loss versus a risk with high loss but lower probability of occurrence can often be mishandled.
+A central challenge in risk management is prioritizing risks to optimize investment in countermeasures. The ISO Risk Management Guide 73:2009 describes ideal prioritization as follows:
 
-In the context of assessing information security risk, risk level is assessed (or scored) based on likelihood and impact - meaning, the higher the probability of an attack or breach, the higher the risk; and the higher the potential impact of an attack or breach, the higher the risk.
+*In ideal risk management, a prioritization process is followed whereby the risks with the greatest loss (or impact) and the greatest probability of occurring are handled first, and risks with lower probability of occurrence and lower loss are handled in descending order. In practice the process of assessing overall risk can be difficult, and balancing resources used to mitigate between risks with a high probability of occurrence but lower loss versus a risk with high loss but lower probability of occurrence can often be mishandled.*
 
-Risk assessments outlines what threats exist to specific assets and the associated risk levels. Risk mangers use risk levels to select appropriate security defenses and countermeasures to lower the risk to an acceptable level (Engebretson, 2011; Landoll & Landoll, 2005; Peltier, 2005).
+Once risks are assessed and prioritized, organizations have four treatment options (Stewart, 2012):
 
-After a risk assessment, a risk can be accepted (this involves an evaluation of whether the cost of countermeasures outweighs the potential cost of loss due to the threat), mitigated (this involves implementing safeguards and countermeasures to eliminate vulnerabilities or to block threats), or transferred (this involves transferring the cost of the threat to another business function or unit) (Stewart, 2012).
+- **Risk acceptance:** Acknowledging the risk and its potential consequences without implementing additional controls, typically because the cost of mitigation exceeds the potential loss, or because the risk falls within the established risk appetite.
+- **Risk mitigation:** Implementing safeguards and countermeasures to reduce either the likelihood of exploitation or the impact should exploitation occur—the most common treatment approach.
+- **Risk transfer:** Shifting the financial consequences of the risk to another party, typically through insurance, or outsourcing the associated activity to a third party better equipped to manage it.
+- **Risk avoidance:** Eliminating the activity or asset that gives rise to the risk entirely, effectively removing the risk from the organization's risk profile.
 
-The goal of risk assessment is “to identify which investments of time and resources will best protect the organization from its most likely and serious threats” (Reynolds, 2012, p. 103).
+**The Goals and Limits of Risk Management**
 
-Systems can be more secure or less secure, but there is no absolute security. For example, you can implement malware detection on your network firewall and have the best antivirus software on client PCs, but the chance of the PCs getting infected with malware is never zero.
+The ultimate objective of risk assessment is "to identify which investments of time and resources will best protect the organization from its most likely and serious threats" (Reynolds, 2012, p. 103). This requires accepting a fundamental truth: there is no absolute security. Systems can be more secure or less secure, but never perfectly secure. An organization may deploy malware detection at the network perimeter and endpoint protection on every client, yet the probability of infection never reaches zero.
 
-Data that is not accessible to anyone may be perfectly secure, but it’s worthless to an enterprise if it cannot be seen and used. A security access policy is always trying to balance security with functionality (or access privileges).
+This reality leads to another essential insight: security must be balanced with functionality. Data that is completely inaccessible may be perfectly secure, but it is also worthless to an enterprise. Security controls inevitably introduce friction; the art of risk management lies in applying just enough friction to protect critical assets while enabling the business to function. A security access policy is always navigating the tension between protection and productivity, and effective risk management provides the compass for that navigation.
 
 ### Techniques of CIA attacks
 

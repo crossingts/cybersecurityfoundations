@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2.-introduction-to-cybersecurity/foundational-cybersecurity-concepts/README.md",
+                "file": "7.-conclusion/practical-foundations-in-ethical-hacking.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "practical-foundations-in-ethical-hacking"
             }
           }
         ]
@@ -183,9 +183,9 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
+    "2.-introduction-to-cybersecurity/foundational-cybersecurity-concepts/README.md",
     "2.-introduction-to-cybersecurity/common-cyber-attacks/README.md",
     "7.-conclusion/practical-foundations-in-ethical-hacking.md",
-    "2.-introduction-to-cybersecurity/foundational-cybersecurity-concepts/README.md",
     "7.-conclusion/cryptography-and-wireless-security.md",
     "2.-introduction-to-cybersecurity/common-cyber-attacks/common-cyber-attacks-quiz.md",
     "2.-introduction-to-cybersecurity/cybersecurity-risk-mitigation-methods/README.md",

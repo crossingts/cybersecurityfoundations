@@ -264,7 +264,7 @@ Several centralized logging technologies can enhance security and compliance by 
 * **Splunk** – Powerful log aggregation, real-time analysis, and alerting.
 * **IBM QRadar** – Combines logs with threat intelligence for security monitoring.
 * **Microsoft Sentinel** – Cloud-native SIEM with AI-driven threat detection.
-* **Elastic SIEM (Elastic Stack / ELK Stack)** – Open-source option using **Elasticsearch, Logstash, and Kibana (ELK)** for log parsing and visualization.
+* **Elastic SIEM (Elastic Stack / ELK Stack)** – Open-source option using Elasticsearch, Logstash, and Kibana (ELK) for log parsing and visualization.
 
 **2. Log Management & Analytics Platforms**
 
@@ -287,7 +287,7 @@ Several centralized logging technologies can enhance security and compliance by 
 * **Search & analytics** (to detect anomalies or breaches).
 * **Alerting & automation** (trigger responses to suspicious activity).
 
-**Free/Open-Source vs. Commercial Tools**
+**Free/Open-Source vs. Commercial Logging Tools**
 
 | Category                       | Tool Name                       | Type            | Notes                                                                                                                   |
 | ------------------------------ | ------------------------------- | --------------- | ----------------------------------------------------------------------------------------------------------------------- |

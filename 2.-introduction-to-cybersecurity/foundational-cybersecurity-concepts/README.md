@@ -80,11 +80,7 @@ Risk management requires understanding the key concepts of vulnerabilities, expl
 * A threat vector is a means or method a threat actor can use or follow to exploit a vulnerability (i.e., the pathway of an attack). A glass window a burglar can use to gain entry into a house can be considered a threat vector.
 * A mitigation technique is something that can protect against threats. Appropriate mitigation techniques should be implemented everywhere a vulnerability can be exploited, for example, devices, servers, switches, and routers. In our glass window example, adding welded metallic bars would be a mitigation technique.
 
-Risk is “a threat that exploits some vulnerability that could cause harm to an asset” (Peltier, 2005, p.16). “One instance of risk within a system is represented by the formula (asset\*threat\*vulnerability)” (Landoll & Landoll, 2005, p. 8).
-
-The Risk Management Guide of the National Institute of Standards and Technology defines risk assessment as “the process of identifying the risks to system security and determining the probability of occurrence, the resulting impact, and additional safeguards that would mitigate this impact” (Landoll & Landoll, 2005, p. 10). According to the General Security Risk Assessment Guidelines, ASIS International (2003), the basic components of a risk assessment plan include, identifying assets, specifying loss events (threats), assessing the frequency and impact of events, recommending mitigation options, conducting a cost/benefit analysis, and making decisions.
-
-#### Sources of vulnerabilities
+#### Sources of network vulnerabilities
 
 Computer system vulnerabilities can be categorized based on their origin. Understanding these root causes is essential for effective risk assessment and control selection.
 
@@ -118,7 +114,7 @@ In ideal risk management, a prioritization process is followed whereby the risks
 
 **Acceptable risk**
 
-In the context of assessing information security risk, risk level is assessed (scored) based on likelihood and impact - meaning, the higher the probability of an attack or breach, the higher the risk; and the higher the potential impact of an attack or breach, the higher the risk.
+In the context of assessing information security risk, risk level is assessed (or scored) based on likelihood and impact - meaning, the higher the probability of an attack or breach, the higher the risk; and the higher the potential impact of an attack or breach, the higher the risk.
 
 Risk assessments outlines what threats exist to specific assets and the associated risk levels. Risk mangers use risk levels to select appropriate security defenses and countermeasures to lower the risk to an acceptable level (Engebretson, 2011; Landoll & Landoll, 2005; Peltier, 2005).
 

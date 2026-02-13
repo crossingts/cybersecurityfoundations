@@ -189,9 +189,9 @@ An information availability attack aims to disrupt access to data, systems, or s
 
 ### CIA attacks mitigation technologies
 
-Key mitigation technologies against CIA attacks
+#### Key mitigation technologies against CIA attacks
 
-Mitigation Technologies for Confidentiality, Integrity, and Availability
+Follows is a tabulated summary of key mitigation technologies/approaches against confidentiality, integrity, and availability attacks.
 
 | **Security Objective** | **Key Technologies**                                                                                                                                                                                                                                                   | **Purpose**                                      | **Notes**                                                    |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------ |

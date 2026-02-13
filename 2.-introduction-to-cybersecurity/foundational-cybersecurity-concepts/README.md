@@ -86,6 +86,15 @@ The Risk Management Guide of the National Institute of Standards and Technology 
 
 **Sources of Vulnerabilities**
 
+Computer system vulnerabilities can be categorized based on their origin. Understanding these root causes is essential for effective risk assessment and control selection.
+
+- **Software infrastructure:** Insecure code (e.g., buffer overflows, SQL injection flaws, business logic errors) and unpatched software (e.g., missing vendor security updates for operating systems, applications, or firmware). This also includes vulnerabilities introduced by third-party libraries and end-of-life software no longer supported by the vendor.
+- **Network infrastructure:** Weaknesses arising from misconfigured protocols and IP services (e.g., unnecessary open ports, default SNMP community strings, weak VPN ciphers), inherent flaws in network protocol designs (e.g., ARP spoofing, DNS cache poisoning), or insecure device configurations (e.g., lack of access control lists, default administrative credentials).
+- **Hardware:** Physical security flaws (e.g., exposed debugging interfaces, lack of tamper resistance), hardware-based side-channel attacks (e.g., speculative execution vulnerabilities like Meltdown and Spectre), or insecure device design and supply chain integrity issues (e.g., implanted backdoors in manufacturing).
+- **Organizational and network policies:** Absence of, or poorly defined, security policies, standards, and procedures that govern system use. This includes a lack of acceptable use policies, missing data classification guidelines, or the absence of formal change management processes, all of which create exploitable security gaps.
+- **Human factors:** The susceptibility of users and administrators to social engineering tactics (e.g., phishing, pretexting, baiting), errors in judgment, lack of security awareness and training, or negligent behavior such as writing down passwords or mishandling sensitive data.
+- **Configuration mistakes:** The failure to securely configure systems and devices. This includes unsecured endpoints (e.g., disabled host firewalls), failure to change default passwords, overly permissive file shares, misconfigured cloud storage buckets, or the unintentional exposure of administrative interfaces to the public internet. These errors often violate the principle of least privilege.
+
 Computer system vulnerabilities can be categorized based on their origin:
 
 * **Software infrastructure:** Flaws in applications, operating systems, or firmware.

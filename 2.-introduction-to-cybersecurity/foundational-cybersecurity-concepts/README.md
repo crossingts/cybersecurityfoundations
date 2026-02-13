@@ -189,7 +189,7 @@ An information availability attack aims to disrupt access to data, systems, or s
 
 ### CIA attacks mitigation technologies
 
-#### **Technologies for Confidentiality, Integrity, and Availability**
+**Technologies for Confidentiality, Integrity, and Availability**
 
 | **Security Objective** | **Key Technologies**                                                                                                                                                                                                                                                   | **Purpose**                                      | **Notes**                                                    |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------ |
@@ -302,7 +302,7 @@ Several centralized logging technologies can enhance security and compliance by 
 |                                | **Azure Monitor Logs**          | **Commercial**  | Part of Microsoft Azure's paid ecosystem. Billed based on data ingestion and retention.                                 |
 |                                | **Syslog-ng / Rsyslog**         | **Open Source** | Standard, free, and open-source log forwarders available on most Unix/Linux systems.                                    |
 
-#### Clarifications:
+**Clarifications:**
 
 * **Freemium Models:** Several tools listed as "Commercial" (like Splunk, Datadog, and the cloud platforms) offer generous free tiers or free plans for low-volume use, but their full-featured enterprise versions are paid services.
 * **Open Core Models:** Tools like **Elastic SIEM** and **Graylog** have strong open-source cores. However, the companies behind them also sell commercial extensions (like advanced security features, supported plugins, and professional support), which is a common business model in the open-source world.

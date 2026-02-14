@@ -22,6 +22,20 @@
             }
           },
           {
+            "id": "8ff18063b6ccdc9d",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1800-32.pdf",
+                "title": "Securing Distributed Energy Resources: An Example of Industrial Internet of Things Cybersecurity",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "Securing Distributed Energy Resources: An Example of Industrial Internet of Things Cybersecurity"
+            }
+          },
+          {
             "id": "1873958060cb94ca",
             "type": "leaf",
             "state": {

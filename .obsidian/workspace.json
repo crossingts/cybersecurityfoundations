@@ -20,6 +20,34 @@
               "icon": "lucide-file",
               "title": "README"
             }
+          },
+          {
+            "id": "1873958060cb94ca",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://www.csis.org/analysis/geopolitics-converged-telecommunications",
+                "title": "Page Not Found | CSIS",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "Page Not Found | CSIS"
+            }
+          },
+          {
+            "id": "dda40cecf8904fc5",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://doi.org/10.1016/j.telpol.2023.102476",
+                "title": "Error: DOI Not Found",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "Error: DOI Not Found"
+            }
           }
         ]
       }
@@ -183,6 +211,7 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
+    "2.-introduction-to-cybersecurity/the-cybersecurity-threat-landscape/README.md",
     "7.-conclusion/practical-foundations-in-ethical-hacking.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/README.md",
     "6.-practical-foundations-in-ethical-hacking/what-do-ethical-hackers-do/README.md",
@@ -209,7 +238,6 @@
     "3.-cybersecurity-grc/introduction-cybersecurity-grc.md",
     "3.-cybersecurity-grc/the-information-security-compliance-audit/the-information-security-compliance-audit-quiz.md",
     "3.-cybersecurity-grc/the-information-security-compliance-audit/the-compliance-audit-quiz.md",
-    "3.-cybersecurity-grc/the-information-security-compliance-audit/README.md",
     "3.-cybersecurity-grc/the-information-security-compliance-audit",
     "3.-cybersecurity-grc/the-information-security-risk-assessment",
     "3.-cybersecurity-grc/the-compliance-audit",

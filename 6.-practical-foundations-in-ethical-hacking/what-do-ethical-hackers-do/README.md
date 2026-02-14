@@ -32,7 +32,7 @@ Key practices of ethical hackers include:
 * Discovering unknown vulnerabilities and identifying threats. This includes tracking vulnerabilities over time for metrics purposes and disclosing vulnerabilities to national repositories (e.g., the National Vulnerability Databases).
 * Performing compliance audits against security regulations and standards. This includes government regulations (e.g., Privacy Act, 1983; PIPEDA, 2000), industry regulations (e.g., PCI DSS, ISO/IEC 27001, NIST SP 800-115), and in-house standard procedures and best practices.
 
-These activities are not mutually exclusive. A risk assessment can be performed to achieve compliance with a certain regulation, and vulnerability assessments are performed as part of risk assessments. "Penetration testing", strictly speaking, is the act of exploiting known/discovered vulnerabilities (or testing a hypothesis about the existence of a vulnerability) but in reality the term penetration testing is used in a more broader sense, variably, and the act of exploiting vulnerabilities is typically and ideally performed as part of a more comprehensive risk assessment exercise. Ultimately, a robust vulnerability assessment program aligns with risk management frameworks (e.g., NIST SP 800-115) to ensure compliance and reduce the organization’s attack surface.
+These activities are not mutually exclusive. A risk assessment can be performed to achieve compliance with a certain regulation, and vulnerability assessments are performed as part of risk assessments. "Penetration testing", strictly speaking, is the act of exploiting known/discovered vulnerabilities (or testing a hypothesis about the existence of a vulnerability) but in reality the term penetration testing is used in a more broader sense, variably, and the act of exploiting vulnerabilities is typically and ideally performed as part of a more comprehensive risk assessment exercise. 
 
 ### Vulnerability assessment
 
@@ -44,7 +44,10 @@ Advanced assessments incorporate credentialed scanning, where authenticated chec
 
 ### Risk assessment
 
-The NIST Risk Management Guide defines risk assessment as “the process of identifying the risks to system security and determining the probability of occurrence, the resulting impact, and additional safeguards that would mitigate this impact” (Landoll & Landoll, 2005, p. 10).
+According to NIST SP 800-30 (Guide for Conducting Risk Assessments), risk assessment is defined as the process of identifying, estimating, and prioritizing risks to organizational operations, assets, and individuals. The process begins by determining what the organization values, namely its assets. Within this framework, NIST SP 800-30 describes risk as a function of two key factors:
+
+- **Likelihood of Occurrence:** The probability that a particular threat source will successfully exploit a vulnerability.
+- **Impact of Occurrence:** The level of harm that would result from the exploitation of a vulnerability.
 
 According to the General Security Risk Assessment Guidelines, ASIS International (2003), the essential components of a risk assessment plan include, identifying assets, specifying loss events (threats), assessing the frequency and impact of events, recommending mitigation options, conducting a cost/benefit analysis, and making decisions. Risk assessments help risk managers select appropriate security control measures to lower the risk to an acceptable level (Engebretson, 2011; Landoll & Landoll, 2005; Peltier, 2005). 
 

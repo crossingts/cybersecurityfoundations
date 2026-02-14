@@ -180,14 +180,6 @@ Developed by private firms and sold to governments, law enforcement, or private 
 5. **Bundled Freeware** – Installs spyware if "Advanced" settings are skipped.
 6. **Zero-Click Exploits** (Advanced Spyware like Pegasus) – No user interaction needed.
 
-**Signs Your Device Has Spyware**
-
-* Slow performance, frequent crashes
-* Unusual pop-ups & browser redirects
-* Increased data usage (spyware transmitting data)
-* Unknown programs in Task Manager
-* Antivirus suddenly disabled
-
 **The Legal & Ethical Debate on Commercial Spyware**
 
 **Defenders Argue:**

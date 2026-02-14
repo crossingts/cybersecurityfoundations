@@ -20,48 +20,6 @@
               "icon": "lucide-file",
               "title": "README"
             }
-          },
-          {
-            "id": "8ff18063b6ccdc9d",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1800-32.pdf",
-                "title": "Securing Distributed Energy Resources: An Example of Industrial Internet of Things Cybersecurity",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "Securing Distributed Energy Resources: An Example of Industrial Internet of Things Cybersecurity"
-            }
-          },
-          {
-            "id": "1873958060cb94ca",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://www.csis.org/analysis/geopolitics-converged-telecommunications",
-                "title": "Page Not Found | CSIS",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "Page Not Found | CSIS"
-            }
-          },
-          {
-            "id": "dda40cecf8904fc5",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://doi.org/10.1016/j.telpol.2023.102476",
-                "title": "Error: DOI Not Found",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "Error: DOI Not Found"
-            }
           }
         ]
       }

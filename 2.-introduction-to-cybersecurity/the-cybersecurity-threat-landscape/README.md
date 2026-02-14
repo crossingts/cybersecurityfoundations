@@ -75,15 +75,11 @@ The top higher education information security risks in the U.S. and Canada that 
 
 ### Technological drivers of change
 
-• Social digitization
-
-• Digital convergence of communications channels
-
-• AI/ML
-
-• Internet of things (IoT)
-
-• A growing spyware industry
+- Social digitization
+- Digital convergence of communications channels
+- AI/ML
+- Internet of things (IoT)
+- A growing spyware industry
 
 #### Social digitization
 
@@ -217,9 +213,8 @@ Notable firms include NSO Group (Israel), Paragon (Israel), Candiru (Israel), Ci
 
 ### Sociopolitical drivers of change
 
-• U.S.-China rivalry for technological and geopolitical dominance
-
-• Expansion of the military-industrial complex (collusion between Western governments and the dominant media companies)
+- U.S.-China rivalry for technological and geopolitical dominance
+- Expansion of the military-industrial complex (collusion between Western governments and the dominant media companies)
 
 These two sociopolitical influences are powerful, interconnected drivers shaping the modern cybersecurity threat landscape. Here is a detailed elaboration on each.
 

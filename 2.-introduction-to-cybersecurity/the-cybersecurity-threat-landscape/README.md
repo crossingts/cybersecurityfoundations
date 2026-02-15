@@ -175,8 +175,6 @@ As spyware tools grow more sophisticated—incorporating zero-click exploits, fo
 - U.S.-China rivalry for technological and geopolitical dominance
 - Expansion of the military-industrial complex (collusion between Western governments and the dominant media companies)
 
-These two sociopolitical influences are powerful, interconnected drivers shaping the modern cybersecurity threat landscape. Here is a detailed elaboration on each.
-
 #### U.S.-China Rivalry for Technological and Geopolitical Dominance
 
 This is not merely a trade war; it is a comprehensive strategic competition between a reigning superpower and a rising challenger. This rivalry fundamentally reshapes cybersecurity by blurring the lines between economic competition, espionage, and preparation for potential conflict.
@@ -212,7 +210,7 @@ The traditional concept of the "military-industrial complex" (the symbiotic rela
 
 **Conclusion: The Interconnection**
 
-These two influences are deeply intertwined. The **U.S.-China rivalry** provides the _motivation and justification_ for massive spending and aggressive action. The expanded **military-industrial complex** provides the _means and the machinery_ to execute that action, while simultaneously amplifying the threat narrative to sustain its own growth.
+These two sociopolitical influences are powerful, interconnected drivers shaping the modern cybersecurity threat landscape. The U.S.-China rivalry provides the _motivation and justification_ for massive spending and aggressive action. The expanded military-industrial complex provides the _means and the machinery_ to execute that action, while simultaneously amplifying the threat narrative to sustain its own growth.
 
 This creates a feedback loop: geopolitical tension fuels cyber conflict, which the cyber-industrial complex monetizes and the media amplifies, which in turn leads to greater public and governmental fear, resulting in more funding for cyber capabilities and more aggressive actions that further intensify the geopolitical rivalry. This cycle ensures that the cybersecurity threat landscape will remain dynamic, dangerous, and increasingly central to global politics.
 

@@ -23,7 +23,7 @@ Through an exploration of key concepts and practices, this chapter will help stu
 
 [Foundational cybersecurity concepts](foundational-cybersecurity-concepts/)
 
-[The cybersecurity threat landscape](the-cybersecurity-threat-landscape/)
+[The evolving cybersecurity threat landscape](the-cybersecurity-threat-landscape/)
 
 [Common cyber attacks](common-cyber-attacks/)
 

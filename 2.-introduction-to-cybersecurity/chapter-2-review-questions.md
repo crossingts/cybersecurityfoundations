@@ -32,7 +32,7 @@ Both RADIUS and TACACS+ are AAA protocols, but they have key differences:
 * **RADIUS** is an open standard that combines authentication and authorization. It uses UDP and is often used for network access control (like Wi-Fi logins).
 * **TACACS+** (developed by Cisco) separates authentication, authorization, and accounting into discrete processes. It uses TCP and provides more detailed control and accounting, making it popular for administering network devices like routers and switches.
 
-### The cybersecurity threat landscape
+### The evolving cybersecurity threat landscape
 
 **1. List two types of cybersecurity threats faced by individuals, as outlined in the section.**\
 **Answer:** Identity theft/personal information theft and political interference/malicious online influence activity (e.g., through botnets).

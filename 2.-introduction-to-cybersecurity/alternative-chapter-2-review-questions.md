@@ -22,7 +22,7 @@ hidden: true
 
 ***
 
-### The cybersecurity threat landscape
+### The evolving cybersecurity threat landscape
 
 * What is a major cybersecurity threat facing society as a whole?
 * What are two major cybersecurity threats facing individuals?

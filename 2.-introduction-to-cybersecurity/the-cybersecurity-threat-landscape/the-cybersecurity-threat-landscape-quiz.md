@@ -1,6 +1,6 @@
-# The cybersecurity threat landscape — Quiz
+# The evolving cybersecurity threat landscape — Quiz
 
-### The cybersecurity threat landscape
+### The evolving cybersecurity threat landscape
 
 **1. According to the CSE (2018), what is a primary reason cyber threat activity against public institutions like universities and hospitals is likely to persist? (Choose one answer)**\
 a) They have the weakest security firewalls\

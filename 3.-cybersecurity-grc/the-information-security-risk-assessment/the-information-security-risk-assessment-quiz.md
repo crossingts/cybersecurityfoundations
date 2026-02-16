@@ -1,5 +1,7 @@
 # The information security risk assessment — Quiz
 
+### The information security risk assessment
+
 **1. What is the primary purpose of an information security risk assessment within a GRC program? (Choose one answer)**\
 a) To achieve perfect, risk-free security across all systems\
 **b) To provide an evidence-based foundation for prioritizing security resources and treatment actions**\

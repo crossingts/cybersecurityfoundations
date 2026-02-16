@@ -1,4 +1,6 @@
-# The compliance audit — Quiz
+# The information security compliance audit — Quiz
+
+### The information security compliance audit
 
 **1. What is the primary purpose of a cybersecurity compliance audit within the GRC framework? (Choose one answer)**\
 a) To identify new and emerging security vulnerabilities before attackers can exploit them\

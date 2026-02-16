@@ -84,7 +84,7 @@ The Risk Register is the central, living document that tracks identified risks t
 2. Risk Rating (both Inherent and Residual, based on likelihood and impact).
 3. Risk Owner and Recommended Treatment/Action Plan.
 
-### The compliance audit
+### The information security compliance audit
 
 **1. Define a cybersecurity compliance audit and explain how it differs fundamentally from a risk assessment.**\
 **Answer:**\

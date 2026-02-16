@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2.-introduction-to-cybersecurity/the-cybersecurity-threat-landscape/README.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -183,6 +183,12 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/scanning-and-enumeration/README.md",
+    "1.-it-career-planning/it-career-paths/README.md",
+    "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md",
+    "README.md",
+    "SUMMARY.md",
+    "test_update.md",
     "2.-introduction-to-cybersecurity/the-cybersecurity-threat-landscape/README.md",
     "7.-conclusion/practical-foundations-in-ethical-hacking.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/README.md",
@@ -201,15 +207,9 @@
     "7.-conclusion/glossary.md",
     "7.-conclusion/cybersecurity-grc.md",
     "1.-it-career-planning/introduction-it-career-planning.md",
-    "README.md",
-    "SUMMARY.md",
-    "test_update.md",
     "LICENSE",
     "6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/choosing-a-project-documentation-platform.md",
     "6.-practical-foundations-in-ethical-hacking/introduction-practical-foundations-in-ethical-hacking.md",
-    "3.-cybersecurity-grc/introduction-cybersecurity-grc.md",
-    "3.-cybersecurity-grc/the-information-security-compliance-audit/the-information-security-compliance-audit-quiz.md",
-    "3.-cybersecurity-grc/the-information-security-compliance-audit/the-compliance-audit-quiz.md",
     "3.-cybersecurity-grc/the-information-security-compliance-audit",
     "3.-cybersecurity-grc/the-information-security-risk-assessment",
     "3.-cybersecurity-grc/the-compliance-audit",

@@ -20,6 +20,20 @@
               "icon": "lucide-file",
               "title": "README"
             }
+          },
+          {
+            "id": "f06d42dfd8fb4d57",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://docs.google.com/document/d/e/2PACX-1vRuZOSjEtCp5DjuqkGnET2AZZe1OP98FTG4hYFFOktTBttpPzeQUMvMHecFXxnWzRYx0RC052CYytNV/pub",
+                "title": "Cybersecurity Threats Facing Individuals, Businesses, and Society (CSE, 2018)",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "Cybersecurity Threats Facing Individuals, Businesses, and Society (CSE, 2018)"
+            }
           }
         ]
       }
@@ -183,9 +197,9 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
+    "2.-introduction-to-cybersecurity/the-evolving-cybersecurity-threat-landscape/README.md",
     "3.-cybersecurity-grc/the-information-security-compliance-audit/README.md",
     "3.-cybersecurity-grc/the-information-security-compliance-audit/the-information-security-compliance-audit-quiz.md",
-    "2.-introduction-to-cybersecurity/the-evolving-cybersecurity-threat-landscape/README.md",
     "2.-introduction-to-cybersecurity/the-cybersecurity-threat-landscape/README.md",
     "2.-introduction-to-cybersecurity/the-evolving-cybersecurity-threat-landscape/the-evolving-cybersecurity-threat-landscape-quiz.md",
     "2.-introduction-to-cybersecurity/the-evolving-cybersecurity-threat-landscape",

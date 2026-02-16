@@ -11,14 +11,10 @@
             "id": "1e65107a9a5d3b6c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2.-introduction-to-cybersecurity/the-cybersecurity-threat-landscape/README.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "README"
+              "title": "New tab"
             }
           }
         ]
@@ -183,8 +179,11 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
-    "2.-introduction-to-cybersecurity/the-cybersecurity-threat-landscape/the-cybersecurity-threat-landscape-quiz.md",
     "2.-introduction-to-cybersecurity/the-cybersecurity-threat-landscape/README.md",
+    "2.-introduction-to-cybersecurity/the-evolving-cybersecurity-threat-landscape/the-evolving-cybersecurity-threat-landscape-quiz.md",
+    "2.-introduction-to-cybersecurity/the-evolving-cybersecurity-threat-landscape/README.md",
+    "2.-introduction-to-cybersecurity/the-evolving-cybersecurity-threat-landscape",
+    "2.-introduction-to-cybersecurity/the-cybersecurity-threat-landscape/the-cybersecurity-threat-landscape-quiz.md",
     "2.-introduction-to-cybersecurity/introduction-introduction-to-cybersecurity.md",
     "2.-introduction-to-cybersecurity/chapter-2-review-questions.md",
     "7.-conclusion/glossary.md",
@@ -207,8 +206,6 @@
     "7.-conclusion/introduction-to-cybersecurity.md",
     "7.-conclusion/introduction-conclusion.md",
     "7.-conclusion/networking-fundamentals.md",
-    "7.-conclusion/it-career-planning.md",
-    "7.-conclusion/cybersecurity-grc.md",
     "LICENSE",
     "3.-cybersecurity-grc/the-information-security-compliance-audit",
     "3.-cybersecurity-grc/the-information-security-risk-assessment",
@@ -218,7 +215,6 @@
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets/kernel-flaws-and-buffer-overflows",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets-1/kernel-flaws-and-buffer-overflows",
-    "6.-practical-foundations-in-ethical-hacking/common-attack-targets-1",
     "Pasted image 20251017114230.png",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing/Pasted image 20251010134024.png"
   ]

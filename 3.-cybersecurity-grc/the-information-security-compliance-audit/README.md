@@ -4,7 +4,7 @@ description: >-
   within the GRC framework, demonstrating evidence of due care and adherence
 ---
 
-# The compliance audit
+# The information security compliance audit
 
 ## Learning objectives
 

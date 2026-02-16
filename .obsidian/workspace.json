@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3.-cybersecurity-grc/the-information-security-compliance-audit/README.md",
+                "file": "2.-introduction-to-cybersecurity/the-evolving-cybersecurity-threat-landscape/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -183,6 +183,8 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
+    "3.-cybersecurity-grc/the-information-security-compliance-audit/README.md",
+    "3.-cybersecurity-grc/the-information-security-compliance-audit/the-information-security-compliance-audit-quiz.md",
     "2.-introduction-to-cybersecurity/the-evolving-cybersecurity-threat-landscape/README.md",
     "2.-introduction-to-cybersecurity/the-cybersecurity-threat-landscape/README.md",
     "2.-introduction-to-cybersecurity/the-evolving-cybersecurity-threat-landscape/the-evolving-cybersecurity-threat-landscape-quiz.md",
@@ -208,8 +210,6 @@
     "2.-introduction-to-cybersecurity/common-cyber-attacks/common-cyber-attacks-quiz.md",
     "2.-introduction-to-cybersecurity/cybersecurity-risk-mitigation-methods/README.md",
     "7.-conclusion/introduction-to-cybersecurity.md",
-    "7.-conclusion/introduction-conclusion.md",
-    "7.-conclusion/networking-fundamentals.md",
     "LICENSE",
     "3.-cybersecurity-grc/the-information-security-compliance-audit",
     "3.-cybersecurity-grc/the-information-security-risk-assessment",

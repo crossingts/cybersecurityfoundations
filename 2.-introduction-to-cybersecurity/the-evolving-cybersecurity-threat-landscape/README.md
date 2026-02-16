@@ -4,7 +4,7 @@ description: >-
   technological and sociopolitical influences
 ---
 
-# The cybersecurity threat landscape
+# The evolving cybersecurity threat landscape
 
 ## Learning objectives
 

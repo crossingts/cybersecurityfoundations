@@ -11,6 +11,8 @@ description: This section explores common cyber attacks and malware types
 
 This section looks at common cyber attacks (reconnaissance, social engineering, password attacks, DoS, reflection and amplification, MITM, and spoofing) and malware types (viruses, worms, and ransomware).
 
+This section explores common methods and mechanisms used by adversaries to compromise the CIA (Confidentiality, Integrity, and Availability) of information systems. It begins by examining the attacker's kill chain, starting with reconnaissance, the vital information gathering phase that enables more precise and targeted strikes. From there, the discussion moves to social engineering, which bypasses technical defenses by targeting the human element, and then to direct technical assaults like password attacks and various forms of denial of service (DoS). The section will detail how attackers can amplify the power of DoS through reflection and amplification techniques, and how they can position themselves to intercept or alter communications using man-in-the-middle (MITM) attacks. A recurring theme across many of these threats is the use of spoofing, where an attacker falsifies data—such as an IP or MAC address—to conceal their identity or impersonate a trusted entity. Finally, the section shifts from active network attacks to the malicious software itself, providing an overview of common malware types, including how viruses and worms propagate, and the destructive impact of ransomware.
+
 ## Topics covered in this section
 
 * **Common cyber attacks**
@@ -27,7 +29,7 @@ This section looks at common cyber attacks (reconnaissance, social engineering, 
 
 ### Common cyber attacks
 
-Attack types are threats which can potentially exploit vulnerabilities to compromise the CIA (Confidentiality, Integrity, and Availability) of an enterprise’s information assets and network system security. This discussion explores how attackers can compromise the CIA of information assets by looking at the following common types of cyber attacks: Reconnaissance, social engineering, password attacks, denial of service (DoS), reflection and amplification, MITM, and spoofing attacks. There are many more potential attacks than these, but these are some of the main attack categories.
+This discussion explores how attackers can compromise the CIA (Confidentiality, Integrity, and Availability) of an enterprise's information assets through a range of cyber attack methods: reconnaissance, social engineering, password attacks, denial of service (DoS), reflection and amplification, MITM (Man-in-the-Middle), and spoofing attacks.
 
 #### Reconnaissance
 
@@ -202,7 +204,7 @@ In a reflection attack, the attacker sends traffic to a reflector such as a DNS 
 
 There is a more powerful variant of the reflection attack called an amplification attack. A reflection attack becomes an amplification attack when the amount of traffic sent by the attacker is small, but it triggers a large amount of traffic to be sent from the reflector to the target. This triggers a denial of service. For example, there are DNS and NTP vulnerabilities which can be exploited for such amplification attacks.
 
-#### Man in the middle (MITM)&#x20;
+#### Man-in-the-Middle (MITM) 
 
 **DHCP poisoning**
 
@@ -260,7 +262,7 @@ ARP spoofing, also known as ARP poisoning, is a MITM attack that allows attacker
 
 The attacker sends fake ARP replies (gratuitous ARP) to associate their own MAC address with someone else’s IP address (e.g., the gateway’s IP). The attacker spoofs the source IP address of the target device as their own (impersonates a legitimate IP address). This tricks other devices into sending traffic intended for the victim’s IP to the attacker’s MAC instead.
 
-In an ARP spoofing attack, a host sends an ARP request asking for the MAC address of another device. PC1 is asking for the MAC address of host 10.0.0.1, which is SRV1. Because ARP request messages are broadcast, the switch floods the frame, so both SRV1 and the attacker receive it. SRV1 sends an ARP reply to PC1. The attacker waits briefly and then sends another ARP reply (called **gratuitous ARP**) after the legitimate reply. If the attacker’s ARP reply arrives last, it will overwrite the legitimate ARP entry in PC1’s ARP table.&#x20;
+In an ARP spoofing attack, a host sends an ARP request asking for the MAC address of another device. PC1 is asking for the MAC address of host 10.0.0.1, which is SRV1. Because ARP request messages are broadcast, the switch floods the frame, so both SRV1 and the attacker receive it. SRV1 sends an ARP reply to PC1. The attacker waits briefly and then sends another ARP reply (called **gratuitous ARP**) after the legitimate reply. If the attacker’s ARP reply arrives last, it will overwrite the legitimate ARP entry in PC1’s ARP table. 
 
 Now in PC1’s ARP table, the entry for 10.0.0.1 will have the attacker’s MAC address, not the MAC address of the real 10.0.0.1, SRV1. So when PC1 tries to send traffic to SRV1, traffic will be forwarded to the attacker instead. Then, the attacker can inspect the messages, read their contents and then forward them to SRV1. Or the attacker can modify the messages before forwarding them to SRV1.
 
@@ -317,11 +319,11 @@ A further illustration of the ARP spoofing attack and mitigation via dynamic ARP
 
 #### Spoofing attacks
 
-To spoof an address is to use a fake source address, for example a fake IP or MAC address. There are various types of spoofing attacks:&#x20;
+To spoof an address is to use a fake source address, for example a fake IP or MAC address. There are various types of spoofing attacks: 
 
 * Denial-of-Service (DoS)
-* Reflection and Amplification&#x20;
-* Man-in-the-Middle&#x20;
+* Reflection and Amplification 
+* Man-in-the-Middle 
 
 Each of the following spoofing attack types involves either IP spoofing or MAC spoofing as a mechanism of action.
 

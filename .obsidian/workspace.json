@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2.-introduction-to-cybersecurity/the-evolving-cybersecurity-threat-landscape/README.md",
+                "file": "2.-introduction-to-cybersecurity/common-cyber-attacks/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -181,7 +181,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4cbe2b44801facb3",
+  "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
     "2.-introduction-to-cybersecurity/the-evolving-cybersecurity-threat-landscape/README.md",
     "3.-cybersecurity-grc/the-information-security-compliance-audit/README.md",

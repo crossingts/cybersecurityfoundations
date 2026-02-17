@@ -15,18 +15,21 @@ This section explores how digital technologies and geopolitical forces are trans
 
 ## Topics covered in this section
 
-* **Cybersecurity threats at the societal and individual levels**
-* **Cybersecurity threats to business/industry**
+* **Cybersecurity threats at the societal level**
+* **Cybersecurity threats at the individual level**
+* **Cybersecurity threats to businesses**
 * **Technological drivers of change**
 * **Sociopolitical drivers of change**
 
-### Cybersecurity threats at the societal and individual levels
+### Cybersecurity threats at the societal level
 
 As nations increasingly rely on interconnected digital systems for the management and operation of critical infrastructure and essential services, the potential for cyber operations to disrupt daily life has grown exponentially. Critical infrastructure such as power grids, defence facilities, and health services—once protected by physical isolation—now exist within complex digital ecosystems that span public and private networks. The Canadian Communications Security Establishment (CSE) warns that as "the number and variety of devices used to support, monitor, and control critical infrastructure become more interconnected, the likelihood of cyber threat actors disrupting critical infrastructure has increased" (2018, p. 23). This interconnection means that a vulnerability in a seemingly minor component can potentially cascade into region-wide blackouts, compromised military communications, or the disruption of hospital operations during a public health crisis.
 
 Beyond critical infrastructure, public institutions face persistent targeting by cyber threat actors seeking access to sensitive information. Government departments, universities, and hospitals manage vast repositories of data that are invaluable to adversaries—ranging from confidential communications and defense research to personal health records and academic intellectual property. The CSE notes that cyber threat activity "against public institutions—such as government departments, universities, and hospitals—is likely to persist because of the essential nature of the services and the sensitivity of the information they manage" (2018, p. 26). These institutions are particularly vulnerable because they must balance security with accessibility, maintaining open environments for education, research, and public service while defending against determined adversaries.
 
 A third dimension of societal-level threat operates not in the technical infrastructure but in the information space itself. Cyber warfare now encompasses targeted propaganda, misinformation, and disinformation campaigns conducted via social media platforms. Adversaries exploit the architecture of digital communication to foment unrest, deepen social divisions, and undermine public confidence in democratic institutions. By deploying coordinated networks of automated accounts and manipulating algorithmic content distribution, state-sponsored actors can amplify divisive messages, suppress opposing viewpoints, and create the illusion of widespread support for or against particular policies. These information operations represent a fundamental challenge to societal resilience, as they target the shared understanding and social cohesion upon which democratic societies depend.
+
+### Cybersecurity threats at the individual level
 
 At the individual level, cybercrime—particularly personal information and identity theft—represents the most immediate and widespread threat facing Canadians. The digital transformation of banking, commerce, and government services has concentrated unprecedented volumes of personal data within systems that are continuously targeted by criminal actors. The CSE (2018) observes that Canadians face a rising cyber risk of falling victim to cybercrime, especially identity theft, and that the theft of personal and financial information is both lucrative for cybercriminals and very likely to increase. Cybercriminals profit "by obtaining account login credentials, credit card details, and other personal information. They exploit this information to directly steal money, to resell information on cybercrime marketplaces, to commit fraud, or for extortion" (p. 11). The consequences for victims extend beyond financial loss to include reputational damage, emotional distress, and years of effort restoring compromised identities.
 
@@ -38,7 +41,7 @@ A third and increasingly pervasive individual-level threat arises from state and
 
 [Table 1: Cybersecurity Threats Facing Individuals, Businesses, and Society (CSE, 2018)](https://docs.google.com/document/d/e/2PACX-1vRuZOSjEtCp5DjuqkGnET2AZZe1OP98FTG4hYFFOktTBttpPzeQUMvMHecFXxnWzRYx0RC052CYytNV/pub)
 
-### Cybersecurity threats to business/industry
+### Cybersecurity threats to businesses
 
 Businesses across all sectors face an escalating risk of cybercrime, with data breaches resulting from commercial espionage, theft of sensitive information, and social engineering schemes representing the most pervasive threats. These attacks frequently combine psychological manipulation with technical exploits—social engineering tactics such as phishing are often the delivery mechanism for malware, ransomware, or unauthorized access that enables data exfiltration. The CSE notes, "Canadian businesses, especially those active in strategic sectors of the economy, are subject to cyber espionage aimed at stealing intellectual property and other commercially sensitive information". This targeted activity, "can harm Canada's competitive business advantage and undermine our strategic position in global markets" (2018, p. 19). The stakes extend beyond immediate financial loss to include long-term erosion of competitiveness as proprietary research, manufacturing processes, and business strategies find their way to competitors willing to bypass the costs of legitimate innovation.
 
@@ -46,9 +49,9 @@ Cyber espionage campaigns often transcend borders, with hackers operating from o
 
 Beyond espionage and data theft, businesses must contend with politically motivated cyber operations that blur the line between criminal activity and state-sponsored warfare. Destructive attacks such as the Stuxnet worm—attributed to joint U.S. and Israeli operations—demonstrated that cyber weapons could physically sabotage industrial equipment, causing damage that previously required kinetic military action. Financial institutions have emerged as frequent targets of such campaigns, with ransomware attacks including WannaCry and Petya—attributed to North Korean state actors—disrupting operations globally and causing billions in damages. These incidents illustrate how businesses become collateral damage in geopolitical conflicts, their networks serving as battlegrounds where nations prosecute campaigns of disruption and coercion. The convergence of criminal profit motives with state strategic objectives means that enterprises must defend not only against financially motivated actors but also against sophisticated adversaries whose goals extend far beyond the balance sheet.
 
-#### Risk in higher education (industry in focus)
+#### Information security risks in higher education (industry in focus)
 
-According to EDUCAUSE, a U.S. based nonprofit association that helps higher education elevate the impact of IT, with community of over 100,000 members spanning 45 countries, information security was the number one IT governance issue in 2016. The top higher education information security **risks** that were a priority for IT in 2016 were 1) phishing and social engineering; 2) end-user awareness, training, and education; 3) limited resources for the information security program (i.e., too much work and not enough time or people); and 4) addressing regulatory requirements (Grama & Vogel, 2017).
+According to EDUCAUSE, a U.S. based nonprofit association that helps higher education elevate the impact of IT, with community of over 100,000 members spanning 45 countries, information security was the number one IT governance issue in 2016. The top higher education information security risks that were a priority for IT in 2016 were 1) phishing and social engineering; 2) end-user awareness, training, and education; 3) limited resources for the information security program (i.e., too much work and not enough time or people); and 4) addressing regulatory requirements (Grama & Vogel, 2017).
 
 The top higher education information security risks in the U.S. and Canada that are a priority for IT in 2016 (Grama & Vogel, 2017) are summarized as follows.
 

@@ -37,29 +37,25 @@ Reconnaissance, often the first phase of the cyber kill chain, is the process of
 
 Active reconnaissance, in contrast, involves direct engagement with the target's systems to probe for weaknesses, a process that is far more likely to trigger detection systems like Intrusion Detection/Prevention Systems (IDS/IPS). A primary technique in this phase is port scanning, often performed with tools like Nmap, to discover live hosts and enumerate open ports and services. An attacker is not just looking for open ports, but for the specific service versions running on them (e.g., Apache 2.4.49 vs. nginx 1.18.0), as this fingerprinting allows them to query a database of known vulnerabilities (CVEs) for an easy exploit. Furthermore, techniques like banner grabbing can reveal detailed software information, and OS fingerprinting can determine the underlying operating system of a target host. The cumulative knowledge from active reconnaissance—from identifying a vulnerable service on a seldom-monitored port to confirming a target's operating system—provides the attacker with a precise blueprint for crafting the next, more destructive phases of their operation.
 
-Reconnaissance “attacks” are used to gather information about a target. The information gathered in this initial stage is often publicly available information and can be used to launch a targeted social engineering attack.
-
-You can perform an NSLOOKUP to learn the IP address of a site. From there, you can probe for open ports which are potential vulnerabilities. You could also perform a WHOIS query to learn email addresses, phone numbers, physical addresses, etc. at this website: https://lookup.icann.org/en.
-
 #### Social engineering
 
-Social engineering attacks do not directly exploit a company’s IT systems, instead they exploit the employees. No matter how many security features you configure on your routers, switches, firewalls, servers, PCs, etc., people are always a vulnerability that can be exploited.
+Social engineering attacks do not directly exploit a company’s IT systems, instead they exploit people's propensity to trust others. No matter how many security features you configure on your routers, switches, firewalls, servers, PCs, etc., people are always a vulnerability that can be exploited.
 
-Social engineering attacks involve psychological manipulation to make the target reveal confidential information or perform some action the attacker wants the target to do. As with the previous attack types, there are various kinds of social engineering attacks. Here are a few common ones.
+Social engineering attacks involve psychological manipulation to make the target reveal confidential information or perform some action the attacker wants the target to do. As with other attack types, there are various kinds of social engineering attacks. Here are a few common ones.
 
-\*Phishing involves fraudulent emails that appear to come from a legitimate business, such as your bank or your credit card company. These emails contain links to a fraudulent website that seems legitimate. The website may look identical to the real login page of your bank’s website, for example. Users are told to login to the fake website, therefore providing their login credentials to the attacker.
+**Phishing**
 
-Spear phishing is a type of phishing that is more targeted. This can take the form of personalized emails sent to employees of a specific company.
+Phishing involves fraudulent emails that appear to come from a legitimate business, such as your bank or your credit card company. These emails contain links to a fraudulent website that seems legitimate. The website may look identical to the real login page of your bank’s website, for example. Users are told to login to the fake website, therefore providing their login credentials to the attacker.
 
-Whaling is another kind of phishing targeted at high-profile individuals, for example a company president.
+**Spear phishing** is a type of phishing that is more targeted. This can take the form of personalized emails sent to employees of a specific company. **Whaling** is another kind of phishing targeted at high-profile individuals, for example a company president. **Vishing**, voice phishing, is phishing performed over the phone. The attacker could pretend to be from the target’s bank or from the IT department in the company. For example, an attacker may impersonate an IT department employee who says they need to know the password to reset it. **Mishing**, SMS phishing, is phishing performed using SMS text messages to the target’s cell phone.
 
-Vishing, voice phishing, is phishing performed over the phone. The attacker could pretend to be from the target’s bank or from the IT department in the company. For example, an attacker may impersonate an IT department employee who says they need to know the password to reset it.
+**Watering Hole**
 
-Mishing, SMS phishing, which is phishing performed using SMS text messages to the target’s cell phone.
+Watering hole attacks compromise sites that the target frequently visits. If a malicious link is placed on a website the target trusts, they might not hesitate to click it. So, this kind of attack is taking advantage of the user’s trust in the website they frequently visit.
 
-\*Watering hole attacks compromise sites that the target victim frequently visits. If a malicious link is placed on a website the target trusts, they might not hesitate to click it. So, this kind of attack is taking advantage of the user’s trust in the website they frequently visit.
+**Tailgating**
 
-\*Tailgating attacks involve entering restricted, secure areas by simply walking in behind an authorized person as they enter. Any company that has restricted areas will have rules against this, but often the target will hold the door open for the attacker to be polite, assuming the attacker is also authorized to enter.
+Tailgating attacks involve entering restricted, secure areas by simply walking in behind an authorized person as they enter. Any company that has restricted areas will have rules against this, but often the target will hold the door open for the attacker to be polite, assuming the attacker is also authorized to enter.
 
 #### Password attacks
 

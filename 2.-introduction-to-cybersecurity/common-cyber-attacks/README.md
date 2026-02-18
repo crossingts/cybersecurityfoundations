@@ -180,27 +180,25 @@ The goal of a DHCP starvation attack is to overwhelm the DHCP server with a floo
 
 Defending against DHCP starvation requires a combination of switch-level security features and network design practices:
 
-**DHCP Snooping:** This security feature acts as a firewall between untrusted clients and trusted DHCP servers. The switch is configured to differentiate between trusted ports (connected to legitimate DHCP servers) and untrusted ports (connected to clients). On untrusted ports, the switch:
+1. DHCP Snooping: This security feature acts as a firewall between untrusted clients and trusted DHCP servers. The switch is configured to differentiate between trusted ports (connected to legitimate DHCP servers) and untrusted ports (connected to clients). DHCP snooping helps mitigate DoS attacks by limiting the rate of DHCP messages and filtering out suspicious traffic (DHCP messages received on an untrusted port, as normally sent by a DHCP client, may be filtered if they appear to be part of an attack). On untrusted ports, the switch:
 
-- **Rate-limits DHCP traffic:** Prevents an attacker from flooding the network with Discover messages by limiting the number of DHCP packets accepted per second from a single port.
-- **Validates DHCP messages:** Drops DHCP server messages (OFFER, ACK) received on untrusted ports, preventing rogue server responses.
-- **Builds a DHCP snooping binding table:** Tracks legitimate IP-to-MAC bindings, which other security features (like Dynamic ARP Inspection) can use.
+    - **Rate-limits DHCP traffic:** Prevents an attacker from flooding the network with Discover messages by limiting the number of DHCP packets accepted per second from a single port.
+    - **Validates DHCP messages:** Drops DHCP server messages (OFFER, ACK) received on untrusted ports, preventing rogue server responses.
+    - **Builds a DHCP snooping binding table:** Tracks legitimate IP-to-MAC bindings, which other security features (like Dynamic ARP Inspection) can use.
 
-**Port Security:** This feature limits the number of MAC addresses allowed on a single switch port. By setting a maximum of one to three MAC addresses per access port, the switch can shut down or block a port that suddenly generates traffic from dozens of spoofed MAC addresses—a clear indicator of a DHCP starvation attempt.
+For a detailed walkthrough of DHCP snooping configuration and verification on Cisco switches: [DHCP snooping configuration and verification](https://itnetworkingskills.wordpress.com/2023/05/14/dhcp-snooping-configuration-verification/)
 
-**VLAN Segmentation:** Placing DHCP clients in separate broadcast domains limits the scope of an exhaustion attack to a single VLAN, preventing it from affecting the entire network.
+1. Port Security: This feature limits the number of MAC addresses allowed on a single switch port. By setting a maximum of one to three MAC addresses per access port, the switch can shut down or block a port that suddenly generates traffic from dozens of spoofed MAC addresses—a clear indicator of a DHCP starvation attempt.
 
-DHCP snooping helps mitigate DoS attacks by limiting the rate of DHCP messages and filtering out suspicious traffic (DHCP messages received on an untrusted port, as normally sent by a DHCP client, may be filtered if they appear to be part of an attack). This makes it more difficult for attackers to flood the server and disrupt network operations.
+2. VLAN Segmentation: Placing DHCP clients in separate broadcast domains limits the scope of an exhaustion attack to a single VLAN, preventing it from affecting the entire network.
 
-An illustration of how DHCP snooping can help mitigate DoS attacks: [DHCP snooping configuration and verification](https://itnetworkingskills.wordpress.com/2023/05/14/dhcp-snooping-configuration-verification/)
+While DHCP exhaustion aims to deny service by consuming addresses, a related attack—the rogue DHCP server—uses similar techniques to position the attacker for man-in-the-middle operations:
 
-For a detailed walkthrough of DHCP snooping configuration and verification on Cisco switches, see [this practical guide](https://itnetworkingskills.wordpress.com/2023/05/14/dhcp-snooping-configuration-verification/).
-
-While DHCP exhaustion aims to deny service by consuming addresses, a related attack—the rogue DHCP server—uses similar techniques to position the attacker for man-in-the-middle operations. That variant is examined in the MITM section.
-
-- Both attacks involve using spoofed source Mac addresses in the attack technique.
+- Spoofed MAC addresses: Both attacks involve using spoofed source MAC addresses.
 - Attack chaining: Attackers often use DHCP exhaustion first to force clients to accept offers from a rogue DHCP server they introduce later. When the legitimate server's pool is empty, clients will accept any offer—including from the attacker's malicious server.
-- Shared mitigations: Both attacks are mitigated by the same control—DHCP snooping—which validates DHCP server legitimacy and rate-limits traffic. Cross-referencing reinforces why this single control is so valuable.
+- Shared mitigations: Both attacks are mitigated by the same control—DHCP snooping—which validates DHCP server legitimacy and rate-limits traffic. 
+
+DHCP poisoning is examined in the MITM section.
 
 **UDP Flooding**
 

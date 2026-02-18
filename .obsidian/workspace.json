@@ -34,34 +34,6 @@
               "icon": "globe-2",
               "title": "DHCP snooping configuration and verification – IT Networking Skills"
             }
-          },
-          {
-            "id": "69c1906ee1ce89a5",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://itnetworkingskills.wordpress.com/2023/05/14/dhcp-snooping-configuration-verification/",
-                "title": "DHCP snooping configuration and verification – IT Networking Skills",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "DHCP snooping configuration and verification – IT Networking Skills"
-            }
-          },
-          {
-            "id": "75e4c137ab344bdb",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://itnetworkingskills.wordpress.com/2023/05/14/dhcp-snooping-configuration-verification/",
-                "title": "DHCP snooping configuration and verification – IT Networking Skills",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "DHCP snooping configuration and verification – IT Networking Skills"
-            }
           }
         ]
       }

@@ -215,9 +215,11 @@ Ping of death is a legacy Layer 3 DoS attack that exploits improper handling of
 
 #### Reflection and amplification
 
-In a reflection attack, the attacker sends traffic to a reflector such as a DNS server and spoofs the source address of the sent packets using the target’s IP address. Then the reflector sends the reply to the target’s IP address. If the amount of traffic is large enough this can result in a DoS to the target.
+Reflection and amplification attacks are sophisticated variants of volumetric denial-of-service attacks that leverage the behavior of legitimate network services to turn them against a target. Rather than flooding a victim directly, the attacker spoofs the victim's IP address and sends requests to intermediary servers—called reflectors—which then unwittingly deliver the attack traffic. This indirection not only obscures the attacker's identity but also harnesses the processing power and bandwidth of unsuspecting third-party infrastructure.
 
-There is a more powerful variant of the reflection attack called an amplification attack. A reflection attack becomes an amplification attack when the amount of traffic sent by the attacker is small, but it triggers a large amount of traffic to be sent from the reflector to the target. This triggers a denial of service. For example, there are DNS and NTP vulnerabilities which can be exploited for such amplification attacks.
+In a reflection attack, the attacker sends packets to a reflector (such as a DNS, NTP, or SNMP server) with the source IP address forged to match the intended victim. The reflector, believing the request is legitimate, sends its response to the victim's IP address. When enough reflectors are enlisted—or a single reflector receives enough queries—the aggregate response traffic can overwhelm the victim's network connection, resulting in denial of service. The key mechanism here is the spoofed source address; without it, the responses would return to the attacker rather than the target.
+
+A reflection attack becomes an amplification attack when the response traffic is significantly larger than the requests that triggered it. Attackers specifically seek out services where a small query generates a voluminous reply, achieving what is known as the amplification factor. For example, a DNS query of approximately 60 bytes can be crafted to return a DNS response many times larger, particularly when using the ANY metatype or DNSSEC records. Similarly, the now-patched NTP monlist command would return a list of the last 600 clients that interacted with the NTP server, amplifying traffic by a factor of 200 or more. By combining reflection with amplification, attackers can generate devastating DDoS attacks—sometimes exceeding hundreds of gigabits per second—from relatively modest attacker-controlled infrastructure. Mitigation requires disabling unnecessary services on publicly accessible servers, implementing source IP validation to prevent spoofing, and using cloud-based DDoS scrubbing services to absorb and filter amplified traffic before it reaches the target.
 
 #### Man-in-the-Middle (MITM) 
 
@@ -351,8 +353,6 @@ Each of the following spoofing attack types involves either IP spoofing or MAC s
 | Reflection and Amplification Attacks (DoS) | **IP Spoofing**         | Anti-spoofing ACLs, BCP38 (network egress filtering) | The attacker spoofs the victim's IP address as the source. This causes reflection servers to send large responses to the victim, amplifying the attack traffic.           |
 | DHCP Poisoning (MITM)                      | **IP Spoofing**         | DHCP Snooping                                        | The attacker spoofs a legitimate DHCP server to provide clients malicious DHCP responses to redirect traffic for a MITM attack.                                           |
 | ARP Spoofing (MITM)                        | **IP Spoofing**         | Dynamic ARP Inspection (DAI)                         | The attacker sends gratuitous ARP replies to link their MAC address to the IP address of a legitimate host, intercepting traffic.                                         |
-
-**Clarification:**
 
 Man-in-the-Middle attacks like ARP Spoofing and DHCP Poisoning are a prime example of how MAC spoofing and IP spoofing can be used in conjunction.
 

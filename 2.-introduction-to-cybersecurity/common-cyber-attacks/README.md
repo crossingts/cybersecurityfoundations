@@ -139,7 +139,7 @@ Mitigating TCP SYN flooding attacks requires a layered approach. Modern systems 
 
 Like the TCP SYN flood attack, DHCP exhaustion, also called DHCP starvation, is a resource exhaustion attack. However, instead of consuming connection table entries, it targets a different finite resource: the DHCP server's pool of available IP addresses.
 
-An attacker floods a DHCP server with DHCP Discover messages using spoofed MAC addresses. For each spoofed DHCP Discover message, the server responds with a DHCP Offer, temporarily reserving an IP address from its pool. The server places these addresses in a 'offered' state, awaiting DHCP Request messages that never arrive from the non-existent clients. Over time, the entire address scope becomes reserved for these bogus leases. The filling up of the server’s DHCP pool results in a DoS to other devices which are no longer able to get an IP address. 
+An attacker floods a DHCP server with DHCP Discover messages using spoofed MAC addresses. For each spoofed DHCP Discover message, the server responds with a DHCP Offer, temporarily reserving an IP address from its pool. The server places these addresses in a 'offered' state, awaiting DHCP Request messages that never arrive from the non-existent clients. Over time, the entire address scope becomes reserved for these bogus leases. The depletion of the server's DHCP pool results in a DoS to other devices which are no longer able to get an IP address. 
 
 ```mermaid
 sequenceDiagram
@@ -188,31 +188,34 @@ Defending against DHCP starvation requires a combination of switch-level securit
 
 For a detailed walkthrough of DHCP snooping configuration and verification on Cisco switches: [DHCP snooping configuration and verification](https://itnetworkingskills.wordpress.com/2023/05/14/dhcp-snooping-configuration-verification/)
 
-1. Port Security: This feature limits the number of MAC addresses allowed on a single switch port. By setting a maximum of one to three MAC addresses per access port, the switch can shut down or block a port that suddenly generates traffic from dozens of spoofed MAC addresses—a clear indicator of a DHCP starvation attempt.
+2. Port Security: This feature limits the number of MAC addresses allowed on a single switch port. By setting a maximum of one to three MAC addresses per access port, the switch can shut down or block a port that suddenly generates traffic from dozens of spoofed MAC addresses—a clear indicator of a DHCP starvation attempt.
 
-2. VLAN Segmentation: Placing DHCP clients in separate broadcast domains limits the scope of an exhaustion attack to a single VLAN, preventing it from affecting the entire network.
+3. VLAN Segmentation: Placing DHCP clients in separate broadcast domains limits the scope of an exhaustion attack to a single VLAN, preventing it from affecting the entire network.
 
-While DHCP exhaustion aims to deny service by consuming addresses, a related attack—the rogue DHCP server—uses similar techniques to position the attacker for man-in-the-middle operations:
+While DHCP exhaustion aims to deny service by consuming addresses, a related attack, the rogue DHCP server (DHCP poisoning—examined in the MITM section), uses similar techniques to position the attacker for man-in-the-middle operations:
 
 - Spoofed MAC addresses: Both attacks involve using spoofed source MAC addresses.
 - Attack chaining: Attackers often use DHCP exhaustion first to force clients to accept offers from a rogue DHCP server they introduce later. When the legitimate server's pool is empty, clients will accept any offer—including from the attacker's malicious server.
-- Shared mitigations: Both attacks are mitigated by the same control—DHCP snooping—which validates DHCP server legitimacy and rate-limits traffic. 
 
-DHCP poisoning is examined in the MITM section.
+Both attack types also have shared mitigations: Both attacks are mitigated by the same control—DHCP snooping—which validates DHCP server legitimacy and rate-limits traffic. 
 
 **UDP Flooding**
 
-In a direct UDP flooding attack, the **attacker directly targets a victim’s server or host** by flooding it with a high volume of UDP packets. Since UDP is connectionless, the target must process each incoming packet, consuming bandwidth, CPU, and memory. Attackers often **spoof the source IP address** to hide their identity and make mitigation harder. The goal is to exhaust the victim’s resources, causing slowdowns or a complete denial of service (DoS). Mitigation strategies include rate limiting UDP traffic, deploying firewalls to filter malicious packets, and using intrusion detection/prevention systems (IDS/IPS) to identify and block suspicious activity. Cloud-based DDoS protection services can also help absorb and disperse the attack traffic before it reaches the target.
+In a direct UDP flooding attack, the attacker directly targets a victim’s server or host by flooding it with a high volume of UDP packets. Since UDP is connectionless, the target must process each incoming packet, consuming bandwidth, CPU, and memory. Attackers often spoof the source IP address to hide their identity and make mitigation harder. The goal is to exhaust the victim’s resources, causing slowdowns or a complete denial of service (DoS). Mitigation strategies include rate limiting UDP traffic, deploying firewalls to filter malicious packets, and using intrusion detection/prevention systems (IDS/IPS) to identify and block suspicious activity. Cloud-based DDoS protection services can also help absorb and disperse the attack traffic before it reaches the target.
 
-In a UDP Reflection/Amplification attack, the **attacker does not target the victim directly**. Instead, they send small, spoofed UDP requests (e.g., DNS or NTP queries) to publicly accessible servers, **forging the victim’s IP as the source**. These servers then respond with much larger replies, reflecting and amplifying the attack traffic toward the victim. The attacker leverages misconfigured servers as unwitting "proxies" to multiply the attack’s impact, potentially achieving 10x–100x amplification with minimal effort. Mitigation strategies include disabling open DNS/NTP resolvers, implementing source IP validation, and using cloud-based scrubbing.
+In a UDP Reflection/Amplification attack, the attacker does not target the victim directly. Instead, they send small, spoofed UDP requests (e.g., DNS or NTP queries) to publicly accessible servers, forging the victim’s IP as the source. These servers then respond with much larger replies, reflecting and amplifying the attack traffic toward the victim. The attacker leverages misconfigured servers as unwitting "proxies" to multiply the attack’s impact, potentially achieving 10x–100x amplification with minimal effort. Mitigation strategies include disabling open DNS/NTP resolvers, implementing source IP validation, and using cloud-based scrubbing.
 
 **HTTP Flooding**
 
 A layer 7 DoS attack where bots send massive HTTP requests (GET/POST) to a web server, exhausting its resources. Unlike brute-force attacks, these requests look like legitimate traffic, making them harder to block.
 
+**HTTP Flooding** is a layer 7 (application layer) DoS attack in which a botnet sends a high volume of seemingly legitimate HTTP requests—typically GETs for web pages or POSTs for form submissions—to overwhelm a web server's resources. Because these requests mimic normal user behavior, distinguishing attack traffic from legitimate visitors becomes challenging for traditional network-layer defenses. Attackers often employ variations such as **slow-rate attacks** (sending requests gradually to evade threshold-based detection) or **pulse-wave attacks** (bursts of traffic followed by pauses). Mitigation typically requires web application firewalls (WAFs) capable of analyzing request patterns, rate limiting based on user behavior, CAPTCHA challenges, and cloud-based scrubbing services that absorb and filter malicious HTTP traffic before it reaches the origin server.
+
 **Ping of Death**
 
 A layer 3 DoS attack where an attacker sends oversized or malformed ICMP ping packets to a target host, crashing systems that fail to handle them properly. Modern systems now block such packets, but legacy devices may still be vulnerable.
+
+**Ping of Death** is a legacy layer 3 DoS attack that exploits improper handling of oversized ICMP packets. Under normal operation, IPv4 packets are limited to 65,535 bytes. By sending a malformed ping packet that exceeds this size—typically fragmented and reassembled on the target—an attacker can trigger buffer overflows in vulnerable systems, causing crashes, reboots, or kernel panics. While this attack is largely historical due to patches implemented in modern operating systems (which now drop such malformed packets by default), it remains relevant for legacy systems, unpatched IoT devices, and as a foundational example of how protocol violations can lead to denial of service. Mitigation involves simply ensuring systems are updated and applying ingress filtering to block suspicious ICMP traffic at the network perimeter.
 
 #### Reflection and amplification
 

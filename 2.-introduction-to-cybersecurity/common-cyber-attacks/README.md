@@ -69,17 +69,17 @@ Most enterprises will enforce rules like these on their employees, but it’s al
 
 #### Denial of service (DoS)
 
-There are many types of DoS attacks, such as TCP SYN flood, DHCP exhaustion attack, UDP flood, HTTP flood, and Ping of death. DoS and DDoS attacks threaten the availability of information. A prime mitigation method for DoS attacks is network segmentation.
+There are many types of DoS attacks, such as TCP SYN flooding, DHCP exhaustion attack, UDP flooding, HTTP flooding, and Ping of death. DoS and DDoS attacks threaten the availability of information. Mitigating DoS and DDoS attacks requires a defense-in-depth strategy combining host-based protections, network-level filters, dedicated appliances, and often cloud-based scrubbing services.
 
-**TCP SYN flood**
+**TCP SYN Flooding**
 
-The TCP SYN flood is a common type of DoS attack (often directed against ISPs) which exploits the TCP three-way handshake process used by TCP connections. The attacker likely spoofs their IP address, meaning the attacker uses a fake IP address, making this a spoofing attack. By spoofing the source IP address in the SYN, the malicious client causes the server to send the SYN-ACK to a falsified IP address – which will not send an ACK because it knows that it never sent a SYN. Or the malicious client can simply not send the expected ACK.
-
-The three-way handshake is SYN, SYN-ACK, and ACK. The attacker sends a large number of SYN packets to a target server. The target server sends a SYN-ACK message in response to each SYN it receives. But the attacker never replies with the final ACK of the handshake.
+The TCP SYN flood is a common type of DoS attack (often directed against ISPs) which exploits the TCP three-way handshake process used by TCP connections. The three-way handshake is SYN, SYN-ACK, and ACK. The attacker sends a large number of SYN packets to a target server. The target server sends a SYN-ACK message in response to each SYN it receives. But the attacker never replies with the final ACK of the handshake.
 
 <figure><img src="../../.gitbook/assets/image (17).png" alt="TCP SYN flood"><figcaption><p>The TCP SYN flood attack</p></figcaption></figure>
 
-The target waits for the final ACK of each handshake, and the incomplete connections fill up the target’s TCP connection table. The incomplete connections will timeout and be removed from the table after a certain period of time, but the attacker continues sending SYN messages. This exhausts the server’s resources and prevents legitimate users from accessing it. In the end, the target is no longer able to make legitimate TCP connections because it has reached the maximum number of TCP connections it can maintain.
+The attacker likely spoofs their source IP address, making this a spoofing attack. By spoofing the source IP address in the SYN message, the malicious client causes the server to send the SYN-ACK to a falsified IP address – which will not send an ACK because it knows that it never sent a SYN. Or the malicious client can simply not send the expected ACK.
+
+The target waits for the final ACK of each handshake, and the incomplete connections fill up the target’s TCP connection table. The incomplete connections will timeout and be removed from the table after a certain period of time, but the attacker continues sending SYN messages and the target keeps sending SYN-ACK messages. 
 
 ```mermaid
 sequenceDiagram
@@ -107,11 +107,11 @@ sequenceDiagram
     Note over Target Server: Server State: Overwhelmed<br/>- Connection queue full<br/>- Memory exhausted<br/>- CPU overloaded<br/>- Legitimate traffic blocked
 ```
 
-For each SYN message the attacker sends, the target puts an entry in its TCP connection table and sends a SYN-ACK message, then waits for an ACK to complete the connection. But the ACK never comes. The attacker keeps sending SYN messages, and the target keeps sending SYN-ACK messages. Then the target’s TCP connection table fills up, and the denial-of-service has been achieved.
+Eventually, the target’s TCP connection table fills up - it is no longer able to make legitimate TCP connections because it has reached the maximum number of TCP connections it can maintain. The exhaustion of the server’s resources prevents legitimate users from accessing it. Denial-of-service has been achieved.
 
-A much more powerful version of this attack type is the DDoS. In a distributed denial-of-service attack, the attacker infects many target computers with malware and uses the computers to initiate a denial-of-service attack such as a TCP SYN flood attack. The group of infected computers is called a botnet. The PCs infected with malware together start flooding the target with TCP SYN messages, so the target server is no longer able to respond to legitimate TCP connection requests.
+A much more powerful version of this attack type is the distributed denial-of-service (DDoS) attack. In a DDoS attack, the attacker infects many target computers with malware and uses the computers to initiate a DoS attack such as a TCP SYN flood attack. The group of infected computers is called a botnet. The PCs infected with malware together start flooding the target with SYN messages, so the target server is no longer able to respond to legitimate TCP connection requests.
 
-Mitigating TCP SYN flood attacks requires a layered approach that begins with host-based operating system hardening and extends through network-layer filtering to dedicated appliances and cloud services. Modern systems rely heavily on SYN cookies—enabled by default in major operating systems—as the critical first line of defense, complemented by rate limiting, firewall policies, and scalable offloading techniques. Here is an outline of the key technical mitigation methods used at each layer:
+Mitigating TCP SYN flooding attacks requires a layered approach. Modern systems rely heavily on SYN cookies—enabled by default in major operating systems—as the critical first line of defense, complemented by rate limiting, firewall policies, and scalable offloading techniques. Here is an outline of the key technical mitigation methods used at each layer:
 
 1. **Operating System Hardening**
 
@@ -135,7 +135,7 @@ Mitigating TCP SYN flood attacks requires a layered approach that begins with ho
     - **Dedicated Anti-DDoS Appliances:** Hardware/software (Arbor, Radware) that detect and drop flood traffic behaviorally.
     - **Cloud Scrubbing Services:** Traffic diversion to providers (Cloudflare, AWS Shield, Akamai) for absorption and filtering before reaching the origin.
 
-**DHCP exhaustion attack**
+**DHCP Exhaustion Attack**
 
 DHCP exhaustion attack, also known as a DHCP starvation attack, is similar to the TCP SYN flood attack. An attacker uses spoofed MAC addresses to flood a DHCP server with DHCP Discover messages. Attackers send DHCP Discover messages with fake source MAC addresses at a very quick pace. The server will reply to each Discover with a DHCP Offer message, and while it is offering an IP address it will not assign that address to other devices. The target server’s DHCP pool becomes full, resulting in a denial-of-service to other devices which are no longer able to get an IP address. Mitigation: DHCP snooping, Switch Port Security.
 
@@ -182,17 +182,17 @@ DHCP snooping helps mitigate DoS attacks by limiting the rate of DHCP messages a
 
 An illustration of how DHCP snooping can help mitigate DoS attacks: [DHCP snooping configuration and verification](https://itnetworkingskills.wordpress.com/2023/05/14/dhcp-snooping-configuration-verification/)
 
-**UDP flooding**
+**UDP Flooding**
 
 In a direct UDP flooding attack, the **attacker directly targets a victim’s server or host** by flooding it with a high volume of UDP packets. Since UDP is connectionless, the target must process each incoming packet, consuming bandwidth, CPU, and memory. Attackers often **spoof the source IP address** to hide their identity and make mitigation harder. The goal is to exhaust the victim’s resources, causing slowdowns or a complete denial of service (DoS). Mitigation strategies include rate limiting UDP traffic, deploying firewalls to filter malicious packets, and using intrusion detection/prevention systems (IDS/IPS) to identify and block suspicious activity. Cloud-based DDoS protection services can also help absorb and disperse the attack traffic before it reaches the target.
 
 In a UDP Reflection/Amplification attack, the **attacker does not target the victim directly**. Instead, they send small, spoofed UDP requests (e.g., DNS or NTP queries) to publicly accessible servers, **forging the victim’s IP as the source**. These servers then respond with much larger replies, reflecting and amplifying the attack traffic toward the victim. The attacker leverages misconfigured servers as unwitting "proxies" to multiply the attack’s impact, potentially achieving 10x–100x amplification with minimal effort. Mitigation strategies include disabling open DNS/NTP resolvers, implementing source IP validation, and using cloud-based scrubbing.
 
-**HTTP flooding**
+**HTTP Flooding**
 
 A layer 7 DoS attack where bots send massive HTTP requests (GET/POST) to a web server, exhausting its resources. Unlike brute-force attacks, these requests look like legitimate traffic, making them harder to block.
 
-**Ping of death**
+**Ping of Death**
 
 A layer 3 DoS attack where an attacker sends oversized or malformed ICMP ping packets to a target host, crashing systems that fail to handle them properly. Modern systems now block such packets, but legacy devices may still be vulnerable.
 

@@ -139,7 +139,7 @@ Mitigating TCP SYN flooding attacks requires a layered approach. Modern systems 
 
 Like the TCP SYN flood attack, DHCP exhaustion, also called DHCP starvation, is a resource exhaustion attack. However, instead of consuming connection table entries, it targets a different finite resource: the DHCP server's pool of available IP addresses.
 
-An attacker uses spoofed MAC addresses to flood a DHCP server with DHCP Discover messages. Attackers send DHCP Discover messages with fake source MAC addresses at a very quick pace. For each spoofed DHCP Discover message, the server responds with a DHCP Offer, temporarily reserving an IP address from its pool. The server places these addresses in a 'offered' state, awaiting DHCP Request messages that never arrive from the non-existent clients. Over time, the entire address scope becomes reserved for these bogus leases. Filling up of the target server’s DHCP pool results in a denial-of-service to other devices which are no longer able to get an IP address. 
+An attacker floods a DHCP server with DHCP Discover messages using spoofed MAC addresses. For each spoofed DHCP Discover message, the server responds with a DHCP Offer, temporarily reserving an IP address from its pool. The server places these addresses in a 'offered' state, awaiting DHCP Request messages that never arrive from the non-existent clients. Over time, the entire address scope becomes reserved for these bogus leases. The filling up of the server’s DHCP pool results in a DoS to other devices which are no longer able to get an IP address. 
 
 ```mermaid
 sequenceDiagram
@@ -177,10 +177,6 @@ sequenceDiagram
 ```
 
 The goal of a DHCP starvation attack is to overwhelm the DHCP server with a flood of bogus DHCP requests, exhausting the pool of available IP addresses. This prevents legitimate clients from obtaining an IP address and essentially denies them access to the network.
-
-Key mitigation techniques for DHCP exhaustion attacks include DHCP snooping and Switch Port Security. 
-
-**Mitigating DHCP Exhaustion Attacks**
 
 Defending against DHCP starvation requires a combination of switch-level security features and network design practices:
 

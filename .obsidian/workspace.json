@@ -20,6 +20,20 @@
               "icon": "lucide-file",
               "title": "README"
             }
+          },
+          {
+            "id": "75e4c137ab344bdb",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://itnetworkingskills.wordpress.com/2023/05/14/dhcp-snooping-configuration-verification/",
+                "title": "DHCP snooping configuration and verification – IT Networking Skills",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "DHCP snooping configuration and verification – IT Networking Skills"
+            }
           }
         ]
       }
@@ -183,6 +197,7 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
+    "2.-introduction-to-cybersecurity/common-cyber-attacks/README.md",
     "2.-introduction-to-cybersecurity/the-evolving-cybersecurity-threat-landscape/README.md",
     "3.-cybersecurity-grc/the-information-security-compliance-audit/README.md",
     "3.-cybersecurity-grc/the-information-security-compliance-audit/the-information-security-compliance-audit-quiz.md",
@@ -205,7 +220,6 @@
     "2.-introduction-to-cybersecurity/foundational-cybersecurity-concepts/README.md",
     "2.-introduction-to-cybersecurity/foundational-cybersecurity-concepts/foundational-cybersecurity-concepts-quiz.md",
     "2.-introduction-to-cybersecurity/foundational-cybersecurity-concepts/cia-attacks-mitigation-technologies.md",
-    "2.-introduction-to-cybersecurity/common-cyber-attacks/README.md",
     "7.-conclusion/cryptography-and-wireless-security.md",
     "2.-introduction-to-cybersecurity/common-cyber-attacks/common-cyber-attacks-quiz.md",
     "2.-introduction-to-cybersecurity/cybersecurity-risk-mitigation-methods/README.md",

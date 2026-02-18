@@ -184,6 +184,10 @@ Key mitigation techniques for DHCP exhaustion attacks include DHCP snooping and 
 
 An illustration of how DHCP snooping can help mitigate DoS attacks: [DHCP snooping configuration and verification](https://itnetworkingskills.wordpress.com/2023/05/14/dhcp-snooping-configuration-verification/)
 
+While DHCP exhaustion aims to deny service by consuming addresses, a related attack—the rogue DHCP server—uses similar techniques to position the attacker for man-in-the-middle operations. That variant is examined in the MITM section.
+
+both attacks involve using spoofed source mac addresses in the attack technique
+
 **UDP Flooding**
 
 In a direct UDP flooding attack, the **attacker directly targets a victim’s server or host** by flooding it with a high volume of UDP packets. Since UDP is connectionless, the target must process each incoming packet, consuming bandwidth, CPU, and memory. Attackers often **spoof the source IP address** to hide their identity and make mitigation harder. The goal is to exhaust the victim’s resources, causing slowdowns or a complete denial of service (DoS). Mitigation strategies include rate limiting UDP traffic, deploying firewalls to filter malicious packets, and using intrusion detection/prevention systems (IDS/IPS) to identify and block suspicious activity. Cloud-based DDoS protection services can also help absorb and disperse the attack traffic before it reaches the target.

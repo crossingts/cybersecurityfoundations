@@ -139,7 +139,11 @@ Mitigating TCP SYN flooding attacks requires a layered approach. Modern systems 
 
 Like the TCP SYN flood attack, DHCP exhaustion, also called DHCP starvation, is a resource exhaustion attack. However, instead of consuming connection table entries, it targets a different finite resource: the DHCP server's pool of available IP addresses.
 
-An attacker uses spoofed MAC addresses to flood a DHCP server with DHCP Discover messages. Attackers send DHCP Discover messages with fake source MAC addresses at a very quick pace. The server will reply to each Discover with a DHCP Offer message, and while it is offering an IP address it will not assign that address to other devices. The target server’s DHCP pool becomes full, resulting in a denial-of-service to other devices which are no longer able to get an IP address. Mitigation: DHCP snooping, Switch Port Security.
+An attacker uses spoofed MAC addresses to flood a DHCP server with DHCP Discover messages. Attackers send DHCP Discover messages with fake source MAC addresses at a very quick pace. 
+
+For each spoofed DHCP Discover message, the server responds with a DHCP Offer, temporarily reserving an IP address from its pool. The server places these addresses in a 'offered' state, awaiting DHCP Request messages that never arrive from the non-existent clients. Over time, the entire address scope becomes reserved for these bogus leases. Filling up of the target server’s DHCP pool results in a denial-of-service to other devices which are no longer able to get an IP address. 
+
+
 
 ```mermaid
 sequenceDiagram
@@ -180,7 +184,7 @@ So if some PCs send DHCP Discover messages to get IP addresses, the server is no
 
 The goal of a DHCP starvation attack is to overwhelm the DHCP server with a flood of bogus DHCP requests, exhausting the pool of available IP addresses. This prevents legitimate clients from obtaining an IP address and essentially denies them access to the network.
 
-DHCP snooping helps mitigate DoS attacks by limiting the rate of DHCP messages and filtering out suspicious traffic (DHCP messages received on an untrusted port, as normally sent by a DHCP client, may be filtered if they appear to be part of an attack). This makes it more difficult for attackers to flood the server and disrupt network operations.
+Key mitigation techniques for DHCP exhaustion attacks include DHCP snooping and Switch Port Security. DHCP snooping helps mitigate DoS attacks by limiting the rate of DHCP messages and filtering out suspicious traffic (DHCP messages received on an untrusted port, as normally sent by a DHCP client, may be filtered if they appear to be part of an attack). This makes it more difficult for attackers to flood the server and disrupt network operations.
 
 An illustration of how DHCP snooping can help mitigate DoS attacks: [DHCP snooping configuration and verification](https://itnetworkingskills.wordpress.com/2023/05/14/dhcp-snooping-configuration-verification/)
 

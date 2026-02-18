@@ -223,6 +223,8 @@ A reflection attack becomes an amplification attack when the response traffic 
 
 #### Man-in-the-Middle (MITM) 
 
+Man-in-the-middle attacks represent a class of exploits where an adversary secretly intercepts and potentially alters communications between two parties who believe they are directly communicating with each other. Unlike DoS attacks, which target availability, MITM attacks primarily threaten the confidentiality and integrity of information—allowing attackers to eavesdrop on sensitive data, steal credentials, inject malicious content, or redirect users to fraudulent websites. This section examines two common MITM techniques: **DHCP poisoning**, where a rogue server assigns itself as the default gateway, and **ARP spoofing**, where falsified address resolution messages redirect traffic through the attacker's system.
+
 **DHCP poisoning**
 
 In a DHCP poisoning attack a malicious device impersonates a legitimate DHCP server and offers IP addresses to clients. The spurious DHCP server leases a useful IP address to the target device, in the correct subnet, with the correct mask, but assigns its own IP address as the default gateway. Once a client accepts the attacker's offer, their communication gets routed through the attacker's device, allowing them to potentially eavesdrop on traffic, steal data, redirect the user to malicious websites, or tamper with (damage) or alter the captured traffic. Mitigation: DHCP snooping.

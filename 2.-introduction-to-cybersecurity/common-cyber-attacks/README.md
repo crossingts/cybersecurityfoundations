@@ -194,7 +194,6 @@ Defending against DHCP starvation requires a combination of switch-level securit
 
 **VLAN Segmentation:** Placing DHCP clients in separate broadcast domains limits the scope of an exhaustion attack to a single VLAN, preventing it from affecting the entire network.
 
-
 DHCP snooping helps mitigate DoS attacks by limiting the rate of DHCP messages and filtering out suspicious traffic (DHCP messages received on an untrusted port, as normally sent by a DHCP client, may be filtered if they appear to be part of an attack). This makes it more difficult for attackers to flood the server and disrupt network operations.
 
 An illustration of how DHCP snooping can help mitigate DoS attacks: [DHCP snooping configuration and verification](https://itnetworkingskills.wordpress.com/2023/05/14/dhcp-snooping-configuration-verification/)

@@ -223,7 +223,7 @@ A reflection attack becomes an amplification attack when the response traffic 
 
 #### Man-in-the-Middle (MITM) 
 
-Man-in-the-middle attacks represent a class of exploits where an adversary secretly intercepts and potentially alters communications between two parties who believe they are directly communicating with each other. Unlike DoS attacks, which target availability, MITM attacks primarily threaten the confidentiality and integrity of information—allowing attackers to eavesdrop on sensitive data, steal credentials, inject malicious content, or redirect users to fraudulent websites. This section examines two common MITM techniques: **DHCP poisoning**, where a rogue server assigns itself as the default gateway, and **ARP spoofing**, where falsified address resolution messages redirect traffic through the attacker's system.
+Man-in-the-middle attacks represent a class of exploits where an adversary secretly intercepts and potentially alters communications between two parties who believe they are directly communicating with each other. Unlike DoS attacks, which target availability, MITM attacks primarily threaten the confidentiality and integrity of information—allowing attackers to eavesdrop on sensitive data, steal credentials, inject malicious content, or redirect users to fraudulent websites. Follows is a discussion of two common MITM techniques: DHCP poisoning, where a rogue server assigns itself as the default gateway, and ARP spoofing, where falsified address resolution messages redirect traffic through the attacker's system.
 
 **DHCP poisoning**
 
@@ -346,7 +346,7 @@ To spoof an address is to use a fake source address, for example a fake IP or MA
 
 Each of the following spoofing attack types involves either IP spoofing or MAC spoofing as a mechanism of action.
 
-#### Spoofing Attacks Summary Table
+**Spoofing Attacks Summary Table**
 
 | Spoofing Attack Type                       | Primary Spoofing Method | Mitigation                                           | Explanation                                                                                                                                                               |
 | ------------------------------------------ | ----------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

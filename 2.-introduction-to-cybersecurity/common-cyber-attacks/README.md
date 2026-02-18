@@ -137,7 +137,9 @@ Mitigating TCP SYN flooding attacks requires a layered approach. Modern systems 
 
 **DHCP Exhaustion Attack**
 
-DHCP exhaustion attack, also known as a DHCP starvation attack, is similar to the TCP SYN flood attack. An attacker uses spoofed MAC addresses to flood a DHCP server with DHCP Discover messages. Attackers send DHCP Discover messages with fake source MAC addresses at a very quick pace. The server will reply to each Discover with a DHCP Offer message, and while it is offering an IP address it will not assign that address to other devices. The target server’s DHCP pool becomes full, resulting in a denial-of-service to other devices which are no longer able to get an IP address. Mitigation: DHCP snooping, Switch Port Security.
+Like the TCP SYN flood attack, DHCP exhaustion, also called DHCP starvation, is a resource exhaustion attack. However, instead of consuming connection table entries, it targets a different finite resource: the DHCP server's pool of available IP addresses.
+
+An attacker uses spoofed MAC addresses to flood a DHCP server with DHCP Discover messages. Attackers send DHCP Discover messages with fake source MAC addresses at a very quick pace. The server will reply to each Discover with a DHCP Offer message, and while it is offering an IP address it will not assign that address to other devices. The target server’s DHCP pool becomes full, resulting in a denial-of-service to other devices which are no longer able to get an IP address. Mitigation: DHCP snooping, Switch Port Security.
 
 ```mermaid
 sequenceDiagram

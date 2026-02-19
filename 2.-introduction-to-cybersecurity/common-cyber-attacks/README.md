@@ -362,22 +362,26 @@ Man-in-the-Middle attacks like ARP Spoofing and DHCP Poisoning are a prime examp
 
 Malware (malicious software) refers to a variety of harmful programs designed to infiltrate, damage, or disable computers and computer systems without the user's informed consent. There are many types of malware, categorized by how they infect a system and how they spread, not by the attacks they carry out after infecting the system.
 
-**Virus**\
+**Virus**
+
 A virus is a type of malware that attaches itself to a legitimate program or file, known as a host. It requires human action to spread, such as a user sharing an infected file or launching a corrupted program. Once activated, a virus can replicate itself and spread to other files and systems. Its payload can range from being merely annoying to highly destructive.
 
 * Example: The ILOVEYOU Virus (2000) - One of the most damaging viruses ever, it arrived as a seemingly innocent love confession email attachment (`LOVE-LETTER-FOR-YOU.TXT.vbs`). Once opened, it overwrote critical user files (like JPEGs and documents) and replicated by sending itself to everyone in the victim's Microsoft Outlook address book, causing an estimated $10-15 billion in damages globally.
 
-**Worm**\
+**Worm**
+
 Worms are different from viruses in that they are standalone software and do not require a host program or human interaction to propagate. They exploit vulnerabilities in network services or operating systems to spread automatically across networks at an incredible speed.
 
 * Example: The WannaCry Worm (2017) - Although often called ransomware, WannaCry's rapid global spread was due to its worm component. It exploited a known Windows vulnerability (EternalBlue) to move laterally across networks without user interaction. Once on a system, it encrypted the user's files (its ransomware payload), demanding payment. It crippled critical infrastructure worldwide, including the UK's National Health Service (NHS), causing massive disruptions to healthcare services.
 
-**Trojan Horse**\
+**Trojan Horse**
+
 A Trojan horse is harmful software disguised as legitimate or desirable software, tricking users into installing it themselves (e.g., a free game, a cracked application, or a fake software update). Unlike viruses and worms, Trojans do not self-replicate. Their purpose is to create a backdoor on the system, giving attackers unauthorized remote access.
 
 * Example: Zeus Trojan (2007) - A notorious Trojan designed to steal banking credentials through keystroke logging and form grabbing. It was primarily spread through drive-by downloads and phishing emails. Once installed, it secretly transferred millions of dollars from victims' accounts. Its code was later adapted into other malware, making it one of the most influential and damaging Trojans in history.
 
-**Ransomware**\
+**Ransomware**
+
 Ransomware is a particularly destructive form of malware that encrypts the victim's files, rendering them inaccessible. The attackers then demand a ransom payment (usually in cryptocurrency) in exchange for the decryption key.
 
 * Example: Colonial Pipeline Attack (2021) - The DarkSide ransomware gang infected the systems of Colonial Pipeline, a major US fuel pipeline operator. The attack forced the company to shut down its entire pipeline system for days, causing widespread fuel shortages and price spikes across the US East Coast. The company paid a ransom of nearly $4.4 million, highlighting the real-world physical and economic damage cyberattacks can cause.

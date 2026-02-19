@@ -9,8 +9,6 @@ description: This section explores common cyber attacks and malware types
 * Become familiar with common cyber attacks
 * Become familiar with common malware types
 
-This section looks at common cyber attacks (reconnaissance, social engineering, password attacks, DoS, reflection and amplification, MITM, and spoofing) and malware types (viruses, worms, and ransomware).
-
 This section explores common methods and mechanisms used by adversaries to compromise the CIA (Confidentiality, Integrity, and Availability) of information systems. It begins by examining the attacker's kill chain, starting with reconnaissance, the vital information gathering phase that enables more precise and targeted strikes. From there, the discussion moves to social engineering, which bypasses technical defenses by targeting the human element, and then to direct technical assaults like password attacks and various forms of denial of service (DoS). The section will detail how attackers can amplify the power of DoS through reflection and amplification techniques, and how they can position themselves to intercept or alter communications using man-in-the-middle (MITM) attacks. A recurring theme across many of these threats is the use of spoofing, where an attacker falsifies data—such as an IP or MAC address—to conceal their identity or impersonate a trusted entity. Finally, the section shifts from active network attacks to the malicious software itself, providing an overview of common malware types, including how viruses and worms propagate, and the destructive impact of ransomware.
 
 ## Topics covered in this section

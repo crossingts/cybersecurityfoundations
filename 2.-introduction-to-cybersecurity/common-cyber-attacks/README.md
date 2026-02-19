@@ -19,11 +19,11 @@ This section explores common methods and mechanisms used by adversaries to compr
   * **Password attacks**
   * **Denial of service (DoS)**
   * **Reflection and amplification**
-  * **Man in the middle (MITM)**
+  * **Man-in-the-middle (MITM)**
   * **Spoofing attacks**
 * **Malware types**
   * **Viruses and worms**
-  * **Ransomeware**
+  * **Ransomware**
 
 ### Common cyber attacks
 
@@ -330,7 +330,7 @@ DAI (Dynamic ARP Inspection) validates ARP packets by checking them against a tr
 
 Since DAI verifies that an ARP reply matches a legitimate IP-MAC binding, it prevents a malicious host from falsely claiming a MAC address that does not belong to it (thus indirectly helping to prevent MAC spoofing).
 
-A further illustration of the ARP spoofing attack: [Man in the middle attacks](https://itnetworkingskills.wordpress.com/2023/05/06/ccna-security-fundamentals/)
+A further illustration of the ARP spoofing attack: [Man-in-the-middle attacks](https://itnetworkingskills.wordpress.com/2023/05/06/ccna-security-fundamentals/)
 
 A further illustration of the ARP spoofing attack and mitigation via dynamic ARP inspection: [DAI configuration and verification](https://itnetworkingskills.wordpress.com/2023/05/16/dynamic-arp-inspection-configuration-and-verification/)
 

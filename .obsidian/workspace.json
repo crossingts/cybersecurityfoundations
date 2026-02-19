@@ -20,6 +20,20 @@
               "icon": "lucide-file",
               "title": "README"
             }
+          },
+          {
+            "id": "8748966c8dd79654",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://itnetworkingskills.wordpress.com/2023/05/06/ccna-security-fundamentals/",
+                "title": "CCNA security fundamentals – IT Networking Skills",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "CCNA security fundamentals – IT Networking Skills"
+            }
           }
         ]
       }
@@ -183,8 +197,8 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
-    "2.-introduction-to-cybersecurity/the-evolving-cybersecurity-threat-landscape/README.md",
     "2.-introduction-to-cybersecurity/common-cyber-attacks/README.md",
+    "2.-introduction-to-cybersecurity/the-evolving-cybersecurity-threat-landscape/README.md",
     "3.-cybersecurity-grc/the-information-security-compliance-audit/README.md",
     "3.-cybersecurity-grc/the-information-security-compliance-audit/the-information-security-compliance-audit-quiz.md",
     "2.-introduction-to-cybersecurity/the-cybersecurity-threat-landscape/README.md",

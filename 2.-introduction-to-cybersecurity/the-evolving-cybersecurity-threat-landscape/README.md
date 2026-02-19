@@ -149,6 +149,8 @@ A parallel market has emerged around commercially developed spyware, produced by
 
 These entities develop advanced capabilities, including zero-click exploits that require no user interaction—exemplified by NSO's Pegasus, which can infiltrate smartphones to extract messages, calls, and activate cameras or microphones remotely.
 
+Related LinkedIn article: [Removing firmware spyware from iPhone](https://www.linkedin.com/pulse/removing-firmware-spyware-from-iphone-abu-shaqra-phd-dti-uottawa--v3gaf/)
+
 **Advanced Infection Mechanisms**
 
 Commercial spyware leverages sophisticated delivery methods beyond conventional phishing. Zero-click exploits represent the pinnacle of stealth, enabling infection without any target interaction—Pegasus famously exploited WhatsApp's calling protocol to compromise devices. Paragon's Graphite, targeting both iOS and Android, reportedly includes a "forensic disappearance" feature that self-destructs upon detection, minimizing traces for investigators. Some vendors, including Paragon, allegedly employ "ghost infrastructure"—using front companies like Itervest to obscure sales and deployment activity, complicating accountability efforts.

@@ -224,7 +224,7 @@ Web Filters prevent users’ browsers from loading certain pages from particular
 
 Anti-Virus software is a security program designed to prevent, detect, and remove malicious software (malware), including viruses, worms, Trojan horses, spyware, and ransomware. It uses a combination of signature-based detection (matching known malware code) and heuristic analysis (identifying suspicious behavior) to protect systems. Anti-Virus solutions can be implemented on individual devices, networks, and email gateways to establish security policies, perform real-time system monitoring, and quarantine threats for both personal and enterprise use.
 
-**Note** - SIEM, EDR/XDR, IAM, and NAC are covered in the section [Network security risk mitigation best practices](../network-security-risk-mitigation-best-practices/) (Chapter 2). SIEM/EDR/XDR are further discussed in the section [Defensive cybersecurity technologies](../../6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/) (Chapter 6).
+**Note** - SIEM, EDR/XDR, IAM, and NAC are covered in the section [Network security risk mitigation best practices](../network-security-risk-mitigation-best-practices/) (Chapter 2). SIEM and EDR/XDR are further discussed in the section [Defensive cybersecurity technologies](../../6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/) (Chapter 6).
 
 ### Network design
 
@@ -232,8 +232,7 @@ A well designed network supports efficient Internet usage and device communicati
 
 #### Network Segmentation
 
-Effective cybersecurity risk mitigation begins with a well-designed network architecture that prioritizes security at every layer. By strategically segmenting networks, organizations can limit the spread of malware and unauthorized access, ensuring that breaches in one area do not compromise the entire system. Network segmentation involves segregating a network into logical or functional zones. For\
-example, you might have a zone for sales, a zone for technical support, and a zone for research, with each zone having different technical needs. You can separate zones using routers or switches or using virtual local area networks (VLANs).
+Effective cybersecurity risk mitigation begins with a well-designed network architecture that prioritizes security at every layer. By strategically segmenting networks, organizations can limit the spread of malware and unauthorized access, ensuring that breaches in one area do not compromise the entire system. Network segmentation involves segregating a network into logical or functional zones. For example, you might have a zone for sales, a zone for technical support, and a zone for research, with each zone having different technical needs. You can separate zones using routers or switches or using virtual local area networks (VLANs).
 
 Segmentation limits the potential damage of a compromise to whatever is in the compromised zone. Segmentation divides one target into many, which forces attackers to interact with each segment as a separate network. This creates a great deal of additional work for the attacker, since the attacker must compromise each segment individually. Further, this approach dramatically increases the attacker’s exposure to being discovered. 
 

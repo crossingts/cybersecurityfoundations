@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7.-conclusion/glossary.md",
+                "file": "2.-introduction-to-cybersecurity/cybersecurity-risk-mitigation-methods/README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "glossary"
+              "title": "README"
             }
           },
           {
@@ -197,6 +197,7 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
+    "7.-conclusion/glossary.md",
     "2.-introduction-to-cybersecurity/common-cyber-attacks/README.md",
     "2.-introduction-to-cybersecurity/the-evolving-cybersecurity-threat-landscape/README.md",
     "3.-cybersecurity-grc/the-information-security-compliance-audit/README.md",
@@ -207,7 +208,6 @@
     "2.-introduction-to-cybersecurity/the-cybersecurity-threat-landscape/the-cybersecurity-threat-landscape-quiz.md",
     "2.-introduction-to-cybersecurity/introduction-introduction-to-cybersecurity.md",
     "2.-introduction-to-cybersecurity/chapter-2-review-questions.md",
-    "7.-conclusion/glossary.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md",
     "1.-it-career-planning/it-career-paths/README.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/scanning-and-enumeration/README.md",

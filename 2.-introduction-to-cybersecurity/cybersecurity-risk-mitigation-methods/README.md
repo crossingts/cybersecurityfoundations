@@ -48,7 +48,7 @@ Unlike next-generation firewalls (NGFWs), traditional firewalls do not perform d
 
 Next-generation firewall (NGFW): A firewall device with advanced features, including the ability to run many related security features in the same firewall device (IPS, malware detection, VPN termination), along with deep packet inspection with Application Visibility and Control (AVC) and the ability to perform URL filtering versus data collected about the reliability and risk associated with every domain name.
 
-The following list summarizes a few key features of an NGFW (Odom, 2020):
+The following list summarizes a few key features of a NGFW (Odom, 2020):
 
 **Traditional Firewall Foundation**: Cisco NGFWs perform all standard firewall functions, including stateful packet filtering, network address translation (NAT/PAT), and VPN termination—serving as the baseline upon which advanced security features are added.
 
@@ -64,23 +64,23 @@ The following list summarizes a few key features of an NGFW (Odom, 2020):
 
 Intrusion Detection Systems (IDS) monitor network traffic for signs of unauthorized access or malicious activity. A traditional intrusion prevention system (IPS) can sit in the path packets take through the network, and it can filter packets, but it makes its decisions with different logic. The IPS first downloads a database of exploit signatures. Each signature defines different header field values found in sequences of packets used by different exploits. Then the IPS can examine packets, compare them to the known exploit signatures, and notice when packets may be part of a known exploit. Once identified, the IPS can log the event, discard packets, or even redirect the packets to another security application for further examination.
 
-A traditional IPS differs from firewalls in that instead of an engineer at the company defining rules for that company based on applications (by port number) and zones, the IPS applies the logic based on signatures supplied mostly by the IPS vendor. Those signatures look for these kinds of attacks: DoS, DDoS, Worms, Viruses. Organizations can also create custom signatures—an important capability for zero-day and application-specific threats.
+A traditional IPS differs from firewalls in that instead of an engineer at the company defining rules for that company based on applications (by port number) and zones, the IPS applies the logic based on signatures supplied mostly by the IPS vendor. Those signatures look for various kinds of attacks, such as DoS, DDoS, worms, viruses, SQL injections, cross-site scripting (XSS), buffer overflow exploits, and malformed protocol traffic. Organizations can also create custom signatures—an important capability for zero-day and application-specific threats.
 
 **Industry focus: Cisco Next-Generation IPS**
 
 Next-generation IPS (NGIPS): An IPS device with advanced features, including the capability to go beyond a comparison to known attack signatures to also look at contextual data, including the vulnerabilities in the current network, the capability to monitor for new zero-day threats, with frequent updates of signatures from the Cisco Talos security research group.
 
-The following list mentions a few of the Cisco NGIPS features (Odom, 2020, p. 103):
+The following list summarizes a few key features of a NGIPS (Odom, 2020):
 
-■ Traditional IPS: An NGIPS performs traditional IPS features, like using exploit signatures to compare packet flows, creating a log of events, and possibly discarding and/or redirecting packets.
+**Traditional IPS Foundation**: Cisco NGIPS performs core IPS functions, including comparing packet flows against extensive exploit signature databases, generating detailed event logs, and taking automated actions such as discarding malicious packets or redirecting suspicious traffic for further analysis.
 
-■ Application Visibility and Control (AVC): As with NGFWs, an NGIPS has the ability to look deep into the application layer data to identify the application.
+**Application Visibility and Control (AVC)**: Similar to Cisco NGFW platforms, Cisco NGIPS incorporates deep packet inspection to identify applications based on their payload characteristics rather than relying solely on port numbers. This enables the IPS to detect application-layer attacks and policy violations even when applications use non-standard ports or encryption.
 
-■ Contextual Awareness: NGFW platforms gather data from hosts—OS, software version/level, patches applied, applications running, open ports, applications currently sending data, and so on. Those facts inform the NGIPS as to the often more limited vulnerabilities in a portion of the network so that the NGIPS can focus on actual vulnerabilities while greatly reducing the number of logged events.
+**Contextual Awareness**: Cisco NGIPS gathers and leverages detailed contextual data about hosts on the protected network—including operating systems, software versions, patch levels, running applications, and open ports. By understanding the actual attack surface and vulnerabilities present in each network segment, the NGIPS can focus on relevant threats while dramatically reducing false positives and alert fatigue. For example, it will not generate alerts for a Windows exploit targeting a Linux server.
 
-■ Reputation-Based Filtering: The Cisco Talos security intelligence group researches security threats daily, building the data used by the Cisco security portfolio. Part of that data identifies known bad actors, based on IP address, domain, name, or even specific URL, with a reputation score for each. A Cisco NGIPS can perform reputation-based filtering, taking the scores into account.
+**Reputation-Based Filtering with Cisco Talos**: The Cisco Talos security intelligence group continuously researches global threat activity, compiling reputation data on IP addresses, domains, URLs, and known threat actors. Cisco NGIPS integrates this intelligence, assigning reputation scores to traffic sources and applying filtering decisions based on an entity's history of malicious behavior. This enables proactive blocking of traffic from known command-and-control servers, phishing sites, and other threat infrastructure before signature-based detection is triggered.
 
-■ Event Impact Level: Security personnel need to assess the logged events, so an NGIPS provides an assessment based on impact levels, with characterizations as to the impact if an event is indeed some kind of attack.
+**Event Impact Assessment**: Security teams face the challenge of prioritizing thousands of daily alerts. Cisco NGIPS addresses this by providing impact-level assessments for detected events, characterizing the potential severity if an alert represents a genuine attack. Events are contextualized with information about target vulnerability, exploit maturity, and network exposure—helping analysts focus on the most critical threats first rather than triaging every alert equally.
 
 #### Web Proxies
 

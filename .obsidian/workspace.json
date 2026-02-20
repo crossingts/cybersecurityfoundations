@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2.-introduction-to-cybersecurity/cybersecurity-risk-mitigation-methods/README.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
@@ -197,6 +197,7 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
+    "2.-introduction-to-cybersecurity/cybersecurity-risk-mitigation-methods/README.md",
     "7.-conclusion/glossary.md",
     "2.-introduction-to-cybersecurity/common-cyber-attacks/README.md",
     "2.-introduction-to-cybersecurity/the-evolving-cybersecurity-threat-landscape/README.md",
@@ -222,7 +223,6 @@
     "2.-introduction-to-cybersecurity/foundational-cybersecurity-concepts/cia-attacks-mitigation-technologies.md",
     "7.-conclusion/cryptography-and-wireless-security.md",
     "2.-introduction-to-cybersecurity/common-cyber-attacks/common-cyber-attacks-quiz.md",
-    "2.-introduction-to-cybersecurity/cybersecurity-risk-mitigation-methods/README.md",
     "7.-conclusion/introduction-to-cybersecurity.md",
     "LICENSE",
     "3.-cybersecurity-grc/the-information-security-compliance-audit",

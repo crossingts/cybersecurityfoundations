@@ -8,7 +8,7 @@ description: >-
 
 ## Introduction
 
-The global demand for skilled cybersecurity professionals has never been higher. This book covers key theoretical and practical foundations that have real-world relevance for those embarking on a career in cybersecurity, whether in defensive, offensive, or governance roles. Further, this resource is designed to help learners looking to enter the cybersecurity field choose a specialization and plan their skill development journey. The main audience for this book is learners with little to no technical background and experience in IT and who want to break into a cybersecurity career.
+The global demand for skilled cybersecurity professionals has never been higher. This book covers key theoretical and practical foundations that have real-world relevance for those embarking on a career in cybersecurity, whether in defensive, offensive, or governance roles. To provide a clear benchmark for the reader, the technical content is written at the foundational level of industry-respected certifications, namely, the Cisco Certified Network Associate (CCNA), the Certified Ethical Hacker (CEH) from EC-Council, and the CISSP (Certified Information Systems Security Professional) from ISC2. Further, this resource is designed to help learners looking to enter the cybersecurity field choose a specialization and plan their skill development journey. The main audience for this book is learners with little to no technical background and experience in IT and who want to break into a cybersecurity career.
 
 ## Learning Objectives
 

@@ -35,7 +35,7 @@ Common cybersecurity risk mitigation technologies include Firewalls, IDS/IPS, We
 
 Firewalls are network security systems that control incoming and outgoing network traffic based on predetermined security rules. Firewalls sit in the path of packets so they can filter the packets, redirect them for collection and later analysis, or let them continue toward their destination. In their most basic form, firewalls do the same kinds of work that routers do with ACLs (Access Control Lists). ACLs are configured on network devices such as routers to only allow specific traffic to pass through based on source and destination IP addresses, ports, and protocols. However, firewalls can perform packet filtering with more granularity and additional security functions.
 
-While firewalls share some router-like features (such as packet forwarding and filtering), they provide stronger security controls than a traditional router. For example, most firewalls use the following logic to determine whether to allow or discard a packet:
+While firewalls can share some router-like features (such as packet forwarding and filtering), they provide stronger security controls than a traditional router. For example, most firewalls use the following logic to determine whether to allow or discard a packet:
 
 * **Source/Destination IP Matching** – Like router ACLs, firewalls filter traffic based on source and destination IP addresses.
 * **Static Port-Based Filtering** – Identifies applications by matching well-known TCP/UDP ports (e.g., blocking port 23 for Telnet or allowing port 80 for HTTP).

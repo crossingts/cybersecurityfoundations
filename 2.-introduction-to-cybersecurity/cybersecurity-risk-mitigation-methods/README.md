@@ -244,7 +244,7 @@ Virtualization is another way to segment a network. It is much easier to segment
 
 When segmenting networks for security, both **subnets** and **VLANs** can be used, but they serve different purposes and operate at different layers of the network. Here’s when to use each:
 
-#### **1. VLANs (Virtual LANs) – Layer 2 Segmentation**
+#### 1. VLANs (Virtual LANs) – Layer 2 Segmentation
 
 VLANs are used to segment portions of a network at layer two and differentiate devices. VLANs are configured on a switch by adding a tag to a frame. The 802.1q (dot1q) tag designates the VLAN that the traffic originates from.
 
@@ -259,7 +259,7 @@ VLANs are used to segment portions of a network at layer two and differentiate d
   * Isolating **IoT devices** from the main corporate network.
   * Creating a **guest Wi-Fi network** that can’t access internal resources.
 
-#### **2. Subnets – Layer 3 Segmentation**
+#### 2. Subnets – Layer 3 Segmentation
 
 * **Use Subnets when:**
   * You need **IP-based segmentation** (routed networks).
@@ -272,7 +272,7 @@ VLANs are used to segment portions of a network at layer two and differentiate d
   * Creating **DMZ subnets** for public-facing servers.
   * Enforcing **micro-segmentation** in data centers (e.g., PCI-compliant networks).
 
-#### **When to Use Both VLANs + Subnets Together**
+#### When to Use Both VLANs + Subnets Together
 
 * For **stronger security**, combine both:
   * **VLANs** for Layer 2 isolation (prevents direct device-to-device attacks).
@@ -283,7 +283,7 @@ VLANs are used to segment portions of a network at layer two and differentiate d
   * VLAN 30 → Subnet `10.0.30.0/24` (IoT)
   * **Firewall rules** block IoT from accessing Corporate.
 
-#### **Key Differences for Security**
+#### Key Differences for Security
 
 | Feature                | VLANs (Layer 2)                                       | Subnets (Layer 3)                 |
 | ---------------------- | ----------------------------------------------------- | --------------------------------- |
@@ -293,7 +293,7 @@ VLANs are used to segment portions of a network at layer two and differentiate d
 | **Scalability**        | Good for single-site networks                         | Better for large, routed networks |
 | **Cloud Usage**        | Rare (mostly on-prem)                                 | Common (AWS/Azure subnets)        |
 
-#### **Best Practices for Security**
+#### Best Practices for Security
 
 ✔ **Use VLANs** for **internal segmentation** (switch-level isolation).\
 ✔ **Use Subnets** for **inter-VLAN routing & firewall policies**.\
@@ -301,7 +301,7 @@ VLANs are used to segment portions of a network at layer two and differentiate d
 ✔ **Avoid VLAN hopping** by securing trunk ports and using private VLANs where needed.\
 ✔ **Prefer Subnets in cloud** (cloud networks rely on IP-based segmentation).
 
-#### **Practical Approach**
+#### Practical Approach
 
 * **For physical networks:** Start with VLANs, then assign subnets for routing.
 * **For cloud/virtual networks:** Use subnets with security groups/NACLs.
@@ -464,7 +464,7 @@ Network automation uses software to perform network tasks with minimal human int
 
 In summary, **network automation transforms cybersecurity from a manual, reactive effort into a consistent, proactive, and rapid-response strategy.** It is essential for managing the complexity and scale of modern networks and enforcing robust security policies like those enabled by SDN and micro-segmentation.
 
-#### **Effective Network Architecture**
+#### Effective Network Architecture
 
 When designing a network segregation strategy, device placement is critical. The simplest device to position is the firewall: it should be deployed at every network zone junction, ensuring each segment is protected. Fortunately, this is easier than it sounds—modern switches and routers include built-in firewall capabilities that only need activation and proper configuration. Another essential perimeter device is an anti-DDoS solution, which mitigates attacks before they impact the entire network. Behind the primary public-facing firewall, a web filter proxy should also be implemented.
 

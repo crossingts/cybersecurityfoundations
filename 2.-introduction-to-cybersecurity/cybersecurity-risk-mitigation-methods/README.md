@@ -48,6 +48,19 @@ Unlike next-generation firewalls (NGFWs), traditional firewalls do not perform d
 
 Next-generation firewall (NGFW): A firewall device with advanced features, including the ability to run many related security features in the same firewall device (IPS, malware detection, VPN termination), along with deep packet inspection with Application Visibility and Control (AVC) and the ability to perform URL filtering versus data collected about the reliability and risk associated with every domain name.
 
+The following list summarizes a few key features of an NGFW (Odom, 2020):
+
+**Traditional Firewall Foundation**: Cisco NGFWs perform all standard firewall functions, including stateful packet filtering, network address translation (NAT/PAT), and VPN termination—serving as the baseline upon which advanced security features are added.
+
+**Application Visibility and Control (AVC)**: Unlike traditional firewalls that identify applications solely by port numbers, Cisco NGFWs inspect application-layer data to identify the actual application in use. This prevents attacks that evade detection by using non-standard ports or protocol tunneling, enabling policies based on application identity rather than just port numbers.
+
+**Advanced Malware Protection (AMP)**: Cisco NGFW platforms run AMP directly on the firewall appliance rather than simply passing traffic to separate devices. This integration enables network-based antimalware functions to block file transfers carrying malicious code in real-time while also saving copies of files for retrospective analysis using Cisco Threat Grid—identifying new threats that may have initially evaded detection.
+
+**URL Filtering with Cisco Talos Intelligence**: Cisco NGFWs examine URLs within web requests and categorize them using reputation data from the Cisco Talos security intelligence group. Talos continuously monitors Internet domains, assigning each a reputation score based on factors such as age, traffic patterns, and known associations with malicious activity. The firewall can then filter, block, or rate-limit traffic based on these scores and organizational policies.
+
+**Integrated Next-Generation IPS**: Cisco NGFW products can run Cisco Next-Generation IPS (NGIPS) functionality as an integrated service rather than as a separate appliance. This tight integration allows the firewall and IPS to share context and coordinate responses, improving detection accuracy and enabling more sophisticated threat mitigation strategies.
+
+--
 The following list summarizes a few key features of an NGFW (Odom, 2020, pp. 101-102):
 
 ■ Traditional firewall: An NGFW performs traditional firewall features, like stateful firewall filtering, NAT/PAT, and VPN termination.

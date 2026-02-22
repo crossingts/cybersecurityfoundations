@@ -371,12 +371,12 @@ While traditional network segmentation can use VLANs and subnets as its primary 
 
 A micro-segmentation policy could be applied to two VMs that are on the _same VLAN and subnet_, preventing them from talking to each other unless explicitly allowed. A traditional network firewall at the VLAN boundary would be blind to this East-West traffic.
 
-Micro-segmentation is a core implementation of the "Zero Trust" principle ("never trust, always verify"). Traditional segmentation often operates on a "trust but verify" model within a segment. In comparison, micro-segmentation assumes a breach has already occurred inside a segment. Micro-segmentation aims to prevent lateral movement by an attacker. 
+Micro-segmentation is a core implementation of the "Zero Trust" principle ("never trust, always verify" or "trust no one, verify everything"). Traditional segmentation often operates on a "trust but verify" model within a segment. In comparison, micro-segmentation assumes a breach has already occurred inside a segment. 
 
 **East-West vs. North-South Traffic**
 
 * **Network Segmentation** is traditionally very good at controlling **North-South** traffic (traffic moving in and out of the network segment/zone).
-* **Micro-Segmentation** is specifically designed to control **East-West** traffic (traffic between servers _within_ the same segment/zone), which is where most malicious lateral movement occurs after a breach.
+* **Micro-Segmentation** is specifically designed to control **East-West** traffic (traffic between servers within the same segment/zone), which is where most malicious lateral movement occurs after a breach.
 
 Micro-segmentation takes the principle of "divide and contain" and applies it with far greater precision, using software-defined policies instead of relying on network hardware boundaries. You can have network segmentation without micro-segmentation (e.g., just using VLANs), but effective micro-segmentation implements and enhances the goals of network segmentation.
 

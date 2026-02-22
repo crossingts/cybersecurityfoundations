@@ -29,7 +29,7 @@ This section studies major cybersecurity risk mitigation methods. This section e
 
 ### Risk mitigation technologies
 
-Common cybersecurity risk mitigation technologies include Firewalls, IDS/IPS, Web Proxies, Virtual Private Networks (VPNs), Encryption, Web Filters, Anti-Virus, SIEM, EDR/XDR, Identity and Access Management (IAM), and Network Access Control (NAC).
+Common cybersecurity risk mitigation technologies include firewalls, Intrusion Detection Systems/Intrusion Prevention Systems (IDS/IPS), web proxies, Virtual Private Networks (VPNs), encryption, web filters, anti-virus software, Security Information and Event Management (SIEM), Endpoint Detection and Response/Extended Detection and Response (EDR/XDR), Identity and Access Management (IAM), and Network Access Control (NAC).
 
 #### Firewalls
 
@@ -60,7 +60,7 @@ The following list summarizes a few key features of a NGFW (Odom, 2020):
 
 **Integrated Next-Generation IPS**: Cisco NGFW products can run Cisco next-generation IPS (NGIPS) functionality as an integrated service rather than as a separate appliance. This tight integration allows the firewall and IPS to share context and coordinate responses, improving detection accuracy and enabling more sophisticated threat mitigation strategies.
 
-#### IDS/IPS
+#### Intrusion Detection Systems/Intrusion Prevention Systems (IDS/IPS)
 
 Intrusion Detection Systems (IDS) monitor network traffic for signs of unauthorized access or malicious activity. A traditional intrusion prevention system (IPS) can sit in the path packets take through the network, and it can filter packets, but it makes its decisions with different logic. The IPS first downloads a database of exploit signatures. Each signature defines different header field values found in sequences of packets used by different exploits. Then the IPS can examine packets, compare them to the known exploit signatures, and notice when packets may be part of a known exploit. Once identified, the IPS can log the event, discard packets, or even redirect the packets to another security application for further examination.
 
@@ -82,9 +82,7 @@ The following list summarizes a few key features of a NGIPS (Odom, 2020):
 
 **Event Impact Assessment**: Security teams face the challenge of prioritizing thousands of daily alerts. Cisco NGIPS addresses this by providing impact-level assessments for detected events, characterizing the potential severity if an alert represents a genuine attack. Events are contextualized with information about target vulnerability, exploit maturity, and network exposure—helping analysts focus on the most critical threats first rather than triaging every alert equally.
 
-#### Web Proxies
-
-**Understanding Proxies: Forward vs. Reverse**
+#### Web proxies
 
 Proxies act as intermediaries between clients and servers, but their roles differ significantly. A **forward proxy** sits in front of clients (e.g., users on a corporate network) and forwards their requests to the internet while masking their IP addresses—common in VPNs or censorship bypassing. In contrast, a **reverse proxy** sits in front of servers, receiving client requests and routing them to the appropriate backend (e.g., Apache, Node.js). This setup improves security by hiding server infrastructure and enhances performance through load balancing, SSL termination, and caching. For example, Nginx is often used as a reverse proxy to distribute traffic across multiple Apache servers while handling HTTPS encryption.
 
@@ -144,26 +142,25 @@ All organizational web traffic—outbound (workstation to internet) and inbound 
 
 #### Virtual Private Networks (VPNs)
 
-**Internet VPNs: Secure Connectivity Over a Public Network**
-
 Businesses require secure connectivity between geographically separate sites and for remote employees. Private WAN services such as leased lines and MPLS provide security through dedicated physical infrastructure (leased lines) or traffic separation via tags (MPLS). However, when using the Internet as a WAN to connect sites together, there is no built-in security by default.
 
-VPNs solve this problem by creating a secure "tunnel" over the shared public Internet, ensuring confidentiality, integrity, and authentication for the traffic that passes through them. Internet VPNs are broadly categorized into two types, each designed for a specific use case and employing different technologies: **Site-to-Site VPNs** and **Remote-Access VPNs**.
+VPNs solve this problem by creating a secure "tunnel" over the shared public Internet, ensuring confidentiality, integrity, and authentication for the traffic that passes through them. **Internet VPNs are broadly categorized into two types**, each designed for a specific use case and employing different technologies: Site-to-Site VPNs and Remote-Access VPNs.
 
-#### **1. Site-to-Site VPNs (using IPsec)**
+1. **Site-to-Site VPNs (using IPsec)**
 
 A site-to-site VPN establishes a secure, permanent connection between two networks (e.g., a main office and a branch office) over the Internet. It connects entire networks to each other.
 
 * **Primary Technology:** IPsec (Internet Protocol Security)
 * **Function:** A VPN tunnel is created between two gateway devices (such as routers or firewalls) at the edge of each network. All traffic between the sites is routed through these gateways, which handle the encryption and decryption. This provides security for _all devices_ within each site without requiring software on every individual computer.
 
-**How IPsec VPNs Work: A Basic Overview**\
+**How IPsec VPNs Work: A Basic Overview**
+
 The security process involves the following steps for each packet:
 
-1. **Encryption:** The gateway router at Office A takes the original IP packet destined for Office B and encrypts its payload.
-2. **Encapsulation:** The router encapsulates the encrypted packet by adding an IPsec header (for security parameters) and a _new_ IP header. This new header uses the public IP addresses of the two gateway routers as its source and destination.
-3. **Transit:** This new, secure packet is routed across the public Internet. To any intermediary device, the packet appears as a standard IP packet moving between the two routers, hiding the original source, destination, and content.
-4. **Decryption:** The gateway router at Office B receives the packet, verifies its authenticity, strips off the new IP header and IPsec header, decrypts the payload, and forwards the original packet to the intended host inside its local network.
+- **Encryption:** The gateway router at Office A takes the original IP packet destined for Office B and encrypts its payload.
+- **Encapsulation:** The router encapsulates the encrypted packet by adding an IPsec header (for security parameters) and a _new_ IP header. This new header uses the public IP addresses of the two gateway routers as its source and destination.
+- **Transit:** This new, secure packet is routed across the public Internet. To any intermediary device, the packet appears as a standard IP packet moving between the two routers, hiding the original source, destination, and content.
+- **Decryption:** The gateway router at Office B receives the packet, verifies its authenticity, strips off the new IP header and IPsec header, decrypts the payload, and forwards the original packet to the intended host inside its local network.
 
 **Limitations of Standard IPsec and Enhancements**
 
@@ -177,7 +174,7 @@ The security process involves the following steps for each packet:
 * **Solution: Dynamic Multipoint VPN (DMVPN)**\
   Scalability solutions like **Cisco's DMVPN** dynamically create tunnels on-demand between sites only when needed, significantly reducing configuration overhead and simplifying the management of large-scale site-to-site VPN deployments.
 
-#### **2. Remote-Access VPNs (using TLS/SSL)**
+2. **Remote-Access VPNs (using TLS/SSL)**
 
 Whereas site-to-site VPNs connect entire networks, remote-access VPNs are designed to provide secure, on-demand access for individual end-user devices (like laptops, smartphones, and tablets) to a central company network over the Internet.
 
@@ -186,11 +183,11 @@ Whereas site-to-site VPNs connect entire networks, remote-access VPNs are design
 
 **How Remote-Access VPNs Work**
 
-1. **Client Software:** Users have a VPN client application (e.g., Cisco AnyConnect, OpenVPN) installed on their device.
-2. **Connection Initiation:** The user launches the client, which establishes an authenticated and encrypted TLS session with the company's VPN gateway.
-3. **Secure Access:** Once the tunnel is established, the user's device behaves as if it is directly connected to the company's internal network, allowing it to securely access email, internal file shares, and business applications.
+- **Client Software:** Users have a VPN client application (e.g., Cisco AnyConnect, OpenVPN) installed on their device.
+- **Connection Initiation:** The user launches the client, which establishes an authenticated and encrypted TLS session with the company's VPN gateway.
+- **Secure Access:** Once the tunnel is established, the user's device behaves as if it is directly connected to the company's internal network, allowing it to securely access email, internal file shares, and business applications.
 
-#### **Key Comparison: Site-to-Site vs. Remote-Access VPNs**
+**Key Comparison: Site-to-Site vs Remote-Access VPNs**
 
 | Feature                | Site-to-Site VPN                                                 | Remote-Access VPN                                                |
 | ---------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- |
@@ -215,37 +212,33 @@ In summary, both VPN types are essential tools for modern business, leveraging t
 
 Encryption transforms readable data (plaintext) into a scrambled, unreadable format (ciphertext) using algorithms and cryptographic keys to protect it from unauthorized access. Encryption is a fundamental security measure designed to protect data confidentiality for data at rest (on storage devices), in transit (across networks), and in use (during processing). Strong encryption standards can be implemented to secure sensitive information, enforce data protection policies, and ensure privacy for communications and stored files across individual, corporate, and government use.
 
-#### Web Filters 
+#### Web filters 
 
-Web Filters prevent users’ browsers from loading certain pages from particular websites. There are different web filters designed for individual, family, institutional, and enterprise use. Web domain whitelisting can be implemented using a web filter that can make web access policies and perform web site monitoring.
+Web filters prevent users’ browsers from loading certain pages from particular websites. There are different web filters designed for individual, family, institutional, and enterprise use. Web domain whitelisting can be implemented using a web filter that can make web access policies and perform web site monitoring.
 
-#### Anti-Virus
+#### Anti-virus software
 
-Anti-Virus software is a security program designed to prevent, detect, and remove malicious software (malware), including viruses, worms, Trojan horses, spyware, and ransomware. It uses a combination of signature-based detection (matching known malware code) and heuristic analysis (identifying suspicious behavior) to protect systems. Anti-Virus solutions can be implemented on individual devices, networks, and email gateways to establish security policies, perform real-time system monitoring, and quarantine threats for both personal and enterprise use.
+Anti-virus software is a security program designed to prevent, detect, and remove malicious software (malware), including viruses, worms, Trojan horses, spyware, and ransomware. It uses a combination of signature-based detection (matching known malware code) and heuristic analysis (identifying suspicious behavior) to protect systems. Anti-virus solutions can be implemented on individual devices, networks, and email gateways to establish security policies, perform real-time system monitoring, and quarantine threats for both personal and enterprise use.
 
 **Note** - SIEM, EDR/XDR, IAM, and NAC are covered in the section [Network security risk mitigation best practices](../network-security-risk-mitigation-best-practices/) (Chapter 2). SIEM and EDR/XDR are further discussed in the section [Defensive cybersecurity technologies](../../6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/) (Chapter 6).
 
 ### Network design
 
-A well designed network supports efficient Internet usage and device communication as well as redundancy, optimization, and security. Network design considerations/practices in support of network security include Network Segmentation, Honeypots, Network Automation, and Effective Network Architecture. Designing networks with these considerations in mind reduces attack surfaces and improves overall resilience against cyber threats.
+A well designed network supports efficient Internet usage and device communication as well as redundancy, optimization, and security. Network design considerations in support of network security include network segmentation, honeypots, network automation, and effective network architecture. Designing networks with these considerations in mind reduces attack surfaces and improves overall resilience against cyber threats.
 
-#### Network Segmentation
+#### Network segmentation
 
-Effective cybersecurity risk mitigation begins with a well-designed network architecture that prioritizes security at every layer. By strategically segmenting networks, organizations can limit the spread of malware and unauthorized access, ensuring that breaches in one area do not compromise the entire system. Network segmentation involves segregating a network into logical or functional zones. For example, you might have a zone for sales, a zone for technical support, and a zone for research, with each zone having different technical needs. You can separate zones using routers or switches or using virtual local area networks (VLANs).
+Effective cybersecurity risk mitigation begins with a well-designed network architecture that prioritizes security at every layer. By strategically segmenting networks, organizations can limit the spread of malware and unauthorized access, ensuring that breaches in one area do not compromise the entire system. Network segmentation involves segregating a network into logical or functional zones. For example, you might have a zone for sales, a zone for technical support, and a zone for research, with each zone having different technical needs. You can separate zones using routers, switches, or virtual local area networks (VLANs).
 
-Segmentation limits the potential damage of a compromise to whatever is in the compromised zone. Segmentation divides one target into many, which forces attackers to interact with each segment as a separate network. This creates a great deal of additional work for the attacker, since the attacker must compromise each segment individually. Further, this approach dramatically increases the attacker’s exposure to being discovered. 
-
-Segmentation also helps enforce data protection by applying different security rules to each zone based on sensitivity. In extreme cases, critical systems can be air-gapped (disconnected entirely) to prevent attacks, such as with backup servers.
+Segmentation limits the potential damage of a compromise to whatever is in the compromised zone. Segmentation divides one target into many, which forces attackers to interact with each segment as a separate network. This creates a great deal of additional work for the attacker, since the attacker must compromise each segment individually. Further, this approach dramatically increases the attacker’s exposure to being discovered. Segmentation also helps enforce data protection by applying different security rules to each zone based on sensitivity. In extreme cases, critical systems can be air-gapped (disconnected entirely) to prevent attacks, such as with backup servers.
 
 Virtualization is another way to segment a network. It is much easier to segment virtual systems than it is to segment physical systems. For example, you can easily configure a virtual machine on your workstation so that the virtual machine is completely isolated from the workstation — it does not share a clipboard, common folders or drives, and literally operates as an isolated system.
 
-**Virtual Local Area Networks (VLANs)**
+When segmenting networks for security, both **VLANs and subnets** can be used, but they serve different purposes and operate at different layers of the network. Here’s when to use each:
 
-When segmenting networks for security, both **subnets** and **VLANs** can be used, but they serve different purposes and operate at different layers of the network. Here’s when to use each:
+1. **VLANs (Virtual LANs) – Layer 2 Segmentation**
 
-#### 1. VLANs (Virtual LANs) – Layer 2 Segmentation
-
-VLANs are used to segment portions of a network at layer two and differentiate devices. VLANs are configured on a switch by adding a tag to a frame. The 802.1q (dot1q) tag designates the VLAN that the traffic originates from.
+VLANs are used to segment portions of a network at Layer 2 and differentiate devices. VLANs are configured on a switch by adding a tag to a frame. The 802.1q (dot1q) tag designates the VLAN that the traffic originates from.
 
 * **Use VLANs when:**
   * You need to **isolate broadcast domains** at Layer 2 (switch level).
@@ -258,7 +251,7 @@ VLANs are used to segment portions of a network at layer two and differentiate d
   * Isolating **IoT devices** from the main corporate network.
   * Creating a **guest Wi-Fi network** that can’t access internal resources.
 
-#### 2. Subnets – Layer 3 Segmentation
+2. **Subnets – Layer 3 Segmentation**
 
 * **Use Subnets when:**
   * You need **IP-based segmentation** (routed networks).
@@ -271,7 +264,7 @@ VLANs are used to segment portions of a network at layer two and differentiate d
   * Creating **DMZ subnets** for public-facing servers.
   * Enforcing **micro-segmentation** in data centers (e.g., PCI-compliant networks).
 
-#### When to Use Both VLANs + Subnets Together
+**When to Use Both VLANs and Subnets Together**
 
 * For **stronger security**, combine both:
   * **VLANs** for Layer 2 isolation (prevents direct device-to-device attacks).
@@ -282,7 +275,7 @@ VLANs are used to segment portions of a network at layer two and differentiate d
   * VLAN 30 → Subnet `10.0.30.0/24` (IoT)
   * **Firewall rules** block IoT from accessing Corporate.
 
-#### Key Differences for Security
+**Key Differences for Security**
 
 | Feature                | VLANs (Layer 2)                                       | Subnets (Layer 3)                 |
 | ---------------------- | ----------------------------------------------------- | --------------------------------- |
@@ -292,21 +285,21 @@ VLANs are used to segment portions of a network at layer two and differentiate d
 | **Scalability**        | Good for single-site networks                         | Better for large, routed networks |
 | **Cloud Usage**        | Rare (mostly on-prem)                                 | Common (AWS/Azure subnets)        |
 
-#### Best Practices for Security
+**Best Practices for Security**
 
-✔ **Use VLANs** for **internal segmentation** (switch-level isolation).\
-✔ **Use Subnets** for **inter-VLAN routing & firewall policies**.\
-✔ **Combine both** for **defense-in-depth** (e.g., VLANs + Subnets + ACLs).\
-✔ **Avoid VLAN hopping** by securing trunk ports and using private VLANs where needed.\
-✔ **Prefer Subnets in cloud** (cloud networks rely on IP-based segmentation).
+- **Use VLANs** for **internal segmentation** (switch-level isolation).
+- **Use Subnets** for **inter-VLAN routing & firewall policies**.
+- **Combine both** for **defense-in-depth** (e.g., VLANs + Subnets + ACLs).
+- **Avoid VLAN hopping** by securing trunk ports and using private VLANs where needed.
+- **Prefer Subnets in cloud** (cloud networks rely on IP-based segmentation).
 
-#### Practical Approach
+**Practical Approach**
 
 * **For physical networks:** Start with VLANs, then assign subnets for routing.
 * **For cloud/virtual networks:** Use subnets with security groups/NACLs.
 * **For maximum security:** Use both with strict firewall rules between them.
 
-#### Security zones using VLANs
+**Security Zones Using VLANs**
 
 VLANs can be used to define security zones to regulate traffic flow within and between network segments. 
 
@@ -314,7 +307,7 @@ VLANs can be used to define security zones to regulate traffic flow within and b
   While security zones primarily focus on internal traffic, it’s crucial to plan for how external devices or traffic will integrate into the network. For example:
   * Most external traffic (e.g., HTTP, mail) remains confined to the demilitarized zone (DMZ).
   * Remote users requiring internal access can be granted permissions based on MAC/IP addresses, enforced via network security controls.
-  * Access rules are dictated by organizational policies, compliance requirements, and security protocols, which we’ll explore next.
+  * Access rules are dictated by organizational policies, compliance requirements, and security protocols.
 * **Implementation and Enforcement**:\
   Security zones and access controls dictate traffic routing, but authorization decisions rely on:
   * Company security policies.
@@ -323,7 +316,7 @@ VLANs can be used to define security zones to regulate traffic flow within and b
 
 The next step is applying these principles to practical VLAN deployment and policy enforcement. Follows is a summary table of commonly standardized security zones. 
 
-#### Security Zones
+**Security Zones**
 
 | Zone           | Explanation                                                         | Examples                                  |
 | -------------- | ------------------------------------------------------------------- | ----------------------------------------- |
@@ -336,7 +329,7 @@ The next step is applying these principles to practical VLAN deployment and poli
 
 DMZ is a noncritical yet secure segment of the network at the periphery of a private network, positioned between the public internet and the internal network. It is typically separated from the public network by an outer firewall and may also be divided from the private network by an additional firewall. Organizations often deploy a DMZ to host public-facing servers—such as web or email servers—that need to be accessible to untrusted users. By placing these servers in the DMZ, the organization can restrict access to the internal network, reducing exposure to potential threats. While authorized internal users can still reach the DMZ servers, external users are confined to the DMZ and cannot penetrate deeper into the network.
 
-* **Network Security Policies and Controls**
+**Network Security Policies and Controls**
 
 Now that we’ve discussed segmentation and secure architecture design (security zones), enforcement becomes critical. Key considerations include:
 
@@ -361,11 +354,11 @@ A fundamental method for enforcing access is through **ACLs (Access Control List
 
 Traffic filtering ensures security, validation, and segmentation by allowing or blocking traffic based on predefined rules.
 
-**Practice**
+**Practicing ACL Implementation**
 
 Explore practical ACL implementation in traffic filtering and access control policies: [How to configure standard ACLs on Cisco routers](https://itnetworkingskills.wordpress.com/2023/04/11/how-configure-standard-acls-cisco-routers/)
 
-**Prioritize network traffic using QoS**
+**Prioritizing Network Traffic Using QoS**
 
 Set up QoS (Quality of Service) policies on routers, switches, and firewalls to shape and prioritize traffic. QoS settings are vital in managing network traffic, ensuring priority is given to critical applications. Load balancing and bandwidth management further help in evenly distributing network traffic, preventing any single resource from becoming a bottleneck.
 
@@ -378,16 +371,16 @@ While traditional network segmentation can use VLANs and subnets as its primary 
 
 A micro-segmentation policy could be applied to two VMs that are on the _same VLAN and subnet_, preventing them from talking to each other unless explicitly allowed. A traditional network firewall at the VLAN boundary would be blind to this East-West traffic.
 
-**The "Zero Trust" Principle:** Micro-segmentation is a core implementation of the Zero Trust model ("never trust, always verify"). It assumes a breach has already occurred inside a segment and prevents lateral movement by an attacker. Traditional segmentation often operates on a "trust but verify" model within a segment.
+Micro-segmentation is a core implementation of the "Zero Trust" principle ("never trust, always verify"). Traditional segmentation often operates on a "trust but verify" model within a segment. In comparison, micro-segmentation assumes a breach has already occurred inside a segment. Micro-segmentation aims to prevent lateral movement by an attacker. 
 
-**East-West vs. North-South Traffic:**
+**East-West vs. North-South Traffic**
 
 * **Network Segmentation** is traditionally very good at controlling **North-South** traffic (traffic moving in and out of the network segment/zone).
 * **Micro-Segmentation** is specifically designed to control **East-West** traffic (traffic between servers _within_ the same segment/zone), which is where most malicious lateral movement occurs after a breach.
 
-Micro-segmentation takes the principle of "divide and contain" and applies it with far greater precision, using software-defined policies instead of relying on network hardware boundaries. You can have network segmentation _without_ micro-segmentation (e.g., just using VLANs), but effective micro-segmentation implements and enhances the goals of network segmentation.
+Micro-segmentation takes the principle of "divide and contain" and applies it with far greater precision, using software-defined policies instead of relying on network hardware boundaries. You can have network segmentation without micro-segmentation (e.g., just using VLANs), but effective micro-segmentation implements and enhances the goals of network segmentation.
 
-#### Detailed Comparison
+**Network Segmentation vs Micro-Segmentation Comparison**
 
 | Feature                   | Network Segmentation                                                                  | Micro-Segmentation                                                                                                                  |
 | ------------------------- | ------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
@@ -411,7 +404,7 @@ Honeypots can exhaust attackers by making them interact with phoney systems. Fur
 
 A honeynet can be deployed as a complementary defense mechanism. A honeynet is a fake network segment that appears to be a very enticing target. Some organizations set up fake wireless access points for just this purpose.
 
-#### Types of Honeypots
+**Types of Honeypots**
 
 | Type Category             | Specific Type          | Description                                                                                              | Key Examples (Open Source / Commercial)              |
 | ------------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
@@ -430,20 +423,19 @@ A honeynet can be deployed as a complementary defense mechanism. A honeynet is a
 * **Distraction:** Keep attackers away from real systems.
 * **Incident Response:** Help analyze breaches and improve defenses.
 
-#### Network Automation
+#### Network automation
 
-Software-defined networking (SDN) is a relatively recent trend that can be useful both in placing\
-security devices and in segmenting the network. SDN is a powerful and efficient technology for implementing and managing micro-segmentation in a modern enterprise network. Essentially, in SDN the entire network is virtualized, which enables relatively easy segmentation of the network. It also allows administrators to place virtualized security devices wherever they want.
+Software-defined networking (SDN) is a relatively recent trend that can be useful both in placing security devices and in segmenting the network. SDN is a powerful and efficient technology for implementing and managing micro-segmentation in a modern enterprise network. Essentially, in SDN the entire network is virtualized, which enables relatively easy segmentation of the network. It also allows administrators to place virtualized security devices wherever they want.
 
 **How SDN can be Used for Micro-Segmentation**
 
 * **Centralized Control and Policy Management:** The core principle of SDN is separating the control plane (the brain that decides how traffic flows) from the data plane (the devices that forward traffic). An SDN controller has a centralized, holistic view of the entire network. This allows administrators to define security policies (e.g., "Web server can talk to Database server on port 3306, but nothing else") in one place and push them out to all relevant devices instantly and consistently.
-* **Network Virtualization and Abstraction:** SDN virtualizes the underlying physical hardware. This means micro-segmentation is achieved through software-defined policies (often called "groups" or "tags") rather than complex physical firewall rules and Access Control Lists (ACLs) on every switch and router. You segment based on **what a device is** (e.g., "IoT Sensor," "HR Server") rather than **where it is** plugged in (e.g., "Switch 5, Port 12").
+* **Network Virtualization and Abstraction:** SDN virtualizes the underlying physical hardware. This means micro-segmentation is achieved through software-defined policies (often called "groups" or "tags") rather than complex physical firewall rules and ACLs on every switch and router. You segment based on what a device is (e.g., "IoT Sensor," "HR Server") rather than where it is plugged in (e.g., "Switch 5, Port 12").
 * **Dynamic and Granular Enforcement:** Policies in an SDN are dynamic. When a device moves or a new virtual machine spins up, the SDN controller automatically identifies it, applies the appropriate security policy based on its identity, and places it in the correct segment. This enables extremely granular segmentation, down to the level of a single workload or device.
 
 Adopting SDN permits dynamic security policy adjustments in response to emerging threats. For example, Cisco DNA Center is a software-based network management and automation platform that helps organizations simplify, automate, and secure their networks. DNA Center is an SDN controller in SD-Access architecture, but it can also be used as a general network management tool even in networks that do not use SD-Access. DNA Center has two main roles. First, it is the SDN controller used in SD-Access. Second, it can be a network manager in a traditional network that is not using SD-Access. In this case, it acts as a central point to monitor, analyze, and configure the network.
 
-Cisco's SD-Access uses something called a **Virtual Network (VN)** for macro-segmentation (e.g., separating Guest, Corporate, and IoT traffic) and **Scalable Group Tags (SGTs)** for micro-segmentation within a VN. An SGT policy can enforce rules between any two entities, regardless of their IP address or physical location.
+Cisco's SD-Access uses something called a Virtual Network (VN) for macro-segmentation (e.g., separating Guest, Corporate, and IoT traffic) and Scalable Group Tags (SGTs) for micro-segmentation within a VN. An SGT policy can enforce rules between any two entities, regardless of their IP address or physical location.
 
 **Key Ways Network Automation Enhances Cybersecurity Posture**
 
@@ -461,17 +453,13 @@ Network automation uses software to perform network tasks with minimal human int
 6. **Enhanced Vulnerability Management:**
    * Automation can schedule and execute security patches and updates for network devices (routers, switches, firewalls) during maintenance windows with minimal downtime, rapidly closing known vulnerabilities before they can be exploited.
 
-In summary, **network automation transforms cybersecurity from a manual, reactive effort into a consistent, proactive, and rapid-response strategy.** It is essential for managing the complexity and scale of modern networks and enforcing robust security policies like those enabled by SDN and micro-segmentation.
+In summary, network automation transforms cybersecurity from a manual, reactive effort into a consistent, proactive, and rapid-response strategy. Network automation is essential for managing the complexity and scale of modern networks and enforcing robust security policies like those enabled by SDN and micro-segmentation.
 
-#### Effective Network Architecture
+#### Effective network architecture
 
 When designing a network segregation strategy, device placement is critical. The simplest device to position is the firewall: it should be deployed at every network zone junction, ensuring each segment is protected. Fortunately, this is easier than it sounds—modern switches and routers include built-in firewall capabilities that only need activation and proper configuration. Another essential perimeter device is an anti-DDoS solution, which mitigates attacks before they impact the entire network. Behind the primary public-facing firewall, a web filter proxy should also be implemented.
 
-For other devices, placement depends on the network’s structure. Load balancers, for example, should reside in the same segment as the servers they manage—whether in a DMZ for web servers or a private segment for database clusters. 
-
-Network aggregation switches lack a fixed placement rule but are commonly used to consolidate bandwidth streams—for instance, optimizing throughput to and from a server cluster.
-
-Finally, any Internet-connected network must have a local router with NAT and DHCP, both for security and to prevent IP exhaustion. The router should be the sole device connected to the modem, with all other devices routing through it.
+For other devices, placement depends on the network’s structure. Load balancers, for example, should reside in the same segment as the servers they manage—whether in a DMZ for web servers or a private segment for database clusters. Network aggregation switches lack a fixed placement rule but are commonly used to consolidate bandwidth streams—for instance, optimizing throughput to and from a server cluster. Finally, any Internet-connected network must have a local router with NAT and DHCP, both for security and to prevent IP exhaustion. The router should be the sole device connected to the modem, with all other devices routing through it.
 
 ### Networking protocols
 
@@ -483,19 +471,15 @@ Furthermore, NAT hides internal IP addresses from the public Internet by transla
 
 Secure DNS services like Cloudflare’s offer enhanced privacy and security by encrypting DNS queries, which can protect against DNS eavesdropping and spoofing attacks, often providing faster response times and improved reliability compared to standard DNS services.
 
-**Network security protocols**
+#### Network security protocols
 
 Network security protocols are essentially the security guards of the data traveling across a network. These protocols act as a set of rules that ensure the data gets from point A to B safely, without unauthorized access or alteration. There are different types of security protocols, each focusing on a specific aspect of data protection. Here's a brief breakdown:
 
-• Encryption protocols: These scramble data using algorithms, making it unreadable to anyone without the decryption key. Examples include SSL/TLS, which secures communication on websites.
-
-• Authentication protocols: These verify the identity of users or devices trying to access a network resource. For example, RADIUS (Remote Authentication Dial-In User Service) is a client-server protocol often used for managing network access.
-
-• Integrity protocols: These make sure data has not been tampered with during transmission. They act like checksums, ensuring the data received is exactly what was sent. For example, HMAC (Hash-Based Message Authentication Code) is a specific mechanism used by other protocols such as TLS and IPsec to guarantee integrity. 
-
-• Tunneling protocols: These encapsulate and encrypt data packets to create a secure "tunnel" across an untrusted network. For example, IPsec (Internet Protocol Security) operates at the network layer (Layer 3) of the OSI model, securing all communication between two points (e.g., two offices, a remote worker and a central server). 
-
-• Wireless network security protocols such as WPA and WPA2 are considered more secure than WEP. For example, WPA2 uses AES for encryption and 802.1X for authentication. 
+- Encryption protocols: These scramble data using algorithms, making it unreadable to anyone without the decryption key. Examples include SSL/TLS, which secures communication on websites.
+- Authentication protocols: These verify the identity of users or devices trying to access a network resource. For example, RADIUS (Remote Authentication Dial-In User Service) is a client-server protocol often used for managing network access.
+- Integrity protocols: These make sure data has not been tampered with during transmission. They act like checksums, ensuring the data received is exactly what was sent. For example, HMAC (Hash-Based Message Authentication Code) is a specific mechanism used by other protocols such as TLS and IPsec to guarantee integrity. 
+- Tunneling protocols: These encapsulate and encrypt data packets to create a secure "tunnel" across an untrusted network. For example, IPsec (Internet Protocol Security) operates at the network layer (Layer 3) of the OSI model, securing all communication between two points (e.g., two offices, a remote worker and a central server). 
+- Wireless network security protocols such as WPA and WPA2 are considered more secure than WEP. For example, WPA2 uses AES for encryption and 802.1X for authentication. 
 
 ### Organizational policies
 
@@ -514,14 +498,14 @@ Here is a basic information security policy framework, aligned with industry bes
 **2. Asset Management & Data Protection**
 
 * **Asset Management Policy:** Rules for managing IT assets throughout their lifecycle (from procurement to disposal).
-* **Data Classification and Handling:** A critical policy that defines categories of data (e.g., Public, Internal, Confidential, Restricted) and specifies how each class must be stored, transmitted, and destroyed. _(This was a key missing element in the original list.)_
+* **Data Classification and Handling:** A critical policy that defines categories of data (e.g., Public, Internal, Confidential, Restricted) and specifies how each class must be stored, transmitted, and destroyed.
 * **Cryptography (Encryption) Policy:** Guidelines for the use of encryption to protect data at rest (on servers/drives) and in transit (over networks).
 
 **3. Human Resources Security**
 
 * **Employee Onboarding/Offboarding:** Security procedures for when employees join, change roles, or leave the organization.
 * **Security Awareness Training:** Mandates regular training to ensure all personnel understand their security responsibilities and can recognize threats like phishing.
-* **Acceptable Use Policy (AUP):** Defines acceptable and unacceptable use of company IT resources (email, internet, software, etc.). This is your "User responsibility/usage policies."
+* **Acceptable Use Policy (AUP) or Usage Policy:** Defines acceptable and unacceptable use of company IT resources (email, internet, software, etc.).
 * **Ethical Code of Conduct / Confidentiality Agreements:** Establishes expected behavior and legal obligations to protect company information.
 
 **4. Operational & Technical Security**
@@ -534,25 +518,21 @@ Here is a basic information security policy framework, aligned with industry bes
 
 **5. Incident Management & Compliance**
 
-* **Incident Response Plan:** A formal plan for detecting, responding to, and recovering from security incidents (data breaches, ransomware, etc.). _(Another critical missing element.)_
+* **Incident Response Plan:** A formal plan for detecting, responding to, and recovering from security incidents (data breaches, ransomware, etc.).
 * **Physical and Environmental Security:** Controls to protect physical assets like data centers, server rooms, and workstations from unauthorized access and environmental hazards.
-* **Vendor and Third-Party Risk Management:** Policies to assess and monitor the security practices of partners, suppliers, and cloud service providers that have access to your data. _(Extremely important in modern supply-chain attacks.)_
+* **Vendor and Third-Party Risk Management:** Policies to assess and monitor the security practices of partners, suppliers, and cloud service providers that have access to your data.
 * **Audit and Compliance Monitoring:** Procedures for regularly reviewing and auditing compliance with the security policy itself.
 
 ### Security testing
 
-Information security testing is an essential part of both risk assessments and compliance audits.
-
-A risk assessment is the process of **identifying, estimating, and prioritizing risks** to organizational operations, assets, and individuals. Information security testing is used to identify and assess the risks to an organization's information assets. This information is then used to develop and implement security controls to mitigate those risks. Security testing (like vulnerability scans and penetration tests) provides the **empirical evidence** needed to:
+Information security testing is an essential part of both risk assessments and compliance audits. A risk assessment is the process of identifying, estimating, and prioritizing risks to organizational operations, assets, and individuals. Information security testing is used to identify and assess the risks to an organization's information assets. This information is then used to develop and implement security controls to mitigate those risks. Security testing (like vulnerability scans and penetration tests) provides the empirical evidence needed to:
 
 * **Identify Vulnerabilities:** Find actual weaknesses in systems, networks, and applications.
 * **Validate Threats:** Confirm whether theoretical threats can actually be exploited.
 * **Estimate Likelihood:** Get real data on how easy or difficult it is for an attacker to breach a system.
 * **Predict Impact:** Simulate an attack to understand what data could be accessed and what the business impact would be.
 
-Without testing, a risk assessment is often just an educated guess. Testing turns it into a data-driven evaluation.
-
-A compliance audit is the process of **verifying that an organization adheres to a specific set of external rules or internal policies** (e.g., PCI DSS, HIPAA, SOC 2, ISO 27001). Information security testing is used in compliance audits to verify that an organization's information security controls are effective and are in compliance with applicable regulations. Many of these standards and regulations explicitly require regular security testing as a condition for compliance. For example:
+A compliance audit is the process of verifying that an organization adheres to a specific set of external rules or internal policies (e.g., PCI DSS, HIPAA, SOC 2, ISO 27001). Information security testing is used in compliance audits to verify that an organization's information security controls are effective and are in compliance with applicable regulations. Many of these standards and regulations explicitly require regular security testing as a condition for compliance. For example:
 
 * **PCI DSS:** Requires internal and external vulnerability scans (Req. 11.2) and penetration testing (Req. 11.3).
 * **ISO 27001:** Control A.12.6.1 requires information about technical vulnerabilities to be managed and addressed in a timely manner, which is operationalized through vulnerability scanning.

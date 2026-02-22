@@ -12,7 +12,7 @@ description: >-
 * List and describe network security risk mitigation best practices
 * Develop an appreciation for the need for a layered approach to cybersecurity
 * Explain the principle of least privilege and its critical role in preventing insider threats and limiting attack surfaces
-* Differentiate between the functions of IAM (Identity and Access Management), AAA (Authentication, Authorization, and Accounting), and NAC (Network Access Control) in network security&#x20;
+* Differentiate between the functions of IAM (Identity and Access Management), AAA (Authentication, Authorization, and Accounting), and NAC (Network Access Control) in network security 
 * Compare and contrast the goals and methodologies of IDS/IPS and NTA (Network Traffic Analysis)
 * Outline the four phases of the NIST incident response lifecycle and describe key activities in each phase
 * Describe the role of automation in ensuring consistent and compliant patch management processes
@@ -26,7 +26,7 @@ This section discusses network security risk mitigation best practices, includin
   * **Identity and Access Management (IAM)**
   * **Automated policy enforcement**
   * **Multi-Factor Authentication (MFA)**
-* **Network security monitoring**&#x20;
+* **Network security monitoring** 
   * **Network visibility vs network security monitoring**
   * **Network security monitoring technologies**
   * **Network Traffic Analysis (NTA) vs IDS/IPS**
@@ -34,7 +34,7 @@ This section discusses network security risk mitigation best practices, includin
 * **Incident response management**
 * **Using multiple vendors**
 * **Quality Assurance**
-* **Timely software patching**&#x20;
+* **Timely software patching** 
 * **Physically securing the network**
 
 ### Robust access control
@@ -52,7 +52,7 @@ The principle of least privilege rules that only the necessary and sufficient le
 
 #### Identity and Access Management (IAM)
 
-IAM is a comprehensive system for identification, authentication, authorization, accounting, and identity management. IAM is a comprehensive discipline and set of technologies focused on managing digital identities and their access rights across systems.&#x20;
+IAM is a comprehensive system for identification, authentication, authorization, accounting, and identity management. IAM is a comprehensive discipline and set of technologies focused on managing digital identities and their access rights across systems. 
 
 IAM is the broad, enterprise-wide strategy for governing identity and access policies. It is responsible for establishing user identities, assigning access privileges, and defining the business rules that govern those privileges across all systems (applications, data, and network). Technologies like Microsoft Active Directory are core components that implement the identity repository aspect of this IAM strategy. AAA is a critical functional framework within IAM, focused specifically on the operational enforcement of Authentication, Authorization, and Accounting for network access. It is the "how" for controlling access to network devices and services. This AAA framework is implemented using specific technologies and protocols. Cisco ISE is a prime example of a comprehensive AAA server that also performs Automated Policy Enforcement. This enforcement is a key capability of modern Network Access Control (NAC) systems, which use AAA protocols like RADIUS and TACACS+ to dynamically apply the broader IAM policies at the network level.
 
@@ -68,7 +68,7 @@ IAM is the broad, enterprise-wide strategy for governing identity and access pol
 **Core capabilities of IAM include:**
 
 * **User Lifecycle Management:** Provisioning, de-provisioning, and updating user accounts.
-* **Role-Based Access Control (RBAC):** Assigning permissions based on a user's role in the organization. RBAC ensures that users and devices only have permissions necessary for their functions, minimizing insider threats and credential misuse.&#x20;
+* **Role-Based Access Control (RBAC):** Assigning permissions based on a user's role in the organization. RBAC ensures that users and devices only have permissions necessary for their functions, minimizing insider threats and credential misuse. 
 * **Attribute-Based Access Control (ABAC):** A more dynamic model that grants access based on attributes (user, resource, environment).
 * **Federation:** Allowing users to use a single identity across different systems (e.g., using your corporate login for cloud apps).
 * **Privileged Access Management (PAM):** A subset of IAM focused on securing highly privileged accounts.
@@ -163,7 +163,7 @@ Multi-factor authentication involves using at least two authentication methods f
 
 * Something you know, for example a username and password combination.
 * Something you have, for example pressing a notification that appears on your phone using an authenticator app, or using a badge that is scanned.
-* Something you are, these are unique characteristics about you. For example, biometrics such as a face scan, palm scan, fingerprint scan, retina scan, etc.&#x20;
+* Something you are, these are unique characteristics about you. For example, biometrics such as a face scan, palm scan, fingerprint scan, retina scan, etc. 
 
 ### Network security monitoring
 
@@ -185,7 +185,7 @@ Network visibility is the ability to see, understand, and contextualize all acti
 
 #### Network security monitoring technologies
 
-A secure network design must incorporate robust monitoring to detect and respond to threats in real time. SIEM solutions aggregate and correlate system logs/alerts from IDS, firewalls, endpoints, etc. for centralized threat detection, while endpoint detection and response (EDR) solutions track suspicious behavior across devices for signs of compromise. IDS/IPS solutions help identify/block malicious traffic. Network traffic analysis (NTA) solutions provide visibility into data flows, helping detect lateral movement by attackers.&#x20;
+A secure network design must incorporate robust monitoring to detect and respond to threats in real time. SIEM solutions aggregate and correlate system logs/alerts from IDS, firewalls, endpoints, etc. for centralized threat detection, while endpoint detection and response (EDR) solutions track suspicious behavior across devices for signs of compromise. IDS/IPS solutions help identify/block malicious traffic. Network traffic analysis (NTA) solutions provide visibility into data flows, helping detect lateral movement by attackers. 
 
 By integrating these technologies, organizations can proactively identify vulnerabilities and mitigate risks before they escalate.
 
@@ -245,7 +245,7 @@ The most fundamental approaches to detecting cyber intrusions are to monitor ser
 
 #### **Network Traffic Analysis (NTA)**
 
-NTA (also called Network Detection and Response, NDR) is a broad process of monitoring network activity to understand what is happening on the network. Its primary goal is visibility and discovery. NTA focuses on analyzing raw network traffic to detect suspicious behavior that evades traditional tools. Network visibility is a practice/capability a level above the more traditional network monitoring. For example, an IDS/IPS might block 99% of the obvious, automated attacks at the perimeter. A NTA solution would then be used to discover the sophisticated, stealthy attacker that bypassed the IPS by finding their unusual command-and-control traffic hidden in normal web requests.&#x20;
+NTA (also called Network Detection and Response, NDR) is a broad process of monitoring network activity to understand what is happening on the network. Its primary goal is visibility and discovery. NTA focuses on analyzing raw network traffic to detect suspicious behavior that evades traditional tools. Network visibility is a practice/capability a level above the more traditional network monitoring. For example, an IDS/IPS might block 99% of the obvious, automated attacks at the perimeter. A NTA solution would then be used to discover the sophisticated, stealthy attacker that bypassed the IPS by finding their unusual command-and-control traffic hidden in normal web requests. 
 
 **Key Technologies & Tools:**
 
@@ -348,7 +348,7 @@ Defense in depth is an information security strategy that uses multiple layers a
 * **Defense in depth: the broader, more established term** (originating from military strategy) and is widely recognized in cybersecurity as a comprehensive approach combining multiple security layers (technical, administrative, and physical controls).
 * **Layered security: a subset of defense in depth**, often referring specifically to the technological controls (firewalls, encryption, endpoint protection, etc.) rather than the full strategy.
 
-### Incident response management&#x20;
+### Incident response management 
 
 One of the biggest challenges facing today's IT professionals is planning and preparing for the almost inevitable security incident.
 
@@ -367,7 +367,7 @@ This is the proactive phase focused on getting ready for a potential incident _b
 
 The first consideration in an incident response plan is **preparation**. There should be a manifesto or playbook outlining a structured approach to managing security incidents. Typically an organization should have a SIRT, which will investigate and document incidents. SIRT can be cross functional assembled from various IT related departments or units, and it can be part of or an extension of a SOC team.
 
-The playbook will provision responses commensurate with established risk levels to data assets. For instance, it is important to rank incidents by severity level. It is critical to differentiate between security events (less serious) and security incidents (serious and requiring immediate action). A security event, like a virus on endpoint, might escalate to incident level, but typically it can be addressed via standard procedures or even automation.&#x20;
+The playbook will provision responses commensurate with established risk levels to data assets. For instance, it is important to rank incidents by severity level. It is critical to differentiate between security events (less serious) and security incidents (serious and requiring immediate action). A security event, like a virus on endpoint, might escalate to incident level, but typically it can be addressed via standard procedures or even automation. 
 
 **2. Detection and Analysis**
 

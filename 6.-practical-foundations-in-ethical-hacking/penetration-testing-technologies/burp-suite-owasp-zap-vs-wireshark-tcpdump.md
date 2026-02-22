@@ -2,7 +2,7 @@
 
 #### Burp Suite and OWASP ZAP
 
-Burp Suite and OWASP ZAP are specialized tools designed for the **Application Layer** (Layer 7 of the OSI model), specifically for web traffic (HTTP/HTTPS).
+Burp Suite and OWASP ZAP are specialized tools designed for the Application Layer (Layer 7), specifically for web traffic (HTTP/HTTPS).
 
 * **Burp Suite:** The industry-standard, commercial-grade tool for web application security testing. It has a free version (Burp Suite Community) with powerful core features, and a more advanced professional version.
 * **OWASP ZAP (Zed Attack Proxy):** A free, open-source, and community-driven alternative from the Open Web Application Security Project (OWASP). It is a powerful tool and often considered the primary competitor to Burp Suite.
@@ -15,13 +15,13 @@ The key difference is **active interaction and manipulation** versus **passive o
 
 **1. Intercept and Actively Modify Traffic in Real-Time**
 
-* **Burp/ZAP:** You can pause an HTTP request _after_ it leaves your browser but _before_ it reaches the server. You can then change parameters, headers, cookies, or the POST body and forward the modified request. This is essential for testing for vulnerabilities like SQL Injection, Cross-Site Scripting (XSS), and logic flaws.
-* **Wireshark/tcpdump:** You can only _observe_ the packets. You cannot pause and modify them in transit. You would have to craft a new packet from scratch using a different tool.
+* **Burp/ZAP:** You can pause an HTTP request after it leaves your browser but before it reaches the server. You can then change parameters, headers, cookies, or the POST body and forward the modified request. This is essential for testing for vulnerabilities like SQL Injection, Cross-Site Scripting (XSS), and logic flaws.
+* **Wireshark/tcpdump:** You can only observe the packets. You cannot pause and modify them in transit. You would have to craft a new packet from scratch using a different tool.
 
 **2. Automated and Passive Vulnerability Scanning**
 
 * **Burp/ZAP:** They have built-in scanners that can automatically crawl a web application (find all the pages and functionality) and then perform a barrage of tests to identify common vulnerabilities like SQLi, XSS, and broken authentication.
-* **Wireshark/tcpdump:** They have no concept of what a "vulnerability" is. They can help you investigate the _network symptoms_ of an attack (e.g., seeing a string like `' OR 1=1--` in a packet), but they will not automatically identify or report it as a SQL Injection flaw.
+* **Wireshark/tcpdump:** They have no concept of what a "vulnerability" is. They can help you investigate the network symptoms of an attack (e.g., seeing a string like `' OR 1=1--` in a packet), but they will not automatically identify or report it as a SQL Injection flaw.
 
 **3. Web-Specific Context and Decoding**
 
@@ -41,7 +41,7 @@ The key difference is **active interaction and manipulation** versus **passive o
 * **Burp/ZAP:** Can automatically explore a website by following every link, form, and JavaScript action to build a site map of the entire application. This is the first step in any security assessment.
 * **Wireshark/tcpdump:** Cannot actively crawl a site. It can only record the traffic that is generated while you manually browse.
 
-#### Comparison Table
+**Comparison Table**
 
 | Feature                      | Burp Suite / OWASP ZAP               | Wireshark / tcpdump                                      |
 | ---------------------------- | ------------------------------------ | -------------------------------------------------------- |
@@ -55,7 +55,7 @@ The key difference is **active interaction and manipulation** versus **passive o
 | **Protocol Scope**           | Primarily **HTTP/HTTPS/WebSockets**  | **All** protocols on the wire (TCP, UDP, DNS, ARP, etc.) |
 | **Traffic Generation**       | **Yes** (Repeater, Intruder, Fuzzer) | No (only observation)                                    |
 
-#### Conclusion: They Are Complementary, Not Competitors
+**Conclusion: They Are Complementary, Not Competitors**
 
 A skilled security analyst uses **both** types of tools.
 

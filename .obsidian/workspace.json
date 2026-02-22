@@ -13,26 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "2.-introduction-to-cybersecurity/cybersecurity-risk-mitigation-methods/README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "README"
-            }
-          },
-          {
-            "id": "8748966c8dd79654",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://itnetworkingskills.wordpress.com/2023/05/06/ccna-security-fundamentals/",
-                "title": "CCNA security fundamentals – IT Networking Skills",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "CCNA security fundamentals – IT Networking Skills"
             }
           }
         ]
@@ -197,7 +183,10 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
+    "2.-introduction-to-cybersecurity/network-security-risk-mitigation-best-practices/README.md",
     "2.-introduction-to-cybersecurity/cybersecurity-risk-mitigation-methods/README.md",
+    "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/burp-suite-owasp-zap-vs-wireshark-tcpdump.md",
+    "README.md",
     "7.-conclusion/glossary.md",
     "2.-introduction-to-cybersecurity/common-cyber-attacks/README.md",
     "2.-introduction-to-cybersecurity/the-evolving-cybersecurity-threat-landscape/README.md",
@@ -212,7 +201,6 @@
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md",
     "1.-it-career-planning/it-career-paths/README.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/scanning-and-enumeration/README.md",
-    "README.md",
     "SUMMARY.md",
     "test_update.md",
     "7.-conclusion/practical-foundations-in-ethical-hacking.md",
@@ -222,8 +210,6 @@
     "2.-introduction-to-cybersecurity/foundational-cybersecurity-concepts/foundational-cybersecurity-concepts-quiz.md",
     "2.-introduction-to-cybersecurity/foundational-cybersecurity-concepts/cia-attacks-mitigation-technologies.md",
     "7.-conclusion/cryptography-and-wireless-security.md",
-    "2.-introduction-to-cybersecurity/common-cyber-attacks/common-cyber-attacks-quiz.md",
-    "7.-conclusion/introduction-to-cybersecurity.md",
     "LICENSE",
     "3.-cybersecurity-grc/the-information-security-compliance-audit",
     "3.-cybersecurity-grc/the-information-security-risk-assessment",

@@ -59,6 +59,8 @@ A layered security architecture implements controls across multiple security dom
 
 By implementing controls across these layers, an organization creates a robust and resilient security posture. A failure in the perimeter layer, for example, does not automatically spell disaster because the network layer can limit the attacker's movement, and the data layer can prevent the exfiltration of sensitive information. This multi-layered approach is the essence of defense in depth.
 
+<figure><img src="../../.gitbook/assets/Layers-defense-in-depth.jpg" alt="defense-in-depth-model"><figcaption><p>Defense in depth model (courtesy of learn.microsoft.com)</p></figcaption></figure>
+
 Defense in depth model (courtesy of learn.microsoft.com)
 
 ### The Zero Trust model
@@ -89,6 +91,8 @@ To put these principles into practice, the Zero Trust model provides a framework
 | **Networks**       | The network should no longer be considered a trusted zone. Zero Trust mandates deep network segmentation (including micro-segmentation within data centers), real-time threat protection, end-to-end encryption, and robust monitoring to detect and respond to malicious traffic. |
 
 By applying the three guiding principles across these six pillars, an organization can build a cohesive and robust security posture that protects its modern, distributed resources, regardless of where users work or where data resides. Zero Trust is not a single product, but a strategic, holistic approach to security that aligns with the layered defense (defense-in-depth) model.
+
+<figure><img src="../../.gitbook/assets/Zero-Trust-model.jpg" alt="zero-trust-model"><figcaption><p>Zero Trust model (courtesy of learn.microsoft.com)</p></figcaption></figure>
 
 Zero Trust model (courtesy of learn.microsoft.com)
 

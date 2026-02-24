@@ -98,10 +98,10 @@ By applying the three guiding principles across these six pillars, an organizati
 
 A critical aspect of network design is enforcing strict access controls to prevent unauthorized entry. Best practices for access control in network design include least privilege access control, Identity and Access Management (IAM), automated policy enforcement, and Multi-Factor Authentication (MFA).
 
-* **Least privilege access control:** Granting minimal access required for users to perform their duties.
-* **Identity and Access Management (IAM):** The core framework for defining and managing identity and permissions.
-* **Automated policy enforcement:** The mechanisms that execute the IAM policies. This is the domain of Network Access Control (NAC), automated security group updates, and automated threat response.
-* **Multi-Factor Authentication (MFA):** A critical component of IAM. MFA involves mandating multiple verification steps for sensitive systems.
+- **Least privilege access control:** Granting the minimal access required for users to perform their duties.
+- **Identity and Access Management (IAM):** The core framework for defining and managing digital identities and their permissions across the enterprise.
+- **Automated policy enforcement:** The mechanisms—such as Network Access Control (NAC) and cloud security groups—that execute IAM policies in real-time without manual intervention.
+- **Multi-Factor Authentication (MFA):** A critical control that requires multiple verification methods, directly implementing the Zero Trust mandate to verify explicitly.
 
 #### Least privilege access control
 

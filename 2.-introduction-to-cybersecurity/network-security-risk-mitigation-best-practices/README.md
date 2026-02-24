@@ -141,20 +141,20 @@ IAM defines the policies, users, roles, and permissions. Automated policy enforc
 - **Endpoint Detection and Response (EDR) platforms:** Automatically isolate a compromised endpoint from the network based on predefined policies.
 - **SIEM Automation:** A Security Information and Event Management (SIEM) tool can automatically disable a user account after detecting multiple failed login attempts, based on a pre-defined policy.
 
-A NAC system (like Cisco ISE, Aruba ClearPass, FortiNAC) will:
-
-  1. **Check a device's identity** - is it a corporate laptop, a guest phone, an IoT sensor?
-  2. **Check its compliance** - is its OS patched? does it have antivirus running?
-  3. **Query the IAM system** - what is this user's role? Sales? Engineering?
-  4. **Automatically enforce policy:** Based on the answers, it places the device on the correct VLAN, grants full internet access, restricts it to only specific applications, or blocks it entirely.
-
 **Network Access Control (NAC)**
 
-NAC restricts network access to only those devices that comply with security policies, such as having up-to-date antivirus or OS patches. Non-compliant devices may be blocked, quarantined, or automatically remediated (e.g., by redirecting to a patch server). NAC works best in tightly controlled environments like corporate offices or government networks but can be challenging in dynamic settings like hospitals or universities, where device types and users change frequently, which complicates policy enforcement.
+NAC restricts network access to only those devices that comply with security policies, such as having up-to-date antivirus or OS patches. A NAC system operates at the network edge, evaluating each device that attempts to connect. The process typically follows these steps:
 
-**Examples of NAC Technologies:**
+1. **Check device identity:** Is it a corporate laptop, a guest smartphone, or an unmanaged IoT sensor?
+2. **Assess compliance:** Is the operating system patched? Is antivirus software installed and updated?
+3. **Query the IAM system:** Based on the authenticated user (if any), what is their role and associated permissions?
+4. **Enforce policy dynamically:** Based on the collected information, the NAC system grants appropriate access—placing the device on a specific VLAN, granting full network access, restricting access to only necessary applications, or blocking the connection entirely.
 
-* **Open Source:**
+Non-compliant devices may be blocked, quarantined, or automatically remediated (e.g., by redirecting to a patch server). NAC works best in tightly controlled environments like corporate offices or government networks but can be challenging in dynamic settings like hospitals or universities, where device types and users change frequently, which complicates policy enforcement.
+
+**Examples of NAC technologies:**
+
+* **Open source:**
   1. **PacketFence** – A widely used open-source NAC that enforces policies via VLAN assignment, captive portals, and device profiling.
   2. **FreeRADIUS** – A flexible authentication server often integrated with NAC to control network access via protocols like 802.1X.
 * **Commercial:**
@@ -163,7 +163,21 @@ NAC restricts network access to only those devices that comply with security pol
 
 **NAC vs IAM**
 
-**Network Access Control (NAC)** and **Identity and Access Management (IAM)** are both security frameworks, but they serve different purposes and operate at different layers of IT infrastructure. Here’s how they differ, with concrete examples:
+Network Access Control (NAC) and Identity and Access Management (IAM) are complementary frameworks that operate at different layers. Understanding their distinction is essential for designing robust access control architectures. The following table compares the two frameworks.
+
+|Feature|NAC|IAM|
+|---|---|---|
+|**Primary Focus**|Controls **device access to the network** based on compliance and identity.|Manages **user identities and their access to systems and applications**.|
+|**Scope of Enforcement**|Operates at the **network layer** (ports, VLANs, Wi-Fi).|Operates at the **application and cloud layer** (logins, APIs, data).|
+|**Key Functions**|Authenticates devices; checks device health (patch level, antivirus); assigns network segments; often uses 802.1X and MAC filtering.|Authenticates users; manages roles and permissions; enforces MFA; uses SAML, OAuth, and OpenID Connect.|
+|**Integration**|Modern NAC solutions integrate with IAM to combine device posture checks with user identity and role information for fine-grained access decisions.||
+
+**When to Use Which?**
+
+- **Use NAC** when you need to secure network access against rogue devices, enforce endpoint compliance mandates (e.g., for HIPAA or PCI DSS), or manage guest and BYOD network access.
+- **Use IAM** when you need to manage user access to cloud applications, implement role-based access control across the enterprise, or enforce least-privilege access for applications and data.
+
+---
 
 **1. Primary Focus**
 
@@ -214,13 +228,13 @@ Modern systems often combine both:
 
 #### Multi-Factor Authentication (MFA)
 
-Multi-factor authentication (MFA) requires verification beyond passwords. No matter how secure is a password, there is still a chance it gets into the hands of an attacker. That’s why Multi-Factor Authentication is becoming more and more wide-spread.
+No matter how secure a password may be, it remains vulnerable to theft through phishing, data breaches, or credential stuffing. Multi-factor authentication (MFA) directly addresses this vulnerability by implementing the Zero Trust principle of verify explicitly. MFA requires users to present at least two authentication methods from at least two authentication categories to prove your identity:
 
-Multi-factor authentication involves using at least two authentication methods from at least two of the following categories to prove your identity.
+- **Something you know:** A knowledge factor, such as a password, PIN, or answer to a security question.
+- **Something you have:** A possession factor, such as a smartphone with an authenticator app, a hardware token, or a smart card.
+- **Something you are:** An inherence factor, consisting of biometric characteristics like a fingerprint, facial recognition, retina scan, or voice pattern.
 
-* Something you know, for example a username and password combination.
-* Something you have, for example pressing a notification that appears on your phone using an authenticator app, or using a badge that is scanned.
-* Something you are, these are unique characteristics about you. For example, biometrics such as a face scan, palm scan, fingerprint scan, retina scan, etc.
+By requiring multiple independent factors, MFA dramatically reduces the risk of account takeover. An attacker who compromises a user's password (something they know) cannot access the account without also possessing the user's phone (something they have) or replicating their biometric data (something they are). This layered approach to authentication is a cornerstone of modern identity security and is increasingly mandated by regulatory frameworks and insurance providers.
 
 ### Network security monitoring
 

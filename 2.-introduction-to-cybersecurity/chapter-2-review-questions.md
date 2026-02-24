@@ -69,23 +69,6 @@ Both RADIUS and TACACS+ are AAA protocols, but they have key differences:
 **5. A user receives a phone call from someone claiming to be from the IT department who needs their password to perform a reset. What type of attack is this?**\
 **Answer:** This is a **vishing** (voice phishing) attack, which is a form of social engineering.
 
-### Cybersecurity risk mitigation methods
-
-**1. Briefly describe the primary purpose of a Demilitarized Zone (DMZ) in network architecture.**\
-**Answer:** A DMZ is a secure, isolated network segment positioned between the public internet and the internal private network. Its purpose is to host public-facing services (like web or email servers) so that external users can access them without being able to penetrate into the internal network, thereby limiting the potential damage of a breach.
-
-**2. What is one key security benefit of using Network Address Translation (NAT)?**\
-**Answer:** NAT enhances security by hiding the internal IP addresses of devices on a private network from the public internet. It obscures the internal network structure, making it harder for attackers to identify and target specific devices.
-
-**3. Name two technical methods used to enforce network segmentation.**\
-**Answer:** 1) Virtual Local Area Networks (VLANs) for Layer 2 segmentation. 2) Subnetting (with firewalls/ACLs between subnets) for Layer 3 segmentation.
-
-**4. What is the critical difference between a user awareness program and a user training program in cybersecurity?**\
-**Answer:** A user awareness program is designed to make employees conscious of threats (e.g., through simulated phishing emails), while a user training program is a more formal, dedicated session that educates users on policies and procedures (e.g., how to create strong passwords).
-
-**5. List three components that should be included in a comprehensive Information Security Policy.**\
-**Answer:** (Any three of the following) Data Classification and Handling policy, Access Control Policy, Incident Response Plan, Acceptable Use Policy (AUP), Vendor and Third-Party Risk Management policy.
-
 ### Network security risk mitigation best practices
 
 **1. Explain the difference between IAM and AAA in one or two sentences.**\
@@ -102,3 +85,20 @@ Both RADIUS and TACACS+ are AAA protocols, but they have key differences:
 
 **5. Name two physical security controls used to prevent unauthorized access to a network server room.**\
 **Answer:** (Any two of the following) Badge/biometric access systems, mantraps, 24/7 CCTV surveillance, locked cabinets, security guards.
+
+### Cybersecurity risk mitigation methods
+
+**1. Briefly describe the primary purpose of a Demilitarized Zone (DMZ) in network architecture.**\
+**Answer:** A DMZ is a secure, isolated network segment positioned between the public internet and the internal private network. Its purpose is to host public-facing services (like web or email servers) so that external users can access them without being able to penetrate into the internal network, thereby limiting the potential damage of a breach.
+
+**2. What is one key security benefit of using Network Address Translation (NAT)?**\
+**Answer:** NAT enhances security by hiding the internal IP addresses of devices on a private network from the public internet. It obscures the internal network structure, making it harder for attackers to identify and target specific devices.
+
+**3. Name two technical methods used to enforce network segmentation.**\
+**Answer:** 1) Virtual Local Area Networks (VLANs) for Layer 2 segmentation. 2) Subnetting (with firewalls/ACLs between subnets) for Layer 3 segmentation.
+
+**4. What is the critical difference between a user awareness program and a user training program in cybersecurity?**\
+**Answer:** A user awareness program is designed to make employees conscious of threats (e.g., through simulated phishing emails), while a user training program is a more formal, dedicated session that educates users on policies and procedures (e.g., how to create strong passwords).
+
+**5. List three components that should be included in a comprehensive Information Security Policy.**\
+**Answer:** (Any three of the following) Data Classification and Handling policy, Access Control Policy, Incident Response Plan, Acceptable Use Policy (AUP), Vendor and Third-Party Risk Management policy.

@@ -16,8 +16,8 @@ Through an exploration of key concepts and practices, this chapter will help stu
 * Approach information security in terms of risk, threat, vulnerability, and mitigation.
 * Understand the changing cybersecurity threat landscape and key technological and sociopolitical factors driving the change.
 * Become familiar with common cyber attacks and malware types.
-* Describe cybersecurity risk mitigation methods.
 * Describe network security risk mitigation best practices.
+* Describe cybersecurity risk mitigation methods.
 
 ## Topics covered in this chapter
 

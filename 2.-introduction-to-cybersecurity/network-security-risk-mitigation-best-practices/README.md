@@ -136,13 +136,10 @@ IAM systems—such as Microsoft Active Directory, Microsoft Entra ID, Okta, and 
 
 IAM defines the policies, users, roles, and permissions. Automated policy enforcement uses the rules defined in the IAM system to automatically allow, deny, or restrict access in real-time. Automated policy enforcement refers to the tools and mechanisms that implement the policies defined in the IAM system without manual intervention. This is crucial for scalability and security in modern networks. Examples of automated policy enforcement tools leveraged by IAM include:
 
-* **Network Access Control (NAC):** Enforces security policies at the point of network connection.
-* **Cloud Security Groups and Firewalls:** Rules that automatically allow or deny traffic based on security tags derived from IAM roles.
-* **Endpoint Detection and Response (EDR) platforms:** Automatically isolates a compromised endpoint from the network based on a policy.
-
-
-
-* **SIEM Automation:** A SIEM (Security Information and Event Management) tool automatically disabling a user account after detecting multiple failed login attempts, based on a pre-defined policy.
+- **Network Access Control (NAC):** Enforces security policies at the point of network connection.
+- **Cloud Security Groups and Firewalls:** Automatically allow or deny traffic based on security tags derived from IAM roles.
+- **Endpoint Detection and Response (EDR) platforms:** Automatically isolate a compromised endpoint from the network based on predefined policies.
+- **SIEM Automation:** A Security Information and Event Management (SIEM) tool can automatically disable a user account after detecting multiple failed login attempts, based on a pre-defined policy.
 
 A NAC system (like Cisco ISE, Aruba ClearPass, FortiNAC) will:
 

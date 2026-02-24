@@ -115,12 +115,12 @@ IAM is the broad, enterprise-wide strategy for governing identity and access pol
 
 **IAM vs AAA**
 
-| Feature        | IAM (Identity and Access Management)                                                                                                                                        | AAA (Authentication, Authorization, and Accounting)                                                                                                                                                                    |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Scope**      | **Enterprise-wide.** Covers applications, data, files, cloud services, and network infrastructure.                                                                          | **Network-centric.** Primarily focused on controlling access to network devices and network access itself (e.g., Wi-Fi, VPN).                                                                                          |
-| **Function**   | **Governance and Strategy.** Manages the complete identity lifecycle (onboarding, role changes, offboarding), defines access policies, and ensures compliance.              | **Operational Enforcement.** The specific process of checking credentials (AuthN), granting permissions (AuthZ), and logging activity (Acct) for network access.                                                       |
-| **Components** | Identity Providers (IdP), Single Sign-On (SSO), User Provisioning/De-provisioning systems, Identity Governance tools.                                                       | AAA Servers (like Cisco ISE), Network Access Devices (NADs) like switches and WLCs, and protocols like RADIUS and TACACS+.                                                                                             |
-| **Analogy**    | **The entire corporate security policy and HR department.** It defines _that_ a user is an employee, _what_ their role is, and _what_ resources they should have access to. | **The security guard at the building door.** They don't decide the policy, but they _enforce_ it by checking your ID badge (AuthN), verifying you're allowed to enter (AuthZ), and noting the time you entered (Acct). |
+| Feature        | IAM (Identity and Access Management)                                                                                                                                  | AAA (Authentication, Authorization, and Accounting)                                                                                                                                                                  |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Scope**      | **Enterprise-wide.** Covers applications, data, files, cloud services, and network infrastructure.                                                                    | **Network-centric.** Primarily focused on controlling access to network devices and network access itself (e.g., Wi-Fi, VPN).                                                                                        |
+| **Function**   | **Governance and Strategy.** Manages the complete identity lifecycle (onboarding, role changes, offboarding), defines access policies, and ensures compliance.        | **Operational Enforcement.** The specific process of checking credentials (AuthN), granting permissions (AuthZ), and logging activity (Acct) for network access.                                                     |
+| **Components** | Identity Providers (IdP), Single Sign-On (SSO), User Provisioning/De-provisioning systems, Identity Governance tools.                                                 | AAA Servers (like Cisco ISE), Network Access Devices (NADs) like switches and WLCs, and protocols like RADIUS and TACACS+.                                                                                           |
+| **Analogy**    | **The entire corporate security policy and HR department.** It defines that a user is an employee, what their role is, and what resources they should have access to. | **The security guard at the building door.** They don't decide the policy, but they enforce it by checking your ID badge (AuthN), verifying you're allowed to enter (AuthZ), and noting the time you entered (Acct). |
 
 **Core capabilities of IAM include:**
 
@@ -130,17 +130,18 @@ IAM is the broad, enterprise-wide strategy for governing identity and access pol
 * **Federation:** Allowing users to use a single identity across different systems (e.g., using your corporate login for cloud apps).
 * **Privileged Access Management (PAM):** A subset of IAM focused on securing highly privileged accounts.
 
-IAM systems (like Microsoft Active Directory, Azure AD, Okta, Ping Identity) are the source of truth for identity policy.
+IAM systems—such as Microsoft Active Directory, Microsoft Entra ID, Okta, and Ping Identity—serve as the authoritative source of truth for identity policy across the organization.
 
 #### Automated policy enforcement
 
-IAM defines the policies, users, roles, and permissions. Automated policy enforcement uses the rules defined in the IAM system to automatically allow, deny, or restrict access in real-time. Automated policy enforcement refers to the tools and mechanisms that implement the policies defined in the IAM system without manual intervention. This is crucial for scalability and security in modern networks.
+IAM defines the policies, users, roles, and permissions. Automated policy enforcement uses the rules defined in the IAM system to automatically allow, deny, or restrict access in real-time. Automated policy enforcement refers to the tools and mechanisms that implement the policies defined in the IAM system without manual intervention. This is crucial for scalability and security in modern networks. Examples of automated policy enforcement tools leveraged by IAM include:
 
-Examples of automated policy enforcement tools leveraged by IAM include:
-
-* **Network Access Control (NAC):** A NAC system (like Cisco ISE, Aruba ClearPass, FortiNAC)
+* **Network Access Control (NAC):** Enforces security policies at the point of network connection.
 * **Cloud Security Groups and Firewalls:** Rules that automatically allow or deny traffic based on security tags derived from IAM roles.
-* **Endpoint Detection and Response (EDR) platforms:** Automatically isolating a compromised endpoint from the network based on a policy.
+* **Endpoint Detection and Response (EDR) platforms:** Automatically isolates a compromised endpoint from the network based on a policy.
+
+
+
 * **SIEM Automation:** A SIEM (Security Information and Event Management) tool automatically disabling a user account after detecting multiple failed login attempts, based on a pre-defined policy.
 
 A NAC system (like Cisco ISE, Aruba ClearPass, FortiNAC) will:

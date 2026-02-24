@@ -27,6 +27,6 @@ Through an exploration of key concepts and practices, this chapter will help stu
 
 [Common cyber attacks](common-cyber-attacks/)
 
-[Cybersecurity risk mitigation methods](cybersecurity-risk-mitigation-methods/)
-
 [Network security risk mitigation best practices](network-security-risk-mitigation-best-practices/)
+
+[Cybersecurity risk mitigation methods](cybersecurity-risk-mitigation-methods/)

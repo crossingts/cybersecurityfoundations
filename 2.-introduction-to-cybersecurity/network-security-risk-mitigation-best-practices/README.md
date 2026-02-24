@@ -1,8 +1,8 @@
 ---
 description: >-
   This section discusses network security risk mitigation best practices,
-  including least privilege access control, network security monitoring, layered
-  security, and incident response management
+  including defense in depth, Zero Trust, least privilege access, network
+  security monitoring, and incident response management
 ---
 
 # Network security risk mitigation best practices
@@ -13,53 +13,51 @@ description: >-
 * Develop an appreciation for the need for a defense in depth approach to cybersecurity
 * Describe the three principles and six foundational pillars of the Zero Trust model
 * Explain the principle of least privilege and its role in mitigating insider threats and limiting attack surfaces
-* Describe the complementary roles of IAM (Identity & Access Management), AAA (Authentication, Authorization, and Accounting), and NAC (Network Access Control) in ensuring robust enterprise access management 
+* Describe the complementary roles of IAM (Identity & Access Management), AAA (Authentication, Authorization, and Accounting), and NAC (Network Access Control) in ensuring robust enterprise access management
 * Compare the goals and techniques of IDS/IPS and NTA (Network Traffic Analysis)
 * Outline the four phases of the NIST incident response lifecycle and describe the key activities in each phase
 * Describe the role of automation in ensuring consistent and compliant patch management processes
 
-This section discusses network security risk mitigation best practices, beginning with the foundational strategies of defense in depth and the Zero Trust model. The section then examines core technical controls, including robust access control (least privilege, Identity and Access Management, automated policy enforcement, and Multi-Factor Authentication) and network security monitoring. The discussion continues by covering the essential processes of incident response management, timely software patching, and physically securing the network, before concluding with the supporting practices of using multiple vendors and Quality Assurance.
+This section discusses network security risk mitigation best practices, beginning with the foundational strategies of defense in depth and the Zero Trust model. The section then examines core technical controls, including robust access control (least privilege, Identity and Access Management, automated policy enforcement, and Multi-Factor Authentication) and network security monitoring. The discussion continues by covering the essential processes of incident response management, timely software patching, and physically securing the network, before concluding with the supporting practices of using multiple vendors and Quality Assurance.
 
 ## Topics covered in this section
 
 * **Defense in depth (layered security)**
 * **The Zero Trust model**
 * **Robust access control**
-* **Network security monitoring** 
+* **Network security monitoring**
 * **Network Traffic Analysis (NTA)**
 * **Incident response management**
-* **Timely software patching** 
+* **Timely software patching**
 * **Physically securing the network**
 * **Using multiple vendors**
 * **Quality Assurance**
 
 ### Defense in depth (layered security)
 
-The terms defense in depth and layered security are often used interchangeably to describe a multi-layered security architecture. However, it's useful to think of them as two sides of the same coin: defense in depth is the overarching strategy, while layered security represents the practical implementation of that strategy through a combination of procedural, technological, and physical controls.
+The terms defense in depth and layered security are often used interchangeably to describe a multi-layered security architecture. However, it's useful to think of them as two sides of the same coin: defense in depth is the overarching strategy, while layered security represents the practical implementation of that strategy through a combination of procedural, technological, and physical controls.
 
 The core idea behind defense in depth is that no single security control is perfect. A firewall can be misconfigured, an IDS can miss a novel attack, and a user can fall for a phishing email. A defense-in-depth strategy acknowledges this reality and builds resilience by creating multiple, overlapping layers of protection. If one layer fails or is bypassed, the next layer is already in place to stop the attack, slowing its progress and providing defenders with more time to detect and respond. This approach transforms security from a single barrier into a series of interconnected hurdles for an attacker.
 
 A layered security architecture implements controls across multiple security domains. These domains can be visualized as a stack of defensive layers, starting from the physical infrastructure and moving up to the data itself. A practical layered security architecture can be comprised of the following layers:
 
-- **Physical layer:** This is the foundation of security. It involves protecting the physical assets that house your data and systems. Controls here include limiting access to data centers and network closets to only authorized personnel, using security badges, biometrics, mantraps, and 24/7 surveillance. If an attacker cannot physically touch a server, many attack vectors are immediately neutralized.
-- **Identity and access layer:** This layer focuses on ensuring that only the right people (and devices) have access to the right resources. It's where the principles and technologies of robust access control are implemented. Key controls include:
-    - **Identity and Access Management (IAM)** systems that define and manage user identities and their permissions (e.g., Role-Based Access Control).
-    - **Multi-Factor Authentication (MFA)** , which requires users to provide something they know (a password) plus something they have (a phone) or something they are (a fingerprint).
-    - **Conditional access policies** that grant or deny access based on specific conditions, such as the user's location, device health, or risk level.
-- **Perimeter layer:** This layer secures the boundary between your corporate network and the public internet (or other untrusted networks). Its goal is to filter out attacks and unwanted traffic before they can reach internal resources. Controls here include next-generation firewalls (NGFWs), Intrusion Prevention Systems (IPS), and Distributed Denial of Service (DDoS) protection services that can absorb and filter large-scale volumetric attacks.
-- **Network layer:** This layer focuses on security within the network. Its primary goals are to limit the "blast radius" of a successful breach and restrict the lateral movement of attackers. Key controls include:
-    - **Network segmentation:** Dividing the network into smaller, isolated zones (e.g., separating the finance department's network from the guest Wi-Fi network).
-    - **Network Access Control (NAC):** Enforcing security policies on devices before they are granted network access, such as checking for up-to-date antivirus or operating system patches.
-    - **Virtual Local Area Networks (VLANs)** and firewalls between internal segments to control traffic flows.
-- **Compute layer:** This layer involves securing the virtual machines, containers, and servers where your applications run. Controls here focus on hardening these systems against attack. Examples include securing remote access protocols (like RDP and SSH) by closing unnecessary ports, enforcing host-based firewalls, and ensuring that virtual machine images are built from secure, hardened baselines.
-- **Application layer:** This layer aims to ensure that the applications themselves are secure. It involves integrating security into the software development lifecycle (DevSecOps). Key activities include regular application security testing (static and dynamic analysis), vulnerability scanning, and employing a Web Application Firewall (WAF) to protect against common web-based attacks like SQL injection and cross-site scripting.
-- **Data layer:** This is the innermost layer, focused on protecting the crown jewels—the data itself. Controls here are the last line of defense and are critical for maintaining confidentiality and integrity, even if all other layers are compromised. They include:
-    - **Data classification and rights management:** Labeling data based on sensitivity and controlling who can view, edit, or share it.
-    - **Encryption:** Protecting data at rest (on hard drives), in transit (over the network), and in use (in memory). This ensures that even if data is exfiltrated, it remains unreadable without the proper keys.
+* **Physical layer:** This is the foundation of security. It involves protecting the physical assets that house your data and systems. Controls here include limiting access to data centers and network closets to only authorized personnel, using security badges, biometrics, mantraps, and 24/7 surveillance. If an attacker cannot physically touch a server, many attack vectors are immediately neutralized.
+* **Identity and access layer:** This layer focuses on ensuring that only the right people (and devices) have access to the right resources. It's where the principles and technologies of robust access control are implemented. Key controls include:
+  * **Identity and Access Management (IAM)** systems that define and manage user identities and their permissions (e.g., Role-Based Access Control).
+  * **Multi-Factor Authentication (MFA)** , which requires users to provide something they know (a password) plus something they have (a phone) or something they are (a fingerprint).
+  * **Conditional access policies** that grant or deny access based on specific conditions, such as the user's location, device health, or risk level.
+* **Perimeter layer:** This layer secures the boundary between your corporate network and the public internet (or other untrusted networks). Its goal is to filter out attacks and unwanted traffic before they can reach internal resources. Controls here include next-generation firewalls (NGFWs), Intrusion Prevention Systems (IPS), and Distributed Denial of Service (DDoS) protection services that can absorb and filter large-scale volumetric attacks.
+* **Network layer:** This layer focuses on security within the network. Its primary goals are to limit the "blast radius" of a successful breach and restrict the lateral movement of attackers. Key controls include:
+  * **Network segmentation:** Dividing the network into smaller, isolated zones (e.g., separating the finance department's network from the guest Wi-Fi network).
+  * **Network Access Control (NAC):** Enforcing security policies on devices before they are granted network access, such as checking for up-to-date antivirus or operating system patches.
+  * **Virtual Local Area Networks (VLANs)** and firewalls between internal segments to control traffic flows.
+* **Compute layer:** This layer involves securing the virtual machines, containers, and servers where your applications run. Controls here focus on hardening these systems against attack. Examples include securing remote access protocols (like RDP and SSH) by closing unnecessary ports, enforcing host-based firewalls, and ensuring that virtual machine images are built from secure, hardened baselines.
+* **Application layer:** This layer aims to ensure that the applications themselves are secure. It involves integrating security into the software development lifecycle (DevSecOps). Key activities include regular application security testing (static and dynamic analysis), vulnerability scanning, and employing a Web Application Firewall (WAF) to protect against common web-based attacks like SQL injection and cross-site scripting.
+* **Data layer:** This is the innermost layer, focused on protecting the crown jewels—the data itself. Controls here are the last line of defense and are critical for maintaining confidentiality and integrity, even if all other layers are compromised. They include:
+  * **Data classification and rights management:** Labeling data based on sensitivity and controlling who can view, edit, or share it.
+  * **Encryption:** Protecting data at rest (on hard drives), in transit (over the network), and in use (in memory). This ensures that even if data is exfiltrated, it remains unreadable without the proper keys.
 
 By implementing controls across these layers, an organization creates a robust and resilient security posture. A failure in the perimeter layer, for example, does not automatically spell disaster because the network layer can limit the attacker's movement, and the data layer can prevent the exfiltration of sensitive information. This multi-layered approach is the essence of defense in depth.
-
-
 
 Defense in depth model (courtesy of learn.microsoft.com)
 
@@ -67,15 +65,15 @@ Defense in depth model (courtesy of learn.microsoft.com)
 
 The traditional security model often operated like a medieval castle. It had a strong perimeter (the castle walls with firewalls and VPNs) to keep attackers out, but once inside the walls, users and devices were often trusted implicitly. This model is no longer sufficient. Attackers have become adept at breaching the perimeter through phishing, stolen credentials, or exploiting vulnerabilities in web applications. Once inside, they can move laterally, undetected, to access sensitive data.
 
-The **Zero Trust model** is a modern security strategy built on the principle of **"never trust, always verify."** It assumes that breach is inevitable, or has perhaps already happened, and that the network is inherently hostile. Therefore, no user, device, or application—whether inside or outside the corporate network—is trusted by default. Every access request must be explicitly verified before granting access to any resource.
+The **Zero Trust model** is a modern security strategy built on the principle of **"never trust, always verify."** It assumes that breach is inevitable, or has perhaps already happened, and that the network is inherently hostile. Therefore, no user, device, or application—whether inside or outside the corporate network—is trusted by default. Every access request must be explicitly verified before granting access to any resource.
 
 #### Zero Trust guiding principles
 
 The Zero Trust model is guided by three core principles that shape how security is architected and enforced:
 
-1. **Verify explicitly:** Always authenticate and authorize access based on all available data points. This goes far beyond a simple username and password. It means continuously verifying the user's identity, the health and compliance of their device, their physical location, the sensitivity of the data they're requesting, and even detecting anomalous behavior in real-time.
-2. **Use least privilege access:** This principle is a cornerstone of Zero Trust. It means limiting user access with **just-in-time (JIT)** and **just-enough-access (JEA)**. JIT ensures that privileged access is granted only for a limited time window when needed, while JEA ensures users have the minimum permissions required for a specific task, not broad, standing access.
-3. **Assume breach:** This principle fundamentally changes the security mindset. Instead of solely focusing on prevention, Zero Trust assumes that a breach has already occurred or will occur. The strategy, therefore, shifts to **minimizing the blast radius** and preventing lateral movement. This is achieved by segmenting access (by network, user, and application), using end-to-end encryption to protect data, and employing advanced analytics to rapidly detect, investigate, and respond to threats.
+1. **Verify explicitly:** Always authenticate and authorize access based on all available data points. This goes far beyond a simple username and password. It means continuously verifying the user's identity, the health and compliance of their device, their physical location, the sensitivity of the data they're requesting, and even detecting anomalous behavior in real-time.
+2. **Use least privilege access:** This principle is a cornerstone of Zero Trust. It means limiting user access with **just-in-time (JIT)** and **just-enough-access (JEA)**. JIT ensures that privileged access is granted only for a limited time window when needed, while JEA ensures users have the minimum permissions required for a specific task, not broad, standing access.
+3. **Assume breach:** This principle fundamentally changes the security mindset. Instead of solely focusing on prevention, Zero Trust assumes that a breach has already occurred or will occur. The strategy, therefore, shifts to **minimizing the blast radius** and preventing lateral movement. This is achieved by segmenting access (by network, user, and application), using end-to-end encryption to protect data, and employing advanced analytics to rapidly detect, investigate, and respond to threats.
 
 #### The six foundational pillars of Zero Trust
 
@@ -91,8 +89,6 @@ To put these principles into practice, the Zero Trust model provides a framework
 | **Networks**       | The network should no longer be considered a trusted zone. Zero Trust mandates deep network segmentation (including micro-segmentation within data centers), real-time threat protection, end-to-end encryption, and robust monitoring to detect and respond to malicious traffic. |
 
 By applying the three guiding principles across these six pillars, an organization can build a cohesive and robust security posture that protects its modern, distributed resources, regardless of where users work or where data resides. Zero Trust is not a single product, but a strategic, holistic approach to security that aligns with the layered defense (defense-in-depth) model.
-
-
 
 Zero Trust model (courtesy of learn.microsoft.com)
 
@@ -111,7 +107,7 @@ The principle of least privilege rules that only the necessary and sufficient le
 
 #### Identity and Access Management (IAM)
 
-IAM is a comprehensive system for identification, authentication, authorization, accounting, and identity management. IAM is a comprehensive discipline and set of technologies focused on managing digital identities and their access rights across systems. 
+IAM is a comprehensive system for identification, authentication, authorization, accounting, and identity management. IAM is a comprehensive discipline and set of technologies focused on managing digital identities and their access rights across systems.
 
 IAM is the broad, enterprise-wide strategy for governing identity and access policies. It is responsible for establishing user identities, assigning access privileges, and defining the business rules that govern those privileges across all systems (applications, data, and network). Technologies like Microsoft Active Directory are core components that implement the identity repository aspect of this IAM strategy. AAA is a critical functional framework within IAM, focused specifically on the operational enforcement of Authentication, Authorization, and Accounting for network access. It is the "how" for controlling access to network devices and services. This AAA framework is implemented using specific technologies and protocols. Cisco ISE is a prime example of a comprehensive AAA server that also performs Automated Policy Enforcement. This enforcement is a key capability of modern Network Access Control (NAC) systems, which use AAA protocols like RADIUS and TACACS+ to dynamically apply the broader IAM policies at the network level.
 
@@ -127,7 +123,7 @@ IAM is the broad, enterprise-wide strategy for governing identity and access pol
 **Core capabilities of IAM include:**
 
 * **User Lifecycle Management:** Provisioning, de-provisioning, and updating user accounts.
-* **Role-Based Access Control (RBAC):** Assigning permissions based on a user's role in the organization. RBAC ensures that users and devices only have permissions necessary for their functions, minimizing insider threats and credential misuse. 
+* **Role-Based Access Control (RBAC):** Assigning permissions based on a user's role in the organization. RBAC ensures that users and devices only have permissions necessary for their functions, minimizing insider threats and credential misuse.
 * **Attribute-Based Access Control (ABAC):** A more dynamic model that grants access based on attributes (user, resource, environment).
 * **Federation:** Allowing users to use a single identity across different systems (e.g., using your corporate login for cloud apps).
 * **Privileged Access Management (PAM):** A subset of IAM focused on securing highly privileged accounts.
@@ -222,7 +218,7 @@ Multi-factor authentication involves using at least two authentication methods f
 
 * Something you know, for example a username and password combination.
 * Something you have, for example pressing a notification that appears on your phone using an authenticator app, or using a badge that is scanned.
-* Something you are, these are unique characteristics about you. For example, biometrics such as a face scan, palm scan, fingerprint scan, retina scan, etc. 
+* Something you are, these are unique characteristics about you. For example, biometrics such as a face scan, palm scan, fingerprint scan, retina scan, etc.
 
 ### Network security monitoring
 
@@ -294,7 +290,7 @@ The most fundamental approaches to detecting cyber intrusions are to monitor ser
 
 ### Network Traffic Analysis (NTA)
 
-NTA (also called Network Detection and Response, NDR) is a broad process of monitoring network activity to understand what is happening on the network. Its primary goal is visibility and discovery. 
+NTA (also called Network Detection and Response, NDR) is a broad process of monitoring network activity to understand what is happening on the network. Its primary goal is visibility and discovery.
 
 NTA is an operationalization or implementation of network visibility. Network visibility is the ability to see, understand, and contextualize all activity and data traversing a network. It is not a single tool, but a capability achieved through a combination of tools, processes, and policies. The key pillars of network visibility include:
 
@@ -304,7 +300,7 @@ NTA is an operationalization or implementation of network visibility. Network vi
 * **Providing evidence:** Having the data to investigate alerts and perform forensics.
 * **Measuring performance:** Ensuring the network is functioning as required for business.
 
-NTA focuses on analyzing raw network traffic to detect suspicious behavior that evades traditional tools. Network visibility is a capability a level above the more traditional network monitoring. For example, an IDS/IPS might block 99% of the obvious, automated attacks at the perimeter. A NTA solution would then be used to discover the sophisticated, stealthy attacker that bypassed the IPS by finding their unusual command-and-control traffic hidden in normal web requests. 
+NTA focuses on analyzing raw network traffic to detect suspicious behavior that evades traditional tools. Network visibility is a capability a level above the more traditional network monitoring. For example, an IDS/IPS might block 99% of the obvious, automated attacks at the perimeter. A NTA solution would then be used to discover the sophisticated, stealthy attacker that bypassed the IPS by finding their unusual command-and-control traffic hidden in normal web requests.
 
 **Key Technologies & Tools**
 
@@ -393,7 +389,7 @@ Both NTA and IDS/IPS contribute to network visibility, but they do so in very di
 | **Network Traffic Analysis (NTA)** | <p><strong>Provides a wide-angle, contextual lens.</strong><br><br>1. <strong>Behavioral Baseline:</strong> It first learns what "normal" looks like for every device (e.g., "This server only talks to these three other servers on port 443").<br>2. <strong>Anomaly Detection:</strong> It then flags deviations from that baseline (e.g., "That server is now trying to send data to a new country on a strange port").<br>3. <strong>Forensic Detail:</strong> It often stores packet-level data or rich flow data, allowing you to "rewind time" and investigate exactly what happened during an incident.</p>     | **A detailed map and a timeline.** It shows you all the roads (connections), how much traffic is on them (volume), and can tell you if a car is driving in an unusual pattern, even if it's not breaking a specific law.                                                      |
 | **IDS/IPS**                        | <p><strong>Provides a targeted, focused lens.</strong><br><br>1. <strong>Signature-Based Detection:</strong> It looks for specific, known malicious patterns (e.g., "This packet contains the exact signature of the latest ransomware").<br>2. <strong>Policy Enforcement:</strong> It alerts on or blocks traffic that violates pre-defined rules (e.g., "Block any traffic from the internal network to known malicious IP addresses").<br>3. <strong>Point-in-Time Alerts:</strong> It provides high-fidelity alerts on <em>specific known bad</em> things, but with less context about the overall environment.</p> | **A burglar alarm and a bouncer.** It knows the specific faces of known criminals (signatures) and has a list of rules (policies). It screams (alert) or physically blocks (prevent) when it sees a match, but it doesn't necessarily track everyone's movements in the club. |
 
-### Incident response management 
+### Incident response management
 
 One of the biggest challenges facing today's IT professionals is planning and preparing for the almost inevitable security incident. Incident Response (IR) is a structured methodology for handling security breaches, cyber threats, and policy violations. The goal is to manage the situation in a way that limits damage, reduces recovery time and costs, and prevents future occurrences. A standard IR process follows a lifecycle, often based on the NIST framework (NIST SP 800-61r2: Computer Security Incident Handling Guide) which includes:
 
@@ -410,7 +406,7 @@ This is the proactive phase focused on getting ready for a potential incident _b
 
 The first consideration in an incident response plan is **preparation**. There should be a manifesto or playbook outlining a structured approach to managing security incidents. Typically an organization should have a SIRT, which will investigate and document incidents. SIRT can be cross functional assembled from various IT related departments or units, and it can be part of or an extension of a SOC team.
 
-The playbook will provision responses commensurate with established risk levels to data assets. For instance, it is important to rank incidents by severity level. It is critical to differentiate between security events (less serious) and security incidents (serious and requiring immediate action). A security event, like a virus on endpoint, might escalate to incident level, but typically it can be addressed via standard procedures or even automation. 
+The playbook will provision responses commensurate with established risk levels to data assets. For instance, it is important to rank incidents by severity level. It is critical to differentiate between security events (less serious) and security incidents (serious and requiring immediate action). A security event, like a virus on endpoint, might escalate to incident level, but typically it can be addressed via standard procedures or even automation.
 
 #### 2. Detection and Analysis
 
@@ -449,7 +445,7 @@ Automation is a game-changer in patch management. Automation enhances consistenc
 * **Scheduling and deploying patches** during maintenance windows to minimize downtime.
 * **Prioritizing critical updates** based on CVSS scores or vendor advisories.
 * **Generating audit logs** for compliance reporting, proving adherence to regulatory requirements.
-  
+
 Automation also enables **continuous monitoring** for missing patches and **rollback capabilities** if updates cause instability. By integrating with SIEM or IT service management (ITSM) platforms, automated patching systems can trigger alerts for failed deployments, ensuring no asset is left unprotected. In essence, automation reduces human error, enforces policy adherence, and strengthens overall security posture.
 
 ### Physically securing the network

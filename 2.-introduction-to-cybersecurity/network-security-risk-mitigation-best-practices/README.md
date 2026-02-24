@@ -136,17 +136,19 @@ IAM systems (like Microsoft Active Directory, Azure AD, Okta, Ping Identity) are
 
 IAM defines the policies, users, roles, and permissions. Automated policy enforcement uses the rules defined in the IAM system to automatically allow, deny, or restrict access in real-time. Automated policy enforcement refers to the tools and mechanisms that implement the policies defined in the IAM system without manual intervention. This is crucial for scalability and security in modern networks.
 
-* **Network Access Control (NAC):** A NAC system (like Cisco ISE, Aruba ClearPass, FortiNAC) will:
+Examples of automated policy enforcement tools leveraged by IAM include:
+
+* **Network Access Control (NAC):** A NAC system (like Cisco ISE, Aruba ClearPass, FortiNAC)
+* **Cloud Security Groups and Firewalls:** Rules that automatically allow or deny traffic based on security tags derived from IAM roles.
+* **Endpoint Detection and Response (EDR) platforms:** Automatically isolating a compromised endpoint from the network based on a policy.
+* **SIEM Automation:** A SIEM (Security Information and Event Management) tool automatically disabling a user account after detecting multiple failed login attempts, based on a pre-defined policy.
+
+A NAC system (like Cisco ISE, Aruba ClearPass, FortiNAC) will:
+
   1. **Check a device's identity** - is it a corporate laptop, a guest phone, an IoT sensor?
   2. **Check its compliance** - is its OS patched? does it have antivirus running?
   3. **Query the IAM system** - what is this user's role? Sales? Engineering?
   4. **Automatically enforce policy:** Based on the answers, it places the device on the correct VLAN, grants full internet access, restricts it to only specific applications, or blocks it entirely.
-
-Other examples of automated policy enforcement tools leveraged by IAM include:
-
-* **Cloud Security Groups and Firewalls:** Rules that automatically allow or deny traffic based on security tags derived from IAM roles.
-* **Endpoint Detection and Response (EDR) platforms:** Automatically isolating a compromised endpoint from the network based on a policy.
-* **SIEM Automation:** A SIEM (Security Information and Event Management) tool automatically disabling a user account after detecting multiple failed login attempts, based on a pre-defined policy.
 
 **Network Access Control (NAC)**
 

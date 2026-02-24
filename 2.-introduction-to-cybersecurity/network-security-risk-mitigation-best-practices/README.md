@@ -9,15 +9,15 @@ description: >-
 
 ## Learning objectives
 
-* List and describe network security risk mitigation best practices
-* Develop an appreciation for the need for a defense in depth approach to cybersecurity
-* Describe the three principles and six foundational pillars of the Zero Trust model
-* Explain the principle of least privilege and its role in mitigating insider threats and limiting attack surfaces
+- List and describe network security risk mitigation best practices
+- Develop an appreciation for the need for a defense in depth approach to cybersecurity
+- Describe the three principles and six foundational pillars of the Zero Trust model
+- Explain the principle of least privilege and its role in mitigating insider threats and limiting attack surfaces
 - Describe the complementary roles of IAM (Identity & Access Management) and NAC (Network Access Control) in ensuring robust enterprise access management
 - Differentiate the function of AAA (Authentication, Authorization, and Accounting) as the operational framework within IAM for network-level enforcement
-* Compare the goals and techniques of IDS/IPS and NTA (Network Traffic Analysis)
-* Outline the four phases of the NIST SP 800-61r2 incident response lifecycle and describe the key activities in each phase
-* Describe the role of automation in ensuring consistent and compliant patch management processes
+- Compare the goals and techniques of IDS/IPS and NTA (Network Traffic Analysis)
+- Outline the four phases of the NIST SP 800-61r2 incident response lifecycle and describe the key activities in each phase
+- Describe the role of automation in ensuring consistent and compliant patch management processes
 - Identify key physical security controls used to protect network infrastructure from unauthorized access and environmental threats
 
 This section discusses network security risk mitigation best practices, beginning with the foundational strategies of defense in depth and the Zero Trust model. The section then examines core technical controls, including robust access control (least privilege, Identity and Access Management, automated policy enforcement, and Multi-Factor Authentication) and network security monitoring. The discussion continues by covering the essential processes of incident response management, timely software patching, and physically securing the network, before concluding with the supporting practices of using multiple vendors and Quality Assurance.
@@ -109,9 +109,7 @@ The principle of least privilege rules that only the necessary and sufficient le
 
 #### Identity and Access Management (IAM)
 
-IAM is a comprehensive system for identification, authentication, authorization, accounting, and identity management. IAM is a comprehensive discipline and set of technologies focused on managing digital identities and their access rights across systems.
-
-IAM is the broad, enterprise-wide strategy for governing identity and access policies. It is responsible for establishing user identities, assigning access privileges, and defining the business rules that govern those privileges across all systems (applications, data, and network). Technologies like Microsoft Active Directory are core components that implement the identity repository aspect of this IAM strategy. AAA is a critical functional framework within IAM, focused specifically on the operational enforcement of Authentication, Authorization, and Accounting for network access. It is the "how" for controlling access to network devices and services. This AAA framework is implemented using specific technologies and protocols. Cisco ISE is a prime example of a comprehensive AAA server that also performs Automated Policy Enforcement. This enforcement is a key capability of modern Network Access Control (NAC) systems, which use AAA protocols like RADIUS and TACACS+ to dynamically apply the broader IAM policies at the network level.
+IAM is a comprehensive discipline and set of technologies for identification, authentication, authorization, accounting, and identity management across systems. IAM is the broad, enterprise-wide strategy for governing identity and access policies. It is responsible for establishing user identities, assigning access privileges, and defining the business rules that govern those privileges across all systems (applications, data, and network). Technologies like Microsoft Active Directory are core components that implement the identity repository aspect of this IAM strategy. AAA is a critical functional framework within IAM, focused specifically on the operational enforcement of Authentication, Authorization, and Accounting for network access. It is the "how" for controlling access to network devices and services. This AAA framework is implemented using specific technologies and protocols. Cisco ISE is a prime example of a comprehensive AAA server that also performs Automated Policy Enforcement. This enforcement is a key capability of modern Network Access Control (NAC) systems, which use AAA protocols like RADIUS and TACACS+ to dynamically apply the broader IAM policies at the network level.
 
 **IAM vs AAA**
 
@@ -179,7 +177,7 @@ Network Access Control (NAC) and Identity and Access Management (IAM) are comple
 
 #### Multi-Factor Authentication (MFA)
 
-No matter how secure a password may be, it remains vulnerable to theft through phishing, data breaches, or credential stuffing. Multi-factor authentication (MFA) directly addresses this vulnerability by implementing the Zero Trust principle of verify explicitly. MFA requires users to present at least two authentication methods from at least two authentication categories to prove your identity:
+No matter how secure a password may be, it remains vulnerable to theft through phishing, data breaches, or credential stuffing. Multi-factor authentication (MFA) directly addresses this vulnerability by implementing the Zero Trust principle of verify explicitly. MFA requires users to present at least two authentication methods from at least two authentication categories to prove their identity:
 
 - **Something you know:** A knowledge factor, such as a password, PIN, or answer to a security question.
 - **Something you have:** A possession factor, such as a smartphone with an authenticator app, a hardware token, or a smart card.
@@ -229,7 +227,7 @@ NIDS can be classified by their approach to identifying threats:
 | -------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ----------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
 | **Signature-Based**  | Compares traffic against known attack patterns (signatures).                                | Effective against known threats; low false positives for well-defined attacks. | Cannot detect zero-day or novel attacks.              | Snort (open source), Suricata (open source), Cisco Firepower (commercial)                           |
 | **Anomaly-Based**    | Uses machine learning or statistical baselining to detect deviations from normal behavior.  | Can identify novel attacks, insider threats, and lateral movement.             | May generate higher false positives; requires tuning. | Zeek (open source), Suricata (open source), Darktrace (commercial), Cisco Stealthwatch (commercial) |
-| **Reputation-Based** | Assesses potential malicious activity based on reputation scores of IPs, domains, or files. | Effective for blocking communications with known malicious entities.           | Limited to known malicious sources.                   | Various threat intelligence feeds                                                                   |
+| **Reputation-Based** | Assesses potential malicious activity based on reputation scores of IPs, domains, or files. | Effective for blocking communications with known malicious entities.           | Limited to known malicious sources.                   | Various threat intelligence feeds (see table below)                                                 |
 
 **Examples of Reputation-Based Detection Tools**
 

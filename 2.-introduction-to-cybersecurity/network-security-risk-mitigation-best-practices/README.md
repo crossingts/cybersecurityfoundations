@@ -9,8 +9,6 @@ description: >-
 
 ## Learning objectives
 
-This section discusses network security risk mitigation best practices, including defense in depth, Zero Trust, least privilege access control, network security monitoring, and incident response management
-
 * List and describe network security risk mitigation best practices
 * Develop an appreciation for the need for a defense in depth approach to cybersecurity
 * Describe the three principles and six foundational pillars of the Zero Trust model

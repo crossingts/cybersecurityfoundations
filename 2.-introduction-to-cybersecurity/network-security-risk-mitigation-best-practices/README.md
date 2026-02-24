@@ -231,6 +231,18 @@ NIDS can be classified by their approach to identifying threats:
 | **Anomaly-Based**    | Uses machine learning or statistical baselining to detect deviations from normal behavior.  | Can identify novel attacks, insider threats, and lateral movement.             | May generate higher false positives; requires tuning. | Darktrace (commercial), Cisco Stealthwatch (commercial)                   |
 | **Reputation-Based** | Assesses potential malicious activity based on reputation scores of IPs, domains, or files. | Effective for blocking communications with known malicious entities.           | Limited to known malicious sources.                   | Various threat intelligence feeds                                         |
 
+**Examples of Reputation-Based Detection Tools**
+
+| Tool/Platform                                   | Type                                     | Description                                                                                                                                                                                                |
+| ----------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **AlienVault OTX (Open Threat Exchange)**       | Open threat intelligence                 | A community-driven platform that shares IP, domain, and file reputation data. Users can integrate OTX feeds into firewalls, IDS/IPS, and SIEM tools to block communications with known malicious entities. |
+| **MISP (Malware Information Sharing Platform)** | Open source threat intelligence platform | An open-source platform for sharing, storing, and correlating indicators of compromise (IOCs) such as malicious IPs, domains, and hashes.                                                                  |
+| **Cisco Talos Intelligence**                    | Commercial threat intelligence           | One of the largest commercial threat intelligence teams, providing reputation data for IPs, domains, and file hashes. Integrated into Cisco security products like Firepower and Umbrella.                 |
+| **VirusTotal**                                  | Free/Commercial                          | Aggregates detection results from multiple antivirus engines and provides reputation data for files, URLs, domains, and IPs.                                                                               |
+| **Palo Alto Networks WildFire**                 | Commercial threat intelligence           | Analyzes files and URLs in a sandbox environment and generates reputation data that is shared across Palo Alto Networks subscribers.                                                                       |
+
+A firewall or security appliance configured with a threat intelligence feed might block outbound connections to IP addresses listed as command-and-control servers, quarantine emails originating from domains with poor reputation scores, alert on file downloads with hash values associated with known malware, or dynamously update firewall rules based on real-time reputation changes.
+
 **Intrusion Prevention Systems (IPS)**
 
 An intrusion prevention system (IPS) builds on IDS functionality by taking active blocking actions. While an IDS passively monitors and alerts, an IPS is deployed inline and can automatically drop malicious packets, block offending IP addresses, or reset connections. Many modern solutions combine both capabilities into a single unified platform (UTM or next-generation firewall).

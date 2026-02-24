@@ -27,14 +27,8 @@ This section discusses network security risk mitigation best practices, beginnin
 * **Defense in depth (layered security)**
 * **The Zero Trust model**
 * **Robust access control**
-  * **Least privilege access control**
-  * **Identity and Access Management (IAM)**
-  * **Automated policy enforcement**
-  * **Multi-Factor Authentication (MFA)**
 * **Network security monitoring** 
-  * **Network visibility vs network security monitoring**
-  * **Network security monitoring technologies**
-  * **Network Traffic Analysis (NTA) vs IDS/IPS**
+* **Network Traffic Analysis (NTA)**
 * **Incident response management**
 * **Timely software patching** 
 * **Physically securing the network**
@@ -234,39 +228,19 @@ Multi-factor authentication involves using at least two authentication methods f
 
 ### Network security monitoring
 
-Network visibility vs network security monitoring
-Network security monitoring technologies
-Intrusion Detection Systems (IDS)
-SIEM (Security Information and Event Management)
-Endpoint Detection and Response/Extended Detection and Response (EDR/XDR)
-Network Traffic Analysis (NTA) = network detection and response NDR
-Network Traffic Analysis (NTA) vs IDS/IPS
-cf
-  * **Network visibility vs network security monitoring**
-  * **Network security monitoring technologies**
-  * **Network Traffic Analysis (NTA) vs IDS/IPS**
-
-#### Network visibility vs network security monitoring
+There are three broad kinds of network monitoring: network performance and health monitoring, network security monitoring, and network visibility.
 
 Network monitoring is the practice of continuously observing a computer network for availability, performance, and reliability. Its key goal is to answer the questions: "Is the network operational, and is it performing well?" This is achieved by collecting and analyzing specific, predefined metrics such as device uptime, bandwidth usage, CPU/memory load on routers and switches, and error rates. For example, a network monitoring tool might alert an administrator if a critical server goes offline.
 
-Two concepts that expand upon this foundation are **network security monitoring (NSM)** and **network visibility**. NSM focuses on detecting, investigating, and responding to security threats. It uses tools like IDS/IPS and SIEM platforms to analyze traffic for malicious patterns, enforce security policies, and aid in post-incident recovery. While standard monitoring might flag a high bandwidth spike, NSM would investigate if that spike is caused by a legitimate backup or a malicious denial-of-service attack.
+Network security monitoring focuses on detecting, investigating, and responding to security threats. It uses tools like IDS/IPS and SIEM platforms to analyze traffic for malicious patterns, enforce security policies, and aid in post-incident recovery. While standard monitoring might flag a high bandwidth spike, network security monitoring would investigate if that spike is caused by a legitimate backup or a malicious denial-of-service attack.
 
 Network visibility is a broader, more proactive approach that encompasses both performance and security monitoring. It involves gaining a comprehensive, often granular, real-time understanding of all traffic flows across the entire network infrastructure. This is achieved through advanced telemetry data, flow analysis (NetFlow, sFlow) and packet inspection. Where basic monitoring might track if a link is up/down, visibility reveals which applications, users, and protocols are consuming that link's capacity, providing the essential context needed to troubleshoot complex issues and optimize the network holistically.
-
-Network visibility is the ability to see, understand, and contextualize all activity and data traversing a network. It is not a single tool, but a capability achieved through a combination of tools, processes, and policies. The key pillars of network visibility include:
-
-* **Knowing what's on your network:** All devices, users, and applications.
-* **Understanding behavior:** How those devices, users, and applications normally interact.
-* **Identifying anomalies:** Spotting deviations from normal behavior that could indicate a problem.
-* **Providing evidence:** Having the data to investigate alerts and perform forensics.
-* **Measuring performance:** Ensuring the network is functioning as required for business.
 
 #### Network security monitoring technologies
 
 A secure network design must incorporate robust monitoring to detect and respond to threats in real time. SIEM solutions aggregate and correlate system logs/alerts from IDS, firewalls, endpoints, etc. for centralized threat detection, while endpoint detection and response (EDR) solutions track suspicious behavior across devices for signs of compromise. IDS/IPS solutions help identify/block malicious traffic. Network traffic analysis (NTA) solutions provide visibility into data flows, helping detect lateral movement by attackers. By integrating these technologies, organizations can proactively identify vulnerabilities and mitigate risks before they escalate.
 
-#### Intrusion Detection Systems (IDS)
+**Intrusion Detection Systems (IDS)**
 
 An IDS is a device or software application that monitors a network or systems for malicious activity or policy violations. Any intrusion activity or violation is typically either reported to an administrator or collected centrally using a security information and event management (SIEM) system. A SIEM system combines outputs from multiple sources and uses alarm filtering techniques to distinguish malicious activity from false alarms. (Wikipedia)
 
@@ -296,7 +270,7 @@ NIDS can be classified based on their detection approach. The primary variants a
   * Can identify novel attacks but may have higher false positives.
 * **Best for:** Detecting insider threats, lateral movement, and unknown attacks.
 
-#### SIEM (Security Information and Event Management)
+**SIEM (Security Information and Event Management)**
 
 The most fundamental approaches to detecting cyber intrusions are to monitor server logs for signs of unauthorized access, to monitor firewall or router logs for abnormal events, and to monitor network performance for spikes in traffic. SIEM can integrate and correlate distributed events and alert on hostile or abnormal behavior.
 
@@ -312,7 +286,7 @@ The most fundamental approaches to detecting cyber intrusions are to monitor ser
   * Requires fine-tuning to reduce noise.
   * Not a direct replacement for IDS/IPS but complements them.
 
-#### Endpoint Detection and Response/Extended Detection and Response (EDR/XDR)
+**Endpoint Detection and Response/Extended Detection and Response (EDR/XDR)**
 
 * **Example Tools:** CrowdStrike (commercial), SentinelOne (commercial), Microsoft Defender for Endpoint (commercial)
 * **How it works:**
@@ -320,9 +294,19 @@ The most fundamental approaches to detecting cyber intrusions are to monitor ser
   * Uses behavioral analysis to detect malware and suspicious activity.
 * **Best for:** Detecting advanced threats on endpoints/workstations/servers.
 
-#### Network Traffic Analysis (NTA)
+### Network Traffic Analysis (NTA)
 
-NTA (also called Network Detection and Response, NDR) is a broad process of monitoring network activity to understand what is happening on the network. Its primary goal is visibility and discovery. NTA focuses on analyzing raw network traffic to detect suspicious behavior that evades traditional tools. Network visibility is a capability a level above the more traditional network monitoring. For example, an IDS/IPS might block 99% of the obvious, automated attacks at the perimeter. A NTA solution would then be used to discover the sophisticated, stealthy attacker that bypassed the IPS by finding their unusual command-and-control traffic hidden in normal web requests. 
+NTA (also called Network Detection and Response, NDR) is a broad process of monitoring network activity to understand what is happening on the network. Its primary goal is visibility and discovery. 
+
+NTA is an operationalization or implementation of network visibility. Network visibility is the ability to see, understand, and contextualize all activity and data traversing a network. It is not a single tool, but a capability achieved through a combination of tools, processes, and policies. The key pillars of network visibility include:
+
+* **Knowing what's on your network:** All devices, users, and applications.
+* **Understanding behavior:** How those devices, users, and applications normally interact.
+* **Identifying anomalies:** Spotting deviations from normal behavior that could indicate a problem.
+* **Providing evidence:** Having the data to investigate alerts and perform forensics.
+* **Measuring performance:** Ensuring the network is functioning as required for business.
+
+NTA focuses on analyzing raw network traffic to detect suspicious behavior that evades traditional tools. Network visibility is a capability a level above the more traditional network monitoring. For example, an IDS/IPS might block 99% of the obvious, automated attacks at the perimeter. A NTA solution would then be used to discover the sophisticated, stealthy attacker that bypassed the IPS by finding their unusual command-and-control traffic hidden in normal web requests. 
 
 **Key Technologies & Tools**
 
@@ -353,7 +337,7 @@ NTA (also called Network Detection and Response, NDR) is a broad process of moni
 * Requires **high storage** for full packet capture (PCAP).
 * Can be **noisy** without proper tuning.
 
-#### Network Traffic Analysis (NTA) vs IDS/IPS
+**Network Traffic Analysis (NTA) vs IDS/IPS**
 
 The network visibility vs network security monitoring dichotomy can be better understood through concrete examples. NTA is more closely related to network visibility, while IDS/IPS is more closely related to network security monitoring.
 

@@ -165,66 +165,17 @@ Non-compliant devices may be blocked, quarantined, or automatically remediated (
 
 Network Access Control (NAC) and Identity and Access Management (IAM) are complementary frameworks that operate at different layers. Understanding their distinction is essential for designing robust access control architectures. The following table compares the two frameworks.
 
-|Feature|NAC|IAM|
-|---|---|---|
-|**Primary Focus**|Controls **device access to the network** based on compliance and identity.|Manages **user identities and their access to systems and applications**.|
-|**Scope of Enforcement**|Operates at the **network layer** (ports, VLANs, Wi-Fi).|Operates at the **application and cloud layer** (logins, APIs, data).|
-|**Key Functions**|Authenticates devices; checks device health (patch level, antivirus); assigns network segments; often uses 802.1X and MAC filtering.|Authenticates users; manages roles and permissions; enforces MFA; uses SAML, OAuth, and OpenID Connect.|
-|**Integration**|Modern NAC solutions integrate with IAM to combine device posture checks with user identity and role information for fine-grained access decisions.||
+| Feature                  | NAC                                                                                                                                                                                                            | IAM                                                                                                                                                                                                                                 |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Primary Focus**        | Controls **device access to the network** based on compliance and identity. Example: A hospital blocks an unpatched laptop from connecting to the network until it updates its OS.                             | Manages **user identities and their access to systems and applications**. Example: An employee uses single sign-on (SSO) to access Salesforce but is denied entry to the HR system due to their role.                               |
+| **Scope of Enforcement** | Operates at the **network layer** (ports, VLANs, Wi-Fi). Tools: Cisco ISE, Aruba ClearPass, PacketFence. Use case: A university grants students Wi-Fi access only after their devices pass an antivirus check. | Operates at the **application and cloud layer** (logins, APIs, data). Tools: Okta, Microsoft Entra ID (Azure AD), Keycloak. Use case: A contractor can log in to Google Workspace but can’t access the company’s AWS admin console. |
+| **Key Functions**        | Authenticates devices; checks device health (patch level, antivirus); assigns network segments; often uses 802.1X and MAC filtering.                                                                           | Authenticates users; manages roles and permissions; enforces MFA; uses SAML, OAuth, and OpenID Connect.                                                                                                                             |
+| **Integration**          | Modern NAC solutions integrate with IAM to combine device posture checks with user identity and role information for fine-grained access decisions.                                                            |                                                                                                                                                                                                                                     |
 
 **When to Use Which?**
 
 - **Use NAC** when you need to secure network access against rogue devices, enforce endpoint compliance mandates (e.g., for HIPAA or PCI DSS), or manage guest and BYOD network access.
 - **Use IAM** when you need to manage user access to cloud applications, implement role-based access control across the enterprise, or enforce least-privilege access for applications and data.
-
----
-
-**1. Primary Focus**
-
-* **NAC:** Controls **device access to the network** based on compliance (e.g., antivirus status, OS patches).
-  * _Example:_ A hospital blocks an unpatched laptop from connecting to the network until it updates its OS.
-* **IAM:** Manages **user identities and their access to systems/applications** (e.g., logins, permissions).
-  * _Example:_ An employee uses single sign-on (SSO) to access Salesforce but is denied entry to the HR system due to their role.
-
-**2. Scope of Enforcement**
-
-* **NAC:** Operates at the **network layer** (ports, VLANs, Wi-Fi).
-  * _Tools:_ Cisco ISE, Aruba ClearPass, PacketFence.
-  * _Use case:_ A university grants students Wi-Fi access only after their devices pass an antivirus check.
-* **IAM:** Operates at the **application/cloud layer** (user logins, APIs, databases).
-  * _Tools:_ Okta, Microsoft Entra ID (Azure AD), Keycloak.
-  * _Use case:_ A contractor can log in to Google Workspace but can’t access the company’s AWS admin console.
-
-**3. Key Functions**
-
-| **NAC**                                      | **IAM**                                              |
-| -------------------------------------------- | ---------------------------------------------------- |
-| Authenticates _devices_                      | Authenticates _users_                                |
-| Checks device health (e.g., firewall status) | Manages roles/permissions (e.g., "Read-only" access) |
-| Assigns VLANs or restricts network segments  | Enforces multi-factor authentication (MFA)           |
-| Often uses 802.1X, MAC filtering             | Uses SAML, OAuth, OpenID Connect                     |
-
-**4. Overlap & Integration**
-
-Modern systems often combine both:
-
-* A **NAC** (like Cisco ISE) might integrate with an **IAM** (like Microsoft Entra ID) to enforce:
-  * _Step 1:_ Device compliance (NAC) → "Is your laptop patched?"
-  * _Step 2:_ User authentication (IAM) → "Is this employee allowed to use the finance app?"
-
-**Example:** A bank might use:
-
-* **NAC** to block a teller’s personal tablet from the corporate network.
-* **IAM** to ensure the same teller can’t approve transactions in the banking software.
-
-**When to Use Which?**
-
-* **Use NAC** when you need to:
-  * Secure network ports/Wi-Fi against rogue devices.
-  * Enforce endpoint compliance (e.g., HIPAA-mandated encryption).
-* **Use IAM** when you need to:
-  * Manage user access to cloud apps (e.g., SaaS like Slack).
-  * Implement least-privilege access (e.g., "Developer" vs. "Admin" roles).
 
 #### Multi-Factor Authentication (MFA)
 

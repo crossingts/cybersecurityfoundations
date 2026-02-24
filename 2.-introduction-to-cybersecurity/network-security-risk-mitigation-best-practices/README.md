@@ -13,10 +13,12 @@ description: >-
 * Develop an appreciation for the need for a defense in depth approach to cybersecurity
 * Describe the three principles and six foundational pillars of the Zero Trust model
 * Explain the principle of least privilege and its role in mitigating insider threats and limiting attack surfaces
-* Describe the complementary roles of IAM (Identity & Access Management), AAA (Authentication, Authorization, and Accounting), and NAC (Network Access Control) in ensuring robust enterprise access management
+- Describe the complementary roles of IAM (Identity & Access Management) and NAC (Network Access Control) in ensuring robust enterprise access management
+- Differentiate the function of AAA (Authentication, Authorization, and Accounting) as the operational framework within IAM for network-level enforcement
 * Compare the goals and techniques of IDS/IPS and NTA (Network Traffic Analysis)
 * Outline the four phases of the NIST incident response lifecycle and describe the key activities in each phase
 * Describe the role of automation in ensuring consistent and compliant patch management processes
+- Identify key physical security controls used to protect network infrastructure from unauthorized access and environmental threats
 
 This section discusses network security risk mitigation best practices, beginning with the foundational strategies of defense in depth and the Zero Trust model. The section then examines core technical controls, including robust access control (least privilege, Identity and Access Management, automated policy enforcement, and Multi-Factor Authentication) and network security monitoring. The discussion continues by covering the essential processes of incident response management, timely software patching, and physically securing the network, before concluding with the supporting practices of using multiple vendors and Quality Assurance.
 

@@ -74,8 +74,8 @@ The **Zero Trust model** is a modern security strategy built on the principle of
 The Zero Trust model is guided by three core principles that shape how security is architected and enforced:
 
 1. **Verify explicitly:** Always authenticate and authorize access based on all available data points. This goes far beyond a simple username and password. It means continuously verifying the user's identity, the health and compliance of their device, their physical location, the sensitivity of the data they're requesting, and even detecting anomalous behavior in real-time.
-2. **Use least privilege access:** This principle is a cornerstone of Zero Trust. It means limiting user access with **just-in-time (JIT)** and **just-enough-access (JEA)**. JIT ensures that privileged access is granted only for a limited time window when needed, while JEA ensures users have the minimum permissions required for a specific task, not broad, standing access.
-3. **Assume breach:** This principle fundamentally changes the security mindset. Instead of solely focusing on prevention, Zero Trust assumes that a breach has already occurred or will occur. The strategy, therefore, shifts to **minimizing the blast radius** and preventing lateral movement. This is achieved by segmenting access (by network, user, and application), using end-to-end encryption to protect data, and employing advanced analytics to rapidly detect, investigate, and respond to threats.
+2. **Use least privilege access:** This principle is a cornerstone of Zero Trust. It means limiting user access with just-in-time (JIT) and just-enough-access (JEA). JIT ensures that privileged access is granted only for a limited time window when needed, while JEA ensures users have the minimum permissions required for a specific task, not broad, standing access.
+3. **Assume breach:** This principle fundamentally changes the security mindset. Instead of solely focusing on prevention, Zero Trust assumes that a breach has already occurred or will occur. The strategy, therefore, shifts to minimizing the blast radius and preventing lateral movement. This is achieved by segmenting access (by network, user, and application), using end-to-end encryption to protect data, and employing advanced analytics to rapidly detect, investigate, and respond to threats.
 
 <figure><img src="../../.gitbook/assets/Zero-Trust-model.jpg" alt="zero-trust-model"><figcaption><p>Zero Trust model (courtesy of learn.microsoft.com)</p></figcaption></figure>
 
@@ -356,7 +356,7 @@ One of the biggest challenges facing today's IT professionals is planning and pr
 
 #### 1. Preparation
 
-Preparation is the proactive phase focused on getting ready for a potential incident _before_ it happens. This phase directly implements the Zero Trust principle of **assume breach** by acknowledging that incidents will occur and ensuring the organization is equipped to handle them.
+Preparation is the proactive phase focused on getting ready for a potential incident _before_ it happens. This phase directly implements the Zero Trust principle of assume breach by acknowledging that incidents will occur and ensuring the organization is equipped to handle them.
 
 Key activities in this phase include:
 
@@ -438,33 +438,33 @@ To protect an enterprise network from physical threats, organizations must imple
 
 Physical access control protects equipment and data from potential attackers by only allowing authorized users into protected areas such as network closets or data center floors. This is not just to prevent people outside of the organization from gaining access to these areas. Even within the company, access to these areas should be limited to those who need access.
 
-* **Badge & Biometric Systems** – Require employees to use **smart cards, key fobs, or biometric scans** (fingerprint/retina) to enter secure areas. Multifactor locks can protect access to restricted areas. For example, a door that requires users to swipe a badge and scan their fingerprint to enter. That’s something you have, a badge, and something you are, your fingerprint. Badge systems are very flexible, and permissions granted to a badge can easily be changed. This allows for strict, centralized control of who is authorized to enter where.
+* **Badge & Biometric Systems** – Require employees to use smart cards, key fobs, or biometric scans (fingerprint/retina) to enter secure areas. Multifactor locks can protect access to restricted areas. For example, a door that requires users to swipe a badge and scan their fingerprint to enter. That’s something you have, a badge, and something you are, your fingerprint. Badge systems are very flexible, and permissions granted to a badge can easily be changed. This allows for strict, centralized control of who is authorized to enter where.
 * **Mantraps & Turnstiles** – Use double-door entry systems (mantraps) to prevent tailgating and ensure only one person enters at a time.
 * **Visitor Logs & Escorts** – All guests must sign in, present ID, and be accompanied by authorized personnel while inside restricted zones.
 
 #### 2. Securing network infrastructure
 
-* **Locked Server Rooms & Cabinets** – Critical network devices (servers, routers, switches) should be housed in **access-controlled, monitored rooms** with **rack-mounted locks**.
+* **Locked Server Rooms & Cabinets** – Critical network devices (servers, routers, switches) should be housed in access-controlled, monitored rooms with rack-mounted locks.
 * **Tamper-Evident Seals** – Use security screws, seals, or sensors to detect unauthorized hardware modifications.
 * **Disable Unused Ports** – Physically block or disable unused Ethernet, USB, and console ports to prevent unauthorized connections.
 
 #### 3. Surveillance and monitoring
 
-* **24/7 CCTV with AI Analytics** – Deploy high-resolution cameras with **motion detection and facial recognition** to monitor sensitive areas.
-* **Security Guards & Patrols** – On-site personnel should conduct **random checks** and verify access permissions.
-* **Environmental Sensors** – Monitor for **temperature, humidity, and smoke** to prevent equipment damage.
+* **24/7 CCTV with AI Analytics** – Deploy high-resolution cameras with motion detection and facial recognition to monitor sensitive areas.
+* **Security Guards & Patrols** – On-site personnel should conduct random checks and verify access permissions.
+* **Environmental Sensors** – Monitor for temperature, humidity, and smoke to prevent equipment damage.
 
 #### 4. Preventing data and hardware theft
 
-* **Asset Tagging & RFID Tracking** – Tag all equipment with **barcodes or RFID chips** to track movement and detect unauthorized removal.
+* **Asset Tagging & RFID Tracking** – Tag all equipment with barcodes or RFID chips to track movement and detect unauthorized removal.
 * **Checkpoint Inspections** – Security staff should inspect bags and devices when employees exit the building to prevent data theft.
 * **Secure Disposal Policies** – Destroy decommissioned drives (shredding/degaussing) and enforce strict e-waste handling procedures.
 
 #### 5. Redundancy and disaster preparedness
 
-* **Offsite Backup Storage** – Keep backups in a **geographically separate, access-controlled facility** to ensure recovery in case of physical damage.
-* **UPS & Backup Power** – Use **uninterruptible power supplies (UPS)** and generators to maintain operations during outages.
-* **Fire Suppression Systems** – Install **gas-based (e.g., FM-200) or waterless suppression systems** in server rooms to avoid damage from traditional sprinklers.
+* **Offsite Backup Storage** – Keep backups in a geographically separate, access-controlled facility to ensure recovery in case of physical damage.
+* **UPS & Backup Power** – Use uninterruptible power supplies (UPS) and generators to maintain operations during outages.
+* **Fire Suppression Systems** – Install gas-based (e.g., FM-200) or waterless suppression systems in server rooms to avoid damage from traditional sprinklers.
 
 #### Enforcement and best practices
 

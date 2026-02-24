@@ -403,21 +403,32 @@ This phase closes the loop, ensuring that each incident strengthens the organiza
 
 ### Timely software patching
 
-Timely software patching is critical for maintaining a secure network, as unpatched systems are prime targets for cyberattacks. Vulnerabilities in software, whether in operating systems, applications, or firmware, are frequently exploited by threat actors to gain unauthorized access, deploy malware, or exfiltrate data. For example, zero-day vulnerabilities—flaws unknown to vendors until exploited—require immediate patching to mitigate risks. Additionally, compliance frameworks such as NIST, CIS, and ISO 27001 mandate regular patch management to meet security standards. Delayed patching can lead to:
+Timely software patching is critical for maintaining a secure network, as unpatched systems are prime targets for cyberattacks. Vulnerabilities in software—whether in operating systems, applications, or firmware—are frequently exploited by threat actors to gain unauthorized access, deploy malware, or exfiltrate data. Patching is a key technical control that spans multiple layers of the defense-in-depth model, from the operating system and applications to network devices and firmware.
 
-* **Increased attack surface**: Unpatched systems expose networks to known exploits.
-* **Regulatory penalties**: Non-compliance with security standards may result in fines.
-* **Operational disruptions**: Exploits like ransomware can cripple business continuity.
+A formal **patch management policy** governs the process, defining timelines for patch deployment based on risk. For example, critical security patches may require deployment within 48 hours, while standard patches may be applied during regular monthly cycles. Delayed or inadequate patching can lead to:
+
+- **Increased attack surface:** Unpatched systems expose networks to known exploits.
+- **Regulatory penalties:** Non-compliance with frameworks like NIST, CIS, or ISO 27001 may result in fines.
+- **Operational disruptions:** Exploits like ransomware can cripple business continuity.
+
+**Key elements of a patch management program include:**
+
+- **Asset inventory:** Maintaining a complete and accurate inventory of all hardware and software to ensure no system is overlooked.
+- **Patch testing:** Evaluating patches in a non-production environment before wide deployment to identify potential conflicts or instability.
+- **Risk-based prioritization:** Using Common Vulnerability Scoring System (CVSS) scores and vendor advisories to prioritize critical updates.
+- **Deployment and verification:** Applying patches according to policy and verifying successful installation.
+
+**Legacy and end-of-life systems** present a special challenge. When vendors no longer provide patches, organizations must accept the risk, apply compensatory controls (such as strict network segmentation), or plan for system replacement.
 
 #### Automation and patch management
 
-Automation is a game-changer in patch management. Automation enhances consistency and compliance in patching, ensuring patches are deployed promptly and uniformly across an organization’s infrastructure. Manual patching is error-prone and often inconsistent, especially in large or hybrid environments. Automated patch management tools (e.g., WSUS, SCCM, or third-party solutions like Qualys or Tanium) streamline the process by:
+Automation enhances consistency and compliance in patching, ensuring patches are deployed promptly and uniformly across an organization's infrastructure. Manual patching is error-prone and often inconsistent, especially in large or hybrid environments. Automated patch management tools (e.g., WSUS, SCCM, or third-party solutions like Qualys or Tanium) streamline the process by:
 
-* **Scheduling and deploying patches** during maintenance windows to minimize downtime.
-* **Prioritizing critical updates** based on CVSS scores or vendor advisories.
-* **Generating audit logs** for compliance reporting, proving adherence to regulatory requirements.
+- **Scheduling and deploying patches** during maintenance windows to minimize downtime.
+- **Prioritizing critical updates** based on CVSS scores or vendor advisories.
+- **Generating audit logs** for compliance reporting, proving adherence to regulatory requirements.
 
-Automation also enables **continuous monitoring** for missing patches and **rollback capabilities** if updates cause instability. By integrating with SIEM or IT service management (ITSM) platforms, automated patching systems can trigger alerts for failed deployments, ensuring no asset is left unprotected. In essence, automation reduces human error, enforces policy adherence, and strengthens overall security posture.
+Automation also enables **continuous monitoring** for missing patches and **rollback capabilities** if updates cause instability. By integrating with SIEM or IT service management (ITSM) platforms, automated patching systems can trigger alerts for failed deployments, ensuring no asset is left unprotected. In essence, automation reduces human error, enforces policy adherence, and strengthens overall security posture.
 
 ### Physically securing the network
 

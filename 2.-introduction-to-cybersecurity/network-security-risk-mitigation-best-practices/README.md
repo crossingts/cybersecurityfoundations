@@ -189,13 +189,82 @@ By requiring multiple independent factors, MFA dramatically reduces the risk of 
 
 ### Network security monitoring
 
-There are three broad kinds of network monitoring: network performance and health monitoring, network security monitoring, and network visibility.
+Organizations typically perform three interrelated types of network monitoring—network performance monitoring, network security monitoring, and network visibility. Each monitoring type serves a distinct purpose:
 
-Network monitoring is the practice of continuously observing a computer network for availability, performance, and reliability. Its key goal is to answer the questions: "Is the network operational, and is it performing well?" This is achieved by collecting and analyzing specific, predefined metrics such as device uptime, bandwidth usage, CPU/memory load on routers and switches, and error rates. For example, a network monitoring tool might alert an administrator if a critical server goes offline.
+|Monitoring Type|Primary Question|Focus|
+|---|---|---|
+|**Network Performance Monitoring**|"Is the network operational and performing well?"|Availability, latency, bandwidth utilization, device health|
+|**Network Security Monitoring**|"Is something bad happening on my network?"|Threats, attacks, policy violations, anomalies|
+|**Network Visibility**|"What is happening on my network?"|Comprehensive understanding of all traffic, users, applications, and behaviors|
 
-Network security monitoring focuses on detecting, investigating, and responding to security threats. It uses tools like IDS/IPS and SIEM platforms to analyze traffic for malicious patterns, enforce security policies, and aid in post-incident recovery. While standard monitoring might flag a high bandwidth spike, network security monitoring would investigate if that spike is caused by a legitimate backup or a malicious denial-of-service attack.
+**Network performance monitoring** is the practice of continuously observing a network for availability, reliability, and performance. It answers questions like: "Is the critical server online?" and "Is the link saturated?" This is achieved by collecting predefined metrics such as device uptime, bandwidth usage, and error rates. For example, a performance monitoring tool might alert an administrator when a router's CPU load exceeds a threshold.
 
-Network visibility is a broader, more proactive approach that encompasses both performance and security monitoring. It involves gaining a comprehensive, often granular, real-time understanding of all traffic flows across the entire network infrastructure. This is achieved through advanced telemetry data, flow analysis (NetFlow, sFlow) and packet inspection. Where basic monitoring might track if a link is up/down, visibility reveals which applications, users, and protocols are consuming that link's capacity, providing the essential context needed to troubleshoot complex issues and optimize the network holistically.
+**Network security monitoring** focuses specifically on detecting, investigating, and responding to security threats. While performance monitoring might flag a bandwidth spike, security monitoring investigates whether that spike is caused by a legitimate backup or a distributed denial-of-service (DDoS) attack. It uses tools like intrusion detection systems (IDS) and security information and event management (SIEM) platforms to analyze traffic for malicious patterns and support incident response.
+
+**Network visibility** is a broader, more proactive capability that encompasses both performance and security monitoring. It involves gaining a comprehensive, real-time understanding of all traffic flows across the entire infrastructure. Through advanced telemetry, flow analysis (NetFlow, sFlow), and packet inspection, visibility reveals _which_ applications, users, and protocols are consuming network capacity—providing the essential context needed for troubleshooting, optimization, and threat hunting.
+
+#### Network security monitoring technologies
+
+A robust security architecture incorporates multiple monitoring technologies that work together to detect and respond to threats. Key technologies include:
+
+- **Intrusion Detection and Prevention Systems (IDS/IPS):** Monitor network traffic for malicious activity.
+- **Security Information and Event Management (SIEM):** Aggregates and correlates logs from multiple sources.
+- **Endpoint Detection and Response (EDR):** Monitors endpoint behavior for signs of compromise.
+- **Network Traffic Analysis (NTA):** Provides deep visibility into network flows and anomalies.
+
+By integrating these technologies, organizations can detect threats at multiple points—network perimeter, internal traffic, endpoints, and centralized logs—creating a comprehensive monitoring posture.
+
+**Intrusion Detection Systems (IDS)**
+
+An intrusion detection system (IDS) is a device or software application that monitors networks or systems for malicious activity or policy violations. When suspicious activity is detected, the IDS generates alerts that are reported to administrators or collected centrally by a SIEM system for analysis and correlation. IDS deployments fall into two primary categories:
+
+- **Network Intrusion Detection Systems (NIDS):** Monitor network traffic by analyzing packet headers and payloads. Deployed at strategic points (via span ports or network taps), NIDS inspects traffic passing through the network segment.
+- **Host-based Intrusion Detection Systems (HIDS):** Monitor activity on individual hosts, including system files, processes, and registry changes. A HIDS can also monitor network traffic arriving at that specific host.
+
+**Detection Methodologies**
+
+NIDS can be classified by their approach to identifying threats:
+
+|Methodology|Description|Strengths|Limitations|Example Tools|
+|---|---|---|---|---|
+|**Signature-Based**|Compares traffic against known attack patterns (signatures).|Effective against known threats; low false positives for well-defined attacks.|Cannot detect zero-day or novel attacks.|Snort, Suricata, Cisco Firepower|
+|**Anomaly-Based**|Uses machine learning or statistical baselining to detect deviations from normal behavior.|Can identify novel attacks, insider threats, and lateral movement.|May generate higher false positives; requires tuning.|Darktrace, Cisco Stealthwatch|
+|**Reputation-Based**|Assesses potential malicious activity based on reputation scores of IPs, domains, or files.|Effective for blocking communications with known malicious entities.|Limited to known malicious sources.|Various threat intelligence feeds|
+
+**Intrusion Prevention Systems (IPS)**
+
+An intrusion prevention system (IPS) builds on IDS functionality by taking active blocking actions. While an IDS passively monitors and alerts, an IPS is deployed inline and can automatically drop malicious packets, block offending IP addresses, or reset connections. Many modern solutions combine both capabilities into a single unified platform (UTM or next-generation firewall).
+
+**Security Information and Event Management (SIEM)**
+
+SIEM technology aggregates and correlates log data from across the environment—firewalls, IDS/IPS, servers, applications, cloud services—to provide centralized visibility and threat detection.
+
+- **How it works:**
+    - **Aggregates logs** from diverse sources into a normalized format.
+    - **Correlates events** to identify complex attack patterns (e.g., multiple failed logins across different systems followed by a successful login).
+    - Provides **real-time alerting**, historical analysis, and compliance reporting.
+
+- **Example Tools:** Wazuh (open source), Splunk (commercial), IBM QRadar (commercial), Elastic SIEM (open core).
+- **Strengths:** Holistic visibility across the environment; essential for incident response and forensics.
+- **Limitations:** Requires careful tuning to reduce noise; complements rather than replaces IDS/IPS and other detection tools.
+
+**Endpoint Detection and Response (EDR) and Extended Detection and Response (XDR)**
+
+While network-focused tools monitor traffic, endpoints remain a critical attack surface. EDR solutions focus on detecting and investigating threats on individual devices.
+
+- **How it works:** Monitors endpoint behavior—process execution, file changes, registry modifications, network connections—using behavioral analysis to detect malware and suspicious activity.
+- **Example Tools:** CrowdStrike (commercial), SentinelOne (commercial), Microsoft Defender for Endpoint (commercial).
+- **Best for:** Detecting advanced threats that evade network-based controls, including fileless malware and living-off-the-land attacks.
+
+**Extended Detection and Response (XDR)** expands this concept by integrating and correlating data across multiple security layers—endpoints, network, email, cloud workloads—providing a more unified view of threats than siloed tools can offer.
+
+---
+
+Network performance monitoring is the practice of continuously observing a computer network for availability, performance, and reliability. Its key goal is to answer the questions: "Is the network operational, and is it performing well?" This is achieved by collecting and analyzing specific, predefined metrics such as device uptime, bandwidth usage, CPU/memory load on routers and switches, and error rates. For example, a network performance monitoring tool might alert an administrator if a critical server goes offline.
+
+Network security monitoring focuses on detecting, investigating, and responding to security threats. It uses tools like IDS/IPS and SIEM platforms to analyze traffic for malicious patterns, enforce security policies, and aid in post-incident recovery. While performance monitoring might flag a high bandwidth spike, network security monitoring would investigate if that spike is caused by a legitimate backup or a malicious denial-of-service attack.
+
+Network visibility is a broader, more proactive approach that encompasses both performance and security monitoring. It involves gaining a comprehensive, often granular, real-time understanding of all traffic flows across the entire network infrastructure. This is achieved through advanced telemetry data, flow analysis (NetFlow, sFlow) and packet inspection. Where performance monitoring might track if a link is up/down, visibility reveals which applications, users, and protocols are consuming that link's capacity, providing the essential context needed to troubleshoot complex issues and optimize the network holistically.
 
 #### Network security monitoring technologies
 

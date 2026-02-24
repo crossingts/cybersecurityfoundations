@@ -225,11 +225,11 @@ An intrusion detection system (IDS) is a device or software application that mon
 
 NIDS can be classified by their approach to identifying threats:
 
-|Methodology|Description|Strengths|Limitations|Example Tools|
-|---|---|---|---|---|
-|**Signature-Based**|Compares traffic against known attack patterns (signatures).|Effective against known threats; low false positives for well-defined attacks.|Cannot detect zero-day or novel attacks.|Snort, Suricata, Cisco Firepower|
-|**Anomaly-Based**|Uses machine learning or statistical baselining to detect deviations from normal behavior.|Can identify novel attacks, insider threats, and lateral movement.|May generate higher false positives; requires tuning.|Darktrace, Cisco Stealthwatch|
-|**Reputation-Based**|Assesses potential malicious activity based on reputation scores of IPs, domains, or files.|Effective for blocking communications with known malicious entities.|Limited to known malicious sources.|Various threat intelligence feeds|
+| Methodology          | Description                                                                                 | Strengths                                                                      | Limitations                                           | Example Tools                                                             |
+| -------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ----------------------------------------------------- | ------------------------------------------------------------------------- |
+| **Signature-Based**  | Compares traffic against known attack patterns (signatures).                                | Effective against known threats; low false positives for well-defined attacks. | Cannot detect zero-day or novel attacks.              | Snort (open source), Suricata (open source), Cisco Firepower (commercial) |
+| **Anomaly-Based**    | Uses machine learning or statistical baselining to detect deviations from normal behavior.  | Can identify novel attacks, insider threats, and lateral movement.             | May generate higher false positives; requires tuning. | Darktrace (commercial), Cisco Stealthwatch (commercial)                   |
+| **Reputation-Based** | Assesses potential malicious activity based on reputation scores of IPs, domains, or files. | Effective for blocking communications with known malicious entities.           | Limited to known malicious sources.                   | Various threat intelligence feeds                                         |
 
 **Intrusion Prevention Systems (IPS)**
 
@@ -237,18 +237,13 @@ An intrusion prevention system (IPS) builds on IDS functionality by taking activ
 
 **Security Information and Event Management (SIEM)**
 
-SIEM technology aggregates and correlates log data from across the environment—firewalls, IDS/IPS, servers, applications, cloud services—to provide centralized visibility and threat detection.
-
-- **How it works:**
-    - **Aggregates logs** from diverse sources into a normalized format.
-    - **Correlates events** to identify complex attack patterns (e.g., multiple failed logins across different systems followed by a successful login).
-    - Provides **real-time alerting**, historical analysis, and compliance reporting.
+SIEM technology aggregates and correlates log data from across the environment—firewalls, IDS/IPS, servers, applications, cloud services—to provide centralized visibility and threat detection. SIEM correlates events to identify complex attack patterns (e.g., multiple failed logins across different systems followed by a successful login). SIEM also provides real-time alerting, historical analysis, and compliance reporting.
 
 - **Example Tools:** Wazuh (open source), Splunk (commercial), IBM QRadar (commercial), Elastic SIEM (open core).
 - **Strengths:** Holistic visibility across the environment; essential for incident response and forensics.
 - **Limitations:** Requires careful tuning to reduce noise; complements rather than replaces IDS/IPS and other detection tools.
 
-**Endpoint Detection and Response (EDR) and Extended Detection and Response (XDR)**
+**Endpoint Detection & Response (EDR) and Extended Detection & Response (XDR)**
 
 While network-focused tools monitor traffic, endpoints remain a critical attack surface. EDR solutions focus on detecting and investigating threats on individual devices.
 
@@ -257,72 +252,6 @@ While network-focused tools monitor traffic, endpoints remain a critical attack 
 - **Best for:** Detecting advanced threats that evade network-based controls, including fileless malware and living-off-the-land attacks.
 
 **Extended Detection and Response (XDR)** expands this concept by integrating and correlating data across multiple security layers—endpoints, network, email, cloud workloads—providing a more unified view of threats than siloed tools can offer.
-
----
-
-Network performance monitoring is the practice of continuously observing a computer network for availability, performance, and reliability. Its key goal is to answer the questions: "Is the network operational, and is it performing well?" This is achieved by collecting and analyzing specific, predefined metrics such as device uptime, bandwidth usage, CPU/memory load on routers and switches, and error rates. For example, a network performance monitoring tool might alert an administrator if a critical server goes offline.
-
-Network security monitoring focuses on detecting, investigating, and responding to security threats. It uses tools like IDS/IPS and SIEM platforms to analyze traffic for malicious patterns, enforce security policies, and aid in post-incident recovery. While performance monitoring might flag a high bandwidth spike, network security monitoring would investigate if that spike is caused by a legitimate backup or a malicious denial-of-service attack.
-
-Network visibility is a broader, more proactive approach that encompasses both performance and security monitoring. It involves gaining a comprehensive, often granular, real-time understanding of all traffic flows across the entire network infrastructure. This is achieved through advanced telemetry data, flow analysis (NetFlow, sFlow) and packet inspection. Where performance monitoring might track if a link is up/down, visibility reveals which applications, users, and protocols are consuming that link's capacity, providing the essential context needed to troubleshoot complex issues and optimize the network holistically.
-
-#### Network security monitoring technologies
-
-A secure network design must incorporate robust monitoring to detect and respond to threats in real time. SIEM solutions aggregate and correlate system logs/alerts from IDS, firewalls, endpoints, etc. for centralized threat detection, while endpoint detection and response (EDR) solutions track suspicious behavior across devices for signs of compromise. IDS/IPS solutions help identify/block malicious traffic. Network traffic analysis (NTA) solutions provide visibility into data flows, helping detect lateral movement by attackers. By integrating these technologies, organizations can proactively identify vulnerabilities and mitigate risks before they escalate.
-
-**Intrusion Detection Systems (IDS)**
-
-An IDS is a device or software application that monitors a network or systems for malicious activity or policy violations. Any intrusion activity or violation is typically either reported to an administrator or collected centrally using a security information and event management (SIEM) system. A SIEM system combines outputs from multiple sources and uses alarm filtering techniques to distinguish malicious activity from false alarms. (Wikipedia)
-
-IDS types range in scope from single computers to large networks. The most common classifications are network intrusion detection systems (NIDS) and host-based intrusion detection systems (HIDS). (Wikipedia)
-
-A Network Intrusion Detection System (**NIDS**) is a security mechanism that monitors network traffic for malicious activity or policy violations by analyzing packet headers and payloads, using signature-based detection (known threats) or anomaly-based detection (deviations from baseline behavior). It operates in passive mode, alerting administrators without directly blocking traffic (unlike an IPS). A NIDS can be deployed inline (span port) or via network taps, leveraging protocols like Deep Packet Inspection (DPI) for enhanced threat detection. By comparison, a Host-Based Intrusion Detection System (**HIDS**) monitors important operating system files. A HIDS is capable of monitoring and analyzing the internals of a computing system as well as the network packets on its network interfaces.
-
-**Network Intrusion Detection System (NIDS)**
-
-NIDS can be classified based on their detection approach. The primary variants are signature-based detection (identifying patterns associated with known threats, such as exploitation attempts), anomaly-based detection (identifying deviations from a established model of benign traffic, often using machine learning), and reputation-based detection (assessing potential malicious activity based on reputation scores).
-
-**A. Signature-Based Detection (IDS/IPS)**
-
-* **Example Tools:** Snort (open source), Suricata (open source), Cisco Firepower (commercial)
-* **How it works:**
-  * Compares network traffic or system activity against known attack patterns (signatures).
-  * **IDS (Intrusion Detection System):** Passive monitoring and alerting.
-  * **IPS (Intrusion Prevention System):** Actively blocks malicious traffic.
-* **Strengths:** Effective against known threats, low false positives for well-defined attacks.
-* **Limitations:** Struggles with zero-day attacks and advanced threats that evade signatures.
-
-**B. Anomaly-Based Detection (Network Behavior Analysis)**
-
-* **Example Tools:** Darktrace (commercial), Cisco Stealthwatch (commercial)
-* **How it works:**
-  * Uses machine learning or statistical baselining to detect unusual behavior.
-  * Can identify novel attacks but may have higher false positives.
-* **Best for:** Detecting insider threats, lateral movement, and unknown attacks.
-
-**SIEM (Security Information and Event Management)**
-
-The most fundamental approaches to detecting cyber intrusions are to monitor server logs for signs of unauthorized access, to monitor firewall or router logs for abnormal events, and to monitor network performance for spikes in traffic. SIEM can integrate and correlate distributed events and alert on hostile or abnormal behavior.
-
-* **Example Tools:** Wazuh (open source), Splunk (commercial), IBM QRadar (commercial), Elastic SIEM (open core)
-* **How it works:**
-  * **Aggregates logs** from multiple sources (e.g., network devices, cloud services, IDS, servers).
-  * **Correlates events** to detect complex attack patterns (e.g., multiple failed logins followed by a successful one).
-  * Provides **real-time alerting**, historical analysis, and compliance reporting.
-* **Strengths:**
-  * Holistic visibility across the environment.
-  * Helps with **incident response** and **forensics**.
-* **Limitations:**
-  * Requires fine-tuning to reduce noise.
-  * Not a direct replacement for IDS/IPS but complements them.
-
-**Endpoint Detection and Response/Extended Detection and Response (EDR/XDR)**
-
-* **Example Tools:** CrowdStrike (commercial), SentinelOne (commercial), Microsoft Defender for Endpoint (commercial)
-* **How it works:**
-  * Monitors **endpoint behavior** (processes, file changes, registry edits).
-  * Uses behavioral analysis to detect malware and suspicious activity.
-* **Best for:** Detecting advanced threats on endpoints/workstations/servers.
 
 ### Network Traffic Analysis (NTA)
 

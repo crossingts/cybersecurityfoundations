@@ -352,44 +352,54 @@ In practice, NTA and IDS/IPS are complementary. IDS/IPS provides reliable detect
 
 ### Incident response management
 
-One of the biggest challenges facing today's IT professionals is planning and preparing for the almost inevitable security incident. Incident Response (IR) is a structured methodology for handling security breaches, cyber threats, and policy violations. The goal is to manage the situation in a way that limits damage, reduces recovery time and costs, and prevents future occurrences. A standard IR process follows a lifecycle, often based on the NIST framework (NIST SP 800-61r2: Computer Security Incident Handling Guide) which includes:
-
-1. **Preparation**
-2. **Detection and Analysis**
-3. **Containment, Eradication & Recovery**
-4. **Post-Incident Activity**
+One of the biggest challenges facing today's IT professionals is planning and preparing for the almost inevitable security incident. Incident response (IR) is the structured methodology for handling security breaches, cyber threats, and policy violations when they occur. The goal is to manage the situation in a way that limits damage, reduces recovery time and costs, and prevents future occurrences. A standard IR process follows a lifecycle, often based on the NIST SP 800-61r2 framework, which includes four phases: 1) Preparation, 2) Detection and Analysis, 3) Containment, Eradication, and Recovery, and 4) Post-Incident Activity.
 
 #### 1. Preparation
 
-This is the proactive phase focused on getting ready for a potential incident _before_ it happens.
+Preparation is the proactive phase focused on getting ready for a potential incident _before_ it happens. This phase directly implements the Zero Trust principle of **assume breach** by acknowledging that incidents will occur and ensuring the organization is equipped to handle them.
 
-* **What it entails:** Establishing a Security Incident Response Team (SIRT), developing and writing an IR plan, acquiring necessary tools (forensic software, communication systems), and providing training through drills and simulations. This phase also includes implementing general security controls to prevent incidents.
+Key activities in this phase include:
 
-The first consideration in an incident response plan is **preparation**. There should be a manifesto or playbook outlining a structured approach to managing security incidents. Typically an organization should have a SIRT, which will investigate and document incidents. SIRT can be cross functional assembled from various IT related departments or units, and it can be part of or an extension of a SOC team.
-
-The playbook will provision responses commensurate with established risk levels to data assets. For instance, it is important to rank incidents by severity level. It is critical to differentiate between security events (less serious) and security incidents (serious and requiring immediate action). A security event, like a virus on endpoint, might escalate to incident level, but typically it can be addressed via standard procedures or even automation.
+- **Establishing a Security Incident Response Team (SIRT):** A cross-functional team assembled from various IT-related departments or units, which may be part of or an extension of a Security Operations Center (SOC).
+- **Developing an incident response plan:** A documented playbook outlining structured procedures for managing incidents, including clear escalation paths and communication protocols.
+- **Acquiring necessary tools:** Forensic software, secure communication systems, and investigation platforms.
+- **Training and drills:** Regular simulations and tabletop exercises to ensure team readiness.
+- **Differentiating event severity:** Defining what constitutes a security event versus a security incident. A _security event_ is any observable occurrence (e.g., a virus detected on an endpoint). An event escalates to a _security incident_ when it poses actual harm to systems or data and requires formal response. This distinction ensures resources are allocated appropriately.
 
 #### 2. Detection and Analysis
 
-This is the phase where potential security events are identified and investigated to confirm an incident and understand its scope.
+This phase involves identifying potential security events and investigating them to confirm whether an incident has occurred and understand its scope.
 
-* **What it entails:** Monitoring systems for alerts (from IDS/IPS, SIEM, antivirus), analyzing the evidence to determine the cause, assessing the impact (what systems/data are affected), and prioritizing the incident's severity to allocate appropriate resources.
+Key activities include:
 
-#### 3. Containment, Eradication & Recovery
+- **Monitoring systems** for alerts from IDS/IPS, SIEM, antivirus, and other security tools.
+- **Analyzing evidence** to determine the cause, nature, and extent of the suspicious activity.
+- **Assessing impact** to identify which systems, data, and users are affected.
+- **Prioritizing the incident** based on severity to allocate appropriate response resources.
 
-This is the reactive core of the IR process where the incident is actively handled and resolved.
+Effective detection depends on the visibility provided by the monitoring technologies discussed earlier in this chapter—NTA, IDS/IPS, SIEM, and EDR.
 
-* **Containment:** Taking immediate, short-term actions to limit the damage (e.g., isolating a network segment, disabling accounts). This is often split into short-term and long-term containment strategies.
-* **Eradication:** Removing the root cause of the incident from the environment (e.g., deleting malware, disabling breached user accounts, addressing vulnerabilities that were exploited).
-* **Recovery:** Restoring systems and data to normal operation and confirming they are no longer compromised (e.g., restoring from clean backups, rebuilding systems, bringing services back online).
+#### 3. Containment, Eradication, and Recovery
 
-Organizations should schedule data backups in order to guarantee business continuity in the case of a security incident or disaster. Backups should be created on a yearly, monthly, and weekly basis, and stored in an offsite location. It is critical to encrypt backup data in order to prevent untrusted access to it.
+This is the reactive core of the IR process, where the incident is actively handled and resolved.
+
+- **Containment:** Taking immediate actions to limit the damage and prevent further spread. This is often split into short-term containment (e.g., isolating a network segment, disabling compromised accounts) and long-term containment (e.g., applying temporary access controls while preparing for eradication).
+- **Eradication:** Removing the root cause of the incident from the environment. This may involve deleting malware, disabling breached user accounts, patching exploited vulnerabilities, or completely rebuilding compromised systems.
+- **Recovery:** Restoring systems and data to normal operations. This includes restoring data from clean, verified backups, bringing services back online, and monitoring for any signs of recurring compromise.
+
+**Note on backups:** While backups are essential for recovery, the work of _creating and maintaining_ them—scheduled backups stored in encrypted, offsite locations—occurs during the preparation phase. During recovery, the focus is on _restoring_ from those backups efficiently and verifying the integrity of restored data.
 
 #### 4. Post-Incident Activity
 
-This critical phase occurs after the incident is resolved and focuses on learning from the event to improve future response.
+This critical phase occurs after the incident is resolved and focuses on learning from the experience to improve future response capabilities.
 
-* **What it entails:** Conducting a "lessons learned" meeting to review what happened, what was done well, and what could be improved. This phase results in a formal incident report that is used to update the IR plan, policies, and security controls to prevent a recurrence.
+Key activities include:
+
+- **Conducting a "lessons learned" meeting** with all involved parties to review what happened, what was done well, and what could be improved.
+- **Producing a formal incident report** documenting the timeline, impact, response actions, and findings.
+- **Updating the IR plan, policies, and security controls** based on lessons learned to prevent recurrence and improve future response.
+
+This phase closes the loop, ensuring that each incident strengthens the organization's overall security posture and resilience.
 
 ### Timely software patching
 

@@ -225,11 +225,11 @@ An intrusion detection system (IDS) is a device or software application that mon
 
 NIDS can be classified by their approach to identifying threats:
 
-| Methodology          | Description                                                                                 | Strengths                                                                      | Limitations                                           | Example Tools                                                             |
-| -------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ----------------------------------------------------- | ------------------------------------------------------------------------- |
-| **Signature-Based**  | Compares traffic against known attack patterns (signatures).                                | Effective against known threats; low false positives for well-defined attacks. | Cannot detect zero-day or novel attacks.              | Snort (open source), Suricata (open source), Cisco Firepower (commercial) |
-| **Anomaly-Based**    | Uses machine learning or statistical baselining to detect deviations from normal behavior.  | Can identify novel attacks, insider threats, and lateral movement.             | May generate higher false positives; requires tuning. | Darktrace (commercial), Cisco Stealthwatch (commercial)                   |
-| **Reputation-Based** | Assesses potential malicious activity based on reputation scores of IPs, domains, or files. | Effective for blocking communications with known malicious entities.           | Limited to known malicious sources.                   | Various threat intelligence feeds                                         |
+| Methodology          | Description                                                                                 | Strengths                                                                      | Limitations                                           | Example Tools                                                                                       |
+| -------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ----------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| **Signature-Based**  | Compares traffic against known attack patterns (signatures).                                | Effective against known threats; low false positives for well-defined attacks. | Cannot detect zero-day or novel attacks.              | Snort (open source), Suricata (open source), Cisco Firepower (commercial)                           |
+| **Anomaly-Based**    | Uses machine learning or statistical baselining to detect deviations from normal behavior.  | Can identify novel attacks, insider threats, and lateral movement.             | May generate higher false positives; requires tuning. | Zeek (open source), Suricata (open source), Darktrace (commercial), Cisco Stealthwatch (commercial) |
+| **Reputation-Based** | Assesses potential malicious activity based on reputation scores of IPs, domains, or files. | Effective for blocking communications with known malicious entities.           | Limited to known malicious sources.                   | Various threat intelligence feeds                                                                   |
 
 **Examples of Reputation-Based Detection Tools**
 
@@ -241,7 +241,7 @@ NIDS can be classified by their approach to identifying threats:
 | **VirusTotal**                                  | Free/Commercial                          | Aggregates detection results from multiple antivirus engines and provides reputation data for files, URLs, domains, and IPs.                                                                               |
 | **Palo Alto Networks WildFire**                 | Commercial threat intelligence           | Analyzes files and URLs in a sandbox environment and generates reputation data that is shared across Palo Alto Networks subscribers.                                                                       |
 
-A firewall or security appliance configured with a threat intelligence feed might block outbound connections to IP addresses listed as command-and-control servers, quarantine emails originating from domains with poor reputation scores, alert on file downloads with hash values associated with known malware, or dynamously update firewall rules based on real-time reputation changes.
+A firewall or security appliance configured with a threat intelligence feed might block outbound connections to IP addresses listed as command-and-control servers, quarantine emails originating from domains with poor reputation scores, alert on file downloads with hash values associated with known malware, or dynamically update firewall rules based on real-time reputation changes.
 
 **Intrusion Prevention Systems (IPS)**
 

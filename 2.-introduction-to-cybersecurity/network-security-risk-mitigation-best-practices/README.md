@@ -41,6 +41,8 @@ The core idea behind defense in depth is that no single security control is perf
 
 A layered security architecture implements controls across multiple security domains. These domains can be visualized as a stack of defensive layers, starting from the physical infrastructure and moving up to the data itself. A practical layered security architecture can be comprised of the following layers:
 
+<figure><img src="../../.gitbook/assets/Layers-defense-in-depth.jpg" alt="defense-in-depth-model"><figcaption><p>Defense in depth model (courtesy of learn.microsoft.com)</p></figcaption></figure>
+
 * **Physical layer:** This is the foundation of security. It involves protecting the physical assets that house your data and systems. Controls here include limiting access to data centers and network closets to only authorized personnel, using security badges, biometrics, mantraps, and 24/7 surveillance. If an attacker cannot physically touch a server, many attack vectors are immediately neutralized.
 * **Identity and access layer:** This layer focuses on ensuring that only the right people (and devices) have access to the right resources. It's where the principles and technologies of robust access control are implemented. Key controls include:
   * **Identity and Access Management (IAM)** systems that define and manage user identities and their permissions (e.g., Role-Based Access Control).
@@ -59,10 +61,6 @@ A layered security architecture implements controls across multiple security dom
 
 By implementing controls across these layers, an organization creates a robust and resilient security posture. A failure in the perimeter layer, for example, does not automatically spell disaster because the network layer can limit the attacker's movement, and the data layer can prevent the exfiltration of sensitive information. This multi-layered approach is the essence of defense in depth.
 
-<figure><img src="../../.gitbook/assets/Layers-defense-in-depth.jpg" alt="defense-in-depth-model"><figcaption><p>Defense in depth model (courtesy of learn.microsoft.com)</p></figcaption></figure>
-
-Defense in depth model (courtesy of learn.microsoft.com)
-
 ### The Zero Trust model
 
 The traditional security model often operated like a medieval castle. It had a strong perimeter (the castle walls with firewalls and VPNs) to keep attackers out, but once inside the walls, users and devices were often trusted implicitly. This model is no longer sufficient. Attackers have become adept at breaching the perimeter through phishing, stolen credentials, or exploiting vulnerabilities in web applications. Once inside, they can move laterally, undetected, to access sensitive data.
@@ -76,6 +74,8 @@ The Zero Trust model is guided by three core principles that shape how security 
 1. **Verify explicitly:** Always authenticate and authorize access based on all available data points. This goes far beyond a simple username and password. It means continuously verifying the user's identity, the health and compliance of their device, their physical location, the sensitivity of the data they're requesting, and even detecting anomalous behavior in real-time.
 2. **Use least privilege access:** This principle is a cornerstone of Zero Trust. It means limiting user access with **just-in-time (JIT)** and **just-enough-access (JEA)**. JIT ensures that privileged access is granted only for a limited time window when needed, while JEA ensures users have the minimum permissions required for a specific task, not broad, standing access.
 3. **Assume breach:** This principle fundamentally changes the security mindset. Instead of solely focusing on prevention, Zero Trust assumes that a breach has already occurred or will occur. The strategy, therefore, shifts to **minimizing the blast radius** and preventing lateral movement. This is achieved by segmenting access (by network, user, and application), using end-to-end encryption to protect data, and employing advanced analytics to rapidly detect, investigate, and respond to threats.
+
+<figure><img src="../../.gitbook/assets/Zero-Trust-model.jpg" alt="zero-trust-model"><figcaption><p>Zero Trust model (courtesy of learn.microsoft.com)</p></figcaption></figure>
 
 #### The six foundational pillars of Zero Trust
 
@@ -91,10 +91,6 @@ To put these principles into practice, the Zero Trust model provides a framework
 | **Networks**       | The network should no longer be considered a trusted zone. Zero Trust mandates deep network segmentation (including micro-segmentation within data centers), real-time threat protection, end-to-end encryption, and robust monitoring to detect and respond to malicious traffic. |
 
 By applying the three guiding principles across these six pillars, an organization can build a cohesive and robust security posture that protects its modern, distributed resources, regardless of where users work or where data resides. Zero Trust is not a single product, but a strategic, holistic approach to security that aligns with the layered defense (defense-in-depth) model.
-
-<figure><img src="../../.gitbook/assets/Zero-Trust-model.jpg" alt="zero-trust-model"><figcaption><p>Zero Trust model (courtesy of learn.microsoft.com)</p></figcaption></figure>
-
-Zero Trust model (courtesy of learn.microsoft.com)
 
 ### Robust access control
 

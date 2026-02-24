@@ -16,7 +16,7 @@ description: >-
 - Describe the complementary roles of IAM (Identity & Access Management) and NAC (Network Access Control) in ensuring robust enterprise access management
 - Differentiate the function of AAA (Authentication, Authorization, and Accounting) as the operational framework within IAM for network-level enforcement
 * Compare the goals and techniques of IDS/IPS and NTA (Network Traffic Analysis)
-* Outline the four phases of the NIST incident response lifecycle and describe the key activities in each phase
+* Outline the four phases of the NIST SP 800-61r2 incident response lifecycle and describe the key activities in each phase
 * Describe the role of automation in ensuring consistent and compliant patch management processes
 - Identify key physical security controls used to protect network infrastructure from unauthorized access and environmental threats
 

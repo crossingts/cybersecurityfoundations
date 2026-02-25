@@ -442,16 +442,11 @@ Cisco's SD-Access uses something called a Virtual Network (VN) for macro-segment
 Network automation uses software to perform network tasks with minimal human intervention. This fundamentally enhances security in the following key ways:
 
 1. **Consistency and Elimination of Human Error:** Manual configuration is error-prone. A mistyped ACL can create a major security hole. Automation ensures that security policies are deployed exactly as defined, every time, across thousands of devices, eliminating configuration drift.
-2. **Rapid Threat Response and Mitigation:**
-   * When a threat is detected (e.g., an infected host), automated scripts can instantly isolate the compromised device by reconfiguring switch ports, updating ACLs, or pushing a new SGT policy across the entire network in seconds, far faster than any human team could.
-3. **Continuous Compliance and Auditing:**
-   * Automation tools can continuously scan network devices, compare their configurations against a gold-standard security template (a "desired state"), and automatically remediate any deviations. This ensures the network is always in a compliant state and generates audit-ready reports effortlessly.
-4. **Comprehensive Visibility and Real-Time Monitoring:**
-   * Automated systems provide a single source of truth for the entire network state. They can collect and correlate data from all devices, applications, and security tools, giving security teams a real-time view of traffic flows, anomalies, and potential threats.
-5. **Secure Zero-Trust and Micro-Segmentation Deployment:**
-   * As detailed above, automating the deployment and lifecycle management of micro-segmentation policies is the only practical way to implement a Zero-Trust architecture ("never trust, always verify") at scale across a large, dynamic network.
-6. **Enhanced Vulnerability Management:**
-   * Automation can schedule and execute security patches and updates for network devices (routers, switches, firewalls) during maintenance windows with minimal downtime, rapidly closing known vulnerabilities before they can be exploited.
+2. **Rapid Threat Response and Mitigation:** When a threat is detected (e.g., an infected host), automated scripts can instantly isolate the compromised device by reconfiguring switch ports, updating ACLs, or pushing a new SGT policy across the entire network in seconds, far faster than any human team could.
+3. **Continuous Compliance and Auditing:** Automation tools can continuously scan network devices, compare their configurations against a gold-standard security template (a "desired state"), and automatically remediate any deviations. This ensures the network is always in a compliant state and generates audit-ready reports effortlessly.
+4. **Comprehensive Visibility and Real-Time Monitoring:** Automated systems provide a single source of truth for the entire network state. They can collect and correlate data from all devices, applications, and security tools, giving security teams a real-time view of traffic flows, anomalies, and potential threats.
+5. **Secure Zero-Trust and Micro-Segmentation Deployment:** As detailed above, automating the deployment and lifecycle management of micro-segmentation policies is the only practical way to implement a Zero-Trust architecture ("never trust, always verify") at scale across a large, dynamic network.
+6. **Enhanced Vulnerability Management:** Automation can schedule and execute security patches and updates for network devices (routers, switches, firewalls) during maintenance windows with minimal downtime, rapidly closing known vulnerabilities before they can be exploited.
 
 In summary, network automation transforms cybersecurity from a manual, reactive effort into a consistent, proactive, and rapid-response strategy. Network automation is essential for managing the complexity and scale of modern networks and enforcing robust security policies like those enabled by SDN and micro-segmentation.
 

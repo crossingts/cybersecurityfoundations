@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2.-introduction-to-cybersecurity/network-security-risk-mitigation-best-practices/README.md",
+                "file": "2.-introduction-to-cybersecurity/cybersecurity-risk-mitigation-methods/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -183,8 +183,8 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
-    "2.-introduction-to-cybersecurity/cybersecurity-risk-mitigation-methods/README.md",
     "2.-introduction-to-cybersecurity/network-security-risk-mitigation-best-practices/README.md",
+    "2.-introduction-to-cybersecurity/cybersecurity-risk-mitigation-methods/README.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/burp-suite-owasp-zap-vs-wireshark-tcpdump.md",
     "README.md",
     "7.-conclusion/glossary.md",

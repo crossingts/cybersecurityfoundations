@@ -267,7 +267,7 @@ While network-focused tools monitor traffic, endpoints remain a critical attack 
 
 Network Traffic Analysis (NTA), also called Network Detection and Response (NDR), is a network monitoring technology focused on providing deep visibility into network activity. While IDS/IPS answers "Is something bad happening?", NTA answers the broader question: "What is happening on my network?" NTA's primary goals are visibility, discovery, and investigation.
 
-#### NTA and Network Visibility
+#### NTA and network visibility
 
 Network visibility is the ability to see, understand, and contextualize all activity traversing a network. It is not a single tool but a capability achieved through a combination of technologies, processes, and policies. NTA serves as the primary technical implementation of network visibility, delivering on its key pillars:
 
@@ -281,7 +281,7 @@ Network visibility is the ability to see, understand, and contextualize all acti
 
 For example, while an IDS/IPS might block obvious, signature-based attacks at the perimeter, an NTA solution could discover a sophisticated attacker that evaded those controls by detecting their unusual command-and-control traffic hidden within normal web requests.
 
-#### Key NTA Technologies and Tools
+#### Key NTA technologies and tools
 
 The following table represents a range of NTA and related technologies, from open-source analysis frameworks to commercial AI-driven platforms:
 
@@ -295,7 +295,7 @@ The following table represents a range of NTA and related technologies, from ope
 |**Darktrace**|Commercial|An AI-driven NTA platform that uses machine learning for anomaly detection, identifying threats like unusual data exfiltration or C2 beaconing.|
 |**Cisco Stealthwatch**|Commercial|An enterprise-grade NTA/NDR solution that analyzes NetFlow data and uses behavioral modeling to detect threats across the network.|
 
-#### How NTA Complements Other Security Tools
+#### How NTA complements other security tools
 
 NTA fills critical gaps left by traditional security controls. The table below illustrates how different tools respond to specific attack scenarios:
 
@@ -305,7 +305,7 @@ NTA fills critical gaps left by traditional security controls. The table below i
 |**Lateral movement via RDP**|Blocks if port is restricted|May detect brute-forcing attempts|Logs the event (if logging enabled)|Flags abnormal internal RDP connections between unrelated systems|
 |**C2 beaconing to a new domain**|Allows outbound web traffic|May miss (new domain, no signature)|Depends on visibility|Detects periodic beaconing patterns and domain reputation anomalies|
 
-#### NTA Strengths and Limitations
+#### NTA strengths and limitations
 
 **Strengths:**
 
@@ -319,7 +319,7 @@ NTA fills critical gaps left by traditional security controls. The table below i
 - **Noise and tuning:** Behavioral analysis can generate false positives without proper baselining and tuning.
 - **Not a replacement for prevention:** NTA excels at detection and investigation but does not actively block threats (unlike IPS or firewalls).
 
-#### NTA vs IDS/IPS Comparison
+#### NTA vs IDS/IPS comparison
 
 Understanding the distinction between NTA and IDS/IPS is essential for designing a layered monitoring strategy. While both analyze network traffic, they serve different purposes and provide different types of visibility.
 

@@ -48,7 +48,7 @@ Unlike next-generation firewalls (NGFWs), traditional firewalls do not perform d
 
 Next-generation firewall (NGFW): A firewall device with advanced features, including the ability to run many related security features in the same firewall device (IPS, malware detection, VPN termination), along with deep packet inspection with Application Visibility and Control (AVC) and the ability to perform URL filtering versus data collected about the reliability and risk associated with every domain name.
 
-The following list summarizes a few key features of a NGFW (Odom, 2020):
+The following list summarizes a few key features of an NGFW (Odom, 2020):
 
 **Traditional Firewall Foundation**: Cisco NGFWs perform all standard firewall functions, including stateful packet filtering, network address translation (NAT/PAT), and VPN termination—serving as the baseline upon which advanced security features are added.
 
@@ -70,7 +70,7 @@ A traditional IPS differs from firewalls in that instead of an engineer at the c
 
 Next-generation IPS (NGIPS): An IPS device with advanced features, including the capability to go beyond a comparison to known attack signatures to also look at contextual data, including the vulnerabilities in the current network, the capability to monitor for new zero-day threats, with frequent updates of signatures from the Cisco Talos security research group.
 
-The following list summarizes a few key features of a NGIPS (Odom, 2020):
+The following list summarizes a few key features of an NGIPS (Odom, 2020):
 
 **Traditional IPS Foundation**: Cisco NGIPS performs core IPS functions, including comparing packet flows against extensive exploit signature databases, generating detailed event logs, and taking automated actions such as discarding malicious packets or redirecting suspicious traffic for further analysis.
 

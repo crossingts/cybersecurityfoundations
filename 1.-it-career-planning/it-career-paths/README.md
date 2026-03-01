@@ -12,7 +12,7 @@ description: >-
 * Describe key IT career paths, skills, and industry certifications
 * Identify key IT and cybersecurity training resources
 
-[IT career paths](https://www.coursera.org/articles/it-career-paths-how-to-get-started) – everything you need to know to plan, kick-start, and level up your IT career: job roles, job titles, specializations, skills, certifications, salaries, and training resources, from entry level positions to senior level positions.
+Navigating the world of information technology can often feel like exploring a vast, complex city without a map. This section is designed to be your guide, providing a clear and structured overview of [IT career paths](https://www.coursera.org/articles/it-career-paths-how-to-get-started). Whether you are just starting to explore the field, preparing to launch your first role, or looking to elevate your career to the next level, we will cover everything you need to plan your journey effectively. We will dissect the primary industry domains—from IT Support and Systems to Networking, Database Administration, Development, and Information Security—detailing the specific job roles, specializations, and common job titles you can expect at each stage. Beyond just job descriptions, we will look at the concrete building blocks of a successful career: the essential skills you need to cultivate, the industry certifications that validate your expertise, and the realities of salary expectations as you progress from entry-level to senior-level positions. Finally, we will equip you with a curated list of both commercial and free training resources to help you acquire those skills and take the next step on your professional path.
 
 ## Topics covered in this section
 
@@ -117,7 +117,10 @@ Sr. Developer related job titles include Systems Engineer, Web Developer, Applic
 
 #### [How to become a software engineer with no experience (Self-taught Roadmap 2022)](https://www.youtube.com/watch?v=puLSsuG1YE4)
 
-1\. Learn Python from freeCodeCamp’s Python in 4 hours Full Course: [Learn Python – Full Course for Beginners \[Tutorial\]](https://www.youtube.com/watch?v=rfscVS0vtbw)
+1\. Learn Python from:
+
+- [Python for Absolute Beginners](https://academicbullying.wordpress.com/2025/12/04/python-for-absolute-beginners/)
+- [Learn Python – Full Course for Beginners [Tutorial]](https://www.youtube.com/watch?v=rfscVS0vtbw) (freeCodeCamp)
 
 Master: variables, functions, conditional statements, loops, lists, dictionaries, objects, and interfaces.
 

@@ -14,7 +14,7 @@ description: >-
 * Identify key GRC risk management frameworks
 * Identify industry certifications relevant to the GRC analyst/manager role
 
-This section sheds light on the GRC analyst role as a career choice, including how to pivot into it from another IT job role, relevant skills of a GRC analyst, and relevant industry certifications.
+Navigating the complex intersection of business objectives, legal obligations, and security threats has made the Governance, Risk, and Compliance (GRC) analyst one of the most pivotal roles in modern cybersecurity. This section provides a comprehensive guide to understanding the GRC analyst as a career choice, offering a roadmap for both IT professionals seeking a strategic pivot and newcomers aiming to enter the field. We will explore the diverse pathways into GRC, examining how experience in roles ranging from SOC analyst to policy analyst can serve as a springboard. Beyond the career transition, we will dissect the dual nature of the role, outlining the essential skills required—from technical proficiencies in system administration to the soft skills needed for cross-departmental collaboration. You will also gain an overview of the industry's most salient risk management frameworks, such as the NIST CSF and ISO 27001, and discover the key job activities that define a GRC analyst's day-to-day responsibilities. Finally, we will map out the most respected industry certifications, like CISA and CRISC, and point you toward valuable training resources to help you build your expertise and credibility in this critical domain.
 
 ## Topics covered in this section
 

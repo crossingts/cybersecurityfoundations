@@ -168,7 +168,3 @@ Consider:
 * Research the industry skills for the role and create a skill development plan.
 * Tailor your resume for the target role.
 * Start building a professional network ASAP.
-
-### References
-
-[https://futurecareer.net](https://futurecareer.net)&#x20;

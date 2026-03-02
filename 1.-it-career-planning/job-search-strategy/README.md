@@ -14,7 +14,7 @@ description: >-
 * Tailor and optimize your CV for the role
 * Become familiar with the job interview process
 
-When a recruiter has limited time with a decision-maker, they may only highlight one or two resumes—you want yours to be one of them. Below are steps to help you stand out.
+In the high-stakes world of recruitment, where a decision-maker's attention is often measured in seconds, a recruiter may only have the bandwidth to champion one or two candidates from a pile of applications. To earn that coveted spot, your candidacy must be undeniable before you even enter the room. This requires a deliberate strategy that begins long before you submit an application. The following steps will guide you through building a competitive edge from the ground up, starting with identifying the right role, bridging your skill gaps, and optimizing your resume, all the way to mastering the nuances of networking and interview preparation.
 
 ## Topics covered in this section
 

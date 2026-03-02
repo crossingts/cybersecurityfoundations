@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1.-it-career-planning/the-grc-analyst-job-role/README.md",
+                "file": "1.-it-career-planning/job-search-strategy/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -183,6 +183,7 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
+    "1.-it-career-planning/the-grc-analyst-job-role/README.md",
     "1.-it-career-planning/the-security-operations-center-soc-career-path/README.md",
     "1.-it-career-planning/it-career-paths/README.md",
     "2.-introduction-to-cybersecurity/cybersecurity-risk-mitigation-methods/README.md",
@@ -209,7 +210,6 @@
     "6.-practical-foundations-in-ethical-hacking/what-do-ethical-hackers-do/README.md",
     "2.-introduction-to-cybersecurity/foundational-cybersecurity-concepts/README.md",
     "2.-introduction-to-cybersecurity/foundational-cybersecurity-concepts/foundational-cybersecurity-concepts-quiz.md",
-    "2.-introduction-to-cybersecurity/foundational-cybersecurity-concepts/cia-attacks-mitigation-technologies.md",
     "LICENSE",
     "3.-cybersecurity-grc/the-information-security-compliance-audit",
     "3.-cybersecurity-grc/the-information-security-risk-assessment",

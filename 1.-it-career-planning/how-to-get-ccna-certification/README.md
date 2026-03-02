@@ -54,7 +54,7 @@ Having said that, some of the job roles for CCNA holders you might encounter in 
 
 The 200-301 CCNA exam is the one exam required to earn the Cisco Certified Network Associate certification. This exam tests a candidate’s knowledge and skills related to network fundamentals, network access, IP connectivity, IP services, security fundamentals, and automation and programmability.
 
-### [How to get CCNA certification](https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html)
+### How to get CCNA certification
 
 Before discussing a study approach and study resources for the CCNA exam, here is a brief discussion of the [CCNA exam registration information](https://www.cisco.com/c/en/us/training-events/training-certifications/exams/registration.html).
 
@@ -155,8 +155,7 @@ Digital flashcards phone app: Anki. Build your own flashcard decks or import pre
 2.1. Cisco Cert Prep Tip
 
 Create and keep track of learning milestones by downloading exam topics:\
-[Download Complete List of CCNA Exam Topics in PDF Format\
-](https://learningcontent.cisco.com/documents/marketing/exam-topics/200-301-CCNA-v1.1.pdf)[Download CCNA Exam Topics Study Plan](https://learningcontent.cisco.com/documents/marketing/study-plans/2022_CCNAExam_StudyTool.pdf)
+[Download Complete List of CCNA Exam Topics in PDF Format<br>](https://learningcontent.cisco.com/documents/marketing/exam-topics/200-301-CCNA-v1.1.pdf)[Download CCNA Exam Topics Study Plan](https://learningcontent.cisco.com/documents/marketing/study-plans/2022_CCNAExam_StudyTool.pdf)
 
 2.2. Practical skills in the exam
 

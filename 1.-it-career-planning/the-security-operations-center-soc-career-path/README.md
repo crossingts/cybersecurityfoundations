@@ -14,7 +14,7 @@ description: >-
 * Identify the four main SOC roles
 * Understand the main responsibilities, skills, and industry certifications of the SOC analyst
 
-This section discusses the Security Operations Center (SOC) career path. First, the SOC unit composition and technologies are discussed. Then the SOC team member roles and responsibilities, skills/qualifications, and certifications are discussed. Finally, training resources for SOC careers are suggested.
+This section explores the Security Operations Center (SOC) career path, offering readers a practical roadmap for understanding and pursuing opportunities in this critical cybersecurity domain. We begin by examining the fundamental structure of a SOC unit, including its organizational function within the enterprise and the essential technologies that power modern security monitoring and response—with particular emphasis on the Security Information and Event Management (SIEM) system and its evolution into next-generation platforms incorporating SOAR and UEBA capabilities. The discussion then progresses through the complete SOC team hierarchy, from entry-level positions to executive leadership, providing an in-depth analysis of the four primary SOC roles. For each role—including the tiered progression of SOC analysts (Tiers 1-3), the SOC manager, the CISO, and the security engineer—we detail specific responsibilities, required technical and soft skills, educational qualifications, and relevant industry certifications that validate expertise at each career stage. The section concludes with curated training resources tailored to each career level, enabling aspiring professionals to identify appropriate learning paths for their desired SOC positions.
 
 ## Topics covered in this section
 

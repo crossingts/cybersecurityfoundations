@@ -70,7 +70,7 @@ To keep track of your exam history and certification status, login to your Certi
 
 Like all of Cisco’s certifications, the CCNA expires after three years. Your can recertify a CCNA before it expires by retaking the original exam, completing enough continuing education credits, or advancing to the next tier of Cisco certifications.
 
-### [7 steps x 7 weeks to become CCNA certified](https://www.youtube.com/watch?v=SEz3MO4oLxM)
+### 7 steps x 7 weeks to become CCNA certified
 
 \[This section was inspired by [Network Engineer Academy](https://networkengineeracademy.com/) trainer Jorge Armando Navarro. Jorge’s advice is more likely to work for someone who already has a year or so on the job network administration experience under their belt. For a complete novice, a good place to start is the “[Networking Fundamentals](https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi)” YouTube playlist by Ed Harmoush, a Network Engineer and YouTuber based in Seattle, WA, U.S. ([Practical Networking](https://www.youtube.com/@PracticalNetworking)). Some key concepts from Ed’s playlist in blog form: [How data flow through the Internet](https://itnetworkingskills.wordpress.com/2023/02/01/how-data-flow-through-internet/).]
 

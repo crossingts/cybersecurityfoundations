@@ -144,7 +144,7 @@ Digital flashcards phone app: Anki. Build your own flashcard decks or import pre
 
 ### Cisco’s own study resources
 
-1\. [Your career in networking begins with CCNA](https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html)
+[1. Your career in networking begins with CCNA](https://www.cisco.com/site/us/en/learn/training-certifications/certifications/enterprise/ccna/index.html)
 
 [Download CCNA Guide](https://mkto.cisco.com/ccna-cert-guide.html) – This CCNA Certification Guide 2022 provides insight and guidance on what to expect and the best way to plan for certification.
 
@@ -189,12 +189,8 @@ A collection of live webinar recordings conducted on the Cisco Learning Network 
 
 ### References
 
-[CCNA exam information and overview \[updated 2023\]](https://resources.infosecinstitute.com/certification/ccna-exam-information-and-overview/) (Infosec Institute, Inc.)
-
-[CCNA The 7 Week Step-By-Step Process To Get Your Cisco CCNA The Right Way](https://www.youtube.com/watch?v=SEz3MO4oLxM) (Network Engineer Academy YouTube video)
-
 [Exam Registration Information](https://www.cisco.com/c/en/us/training-events/training-certifications/exams/registration.html) (Cisco.com)
 
 [How to Study for Cisco CCNA Certification Exam – CCNA Study Tips](https://www.youtube.com/watch?v=gyszjNKMuDs) (ITProTV YouTube video)
 
-[Your career in networking begins with CCNA](https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html) (Cisco.com)
+[Your career in networking begins with CCNA](https://www.cisco.com/site/us/en/learn/training-certifications/certifications/enterprise/ccna/index.html) (Cisco.com)

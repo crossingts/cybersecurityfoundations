@@ -78,7 +78,7 @@ Accreditation bodies like the Canadian Engineering Accreditation Board (CEAB) an
 
 Adhering to multiple overlapping ethical guidelines, all of which reinforce the same core values, ensures that ethical hackers do not merely rely on personal judgment but follow institutionalized best practices that have been refined over decades. University programs teaching ethical hacking incorporate these professional codes into their curricula to ensure graduates enter the field with a strong ethical foundation.
 
-In the context of university instruction, key assumptions are that university instruction equips students with ethical decision making, scientific thinking, and critical thinking skills necessary for professionalism on the job.
+In the context of university instruction, a key assumption is that university training equips students with ethical decision making, scientific thinking, and critical thinking skills necessary for professionalism on the job.
 
 It’s kind of like when software engineering became an engineering discipline. There were a lot of coders that knew how to code, but they didn’t have the mindset to approach it as a systematic large problem. I think ethical hacking is a very similar thing. (PPT11)
 
@@ -88,9 +88,9 @@ PPT11 added, ethical hacking “has become more of an engineering type of discip
 
 Unlike malicious hackers, professional ethical hackers adhere to formalized codes of conduct, often outlined by organizations such as the EC-Council (International Council of E-Commerce Consultants), Offensive Security, and (ISC)².
 
-This segment focuses on professional ethical hacking ethics within three industry domains: industry certifications and training authorities, professional associations, and Industry standards/guidelines. First, the discussion sheds light on key professional ethical hacking ethics of ethical hackers and information security professionals within industry certifications and training authorities: CEH Code of Ethics (EC-Council), OSCP (Offensive Security Code of Conduct), (ISC)² Code of Ethics, and ISACA Code of Professional Ethics.
+This segment focuses on professional ethical hacking ethics within three industry domains: industry certifications and training authorities, professional associations, and Industry standards and guidelines. First, the discussion sheds light on key professional ethical hacking ethics of ethical hackers and information security professionals within industry certifications and training authorities: CEH Code of Ethics (EC-Council), OSCP (Offensive Security Code of Conduct), (ISC)² Code of Ethics, and ISACA Code of Professional Ethics.
 
-Second, the discussion sheds light on key professional ethical hacking ethics of ethical hackers and information security professionals within professional associations codes and industry standards/guidelines: Professional associations: ACM Code of Ethics (2018), IEEE standards/guidelines (IEEE Cybersecurity Initiative, IEEE Certified Ethical Hacker (CEH) resources), IEEE code of ethics, and IEEE code of conduct; industry standards/guidelines: OSSTMM, ISO/IEC 27001, OWASP (Open Web Application Security Project) Testing Guide, and PCI DSS Penetration Testing Guidance.
+Second, the discussion sheds light on key professional ethical hacking ethics of ethical hackers and information security professionals within professional associations codes, and industry standards and guidelines: Professional associations codes: ACM Code of Ethics (2018), IEEE standards/guidelines (IEEE Cybersecurity Initiative, IEEE Certified Ethical Hacker (CEH) resources), IEEE code of ethics, and IEEE code of conduct; industry standards and guidelines: OSSTMM, ISO/IEC 27001, OWASP (Open Web Application Security Project) Testing Guide, and PCI DSS Penetration Testing Guidance.
 
 **Industry certifications and training authorities**
 

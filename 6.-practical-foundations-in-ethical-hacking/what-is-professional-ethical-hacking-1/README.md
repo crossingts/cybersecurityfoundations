@@ -46,13 +46,13 @@ The practices of professional ethical hackers are governed by a legal framework.
 
 Pike (2013) draws a sharp distinction between white and black hats. A white-hat hacker is defined as “a hacker who is committed to full compliance with legal and regulatory statutes as well as published ethical frameworks that apply to the task at hand.” In contrast, a black-hat hacker is “a hacker who either ignores or intentionally defies legal or regulatory statutes with presumably little interest in ethical frameworks” (p. 69).
 
-Similarly, Palmer's (2001) use of the explicit terms “ethical hacker” and “criminal hacker” places him squarely in the same camp of moral clarity as Pike (2013) and Young et al. (2007)—there is really one type of ethical hacker, the hacker who hacks within a legal framework. Logan and Clarkson (2005), Palmer (2001), Sharma and Sefchek (2007), Xu, Hu, and Zhang (2013), and Young et al. (2007) all more or less echo Pike’s definition--essentially placing hacking and hackers at either side of the law.
+Similarly, Palmer's (2001) use of the explicit terms “ethical hacker” and “criminal hacker” places him squarely in the same camp of moral clarity as Pike (2013) and Young et al. (2007)—there is really one type of ethical hacker, the hacker who hacks within a legal framework. Logan and Clarkson (2005), Palmer (2001), Sharma and Sefchek (2007), Xu, Hu, and Zhang (2013), and Young et al. (2007) all more or less echo Pike’s definition—essentially placing hacking and hackers at either side of the law.
 
 That ethical hacking is a legal practice is hardly a point of contention whether in literature or within the public sphere. But it should be noted, legal does not necessarily equate with ethical. For example, Pashel (2006) and Bodhani (2013) explicitly acknowledge variations of grey hat hacking exist, but they too agree that white hat hacking can be distinguished as being legal and authorized.
 
 The key defining characteristic of ethical hacking in comparison to other hacking practices is the legal imperative: ethical hacking is unambiguously legal. The practices of ethical hackers are governed by a legal framework. Ethical hackers have authorization to hack the target system (Graves, 2010; Palmer, 2001). Ethical hackers need prior authorization, stipulated in a legally binding contract with the computer network owners, before attempting to breach a computer network (Bodhani, 2013; Palmer, 2001; Young, Lixuan, & Prybutok, 2007).
 
-The imperative that testing must be authorized to avoid legal risks is enriched within the major industry standards/guidelines such as ISO/IEC 27001 (Authorization & Legal Compliance, A.18.1.4) and codes of professional associations such as IEEE Code of Ethics (Ethics 3, 4).
+The imperative that testing must be authorized to avoid legal risks is enriched within major industry standards/guidelines such as ISO/IEC 27001 (Authorization & Legal Compliance, A.18.1.4) and codes of professional associations such as IEEE Code of Ethics (Ethics 3, 4).
 
 ### Professional ethics of ethical hackers
 
@@ -178,7 +178,7 @@ Many times, while the ethical hacker is carrying out her procedures to gain tota
 
 Andrasik (2016), and Thomas et al. (2018) make the same point as do Harper el al. (2011), that ethical hackers will sometimes unavoidably access privileged information. Underscoring the importance of trustworthiness, Andrasik (2016) proposes that organizations hiring ethical hackers need to talk to references first:
 
-If a pen-test group is going to actively try to breach your defenses, you want to know their ethics are beyond reproach. That knowledge should come from somewhere other than a well-crafted website or canned testimonials— it should come from conversations with companies that have experienced a pen test by the group in question.
+If a pen-test group is going to actively try to breach your defenses, you want to know their ethics are beyond reproach. That knowledge should come from somewhere other than a well-crafted website or canned testimonials—it should come from conversations with companies that have experienced a pen test by the group in question.
 
 Thomas et al. (2018) argue that "to be effective, ethical hacking involves trying to gain access to a system to access confidential and sensitive information. This means, that a certain level of trust needs to be established between the ethical hacker and the party engaging them” (p. 3).
 

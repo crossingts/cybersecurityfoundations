@@ -92,9 +92,7 @@ This segment focuses on professional ethical hacking ethics within three industr
 
 **Industry certifications and training authorities**
 
-This segment explores what are the key professional ethics and values of an ethical hacker, and how are they defined by these authoritative sources? The following two tables summarize the key findings.
-
-The following table shows how the core ethical principles are formally mandated by the major bodies that certify ethical hackers. The Clarifying Comments focus on why each theme is a key component of professional ethics.
+This segment explores key professional ethics of ethical hackers and information security professionals within industry certifications and training authorities. The following two tables summarize the key findings. The first table (Professional Ethics as Defined by Industry Certifications and Training Authorities) shows how the core ethical principles are formally mandated by the major bodies that certify ethical hackers. The second table (Key Codes of Conduct for Information Security Professionals) sheds light on key provisions within ethics codes of industry certifications and training authorities.
 
 **Professional Ethics as Defined by Industry Certifications and Training Authorities**
 
@@ -112,8 +110,6 @@ The following table shows how the core ethical principles are formally mandated 
 | **Professionalism**               | The codes themselves are definitions of professionalism, requiring competent, diligent, and socially responsible service.                                                                               | Professionalism is the holistic embodiment of all these themes. It's the commitment to the role as a trusted expert, not just a technical practitioner.                           |
 | **Skills of Ethical Hackers**     | The ethical obligation to maintain and apply relevant, up-to-date skills is implicit in the certification requirements and the duty to provide "diligent and competent service" ((ISC)²).               | An unskilled ethical hacker is an ethical risk. They may miss critical vulnerabilities (providing a false sense of security) or cause damage through incompetence.                |
 | **Goal of Testing**               | The unified ethical goal is not to "break in at all costs" but to faithfully work to improve the client's security posture within the agreed boundaries.                                                | Aligns the hacker's incentives with the client's. The value is in the truthful assessment of security, not in proving superiority or causing embarrassment.                       |
-
-The following table sheds light on key provisions within ethics codes of industry certifications and training authorities.
 
 **Key Codes of Conduct for Information Security Professionals (Adapted From Thomas et al., 2018, pp. 5-6)**
 

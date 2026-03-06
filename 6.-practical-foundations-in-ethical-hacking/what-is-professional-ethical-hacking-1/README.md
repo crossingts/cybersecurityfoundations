@@ -14,7 +14,12 @@ description: >-
 - Become familiar with the core ethical principles (e.g., trust, integrity, confidentiality) mandated by professional codes of conduct
 - Identify the role of university accreditation and training in instilling a professional and ethical mindset
 
-This section advances an understanding that ethical hackers are white hat hackers who abide by well established and widely accepted industry and government standards, guidelines, and licensing and accreditation requirements regarding what constitutes professional practice. First, the discussion makes the case that ethical hackers are white hat hackers (ethical hacking is a legal practice). Next, the analysis explores the web of professional codes of conduct that govern the behavior of professional ethical hackers (professional ethics of ethical hackers). Finally, the analysis sketches out four types of hacker groups classified based on the legality of their practices and the imperative of professional conduct.
+This section advances an understanding that ethical hackers are white hat hackers who abide by well established and widely accepted industry and government standards, guidelines, and licensing and accreditation requirements regarding what constitutes professional practice. First, the discussion differentiates white hat hackers from grey hat hackers, black hat hackers, and hacktivists on the basis of legal practice (ethical hacking is legal).
+
+Next, the section explores the web of professional codes of conduct that govern the behavior of professional ethical hackers (professional ethics of ethical hackers). 
+Next, the analysis explores the key properties (themes) of professional ethics of professional ethical hackers as stipulated in various industry standards, guidelines, and conventions. 
+
+Finally, the analysis sketches out four types of hacker groups classified based on the legality of their practices and the imperative of professional conduct.
 
 ## Topics covered in this section
 
@@ -35,7 +40,7 @@ This section advances an understanding that ethical hackers are white hat hacker
 
 A Certified Ethical Hacker (EC-Council) is, “a skilled professional who understands and knows how to look for weaknesses and vulnerabilities in target systems and uses the same knowledge and tools as a malicious hacker, but in a lawful and legitimate manner to assess the security posture of the target system(s).” In contrast to a cracker, who is a malicious hacker, an ethical hacker “is someone who employs the same tools and techniques a criminal might use, with the customer’s full support and approval, to help secure a network or system” (Walker, 2017, p. 29).
 
-This analysis frames an understanding of professional ethical hackers as white hat hackers who abide by well established and widely accepted industry and government standards, guidelines, and licensing and accreditation requirements regarding what constitutes professional practice. First, the analysis differentiates white hat hackers from grey hat hackers, black hat hackers, and hacktivists on the basis of legal practice. Next, the analysis explores the key properties (themes) of professional ethics of professional ethical hackers as stipulated/enriched within various industry standards, guidelines, and conventions. Finally, the discussion presents an analysis of four types of hacker groups classified based on the legality of their practices and the imperative of professional conduct.
+First, the analysis differentiates white hat hackers from grey hat hackers, black hat hackers, and hacktivists on the basis of legal practice. Next, the analysis explores the key properties (themes) of professional ethics of professional ethical hackers as stipulated/enriched within various industry standards, guidelines, and conventions. Finally, the discussion presents an analysis of four types of hacker groups classified based on the legality of their practices and the imperative of professional conduct.
 
 ### Ethical hacking is legal
 

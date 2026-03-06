@@ -60,17 +60,17 @@ Ethical hackers operate within a structured framework of professional codes of c
 
 * Industry certifications and training: CEH Code of Ethics (EC-Council), OSCP (Offensive Security Code of Conduct), (ISC)² Code of Ethics, ISACA Code of Professional Ethics.
 * Professional associations: ACM Code of Ethics (2018), IEEE standards/guidelines (IEEE Cybersecurity Initiative, IEEE Certified Ethical Hacker (CEH) resources), IEEE code of ethics, IEEE code of conduct.
-* Industry standards/guidelines: OSSTMM, ISO/IEC 27001, OWASP (Open Web Application Security Project) Testing Guide, PCI DSS Penetration Testing Guidance.
-* Regulatory/governmental standards/guidelines: NIST SP 800-12 and NIST SP 800-53 touch on broader security and privacy principles, NIST SP 800-115 (Technical Guide to Penetration Testing) emphasizes authorized testing.
-* Professional licensing/accreditation bodies: Professional Engineers Ontario (PEO)/PEO code of ethics, Canadian Engineering Accreditation Board (CEAB), Canadian Information Processing Society (CIPS).
+* Industry standards and guidelines: OSSTMM, ISO/IEC 27001, OWASP (Open Web Application Security Project) Testing Guide, PCI DSS Penetration Testing Guidance.
+* Regulatory/governmental standards and guidelines: NIST SP 800-12 and NIST SP 800-53 touch on broader security and privacy principles, NIST SP 800-115 (Technical Guide to Penetration Testing) emphasizes authorized testing.
+* Professional licensing and accreditation bodies: Professional Engineers Ontario (PEO)/PEO code of ethics, Canadian Engineering Accreditation Board (CEAB), Canadian Information Processing Society (CIPS).
 
-This segment explores the professional ethics of ethical hackers as stipulated/enriched in several key formal codes of ethical conduct (professionalism as grounded in university training, and professionalism as grounded in industry standards), and conventional codes of ethical conduct (professionalism as grounded in industry conventions).
+This segment explores the professional ethics of ethical hackers as stipulated in several key formal codes of ethical conduct (professionalism as grounded in university training, and professionalism as grounded in industry standards), and conventional codes of ethical conduct (professionalism as grounded in industry conventions).
 
 #### Professionalism as grounded in university training
 
-Three Canadian university professors (PPT11, PPT3, PPT10) of computer science disciplines interviewed for a PhD thesis said professionalism, as in professional ethics or a professional code of conduct, guides the behavior of professional engineers and computer scientists.
+Three Canadian university professors (PPT11, PPT3, PPT10) of computer science and computer engineering disciplines interviewed for a PhD thesis said professionalism, as in professional ethics or a professional code of conduct, guides the behavior of professional engineers and computer scientists.
 
-As a professional engineer, said a Canadian university professor of computer science and software engineering (PPT3), he is “bound by a number of codes of practice, of ethics.” “As a professional engineer, I’m bound by the PEO code of ethics … I’m also bound by the software engineering code of ethics, the ACM code of ethics, the IEEE code of ethics, because I’m members of multiple societies that have codes.” PPT3 says he teaches “five different codes of ethics. They are all broadly the same, but I teach about them to students.” PPT3 adds:
+As a professional engineer, said a Canadian university professor of computer science and software engineering (PPT3), he is “bound by a number of codes of practice, of ethics.” “As a professional engineer, I’m bound by the PEO code of ethics … I’m also bound by the software engineering code of ethics, the ACM code of ethics, the IEEE code of ethics, because I’m members of multiple societies that have codes.” PPT3 said he teaches “five different codes of ethics. They are all broadly the same, but I teach about them to students.” PPT3 added:
 
 That is in the course calendar descriptions and it’s also in our accreditation. We are accredited by CIPS, the Canadian Information Processing Society, and by the Canadian Engineering Accreditation Board, and both of those require us to teach students about ethics.
 
@@ -78,11 +78,11 @@ Accreditation bodies like the Canadian Engineering Accreditation Board (CEAB) an
 
 Adhering to multiple overlapping ethical guidelines, all of which reinforce the same core values, ensures that ethical hackers do not merely rely on personal judgment but follow institutionalized best practices that have been refined over decades. University programs teaching ethical hacking incorporate these professional codes into their curricula to ensure graduates enter the field with a strong ethical foundation.
 
-Key assumptions involved in this perspective is that university instruction equips students with ethical, scientific, and critical thinking skills necessary for professionalism on the job.
+In the context of university instruction, key assumptions are that university instruction equips students with ethical decision making, scientific thinking, and critical thinking skills necessary for professionalism on the job.
 
 It’s kind of like when software engineering became an engineering discipline. There were a lot of coders that knew how to code, but they didn’t have the mindset to approach it as a systematic large problem. I think ethical hacking is a very similar thing. (PPT11)
 
-PPT11 adds, ethical hacking “has become more of an engineering type of discipline now. There’s structure, there’s rigor, there’s tools out there that can be used for it … you need to systematically approach a problem, how to see if you can penetrate a system or not.” It is “that systematic nature that most of the underground ethical hackers, or the small people, don’t have because they’ve never had exposure to doing it in kind of an engineering mindset.”
+PPT11 added, ethical hacking “has become more of an engineering type of discipline now. There’s structure, there’s rigor, there’s tools out there that can be used for it … you need to systematically approach a problem, how to see if you can penetrate a system or not.” It is “that systematic nature that most of the underground ethical hackers, or the small people, don’t have because they’ve never had exposure to doing it in kind of an engineering mindset.”
 
 #### Professionalism as grounded in industry standards
 

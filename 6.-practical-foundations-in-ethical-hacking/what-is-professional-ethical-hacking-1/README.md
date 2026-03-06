@@ -101,9 +101,9 @@ Second, the discussion sheds light on key professional ethical hacking ethics of
 
 This segment explores what are the key professional ethics and values of an ethical hacker, and how are they defined by these authoritative sources? The following two tables summarize the key findings.
 
-Table 1 shows how the core ethical principles are formally mandated by the major bodies that certify ethical hackers. The Clarifying Comments focus on why each theme is a key component of professional ethics.
+The following table shows how the core ethical principles are formally mandated by the major bodies that certify ethical hackers. The Clarifying Comments focus on why each theme is a key component of professional ethics.
 
-**Table 1: Professional ethics as defined by industry certifications and training authorities**
+**Professional Ethics as Defined by Industry Certifications and Training Authorities**
 
 | Theme                             | How it Defines Professional Ethics (as seen in CEH, OSCP, (ISC)², ISACA)                                                                                                                                | Clarifying Comment on its Ethical Significance                                                                                                                                    |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -122,7 +122,7 @@ Table 1 shows how the core ethical principles are formally mandated by the major
 
 The following table sheds light on key provisions within ethics codes of industry certifications and training authorities.
 
-**Key codes of conduct for information security professionals (adapted from Thomas et al., 2018, pp. 5-6)**
+**Key Codes of Conduct for Information Security Professionals (Adapted From Thomas et al., 2018, pp. 5-6)**
 
 | **Code of conduct**                                                                                                                                                                                                                                           | **Key directives**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -136,7 +136,7 @@ The following table sheds light on key provisions within ethics codes of industr
 
 The following table shows how broader professional communities and technical standards operationalize and reinforce these same ethical principles.
 
-**Table 2: Professional ethics as reinforced by professional associations and industry standards**
+**Professional Ethics as Reinforced by Professional Associations and Industry Standards**
 
 | Theme                             | How it Defines Professional Ethics (as seen in ACM, IEEE, OSSTMM, OWASP, etc.)                                                                                           | Clarifying Comment on its Ethical Significance                                                                                                                    |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |

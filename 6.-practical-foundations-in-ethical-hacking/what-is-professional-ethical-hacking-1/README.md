@@ -18,7 +18,6 @@ This section advances an understanding that ethical hackers are white hat hacker
 
 ## Topics covered in this section
 
-* **Introduction**
 * **Ethical hacking is legal**
 * **Professional ethics of ethical hackers**
   * **Professionalism as grounded in university training**
@@ -31,11 +30,9 @@ This section advances an understanding that ethical hackers are white hat hacker
   * **Hacktivists: The Politically Motivated Hackers**
 * **Other perspectives on hacker ethics**
 
-### Introduction
+### Ethical hacking is legal
 
 A Certified Ethical Hacker (EC-Council) is, “a skilled professional who understands and knows how to look for weaknesses and vulnerabilities in target systems and uses the same knowledge and tools as a malicious hacker, but in a lawful and legitimate manner to assess the security posture of the target system(s).” In contrast to a cracker, who is a malicious hacker, an ethical hacker “is someone who employs the same tools and techniques a criminal might use, with the customer’s full support and approval, to help secure a network or system” (Walker, 2017, p. 29).
-
-### Ethical hacking is legal
 
 Various perspectives can be used to distinguish between white hat hackers, grey hat hackers, black hat hackers, and hacktivists (e.g., see "Other perspectives on hacking/hacker ethics"). However, we make a comparison differentiating between these four hacker groups and their hacking practices on the logic that there is only one category of legal hacking: white hat hacking. Ethical hackers necessarily fit into the white hat hackers group—there's no ambiguity regrading the legality of their practices.
 

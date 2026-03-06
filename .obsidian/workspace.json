@@ -20,20 +20,6 @@
               "icon": "lucide-file",
               "title": "README"
             }
-          },
-          {
-            "id": "4dc6a15f28d212c8",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://docs.google.com/document/d/e/2PACX-1vQVQ4AWXWyM83aXg5QxKwWkl9Oi8-gfRvUh7WhrMKekgb_I8yph4dTOtQYoXjflUA_6roJD5hWRGUT5/pub",
-                "title": "Profiles of Hackers",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "Profiles of Hackers"
-            }
           }
         ]
       }

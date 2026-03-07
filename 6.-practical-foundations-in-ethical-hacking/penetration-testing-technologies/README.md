@@ -110,7 +110,11 @@ Beyond initial access, Metasploit's true power is its extensive post-exploitatio
 
 ### Burp Suite
 
-Burp Suite dominates the field of web application penetration testing by providing an integrated platform of specialized tools. It is available in two versions: Burp Suite Professional (paid) and Burp Suite Community Edition. Its core components include the **Proxy**, which allows testers to intercept, inspect, and modify all HTTP/S traffic between the browser and the target application, crucial for bypassing client-side validation. The **Repeater** tool enables manual manipulation and resending of individual requests to test for vulnerabilities like insecure direct object references or logic flaws, while **Intruder** automates attacks such as brute-forcing login forms, fuzzing parameters for injection points, and enumerating values.
+Burp Suite dominates the field of web application penetration testing by providing an integrated platform of specialized tools. It is available in two versions: Burp Suite Professional (paid) and Burp Suite Community Edition. Burp Suite's core components include: 
+
+- The **Proxy**, which allows testers to intercept, inspect, and modify all HTTP/S traffic between the browser and the target application, crucial for bypassing client-side validation.
+- The **Repeater** tool enables manual manipulation and resending of individual requests to test for vulnerabilities like insecure direct object references or logic flaws.
+- The **Intruder** automates attacks such as brute-forcing login forms, fuzzing parameters for injection points, and enumerating values.
 
 The key differences between Burp Suite Professional and Burp Suite Community Edition pertain to the following features:
 

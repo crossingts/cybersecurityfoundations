@@ -194,7 +194,7 @@ Research by Tavani (2016) emphasizes the duty of care that ethical hackers owe t
 
 Ethical hackers use the same tools as malicious hackers but with the strategic end of fortifying a computer system's security. While ethical hackers aim principally to achieve security risk mitigation, the various other hacker groups hold other priorities for their hacking activities. Follows is an analysis of the four types of hacker groups classified based on the legality of their practices and the professionalism of their conduct.
 
-#### White Hat Hackers: The Ethical Professionals <a href="#ember515" id="ember515"></a>
+#### White Hat Hackers: The Ethical Professionals
 
 White hat hackers only hack computer systems or machines with legal authorization to do so (including legal contractual agreements). So whether resident (in-house) employees of a company or hired by a company for security testing, the practices of white hat hackers would be ethical as long as hacking is performed in accordance with agreed upon terms and within the specified authorization parameters. Bug bounty hunters are ethical hackers since they work within this legal contractual framework.
 

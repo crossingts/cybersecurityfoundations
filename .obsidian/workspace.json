@@ -20,6 +20,20 @@
               "icon": "lucide-file",
               "title": "README"
             }
+          },
+          {
+            "id": "483bc6505a718e4f",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://journals.sagepub.com/doi/10.1177/1463499608093814",
+                "title": "Just a moment...",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "Just a moment..."
+            }
           }
         ]
       }
@@ -183,8 +197,8 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
-    "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/README.md",
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/README.md",
+    "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/README.md",
     "1.-it-career-planning/job-search-strategy/README.md",
     "1.-it-career-planning/the-grc-analyst-job-role/README.md",
     "1.-it-career-planning/the-security-operations-center-soc-career-path/README.md",

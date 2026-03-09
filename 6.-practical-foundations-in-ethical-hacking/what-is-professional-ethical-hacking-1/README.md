@@ -229,7 +229,7 @@ The practices of white hats align with well-established professional codes and i
 
 #### Grey hat hackers: The unauthorized researchers <a href="#ember524" id="ember524"></a>
 
-Grey hat hackers fall between white and black hats—they hack computer systems without permission but usually claim altruistic motives (Jordan & Taylor, 2004). They often breach regulations (e.g., CFAA) in the course of discovering security flaws within commercial software—a practice critiqued in literature as "vigilante security" (Denning, 2010). They then notify the software vendor asking it to fix discovered vulnerabilities and threaten public exposure of the vulnerabilities if the vendor does not oblige (sometimes they demand payment). While some may genuinely help improve security, their methods are illegal and ethically questionable. Some call themselves security researchers, but legitimate researchers work within legal frameworks (e.g., ethical hacking consultants).
+Grey hat hackers fall between white and black hats—they hack computer systems without permission but usually claim altruistic motives (Jordan & Taylor, 2004). They often breach regulations (e.g., CFAA) in the course of discovering security flaws within commercial software—a practice critiqued as a form of vigilante security. They then notify the software vendor asking it to fix discovered vulnerabilities and threaten public exposure of the vulnerabilities if the vendor does not oblige (sometimes they demand payment). While some may genuinely help improve security, their methods are illegal and ethically questionable. Some call themselves security researchers, but legitimate researchers work within legal frameworks (e.g., ethical hacking consultants).
 
 **Key Traits of Grey Hat Hackers**
 
@@ -248,7 +248,7 @@ Grey hat hackers fall between white and black hats—they hack computer systems 
 
 Black hat hackers come in two variations. The original, more traditional attribution of the label "black hat hackers" is associated with bad actors who hack for personal profit or for some other criminal goal. A more recent and potentially confusing use of the term "black hat hacking" sometimes appears in discussions of black box testing, where the tester has no prior knowledge of the target system—a methodology that is perfectly legal when properly authorized. Within our classification scheme, however, black hats are criminally-minded.
 
-Black hat hackers as criminals engage in illegal hacking for personal gain, sabotage, or espionage (Chandler, 1996). They exploit vulnerabilities to steal data, deploy ransomware, or disrupt systems. Research ties them to organized crime and state-sponsored threats (Rid, 2013), with motivations ranging from financial theft to ideological disruption. Unlike white hats, they have no ethical constraints and often work within organized cybercrime syndicates or are rogue intelligence operatives. Their activities include identity theft, financial fraud, and espionage.
+Black hat hackers as criminals engage in illegal hacking for personal gain, sabotage, or espionage (Chandler, 2017). They exploit vulnerabilities to steal data, deploy ransomware, or disrupt systems. Research ties them to organized crime and state-sponsored threats (Rid, 2013), with motivations ranging from financial theft to ideological disruption. Unlike white hats, they have no ethical constraints and often work within organized cybercrime syndicates or are rogue intelligence operatives. Their activities include identity theft, financial fraud, and espionage.
 
 **Key Traits of Black Hat Hackers**
 
@@ -322,15 +322,13 @@ Coleman and Golub (2008) offer an anthropological taxonomy of various hacker eth
 
 Andrasik, J. (2016). _Penetration testing: A guide for business and IT management_. CreateSpace Independent Publishing Platform.
 
-Bodhani, A. (2013). Hacking it. _Engineering & Technology, 8_(6), 64–67. [https://doi.org/10.1049/et.2013.0614](https://doi.org/10.1049/et.2013.0614)
+Bodhani, A. (2013). Hacking it. _Engineering & Technology, 8_(6), 64–67. 
 
-Chandler, A. (1996). The changing definition and image of hackers in popular discourse. _International Journal of the Sociology of Law, 24_(2), 229–251. [https://doi.org/10.1006/ijsl.1996.0012](https://doi.org/10.1006/ijsl.1996.0012)
+Chandler, A. (2017). The changing definition and image of hackers in popular discourse. In Cyberspace Crime (pp. 121-143). Routledge.
 
-Coleman, E. G., & Golub, A. (2008). Hacker practice: Moral genres and the cultural articulation of liberalism. _Anthropological Theory, 8_(3), 255–277. [https://doi.org/10.1177/1463499608093814](https://doi.org/10.1177/1463499608093814)
+Coleman, E. G., & Golub, A. (2008). Hacker practice: Moral genres and the cultural articulation of liberalism. _Anthropological Theory, 8_(3), 255–277. 
 
 Coleman, G. (2014). _Hacker, Hoaxer, Whistleblower, Spy: The Many Faces of Anonymous_. Verso.
-
-Denning, D. (2010). "Cyber Conflict as an Emergent Social Phenomenon." _Corporate Cyber Security_.
 
 Graves, K. (2010). _Certified ethical hacker study guide_. John Wiley & Sons.
 

@@ -154,7 +154,7 @@ The client relationship is defined by a strict set of ethical imperatives that a
 
 These ethical obligations are operationalized through methodological commitments codified in industry standards and guidelines. Documents like the OWASP Testing Guide and OSSTMM provide the detailed, peer-reviewed best practices that translate ethical intentions into safe, effective, and repeatable actions. Adherence to these methodologies is itself an ethical duty, as it ensures skills are applied competently and minimizes the risk of negligent testing. Ultimately, the consistent application of these themes—from foundational integrity to client-focused actions and methodological rigor—culminates in the profession’s highest duty: protecting the public. By creating more secure systems through ethical conduct, the professional hacker fulfills a social responsibility that extends beyond the immediate client, a principle championed by associations like ACM and IEEE and embedded in the outcomes of security-focused standards.
 
-The universality of these ethical principles across various standards/guidelines/conventions/codes of ethical conduct reinforces that ethical hacking is not a subjective practice but one grounded in well-established professional norms. By internalizing these codes, ethical hackers ensure their work enhances cybersecurity without veering into ethically questionable practices. 
+The universality of these ethical principles across various standards/guidelines/conventions/codes of ethical conduct reinforces that ethical hacking is not a subjective practice but one grounded in well established professional norms. By internalizing these codes, ethical hackers ensure their work enhances cybersecurity without veering into ethically questionable practices. 
 
 #### Professionalism as grounded in industry conventions
 
@@ -198,16 +198,20 @@ Ethical hackers use the same tools as malicious hackers but with the strategic e
 
 White hat hackers only hack computer systems or machines with legal authorization to do so (including legal contractual agreements). So whether resident (in-house) employees of a company or hired by a company for security testing, the practices of white hat hackers would be ethical as long as hacking is performed in accordance with agreed upon terms and within the specified authorization parameters. Bug bounty hunters are ethical hackers since they work within this legal contractual framework.
 
-The practices of white hats align with professional codes such as the ACM Code of Ethics (2018), which mandates permission-based hacking (e.g., Principle 2.8: "Access computing and communication resources only when authorized"), the IEEE Code of Ethics, the IEEE Code of Conduct, and the IEEE Cybersecurity Initiative.
+The practices of white hats align with well-established professional codes and industry standards that mandate authorization and ethical conduct. For example:
 
-White hats operate with explicit client permission and follow well established penetration testing industry and regulatory ethical guidelines (e.g., EC-Council’s CEH, OffSec's OSCP, ISO/IEC 27001, IEEE 802.10, OWASP, and NIST SP 800-115):
+**Professional Codes**
 
-* EC-Council’s CEH Code of Ethics (explicit rules for pentesters).
-* Offensive Security's OSCP curriculum includes ethics module to reinforce professional conduct.
-* ISO/IEC 27001 (includes security testing norms).
-* IEEE 802.10 (historical standard for security) and newer frameworks emphasize authorized testing.
-* OWASP (Open Web Application Security Project) provide guidelines for responsible vulnerability disclosure.
-* NIST SP 800-115 (Technical Guide to Penetration Testing) emphasizes authorized testing.
+- **ACM Code of Ethics (2018)** – Mandates permission-based hacking (Principle 2.8: "Access computing and communication resources only when authorized").
+- **IEEE Code of Ethics, IEEE Code of Conduct, and IEEE Cybersecurity Initiative** – Emphasize honesty, avoiding harm, and maintaining confidentiality.
+
+**Industry Standards**
+
+- **EC-Council's CEH Code of Ethics** – Provides explicit rules for penetration testers, including confidentiality and proper authorization.
+- **Offensive Security's OSCP curriculum** – Includes an ethics module to reinforce professional conduct.
+- **OWASP (Open Web Application Security Project) Testing Guide** – Offers guidelines for responsible vulnerability disclosure and ethical testing methodologies.
+- **ISO/IEC 27001** – Incorporates security testing norms under its authorization and compliance requirements (A.18.1.4).
+- **NIST SP 800-115** – The Technical Guide to Penetration Testing explicitly emphasizes authorized testing.
 
 **Key traits of ethical hackers:**
 

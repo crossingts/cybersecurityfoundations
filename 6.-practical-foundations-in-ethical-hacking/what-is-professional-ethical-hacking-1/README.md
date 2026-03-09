@@ -229,7 +229,7 @@ The practices of white hats align with well-established professional codes and i
 
 #### Grey hat hackers: The unauthorized researchers <a href="#ember524" id="ember524"></a>
 
-Grey hat hackers fall between white and black hats—they hack computer systems without permission but usually claim altruistic motives (Jordan & Taylor, 2004). They often breach regulations (e.g., CFAA) in the course of discovering security flaws within commercial software—a practice critiqued as a form of vigilante security. They then notify the software vendor asking it to fix discovered vulnerabilities and threaten public exposure of the vulnerabilities if the vendor does not oblige (sometimes they demand payment). While some may genuinely help improve security, their methods are illegal and ethically questionable. Some call themselves security researchers, but legitimate researchers work within legal frameworks (e.g., ethical hacking consultants).
+Grey hat hackers fall between white and black hats—they hack computer systems without permission but usually claim altruistic motives. They often breach regulations (e.g., CFAA) in the course of discovering security flaws within commercial software—a practice critiqued as a form of vigilante security. They then notify the software vendor asking it to fix discovered vulnerabilities and threaten public exposure of the vulnerabilities if the vendor does not oblige (sometimes they demand payment). While some may genuinely help improve security, their methods are illegal and ethically questionable. Some call themselves security researchers, but legitimate researchers work within legal frameworks (e.g., ethical hacking consultants).
 
 **Key Traits of Grey Hat Hackers**
 
@@ -301,7 +301,7 @@ The pioneering historical work of Steven Levy (1984) on hacker culture and hacke
 * You can create art and beauty on a computer.
 * Computers can change your life for the better.
 
-Coleman and Golub (2008) offer an anthropological taxonomy of various hacker ethic (hacker groups) based on idioms and practices. Coleman and Golub (2008) see various hacker ethic as representative of the subjective self. They conceptualize three liberal moral expressions of hackers and hacking (cultural sensibilities or hacker ethics) revealed variably in the context of computer hacking: Cryptofreedom, free and open source software, and the hacker underground (see [Table 14: Profiles of Hackers](https://docs.google.com/document/d/e/2PACX-1vQVQ4AWXWyM83aXg5QxKwWkl9Oi8-gfRvUh7WhrMKekgb_I8yph4dTOtQYoXjflUA_6roJD5hWRGUT5/pub)).
+Coleman and Golub (2008) offer an anthropological taxonomy of various hacker ethic (hacker groups) based on idioms and practices. Coleman and Golub (2008) see various hacker ethic as representative of the subjective self. They conceptualize three liberal moral expressions of hackers and hacking (cultural sensibilities or hacker ethics) revealed variably in the context of computer hacking: Cryptofreedom, free and open source software, and the hacker underground (see [Table: Profiles of Hackers](https://docs.google.com/document/d/e/2PACX-1vQVQ4AWXWyM83aXg5QxKwWkl9Oi8-gfRvUh7WhrMKekgb_I8yph4dTOtQYoXjflUA_6roJD5hWRGUT5/pub)).
 
 ### Key takeaways
 
@@ -336,7 +336,7 @@ Harper, A., Harris, S., Ness, J., & Eagle, C. (2011). _Gray hat hacking: The eth
 
 Harris, A. (2021). _Penetration testing essentials_. John Wiley & Sons.
 
-Jordan, T., & Taylor, P. (2004). _Hacktivism and cyberwars: Rebels with a cause?_ Routledge. [https://doi.org/10.4324/9780203637997](https://doi.org/10.4324/9780203637997)
+
 
 Levy, S. (1984). _Hackers: Heroes of the computer revolution_. Anchor Press/Doubleday.
 

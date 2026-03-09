@@ -20,6 +20,20 @@
               "icon": "lucide-file",
               "title": "README"
             }
+          },
+          {
+            "id": "5ab20ace11c4c8e4",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://www.tandfonline.com/doi/full/10.1080/10580530701585823",
+                "title": "Hacking into the Minds of Hackers: Information Systems Management: Vol 24 , No 4 - Get Access",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "Hacking into the Minds of Hackers: Information Systems Management: Vol 24 , No 4 - Get Access"
+            }
           }
         ]
       }

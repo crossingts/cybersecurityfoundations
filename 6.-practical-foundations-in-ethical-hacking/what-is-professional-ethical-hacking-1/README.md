@@ -188,7 +188,7 @@ Ethical hackers should take “all precautions to do no harm to their systems du
 
 In the case of computer security, these “tiger teams” or “ethical hackers” would employ the same tools and techniques as the intruders, but they would neither damage the target systems nor steal information. Instead, they would evaluate the target systems’ security and report back to the owners with the vulnerabilities they found and instructions for how to remedy them. (Palmer, 2001, p. 770)
 
-Research by Tavani (2016) emphasizes the duty of care that ethical hackers owe to organizations and end-users. This includes avoiding unnecessary disruptions (e.g., crashing production servers) and ensuring that discovered vulnerabilities are not leaked to malicious actors. Additionally, ethical hackers must avoid conflicts of interest—such as working for competing firms without transparency—to maintain professional credibility.
+Ethical hackers owe a duty of care to organizations and end-users. This includes avoiding unnecessary disruptions (e.g., crashing production servers) and ensuring that discovered vulnerabilities are not leaked to malicious actors. Additionally, ethical hackers must avoid conflicts of interest—such as working for competing firms without transparency—to maintain professional credibility.
 
 ### Profiles of hackers
 
@@ -215,11 +215,11 @@ The practices of white hats align with well-established professional codes and i
 
 **Key Traits of White Hat Hackers**
 
-* Operate legally under contracts or employment agreements (Schneier, 2020).
+* Operate legally under contracts or employment agreements.
 * Follow responsible disclosure practices (ISO/IEC 29147), e.g., report vulnerabilities privately to the vendor.
 * Motivated by improving security, not fame or profit.
 * Often hold industry certifications like CEH (Certified Ethical Hacker) or OSCP (Offensive Security Certified Professional).
-* Compliance with laws like the Computer Fraud and Abuse Act (CFAA) (Schneier, 2020).
+* Compliance with laws like the Computer Fraud and Abuse Act (CFAA).
 
 **Examples:**
 
@@ -265,7 +265,7 @@ Black hat hackers as criminals engage in illegal hacking for personal gain, sabo
 
 #### Hacktivists: The politically motivated hackers <a href="#ember537" id="ember537"></a>
 
-Hacktivists leverage cyber techniques for political or social causes, blurring the line between activism and cybercrime (Samuel, 2004). While some actions (e.g., DDoS attacks) are illegal, their goals distinguish them from profit-driven black hats (Coleman, 2014). Unlike black hats, they are not primarily motivated by money but by ideology. Their targets include governments, corporations, or organizations they oppose. Tactics include DDoS attacks, website defacements, and data leaks.
+Hacktivists leverage cyber techniques for political or social causes, blurring the line between activism and cybercrime. While some actions (e.g., DDoS attacks) are illegal, their goals distinguish them from profit-driven black hats (Coleman, 2014). Unlike black hats, they are not primarily motivated by money but by ideology. Their targets include governments, corporations, or organizations they oppose. Tactics include DDoS attacks, website defacements, and data leaks.
 
 **Key Traits of Hacktivists**
 
@@ -342,18 +342,11 @@ Logan, P. Y., & Clarkson, A. (2005). Teaching students to hack: Curriculum issue
 
 Palmer, C. C. (2001). Ethical hacking. _IBM Systems Journal, 40_(3), 769–780. [https://doi.org/10.1147/sj.403.0769](https://doi.org/10.1147/sj.403.0769)
 
-Pashel, B. A. (2006). Teaching students to hack: Ethical implications in teaching students to hack at the university level. In _Proceedings of the 4th annual conference on Information security curriculum development_ (pp. 197–200). [https://doi.org/10.1145/1231047.1231086](https://doi.org/10.1145/1231047.1231086)
+Pashel, B. A. (2006). Teaching students to hack: Ethical implications in teaching students to hack at the university level. In _Proceedings of the 4th annual conference on Information security curriculum development_ (pp. 197–200).
 
 Pike, G. H. (2013). The law and ethics of hiring hackers. _Information Today, 30_(9), 1, 34.
 
-
-Samuel, A. (2004). Hacktivism and the future of political participation. _Harvard Law Review, 117_(8), 2714–2727. [https://doi.org/10.2307/4093405](https://doi.org/10.2307/4093405)
-
-Schneier, B. (2020). _Click here to kill everybody: Security and survival in a hyper-connected world._ W.W. Norton & Company.
-
-Sharma, S., & Sefchek, J. (2007). Teaching information systems security courses: A hands-on approach. _Computers & Security, 26_(4), 290–299. [https://doi.org/10.1016/j.cose.2006.11.005](https://doi.org/10.1016/j.cose.2006.11.005)
-
-Tavani, H. T. (2016). _Ethics and technology: Controversies, questions, and strategies for ethical computing_ (5th ed.). John Wiley & Sons.
+Sharma, S., & Sefchek, J. (2007). Teaching information systems security courses: A hands-on approach. _Computers & Security, 26_(4), 290–299. 
 
 Thomas, T., Andrasik, F., & Morato, E. (2018). *Ethical hacking: A comprehensive beginner's guide*. CRC Press.
 

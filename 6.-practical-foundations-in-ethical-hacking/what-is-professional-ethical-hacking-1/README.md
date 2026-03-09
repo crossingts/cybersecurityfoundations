@@ -24,10 +24,10 @@ This section advances an understanding that ethical hackers are white hat hacker
   * **Professionalism as grounded in industry standards**
   * **Professionalism as grounded in industry conventions**
 * **Profiles of hackers**
-  * **White Hat Hackers: The Ethical Professionals**
-  * **Grey Hat Hackers: The Unauthorized Researchers**
-  * **Black Hat Hackers: The Criminals**
-  * **Hacktivists: The Politically Motivated Hackers**
+  * **White hat hackers: The ethical professionals**
+  * **Grey hat hackers: The unauthorized researchers**
+  * **Black hat hackers: The criminals**
+  * **Hacktivists: The politically motivated hackers**
 * **Other perspectives on hacker ethics**
 
 ### Ethical hacking is legal
@@ -194,7 +194,7 @@ Research by Tavani (2016) emphasizes the duty of care that ethical hackers owe t
 
 Ethical hackers use the same tools as malicious hackers but with the strategic end of fortifying a computer system's security. While ethical hackers aim principally to achieve security risk mitigation, the various other hacker groups hold other priorities for their hacking activities. Follows is an analysis of the four types of hacker groups classified based on the legality of their practices and the professionalism of their conduct.
 
-#### White Hat Hackers: The Ethical Professionals
+#### White hat hackers: The ethical professionals
 
 White hat hackers only hack computer systems or machines with legal authorization to do so (including legal contractual agreements). So whether resident (in-house) employees of a company or hired by a company for security testing, the practices of white hat hackers would be ethical as long as hacking is performed in accordance with agreed upon terms and within the specified authorization parameters. Bug bounty hunters are ethical hackers since they work within this legal contractual framework.
 
@@ -213,7 +213,7 @@ The practices of white hats align with well-established professional codes and i
 - **ISO/IEC 27001** – Incorporates security testing norms under its authorization and compliance requirements (A.18.1.4).
 - **NIST SP 800-115** – The Technical Guide to Penetration Testing explicitly emphasizes authorized testing.
 
-**Key traits of ethical hackers:**
+**Key Traits of Ethical Hackers**
 
 * Operate legally under contracts or employment agreements (Schneier, 2020).
 * Follow responsible disclosure practices (ISO/IEC 29147), e.g., report vulnerabilities privately to the vendor.
@@ -227,7 +227,7 @@ The practices of white hats align with well-established professional codes and i
 2. **Charlie Miller** – A well-known security researcher who worked for companies like Uber and Cruise Automation, uncovering critical vulnerabilities responsibly.
 3. **Troy Hunt** – Creator of _Have I Been Pwned_, a security expert who collaborates with companies to expose data breaches ethically.
 
-#### Grey Hat Hackers: The Unauthorized Researchers <a href="#ember524" id="ember524"></a>
+#### Grey hat hackers: The unauthorized researchers <a href="#ember524" id="ember524"></a>
 
 Grey hat hackers fall between white and black hats—they hack computer systems without permission but usually claim altruistic motives (Jordan & Taylor, 2004). They often breach regulations (e.g., CFAA) in the course of discovering security flaws within commercial software—a practice critiqued in literature as "vigilante security" (Denning, 2010). They then notify the software vendor asking it to fix discovered vulnerabilities and threaten public exposure of the vulnerabilities if the vendor does not oblige (sometimes they demand payment). While some may genuinely help improve security, their methods are illegal and ethically questionable. Some call themselves security researchers, but legitimate researchers work within legal frameworks (e.g., ethical hacking consultants).
 

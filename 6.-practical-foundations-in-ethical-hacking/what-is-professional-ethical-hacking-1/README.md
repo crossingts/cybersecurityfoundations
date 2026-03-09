@@ -213,7 +213,7 @@ The practices of white hats align with well-established professional codes and i
 - **ISO/IEC 27001** – Incorporates security testing norms under its authorization and compliance requirements (A.18.1.4).
 - **NIST SP 800-115** – The Technical Guide to Penetration Testing explicitly emphasizes authorized testing.
 
-**Key Traits of Ethical Hackers**
+**Key Traits of White Hat Hackers**
 
 * Operate legally under contracts or employment agreements (Schneier, 2020).
 * Follow responsible disclosure practices (ISO/IEC 29147), e.g., report vulnerabilities privately to the vendor.
@@ -231,7 +231,7 @@ The practices of white hats align with well-established professional codes and i
 
 Grey hat hackers fall between white and black hats—they hack computer systems without permission but usually claim altruistic motives (Jordan & Taylor, 2004). They often breach regulations (e.g., CFAA) in the course of discovering security flaws within commercial software—a practice critiqued in literature as "vigilante security" (Denning, 2010). They then notify the software vendor asking it to fix discovered vulnerabilities and threaten public exposure of the vulnerabilities if the vendor does not oblige (sometimes they demand payment). While some may genuinely help improve security, their methods are illegal and ethically questionable. Some call themselves security researchers, but legitimate researchers work within legal frameworks (e.g., ethical hacking consultants).
 
-**Key traits of grey hat hackers:**
+**Key Traits of Grey Hat Hackers**
 
 * Hack without permission but often claim to act in the public interest.
 * May extort companies by threatening to release vulnerabilities.
@@ -244,13 +244,13 @@ Grey hat hackers fall between white and black hats—they hack computer systems 
 2. **The Anonymous Researcher Who Leaked iOS Vulnerabilities** – Some grey hats have exposed Apple or Microsoft flaws without authorization, claiming it was for public safety.
 3. **Researchers Who Sold Zero-Days** – Some grey hats have sold exploits to companies (or even governments) instead of reporting them responsibly.
 
-#### Black Hat Hackers: The Criminals <a href="#ember530" id="ember530"></a>
+#### Black hat hackers: The criminals <a href="#ember530" id="ember530"></a>
 
 Black hat hackers come in two variations. The original/more traditional attribution of the label "black hat hackers" is associated with bad actors who hack for personal profit or for some other criminal goal. A more recent and potentially confusing use of the term "black hat hacking" sometimes appears in discussions of black box testing, where the tester has no prior knowledge of the target system—a methodology that is perfectly legal when properly authorized. Within our classification scheme, however, black hats are criminally-minded.
 
 Black hat hackers as criminals engage in illegal hacking for personal gain, sabotage, or espionage (Chandler, 1996). They exploit vulnerabilities to steal data, deploy ransomware, or disrupt systems. Research ties them to organized crime and state-sponsored threats (Rid, 2013), with motivations ranging from financial theft to ideological disruption. Unlike white hats, they have no ethical constraints and often work within organized cybercrime syndicates or are rogue intelligence operatives. Their activities include identity theft, financial fraud, and espionage.
 
-**Key traits of black hat hackers:**
+**Key Traits of Black Hat Hackers**
 
 * Operate purely for personal profit or destruction.
 * Use malware, phishing, and zero-day exploits maliciously.
@@ -263,11 +263,11 @@ Black hat hackers as criminals engage in illegal hacking for personal gain, sabo
 2. **Evgeniy Bogachev** – Creator of the _Zeus_ banking Trojan, responsible for stealing over $100 million.
 3. **The Lazarus Group** – A North Korean state-sponsored hacking group behind the _Sony Pictures hack_ and _WannaCry_.
 
-#### Hacktivists: The Politically Motivated Hackers <a href="#ember537" id="ember537"></a>
+#### Hacktivists: The politically motivated hackers <a href="#ember537" id="ember537"></a>
 
 Hacktivists leverage cyber techniques for political or social causes, blurring the line between activism and cybercrime (Samuel, 2004). While some actions (e.g., DDoS attacks) are illegal, their goals distinguish them from profit-driven black hats (Coleman, 2014). Unlike black hats, they are not primarily motivated by money but by ideology. Their targets include governments, corporations, or organizations they oppose. Tactics include DDoS attacks, website defacements, and data leaks.
 
-**Key traits of hacktivists:**
+**Key Traits of Hacktivists**
 
 * Motivated by political/social causes (e.g., human rights, anti-censorship).
 * May work in collectives (e.g., _Anonymous_).

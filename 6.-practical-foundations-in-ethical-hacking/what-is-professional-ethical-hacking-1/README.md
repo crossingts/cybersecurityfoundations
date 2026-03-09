@@ -248,7 +248,7 @@ Grey hat hackers fall between white and black hats—they hack computer systems 
 
 Black hat hackers come in two variations. The original, more traditional attribution of the label "black hat hackers" is associated with bad actors who hack for personal profit or for some other criminal goal. A more recent and potentially confusing use of the term "black hat hacking" sometimes appears in discussions of black box testing, where the tester has no prior knowledge of the target system—a methodology that is perfectly legal when properly authorized. Within our classification scheme, however, black hats are criminally-minded.
 
-Black hat hackers as criminals engage in illegal hacking for personal gain, sabotage, or espionage (Chandler, 2017). They exploit vulnerabilities to steal data, deploy ransomware, or disrupt systems. Research ties them to organized crime and state-sponsored threats (Rid, 2013), with motivations ranging from financial theft to ideological disruption. Unlike white hats, they have no ethical constraints and often work within organized cybercrime syndicates or are rogue intelligence operatives. Their activities include identity theft, financial fraud, and espionage.
+Black hat hackers as criminals engage in illegal hacking for personal gain, sabotage, or espionage (Chandler, 2017). They exploit vulnerabilities to steal data, deploy ransomware, or disrupt systems. Black hats are tied to organized crime and state-sponsored threats, with motivations ranging from financial theft to ideological disruption. Unlike white hats, they have no ethical constraints and often work within organized cybercrime syndicates or are rogue intelligence operatives. Their activities include identity theft, financial fraud, and espionage.
 
 **Key Traits of Black Hat Hackers**
 
@@ -336,8 +336,6 @@ Harper, A., Harris, S., Ness, J., & Eagle, C. (2011). _Gray hat hacking: The eth
 
 Harris, A. (2021). _Penetration testing essentials_. John Wiley & Sons.
 
-
-
 Levy, S. (1984). _Hackers: Heroes of the computer revolution_. Anchor Press/Doubleday.
 
 Logan, P. Y., & Clarkson, A. (2005). Teaching students to hack: Curriculum issues in information security. In _Proceedings of the 36th SIGCSE technical symposium on Computer science education_ (pp. 157–161). [https://doi.org/10.1145/1047344.1047405](https://doi.org/10.1145/1047344.1047405)
@@ -348,7 +346,6 @@ Pashel, B. A. (2006). Teaching students to hack: Ethical implications in teachin
 
 Pike, G. H. (2013). The law and ethics of hiring hackers. _Information Today, 30_(9), 1, 34.
 
-Rid, T. (2013). _Cyber War Will Not Take Place_. Oxford University Press.
 
 Samuel, A. (2004). Hacktivism and the future of political participation. _Harvard Law Review, 117_(8), 2714–2727. [https://doi.org/10.2307/4093405](https://doi.org/10.2307/4093405)
 

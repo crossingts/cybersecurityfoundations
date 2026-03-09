@@ -20,20 +20,6 @@
               "icon": "lucide-file",
               "title": "README"
             }
-          },
-          {
-            "id": "483bc6505a718e4f",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://journals.sagepub.com/doi/10.1177/1463499608093814",
-                "title": "Just a moment...",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "Just a moment..."
-            }
           }
         ]
       }

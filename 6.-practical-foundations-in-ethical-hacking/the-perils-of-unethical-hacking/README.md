@@ -8,7 +8,7 @@ description: >-
 
 ## Learning objectives
 
-* Identify key elements of legal and contractual obligations of ethical hackers
+- Identify key elements of legal and contractual obligations of ethical hackers
 - Summarize the severe legal penalties, including fines and imprisonment, for unauthorized access
 - Describe the professional consequences, such as credential revocation and industry blacklisting
 - Explain the long-term personal and reputational damage resulting from unethical conduct
@@ -56,11 +56,11 @@ Adherence to professional codes is not optional—ethical hackers who violate th
 
 ### Legal and professional consequences 
 
-Unethical hacking, whether conducted by grey hats, black hats, or hacktivists, carries severe legal and professional repercussions. Under frameworks like the Computer Fraud and Abuse Act (CFAA) in the U.S. and the UK Computer Misuse Act, unauthorized access to systems can result in felony charges, fines exceeding $250,000, and imprisonment (up to 20 years for aggravated offenses) (Schneier, 2020). Legal penalties extend beyond incarceration—convicted hackers often face asset forfeiture, lifetime bans from technology use, and mandatory monitoring (Martin, 2014). For professionals, unethical hacking breaches ACM/IEEE codes of ethics, leading to revoked certifications (e.g., CISSP, CEH) and blacklisting from industry jobs. High-profile cases, such as Kevin Mitnick’s early career, demonstrate how hacking can derail lives: after serving 5 years in prison, Mitnick rebuilt his reputation only after transitioning to ethical hacking (Mitnick, 2005).
+Unethical hacking, whether conducted by grey hats, black hats, or hacktivists, carries severe legal and professional repercussions. Under frameworks like the Computer Fraud and Abuse Act (CFAA) in the U.S. and the UK Computer Misuse Act, unauthorized access to systems can result in felony charges, fines exceeding $250,000, and imprisonment (up to 20 years for aggravated offenses) (Schneier, 2020). Legal penalties extend beyond incarceration—convicted hackers often face asset forfeiture, lifetime bans from technology use, and mandatory monitoring. For professionals, unethical hacking breaches ACM/IEEE codes of ethics, leading to revoked certifications (e.g., CISSP, CEH) and blacklisting from industry jobs. High-profile cases, such as Kevin Mitnick’s early career, demonstrate how hacking can derail lives: after serving 5 years in prison, Mitnick rebuilt his reputation only after transitioning to ethical hacking (Mitnick, 2005).
 
 ### Career destruction, job loss, and reputational damage
 
-The consequences of unethical hacking often extend far beyond legal penalties, ruining careers and personal lives. For example, Marcus Hutchins (the "WannaCry hero") faced 10 years in prison after admitting to prior malware offenses—his security research career nearly ended despite his later white hat contributions (Greenberg, 2019). Similarly, Albert Gonzalez, mastermind of the TJX breach, received 20 years in federal prison and was ordered to repay $25 million (US v. Gonzalez, 2010). 
+The consequences of unethical hacking often extend far beyond legal penalties, ruining careers and personal lives. For example, Marcus Hutchins (the "WannaCry hero") faced 10 years in prison after admitting to prior malware offenses—his security research career nearly ended despite his later white hat contributions. Similarly, Albert Gonzalez, mastermind of the TJX breach, received 20 years in federal prison and was ordered to repay $25 million (US v. Gonzalez, 2010). 
 
 Even hackers avoiding prison struggle with permanent reputational damage, as seen with Andrew Auernheimer ("Weev"), whose conviction (later overturned) left him ostracized from tech firms (Coleman, 2014). Industry reports (e.g., Verizon DBIR 2023) emphasize that 87% of black hats face unemployment post-conviction due to background checks. These cases underscore the zero-tolerance stance of legal and professional bodies toward unethical hacking, serving as a deterrent to potential offenders.
 
@@ -74,10 +74,6 @@ Even hackers avoiding prison struggle with permanent reputational damage, as see
 ### References
 
 Coleman, G. (2014). _Hacker, Hoaxer, Whistleblower, Spy: The Many Faces of Anonymous._ Verso.
-
-Greenberg, A. (2019, April 19). WannaCry hero pleads guilty to writing banking malware. _Wired_. [https://www.wired.com/story/marcus-hutchins-guilty-plea-kronos-malware/](https://www.wired.com/story/marcus-hutchins-guilty-plea-kronos-malware/)
-
-Martin, J. (2014). _Crime Online: Correlates, Causes, and Context._ Carolina Academic Press.
 
 Mitnick, K. (2005). _The art of intrusion: The real stories behind the exploits of hackers, intruders & deceivers_. Wiley.
 

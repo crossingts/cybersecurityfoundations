@@ -22,6 +22,34 @@
             }
           },
           {
+            "id": "e02a04f72745675d",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://www.verizon.com/business/resources/reports/dbir/",
+                "title": "2025 Data Breach Investigations Report | Verizon",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "2025 Data Breach Investigations Report | Verizon"
+            }
+          },
+          {
+            "id": "556bd26ff5f6a223",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://www.justice.gov/archives/opa/page/file/1398901/download",
+                "title": "Department of Justice | Page not found",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "Department of Justice | Page not found"
+            }
+          },
+          {
             "id": "6a4bf0953b2a8519",
             "type": "leaf",
             "state": {

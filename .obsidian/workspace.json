@@ -20,48 +20,6 @@
               "icon": "lucide-file",
               "title": "README"
             }
-          },
-          {
-            "id": "e02a04f72745675d",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://www.verizon.com/business/resources/reports/dbir/",
-                "title": "2025 Data Breach Investigations Report | Verizon",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "2025 Data Breach Investigations Report | Verizon"
-            }
-          },
-          {
-            "id": "556bd26ff5f6a223",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://www.justice.gov/archives/opa/page/file/1398901/download",
-                "title": "Department of Justice | Page not found",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "Department of Justice | Page not found"
-            }
-          },
-          {
-            "id": "6a4bf0953b2a8519",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://www.wired.com/story/marcus-hutchins-guilty-plea-kronos-malware/",
-                "title": "Page Not Found | WIRED",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "Page Not Found | WIRED"
-            }
           }
         ]
       }
@@ -223,7 +181,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1e65107a9a5d3b6c",
+  "active": "06ca7278ba5efd38",
   "lastOpenFiles": [
     "6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking/README.md",
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/README.md",

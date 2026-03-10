@@ -13,7 +13,7 @@ description: >-
 - Describe the professional consequences, such as credential revocation and industry blacklisting
 - Explain the long-term personal and reputational damage resulting from unethical conduct
 
-This section explores the profound and often irreversible consequences of unethical hacking, moving beyond theoretical ethics to examine the tangible fallout. We explore how crossing the line from white hat to black hat hacking triggers a cascade of repercussions across three critical domains: professional, legal, and personal. Professionally, this can mean the immediate revocation of hard-earned certifications like CISSP and a blacklisting from industry jobs for failing background checks or from bug bounty programs (e.g., HackerOne, Bugcrowd) for violating disclosure policies. Legally, individuals face aggressive prosecution under laws like the Computer Fraud and Abuse Act, resulting in devastating fines and prison sentences measured in decades. On a personal level, the damage extends to shattered reputations, financial ruin, and the long-term burden of a criminal record, demonstrating that the price of unethical conduct can be truly life-altering.
+This section explores the profound and often irreversible consequences of unethical hacking, moving beyond theoretical ethics to examine the tangible fallout. We explore how crossing the line from white hat to black hat hacking triggers a cascade of repercussions across three critical domains: professional, legal, and personal. Professionally, this can mean the immediate revocation of hard-earned certifications like CISSP (Certified Information Systems Security Professional) and a blacklisting from industry jobs for failing background checks or from bug bounty programs (e.g., HackerOne, Bugcrowd) for violating disclosure policies. Legally, individuals face prosecution under laws like the Computer Fraud and Abuse Act, resulting in devastating fines and prison sentences measured in decades. On a personal level, the damage extends to shattered reputations, financial ruin, and the long-term burden of a criminal record, demonstrating that the price of unethical conduct can be truly life-altering.
 
 ## Topics covered in this section
 
@@ -56,7 +56,7 @@ Adherence to professional codes is not optional—ethical hackers who violate th
 
 ### Legal and professional consequences 
 
-Unethical hacking, whether conducted by gray hats, black hats, or hacktivists, carries severe legal and professional repercussions. Under frameworks like the Computer Fraud and Abuse Act (CFAA) in the U.S. and the UK Computer Misuse Act, unauthorized access to systems can result in felony charges, fines exceeding $250,000, and imprisonment (up to 20 years for aggravated offenses) (DOJ, 2021; Schneier, 2020). Legal penalties extend beyond incarceration—convicted hackers often face asset forfeiture, lifetime bans from technology use, and mandatory monitoring (Martin, 2014). For professionals, unethical hacking breaches ACM/IEEE codes of ethics, leading to revoked certifications (e.g., CISSP, CEH) and blacklisting from industry jobs (Gotterbarn et al., 2018). High-profile cases, such as Kevin Mitnick’s early career, demonstrate how hacking can derail lives: after serving 5 years in prison, Mitnick rebuilt his reputation only after transitioning to ethical hacking (Mitnick, 2005).
+Unethical hacking, whether conducted by grey hats, black hats, or hacktivists, carries severe legal and professional repercussions. Under frameworks like the Computer Fraud and Abuse Act (CFAA) in the U.S. and the UK Computer Misuse Act, unauthorized access to systems can result in felony charges, fines exceeding $250,000, and imprisonment (up to 20 years for aggravated offenses) (Schneier, 2020). Legal penalties extend beyond incarceration—convicted hackers often face asset forfeiture, lifetime bans from technology use, and mandatory monitoring (Martin, 2014). For professionals, unethical hacking breaches ACM/IEEE codes of ethics, leading to revoked certifications (e.g., CISSP, CEH) and blacklisting from industry jobs. High-profile cases, such as Kevin Mitnick’s early career, demonstrate how hacking can derail lives: after serving 5 years in prison, Mitnick rebuilt his reputation only after transitioning to ethical hacking (Mitnick, 2005).
 
 ### Career destruction, job loss, and reputational damage
 
@@ -74,8 +74,6 @@ Even hackers avoiding prison struggle with permanent reputational damage, as see
 ### References
 
 Coleman, G. (2014). _Hacker, Hoaxer, Whistleblower, Spy: The Many Faces of Anonymous._ Verso.
-
-DOJ (2021). _Report on Cybercrime Prosecutions._ \[Link]
 
 Greenberg, A. (2019, April 19). WannaCry hero pleads guilty to writing banking malware. _Wired_. [https://www.wired.com/story/marcus-hutchins-guilty-plea-kronos-malware/](https://www.wired.com/story/marcus-hutchins-guilty-plea-kronos-malware/)
 

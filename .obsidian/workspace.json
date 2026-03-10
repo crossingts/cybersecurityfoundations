@@ -20,6 +20,20 @@
               "icon": "lucide-file",
               "title": "README"
             }
+          },
+          {
+            "id": "6a4bf0953b2a8519",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://www.wired.com/story/marcus-hutchins-guilty-plea-kronos-malware/",
+                "title": "Page Not Found | WIRED",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "Page Not Found | WIRED"
+            }
           }
         ]
       }
@@ -183,6 +197,7 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking/README.md",
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/README.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/README.md",
     "1.-it-career-planning/job-search-strategy/README.md",
@@ -209,7 +224,6 @@
     "SUMMARY.md",
     "test_update.md",
     "7.-conclusion/practical-foundations-in-ethical-hacking.md",
-    "6.-practical-foundations-in-ethical-hacking/what-do-ethical-hackers-do/README.md",
     "LICENSE",
     "3.-cybersecurity-grc/the-information-security-compliance-audit",
     "3.-cybersecurity-grc/the-information-security-risk-assessment",

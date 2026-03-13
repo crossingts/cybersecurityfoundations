@@ -8,12 +8,12 @@ description: >-
 
 ## Learning objectives
 
-* Understand the practical use of network scanners like Nmap and OpenVAS in network security testing
-* Understand the practical use of packet analyzers like Wireshark and tcpdump in network security testing
-* Differentiate between active network scanning and passive packet analysis
-* Develop a practical understanding of how protocol analyzers and software analyzers differ
+- Understand the practical use of network scanners like Nmap and OpenVAS in network security testing
+- Understand the practical use of packet analyzers like Wireshark and tcpdump in network security testing
+- Differentiate between active network scanning and passive packet analysis
+- Develop a practical understanding of how protocol analyzers and software analyzers differ
 
-This section covers the use of network scanners (Nmap and OpenVAS) and packet analyzers (Wireshark and tcpdump) in network security testing. The discussion explores the role of network and vulnerability scanners, specifically Nmap and OpenVAS, in actively probing a network, mapping its assets, and identifying potential vulnerabilities. Furthermore, the discussion examines the role of packet analyzers like Wireshark and tcpdump in passively capturing and dissecting network traffic. This dual approach allows security professionals to not only discover what is on the network and what weaknesses may exist but also to gain deep visibility into the actual data traversing the network for verification, troubleshooting, and forensic analysis. The discussion will highlight how these tools work together within the "Test" phase of the security cycle to help monitor and improve an organization's overall security posture.
+This section establishes a practical understanding of network security testing by exploring both the underlying concepts and the essential tools used in the field. It begins by differentiating network security testing from routine network monitoring and administration, placing it within the context of a continuous security process like the "Test" phase of a security cycle. Next, the section looks at how network and vulnerability scanners like Nmap and OpenVAS actively probe a network to map assets and identify potential vulnerabilities. In contrast, we will explore how packet analyzers like Wireshark and tcpdump passively capture and dissect network traffic to provide deep visibility into the actual data in transit. This dual approach allows security professionals not only to discover what is on the network and what weaknesses may exist, but also to verify, troubleshoot, and perform forensic analysis on the network's live data. Finally, the section will expand this view by distinguishing protocol analysis from software analysis, introducing the specialized tools and methodologies used for deeper vulnerability research and reverse engineering. By the end, you will understand how these varied techniques work together to monitor and improve an organization's security posture.
 
 ## Topics covered in this section
 
@@ -25,27 +25,13 @@ This section covers the use of network scanners (Nmap and OpenVAS) and packet an
 
 Network administrators configure various monitoring tools and perform various testing activities to ensure smooth and secure network operation. Such activities and tools include:
 
-• **Connectivity testing/troubleshooting** (basic netadmin) using such tools/technologies as ping, traceroute, whois, nslookup, dig, netstat, nbtstat, arp, and syslog.
-
-• **Network availability monitoring** (part of Network Management System) to determine the availability of network resources to users, using such tools as Big Brother, OpenNMS, and Nagios/Icinga. Network availability monitoring is "the concept of observing, measuring, and comparing the performance of a computer network using both technology and personnel". The purpose of network availability monitoring is "to detect faults within a network and ensure steady network operations" (Deveriya, 2005, p. 270).
-
-Typically, a network-monitoring system is comprised of Windows- or UNIX-based network-ready computers loaded with network-monitoring software. The network-monitoring system polls the monitored nodes at regular intervals to determine the overall health of the network and its components. Based on the polled results, the network-monitoring system generates alerts. These alerts can be e-mailed, sent through pager messages, or relayed through a web page. The network-monitoring system also stores the historical data for reporting and trending. (Deveriya, 2005, p. 270)
-
-Key concepts related to network availability monitoring include SLAs (Service-Level Agreements), MTTR (mean time to repair), and Five Nines.
-
-• **Network performance monitoring** (part of NMS) to determine the adequacy of key performance parameters of network devices and links, using such tools as MRTG, Cacti, and Nagios/Icinga. Network performance monitoring is "the process of collecting, storing, and analyzing network statistics" (Deveriya, 2005, p. 314).
-
-Typically, performance-monitoring systems use the Simple Network Management Protocol (SNMP) to communicate with the monitored hosts. Using SNMP, the performance-monitoring system regularly polls the monitored hosts and collects performance-parameter samples. The samples are then stored in a central database for analysis and reporting, such as historical trending. (Deveriya, 2005, p. 314)
-
-The most common parameters for monitoring network performance are throughput (kbps), latency (ms/RTT), jitter, packet loss, CPU and memory utilization of network devices, and hard device space.
-
-• **Intrusion detection systems/intrusion prevention systems (IDS/IPS)** using such tools as Suricata and Snort. Most network intrusion detection systems (NIDS) are packet analyzers that watch for peculiar traffic patterns that are unique to network attacks.
-
-• **Incident response and mitigation (SIEM) and endpoint detection and response (EDR)** using such tools as Wazuh SIEM/XDR.
-
-• **Host and network firewalls** using such tools as ufw, iptables, nftables, pf (packet filter), OPNsense, and pfsense.
-
-• **Network security testing** performed to assess and verify threats and vulnerabilities of a network, using such tools as Nmap, Nessus, OpenVAS, Netcat, Wireshark, and tcpdump.
+- **Connectivity testing/troubleshooting** (basic network administration) using such tools/technologies as ping, traceroute, whois, nslookup, dig, netstat, nbtstat, arp, and syslog.
+- **Network availability monitoring** (part of Network Management System) to determine the availability of network resources to users, using such tools as Big Brother, OpenNMS, and Nagios/Icinga. Network availability monitoring is "the concept of observing, measuring, and comparing the performance of a computer network using both technology and personnel". The purpose of network availability monitoring is "to detect faults within a network and ensure steady network operations" (Deveriya, 2005, p. 270). A typical network monitoring system is comprised of Windows-based or UNIX-based computers equipped with network-monitoring software. These systems regularly query the monitored devices at set intervals to assess the operational status of the network and its individual components. Based on the data collected from these queries, the monitoring system can generate alerts, which may be distributed through various channels such as email, pager notifications, or web-based dashboards. In addition to real-time alerting, the system retains historical data, enabling long-term reporting and trend analysis (Deveriya, 2005). Key concepts related to network availability monitoring include SLAs (Service-Level Agreements), MTTR (mean time to repair), and Five Nines.
+- **Network performance monitoring** (part of Network Management System) to determine the adequacy of key performance parameters of network devices and links, using such tools as MRTG, Cacti, and Nagios/Icinga. Network performance monitoring is "the process of collecting, storing, and analyzing network statistics" (Deveriya, 2005, p. 314). Performance-monitoring systems typically rely on the Simple Network Management Protocol (SNMP) to interact with the devices under observation. Through SNMP, the monitoring system periodically polls these hosts to gather samples of key performance indicators. These collected data points are subsequently saved to a centralized repository, where they can be used for analysis and reporting purposes, including the generation of historical trends (Deveriya, 2005). The most common parameters for monitoring network performance are throughput (kbps), latency (ms/RTT), jitter, packet loss, CPU and memory utilization of network devices, and hard device space.
+- **Intrusion detection systems/intrusion prevention systems (IDS/IPS)** using such tools as Suricata and Snort. Most network intrusion detection systems (NIDS) are packet analyzers that watch for peculiar traffic patterns that are unique to network attacks.
+- **Incident response and mitigation (SIEM) and endpoint detection and response (EDR)** using such tools as Wazuh SIEM/XDR.
+- **Host and network firewalls** using such tools as ufw, iptables, nftables, pf (packet filter), OPNsense, and pfsense.
+- **Network security testing** performed to assess and verify threats and vulnerabilities of a network, using such tools as Nmap, Nessus, OpenVAS, Netcat, Wireshark, and tcpdump.
 
 ### Network security testing
 
@@ -64,11 +50,9 @@ Tools used for network security testing can be loosely classified into the follo
 
 **This discussion focuses on the following tools and methodologies of network security testing:**
 
-• Network scanners: Nmap.
-
-• Vulnerability scanners: OpenVAS (forked Nessus).
-
-• Packet analyzers (sniffers): tcpdump and Wireshark.
+- Network scanners: Nmap.
+- Vulnerability scanners: OpenVAS (forked Nessus).
+- Packet analyzers (sniffers): tcpdump and Wireshark.
 
 Nmap and OpenVAS are covered in the section [Penetration testing technologies](../penetration-testing-technologies/). tcpdump and Wireshark are covered in the section [Defensive cybersecurity technologies](../defensive-cybersecurity-technologies/).
 
@@ -76,19 +60,16 @@ Nmap and OpenVAS are covered in the section [Penetration testing technologies](.
 
 Network scanners are software tools that probe a network to determine the hosts present on the network. Network scanners also probe the discovered hosts to determine the TCP and UDP ports that are open. Furthermore, based on the response of the probes, scanners can identify the OS, the services that are running, and the associated security vulnerabilities present on the discovered hosts. Some scanners can also display the results in the form of graphical reports. (Deveriya, 2005, p. 365)
 
-• **Nmap** (Network Mapper): The Swiss army knife of network scanners; a popular and versatile tool. Nmap identifies live hosts, open ports, and what services are running.
-
-• **Nessus**: A popular **vulnerability scanner** with the ability to regularly update the vulnerability database; comes preinstalled with many Linux live CD-ROMs; and has good reporting capability. Nessus turned commercial in October 2005 but a limited feature version is available (Nessus Essentials provides vulnerability scanning for up to 16 IP addresses per scanner).
-
-• **OpenVAS** (forked Nessus): Automatically scans live hosts, open ports, and running services for known vulnerabilities.
+- **Nmap** (Network Mapper): The Swiss army knife of network scanners; a popular and versatile tool. Nmap identifies live hosts, open ports, and what services are running.
+- **Nessus**: A popular **vulnerability scanner** with the ability to regularly update the vulnerability database; comes preinstalled with many Linux live CD-ROMs; and has good reporting capability. Nessus turned commercial in October 2005 but a limited feature version is available (Nessus Essentials provides vulnerability scanning for up to 16 IP addresses per scanner).
+- **OpenVAS** (forked Nessus): Automatically scans live hosts, open ports, and running services for known vulnerabilities.
 
 #### Packet Analyzers
 
 Packet analyzers are software or hardware devices that capture and analyze the data flowing through the network ... Many packet analyzers provide capabilities to filter, store, and analyze the captured data. In fact, most network intrusion detection systems (NIDS) are packet analyzers that watch for peculiar traffic patterns that are unique to network attacks. Packet analyzers work at Layers 1 and 2 of the OSI model but can also decode data at higher layers. This feature enables networking professionals to have a cross-sectional view of the data flowing through the network in real time. The ability to slice and view the raw data flowing through the wires is important when troubleshooting. Such views also help networking professionals to learn and understand the functioning of various protocols and applications. The views also provide clear proof that the network and its components are operational. (Deveriya, 2005, p. 386)
 
-• **Wireshark**: A versatile network protocol analyzer that captures and interactively displays traffic on a network in real time. With its graphical interface and deep inspection capabilities, Wireshark allows users to analyze packet data for troubleshooting, security analysis, and protocol development. It supports hundreds of protocols and offers powerful filtering and visualization tools.
-
-• **tcpdump**: A powerful command-line packet analyzer that captures and displays network traffic in real time, allowing deep inspection of packets for troubleshooting or security analysis.
+- **Wireshark**: A versatile network protocol analyzer that captures and interactively displays traffic on a network in real time. With its graphical interface and deep inspection capabilities, Wireshark allows users to analyze packet data for troubleshooting, security analysis, and protocol development. It supports hundreds of protocols and offers powerful filtering and visualization tools.
+- **tcpdump**: A powerful command-line packet analyzer that captures and displays network traffic in real time, allowing deep inspection of packets for troubleshooting or security analysis.
 
 #### Basic vs deep packet inspection
 
@@ -140,6 +121,8 @@ Wireshark excels at deep L5-L7 analysis (e.g., "Decode this HTTP/2 stream" or "F
 
 ### Protocol analyzers vs software analyzers
 
+A different class of tools becomes necessary when the focus shifts from observing network conversations to examining the internal logic of the applications themselves. The following discussion clarifies the difference between analyzing protocols, performed to identify network-level issues, and analyzing software, performed to discover flaws embedded within application code. The discussion contrasts protocol analyzers like Wireshark and tcpdump with software analysis tools such as disassemblers, debuggers, and decompilers which are used in reverse engineering and vulnerability research.
+ 
 #### Communications protocols analyzers
 
 This is the domain of network traffic inspection. Wireshark and tcpdump are protocol analyzers (or packet sniffers). They see everything on the wire at the network and transport layers (e.g., IP, TCP, UDP, ICMP). They are passive observers. In comparison, Burp Suite and OWASP ZAP are Web Application Security Proxies. They operate as a man-in-the-middle between your browser and the web server, specifically for HTTP/HTTPS traffic. They are active manipulators.
@@ -207,7 +190,7 @@ Security researchers do not have the source code for Windows, Pages, or any othe
 * **Process:** Use Ghidra/IDA Pro to **reverse engineer** it
 * **Output:** Understand what the program does, find security flaws
 
-**Security Testing vs Vulnerability Analysis**
+#### Security Testing vs Vulnerability Analysis
 
 | Aspect                     | Penetration Testing                                                                       | Vulnerability Research                                                                           |
 | -------------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |

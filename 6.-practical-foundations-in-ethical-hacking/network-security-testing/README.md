@@ -81,7 +81,7 @@ Deep inspection involves analyzing not just Layer 3 (IP) and Layer 4 (TCP/UDP) h
 * **Payload analysis**: Displays partial/full payloads (e.g., `-X` flag for hex/ASCII output).
 * Example: `tcpdump -A -s0 'port 443'` (attempts to show plaintext parts of TLS/SSL traffic).
 
-**Basic vs. Deep Packet Inspection: tcpdump vs. Wireshark**
+**Basic vs Deep Packet Inspection: tcpdump vs Wireshark**
 
 | **Feature**                  | **tcpdump (CLI)**                                                               | **Wireshark (GUI)**                                                                   |
 | ---------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |

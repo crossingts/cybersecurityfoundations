@@ -193,6 +193,6 @@ Shah, S., & Mehtre, B. M. (2015). An overview of vulnerability assessment and pe
 
 Velu, V. (2013). 200 OK on Audience. _PenTest Magazine, 3_(7), pp. 7-16.
 
-Walker, M. (2012). Certified Ethical Hacker Exam Guide. Columbus: McGraw-Hill Osborne.
+Walker, M. (2012). Certified Ethical Hacker All-in-One Exam Guide. Columbus: McGraw-Hill Osborne.
 
 Walker, M. (2017). CEH Certified Ethical Hacker All-in-One Exam Guide, Second Edition. New York, NY: McGraw-Hill Education.

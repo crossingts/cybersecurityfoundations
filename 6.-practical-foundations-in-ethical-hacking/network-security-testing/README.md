@@ -56,7 +56,7 @@ Tools used for network security testing can be loosely classified into the follo
 
 Nmap and OpenVAS are covered in the section [Penetration testing technologies](../penetration-testing-technologies/). tcpdump and Wireshark are covered in the section [Defensive cybersecurity technologies](../defensive-cybersecurity-technologies/).
 
-#### Network Scanners
+#### Network scanners
 
 Network scanners are software tools that probe a network to determine the hosts present on the network. Network scanners also probe the discovered hosts to determine the TCP and UDP ports that are open. Furthermore, based on the response of the probes, scanners can identify the OS, the services that are running, and the associated security vulnerabilities present on the discovered hosts. Some scanners can also display the results in the form of graphical reports. (Deveriya, 2005, p. 365)
 
@@ -64,7 +64,7 @@ Network scanners are software tools that probe a network to determine the hosts 
 - **Nessus**: A popular **vulnerability scanner** with the ability to regularly update the vulnerability database; comes preinstalled with many Linux live CD-ROMs; and has good reporting capability. Nessus turned commercial in October 2005 but a limited feature version is available (Nessus Essentials provides vulnerability scanning for up to 16 IP addresses per scanner).
 - **OpenVAS** (forked Nessus): Automatically scans live hosts, open ports, and running services for known vulnerabilities.
 
-#### Packet Analyzers
+#### Packet analyzers
 
 Packet analyzers, whether implemented as software applications or dedicated hardware devices, capture network traffic for inspection and analysis. These tools typically offer functionality for filtering, storing, and analyzing captured data. Many network intrusion detection systems (NIDS), for instance, function as specialized packet analyzers that monitor traffic for anomalous patterns associated with network attacks. Operating at the physical and data link layers (Layers 1 and 2 of the OSI model), packet analyzers can also decode protocol information from higher layers, providing networking professionals with a real-time, cross-sectional view of data traversing the network. This capability is invaluable when troubleshooting, as it allows administrators to inspect raw traffic at the packet level. It also serves as a learning tool for understanding protocol behavior and application communications, while simultaneously offering tangible proof that network components are functioning as intended (Deveriya, 2005).
 
@@ -190,7 +190,7 @@ Security researchers do not have the source code for Windows, Pages, or any othe
 * **Process:** Use Ghidra/IDA Pro to **reverse engineer** it
 * **Output:** Understand what the program does, find security flaws
 
-#### Security Testing vs Vulnerability Analysis
+#### Security testing vs vulnerability analysis
 
 | Aspect                     | Penetration Testing                                                                       | Vulnerability Research                                                                           |
 | -------------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
@@ -215,3 +215,5 @@ Security researchers do not have the source code for Windows, Pages, or any othe
 Deveriya, A. (2005). Network Administrators Survival Guide. Pearson Education.
 
 Sanders, C. (2017). _Practical Packet Analysis: Using Wireshark to Solve Real-World Network Problems_ (3rd ed.). No Starch Press.
+
+Walker, M. (2012). _CEH Certified Ethical Hacker All-in-One Exam Guide_. McGraw-Hill.

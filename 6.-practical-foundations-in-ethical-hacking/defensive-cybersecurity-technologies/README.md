@@ -215,15 +215,15 @@ The modern evolution is the Next-Generation Firewall (NGFW), which incorporates 
 
 The key differences between a traditional packet filtering firewall and an NGFW can be summarized as follows:
 
-|Feature|Packet Filtering Firewall|Next-Generation Firewall (NGFW)|
-|---|---|---|
-|**Primary OSI Layer**|**Layers 3 & 4** (Network & Transport)|**Layers 3-7** (Network to Application)|
-|**Decision Basis**|IP Address, Port, Protocol|IP, Port, Protocol, **Application, User, Content**|
-|**Connection Awareness**|Stateless or Stateful|**Stateful** by default|
-|**Traffic Inspection**|Header-only|**Deep Packet Inspection (DPI)** of payload|
-|**Additional Features**|Basic NAT, basic logging|**IPS, Anti-Virus, Threat Intelligence, Identity Awareness**|
+| Feature                  | Packet Filtering Firewall          | Next-Generation Firewall (NGFW)                          |
+| ------------------------ | ---------------------------------- | -------------------------------------------------------- |
+| **Primary OSI Layer**    | Layers 3 & 4 (Network & Transport) | Layers 3-7 (Network to Application)                      |
+| **Decision Basis**       | IP Address, Port, Protocol         | IP, Port, Protocol, Application, User, Content           |
+| **Connection Awareness** | Stateless or Stateful              | Stateful by default                                      |
+| **Traffic Inspection**   | Header-only                        | Deep Packet Inspection (DPI) of payload                  |
+| **Additional Features**  | Basic NAT, basic logging           | IPS, Anti-Virus, Threat Intelligence, Identity Awareness |
 
-UFW, iptables, nftables, PF, ipfw, OPNsense, and pfSense (CE) all have their foundation in packet filtering, and they can all be considered stateful packet filtering firewalls, but some have evolved into more sophisticated frameworks. For example, pfSense and OPNsense are complete, GUI-based firewall distributions (operating systems). They use PF (Packet Filter) as their core packet filtering engine. However, the systems themselves are full-featured NGFWs) because they include many features beyond simple packet filtering.
+UFW, iptables, nftables, PF, ipfw, OPNsense, and pfSense (CE) all have their foundation in packet filtering, and they can all be considered stateful packet filtering firewalls, but some have evolved into more sophisticated frameworks. For example, pfSense and OPNsense are complete, GUI-based firewall distributions (operating systems). They use PF (Packet Filter) as their core packet filtering engine. However, the systems themselves are full-featured NGFWs because they include many features beyond simple packet filtering.
 
 #### Firewalls key features
 

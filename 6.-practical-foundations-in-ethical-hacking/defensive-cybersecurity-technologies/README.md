@@ -225,6 +225,23 @@ The key differences between a traditional packet filtering firewall and an NGFW 
 
 UFW, iptables, nftables, PF, ipfw, OPNsense, and pfSense (CE) all have their foundation in packet filtering, and they can all be considered stateful packet filtering firewalls, but some have evolved into more sophisticated frameworks. For example, pfSense and OPNsense are complete, GUI-based firewall distributions (operating systems). They use PF (Packet Filter) as their core packet filtering engine. However, the systems themselves are full-featured NGFWs because they include many features beyond simple packet filtering.
 
+#### Choosing the right firewall type
+
+The following guide helps you match firewall types to common scenarios. In practice, many environments use a combination—for example, a stateful firewall at the network perimeter, a WAF in front of public web applications, and host‑based packet filters on critical servers.
+
+|**Scenario**|**Recommended Firewall Type(s)**|**Why**|
+|---|---|---|
+|**Simple home or small office network** with no public‑facing services|**Stateful firewall** (e.g., integrated in a home router, OPNsense, pfSense)|Provides essential protection with minimal configuration. Stateful tracking allows outbound traffic while blocking unsolicited inbound connections.|
+|**A Linux desktop or server** that needs basic protection|**UFW** (with stateful backend) or **nftables**|UFW offers a simple interface while leveraging the kernel’s stateful connection tracking. nftables gives expert users fine‑grained control.|
+|**High‑performance core router** where packet latency is critical (e.g., ISP backbone)|**Stateless ACLs** on the router|Stateless filtering imposes almost no processing overhead, preserving line‑rate forwarding. Security relies on perimeter firewalls upstream.|
+|**Corporate network perimeter** with hundreds of internal users|**Stateful firewall** + **NGFW**|Stateful inspection handles the bulk of traffic, while NGFW features (application control, IPS, threat intelligence) protect against advanced threats and enforce user‑based policies.|
+|**Protecting a public web application** (e‑commerce, API, portal)|**Web Application Firewall (WAF)**|A WAF inspects HTTP/HTTPS payloads to block SQLi, XSS, and other Layer‑7 attacks that a network firewall cannot detect. Often deployed as a reverse proxy (cloud‑based or on‑premises).|
+|**Legacy applications** that use non‑HTTP protocols (e.g., FTP, SMTP) and require deep inspection|**Proxy firewall** (application‑level gateway)|A proxy firewall terminates the connection and inspects the protocol content, allowing fine‑grained control over commands, attachments, or authentication.|
+|**Isolating a high‑risk network segment** (e.g., guest Wi‑Fi, DMZ)|**Stateful firewall** with **strict rule sets**|Placed between segments to enforce access policies. Use stateful inspection to allow established return traffic while denying unsolicited cross‑segment connections.|
+|**Internal VLAN traffic control** within a switch|**VLAN ACLs (VACLs)** or **Port ACLs (PACLs)**|These stateless filters apply to bridged traffic, preventing lateral movement even when traffic never passes through a router.|
+|**Virtualized data center** with east‑west traffic between VMs|**Virtual switch ACLs (vACLs)** or **distributed firewall** (e.g., VMware NSX)|Enforce micro‑segmentation at the hypervisor level, applying stateless or stateful rules to traffic that stays inside the physical host.|
+|**Comprehensive defense‑in‑depth** for an enterprise|**Layered approach:** Perimeter NGFW + internal stateful firewalls + WAF for web apps + host‑based firewalls|No single firewall type blocks all threats. Combining them creates overlapping controls that compensate for individual weaknesses.|
+
 #### Firewalls key features
 
 **1. UFW (Uncomplicated Firewall)**

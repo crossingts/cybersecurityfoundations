@@ -21,7 +21,7 @@ This section explores major defensive cybersecurity technologies, including fire
 
 ### Firewalls
 
-Popular open source host and network firewalls include UFW (Uncomplicated Firewall), iptables, nftables, PF (pfilter or packet filter), ipfw, OPNsense, and pfSense (Community Edition). Key firewall concepts discussed in this section include packet filtering firewalls, stateful vs stateless firewalls, proxy firewalls, Web Application Firewalls (WAFs), and Next-Generation Firewalls (NGFWs). 
+Popular open source host and network firewalls include UFW (Uncomplicated Firewall), iptables, nftables, PF (pfilter or packet filter), ipfw, OPNsense, and pfSense (Community Edition). Key firewall concepts discussed in this section include packet filtering firewalls, stateful vs stateless firewalls, proxy firewalls, Web Application Firewalls (WAFs), and Next-Generation Firewalls (NGFWs). Technology focus: nftables and OPNsense.
 
 At its most basic, a firewall is a gatekeeper for network traffic. The simplest and oldest type is the packet filtering firewall. Packet-filtering firewalls operate at the network level (Layers 3/4). They allow network administrators to define rules for allowing, blocking, or modifying traffic based on IPs, ports, and protocols. Packet‑filtering firewalls (stateless) can be contrasted with stateful inspection firewalls, while application-level gateways (proxy firewalls) and Next-Generation Firewalls (NGFWs) build on stateful inspection by adding application‑layer awareness.
 
@@ -349,13 +349,11 @@ All the following firewalls are open source, stateful, perform NAT, and have IPv
 
 ### IDS/IPS
 
-Popular open source NIDS (Network IDS) and HIDS (Host IDS) include Suricata, Snort, Wazuh, OSSEC, Fail2Ban, Zeek (formerly Bro), Security Onion, and OpenWIPS-NG.
-
-Technology focus: Suricata and Zeek (Bro).
+Popular open source NIDS (Network IDS) and HIDS (Host IDS) include Suricata, Snort, Wazuh, OSSEC, Fail2Ban, Zeek (formerly Bro), Security Onion, and OpenWIPS-NG. Technology focus: Suricata and Zeek (Bro).
 
 #### IDS/IPS key features
 
-#### **1. Suricata**
+**1. Suricata**
 
 * **Type**: NIDS/NIPS (Network Intrusion Detection/Prevention System).
 * **Key Features**:
@@ -367,7 +365,7 @@ Technology focus: Suricata and Zeek (Bro).
   * Can act as an IPS (inline blocking).
 * **Use Case**: Enterprise networks, high-speed traffic analysis.
 
-#### **2. Snort**
+**2. Snort**
 
 * **Type**: NIDS/NIPS.
 * **Key Features**:
@@ -378,7 +376,7 @@ Technology focus: Suricata and Zeek (Bro).
   * Can be used as an IPS with inline mode.
 * **Use Case**: Small to medium networks, basic threat detection.
 
-#### **3. Wazuh**
+**3. Wazuh**
 
 * **Type**: HIDS + SIEM + Compliance.
 * **Key Features**:
@@ -389,7 +387,7 @@ Technology focus: Suricata and Zeek (Bro).
   * Integrates with **Elasticsearch** for log storage.
 * **Use Case**: Endpoint security, compliance (PCI DSS, GDPR), and threat detection.
 
-#### **4. OSSEC**
+**4. OSSEC**
 
 * **Type**: HIDS.
 * **Key Features**:
@@ -399,7 +397,7 @@ Technology focus: Suricata and Zeek (Bro).
   * No native GUI (CLI-based, but Wazuh adds one).
 * **Use Case**: Server security, compliance monitoring, and log-based intrusion detection.
 
-#### **5. Fail2Ban**
+**5. Fail2Ban**
 
 * **Type**: HIDS (focused on log-based intrusion prevention).
 * **Key Features**:
@@ -409,7 +407,7 @@ Technology focus: Suricata and Zeek (Bro).
   * Limited to log-based attacks (not full HIDS).
 * **Use Case**: Protecting servers from brute-force attacks.
 
-#### **6. Zeek (formerly Bro)**
+**6. Zeek (formerly Bro)**
 
 * **Type**: NIDS + Network Traffic Analysis (NTA).
 * **Key Features**:
@@ -419,7 +417,7 @@ Technology focus: Suricata and Zeek (Bro).
   * No built-in IPS (passive monitoring only).
 * **Use Case**: Best for network monitoring, forensics, and anomaly detection (deep traffic analysis).
 
-#### **7. Security Onion**
+**7. Security Onion**
 
 * **Type**: NIDS/HIDS + SIEM + Network Monitoring.
 * **Key Features**:
@@ -429,7 +427,7 @@ Technology focus: Suricata and Zeek (Bro).
   * Heavy resource requirements (best for dedicated hardware).
 * **Use Case**: Enterprise-grade network security monitoring.
 
-#### **8. OpenWIPS-NG**
+**8. OpenWIPS-NG**
 
 * **Type**: Wireless IDS/IPS (specialized for Wi-Fi).
 * **Key Features**:
@@ -474,13 +472,11 @@ Technology focus: Suricata and Zeek (Bro).
 
 ### SIEM/EDR
 
-Popular open source SIEM/EDR (Security Information and Event Management/Endpoint Detection and Response) technologies include Wazuh, TheHive, Zeek, OSSEC, Suricata, and Velociraptor.
-
-Technology focus: Wazuh (SIEM/XDR).
+Popular open source SIEM/EDR (Security Information and Event Management/Endpoint Detection and Response) technologies include Wazuh, TheHive, Zeek, OSSEC, Suricata, and Velociraptor. Technology focus: Wazuh (SIEM/XDR).
 
 #### SIEM/EDR key features
 
-#### **1. Wazuh**
+**1. Wazuh**
 
 * **Type**: SIEM + HIDS + Compliance
 * **Key Features**:
@@ -492,7 +488,7 @@ Technology focus: Wazuh (SIEM/XDR).
   * **Active response** (e.g., blocking malicious IPs).
 * **Use Case**: Unified SIEM + endpoint security with compliance monitoring and threat detection.
 
-#### **2. TheHive**
+**2. TheHive**
 
 * **Type**: Incident Response + Case Management (Not a SIEM/EDR, but complementary)
 * **Key Features**:
@@ -502,7 +498,7 @@ Technology focus: Wazuh (SIEM/XDR).
   * **No detection capabilities** (relies on other tools like Wazuh/Suricata).
 * **Use Case**: Collaborative incident response platform for SOC teams.
 
-#### **3. Zeek (formerly Bro)**
+**3. Zeek (formerly Bro)**
 
 * **Type**: Network Security Monitoring (NSM) + NTA
 * **Key Features**:
@@ -512,7 +508,7 @@ Technology focus: Wazuh (SIEM/XDR).
   * **No built-in SIEM/EDR** (passive monitoring).
 * **Use Case**: Network traffic analysis and behavioral threat detection via protocol logs.
 
-#### **4. OSSEC**
+**4. OSSEC**
 
 * **Type**: HIDS (Host-based IDS)
 * **Key Features**:
@@ -522,7 +518,7 @@ Technology focus: Wazuh (SIEM/XDR).
   * **Lightweight**, best for endpoint monitoring.
 * **Use Case**: Lightweight HIDS for log analysis, file integrity, and active response.
 
-#### **5. Suricata**
+**5. Suricata**
 
 * **Type**: NIDS/NIPS (Network IDS/IPS)
 * **Key Features**:
@@ -533,7 +529,7 @@ Technology focus: Wazuh (SIEM/XDR).
   * **Not an EDR** (focused on network traffic).
 * **Use Case**: High-performance NIDS/NIPS with file extraction and IPS capabilities.
 
-#### **6. Velociraptor**
+**6. Velociraptor**
 
 * **Type**: EDR + Digital Forensics
 * **Key Features**:

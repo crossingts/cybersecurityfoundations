@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/defensive-security-vs-offensive-security/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -183,6 +183,7 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing/nmap-cheat-sheet-for-netadmins-sysadmins.md",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing/README.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md",
@@ -209,7 +210,6 @@
     "2.-introduction-to-cybersecurity/introduction-introduction-to-cybersecurity.md",
     "2.-introduction-to-cybersecurity/chapter-2-review-questions.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/scanning-and-enumeration/README.md",
-    "SUMMARY.md",
     "LICENSE",
     "3.-cybersecurity-grc/the-information-security-compliance-audit",
     "3.-cybersecurity-grc/the-information-security-risk-assessment",

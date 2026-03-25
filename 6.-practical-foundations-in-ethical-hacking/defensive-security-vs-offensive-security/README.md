@@ -104,17 +104,7 @@ In larger companies, it is common to have both a SOC and a SIRT/CSIRT operating 
 
 #### When SOC handles SIRT/CSIRT tasks (without a dedicated team)
 
-1. **SOC Analysts Wear Multiple Hats**
-   * Tier 1 SOC: Monitors alerts, performs initial triage.
-   * Tier 2/Tier 3 SOC: Acts as de facto *incident responders*—investigating, containing, and remediating incidents (normally CSIRT’s role).
-   * Example: A SOC analyst investigates a phishing campaign, traces compromised accounts, and coordinates remediation—all without escalating to a separate CSIRT.
-1. **No Formal "CSIRT" Branding**
-   * The organization may document incident response processes (e.g., playbooks) but won’t designate a standalone CSIRT.
-   * Roles like "SOC Incident Responder" or "Senior Security Analyst" cover CSIRT duties.
-1. **Why This Happens**
-   * Cost/Resources: Maintaining a 24/7 SOC is expensive; adding a separate CSIRT isn’t always justified.
-   * Workflow Simplicity: Smaller incident volumes may not require a specialized team.
-   * Outsourcing: Some organizations rely on an MSSP’s SOC for monitoring and keep a tiny internal team for response (effectively a mini-CSIRT without the name).
+In organizations without a dedicated CSIRT, SOC analysts often wear multiple hats. Tier 1 analysts monitor alerts and perform initial triage, while Tier 2 and Tier 3 analysts act as de facto incident responders—investigating, containing, and remediating incidents that would normally fall under a CSIRT’s purview. For example, a SOC analyst might investigate a phishing campaign, trace compromised accounts, and coordinate remediation without ever escalating to a separate team. This model often coexists with a lack of formal CSIRT branding: the organization documents incident response processes and playbooks but does not designate a standalone CSIRT, instead relying on roles such as “SOC Incident Responder” or “Senior Security Analyst” to cover response duties. Several factors drive this approach. Maintaining a 24/7 SOC is already expensive, and adding a separate CSIRT is not always justified. Smaller incident volumes may not require a specialized team, and in some cases organizations outsource monitoring to an MSSP while keeping a tiny internal team for response—effectively a mini‑CSIRT without the name.
 
 **Key Differences: Dedicated CSIRT vs SOC-Only Approach**
 
@@ -127,19 +117,11 @@ In larger companies, it is common to have both a SOC and a SIRT/CSIRT operating 
 
 **When Does a Company Need a Dedicated CSIRT?**
 
-1. **High Incident Volume**: SOC is overwhelmed by false positives and lacks time for deep investigations.
-2. **Regulatory Requirements**: Industries like finance/healthcare may mandate a formal IR team.
-3. **Complex Attacks**: Advanced threats (APT, ransomware) need specialized skills beyond SOC analysts.
+A dedicated CSIRT becomes necessary when the volume of incidents overwhelms the SOC, leaving analysts too burdened by false positives to conduct deep investigations. Regulatory requirements in industries such as finance or healthcare may also mandate a formal incident response team. Additionally, organizations facing complex threats—like advanced persistent threats (APTs) or ransomware—often require specialized forensics and malware analysis skills that extend beyond the capabilities of typical SOC analysts.
 
 **Hybrid Approach (Common in Growing Companies)**
 
-Some  organizations start with a SOC-only model, then evolve:
-
-* Phase 1: SOC handles everything.
-* Phase 2: Senior SOC members are designated as IRT leads (still part of SOC).
-* Phase 3: Formal CSIRT splits off as the security program matures.
-
-Example: A tech startup’s SOC might handle IR until a breach occurs, prompting the creation of a CSIRT.
+Many organizations begin with a SOC‑only model and evolve toward a dedicated CSIRT as their security program matures. In Phase 1, the SOC handles all monitoring, detection, and incident response. As the organization grows, Phase 2 introduces senior SOC members who are designated as incident response team leads, though they remain within the SOC structure. Finally, in Phase 3, a formal CSIRT splits off as a separate team. For example, a tech startup’s SOC might handle incident response until a significant breach occurs, prompting the creation of a standalone CSIRT to manage major incidents going forward.
 
 ### Ethical hacking vs red teaming roles and activities 
 

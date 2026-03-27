@@ -120,10 +120,10 @@ The need for a WAF has grown with the adoption of modern IT practices, including
 
 Many WAFs are reverse proxies (e.g., ModSecurity running in reverse‑proxy mode, cloud‑based WAFs like Cloudflare). However, not all proxy firewalls are WAFs—a generic proxy firewall can handle FTP, SMTP, etc., while a WAF is narrowly focused on HTTP/HTTPS. For comprehensive protection, organizations require both: the network firewall to guard the network perimeter and the WAF to protect the applications exposed to the internet from targeted layer‑7 attacks.
 
-|WAF Deployment Type|Example Tools|Description|
-|---|---|---|
-|Host‑based WAF|ModSecurity (Apache/Nginx plugin)|Runs directly on the web server itself (e.g., as a module).|
-|Network‑based WAF|Cloudflare WAF, HAProxy + ModSecurity|Deployed as a standalone appliance or cloud service, protecting multiple backend servers.|
+| WAF Deployment Type | Example Tools                         | Description                                                                               |
+| ------------------- | ------------------------------------- | ----------------------------------------------------------------------------------------- |
+| Host‑based WAF      | ModSecurity (Apache/Nginx plugin)     | Runs directly on the web server itself (e.g., as a module).                               |
+| Network‑based WAF   | Cloudflare WAF, HAProxy + ModSecurity | Deployed as a cloud service or standalone appliance, protecting multiple backend servers. |
 
 **Proxy Firewall vs WAF Comparison**
 

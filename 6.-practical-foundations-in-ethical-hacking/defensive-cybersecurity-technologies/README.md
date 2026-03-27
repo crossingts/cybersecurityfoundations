@@ -332,16 +332,16 @@ The following table maps common IDS/IPS tools to their detection methods, deploy
 
 The following guide helps match IDS/IPS technologies to common scenarios. Many environments combine network‑based and host‑based tools for layered coverage.
 
-| Scenario                                               | Recommended Tools   | Why                                                                                            |
-| ------------------------------------------------------ | ------------------- | ---------------------------------------------------------------------------------------------- |
-| High‑speed network perimeter with inline blocking      | Suricata (IPS mode) | Multi‑threaded, high throughput; can drop malicious packets in real time.                      |
-| Small to medium network needing a well‑documented NIDS | Snort               | Extensive community ruleset, widely supported; can run in IDS or IPS mode.                     |
-| Deep network forensics and behavioural analysis        | Zeek (Bro)          | Produces detailed logs (HTTP, DNS, TLS) suitable for offline analysis and SIEM integration.    |
-| Centralised endpoint security, compliance, and SIEM    | Wazuh               | Combines HIDS, file integrity monitoring, vulnerability detection, and a modern web dashboard. |
-| Host‑based intrusion detection with active response    | OSSEC               | Lightweight; can automatically block IPs after failed logins or trigger custom actions.        |
-| Quick brute‑force protection for SSH, web servers      | Fail2Ban            | Simple to configure; bans IPs at the local firewall after repeated failures.                   |
-| All‑in‑one security monitoring platform (SOC)          | Security Onion      | Provides full packet capture, multiple analysis engines, and a central console out of the box. |
-| Wireless network security monitoring                   | OpenWIPS‑NG         | Detects rogue access points and wireless‑specific attacks that wired IDS cannot see.           |
+|Scenario / Primary Need|Recommended Tool(s)|Why / Key Reason|
+|---|---|---|
+|High‑speed network perimeter with inline blocking; high‑speed network intrusion detection/prevention (NIDS/NIPS)|Suricata (IPS mode)|Multi‑threaded, high throughput; can drop malicious packets in real time. Snort‑rule compatible, supports file extraction and EVE JSON logging.|
+|Small to medium network needing a well‑documented NIDS; a lightweight, well‑known NIDS for smaller networks|Snort|Industry standard with extensive community ruleset, widely supported. Can run in IDS or IPS mode; lightweight but single‑threaded in v2 (v3 adds multi‑threading).|
+|Deep network forensics and behavioural analysis; deep network traffic analysis and forensics|Zeek (Bro)|Produces detailed, structured logs (HTTP, DNS, TLS) suitable for offline analysis, anomaly detection, and SIEM integration. Passive monitoring only; can integrate with firewalls via netcontrol.|
+|Centralised endpoint security, compliance, and SIEM; host‑based monitoring (HIDS) and compliance|Wazuh|Combines HIDS, file integrity monitoring, vulnerability detection, MITRE ATT&CK mapping, and a modern web dashboard (Elastic Stack). Supports cloud environments and active response.|
+|Host‑based intrusion detection with active response; a lightweight HIDS for servers with active response|OSSEC|Lightweight; monitors logs, file integrity, rootkits. Can automatically block IPs after failed logins or trigger custom actions. No native GUI (Wazuh extends it).|
+|Quick brute‑force protection for SSH, web servers; protection against brute‑force attacks on services|Fail2Ban|Simple to configure; scans logs (e.g., SSH, Apache) and bans malicious IPs at the local firewall. Lightweight, not a full HIDS.|
+|All‑in‑one security monitoring platform (SOC); an all‑in‑one distributed security monitoring platform|Security Onion|Provides full packet capture, multiple detection engines (Suricata, Zeek), and a central console (Kibana) out of the box. Designed for enterprise SOC environments.|
+|Wireless network security monitoring; wireless intrusion detection and prevention|OpenWIPS‑NG|Detects rogue access points, evil twin attacks, deauthentication floods, and other wireless‑specific threats that wired IDS cannot see.|
 
 #### IDS/IPS tools: key features and comparison
 
@@ -441,19 +441,6 @@ The following guide helps match IDS/IPS technologies to common scenarios. Many e
 |Security Onion|NIDS/HIDS/SIEM|Multiple engines|All‑in‑one SOC platform|Via Suricata|Yes (Kibana)|Elasticsearch, PCAP|Security Operations Centers|
 |OpenWIPS‑NG|Wireless IDS|Wi‑Fi‑specific|Rogue AP detection|Limited|No (CLI)|Text logs|Wi‑Fi security monitoring|
 
-**IDS/IPS Selection Guide**
-
-| Your Primary Need                                             | Recommended Tool(s) | Key Reason                                                                    |
-| ------------------------------------------------------------- | ------------------- | ----------------------------------------------------------------------------- |
-| High‑speed network intrusion detection/prevention (NIDS/NIPS) | Suricata            | Multi‑threaded, high performance, Snort‑rule compatible.                      |
-| A lightweight, well‑known NIDS for smaller networks           | Snort               | Industry standard with extensive community support.                           |
-| Deep network traffic analysis and forensics                   | Zeek (Bro)          | Generates rich, structured logs for behavioural analysis.                     |
-| Host‑based monitoring (HIDS) and compliance                   | Wazuh               | Combines log analysis, FIM, vulnerability detection, and a central dashboard. |
-| A lightweight HIDS for servers with active response           | OSSEC               | Efficient, can trigger actions like blocking IPs.                             |
-| Protection against brute‑force attacks on services            | Fail2Ban            | Scans logs and automatically bans malicious IPs.                              |
-| An all‑in‑one distributed security monitoring platform        | Security Onion      | Bundles Suricata, Zeek, Wazuh, and Elastic for a complete SOC experience.     |
-| Wireless intrusion detection and prevention                   | OpenWIPS‑NG         | Specialised for Wi‑Fi security.                                               |
-
 **Summary**
 
 - For networks: Suricata (best performance), Snort (legacy), Zeek (deep analysis).
@@ -550,14 +537,14 @@ The following table maps common SIEM/EDR tools to their primary function and key
 
 The following guide helps match tools to common scenarios. Many organisations use a combination—for example, Wazuh for centralised SIEM and Velociraptor for deep endpoint hunting.
 
-|Scenario|Recommended Tools|Why|
-|---|---|---|
-|Centralised log management, compliance, and HIDS|Wazuh|All‑in‑one with Elastic Stack; compliance reporting, file integrity, vulnerability detection.|
-|Lightweight HIDS with active response|OSSEC|Low overhead; can block IPs; no GUI out of the box.|
-|Deep endpoint forensics and threat hunting|Velociraptor|Powerful query language (VQL); live memory analysis; artefact collection.|
-|Network traffic logs for SIEM enrichment|Zeek or Suricata|Generate structured logs (e.g., EVE JSON) that feed into Wazuh or Elastic.|
-|Collaborative incident response case management|TheHive|Manage investigations, integrate threat intelligence from MISP, track progress.|
-|All‑in‑one SOC platform (network + host)|Security Onion|Full packet capture, multiple detection engines, central console.|
+| Scenario / Primary Need                                                                                 | Recommended Tool(s) | Why / Key Reason                                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Centralised log management, compliance, and HIDS; a unified SIEM with HIDS, compliance, and a dashboard | Wazuh               | All‑in‑one open‑source SIEM/XDR platform with Elastic Stack integration; compliance reporting, file integrity monitoring, vulnerability detection, MITRE ATT&CK mapping, and a central dashboard.   |
+| Lightweight HIDS with active response; lightweight host‑based intrusion detection with active response  | OSSEC               | Low overhead; monitors logs, file integrity, rootkits; can automatically block IPs after failed logins. No GUI out of the box (Wazuh extends it).                                                   |
+| Deep endpoint forensics and threat hunting; endpoint hunting, forensics, and live response              | Velociraptor        | Powerful query language (VQL) for live endpoint queries, memory analysis, and artifact collection; enables deep investigation and incident response.                                                |
+| Network traffic logs for SIEM enrichment; to feed network traffic logs into your SIEM                   | Zeek or Suricata    | Generate structured logs (e.g., EVE JSON, Zeek `.log` files) that can be ingested by SIEMs like Wazuh or Elastic. Zeek provides deep protocol‑aware metadata; Suricata adds signature‑based alerts. |
+| Collaborative incident response case management; collaborative incident response and case management    | TheHive             | Manages security incidents with collaborative workflows; integrates with MISP for threat intelligence; streamlines SOC case management.                                                             |
+| All‑in‑one SOC platform (network + host)                                                                | Security Onion      | Full packet capture, multiple detection engines (Suricata, Zeek), and a central console (Kibana) out of the box; designed for enterprise SOC environments.                                          |
 
 #### SIEM/EDR tools: key features and comparison
 
@@ -627,16 +614,6 @@ A mature SIEM/EDR deployment often combines a central analytics platform with de
 |OSSEC|HIDS|Log/FIM/rootkit|Lightweight, active response|Via Wazuh|No|Endpoint security|
 |Suricata|NIDS/NIPS|Signature/anomaly|High‑speed, file extraction, IPS mode|Via logs|No|Network traffic analysis|
 |Velociraptor|EDR|Endpoint forensics, hunting|Live querying, memory analysis|Via APIs|Yes|Threat hunting, incident response|
-
-**SIEM/EDR Selection Guide**
-
-|Your Primary Need|Recommended Tool(s)|Key Reason|
-|---|---|---|
-|A unified SIEM with HIDS, compliance, and a dashboard|Wazuh|All‑in‑one open‑source SIEM/XDR platform with strong integration.|
-|Endpoint hunting, forensics, and live response|Velociraptor|Powerful query language (VQL) for deep investigation and artifact collection.|
-|Collaborative incident response and case management|TheHive|Manages security incidents, integrates with MISP, streamlines SOC workflows.|
-|To feed network traffic logs into your SIEM|Zeek or Suricata|Both generate structured logs (e.g., EVE JSON) that can be ingested by SIEMs like Wazuh.|
-|Lightweight host‑based intrusion detection with active response|OSSEC|Low overhead; can block IPs; ideal for servers.|
 
 **Summary**
 

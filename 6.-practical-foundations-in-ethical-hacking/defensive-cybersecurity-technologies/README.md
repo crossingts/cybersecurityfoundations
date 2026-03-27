@@ -176,7 +176,7 @@ BSD‑based firewalls use networking and security tools native to BSD systems. B
 
 The following guide helps you match firewall types to common scenarios. In practice, many environments use a combination—for example, a stateful firewall at the network perimeter, a WAF in front of public web applications, and host‑based packet filters on critical servers.
 
-| Scenario / Primary Need                                                                       | Recommended Firewall Type(s)                                                                             | Why / Key Reason                                                                                                                                                                        |
+| Scenario/Primary Need                                                                         | Recommended Firewall Type(s)                                                                             | Rationale                                                                                                                                                                               |
 | --------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Simple home or small office network with no public‑facing services                            | Stateful firewall (e.g., integrated in a home router, OPNsense, pfSense)                                 | Provides essential protection with minimal configuration. Stateful tracking allows outbound traffic while blocking unsolicited inbound connections.                                     |
 | A simple host firewall for a Linux desktop or server                                          | UFW (Uncomplicated Firewall)                                                                             | Uncomplicated CLI, pre‑configured profiles, user‑friendly, and leverages the kernel’s stateful connection tracking.                                                                     |
@@ -328,20 +328,20 @@ The following table maps common IDS/IPS tools to their detection methods, deploy
 | Security Onion | NIDS/HIDS/SIEM   | Multiple (bundled)              | Passive           | Complete Linux distribution with Suricata, Zeek, Wazuh, Elastic, and full packet capture |
 | OpenWIPS‑NG    | Wireless IDS/IPS | Wireless‑specific               | Passive or inline | Detects rogue APs, evil twin, deauthentication floods                                    |
 
-#### Choosing the right IDS/IPS type
+#### Choosing the right IDS/IPS tool
 
 The following guide helps match IDS/IPS technologies to common scenarios. Many environments combine network‑based and host‑based tools for layered coverage.
 
-|Scenario / Primary Need|Recommended Tool(s)|Why / Key Reason|
-|---|---|---|
-|High‑speed network perimeter with inline blocking; high‑speed network intrusion detection/prevention (NIDS/NIPS)|Suricata (IPS mode)|Multi‑threaded, high throughput; can drop malicious packets in real time. Snort‑rule compatible, supports file extraction and EVE JSON logging.|
-|Small to medium network needing a well‑documented NIDS; a lightweight, well‑known NIDS for smaller networks|Snort|Industry standard with extensive community ruleset, widely supported. Can run in IDS or IPS mode; lightweight but single‑threaded in v2 (v3 adds multi‑threading).|
-|Deep network forensics and behavioural analysis; deep network traffic analysis and forensics|Zeek (Bro)|Produces detailed, structured logs (HTTP, DNS, TLS) suitable for offline analysis, anomaly detection, and SIEM integration. Passive monitoring only; can integrate with firewalls via netcontrol.|
-|Centralised endpoint security, compliance, and SIEM; host‑based monitoring (HIDS) and compliance|Wazuh|Combines HIDS, file integrity monitoring, vulnerability detection, MITRE ATT&CK mapping, and a modern web dashboard (Elastic Stack). Supports cloud environments and active response.|
-|Host‑based intrusion detection with active response; a lightweight HIDS for servers with active response|OSSEC|Lightweight; monitors logs, file integrity, rootkits. Can automatically block IPs after failed logins or trigger custom actions. No native GUI (Wazuh extends it).|
-|Quick brute‑force protection for SSH, web servers; protection against brute‑force attacks on services|Fail2Ban|Simple to configure; scans logs (e.g., SSH, Apache) and bans malicious IPs at the local firewall. Lightweight, not a full HIDS.|
-|All‑in‑one security monitoring platform (SOC); an all‑in‑one distributed security monitoring platform|Security Onion|Provides full packet capture, multiple detection engines (Suricata, Zeek), and a central console (Kibana) out of the box. Designed for enterprise SOC environments.|
-|Wireless network security monitoring; wireless intrusion detection and prevention|OpenWIPS‑NG|Detects rogue access points, evil twin attacks, deauthentication floods, and other wireless‑specific threats that wired IDS cannot see.|
+| Scenario/Primary Need                                                                                            | Recommended Tool(s) | Rationale                                                                                                                                                                                         |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| High‑speed network perimeter with inline blocking; high‑speed network intrusion detection/prevention (NIDS/NIPS) | Suricata (IPS mode) | Multi‑threaded, high throughput; can drop malicious packets in real time. Snort‑rule compatible, supports file extraction and EVE JSON logging.                                                   |
+| Small to medium network needing a well‑documented NIDS; a lightweight, well‑known NIDS for smaller networks      | Snort               | Industry standard with extensive community ruleset, widely supported. Can run in IDS or IPS mode; lightweight but single‑threaded in v2 (v3 adds multi‑threading).                                |
+| Deep network forensics and behavioural analysis; deep network traffic analysis and forensics                     | Zeek (Bro)          | Produces detailed, structured logs (HTTP, DNS, TLS) suitable for offline analysis, anomaly detection, and SIEM integration. Passive monitoring only; can integrate with firewalls via netcontrol. |
+| Centralised endpoint security, compliance, and SIEM; host‑based monitoring (HIDS) and compliance                 | Wazuh               | Combines HIDS, file integrity monitoring, vulnerability detection, MITRE ATT&CK mapping, and a modern web dashboard (Elastic Stack). Supports cloud environments and active response.             |
+| Host‑based intrusion detection with active response; a lightweight HIDS for servers with active response         | OSSEC               | Lightweight; monitors logs, file integrity, rootkits. Can automatically block IPs after failed logins or trigger custom actions. No native GUI (Wazuh extends it).                                |
+| Quick brute‑force protection for SSH, web servers; protection against brute‑force attacks on services            | Fail2Ban            | Simple to configure; scans logs (e.g., SSH, Apache) and bans malicious IPs at the local firewall. Lightweight, not a full HIDS.                                                                   |
+| All‑in‑one security monitoring platform (SOC); an all‑in‑one distributed security monitoring platform            | Security Onion      | Provides full packet capture, multiple detection engines (Suricata, Zeek), and a central console (Kibana) out of the box. Designed for enterprise SOC environments.                               |
+| Wireless network security monitoring; wireless intrusion detection and prevention                                | OpenWIPS‑NG         | Detects rogue access points, evil twin attacks, deauthentication floods, and other wireless‑specific threats that wired IDS cannot see.                                                           |
 
 #### IDS/IPS tools: key features and comparison
 
@@ -533,11 +533,11 @@ The following table maps common SIEM/EDR tools to their primary function and key
 |Suricata|NIDS/NIPS|Network traffic inspection; logs can be ingested by SIEM|
 |Velociraptor|EDR + Digital Forensics|Live endpoint queries (VQL); memory forensics; artifact collection|
 
-#### Choosing the right SIEM/EDR approach
+#### Choosing the right SIEM/EDR tool
 
-The following guide helps match tools to common scenarios. Many organisations use a combination—for example, Wazuh for centralised SIEM and Velociraptor for deep endpoint hunting.
+The following guide helps match tools to common scenarios. Many organisations use a combination—for example, Wazuh for centralized SIEM and Velociraptor for deep endpoint hunting.
 
-| Scenario / Primary Need                                                                                 | Recommended Tool(s) | Why / Key Reason                                                                                                                                                                                    |
+| Scenario/Primary Need                                                                                   | Recommended Tool(s) | Rationale                                                                                                                                                                                           |
 | ------------------------------------------------------------------------------------------------------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Centralised log management, compliance, and HIDS; a unified SIEM with HIDS, compliance, and a dashboard | Wazuh               | All‑in‑one open‑source SIEM/XDR platform with Elastic Stack integration; compliance reporting, file integrity monitoring, vulnerability detection, MITRE ATT&CK mapping, and a central dashboard.   |
 | Lightweight HIDS with active response; lightweight host‑based intrusion detection with active response  | OSSEC               | Low overhead; monitors logs, file integrity, rootkits; can automatically block IPs after failed logins. No GUI out of the box (Wazuh extends it).                                                   |

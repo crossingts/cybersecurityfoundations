@@ -276,7 +276,7 @@ Popular open source NIDS/NIPS (Network IDS/IPS) and HIDS (Host IDS) include Suri
 
 Intrusion Detection Systems (IDS) and Intrusion Prevention Systems (IPS) are foundational defensive technologies that monitor network traffic or host activity for signs of malicious behaviour. An IDS passively alerts when suspicious activity is detected; an IPS actively blocks or modifies malicious traffic inline. Both play critical roles in a defense in depth strategy.
 
-The following discussion begins by distinguishing intrusion detection methodologies—signature‑based, anomaly‑based, and behavioural—and explains how they are applied in both network‑based (NIDS/NIPS) and host‑based (HIDS) tools. Deployment architectures are examined, contrasting passive monitoring (IDS mode) with inline prevention (IPS mode), and highlighting specialized solutions such as wireless IDS/IPS. The section then surveys popular open‑source tools, including Suricata, Snort, Zeek (formerly Bro), Wazuh, OSSEC, Fail2Ban, Security Onion, and OpenWIPS‑NG, mapping each to its typical use case. By the end, you will understand how to select and position IDS/IPS technologies as part of a layered defence strategy.
+The following discussion begins by distinguishing intrusion detection methodologies—signature‑based, anomaly‑based, and behavioural—and explains how they are applied in both network‑based (NIDS/NIPS) and host‑based (HIDS) tools. Deployment architectures are examined, contrasting passive monitoring (IDS mode) with inline prevention (IPS mode), and highlighting specialized solutions such as wireless IDS/IPS. The section then surveys popular open‑source tools, including Suricata, Snort, Zeek, Wazuh, OSSEC, Fail2Ban, Security Onion, and OpenWIPS‑NG, mapping each to its typical use case. By the end, you will understand how to select and position IDS/IPS technologies as part of a layered defence strategy.
 
 #### IDS/IPS detection methodologies
 
@@ -324,16 +324,16 @@ Specialized tools like OpenWIPS‑NG monitor Wi‑Fi channels for rogue access p
 
 The following table maps common IDS/IPS tools to their detection methods, deployment type, and underlying technology.
 
-|Tool|Type|Detection Method|Deployment|Key Technology / Notes|
-|---|---|---|---|---|
-|Suricata|NIDS/NIPS|Signature, anomaly, behavioural|Inline or passive|Multi‑threaded, Snort‑rule compatible, EVE JSON logging, file extraction|
-|Snort|NIDS/NIPS|Signature|Inline or passive|Single‑threaded (v2), widely used; Snort 3 adds multi‑threading|
-|Zeek (Bro)|NIDS / NSM|Behavioural, protocol‑based|Passive only|Generates rich logs; ideal for forensic analysis, not inline blocking|
-|Wazuh|HIDS / SIEM|Log analysis, FIM, rootkit|Host agent|Fork of OSSEC with Elastic Stack integration, MITRE ATT&CK mapping|
-|OSSEC|HIDS|Log analysis, FIM, rootkit|Host agent|Lightweight, active response (e.g., block IPs)|
-|Fail2Ban|HIDS (log‑based)|Log parsing|Host|Scans logs for brute‑force attempts, bans IPs via firewall|
-|Security Onion|NIDS/HIDS/SIEM|Multiple (bundled)|Passive|Complete Linux distribution with Suricata, Zeek, Wazuh, Elastic, and full packet capture|
-|OpenWIPS‑NG|Wireless IDS/IPS|Wireless‑specific|Passive or inline|Detects rogue APs, evil twin, deauthentication floods|
+| Tool           | Type             | Detection Method                | Deployment        | Key Technology / Notes                                                                   |
+| -------------- | ---------------- | ------------------------------- | ----------------- | ---------------------------------------------------------------------------------------- |
+| Suricata       | NIDS/NIPS        | Signature, anomaly, behavioural | Inline or passive | Multi‑threaded, Snort‑rule compatible, EVE JSON logging, file extraction                 |
+| Snort          | NIDS/NIPS        | Signature                       | Inline or passive | Single‑threaded (v2), widely used; Snort 3 adds multi‑threading                          |
+| Zeek (Bro)     | NIDS / NSM       | Behavioural, protocol‑based     | Passive only      | Generates rich logs; ideal for forensic analysis, not inline blocking                    |
+| Wazuh          | HIDS / SIEM      | Log analysis, FIM, rootkit      | Host agent        | Fork of OSSEC with Elastic Stack integration, MITRE ATT&CK mapping                       |
+| OSSEC          | HIDS             | Log analysis, FIM, rootkit      | Host agent        | Lightweight, active response (e.g., block IPs)                                           |
+| Fail2Ban       | HIDS (log‑based) | Log parsing                     | Host              | Scans logs for brute‑force attempts, bans IPs via firewall                               |
+| Security Onion | NIDS/HIDS/SIEM   | Multiple (bundled)              | Passive           | Complete Linux distribution with Suricata, Zeek, Wazuh, Elastic, and full packet capture |
+| OpenWIPS‑NG    | Wireless IDS/IPS | Wireless‑specific               | Passive or inline | Detects rogue APs, evil twin, deauthentication floods                                    |
 
 #### Choosing the right IDS/IPS type
 

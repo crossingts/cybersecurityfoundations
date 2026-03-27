@@ -154,7 +154,7 @@ The key differences between a traditional packet filtering firewall and an NGFW 
 |Traffic Inspection|Header‑only|Deep Packet Inspection (DPI) of payload|
 |Additional Features|Basic NAT, basic logging|IPS, Anti‑Virus, Threat Intelligence, Identity Awareness|
 
-pfSense and OPNsense are complete, GUI‑based firewall distributions (operating systems). They use PF (Packet Filter) as their core packet filtering engine. However, the systems themselves are NGFWs because they include many features beyond simple packet filtering.
+pfSense and OPNsense are complete, GUI‑based firewall distributions (operating systems). They use PF (Packet Filter) as their core packet filtering engine. However, the systems themselves offer many NGFW‑like capabilities beyond simple packet filtering, including application control, IPS, and threat intelligence via integrated packages.
 
 #### Firewall roots and technology mapping
 
@@ -239,7 +239,8 @@ The following guide helps you match firewall types to common scenarios. In pract
 **7. pfSense (Community Edition)**
 
 - Type: Network firewall/router.
-- Platform: FreeBSD‑based (dedicated appliance/VM). Key features: Fork of m0n0wall, widely used in enterprises. Web GUI for easy management. Supports VPN (OpenVPN, IPsec), IDS/IPS (Snort), and traffic shaping. Advanced features (captive portal, CARP for HA). Supports packages (Snort, Squid, HAProxy). Stateful firewall, NAT, and traffic shaping. Large community but slower updates than OPNsense.
+- Platform: FreeBSD‑based (dedicated appliance/VM). 
+- Key features: Fork of m0n0wall, widely used in enterprises. Web GUI for easy management. Supports VPN (OpenVPN, IPsec), IDS/IPS (Snort), and traffic shaping. Advanced features (captive portal, CARP for HA). Supports packages (Snort, Squid, HAProxy). Stateful firewall, NAT, and traffic shaping. Large community but slower updates than OPNsense.
 - Use case: Reliable FreeBSD‑based network firewall with a large support community.
 
 **Firewall Comparison Table**

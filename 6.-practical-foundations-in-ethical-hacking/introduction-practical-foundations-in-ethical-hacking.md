@@ -39,8 +39,6 @@ Ethical hacking is the cornerstone of security verification within organizations
 
 [Defensive cybersecurity technologies](defensive-cybersecurity-technologies/)
 
-[Packet analyzers](packet-analyzers/)
-
 [Phases of the penetration testing process](phases-of-the-penetration-testing-process/)
 
 [Types of penetration testing](types-of-penetration-testing/)

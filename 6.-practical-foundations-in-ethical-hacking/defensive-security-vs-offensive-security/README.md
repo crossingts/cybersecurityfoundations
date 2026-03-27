@@ -152,7 +152,7 @@ The choice often depends on the organization’s size, budget, regulatory requir
 | **Team Structure** | Usually individual testers or small, specialized groups.                     | Larger, multidisciplinary teams (cyber, physical, social engineering).                                                       |
 | **Reporting**      | Detailed technical findings with prioritized remediation steps.              | Focuses on strategic security gaps, process failures, and recommendations for improving detection/response.                  |
 
-### Purple teaming: a collaborative bridge
+### Purple teaming: A collaborative bridge
 
 Purple teaming is not a standalone team but a collaborative exercise that brings red and blue teams together to maximize the value of offensive security engagements. Instead of operating in silos—where red teams attack and blue teams defend without real‑time interaction—purple teaming creates a feedback loop. Red team shares its tactics, techniques, and procedures (TTPs) as they are discovered, while blue team uses that intelligence to tune detection rules, improve monitoring, and validate incident response processes on the spot. This approach shifts the focus from simply “finding vulnerabilities” to measurably improving the organization’s detection and response capabilities. Purple teaming can be conducted as a dedicated exercise or woven into traditional red team engagements, making it especially valuable for organizations looking to mature their security operations efficiently.
 

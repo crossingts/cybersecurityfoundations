@@ -11,14 +11,10 @@
             "id": "1e65107a9a5d3b6c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/packet-analyzers/README.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "README"
+              "title": "New tab"
             }
           }
         ]
@@ -183,9 +179,13 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/packet-analyzers/README.md",
+    "6.-practical-foundations-in-ethical-hacking/network-security-testing/wireshark-defensive-or-offensive.md",
+    "6.-practical-foundations-in-ethical-hacking/network-security-testing/using-wireshark-to-identify-non-secure-network-traffic.md",
+    "6.-practical-foundations-in-ethical-hacking/network-security-testing/tcpdump-defensive-or-offensive.md",
+    "6.-practical-foundations-in-ethical-hacking/network-security-testing/how-to-get-started-with-wireshark.md",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing/README.md",
     "6.-practical-foundations-in-ethical-hacking/packet-analyzers/wireshark-defensive-or-offensive.md",
-    "6.-practical-foundations-in-ethical-hacking/packet-analyzers/README.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/README.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-security-vs-offensive-security/README.md",
@@ -205,11 +205,7 @@
     "2.-introduction-to-cybersecurity/common-cyber-attacks/README.md",
     "2.-introduction-to-cybersecurity/the-evolving-cybersecurity-threat-landscape/README.md",
     "3.-cybersecurity-grc/the-information-security-compliance-audit/README.md",
-    "3.-cybersecurity-grc/the-information-security-compliance-audit/the-information-security-compliance-audit-quiz.md",
-    "2.-introduction-to-cybersecurity/the-cybersecurity-threat-landscape/README.md",
-    "2.-introduction-to-cybersecurity/the-evolving-cybersecurity-threat-landscape/the-evolving-cybersecurity-threat-landscape-quiz.md",
     "2.-introduction-to-cybersecurity/the-evolving-cybersecurity-threat-landscape",
-    "2.-introduction-to-cybersecurity/the-cybersecurity-threat-landscape/the-cybersecurity-threat-landscape-quiz.md",
     "LICENSE",
     "3.-cybersecurity-grc/the-information-security-compliance-audit",
     "3.-cybersecurity-grc/the-information-security-risk-assessment",

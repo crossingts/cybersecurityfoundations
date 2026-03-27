@@ -34,15 +34,15 @@ Both defensive and offensive security are essential regardless of whether a thre
 
 **Two Key Cybersecurity Paradigms (Concepts, Skills, and Implementation Approaches)**
 
-| Strategy                | Offensive Security                                                                                         | Defensive Security                                                                                        |
-| ----------------------- | ---------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| **Approach**            | Ethical hacking, red teaming, vulnerability research, bug bounty programs (e.g., HackerOne, Bugcrowd)      | Diligence, SDLC/agile security, DevSecOps/security‑by‑design, best practices, information assurance (IA)  |
-| **Mindset**             | Attacker, adversarial – seek to compromise, break, deceive, trick                                          | Defender, ally – seek to protect, prevent, mitigate                                                       |
-| **Primary Goal**        | Identify and exploit vulnerabilities before malicious actors do                                            | Maintain confidentiality, integrity, and availability of systems and data                                 |
-| **Skillsets**           | How to penetrate an information system                                                                     | How to protect an information system (risk assessment, risk mitigation, governance)                       |
-| **Related Paradigms**   | Red teaming                                                                                                | Hygiene culture, security culture, blue teaming                                                           |
-| **Permission of Owner** | Authorized, legal                                                                                          | Authorized, legal                                                                                         |
-| **Testing Approaches**  | Often uses black‑box testing (limited prior knowledge of the target system) to simulate external attackers | Often uses white‑box testing (full knowledge of the target system) to validate controls and identify gaps |
+| Strategy                | Offensive Security                                                                                           | Defensive Security                                                                                        |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
+| **Approach**            | Ethical hacking, red teaming, vulnerability research, bug bounty programs (e.g., HackerOne, Bugcrowd)        | Diligence, SDLC/agile security, DevSecOps/security‑by‑design, best practices, information assurance (IA)  |
+| **Mindset**             | Attacker, adversarial – seek to compromise, break, deceive, trick                                            | Defender, ally – seek to protect, prevent, mitigate                                                       |
+| **Primary Goal**        | Identify and exploit vulnerabilities before malicious actors do                                              | Maintain confidentiality, integrity, and availability of systems and data                                 |
+| **Skillsets**           | How to penetrate an information system                                                                       | How to protect an information system (risk assessment, risk mitigation, governance)                       |
+| **Related Paradigms**   | Red teaming                                                                                                  | Hygiene culture, security culture, blue teaming                                                           |
+| **Permission of Owner** | Authorized, legal                                                                                            | Authorized, legal                                                                                         |
+| **Testing Approaches**  | Often uses black‑box testing (limited prior knowledge of the target system) to simulate external adversaries | Often uses white‑box testing (full knowledge of the target system) to validate controls and identify gaps |
 
 ### Blue teaming core functions
 
@@ -64,7 +64,7 @@ The composition and focus of a blue team can vary significantly depending on the
 | -------------------------------------------------------- | ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Small / Medium Companies**                             | Blue Team = SOC + Incident Response (IR)                          | • No formal, dedicated CSIRT.  <br>• SOC analysts handle both monitoring and response tasks.  <br>• A lean, consolidated security model.                                                                         |
 | **Large Enterprises**                                    | Blue Team = SOC + CSIRT + Threat Intel + Vulnerability Management | • Clear separation of duties and specialized roles.  <br>• SOC handles 24/7 monitoring; CSIRT handles major incidents.  <br>• Includes dedicated functions for threat intelligence and vulnerability management. |
-| **Elite / Advanced  organizations (technology leaders)** | Blue Team = Proactive Defense Unit                                | • Focus shifts from reactive to proactive measures.  <br>• Heavy emphasis on threat hunting, adversary simulation, and intelligence-led defense.  <br>• Often involves developing custom security tooling.       |
+| **Elite / Advanced  organizations (technology leaders)** | Blue Team = Proactive Defense Unit/Threat Hunting                 | • Focus shifts from reactive to proactive measures.  <br>• Heavy emphasis on threat hunting, adversary simulation, and intelligence-led defense.  <br>• Often involves developing custom security tooling.       |
 
 ### SOC (Security Operations Center)
 
@@ -107,12 +107,12 @@ In organizations without a dedicated CSIRT, SOC analysts often wear multiple hat
 
 **Key Differences: Dedicated CSIRT vs SOC-Only Approach**
 
-|                    | Dedicated SIRT/CSIRT                    | SOC-Only (With CSIRT Responsibilities)   |
-| ------------------ | --------------------------------------- | ---------------------------------------- |
-| **Team Structure** | Separate team, often senior specialists | SOC tiers handle end-to-end incidents    |
-| **Activation**     | Engaged for major incidents             | SOC escalates internally (no handoff)    |
-| **Skills**         | Deep forensics, legal/PR coordination   | SOC analysts trained in basic IR         |
-| **Common in**      | Large enterprises, regulated industries | Mid-sized companies, lean security teams |
+|                    | Dedicated SIRT/CSIRT                    | SOC-Only (With CSIRT Responsibilities)               |
+| ------------------ | --------------------------------------- | ---------------------------------------------------- |
+| **Team Structure** | Separate team, often senior specialists | SOC tiers handle end-to-end incidents                |
+| **Activation**     | Engaged for major incidents             | SOC escalates internally (no handoff)                |
+| **Skills**         | Deep forensics, legal/PR coordination   | SOC analysts trained in basic IR (Incident Response) |
+| **Common in**      | Large enterprises, regulated industries | Mid-sized companies, lean security teams             |
 
 **When Does a Company Need a Dedicated CSIRT?**
 

@@ -154,7 +154,7 @@ The key differences between a traditional packet filtering firewall and an NGFW 
 |Traffic Inspection|Header‑only|Deep Packet Inspection (DPI) of payload|
 |Additional Features|Basic NAT, basic logging|IPS, Anti‑Virus, Threat Intelligence, Identity Awareness|
 
-pfSense and OPNsense are complete, GUI‑based firewall distributions (operating systems). They use PF (Packet Filter) as their core packet filtering engine. However, the systems themselves are full‑featured NGFWs because they include many features beyond simple packet filtering.
+pfSense and OPNsense are complete, GUI‑based firewall distributions (operating systems). They use PF (Packet Filter) as their core packet filtering engine. However, the systems themselves are NGFWs because they include many features beyond simple packet filtering.
 
 #### Firewall roots and technology mapping
 
@@ -163,7 +163,7 @@ The following table maps common firewall implementations to their underlying sys
 | Firewall / Platform | Underlying System   | OS Family              | Layers | Notes                                                   |
 | ------------------- | ------------------- | ---------------------- | ------ | ------------------------------------------------------- |
 | UFW                 | iptables / nftables | Linux                  | L3/L4  | Front‑end for simplifying rule management.              |
-| iptables            | Netfilter           | Linux                  | L3/L4  | Legacy, replaced by nftables.                           |
+| iptables            | Netfilter           | Linux                  | L3/L4  | Traditional Linux firewall, being replaced by nftables. |
 | nftables            | Netfilter           | Linux                  | L3/L4  | Unifies IPv4/IPv6, improved syntax.                     |
 | PF (Packet Filter)  | PF (in‑kernel)      | OpenBSD, FreeBSD, etc. | L3/L4  | Modern BSD firewall; supports stateful inspection.      |
 | ipfw                | ipfw (in‑kernel)    | FreeBSD, macOS         | L3/L4  | Legacy; still available but PF is preferred on FreeBSD. |
@@ -245,23 +245,22 @@ The following guide helps you match firewall types to common scenarios. In pract
 **7. pfSense (Community Edition)**
 
 - Type: Network firewall/router.
-- Platform: FreeBSD‑based (dedicated appliance/VM).
-- Key features: Fork of m0n0wall, widely used in enterprises. Web GUI with advanced features (VPN, captive portal, CARP for HA). Supports packages (Snort, Squid, HAProxy). Stateful firewall, NAT, and traffic shaping. Large community but slower updates than OPNsense.
+- Platform: FreeBSD‑based (dedicated appliance/VM). Key features: Fork of m0n0wall, widely used in enterprises. Web GUI for easy management. Supports VPN (OpenVPN, IPsec), IDS/IPS (Snort), and traffic shaping. Advanced features (captive portal, CARP for HA). Supports packages (Snort, Squid, HAProxy). Stateful firewall, NAT, and traffic shaping. Large community but slower updates than OPNsense.
 - Use case: Reliable FreeBSD‑based network firewall with a large support community.
 
 **Firewall Comparison Table**
 
 All the firewalls listed in the following table are open source, stateful, perform NAT, and have IPv6 routing capability.
 
-| Firewall   | Type         | Platform                | GUI       | Ease of Use | VPN Support       | IDS/IPS      | Traffic Shaping (QoS) |
-| ---------- | ------------ | ----------------------- | --------- | ----------- | ----------------- | ------------ | --------------------- |
-| UFW        | Host         | Linux                   | No (CLI)  | Very Easy   | Limited           | No           | No                    |
-| iptables   | Host/Network | Linux                   | No (CLI)  | Complex     | Manual            | No (add-ons) | Yes                   |
-| nftables   | Host/Network | Linux                   | No (CLI)  | Moderate    | Manual            | No (add-ons) | Yes                   |
-| PF         | Host/Network | OpenBSD, FreeBSD, macOS | No (CLI)  | Moderate    | Manual            | No (add-ons) | Yes                   |
-| ipfw       | Host/Network | FreeBSD, macOS (legacy) | No (CLI)  | Complex     | Manual            | No (add-ons) | Yes (via dummynet)    |
-| OPNsense   | Network      | FreeBSD                 | Yes (Web) | Easy        | OpenVPN/WireGuard | Suricata     | Yes                   |
-| pfSense CE | Network      | FreeBSD                 | Yes (Web) | Easy        | OpenVPN/IPsec     | Snort        | Yes                   |
+| Firewall   | Type         | Platform                | GUI       | Ease of Use | IDS/IPS      | Traffic Shaping (QoS) |
+| ---------- | ------------ | ----------------------- | --------- | ----------- | ------------ | --------------------- |
+| UFW        | Host         | Linux                   | No (CLI)  | Very Easy   | No           | No                    |
+| iptables   | Host/Network | Linux                   | No (CLI)  | Complex     | No (add-ons) | Yes                   |
+| nftables   | Host/Network | Linux                   | No (CLI)  | Moderate    | No (add-ons) | Yes                   |
+| PF         | Host/Network | OpenBSD, FreeBSD, macOS | No (CLI)  | Moderate    | No (add-ons) | Yes                   |
+| ipfw       | Host/Network | FreeBSD, macOS (legacy) | No (CLI)  | Complex     | No (add-ons) | Yes (via dummynet)    |
+| OPNsense   | Network      | FreeBSD                 | Yes (Web) | Easy        | Suricata     | Yes                   |
+| pfSense CE | Network      | FreeBSD                 | Yes (Web) | Easy        | Snort        | Yes                   |
 
 **Summary**
 
@@ -284,7 +283,7 @@ IDS/IPS tools use one or more detection methods to identify threats:
 
 - Signature‑based detection – matches traffic or activity against a database of known attack patterns (signatures). It is highly accurate for known threats but cannot detect zero‑day attacks without an updated signature. Examples: Snort, Suricata.
 - Anomaly‑based detection – establishes a baseline of “normal” behaviour and flags deviations. It can detect novel attacks but may generate false positives. Often implemented with statistical or machine‑learning models.
-- Behavioural detection – focuses on patterns of activity that indicate compromise (e.g., command‑and‑control traffic, data exfiltration). It overlaps with anomaly detection but is often rule‑based. Zeek specialises in behavioural analysis.
+- Behavioural detection – focuses on patterns of activity that indicate compromise (e.g., command‑and‑control traffic, data exfiltration). It overlaps with anomaly detection but is often rule‑based. Zeek specializes in behavioural analysis.
 
 Most modern IDS/IPS engines combine these approaches.
 
@@ -382,7 +381,7 @@ The following guide helps match IDS/IPS technologies to common scenarios. Many e
     - Protocol‑aware traffic analysis (HTTP, DNS, SSL, etc.).
     - Generates detailed log files (`.log`) for forensic analysis.
     - Behavioural detection (e.g., detecting C2 traffic, anomalies).
-    - No built‑in IPS; passive monitoring only.
+    - No built‑in IPS; passive monitoring only. However, Zeek can integrate with firewalls (e.g., PF and iptables) via its netcontrol framework to enforce blocking decisions.
 - Use case: Best for network monitoring, forensics, and anomaly detection (deep traffic analysis).
 
 **4. Wazuh**

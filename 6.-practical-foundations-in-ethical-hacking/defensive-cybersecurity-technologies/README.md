@@ -567,6 +567,8 @@ The following guide helps match tools to common scenarios. Many organisations us
 
 #### SIEM/EDR tools: key features and comparison
 
+A mature SIEM/EDR deployment often combines a central analytics platform with dedicated data sources. Tools like _Zeek_ and _Suricata_ provide the network telemetry layer, feeding rich, structured logs into a central SIEM such as _Wazuh_ for correlation, alerting, and long‑term storage. Endpoint telemetry is typically handled by agents (e.g., Wazuh agent, Velociraptor). The following list highlights the primary role of each tool in a SIEM/EDR ecosystem.
+
 **1. Wazuh**
 
 - Type: SIEM + HIDS + Compliance + basic EDR
@@ -575,13 +577,13 @@ The following guide helps match tools to common scenarios. Many organisations us
     - MITRE ATT&CK mapping for threat detection.
     - Endpoint protection (Linux, Windows, macOS).
     - Cloud/SaaS integration (AWS, Azure, GCP).
-    - Centralised dashboard (Elastic Stack/Kibana).
+    - Centralized dashboard (Elastic Stack/Kibana).
     - Active response (e.g., blocking malicious IPs, quarantining files).
 - Use case: Unified SIEM and endpoint security with compliance monitoring.
 
 **2. TheHive**
 
-- Type: Incident Response + Case Management (not a SIEM/EDR, but complementary)
+- Type: Incident Response + Case Management (complementary to SIEM/EDR)
 - Key features:
     - Collaborative platform for SOC teams.
     - Integrates with MISP (threat intelligence).
@@ -591,13 +593,9 @@ The following guide helps match tools to common scenarios. Many organisations us
 
 **3. Zeek (formerly Bro)**
 
-- Type: Network Security Monitoring (NSM) / NTA
-- Key features:
-    - Protocol‑aware traffic analysis (HTTP, DNS, SSL).
-    - Behavioural detection (e.g., C2 traffic, anomalies).
-    - Detailed logs (`.log` files) for forensics.
-    - No built‑in SIEM/EDR; serves as a data source.
-- Use case: Network traffic analysis and behavioural threat detection.
+- Type: Network Security Monitoring (NSM) / Data Source
+- Role in SIEM/EDR: _Zeek_ is a network telemetry generator. It passively analyses traffic, producing highly detailed, structured logs (HTTP, DNS, TLS, etc.) that serve as rich input for a central SIEM. It does not perform inline blocking, but its logs enable deep behavioural analysis and forensic investigation.
+- Use case: Feeding high‑fidelity network metadata into a SIEM for anomaly detection and forensics.
 
 **4. OSSEC**
 
@@ -611,14 +609,9 @@ The following guide helps match tools to common scenarios. Many organisations us
 
 **5. Suricata**
 
-- Type: NIDS/NIPS
-- Key features:
-    - Real‑time traffic inspection (supports Snort rules).
-    - File extraction (YARA for malware detection).
-    - EVE JSON logs for structured data.
-    - Can act as IPS (inline blocking).
-    - Not an EDR; focused on network traffic.
-- Use case: High‑performance NIDS/NIPS with file extraction and IPS capabilities.
+- Type: NIDS/NIPS / Data Source
+- Role in SIEM/EDR: _Suricata_ acts as a network intrusion detection engine that can also supply real‑time alerts and EVE JSON logs to a SIEM. When deployed in passive mode, it provides signature‑based and behavioural alerts that a SIEM can correlate with other data sources. Its inline IPS capability is typically used at the network perimeter, independent of the SIEM.
+- Use case: High‑performance network threat detection with seamless SIEM integration via structured log output.
 
 **6. Velociraptor**
 

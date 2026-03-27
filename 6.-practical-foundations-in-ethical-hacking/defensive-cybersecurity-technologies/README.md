@@ -292,18 +292,9 @@ Most modern IDS/IPS engines combine these approaches.
 
 **Network‑Based Deployment**
 
-**Inline vs Passive Deployment**
+When deploying a network‑based IDS/IPS, the first architectural decision is whether to operate in passive or inline mode. In passive mode—commonly referred to as IDS mode—the system receives a copy of network traffic via a switch SPAN (mirror) port or a network tap. This approach has no impact on traffic flow and introduces no latency, but it cannot block attacks in real time; detection is limited to alerting. In contrast, inline mode—IPS mode—places the device directly in the traffic path. The system can drop malicious packets, reset connections, or block source IP addresses as traffic passes through. While this enables active prevention, it adds a small amount of latency and requires careful design to avoid becoming a single point of failure.
 
-- Passive (IDS mode) – copies traffic (via SPAN port or tap) for analysis. No impact on traffic flow, but cannot block attacks in real time.
-- Inline (IPS mode) – sits directly in the traffic path. Can drop malicious packets, reset connections, or block IPs. Adds latency but enables active prevention.
-
-NIDS/NIPS appliances or virtual instances are placed at strategic points:
-
-- Perimeter – monitors traffic entering or leaving the network.
-- Internal segments – monitors east‑west traffic to detect lateral movement.
-- DMZ – inspects traffic to/from public‑facing servers.
-
-For passive monitoring, a switch SPAN (mirror) port or network tap copies traffic. For inline IPS, the device is inserted between two network segments.
+Placement of NIDS/NIPS appliances or virtual instances is equally important to maximize visibility. At the network perimeter, the system monitors traffic entering or leaving the organization, catching threats before they reach internal assets. On internal segments, it watches east‑west traffic to detect lateral movement after an initial compromise. In a DMZ, it inspects traffic to and from public‑facing servers, where application‑layer attacks often originate. For passive monitoring, traffic is copied via a SPAN port or tap; for inline IPS, the device is inserted between two network segments, such as between a firewall and an internal switch.
 
 **Host‑Based Deployment**
 

@@ -34,16 +34,15 @@ Both defensive and offensive security are essential regardless of whether a thre
 
 **Two Key Cybersecurity Paradigms (Concepts, Skills, and Implementation Approaches)**
 
-| Strategy                  | Offensive Security                                                                    | Defensive Security                                                                                       |
-| ------------------------- | ------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Approach**              | Ethical hacking, hacker-powered security (e.g., HackerOne, Bugcrowd)                  | Diligence, SDLC/agile security, DevSecOps/security‑by‑design, best practices, information assurance (IA) |
-| **Mindset**               | Attacker, adversarial – seek to compromise, break, deceive, trick                     | Defender, ally – seek to protect, prevent, mitigate                                                      |
-| **Primary Goal**          | Identify and exploit vulnerabilities before malicious actors do                       | Maintain confidentiality, integrity, and availability of systems and data                                |
-| **Skillsets**             | How to penetrate an information system                                                | How to protect an information system (risk assessment, risk mitigation, governance)                      |
-| **Conflict of Interests** | Less conflict of interest (especially when hiring external ethical hackers)           | Potential conflict of interest (defenders are typically in‑house employees)                              |
-| **Related Paradigms**     | Red teaming                                                                           | Hygiene culture, security culture, blue teaming                                                          |
-| **Permission of Owner**   | Authorized, legal                                                                     | Authorized, legal                                                                                        |
-| **Testing Approaches**    | Often uses black‑box testing (limited prior knowledge) to simulate external attackers | Often uses white‑box testing (full knowledge) to validate controls and identify gaps                     |
+| Strategy                | Offensive Security                                                                                         | Defensive Security                                                                                        |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| **Approach**            | Ethical hacking, red teaming, vulnerability research, bug bounty programs (e.g., HackerOne, Bugcrowd)      | Diligence, SDLC/agile security, DevSecOps/security‑by‑design, best practices, information assurance (IA)  |
+| **Mindset**             | Attacker, adversarial – seek to compromise, break, deceive, trick                                          | Defender, ally – seek to protect, prevent, mitigate                                                       |
+| **Primary Goal**        | Identify and exploit vulnerabilities before malicious actors do                                            | Maintain confidentiality, integrity, and availability of systems and data                                 |
+| **Skillsets**           | How to penetrate an information system                                                                     | How to protect an information system (risk assessment, risk mitigation, governance)                       |
+| **Related Paradigms**   | Red teaming                                                                                                | Hygiene culture, security culture, blue teaming                                                           |
+| **Permission of Owner** | Authorized, legal                                                                                          | Authorized, legal                                                                                         |
+| **Testing Approaches**  | Often uses black‑box testing (limited prior knowledge of the target system) to simulate external attackers | Often uses white‑box testing (full knowledge of the target system) to validate controls and identify gaps |
 
 ### Blue teaming core functions
 

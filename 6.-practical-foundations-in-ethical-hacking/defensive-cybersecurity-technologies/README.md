@@ -72,7 +72,7 @@ The most fundamental type of packet filters are ACLs (access control lists). The
 5. Stateless firewall context in virtual switches (vACLs) – in virtualized environments (like VMware vSphere, Microsoft Hyper‑V), the virtual switch can implement stateless packet filtering rules, often called virtual ACLs (vACLs). As traffic passes between virtual machines on the same physical host, the virtual switch intercepts it and applies stateless filtering rules defined in the VM’s security policy or on the virtual port. This shifts security enforcement from a physical hardware appliance into the hypervisor software.
 6. Stateless NAT (Network Address Translation) – while not a firewall in the classic sense, stateless NAT operates on a per‑packet basis without maintaining a state table. A one‑to‑one mapping between a private IP and a public IP is statically configured (e.g., 1:1 NAT). The router or firewall translates the addresses in the header for every packet, regardless of context. This contrasts with stateful NAT (often called NAPT or PAT), which does maintain a state table to track hundreds of connections from a single public IP.
 
-#### Stateful firewalls in depth
+#### Stateful inspection: Implementation and connection states
 
 While all modern firewalls are used in a stateful manner, their implementation differs. Some, like nftables, PF, ipfw, OPNsense, and pfSense are inherently stateful, with connection tracking as a core feature. Others, like the Linux iptables framework, achieve statefulness through the addition of the `conntrack` module and specific rules, which is considered a standard practice (statefulness comes from its connection tracking module, not the `iptables` command itself). Tools like UFW configure their underlying engines to be stateful by default.
 
@@ -449,16 +449,16 @@ The following guide helps match IDS/IPS technologies to common scenarios. Many e
 
 **IDS/IPS Selection Guide**
 
-|Your Primary Need|Recommended Tool(s)|Key Reason|
-|---|---|---|
-|High‑speed network intrusion detection/prevention (NIDS/NIPS)|Suricata|Multi‑threaded, high performance, Snort‑rule compatible.|
-|A lightweight, well‑known NIDS for smaller networks|Snort|Industry standard with extensive community support.|
-|Deep network traffic analysis and forensics|Zeek (Bro)|Generates rich, structured logs for behavioural analysis.|
-|Host‑based monitoring (HIDS) and compliance|Wazuh|Combines log analysis, FIM, vulnerability detection, and a central dashboard.|
-|A lightweight HIDS for servers with active response|OSSEC|Efficient, can trigger actions like blocking IPs.|
-|Protection against brute‑force attacks on services|Fail2Ban|Scans logs and automatically bans malicious IPs.|
-|An all‑in‑one distributed security monitoring platform|Security Onion|Bundles Suricata, Zeek, Wazuh, and Elastic for a complete SOC experience.|
-|Wireless intrusion detection and prevention|OpenWIPS‑NG|Specialised for Wi‑Fi security.|
+| Your Primary Need                                             | Recommended Tool(s) | Key Reason                                                                    |
+| ------------------------------------------------------------- | ------------------- | ----------------------------------------------------------------------------- |
+| High‑speed network intrusion detection/prevention (NIDS/NIPS) | Suricata            | Multi‑threaded, high performance, Snort‑rule compatible.                      |
+| A lightweight, well‑known NIDS for smaller networks           | Snort               | Industry standard with extensive community support.                           |
+| Deep network traffic analysis and forensics                   | Zeek (Bro)          | Generates rich, structured logs for behavioural analysis.                     |
+| Host‑based monitoring (HIDS) and compliance                   | Wazuh               | Combines log analysis, FIM, vulnerability detection, and a central dashboard. |
+| A lightweight HIDS for servers with active response           | OSSEC               | Efficient, can trigger actions like blocking IPs.                             |
+| Protection against brute‑force attacks on services            | Fail2Ban            | Scans logs and automatically bans malicious IPs.                              |
+| An all‑in‑one distributed security monitoring platform        | Security Onion      | Bundles Suricata, Zeek, Wazuh, and Elastic for a complete SOC experience.     |
+| Wireless intrusion detection and prevention                   | OpenWIPS‑NG         | Specialised for Wi‑Fi security.                                               |
 
 **Summary**
 

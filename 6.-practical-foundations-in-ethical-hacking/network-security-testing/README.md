@@ -71,6 +71,26 @@ Packet analyzers, whether implemented as software applications or dedicated hard
 - **Wireshark**: A versatile network protocol analyzer that captures and interactively displays traffic on a network in real time. With its graphical interface and deep inspection capabilities, Wireshark allows users to analyze packet data for troubleshooting, security analysis, and protocol development (Sanders, 2017). It supports hundreds of protocols and offers powerful filtering and visualization tools.
 - **tcpdump**: A powerful command-line packet analyzer that captures and displays network traffic in real time, allowing deep inspection of packets for troubleshooting or security analysis.
 
+#### BPF (Berkeley Packet Filter) syntax in tcpdump
+
+The Berkeley Packet Filter (BPF) syntax is a highly efficient packet-filtering mechanism used by tools like `tcpdump`, Wireshark, and Linux's `libpcap` to capture only the network traffic that matches specific criteria. Instead of capturing all packets and filtering them later (which is resource-intensive), BPF applies filters at the kernel level, reducing CPU and memory usage.
+
+**Key Features of BPF Syntax in tcpdump:**
+
+* **Expressive filtering**: Can match packets based on protocols (e.g., `tcp`, `udp`), IPs (`host 192.168.1.1`), ports (`port 80`), and even byte-level offsets.
+* **Logical operators**: Supports `and` (`&&`), `or` (`||`), and `not` (`!`).
+* **Directional filters**: Can filter by source/destination (`src`, `dst`).
+
+**Example BPF Filters in tcpdump:**
+
+sh
+
+```
+tcpdump 'tcp port 80 and host 192.168.1.1'  # Captures HTTP traffic to/from 192.168.1.1  
+tcpdump 'icmp'                              # Captures only ICMP (ping) packets  
+tcpdump 'udp and not port 53'               # Captures UDP traffic except DNS  
+```
+
 #### Basic vs deep packet inspection
 
 Layers 3-4 basic inspection of packets includes source/destination IPs, ports, TCP flags (SYN/ACK), packet size, and TTL (e.g., `tcpdump -i eth0 'tcp port 80'` shows HTTP traffic metadata).

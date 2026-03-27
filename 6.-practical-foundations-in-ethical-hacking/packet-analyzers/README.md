@@ -122,11 +122,7 @@ Technology focus: Wireshark and tcpdump.
 
 ### BPF (Berkeley Packet Filter) syntax in tcpdump
 
-Modern packet analyzers support filtering (e.g., BPF syntax in tcpdump), decryption (for TLS/SSL traffic with the right keys), and statistical analysis (e.g., throughput, latency). Some packet analyzers, like Wireshark, provide deep protocol dissection, while others, like Zeek and Suricata, focus on behavioral analysis and intrusion detection. Whether used for network forensics, performance tuning, or security auditing, packet analyzers are indispensable for network engineers, cybersecurity professionals, and system administrators.
-
-- The Role of BPF: The Berkeley Packet Filter (BPF) syntax is a critical, efficient packet-filtering mechanism. It allows tools like tcpdump and Wireshark to capture only relevant traffic at the kernel level, conserving system resources.
-- 
-BPF is a highly efficient packet-filtering mechanism used by tools like `tcpdump`, Wireshark, and Linux's `libpcap` to capture only the network traffic that matches specific criteria. Instead of capturing all packets and filtering them later (which is resource-intensive), BPF applies filters at the kernel level, reducing CPU and memory usage.
+The Berkeley Packet Filter (BPF) syntax is a highly efficient packet-filtering mechanism used by tools like `tcpdump`, Wireshark, and Linux's `libpcap` to capture only the network traffic that matches specific criteria. Instead of capturing all packets and filtering them later (which is resource-intensive), BPF applies filters at the kernel level, reducing CPU and memory usage.
 
 **Key Features of BPF Syntax in tcpdump:**
 

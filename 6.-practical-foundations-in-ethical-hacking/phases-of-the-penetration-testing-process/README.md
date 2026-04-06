@@ -96,7 +96,7 @@ This process typically follows a logical sequence:
 - OS fingerprinting – to identify a host's operating system.
 - Enumeration (beyond banner grabbing) – through Nmap’s enumeration scripts.
 - Vulnerability scanning (optional) using vulnerability scanners – can be run after port scanning (fast) or after enumeration (stealthier but slower).
-- Vulnerability identification – map findings from enumeration and vulnerability scanning (whether using dedicated scanners like Nessus or Nmap’s NSE vulnerability scripts) to known CVEs, misconfigurations, and weaknesses.
+- Vulnerability identification – map findings from enumeration and vulnerability scanning (whether using dedicated vulnerability scanners like OpenVAS or Nmap’s NSE vulnerability scripts) to known CVEs, misconfigurations, and weaknesses.
 
 **Nmap (Network Mapper)** 
 
@@ -659,6 +659,8 @@ When people say Nmap can be used for “vulnerability detection,” it usually r
 #### a) Detection of weak configurations/misconfigurations (via enumeration)
 through Nmap’s enumeration scripts
 =beyond banner grabbing
+
+- **NSE** stands for **Nmap Scripting Engine**, which is the built‑in framework within Nmap for writing and running scripts. All scripts that come with Nmap (or are written for it) are NSE scripts.
 
 Nmap’s NSE scripts can also perform enumeration (e.g., `smb-enum-users`)
 

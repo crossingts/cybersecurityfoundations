@@ -155,7 +155,28 @@ Host discovery is a default behavior unless you add other flags, like `-Pn` to
 The command outputs a list of open ports (limited to top 100) on live hosts and often the service names associated with them (based on port number guesses).
 
 
+**Scanning:**
+
+**Classic scanning activities that can be performed with Nmap:**
+
+ - Network scanning (`-sn`) to find live hosts.
+ - Port scanning (`-sS`, `-sT`, etc.) to identify open ports.
+ - Service/version detection (`-sV`) (basic enumeration via banner grabbing) 
+ - OS fingerprinting (`-O`).  
+
 #### Host discovery – to identify live hosts on a network
+
+Nmap is used to discover live hosts on a network and then probes those hosts to identify which ports are open (listening), closed, or filtered. 
+
+The host discovery phase uses a combination of **ICMP and TCP** packets to determine whether a target is alive.
+
+Nmap sends the four probes ICMP echo, SYN to 443, ACK to 80, timestamp request to identify live hosts.
+
+```bash
+nmap -sn <target>
+```
+
+
 
 **`nmap -sn 192.168.1.0/24`** – Performs a ping sweep (**no port scan**) to discover which hosts are alive (network mapping) on the subnet `192.168.1.0/24`. 
 
@@ -186,130 +207,6 @@ Why port 80 specifically? Port 80 (HTTP) is almost always open on web servers, a
 Example: `nmap -p- 192.168.1.10` scans to determine what ports are open, closed, or filtered. It does **not** retrieve the **banner** or version string. 
 
 
-#### Service and version detection
-
-Perform detailed port and service scans on a single machine.
-
-For example, running nmap -sV -p- 192.168.1.10 performs a comprehensive scan of the single host 192.168.1.10.
-
-**`nmap -sV -p- 192.168.1.10`** – Performs a **comprehensive** scan of the single host `192.168.1.10`.
-`-p-` scans all 65,535 TCP ports, and 
-`-sV` enables version detection to identify service names and versions through **banner grabbing**
-
-Syntax Explanation
-
-| Part           | Meaning                                                                                                                                                                                                                                                        |
-| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `nmap`         | The command-line network scanning tool.                                                                                                                                                                                                                        |
-| `-p-`          | **Scan all ports to discover open ports via default SYN scan or TCP connect scan if run without privileges**. The hyphen without a range means ports 1 through 65535 (all TCP ports). Equivalent to `-p 1-65535`.                                              |
-| `-sV`          | **Version detection via full TCP handshake for TCP services**. After discovering open ports, Nmap connects to the open ports to probe the services to determine their exact name, version, and sometimes additional information (e.g., `Apache httpd 2.4.41`). |
-| `192.168.1.10` | Target IP address – a single host.                                                                                                                                                                                                                             |
-
-Running `nmap -sV -p- 192.168.1.10`:
-1. **Host discovery** – Nmap sends the four probes (ICMP echo, SYN to 443, ACK to 80, timestamp request) to see if `192.168.1.10` is alive.
-2. **If the host responds** (any reply), Nmap then scans all ports (via default SYN scan) to check if they are open.
-3. **If ports are open**, `-sV` performs version detection to identify the services (e.g., SSH version).
-
-When you run `nmap -sV -p- 192.168.1.10`, Nmap determines which ports are **open**, **closed**, or **filtered** using a **port scanning technique (by default, SYN scan `-sS` if run with root privileges, otherwise TCP connect scan `-sT`).**  Only after that does it perform version detection (`-sV`) on the open ports.
-
--sS: TCP SYN stealth scan (default with root)
--sT: TCP connect scan (default without root)
-
-
-Implied in the command syntax `nmap -sV -p- target` is 
-
-that Nmap determines which ports are **open**, **closed**, or **filtered** using a **port scanning technique (by default, SYN scan `-sS` if you have root privileges, otherwise TCP connect scan `-sT`).**? Does this mean the syntax can also be more explicit, e.g., as nmap -sS -sV -p- 192.168.1.10? 
-Explain for the readers being introduced to Nmap and how it is used
-
-By default:
-
-- If you run Nmap with **root/administrator privileges**, it uses the **SYN scan** (`-sS`).
-- If you run **without privileges**, it falls back to the **TCP connect scan** (`-sT`).
-
-So yes, the syntax can be made more explicit by adding `-sS` (or `-sT`). For example:
-
-nmap -sS -sV -p- 192.168.1.10
-
-This makes it clear that you are requesting a SYN scan (stealth, faster) along with version detection.
-
-sudo nmap -sS -sV -p- 192.168.1.10   # SYN scan (requires root)
-
-nmap -sT -sV -p- 192.168.1.10        # TCP connect scan (no root needed)
-
-If you run `nmap -sS -sV -p- 192.168.1.10` **without sudo or root privileges**, Nmap will not perform a SYN scan (`-sS`). Instead, it will automatically **fall back** to a TCP connect scan (`-sT`) and typically display a warning message like:
-
-> _"SYN scan requires root privileges. Falling back to TCP connect scan."_
-
-The rest of the command (`-sV -p-`) will execute as normal using the fallback scan type. The scan will still complete, but it will use the full TCP three‑way handshake for each port, which is slower and more easily logged by the target.
-
-**`-sV` performs its own full TCP handshake (or application‑layer probe) for each open port, regardless of whether the preceding port scan used `-sS` (SYN) or `-sT` (TCP connect).**
-(whether -sS or -sT is used for the port scanning)
-
-Here’s how Nmap distinguishes between a **listening (open)** port and a **filtered** port.
-
-1. Listening (Open) Port
-
-A port is considered _open_ (listening) if the target machine actively responds to a connection attempt in a way that indicates acceptance.
-
-- **SYN scan (`-sS`)** : Nmap sends a TCP packet with the SYN flag set.
-    
-    - **Expected response from an open port:** `SYN-ACK` (the target agrees to establish a connection).
-    - Nmap immediately replies with a `RST` to tear down the half-open connection (making the scan stealthy).
-        
-- **TCP connect scan (`-sT`)** : Nmap completes the full three-way handshake (`SYN` → `SYN-ACK` → `ACK`), then closes the connection with `RST` or `FIN`.
-
-> **Key takeaway:** Receiving a `SYN-ACK` (or completing a handshake) proves the port is **listening**.
-
-2. Filtered Port
-
-A port is marked _filtered_ when Nmap receives **no response** or an **ICMP error message** that suggests a firewall or packet filter is blocking the probe.
-
-- **No response (timeout)** : Nmap sends the SYN packet but never receives a reply (no SYN-ACK or not even a `RST`). After retransmissions (default 10 seconds), it assumes the packet was dropped by a firewall. This is the most common indication of a filtered port.
-- **ICMP unreachable (type 3, code 0, 1, 2, 3, 9, 10, 13)** : The target network or an intermediate firewall returns an ICMP error like “administratively prohibited” (code 13) or “host unreachable” (code 1). This also results in `filtered` state.
-
-3. Closed port (not listening, but no filter)
-
-The target sends a `RST` packet. This means the host exists and the packet reached it, but no process is listening. Nmap marks this as `closed`, not `filtered`.
-
-
-
-- Host discovery - to identify live hosts on a network. 
-- Port scanning - to discover open ports.
-- Service and version detection - basic (manual) enumeration via banner grabbing.
-- OS fingerprinting - to identify a host's operating system.
-- Enumeration (beyond banner grabbing) - through Nmap’s enumeration scripts.
-- Vulnerability scanning (optional) using vulnerability scanners - can be run after port scanning (fast) or after enumeration (stealthier but slower).
-- Vulnerability identification - map findings to known CVEs, misconfigurations, weaknesses.
-
-
-**Scanning:**
-
-**Classic scanning activities that can be performed with Nmap:**
-
- - Network scanning (`-sn`) to find live hosts.
- - Port scanning (`-sS`, `-sT`, etc.) to identify open ports.
- - Service/version detection (`-sV`) (basic enumeration) 
- - OS fingerprinting (`-O`).  
-/
-- Host discovery - to identify live hosts on a network. 
-- Port scanning - to discover open ports.
-- Service and version detection - basic (manual) enumeration via banner grabbing.
-- OS fingerprinting - to identify a host's operating system.
-
-
-**Host discovery** 
-
-Nmap is used to discover live hosts on a network and then probes those hosts to identify which ports are open (listening), closed, or filtered. 
-
-The host discovery phase uses a combination of **ICMP and TCP** packets to determine whether a target is alive.
-
-Nmap sends the four probes ICMP echo, SYN to 443, ACK to 80, timestamp request to identify live hosts.
-
-```bash
-nmap -sn <target>
-```
-
-
 **Port scanning** 
 
 Port scanning refers to probing each port (sending prognostic packets to each port) to see whether it is open, closed, or filtered.
@@ -326,7 +223,20 @@ It does **not** retrieve the **banner** or version string.
 At this stage, running services are **inferred** by port number (e.g., port 80 suggests HTTP), but not confirmed.
 
 
-**Service and version scanning** 
+
+#### Service and version detection
+
+Perform detailed port and service scans on a single machine.
+
+Example 1:
+nmap -sV -p22 192.168.1.1
+
+Example 2: 
+nmap -sV -p- 192.168.1.10
+
+#### Service and version detection Example 1:
+
+nmap -sV -p22 192.168.1.1
 
 Service and version detection = basic enumeration 
 e.g., 
@@ -423,6 +333,86 @@ nmap -sV -p80 192.168.1.1
 | SSH     | TCP connection   | `SSH-2.0-OpenSSH_8.2p1`                       | OpenSSH 8.2p1    |
 | HTTP    | `GET / HTTP/1.0` | `Server: nginx/1.18.0`                        | nginx 1.18.0     |
 | SMTP    | `HELO test`      | `220 mail.example.com ESMTP Postfix (Ubuntu)` | Postfix (Ubuntu) |
+
+
+#### Example 2: 
+
+nmap -sV -p- 192.168.1.10
+
+For example, running nmap -sV -p- 192.168.1.10 performs a comprehensive scan of the single host 192.168.1.10.
+
+**`nmap -sV -p- 192.168.1.10`** – Performs a **comprehensive** scan of the single host `192.168.1.10`.
+`-p-` scans all 65,535 TCP ports, and 
+`-sV` enables version detection to identify service names and versions through **banner grabbing**
+
+Syntax Explanation
+
+| Part           | Meaning                                                                                                                                                                                                                                                                                |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `nmap`         | The command-line network scanning tool.                                                                                                                                                                                                                                                |
+| `-p-`          | **Scan all ports to discover open ports via default SYN scan or TCP connect scan if run without privileges**. The hyphen without a range means ports 1 through 65535 (all TCP ports). Equivalent to `-p 1-65535` (terminology tip: here `1-65535` is the argument to the `-p` option). |
+| `-sV`          | **Version detection via full TCP handshake for TCP services**. After discovering open ports, Nmap connects to the open ports to probe the services to determine their exact name, version, and sometimes additional information (e.g., `Apache httpd 2.4.41`).                         |
+| `192.168.1.10` | Target IP address – a single host.                                                                                                                                                                                                                                                     |
+
+Running `nmap -sV -p- 192.168.1.10`:
+1. **Host discovery** – Nmap sends the four probes (ICMP echo, SYN to 443, ACK to 80, timestamp request) to see if `192.168.1.10` is alive.
+2. **If the host responds** (any reply), Nmap then scans all ports (via default SYN scan) to check if they are open.
+3. **If ports are open**, `-sV` performs version detection to identify the services (e.g., SSH version).
+
+When you run `nmap -sV -p- 192.168.1.10`, Nmap determines which ports are **open**, **closed**, or **filtered** using a **port scanning technique (by default, SYN scan `-sS` if run with root privileges, otherwise TCP connect scan `-sT`).**  Only after that does it perform version detection (`-sV`) on the open ports.
+
+-sS: TCP SYN stealth scan (default with root)
+-sT: TCP connect scan (default without root)
+
+Implied in the command syntax `nmap -sV -p- target` is the existence of options (flags) -sS and -sT: 
+
+- If you run Nmap with **root/administrator privileges**, it uses the **SYN scan** (`-sS`).
+- If you run **without privileges**, it falls back to the **TCP connect scan** (`-sT`).
+
+So the syntax can be made more explicit by adding `-sS` or `-sT`. For example, if requesting a SYN scan (stealth, faster) along with version detection:
+
+nmap -sS -sV -p- 192.168.1.10
+
+sudo nmap -sS -sV -p- 192.168.1.10 # SYN scan (requires root)
+
+nmap -sT -sV -p- 192.168.1.10 # TCP connect scan (no root needed)
+
+If you run `nmap -sS -sV -p- 192.168.1.10` **without sudo or root privileges**, Nmap will not perform a SYN scan (`-sS`). Instead, it will automatically **fall back** to a TCP connect scan (`-sT`) and typically display a warning message like:
+
+> _"SYN scan requires root privileges. Falling back to TCP connect scan."_
+
+**`-sV` performs its own full TCP handshake (or application‑layer probe) for each open port, regardless of whether the preceding port scan used `-sS` (SYN) or `-sT` (TCP connect).**
+(whether -sS or -sT is used for the port scanning)
+
+Here’s how Nmap distinguishes between a **listening (open)** port and a **filtered** port.
+
+1. Listening (Open) Port
+
+A port is considered _open_ (listening) if the target machine actively responds to a connection attempt in a way that indicates acceptance.
+
+- **SYN scan (`-sS`)** : Nmap sends a TCP packet with the SYN flag set.
+    
+    - **Expected response from an open port:** `SYN-ACK` (the target agrees to establish a connection).
+    - Nmap immediately replies with a `RST` to tear down the half-open connection (making the scan stealthy).
+        
+- **TCP connect scan (`-sT`)** : Nmap completes the full three-way handshake (`SYN` → `SYN-ACK` → `ACK`), then closes the connection with `RST` or `FIN`.
+
+> **Key takeaway:** Receiving a `SYN-ACK` (or completing a handshake) proves the port is **listening**.
+
+2. Filtered Port
+
+A port is marked _filtered_ when Nmap receives **no response** or an **ICMP error message** that suggests a firewall or packet filter is blocking the probe.
+
+- **No response (timeout)** : Nmap sends the SYN packet but never receives a reply (no SYN-ACK or not even a `RST`). After retransmissions (default 10 seconds), it assumes the packet was dropped by a firewall. This is the most common indication of a filtered port.
+- **ICMP unreachable (type 3, code 0, 1, 2, 3, 9, 10, 13)** : The target network or an intermediate firewall returns an ICMP error like “administratively prohibited” (code 13) or “host unreachable” (code 1). This also results in `filtered` state.
+
+3. Closed port (not listening, but no filter)
+
+The target sends a `RST` packet. This means the host exists and the packet reached it, but no process is listening. Nmap marks this as `closed`, not `filtered`.
+
+
+
+
 
 **OS Fingerprinting**
 

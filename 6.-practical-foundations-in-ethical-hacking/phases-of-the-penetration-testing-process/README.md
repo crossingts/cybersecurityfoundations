@@ -100,12 +100,12 @@ This process typically follows a logical sequence:
 
 **Nmap (Network Mapper)** 
 
-Nmap is a key technology used in the discovery phase (scanning and enumeration) of the penetration testing process. It sends custom ICMP, TCP, and UDP packets to probe a target. One purpose of these probes is host discovery – identifying live hosts on a network (hence its original name, network mapper). Other probes perform port scanning and service/version detection. The target’s responses form unique patterns (sometimes called fingerprints), which Nmap uses to identify running software, protocols, and the operating system. Because its primary function is to scan networks and enumerate open ports and services, Nmap is popularly referred to as a network scanner.
+Nmap is a key technology used in the discovery phase (scanning and enumeration) of the penetration testing process. Nmap sends custom ICMP, TCP, and UDP packets to probe a target. One purpose of these probes is host discovery – identifying live hosts on a network (hence its original name, network mapper). Other probes perform port scanning and service/version detection. The target’s responses form unique patterns (sometimes called fingerprints), which Nmap uses to identify running software, protocols, and the operating system. Because its primary function is to scan networks and enumerate open ports and services, Nmap is popularly referred to as a network scanner.
 
-In practice, Nmap is a versatile tool. It can be used as a:
+Nmap is a versatile tool. It can be used as a:
 
-- **Network Mapper** – highlights its ability to discover hosts on a network and map out the topology, IP ranges, and relationships between devices. 
-- **Network Scanner** – describes its most common use: probing specific targets to identify open ports, running services, operating systems, and potential vulnerabilities.
+- **Network mapper** – highlights its ability to discover hosts on a network and map out the topology, IP ranges, and relationships between devices. 
+- **Network scanner** – describes its most common use: probing specific targets to identify open ports, running services, operating systems, and potential vulnerabilities.
 
 Typical uses of Nmap:
 
@@ -144,6 +144,8 @@ When you run `nmap -F <target>`, Nmap will send:
 - A **TCP ACK to port 80** (HTTP)
 - An **ICMP timestamp request** (if the user has appropriate privileges)
 
+First, the four probes (host discovery) to find live hosts. Then, if a host is alive, Nmap performs a TCP SYN scan (`-sS`) by default – or TCP connect scan (-sT) if run without privileges – on those 100 ports to identify open ports.
+
 If any of these get a response, Nmap considers the host “up” and proceeds to the fast port scan to determine which ports are open. 
 
 Every Nmap scan (including `-F`, `-sS`, `-sT`, etc.) first runs host discovery using those four probes, unless you override it with `-Pn` (skip host discovery). 
@@ -152,13 +154,10 @@ Host discovery is a default behavior unless you add other flags, like `-Pn` to
 
 The command outputs a list of open ports (limited to top 100) on live hosts and often the service names associated with them (based on port number guesses).
 
-First, the four probes (host discovery) to find live hosts. Then, if a host is alive, it performs a TCP SYN scan (`-sS` by default) on those 100 ports to identify open ports.
 
-#### Host discovery - to identify live hosts on a network
+#### Host discovery – to identify live hosts on a network
 
-- **Mapping: Discover live hosts on a subnet: / Host Discovery**
-
-**`nmap -sn 192.168.1.0/24`** – Performs a ping sweep (**no port scan**) to discover which hosts are alive on the subnet `192.168.1.0/24`. 
+**`nmap -sn 192.168.1.0/24`** – Performs a ping sweep (**no port scan**) to discover which hosts are alive (network mapping) on the subnet `192.168.1.0/24`. 
 
 Syntax Explanation
 

@@ -90,13 +90,13 @@ While recon may find that a network has 500 machines connected to a single subne
 The core technical activities of the **scanning and enumeration phase** move from identifying potential targets to actively discovering and cataloging detailed information about them. 
 This process typically follows a logical sequence:
 
-- Host discovery - to identify live hosts on a network. 
-- Port scanning - to discover open ports.
-- Service and version detection - basic (manual) enumeration via banner grabbing.
-- OS fingerprinting - to identify a host's operating system.
-- Enumeration (beyond banner grabbing) - through Nmap’s enumeration scripts.
-- Vulnerability scanning (optional) using vulnerability scanners - can be run after port scanning (fast) or after enumeration (stealthier but slower).
-- Vulnerability identification - map findings to known CVEs, misconfigurations, weaknesses.
+- Host discovery – to identify live hosts on a network. 
+- Port scanning – to discover open ports.
+- Service and version detection – basic (manual) enumeration via banner grabbing.
+- OS fingerprinting – to identify a host's operating system.
+- Enumeration (beyond banner grabbing) – through Nmap’s enumeration scripts.
+- Vulnerability scanning (optional) using vulnerability scanners – can be run after port scanning (fast) or after enumeration (stealthier but slower).
+- Vulnerability identification – map findings from enumeration and vulnerability scanning (whether using dedicated scanners like Nessus or Nmap’s NSE vulnerability scripts) to known CVEs, misconfigurations, and weaknesses.
 
 **Nmap (Network Mapper)** 
 
@@ -660,6 +660,8 @@ When people say Nmap can be used for “vulnerability detection,” it usually r
 through Nmap’s enumeration scripts
 =beyond banner grabbing
 
+Nmap’s NSE scripts can also perform enumeration (e.g., `smb-enum-users`)
+
 This is not vulnerability scanning in the CVEs-and-patches sense, but rather identifying issues like:
 
 - Default or blank passwords (e.g., `mysql-empty-password` script).
@@ -673,6 +675,8 @@ These are _configuration weaknesses_ that may lead to compromise. They are oft
 through Nmap’s NSE
 =beyond banner grabbing 
 
+ NSE scripts for vulnerability detection (e.g., `smb-vuln-ms17-010`) are a form of vulnerability scanning.
+ 
 Nmap’s NSE includes **vulnerability detection scripts** that check for specific CVEs. For example:
 
 - `smb-vuln-ms17-010` – checks if a host is vulnerable to EternalBlue.

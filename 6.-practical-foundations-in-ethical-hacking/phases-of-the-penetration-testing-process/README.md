@@ -334,8 +334,7 @@ nmap -sV -p80 192.168.1.1
 | HTTP    | `GET / HTTP/1.0` | `Server: nginx/1.18.0`                        | nginx 1.18.0     |
 | SMTP    | `HELO test`      | `220 mail.example.com ESMTP Postfix (Ubuntu)` | Postfix (Ubuntu) |
 
-
-#### Example 2: 
+#### Service and version detection Example 2: 
 
 nmap -sV -p- 192.168.1.10
 
@@ -409,8 +408,6 @@ A port is marked _filtered_ when Nmap receives **no response** or an **ICMP
 3. Closed port (not listening, but no filter)
 
 The target sends a `RST` packet. This means the host exists and the packet reached it, but no process is listening. Nmap marks this as `closed`, not `filtered`.
-
-
 
 
 

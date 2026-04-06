@@ -532,27 +532,22 @@ These examples show how enumeration transforms a list of open ports into actiona
 
 **Passive vs Active Discovery Techniques**
 
-Both passive and active scanning and enumeration techniques exist. 
+Key scanning types include network scanning (host discovery), port scanning, and vulnerability scanning. Common enumeration techniques include Banner Grabbing, SMB enumeration, NetBIOS Enumeration, SNMP Enumeration, and using protocols like LDAP, NTP, and SMTP.
 
-split table into scanning + enumeration
-
-| Type                 | Passive                                          | Active                                         |
-| -------------------- | ------------------------------------------------ | ---------------------------------------------- |
-| **Interaction**      | No direct contact with target                    | Direct probes and packets sent                 |
-| **Detection Risk**   | Very Low                                         | High                                           |
-| **Speed/Accuracy**   | Slower, less precise                             | Faster, highly detailed                        |
-| **Primary Use Case** | Early recon, compliance testing, avoiding alerts | Post-recon validation, comprehensive deep dive |
-| Tools???             |                                                  |                                                |
-
-Scanning types network scanning (host discovery), port scanning, and vulnerability scanning.
-
-Common enumeration techniques include Banner Grabbing, SMB enumeration, NetBIOS Enumeration, SNMP Enumeration, and using protocols like LDAP, NTP, and SMTP.
+Both passive and active scanning and enumeration techniques exist. Passive techniques involve no direct contact with the target, resulting in very low detection risk. However, they are slower and less precise, making them best suited for early reconnaissance, compliance testing, or situations where avoiding alerts is critical. Active techniques, by contrast, send direct probes and packets to the target, which carries a high risk of detection. They are faster and produce highly detailed results, making them ideal for post‑reconnaissance validation and comprehensive deep‑dive testing. (Tools for each category vary; common passive tools include packet analyzers like Wireshark and passive fingerprinting tools like `p0f`, while active tools include Nmap, `enum4linux`, and vulnerability scanners.)
 
 Network scanning, port scanning, and vulnerability scanning are all typically active techniques because they involve sending probes to the target. However, passive network scanning does exist—analyzing traffic (e.g., with `p0f`) to infer network topology and hosts without sending packets—but it is less common and not the primary meaning in penetration testing.
 
-The enumeration techniques Banner Grabbing, SMB enumeration, NetBIOS Enumeration, SNMP Enumeration, and using protocols like LDAP, NTP, and SMTP are generally active as they require direct queries to the target services. There are passive variants—for example, capturing banner information from unencrypted traffic already on the wire
-using packet analyzers such as?
-—but in practice, enumerators actively send requests to extract the data.
+**`p0f`** is a passive TCP/IP stack fingerprinting tool. It analyzes captured network traffic (without sending any probes) to infer the operating system of a target host by examining characteristics such as:
+
+- TCP window size
+- Time-to-live (TTL)
+- TCP options (e.g., maximum segment size, selective acknowledgment)
+- Initial sequence numbers
+
+Because it does not generate any packets of its own, `p0f` is completely stealthy and well-suited for passive reconnaissance. Its primary output is an estimate of the remote operating system (e.g., “Linux 2.6.x”, “Windows 10”, “iOS”). 
+
+The enumeration techniques Banner Grabbing, SMB enumeration, NetBIOS Enumeration, SNMP Enumeration, and using protocols like LDAP, NTP, and SMTP are generally active as they require direct queries to the target services. There are passive variants—for example, capturing banner information from unencrypted traffic already on the wire using packet analyzers such as Wireshark—but in practice, enumerators actively send requests to extract the data.
 
 Here’s a classification based on how these techniques are typically applied during a penetration test:
 
@@ -614,13 +609,11 @@ In practice, vulnerability identification is not a separate phase but an _ongoi
 
 **Vulnerability identification** 
 
-=map findings to known CVEs, misconfigurations, weaknesses.
-
 Vulnerability identification is the result of:
 
 service/version detection (via banner grabbing), 
-enumeration (beyond banner grabbing), and 
-vulnerability scanning using scanners (if performed) 
+enumeration (beyond banner grabbing) using enumeration scripts, and 
+vulnerability scanning using scanning scripts and dedicated scanners such as OpenVAS (if performed) 
 
 Following detection, enumeration extracts specific details like user lists, network shares, DNS records, configurations, and application data from the identified services. 
 

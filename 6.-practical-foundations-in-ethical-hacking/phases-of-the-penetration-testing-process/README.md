@@ -678,39 +678,32 @@ As the assessment progresses, the sniffer's role deepens from mapping to detaile
 
 ### Gaining access
 
-exploitation of vulnerabilities to gain access, and privilege escalation
-
 The actual hacking or penetration happens in the gaining access phase, when true attacks are leveled against the targets enumerated in the third phase (scanning and enumeration) of the ethical hacking process.
 
 These attacks can be as simple as accessing an open and nonsecured wireless access point and then manipulating it for whatever purpose, or as complex as writing and delivering a buffer overflow or SQL injection against a web application. (Walker, 2012, p. 10)
 
-In the enumeration phase, we successfully obtained user account information. Now what?  We’ll go over some of the basics on escalating your current privilege level. 
-If the user account is not an administrator or doesn’t have access to interesting shares, escalating access privileges is necessary. After all, the point of hacking is gaining access to data or services. 
+In the enumeration phase, we may have successfully obtained user account information. But if the user account is not an administrator or doesn’t have access to interesting shares, escalating access privileges is necessary. After all, the point of hacking is gaining access to data or services. 
 
-**Privilege Escalation**
+We’ll go over some of the basics on escalating your current privilege level. 
 
-An effective or successful hack or hacking will typically entail achieving root or administrative level access on the target machine.
+Successful hacking will typically entail achieving root or administrative level access on the target machine.
 
 Basically you have four real hopes for obtaining administrator (root) privileges on
-a machine... see Gaining access subsection
-
-/
-Next, we start talking about actual system hacking. 
+a machine.
 
 In the gaining access phase the ethical hacker tests many of the vulnerabilities identified during the vulnerability assessment (phases 2-6 of the ethical hacking process, i.e., reconnaissance, scanning and enumeration, gaining access, maintaining access, and covering tracks) to quantify the actual risk posed by the vulnerability (Harper et al., 2011; Walker, 2017). 
 
-In the enumeration phase, we successfully obtained user account information. 
-If the user account is not an administrator or doesn’t have access to interesting shares - such as???
-, escalating access privileges is necessary. After all, the point of hacking is gaining access to data or services. 
+In the enumeration phase, we successfully obtained user account information. If the user account lacks administrator privileges or access to interesting shares (network shares that contain valuable data or credentials, such as `C$` and `ADMIN$` in Windows SMB environments), escalating access privileges becomes necessary. After all, the goal of hacking is gaining access to data or services. An interesting share is any share that (a) contains sensitive data, (b) allows write access (for planting backdoors or ransomware), or (c) can be used to pivot (e.g., a share mapped to a file server that also hosts scripts executed by other machines).
+
 Next, we’ll go over some of the basics on escalating your current privilege level. 
 
 lateral movement as a form/technique of privilege escalation? 
+
 
 We'll go over four primary methods to gain administrator (or root) privileges on a system and best practices to maintain access and remain undetected after a successful penetration of a target system 
 (also see the subsection below "Escalating privileges and maintaining stealth").
 
 --
-reword (from Walker 2012, p. 168):
 
 Basically you have four real hopes for obtaining administrator (root) privileges on a machine. The first is to crack the password of an administrator or root account, which should be your primary aim.
 The second is to take advantage of a vulnerability found in the OS, or in an application, such as unpatched security flaws, that will give you access as a privileged user. 

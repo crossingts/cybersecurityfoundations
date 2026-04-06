@@ -424,10 +424,7 @@ Full OS fingerprinting (e.g., using Nmap’s `-O` flag) is a related but disti
 
 **Enumeration**
 
-- Enumeration (beyond banner grabbing) - through Nmap’s enumeration scripts.
-
-Enumeration – extract detailed data (users, shares, configs) using NSE scripts or dedicated tools.
-
+Enumeration – extract detailed data (users, shares, configs) using Nmap's NSE scripts or dedicated tools.
 
 **Enumeration** is the active process of connecting to discovered services and querying them for detailed information. This includes everything from **simple banner grabbing** (reading the initial welcome banner) to **more complex interactions** (listing users, shares, directories, hidden web paths, or authentication methods).
 

@@ -44,17 +44,15 @@ For the purposes of this section, ethical hacking refers to the comprehensive pr
 Typical penetration testing steps:
 
 1. **Reconnaissance** – predominantly passive information gathering.
-
-2. **Scanning** – active probing (mostly Nmap) for host discovery, port scanning, service/OS detection.
-3. **Enumeration** – extraction of information from discovered services (user accounts, shares, SNMP data, etc.). This may uncover **weak configurations** that could be exploited immediately (e.g., default credentials, anonymous access).
-4. **Vulnerability Assessment** – using automated tools (OpenVAS, Nessus, etc.) to identify **known vulnerabilities (CVEs)**, missing patches, and **misconfigurations** beyond what enumeration revealed. This step is systematic and produces a prioritized list of weaknesses.
-
+2. **Scanning** – active probing (mostly Nmap) for host discovery, port scanning, and service/OS detection.
+3. **Enumeration** – extraction of information from discovered services (user accounts, shares, SNMP data, etc.). This may uncover weak configurations that could be exploited immediately (e.g., default credentials, anonymous access).
+4. **Vulnerability Assessment** – using automated tools (OpenVAS, Nessus, etc.) to identify known vulnerabilities (CVEs), missing patches, and misconfigurations beyond what enumeration revealed. This step is systematic and produces a prioritized list of weaknesses.
 5. **Exploitation** (gaining access and privilege escalation) – attempting to exploit the discovered weaknesses (whether from enumeration or vulnerability scanning) to gain access.
-6. **Post‑Exploitation** – **maintaining access and covering tracks**.
+6. **Post‑Exploitation** – maintaining access and covering tracks.
 
 ### Reconnaissance
 
-Penetration tests begin with an extensive information gathering phase to build a profile of the target user or system to determine entry points. Reconnaissance can be passive or active. Passive reconnaissance involves gathering information from the public domain (OSINT) in places like Internet registries, Google, newspapers, and public records. At this stage “the target does not even know generally that they are the subject of surveillance.” Active reconnaissance involves social engineering and “anything that requires the hacker to interact with the organization” (Walker, 2017, p. 45). Most reconnaissance activities are passive in nature.
+Penetration tests begin with an extensive information gathering phase to build a profile of the target user or system to determine entry points. Reconnaissance can be passive or active, but most reconnaissance activities are passive in nature. Passive reconnaissance involves gathering information from the public domain (OSINT) in places like Internet registries, Google, newspapers, and public records. At this stage "the target does not even know generally that they are the subject of surveillance". Active reconnaissance includes "anything that requires the hacker to interact with the organization", including social engineering activities (Walker, 2017, p. 45).
 
 OSINT involves collating technical information on an organization’s public-facing systems. “Internet registries, coupled with services such as Shodan or VPN Hunter, can highlight and identify an organization’s Web servers, mail servers, remote access endpoints and many other Internet-facing devices.” During OSINT, the penetration tester identifies potential weaknesses and entry points across the organization’s security posture, including its network, applications, website, wireless networks, physical facilities, cloud-based systems, and employees.
 
@@ -592,7 +590,8 @@ Here’s a classification based on how these techniques are typically applied du
 | NTP Enumeration        | Active | Using `ntpdc` or `ntpq` to query NTP servers (UDP 123) for monlist, peers, and system information.                     |
 | SMTP Enumeration       | Active | Using `VRFY`, `EXPN`, or `RCPT TO` commands (TCP 25) to validate user accounts.                                        |
 
-In short, all three scanning types and all listed enumeration techniques are predominantly active. Passive discovery usually occurs earlier, during the reconnaissance phase, and focuses on information already publicly available or observable without direct interaction.
+In short, all three / these
+scanning types and all listed enumeration techniques are predominantly active. Passive discovery usually occurs earlier, during the reconnaissance phase, and focuses on information already publicly available or observable without direct interaction.
 
 #### Vulnerability Scanning 
 

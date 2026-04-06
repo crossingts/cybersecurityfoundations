@@ -424,11 +424,10 @@ Full OS fingerprinting (e.g., using Nmap’s `-O` flag) is a related but disti
 
 **Enumeration**
 
-Enumeration – extract detailed data (users, shares, configs) using Nmap's NSE scripts or dedicated tools.
+**Enumeration** is the active process of connecting to discovered services and querying them for detailed information. This includes everything from **simple banner grabbing** (reading the initial welcome banner) to **more complex interactions** (listing users, shares, directories, hidden web paths, or authentication methods). Enumeration extracts detailed data (users, shares, configs) using Nmap's NSE scripts or dedicated tools.
 
-**Enumeration** is the active process of connecting to discovered services and querying them for detailed information. This includes everything from **simple banner grabbing** (reading the initial welcome banner) to **more complex interactions** (listing users, shares, directories, hidden web paths, or authentication methods).
+Common enumeration techniques include banner grabbing (typically via version detection), SMB enumeration, NetBIOS enumeration, SNMP enumeration, and enumeration through protocols such as LDAP, NTP, and SMTP. These techniques can be performed using Nmap’s NSE scripts, dedicated tools (e.g., `enum4linux`, `snmpwalk`, `ldapsearch`), or, in the case of banner grabbing, Nmap’s `-sV` version detection.
 
-Common enumeration techniques include Banner Grabbing, SMB enumeration, NetBIOS Enumeration, SNMP Enumeration, and using protocols like LDAP, NTP, and SMTP.
 
 Below are concrete examples, ordered from foundational enumeration (banner grabbing) to deeper service‑specific enumeration,
 illustrating how enumeration can extract usernames, shares, and configurations.
@@ -549,10 +548,9 @@ Scanning types network scanning (host discovery), port scanning, and vulnerabili
 
 Common enumeration techniques include Banner Grabbing, SMB enumeration, NetBIOS Enumeration, SNMP Enumeration, and using protocols like LDAP, NTP, and SMTP.
 
-which of these types of scanning and types of enumeration are passive and which are active?
+Network scanning, port scanning, and vulnerability scanning are all typically active techniques because they involve sending probes to the target. However, passive network scanning does exist—analyzing traffic (e.g., with `p0f`) to infer network topology and hosts without sending packets—but it is less common and not the primary meaning in penetration testing.
 
-- Network scanning, port scanning, and vulnerability scanning are all typically active techniques because they involve sending probes to the target. However, passive network scanning does exist—analyzing traffic (e.g., with `p0f`) to infer network topology and hosts without sending packets—but it is less common and not the primary meaning in penetration testing.
-- The enumeration techniques Banner Grabbing, SMB enumeration, NetBIOS Enumeration, SNMP Enumeration, and using protocols like LDAP, NTP, and SMTP are generally active as they require direct queries to the target services. There are passive variants—for example, capturing banner information from unencrypted traffic already on the wire
+The enumeration techniques Banner Grabbing, SMB enumeration, NetBIOS Enumeration, SNMP Enumeration, and using protocols like LDAP, NTP, and SMTP are generally active as they require direct queries to the target services. There are passive variants—for example, capturing banner information from unencrypted traffic already on the wire
 using packet analyzers such as?
 —but in practice, enumerators actively send requests to extract the data.
 
@@ -570,8 +568,7 @@ Here’s a classification based on how these techniques are typically applied du
 | NTP Enumeration        | Active | Using `ntpdc` or `ntpq` to query NTP servers (UDP 123) for monlist, peers, and system information.                     |
 | SMTP Enumeration       | Active | Using `VRFY`, `EXPN`, or `RCPT TO` commands (TCP 25) to validate user accounts.                                        |
 
-In short, all three / these
-scanning types and all listed enumeration techniques are predominantly active. Passive discovery usually occurs earlier, during the reconnaissance phase, and focuses on information already publicly available or observable without direct interaction.
+In short, all these scanning types and all listed enumeration techniques are predominantly active. Passive discovery usually occurs earlier, during the reconnaissance phase, and focuses on information already publicly available or observable without direct interaction.
 
 #### Vulnerability Scanning 
 

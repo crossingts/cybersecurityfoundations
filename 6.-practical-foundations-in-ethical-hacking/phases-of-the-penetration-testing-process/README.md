@@ -569,30 +569,26 @@ In short, all these scanning types and all listed enumeration techniques are pr
 
 - Vulnerability scanning (optional) using vulnerability scanners - can be run after port scanning (fast) or after enumeration (stealthier but slower).
 
-In a typical penetration testing process, a dedicated vulnerability scanner like Nessus or OpenVAS is usually used after the enumeration phase, 
-and often before exploitation. 
-Let me break it down in context.
+In a typical penetration testing process, a dedicated vulnerability scanner like Nessus or OpenVAS is usually used after the enumeration phase, and often before exploitation. 
 
-- xService and version detection - basic (manual) **enumeration** via banner grabbing.
-- xEnumeration (beyond banner grabbing) - through Nmap’s **enumeration** scripts.
+**Timing**: Vulnerability scanning is typically performed **after** enumeration, but before exploitation. Some testers run it concurrently with enumeration. Running it after enumeration allows you to use any discovered credentials for authenticated scans, which yield more accurate results.
+
+Vulnerability scanning using scanning scripts and dedicated scanners such as OpenVAS.
+
 - "Vulnerability scanning" using Nmap’s NSE vulnerability detection scripts 
 - Vulnerability scanning (optional) using vulnerability scanners - can be run after port scanning (fast) or after enumeration (stealthier but slower).
 
-although Nmap’s NSE scripts can send such probes for specific CVEs,
-a specialized vulnerability scanner like OpenVAS is used to discover known vulnerabilities 
+Although Nmap’s NSE scripts can send probes for specific CVEs, a specialized vulnerability scanner like OpenVAS is used to discover known vulnerabilities 
 
 A vulnerability scanner “actively communicates with the target system, sends the malicious packets and analyses the results, which can then be exported to PDF, HTML, CSV and other formats” (Rasskazov, 2013, p. 58). 
 
-- **Enumeration may or may not find a clear path.** If enumeration reveals an easy win (e.g., a service with a default admin password), a tester might skip straight to exploitation. However, in a thorough assessment, a vulnerability scan is still valuable because:
-    
-    - It uncovers **missing patches** and **CVEs** that are not detectable through manual enumeration.
-    - It provides **documentation** (reports, risk ratings) needed for formal assessments.
-    - It can be run **authenticated** using credentials gathered during enumeration, revealing even deeper vulnerabilities.
-        
-- **Timing**: Vulnerability scanning is typically performed **after** enumeration, but before exploitation. Some testers run it concurrently with enumeration. Running it after enumeration allows you to use any discovered credentials for authenticated scans, which yield more accurate results.
+Enumeration may or may not find a clear path. If enumeration reveals an easy win (e.g., a service with a default admin password), a tester might skip straight to exploitation. However, in a thorough assessment, a vulnerability scan is still valuable because:
+
+- It uncovers **missing patches** and **CVEs** that are not detectable through manual enumeration.
+- It provides **documentation** (reports, risk ratings) needed for formal assessments.
+- It can be run **authenticated** using credentials gathered during enumeration, revealing even deeper vulnerabilities.
 
 **If enumeration does not uncover a vulnerability worth exploiting**, the vulnerability scanner becomes even more critical—it’s the primary method to identify technical vulnerabilities (e.g., unpatched software) that can provide an entry point.
-
 
 #### Vulnerability identification
 
@@ -606,20 +602,15 @@ Vulnerability identification is the result of service/version detection, enume
 
 In practice, vulnerability identification is not a separate phase but an _ongoing analysis_ that happens as you gather information. 
 
-
-**Vulnerability identification** 
-
 Vulnerability identification is the result of:
 
 service/version detection (via banner grabbing), 
 enumeration (beyond banner grabbing) using enumeration scripts, and 
 vulnerability scanning using scanning scripts and dedicated scanners such as OpenVAS (if performed) 
 
-Following detection, enumeration extracts specific details like user lists, network shares, DNS records, configurations, and application data from the identified services. 
+Following detection, enumeration extracts specific details like user lists, network shares, DNS records, configurations, and application data from the identified services, mapping them to known CVEs, misconfigurations, weaknesses.
 
-The tester then analyzes all gathered information
-—service versions and enumerated data
-—to pinpoint potential security weaknesses such as weak configurations (e.g., default credentials, anonymous access) and known vulnerabilities that could be exploited in the next phase. 
+The tester then analyzes all gathered information—service versions, enumerated data, and vulnerability scans—to pinpoint potential security weaknesses such as weak configurations (e.g., default credentials, anonymous access) and known vulnerabilities that could be exploited in the next phase. 
 
 
 **Vulnerability detection via Nmap – what does it mean?**
@@ -689,9 +680,7 @@ As the assessment progresses, the sniffer's role deepens from mapping to detaile
 
 exploitation of vulnerabilities to gain access, and privilege escalation
 
-The actual hacking or penetration happens in the gaining access phase.
-
-Now true attacks are leveled against the targets enumerated in the third phase (scanning and enumeration) of the ethical hacking process.
+The actual hacking or penetration happens in the gaining access phase, when true attacks are leveled against the targets enumerated in the third phase (scanning and enumeration) of the ethical hacking process.
 
 These attacks can be as simple as accessing an open and nonsecured wireless access point and then manipulating it for whatever purpose, or as complex as writing and delivering a buffer overflow or SQL injection against a web application. (Walker, 2012, p. 10)
 

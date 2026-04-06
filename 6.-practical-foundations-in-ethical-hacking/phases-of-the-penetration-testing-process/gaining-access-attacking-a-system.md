@@ -2,11 +2,51 @@
 
 ### Introduction
 
-The magic part of a penetration test is exploiting a vulnerability discovered during the vulnerability assessment phase (Harper et al., 2011; Walker, 2017). A penetration test “is when ethical hackers do their magic. They can test many of the vulnerabilities identified during the vulnerability assessment to quantify the actual threat and risk posed by the vulnerability” (Harper el al., 2011, p. 11).
+Next, we start talking about actual system hacking. 
 
-Next, we start talking about actual system hacking. In the enumeration phase, we successfully obtained user account information. Now what?  We’ll go over some of the basics on escalating your current privilege level. If the user account is not an administrator or doesn’t have access to interesting shares, escalating access privileges is necessary. After all, the point of hacking is gaining access to data or services. We'll go over four primary methods to gain administrator (or root) privileges on a system and best practices to maintain access and remain undetected after a successful penetration of a target system.
+In the gaining access phase the ethical hacker tests many of the vulnerabilities identified during the vulnerability assessment (phases 2-6 of the ethical hacking process, i.e., reconnaissance, scanning and enumeration, gaining access, maintaining access, and covering tracks) to quantify the actual risk posed by the vulnerability (Harper et al., 2011; Walker, 2017). 
 
-### Password Attacks
+In the enumeration phase, we successfully obtained user account information. 
+If the user account is not an administrator or doesn’t have access to interesting shares - such as???
+, escalating access privileges is necessary. After all, the point of hacking is gaining access to data or services. 
+Next, we’ll go over some of the basics on escalating your current privilege level. 
+
+lateral movement as a form/technique of privilege escalation? 
+
+We'll go over four primary methods to gain administrator (or root) privileges on a system and best practices to maintain access and remain undetected after a successful penetration of a target system 
+(also see the subsection below "Escalating privileges and maintaining stealth").
+
+--
+reword (from Walker 2012, p. 168):
+
+Basically you have four real hopes for obtaining administrator (root) privileges on a machine. The first is to crack the password of an administrator or root account, which should be your primary aim.
+The second is to take advantage of a vulnerability found in the OS, or in an application, such as unpatched security flaws, that will give you access as a privileged user. 
+In addition to running vulnerability scanners such as OpenVAS and Nessus to find holes, you should be aware of disclosed or published vulnerabilities before the scanner gets the results back to you - i.e., you should already know what to look for based on recent disclosures.
+
+Vulnerability websites and online resources that publicly disclose, track, and detail software vulnerabilities include:
+
+Sources of Intelligence
+
+- **CVE Details (Common Vulnerabilities and Exposures):** A dictionary of publicly known security vulnerabilities.
+- **Exploit-DB:** A repository of actual exploit code for specific vulnerabilities.
+- **Vendor Security Advisories:** Official notices from Microsoft, Apple, Linux distributors, etc., about patches.
+- **Full Disclosure Mailing Lists:** Where researchers publish zero-day or recently patched vulnerabilities.
+
+The third method for obtaining administrator (root) privileges on a machine is to use a tool that will hopefully provide you the access you’re looking for. 
+One such tool, Metasploit, is an entire hacking suite in one and is a great
+exploit-testing tool (in other words, it’s about a heck of a lot more than privilege escalation and will be discussed more as this book continues). 
+You basically enter the IP address and port number of the target you’re aiming at, choose an exploit, and add a payload—Metasploit does the rest. 
+Metasploit has a free version and a pay-for version, known as Metasploit Pro.
+
+Other tools?
+
+Finally, the last method available is **social engineering**
+You can simply
+put executable code in an e-mail and ask the user to click it—more often than not, they
+will! Craft a PDF file to take advantage of a known Adobe flaw on an unpatched system
+and send it to them—most of the time, they’ll click and open it!
+
+#### Password attacks
 
 Most people will make their passwords the exact length of the minimum required. "If the network administrator sets the minimum at eight characters, over 95 percent of the passwords will be only eight characters—very helpful to the password-cracking attacker" (Walker, 2012, p. 157). Password attacks are often considered the first line of exploitation.
 
@@ -37,7 +77,7 @@ Successful authentication via IPC$ can lead to:
 
 **Is the IPC$ vulnerability still relevant today?**
 
-**Yes, but less so on modern systems** due to improvements:
+Yes, but less so on modern systems due to improvements:
 
 * **Windows defaults**: Later versions (Win7+) disable NULL sessions and enforce stronger authentication (NTLMv2, Kerberos).
 * **SMBv1 disabled**: Modern Windows disables SMBv1 (exploited by worms like **WannaCry**).
@@ -149,7 +189,7 @@ Here’s a table summarizing which free/open-source keylogger detection tools wo
 | **Spybot S\&D**      | ✅           | ❌         | ❌         | Windows-only.                                                            |
 | **RKill**            | ✅           | ❌         | ❌         | Windows-only (terminates malware processes).                             |
 
-#### Key Takeaways:
+**Key Takeaways**
 
 * **Cross-Platform Tools**:
   * **ClamAV** (antivirus) and **Wireshark** (network analysis) work on all three OSes.
@@ -185,7 +225,7 @@ Precomputed tables of hashes of every password imaginable for quick lookups. Fas
 | **THC Hydra**       | Linux/Windows | Online services (SSH, FTP, RDP, etc.)            | Dictionary, Brute-force                     | Not strictly offline but useful for credential stuffing.                                         |
 | **RainbowCrack**    | Linux/Windows | Generic hashes (with rainbow tables)             | Rainbow tables                              | Precomputed hashes for faster cracking. Limited to supported algorithms.                         |
 
-#### Clarification Notes
+**Clarification Notes**
 
 * **Fastest method**: Dictionary attacks (using tools like John or Hashcat).
 * **Most thorough**: Brute-force (but slow; Hashcat’s GPU support speeds this up).
@@ -193,9 +233,9 @@ Precomputed tables of hashes of every password imaginable for quick lookups. Fas
 * **For versatility**: Hashcat (supports almost every hash type).
 * **Not open-source**: Ophcrack (proprietary but free). LC5/L0phtCrack, Cain, KerbCrack, and Legion are proprietary tools.
 
-#### Escalating Privileges and Maintaining Stealth
+#### Escalating privileges and maintaining stealth
 
-Gaining administrator (or root) privileges is a critical step in penetration testing. Attackers typically rely on four main methods to achieve privilege escalation, each with its own advantages and challenges. A skilled ethical hacker will use a combination of these methods, adapting based on the target’s defenses. 
+Gaining administrator (or root) privileges is a critical step in penetration testing. Attackers typically rely on four main methods to achieve privilege escalation, each with its own advantages and challenges. A skilled hacker will use a combination of these methods, adapting based on the target’s defenses. 
 
 **1. Cracking the Password of a Privileged Account**
 
@@ -267,8 +307,6 @@ The easiest and often most effective method is bypassing technical defenses enti
 
 Social engineering requires minimal technical skill but relies heavily on psychological manipulation.
 
-**Note:**
-
 Each privilege escalation method has its strengths:
 
 * **Password attacks** are direct but depend on weak credentials.
@@ -276,7 +314,7 @@ Each privilege escalation method has its strengths:
 * **Metasploit** automates exploitation but has a learning curve.
 * **Social engineering** is the easiest but relies on human error.
 
-#### Stealth: Before, During, and After
+#### Stealth: Before, during, and after
 
 After gaining access to a machine, a hacker must remain stealthy. There’s stealth involved in hiding files, covering tracks, and maintaining access on the machine. To operate undetected during a penetration test or malicious attack, adversaries employ various techniques to hide files, evade logging, and cover their tracks. 
 
@@ -462,7 +500,7 @@ There are three main types of rootkits (Walker, 2012, p. 175):
 
 • Library level: These rootkits basically make use of system-level calls to hide their existence. 
 
-#### The Evolution of Linux Rootkits
+#### The evolution of Linux rootkits
 
 Rootkits first emerged in the Linux environment, primarily taking two distinct forms:
 
@@ -486,7 +524,7 @@ Rootkits are exponentially more complicated than your typical malware applicatio
 
 Privilege escalation relies on weak credentials, unpatched vulnerabilities, exploitation tools like Metasploit, or social engineering.
 
-#### Lateral Movement
+#### Lateral movement
 
 **RDP vs. SMB: A Pentester's Comparison**
 

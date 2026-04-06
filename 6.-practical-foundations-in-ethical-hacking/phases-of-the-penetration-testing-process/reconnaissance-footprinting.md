@@ -1,47 +1,44 @@
 # Reconnaissance (footprinting)
 
-### Introduction
+### Key resources of reconnaissance
 
-Footprinting is a systematic and organized process in ethical hacking that involves gathering as much publicly available information as possible about a target organization. This initial reconnaissance phase helps ethical hackers (and malicious attackers) understand the target’s digital footprint, infrastructure, and potential vulnerabilities before launching any penetration tests. The key methods of footprinting include:
+Reconnaissance is a systematic and organized process in ethical hacking that involves gathering as much publicly available information as possible about a target computer system. Reconnaissance helps hackers understand the target’s digital footprint, infrastructure, and potential vulnerabilities before launching any penetration tests. Key resources of reconnaissance include:
 
-1. **Competitive Intelligence**
-   * Businesses legally collect data on competitors, including customer details, products, and marketing strategies.
-   * Ethical hackers can use this same approach to gather valuable insights about a target, such as technology stacks, business strategies, and potential weak points.
-2. **Company Websites**
+1. **Company Websites**
    * A primary source of information, often containing:
      * **Company history & organizational structure** (useful for social engineering).
      * **Technical details** (server types, software versions, network setups).
      * **Employee directories & contact information** (helpful for phishing attacks).
    * Many companies unintentionally expose too much technical data, making it easier for hackers to identify vulnerabilities.
-3. **Job Postings & Career Boards**
+2. **Job Postings & Career Boards**
    * Sites like LinkedIn, Monster, and Dice reveal:
      * **Specific technologies in use** (e.g., "Windows Server 2016, Cisco firewalls").
      * **Software versions** (helping hackers match exploits to known vulnerabilities).
      * **Internal IT roles & responsibilities** (indicating security gaps).
    * Job descriptions can essentially serve as a blueprint of the company’s IT infrastructure.
-4. **Social Media & Professional Networks**
+3. **Social Media & Professional Networks**
    * Platforms like LinkedIn, Facebook, and Twitter provide:
      * **Employee profiles** (roles, departments, connections).
      * **Company culture & internal issues** (layoffs, disgruntled employees).
      * **Real-time updates** (mergers, new tech deployments).
    * Hackers can exploit personal details for social engineering attacks (e.g., impersonating IT staff).
-5. **Website Mirroring & Historical Archives**
+4. **Website Mirroring & Historical Archives**
    * Tools like **BlackWidow, Wget, and TeleportPro** allow copying entire websites for offline analysis.
    * **Archive.org (Wayback Machine) & Google Cache** can retrieve deleted or modified content, exposing old but still relevant vulnerabilities.
    * Even if a company removes sensitive data, archived versions may still be accessible.
+
+### Key tools of reconnaissance
 
 #### Censys
 
 Censys is primarily a tool for the reconnaissance phase, specifically the Footprinting (Faircloth, 2011) stage. Here is the detailed breakdown:
 
-**Primary Role: Reconnaissance (Footprinting)**
+**Primary Role: Footprinting**
 
 The core function of Censys is to provide a pre-scanned, searchable index of Internet-facing assets. Its output aligns with the objectives of the reconnaissance phase:
 
-- **Objective:** "To mine as many DNS host names as possible... and translate those into IP addresses or IP address ranges."
-    
+- **Objective:** To mine as many DNS host names as possible and translate those into IP addresses or IP address ranges.
 - **Censys Output:** It directly provides lists of:
-    
     - **IP Addresses and Ranges** associated with an organization.
     - **DNS Hostnames** and associated certificates.
     - **Open Ports** on those IPs (e.g., it tells you _that_ port 443 is open, not necessarily what specific software is running on it beyond a basic banner).
@@ -49,7 +46,7 @@ The core function of Censys is to provide a pre-scanned, searchable index of Int
 
 This output is a goldmine for building the initial target list and understanding the organization's public attack surface **without sending a single packet to the target yourself**. The search itself is a passive act from the target's perspective.
 
-**Bridging into Scanning & Enumeration**
+**Bridging into Scanning and Enumeration**
 
 While its primary home is reconnaissance, the data provided by Censys can directly enable and accelerate the scanning and enumeration phase. It blurs the line in the following way:
 
@@ -57,9 +54,10 @@ While its primary home is reconnaissance, the data provided by Censys can direct
 - In this sense, a tester uses Censys for reconnaissance ("find all IPs for company X with port 443 open") and then immediately uses its detailed data for initial enumeration ("and now I see that this specific IP is running a vulnerable version of Apache").
 
 In summary, a penetration tester uses Censys during the reconnaissance (Footprinting) phase to quickly generate a highly accurate map of a target's public-facing assets—IPs, domains, and open ports. The intelligence gleaned from Censys, particularly service banners and certificate details, can then immediately inform the subsequent scanning and enumeration phase by highlighting specific systems and services worthy of more targeted, active investigation.
-### Footprinting with DNS
 
-Footprinting with DNS involves exploring DNS records (directions to or for a specific type of resource).
+#### Footprinting with DNS
+
+Footprinting with DNS involves exploring DNS records (directions to a specific type of resource).
 
 Some records provide IP addresses for individual systems within your network, whereas others provide addresses for your e-mail servers. Some provide pointers to other DNS servers, which are designed to help people find what they’re looking for. (Walker, 2012, p. 62)
 
@@ -67,7 +65,7 @@ The record types held within a company's DNS system can tell a hacker valuable i
 
 <figure><img src="../../.gitbook/assets/image (2) (1).png" alt="DNS record types"><figcaption><p>Source: Walker (2012, p. 63)</p></figcaption></figure>
 
-DNS (Domain Name System) is a foundational component of the internet, acting as a directory that translates human-readable domain names (like _example.com_) into machine-readable IP addresses (like \*192.0.2.1\*). For ethical hackers and penetration testers, DNS is a goldmine of reconnaissance data, revealing critical details about a target’s network infrastructure. This discussion explores how attackers (and defenders) leverage DNS for footprinting, including key DNS records, tools, and techniques.
+DNS is a foundational component of the internet, acting as a directory that translates human-readable domain names (like _example.com_) into machine-readable IP addresses (like \*192.0.2.1\*). For ethical hackers and penetration testers, DNS is a goldmine of reconnaissance data, revealing critical details about a target’s network infrastructure. This discussion explores how attackers (and defenders) leverage DNS for footprinting, including key DNS records, tools, and techniques.
 
 **1. DNS Records and Their Significance**
 
@@ -185,7 +183,7 @@ Some DNS servers cache responses to improve performance. Attackers can probe the
 * Recently visited domains (useful for profiling user activity).
 * Internal hostnames that may not be publicly listed.
 
-### Summary/key takeaways
+### Summary
 
 Footprinting is a critical first step in ethical hacking, relying on open-source intelligence (OSINT) to map out a target’s physical and digital presence. With footprinting, we want to gather information about network architecture (size, design, equipment brands and specifications), websites, who’s who in the company and any contact information, and the target’s geographical location (address).
 

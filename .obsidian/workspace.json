@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/gaining-access-attacking-a-system.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "gaining-access-attacking-a-system"
             }
           }
         ]
@@ -183,8 +183,15 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
-    "6.-practical-foundations-in-ethical-hacking/defensive-security-vs-offensive-security/README.md",
+    "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/reconnaissance-footprinting.md",
+    "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/gaining-access-attacking-a-system.md",
+    "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md",
+    "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/scanning-and-enumeration/README.md",
+    "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/passive-discovery-method.md",
+    "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/scanning-and-enumeration/scanning-and-enumeration-tools.md",
+    "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/scanning-and-enumeration/scanning-and-enumeration-techniques-and-tools.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md",
+    "6.-practical-foundations-in-ethical-hacking/defensive-security-vs-offensive-security/README.md",
     "6.-practical-foundations-in-ethical-hacking/packet-analyzers/README.md",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing/wireshark-defensive-or-offensive.md",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing/using-wireshark-to-identify-non-secure-network-traffic.md",
@@ -194,7 +201,6 @@
     "6.-practical-foundations-in-ethical-hacking/packet-analyzers/wireshark-defensive-or-offensive.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/README.md",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing/nmap-cheat-sheet-for-netadmins-sysadmins.md",
-    "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md",
     "6.-practical-foundations-in-ethical-hacking/the-perils-of-unethical-hacking/README.md",
     "6.-practical-foundations-in-ethical-hacking/what-is-professional-ethical-hacking-1/README.md",
     "1.-it-career-planning/job-search-strategy/README.md",
@@ -203,12 +209,6 @@
     "1.-it-career-planning/it-career-paths/README.md",
     "2.-introduction-to-cybersecurity/cybersecurity-risk-mitigation-methods/README.md",
     "2.-introduction-to-cybersecurity/network-security-risk-mitigation-best-practices/README.md",
-    "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/burp-suite-owasp-zap-vs-wireshark-tcpdump.md",
-    "README.md",
-    "7.-conclusion/glossary.md",
-    "2.-introduction-to-cybersecurity/common-cyber-attacks/README.md",
-    "2.-introduction-to-cybersecurity/the-evolving-cybersecurity-threat-landscape/README.md",
-    "3.-cybersecurity-grc/the-information-security-compliance-audit/README.md",
     "2.-introduction-to-cybersecurity/the-evolving-cybersecurity-threat-landscape",
     "LICENSE",
     "3.-cybersecurity-grc/the-information-security-compliance-audit",

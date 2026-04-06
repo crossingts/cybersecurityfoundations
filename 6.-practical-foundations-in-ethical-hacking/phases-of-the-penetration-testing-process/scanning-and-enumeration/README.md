@@ -2,14 +2,14 @@
 
 ### Introduction
 
-Scanning is "the process of discovering systems on the network and taking a look at what open ports and applications may be running" (Walker, 2012, p. 86).&#x20;
+Scanning is "the process of discovering systems on the network and taking a look at what open ports and applications may be running" (Walker, 2012, p. 86). 
 
 The steps for a scanning methodology according to EC-Council's CEH curriculum are (Walker, 2012, pp. 86-87):
 
 1. Identify live systems (finding out which IP addresses are actually alive). Something as simple as a ping can provide this. This gives you a list of what’s actually alive on your network subnet.
 2. Discover open ports. Once you know which IP addresses are active, find what ports they’re listening on.
 3. Identify the OS and services. Banner grabbing and OS fingerprinting will tell you what operating system is on the machines and which services they are running.
-4. Scan for vulnerabilities. Perform a more focused look at the vulnerabilities these machines haven’t been patched for yet.&#x20;
+4. Scan for vulnerabilities. Perform a more focused look at the vulnerabilities these machines haven’t been patched for yet. 
 
 #### Identifying Active Machines
 
@@ -39,7 +39,7 @@ So what is a TCP flag and how does TCP and UDP communication work?
 
 Two TCP/IP-enabled hosts can use two data transfer methods to communicate with each other: connectionless and connection-oriented.
 
-In connectionless communication the sender does not care whether the recipient currently has the bandwidth to accept the message or whether the recipient gets the message at all. The sender relies on other upper-layer protocols to handle any problems. At the transport layer, connectionless communication is accomplished with UDP. Examples of application protocols that make use of UDP are TFTP, DNS, and DHCP.&#x20;
+In connectionless communication the sender does not care whether the recipient currently has the bandwidth to accept the message or whether the recipient gets the message at all. The sender relies on other upper-layer protocols to handle any problems. At the transport layer, connectionless communication is accomplished with UDP. Examples of application protocols that make use of UDP are TFTP, DNS, and DHCP. 
 
 In connection-oriented communication, which uses TCP, a sender first reaches out to a recipient to make sure the recipient is available before attempting to exchange any data. TCP establishes a connection through the use of header flags and the three-way handshake. The method involves three messages being sent between any two hosts. Six flags can be set in the TCP header. Depending on what a segment is intended to do, some or all of these flags would be set.
 
@@ -52,23 +52,23 @@ The TCP header flags are (Walker, 2012, p. 96):
 • SYN (Synchronize) This flag is set during initial communication establishment. It indicates negotiation of parameters and sequence numbers.\
 • FIN (Finish) This flag signifies an ordered close to communications.
 
-**Nmap** &#x20;
+**Nmap**
 
 nmap can perform many different types of scans (from simply identifying active machines to port scanning and enumeration) and can also be configured to control the speed at which a scan operates—in general, the slower the scan, the less likely you are to be discovered. It comes in both a command-line version and a GUI version (now known as Zenmap), works on multiple OS platforms, and can even scan over TCP and UDP. (Walker, 2012, p. 98)
 
-Nmap syntax is fairly straightforward:&#x20;
+Nmap syntax is fairly straightforward: 
 
 nmap \<scan options> \<target>
 
-The target for nmap can be a single IP address, multiple individual IPs separated by spaces, or an entire subnet range (using CIDR notation). For example, to scan a single IP, the command might look like&#x20;
+The target for nmap can be a single IP address, multiple individual IPs separated by spaces, or an entire subnet range (using CIDR notation). For example, to scan a single IP, the command might look like
 
 nmap 192.168.1.100
 
-whereas scanning multiple IPs would look like&#x20;
+whereas scanning multiple IPs would look like 
 
 nmap 192.168.1.100 192.168.1.101
 
-and scanning an entire subnet would appear as&#x20;
+and scanning an entire subnet would appear as 
 
 nmap 192.168.1.0/24
 
@@ -86,7 +86,7 @@ Generally speaking, there are seven generic scan types for port scanning (Walker
 • IDLE Uses a spoofed IP address to elicit port responses during a scan. Designed for stealth, this scan uses a SYN flag and monitors responses as with a SYN scan.\
 • NULL Almost the opposite of the XMAS scan. The NULL scan sends packets with no flags set. Responses will vary, depending on the OS and version, but NULL scans are designed for Unix/Linux machines.
 
-Table 4-4 Network Scan Types correlates a scan type and what response to expect from an open or closed port.&#x20;
+Table 4-4 Network Scan Types correlates a scan type and what response to expect from an open or closed port. 
 
 A quick-and-easy tip to remember is that all scans return an RST on a closed port, with the exception of the ACK scan, which returns no response. nmap handles all these scans, using the switches identified earlier, and more. (Walker, 2012, p. 100)
 
@@ -145,7 +145,7 @@ Vulnerability scanning involves using automated tools to identify security weakn
 
 ### Enumeration
 
-Enumeration refers to listing off the items found within a specific target. After identifying open ports, we now want to find things like open shares and any easy-to-grab user account information. We can use a variety of tools and techniques, many of which bleeds over from scanning.&#x20;
+Enumeration refers to listing off the items found within a specific target. After identifying open ports, we now want to find things like open shares and any easy-to-grab user account information. We can use a variety of tools and techniques, many of which bleeds over from scanning. 
 
 Enumeration should be performed on every system found on the target network, regardless of operating system. However, because Windows machines will likely make up the majority of the targets, it would helpful to spend a little time on them—to learn some of the basics of Windows’ design and security features.
 

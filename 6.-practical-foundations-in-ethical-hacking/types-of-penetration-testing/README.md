@@ -19,6 +19,7 @@ This section explores six types of penetration testing (network penetration test
 
 * **Types of penetration testing**
 * **Black box penetration testing and white box penetration testing**
+* **Testing perspectives: External vs internal**
 * **Risks of penetration testing**
 
 ### Types of penetration testing
@@ -79,7 +80,9 @@ Bridging the gap between these two methodologies is grey box penetration testing
 | **Realism**   | Medium                                        | High                                       | Medium                          |
 | **Best For**  | Code review, pre-release audits, blue teaming | External security assessments, red teaming | A balanced approach, compliance |
 
-#### Testing from an outsider vs insider perspective: A historical emphasis
+### Testing perspectives: External vs internal
+
+#### A historical emphasis
 
 There are several kinds of testing—each of which can be performed from an outsider or insider perspective (Palmer, 2001, pp. 777-778):
 
@@ -90,7 +93,7 @@ There are several kinds of testing—each of which can be performed from an outs
 * Social engineering. This test evaluates the target organization’s staff as to whether it would leak information to someone. A typical example of this would be an intruder calling the organization’s computer help line and asking for the external telephone numbers of the modem pool. Defending against this kind of attack is the hardest, because people and personalities are involved. Most people are basically helpful, so it seems harmless to tell someone who appears to be lost where the computer room is located, or to let someone into the building who “forgot” his or her badge. The only defense against this is to raise security awareness.
 * Physical entry. This test acts out a physical penetration of the organization's building.
 
-#### Testing from an outsider vs insider perspective: A modern emphasis
+#### A modern emphasis
 
 The classification of penetration tests by entry point as noted by Palmer (2001) remains a useful way to scope assessments. However, the specific attack vectors have evolved with technology. Modern tests can be categorized from both outsider (no initial access) and insider (some level of initial access) perspectives:
 

@@ -44,7 +44,7 @@ Penetration testing is scoped to target specific segments of an organization's a
 
 This assessment focuses on the security of an organization's radio frequency (RF) communications. It involves enumerating all wireless SSIDs, testing the strength of encryption protocols (e.g., WPA2-Enterprise, WPA3), and attempting to exploit weaknesses in authentication mechanisms like 802.1X. The scope extends beyond corporate Wi-Fi to include guest networks, Bluetooth Low Energy (BLE) devices, and Zigbee systems, identifying if they can be used as a vector to gain a foothold on the wired network.
 
-**Website/Web Application Penetration Testing**  
+**Web Application Penetration Testing**  
 
 This is a code-level assessment of web applications and the services they depend on. It involves manually probing for the OWASP Top Ten vulnerabilities, including injection flaws (SQLi, OS command injection), broken access controls, and security misconfigurations. Testers analyze the application's logic, input validation, session management, and backend API interactions to find vulnerabilities that automated scanners might miss, providing a realistic view of the application's resilience to targeted attack.
 
@@ -70,13 +70,13 @@ In contrast, black box penetration testing operates on a "zero knowledge" premis
 
 Bridging the gap between these two methodologies is grey box penetration testing, a hybrid approach where the tester is provided with partial knowledge of the system. This often includes low-privilege user account credentials or limited documentation. By providing this contextual information, grey box testing strikes a balance between the speed and depth of white box testing and the realism of the black box approach. It allows testers to bypass the initial reconnaissance phase and focus their efforts more efficiently, while still simulating an attack vector that could come from a compromised user account or an insider threat. This balanced nature makes it a common and practical choice for internal penetration tests and for organizations seeking a comprehensive yet efficient security assessment that aligns well with various compliance frameworks.
 
-**Comparison Table**
+White vs Black vs Grey Comparison Table
 
 | Feature       | White Box                                     | Black Box                                  | Grey Box                        |
 | ------------- | --------------------------------------------- | ------------------------------------------ | ------------------------------- |
 | **Knowledge** | Full                                          | None                                       | Partial                         |
 | **Speed**     | Fast                                          | Slow                                       | Moderate                        |
-| **Realism**   | Low                                           | High                                       | Medium                          |
+| **Realism**   | Medium                                        | High                                       | Medium                          |
 | **Best For**  | Code review, pre-release audits, blue teaming | External security assessments, red teaming | A balanced approach, compliance |
 
 #### Testing from an outsider vs insider perspective: A historical emphasis
@@ -139,6 +139,8 @@ Ultimately, due to these potential side effects, penetration testing is often a 
 ### References
 
 Cipher. (n.d.). The types of pentests you must know about. Retrieved January 21, 2020, from https://cipher.com/blog/the-types-of-pentests-you-must-know-about/
+
+NIST Special Publication 800-115: Technical Guide to Information Security Testing and Assessment (NIST 800-115). Retrieved January 21, 2020, from http://csrc.nist.gov/publications/nistpubs/800-115/SP800-115.pdf
 
 Palmer, C. C. (2001). Ethical hacking. _IBM Systems Journal, 40_(3), 769-780.
 

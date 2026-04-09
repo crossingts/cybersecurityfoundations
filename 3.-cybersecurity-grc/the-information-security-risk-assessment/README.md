@@ -220,6 +220,8 @@ The risk assessment process is not standalone; it is embedded within larger fram
 
 ### References
 
+NIST Special Publication 800-115: Technical Guide to Information Security Testing and Assessment (NIST 800-115). Retrieved January 21, 2020, from http://csrc.nist.gov/publications/nistpubs/800-115/SP800-115.pdf
+
 NIST SP 800-30 Rev. 1. _Guide for Conducting Risk Assessments._
 
 ISO/IEC 27005:2022. _Information security, cybersecurity and privacy protection — Guidance on managing information security risks._

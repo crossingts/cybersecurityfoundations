@@ -22,17 +22,17 @@
             }
           },
           {
-            "id": "3d9591f88227c737",
+            "id": "ec7ecd078b74127b",
             "type": "leaf",
             "state": {
               "type": "webviewer",
               "state": {
-                "url": "https://csrc.nist.gov/pubs/sp/800/115/final",
-                "title": "SP 800-115, Technical Guide to Information Security Testing and Assessment | CSRC",
+                "url": "http://www.pentest-standard.org/index.php/Main_Page",
+                "title": "The Penetration Testing Execution Standard",
                 "mode": "webview"
               },
               "icon": "globe-2",
-              "title": "SP 800-115, Technical Guide to Information Security Testing and Assessment | CSRC"
+              "title": "The Penetration Testing Execution Standard"
             }
           }
         ]

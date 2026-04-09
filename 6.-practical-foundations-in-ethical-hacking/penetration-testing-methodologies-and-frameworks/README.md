@@ -24,21 +24,11 @@ This section discusses major penetration testing methodologies and frameworks. T
 ### Introduction
 
 Security assessments follow structured methodologies to ensure thorough and reliable testing. Key penetration testing methodologies include 
-OSSTMM (Open Source Security Testing Methodology Manual) (Herzog, 2010), 
-
-
-NIST Special Publication 800-115 (2008) Technical Guide to Information Security Testing and Assessment, 
-
-
-The Penetration Testing Execution Standard (PTES), 
-
-
-The Information System Security Assessment Framework (ISSAF), 
-
-
+OSSTMM (Open Source Security Testing Methodology Manual) (Herzog, 2010),
+NIST SP 800-115 (NIST Special Publication 800-115: Technical Guide to Information Security Testing and Assessment) (2008),
+PTES (Penetration Testing Execution Standard), 
+ISSAF (Information System Security Assessment Framework), 
 PCI-DSS (Payment Card Industry Data Security Standard) Version 4.0 (2022),
-
-
 and Communications Security Establishment/Royal Canadian Mounted Police, Harmonized Threat and Risk Assessment Methodology (CSE/RCMP, 2007). 
 
 Key penetration testing frameworks include 
@@ -208,17 +198,16 @@ Faircloth, J. (2011). _Penetration tester’s open source toolkit_. Penetration 
 
 Herzog, P. (2010). OSSTMM 3–The open source security testing methodology manual. Barcelona, España: ISECOM. https://www.isecom.org/OSSTMM.3.pdf
 
+
 ISSAF (Information Systems Security Assessment Framework). Retrieved January 21, 2020, from http://www.oissg.org/information-systems-security-assessment-framework-issaf.html
 
 MITRE. (2024). ATT\&CK: Adversarial tactics, techniques, and common knowledge. MITRE Corporation. https://attack.mitre.org/
 
-NIST Special Publication 800-115: Technical Guide to Information Security Testing and Assessment (NIST 800-115). Retrieved January 21, 2020, from http://csrc.nist.gov/publications/nistpubs/800-115/SP800-115.pdf
-
-
-NIST Special Publication 800-115: Technical Guide to Information Security Testing and Assessment (NIST 800-115). Retrieved January 21, 2020, from http://csrc.nist.gov/publications/nistpubs/800-115/SP800-115.pdf
+NIST SP 800-115. (2008). NIST Special Publication 800-115: Technical Guide to Information Security Testing and Assessment. Retrieved January 21, 2020, from http://csrc.nist.gov/publications/nistpubs/800-115/SP800-115.pdf
 
 OWASP Foundation. (2020). OWASP web security testing guide (WSTG). _https://owasp.org/www-project-web-security-testing-guide/_
 
 PCI-DSS. (2022). _Payment Card Industry Data Security Standard: Requirements and testing procedures (Version 4.0)_. [https://www.pcisecuritystandards.org/document_library/](https://www.pcisecuritystandards.org/document_library/)
 
-PTES (The Penetration Testing Execution Standard). Retrieved January 21, 2020, from http://www.pentest-standard.org/index.php/Main\_Page
+
+PTES (Penetration Testing Execution Standard). Retrieved January 21, 2020, from http://www.pentest-standard.org/index.php/Main_Page

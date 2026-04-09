@@ -70,7 +70,7 @@ In contrast, black box penetration testing operates on a "zero knowledge" premis
 
 Bridging the gap between these two methodologies is grey box penetration testing, a hybrid approach where the tester is provided with partial knowledge of the system. This often includes low-privilege user account credentials or limited documentation. By providing this contextual information, grey box testing strikes a balance between the speed and depth of white box testing and the realism of the black box approach. It allows testers to bypass the initial reconnaissance phase and focus their efforts more efficiently, while still simulating an attack vector that could come from a compromised user account or an insider threat. This balanced nature makes it a common and practical choice for internal penetration tests and for organizations seeking a comprehensive yet efficient security assessment that aligns well with various compliance frameworks.
 
-White vs Black vs Grey Comparison Table
+**White vs Black vs Grey Box Testing Key Features**
 
 | Feature       | White Box                                     | Black Box                                  | Grey Box                        |
 | ------------- | --------------------------------------------- | ------------------------------------------ | ------------------------------- |

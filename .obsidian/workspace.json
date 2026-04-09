@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3.-cybersecurity-grc/the-grc-approach-to-cybersecurity-management/README.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -183,9 +183,9 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
-    "test_update.md",
     "3.-cybersecurity-grc/the-grc-approach-to-cybersecurity-management/README.md",
     "3.-cybersecurity-grc/the-grc-approach-to-cybersecurity-management/the-grc-approach-to-cybersecurity-management-quiz.md",
+    "test_update.md",
     "the-grc-approach-to-cybersecurity-management.md",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing/README.md",
     "4.-networking-fundamentals/network-devices-and-their-functions/network-devices-and-their-functions-quiz.md",

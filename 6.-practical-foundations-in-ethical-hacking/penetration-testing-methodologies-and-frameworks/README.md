@@ -10,12 +10,14 @@ description: This section discusses major penetration testing methodologies and 
 * Become familiar with the OWASP Testing Guide
 * Become familiar with the MITRE ATT\&CK framework
 
-This section discusses major penetration testing methodologies and frameworks. The most widely used penetration testing methodologies include OSSTMM, NIST SP 800-115, PTES, ISSAF, and PCI-DSS. Common penetration testing frameworks include OWASP Testing Guide, MITRE ATT\&CK, and cyber kill chain. This section first elaborates the deployment and main features of OSSTMM, NIST SP 800-115, and Communications Security Establishment/Royal Canadian Mounted Police, Harmonized Threat and Risk Assessment Methodology (CSE/RCMP, 2007). It then discusses the PTES, ISSAF, and PCI-DSS penetration testing methodologies. It then looks at the OWASP Testing Guide and MITRE ATT\&CK® frameworks.
+This section discusses major penetration testing methodologies and frameworks. The most widely used penetration testing methodologies include OSSTMM, NIST SP 800-115, PTES, ISSAF, and PCI-DSS. Common penetration testing frameworks include OWASP Testing Guide, MITRE ATT\&CK, and cyber kill chain. 
+
+This section first elaborates the deployment and main features of OSSTMM, NIST SP 800-115, and Communications Security Establishment/Royal Canadian Mounted Police, Harmonized Threat and Risk Assessment Methodology TRA-1 (CSE/RCMP, 2007). It then discusses the PTES, ISSAF, and PCI-DSS penetration testing methodologies. It then looks at the OWASP Testing Guide and MITRE ATT\&CK® frameworks.
 
 ### Topics covered in this section
 
 * **Introduction**
-* **OSSTMM, NIST SP 800-115, and CSE/RCMP**
+* **OSSTMM, NIST SP 800-115, and CSE/RCMP TRA-1**
 * **Other major penetration testing methodologies**
 * **OWASP Testing Guide (Web Security Testing Guide)**
 * **MITRE ATT\&CK® framework**
@@ -23,9 +25,13 @@ This section discusses major penetration testing methodologies and frameworks. T
 
 ### Introduction
 
-Security assessments follow structured methodologies to ensure thorough and reliable testing. Key penetration testing methodologies include OSSTMM (Open Source Security Testing Methodology Manual) (Herzog, 2010), NIST SP 800-115 (NIST Special Publication 800-115: Technical Guide to Information Security Testing and Assessment) (Scarfone et al., 2008), PTES (Penetration Testing Execution Standard) (2014), ISSAF (Information System Security Assessment Framework) (Open Information Systems Security Group, 2006), PCI-DSS (Payment Card Industry Data Security Standard) Version 4.0 (2022), and Communications Security Establishment/Royal Canadian Mounted Police, Harmonized Threat and Risk Assessment Methodology (CSE/RCMP, 2007). Key penetration testing frameworks include OWASP Testing Guide (Open Web Application Security Project) (2020), and MITRE ATT\&CK® (2024) framework.
+While the technical skills of exploitation are crucial, a repeatable and comprehensive methodology ensures that no critical area of the security posture is overlooked. The following models provide the scaffolding for professional assessments.
 
-### OSSTMM, NIST SP 800-115, and CSE/RCMP
+Security assessments follow structured methodologies to ensure thorough and reliable testing. 
+
+Key penetration testing methodologies include **OSSTMM** (Open Source Security Testing Methodology Manual) (Herzog, 2010), **NIST SP 800-115** (NIST Special Publication 800-115: Technical Guide to Information Security Testing and Assessment) (Scarfone et al., 2008), PTES (Penetration Testing Execution Standard) (2014), ISSAF (Information System Security Assessment Framework) (Open Information Systems Security Group, 2006), PCI-DSS (Payment Card Industry Data Security Standard) Version 4.0 (2022), and Communications Security Establishment/Royal Canadian Mounted Police, Harmonized Threat and Risk Assessment Methodology **TRA-1** (CSE/RCMP, 2007). Key penetration testing frameworks include OWASP Testing Guide (Open Web Application Security Project) (2020), and MITRE ATT\&CK® (2024) framework.
+
+### OSSTMM, NIST SP 800-115, and CSE/RCMP TRA-1
 
 A comparative analysis of three penetration testing methodologies—OSSTMM 3.0, NIST 800-115, and CSE/RCMP Harmonized Threat and Risk Assessment Methodology (2007)—offers insights into establishing a harmonized penetration testing methodology (see Table: Information Security Assessment Methodologies).
 

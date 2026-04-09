@@ -20,6 +20,20 @@
               "icon": "lucide-file",
               "title": "README"
             }
+          },
+          {
+            "id": "3d9591f88227c737",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://csrc.nist.gov/pubs/sp/800/115/final",
+                "title": "SP 800-115, Technical Guide to Information Security Testing and Assessment | CSRC",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "SP 800-115, Technical Guide to Information Security Testing and Assessment | CSRC"
+            }
           }
         ]
       }

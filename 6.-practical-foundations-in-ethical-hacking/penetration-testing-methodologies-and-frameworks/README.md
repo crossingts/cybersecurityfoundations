@@ -6,17 +6,11 @@ description: This section discusses major penetration testing methodologies and 
 
 ## Learning objectives
 
-* Become familiar with major penetration testing methodologies, including OSSTMM 3.0, NIST SP 800-115, and CSE/RCMP, 2007
+* Become familiar with major penetration testing methodologies, including OSSTMM 3.0, NIST SP 800-115, and CSE/RCMP (2007)
 * Become familiar with the OWASP Testing Guide
 * Become familiar with the MITRE ATT\&CK framework
 
-This section discusses major penetration testing methodologies and frameworks. The most widely used penetration testing methodologies include OSSTMM, NIST SP 800-115, PTES, ISSAF, and PCI-DSS. Common penetration testing frameworks include OWASP Testing Guide, MITRE ATT\&CK, and cyber kill chain.
-
-This section first elaborates the deployment and main features of OSSTMM, NIST SP 800-115, and Communications Security Establishment/Royal Canadian Mounted Police, Harmonized Threat and Risk Assessment Methodology (CSE/RCMP, 2007). 
-
-It then discusses the PTES, ISSAF, and PCI-DSS penetration testing methodologies.
-
-It then looks at the OWASP Testing Guide and MITRE ATT\&CK® frameworks.
+This section discusses major penetration testing methodologies and frameworks. The most widely used penetration testing methodologies include OSSTMM, NIST SP 800-115, PTES, ISSAF, and PCI-DSS. Common penetration testing frameworks include OWASP Testing Guide, MITRE ATT\&CK, and cyber kill chain. This section first elaborates the deployment and main features of OSSTMM, NIST SP 800-115, and Communications Security Establishment/Royal Canadian Mounted Police, Harmonized Threat and Risk Assessment Methodology (CSE/RCMP, 2007). It then discusses the PTES, ISSAF, and PCI-DSS penetration testing methodologies. It then looks at the OWASP Testing Guide and MITRE ATT\&CK® frameworks.
 
 ### Topics covered in this section
 
@@ -29,11 +23,27 @@ It then looks at the OWASP Testing Guide and MITRE ATT\&CK® frameworks.
 
 ### Introduction
 
-Security assessments follow structured methodologies to ensure thorough and reliable testing. Key penetration testing methodologies include Open Source Security Testing Methodology Manual (OSSTMM) (Herzog, 2010), NIST Special Publication 800-115 (2008) Technical Guide to Information Security Testing and Assessment, The Penetration Testing Execution Standard (PTES), The Information System Security Assessment Framework (ISSAF), 
+Security assessments follow structured methodologies to ensure thorough and reliable testing. Key penetration testing methodologies include 
+OSSTMM (Open Source Security Testing Methodology Manual) (Herzog, 2010), 
+
+
+NIST Special Publication 800-115 (2008) Technical Guide to Information Security Testing and Assessment, 
+
+
+The Penetration Testing Execution Standard (PTES), 
+
+
+The Information System Security Assessment Framework (ISSAF), 
+
 
 PCI-DSS (Payment Card Industry Data Security Standard) Version 4.0 (2022),
 
-and Communications Security Establishment/Royal Canadian Mounted Police, Harmonized Threat and Risk Assessment Methodology (CSE/RCMP, 2007). Key penetration testing frameworks include The Open Web Application Security Project (OWASP Testing Guide), and MITRE ATT\&CK® framework.
+
+and Communications Security Establishment/Royal Canadian Mounted Police, Harmonized Threat and Risk Assessment Methodology (CSE/RCMP, 2007). 
+
+Key penetration testing frameworks include 
+OWASP Testing Guide (Open Web Application Security Project),
+and MITRE ATT\&CK® framework.
 
 ### OSSTMM, NIST SP 800-115, and CSE/RCMP
 
@@ -201,6 +211,9 @@ Herzog, P. (2010). OSSTMM 3–The open source security testing methodology manua
 ISSAF (Information Systems Security Assessment Framework). Retrieved January 21, 2020, from http://www.oissg.org/information-systems-security-assessment-framework-issaf.html
 
 MITRE. (2024). ATT\&CK: Adversarial tactics, techniques, and common knowledge. MITRE Corporation. https://attack.mitre.org/
+
+NIST Special Publication 800-115: Technical Guide to Information Security Testing and Assessment (NIST 800-115). Retrieved January 21, 2020, from http://csrc.nist.gov/publications/nistpubs/800-115/SP800-115.pdf
+
 
 NIST Special Publication 800-115: Technical Guide to Information Security Testing and Assessment (NIST 800-115). Retrieved January 21, 2020, from http://csrc.nist.gov/publications/nistpubs/800-115/SP800-115.pdf
 

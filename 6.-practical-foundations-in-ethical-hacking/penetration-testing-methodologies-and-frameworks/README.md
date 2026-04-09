@@ -25,15 +25,13 @@ This section discusses major penetration testing methodologies and frameworks. T
 
 Security assessments follow structured methodologies to ensure thorough and reliable testing. Key penetration testing methodologies include 
 OSSTMM (Open Source Security Testing Methodology Manual) (Herzog, 2010),
-NIST SP 800-115 (NIST Special Publication 800-115: Technical Guide to Information Security Testing and Assessment) (2008),
-PTES (Penetration Testing Execution Standard), 
-ISSAF (Information System Security Assessment Framework), 
+NIST SP 800-115 (NIST Special Publication 800-115: Technical Guide to Information Security Testing and Assessment) (Scarfone et al., 2008),
+PTES (Penetration Testing Execution Standard) (2014), 
+ISSAF (Information System Security Assessment Framework) (Open Information Systems Security Group, 2006), 
 PCI-DSS (Payment Card Industry Data Security Standard) Version 4.0 (2022),
-and Communications Security Establishment/Royal Canadian Mounted Police, Harmonized Threat and Risk Assessment Methodology (CSE/RCMP, 2007). 
+and Communications Security Establishment/Royal Canadian Mounted Police, Harmonized Threat and Risk Assessment Methodology (CSE/RCMP, 2007).
 
-Key penetration testing frameworks include 
-OWASP Testing Guide (Open Web Application Security Project),
-and MITRE ATT\&CK® framework.
+Key penetration testing frameworks include OWASP Testing Guide (Open Web Application Security Project) (2020), and MITRE ATT\&CK® (2024) framework.
 
 ### OSSTMM, NIST SP 800-115, and CSE/RCMP
 
@@ -192,22 +190,20 @@ Below are the most widely used penetration testing methodologies and frameworks 
 
 ### References
 
-Communications Security Establishment/Royal Canadian Mounted Police, Harmonized Threat and Risk Assessment Methodology (TRA-1, 2007). Retrieved January 4, 2017, from http://www.rcmp-grc.gc.ca/ts-st/pubs/tra-emr/index-eng.htm
+Communications Security Establishment/Royal Canadian Mounted Police, Harmonized Threat and Risk Assessment Methodology TRA-1 (CSE/RCMP, 2007). http://www.rcmp-grc.gc.ca/ts-st/pubs/tra-emr/index-eng.htm
 
-Faircloth, J. (2011). _Penetration tester’s open source toolkit_. Penetration tester’s open source toolkit. Retrieved from www.scopus.com
+Faircloth, J. (2011). _Penetration tester’s open source toolkit_. Penetration tester’s open source toolkit. 
 
 Herzog, P. (2010). OSSTMM 3–The open source security testing methodology manual. Barcelona, España: ISECOM. https://www.isecom.org/OSSTMM.3.pdf
 
-
-ISSAF (Information Systems Security Assessment Framework). Retrieved January 21, 2020, from http://www.oissg.org/information-systems-security-assessment-framework-issaf.html
-
 MITRE. (2024). ATT\&CK: Adversarial tactics, techniques, and common knowledge. MITRE Corporation. https://attack.mitre.org/
 
-NIST SP 800-115. (2008). NIST Special Publication 800-115: Technical Guide to Information Security Testing and Assessment. Retrieved January 21, 2020, from http://csrc.nist.gov/publications/nistpubs/800-115/SP800-115.pdf
+Open Information Systems Security Group. (2006). _Information systems security assessment framework (ISSAF)_. [http://www.oissg.org/information-systems-security-assessment-framework-issaf.html](http://www.oissg.org/information-systems-security-assessment-framework-issaf.html)
 
 OWASP Foundation. (2020). OWASP web security testing guide (WSTG). _https://owasp.org/www-project-web-security-testing-guide/_
 
 PCI-DSS. (2022). _Payment Card Industry Data Security Standard: Requirements and testing procedures (Version 4.0)_. [https://www.pcisecuritystandards.org/document_library/](https://www.pcisecuritystandards.org/document_library/)
 
+PTES (Penetration Testing Execution Standard).(2014, August 16). http://www.pentest-standard.org/index.php/Main_Page
 
-PTES (Penetration Testing Execution Standard). Retrieved January 21, 2020, from http://www.pentest-standard.org/index.php/Main_Page
+Scarfone, K., Souppaya, M., Cody, A., & Orebaugh, A. (2008). _Technical guide to information security testing and assessment_ (NIST Special Publication 800-115). National Institute of Standards and Technology. [http://csrc.nist.gov/publications/nistpubs/800-115/SP800-115.pdf](http://csrc.nist.gov/publications/nistpubs/800-115/SP800-115.pdf)

@@ -20,20 +20,6 @@
               "icon": "lucide-file",
               "title": "README"
             }
-          },
-          {
-            "id": "ec7ecd078b74127b",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "http://www.pentest-standard.org/index.php/Main_Page",
-                "title": "The Penetration Testing Execution Standard",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "The Penetration Testing Execution Standard"
-            }
           }
         ]
       }

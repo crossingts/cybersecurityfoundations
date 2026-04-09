@@ -645,7 +645,7 @@ The final report is typically delivered directly to an officer of the client org
 
 Chaudhary, H. (2013). Writing an effective penetration testing report. _PenTest Magazine, 3_(7), pp. 18-29.
 
-Faircloth, J. (2011). _Penetration tester’s open source toolkit_. Penetration tester’s open source toolkit. Retrieved from www.scopus.com
+Faircloth, J. (2011). _Penetration tester’s open source toolkit_. Retrieved from www.scopus.com
 
 Graves, K. (2010). _CEH: Certified Ethical Hacker Study Guide_. Wiley Publishing.
 

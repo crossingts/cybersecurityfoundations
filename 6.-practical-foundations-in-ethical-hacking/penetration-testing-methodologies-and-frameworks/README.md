@@ -29,7 +29,11 @@ It then looks at the OWASP Testing Guide and MITRE ATT\&CK® frameworks.
 
 ### Introduction
 
-Security assessments follow structured methodologies to ensure thorough and reliable testing. Key penetration testing methodologies include Open Source Security Testing Methodology Manual (OSSTMM) (Herzog, 2010), NIST Special Publication 800-115 (2008) Technical Guide to Information Security Testing and Assessment, The Penetration Testing Execution Standard (PTES), The Information System Security Assessment Framework (ISSAF), PCI-DSS Version 4.0 Penetration Testing Guide, and Communications Security Establishment/Royal Canadian Mounted Police, Harmonized Threat and Risk Assessment Methodology (CSE/RCMP, 2007). Key penetration testing frameworks include The Open Web Application Security Project (OWASP Testing Guide), and MITRE ATT\&CK® framework.
+Security assessments follow structured methodologies to ensure thorough and reliable testing. Key penetration testing methodologies include Open Source Security Testing Methodology Manual (OSSTMM) (Herzog, 2010), NIST Special Publication 800-115 (2008) Technical Guide to Information Security Testing and Assessment, The Penetration Testing Execution Standard (PTES), The Information System Security Assessment Framework (ISSAF), 
+
+PCI-DSS (Payment Card Industry Data Security Standard) Version 4.0 (2022),
+
+and Communications Security Establishment/Royal Canadian Mounted Police, Harmonized Threat and Risk Assessment Methodology (CSE/RCMP, 2007). Key penetration testing frameworks include The Open Web Application Security Project (OWASP Testing Guide), and MITRE ATT\&CK® framework.
 
 ### OSSTMM, NIST SP 800-115, and CSE/RCMP
 
@@ -202,8 +206,6 @@ NIST Special Publication 800-115: Technical Guide to Information Security Testin
 
 OWASP Foundation. (2020). OWASP web security testing guide (WSTG). _https://owasp.org/www-project-web-security-testing-guide/_
 
-
-PCI-DSS v.1 2015 Penetration Testing Guide. Retrieved January 21, 2020, from https://www.pcisecuritystandards.org/documents/Penetration\_Testing\_Guidance\_March\_2015.pdf
-
+PCI-DSS. (2022). _Payment Card Industry Data Security Standard: Requirements and testing procedures (Version 4.0)_. [https://www.pcisecuritystandards.org/document_library/](https://www.pcisecuritystandards.org/document_library/)
 
 PTES (The Penetration Testing Execution Standard). Retrieved January 21, 2020, from http://www.pentest-standard.org/index.php/Main\_Page

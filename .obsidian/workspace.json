@@ -20,20 +20,6 @@
               "icon": "lucide-file",
               "title": "README"
             }
-          },
-          {
-            "id": "5539c52cd40e9ac3",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://listings.pcisecuritystandards.org/documents/Penetration/_Testing/_Guidance/_March/_2015.pdf",
-                "title": "PCI Security Standards Council – Protect Payment Data with Industry-driven Security Standards, Training, and Programs",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "PCI Security Standards Council – Protect Payment Data with Industry-driven Security Standards, Training, and Programs"
-            }
           }
         ]
       }

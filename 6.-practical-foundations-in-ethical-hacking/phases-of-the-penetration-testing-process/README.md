@@ -289,11 +289,11 @@ A typical HTTP response header: `Server: nginx/1.18.0`
 - Software: `nginx`
 - Version: `1.18.0`
 
-> _When Nmap performs version detection (`-sV`), Nmap initiates a connection to the open port and sends a series of carefully crafted probes (e.g., specific protocol requests, malformed packets, or known commands). The target’s response—its banner, error messages, or behavior—acts as a fingerprint. Nmap compares this fingerprint against its internal database of known service signatures to identify the exact software and version._
+When Nmap performs version detection (`-sV`), Nmap initiates a connection to the open port and sends a series of carefully crafted probes (e.g., specific protocol requests, malformed packets, or known commands). The target’s response—its banner, error messages, or behavior—acts as a fingerprint. Nmap compares this fingerprint against its internal database of known service signatures to identify the exact software and version.
 
 Note that for some services (e.g., SSH), the server sends its banner before Nmap sends any probe. Nmap still reads that banner as part of the fingerprint. 
 
-> _The TCP handshake establishes a connection; the probes are the application‑layer questions Nmap asks once connected. Both are part of version detection, but they serve different purposes._
+The TCP handshake establishes a connection; the probes are the application‑layer questions Nmap asks once connected. Both are part of version detection, but they serve different purposes.
 
 **Two distinct steps in version detection:**
 
@@ -339,9 +339,9 @@ sudo nmap -sS -sV -p- 192.168.1.10 # SYN scan (requires root)
 
 nmap -sT -sV -p- 192.168.1.10 # TCP connect scan (no root needed)
 
-If you request `-sS` without root, Nmap falls back to `-sT` and typically displays a warning like.
+If you request `-sS` without root, Nmap falls back to `-sT` and typically displays a warning like:
 
-> _"SYN scan requires root privileges. Falling back to TCP connect scan."_
+"SYN scan requires root privileges. Falling back to TCP connect scan."
 
 #### OS fingerprinting
 
@@ -377,8 +377,7 @@ nmap --script banner -p80,22 192.168.1.10
 
 `nmap -p22 192.168.1.1` only checks if port 22 is open (e.g., SYN scan → SYN‑ACK or RST). `nmap -sV -p22 192.168.1.1` does the same port scan plus connects to the open port, sends probes, and grabs the banner to determine the service and version. That second command (`-sV`) performs **banner grabbing as a foundational enumeration technique** – it extracts the SSH version string (e.g., `SSH-2.0-OpenSSH_8.2p1`). 
 
-> **`-sV` = port scan + banner grabbing / service version detection**  
-> and that banner grabbing is the first and simplest form of enumeration on that port.
+`-sV` = port scan + banner grabbing (and that banner grabbing is the first and simplest form of enumeration on that port).
 
 **Example 2: SSH Enumeration (Beyond Banner Grabbing)**
 
@@ -596,8 +595,6 @@ If logging is enabled and monitored (which is often not the case), log entries c
 The following table, Pen Source/Free Tools—for Network Penetration Testing (Shah & Mehtre, 2015, p. 45), offers a summary of common open source network penetration testing tools, including their function and operating system compatibility.
 
 <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt="Open-Source-Network-Penetration-Testing-Tools"><figcaption><p>Pen Source/Free Tools—for Network Penetration Testing (Shah &#x26; Mehtre, 2015, p. 45)</p></figcaption></figure>
-
----
 
 ### The penetration test report
 

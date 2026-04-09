@@ -27,9 +27,18 @@ Penetration testing is scoped to target specific segments of an organization's a
 
 **Network Penetration Testing** 
 
-This test targets an organization's network infrastructure, assessing both perimeter and internal defenses. The methodology involves reconnaissance, service enumeration, vulnerability scanning, and exploitation of identified weaknesses in network devices (routers, switches), servers, and network services. Testers aim to bypass security controls like firewalls and Intrusion Prevention Systems (IPS), often using techniques like protocol manipulation and credential brute-forcing. The goal is to map attack paths, demonstrate lateral movement potential, and identify misconfigurations that could lead to a full network compromise.
+ This test targets an organization's network infrastructure, assessing both perimeter and internal defenses. The methodology involves reconnaissance, service enumeration, vulnerability scanning, and exploitation of identified weaknesses in network devices (routers, switches), servers, and network services. Testers aim to bypass security controls like firewalls and Intrusion Prevention Systems (IPS), often using techniques such as protocol manipulation and credential brute‑forcing. Specific activities include:
 
-Network penetration testing typically includes bypassing firewalls, router testing, IPS/IDS evasion, DNS footprinting, open port scanning and testing, SSH attacks, proxy servers, network vulnerabilities, and application penetration testing (Cipher, n.d.). 
+- **Bypassing firewalls and IPS/IDS evasion** – using fragmented packets, protocol tunneling, or encrypted payloads to circumvent perimeter defenses.
+- **Router and switch testing** – examining configuration weaknesses (e.g., default credentials, exposed management interfaces, weak SNMP community strings).
+- **DNS footprinting and zone transfers** – mapping the organization's domain namespace and identifying internal hostnames.
+- **Open port scanning and service enumeration** – identifying listening services and their versions to locate potential entry points.
+- **SSH attacks** – testing for weak credentials, outdated versions vulnerable to known exploits, or misconfigured key‑based authentication.    
+- **Proxy server assessment** – evaluating whether internal proxy configurations leak information, allow unauthorized forwarding, or can be abused for lateral movement.
+- **General network vulnerability exploitation** – targeting unpatched services, default configurations, and weak encryption protocols.
+- **Application penetration testing on network‑exposed services** – assessing the security of web interfaces, management consoles, and custom protocols accessible over the network.
+ 
+ The goal is to map attack paths, demonstrate lateral movement potential, and identify misconfigurations that could lead to a full network compromise.
 
 **Wireless Network Penetration Testing**  
 
@@ -63,7 +72,7 @@ Bridging the gap between these two methodologies is grey box penetration testing
 
 **Comparison Table**
 
-| Feature       | White Box                                     | Black Box                                  | grey Box                        |
+| Feature       | White Box                                     | Black Box                                  | Grey Box                        |
 | ------------- | --------------------------------------------- | ------------------------------------------ | ------------------------------- |
 | **Knowledge** | Full                                          | None                                       | Partial                         |
 | **Speed**     | Fast                                          | Slow                                       | Moderate                        |

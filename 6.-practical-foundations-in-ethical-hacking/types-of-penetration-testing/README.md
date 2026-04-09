@@ -10,8 +10,8 @@ description: >-
 ## Learning objectives
 
 * Describe main types of penetration testing
-* Compare black box and white box penetration testing methods
-* Identify the possible risks of penetration testing
+* Compare black box, white box, and grey box penetration testing methods
+* Identify possible risks of penetration testing
 
 This section explores six types of penetration testing (network penetration testing, wireless network penetration testing, web application penetration testing, physical penetration testing, social engineering, and cloud penetration testing), compares black box and white box penetration testing, and sheds light on possible risks of penetration testing to the client organization.
 

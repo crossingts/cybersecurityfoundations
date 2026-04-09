@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -183,9 +183,9 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/scanning-and-enumeration/README.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/gaining-access-attacking-a-system.md",
-    "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/reconnaissance-footprinting.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/passive-discovery-method.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/scanning-and-enumeration/scanning-and-enumeration-tools.md",

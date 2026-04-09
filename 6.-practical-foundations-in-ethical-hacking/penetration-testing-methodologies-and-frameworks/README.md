@@ -6,13 +6,15 @@ description: This section discusses major penetration testing methodologies and 
 
 ## Learning objectives
 
-* Become familiar with major penetration testing methodologies, including OSSTMM 3.0, NIST SP 800-115, and CSE/RCMP (2007)
+* Become familiar with major penetration testing methodologies, including OSSTMM 3.0, NIST SP 800-115, and CSE/RCMP TRA-1 (2007)
 * Become familiar with the OWASP Testing Guide
-* Become familiar with the MITRE ATT\&CK framework
+* Become familiar with the MITRE ATT&CK framework
 
-This section discusses major penetration testing methodologies and frameworks. The most widely used penetration testing methodologies include OSSTMM, NIST SP 800-115, PTES, ISSAF, and PCI-DSS. Common penetration testing frameworks include OWASP Testing Guide, MITRE ATT\&CK, and cyber kill chain. 
+This section discusses major penetration testing methodologies and frameworks. The most widely used penetration testing methodologies include OSSTMM, NIST SP 800-115, PTES, ISSAF, and PCI-DSS. Common penetration testing frameworks include OWASP Testing Guide, MITRE ATT&CK, and cyber kill chain. 
 
-This section first elaborates the deployment and main features of OSSTMM, NIST SP 800-115, and Communications Security Establishment/Royal Canadian Mounted Police, Harmonized Threat and Risk Assessment Methodology TRA-1 (CSE/RCMP, 2007). It then discusses the PTES, ISSAF, and PCI-DSS penetration testing methodologies. It then looks at the OWASP Testing Guide and MITRE ATT\&CK® frameworks.
+This section first explores the deployment and main features of OSSTMM, NIST SP 800-115, and Communications Security Establishment/Royal Canadian Mounted Police, Harmonized Threat and Risk Assessment Methodology TRA-1 (CSE/RCMP, 2007). 
+It then discusses the PTES, ISSAF, and PCI-DSS penetration testing methodologies. 
+It then looks at the OWASP Testing Guide and MITRE ATT&CK® frameworks.
 
 ### Topics covered in this section
 
@@ -20,16 +22,26 @@ This section first elaborates the deployment and main features of OSSTMM, NIST S
 * **OSSTMM, NIST SP 800-115, and CSE/RCMP TRA-1**
 * **Other major penetration testing methodologies**
 * **OWASP Testing Guide (Web Security Testing Guide)**
-* **MITRE ATT\&CK® framework**
+* **MITRE ATT&CK® framework**
 * **Penetration testing methodologies and frameworks comparison**
 
 ### Introduction
 
-While the technical skills of exploitation are crucial, a repeatable and comprehensive methodology ensures that no critical area of the security posture is overlooked. The following models provide the scaffolding for professional assessments.
+While the technical skills of exploitation are crucial, a repeatable and comprehensive methodology ensures that no critical area of the security posture is overlooked. 
+The following models provide the scaffolding for professional assessments.
 
 Security assessments follow structured methodologies to ensure thorough and reliable testing. 
 
-Key penetration testing methodologies include **OSSTMM** (Open Source Security Testing Methodology Manual) (Herzog, 2010), **NIST SP 800-115** (NIST Special Publication 800-115: Technical Guide to Information Security Testing and Assessment) (Scarfone et al., 2008), PTES (Penetration Testing Execution Standard) (2014), ISSAF (Information System Security Assessment Framework) (Open Information Systems Security Group, 2006), PCI-DSS (Payment Card Industry Data Security Standard) Version 4.0 (2022), and Communications Security Establishment/Royal Canadian Mounted Police, Harmonized Threat and Risk Assessment Methodology **TRA-1** (CSE/RCMP, 2007). Key penetration testing frameworks include OWASP Testing Guide (Open Web Application Security Project) (2020), and MITRE ATT\&CK® (2024) framework.
+This section explores the following penetration testing frameworks: 
+OSSTMM (Open Source Security Testing Methodology Manual) (Herzog, 2010), 
+NIST SP 800-115 (NIST Special Publication 800-115: Technical Guide to Information Security Testing and Assessment) (Scarfone et al., 2008), 
+PTES (Penetration Testing Execution Standard) (2014), 
+ISSAF (Information System Security Assessment Framework) (Open Information Systems Security Group, 2006), 
+PCI-DSS (Payment Card Industry Data Security Standard) Version 4.0 (2022), 
+and 
+Communications Security Establishment/Royal Canadian Mounted Police, Harmonized Threat and Risk Assessment Methodology TRA-1 (CSE/RCMP, 2007). 
+
+This section also explores the following penetration testing frameworks: OWASP Testing Guide (Open Web Application Security Project) (2020), and MITRE ATT&CK® (2024) framework.
 
 ### OSSTMM, NIST SP 800-115, and CSE/RCMP TRA-1
 
@@ -81,13 +93,13 @@ The guide is structured to mirror the phases of a typical application penetratio
 
 A key strength of the OWASP Testing Guide is its evolution to keep pace with modern application architectures. While it thoroughly covers traditional web applications, it also includes critical testing procedures for **APIs (REST and SOAP), serverless architectures, and cloud-native applications**. This makes it an indispensable tool not only for dedicated penetration testers but also for DevSecOps teams integrating security into the development lifecycle. By providing a community-driven, open-source set of best practices, the OWASP WSTG establishes a common language and baseline for web application security testing across the industry.
 
-### MITRE ATT\&CK® framework
+### MITRE ATT&CK® framework
 
-MITRE ATT\&CK® (Adversarial Tactics, Techniques, and Common Knowledge) is a globally accessible knowledge base of adversary behaviors, based on real-world cyber threats. MITRE ATT\&CK is an "encyclopedia of hacking"—helping defenders understand attackers and build better defenses. It serves as a foundation for threat intelligence, detection, red teaming, and defense strategies. MITRE ATT\&CK is comparable to/an alternative to the cyber kill chain developed by Lockheed Martin.
+MITRE ATT&CK® (Adversarial Tactics, Techniques, and Common Knowledge) is a globally accessible knowledge base of adversary behaviors, based on real-world cyber threats. MITRE ATT&CK is an "encyclopedia of hacking"—helping defenders understand attackers and build better defenses. It serves as a foundation for threat intelligence, detection, red teaming, and defense strategies. MITRE ATT&CK is comparable to/an alternative to the cyber kill chain developed by Lockheed Martin.
 
-1. What is MITRE ATT\&CK?
+1. What is MITRE ATT&CK?
 
-MITRE ATT\&CK is a guideline for classifying and describing cyberattacks and intrusions. It was created by the Mitre Corporation and released in 2013. (Wikipedia)
+MITRE ATT&CK is a guideline for classifying and describing cyberattacks and intrusions. It was created by the Mitre Corporation and released in 2013. (Wikipedia)
 
 * A **structured framework** mapping how attackers operate, from initial access to data exfiltration.
 * Used by **security teams, threat hunters, red teams, and SOC analysts** to:
@@ -96,7 +108,7 @@ MITRE ATT\&CK is a guideline for classifying and describing cyberattacks and int
   * Conduct **red team exercises** (simulating real attacks).
   * Benchmark security controls (**"How well can we detect Technique X?"**).
 
-2. ATT\&CK Matrices: Breaking Down the Structure
+2. ATT&CK Matrices: Breaking Down the Structure
 
 The framework organizes threats into **matrices** for different environments:
 
@@ -119,13 +131,13 @@ The framework organizes threats into **matrices** for different environments:
 * **Procedures (Real-World Examples)**
   * How threat groups (e.g., APT29, Lazarus) use these techniques.
 
-3. How Organizations Use MITRE ATT\&CK
+3. How Organizations Use MITRE ATT&CK
 
 **Defensive Use Cases (Blue Team/SOC)**
 
-✔ **Threat Detection** – Map detection rules (SIEM, EDR) to ATT\&CK techniques.\
+✔ **Threat Detection** – Map detection rules (SIEM, EDR) to ATT&CK techniques.\
 ✔ **Gap Analysis** – "Can we detect **Credential Dumping (T1003)?"**\
-✔ **Incident Response** – Investigate breaches using ATT\&CK as a playbook.
+✔ **Incident Response** – Investigate breaches using ATT&CK as a playbook.
 
 **Offensive Use Cases (Red Team/Pentesters)**
 
@@ -136,7 +148,7 @@ The framework organizes threats into **matrices** for different environments:
 
 ✔ **Track Threat Actors** – Compare APT groups (e.g., _Russian Cozy Bear uses T1195.002_).
 
-4. Example: Mapping an Attack with ATT\&CK
+4. Example: Mapping an Attack with ATT&CK
 
 **Scenario:** Ransomware Attack
 
@@ -146,7 +158,7 @@ The framework organizes threats into **matrices** for different environments:
 * **Lateral Movement (TA0008)** → Pass the Hash (T1550.002).
 * **Impact (TA0040)** → Data Encrypted for Ransom (T1486).
 
-5. ATT\&CK vs. Other Frameworks
+5. ATT&CK vs. Other Frameworks
 
 | Framework                            | Purpose                                  | Comparison                     |
 | ------------------------------------ | ---------------------------------------- | ------------------------------ |
@@ -154,13 +166,13 @@ The framework organizes threats into **matrices** for different environments:
 | **Lockheed Martin Cyber Kill Chain** | Focuses on **stages** of an attack.      | Less detailed than ATT\&CK.    |
 | **NIST CSF**                         | Risk management framework.               | High-level, not TTP-focused.   |
 
-6. Getting Started with ATT\&CK
+6. Getting Started with ATT&CK
 
-* **Explore:** [MITRE ATT\&CK Website](https://attack.mitre.org/)
+* **Explore:** [MITRE ATT&CK Website](https://attack.mitre.org/)
 * **Tools:**
-  * **ATT\&CK Navigator** (Visualize TTPs).
+  * **ATT&CK Navigator** (Visualize TTPs).
   * **CALDERA** (Automated adversary simulation).
-  * **Atomic Red Team** (Test detections for ATT\&CK techniques).
+  * **Atomic Red Team** (Test detections for ATT&CK techniques).
 
 ### Penetration testing methodologies and frameworks comparison
 
@@ -180,11 +192,11 @@ Below are the most widely used penetration testing methodologies and frameworks 
 
 ### Key takeaways
 
-* Penetration testing is guided by both methodologies, which provide a process for the entire engagement (e.g., OSSTMM, NIST SP 800-115, PTES), and frameworks, which provide knowledge bases of attacker behaviors (e.g., MITRE ATT\&CK) or specialized checklists (e.g., OWASP WSTG).
+* Penetration testing is guided by both methodologies, which provide a process for the entire engagement (e.g., OSSTMM, NIST SP 800-115, PTES), and frameworks, which provide knowledge bases of attacker behaviors (e.g., MITRE ATT&CK) or specialized checklists (e.g., OWASP WSTG).
 * OSSTMM 3.0 provides a scientific, metrics-focused approach to operational security across multiple channels (human, physical, network), generating factual data about an organization's attack surface.
 * NIST SP 800-115 offers a high-level, phased approach (Plan, Discover, Attack, Report) that aligns with broader U.S. federal compliance standards and is strong on vulnerability assessment.
 * The OWASP Testing Guide (WSTG) is the definitive standard for web application security testing, offering a detailed, phase-based checklist for finding critical vulnerabilities like those in the OWASP Top 10.
-* The MITRE ATT\&CK® framework is not a testing methodology but a knowledge base of real-world adversary TTPs (Tactics, Techniques, and Procedures), essential for red teaming, threat hunting, and improving defensive detection capabilities.
+* The MITRE ATT&CK® framework is not a testing methodology but a knowledge base of real-world adversary TTPs (Tactics, Techniques, and Procedures), essential for red teaming, threat hunting, and improving defensive detection capabilities.
 
 ### References
 
@@ -194,7 +206,7 @@ Faircloth, J. (2011). _Penetration tester’s open source toolkit_. Penetration 
 
 Herzog, P. (2010). OSSTMM 3–The open source security testing methodology manual. Barcelona, España: ISECOM. https://www.isecom.org/OSSTMM.3.pdf
 
-MITRE. (2024). ATT\&CK: Adversarial tactics, techniques, and common knowledge. MITRE Corporation. https://attack.mitre.org/
+MITRE. (2024). ATT&CK: Adversarial tactics, techniques, and common knowledge. MITRE Corporation. https://attack.mitre.org/
 
 Open Information Systems Security Group. (2006). _Information systems security assessment framework (ISSAF)_. [http://www.oissg.org/information-systems-security-assessment-framework-issaf.html](http://www.oissg.org/information-systems-security-assessment-framework-issaf.html)
 

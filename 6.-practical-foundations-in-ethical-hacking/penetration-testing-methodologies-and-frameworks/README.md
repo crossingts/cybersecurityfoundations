@@ -23,15 +23,7 @@ This section discusses major penetration testing methodologies and frameworks. T
 
 ### Introduction
 
-Security assessments follow structured methodologies to ensure thorough and reliable testing. Key penetration testing methodologies include 
-OSSTMM (Open Source Security Testing Methodology Manual) (Herzog, 2010),
-NIST SP 800-115 (NIST Special Publication 800-115: Technical Guide to Information Security Testing and Assessment) (Scarfone et al., 2008),
-PTES (Penetration Testing Execution Standard) (2014), 
-ISSAF (Information System Security Assessment Framework) (Open Information Systems Security Group, 2006), 
-PCI-DSS (Payment Card Industry Data Security Standard) Version 4.0 (2022),
-and Communications Security Establishment/Royal Canadian Mounted Police, Harmonized Threat and Risk Assessment Methodology (CSE/RCMP, 2007).
-
-Key penetration testing frameworks include OWASP Testing Guide (Open Web Application Security Project) (2020), and MITRE ATT\&CK® (2024) framework.
+Security assessments follow structured methodologies to ensure thorough and reliable testing. Key penetration testing methodologies include OSSTMM (Open Source Security Testing Methodology Manual) (Herzog, 2010), NIST SP 800-115 (NIST Special Publication 800-115: Technical Guide to Information Security Testing and Assessment) (Scarfone et al., 2008), PTES (Penetration Testing Execution Standard) (2014), ISSAF (Information System Security Assessment Framework) (Open Information Systems Security Group, 2006), PCI-DSS (Payment Card Industry Data Security Standard) Version 4.0 (2022), and Communications Security Establishment/Royal Canadian Mounted Police, Harmonized Threat and Risk Assessment Methodology (CSE/RCMP, 2007). Key penetration testing frameworks include OWASP Testing Guide (Open Web Application Security Project) (2020), and MITRE ATT\&CK® (2024) framework.
 
 ### OSSTMM, NIST SP 800-115, and CSE/RCMP
 

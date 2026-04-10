@@ -1,5 +1,5 @@
 ---
-description: This section explores core features and primary use cases of major open source penetration testing technologies
+description: This section explores core features and primary use cases of major open source penetration testing technologies, including Nmap, OpenVAS, tcpdump, Metasploit, Burp Suite CE, OWASP ZAP
 ---
 
 # Penetration testing technologies
@@ -10,12 +10,12 @@ description: This section explores core features and primary use cases of major 
 - Differentiate between the functionalities of key tools, such as network mapping (Nmap) and vulnerability scanning (OpenVAS)
 - Understand how these technologies integrate to form a comprehensive penetration testing kill chain
 
-This section provides a comprehensive overview of the major open source technologies that form the backbone of modern penetration testing. We explore the core features and practical applications of essential tools, including Nmap for network discovery, OpenVAS for vulnerability scanning, tcpdump for traffic analysis, Metasploit for exploitation, and Burp Suite/OWASP ZAP for web application security. Understanding the distinct role of each tool as well as how tools complement each other is fundamental to executing a systematic and effective security assessment.
+This section provides an overview of the major open source technologies that form the backbone of modern penetration testing. We explore the core features and practical applications of essential tools, including Nmap for network discovery, OpenVAS for vulnerability scanning, tcpdump for traffic analysis, Metasploit for exploitation, and Burp Suite and OWASP ZAP for web application security. Understanding the distinct role of each tool as well as how tools complement each other is fundamental to executing a systematic and effective security assessment.
 
 ## Topics covered in this section <a href="#topics-covered-in-this-section" id="topics-covered-in-this-section"></a>
 
 * **Introduction**
-* **Nmap: Network reconnaissance, and enumeration**
+* **Nmap: Network reconnaissance, scanning, and enumeration**
 * **OpenVAS: Vulnerability assessment**
 * **tcpdump: Traffic analysis and forensics**
 * **Metasploit: Exploitation and post-exploitation**
@@ -24,9 +24,9 @@ This section provides a comprehensive overview of the major open source technolo
 
 ### Introduction
 
-Penetration testing relies on a suite of specialized tools to systematically identify vulnerabilities, exploit weaknesses, and validate an organization's security posture. This process, often conceptualized as a "kill chain", involves "sequential" phases: reconnaissance, scanning and enumeration, gaining access, maintaining access, and covering tracks. Among the vast array of available utilities, Nmap, OpenVAS, tcpdump, Metasploit, and Burp Suite/OWASP ZAP serve as core technologies, each addressing distinct phases of the penetration test lifecycle. Mastering this toolkit is not just about learning individual commands but understanding how to strategically chain these tools together to simulate sophisticated attacks and provide actionable insights for hardening defenses.
+Penetration testing relies on a suite of specialized tools to systematically identify vulnerabilities, exploit weaknesses, and validate an organization's security posture. This process, often conceptualized as a "kill chain", involves "sequential" phases: reconnaissance, scanning and enumeration, gaining access, maintaining access, and covering tracks. Among the vast array of available utilities, Nmap, OpenVAS, tcpdump, Metasploit, Burp Suite, and OWASP ZAP serve as core technologies, each addressing distinct phases or needs of the penetration test lifecycle. Mastering this toolkit is not just about learning individual commands but understanding how to strategically chain these tools together to simulate sophisticated attacks and provide actionable insights for hardening defenses.
 
-### Nmap: Network reconnaissance and enumeration
+### Nmap: Network reconnaissance, scanning, and enumeration
 
 Nmap (Network Mapper) is the de facto standard for host discovery, port scanning, and service enumeration. Using techniques like SYN scans (`-sS`), OS fingerprinting (`-O`), and version detection (`-sV`), Nmap provides a detailed map of network assets. For example, during the initial reconnaissance phase, a pentester might use `nmap -A -T4 192.168.1.0/24` to aggressively scan a subnet, identifying open ports (e.g., SSH on 22, HTTP on 80) and potential attack vectors. Its scripting engine (`--script`) further automates tasks like vulnerability detection (e.g., `http-vuln-cve2021-44228` for Log4j).
 
@@ -102,13 +102,7 @@ Furthermore, tcpdump is indispensable for forensic analysis and validating explo
 
 ### Metasploit: Exploitation and post-exploitation
 
-Metasploit Framework (Open Source Edition)
-
-The Metasploit Framework is the freely available, open-source edition of the Metasploit Project.
-
-Metasploit Framework, a tool for developing and executing exploit code against a remote target machine. 
-
-Metasploit Framework is a sub-project of The Metasploit Project, which is owned by Rapid7, a Boston, Massachusetts-based security company.
+Metasploit Framework (Open Source Edition) is a tool for developing and executing exploit code against a remote target machine. It is a sub-project of The Metasploit Project, which is owned by Rapid7, a Boston, Massachusetts-based security company.
 
 The Metasploit Framework automates exploitation and post-exploitation workflows. Its modular design includes exploits (e.g., `multi/handler` for reverse shells), payloads (e.g., Meterpreter), and auxiliary modules (e.g., SMB brute-forcing). For example, after identifying an unpatched SMB service via Nmap, a pentester could deploy `exploit/windows/smb/ms17_010_eternalblue` to gain a shell. Metasploit’s post-modules (e.g., `hashdump`, `mimikatz`) enable lateral movement, privilege escalation, and data exfiltration, simulating advanced persistent threats (APTs).
 

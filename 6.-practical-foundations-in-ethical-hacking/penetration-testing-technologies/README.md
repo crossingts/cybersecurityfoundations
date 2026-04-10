@@ -14,17 +14,17 @@ This section provides an overview of the major open source technologies that for
 
 ## Topics covered in this section
 
-* **Introduction**
-* **Nmap: Network reconnaissance, scanning, and enumeration**
-* **OpenVAS: Vulnerability assessment**
-* **tcpdump: Traffic analysis and forensics**
-* **Metasploit: Exploitation and post-exploitation**
-* Burp Suite Community Edition:
-* OWASP ZAP:
+- Introduction
+- Nmap: Network reconnaissance, scanning, and enumeration
+- OpenVAS: Vulnerability assessment
+- tcpdump: Traffic analysis and forensics
+- Metasploit: Exploitation and post-exploitation
+- Burp Suite Community Edition: Web application proxy and manual testing platform
+- OWASP ZAP: Open-source web application security scanner
 
 ### Introduction
 
-Penetration testing relies on a suite of specialized tools to systematically identify vulnerabilities, exploit weaknesses, and validate an organization's security posture. This process, often conceptualized as a "kill chain", involves "sequential" phases: reconnaissance, scanning and enumeration, gaining access, maintaining access, and covering tracks. Among the vast array of available utilities, Nmap, OpenVAS, tcpdump, Metasploit, Burp Suite, and OWASP ZAP serve as core technologies, each addressing distinct phases or needs of the penetration test lifecycle. Mastering this toolkit is not just about learning individual commands but understanding how to strategically chain these tools together to simulate sophisticated attacks and provide actionable insights for hardening defenses.
+Penetration testing relies on a suite of specialized tools to systematically identify vulnerabilities, exploit weaknesses, and validate an organization's security posture. This process, often conceptualized as a "kill chain", involves progressive phases: reconnaissance, scanning and enumeration, gaining access, maintaining access, and covering tracks. Among the vast array of available utilities, Nmap, OpenVAS, tcpdump, Metasploit, Burp Suite, and OWASP ZAP serve as core technologies, each addressing distinct phases or needs of the penetration test lifecycle. Mastering this toolkit is not just about learning individual commands, but understanding how to strategically chain these tools together to simulate sophisticated attacks and provide actionable insights for hardening defenses.
 
 ### Nmap: Network reconnaissance, scanning, and enumeration
 

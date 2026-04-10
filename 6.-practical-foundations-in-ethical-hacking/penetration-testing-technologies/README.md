@@ -4,7 +4,7 @@ description: This section explores core features and primary use cases of major 
 
 # Penetration testing technologies
 
-## Learning objectives <a href="#learning-objectives" id="learning-objectives"></a>
+## Learning objectives
 
 - Become familiar with core features and primary use cases of major open source penetration testing technologies
 - Differentiate between the functionalities of key tools, such as network mapping (Nmap) and vulnerability scanning (OpenVAS)
@@ -12,7 +12,7 @@ description: This section explores core features and primary use cases of major 
 
 This section provides an overview of the major open source technologies that form the backbone of modern penetration testing. We explore the core features and practical applications of essential tools, including Nmap for network discovery, OpenVAS for vulnerability scanning, tcpdump for traffic analysis, Metasploit for exploitation, and Burp Suite and OWASP ZAP for web application security. Understanding the distinct role of each tool as well as how tools complement each other is fundamental to executing a systematic and effective security assessment.
 
-## Topics covered in this section <a href="#topics-covered-in-this-section" id="topics-covered-in-this-section"></a>
+## Topics covered in this section
 
 * **Introduction**
 * **Nmap: Network reconnaissance, scanning, and enumeration**

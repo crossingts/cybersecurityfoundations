@@ -76,6 +76,36 @@ Starting nmap without any of the options runs a “regular” scan and provides 
 
 <figure><img src="../../../.gitbook/assets/image (14).png" alt="Nmap switches"><figcaption><p>Source: Walker (2012, p. 99)</p></figcaption></figure>
 
+a direct, switch‑for‑switch update of the Walker 2012 table. Below is the modern equivalent for each entry, with notes where syntax or functionality has changed.
+
+| Old Switch                   | Old Description             | Current Switch | Current Description / Notes                                                                 |
+| ---------------------------- | --------------------------- | -------------- | ------------------------------------------------------------------------------------------- |
+| `-sA`                        | ACK scan                    | `-sA`          | Unchanged – TCP ACK scan (firewall rule detection)                                          |
+| `-sF`                        | FIN scan                    | `-sF`          | Unchanged – TCP FIN scan                                                                    |
+| `-sI` (table had `-sl` typo) | IDLE scan                   | `-sI <zombie>` | Unchanged – Idle scan (requires zombie host)                                                |
+| `-sL`                        | DNS scan (List scan)        | `-sL`          | Unchanged – List scan (DNS resolution, no packets)                                          |
+| `-sN`                        | NULL scan                   | `-sN`          | Unchanged – TCP NULL scan                                                                   |
+| `-sO`                        | Protocol scan               | `-sO`          | Unchanged – IP protocol scan                                                                |
+| `-sP`                        | Ping scan                   | `-sn`          | **Changed** – `-sn` (no port scan; `-sP` is deprecated)                                     |
+| `-sR`                        | RPC scan                    | `-sV`          | **Changed** – RPC detection integrated into version scan (`-sV`)                            |
+| `-sS`                        | SYN scan                    | `-sS`          | Unchanged – TCP SYN stealth scan (default with root)                                        |
+| `-sT`                        | TCP Connect scan            | `-sT`          | Unchanged – TCP connect scan (default without root)                                         |
+| `-sW`                        | Windows scan                | `-sW`          | Unchanged – TCP window scan                                                                 |
+| `-sX`                        | XMAS tree scan              | `-sX`          | Unchanged – TCP XMAS scan                                                                   |
+| `-PI`                        | ICMP ping                   | `-PE`          | **Changed** – `-PE` (ICMP echo ping) is preferred; `-PI` still works but not recommended    |
+| `-Po`                        | No ping                     | `-Pn`          | **Changed** – `-Pn` (skip host discovery); `-Po` is deprecated                              |
+| `-PS`                        | SYN ping                    | `-PS`          | Unchanged – TCP SYN ping (host discovery)                                                   |
+| `-PT`                        | TCP ping                    | `-PA`          | **Changed** – `-PA` (TCP ACK ping); `-PT` is obsolete                                       |
+| `-oN`                        | Normal output               | `-oN`          | Unchanged – normal human‑readable output                                                    |
+| `-oX`                        | XML output                  | `-oX`          | Unchanged – XML output                                                                      |
+| `-T paranoid` or `-T0`       | Serial, slowest scan        | `-T0`          | Unchanged – Paranoid (serial, very slow)                                                    |
+| `-T sneaky` or `-T1`         | Serial, slow scan           | `-T1`          | Unchanged – Sneaky (serial, slow)                                                           |
+| `-T polite` or `-T2`         | Serial, normal speed scan   | `-T2`          | Unchanged – Polite (serial, normal)                                                         |
+| `-T normal` or `-T3`         | Parallel, normal speed scan | `-T3`          | Unchanged – Normal (parallel, default)                                                      |
+| `-T aggressive` or `-T4`     | Parallel, fast scan         | `-T4`          | Unchanged – Aggressive (parallel, fast)                                                     |
+| `-T Sneaky` (ta              | Parallel, fastest scan      | `-T5`          | **Changed** – `-T5` (Insane); the description “parallel, fastest” matches `-T5`, not Sneaky |
+
+
 Generally speaking, there are seven generic scan types for port scanning (Walker, 2012, pp. 99-100):
 
 • TCP Connect Runs through a full connection (three-way handshake) on all ports. Easiest to detect, but possibly the most reliable. Open ports will respond with a SYN/ACK, closed ports with a RST/ACK.\

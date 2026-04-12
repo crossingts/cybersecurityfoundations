@@ -9,11 +9,11 @@ description: >-
 ## Learning objectives <a href="#learning-objectives" id="learning-objectives"></a>
 
 * Learn how to design, configure, verify, and operate a fully functional virtual cybersecurity lab using exclusively open source technologies
-- Compare open-source virtualization tools and select one appropriate for your host system and lab design
+- Compare open source virtualization tools and select one appropriate for your lab design
 - Design a multi-component cybersecurity lab architecture by following a provided design pipeline
 - Build a virtual network with functional security layers, including firewall, IDS/IPS, and monitoring (SIEM)
 - Configure target systems (web/database servers) and an attack platform (Kali Linux) to validate the lab
-- Document the lab setup and findings using a suitable open-source platform
+- Document the lab design, deployment, and validation process using a suitable open source documentation platform
 
 This section provides a comprehensive hands-on guide to constructing a complete cybersecurity lab environment from the ground up using only free and open-source tools. You will learn to architect a realistic network containing defensive security controls—such as firewalls (e.g., OPNsense), intrusion detection/intrusion prevention systems (e.g., Suricata), and security monitoring (e.g., Wazuh SIEM)—alongside both target services (e.g., Apache and MySQL) and an offensive security workstation (Kali Linux). The guide walks you through the entire process: from selecting a virtualization platform that matches your host hardware, to designing your lab's topology, implementing and configuring each component, verifying connectivity and functionality, and finally documenting the entire project. By the end, you will have a fully isolated, functional virtual lab where you can safely launch simulated attacks, observe defensive telemetry, and develop practical cybersecurity skills.
 

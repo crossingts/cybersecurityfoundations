@@ -39,12 +39,12 @@ These three frameworks reflect an evolving attack landscape prioritizing the fol
 
 * **Web Application Flaws:** Injection (SQLi, OS Command), XSS, Broken Access Control (IDOR).
 * **Security Misconfigurations:** Cloud storage (S3) buckets, default credentials, unnecessary services.
-* **Identity & Access Issues:** Weak passwords, lack of multi-factor authentication, privilege escalation.
+* **Identity and Access Issues:** Weak passwords, lack of multi-factor authentication, privilege escalation.
 * **Outdated Software:** Unpatched systems with known CVEs.
 
 ### NIST SP 800-115's attack categories
 
-The majority of vulnerabilities exploited by penetration testing fall into the following categories (Scarfone et al., 2008, pp. 5-4-5-5):
+The majority of vulnerabilities exploited during penetration testing fall into the following categories (Scarfone et al., 2008, pp. 5-4-5-5):
 
 * Misconfigurations. Misconfigured security settings, particularly insecure default settings, are usually easily exploitable.
 * Kernel Flaws. Kernel code is the core of an OS, and enforces the overall security model for the system—so any security flaw in the kernel puts the entire system in danger.
@@ -62,32 +62,32 @@ The majority of vulnerabilities exploited by penetration testing fall into the f
 | **Security Misconfigurations**            | Cloud, Servers, Containers, OS, Databases, Applications | Exposed admin interfaces, verbose errors, insecure settings                                 | **Kubernetes dashboard exposed** (CVE-2018-18264), **Jenkins RCE** (misconfigured scripts), Accessing admin panels with `admin:admin` credentials |
 | **Misconfigurations (Insecure Defaults)** | Servers, Cloud, IoT, APIs, Network Devices              | Default credentials, open ports, exposed interfaces, insecure default settings              | **Mirai botnet** (exploited default IoT passwords), **AWS S3 bucket leaks** (public-by-default)                                                   |
 | **Kernel Flaws**                          | OS (Linux/Windows/macOS), Operating System              | Privilege escalation via kernel bugs, kernel exploits                                       | **Dirty Pipe** (CVE-2022-0847) for root access, **Dirty COW** (CVE-2016-5195)                                                                     |
-| **Buffer Overflows**                      | Applications, OS, Services, Applications, Services      | Crafted input overflowing memory, overflowing memory to execute shellcode                   | **EternalBlue** (MS17-010), **Code Red worm** (IIS buffer overflow), Stack-based overflow in legacy FTP servers                                   |
-| **Insufficient Input Validation**         | Web apps, APIs, Databases, Web Applications             | SQLi, XSS, Command Injection                                                                | **Equifax breach** (SQLi, CVE-2017-5638), **Log4Shell** (CVE-2021-44228), Bypassing login forms with `' OR 1=1 --`                                |
-| **Symbolic Links (Symlink)**              | File systems, Privileged apps, File Systems             | Tricking apps into writing to sensitive files, tricking privileged processes to write files | **Docker symlink escape** (CVE-2018-15664), Symlink attacks in `/tmp` directories                                                                 |
+| **Buffer Overflows**                      | Applications, OS, Services                              | Crafted input overflowing memory, overflowing memory to execute shellcode                   | **EternalBlue** (MS17-010), **Code Red worm** (IIS buffer overflow), Stack-based overflow in legacy FTP servers                                   |
+| **Insufficient Input Validation**         | Web apps, APIs, Databases                               | SQLi, XSS, Command Injection                                                                | **Equifax breach** (SQLi, CVE-2017-5638), **Log4Shell** (CVE-2021-44228), Bypassing login forms with `' OR 1=1 --`                                |
+| **Symbolic Links (Symlink)**              | File systems, Privileged apps                           | Tricking apps into writing to sensitive files, tricking privileged processes to write files | **Docker symlink escape** (CVE-2018-15664), Symlink attacks in `/tmp` directories                                                                 |
 | **File Descriptor Issues**                | OS, Applications, Running Processes                     | Exploiting unclosed file handles, accessing sensitive files left open                       | **Heartbleed** (CVE-2014-0160) via OpenSSL file descriptor leaks, Reading `/etc/passwd` from a crashed service                                    |
 | **Race Conditions (TOCTOU)**              | OS, Applications, Concurrent Systems                    | Timing attacks to bypass checks, TOCTOU (Time-of-Check to Time-of-Use) attacks              | Linux `ptrace` race condition (CVE-2019-13272), Changing file permissions between check and use                                                   |
 | **Incorrect File/Directory Permissions**  | OS, Databases, Apps, File Systems                       | Unauthorized access/modification, reading/writing restricted files                          | **MongoDB ransomware attacks** (exposed databases with weak permissions), `chmod 777` exposing SSH private keys                                   |
 
 ### OWASP Top 10
 
-The **Open Worldwide Application Security Project (OWASP)** is a non-profit foundation that works to improve the security of software through community-led open-source projects. Its flagship project is the **OWASP Top 10**, a regularly updated document that catalogues the most critical security risks to web applications.
+The Open Worldwide Application Security Project (OWASP) is a non-profit foundation that works to improve the security of software through community-led open-source projects. Its flagship project is the OWASP Top 10, a regularly updated document that catalogues the most critical security risks to web applications.
 
 While NIST SP 800-115 offers a general, system-level view of vulnerabilities, the OWASP Top 10 provides a specialized, application-centric focus. First published in 2003, the OWASP Top 10 is based on real-world data from thousands of applications and vulnerabilities. The OWASP Top 10 serves as a vital benchmark for developers, auditors, and penetration testers, and is referenced by many standards, including the Payment Card Industry Data Security Standard (PCI DSS) and U.S. government frameworks.
 
-For penetration testers, the OWASP Top 10 provides a prioritized checklist of what to look for. This is operationalized through the **OWASP Web Security Testing Guide (WSTG)**, a comprehensive manual that outlines how to test for each category of vulnerability. The testing methodology in the WSTG mirrors a real-world engagement, starting with information gathering and configuration management testing, then moving into deep assessments of authentication, authorization, and business logic, with dedicated sections for testing each Top 10 risk.
+For penetration testers, the OWASP Top 10 provides a prioritized checklist of what to look for. This is operationalized through the OWASP Web Security Testing Guide (WSTG), a comprehensive manual that outlines how to test for each category of vulnerability. The testing methodology in the WSTG mirrors a real-world engagement, starting with information gathering and configuration management testing, then moving into deep assessments of authentication, authorization, and business logic, with dedicated sections for testing each Top 10 risk.
 
 Both the OWASP Top 10 and NIST SP 800-115 frameworks share several core themes, notably,
-
-* **Input Validation:** NIST's "Insufficient Input Validation" category is directly reflected in OWASP's A03:2021-Injection and A03:2021-Server-Side Request Forgery (SSRF).
+ 
+* **Input Validation:** NIST's "Insufficient Input Validation" category is directly reflected in OWASP's A03:2021-Injection.
 * **Misconfigurations:** NIST's "Misconfigurations" are a primary focus of OWASP A05:2021-Security Misconfiguration.
 * **Access Control:** The principle behind NIST's "Incorrect File and Directory Permissions" is expanded in the web context by OWASP A01:2021-Broken Access Control.
 
 ### Common Weakness Enumeration (CWE™)
 
-NIST itself now primarily uses the **CWE list** as the authoritative source for types of software weaknesses. This is a much more granular and detailed community-developed list of common software and hardware security weaknesses which serves as a common language for describing vulnerabilities. MITRE maintains and hosts the official CWE list (on cwe.mitre.org). It owns the intellectual property and is responsible for its structure and integrity.
+NIST itself now primarily uses the CWE list as the authoritative source for types of software weaknesses. This is a much more granular and detailed community-developed list of common software and hardware security weaknesses which serves as a common language for describing vulnerabilities. MITRE maintains and hosts the official CWE list (on cwe.mitre.org). It owns the intellectual property and is responsible for its structure and integrity.
 
-Penetration testers use the CWE to classify the root cause of the flaws they find. The **CWE Top 25 Most Dangerous Software Weaknesses** is the spiritual successor to NIST's 2008 list and it is updated regularly based on real-world data.
+Penetration testers use the CWE to classify the root cause of the flaws they find. The CWE Top 25 Most Dangerous Software Weaknesses is the spiritual successor to NIST's 2008 list and it is updated regularly based on real-world data.
 
 **Mapping NIST's 2008 List to the 2023 CWE Top 25**
 
@@ -107,7 +107,7 @@ NIST's 2008 list is very OS and application-centric. The modern CWE Top 25 inclu
 * [**\[CWE-434\] Unrestricted Upload of File with Dangerous Type**](https://cwe.mitre.org/data/definitions/434.html)
 * [**\[CWE-862\] Missing Authorization**](https://cwe.mitre.org/data/definitions/862.html) (a big part of modern API testing)
 
-When a penetration tester exploits a vulnerability (e.g., a CWE), he then use techniques mapped in ATT\&CK (e.g., Credential Dumping \[T1003], Lateral Movement \[TA0008]). MITRE ATT\&CK is a framework that describes the tactics and techniques adversaries use during an attack.
+When a penetration tester exploits a vulnerability (e.g., a CWE), he then uses techniques mapped in ATT\&CK (e.g., Credential Dumping \[T1003], Lateral Movement \[TA0008]). MITRE ATT\&CK is a framework that describes the tactics and techniques adversaries use during an attack.
 
 ### Common Vulnerabilities and Exposures (CVE®) & NVD
 
@@ -149,7 +149,7 @@ The following table provides a comprehensive overview of prioritized vulnerabili
 | **File Descriptor Leaks**                 | 6.5 (Medium)   | Low                | High       | OS, Applications, Running Processes        | Exploiting unclosed file handles                           | Heartbleed                                               | <p>▶ Secure coding (close handles).<br>▶ Static analysis (Coverity).<br>▶ Memory-safe languages.</p>                             |
 | **Missing Encryption**                    | 6.8 (Medium)   | Low                | High       | Databases, Networks                        | Sniffing plaintext data                                    | FTP credentials intercepted, unencrypted medical records | <p>▶ TLS 1.3+ enforcement.<br>▶ Encrypt data at rest (AES-256).<br>▶ HSM for keys.</p>                                           |
 
-**High-Risk Focus Areas:**
+**High-risk focus areas:**
 
 * **Critical (9.0+ CVSS)**: Patch buffers/injection flaws within 24hrs of CVE disclosure.
 * **High (7.0–8.9 CVSS)**: Automate scans for misconfigurations/weak credentials weekly.
@@ -184,7 +184,7 @@ The following table presents a consolidated toolkit and response playbook for ea
 
 #### Key Tools by Function
 
-**Detection & Scanning**
+**Detection and Scanning**
 
 | **Tool**       | **Purpose**                        | **Vulnerability Focus**              |
 | -------------- | ---------------------------------- | ------------------------------------ |
@@ -194,7 +194,7 @@ The following table presents a consolidated toolkit and response playbook for ea
 | **Lynis**      | Linux hardening audits             | Kernel flaws, file permissions       |
 | **Shodan**     | Internet-exposed device search     | Misconfigurations (e.g., open Redis) |
 
-**Exploitation & Testing**
+**Exploitation and Testing**
 
 | **Tool**       | **Purpose**                   | **Example Command**                   |
 | -------------- | ----------------------------- | ------------------------------------- |
@@ -204,7 +204,7 @@ The following table presents a consolidated toolkit and response playbook for ea
 | **BeEF**       | XSS exploitation              | Hook browsers via `<script>`          |
 | **Gopherus**   | SSRF exploit crafting         | Generate malicious Gopher payloads    |
 
-**Mitigation & Hardening**
+**Mitigation and Hardening**
 
 | **Tool**        | **Purpose**             | **Command/Use Case**             |
 | --------------- | ----------------------- | -------------------------------- |

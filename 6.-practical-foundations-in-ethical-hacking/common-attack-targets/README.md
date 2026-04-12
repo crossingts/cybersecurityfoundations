@@ -1,7 +1,5 @@
 ---
-description: >-
-  This section explores common cyber attack targets and associated attack
-  vectors and vulnerabilities
+description: This section explores common cyber attack targets—vulnerability categories and weaknesses that attackers exploit—and associated attack vectors
 ---
 
 # Common attack targets
@@ -9,13 +7,13 @@ description: >-
 ## Learning objectives
 
 - Compare historical and modern vulnerability taxonomies, including NIST SP 800-115, OWASP Top 10, and CWE
-- Analyze common vulnerability types, their attack vectors, and real-world exploits
+- Analyze common vulnerability categories, their attack vectors, and real-world exploits
 - Distinguish between the roles of CWE, CVE, and NVD in categorizing and tracking vulnerabilities
 - Prioritize attack targets based on CVSS severity, exploitability, and potential impact
 - Identify key tools for detecting, exploiting, and mitigating prioritized vulnerabilities
 - Develop a structured response playbook for addressing critical security flaws
 
-This section explores the most common and critical cybersecurity attack targets and associated attack vectors and vulnerabilities—where "targets" refers to vulnerability categories and weaknesses that attackers exploit, rather than specific asset types like servers or databases. We begin by examining the historical foundation of NIST SP 800-115's vulnerability categories, then transition to modern, community-driven frameworks that define today's attack landscape: the OWASP Top 10 for web application risks, the Common Weakness Enumeration (CWE) for root-cause flaws, and the Common Vulnerabilities and Exposures (CVE) system alongside the National Vulnerability Database (NVD) for tracking specific instances. By understanding the evolution and current state of these frameworks, you will learn to prioritize vulnerabilities based on severity and exploitability, and develop practical strategies for their detection, exploitation, and mitigation.
+This section explores the most common and critical cybersecurity attack targets and associated attack vectors—where "targets" refers to vulnerability categories and weaknesses that attackers exploit, rather than specific asset types like servers or databases. We begin by examining the historical foundation of NIST SP 800-115's vulnerability categories, then transition to modern, community-driven frameworks that define today's attack landscape: the OWASP Top 10 for web application risks, the Common Weakness Enumeration (CWE) for root-cause flaws, and the Common Vulnerabilities and Exposures (CVE) system alongside the National Vulnerability Database (NVD) for tracking specific instances. By understanding the evolution and current state of these frameworks, you will learn to prioritize vulnerabilities based on severity and exploitability, and develop practical strategies for their detection, exploitation, and mitigation.
 
 ## Topics covered in this section
 
@@ -29,11 +27,7 @@ This section explores the most common and critical cybersecurity attack targets 
 
 ### Introduction
 
-When it comes to categorizing common vulnerabilities targeted by malicious hackers and penetration testers, the NIST SP 800-115 Technical Guide to Information Security Testing and Assessment (Scarfone et al., 2008) categories of vulnerabilities (attack targets) is a logical starting point. 
-
-NIST SP 800-115 (Technical Guide to Information Security Testing and Assessment) was published in 2008 but it has not been formally updated. While the high-level principles and methodology of penetration testing in the guide are still sound, the taxonomy of vulnerabilities is significantly outdated. The attack landscape has evolved, primarily towards web applications, identity-based attacks, APIs, and cloud services.
-
-When it comes to categorizing common vulnerabilities targeted by malicious hackers and penetration testers, NIST's 2008 categories of vulnerabilities (attack targets) is a logical starting point. NIST SP 800-115 (Technical Guide to Information Security Testing and Assessment) was published in 2008 but it has not been formally updated. While the high-level principles and methodology of penetration testing in the guide are still sound, the taxonomy of vulnerabilities is significantly outdated. The attack landscape has evolved, primarily towards web applications, identity-based attacks, APIs, and cloud services.
+When it comes to categorizing common vulnerabilities targeted by malicious hackers and penetration testers, the NIST SP 800-115: Technical Guide to Information Security Testing and Assessment (Scarfone et al., 2008) categories of vulnerabilities (attack targets) is a logical starting point. While the high-level principles and methodology of penetration testing in NIST SP 800-115 are still sound, the taxonomy of vulnerabilities is significantly outdated. The attack landscape has evolved, primarily towards web applications, identity-based attacks, APIs, and cloud services.
 
 A modern, practical taxonomy of attack categories can be anchored in the following three frameworks:
 
@@ -50,7 +44,7 @@ These three frameworks reflect an evolving attack landscape prioritizing the fol
 
 ### NIST SP 800-115's attack categories
 
-The majority of vulnerabilities exploited by penetration testing fall into the following categories (NIST SP 800-115, 2008, pp. 5-4-5-5):
+The majority of vulnerabilities exploited by penetration testing fall into the following categories (Scarfone et al., 2008, pp. 5-4-5-5):
 
 * Misconfigurations. Misconfigured security settings, particularly insecure default settings, are usually easily exploitable.
 * Kernel Flaws. Kernel code is the core of an OS, and enforces the overall security model for the system—so any security flaw in the kernel puts the entire system in danger.

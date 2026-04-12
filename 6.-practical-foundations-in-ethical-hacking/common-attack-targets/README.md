@@ -27,13 +27,13 @@ This section explores the most common and critical cybersecurity attack targets 
 
 ### Introduction
 
-When it comes to categorizing common vulnerabilities targeted by malicious hackers and penetration testers, the NIST SP 800-115: Technical Guide to Information Security Testing and Assessment (Scarfone et al., 2008) categories of vulnerabilities (attack targets) is a logical starting point. While the high-level principles and methodology of penetration testing in NIST SP 800-115 are still sound, the taxonomy of vulnerabilities is significantly outdated. The attack landscape has evolved, primarily towards web applications, identity-based attacks, APIs, and cloud services.
+When it comes to categorizing common vulnerabilities targeted by malicious hackers and penetration testers, the NIST SP 800-115: Technical Guide to Information Security Testing and Assessment (Scarfone et al., 2008) categories of vulnerabilities are a logical starting point. While the high-level principles and methodology of penetration testing in NIST SP 800-115 are still sound, the taxonomy of vulnerabilities is significantly outdated. The attack landscape has evolved, primarily towards web applications, identity-based attacks, APIs, and cloud services.
 
 A modern, practical taxonomy of attack categories can be anchored in the following three frameworks:
 
 * **OWASP Top 10:** The de facto standard for categorizing critical risks in web applications.
 * **Common Weakness Enumeration (CWE):** The authoritative list for classifying the root cause of software vulnerabilities.
-* **Common Vulnerabilities and Exposures (CVE) & the National Vulnerability Database (NVD):** The systems for tracking specific, instances of vulnerabilities in software products.
+* **Common Vulnerabilities and Exposures (CVE) & the National Vulnerability Database (NVD):** The systems for tracking specific instances of vulnerabilities in software products.
 
 These three frameworks reflect an evolving attack landscape prioritizing the following categories of vulnerabilities:
 

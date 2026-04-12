@@ -6,7 +6,7 @@ description: >-
 
 # Setting up a cybersecurity lab
 
-## Learning objectives <a href="#learning-objectives" id="learning-objectives"></a>
+## Learning objectives
 
 * Learn how to design, configure, verify, and operate a fully functional virtual cybersecurity lab using exclusively open source technologies
 - Compare open source virtualization tools and select one appropriate for your lab design

@@ -8,7 +8,7 @@ description: >-
 
 ## Learning objectives
 
-* Learn how to design, configure, verify, and operate a fully functional virtual cybersecurity lab using exclusively open source technologies
+* Design, configure, verify, and operate a fully functional virtual cybersecurity lab using exclusively open source technologies
 - Compare open source virtualization tools and select one appropriate for your lab design
 - Design a multi-component cybersecurity lab architecture by following a provided design pipeline
 - Build a virtual network with functional security layers, including firewall, IDS/IPS, and monitoring (SIEM)

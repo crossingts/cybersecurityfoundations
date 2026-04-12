@@ -25,11 +25,11 @@ This section describes the phases of the penetration testing process—planning,
 
 ### Introduction
 
-The penetration testing process can be broken down into several phases: planning or preparation, reconnaissance, scanning and enumeration, gaining access (exploitation) and privilege escalation, post-exploitation (maintaining access and covering tracks), and reporting (NIST SP 800-115, 2008; Walker, 2012, 2017).
+The penetration testing process can be broken down into several phases: planning or preparation, reconnaissance, scanning and enumeration, gaining access (exploitation) and privilege escalation, post-exploitation (maintaining access and covering tracks), and reporting (Scarfone et al., 2008; Walker, 2012, 2017).
 
 <figure><img src="../../.gitbook/assets/Ethical-hacking-phases.jpg" alt="Ethical-hacking-phases"><figcaption><p>The seven phases of the ethical hacking process</p></figcaption></figure>
 
-In the planning phase, rules are identified, management approval is finalized and documented, and testing goals are set. The planning phase sets the groundwork for a successful penetration test. No actual testing occurs in this phase. (NIST SP 800-115, 2008, p. 5-2)
+In the planning phase, rules are identified, management approval is finalized and documented, and testing goals are set. The planning phase sets the groundwork for a successful penetration test. No actual testing occurs in this phase. (Scarfone et al., 2008, p. 5-2)
 
 In the words of Walker (2012), "There are three main phases to a pen test—preparation, assessment, and conclusion" (p. 8). The preparation phase defines the timeline and scope of the penetration test, "the types of attacks allowed, and the individuals assigned to perform the activity" (p. 8).
 
@@ -648,11 +648,11 @@ Faircloth, J. (2011). _Penetration tester’s open source toolkit_. Syngress.
 
 Graves, K. (2010). _CEH: Certified Ethical Hacker Study Guide_. Wiley Publishing.
 
-NIST Special Publication 800-115: Technical Guide to Information Security Testing and Assessment (NIST 800-115). Retrieved January 21, 2020, from http://csrc.nist.gov/publications/nistpubs/800-115/SP800-115.pdf
-
 Palmer, C. C. (2001). Ethical hacking. _IBM Systems Journal, 40_(3), 769-780.
 
 Rasskazov, V. (2013). Analysing vulnerability scanning reports. _PenTest Magazine, 3_(7), pp. 51-60.
+
+Scarfone, K., Souppaya, M., Cody, A., & Orebaugh, A. (2008). _Technical guide to information security testing and assessment_ (NIST Special Publication 800-115). National Institute of Standards and Technology. [http://csrc.nist.gov/publications/nistpubs/800-115/SP800-115.pdf](http://csrc.nist.gov/publications/nistpubs/800-115/SP800-115.pdf)
 
 Shah, S., & Mehtre, B. M. (2015). An overview of vulnerability assessment and penetration testing techniques. _Journal of Computer Virology and Hacking Techniques, 11_(1), 27-49. doi:10.1007/s11416-014-0231-x
 

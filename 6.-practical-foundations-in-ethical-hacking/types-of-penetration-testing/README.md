@@ -122,7 +122,7 @@ The following table summarizes the evolution from the 2001 concepts to their mod
 
 ### Risks of penetration testing
 
-Penetration testing involves “launching real attacks on real systems and data using tools and techniques commonly used by hackers” (NIST SP 800-115, p. 5-2). While invaluable for security, performing real attacks on live systems carries inherent risks that must be carefully weighed against the intended benefits.
+Penetration testing involves “launching real attacks on real systems and data using tools and techniques commonly used by hackers” (Scarfone et al., 2008, p. 5-2). While invaluable for security, performing real attacks on live systems carries inherent risks that must be carefully weighed against the intended benefits.
 
 These risks can be broadly categorized into operational and data-related impacts. The primary operational risks include "alarmed staff and unintentional system crashes, degraded network or system performance, denial of service, and log-file size explosions" (Palmer, 2001, p. 776). Furthermore, penetration testing can directly compromise data integrity or availability through accidental damage, or breach confidentiality simply because the tester sees sensitive information during the assessment.
 
@@ -143,8 +143,8 @@ Ultimately, due to these potential side effects, penetration testing is often a 
 
 Cipher. (n.d.). The types of pentests you must know about. Retrieved January 21, 2020, from https://cipher.com/blog/the-types-of-pentests-you-must-know-about/
 
-NIST Special Publication 800-115: Technical Guide to Information Security Testing and Assessment (NIST 800-115). Retrieved January 21, 2020, from http://csrc.nist.gov/publications/nistpubs/800-115/SP800-115.pdf
-
 Palmer, C. C. (2001). Ethical hacking. _IBM Systems Journal, 40_(3), 769-780.
+
+Scarfone, K., Souppaya, M., Cody, A., & Orebaugh, A. (2008). _Technical guide to information security testing and assessment_ (NIST Special Publication 800-115). National Institute of Standards and Technology. [http://csrc.nist.gov/publications/nistpubs/800-115/SP800-115.pdf](http://csrc.nist.gov/publications/nistpubs/800-115/SP800-115.pdf)
 
 Weidman, G. (2014). _Penetration Testing: A Hands-On Introduction to Hacking_. No Starch Press.

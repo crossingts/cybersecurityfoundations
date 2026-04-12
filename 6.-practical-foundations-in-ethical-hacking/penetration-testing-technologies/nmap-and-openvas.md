@@ -4,7 +4,7 @@ Nmap and OpenVAS are two popular and complementary open source network scanners�
 
 ### Technology focus: Nmap
 
-Nmap is highly versatile tool for scanning and enumerating networks. Nmap also looks for services that are running on hosts by scanning TCP and UDP ports. Often referred to as the Swiss army knife of security tools, Nmap is an integral part of every network security professional's tool kit. (Deveriya, 2005, p. 366)
+Nmap is a highly versatile tool for scanning and enumerating networks. Nmap also looks for services that are running on hosts by scanning TCP and UDP ports. Often referred to as the Swiss army knife of security tools, Nmap is an integral part of every network security professional's tool kit. (Deveriya, 2005, p. 366)
 
 Netadmins routinely use Nmap to perform the following tasks:
 
@@ -82,8 +82,8 @@ Here is a comparison of the two tools in the context of a Penetration Testing (P
 
 | Aspect          | Nmap                                                                                                                                                                                                                                                                                                                                                    | OpenVAS                                                                                                                                                                                                                   |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Strengths**   | - **Excellent Reconnaissance:** Rapidly discovers attack surfaces (hosts, ports, services).  <br>- **Evasion Capabilities:** Offers techniques for stealthy scanning and firewall bypass (`-f`, `--script firewall-bypass`).<br>- **Seamless Integration:** Can feed scan data directly into exploitation frameworks like Metasploit (e.g., `db_nmap`). | - **Vulnerability Identification:** Specializes in finding specific, exploitable weaknesses and CVEs.  <br>- **Target Prioritization:** Provides detailed reports that help pinpoint high-value targets for exploitation. |
-| **Limitations** | - **No Exploitation:** Cannot itself exploit the vulnerabilities it finds.  <br>- **Limited Depth:** Lacks the deep vulnerability database to identify many specific security flaws.                                                                                                                                                                    | - **No Exploitation:** Is a scanner, not an exploitation tool.  <br>- **Indirect Workflow:** Does not automatically feed data into Metasploit; requires manual analysis of reports to guide the next steps.               |
+| **Strengths**   | - **Excellent Reconnaissance:** Rapidly discovers attack surfaces (hosts, ports, services).  <br>- **Evasion Capabilities:** Offers techniques for stealthy scanning and firewall bypass (`-f`, `--script http-waf-detect`).<br>- **Seamless Integration:** Can feed scan data directly into exploitation frameworks like Metasploit (e.g., `db_nmap`). | - **Vulnerability Identification:** Specializes in finding specific, exploitable weaknesses and CVEs.  <br>- **Target Prioritization:** Provides detailed reports that help pinpoint high-value targets for exploitation. |
+| **Limitations** | - **No Exploitation:** Cannot itself exploit the vulnerabilities it finds (except via limited brute‑force and exploit NSE scripts).  <br>- **Limited Depth:** Lacks the deep vulnerability database to identify many specific security flaws.                                                                                                           | - **No Exploitation:** Is a scanner, not an exploitation tool.  <br>- **Indirect Workflow:** Does not automatically feed data into Metasploit; requires manual analysis of reports to guide the next steps.               |
 
 **PT Workflow Example**:
 
@@ -107,16 +107,15 @@ The following table clarifies how these tools are typically used in each phase:
 - **Nmap + OpenVAS:**
     - Use Nmap for initial scanning, then OpenVAS for deep VA. Use Nmap to find live hosts with open ports. Import the Nmap results into OpenVAS for a targeted vulnerability scan.
     - Example:
-      bash
 
-      ```
-      nmap -Pn -p- --open 192.168.1.1-254 -oX targets.xml  
-      openvas-cli --import-targets targets.xml  
-      ```
+```bash
+nmap -Pn -p- --open 192.168.1.1-254 -oX targets.xml  
+# Import targets.xml into OpenVAS via the Greenbone Security Assistant web interface (Configuration → Targets → Import).  
+```
 
 **Conclusion**
 
 - **Nmap** = Network scanner + light VA (best for recon).
 - **OpenVAS** = Full vulnerability assessment (best for compliance/PT prep).
-- For PT: Use both (Nmap → OpenVAS → Metasploit/Burp Suite).
 - **Nmap** finds the doors; **OpenVAS** checks which ones are unlocked and reports on the weak locks; **Metasploit** picks the locks.
+- For PT: Implement a kill chain (Nmap → OpenVAS → Metasploit/Burp Suite).

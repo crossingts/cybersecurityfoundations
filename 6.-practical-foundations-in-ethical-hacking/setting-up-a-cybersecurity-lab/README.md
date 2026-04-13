@@ -8,12 +8,12 @@ description: >-
 
 ## Learning objectives
 
-* Design, configure, verify, and operate a fully functional virtual cybersecurity lab using exclusively open source technologies
-- Compare open source virtualization tools and select one appropriate for your lab design
+- Design, configure, verify, and operate a fully functional virtual cybersecurity lab using exclusively open source technologies
+- Document the lab design, deployment, and validation process using a suitable open source documentation platform
 - Design a multi-component cybersecurity lab architecture by following a provided design pipeline
+- Compare open source virtualization tools and select one appropriate for your lab design
 - Build a virtual network with functional security layers, including firewall, IDS/IPS, and monitoring (SIEM)
 - Configure target systems (web/database servers) and an attack platform (Kali Linux) to validate the lab
-- Document the lab design, deployment, and validation process using a suitable open source documentation platform
 
 This section provides a practical hands-on guide to constructing a complete cybersecurity lab environment from the ground up using only free and open-source tools. You will learn to architect a realistic network containing defensive security controls—such as firewalls (e.g., nftables and OPNsense), intrusion detection systems/intrusion prevention systems (e.g., Suricata and Snort), and security monitoring (e.g., Wazuh XDR/SIEM)—alongside both target services (e.g., Apache and MySQL) and an offensive security workstation (Kali Linux). The guide walks you through the entire process: from selecting a virtualization platform that matches your host hardware, to designing your lab's topology, implementing and configuring each component, verifying connectivity and functionality, and finally documenting the entire project. By the end, you will have a fully isolated, functional virtual lab where you can safely launch simulated attacks, observe defensive telemetry, and develop practical cybersecurity skills.
 
@@ -23,86 +23,29 @@ This section provides a practical hands-on guide to constructing a complete cybe
 * **Design the cybersecurity lab (choose a design pipeline)**
 * **Choose a virtualization environment**
 * **Build the lab**
-  * **Configure subnet interfaces and verify connectivity**
-  * **Configure and verify the firewall**
-  * **Configure and verify the IDS/IPS**
-  * **Configure and verify a web server (e.g., nginx or Apache) and/or a database server (e.g., MySQL)**
-  * **Configure and verify SIEM/EDR (e.g., Wazuh)**
-  * **Configure and verify Kali Linux**
-  * **Launch attacks from Kali Linux and publish the project**
 
 ### Choose a project documentation platform
 
-**Comparison Table: Documentation Platforms**
+Before configuring any virtual hardware, establishing a documentation repository is a critical first step. A well-structured lab log prevents configuration drift, ensures repeatability, and serves as a future reference for troubleshooting. Select one of the following platforms to capture your design diagrams, firewall rules, and test results.
 
-| Feature              | GitHub Wiki           | GitHub Pages                         | GitBook                   | Notion                 | Draw.io                      |
-| -------------------- | --------------------- | ------------------------------------ | ------------------------- | ---------------------- | ---------------------------- |
-| **Type**             | Wiki (Markdown)       | Static Website                       | Professional Docs         | All-in-One Workspace   | Diagramming Tool             |
-| **Hosting**          | Free (GitHub)         | Free (GitHub)                        | Free (limited) / Paid     | Free (limited) / Paid  | Free (cloud/desktop)         |
-| **Collaboration**    | Yes (Git/GitHub UI)   | Via Git                              | Real-time (paid)          | Real-time              | Real-time (cloud)            |
-| **Version Control**  | Yes (Git)             | Yes (Git)                            | Yes (Git integration)     | No (only page history) | No (manual versioning)       |
-| **Customization**    | Basic (Markdown only) | Full (HTML/CSS/JS + SSGs\*)          | Medium (themes & plugins) | High (drag & drop)     | High (custom shapes/themes)  |
-| **Search**           | Basic (GitHub search) | Custom (Algolia/Google possible)     | Full-text                 | Full-text              | No (manual organization)     |
-| **Diagrams/Visuals** | Images only           | Images + JS diagrams (e.g., Mermaid) | Embeds                    | Embeds (Draw.io, etc.) | **Specialized for diagrams** |
-| **Export Options**   | Markdown              | HTML/PDF                             | PDF/HTML/ePub             | PDF/Markdown/HTML      | PNG/SVG/PDF/etc.             |
-| **Best For**         | Quick technical notes | Professional project websites        | Developer/API docs        | Flexible team docs     | Network diagrams/flowcharts  |
-| **Limitations**      | No styling/themes     | Requires Git/static-site setup       | Free tier is limited      | No version control     | Only diagrams (no text docs) |
 
-_SSGs = Static Site Generators (e.g., Jekyll, MkDocs, Docusaurus)._
 
-**Clarifications:**
 
-- **For pure documentation:**
-   * **GitHub Wiki** (simple, free, Git-backed).
-   * **GitHub Pages + MkDocs** (polished, searchable, free).
-- **For collaborative notes:**
-   * **Notion** (best for non-tech users).
-   * **Slite** (alternative to Notion, team-focused).
-- **For developer-friendly docs:**
-   * **GitBook** (API docs, versioning).
-- **For diagrams:**
-   * **Draw.io** (integrate with all platforms).
-   * Store Draw.io source files (.xml/.drawio) in your repo for version control.
 
-**How to Embed Draw.io Diagrams & Mermaid.js Support**
+Example Mermaid.js Flowchart:
 
-| Platform         | Draw.io Embed Method                                                                                        | Live Updates? | Mermaid.js?                        | Best Use Case                               |
-| ---------------- | ----------------------------------------------------------------------------------------------------------- | ------------- | ---------------------------------- | ------------------------------------------- |
-| **GitHub Wiki**  | <p>1. Export as <code>.png</code>/<code>.svg</code> → upload.<br>2. Use  in Markdown.</p>                   | ❌ No          | ❌ No (Markdown-only)               | Static diagrams (simple networks).          |
-| **GitHub Pages** | <p>1. Export as <code>.svg</code> → place in <code>docs/images/</code>.<br>2. Embed with HTML/Markdown.</p> | ❌ No          | ✅ Yes (with MkDocs/Jekyll plugins) | Scalable docs with auto-generated diagrams. |
-| **GitBook**      | <p>1. Export as <code>.png</code>/<code>.svg</code> → upload.<br>2. Or embed cloud links: </p>              | ❌ No          | ✅ Yes (native support)             | Versioned docs with dynamic diagrams.       |
-| **Notion**       | <p>1. Copy-paste directly.<br>2. Or embed cloud links.</p>                                                  | ✅ Yes (cloud) | ❌ No (but supports Draw.io embeds) | Real-time collaborative diagrams.           |
-| **VS Code**      | <p>1. Use Draw.io extension.<br>2. Edit <code>.drawio</code> files directly.</p>                            | ✅ Yes         | ✅ Yes (with Mermaid extension)     | Local editing with live preview.            |
-| **MkDocs**       | <p>1. Export as <code>.svg</code> → embed.<br>2. Or use <code>plantuml</code> plugin for Draw.io XML.</p>   | ❌ No          | ✅ Yes (native support)             | Automated docs with code-based diagrams.    |
+```mermaid
+graph TD
+    A[Kali Linux] -->|Attack Traffic| B(Firewall);
+    B -->|Allowed Traffic| C[Web Server];
+    C -->|Queries| D[Database Server];
+    B -->|Logs| E[SIEM/Wazuh];
+    C -->|Logs| E;
+```
 
-**Clarifications:**
 
-* **Mermaid.js works best in**: GitBook, GitHub Pages (with plugins), MkDocs, and VS Code.
-* **Draw.io is better for**: Platforms without Mermaid support (e.g., GitHub Wiki, Notion).
-* **Hybrid approach**: Use Mermaid for simple flowcharts + Draw.io for complex designs in the same doc.
 
-**What Is Mermaid.js**
-
-* A JavaScript-based diagramming tool that lets you create diagrams using text (Markdown-like syntax).
-* Runs in browsers/docs that support it (e.g., GitHub Pages, GitBook, VS Code).
-
-**Key Features**
-
-* **No image files needed**: Diagrams are defined in code.
-* **Supports**:
-  * Flowcharts (`graph LR/TD`)
-  * Sequence diagrams (`sequenceDiagram`)
-  * Class diagrams (`classDiagram`)
-  * Gantt charts (`gantt`)
-
-**Mermaid.js vs. Draw.io**
-
-|                | Mermaid.js                                   | Draw.io                                     |
-| -------------- | -------------------------------------------- | ------------------------------------------- |
-| **Setup**      | Code-only (no GUI).                          | Drag-and-drop GUI.                          |
-| **Dynamic**    | Updates when code changes.                   | Manual re-export needed.                    |
-| **Complexity** | Limited to supported diagrams.               | More flexible (custom shapes).              |
-| **Best for**   | Simple, version-controlled diagrams in docs. | Complex designs (e.g., network topologies). |
+--
 
 ### Design the cybersecurity lab (choose a design pipeline)
 
@@ -192,6 +135,16 @@ pfSense (firewall) + Snort (IDS/IPS) + web server (Apache) and/or database serve
   * WHPX is a hypervisor-based acceleration feature on Windows 10/11 Pro and Enterprise editions. It allows virtualization software (like QEMU) to use hardware-assisted virtualization (Intel VT-x / AMD-V).
 
 ### Build the lab
+
+Building a fully functional virtual lab entails:
+
+  * **Configure subnet interfaces and verify connectivity**
+  * **Configure and verify the firewall**
+  * **Configure and verify the IDS/IPS**
+  * **Configure and verify a web server (e.g., nginx or Apache) and/or a database server (e.g., MySQL)**
+  * **Configure and verify SIEM/EDR (e.g., Wazuh)**
+  * **Configure and verify Kali Linux**
+  * **Launch attacks from Kali Linux and publish the project**
 
 #### Walk through/example 1 using Design Pipeline 1 (ARM64):
 

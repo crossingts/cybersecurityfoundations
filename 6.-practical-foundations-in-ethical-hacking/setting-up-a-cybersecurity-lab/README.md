@@ -201,15 +201,7 @@ After completing this selection, proceed to **Choose a virtualization environme
 
 ### Build the lab
 
-Building a fully functional virtual lab entails:
-
-  * **Configure subnet interfaces and verify connectivity**
-  * **Configure and verify the firewall**
-  * **Configure and verify the IDS/IPS**
-  * **Configure and verify a web server (e.g., nginx or Apache) and/or a database server (e.g., MySQL)**
-  * **Configure and verify SIEM/EDR (e.g., Wazuh)**
-  * **Configure and verify Kali Linux**
-  * **Launch attacks from Kali Linux and publish the project**
+Building a fully functional virtual lab entails configuring and verifying each layer of the security stack in sequence. You will begin by establishing subnet interfaces and confirming basic network connectivity between virtual machines. With the network foundation in place, you will configure and verify the firewall to enforce traffic policies between lab segments. Next, you will deploy and tune the IDS/IPS to inspect traffic and generate alerts. The target environment is then built by installing and verifying a web server (such as nginx or Apache) and optionally a database server (such as MySQL) to simulate realistic services. To complete the defensive instrumentation, you will set up a SIEM/XDR platform (such as Wazuh) to aggregate logs and provide unified visibility. An attack platform running Kali Linux is configured and verified as the final virtual machine. Once all components are operational, you will launch simulated attacks from Kali Linux and document your findings, publishing the completed project to your chosen documentation platform.
 
 #### Walk through/example 1 using Design Pipeline 1 (ARM64):
 
@@ -230,19 +222,23 @@ Cybersecurity virtual lab in VMware Fusion on M1 Mac:
 
 OPNsense (firewall) + Suricata (IDS/IPS) + web server (Apache) and/or database server (MySQL) + Wazuh (SIEM/XDR) + Kali Linux
 
+The following video series by LS111 Cyber Security Education provides an excellent step-by-step demonstration of this pipeline.
+
 Cybersecurity virtual lab in VirtualBox on Windows (YouTube playlist. 16 videos):
 
 [Virtual Cyber Security Lab Building Series by LS111 Cyber Security Education](https://www.youtube.com/playlist?list=PLjjkJroii8DDb0QZpWLo978VXcLp8-xW3)
 
 <figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption><p>Cybersecurity virtual lab design (courtesy of LS111 Cyber Security Education)</p></figcaption></figure>
 
+For up-to-date installation and configuration guides, refer to the official documentation for each component: nftables ([wiki.nftables.org](https://wiki.nftables.org/)), Suricata ([suricata.io/docs](https://docs.suricata.io/)), Wazuh ([documentation.wazuh.com](https://documentation.wazuh.com/)), and OPNsense ([docs.opnsense.org](https://docs.opnsense.org/)).
+
 ### Key takeaways
 
+- Documentation is Part of the Process: Choosing a suitable documentation platform (like a GitHub Wiki or MkDocs) for planning, recording configurations, and storing diagrams is essential for project management, knowledge retention, and sharing your work.
 - Lab Design is Architectural: A functional cybersecurity lab is built by integrating specific, discrete components into a logical pipeline: a firewall, an IDS/IPS, target services (web/database servers), a SIEM for monitoring, and an attack platform like Kali Linux.
 - Tool Compatibility is Foundational: Successfully building a virtual lab requires ensuring that your chosen virtualization software, guest operating systems, and security tools are all compatible with each other and with your host machine's architecture (x86/AMD64 vs. ARM64). Performance and functionality depend on this alignment.
-- Emulation vs. Virtualization: Pure emulation (like QEMU alone) emulates different hardware architectures for flexibility but sacrifices speed, while hardware-assisted virtualization (like QEMU+KVM or VirtualBox) uses host CPU extensions for near-native performance when running same-architecture systems.
+- Emulation vs Virtualization: Pure emulation (like QEMU alone) emulates different hardware architectures for flexibility but sacrifices speed, while hardware-assisted virtualization (like QEMU+KVM or VirtualBox) uses host CPU extensions for near-native performance when running same-architecture systems.
 - Tool Selection is Critical: The choice of every component depends heavily on your host operating system and CPU architecture, as not all open-source tools are cross-platform. You must consult compatibility tables to make viable choices (e.g., OPNsense does not run on ARM macOS).
-- Documentation is Part of the Process: Choosing a suitable documentation platform (like a GitHub Wiki or MkDocs) for planning, recording configurations, and storing diagrams is essential for project management, knowledge retention, and sharing your work.
 - Build, Test, Validate: The core lab setup process is iterative: after building virtual machines, you must configure networking, verify connectivity, and methodically configure each component before finally testing the entire system's functionality with simulated attacks.
 
 ### References

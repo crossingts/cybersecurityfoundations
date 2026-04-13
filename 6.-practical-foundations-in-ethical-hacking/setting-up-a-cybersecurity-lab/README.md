@@ -1,14 +1,12 @@
 ---
-description: >-
-  This guide will walk you through setting up a fully functional cybersecurity
-  virtual lab using exclusively open source technologies
+description: This guide will walk you through setting up a fully functional cybersecurity virtual lab using open source and free technologies
 ---
 
 # Setting up a cybersecurity lab
 
 ## Learning objectives
 
-- Design, configure, verify, and operate a fully functional virtual cybersecurity lab using exclusively open source technologies
+- Design, configure, verify, and operate a fully functional virtual cybersecurity lab using open source and free technologies
 - Document the lab design, deployment, and validation process using a suitable open source documentation platform
 - Design a multi-component cybersecurity lab architecture by following a provided design pipeline
 - Compare open source virtualization tools and select one appropriate for your lab design
@@ -30,18 +28,18 @@ Before configuring any virtual hardware, establishing a documentation repository
 
 **Comparison Table: Documentation Platforms**
 
-|Feature|GitHub|GitHub Wiki|GitHub Pages|GitBook|
-|---|---|---|---|---|
-|**Type**|Git Repository|Wiki (Markdown)|Static Website|Professional Docs|
-|**Hosting**|Free (GitHub)|Free (GitHub)|Free (GitHub)|Free (limited) / Paid|
-|**Collaboration**|Yes (Git/GitHub UI)|Yes (Git/GitHub UI)|Via Git|Real-time (paid)|
-|**Version Control**|Yes (Git)|Yes (Git)|Yes (Git)|Yes (Git integration)|
-|**Customization**|Raw Markdown/Text|Basic (Markdown only)|Full (HTML/CSS/JS + SSGs*)|Medium (themes & plugins)|
-|**Search**|Code-aware search|Basic (GitHub search)|Custom (Algolia/Google possible)|Full-text|
-|**Diagrams/Visuals**|Rendered in Markdown files|Images only|Images + JS diagrams (e.g., Mermaid)|Embeds|
-|**Export Options**|Clone / Zip|Markdown|HTML/PDF|PDF/HTML/ePub|
-|**Best For**|Code + Docs in one place|Quick technical notes|Professional project websites|Developer/API docs|
-|**Limitations**|Not a structured doc site|No styling/themes|Requires Git/static-site setup|Free tier is limited|
+|Feature|GitHub|GitHub Wiki|GitHub Pages| GitBook                     |
+| -------------------- | -------------------------- | --------------------- | ------------------------------------ | --------------------------- |
+|**Type**|Git Repository|Wiki (Markdown)|Static Website| Professional Docs           |
+|**Hosting**|Free (GitHub)|Free (GitHub)|Free (GitHub)| Free (limited) / Paid       |
+|**Collaboration**|Yes (Git/GitHub UI)|Yes (Git/GitHub UI)|Via Git| Real-time (paid)            |
+|**Version Control**|Yes (Git)|Yes (Git)|Yes (Git)| Yes (Git integration)       |
+|**Customization**|Raw Markdown/Text|Basic (Markdown only)|Full (HTML/CSS/JS + SSGs*)| Medium (themes and plugins) |
+|**Search**|Code-aware search|Basic (GitHub search)|Custom (Algolia/Google possible)| Full-text                   |
+|**Diagrams/Visuals**|Rendered in Markdown files|Images only|Images + JS diagrams (e.g., Mermaid)| Embeds                      |
+|**Export Options**|Clone / Zip|Markdown|HTML/PDF| PDF/HTML/ePub               |
+|**Best For**|Code + Docs in one place|Quick technical notes|Professional project websites| Developer/API docs          |
+|**Limitations**|Not a structured doc site|No styling/themes|Requires Git/static-site setup| Free tier is limited        |
 
 _SSGs = Static Site Generators (e.g., Jekyll, MkDocs, Docusaurus)._
 
@@ -88,15 +86,17 @@ graph TD
 
 ### Design the cybersecurity lab (choose a design pipeline)
 
-**Design Pipeline 1 (ARM64):**
+The lab architecture you select depends primarily on your host machine's CPU architecture. The three design pipelines presented below represent tested, fully open-source component combinations. Pipeline 1 is optimized for ARM64 hosts (e.g., Apple Silicon Macs, Raspberry Pi 4/5), while Pipelines 2 and 3 provide alternative firewall and IDS/IPS stacks for x86-64 hosts (e.g., Intel/AMD Windows, Linux, or Intel-based Macs). Review the compatibility tables that follow to confirm that your chosen pipeline aligns with your virtualization environment and hardware.
+
+**Design Pipeline 1 (ARM64 Host):**
 
 nftables (firewall) + Suricata (IDS/IPS) + web server (Apache) + database server (MySQL) + Wazuh (SIEM/XDR) + Kali Linux
 
-**Design Pipeline 2 (AMD64):**
+**Design Pipeline 2 (AMD64 Host – OPNsense variant):**
 
 OPNsense (firewall) + Suricata (IDS/IPS) + web server (Apache) and/or database server (MySQL) + Wazuh (SIEM/XDR) + Kali Linux
 
-**Design Pipeline 3 (AMD64):**
+**Design Pipeline 3 (AMD64 Host – pfSense variant):**
 
 pfSense (firewall) + Snort (IDS/IPS) + web server (Apache) and/or database server (MySQL) + Wazuh (SIEM/XDR) + Kali Linux
 
@@ -108,7 +108,7 @@ pfSense (firewall) + Snort (IDS/IPS) + web server (Apache) and/or database serve
 | ------------- | -------------------- | ------------------ | ------------------ | ---------------- | ------------------------------------------------------------------ |
 | **OPNsense**  | ✔ (VM)               | ✔ (VM)             | ✔ (VM)             | ✕                | FreeBSD-based. Bare metal requires wiping host OS. No ARM support. |
 | **pfSense**   | ✔ (VM)               | ✔ (VM)             | ✔ (VM)             | ✕                | FreeBSD-based, same as OPNsense.                                   |
-| **IPTables**  | ✔ (Native)           | ✕                  | ✕                  | ✕                | Legacy Linux kernel firewall.                                      |
+| **IPTables**  | ✔ (Native)           | ✕                  | ✕                  | ✕                | Pre-nftables Linux kernel firewall.                                |
 | **nftables**  | ✔ (Native)           | ✕                  | ✕                  | ✕                | Modern Linux firewall (replaces IPTables).                         |
 | **UFW**       | ✔ (Native)           | ✕                  | ✕                  | ✕                | Ubuntu/Debian simplified firewall.                                 |
 | **Firewalld** | ✔ (Native)           | ✕                  | ✕                  | ✕                | RHEL/CentOS frontend for IPTables/nftables.                        |
@@ -133,7 +133,7 @@ pfSense (firewall) + Snort (IDS/IPS) + web server (Apache) and/or database serve
 | -------------- | -------------------- | ------------------ | ---------------------- | ----------------------------------------------------------------------- |
 | **Suricata**   | ✔ (Native/VM)        | ✔ (Native/WSL2)    | ✔ (Native/VM)          | Multi-threaded, supports inline IPS. ARM64 works on Raspberry Pi 4+.    |
 | **Zeek (Bro)** | ✔ (Native)           | ⚠ (WSL2/Cygwin)    | ✔ (Native)             | Network analysis, not real-time IPS. ARM64 supported via source builds. |
-| **Snort**      | ✔ (Native)           | ✔ (Native)         | ✔ (Native)             | Legacy IDS/IPS. ARM support limited.                                    |
+| **Snort**      | ✔ (Native)           | ✔ (Native)         | ✔ (Native)             | Mature IDS/IPS. ARM support limited/experimental.                       |
 
 **Clarifications:**
 
@@ -148,28 +148,54 @@ pfSense (firewall) + Snort (IDS/IPS) + web server (Apache) and/or database serve
     * FreeBSD (OPNsense’s base).
     * macOS (Intel Macs).
 
+**Action Step: Selecting Your Pipeline**
+
+Use the following checklist to identify the correct pipeline for your lab environment:
+
+1. **Identify your host CPU architecture:**
+    
+    - **ARM64:** Apple Silicon (M1/M2/M3), Raspberry Pi 4/5, AWS Graviton → **Use Pipeline 1**.
+    - **x86-64 (Intel/AMD):** Most Windows, Linux, and Intel-based Mac systems → **Use Pipeline 2 or 3**.
+        
+2. **If you are on x86-64, choose a firewall preference:**
+    
+    - **OPNsense** (modern UI, frequent updates) → **Pipeline 2**.
+    - **pfSense** (mature, extensive community documentation) → **Pipeline 3**.
+        
+3. **Confirm IDS/IPS compatibility:**
+    
+    - Both Pipeline 2 and 3 include an IDS/IPS component (Suricata or Snort). Verify that your chosen hypervisor supports promiscuous mode or bridged networking for traffic inspection.
+        
+4. **Document your selection:**
+    
+    - Record the pipeline choice and host architecture in your project documentation platform before proceeding to the virtualization environment setup.
+
+After completing this selection, proceed to **Choose a virtualization environment** to install the hypervisor that matches your host OS.
+
 ### Choose a virtualization environment
 
 **Open Source and Free Virtualization Tools**
 
-| **Virtual Machine**           | **Host OS**            | **License**        | **Multiple VMs** | **Snapshots** | **Cloning** | **Notes**                                                         |
-| ----------------------------- | ---------------------- | ------------------ | ---------------- | ------------- | ----------- | ----------------------------------------------------------------- |
-| **Oracle VM VirtualBox**      | macOS, Windows, Linux  | GPLv2              | ✅ Yes            | ✅ Yes         | ✅ Yes       | Fully open-source. Best balance of features & usability.          |
-| **VMware Workstation Player** | Windows, Linux         | Free (Proprietary) | ❌ No (Single VM) | ✅ Yes         | ✅ Yes       | Free version restricts to 1 running VM. Good for lightweight use. |
-| **VMware Fusion Player**      | macOS (Intel/ARM) only | Free (Proprietary) | ✅ Yes            | ✅ Yes         | ✅ Yes       | Better macOS integration.                                         |
-| **QEMU**                      | macOS, Windows, Linux  | GPLv2              | ✅ Yes (via CLI)  | ❌ No\*        | ✅ (Manual)  | Advanced, needs KVM for best performance. No native snapshot UI.  |
+|**Virtual Machine**|**Host OS**|**License**|**Multiple VMs**|**Snapshots**|**Cloning**|**Notes**|
+|---|---|---|---|---|---|---|
+|**Oracle VM VirtualBox**|macOS, Windows, Linux|GPLv2|✅ Yes|✅ Yes|✅ Yes|Fully open-source. Best balance of features & usability.|
+|**VMware Workstation Player**|Windows, Linux|Free (Proprietary)|❌ No (Single VM)|✅ Yes|✅ Yes|Free version restricts to 1 running VM. Good for lightweight use.|
+|**VMware Fusion Player**|macOS only (Intel/ARM)|Free (Proprietary)|✅ Yes|✅ Yes|✅ Yes|Better macOS integration. Supports multiple VMs simultaneously.|
+|**QEMU**|macOS, Windows, Linux|GPLv2|✅ Yes (via CLI)|⚠ CLI Only|✅ (Manual via qemu-img)|Advanced; needs KVM (Linux) or WHPX (Windows) for best performance. No native snapshot GUI.|
+|**Microsoft Hyper-V**|Windows 10/11 Pro & Enterprise|Built-in (Proprietary)|✅ Yes|✅ Yes (Checkpoints)|✅ Yes (Export/Import)|Native Windows hypervisor. Conflicts with VirtualBox/VMware when enabled. Not cross-platform.|
 
 **Clarifications:**
 
-* **For open-source & full features** → **VirtualBox** (cross-platform, supports multiple VMs, snapshots, cloning).
-* **For macOS-only free use** → **VMware Fusion Player** (better performance than VirtualBox but single-VM limit).
-* **For lightweight Windows/Linux use** → **VMware Workstation Player** (free but single-VM limit).
+- **For open-source & full features:** **VirtualBox** (cross-platform, supports multiple VMs, snapshots, cloning).
+- **For macOS-only free use:** **VMware Fusion Player** (better performance and macOS integration than VirtualBox; supports multiple VMs).
+- **For lightweight Windows/Linux use:** **VMware Workstation Player** (free but single-VM limit).
+- **For Windows-native virtualization:** **Hyper-V** (free with Pro/Enterprise, excellent performance, but may conflict with other hypervisors).
 
 **QEMU: Emulation vs. Virtualization**
 
 * QEMU by itself is primarily an emulator—it can emulate entire systems (CPU, memory, devices) even on different architectures (e.g., running ARM on x86). This makes it flexible but slower than hardware-assisted virtualization.
 * QEMU + KVM (Kernel-based Virtual Machine) enables full hardware-assisted virtualization (like VMware or VirtualBox) when running on Linux.
-  * KVM is a Linux kernel module that turns the host OS into a Type-1 hypervisor (bare-metal virtualization). It allows QEMU to run VMs with near-native performance by using CPU virtualization extensions (Intel VT-x / AMD-V).
+  * KVM is a Linux kernel module that enables hardware-assisted virtualization, allowing QEMU to run VMs with near-native performance. While technically a Type-2 hypervisor (running within a host OS), KVM leverages CPU virtualization extensions to achieve performance comparable to bare-metal hypervisors.
 * On Windows, QEMU can use WHPX (Windows Hypervisor Platform) for acceleration, but performance may not be as good as KVM on Linux or dedicated hypervisors like VMware/Hyper-V.
   * WHPX is a hypervisor-based acceleration feature on Windows 10/11 Pro and Enterprise editions. It allows virtualization software (like QEMU) to use hardware-assisted virtualization (Intel VT-x / AMD-V).
 

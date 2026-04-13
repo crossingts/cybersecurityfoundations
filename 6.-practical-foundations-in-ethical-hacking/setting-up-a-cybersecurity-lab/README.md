@@ -19,25 +19,90 @@ This section provides a practical hands-on guide to constructing a complete cybe
 
 ## Topics covered in this section
 
-* **Setting up a cybersecurity lab - steps**
+* **Choose a project documentation platform**
 * **Design the cybersecurity lab (choose a design pipeline)**
 * **Choose a virtualization environment**
-* **Choose a project documentation platform**
 * **Build the lab**
+  * **Configure subnet interfaces and verify connectivity**
+  * **Configure and verify the firewall**
+  * **Configure and verify the IDS/IPS**
+  * **Configure and verify a web server (e.g., nginx or Apache) and/or a database server (e.g., MySQL)**
+  * **Configure and verify SIEM/EDR (e.g., Wazuh)**
+  * **Configure and verify Kali Linux**
+  * **Launch attacks from Kali Linux and publish the project**
 
-### Setting up a cybersecurity lab - steps
+### Choose a project documentation platform
 
-* Design the cybersecurity lab (choose a design pipeline)
-* Choose a virtualization environment
-* Choose a project documentation platform
-* Build the lab
-  * Configure subnet interfaces and verify connectivity
-  * Configure and verify the firewall
-  * Configure and verify the IDS/IPS
-  * Configure and verify a web server (e.g., nginx or Apache) and/or a database server (e.g., MySQL)
-  * Configure and verify SIEM/EDR (e.g., Wazuh)
-  * Configure and verify Kali Linux
-  * Launch attacks from Kali Linux and publish the project
+**Comparison Table: Documentation Platforms**
+
+| Feature              | GitHub Wiki           | GitHub Pages                         | GitBook                   | Notion                 | Draw.io                      |
+| -------------------- | --------------------- | ------------------------------------ | ------------------------- | ---------------------- | ---------------------------- |
+| **Type**             | Wiki (Markdown)       | Static Website                       | Professional Docs         | All-in-One Workspace   | Diagramming Tool             |
+| **Hosting**          | Free (GitHub)         | Free (GitHub)                        | Free (limited) / Paid     | Free (limited) / Paid  | Free (cloud/desktop)         |
+| **Collaboration**    | Yes (Git/GitHub UI)   | Via Git                              | Real-time (paid)          | Real-time              | Real-time (cloud)            |
+| **Version Control**  | Yes (Git)             | Yes (Git)                            | Yes (Git integration)     | No (only page history) | No (manual versioning)       |
+| **Customization**    | Basic (Markdown only) | Full (HTML/CSS/JS + SSGs\*)          | Medium (themes & plugins) | High (drag & drop)     | High (custom shapes/themes)  |
+| **Search**           | Basic (GitHub search) | Custom (Algolia/Google possible)     | Full-text                 | Full-text              | No (manual organization)     |
+| **Diagrams/Visuals** | Images only           | Images + JS diagrams (e.g., Mermaid) | Embeds                    | Embeds (Draw.io, etc.) | **Specialized for diagrams** |
+| **Export Options**   | Markdown              | HTML/PDF                             | PDF/HTML/ePub             | PDF/Markdown/HTML      | PNG/SVG/PDF/etc.             |
+| **Best For**         | Quick technical notes | Professional project websites        | Developer/API docs        | Flexible team docs     | Network diagrams/flowcharts  |
+| **Limitations**      | No styling/themes     | Requires Git/static-site setup       | Free tier is limited      | No version control     | Only diagrams (no text docs) |
+
+_SSGs = Static Site Generators (e.g., Jekyll, MkDocs, Docusaurus)._
+
+**Clarifications:**
+
+- **For pure documentation:**
+   * **GitHub Wiki** (simple, free, Git-backed).
+   * **GitHub Pages + MkDocs** (polished, searchable, free).
+- **For collaborative notes:**
+   * **Notion** (best for non-tech users).
+   * **Slite** (alternative to Notion, team-focused).
+- **For developer-friendly docs:**
+   * **GitBook** (API docs, versioning).
+- **For diagrams:**
+   * **Draw.io** (integrate with all platforms).
+   * Store Draw.io source files (.xml/.drawio) in your repo for version control.
+
+**How to Embed Draw.io Diagrams & Mermaid.js Support**
+
+| Platform         | Draw.io Embed Method                                                                                        | Live Updates? | Mermaid.js?                        | Best Use Case                               |
+| ---------------- | ----------------------------------------------------------------------------------------------------------- | ------------- | ---------------------------------- | ------------------------------------------- |
+| **GitHub Wiki**  | <p>1. Export as <code>.png</code>/<code>.svg</code> → upload.<br>2. Use  in Markdown.</p>                   | ❌ No          | ❌ No (Markdown-only)               | Static diagrams (simple networks).          |
+| **GitHub Pages** | <p>1. Export as <code>.svg</code> → place in <code>docs/images/</code>.<br>2. Embed with HTML/Markdown.</p> | ❌ No          | ✅ Yes (with MkDocs/Jekyll plugins) | Scalable docs with auto-generated diagrams. |
+| **GitBook**      | <p>1. Export as <code>.png</code>/<code>.svg</code> → upload.<br>2. Or embed cloud links: </p>              | ❌ No          | ✅ Yes (native support)             | Versioned docs with dynamic diagrams.       |
+| **Notion**       | <p>1. Copy-paste directly.<br>2. Or embed cloud links.</p>                                                  | ✅ Yes (cloud) | ❌ No (but supports Draw.io embeds) | Real-time collaborative diagrams.           |
+| **VS Code**      | <p>1. Use Draw.io extension.<br>2. Edit <code>.drawio</code> files directly.</p>                            | ✅ Yes         | ✅ Yes (with Mermaid extension)     | Local editing with live preview.            |
+| **MkDocs**       | <p>1. Export as <code>.svg</code> → embed.<br>2. Or use <code>plantuml</code> plugin for Draw.io XML.</p>   | ❌ No          | ✅ Yes (native support)             | Automated docs with code-based diagrams.    |
+
+**Clarifications:**
+
+* **Mermaid.js works best in**: GitBook, GitHub Pages (with plugins), MkDocs, and VS Code.
+* **Draw.io is better for**: Platforms without Mermaid support (e.g., GitHub Wiki, Notion).
+* **Hybrid approach**: Use Mermaid for simple flowcharts + Draw.io for complex designs in the same doc.
+
+**What Is Mermaid.js**
+
+* A JavaScript-based diagramming tool that lets you create diagrams using text (Markdown-like syntax).
+* Runs in browsers/docs that support it (e.g., GitHub Pages, GitBook, VS Code).
+
+**Key Features**
+
+* **No image files needed**: Diagrams are defined in code.
+* **Supports**:
+  * Flowcharts (`graph LR/TD`)
+  * Sequence diagrams (`sequenceDiagram`)
+  * Class diagrams (`classDiagram`)
+  * Gantt charts (`gantt`)
+
+**Mermaid.js vs. Draw.io**
+
+|                | Mermaid.js                                   | Draw.io                                     |
+| -------------- | -------------------------------------------- | ------------------------------------------- |
+| **Setup**      | Code-only (no GUI).                          | Drag-and-drop GUI.                          |
+| **Dynamic**    | Updates when code changes.                   | Manual re-export needed.                    |
+| **Complexity** | Limited to supported diagrams.               | More flexible (custom shapes).              |
+| **Best for**   | Simple, version-controlled diagrams in docs. | Complex designs (e.g., network topologies). |
 
 ### Design the cybersecurity lab (choose a design pipeline)
 
@@ -125,79 +190,6 @@ pfSense (firewall) + Snort (IDS/IPS) + web server (Apache) and/or database serve
   * KVM is a Linux kernel module that turns the host OS into a Type-1 hypervisor (bare-metal virtualization). It allows QEMU to run VMs with near-native performance by using CPU virtualization extensions (Intel VT-x / AMD-V).
 * On Windows, QEMU can use WHPX (Windows Hypervisor Platform) for acceleration, but performance may not be as good as KVM on Linux or dedicated hypervisors like VMware/Hyper-V.
   * WHPX is a hypervisor-based acceleration feature on Windows 10/11 Pro and Enterprise editions. It allows virtualization software (like QEMU) to use hardware-assisted virtualization (Intel VT-x / AMD-V).
-
-### Choose a project documentation platform
-
-**Comparison Table: Documentation Platforms**
-
-| Feature              | GitHub Wiki           | GitHub Pages                         | GitBook                   | Notion                 | Draw.io                      |
-| -------------------- | --------------------- | ------------------------------------ | ------------------------- | ---------------------- | ---------------------------- |
-| **Type**             | Wiki (Markdown)       | Static Website                       | Professional Docs         | All-in-One Workspace   | Diagramming Tool             |
-| **Hosting**          | Free (GitHub)         | Free (GitHub)                        | Free (limited) / Paid     | Free (limited) / Paid  | Free (cloud/desktop)         |
-| **Collaboration**    | Yes (Git/GitHub UI)   | Via Git                              | Real-time (paid)          | Real-time              | Real-time (cloud)            |
-| **Version Control**  | Yes (Git)             | Yes (Git)                            | Yes (Git integration)     | No (only page history) | No (manual versioning)       |
-| **Customization**    | Basic (Markdown only) | Full (HTML/CSS/JS + SSGs\*)          | Medium (themes & plugins) | High (drag & drop)     | High (custom shapes/themes)  |
-| **Search**           | Basic (GitHub search) | Custom (Algolia/Google possible)     | Full-text                 | Full-text              | No (manual organization)     |
-| **Diagrams/Visuals** | Images only           | Images + JS diagrams (e.g., Mermaid) | Embeds                    | Embeds (Draw.io, etc.) | **Specialized for diagrams** |
-| **Export Options**   | Markdown              | HTML/PDF                             | PDF/HTML/ePub             | PDF/Markdown/HTML      | PNG/SVG/PDF/etc.             |
-| **Best For**         | Quick technical notes | Professional project websites        | Developer/API docs        | Flexible team docs     | Network diagrams/flowcharts  |
-| **Limitations**      | No styling/themes     | Requires Git/static-site setup       | Free tier is limited      | No version control     | Only diagrams (no text docs) |
-
-_SSGs = Static Site Generators (e.g., Jekyll, MkDocs, Docusaurus)._
-
-**Clarifications:**
-
-- **For pure documentation:**
-   * **GitHub Wiki** (simple, free, Git-backed).
-   * **GitHub Pages + MkDocs** (polished, searchable, free).
-- **For collaborative notes:**
-   * **Notion** (best for non-tech users).
-   * **Slite** (alternative to Notion, team-focused).
-- **For developer-friendly docs:**
-   * **GitBook** (API docs, versioning).
-- **For diagrams:**
-   * **Draw.io** (integrate with all platforms).
-   * Store Draw.io source files (.xml/.drawio) in your repo for version control.
-
-**How to Embed Draw.io Diagrams & Mermaid.js Support**
-
-| Platform         | Draw.io Embed Method                                                                                        | Live Updates? | Mermaid.js?                        | Best Use Case                               |
-| ---------------- | ----------------------------------------------------------------------------------------------------------- | ------------- | ---------------------------------- | ------------------------------------------- |
-| **GitHub Wiki**  | <p>1. Export as <code>.png</code>/<code>.svg</code> → upload.<br>2. Use  in Markdown.</p>                   | ❌ No          | ❌ No (Markdown-only)               | Static diagrams (simple networks).          |
-| **GitHub Pages** | <p>1. Export as <code>.svg</code> → place in <code>docs/images/</code>.<br>2. Embed with HTML/Markdown.</p> | ❌ No          | ✅ Yes (with MkDocs/Jekyll plugins) | Scalable docs with auto-generated diagrams. |
-| **GitBook**      | <p>1. Export as <code>.png</code>/<code>.svg</code> → upload.<br>2. Or embed cloud links: </p>              | ❌ No          | ✅ Yes (native support)             | Versioned docs with dynamic diagrams.       |
-| **Notion**       | <p>1. Copy-paste directly.<br>2. Or embed cloud links.</p>                                                  | ✅ Yes (cloud) | ❌ No (but supports Draw.io embeds) | Real-time collaborative diagrams.           |
-| **VS Code**      | <p>1. Use Draw.io extension.<br>2. Edit <code>.drawio</code> files directly.</p>                            | ✅ Yes         | ✅ Yes (with Mermaid extension)     | Local editing with live preview.            |
-| **MkDocs**       | <p>1. Export as <code>.svg</code> → embed.<br>2. Or use <code>plantuml</code> plugin for Draw.io XML.</p>   | ❌ No          | ✅ Yes (native support)             | Automated docs with code-based diagrams.    |
-
-**Clarifications:**
-
-* **Mermaid.js works best in**: GitBook, GitHub Pages (with plugins), MkDocs, and VS Code.
-* **Draw.io is better for**: Platforms without Mermaid support (e.g., GitHub Wiki, Notion).
-* **Hybrid approach**: Use Mermaid for simple flowcharts + Draw.io for complex designs in the same doc.
-
-**What Is Mermaid.js**
-
-* A JavaScript-based diagramming tool that lets you create diagrams using text (Markdown-like syntax).
-* Runs in browsers/docs that support it (e.g., GitHub Pages, GitBook, VS Code).
-
-**Key Features**
-
-* **No image files needed**: Diagrams are defined in code.
-* **Supports**:
-  * Flowcharts (`graph LR/TD`)
-  * Sequence diagrams (`sequenceDiagram`)
-  * Class diagrams (`classDiagram`)
-  * Gantt charts (`gantt`)
-
-**Mermaid.js vs. Draw.io**
-
-|                | Mermaid.js                                   | Draw.io                                     |
-| -------------- | -------------------------------------------- | ------------------------------------------- |
-| **Setup**      | Code-only (no GUI).                          | Drag-and-drop GUI.                          |
-| **Dynamic**    | Updates when code changes.                   | Manual re-export needed.                    |
-| **Complexity** | Limited to supported diagrams.               | More flexible (custom shapes).              |
-| **Best for**   | Simple, version-controlled diagrams in docs. | Complex designs (e.g., network topologies). |
 
 ### Build the lab
 

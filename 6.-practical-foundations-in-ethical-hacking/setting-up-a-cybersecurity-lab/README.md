@@ -28,9 +28,52 @@ This section provides a practical hands-on guide to constructing a complete cybe
 
 Before configuring any virtual hardware, establishing a documentation repository is a critical first step. A well-structured lab log prevents configuration drift, ensures repeatability, and serves as a future reference for troubleshooting. Select one of the following platforms to capture your design diagrams, firewall rules, and test results.
 
+**Comparison Table: Documentation Platforms**
 
+|Feature|GitHub|GitHub Wiki|GitHub Pages|GitBook|
+|---|---|---|---|---|
+|**Type**|Git Repository|Wiki (Markdown)|Static Website|Professional Docs|
+|**Hosting**|Free (GitHub)|Free (GitHub)|Free (GitHub)|Free (limited) / Paid|
+|**Collaboration**|Yes (Git/GitHub UI)|Yes (Git/GitHub UI)|Via Git|Real-time (paid)|
+|**Version Control**|Yes (Git)|Yes (Git)|Yes (Git)|Yes (Git integration)|
+|**Customization**|Raw Markdown/Text|Basic (Markdown only)|Full (HTML/CSS/JS + SSGs*)|Medium (themes & plugins)|
+|**Search**|Code-aware search|Basic (GitHub search)|Custom (Algolia/Google possible)|Full-text|
+|**Diagrams/Visuals**|Rendered in Markdown files|Images only|Images + JS diagrams (e.g., Mermaid)|Embeds|
+|**Export Options**|Clone / Zip|Markdown|HTML/PDF|PDF/HTML/ePub|
+|**Best For**|Code + Docs in one place|Quick technical notes|Professional project websites|Developer/API docs|
+|**Limitations**|Not a structured doc site|No styling/themes|Requires Git/static-site setup|Free tier is limited|
 
+_SSGs = Static Site Generators (e.g., Jekyll, MkDocs, Docusaurus)._
 
+**Clarifications:**
+
+- **For a simple, Git-backed workflow:** Use a standard **GitHub** repository. Store Markdown files alongside your lab configuration scripts and network diagrams for a single source of truth.
+- **For quick, linked notes:** **GitHub Wiki** provides a lightweight, version-controlled wiki that lives alongside your repository.
+- **For a polished project website:** **GitHub Pages + MkDocs** generates a free, searchable, and professional-looking static site from Markdown source files.
+- **For developer-centric documentation:** **GitBook** offers a clean interface and strong API reference features, though the free tier includes usage limitations and it is a proprietary cloud service.
+
+#### Diagramming Tools: [Draw.io](https://draw.io/) vs Mermaid.js
+
+For network topologies and flowcharts, you will need a dedicated diagramming tool alongside your text documentation.
+
+|Platform/Tool|Type|Version Control Friendly|Best Use Case|
+|---|---|---|---|
+|**[Draw.io](https://draw.io/)**|GUI (Drag-and-drop)|Yes (save `.drawio` source file in Git)|Complex network diagrams, custom shapes, visual topologies.|
+|**Mermaid.js**|Code-based (Markdown-like syntax)|Yes (diagram is code/text)|Simple flowcharts, sequence diagrams, and diagrams that need to update automatically with documentation changes.|
+
+**How to Embed [Draw.io](https://draw.io/) Diagrams in Your Documentation Platform**
+
+|Platform|Embed Method|Mermaid.js Support|
+|---|---|---|
+|**GitHub (Repo)**|Export as `.png` or `.svg` → place in repo → reference in Markdown using `![Diagram](./images/diagram.png)`.|✅ Yes (native rendering in Markdown files)|
+|**GitHub Wiki**|Export as `.png`/`.svg` → upload to Wiki → reference in Markdown.|❌ No (Markdown-only)|
+|**GitHub Pages**|Export as `.svg` → place in `docs/images/` → embed with standard Markdown or HTML.|✅ Yes (with MkDocs/Jekyll plugins)|
+|**GitBook**|Export as `.png`/`.svg` → upload or embed cloud link.|✅ Yes (native support)|
+
+**Recommendation:**
+
+- Use **Mermaid.js** for simple, version-controlled diagrams (e.g., data flow, sequence steps) directly within your Markdown files.
+- Use **[Draw.io](https://draw.io/)** for complex network infrastructure designs. **Crucially, save the `.drawio` source file in your documentation repository.** This ensures you can edit the diagram later without starting from a static image.
 
 Example Mermaid.js Flowchart:
 
@@ -42,10 +85,6 @@ graph TD
     B -->|Logs| E[SIEM/Wazuh];
     C -->|Logs| E;
 ```
-
-
-
---
 
 ### Design the cybersecurity lab (choose a design pipeline)
 

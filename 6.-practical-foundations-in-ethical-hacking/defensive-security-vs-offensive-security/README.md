@@ -140,7 +140,7 @@ The choice often depends on the organization’s size, budget, regulatory requir
 |**Ethical Hacking / Penetration Testing**|Common in large enterprises with mature security teams; often performed by in‑house security engineers or dedicated pentesters.|Very common—many organizations hire specialized firms or freelance bug bounty hunters (e.g., via HackerOne, Bugcrowd) for periodic assessments.|
 |**Red Teaming**|Prevalent in large, mature organizations (e.g., financial services, tech) that maintain persistent internal red teams for continuous adversary simulation.|Frequently outsourced to specialized firms for objective, “fresh eyes” assessments, especially for one‑time or annual exercises.|
 
-**Key Differences (Regardless of Employment Model)**
+**Ethical Hacking vs Red Teaming: Key Differences (Regardless of Employment Model)**
 
 | Aspect             | Ethical Hacking                                                              | Red Teaming                                                                                                                  |
 | ------------------ | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |

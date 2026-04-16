@@ -126,7 +126,7 @@ Many organizations begin with a SOC‑only model and evolve toward a dedicated C
 
 Both ethical hacking and red teaming functions aim to improve security by exposing weaknesses before malicious actors exploit them. Both roles require technical skills in penetration testing, social engineering, and attack simulations. And both roles involve authorized attempts to identify vulnerabilities in systems, networks, or organizations.
 
-However, they differ in **scope, duration, objectives, and team structure**—not in whether the practitioners are internal employees or external consultants. In practice, both functions can be delivered by:
+However, they differ in scope, duration, objectives, and team structure—not in whether the practitioners are internal employees or external consultants. In practice, both functions can be delivered by:
 
 - **Internal teams:** Full‑time employees who are part of the organization’s security department.
 - **External consultants:** Third‑party firms or independent contractors hired for specific engagements.

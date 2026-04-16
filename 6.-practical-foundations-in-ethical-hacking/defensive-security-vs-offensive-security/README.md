@@ -40,9 +40,12 @@ Both defensive and offensive security are essential regardless of whether a thre
 | **Mindset**             | Attacker, adversarial – seek to compromise, break, deceive, trick                                            | Defender, ally – seek to protect, prevent, mitigate                                                       |
 | **Primary Goal**        | Identify and exploit vulnerabilities before malicious actors do                                              | Maintain confidentiality, integrity, and availability of systems and data                                 |
 | **Skillsets**           | How to penetrate an information system                                                                       | How to protect an information system (risk assessment, risk mitigation, governance)                       |
-| **Related Paradigms**   | Red teaming                                                                                                  | Blue teaming, diligence, DevSecOps, security‑by‑design, best practices, information assurance (IA)        |
+| **Related Paradigms**   | Red teaming, penetration testing                                                                             | Blue teaming, diligence, DevSecOps, security‑by‑design, best practices, information assurance (IA)        |
 | **Permission of Owner** | Authorized, legal                                                                                            | Authorized, legal                                                                                         |
 | **Testing Approaches**  | Often uses black‑box testing (limited prior knowledge of the target system) to simulate external adversaries | Often uses white‑box testing (full knowledge of the target system) to validate controls and identify gaps |
+
+Clarification:
+
 
 ### Blue teaming core functions
 

@@ -46,6 +46,7 @@ Both defensive and offensive security are essential regardless of whether a thre
 
 Clarification:
 
+Penetration testing can be understood as the technical steps within ethical hacking - encompassing the technical security assessment phase of the more broader process of preparation, assessment, and reporting. While the term "offensive security" is often more associated with penetration testing (e.g., as in EC-Council's CEH, Offensive Security's OSCP), and with contracted services (as opposed to in house staff), it is not uncommon for resident security teams (blue teams) to conduct penetration testing though less frequently than they would perform routine vulnerability assessments (scanning). It's important to note that the concepts are not standardized in the field. So the table gives a broad brush of concepts that cluster around the presumption that offensive security aims to simulate more faithfully real life attacks conditions.
 
 ### Blue teaming core functions
 

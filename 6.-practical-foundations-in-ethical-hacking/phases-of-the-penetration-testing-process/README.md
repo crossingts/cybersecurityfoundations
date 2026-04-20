@@ -176,7 +176,7 @@ If any probe receives a response, the host is considered alive. Then Nmap perfor
 
 Every Nmap scan (including `-F`, `-sS`, `-sT`, etc.) first runs host discovery using those four probes, unless you override it with `-Pn` to skip host discovery or `-sn` (no port scan) to do only host discovery without port scanning.
 
-The command outputs a list of open ports (limited to top 100) on live hosts and often the service names associated with them (based on port number guesses).
+The command outputs a list of open ports (limited to the top 100) on live hosts and often the service names associated with them (based on port number guesses).
 
 **Classic Nmap scanning activities:**
 

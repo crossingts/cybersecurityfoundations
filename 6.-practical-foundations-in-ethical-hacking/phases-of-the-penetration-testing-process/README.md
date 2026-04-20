@@ -46,7 +46,7 @@ Typical penetration testing activities include:
 1. **Reconnaissance** – predominantly passive information gathering.
 2. **Scanning** – active probing (e.g., Nmap) for host discovery, port scanning, and service/OS detection.
 3. **Enumeration** – extraction of information from discovered services (user accounts, shares, SNMP data, etc.). This may uncover weak configurations that could be exploited immediately (e.g., default credentials, anonymous access).
-4. **Vulnerability scanning (optional)** – using tools like OpenVAS or Nessus to identify known CVEs, missing patches, and misconfigurations. Can be run after port scanning (fast) or after enumeration (stealthier).
+4. **Vulnerability scanning (optional)** – using tools like OpenVAS and Nessus to identify known CVEs, missing patches, and misconfigurations. Can be run after port scanning (faster) or after enumeration (stealthier).
 5. **Exploitation** (gaining access and privilege escalation) – attempting to exploit the discovered weaknesses (whether from enumeration or vulnerability scanning) to gain access.
 6. **Post‑Exploitation** – maintaining access and covering tracks.
 
@@ -56,7 +56,7 @@ Penetration tests begin with an extensive information gathering phase to build a
 
 OSINT involves collating technical information on an organization’s public-facing systems. “Internet registries, coupled with services such as Shodan or VPN Hunter, can highlight and identify an organization’s Web servers, mail servers, remote access endpoints and many other Internet-facing devices” (cipher.com). During OSINT, the penetration tester identifies potential weaknesses and entry points across the organization’s security posture, including its network, applications, website, wireless networks, physical facilities, cloud-based systems, and employees.
 
-Automated OSINT is used by hackers and penetration testers to gather and analyze intelligence about a specific target from social networks, including names, online handles, jobs, friends, likes/dislikes, interactions, locations, pictures, etc. Recon-ng and Maltego are examples of such automated OSINT tools, designed to streamline the collection, analysis, and organization of intelligence across multiple data sources.
+Automated OSINT is used by hackers and penetration testers to gather and analyze intelligence about a specific target from social networks, including names, online handles, jobs, friends, likes, dislikes, interactions, locations, pictures, etc. Recon-ng and Maltego are examples of such automated OSINT tools, designed to streamline the collection, analysis, and organization of intelligence across multiple data sources.
 
 Faircloth (2011) proposes an iterative five stage reconnaissance phase: Intelligence Gathering, Footprinting, Human Recon, Verification, and Vitality. Building on Faircloth (2011), follows is a table summarizing the stages of the reconnaissance phase. The first four stages—Intelligence Gathering, Footprinting, Human Recon, and Verification—rely exclusively on passive reconnaissance techniques, gathering information from public sources without directly interacting with the target’s systems. The Vitality stage introduces active reconnaissance, using direct probes to confirm reachability, and serves as the transition into the enumeration phase.
 
@@ -70,7 +70,7 @@ Faircloth (2011) proposes an iterative five stage reconnaissance phase: Intellig
 | **Verification**           | To confirm the validity of information collected in the prior phases.                                                                              | This phase rarely produces new output, but can clean up existing output by removing invalid data. Some additional information can sometimes be gathered as a side-product of the verification.                 | DNS; WHOIS; DIG.                                                                                                                                    |
 | **Vitality**               | To confirm the reachability of the IP addresses identified in prior phases. This is a phase which spreads between reconnaissance and enumeration.  | The output of this phase is a list of IP addresses from prior phases which have been confirmed as reachable.                                                                                                   | PING; Port scanners; Mapping tools.                                                                                                                 |
 
-There is no clear cutoff point between passive and active intelligence gathering techniques. The definition of passive is not always consistent across the field. The confusion includes whether the information gathering can be performed without the knowledge of the organization under investigation (i.e., remains stealthy) and whether the process of testing can be traced back to the tester's location or IP address.
+There is no clear cutoff point between passive and active intelligence gathering techniques. The definition of passive is not always consistent across the field. The confusion includes whether the information gathering can be performed without the knowledge of the organization under investigation (i.e., remains stealthy or undetected) and whether the information gathering can be traced back to the tester's identity, location, or IP address.
 
 ### Scanning and enumeration
 
@@ -87,9 +87,7 @@ While recon may find that a network has 500 machines connected to a single subne
 | Identifies targets and potential entry points | Extracts data: usernames, shares, configurations              |
 | **Tools:** `nmap`, `masscan`, `arp-scan`      | **Tools:** `enum4linux`, Metasploit aux modules, `ldapsearch` |
 
-The core technical activities of the **scanning and enumeration phase** move from identifying potential targets to actively discovering and cataloging detailed information about them. 
-
-This process typically follows a logical sequence:
+The core technical activities of the scanning and enumeration phase move from identifying potential targets to actively discovering and cataloging detailed information about them. This process typically follows a logical sequence:
 
 - Host discovery – to identify live hosts on a network.
 - Port scanning – to discover open ports on those hosts.

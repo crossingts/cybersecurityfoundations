@@ -11,7 +11,7 @@ description: This section explores major open source firewall, IDS/IPS, and SIEM
 * Become familiar with popular open source host and network IDS, their key features, and their common use cases
 * Become familiar with popular open source security event management technologies (SIEM/EDR), their key features, and their common use cases
 
-This section explores major defensive cybersecurity technologies, including firewalls, IDS/IPS, and SIEM/EDR (Security Information and Event Management/Endpoint Detection and Response). The discussion focuses on popular open source tools used to implement these technologies, exploring their key features and deployment use cases. Key categories of defensive cybersecurity technologies discussed include host and network firewalls (e.g., UFW, iptables, nftables, PF, OPNsense, and pfSense), IDS/IPS (e.g., Suricata and Snort), and network security monitoring/SIEM (e.g., Wazuh and OSSEC). This discussion categorizes tools by their primary function, but their real-world value often lies in how they are integrated into a broader security architecture. Many open source security tools have overlapping capabilities and can span multiple functional categories. A tool primarily classified as a Network Intrusion Detection System (NIDS), like Suricata, might also provide critical log data for a Security Information and Event Management (SIEM) system. 
+This section explores major defensive cybersecurity technologies, including firewalls, IDS/IPS, and SIEM/EDR (Security Information and Event Management/Endpoint Detection and Response). The discussion focuses on popular open source tools used to implement these technologies, exploring their key features and deployment use cases. Key categories of defensive cybersecurity technologies discussed include host and network firewalls (e.g., UFW, iptables, nftables, PF, OPNsense, and pfSense), IDS/IPS (e.g., Suricata and Snort), and network security monitoring/SIEM (e.g., Wazuh and OSSEC). This discussion categorizes tools by their primary function, but their real-world value often lies in how they are integrated into a broader security architecture. Many open source security tools have overlapping capabilities and can span multiple functional categories. A tool primarily classified as a Network Intrusion Detection System (NIDS), like Suricata, might also provide critical log data for a Security Information and Event Management (SIEM) system.
 
 ## Topics covered in this section
 
@@ -127,7 +127,7 @@ Many WAFs are reverse proxies (e.g., ModSecurity running in reverse‑proxy mode
 | Host‑based WAF      | ModSecurity (Apache/Nginx plugin)     | Runs directly on the web server itself (e.g., as a module).                               |
 | Network‑based WAF   | Cloudflare WAF, HAProxy + ModSecurity | Deployed as a cloud service or standalone appliance, protecting multiple backend servers. |
 
-**Proxy Firewall vs WAF Comparison**
+**Proxy Firewalls vs WAF Comparison**
 
 |Feature|Proxy Firewall (Application‑level Gateway)|Web Application Firewall (WAF)|
 |---|---|---|
@@ -146,7 +146,7 @@ The modern evolution is the Next-Generation Firewall (NGFW), which incorporates 
 - User & Group Identity Integration: Rules can be created to allow or block traffic based on a user’s or group’s identity (e.g., from Active Directory), moving beyond simple IP address‑based filtering for more precise access control.
 - Threat Intelligence Feeds: NGFWs leverage dynamic, cloud‑based threat intelligence to automatically block traffic to and from known malicious IP addresses, domains, and botnets.
 
-**Traditional Packet Filtering Firewall vs Next‑Generation Firewall (NGFW)**
+**Traditional Packet Filtering Firewalls vs Next‑Generation Firewalls (NGFWs)**
 
 The key differences between a traditional packet filtering firewall and an NGFW can be summarized as follows:
 

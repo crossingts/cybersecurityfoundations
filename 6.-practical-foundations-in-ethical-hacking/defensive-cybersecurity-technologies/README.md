@@ -120,6 +120,8 @@ The need for a WAF has grown with the adoption of modern IT practices, including
 
 Many WAFs are reverse proxies (e.g., ModSecurity running in reverse‑proxy mode, cloud‑based WAFs like Cloudflare). However, not all proxy firewalls are WAFs—a generic proxy firewall can handle FTP, SMTP, etc., while a WAF is narrowly focused on HTTP/HTTPS. For comprehensive protection, organizations require both: the network firewall to guard the network perimeter and the WAF to protect the applications exposed to the internet from targeted layer‑7 attacks.
 
+**WAF Deployment Types: Host‑based vs Network‑based**
+
 | WAF Deployment Type | Example Tools                         | Description                                                                               |
 | ------------------- | ------------------------------------- | ----------------------------------------------------------------------------------------- |
 | Host‑based WAF      | ModSecurity (Apache/Nginx plugin)     | Runs directly on the web server itself (e.g., as a module).                               |
@@ -143,6 +145,8 @@ The modern evolution is the Next-Generation Firewall (NGFW), which incorporates 
 - Integrated Intrusion Prevention System (IPS): This feature actively scans for, blocks, and prevents known attack patterns, exploits, and vulnerabilities within the network traffic flow in real time.
 - User & Group Identity Integration: Rules can be created to allow or block traffic based on a user’s or group’s identity (e.g., from Active Directory), moving beyond simple IP address‑based filtering for more precise access control.
 - Threat Intelligence Feeds: NGFWs leverage dynamic, cloud‑based threat intelligence to automatically block traffic to and from known malicious IP addresses, domains, and botnets.
+
+**Traditional Packet Filtering Firewall vs Next‑Generation Firewall (NGFW)**
 
 The key differences between a traditional packet filtering firewall and an NGFW can be summarized as follows:
 
@@ -531,7 +535,7 @@ The following guide helps match tools to common scenarios. Many organisations us
 
 | Scenario/Primary Need                                                                                   | Recommended Tool(s) | Rationale                                                                                                                                                                                           |
 | ------------------------------------------------------------------------------------------------------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Centralised log management, compliance, and HIDS; a unified SIEM with HIDS, compliance, and a dashboard | Wazuh               | All‑in‑one open‑source SIEM/XDR platform with Elastic Stack integration; compliance reporting, file integrity monitoring, vulnerability detection, MITRE ATT&CK mapping, and a central dashboard.   |
+| Centralized log management, compliance, and HIDS; a unified SIEM with HIDS, compliance, and a dashboard | Wazuh               | All‑in‑one open‑source SIEM/XDR platform with Elastic Stack integration; compliance reporting, file integrity monitoring, vulnerability detection, MITRE ATT&CK mapping, and a central dashboard.   |
 | Lightweight HIDS with active response; lightweight host‑based intrusion detection with active response  | OSSEC               | Low overhead; monitors logs, file integrity, rootkits; can automatically block IPs after failed logins. No GUI out of the box (Wazuh extends it).                                                   |
 | Deep endpoint forensics and threat hunting; endpoint hunting, forensics, and live response              | Velociraptor        | Powerful query language (VQL) for live endpoint queries, memory analysis, and artifact collection; enables deep investigation and incident response.                                                |
 | Network traffic logs for SIEM enrichment; to feed network traffic logs into your SIEM                   | Zeek or Suricata    | Generate structured logs (e.g., EVE JSON, Zeek `.log` files) that can be ingested by SIEMs like Wazuh or Elastic. Zeek provides deep protocol‑aware metadata; Suricata adds signature‑based alerts. |

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -183,6 +183,7 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-security-vs-offensive-security/README.md",
     "6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/README.md",
     "2.-introduction-to-cybersecurity/common-cyber-attacks/README.md",
@@ -207,7 +208,6 @@
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/passive-discovery-method.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/scanning-and-enumeration/scanning-and-enumeration-tools.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/scanning-and-enumeration/scanning-and-enumeration-techniques-and-tools.md",
-    "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md",
     "6.-practical-foundations-in-ethical-hacking/packet-analyzers/README.md",
     "2.-introduction-to-cybersecurity/the-evolving-cybersecurity-threat-landscape",
     "LICENSE",

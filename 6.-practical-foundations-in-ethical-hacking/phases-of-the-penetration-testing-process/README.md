@@ -11,7 +11,7 @@ description: >-
 * Describe the phases of the penetration testing process
 * Describe best practices for writing the penetration test report
 
-This section describes the phases of the penetration testing process—planning, reconnaissance, scanning and enumeration, gaining access (exploitation) and privilege escalation, maintaining access, covering tracks, and reporting—including the goals of each phase and key technologies used. Further, this section describes best practices for writing the penetration test report.
+This section describes the phases of the penetration testing process—reconnaissance, scanning and enumeration, gaining access (exploitation) and privilege escalation, maintaining access, and covering tracks. Penetration testing can be understood as the technical security assessment phase within the broader ethical hacking process, which includes planning, the security assessment itself, and reporting. The goals of each phase and key technologies used are discussed, along with best practices for writing the penetration test report.
 
 ## Topics covered in this section
 
@@ -25,7 +25,7 @@ This section describes the phases of the penetration testing process—planning,
 
 ### Introduction
 
-The penetration testing process can be broken down into several phases: planning or preparation, reconnaissance, scanning and enumeration, gaining access (exploitation) and privilege escalation, post-exploitation (maintaining access and covering tracks), and reporting (Scarfone et al., 2008; Walker, 2012, 2017).
+The penetration test comprises five core phases: reconnaissance, scanning and enumeration, gaining access, maintaining access, and covering tracks. The broader ethical hacking process can be broken down into planning, the penetration test itself, and reporting.
 
 <figure><img src="../../.gitbook/assets/Ethical-hacking-phases.jpg" alt="Ethical-hacking-phases"><figcaption><p>The seven phases of the ethical hacking process</p></figcaption></figure>
 
@@ -41,10 +41,10 @@ For Walker (2017), the assessment phase or “act of hacking” is comprised of 
 
 For the purposes of this section, ethical hacking refers to the comprehensive process of 1) planning or preparing for a penetration test, 2) performing a penetration test (what Walker, 2012/2017 and EC-Council identify as the assessment phase of the penetration test and which is common to both malicious and ethical hackers), and 3) reporting on the findings of the penetration test. This comprehensive process is illustrated in the diagram "The seven phases of the ethical hacking process".
 
-Typical penetration testing activities:
+Typical penetration testing activities include:
 
 1. **Reconnaissance** – predominantly passive information gathering.
-2. **Scanning** – active probing (mostly Nmap) for host discovery, port scanning, and service/OS detection.
+2. **Scanning** – active probing (e.g., Nmap) for host discovery, port scanning, and service/OS detection.
 3. **Enumeration** – extraction of information from discovered services (user accounts, shares, SNMP data, etc.). This may uncover weak configurations that could be exploited immediately (e.g., default credentials, anonymous access).
 4. **Vulnerability scanning (optional)** – using tools like OpenVAS or Nessus to identify known CVEs, missing patches, and misconfigurations. Can be run after port scanning (fast) or after enumeration (stealthier).
 5. **Exploitation** (gaining access and privilege escalation) – attempting to exploit the discovered weaknesses (whether from enumeration or vulnerability scanning) to gain access.
@@ -465,7 +465,7 @@ This is not vulnerability scanning in the CVEs-and-patches sense, but rather ide
 
 These are configuration weaknesses that may lead to compromise. They are often discovered through Nmap’s NSE enumeration scripts. While NSE can perform some enumeration, deeper techniques for NetBIOS (`nbstat.nse`), SNMP (`snmp-*`), and LDAP querying (`ldap-*`) often require specialized tools like `enum4linux`, `snmpwalk`, or `ldapsearch`.
 
-**Checking for known software vulnerabilities using:**  
+**Checking for known software vulnerabilities:**  
 
 Nmap includes NSE scripts that actively probe the running services and software that Nmap discovered on open ports during earlier scanning (e.g., SMB, HTTP, SSH, SSL/TLS) for specific, well‑known CVEs. Examples include:
 
@@ -568,7 +568,7 @@ Maintaining access is a post‑exploitation activity that requires balancing rel
 
 In the covering tracks phase of the ethical hacking process, attackers attempt to conceal their presence on compromised machines to avoid detection. This phase is critical because forensic analysis or routine auditing could reveal the intrusion, jeopardizing the test or real attack.
 
-To cover their tracks, attackers remove or modify log files, hide files using hidden attributes or directories, and use tunneling protocols to communicate with compromised systems. If logging is enabled and monitored (which is often not the case), log entries reveal attacks. Completely clearing a log file is itself a red flag to an attentive administrator; selective editing is a better approach. Corrupting the log file is another effective tactic—while an entirely empty log suggests an attack, corrupted files are common and administrators rarely attempt to repair them. Ultimately, this phase distinguishes skilled penetration testers from novices (Walker, 2012).
+To cover their tracks, attackers remove or modify log files, hide files using hidden attributes or directories, and use tunneling protocols to communicate with compromised systems. If logging is enabled and monitored (which is often not the case), log entries can reveal attacks. Completely clearing a log file is itself a red flag to an attentive administrator; selective editing is a better approach. Corrupting the log file is another effective tactic—while an entirely empty log suggests an attack, corrupted files are common and administrators rarely attempt to repair them. Ultimately, this phase distinguishes skilled penetration testers from novices (Walker, 2012).
 
 **Common Techniques For Covering Tracks**
 
@@ -588,9 +588,7 @@ To cover their tracks, attackers remove or modify log files, hide files using hi
 - **Low‑and‑slow cleaning** – Instead of deleting everything at once, spread log modifications over time to avoid detection patterns.
 - **Living off the land** – Use native OS commands (e.g., `wevtutil` on Windows, `logger` on Linux) to manipulate logs rather than uploading suspicious binaries.
 
-If logging is enabled and monitored (which is often not the case), log entries can reveal attacks. Completely clearing a log file is itself a red flag to an attentive administrator; selective editing is a better approach. Corrupting the log file is another effective tactic—while an entirely empty log suggests an attack, corrupted files are common and administrators rarely attempt to repair them. Ultimately, this phase distinguishes skilled penetration testers from novices (Walker, 2012).
-
----
+**Network Penetration Testing Free and Open Source Tools**
 
 The following table, Pen Source/Free Tools—for Network Penetration Testing (Shah & Mehtre, 2015, p. 45), offers a summary of common open source network penetration testing tools, including their function and operating system compatibility.
 
@@ -617,9 +615,9 @@ The final report is typically delivered directly to an officer of the client org
 
 ### Key takeaways
 
-* Phases of the penetration testing process are planning, reconnaissance, scanning and enumeration, exploitation, post-exploitation, and reporting
-* The two phases of reconnaissance, and scanning and enumeration are intelligence gathering phases that serve to prepare for an exploit strategy against a target. Each of the two phases can be either passive or active
-* Reconnaissance can be passive (e.g., OSINT, WHOIS, social media) or active (e.g., DNS queries, network probing)
+* Phases of the penetration testing process are reconnaissance, scanning and enumeration, gaining access, maintaining access, and covering tracks.
+* The two phases of reconnaissance, and scanning and enumeration are intelligence gathering phases that serve to prepare for an exploit strategy against a target. Each of the two phases can be either passive or active.
+* Reconnaissance can be passive (e.g., OSINT, WHOIS, social media) or active (e.g., DNS queries, network probing).
 * Reconnaissance uncovers information about the target company:
   * Company structure (partners, subsidiaries).
   * Employee details (names, roles, email formats).
@@ -637,6 +635,7 @@ The final report is typically delivered directly to an officer of the client org
   * Application-specific data (SQL databases, SNMP, DNS records).
   * Email lists (harvested from exposed directories or breaches).
   * Results in a refined target list (e.g., vulnerable services, weak credentials).
+- The penetration test report includes an Executive Summary for management and a Technical Report for IT staff, with actionable remediation advice.
 
 ### References
 

@@ -94,12 +94,12 @@ The core technical activities of the scanning and enumeration phase move from id
 - Service and version detection – to confirm the actual service type and extract software names/versions via basic banner grabbing (manual enumeration).
 - OS fingerprinting – to identify a host's operating system.
 - Enumeration (beyond banner grabbing) – to extract detailed data (users, shares, configurations) using Nmap’s enumeration scripts or dedicated tools.
-- Vulnerability scanning (optional) – to run automated checks for known CVEs using dedicated vulnerability scanners (OpenVAS, Nessus). It can be run after port scanning (fast) or after enumeration (stealthier but slower).
+- Vulnerability scanning (optional) – to run automated checks for known CVEs using dedicated vulnerability scanners (OpenVAS, Nessus). It can be run after port scanning (faster) or after enumeration (stealthier but slower).
 - Vulnerability identification – to map findings from enumeration and vulnerability scanning (whether using dedicated vulnerability scanners like OpenVAS or using Nmap’s vulnerability detection scripts) to known CVEs, misconfigurations, and weaknesses.
 
 #### Passive vs active discovery techniques
 
-Both passive and active scanning and enumeration techniques exist. Passive techniques involve no direct contact with the target, resulting in very low detection risk. However, they are usually slower and less precise, making them best suited for early reconnaissance, compliance testing, or situations where avoiding alerts is critical. Active techniques, by contrast, send direct probes to the target, which carries a high risk of detection. They are faster and produce highly detailed results, making them ideal for post‑reconnaissance validation and comprehensive deep‑dive testing. 
+Both passive and active scanning and enumeration techniques exist. Passive techniques involve no direct contact with the target, resulting in very low detection risk. However, passive techniques are usually slower and less precise, making them best suited for early reconnaissance, compliance testing, or situations where avoiding alerts is critical. Active techniques, by contrast, send direct probes to the target, which carries a high risk of detection. Active techniques are faster and produce highly detailed results, making them ideal for post‑reconnaissance validation and comprehensive deep‑dive testing. 
 
 Key scanning activities include network scanning (host discovery), port scanning, and vulnerability scanning. Common enumeration techniques include banner grabbing, SMB enumeration, NetBIOS enumeration, SNMP enumeration, and using protocols like LDAP, NTP, and SMTP.
 

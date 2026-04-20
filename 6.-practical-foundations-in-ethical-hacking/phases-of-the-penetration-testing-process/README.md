@@ -187,7 +187,7 @@ The command outputs a list of open ports (limited to the top 100) on live hosts 
 
 #### Host discovery
 
-Nmap is used to discover live hosts on a network and then probe those hosts to identify which ports are open (listening), closed, or filtered. Nmap sends the four probes (ICMP echo, SYN to 443, ACK to 80, ICMP timestamp request) to identify live hosts. Use `-sn` to perform a ping sweep (no port scan). 
+Nmap is used to discover live hosts on a network and then probe those hosts to identify which ports are open (listening), closed, or filtered. Nmap sends the four probes (ICMP echo, SYN to 443, ACK to 80, ICMP timestamp request) to identify live hosts. Use `-sn` to perform a ping sweep with no port scan. 
 
 ```bash
 nmap -sn <target>
@@ -197,11 +197,11 @@ For example, running `nmap -sn 192.168.1.0/24` performs a ping sweep (no port
 
 **Syntax Explanation**
 
-| Part             | Meaning                                                                                                                                                                                                                   |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `nmap`           | The command-line network scanning tool.                                                                                                                                                                                   |
-| `-sn`            | **Ping scan (no port scan)**. Sends ICMP echo requests, TCP SYN to port 443, TCP ACK to port 80, and ICMP timestamp requests to determine **which hosts are online**. Does **not** probe any ports beyond this discovery. |
-| `192.168.1.0/24` | Target network in CIDR notation. `/24` means a subnet mask of `255.255.255.0`, so addresses from `192.168.1.1` to `192.168.1.254` are scanned.                                                                            |
+| Part             | Meaning                                                                                                                                                                                                               |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `nmap`           | The command-line network scanning tool.                                                                                                                                                                               |
+| `-sn`            | **Ping scan (no port scan)**. Sends ICMP echo requests, TCP SYN to port 443, TCP ACK to port 80, and ICMP timestamp requests to determine **which hosts are online**. Does not probe any ports beyond this discovery. |
+| `192.168.1.0/24` | Target network in CIDR notation. `/24` means a subnet mask of `255.255.255.0`, so addresses from `192.168.1.1` to `192.168.1.254` are scanned.                                                                        |
 
 Nmap sends an ICMP echo request to a target host to check connectivity. If an ICMP echo reply is received, this confirms the host is live. Nmap sends a TCP SYN to port 443 on the target host. If it receives a SYN‑ACK, it can be assumed that the port is open. However, `-sn` does not care whether port 443 is open – it only uses the response (SYN‑ACK or RST) to infer that the host is alive. A RST (if port is closed) still confirms the host exists.
 

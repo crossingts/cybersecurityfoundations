@@ -218,7 +218,7 @@ If it identifies a live host, Nmap proceeds to identify open ports:
 
 **Port Scanning Example 1:** 
 
-`nmap -p22 192.168.1.1` scans to determine whether port 22 is open, closed, or filtered. It does **not** retrieve the **banner** or version string. At this stage, running services are **inferred** by port number (e.g., port 22 suggests SSH), but not confirmed.
+`nmap -p22 192.168.1.1` scans to determine whether port 22 is open, closed, or filtered. It does not retrieve the banner or version string. At this stage, running services are inferred by port number (e.g., port 22 suggests SSH), but not confirmed.
 
 **Port scanning Example 2:**
 
@@ -250,9 +250,9 @@ The target sends a `RST` packet. This means the host exists and the packet rea
 
 #### Service and version detection (basic enumeration)
 
-After port scanning finds open ports, version detection (`-sV`) actively probes those ports to **confirm the actual service type** (e.g., SSH vs a custom service on port 22) and extract the **software name and version number** (e.g., `OpenSSH 8.9p1`).
+After port scanning finds open ports, version detection (`-sV`) would actively probes those ports to **confirm the actual service type** (e.g., SSH vs a custom service on port 22) and extract the **software name and version number** (e.g., `OpenSSH 8.9p1`).
 
-`-sV` (service/version scanning) scans the application layer. Service detection (often called service fingerprinting) **confirms** what service is running on open ports (e.g., SSH, but also which SSH daemon, e.g., OpenSSH, and optionally its version). This is part of `-sV` in Nmap. **Version detection** is the part of `-sV` that extracts the specific version number (e.g., OpenSSH 8.2p1). This may also reveal **hints** about the underlying operating system, though full **OS fingerprinting** is a separate technique.
+`-sV` (service/version scanning) scans the application layer. Service detection (often called service fingerprinting) confirms what service is running on open ports (e.g., SSH, but also which SSH daemon, e.g., OpenSSH, and optionally its version). `-sV` extracts the specific version number (e.g., OpenSSH 8.2p1). This may also reveal hints about the underlying operating system, though full OS fingerprinting is a separate technique.
 
 **Service and Version Detection Example 1:**
 
@@ -262,7 +262,7 @@ On running `nmap -sV -p22 192.168.1.1`:
 2. **If the host responds** (any reply), Nmap then scans port 22 to check if it is open.
 3. **If port 22 is open**, `-sV` performs version detection to identify the service and version (e.g., SSH, OpenSSH_8.2p1).
 
-`-sV` performs its own full TCP handshake or application‑layer probe (some services, e.g., HTTP: `GET /`, require Nmap to send data first) for each open port to elicit a banner or response from the service, regardless of whether the preceding port scan used `-sS` (SYN) or `-sT` (TCP connect), i.e., whether -sS or -sT is used for the port scanning.
+`-sV` performs its own full TCP handshake or application‑layer probe (some services, e.g., HTTP: `GET /`, require Nmap to send data first) for each open port to elicit a banner or response from the service, regardless of whether the preceding port scan used `-sS` (SYN) or `-sT` (TCP connect).
 
 For TCP services like SSH, `-sV` completes a full three‑way handshake (SYN, SYN‑ACK, ACK). Once the connection is established, Nmap reads the banner (if the server sends one immediately, as SSH does) or sends its own probe. For **UDP** or **non‑TCP** services, Nmap sends custom probes without a connection handshake.
 

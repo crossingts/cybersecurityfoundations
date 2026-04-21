@@ -499,7 +499,7 @@ Next, we’ll go over some of the basics on escalating your current privilege le
 
 ### Maintaining access
 
-After successfully gaining initial access, the attacker (or ethical hacker) must ensure they can return to the compromised system later, especially if the target might be rebooted, patched, or investigated. The goal of maintaining access is to establish persistence – a reliable, often stealthy foothold that survives reboots and routine system changes.
+After successfully gaining initial access, the attacker (or penetration tester) must ensure they can return to the compromised system later, especially if the target might be rebooted, patched, or investigated. The goal of maintaining access is to establish persistence – a reliable, often stealthy foothold that survives reboots and routine system changes.
 
 Attackers leave backdoors in compromised systems to retain future access, particularly if the machine is turned into a zombie (used to launch further attacks) or used for ongoing intelligence gathering—for example, placing a sniffer on the compromised host to monitor traffic on a specific subnet. Maintaining access can be achieved through Trojans, rootkits, run keys, cron jobs, web shells, etc.
 
@@ -534,7 +534,7 @@ Maintaining access is a post‑exploitation activity that requires balancing rel
 
 ### Covering tracks
 
-In the covering tracks phase of the ethical hacking process, attackers attempt to conceal their presence on compromised machines to avoid detection. This phase is critical because forensic analysis or routine auditing could reveal the intrusion, jeopardizing the test or real attack.
+In the covering tracks phase of the penetration testing process, testers attempt to conceal their presence on compromised machines to avoid detection. This phase is critical because forensic analysis or routine auditing could reveal the intrusion, jeopardizing the test or real attack.
 
 To cover their tracks, attackers remove or modify log files, hide files using hidden attributes or directories, and use tunneling protocols to communicate with compromised systems. If logging is enabled and monitored (which is often not the case), log entries can reveal attacks. Completely clearing a log file is itself a red flag to an attentive administrator; selective editing is a better approach. Corrupting the log file is another effective tactic—while an entirely empty log suggests an attack, corrupted files are common and administrators rarely attempt to repair them. Ultimately, this phase distinguishes skilled penetration testers from novices (Walker, 2012).
 

@@ -488,14 +488,14 @@ Next, we’ll go over some of the basics on escalating your current privilege le
 
 **1. Password cracking** – Obtaining the password of an administrator or root account should be your primary aim. This may involve brute‑forcing, dictionary attacks, or extracting hashes and cracking them offline.
 
-**2. Exploiting vulnerabilities** – Take advantage of unpatched security flaws in the operating system or applications. In addition to running vulnerability scanners (e.g., OpenVAS, Nessus), you should stay aware of recently disclosed vulnerabilities through public sources:
+**2. Exploiting vulnerabilities** – Taking advantage of unpatched security flaws in the operating system or applications. In addition to running vulnerability scanners (e.g., OpenVAS, Nessus), you should stay aware of recently disclosed vulnerabilities through public sources:
 
 - **CVE Details (Common Vulnerabilities and Exposures)** – A dictionary of publicly known security vulnerabilities.
 - **Exploit-DB** – A repository of actual exploit code for specific vulnerabilities.
 - **Vendor Security Advisories** – Official notices about patches from Microsoft, Apple, Linux distributors, etc.
 - **Full Disclosure Mailing Lists** – Where researchers publish zero‑day or newly patched vulnerabilities.
 
-**3. Using exploitation frameworks** – Tools like Metasploit can automate the process of selecting an exploit and payload. You enter the target’s IP address and port, choose an exploit, add a payload, and the framework handles the rest. Metasploit has a free version (Framework) and a commercial version (Metasploit Pro). It will be discussed in more depth later in this book.
+**3. Using exploitation frameworks** – Using tools like Metasploit that can automate the process of selecting an exploit and payload. You enter the target’s IP address and port, choose an exploit, add a payload, and the framework handles the rest. Metasploit has a free version (Metasploit Framework) and a commercial version (Metasploit Pro).
 
 **4. Social engineering** – Tricking users into executing malicious code remains highly effective. For example, you can send an email with a malicious attachment (e.g., a PDF crafted to exploit an unpatched Adobe Reader flaw) and ask the user to open it. More often than not, they will.
 
@@ -503,7 +503,7 @@ Next, we’ll go over some of the basics on escalating your current privilege le
 
 After successfully gaining initial access, the attacker (or ethical hacker) must ensure they can return to the compromised system later, especially if the target might be rebooted, patched, or investigated. The goal of maintaining access is to establish persistence – a reliable, often stealthy foothold that survives reboots and routine system changes.
 
-Attackers leave back doors in compromised systems to retain future access, particularly if the machine is turned into a zombie (used to launch further attacks) or used for ongoing intelligence gathering—for example, placing a sniffer on the compromised host to monitor traffic on a specific subnet. Maintaining access can be achieved through Trojans, rootkits, or various other techniques.
+Attackers leave backdoors in compromised systems to retain future access, particularly if the machine is turned into a zombie (used to launch further attacks) or used for ongoing intelligence gathering—for example, placing a sniffer on the compromised host to monitor traffic on a specific subnet. Maintaining access can be achieved through Trojans, rootkits, and various other techniques.
 
 **Common Persistence Techniques**
 

@@ -195,7 +195,7 @@ nmap -sn <target>
 
 For example, running `nmap -sn 192.168.1.0/24` performs a ping sweep (no port scan) to discover which hosts are alive on the subnet `192.168.1.0/24`. Any response (including a RST) confirms the host is alive.
 
-**Syntax explanation for `nmap -sn 192.168.1.0/24`**
+**Syntax explanation for `nmap -sn 192.168.1.0/24`:**
 
 | Part             | Meaning                                                                                                                                                                                                               |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -226,7 +226,7 @@ If it identifies a live host, Nmap proceeds to identify open ports:
 
 Here’s how Nmap distinguishes between a listening (open), filtered, and closed port.
 
-1. Listening (open) port
+**1. Listening (open) port**
 
 A port is considered open (listening) if the target machine actively responds to a connection attempt in a way that indicates acceptance.
 
@@ -235,14 +235,14 @@ A port is considered open (listening) if the target machine actively responds 
     - Nmap immediately replies with a `RST` to tear down the half-open connection (making the scan stealthy).
 - TCP connect scan (`-sT`) : Nmap completes the full three-way handshake (`SYN` → `SYN-ACK` → `ACK`), then closes the connection with `RST` or `FIN`.
 
-2. Filtered port
+**2. Filtered port**
 
 A port is marked filtered when Nmap receives no response or an ICMP error message that suggests a firewall or packet filter is blocking the probe.
 
 - No response (timeout): Nmap sends the SYN packet but never receives a reply (no SYN-ACK or not even a `RST`). After retransmissions (default 10 seconds), it assumes the packet was dropped by a firewall. This is the most common indication of a filtered port.
 - ICMP unreachable (type 3, code 0, 1, 2, 3, 9, 10, 13): The target network or an intermediate firewall returns an ICMP error like “administratively prohibited” (code 13) or “host unreachable” (code 1). This also results in `filtered` state.
 
-3. Closed port (not listening, but no filter)
+**3. Closed port (not listening, but no filter)**
 
 The target sends a `RST` packet. This means the host exists and the packet reached it, but no process is listening. Nmap marks this as `closed`, not `filtered`.
 
@@ -291,7 +291,7 @@ On running `nmap -sV -p- 192.168.1.10`:
 
 Nmap performs a comprehensive scan of the single host 192.168.1.10.
 
-**Syntax Explanation**
+**Syntax explanation for `nmap -sV -p- 192.168.1.10`:**
 
 | Part           | Meaning                                                                                                                                                                                                                                                                                                                 |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

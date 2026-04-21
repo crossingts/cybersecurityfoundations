@@ -503,7 +503,7 @@ Next, we’ll go over some of the basics on escalating your current privilege le
 
 After successfully gaining initial access, the attacker (or ethical hacker) must ensure they can return to the compromised system later, especially if the target might be rebooted, patched, or investigated. The goal of maintaining access is to establish persistence – a reliable, often stealthy foothold that survives reboots and routine system changes.
 
-Attackers leave backdoors in compromised systems to retain future access, particularly if the machine is turned into a zombie (used to launch further attacks) or used for ongoing intelligence gathering—for example, placing a sniffer on the compromised host to monitor traffic on a specific subnet. Maintaining access can be achieved through Trojans, rootkits, and various other techniques.
+Attackers leave backdoors in compromised systems to retain future access, particularly if the machine is turned into a zombie (used to launch further attacks) or used for ongoing intelligence gathering—for example, placing a sniffer on the compromised host to monitor traffic on a specific subnet. Maintaining access can be achieved through Trojans, rootkits, run keys, cron jobs, web shells, etc.
 
 **Common Persistence Techniques**
 
@@ -568,9 +568,9 @@ The following table, Pen Source/Free Tools—for Network Penetration Testing (Sh
 
 The penetration test report is the primary deliverable of the entire engagement. As Velu (2013, p. 7) notes, “primarily, the pentesters and their work is judged by their report.” A well‑structured report communicates findings clearly to both management and technical staff, and provides and justifies actionable recommendations.
 
-Typical vulnerability management software collects scan results from target systems and presents them in a comprehensive dashboard. Such software can build trends, sort findings by criticality, and track additional records (e.g., the percentage of computers with outdated software or weak password policies). The reporting component can generate compliance reports against widely used standards such as PCI DSS or ISO 27001, as well as against corporate policies. Dedicated scanners correlate findings, assign risk ratings, and identify false positives. Some vendors (e.g., Nexpose) bundle vulnerability management software with their scanners, while others (e.g., Nessus) sell it separately.
+Typical vulnerability management software collects scan results from target systems and presents them in a comprehensive dashboard. Such software can build trends, sort findings by criticality, and track additional records (e.g., the percentage of computers with outdated software or weak password policies). The reporting component can generate compliance reports against widely used standards such as PCI DSS and ISO 27001, as well as against corporate policies. Dedicated scanners correlate findings, assign risk ratings, and identify false positives. Some vendors bundle vulnerability management software with their scanners, while others sell it separately.
 
-The report typically contains two main sections:
+The penetration test report typically contains two main sections:
 
 - **Executive Summary** – intended for management, focusing on business risk, overall security posture, and high‑level recommendations.
 - **Technical Report** – intended for IT staff, containing detailed findings, exploit evidence, root cause analysis, and step‑by‑step remediation guidance.

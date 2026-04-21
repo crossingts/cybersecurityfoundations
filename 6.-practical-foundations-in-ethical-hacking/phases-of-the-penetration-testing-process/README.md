@@ -538,7 +538,7 @@ In the covering tracks phase of the ethical hacking process, attackers attempt t
 
 To cover their tracks, attackers remove or modify log files, hide files using hidden attributes or directories, and use tunneling protocols to communicate with compromised systems. If logging is enabled and monitored (which is often not the case), log entries can reveal attacks. Completely clearing a log file is itself a red flag to an attentive administrator; selective editing is a better approach. Corrupting the log file is another effective tactic—while an entirely empty log suggests an attack, corrupted files are common and administrators rarely attempt to repair them. Ultimately, this phase distinguishes skilled penetration testers from novices (Walker, 2012).
 
-**Common Techniques For Covering Tracks**
+**Common Techniques for Covering Tracks**
 
 |Technique|Description|Examples|
 |---|---|---|

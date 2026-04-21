@@ -401,11 +401,11 @@ whatweb http://192.168.1.10
 |HTTP (80/443)|Open port, version detected|`http-enum`, `gobuster`, `whatweb`|Hidden directories, CMS, server headers|
 |SMTP (25)|Open port, `VRFY` support|`smtp-user-enum`|Valid user accounts|
 
-These examples show how enumeration transforms a list of open ports into actionable intelligence – exactly the step between “what’s alive” and “what can I exploit.” 
+These examples show how enumeration transforms a list of open ports into actionable intelligence – the step between “what’s alive” and “what can I exploit.” 
 
 #### Vulnerability scanning 
 
-Vulnerability scanning can be performed using Nmap’s NSE vulnerability detection scripts, or using dedicated vulnerability scanners such as OpenVAS. Vulnerability scanning can be run after port scanning (fast) or after enumeration (stealthier but slower). It is typically performed after enumeration, but some testers run it concurrently with enumeration. Running it after enumeration allows you to use any discovered credentials for authenticated scans, which yield more accurate results.
+Vulnerability scanning can be performed using Nmap’s NSE vulnerability detection scripts, or using dedicated vulnerability scanners such as OpenVAS. Vulnerability scanning can be run after port scanning (faster) or after enumeration (stealthier but slower). It is typically performed after enumeration, but some testers run it concurrently with enumeration. Running it after enumeration allows you to use any discovered credentials for authenticated scans.
 
 Although Nmap’s NSE scripts can send probes for specific CVEs, a specialized vulnerability scanner like OpenVAS is commonly used to discover known vulnerabilities. A vulnerability scanner “actively communicates with the target system, sends the malicious packets and analyses the results, which can then be exported to PDF, HTML, CSV and other formats” (Rasskazov, 2013, p. 58). 
 
@@ -419,7 +419,7 @@ Enumeration may or may not find a clear path. If enumeration reveals an easy wi
 
 #### Vulnerability identification
 
-Vulnerability identification is the process of synthesizing findings from multiple sources to pinpoint weaknesses that can be exploited. These sources include service/version detection (via banner grabbing), enumeration of misconfigurations (e.g., via Nmap’s enumeration scripts), lightweight vulnerability checks (e.g., via Nmap's vulnerability detection scripts), and full‑featured dedicated vulnerability scanners. In practice, vulnerability identification is not a separate phase but an ongoing analysis that happens as you gather information. 
+Vulnerability identification is the process of synthesizing findings from multiple sources to pinpoint weaknesses that can be exploited. These sources include service/version detection (e.g., via banner grabbing), enumeration of misconfigurations (e.g., via Nmap’s enumeration scripts), lightweight vulnerability checks (e.g., via Nmap's vulnerability detection scripts), and full‑featured vulnerability scans. In practice, vulnerability identification is not a separate phase but an ongoing analysis that happens as you gather information. 
 
 Vulnerability assessment, as a broader discipline, refers to the systematic process of identifying, classifying, and prioritizing vulnerabilities. It can be performed manually (by analyzing service versions, misconfigurations, and enumeration results) or with automated tools (OpenVAS, Nessus, etc.) that scan for known CVEs, missing patches, and misconfigurations beyond what enumeration revealed. This step produces a prioritized list of weaknesses. Vulnerability identification is the core output of that assessment.
 
@@ -447,13 +447,13 @@ Nmap includes NSE scripts that actively probe the running services and software 
 - `http-vuln-cve2017-5638` – checks for Apache Struts2 RCE
 - `ssl-heartbleed` – tests for the Heartbleed vulnerability
 
-NSE vulnerability scripts are a form of lightweight vulnerability scanning. They are similar to what dedicated vulnerability scanners (OpenVAS, Nessus) do, but with important differences:
+NSE vulnerability scripts are a form of lightweight vulnerability scanning. They are similar to what dedicated vulnerability scanners (OpenVAS, Nessus, etc.) do, but with important differences:
 
 - **Scope:** Nmap has a limited set of vulnerability checks; dedicated scanners have thousands of plugins.
 - **Depth:** Dedicated scanners can perform authenticated scans, configuration audits, and more nuanced checks that Nmap does not.
 - **Reporting:** Nmap outputs simple text; dedicated scanners provide risk ratings, remediation steps, and compliance reports.
 
-Thus, Nmap can perform targeted, lightweight vulnerability scans, but it is not a replacement for tools like Nessus or OpenVAS. It is best used for quick checks during an assessment, especially for high-profile vulnerabilities.
+Thus, Nmap can perform targeted, lightweight vulnerability scans, but it is not a replacement for tools like OpenVAS or Nessus. It is best used for quick checks during an assessment, especially for high-profile vulnerabilities.
 
 Some NSE scripts go beyond detection and can actually exploit a vulnerability to gain access. For example, `http-shellshock` can execute commands on a vulnerable server; `ftp-brute` can perform brute‑force login attempts. While Nmap is not a dedicated exploitation framework (like Metasploit), it can perform limited exploitation. 
 

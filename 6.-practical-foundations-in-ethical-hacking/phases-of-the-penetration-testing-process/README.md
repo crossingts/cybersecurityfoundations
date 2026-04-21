@@ -120,22 +120,22 @@ The enumeration techniques banner grabbing, SMB enumeration, NetBIOS enumeration
 
 Here’s a classification based on how these techniques are typically applied during a penetration test.
 
-| Category        | Technique                  | Type    | Example Tools                                                             | Notes                                                                                                                |
-| --------------- | -------------------------- | ------- | ------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Scanning**    | Network scanning           | Active  | `nmap`, `masscan`, `arp-scan`                                             | Sending probes (ICMP, ARP, TCP SYN/ACK) to discover live hosts.                                                      |
-| **Scanning**    | Port scanning              | Active  | `nmap`, `masscan`                                                         | Directly connecting to ports (SYN, Connect, UDP scans) to determine open/closed/filtered states.                     |
-| **Scanning**    | Vulnerability scanning     | Active  | Nessus, OpenVAS, `nmap` (vuln scripts)                                    | Sending specific payloads or checks to identify known vulnerabilities.                                               |
-| **Scanning**    | Passive network discovery  | Passive | `p0f`, Wireshark                                                          | Analyzing existing network traffic to infer live hosts, OS, and network topology without sending probes.             |
-| **Scanning**    | Passive OS fingerprinting  | Passive | `p0f`                                                                     | Examining TCP/IP stack characteristics (TTL, window size, options) from captured traffic to identify OS.             |
-| **Enumeration** | Banner grabbing            | Active  | `nmap -sV`, `netcat`, `telnet`                                            | Connecting to a service to read its welcome banner.                                                                  |
-| **Enumeration** | Banner grabbing (passive)  | Passive | Wireshark, `tcpdump`                                                      | Capturing banners from unencrypted traffic already on the wire (e.g., FTP, SMTP, HTTP).                              |
-| **Enumeration** | NetBIOS enumeration        | Active  | `nbtscan`, `nmblookup`, Nmap NSE (`nbstat.nse`)                           | Sending queries to NetBIOS Name Service (UDP 137) to list hosts, names, and MAC addresses.                           |
-| **Enumeration** | SMB enumeration            | Active  | `enum4linux`, `smbclient`, Nmap NSE (`smb-enum-shares`, `smb-enum-users`) | Querying SMB (TCP 445) to list shares, users, groups, and policies.                                                  |
-| **Enumeration** | SNMP enumeration           | Active  | `snmpwalk`, `snmp-check`, Nmap NSE (`snmp-info`)                          | Using SNMP queries (UDP 161) to walk MIBs and extract system information. Often relies on default community strings. |
-| **Enumeration** | LDAP enumeration           | Active  | `ldapsearch`, `adidnsdump`, Nmap NSE (`ldap-search`)                      | Querying LDAP directories (TCP 389 / 636) to retrieve user objects, groups, OUs, and email addresses.                |
-| **Enumeration** | NTP enumeration            | Active  | `ntpdc`, `ntpq`, Nmap NSE (`ntp-monlist`)                                 | Using NTP commands (UDP 123) to query monlist, peers, and system information.                                        |
-| **Enumeration** | SMTP enumeration           | Active  | `smtp-user-enum`, Nmap NSE (`smtp-enum-users`)                            | Using `VRFY`, `EXPN`, or `RCPT TO` commands (TCP 25) to validate user accounts.                                      |
-| **Enumeration** | Credential / data sniffing | Passive | Wireshark, `tcpdump`, `dsniff`                                            | Capturing unencrypted credentials (e.g., HTTP) or app data from network traffic without interaction.                 |
+| Category        | Technique                  | Type    | Example Tools                                                             | Notes                                                                                                                           |
+| --------------- | -------------------------- | ------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **Scanning**    | Network scanning           | Active  | `nmap`, `masscan`, `arp-scan`                                             | Sending probes (ICMP, ARP, TCP SYN/ACK) to discover live hosts.                                                                 |
+| **Scanning**    | Port scanning              | Active  | `nmap`, `masscan`                                                         | Directly connecting to ports (SYN, Connect, UDP scans) to determine open/closed/filtered states.                                |
+| **Scanning**    | Vulnerability scanning     | Active  | Nessus, OpenVAS, `nmap` (vuln scripts)                                    | Sending specific payloads or checks to identify known vulnerabilities.                                                          |
+| **Scanning**    | Passive network discovery  | Passive | `p0f`, Wireshark                                                          | Analyzing existing network traffic to infer live hosts, OS, and network topology without sending probes.                        |
+| **Scanning**    | Passive OS fingerprinting  | Passive | `p0f`                                                                     | Examining TCP/IP stack characteristics (TTL, window size, options) from captured traffic to identify OS.                        |
+| **Enumeration** | Banner grabbing            | Active  | `nmap -sV`, `netcat`, `telnet`                                            | Connecting to a service to read its welcome banner.                                                                             |
+| **Enumeration** | Banner grabbing (passive)  | Passive | Wireshark, `tcpdump`                                                      | Capturing banners from unencrypted traffic already on the wire (e.g., FTP, SMTP, HTTP).                                         |
+| **Enumeration** | NetBIOS enumeration        | Active  | `nbtscan`, `nmblookup`, Nmap NSE (`nbstat.nse`)                           | Sending queries to NetBIOS Name Service (UDP 137) to list hosts, names, and MAC addresses.                                      |
+| **Enumeration** | SMB enumeration            | Active  | `enum4linux`, `smbclient`, Nmap NSE (`smb-enum-shares`, `smb-enum-users`) | Querying SMB (TCP 445) to list shares, users, groups, and policies.                                                             |
+| **Enumeration** | SNMP enumeration           | Active  | `snmpwalk`, `snmp-check`, Nmap NSE (`snmp-info`)                          | Using SNMP queries (UDP 161) to walk MIBs and extract system information. Often relies on default community strings.            |
+| **Enumeration** | LDAP enumeration           | Active  | `ldapsearch`, `adidnsdump`, Nmap NSE (`ldap-search`)                      | Querying LDAP directories (TCP 389 / 636) to retrieve user objects, groups, OUs, and email addresses.                           |
+| **Enumeration** | NTP enumeration            | Active  | `ntpdc`, `ntpq`, Nmap NSE (`ntp-monlist`)                                 | Using NTP commands (UDP 123) to query monlist, peers, and system information.                                                   |
+| **Enumeration** | SMTP enumeration           | Active  | `smtp-user-enum`, Nmap NSE (`smtp-enum-users`)                            | Using `VRFY`, `EXPN`, or `RCPT TO` commands (TCP 25) to validate user accounts.                                                 |
+| **Enumeration** | Credential / data sniffing | Passive | Wireshark, `tcpdump`, `dsniff`                                            | Capturing unencrypted credentials (e.g., FTP, Telnet, HTTP Basic) or application data from network traffic without interaction. |
 
 NSE stands for Nmap Scripting Engine, which is the built‑in framework within Nmap for writing and running scripts. All scripts that come with Nmap (or are written for it) are NSE scripts.
 
@@ -387,7 +387,7 @@ whatweb http://192.168.1.10
 - Server: `nginx/1.18.0`
 - CMS: `WordPress 5.8` (from `/wp-content/`)
 
-**Summary Table**
+**Enumeration Techniques Summary Table**
 
 |Service (Port)|Scan Finding|Enumeration Action|Extracted Data|
 |---|---|---|---|

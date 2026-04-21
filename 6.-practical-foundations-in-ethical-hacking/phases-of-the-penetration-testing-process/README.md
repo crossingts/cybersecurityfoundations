@@ -48,7 +48,7 @@ Typical penetration testing activities include:
 3. Enumeration – extraction of information from discovered services (user accounts, shares, SNMP data, etc.). This may uncover weak configurations that could be exploited immediately (e.g., default credentials, anonymous access).
 4. Vulnerability scanning (optional) – using tools like OpenVAS and Nessus to identify known CVEs, missing patches, and misconfigurations. Can be run after port scanning (faster) or after enumeration (stealthier).
 5. Exploitation (gaining access and privilege escalation) – attempting to exploit the discovered weaknesses (whether from enumeration or vulnerability scanning) to gain access.
-6. Post‑Exploitation – maintaining access and covering tracks.
+6. Post‑exploitation – maintaining access and covering tracks.
 
 ### Reconnaissance
 
@@ -248,7 +248,7 @@ The target sends a `RST` packet. This means the host exists and the packet rea
 
 #### Service and version detection (basic enumeration)
 
-After port scanning finds open ports, version detection (`-sV`) would actively probes those ports to **confirm the actual service type** (e.g., SSH vs a custom service on port 22) and extract the **software name and version number** (e.g., `OpenSSH 8.9p1`).
+After port scanning finds open ports, version detection (`-sV`) would actively probe those ports to **confirm the actual service type** (e.g., SSH vs a custom service on port 22) and extract the **software name and version number** (e.g., `OpenSSH 8.9p1`).
 
 `-sV` (service/version scanning) scans the application layer. Service detection (often called service fingerprinting) confirms what service is running on open ports (e.g., SSH, but also which SSH daemon, e.g., OpenSSH, and optionally its version). `-sV` extracts the specific version number (e.g., OpenSSH 8.2p1). This may also reveal hints about the underlying operating system, though full OS fingerprinting is a separate technique.
 
@@ -476,7 +476,7 @@ The actual hacking—the penetration—occurs in the gaining access phase, whe
 
 In the enumeration phase, we successfully obtained user account information. But if the user account lacks administrator (root) privileges or access to interesting shares (network shares that contain valuable data or credentials, such as `C$` and `ADMIN$` in Windows SMB environments), escalating access privileges becomes necessary. After all, the goal of hacking is gaining access to data or services. An interesting share is any share that (a) contains sensitive data, (b) allows write access (for planting backdoors or ransomware), or (c) can be used to pivot (e.g., a share mapped to a file server that also hosts scripts executed by other machines).
 
-In a penetration test, once initial access is gained (e.g., through a compromised user account), two related but distinct concepts come into play: **privilege escalation and lateral movement**. Privilege escalation refers to increasing one’s level of access on the same compromised system – for example, moving from a standard user to `SYSTEM` (Windows) or `root` (Linux). Lateral movement, by contrast, involves moving from the initially compromised system to other systems on the network, typically using the same or similar privileges (e.g., using a captured password hash to log into another workstation). 
+In a penetration test, once initial access is gained (e.g., through a compromised user account), two related but distinct concepts come into play: **privilege escalation and lateral movement**. Privilege escalation refers to increasing one’s level of access on the same compromised system – for example, moving from a standard user to `SYSTEM` (Windows) or `root` (Linux). Lateral movement, by contrast, involves moving from the initially compromised system to other systems on the network, typically using the same or similar privileges (e.g., using a captured password hash to log into another workstation).
 
 The two concepts are often chained together: a tester may escalate privileges on one machine to dump credentials, then use those credentials to move laterally to a more valuable target, where further privilege escalation might be required. Typical privilege escalation techniques include kernel exploits, service misconfigurations, sudo abuse, and DLL injection. Typical lateral movement techniques include pass‑the‑hash, RDP, PsExec, SSH key reuse, and scheduled tasks.
 

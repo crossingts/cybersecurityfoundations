@@ -43,12 +43,12 @@ For the purposes of this section, ethical hacking refers to the comprehensive pr
 
 Typical penetration testing activities include:
 
-1. **Reconnaissance** – predominantly passive information gathering.
-2. **Scanning** – active probing (e.g., Nmap) for host discovery, port scanning, and service/OS detection.
-3. **Enumeration** – extraction of information from discovered services (user accounts, shares, SNMP data, etc.). This may uncover weak configurations that could be exploited immediately (e.g., default credentials, anonymous access).
-4. **Vulnerability scanning (optional)** – using tools like OpenVAS and Nessus to identify known CVEs, missing patches, and misconfigurations. Can be run after port scanning (faster) or after enumeration (stealthier).
-5. **Exploitation** (gaining access and privilege escalation) – attempting to exploit the discovered weaknesses (whether from enumeration or vulnerability scanning) to gain access.
-6. **Post‑Exploitation** – maintaining access and covering tracks.
+1. Reconnaissance – predominantly passive information gathering.
+2. Scanning – active probing (e.g., Nmap) for host discovery, port scanning, and service/OS detection.
+3. Enumeration – extraction of information from discovered services (user accounts, shares, SNMP data, etc.). This may uncover weak configurations that could be exploited immediately (e.g., default credentials, anonymous access).
+4. Vulnerability scanning (optional) – using tools like OpenVAS and Nessus to identify known CVEs, missing patches, and misconfigurations. Can be run after port scanning (faster) or after enumeration (stealthier).
+5. Exploitation (gaining access and privilege escalation) – attempting to exploit the discovered weaknesses (whether from enumeration or vulnerability scanning) to gain access.
+6. Post‑Exploitation – maintaining access and covering tracks.
 
 ### Reconnaissance
 
@@ -137,7 +137,7 @@ Here’s a classification based on how these techniques are typically applied du
 | **Enumeration** | SMTP enumeration           | Active  | `smtp-user-enum`, Nmap NSE (`smtp-enum-users`)                            | Using `VRFY`, `EXPN`, or `RCPT TO` commands (TCP 25) to validate user accounts.                                                 |
 | **Enumeration** | Credential / data sniffing | Passive | Wireshark, `tcpdump`, `dsniff`                                            | Capturing unencrypted credentials (e.g., FTP, Telnet, HTTP Basic) or application data from network traffic without interaction. |
 
-**NSE** stands for **Nmap Scripting Engine**, which is the built‑in framework within Nmap for writing and running scripts. All scripts that come with Nmap (or are written for it) are NSE scripts.
+NSE stands for Nmap Scripting Engine, which is the built‑in framework within Nmap for writing and running scripts. All scripts that come with Nmap (or are written for it) are NSE scripts.
 
 Passive discovery usually occurs earlier, during the reconnaissance phase, and focuses on information already publicly available or observable without direct interaction.
 
@@ -161,16 +161,16 @@ nmap -F <target>
 
 **Command syntax:**
 
-- **`nmap`** – the command-line tool used for discovering live hosts and identifying open ports/services.
-- **`-F`** – stands for fast mode. Nmap scans only the top 100 most frequently used ports (e.g., 22/SSH, 80/HTTP, 443/HTTPS, 3389/RDP, etc.), rather than scanning all 65,535 ports. This makes the scan much quicker, which is useful for a preliminary reconnaissance.
-- **`<target>`** – the target you specify. This can be an IP address (e.g., `192.168.1.10`), a hostname (e.g., `example.com`), or a network range (e.g., `192.168.1.0/24`).
+- `nmap` – the command-line tool used for discovering live hosts and identifying open ports/services.
+- `-F` – stands for fast mode. Nmap scans only the top 100 most frequently used ports (e.g., 22/SSH, 80/HTTP, 443/HTTPS, 3389/RDP, etc.), rather than scanning all 65,535 ports. This makes the scan much quicker, which is useful for a preliminary reconnaissance.
+- `<target>` – the target you specify. This can be an IP address (e.g., `192.168.1.10`), a hostname (e.g., `example.com`), or a network range (e.g., `192.168.1.0/24`).
 
-When you run `nmap -F <target>`, Nmap first performs **host discovery** using four probes:
+When you run `nmap -F <target>`, Nmap first performs host discovery using four probes:
 
-- An **ICMP echo request** (ping)
-- A **TCP SYN to port 443** (HTTPS)
-- A **TCP ACK to port 80** (HTTP)
-- An **ICMP timestamp request** (if the user has appropriate privileges)
+- An ICMP echo request (ping)
+- A TCP SYN to port 443 (HTTPS)
+- A TCP ACK to port 80 (HTTP)
+- An ICMP timestamp request (if the user has appropriate privileges)
 
 If any probe receives a response, the host is considered alive. Then Nmap performs a **port scan** (by default, a SYN scan `-sS` if run with root privileges, or a TCP connect scan `-sT` if run without root privileges) on the top 100 ports to identify which ports are open. 
 
@@ -213,8 +213,8 @@ Port scanning refers to probing each port (sending probing packets to each port)
 
 If it identifies a live host, Nmap proceeds to identify open ports:
 
-- **SYN scan** (`-sS`, default with root privileges) sends a SYN packet. An open port replies with SYN‑ACK; Nmap then sends RST to tear down the half‑open connection. This is stealthy and fast.
-- **TCP connect scan** (`-sT`, default without root privileges) completes the full three‑way handshake (SYN, SYN‑ACK, ACK) then closes the connection. Slower and more detectable.
+- SYN scan (`-sS`, default with root privileges) sends a SYN packet. An open port replies with SYN‑ACK; Nmap then sends RST to tear down the half‑open connection. This is stealthy and fast.
+- TCP connect scan (`-sT`, default without root privileges) completes the full three‑way handshake (SYN, SYN‑ACK, ACK) then closes the connection. Slower and more detectable.
 
 **Port Scanning Example 1:** 
 
@@ -230,19 +230,17 @@ Here’s how Nmap distinguishes between a listening (open), filtered, and clos
 
 A port is considered open (listening) if the target machine actively responds to a connection attempt in a way that indicates acceptance.
 
-- **SYN scan (`-sS`)** : Nmap sends a TCP packet with the SYN flag set.
-    
-    - **Expected response from an open port:** `SYN-ACK` (the target agrees to establish a connection).
+- SYN scan (`-sS`) : Nmap sends a TCP packet with the SYN flag set.
+    - Expected response from an open port: `SYN-ACK` (the target agrees to establish a connection).
     - Nmap immediately replies with a `RST` to tear down the half-open connection (making the scan stealthy).
-        
-- **TCP connect scan (`-sT`)** : Nmap completes the full three-way handshake (`SYN` → `SYN-ACK` → `ACK`), then closes the connection with `RST` or `FIN`.
+- TCP connect scan (`-sT`) : Nmap completes the full three-way handshake (`SYN` → `SYN-ACK` → `ACK`), then closes the connection with `RST` or `FIN`.
 
 2. Filtered port
 
 A port is marked filtered when Nmap receives no response or an ICMP error message that suggests a firewall or packet filter is blocking the probe.
 
-- **No response (timeout)**: Nmap sends the SYN packet but never receives a reply (no SYN-ACK or not even a `RST`). After retransmissions (default 10 seconds), it assumes the packet was dropped by a firewall. This is the most common indication of a filtered port.
-- **ICMP unreachable (type 3, code 0, 1, 2, 3, 9, 10, 13)**: The target network or an intermediate firewall returns an ICMP error like “administratively prohibited” (code 13) or “host unreachable” (code 1). This also results in `filtered` state.
+- No response (timeout): Nmap sends the SYN packet but never receives a reply (no SYN-ACK or not even a `RST`). After retransmissions (default 10 seconds), it assumes the packet was dropped by a firewall. This is the most common indication of a filtered port.
+- ICMP unreachable (type 3, code 0, 1, 2, 3, 9, 10, 13): The target network or an intermediate firewall returns an ICMP error like “administratively prohibited” (code 13) or “host unreachable” (code 1). This also results in `filtered` state.
 
 3. Closed port (not listening, but no filter)
 
@@ -258,13 +256,13 @@ After port scanning finds open ports, version detection (`-sV`) would actively p
 
 On running `nmap -sV -p22 192.168.1.1`:
 
-1. **Host discovery** – Nmap sends the four probes ICMP echo, SYN to 443, ACK to 80, and ICMP timestamp request to see if `192.168.1.1` is alive.
-2. **If the host responds** (any reply), Nmap then scans port 22 to check if it is open.
-3. **If port 22 is open**, `-sV` performs version detection to identify the service and version (e.g., SSH, OpenSSH_8.2p1).
+1. Host discovery – Nmap sends the four probes ICMP echo, SYN to 443, ACK to 80, and ICMP timestamp request to see if `192.168.1.1` is alive.
+2. If the host responds (any reply), Nmap then scans port 22 to check if it is open.
+3. If port 22 is open, `-sV` performs version detection to identify the service and version (e.g., SSH, OpenSSH_8.2p1).
 
 `-sV` performs its own full TCP handshake or application‑layer probe (some services, e.g., HTTP: `GET /`, require Nmap to send data first) for each open port to elicit a banner or response from the service, regardless of whether the preceding port scan used `-sS` (SYN) or `-sT` (TCP connect). For TCP services like SSH, `-sV` completes a full three‑way handshake (SYN, SYN‑ACK, ACK). Once the connection is established, Nmap reads the banner (if the server sends one immediately, as SSH does) or sends its own probe. For **UDP** or **non‑TCP** services, Nmap sends custom probes without a connection handshake.
 
-So, Nmap does a full TCP handshake to **elicit a banner** or response from the service, then:
+So, Nmap does a full TCP handshake to elicit a banner or response from the service, then:
 
 - Waits for a banner (if the service sends one).
 - Sends service‑specific probe strings (e.g., `SSH-` for SSH, `HEAD / HTTP/1.0\r\n\r\n` for HTTP, etc.)
@@ -306,8 +304,8 @@ On running `nmap -sV -p- 192.168.1.10`, Nmap sends the four probes (ICMP echo, S
 
 Implied in the command syntax `nmap -sV -p- <target>` is the existence of options (flags) -sS or -sT: 
 
-- If you run Nmap with **root/administrator privileges**, it uses the **SYN scan** (`-sS`).
-- If you run it **without privileges**, it falls back to the **TCP connect scan** (`-sT`).
+- If you run Nmap with root/administrator privileges, it uses the SYN scan (`-sS`).
+- If you run it without privileges, it falls back to the TCP connect scan (`-sT`).
 
 So the syntax can be made more explicit by adding `-sS` or `-sT`. For example:
 
@@ -321,7 +319,7 @@ If you request `-sS` without root, Nmap falls back to `-sT` and typically di
 
 #### OS fingerprinting
 
-The OS information derived from an SSH banner is only a hint (e.g., Ubuntu). For accurate OS detection, Nmap uses **TCP/IP stack fingerprinting** (`-O`). Nmap sends a series of crafted packets and analyzes responses (TCP window size, initial sequence numbers, IPID, etc.) to guess the operating system (e.g., `Linux 5.15`, `Windows 10`). This is a separate technique from banner grabbing.
+The OS information derived from an SSH banner is only a hint (e.g., Ubuntu). For accurate OS detection, Nmap uses TCP/IP stack fingerprinting (`-O`). Nmap sends a series of crafted packets and analyzes responses (TCP window size, initial sequence numbers, IPID, etc.) to guess the operating system (e.g., `Linux 5.15`, `Windows 10`). This is a separate technique from banner grabbing.
 
 #### Enumeration
 
@@ -411,11 +409,11 @@ Although Nmap’s NSE scripts can send probes for specific CVEs, a specialized v
 
 Enumeration may or may not find a clear path. If enumeration reveals an easy win (e.g., a service with a default admin password), a tester might skip straight to exploitation. However, in a thorough assessment, a vulnerability scan is still valuable because:
 
-- It uncovers **missing patches** and **CVEs** that are not detectable through manual enumeration.
-- It provides **documentation** (reports, risk ratings) needed for formal assessments.
-- It can be run **authenticated** using credentials gathered during enumeration, revealing even deeper vulnerabilities.
+- It uncovers missing patches and CVEs that are not detectable through manual enumeration.
+- It provides documentation (reports, risk ratings) needed for formal assessments.
+- It can be run authenticated using credentials gathered during enumeration, revealing even deeper vulnerabilities.
 
-**If enumeration does not uncover a vulnerability worth exploiting**, the vulnerability scanner becomes even more critical—it’s the primary method to identify technical vulnerabilities (e.g., unpatched software) that can provide an entry point.
+If enumeration does not uncover a vulnerability worth exploiting, the vulnerability scanner becomes even more critical—it’s the primary method to identify technical vulnerabilities (e.g., unpatched software) that can provide an entry point.
 
 #### Vulnerability identification
 
@@ -449,9 +447,9 @@ Nmap includes NSE scripts that actively probe the running services and software 
 
 NSE vulnerability scripts are a form of lightweight vulnerability scanning. They are similar to what dedicated vulnerability scanners (OpenVAS, Nessus, etc.) do, but with important differences:
 
-- **Scope:** Nmap has a limited set of vulnerability checks; dedicated scanners have thousands of plugins.
-- **Depth:** Dedicated scanners can perform authenticated scans, configuration audits, and more nuanced checks that Nmap does not.
-- **Reporting:** Nmap outputs simple text; dedicated scanners provide risk ratings, remediation steps, and compliance reports.
+- Scope: Nmap has a limited set of vulnerability checks; dedicated scanners have thousands of plugins.
+- Depth: Dedicated scanners can perform authenticated scans, configuration audits, and more nuanced checks that Nmap does not.
+- Reporting: Nmap outputs simple text; dedicated scanners provide risk ratings, remediation steps, and compliance reports.
 
 Thus, Nmap can perform targeted, lightweight vulnerability scans, but it is not a replacement for tools like OpenVAS or Nessus. It is best used for quick checks during an assessment, especially for high-profile vulnerabilities.
 
@@ -459,14 +457,14 @@ Some NSE scripts go beyond detection and can actually exploit a vulnerability to
 
 **Discovering vulnerabilities on target hosts using dedicated vulnerability scanners:**
 
-Tools like OpenVAS and Nessus perform comprehensive vulnerability scans by actively probing **target hosts, their open ports, running services, software versions, operating systems, and configurations**. They uncover missing patches, compliance violations, weak settings, and a wide range of CVEs that Nmap cannot detect. They provide prioritized reports with remediation guidance, making them essential for formal assessments.
+Tools like OpenVAS and Nessus perform comprehensive vulnerability scans by actively probing target hosts, their open ports, running services, software versions, operating systems, and configurations. They uncover missing patches, compliance violations, weak settings, and a wide range of CVEs that Nmap cannot detect. They provide prioritized reports with remediation guidance, making them essential for formal assessments.
 
 The tester analyzes all gathered information—service versions, enumerated misconfigurations, Nmap script results, and dedicated scanner outputs—to pinpoint weaknesses. For example:
 
-- **From service/version detection:** "OpenSSH 7.4" → known vulnerability CVE.
-- **From enumeration:** "SMB signing disabled" → misconfiguration.
-- **From Nmap vulnerability script:** `smb-vuln-ms17-010` reports "Windows host is missing critical patch" → EternalBlue vulnerability.
-- **From dedicated vulnerability scanner:** "Missing patch MS17-010" → critical vulnerability.
+- From service/version detection: "OpenSSH 7.4" → known vulnerability CVE.
+- From enumeration: "SMB signing disabled" → misconfiguration.
+- From Nmap vulnerability script: `smb-vuln-ms17-010` reports "Windows host is missing critical patch" → EternalBlue vulnerability.
+- From dedicated vulnerability scanner: "Missing patch MS17-010" → critical vulnerability.
 
 The same vulnerability, such as MS17‑010, can be detected by both dedicated scanners and Nmap’s `smb-vuln-ms17-010` script.
 
@@ -490,10 +488,10 @@ Next, we’ll go over some of the basics on escalating your current privilege le
 
 **2. Exploiting vulnerabilities** – Taking advantage of unpatched security flaws in the operating system or applications. In addition to running vulnerability scanners (e.g., OpenVAS, Nessus), you should stay aware of recently disclosed vulnerabilities through public sources:
 
-- **CVE Details (Common Vulnerabilities and Exposures)** – A dictionary of publicly known security vulnerabilities.
-- **Exploit-DB** – A repository of actual exploit code for specific vulnerabilities.
-- **Vendor Security Advisories** – Official notices about patches from Microsoft, Apple, Linux distributors, etc.
-- **Full Disclosure Mailing Lists** – Where researchers publish zero‑day or newly patched vulnerabilities.
+- CVE Details (Common Vulnerabilities and Exposures) – A dictionary of publicly known security vulnerabilities.
+- Exploit-DB – A repository of actual exploit code for specific vulnerabilities.
+- Vendor Security Advisories – Official notices about patches from Microsoft, Apple, Linux distributors, etc.
+- Full Disclosure Mailing Lists – Where researchers publish zero‑day or newly patched vulnerabilities.
 
 **3. Using exploitation frameworks** – Using tools like Metasploit that can automate the process of selecting an exploit and payload. You enter the target’s IP address and port, choose an exploit, add a payload, and the framework handles the rest. Metasploit has a free version (Metasploit Framework) and a commercial version (Metasploit Pro).
 
@@ -523,10 +521,10 @@ Attackers leave backdoors in compromised systems to retain future access, partic
 
 Maintaining access is not just about staying connected – it is about **not being detected**. Good practices include:
 
-- **Low and slow communication** – Using long sleep intervals between beaconing to avoid network‑based detection.
-- **Domain fronting** – Hiding command‑and‑control (C2) traffic inside legitimate HTTPS requests to popular services (e.g., content delivery networks).
-- **Living off the land** – Using built‑in system tools (PowerShell, WMI, `ssh`, `scp`) instead of uploading new binaries.
-- **Log manipulation** – Clearing or editing only relevant entries (not the entire log) to remove evidence of backdoor installation. (This overlaps with covering tracks.)
+- Low and slow communication – Using long sleep intervals between beaconing to avoid network‑based detection.
+- Domain fronting – Hiding command‑and‑control (C2) traffic inside legitimate HTTPS requests to popular services (e.g., content delivery networks).
+- Living off the land – Using built‑in system tools (PowerShell, WMI, `ssh`, `scp`) instead of uploading new binaries.
+- Log manipulation – Clearing or editing only relevant entries (not the entire log) to remove evidence of backdoor installation. (This overlaps with covering tracks.)
 
 #### Note on privilege escalation
 
@@ -555,8 +553,8 @@ To cover their tracks, attackers remove or modify log files, hide files using hi
 
 **Stealth considerations:**
 
-- **Low‑and‑slow cleaning** – Instead of deleting everything at once, spread log modifications over time to avoid detection patterns.
-- **Living off the land** – Use native OS commands (e.g., `wevtutil` on Windows, `logger` on Linux) to manipulate logs rather than uploading suspicious binaries.
+- Low‑and‑slow cleaning – Instead of deleting everything at once, spread log modifications over time to avoid detection patterns.
+- Living off the land – Use native OS commands (e.g., `wevtutil` on Windows, `logger` on Linux) to manipulate logs rather than uploading suspicious binaries.
 
 **Network Penetration Testing Free and Open Source Tools**
 
@@ -572,8 +570,8 @@ Typical vulnerability management software collects scan results from target syst
 
 The penetration test report typically contains two main sections:
 
-- **Executive Summary** – intended for management, focusing on business risk, overall security posture, and high‑level recommendations.
-- **Technical Report** – intended for IT staff, containing detailed findings, exploit evidence, root cause analysis, and step‑by‑step remediation guidance.
+- Executive Summary – intended for management, focusing on business risk, overall security posture, and high‑level recommendations.
+- Technical Report – intended for IT staff, containing detailed findings, exploit evidence, root cause analysis, and step‑by‑step remediation guidance.
 
 Key considerations when writing the report include: identifying the audience (senior management vs IT staff), stating the purpose of testing, justifying the procedures used, and clearly specifying required actions. As Chaudhary (2013, p. 18) writes, “A report should present outcome of the whole project by including objectives, used methodology, successful exploits, root cause of those exploits and recommendations.” The report should assess technical risk, business risk, reputational risk, and compliance risk. Clients will prioritize remediation activities based on the classification of findings.
 

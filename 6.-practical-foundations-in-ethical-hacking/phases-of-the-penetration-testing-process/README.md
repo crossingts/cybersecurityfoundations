@@ -478,13 +478,9 @@ The actual hacking—the penetration—occurs in the gaining access phase, whe
 
 In the enumeration phase, we successfully obtained user account information. But if the user account lacks administrator (root) privileges or access to interesting shares (network shares that contain valuable data or credentials, such as `C$` and `ADMIN$` in Windows SMB environments), escalating access privileges becomes necessary. After all, the goal of hacking is gaining access to data or services. An interesting share is any share that (a) contains sensitive data, (b) allows write access (for planting backdoors or ransomware), or (c) can be used to pivot (e.g., a share mapped to a file server that also hosts scripts executed by other machines).
 
-In a penetration test, once initial access is gained (e.g., through a compromised user account), two related but distinct concepts come into play: **privilege escalation** and **lateral movement**. Privilege escalation refers to increasing one’s level of access _on the same compromised system_ – for example, moving from a standard user to `SYSTEM` (Windows) or `root` (Linux). Lateral movement, by contrast, involves moving from the initially compromised system to _other systems_ on the network, typically using the same or similar privileges (e.g., using a captured password hash to log into another workstation). The two concepts are often chained together: a tester may escalate privileges on one machine to dump credentials, then use those credentials to move laterally to a more valuable target, where further privilege escalation might be required. The table below summarizes the key differences.
+In a penetration test, once initial access is gained (e.g., through a compromised user account), two related but distinct concepts come into play: **privilege escalation and lateral movement**. Privilege escalation refers to increasing one’s level of access on the same compromised system – for example, moving from a standard user to `SYSTEM` (Windows) or `root` (Linux). Lateral movement, by contrast, involves moving from the initially compromised system to other systems on the network, typically using the same or similar privileges (e.g., using a captured password hash to log into another workstation). 
 
-|Aspect|Privilege Escalation|Lateral Movement|
-|---|---|---|
-|**Scope**|Same host|Different host|
-|**Goal**|Gain higher privileges (e.g., admin, root)|Expand foothold to other machines|
-|**Typical techniques**|Kernel exploits, service misconfigurations, sudo abuse, DLL injection|Pass‑the‑hash, RDP, PsExec, SSH key reuse, scheduled tasks|
+The two concepts are often chained together: a tester may escalate privileges on one machine to dump credentials, then use those credentials to move laterally to a more valuable target, where further privilege escalation might be required. Typical privilege escalation techniques include kernel exploits, service misconfigurations, sudo abuse, and DLL injection. Typical lateral movement techniques include pass‑the‑hash, RDP, PsExec, SSH key reuse, and scheduled tasks.
 
 **Four primary methods for obtaining administrator (root) privileges:**
 

@@ -302,19 +302,14 @@ Nmap performs a comprehensive scan of the single host 192.168.1.10.
 | `-sV`          | **Version detection via full TCP handshake for TCP services + subsequent application-layer probes (or reads banners).** After discovering open ports, Nmap connects to the open ports to probe the services to determine their exact name, version, and sometimes additional information (e.g., `Apache httpd 2.4.41`). |
 | `192.168.1.10` | Target IP address – a single host.                                                                                                                                                                                                                                                                                      |
 
-On running `nmap -sV -p- 192.168.1.10`:
-1. **Host discovery** – Nmap sends the four probes (ICMP echo, SYN to 443, ACK to 80, ICMP timestamp request) to see if `192.168.1.10` is alive.
-2. **If the host responds** (any reply), Nmap then scans all ports to check if they are open.
-3. **If ports are open**, `-sV` performs version detection to identify the service and version (e.g., SSH, OpenSSH_8.2p1).
-
-On running `nmap -sV -p- 192.168.1.10`, Nmap determines which ports are **open**, **closed**, or **filtered** using a **port scanning technique (by default, SYN scan `-sS` if run with root privileges, otherwise TCP connect scan `-sT`).**  Only after that does Nmap perform version detection (`-sV`) on the open ports.
+On running `nmap -sV -p- 192.168.1.10`, Nmap sends the four probes (ICMP echo, SYN to 443, ACK to 80, ICMP timestamp request) to see if `192.168.1.10` is alive. If the host responds, Nmap determines which ports are open, closed, or filtered using a port scanning technique (by default, SYN scan `-sS`). If ports are open, `-sV` performs version detection to identify the service and version (e.g., SSH, OpenSSH_8.2p1).
 
 Implied in the command syntax `nmap -sV -p- <target>` is the existence of options (flags) -sS or -sT: 
 
 - If you run Nmap with **root/administrator privileges**, it uses the **SYN scan** (`-sS`).
-- If you run **without privileges**, it falls back to the **TCP connect scan** (`-sT`).
+- If you run it **without privileges**, it falls back to the **TCP connect scan** (`-sT`).
 
-So the syntax can be made more explicit by adding `-sS` or `-sT`. For example, if requesting a SYN scan along with version detection:
+So the syntax can be made more explicit by adding `-sS` or `-sT`. For example:
 
 sudo nmap -sS -sV -p- 192.168.1.10 # SYN scan (requires root)
 
@@ -357,8 +352,6 @@ nmap --script banner -p80,22 192.168.1.10
 - SSH: `SSH-2.0-OpenSSH_8.2p1 Ubuntu-4ubuntu0.5`
 
 `nmap -p22 192.168.1.1` only checks if port 22 is open (e.g., SYN scan → SYN‑ACK or RST). `nmap -sV -p22 192.168.1.1` does the same port scan plus connects to the open port, sends probes, and grabs the banner to determine the service and version. That second command (`-sV`) performs **banner grabbing as a foundational enumeration technique** – it extracts the SSH version string (e.g., `SSH-2.0-OpenSSH_8.2p1`). 
-
-`-sV` = port scan + banner grabbing (and that banner grabbing is the first and simplest form of enumeration on that port).
 
 **Example 2: SSH Enumeration (Beyond Banner Grabbing)**
 

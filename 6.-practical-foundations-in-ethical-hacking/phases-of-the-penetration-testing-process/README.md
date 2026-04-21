@@ -468,7 +468,7 @@ The tester analyzes all gathered information—service versions, enumerated misc
 - **From Nmap vulnerability script:** `smb-vuln-ms17-010` reports "Windows host is missing critical patch" → EternalBlue vulnerability.
 - **From dedicated vulnerability scanner:** "Missing patch MS17-010" → critical vulnerability.
 
-(Note that the same vulnerability, such as MS17‑010, can be detected by both dedicated scanners and Nmap’s `smb-vuln-ms17-010` script.)
+The same vulnerability, such as MS17‑010, can be detected by both dedicated scanners and Nmap’s `smb-vuln-ms17-010` script.
 
 In short, vulnerability identification draws from multiple complementary sources, and effective testers use all of them to build a complete picture of the target’s weak spots.
 

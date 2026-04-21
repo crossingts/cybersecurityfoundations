@@ -262,9 +262,7 @@ On running `nmap -sV -p22 192.168.1.1`:
 2. **If the host responds** (any reply), Nmap then scans port 22 to check if it is open.
 3. **If port 22 is open**, `-sV` performs version detection to identify the service and version (e.g., SSH, OpenSSH_8.2p1).
 
-`-sV` performs its own full TCP handshake or application‑layer probe (some services, e.g., HTTP: `GET /`, require Nmap to send data first) for each open port to elicit a banner or response from the service, regardless of whether the preceding port scan used `-sS` (SYN) or `-sT` (TCP connect).
-
-For TCP services like SSH, `-sV` completes a full three‑way handshake (SYN, SYN‑ACK, ACK). Once the connection is established, Nmap reads the banner (if the server sends one immediately, as SSH does) or sends its own probe. For **UDP** or **non‑TCP** services, Nmap sends custom probes without a connection handshake.
+`-sV` performs its own full TCP handshake or application‑layer probe (some services, e.g., HTTP: `GET /`, require Nmap to send data first) for each open port to elicit a banner or response from the service, regardless of whether the preceding port scan used `-sS` (SYN) or `-sT` (TCP connect). For TCP services like SSH, `-sV` completes a full three‑way handshake (SYN, SYN‑ACK, ACK). Once the connection is established, Nmap reads the banner (if the server sends one immediately, as SSH does) or sends its own probe. For **UDP** or **non‑TCP** services, Nmap sends custom probes without a connection handshake.
 
 So, Nmap does a full TCP handshake to **elicit a banner** or response from the service, then:
 
@@ -272,26 +270,13 @@ So, Nmap does a full TCP handshake to **elicit a banner** or response from the 
 - Sends service‑specific probe strings (e.g., `SSH-` for SSH, `HEAD / HTTP/1.0\r\n\r\n` for HTTP, etc.)
 - Analyzes the response to determine service name and version.
 
-That response **confirms** the actual service type (e.g., SSH), reveals the SSH software (e.g., OpenSSH), version number, and sometimes OS **hints**.
+That response confirms the actual service type (e.g., SSH), reveals the SSH software (e.g., OpenSSH), version number, and sometimes OS hints.
 
-A typical SSH banner might read `SSH-2.0-OpenSSH_8.2p1 Ubuntu-4ubuntu0.5`, revealing the software (`OpenSSH`), version (`8.2p1`), and often the underlying OS distribution (`Ubuntu`). Similarly, an HTTP `GET` request to a web server on port 80 might return a header such as `Server: nginx/1.18.0`, directly identifying the software and version. 
+A typical SSH banner might read `SSH-2.0-OpenSSH_8.2p1 Ubuntu-4ubuntu0.5`, revealing the software (`OpenSSH`), version (`8.2p1`), and often the underlying OS distribution (`Ubuntu`). Similarly, an HTTP `GET` request to a web server on port 80 might return a header such as `Server: nginx/1.18.0`, directly identifying the software (nginx) and version (1.18.0) . 
 
-A typical SSH banner: `SSH-2.0-OpenSSH_8.2p1 Ubuntu-4ubuntu0.5`
+When Nmap performs version detection (`-sV`), Nmap initiates a connection to the open port and sends a series of carefully crafted probes (e.g., specific protocol requests, malformed packets, or known commands). The target’s response—its banner, error messages, or behavior—acts as a fingerprint. Nmap compares this fingerprint against its internal database of known service signatures to identify the exact software and version. For some services (e.g., SSH), the server sends its banner before Nmap sends any probe. Nmap still reads that banner as part of the fingerprint. 
 
-- Software: `OpenSSH`
-- Version: `8.2p1`
-- OS hint: `Ubuntu`
-
-A typical HTTP response header: `Server: nginx/1.18.0`
-
-- Software: `nginx`
-- Version: `1.18.0`
-
-When Nmap performs version detection (`-sV`), Nmap initiates a connection to the open port and sends a series of carefully crafted probes (e.g., specific protocol requests, malformed packets, or known commands). The target’s response—its banner, error messages, or behavior—acts as a fingerprint. Nmap compares this fingerprint against its internal database of known service signatures to identify the exact software and version.
-
-Note that for some services (e.g., SSH), the server sends its banner before Nmap sends any probe. Nmap still reads that banner as part of the fingerprint. 
-
-The TCP handshake establishes a connection; the probes are the application‑layer questions Nmap asks once connected. Both are part of version detection, but they serve different purposes.
+The TCP handshake establishes a connection; the probes are the application‑layer questions Nmap asks once connected. Both are part of version detection, but they serve different purposes. The probes are not the handshake. The handshake (establishing the TCP connection) opens the channel; the probes are the questions Nmap asks once the channel is open. The probes are the application‑layer data exchanged after the handshake (or, for some services like SSH, the server sends its banner immediately after the handshake, before Nmap sends anything; that banner is still not the handshake – it is an application‑layer response).
 
 **Two distinct steps in version detection:**
 
@@ -300,9 +285,7 @@ The TCP handshake establishes a connection; the probes are the application‑lay
 | **TCP handshake** | Low‑level connection establishment (SYN → SYN‑ACK → ACK). | Nmap and target agree on a TCP connection.                                                                                                            |
 | **Probes**        | Nmap sends application‑layer data after the handshake.    | For HTTP: `GET / HTTP/1.0`; for SMTP: `HELO test`; for SSH: Nmap reads the server’s banner, then sends its own SSH version string as a further probe. |
 
-The probes are not the handshake. The handshake (establishing the TCP connection) opens the channel; the probes are the questions Nmap asks once the channel is open. The probes are the application‑layer data exchanged after the handshake (or, for some services like SSH, the server sends its banner immediately after the handshake, before Nmap sends anything; that banner is still not the handshake – it is an application‑layer response).
-
-However, there is a subtle exception: Nmap can send some `-sV` probes before a full handshake for certain services (e.g., a SYN scan with a TCP option that triggers a specific response). But in standard usage, the handshake happens first, then the probes.
+Nmap can send some `-sV` probes before a full handshake for certain services (e.g., a SYN scan with a TCP option that triggers a specific response). But in standard usage, the handshake happens first, then the probes.
 
 **Service and Version Detection Example 2:** 
 

@@ -105,7 +105,7 @@ Key scanning activities include network scanning (host discovery), port scanning
 
 Network scanning, port scanning, and vulnerability scanning are all typically active techniques because they involve sending probes to the target. Network scanning and port scanning can be performed with Nmap (active tool). Vulnerability scanning is typically performed with dedicated automated scanners such as OpenVAS and Nessus. However, passive network scanning and service detection tools do exist—e.g., using p0f to passively identify live hosts and infer their operating system from captured traffic without sending any probes, and using Wireshark to identify running services from captured traffic—but they are less common in penetration testing.
 
-**`p0f`** is a passive TCP/IP stack fingerprinting tool. It analyzes captured network traffic (without sending any probes) to infer the operating system of a target host by examining characteristics such as:
+`p0f` is a passive TCP/IP stack fingerprinting tool. It analyzes captured network traffic (without sending any probes) to infer the operating system of a target host by examining characteristics such as:
 
 - TCP window size
 - Time-to-live (TTL)
@@ -195,7 +195,7 @@ nmap -sn <target>
 
 For example, running `nmap -sn 192.168.1.0/24` performs a ping sweep (no port scan) to discover which hosts are alive on the subnet `192.168.1.0/24`. Any response (including a RST) confirms the host is alive.
 
-**Syntax Explanation**
+**Syntax explanation for `nmap -sn 192.168.1.0/24`**
 
 | Part             | Meaning                                                                                                                                                                                                               |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -1,8 +1,5 @@
 ---
-description: >-
-  This section explores types of penetration testing, differentiates black box
-  from white box penetration testing, and explores possible risks of penetration
-  testing
+description: This section explores types of penetration testing, differentiates white box from black box penetration testing, and explores possible risks of penetration testing
 ---
 
 # Types of penetration testing
@@ -10,15 +7,15 @@ description: >-
 ## Learning objectives
 
 * Describe main types of penetration testing
-* Compare black box, white box, and grey box penetration testing methods
+* Compare white box, black box, and grey box penetration testing methods
 * Identify possible risks of penetration testing
 
-This section explores six types of penetration testing (network penetration testing, wireless network penetration testing, web application penetration testing, physical penetration testing, social engineering, and cloud penetration testing), compares black box, white box, and grey box penetration testing, and sheds light on possible risks of penetration testing to the client organization.
+This section explores six types of penetration testing (network penetration testing, wireless network penetration testing, web application penetration testing, physical penetration testing, social engineering, and cloud penetration testing), compares white box, black box, and grey box penetration testing, and sheds light on possible risks of penetration testing to the client organization.
 
 ## Topics covered in this section
 
 * **Types of penetration testing**
-* **Black box penetration testing and white box penetration testing**
+* **White box, black box, and grey box penetration testing**
 * **Testing perspectives: External vs internal**
 * **Risks of penetration testing**
 
@@ -61,7 +58,7 @@ This test quantitatively assesses the human layer of security by simulating real
 
 This specialized assessment targets cloud-specific infrastructure and services (IaaS, PaaS, SaaS). The focus is on identifying misconfigurations in services like S3 buckets, IAM roles and policies, serverless functions, and cloud management consoles. Testing must be conducted within the scope of the cloud provider's shared responsibility model and specific compliance requirements (e.g., AWS Customer Penetration Testing Policy). The goal is to prevent data exposure and resource hijacking resulting from improper cloud configuration.
 
-### Black box penetration testing and white box penetration testing
+### White box, black box, and grey box penetration testing
 
 White box and black box penetration testing are two fundamental approaches to security assessments, differing in the level of knowledge and access given to the testers. These methods broadly simulate an insider's and an outsider's attack types, respectively. In black box testing, the penetration tester has no prior knowledge of a company’s network, more closely resembling remote attacks. In white box testing, the penetration tester has complete knowledge of the network, representing a worst-case scenario where the attacker has full internal access.
 

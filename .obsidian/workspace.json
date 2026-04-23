@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -181,8 +181,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "06ca7278ba5efd38",
+  "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-security-vs-offensive-security/README.md",
     "6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/README.md",
@@ -195,7 +196,6 @@
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-methodologies-and-frameworks/README.md",
     "6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing/README.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/scanning-and-enumeration/README.md",
-    "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/nmap-and-openvas.md",
     "3.-cybersecurity-grc/the-grc-approach-to-cybersecurity-management/README.md",
     "3.-cybersecurity-grc/the-information-security-risk-assessment/README.md",

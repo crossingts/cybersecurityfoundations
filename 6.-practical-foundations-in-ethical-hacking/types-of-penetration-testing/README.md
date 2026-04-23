@@ -13,7 +13,7 @@ description: >-
 * Compare black box, white box, and grey box penetration testing methods
 * Identify possible risks of penetration testing
 
-This section explores six types of penetration testing (network penetration testing, wireless network penetration testing, web application penetration testing, physical penetration testing, social engineering, and cloud penetration testing), compares black box and white box penetration testing, and sheds light on possible risks of penetration testing to the client organization.
+This section explores six types of penetration testing (network penetration testing, wireless network penetration testing, web application penetration testing, physical penetration testing, social engineering, and cloud penetration testing), compares black box, white box, and grey box penetration testing, and sheds light on possible risks of penetration testing to the client organization.
 
 ## Topics covered in this section
 
@@ -28,7 +28,7 @@ Penetration testing is scoped to target specific segments of an organization's a
 
 **Network Penetration Testing** 
 
- This test targets an organization's network infrastructure, assessing both perimeter and internal defenses. The methodology involves reconnaissance, service enumeration, vulnerability scanning, and exploitation of identified weaknesses in network devices (routers, switches), servers, and network services. Testers aim to bypass security controls like firewalls and Intrusion Prevention Systems (IPS), often using techniques such as protocol manipulation and credential brute‑forcing. Specific activities include:
+This test targets an organization's network infrastructure, assessing both perimeter and internal defenses. The methodology involves reconnaissance, service enumeration, vulnerability scanning, and exploitation of identified weaknesses in network devices (routers, switches), servers, and network services. Testers aim to bypass security controls like firewalls and Intrusion Prevention Systems (IPS), often using techniques such as protocol manipulation and credential brute‑forcing. Specific activities include:
 
 - **Bypassing firewalls and IPS/IDS evasion** – using fragmented packets, protocol tunneling, or encrypted payloads to circumvent perimeter defenses.
 - **Router and switch testing** – examining configuration weaknesses (e.g., default credentials, exposed management interfaces, weak SNMP community strings).
@@ -65,20 +65,20 @@ This specialized assessment targets cloud-specific infrastructure and services (
 
 White box and black box penetration testing are two fundamental approaches to security assessments, differing in the level of knowledge and access given to the testers. These methods broadly simulate an insider's and an outsider's attack types, respectively. In black box testing, the penetration tester has no prior knowledge of a company’s network, more closely resembling remote attacks. In white box testing, the penetration tester has complete knowledge of the network, representing a worst-case scenario where the attacker has full internal access.
 
-White box penetration testing, also referred to as "clear box" or "full knowledge" testing, is a security assessment where the tester is granted full access to the target system's internal information. This includes source code, architecture diagrams, network configurations, and even credentials. With this level of transparency, the primary advantage is the ability to conduct a more thorough examination, uncovering logic flaws, complex misconfigurations, and hidden vulnerabilities that other methods might miss. Because testers do not need to spend time on reconnaissance, the process is also significantly faster. However, this approach is less realistic, as real-world attackers typically do not start with such extensive internal knowledge. Consequently, it is ideally suited for secure code reviews, testing internal applications before release, and meeting specific compliance audit requirements like those for PCI DSS.
+White box penetration testing, also referred to as "clear box" or "full knowledge" testing, is a security assessment where the tester is granted full access to the target system's internal information. This includes source code, architecture diagrams, network configurations, and even credentials. With this level of transparency, the primary advantage is the ability to conduct a more thorough examination, uncovering logic flaws, complex misconfigurations, and hidden vulnerabilities that other methods might miss. Because testers do not need to spend time on reconnaissance, the process is also significantly faster. This approach realistically simulates an insider threat, a compromised privileged account, or a sophisticated adversary who has already performed extensive reconnaissance and credential harvesting. White box penetration testing is ideally suited for secure code reviews, testing internal applications before release, and meeting specific compliance audit requirements like those for PCI DSS.
 
 In contrast, black box penetration testing operates on a "zero knowledge" premise, where the tester begins with no prior understanding of the system's internal workings, simulating the perspective of an external attacker. This method is highly valued for its realism, as it directly mimics the threats an organization faces from the outside. The process tests the effectiveness of external-facing defenses such as firewalls, web applications, and APIs, and is particularly effective at uncovering issues like information leakage, weak authentication mechanisms, and exposed services. The main drawback is that it can be time-consuming, as a significant portion of the engagement is dedicated to reconnaissance and fingerprinting. Furthermore, it may miss deeper internal flaws, such as business logic errors, that are not accessible from an unprivileged viewpoint. Common use cases include external network penetration tests, red team engagements, and bug bounty programs, where ethical hackers often operate with limited information.
 
-Bridging the gap between these two methodologies is grey box penetration testing, a hybrid approach where the tester is provided with partial knowledge of the system. This often includes low-privilege user account credentials or limited documentation. By providing this contextual information, grey box testing strikes a balance between the speed and depth of white box testing and the realism of the black box approach. It allows testers to bypass the initial reconnaissance phase and focus their efforts more efficiently, while still simulating an attack vector that could come from a compromised user account or an insider threat. This balanced nature makes it a common and practical choice for internal penetration tests and for organizations seeking a comprehensive yet efficient security assessment that aligns well with various compliance frameworks.
+Bridging the gap between these two methodologies is grey box penetration testing, a hybrid approach where the tester is provided with partial knowledge of the system. This often includes low-privilege user account credentials or limited documentation. By providing this contextual information, grey box testing strikes a balance between the speed and depth of white box testing and the externally focused realism of black box testing, offering a moderate level of realism that approximates a user with limited access or an attacker who has gained initial entry. This approach allows testers to bypass the initial reconnaissance phase and focus their efforts more efficiently, while still simulating an attack vector that could come from a compromised user account or an insider threat. This balanced nature makes it a common and practical choice for internal penetration tests and for organizations seeking a comprehensive yet efficient security assessment that aligns well with various compliance frameworks.
 
 **White vs Black vs Grey Box Testing Key Features**
 
-| Feature       | White Box                                     | Black Box                                  | Grey Box                        |
-| ------------- | --------------------------------------------- | ------------------------------------------ | ------------------------------- |
-| **Knowledge** | Full                                          | None                                       | Partial                         |
-| **Speed**     | Fast                                          | Slow                                       | Moderate                        |
-| **Realism**   | Medium                                        | High                                       | Medium                          |
-| **Best For**  | Code review, pre-release audits, blue teaming | External security assessments, red teaming | A balanced approach, compliance |
+| Feature       | White Box                                                                    | Black Box                                  | Grey Box                        |
+| ------------- | ---------------------------------------------------------------------------- | ------------------------------------------ | ------------------------------- |
+| **Knowledge** | Full                                                                         | None                                       | Partial                         |
+| **Speed**     | Fast                                                                         | Slow                                       | Moderate                        |
+| **Realism**   | High                                                                         | High                                       | Medium                          |
+| **Best For**  | Code review, pre-release audits, blue teaming, insider/authenticated attacks | External security assessments, red teaming | A balanced approach, compliance |
 
 ### Testing perspectives: External vs internal
 
@@ -135,13 +135,11 @@ Ultimately, due to these potential side effects, penetration testing is often a 
 ### Key takeaways
 
 - Penetration testing is categorized into several types, each targeting a specific part of the modern attack surface, including network, wireless, web application, cloud, social engineering, and physical security.
-- The approach to testing is defined by the tester's knowledge: White box (full knowledge) is thorough and fast, black box (zero knowledge) is realistic but slower, and grey box (partial knowledge) offers a balanced hybrid.
+- The approach to testing is defined by the tester's knowledge: White box (full knowledge), black box (zero knowledge), and grey box (partial knowledge).
 - The perspective of testing is crucial, with external tests simulating an outside attacker and internal tests assessing the risks of a compromised device or malicious insider, often validating Zero-Trust controls.
 - Penetration testing carries inherent operational risks (like system crashes or performance degradation) and strategic risks (like eavesdropping on the test itself), which must be carefully managed through scoping, scheduling, and mitigation strategies.
 
 ### References
-
-Cipher. (n.d.). The types of pentests you must know about. Retrieved January 21, 2020, from https://cipher.com/blog/the-types-of-pentests-you-must-know-about/
 
 Palmer, C. C. (2001). Ethical hacking. _IBM Systems Journal, 40_(3), 769-780.
 

@@ -132,6 +132,37 @@ OWASP ZAP (Zed Attack Proxy) is a leading open source web application security s
 | **CI/CD integration**                                | Yes (powerful APIs and scheduling)                                                           | Limited                                 | Yes (strong native support for automation and CI/CD pipelines due to its open source nature) |
 | **Unique features**                                  | Collaborator for detecting out-of-band vulnerabilities; Sequencer for session token analysis | Entry-point to Burp's core manual tools | Integrated HUD for in-browser testing; traditional and AJAX spidering combined               |
 
+The following diagram maps the core penetration testing tools covered in this article onto a unified toolkit. It shows each tool’s primary role and the typical flow of data — from initial reconnaissance through to exploitation — that turns a collection of individual utilities into a cohesive testing platform.
+
+```mermaid
+flowchart TD
+    CENTER((Penetration<br/>Testing Toolkit))
+    
+    NMAP[Nmap<br/>Network Recon &<br/>Enumeration]
+    OPENVAS[OpenVAS<br/>Vulnerability<br/>Scanning]
+    TCPDUMP[tcpdump<br/>Traffic Capture<br/>& Forensics]
+    BURP[Burp Suite / ZAP<br/>Web App Testing<br/>& Session Hijacking]
+    MSF[Metasploit<br/>Exploitation &<br/>Post‑Exploitation]
+
+    CENTER --> NMAP
+    CENTER --> OPENVAS
+    CENTER --> TCPDUMP
+    CENTER --> BURP
+    CENTER --> MSF
+
+    NMAP -- "target list" --> OPENVAS
+    OPENVAS -- "vulnerable services" --> MSF
+    TCPDUMP -- "session data" --> BURP
+    BURP -- "hijacked session" --> MSF
+    
+    style CENTER fill:#34495e,color:#fff,stroke:#2c3e50
+    style NMAP fill:#3498db,color:#fff
+    style OPENVAS fill:#2980b9,color:#fff
+    style TCPDUMP fill:#27ae60,color:#fff
+    style BURP fill:#f39c12,color:#fff
+    style MSF fill:#e74c3c,color:#fff
+```
+
 The integration of these core tools in a penetration test forms a kill chain:
 
 1. **Nmap** scouts the network.

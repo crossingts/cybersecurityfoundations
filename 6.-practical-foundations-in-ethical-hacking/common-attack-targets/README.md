@@ -89,7 +89,7 @@ NIST itself now primarily uses the CWE list as the authoritative source for type
 
 Penetration testers use the CWE to classify the root cause of the flaws they find. The CWE Top 25 Most Dangerous Software Weaknesses is the spiritual successor to NIST's 2008 list and it is updated regularly based on real-world data.
 
-**Mapping NIST's 2008 List to the 2023 CWE Top 25**
+**Mapping NIST SP 800-115's 2008 Vulnerability Categories to the 2023 CWE Top 25**
 
 | 2008 Category (NIST SP 800-115)   | Modern Equivalent (CWE Top 25, 2023)                                                                                                                                                                                                                                                                                                                                                                      | Why it's Updated / Refined                                         |
 | --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |

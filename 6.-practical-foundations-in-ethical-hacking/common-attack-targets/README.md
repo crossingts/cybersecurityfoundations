@@ -1,5 +1,5 @@
 ---
-description: This section explores common cyber attack targets—vulnerability categories and weaknesses that attackers exploit—and associated attack vectors
+description: This section explores common cybersecurity attack targets—vulnerability categories and weaknesses that attackers exploit—and associated attack vectors
 ---
 
 # Common attack targets

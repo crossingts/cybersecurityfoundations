@@ -20,7 +20,7 @@ This section provides an overview of the major open source technologies that for
 - **tcpdump: Traffic analysis and forensics**
 - **Metasploit: Exploitation and post-exploitation**
 - **Burp Suite Community Edition: Web application proxy and manual testing platform**
-- **OWASP ZAP: Open-source web application security scanner**
+- **OWASP ZAP: Open source web application security scanner**
 
 ### Introduction
 
@@ -30,7 +30,9 @@ Penetration testing relies on a suite of specialized tools to systematically ide
 
 Nmap (Network Mapper) is the de facto standard for host discovery, port scanning, and service enumeration. Using a variety of scan techniques—including SYN scans (`-sS`), OS fingerprinting (`-O`), and version detection (`-sV`)—Nmap provides a detailed map of network assets and the services running on them. During the initial reconnaissance phase, a penetration tester might execute a command such as `nmap -A -T4 192.168.1.0/24` to perform an aggressive scan of a target subnet. This single command combines OS and version detection with script scanning and traceroute, quickly revealing open ports (e.g., SSH on port 22, HTTP on port 80), service banners, and potential attack vectors. The `-A` flag enables aggressive scanning options, bundling OS detection (`-O`), version detection (`-sV`), script scanning (`-sC`), and traceroute (`--traceroute`) into a single convenient switch. The `-T4` timing template accelerates the scan under the assumption of a stable, high-speed network, though testers should exercise caution as it may trigger intrusion detection systems or overwhelm fragile targets.
 
-Beyond its core scanning engine, the Nmap Scripting Engine (NSE) extends Nmap's utility into deeper enumeration, vulnerability detection, and even limited exploitation. Once open ports are identified, NSE scripts can perform detailed service interrogation: `banner` retrieves full service banners, `http-headers` extracts HTTP response headers, `smb-enum-shares` lists accessible Windows file shares, and `ftp-anon` checks for anonymous FTP access. Moving further down the kill chain, NSE offers vulnerability detection scripts such as `http-vuln-cve2021-44228` for Log4j, `smb-vuln-ms17-010` for EternalBlue, and `ssl-heartbleed` for the Heartbleed flaw. At the outer edge of its capabilities, NSE includes scripts that attempt credential brute-force attacks (e.g., `ftp-brute`, `ssh-brute`) or leverage specific misconfigurations to extract sensitive files (e.g., `http-shellshock`, `http-phpmyadmin-dir-traversal`). This progression—from enumeration through vulnerability identification to limited exploitation—demonstrates why Nmap remains indispensable well beyond the initial scan. Its output forms the foundational intelligence that informs deeper vulnerability scanning with OpenVAS and subsequent exploitation with Metasploit.
+Beyond its core scanning engine, the Nmap Scripting Engine (NSE) extends Nmap's utility into deeper enumeration, vulnerability detection, and even limited exploitation. Once open ports are identified, NSE scripts can perform detailed service interrogation: `banner` retrieves full service banners, `http-headers` extracts HTTP response headers, `smb-enum-shares` lists accessible Windows file shares, and `ftp-anon` checks for anonymous FTP access. Moving further down the kill chain, NSE offers vulnerability detection scripts such as `http-vuln-cve2021-44228` for Log4j, `smb-vuln-ms17-010` for EternalBlue, and `ssl-heartbleed` for the Heartbleed flaw. 
+
+At the outer edge of its capabilities, NSE includes scripts that attempt credential brute-force attacks (e.g., `ftp-brute`, `ssh-brute`, `smb-brute`) or leverage specific misconfigurations to extract sensitive files (e.g., `http-shellshock`, `http-phpmyadmin-dir-traversal`). This progression—from enumeration through vulnerability identification to limited exploitation—demonstrates why Nmap remains indispensable well beyond the initial scan. Its output forms the foundational intelligence that informs deeper vulnerability scanning with OpenVAS and subsequent exploitation with Metasploit.
 
 ### OpenVAS: Vulnerability assessment
 
@@ -62,7 +64,7 @@ The Nmap NSE provides a framework where scripts can be passed credentials (usern
 
 **Examples of NSE scripts doing authenticated scanning:**
 
-- **`smb-brute`**: Takes a list of usernames and passwords to brute-force SMB (Windows file sharing) logins.
+- **`smb-enum-sessions`**: Uses provided SMB credentials to list logged-in users and session details.
 - **`http-auth-finder`**: Can use provided credentials to access protected web pages and look for authentication forms.
 - **`ssh-auth-methods`**: Can use an SSH key to log in and check which authentication methods are supported.
 
@@ -114,21 +116,21 @@ The key differences between Burp Suite Professional and Burp Suite Community Edi
 
 ### OWASP ZAP: Open source web application security scanner
 
-OWASP ZAP (Zed Attack Proxy) is a leading open source web application security scanner, maintained under the Open Web Application Security Project (OWASP) umbrella. It is designed to be a comprehensive and accessible tool for finding vulnerabilities in web applications during both development and testing phases. Key features include an intercepting proxy for manual testing, automated scanners for passive and active vulnerability detection, and a suite of tools for fuzzing and spidering. For example, its AJAX Spider can effectively crawl modern, dynamic applications, while the active scanner can automatically test for flaws like SQL Injection and Cross-Site Scripting (XSS). ZAP's "heads-up display" (HUD) introduces a novel, integrated approach by providing security information and testing capabilities directly within the browser. Its open-source nature and strong community support make it a popular alternative to commercial scanners, especially for automated security testing in CI/CD pipelines.
+OWASP ZAP (Zed Attack Proxy) is a leading open source web application security scanner, maintained under the Open Web Application Security Project (OWASP) umbrella. It is designed to be a comprehensive and accessible tool for finding vulnerabilities in web applications during both development and testing phases. Key features include an intercepting proxy for manual testing, automated scanners for passive and active vulnerability detection, and a suite of tools for fuzzing and spidering. For example, its AJAX Spider can effectively crawl modern, dynamic applications, while the active scanner can automatically test for flaws like SQL Injection and Cross-Site Scripting (XSS). ZAP's "heads-up display" (HUD) introduces a novel, integrated approach by providing security information and testing capabilities directly within the browser. Its open source nature and strong community support make it a popular alternative to commercial scanners, especially for automated security testing in CI/CD pipelines.
 
 **Comparison of Web Application Testing Tools**
 
-| Feature/Capability                                   | Burp Suite Professional                                                                      | Burp Suite Community                    | OWASP ZAP                                                                                    |
+| Feature/capability                                   | Burp Suite Professional                                                                      | Burp Suite Community                    | OWASP ZAP                                                                                    |
 | ---------------------------------------------------- | -------------------------------------------------------------------------------------------- | --------------------------------------- | -------------------------------------------------------------------------------------------- |
-| **Licensing & Cost**                                 | Commercial (Paid)                                                                            | Free (Feature-Limited)                  | Fully Open-Source and Free                                                                   |
-| **Primary Use Case**                                 | Professional, efficient manual & automated testing                                           | Learning and manual-only testing        | Manual testing, automated scanning, and CI/CD                                                |
-| **Automated Scanning**                               | Yes (Advanced and configurable)                                                              | No                                      | Built-in automated (active & passive) scanner is fully featured                              |
-| **Manual Testing Tools (Proxy, Repeater, Intruder)** | Full-Featured & Unlimited                                                                    | Basic & Rate-Limited (e.g., Intruder)   | Full-Featured & Unlimited (Comparable functionality)                                         |
-| **Vulnerability Detection (e.g., SQLi, XSS)**        | Yes (Automated via Scanner)                                                                  | Manual discovery only                   | Yes (Automated via Scanner)                                                                  |
-| **Out-of-Band Testing**                              | Yes (Burp Collaborator)                                                                      | No                                      | Via community scripts or external tools                                                      |
+| **Licensing and cost**                               | Commercial (paid)                                                                            | Free (feature-limited)                  | Fully open source and free                                                                   |
+| **Primary use case**                                 | Professional, efficient manual and automated testing                                         | Learning and manual-only testing        | Manual testing, automated scanning, and CI/CD                                                |
+| **Automated scanning**                               | Yes (advanced and configurable)                                                              | No                                      | Built-in automated (active and passive) scanner is fully featured                            |
+| **Manual testing tools (Proxy, Repeater, Intruder)** | Full-featured and unlimited                                                                  | Basic and rate-limited (e.g., Intruder) | Full-featured and unlimited (comparable functionality)                                       |
+| **Vulnerability detection (e.g., SQLi, XSS)**        | Yes (automated via scanner)                                                                  | Manual discovery only                   | Yes (automated via scanner)                                                                  |
+| **Out-of-band testing**                              | Yes (Burp Collaborator)                                                                      | No                                      | Via community scripts or external tools                                                      |
 | **Extensibility**                                    | Extensive BApp Store for community-developed extensions                                      | BApp Store                              | Strong support for scripts and add-ons via a vibrant community marketplace                   |
-| **CI/CD Integration**                                | Yes (Powerful APIs and scheduling)                                                           | Limited                                 | Yes (Strong native support for automation and CI/CD pipelines due to its open-source nature) |
-| **Unique Features**                                  | Collaborator for detecting out-of-band vulnerabilities; Sequencer for session token analysis | Entry-point to Burp's core manual tools | Integrated HUD for in-browser testing; Traditional and AJAX Spidering combined               |
+| **CI/CD integration**                                | Yes (powerful APIs and scheduling)                                                           | Limited                                 | Yes (strong native support for automation and CI/CD pipelines due to its open source nature) |
+| **Unique features**                                  | Collaborator for detecting out-of-band vulnerabilities; Sequencer for session token analysis | Entry-point to Burp's core manual tools | Integrated HUD for in-browser testing; traditional and AJAX spidering combined               |
 
 The integration of these core tools in a penetration test forms a kill chain:
 
@@ -150,7 +152,7 @@ Mastering these tools requires understanding their strengths and limitations. Nm
 
 ### Key takeaways
 
-* A skilled pentester chains testing tools strategically, simulating real-world attacks to harden defenses.
+- A skilled pentester chains testing tools strategically, simulating real-world attacks to harden defenses.
 - Each core tool has a distinct primary function: Nmap for network discovery and enumeration, OpenVAS for in-depth vulnerability assessment, tcpdump for traffic analysis, Metasploit for exploitation, and Burp Suite/ZAP for web application testing.
 - Understanding the strengths and limitations of each tool is critical; for example, using Nmap for initial host discovery before launching a more intensive, targeted OpenVAS vulnerability scan.
 - Command-line tools like tcpdump and Nmap offer scriptability and lightweight operation for remote or stealthy assessments, while GUI-based tools like Burp Suite provide deep interactivity for web testing.
@@ -159,5 +161,9 @@ Mastering these tools requires understanding their strengths and limitations. Nm
 ### References
 
 Kennedy, D., O’Gorman, J., Kearns, D., & Aharoni, M. (2011). _Metasploit: The Penetration Tester's Guide_. No Starch Press.
+
+Lyon, G. (2009). _Nmap network scanning: The official Nmap project guide to network discovery and security scanning_. [Insecure.com](https://insecure.com/) LLC.
+
+OWASP Zed Attack Proxy Project. (n.d.). _OWASP ZAP documentation_. The OWASP Foundation. Retrieved April 27, 2026, from [https://www.zaproxy.org/docs/](https://www.zaproxy.org/docs/)
 
 Stuttard, D., & Pinto, M. (2011). _The Web Application Hacker's Handbook: Finding and Exploiting Security Flaws_ (2nd ed.). Wiley.

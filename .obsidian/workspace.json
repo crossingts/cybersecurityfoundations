@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/network-security-testing/nmap-cheat-sheet-for-netadmins-sysadmins.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "nmap-cheat-sheet-for-netadmins-sysadmins"
+              "title": "README"
             }
           }
         ]
@@ -183,14 +183,14 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
-    "6.-practical-foundations-in-ethical-hacking/network-security-testing/openvas-cheat-sheet-for-netadmins-sysadmins.md",
+    "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing/nmap-cheat-sheet-for-netadmins-sysadmins.md",
+    "6.-practical-foundations-in-ethical-hacking/network-security-testing/openvas-cheat-sheet-for-netadmins-sysadmins.md",
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets/README.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/README.md",
     "6.-practical-foundations-in-ethical-hacking/penetration-testing-methodologies-and-frameworks/README.md",
     "6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing/README.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md",
-    "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-security-vs-offensive-security/README.md",
     "6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/README.md",
     "2.-introduction-to-cybersecurity/common-cyber-attacks/README.md",

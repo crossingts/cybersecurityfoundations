@@ -22,9 +22,9 @@ This section explains how hashing can be used to ensure message integrity and to
 
 ### Hashing algorithms
 
-#### A simplified explanation of hashing
-
 A hashing algorithm is a mathematical function that takes an input (data) of arbitrary size and produces a fixed-size output, a representational sample of the original data called a hash value or hash. Hashing algorithms are used in a variety of applications, including data integrity, password hashing, file indexing, identifying duplicate files/data, and digital signatures.
+
+#### A simplified explanation of hashing
 
 A basic hashing algorithm can be converting letters to numbers (e.g., a = 1, b = 2, c = 3, etc.):
 
@@ -156,8 +156,6 @@ Hashing Demonstration with Linux: [Run a hashing algorithm (md5sum or sha1sum) o
 * For even stronger guarantees, digital signatures or encryption + MAC can be used.
 
 ### References
-
-Kaufman, C., Perlman, R., & Speciner, M. (2002). Network security: Private communication in a public world (2nd ed.). Prentice Hall.
 
 Paar, C., & Pelzl, J. (2010). Understanding cryptography: A textbook for students and practitioners. Springer.
 

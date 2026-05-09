@@ -15,7 +15,7 @@ description: >-
 
 This section explains three common cryptographic authentication methods: username and password, Pre-Shared Keys (PSKs), and digital certificates. We begin by exploring the username and password method, detailing the critical role of cryptographic hashing—both on the server and client side—in protecting password integrity. Next, we examine Pre-Shared Keys (PSKs), a symmetric secret used for mutual authentication in protocols like Wi-Fi and VPNs, and discuss the process of deriving secure session keys to enhance security. Finally, we analyze digital certificates, the cornerstone of asymmetric cryptography on the web. This includes their role in authenticating servers via trusted Certificate Authorities (CAs), facilitating encrypted key exchange during the TLS handshake, and ensuring message integrity through digital signatures.
 
-## Topics covered in this section <a href="#topics-covered-in-this-section" id="topics-covered-in-this-section"></a>
+## Topics covered in this section
 
 * **Two-factor authentication (2FA)**
 * **Username and password**

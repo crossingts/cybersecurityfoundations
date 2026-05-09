@@ -99,7 +99,7 @@ Digital certificates are used in a variety of applications, including:
 
 The digital certificate is issued by a trusted Certificate Authority (CA) after verifying ownership of a domain. A digital certificate is a file that contains information about a website’s identity (e.g., domain name, and optionally organization details), a public key tied to the identity of the domain name holder of an asymmetric key pair (used for encryption, e.g., in key exchange, and for verifying signatures, to prove the digital certificate holder controls the corresponding private key), the CA’s digital signature (created by hashing the certificate data and encrypting the hash with the CA’s private key), and a validity period (expiration date).
 
-#### The TLS Handshake Purposes
+#### The TLS handshake purposes
 
 The TLS handshake is a process that establishes a secure, encrypted connection between a client (e.g., a web browser) and a server (e.g., a website). The TLS handshake prevents eavesdropping (via encryption), stops man-in-the-middle (MITM) attacks (via certificate verification), and ensures data integrity (via message authentication codes). 
 
@@ -114,7 +114,7 @@ In TLS, what is actually exchanged is the pre-master secret. The final session k
 
 After the handshake, both the client and server use the derived symmetric session key to encrypt all transmitted data and to verify its integrity using HMAC or AEAD modes like AES-GCMP. The symmetric session key derived during the handshake is used alongside a symmetric encryption algorithm (e.g., AES-256, ChaCha20) to encrypt the actual application data (e.g., HTTP requests, form submissions, etc.).
 
-#### Simplified Steps in a TLS Handshake (TLS 1.2)
+#### Simplified steps in a TLS handshake (TLS 1.2)
 
 1. **Client Hello** – The client sends supported TLS versions, cipher suites, and a random number (nonce).
 2. **Server Hello** – The server responds with its chosen cipher suite, a random number (nonce), and its **digital certificate** (containing its public key).
@@ -122,7 +122,7 @@ After the handshake, both the client and server use the derived symmetric sessio
 4. **Session Key Generation** – The sever decrypts the pre-master secret with its private key, combines it with the client's nonce and its own once to compute its copy of the symmetric session key.
 5. **Secure Communication** – All further data is encrypted with the shared/computed session key.
 
-#### Two Integrity Mechanisms
+#### Two integrity mechanisms
 
 There are two different integrity mechanisms at different stages of the TLS process: integrity during the TLS handshake (using Digital Signatures), and integrity after the handshake (using HMAC or AEAD).
 
@@ -168,7 +168,7 @@ There are two different integrity mechanisms at different stages of the TLS proc
 1. **Handshake integrity** ensures the key exchange itself is secure (e.g., no attacker alters the DH parameters).
 2. **Data integrity** ensures the actual HTTP/email/etc. content isn’t modified.
 
-#### **Key Exchange (Establishing a Session Key) in the TLS Handshake**
+#### Key exchange (establishing a session key) in the TLS handshake
 
 The public key in the certificate is used in one of two ways, depending on the key exchange algorithm:
 
@@ -217,7 +217,7 @@ In both cases, the successful use of the public key (for either encryption or si
 * Browsers and operating systems come with a pre-installed list of trusted root certificates.
 * If the certificate is valid and trusted, the SSL/TLS connection proceeds securely.
 
-#### **Types of SSL/TLS Certificates**
+**Types of SSL/TLS Certificates**
 
 * **Domain Validated (DV)** – Basic encryption, checks domain ownership.
 * **Organization Validated (OV)** – Verifies business identity.

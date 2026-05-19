@@ -4,7 +4,7 @@
 
 **CFAA**: Computer Fraud and Abuse Act.
 
-**Cipher**: An algorithm that performs encryption/decryption. Sometimes, the term **cryptosystem** is used instead of cipher. There are two types of ciphers depending on the use of keys: symmetric and asymmetric.
+Cipher: An algorithm that performs encryption/decryption. Sometimes, the term cryptosystem is used instead of cipher. There are two types of ciphers depending on the use of keys: symmetric and asymmetric.
 
 **Cryptanalysis**: A study of techniques for “cracking” encryption ciphers, i.e., attacks on cryptosystems.
 

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7.-conclusion/glossary.md",
+                "file": "typing-www.google.com-into-a-web-browser.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "glossary"
+              "title": "typing-www.google.com-into-a-web-browser"
             }
           }
         ]
@@ -183,6 +183,20 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
+    "test_update.md",
+    "SUMMARY.md",
+    "README.md",
+    "network-devices-and-their-functions 1.md",
+    "network-devices-and-their-functions.md",
+    "connected-and-local-routes.md",
+    "cisco-ios-cli-and-basic-device-security.md",
+    "4.-networking-fundamentals/network-devices-and-their-functions/network-devices-and-their-functions-quiz.md",
+    "4.-networking-fundamentals/network-devices-and-their-functions/README.md",
+    "4.-networking-fundamentals/introduction-networking-fundamentals.md",
+    "4.-networking-fundamentals/chapter-4-review-questions.md",
+    "5.-cryptography-and-wireless-security/introduction-cryptography-and-wireless-security.md",
+    "typing-www.google.com-into-a-web-browser.md",
+    "7.-conclusion/glossary.md",
     "7.-conclusion/cybersecurity-grc.md",
     "7.-conclusion/cryptography-and-wireless-security.md",
     "5.-cryptography-and-wireless-security/cryptographic-authentication-methods/README.md",
@@ -195,20 +209,6 @@
     "6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing/README.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md",
     "6.-practical-foundations-in-ethical-hacking/defensive-cybersecurity-technologies/README.md",
-    "6.-practical-foundations-in-ethical-hacking/network-security-testing/nmap-cheat-sheet-for-netadmins-sysadmins.md",
-    "6.-practical-foundations-in-ethical-hacking/network-security-testing/openvas-cheat-sheet-for-netadmins-sysadmins.md",
-    "6.-practical-foundations-in-ethical-hacking/defensive-security-vs-offensive-security/README.md",
-    "6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/README.md",
-    "2.-introduction-to-cybersecurity/common-cyber-attacks/README.md",
-    "README.md",
-    "SUMMARY.md",
-    "test_update.md",
-    "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/scanning-and-enumeration/README.md",
-    "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/nmap-and-openvas.md",
-    "3.-cybersecurity-grc/the-grc-approach-to-cybersecurity-management/README.md",
-    "3.-cybersecurity-grc/the-information-security-risk-assessment/README.md",
-    "3.-cybersecurity-grc/the-grc-approach-to-cybersecurity-management/the-grc-approach-to-cybersecurity-management-quiz.md",
-    "the-grc-approach-to-cybersecurity-management.md",
     "2.-introduction-to-cybersecurity/the-evolving-cybersecurity-threat-landscape",
     "LICENSE",
     "3.-cybersecurity-grc/the-information-security-compliance-audit",

@@ -15,8 +15,6 @@ description: >-
 
 This section discusses replay attacks and the mechanisms to defend against them. Replay attacks pose a critical threat to data confidentiality and integrity, and session and identity authenticity. This section explores key replay attack mechanisms, the risks they pose—especially to protocols like SSL/TLS—and the fundamental anti-replay methods used to mitigate them. 
 
-Anti-replay measures are deployed to protect against various types of cybersecurity threats. For example, they are deployed to secure financial transactions, where they block attackers from intercepting and re-playing a transaction authorization to drain funds multiple times. They are also essential for hardening VPN tunnels, preventing an adversary from capturing and injecting old packets to hijack a secure connection or impersonate an authorized user. Furthermore, these measures are key to protecting sensitive data transfers, ensuring that a file can't be stolen by an attacker who simply replays the request for it after the initial transfer. Anti-replay methods are often used in combination and include sequence number windowing, timestamps, nonces, cryptographic hashes, and rotating secret keys. This discussion culminates in an analysis of how modern protocols, particularly TLS 1.3, have integrated these defenses to close historic vulnerabilities.
-
 ## Topics covered in this section
 
 * **Replay attacks**
@@ -41,6 +39,8 @@ While replay attacks can be categorized by their target (e.g., web sessions), th
 This section delves into SSL/TLS, session tickets, and authentication tokens. The primary type of replay attack this section focuses on is the session replay attack (and its specific method, HTTP replay). The section's emphasis on threats to authenticity via replayed authentication tokens or handshake messages directly maps to the session hijacking and TLS handshake replay scenarios, which are the most relevant and common replay threats in modern web security.
 
 ### Anti-replay methods
+
+Anti-replay measures are deployed to protect against various types of cybersecurity threats. For example, they are deployed to secure financial transactions, where they block attackers from intercepting and re-playing a transaction authorization to drain funds multiple times. They are also essential for hardening VPN tunnels, preventing an adversary from capturing and injecting old packets to hijack a secure connection or impersonate an authorized user. Furthermore, these measures are key to protecting sensitive data transfers, ensuring that a file can't be stolen by an attacker who simply replays the request for it after the initial transfer. Anti-replay methods are often used in combination and include sequence number windowing, timestamps, nonces, cryptographic hashes, and rotating secret keys. This discussion culminates in an analysis of how modern protocols, particularly TLS 1.3, have integrated these defenses to close historic vulnerabilities.
 
 Suppose we have some packets we want to securely transmit over the wire. We start sending the packets to their destination over the wire. The packets use a 16 bit sequence number field, allowing for sequence number range of 1 – 65536. A malicious hacker manages to capture some packets from our transmission with the sequence numbers 10,000-10,099. The malicious hacker can wait for the sequence number to loop past 65536 and restart at 0, count 9,999 packets, and then inject the replayed packets with the sequence numbers 10,000-10,099. Since the replayed packets would have arrived at the right time, they would have been accepted by the receiver. 
 
@@ -118,7 +118,7 @@ This will allow the receiver to detect the replay attack and drop the packet. If
 
 Robust security protocols implement anti-replay measures as a core part of their design. For instance, modern protocols like WireGuard employ a cryptographic nonce system to guarantee message freshness and prevent replays. IPSec implements anti-replay measures within its ESP protocol, using sequence numbers and a sliding window, while SSH and TLS/SSL leverage sequence numbers and timestamps. 
 
-#### **How Replay Attacks Threaten SSL/TLS Security Guarantees and Modern Defenses**
+#### How Replay Attacks Threaten SSL/TLS Security Guarantees and Modern Defenses
 
 SSL/TLS provides three core security guarantees:
 
@@ -128,7 +128,7 @@ SSL/TLS provides three core security guarantees:
 
 Replay attacks undermine these guarantees by allowing an attacker to reuse previously captured legitimate traffic, potentially bypassing security controls. Below is a breakdown of how replay attacks threaten each guarantee and how modern TLS (especially TLS 1.3) mitigates them.
 
-#### **1. Threat to Data Confidentiality**
+#### 1. Threat to Data Confidentiality
 
 Even if traffic is encrypted, replaying an old session could allow an attacker to reuse an old session key (if session resumption is insecure) or to decrypt future traffic if key material is compromised. A session in TLS refers to a temporary secure connection between a client and server, established via the TLS handshake. It includes session keys (used for encryption), and session tickets/resumption IDs (for faster reconnection). Replaying a session means reusing these components maliciously to bypass authentication or decrypt data.
 
@@ -152,7 +152,7 @@ Even if traffic is encrypted, replaying an old session could allow an attacker t
 
 * Reduces the window for replay attacks by minimizing handshake steps.
 
-#### **2. Threat to Data Integrity** 
+#### 2. Threat to Data Integrity 
 
 TLS ensures that data is not modified in transit (via MACs/AEAD ciphers), but it does not inherently prevent the same data from being retransmitted (without modification). A replayed request (e.g., a bank transaction) could execute the same action multiple times.
 
@@ -171,7 +171,7 @@ TLS ensures that data is not modified in transit (via MACs/AEAD ciphers), but it
 * Idempotency keys (unique identifiers for transactions).
 * Timestamps/nonces to detect stale requests.
 
-#### **3. Threat to Authenticity (Impersonation via Replayed Sessions)**
+#### 3. Threat to Authenticity (Impersonation via Replayed Sessions)
 
 This threat occurs when an attacker captures and retransmits any piece of data that proves a user's identity or an established session. This data can take various forms, such as authentication tokens (like session cookies), handshake messages (like a TLS session ticket), or other authentication credentials. By replaying this data, the attacker bypasses login procedures and tricks the server into granting them unauthorized access as the legitimate user. The server, recognizing the valid but replayed credentials, mistakenly authenticates the attacker.
 
@@ -195,7 +195,7 @@ The authenticity being threatened is the authenticity of the session and the ide
 
 * TLS 1.3 enforces one-time PSKs (Pre-Shared Keys) for session resumption. A replayed PSK is immediately detected and rejected.
 
-#### **4. TLS 1.3 Anti-Replay Mechanisms**
+#### 4. TLS 1.3 Anti-Replay Mechanisms
 
 This table outlines key defenses in TLS 1.3 specifically designed to mitigate replay attacks that were more prevalent in previous versions like TLS 1.2.
 

@@ -31,7 +31,7 @@ This chapter has two main goals. First, this chapter demystifies the underlying 
 
 [Network protocols and their functions](network-protocols-and-their-functions/)
 
-[Typing www.google.com into a web browser](typing-www.google.com-into-a-web-browser/)
+[Typing www.google.com into a web browser](https://dti-techs.gitbook.io/practical-foundations-in-cybersecurity/4.-networking-fundamentals/typing-www.google.com-into-a-web-browser)
 
 [Cisco IOS CLI and basic device security](cisco-ios-cli-and-basic-device-security/)
 

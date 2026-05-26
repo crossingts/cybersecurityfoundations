@@ -9,7 +9,7 @@ description: This section explores common cyber attacks and malware types
 * Become familiar with common cyber attacks
 * Become familiar with common malware types
 
-This section explores common methods and mechanisms used by adversaries to compromise the CIA (Confidentiality, Integrity, and Availability) of information systems. It begins by examining the attacker's kill chain, starting with reconnaissance, the vital information gathering phase that enables more precise and targeted strikes. From there, the discussion moves to social engineering, which bypasses technical defenses by targeting the human element, and then to direct technical assaults like password attacks and various forms of denial of service (DoS). The section will detail how attackers can amplify the power of DoS through reflection and amplification techniques, and how they can position themselves to intercept or alter communications using man-in-the-middle (MITM) attacks. A recurring theme across many of these threats is the use of spoofing, where an attacker falsifies data—such as an IP or MAC address—to conceal their identity or impersonate a trusted entity. Finally, the section shifts from active network attacks to the malicious software itself, providing an overview of common malware types, including how viruses and worms propagate, and the destructive impact of ransomware.
+This section explores common methods and mechanisms used by adversaries to compromise the CIA (Confidentiality, Integrity, and Availability) of information systems. It begins by examining the attacker's kill chain, starting with reconnaissance, the vital information gathering phase that enables more precise and targeted strikes. From there, the discussion moves to social engineering, which bypasses technical defenses by targeting the human element, and then to direct technical assaults like password attacks and various forms of denial of service (DoS). The section will detail how attackers can amplify the power of DoS through reflection and amplification techniques, and how they can position themselves to intercept or alter communications using man-in-the-middle (MITM) attacks. A recurring theme across many of these threats is the use of spoofing, where an attacker falsifies data—such as an IP or MAC address—to conceal their identity or impersonate a trusted entity. Finally, the section shifts from active network attacks to the malicious software itself, providing an overview of common malware types, including how viruses and worms propagate, and the destructive impact of ransomware.
 
 ## Topics covered in this section
 
@@ -31,7 +31,7 @@ This discussion explores how attackers can compromise the CIA (Confidentiality, 
 
 #### Reconnaissance
 
-Reconnaissance, often the first phase of the cyber kill chain, is the process of an attacker gathering as much information as possible about a target to identify potential vulnerabilities and plan an attack strategy. This initial stage is not an attack in the traditional sense, as it rarely involves direct interaction with the target’s production systems, but it is a critical enabler for all subsequent hacking activity. The information gathered can be broadly categorized into two types: passive and active reconnaissance. Passive reconnaissance involves collecting data without directly engaging with the target, often leveraging publicly available sources, a practice known as OSINT (Open-Source Intelligence). For instance, an attacker might perform a WHOIS query through services like ICANN Lookup to uncover administrative contacts, name servers, and registered IP addresses associated with a domain. Tools like `nslookup` or `dig` can be used to map out a target’s mail exchangers (MX records) and other key infrastructure, while search engines and even social media can yield valuable insights into an organization's technology stack, partnerships, and employee details, all of which can fuel a highly targeted social engineering campaign.
+Reconnaissance, often the first phase of the cyber kill chain, is the process of an attacker gathering as much information as possible about a target to identify potential vulnerabilities and plan an attack strategy. This initial stage is not an attack in the traditional sense, as it rarely involves direct interaction with the target’s production systems, but it is a critical enabler for all subsequent hacking activity. The information gathered can be broadly categorized into two types: passive and active reconnaissance. Passive reconnaissance involves collecting data without directly engaging with the target, often leveraging publicly available sources, a practice known as OSINT (Open-Source Intelligence). For instance, an attacker might perform a WHOIS query through services like ICANN Lookup to uncover administrative contacts, name servers, and registered IP addresses associated with a domain. Tools like `nslookup` or `dig` can be used to map out a target’s mail exchangers (MX records) and other key infrastructure, while search engines and even social media can yield valuable insights into an organization's technology stack, partnerships, and employee details, all of which can fuel a highly targeted social engineering campaign.
 
 Active reconnaissance, in contrast, involves direct engagement with the target's systems to probe for weaknesses, a process that is far more likely to trigger detection systems like Intrusion Detection/Prevention Systems (IDS/IPS). A primary technique in this phase is port scanning, often performed with tools like Nmap, to discover live hosts and enumerate open ports and services. An attacker is not just looking for open ports, but for the specific service versions running on them (e.g., Apache 2.4.49 vs. nginx 1.18.0), as this fingerprinting allows them to query a database of known vulnerabilities (CVEs) for an easy exploit. Furthermore, techniques like banner grabbing can reveal detailed software information, and OS fingerprinting can determine the underlying operating system of a target host. The cumulative knowledge from active reconnaissance—from identifying a vulnerable service on a seldom-monitored port to confirming a target's operating system—provides the attacker with a precise blueprint for crafting the next, more destructive phases of their operation.
 
@@ -77,7 +77,7 @@ The TCP SYN flood is a common type of DoS attack (often directed against ISPs) w
 
 The attacker likely spoofs their source IP address, making this a spoofing attack. By spoofing the source IP address in the SYN message, the malicious client causes the server to send the SYN-ACK to a falsified IP address – which will not send an ACK because it knows that it never sent a SYN. Or the malicious client can simply not send the expected ACK.
 
-The target waits for the final ACK of each handshake, and the incomplete connections fill up the target’s TCP connection table. The incomplete connections will timeout and be removed from the table after a certain period of time, but the attacker continues sending SYN messages and the target keeps sending SYN-ACK messages. 
+The target waits for the final ACK of each handshake, and the incomplete connections fill up the target’s TCP connection table. The incomplete connections will timeout and be removed from the table after a certain period of time, but the attacker continues sending SYN messages and the target keeps sending SYN-ACK messages.
 
 ```mermaid
 sequenceDiagram
@@ -109,35 +109,30 @@ Eventually, the target’s TCP connection table fills up - it is no longer able 
 
 A much more powerful version of this attack type is the distributed denial-of-service (DDoS) attack. In a DDoS attack, the attacker infects many target computers with malware and uses the computers to initiate a DoS attack such as a TCP SYN flood attack. The group of infected computers is called a botnet. The PCs infected with malware together start flooding the target with SYN messages, so the target server is no longer able to respond to legitimate TCP connection requests.
 
-Mitigating TCP SYN flooding attacks requires a layered approach. Modern systems rely heavily on SYN cookies—enabled by default in major operating systems—as the critical first line of defense, complemented by rate limiting, firewall policies, and scalable offloading techniques. Here is an outline of the key technical mitigation methods used at each layer:
+Mitigating TCP SYN flooding attacks requires a layered approach. Modern systems rely heavily on SYN cookies—enabled by default in major operating systems—as the critical first line of defense, complemented by rate limiting, firewall policies, and scalable offloading techniques. Here is an outline of the key technical mitigation methods used at each layer:
 
 1. **Operating System Hardening**
-
-    - **SYN Cookies:** Stateless encoding of connection information in the sequence number; no backlog entry until the final ACK is received (Linux: `net.ipv4.tcp_syncookies=1`; Windows: default from Vista/2008).
-    - **Increase SYN Backlog:** Expands the queue for half-open connections (`tcp_max_syn_backlog`).
-    - **Reduce Retries/Timeouts:** Shortens SYN-ACK retries (`tcp_synack_retries=1`) and wait times (Cisco: `ip tcp synwait-time`).
-
+   * **SYN Cookies:** Stateless encoding of connection information in the sequence number; no backlog entry until the final ACK is received (Linux: `net.ipv4.tcp_syncookies=1`; Windows: default from Vista/2008).
+   * **Increase SYN Backlog:** Expands the queue for half-open connections (`tcp_max_syn_backlog`).
+   * **Reduce Retries/Timeouts:** Shortens SYN-ACK retries (`tcp_synack_retries=1`) and wait times (Cisco: `ip tcp synwait-time`).
 2. **Network-Layer Filtering & Rate Limiting**
-    
-    - **Rate Limiting:** Controls the volume of incoming SYNs per source or aggregate using policing (Cisco MQC, CoPP) or ACLs.
-    - **Firewall/IPS Policies:** Identifies abnormal SYN patterns and drops malicious traffic.
-    - **Ingress Filtering (uRPF):** Blocks spoofed source IPs at the edge (`ip verify unicast source reachable-via rx`).
-
+   * **Rate Limiting:** Controls the volume of incoming SYNs per source or aggregate using policing (Cisco MQC, CoPP) or ACLs.
+   * **Firewall/IPS Policies:** Identifies abnormal SYN patterns and drops malicious traffic.
+   * **Ingress Filtering (uRPF):** Blocks spoofed source IPs at the edge (`ip verify unicast source reachable-via rx`).
 3. **Proxy-Based Mitigations (Cisco & Firewall)**
-    
-    - **TCP Intercept:** Router proxies the handshake, validating clients before connecting to the server.
-    - **SYN Proxy:** Firewall or load balancer completes the handshake on behalf of the server, forwarding only validated connections.
-
+   * **TCP Intercept:** Router proxies the handshake, validating clients before connecting to the server.
+   * **SYN Proxy:** Firewall or load balancer completes the handshake on behalf of the server, forwarding only validated connections.
 4. **Scalable & Offloaded Defenses**
-    
-    - **Dedicated Anti-DDoS Appliances:** Hardware/software (Arbor, Radware) that detect and drop flood traffic behaviorally.
-    - **Cloud Scrubbing Services:** Traffic diversion to providers (Cloudflare, AWS Shield, Akamai) for absorption and filtering before reaching the origin.
+   * **Dedicated Anti-DDoS Appliances:** Hardware/software (Arbor, Radware) that detect and drop flood traffic behaviorally.
+   * **Cloud Scrubbing Services:** Traffic diversion to providers (Cloudflare, AWS Shield, Akamai) for absorption and filtering before reaching the origin.
 
 **DHCP Exhaustion Attack**
 
 Like the TCP SYN flood attack, DHCP exhaustion, also called DHCP starvation, is a resource exhaustion attack. However, instead of consuming connection table entries, it targets a different finite resource: the DHCP server's pool of available IP addresses.
 
-An attacker floods a DHCP server with DHCP Discover messages using spoofed MAC addresses. For each spoofed DHCP Discover message, the server responds with a DHCP Offer, temporarily reserving an IP address from its pool. The server places these addresses in a 'offered' state, awaiting DHCP Request messages that never arrive from the non-existent clients. Over time, the entire address scope becomes reserved for these bogus leases. The depletion of the server's DHCP pool results in a DoS to other devices which are no longer able to get an IP address. 
+<figure><img src="../../.gitbook/assets/dhcp-exhaustion.drawio.png" alt="DHCP-exhaustion-attack"><figcaption><p>The DHCP exhaustion attack</p></figcaption></figure>
+
+An attacker floods a DHCP server with DHCP Discover messages using spoofed MAC addresses. For each spoofed DHCP Discover message, the server responds with a DHCP Offer, temporarily reserving an IP address from its pool. The server places these addresses in a 'offered' state, awaiting DHCP Request messages that never arrive from the non-existent clients. Over time, the entire address scope becomes reserved for these bogus leases. The depletion of the server's DHCP pool results in a DoS to other devices which are no longer able to get an IP address.
 
 ```mermaid
 sequenceDiagram
@@ -178,24 +173,22 @@ The goal of a DHCP starvation attack is to overwhelm the DHCP server with a floo
 
 Defending against DHCP starvation requires a combination of switch-level security features and network design practices:
 
-1. DHCP Snooping: This security feature acts as a firewall between untrusted clients and trusted DHCP servers. The switch is configured to differentiate between trusted ports (connected to legitimate DHCP servers) and untrusted ports (connected to clients). DHCP snooping helps mitigate DoS attacks by limiting the rate of DHCP messages and filtering out suspicious traffic (DHCP messages received on an untrusted port, as normally sent by a DHCP client, may be filtered if they appear to be part of an attack). On untrusted ports, the switch:
-
-    - **Rate-limits DHCP traffic:** Prevents an attacker from flooding the network with Discover messages by limiting the number of DHCP packets accepted per second from a single port.
-    - **Validates DHCP messages:** Drops DHCP server messages (OFFER, ACK) received on untrusted ports, preventing rogue server responses.
-    - **Builds a DHCP snooping binding table:** Tracks legitimate IP-to-MAC bindings, which other security features (like Dynamic ARP Inspection) can use.
+1. DHCP Snooping: This security feature acts as a firewall between untrusted clients and trusted DHCP servers. The switch is configured to differentiate between trusted ports (connected to legitimate DHCP servers) and untrusted ports (connected to clients). DHCP snooping helps mitigate DoS attacks by limiting the rate of DHCP messages and filtering out suspicious traffic (DHCP messages received on an untrusted port, as normally sent by a DHCP client, may be filtered if they appear to be part of an attack). On untrusted ports, the switch:
+   * **Rate-limits DHCP traffic:** Prevents an attacker from flooding the network with Discover messages by limiting the number of DHCP packets accepted per second from a single port.
+   * **Validates DHCP messages:** Drops DHCP server messages (OFFER, ACK) received on untrusted ports, preventing rogue server responses.
+   * **Builds a DHCP snooping binding table:** Tracks legitimate IP-to-MAC bindings, which other security features (like Dynamic ARP Inspection) can use.
 
 For a detailed walkthrough of DHCP snooping configuration and verification on Cisco switches: [DHCP snooping configuration and verification](https://itnetworkingskills.wordpress.com/2023/05/14/dhcp-snooping-configuration-verification/)
 
-2. Port Security: This feature limits the number of MAC addresses allowed on a single switch port. By setting a maximum of one to three MAC addresses per access port, the switch can shut down or block a port that suddenly generates traffic from dozens of spoofed MAC addresses—a clear indicator of a DHCP starvation attempt.
-
-3. VLAN Segmentation: Placing DHCP clients in separate broadcast domains limits the scope of an exhaustion attack to a single VLAN, preventing it from affecting the entire network.
+2. Port Security: This feature limits the number of MAC addresses allowed on a single switch port. By setting a maximum of one to three MAC addresses per access port, the switch can shut down or block a port that suddenly generates traffic from dozens of spoofed MAC addresses—a clear indicator of a DHCP starvation attempt.
+3. VLAN Segmentation: Placing DHCP clients in separate broadcast domains limits the scope of an exhaustion attack to a single VLAN, preventing it from affecting the entire network.
 
 While DHCP exhaustion aims to deny service by consuming addresses, a related attack, the rogue DHCP server (DHCP poisoning—examined in the MITM section), uses similar techniques to position the attacker for man-in-the-middle operations:
 
-- Spoofed MAC addresses: Both attacks involve using spoofed source MAC addresses.
-- Attack chaining: Attackers often use DHCP exhaustion first to force clients to accept offers from a rogue DHCP server they introduce later. When the legitimate server's pool is empty, clients will accept any offer—including from the attacker's malicious server.
+* Spoofed MAC addresses: Both attacks involve using spoofed source MAC addresses.
+* Attack chaining: Attackers often use DHCP exhaustion first to force clients to accept offers from a rogue DHCP server they introduce later. When the legitimate server's pool is empty, clients will accept any offer—including from the attacker's malicious server.
 
-Both attack types (DHCP exhaustion and DHCP poisoning) are mitigated by the same control—DHCP snooping—which validates DHCP server legitimacy and rate-limits traffic. 
+Both attack types (DHCP exhaustion and DHCP poisoning) are mitigated by the same control—DHCP snooping—which validates DHCP server legitimacy and rate-limits traffic.
 
 **UDP Flooding**
 
@@ -205,27 +198,27 @@ In a UDP Reflection/Amplification attack, the attacker does not target the victi
 
 **HTTP Flooding**
 
-HTTP flooding is a layer 7 (application layer) DoS attack in which a botnet sends a high volume of seemingly legitimate HTTP requests—typically GETs for web pages or POSTs for form submissions—to overwhelm a web server's resources. Because these requests mimic normal user behavior, distinguishing attack traffic from legitimate visitors becomes challenging for traditional network-layer defenses. Attackers often employ variations such as slow-rate attacks (sending requests gradually to evade threshold-based detection) or pulse-wave attacks (bursts of traffic followed by pauses). Mitigation typically requires web application firewalls (WAFs) capable of analyzing request patterns, rate limiting based on user behavior, CAPTCHA challenges, and cloud-based scrubbing services that absorb and filter malicious HTTP traffic before it reaches the origin server.
+HTTP flooding is a layer 7 (application layer) DoS attack in which a botnet sends a high volume of seemingly legitimate HTTP requests—typically GETs for web pages or POSTs for form submissions—to overwhelm a web server's resources. Because these requests mimic normal user behavior, distinguishing attack traffic from legitimate visitors becomes challenging for traditional network-layer defenses. Attackers often employ variations such as slow-rate attacks (sending requests gradually to evade threshold-based detection) or pulse-wave attacks (bursts of traffic followed by pauses). Mitigation typically requires web application firewalls (WAFs) capable of analyzing request patterns, rate limiting based on user behavior, CAPTCHA challenges, and cloud-based scrubbing services that absorb and filter malicious HTTP traffic before it reaches the origin server.
 
 **Ping of Death**
 
-Ping of death is a legacy Layer 3 DoS attack that exploits improper handling of oversized ICMP packets. Under normal operation, IPv4 packets are limited to 65,535 bytes. By sending a malformed ping packet that exceeds this size—typically fragmented and reassembled on the target—an attacker can trigger buffer overflows in vulnerable systems, causing crashes, reboots, or kernel panics. While this attack is largely historical due to patches implemented in modern operating systems (which now drop such malformed packets by default), it remains relevant for legacy systems, unpatched IoT devices, and as a foundational example of how protocol violations can lead to DoS. Mitigation involves simply ensuring systems are updated and applying ingress filtering to block suspicious ICMP traffic at the network perimeter.
+Ping of death is a legacy Layer 3 DoS attack that exploits improper handling of oversized ICMP packets. Under normal operation, IPv4 packets are limited to 65,535 bytes. By sending a malformed ping packet that exceeds this size—typically fragmented and reassembled on the target—an attacker can trigger buffer overflows in vulnerable systems, causing crashes, reboots, or kernel panics. While this attack is largely historical due to patches implemented in modern operating systems (which now drop such malformed packets by default), it remains relevant for legacy systems, unpatched IoT devices, and as a foundational example of how protocol violations can lead to DoS. Mitigation involves simply ensuring systems are updated and applying ingress filtering to block suspicious ICMP traffic at the network perimeter.
 
 #### Reflection and amplification
 
 Reflection and amplification attacks are sophisticated variants of volumetric denial-of-service attacks that leverage the behavior of legitimate network services to turn them against a target. Rather than flooding a victim directly, the attacker spoofs the victim's IP address and sends requests to intermediary servers—called reflectors—which then unwittingly deliver the attack traffic. This indirection not only obscures the attacker's identity but also harnesses the processing power and bandwidth of unsuspecting third-party infrastructure.
 
-In a reflection attack, the attacker sends packets to a reflector (such as a DNS, NTP, or SNMP server) with the source IP address forged to match the intended victim. The reflector, believing the request is legitimate, sends its response to the victim's IP address. When enough reflectors are enlisted—or a single reflector receives enough queries—the aggregate response traffic can overwhelm the victim's network connection, resulting in DoS. The key mechanism here is the spoofed source address; without it, the responses would return to the attacker rather than the target.
+In a reflection attack, the attacker sends packets to a reflector (such as a DNS, NTP, or SNMP server) with the source IP address forged to match the intended victim. The reflector, believing the request is legitimate, sends its response to the victim's IP address. When enough reflectors are enlisted—or a single reflector receives enough queries—the aggregate response traffic can overwhelm the victim's network connection, resulting in DoS. The key mechanism here is the spoofed source address; without it, the responses would return to the attacker rather than the target.
 
-A reflection attack becomes an amplification attack when the response traffic is significantly larger than the requests that triggered it. Attackers specifically seek out services where a small query generates a voluminous reply, achieving what is known as the amplification factor. For example, a DNS query of approximately 60 bytes can be crafted to return a DNS response many times larger, particularly when using the ANY metatype or DNSSEC records. Similarly, the now-patched NTP monlist command would return a list of the last 600 clients that interacted with the NTP server, amplifying traffic by a factor of 200 or more. By combining reflection with amplification, attackers can generate devastating DDoS attacks—sometimes exceeding hundreds of gigabits per second—from relatively modest attacker-controlled infrastructure. Mitigation requires disabling unnecessary services on publicly accessible servers, implementing source IP validation to prevent spoofing, and using cloud-based DDoS scrubbing services to absorb and filter amplified traffic before it reaches the target.
+A reflection attack becomes an amplification attack when the response traffic is significantly larger than the requests that triggered it. Attackers specifically seek out services where a small query generates a voluminous reply, achieving what is known as the amplification factor. For example, a DNS query of approximately 60 bytes can be crafted to return a DNS response many times larger, particularly when using the ANY metatype or DNSSEC records. Similarly, the now-patched NTP monlist command would return a list of the last 600 clients that interacted with the NTP server, amplifying traffic by a factor of 200 or more. By combining reflection with amplification, attackers can generate devastating DDoS attacks—sometimes exceeding hundreds of gigabits per second—from relatively modest attacker-controlled infrastructure. Mitigation requires disabling unnecessary services on publicly accessible servers, implementing source IP validation to prevent spoofing, and using cloud-based DDoS scrubbing services to absorb and filter amplified traffic before it reaches the target.
 
-#### Man-in-the-Middle (MITM) 
+#### Man-in-the-Middle (MITM)
 
-Man-in-the-middle attacks represent a class of exploits where an adversary secretly intercepts and potentially alters communications between two parties who believe they are directly communicating with each other. Unlike DoS attacks, which target availability, MITM attacks primarily threaten the confidentiality and integrity of information—allowing attackers to eavesdrop on sensitive data, steal credentials, inject malicious content, or redirect users to fraudulent websites. Follows is a discussion of two common MITM techniques: DHCP poisoning, where a rogue server assigns itself as the default gateway, and ARP spoofing, where falsified address resolution messages redirect traffic through the attacker's system.
+Man-in-the-middle attacks represent a class of exploits where an adversary secretly intercepts and potentially alters communications between two parties who believe they are directly communicating with each other. Unlike DoS attacks, which target availability, MITM attacks primarily threaten the confidentiality and integrity of information—allowing attackers to eavesdrop on sensitive data, steal credentials, inject malicious content, or redirect users to fraudulent websites. Follows is a discussion of two common MITM techniques: DHCP poisoning, where a rogue server assigns itself as the default gateway, and ARP spoofing, where falsified address resolution messages redirect traffic through the attacker's system.
 
 **DHCP Poisoning**
 
-In a DHCP poisoning attack a malicious device impersonates a legitimate DHCP server and offers IP addresses to clients. The spurious DHCP server leases a useful IP address to the target device, in the correct subnet, with the correct mask, but assigns its own IP address as the default gateway. Once a client accepts the attacker's offer, their communication gets routed through the attacker's device, allowing them to potentially eavesdrop on traffic, steal data, redirect the user to malicious websites, or damage or alter captured traffic. 
+In a DHCP poisoning attack a malicious device impersonates a legitimate DHCP server and offers IP addresses to clients. The spurious DHCP server leases a useful IP address to the target device, in the correct subnet, with the correct mask, but assigns its own IP address as the default gateway. Once a client accepts the attacker's offer, their communication gets routed through the attacker's device, allowing them to potentially eavesdrop on traffic, steal data, redirect the user to malicious websites, or damage or alter captured traffic.
 
 ```mermaid
 sequenceDiagram
@@ -275,11 +268,11 @@ A further illustration of the DHCP poisoning attack (also covering DHCP snooping
 
 **ARP Spoofing**
 
-ARP spoofing, also known as ARP poisoning, is a MITM attack that allows attackers to intercept communication between network devices. In this kind of attack the attacker places himself between the source and destination to eavesdrop on communications or to modify traffic before it reaches the destination. 
+ARP spoofing, also known as ARP poisoning, is a MITM attack that allows attackers to intercept communication between network devices. In this kind of attack the attacker places himself between the source and destination to eavesdrop on communications or to modify traffic before it reaches the destination.
 
 The attacker sends fake ARP replies (gratuitous ARP) to associate their own MAC address with someone else’s IP address (e.g., the gateway’s IP). The attacker spoofs the source IP address of the target device as their own (impersonates a legitimate IP address). This tricks other devices into sending traffic intended for the victim’s IP to the attacker’s MAC instead.
 
-In an ARP spoofing attack, a host sends an ARP request asking for the MAC address of another device. PC1 is asking for the MAC address of host 10.0.0.1, which is SRV1. Because ARP request messages are broadcast, the switch floods the frame, so both SRV1 and the attacker receive it. SRV1 sends an ARP reply to PC1. The attacker waits briefly and then sends another ARP reply (called gratuitous ARP) after the legitimate reply. If the attacker’s ARP reply arrives last, it will overwrite the legitimate ARP entry in PC1’s ARP table. 
+In an ARP spoofing attack, a host sends an ARP request asking for the MAC address of another device. PC1 is asking for the MAC address of host 10.0.0.1, which is SRV1. Because ARP request messages are broadcast, the switch floods the frame, so both SRV1 and the attacker receive it. SRV1 sends an ARP reply to PC1. The attacker waits briefly and then sends another ARP reply (called gratuitous ARP) after the legitimate reply. If the attacker’s ARP reply arrives last, it will overwrite the legitimate ARP entry in PC1’s ARP table.
 
 Now in PC1’s ARP table, the entry for 10.0.0.1 will have the attacker’s MAC address, not the MAC address of the real 10.0.0.1, SRV1. So when PC1 tries to send traffic to SRV1, traffic will be forwarded to the attacker instead. Then, the attacker can inspect the messages, read their contents and then forward them to SRV1. Or the attacker can modify the messages before forwarding them to SRV1.
 
@@ -336,11 +329,11 @@ A further illustration of the ARP spoofing attack and mitigation via dynamic ARP
 
 #### Spoofing attacks
 
-To spoof an address is to use a fake source address, for example a fake IP or MAC address. There are various types of spoofing attacks: 
+To spoof an address is to use a fake source address, for example a fake IP or MAC address. There are various types of spoofing attacks:
 
 * Denial-of-Service (DoS)
-* Reflection and Amplification 
-* Man-in-the-Middle 
+* Reflection and Amplification
+* Man-in-the-Middle
 
 Each of the following spoofing attack types involves either IP spoofing or MAC spoofing as a mechanism of action.
 

@@ -220,7 +220,7 @@ Man-in-the-middle attacks represent a class of exploits where an adversary secre
 
 In a DHCP poisoning attack a malicious device impersonates a legitimate DHCP server and offers IP addresses to clients. The spurious DHCP server leases a useful IP address to the target device, in the correct subnet, with the correct mask, but assigns its own IP address as the default gateway. Once a client accepts the attacker's offer, their communication gets routed through the attacker's device, allowing them to potentially eavesdrop on traffic, steal data, redirect the user to malicious websites, or damage or alter captured traffic.
 
-Let's look at an illustration the DHCP poisoning attack. PC1 (Legitimate Client) sends a LAN broadcast containing its first DHCP message: DHCP DISCOVER.
+Let's look at an illustration of the DHCP poisoning attack. PC1 (Legitimate Client) sends a LAN broadcast containing its first DHCP message: DHCP DISCOVER.
 
 <figure><img src="../../.gitbook/assets/spurious-DHCP-server.drawio.png" alt="DHCP-poisoning-attack"><figcaption><p>Rogue DHCP server attack</p></figcaption></figure>
 

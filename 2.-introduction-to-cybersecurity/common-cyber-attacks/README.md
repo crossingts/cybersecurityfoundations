@@ -230,7 +230,7 @@ Now PC1 believes it has everything needed to connect to the network. As a result
 
 <figure><img src="../../.gitbook/assets/DHCP-poisoning-mitm-attack.drawio.png" alt="DHCP-poisoning-mitm-attack"><figcaption><p>DHCP poisoning leading to man-in-the-middle attack</p></figcaption></figure>
 
-The attacker likely sent his DHCP OFFER before the legitimate DHCP server (R1) did. Since most hosts accept the first DHCP OFFER they receive, the unsuspecting user of PC1 falls victim to the attack. PC1 sends its packets to its default gateway (`192.168.1.1` — the attacker). The attacker then forwards those packets to the legitimate gateway (R2 at `192.168.1.254`) and onward to R1 (the legitimate DHCP server / upstream router).
+The attacker likely sent his DHCP OFFER before the legitimate DHCP server (R1) did. Since most hosts accept the first DHCP OFFER they receive, the unsuspecting user of PC1 falls victim to the attack. PC1 sends its packets to its default gateway (`192.168.1.1` — the attacker). The attacker then forwards those packets to the legitimate gateway (R2 at `192.168.1.254`) and onward to R1 (the legitimate DHCP server/upstream router).
 
 In this way, any traffic destined to leave the subnet behaves normally from an external perspective, but the attacker can keep a copy of everything sent by PC1 — eavesdropping on data, stealing credentials, or modifying packets at will.
 

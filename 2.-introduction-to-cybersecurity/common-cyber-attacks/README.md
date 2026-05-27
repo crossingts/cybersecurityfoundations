@@ -282,7 +282,7 @@ A DHCP server can send DHCP offers and acknowledgements only to ports that are t
 
 ARP spoofing, also known as ARP poisoning, is a man‑in‑the‑middle (MITM) attack that allows an attacker to intercept or modify traffic between two devices. The attacker sends forged ARP replies (gratuitous ARP messages) associating their own MAC address with the IP address of another device – for example, the default gateway’s IP. This tricks a victim host into sending traffic intended for that gateway to the attacker’s MAC address instead. The attacker can also spoof the victim’s IP address to the gateway, causing return traffic to also pass through the attacker. Once both mappings are poisoned, the attacker sits between the two parties, able to eavesdrop, modify, or drop packets at will.
 
-<figure><img src="../../.gitbook/assets/arp-poisoning.drawio.png" alt="arp-spoofing-attack"><figcaption><p>Gratuitous ARP causes Incorrect ARP data on R1</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/arp-poisoning.drawio.png" alt="arp-spoofing-attack"><figcaption><p>Gratuitous ARP causes incorrect ARP data on R1</p></figcaption></figure>
 
 In this example, the attacker (PC A) sends a forged ARP reply associating PC1’s IP address with the attacker’s own MAC address. Router R1’s ARP table is poisoned, redirecting traffic intended for PC1 to the attacker.
 

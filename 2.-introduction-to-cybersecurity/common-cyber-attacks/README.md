@@ -280,15 +280,15 @@ A DHCP server can send DHCP offers and acknowledgements only to ports that are t
 
 **ARP Spoofing**
 
-ARP spoofing, also known as ARP poisoning, is a MITM attack that allows attackers to intercept communication between network devices. In this kind of attack the attacker places himself between the source and destination to eavesdrop on communications or to modify traffic before it reaches the destination.
-
-The attacker sends fake ARP replies (gratuitous ARP) to associate their own MAC address with someone else’s IP address (e.g., the gateway’s IP). The attacker spoofs the source IP address of the target device as their own (impersonates a legitimate IP address). This tricks other devices into sending traffic intended for the victim’s IP to the attacker’s MAC instead.
+ARP spoofing, also known as ARP poisoning, is a man‑in‑the‑middle (MITM) attack that allows an attacker to intercept or modify traffic between two devices. The attacker sends forged ARP replies (gratuitous ARP messages) associating their own MAC address with the IP address of another device – for example, the default gateway’s IP. This tricks a victim host into sending traffic intended for that gateway to the attacker’s MAC address instead. The attacker can also spoof the victim’s IP address to the gateway, causing return traffic to also pass through the attacker. Once both mappings are poisoned, the attacker sits between the two parties, able to eavesdrop, modify, or drop packets at will.
 
 <figure><img src="../../.gitbook/assets/arp-poisoning.drawio.png" alt="arp-spoofing-attack"><figcaption><p>Gratuitous ARP causes Incorrect ARP data on R1</p></figcaption></figure>
 
-In an ARP spoofing attack, a host sends an ARP request asking for the MAC address of another device. PC1 is asking for the MAC address of host 10.0.0.1, which is SRV1. Because ARP request messages are broadcast, the switch floods the frame, so both SRV1 and the attacker receive it. SRV1 sends an ARP reply to PC1. The attacker waits briefly and then sends another ARP reply (called gratuitous ARP) after the legitimate reply. If the attacker’s ARP reply arrives last, it will overwrite the legitimate ARP entry in PC1’s ARP table.
+In this example, the attacker (PC A) sends a forged ARP reply associating PC1’s IP address with the attacker’s own MAC address. Router R1’s ARP table is poisoned, redirecting traffic intended for PC1 to the attacker.
 
-Now in PC1’s ARP table, the entry for 10.0.0.1 will have the attacker’s MAC address, not the MAC address of the real 10.0.0.1, SRV1. So when PC1 tries to send traffic to SRV1, traffic will be forwarded to the attacker instead. Then, the attacker can inspect the messages, read their contents and then forward them to SRV1. Or the attacker can modify the messages before forwarding them to SRV1.
+The attack unfolds as shown in the sequence diagram below. PC1 needs to communicate with SRV1 (IP 10.0.0.1) but does not have SRV1’s MAC address in its ARP table. PC1 broadcasts an ARP request: “Who has 10.0.0.1? Tell PC1.” The switch floods this request to all devices, so both SRV1 and the attacker receive it. SRV1 replies legitimately, and PC1 temporarily caches the correct mapping (10.0.0.1 → MAC‑SRV1). Immediately after, the attacker sends a malicious gratuitous ARP reply, spoofing SRV1’s IP address and claiming that 10.0.0.1 now maps to the attacker’s own MAC (MAC‑ATTACKER). If this forged reply arrives last – or is repeated aggressively – it overwrites the legitimate entry in PC1’s ARP table.
+
+Now PC1’s ARP table shows 10.0.0.1 → MAC‑ATTACKER. Consequently, any traffic PC1 sends to SRV1 is forwarded to the attacker instead. The attacker can eavesdrop, copy the data, and then forward the unmodified packets to SRV1 (passive interception), or modify or drop the packets before forwarding (active tampering). SRV1’s replies follow the reverse path, again passing through the attacker.
 
 ```mermaid
 sequenceDiagram

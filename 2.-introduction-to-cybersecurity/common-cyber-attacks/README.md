@@ -220,19 +220,19 @@ Man-in-the-middle attacks represent a class of exploits where an adversary secre
 
 In a DHCP poisoning attack a malicious device impersonates a legitimate DHCP server and offers IP addresses to clients. The spurious DHCP server leases a useful IP address to the target device, in the correct subnet, with the correct mask, but assigns its own IP address as the default gateway. Once a client accepts the attacker's offer, their communication gets routed through the attacker's device, allowing them to potentially eavesdrop on traffic, steal data, redirect the user to malicious websites, or damage or alter captured traffic.
 
-Let's look at an illustration the DHCP poisoning attack. PC1 (Legitimate Client) sends a LAN broadcast containing its first DHCP message: DHCP DISCOVER. 
+Let's look at an illustration the DHCP poisoning attack. PC1 (Legitimate Client) sends a LAN broadcast containing its first DHCP message: DHCP DISCOVER.
 
-image 1
+<figure><img src="../../.gitbook/assets/spurious-DHCP-server.drawio.png" alt="DHCP-poisoning-attack"><figcaption><p>Rogue DHCP server attack</p></figcaption></figure>
 
-The Spurious DHCP server (Attacker) — acting as a rogue DHCP server — replies to the DHCP DISCOVER with a DHCP OFFER. The spurious DHCP server leases a valid IP address to PC1 in the correct subnet (e.g., `192.168.1.100`), with the correct subnet mask. However, notice the default gateway assigned to PC1: `192.168.1.1` — which is the attacker’s own IP address — rather than `192.168.1.254`, which is the legitimate gateway’s IP address (R2).
+The Spurious DHCP server (Attacker) — acting as a rogue DHCP server — replies to the DHCP DISCOVER with a DHCP OFFER. The spurious DHCP server leases a valid IP address to PC1 in the correct subnet (e.g., `192.168.1.100`), with the correct subnet mask. However, notice the default gateway assigned to PC1: `192.168.1.1` — which is the attacker’s own IP address — rather than `192.168.1.254`, which is the legitimate gateway’s IP address (R2).
 
-Now PC1 believes it has everything needed to connect to the network. As a result, all packets sent by PC1 first flow through the attacker’s PC, creating a man‑in‑the‑middle (MITM) attack.
+Now PC1 believes it has everything needed to connect to the network. As a result, all packets sent by PC1 first flow through the attacker’s PC, creating a man‑in‑the‑middle (MITM) attack.
 
-image 2
+<figure><img src="../../.gitbook/assets/DHCP-poisoning-mitm-attack.drawio.png" alt="DHCP-poisoning-mitm-attack"><figcaption><p>DHCP poisoning leading to man-in-the-middle attack</p></figcaption></figure>
 
-The attacker likely sent his DHCP OFFER before the legitimate DHCP server (R1) did. Since most hosts accept the first DHCP OFFER they receive, the unsuspecting user of PC1 falls victim to the attack. PC1 sends its packets to its default gateway (`192.168.1.1` — the attacker). The attacker then forwards those packets to the legitimate gateway (R2 at `192.168.1.254`) and onward to R1 (the legitimate DHCP server / upstream router).
+The attacker likely sent his DHCP OFFER before the legitimate DHCP server (R1) did. Since most hosts accept the first DHCP OFFER they receive, the unsuspecting user of PC1 falls victim to the attack. PC1 sends its packets to its default gateway (`192.168.1.1` — the attacker). The attacker then forwards those packets to the legitimate gateway (R2 at `192.168.1.254`) and onward to R1 (the legitimate DHCP server / upstream router).
 
-In this way, any traffic destined to leave the subnet behaves normally from an external perspective, but the attacker can keep a copy of everything sent by PC1 — eavesdropping on data, stealing credentials, or modifying packets at will.
+In this way, any traffic destined to leave the subnet behaves normally from an external perspective, but the attacker can keep a copy of everything sent by PC1 — eavesdropping on data, stealing credentials, or modifying packets at will.
 
 ```mermaid
 sequenceDiagram

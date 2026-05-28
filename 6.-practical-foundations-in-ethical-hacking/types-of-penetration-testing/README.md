@@ -102,9 +102,9 @@ The classification of penetration tests by entry point as noted by Palmer (2001)
 - Modern "stolen asset" scenarios: This category has evolved beyond a single laptop. It now includes testing the security of mobile devices (BYOD), tablets, and the data accessible from them, often through cloud synchronization (e.g., OneDrive, Google Drive). The test focuses on disk encryption, biometric bypasses, cached credentials, and the ability to remotely wipe the device.
 - Wireless and IoT testing: A modern addition, this assesses the security of Wi-Fi networks (corporate and guest), Bluetooth implementations, and Internet of Things (IoT) devices that could serve as a pivot point into the core network.
 
-The following table summarizes the evolution from the 2001 concepts to their modern equivalents, highlighting the key shifts in emphasis. A modern framework should incorporate the complex, cloud-centric, and API-driven nature of today's digital environments. 
+The following table summarizes the evolution from the 2001 concepts to their modern equivalents, highlighting the key shifts in emphasis. A modern framework should incorporate the complex, cloud-centric, and API-driven nature of today's digital environments.
 
-**Evolution of Penetration Testing Vectors: From 2001 to Modern Day**
+**Evolution of Penetration Testing Attack Vectors: From 2001 to Modern Day**
 
 |Palmer (2001) Concept|Modern Equivalent / Updated Emphasis|Rationale for the Shift|
 |---|---|---|

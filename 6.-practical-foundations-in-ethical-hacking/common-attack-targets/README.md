@@ -171,6 +171,20 @@ Furthermore, the NVD's role in enriching CVE records with **CVSS scores** and **
 - The **CVE List** (a simple catalog of IDs and brief descriptions) is managed by MITRE under contract from the U.S. Cybersecurity and Infrastructure Security Agency (CISA).
 - The **National Vulnerability Database (NVD)**, managed by NIST, is the U.S. government repository that analyzes and enriches CVE records with severity scores, impact details, and patch links.
 
+#### Where to look up CVE details
+
+When researching a specific CVE such as CVE‑2018‑15664 these are the most authoritative and commonly used sources. CVE‑2018‑15664 is a **symbolic link race condition** in Docker (and other container runtimes) that allowed a container process to read and write files on the host operating system by exploiting a TOCTOU (time-of-check to time-of-use) flaw in the `docker cp` command. When `docker cp` was running, an attacker inside the container could quickly replace a file or directory with a symlink to a host file, and Docker would follow the symlink, allowing escape from the container and potential host compromise. It was patched in Docker 18.09.0.
+
+|**Resource**|**Description**|**URL**|
+|---|---|---|
+|**National Vulnerability Database (NVD)**|U.S. government repository; provides CVSS scores, CWE mappings, and full descriptions.|`https://nvd.nist.gov/vuln/detail/CVE-2018-15664`|
+|**MITRE CVE List**|The canonical CVE record source; often less detailed than NVD.|`https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-15664`|
+|**[CVE.org](https://cve.org/)**|The new CVE Program website (replaces MITRE's original CVE site).|`https://www.cve.org/CVERecord?id=CVE-2018-15664`|
+|**Vendor Security Advisories**|The most detailed information, including exact patch versions and workarounds.|(Search the vendor's security page, e.g., Docker, Apache, Microsoft)|
+|**CVE Details**|Aggregates NVD data with additional charts and historical scoring information.|`https://www.cvedetails.com/cve/CVE-2018-15664/`|
+
+For penetration testers, the NVD is usually the best starting point—it provides the CVSS score, the associated CWE, and a concise description all in one place. Vendor advisories should always be checked for the most accurate remediation steps.
+
 ### Prioritized vulnerability categories
 
 The following table provides a comprehensive overview of prioritized vulnerabilities contextualized within attack targets, attack vectors, risk scoring, and mitigation strategies - serving as a practical guide for vulnerability prioritization and management. The vulnerability scores are based on exploitability (ease of attack) and impact (potential damage), using CVSS v3.0 scores (where applicable) and real-world prevalence.

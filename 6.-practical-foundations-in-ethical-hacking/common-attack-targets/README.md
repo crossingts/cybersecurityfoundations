@@ -18,18 +18,18 @@ This section explores the most common and critical cybersecurity attack targets 
 ## Topics covered in this section
 
 * **Introduction**
-* **NIST SP 800-115's attack categories**
+* **NIST SP 800-115's vulnerability categories**
 * **OWASP Top 10**
 * **Common Weakness Enumeration (CWE™)**
 * **Common Vulnerabilities and Exposures (CVE®) & NVD**
-* **Prioritized attack categories**
+* **Prioritized vulnerability categories**
 * **Detection, exploitation, and mitigation of prioritized vulnerabilities**
 
 ### Introduction
 
 When it comes to categorizing common vulnerabilities targeted by malicious hackers and penetration testers, the NIST SP 800-115: Technical Guide to Information Security Testing and Assessment (Scarfone et al., 2008) categories of vulnerabilities are a logical starting point. While the high-level principles and methodology of penetration testing in NIST SP 800-115 are still sound, the taxonomy of vulnerabilities is significantly outdated. The attack landscape has evolved, primarily towards web applications, identity-based attacks, APIs, and cloud services.
 
-A modern, practical taxonomy of attack categories can be anchored in the following three frameworks:
+A modern, practical taxonomy of vulnerability categories can be anchored in the following three frameworks:
 
 * **OWASP Top 10:** The de facto standard for categorizing critical risks in web applications.
 * **Common Weakness Enumeration (CWE):** The authoritative list for classifying the root cause of software vulnerabilities.
@@ -42,7 +42,7 @@ These three frameworks reflect an evolving attack landscape prioritizing the fol
 * **Identity and Access Issues:** Weak passwords, lack of multi-factor authentication, privilege escalation.
 * **Outdated Software:** Unpatched systems with known CVEs.
 
-### NIST SP 800-115's attack categories
+### NIST SP 800-115's vulnerability categories
 
 The majority of vulnerabilities exploited during penetration testing fall into the following categories (Scarfone et al., 2008, pp. 5-4-5-5):
 
@@ -57,17 +57,66 @@ The majority of vulnerabilities exploited during penetration testing fall into t
 
 **NIST SP 800-115 Vulnerabilities Mapped to Their Typical Target Systems**
 
-| **Vulnerability Category**                | **Target Systems**                                      | **Attack Vector**                                                                           | **Example Exploit**                                                                                                                               |
-| ----------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Security Misconfigurations**            | Cloud, Servers, Containers, OS, Databases, Applications | Exposed admin interfaces, verbose errors, insecure settings                                 | **Kubernetes dashboard exposed** (CVE-2018-18264), **Jenkins RCE** (misconfigured scripts), Accessing admin panels with `admin:admin` credentials |
-| **Misconfigurations (Insecure Defaults)** | Servers, Cloud, IoT, APIs, Network Devices              | Default credentials, open ports, exposed interfaces, insecure default settings              | **Mirai botnet** (exploited default IoT passwords), **AWS S3 bucket leaks** (public-by-default)                                                   |
-| **Kernel Flaws**                          | OS (Linux/Windows/macOS)                                | Privilege escalation via kernel bugs, kernel exploits                                       | **Dirty Pipe** (CVE-2022-0847) for root access, **Dirty COW** (CVE-2016-5195)                                                                     |
-| **Buffer Overflows**                      | Applications, OS, Services                              | Crafted input that overflows a buffer and executes shellcode                                | **EternalBlue** (MS17-010), **Code Red worm** (IIS buffer overflow), Stack-based overflow in legacy FTP servers                                   |
-| **Insufficient Input Validation**         | Web apps, APIs, Databases                               | SQLi, XSS, Command Injection                                                                | **Equifax breach** (SQLi, CVE-2017-5638), **Log4Shell** (CVE-2021-44228), Bypassing login forms with `' OR 1=1 --`                                |
-| **Symbolic Links (Symlink)**              | File systems, Privileged apps                           | Tricking apps into writing to sensitive files, tricking privileged processes to write files | **Docker symlink escape** (CVE-2018-15664), Symlink attacks in `/tmp` directories                                                                 |
-| **File Descriptor Issues**                | OS, Applications, Running Processes                     | Exploiting unclosed file handles, accessing sensitive files left open                       | **Heartbleed** (CVE-2014-0160) via OpenSSL file descriptor leaks, Reading `/etc/passwd` from a crashed service                                    |
-| **Race Conditions (TOCTOU)**              | OS, Applications, Concurrent Systems                    | Timing attacks to bypass checks, TOCTOU (Time-of-Check to Time-of-Use) attacks              | Linux `ptrace` race condition (CVE-2019-13272), Changing file permissions between check and use                                                   |
-| **Incorrect File/Directory Permissions**  | OS, Databases, Apps, File Systems                       | Unauthorized access/modification, reading/writing restricted files                          | **MongoDB ransomware attacks** (exposed databases with weak permissions), `chmod 777` exposing SSH private keys                                   |
+| **Vulnerability Category**                                           | **Target Systems**                                      | **Attack Vector**                                                                           | **Example Exploit**                                                                                                                               |
+| -------------------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Security Misconfigurations**                                       | Cloud, Servers, Containers, OS, Databases, Applications | Exposed admin interfaces, verbose errors, insecure settings                                 | **Kubernetes dashboard exposed** (CVE-2018-18264), **Jenkins RCE** (misconfigured scripts), Accessing admin panels with `admin:admin` credentials |
+| **Insecure Defaults (A Sub-Category Of Security Misconfigurations)** | Servers, Cloud, IoT, APIs, Network Devices              | Default credentials, open ports, exposed interfaces, insecure default settings              | **Mirai botnet** (exploited default IoT passwords), **AWS S3 bucket leaks** (public-by-default)                                                   |
+| **Kernel Flaws**                                                     | OS (Linux/Windows/macOS)                                | Privilege escalation via kernel bugs, kernel exploits                                       | **Dirty Pipe** (CVE-2022-0847) for root access, **Dirty COW** (CVE-2016-5195)                                                                     |
+| **Buffer Overflows**                                                 | Applications, OS, Services                              | Crafted input that overflows a buffer and executes shellcode                                | **EternalBlue** (MS17-010), **Code Red worm** (IIS buffer overflow), Stack-based overflow in legacy FTP servers                                   |
+| **Insufficient Input Validation**                                    | Web apps, APIs, Databases                               | SQLi, XSS, Command Injection                                                                | **Equifax breach** (SQLi, CVE-2017-5638), Bypassing login forms with `' OR 1=1 --`                                                                |
+| **Symbolic Links (Symlink)**                                         | File systems, Privileged apps                           | Tricking apps into writing to sensitive files, tricking privileged processes to write files | **Docker symlink escape** (CVE-2018-15664), Symlink attacks in `/tmp` directories                                                                 |
+| **File Descriptor Issues**                                           | OS, Applications, Running Processes                     | Exploiting unclosed file handles, accessing sensitive files left open                       | **Heartbleed** (CVE-2014-0160) via OpenSSL file descriptor leaks, Reading `/etc/passwd` from a crashed service                                    |
+| **Race Conditions (TOCTOU)**                                         | OS, Applications, Concurrent Systems                    | Timing attacks to bypass checks, TOCTOU (Time-of-Check to Time-of-Use) attacks              | Linux `ptrace` race condition (CVE-2019-13272), Changing file permissions between check and use                                                   |
+| **Incorrect File/Directory Permissions**                             | OS, Databases, Apps, File Systems                       | Unauthorized access/modification, reading/writing restricted files                          | **MongoDB ransomware attacks** (exposed databases with weak permissions), `chmod 777` exposing SSH private keys                                   |
+
+#### Explanatory notes on key vulnerability categories and attack vectors
+
+**Exposed Admin Interfaces**
+
+An administrative interface (e.g., a database admin panel like phpMyAdmin, a router management web page, a Kubernetes dashboard, or a Jenkins server) is accessible from an untrusted network—often the open internet—without proper network restrictions, authentication, or encryption. This allows attackers to attempt brute-force attacks, exploit known vulnerabilities, or simply walk in if no credentials are set.
+
+Some products ship with administrative interfaces exposed on all network interfaces by default (e.g., certain IoT devices, consumer routers, or misconfigured cloud services). In other cases, it’s not the factory default but rather a common deployment mistake made by administrators who fail to restrict access via firewall rules or VPNs. 
+
+**Verbose Errors**
+
+Applications or services display detailed error messages (stack traces, SQL query dumps, server paths, framework versions, etc.) to users rather than logging them internally. These messages inadvertently reveal internal architecture, software versions, or even partial data that attackers can leverage for further exploitation. For example, a web application that returns a full SQL error on a malformed input leaks its database schema, making SQL injection far easier.
+
+Verbose error reporting is often the default in development frameworks or debug modes (e.g., Django’s DEBUG=True, Spring Boot’s devtools, or PHP’s display_errors). In production, leaving these on is a classic security misconfiguration.
+
+**Open Ports**
+
+Many operating systems, devices, and software packages ship with network services listening on ports by default—even if those services are rarely or never needed. Classic examples:
+
+- **Telnet (23)** on legacy routers or IoT devices, on by default.
+- **SNMP (161)** with default community strings.
+- **MySQL (3306)** or **Redis (6379)** listening on all interfaces with no password.
+- **Windows** services like NetBIOS (139/445) exposed on public interfaces.
+
+These open ports increase the attack surface unnecessarily. The “secure by default” principle dictates that only essential ports should be open, and they should be bound to localhost unless network access is explicitly required and properly protected.
+
+**Insufficient Input Validation**
+
+Insufficient input validation is the broad root cause of XSS, SQL injection, and buffer overflow vulnerabilities, but the specific missing check and the correct fix differ for each.
+
+- **Buffer overflow** occurs when a program fails to validate the length of input before writing it to a fixed-size buffer, allowing data to overflow into adjacent memory. The fix is to enforce strict length checks (input validation) and adopt memory-safe programming practices.
+- **SQL injection** happens when user input is treated as part of a database query without verifying whether it contains SQL control characters, enabling attackers to alter the query's logic. The fix is to use parameterized queries that cleanly separate code from data, not input sanitization.
+- **XSS** arises when a program accepts input containing HTML or JavaScript without proper handling, causing the browser to execute attacker-supplied scripts. The fix is to apply context-aware output encoding, ensuring that any potentially dangerous characters are rendered inert before being displayed.
+
+**Symbolic Links (Symlink)**  
+
+A symbolic link is a special file that points to another file. Operating system commands and privileged programs often perform operations (e.g., changing permissions, writing data) on the file that the symlink targets. If an attacker can create a symlink in a location where a privileged program will act on it, they can trick the program into modifying or disclosing sensitive system files instead—for example, making a symlink from a temporary directory to `/etc/shadow`. Modern container environments are also vulnerable; a container process that can create a symlink to a host file may be able to escape the container when a privileged host process follows the link (e.g., Docker symlink escape CVE‑2018‑15664).
+
+**File Descriptor Issues**  
+
+A file descriptor is a number the operating system uses to track an open file, socket, or pipe. When a privileged program opens a file and then spawns a child process without closing the file descriptor, the child may inherit access to that sensitive file—even if the child runs with lower privileges. In other cases, a program may accidentally leave a file handle open, allowing an attacker who can read from that descriptor to access confidential data. While the Heartbleed bug (CVE‑2014‑0160) was technically a buffer over‑read in OpenSSL, it is often associated with this category because it resulted in the leakage of arbitrary memory contents, similar to reading from an improperly closed file handle.
+
+**Race Conditions (TOCTOU)**  
+
+Race conditions occur when the outcome of a program’s actions depends on the order of execution of concurrent operations. The most common type in security is Time‑of‑Check to Time‑of‑Use (TOCTOU). Here, a privileged program first checks a condition (e.g., “is this file owned by the user?”) and then performs an operation on the file (e.g., “open and write”). If an attacker can swap the file with a symbolic link to a protected system file in the tiny window between the check and the use, they can force the program to modify or disclose protected data. Classic examples include changing file permissions or replacing a temporary file with a symlink to a critical system file.
+
+**Incorrect File/Directory Permissions**  
+
+Every file and directory has permissions that determine which users can read, write, or execute it. When these permissions are set too loosely—such as a world‑writable configuration file, a database backup that any user can read, or an SSH private key accidentally made readable to all—an attacker can view sensitive information, modify critical files, or gain unauthorized access. Following the principle of least privilege and regularly auditing file permissions (e.g., with tools like `auditd`) prevents such exposures.
 
 ### OWASP Top 10
 
@@ -122,7 +171,7 @@ Furthermore, the NVD's role in enriching CVE records with **CVSS scores** and **
 - The **CVE List** (a simple catalog of IDs and brief descriptions) is managed by MITRE under contract from the U.S. Cybersecurity and Infrastructure Security Agency (CISA).
 - The **National Vulnerability Database (NVD)**, managed by NIST, is the U.S. government repository that analyzes and enriches CVE records with severity scores, impact details, and patch links.
 
-### Prioritized attack categories
+### Prioritized vulnerability categories
 
 The following table provides a comprehensive overview of prioritized vulnerabilities contextualized within attack targets, attack vectors, risk scoring, and mitigation strategies - serving as a practical guide for vulnerability prioritization and management. The vulnerability scores are based on exploitability (ease of attack) and impact (potential damage), using CVSS v3.0 scores (where applicable) and real-world prevalence.
 

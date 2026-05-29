@@ -104,7 +104,7 @@ Insufficient input validation is the broad root cause of XSS, SQL injection, and
 
 **Symbolic Links (Symlink)**  
 
-A symbolic link is a special file that points to another file. Operating system commands and privileged programs often perform operations (e.g., changing permissions, writing data) on the file that the symlink targets. If an attacker can create a symlink in a location where a privileged program will act on it, they can trick the program into modifying or disclosing sensitive system files instead—for example, making a symlink from a temporary directory to `/etc/shadow`. Modern container environments are also vulnerable; a container process that can create a symlink to a host file may be able to escape the container when a privileged host process follows the link (e.g., Docker symlink escape CVE‑2018‑15664).
+A symbolic link is a special file that points to another file. Operating system commands and privileged programs often perform operations (e.g., changing permissions, writing data) on the file that the symlink targets. If an attacker can create a symlink in a location where a privileged program will act on it, they can trick the program into modifying or disclosing sensitive system files instead—for example, making a symlink from a temporary directory to `/etc/shadow` (a file on Linux and Unix systems that stores hashed user passwords along with password aging information). Modern container environments are also vulnerable; a container process that can create a symlink to a host file may be able to escape the container when a privileged host process follows the link (e.g., Docker symlink escape CVE‑2018‑15664).
 
 **File Descriptor Issues**  
 

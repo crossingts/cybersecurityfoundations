@@ -175,15 +175,15 @@ Furthermore, the NVD's role in enriching CVE records with **CVSS scores** and **
 
 #### Where to look up CVE details
 
-When researching a specific CVE such as CVE‑2018‑15664 these are the most authoritative and commonly used sources. 
+When researching a specific CVE such as CVE‑2018‑15664 these are the most authoritative and commonly used sources.
 
-|**Resource**|**Description**|**URL**|
-|---|---|---|
-|**National Vulnerability Database (NVD)**|U.S. government repository; provides CVSS scores, CWE mappings, and full descriptions.|`https://nvd.nist.gov/vuln/detail/CVE-2018-15664`|
-|**MITRE CVE List**|The canonical CVE record source; often less detailed than NVD.|`https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-15664`|
-|**[CVE.org](https://cve.org/)**|The new CVE Program website (replaces MITRE's original CVE site).|`https://www.cve.org/CVERecord?id=CVE-2018-15664`|
-|**Vendor Security Advisories**|The most detailed information, including exact patch versions and workarounds.|(Search the vendor's security page, e.g., Docker, Apache, Microsoft)|
-|**CVE Details**|Aggregates NVD data with additional charts and historical scoring information.|`https://www.cvedetails.com/cve/CVE-2018-15664/`|
+| **Resource**                              | **Description**                                                                        | **URL**                                                              |
+| ----------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| **National Vulnerability Database (NVD)** | U.S. government repository; provides CVSS scores, CWE mappings, and full descriptions. | `https://nvd.nist.gov/vuln/detail/CVE-2018-15664`                    |
+| **MITRE CVE List**                        | The canonical CVE record source; often less detailed than NVD.                         | `https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-15664`      |
+| **[CVE.org](https://cve.org/)**           | The new CVE Program website (replaces MITRE's original CVE site).                      | `https://www.cve.org/CVERecord?id=CVE-2018-15664`                    |
+| **Vendor Security Advisories**            | The most detailed information, including exact patch versions and workarounds.         | (Search the vendor's security page, e.g., Docker, Apache, Microsoft) |
+| **CVE Details**                           | Aggregates NVD data with additional charts and historical scoring information.         | `https://www.cvedetails.com/cve/CVE-2018-15664/`                     |
 
 For penetration testers, the NVD is usually the best starting point—it provides the CVSS score, the associated CWE, and a concise description all in one place. Vendor advisories should always be checked for the most accurate remediation steps.
 

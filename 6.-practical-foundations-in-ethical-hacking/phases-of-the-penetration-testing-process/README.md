@@ -149,13 +149,13 @@ As a network mapper, Nmap can discover hosts on a network and map out the topolo
 
 Basic Nmap syntax:
 
-```
+```bash
 nmap <scan options> <target>
 ```
 
 The following command runs a basic host discovery and a fast port scan.
 
-```
+```bash
 nmap -F <target>
 ```
 

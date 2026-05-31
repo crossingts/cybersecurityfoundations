@@ -293,7 +293,7 @@ User rights are granted via an account’s membership within a group and determi
 
 ### **3. SNMP Enumeration**
 
-**Definition:** Exploits **Simple Network Management Protocol (SNMP)** to extract device info via **Management Information Base (MIB)** queries.
+**Definition:** Exploits **Simple Network Management Protocol (SNMP)** to extract device information via **Management Information Base (MIB)** queries.
 
 #### **Key Concepts:**
 
@@ -318,7 +318,7 @@ User rights are granted via an account’s membership within a group and determi
 
 ### **4. LDAP Enumeration**
 
-**Definition:** Queries **Lightweight Directory Access Protocol (LDAP)** for directory info (users, org structure, system data).
+**Definition:** Queries **Lightweight Directory Access Protocol (LDAP)** for directory information (users, org structure, system data).
 
 #### **Key Points:**
 
@@ -336,11 +336,12 @@ User rights are granted via an account’s membership within a group and determi
 
 ### **Conclusion**
 
-Enumeration provides critical details for ethical hackers, including:\
-✅ **Banner Grabbing** → Service versions.\
-✅ **NetBIOS** → Windows shares & roles.\
-✅ **SNMP** → Device configurations.\
-✅ **LDAP** → User/org data.
+Enumeration provides critical details for ethical hackers, including:
+
+- **Banner Grabbing** → Service versions.\
+- **NetBIOS** → Windows shares & roles.\
+- **SNMP** → Device configurations.\
+- **LDAP** → User/org data.
 
 **Notes**
 

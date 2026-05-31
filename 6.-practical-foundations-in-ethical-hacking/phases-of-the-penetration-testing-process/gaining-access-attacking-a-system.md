@@ -138,12 +138,12 @@ Here’s a table summarizing which free/open-source keylogger detection tools wo
 
 | **Tool**             | **Windows** | **Linux** | **macOS** | **Notes**                                                                |
 | -------------------- | ----------- | --------- | --------- | ------------------------------------------------------------------------ |
-| **Malwarebytes**     | ✅           | ❌         | ✅         | Free version for Windows/macOS; no Linux support.                        |
-| **ClamAV**           | ✅           | ✅         | ✅         | Open-source; cross-platform but requires manual setup on macOS.          |
-| **Wireshark**        | ✅           | ✅         | ✅         | Network traffic analyzer; detects exfiltration (not keylogger-specific). |
-| **Process Explorer** | ✅           | ❌         | ❌         | Windows-only (Microsoft Sysinternals).                                   |
-| **Spybot S\&D**      | ✅           | ❌         | ❌         | Windows-only.                                                            |
-| **RKill**            | ✅           | ❌         | ❌         | Windows-only (terminates malware processes).                             |
+| **Malwarebytes**     | ✓           | X         | ✓         | Free version for Windows/macOS; no Linux support.                        |
+| **ClamAV**           | ✓           | ✓         | ✓         | Open-source; cross-platform but requires manual setup on macOS.          |
+| **Wireshark**        | ✓           | ✓         | ✓         | Network traffic analyzer; detects exfiltration (not keylogger-specific). |
+| **Process Explorer** | ✓           | X         | X         | Windows-only (Microsoft Sysinternals).                                   |
+| **Spybot S\&D**      | ✓           | X         | X         | Windows-only.                                                            |
+| **RKill**            | ✓           | X         | X         | Windows-only (terminates malware processes).                             |
 
 **Key Takeaways**
 

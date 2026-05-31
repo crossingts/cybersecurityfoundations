@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/gaining-access-attacking-a-system.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "gaining-access-attacking-a-system"
             }
           }
         ]
@@ -183,8 +183,10 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
-    "6.-practical-foundations-in-ethical-hacking/common-attack-targets/README.md",
+    "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/scanning-and-enumeration/README.md",
+    "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/gaining-access-attacking-a-system.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md",
+    "6.-practical-foundations-in-ethical-hacking/common-attack-targets/README.md",
     "6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing/README.md",
     "2.-introduction-to-cybersecurity/common-cyber-attacks/README.md",
     "test_update.md",
@@ -207,8 +209,6 @@
     "5.-cryptography-and-wireless-security/cryptographic-authentication-methods/README.md",
     "5.-cryptography-and-wireless-security/message-signing-using-asymmetric-keys/README.md",
     "5.-cryptography-and-wireless-security/cryptographic-encryption-and-confidentiality/README.md",
-    "5.-cryptography-and-wireless-security/hashing-algorithms-and-message-integrity/README.md",
-    "6.-practical-foundations-in-ethical-hacking/penetration-testing-technologies/README.md",
     "2.-introduction-to-cybersecurity/the-evolving-cybersecurity-threat-landscape",
     "LICENSE",
     "3.-cybersecurity-grc/the-information-security-compliance-audit",

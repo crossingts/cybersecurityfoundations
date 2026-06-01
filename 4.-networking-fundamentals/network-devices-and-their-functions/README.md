@@ -66,19 +66,17 @@ A switch is a multi-port bridge with dedicated bandwidth per port. A switch main
 
 A switch is a device that facilitates communication within a network. A router is a device that facilitates communication between different networks. 
 
-Routers connect networks to the Internet. Routers provide traffic control points (security, filtering, redirecting) between networks. Routers sit on the boundary between networks, providing a logical location to apply security policies.
+Routers connect networks together, including providing access to the Internet. Routers provide traffic control points (security, filtering, redirecting) between networks. Routers sit on the boundary between networks, providing a logical location to apply security policies.
 
 Routers learn which networks they are attached to. The knowledge of each different network is a route. Routes are stored in a routing table. A routing table is all the networks a router knows about. A router uses the routing table to funnel traffic to the appropriate interface.
+
+Routers use the hierarchical structure of IP addresses (created by subnetting) to forward traffic between networks. This hierarchy lets routers summarize routes and keep routing tables manageable.
 
 Routers have an interface assigned an IP address in every network they are attached to, and typically those interfaces act as a gateway for the connected networks. A gateway is a host’s way out of their local network.
 
 If a host in the sales team of a corporation wants to speak to a host in the marketing team, it’s going to use its gateway, which is its closest router IP address, which is then going to send a packet to the next router, to the next router, and finally to the host in the marketing team.
 
-Routers create the hierarchy in networks and IP addresses.
-
-Routing is the process of moving data between networks. A router is a device which performs routing.
-
-Switching is the process of moving data within networks. A switch is a device which performs switching. 
+Routing is the process of moving data between networks. A router is a device that performs routing. Switching is the process of moving data within networks. A switch is a device that performs switching. 
 
 ### Nodes and endpoints
 

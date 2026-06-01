@@ -27,7 +27,7 @@ This discussion introduces foundational concepts in computer networking and expl
 
 ### Host, client, server, IP address, network
 
-A host is any device that sends or receives traffic. It can be a client or a server. A client initiates a request for some data or a service. A server responds. A server is any computer which has software installed on it and which can respond to specific requests.
+A host is any device that sends or receives traffic. It can be a client or a server. A client initiates a request for some data or a service. A server responds. A server is a computer that runs software specifically designed to listen for and respond to client requests.
 
 Every host must have an IP address to communicate on the Internet. IP stands for [Internet Protocol](https://itnetworkingskills.wordpress.com/2023/01/15/network-protocols-their-functions/). An IP (specifically, IPv4) address is comprised of 32 bits (4 bytes), represented as four octets. The value of each octet is represented in decimal numbers (e.g., 136.22.17.98). The smallest binary number you can get with 8 bits is zero; the largest is 255.
 
@@ -79,6 +79,8 @@ If a host in the sales team of a corporation wants to speak to a host in the mar
 Routing is the process of moving data between networks. A router is a device that performs routing. Switching is the process of moving data within networks. A switch is a device that performs switching. 
 
 ### Nodes and endpoints
+
+The interconnection between various communication devices through different communication links can be defined as a network. The network is used to exchange, store, send, and retrieve data between network devices, also known as network nodes. (solarwinds.com)
 
 The interconnection between various communication devices through different communication links can be defined as a network. The network is used to exchange, store, send, and retrieve data between network devices, also known as network nodes. (solarwinds.com)
 

@@ -29,13 +29,13 @@ This discussion introduces foundational concepts in computer networking and expl
 
 A host is any device that sends or receives traffic. It can be a client or a server. A client initiates a request for some data or a service. A server responds. A server is any computer which has software installed on it and which can respond to specific requests.
 
-An IP address is the identity of a host. IP stands for [Internet Protocol](https://itnetworkingskills.wordpress.com/2023/01/15/network-protocols-their-functions/). Every host must have an IP address to communicate on the Internet. An IP (specifically, IPv4) address is comprised of 32 bits (4 bytes), represented as four octets. The value of each octet is represented in decimal numbers (e.g., 136.22.17.98). The smallest binary number you can get with 8 bits is zero; the largest is 255.
+Every host must have an IP address to communicate on the Internet. IP stands for [Internet Protocol](https://itnetworkingskills.wordpress.com/2023/01/15/network-protocols-their-functions/). An IP (specifically, IPv4) address is comprised of 32 bits (4 bytes), represented as four octets. The value of each octet is represented in decimal numbers (e.g., 136.22.17.98). The smallest binary number you can get with 8 bits is zero; the largest is 255.
 
 IP addresses are typically assigned in some sort of hierarchy. The breaking up of IP addresses into their different hierarchies is done through a process known as subnetting.
 
-A network is what transports traffic between hosts. A computer network delivers data from one device to another. Any time you connect two hosts you have a network. A network is a logical grouping of hosts which require similar connectivity. Networks can contain other networks called sub-networks or subnets. The Internet is a bunch of interconnected networks.
+A network is what transports traffic between hosts. A computer network delivers data from one device to another. Any time you connect two hosts you have a network. A network is a logical grouping of hosts which require similar connectivity. Networks can contain other networks called sub-networks or subnets. The Internet is a collection of interconnected networks.
 
-Each network has its own IP address space and each host in the network has an IP address in that network’s IP address space (hosts on a network share the same IP address space). For example, a network can own all IP addresses which start with 192.168.1.x.
+Each network has its own IP address space (range) and each host in the network has an IP address in that network’s IP address space (hosts on a network share the same IP address space). For example, a network can own all IP addresses which start with 192.168.1.x.
 
 ### Network devices definition
 

@@ -53,7 +53,12 @@ Repeaters regenerate signals, allowing devices to communicate across great dista
 
 Connecting hosts directly to each other does not scale. Hubs connect multiple devices together, solving the scaling problem. Hubs are multi-port repeaters—hubs connect multiple hosts in a single collision domain. When a host sends a packet, the hub duplicates it and floods it out all ports (no MAC learning). Everybody receives everybody else’s data. However, hubs do not scale well due to collisions and wasted bandwidth.
 
-A bridge sits in between hub-connected hosts, connecting two hubs. Bridges only have two ports – each facing a different hub. Bridges learn which hosts are on which side of the bridge (which MAC addresses are on each side), which allows bridges to contain communication/channel packets to their relative networks (i.e., filter traffic). Bridges will forward packets if the destination is on the other segment. Bridges reduce unnecessary broadcasts, improving network performance. But bridges have been largely replaced by switches, which are much more efficient than bridges.
+A bridge sits in between hub-connected hosts, connecting two hubs. Bridges only have two ports – each facing a different hub. Bridges learn which hosts are on which side of the bridge (which MAC addresses are on each side), which allows bridges to contain communication/channel packets to their relative networks (i.e., filter traffic). Bridges will forward packets if the destination is on the other segment. 
+Bridges reduce unnecessary broadcasts, improving network performance. 
+
+Bridges (and standard switches) forward broadcasts and do **not** reduce broadcast traffic. They segment collision domains, which reduces collisions, but the broadcast domain remains unchanged. This statement is incorrect at any technical level, and especially for CCNA-equivalent material.
+
+But bridges have been largely replaced by switches, which are much more efficient than bridges.
 
 A switch is a multi-port bridge with dedicated bandwidth per port. A switch maintains a full MAC address table for all ports and forwards traffic only to the destination port (unless it is flooding frames—more on the concept of flooding later on). 
 

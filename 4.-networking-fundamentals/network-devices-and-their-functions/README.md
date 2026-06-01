@@ -21,7 +21,7 @@ This discussion introduces foundational concepts in computer networking and expl
 * **Network devices definition**
 * **Repeaters, hubs, bridges, switches, and routers**
 * **Nodes and endpoints**
-* **Network devices icons**
+* **Network device icons**
 * **Cisco devices examples**
 * **Firewalls**
 
@@ -60,7 +60,9 @@ To overcome these scaling limitations, networks use bridges and, more commonly t
 - **Bridges** segment collision domains, reducing collisions and allowing simultaneous conversations on different segments, which improves scalability.
 - **Switches** take this much further: each port is its own collision domain (micro-segmentation), and with full-duplex operation, collisions are eliminated entirely. Switches also provide dedicated bandwidth per port and can forward multiple frames simultaneously, making them highly scalable.
 
-A bridge sits between hub-connected hosts, connecting two hub segments. Bridges only have two ports—each facing a different hub segment. Bridges learn which hosts are on which side (which MAC addresses are on each side), allowing them to filter traffic and keep frames local to the appropriate segment. Bridges will forward frames only if the destination is on the other segment. Bridges and standard switches both forward broadcasts. They both segment collision domains, which reduces collisions. Bridges have been largely replaced by switches, which are much more efficient.
+A bridge sits between hub-connected hosts, connecting two hub segments. Bridges only have two ports—each facing a different hub segment. Bridges learn which hosts are on which side, that is, which MAC addresses are on each side. A MAC (Media Access Control) address is a unique hardware identifier assigned to a network interface controller (NIC) by the manufacturer. It is typically a 48-bit address written as 12 hexadecimal digits (e.g., 00:1A:2B:3C:4D:5E), and is often called the burned-in address (BIA). This allows bridges to filter traffic and keep frames local to the appropriate segment.
+
+Bridges will forward frames only if the destination is on the other segment. Bridges and standard switches both forward broadcasts. They both segment collision domains, which reduces collisions. Bridges have been largely replaced by switches, which are much more efficient.
 
 A switch is a multi-port bridge with dedicated bandwidth per port. A switch maintains a full MAC address table for all ports and forwards traffic only to the destination port (unless it is flooding frames—more on the concept of flooding later on). 
 
@@ -84,9 +86,9 @@ A network can be defined as the interconnection between various network devices.
 
 Among these, servers and clients are often referred to as end hosts or endpoints. An endpoint is a device that sits at the “edge” of the network—it originates or terminates communications, acting as a source or destination of data. Typical endpoints include desktop computers, laptops, smartphones, tablets, and servers. Intermediate nodes like routers and switches forward traffic between endpoints but are not themselves considered endpoints.
 
-### Network devices icons
+### Network device icons
 
-For illustration, here are icons used in Wendell Odom’s (2020) CCNA 200-301 Official Cert Guide.
+For illustration, here are the network device icons used in Wendell Odom’s (2020) CCNA 200-301 Official Cert Guide.
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/10/network-icons-used-in-odom-2020.webp?w=980" alt="common network devices" height="676" width="980"><figcaption><p>Icons of common network devices/technologies used in network diagrams (Odom, 2020)</p></figcaption></figure>
 
@@ -114,7 +116,7 @@ Firewalls can be placed inside the network or outside the network. Meaning, the 
 
 The ASA (Adaptive Security Appliance) is Cisco’s classic firewall. The following image shows the Cisco ASA 5500-X series firewall model.
 
-Although the ASA is Cisco’s classic firewall, modern ASAs include modern features of next generation firewalls, including things like IPS (intrusion prevention system). 
+Although the ASA is Cisco’s classic firewall, modern ASAs include modern features of next generation firewalls, including features such as an intrusion prevention system (IPS).
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/10/asa5500-x-series-firewall.webp?w=959" alt="ASA5500-X-series-firewall" height="546" width="959"><figcaption><p>ASA 5500-X series firewall (image courtesy of cisco.com)</p></figcaption></figure>
 

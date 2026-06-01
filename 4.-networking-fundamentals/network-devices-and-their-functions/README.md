@@ -55,9 +55,9 @@ Connecting hosts directly to each other does not scale. Hubs connect multiple de
 
 A bridge sits in between hub-connected hosts, connecting two hubs. Bridges only have two ports – each facing a different hub. Bridges learn which hosts are on which side of the bridge (which MAC addresses are on each side), which allows bridges to contain communication/channel packets to their relative networks (i.e., filter traffic). Bridges will forward packets if the destination is on the other segment. Bridges reduce unnecessary broadcasts, improving network performance. But bridges have been largely replaced by switches, which are much more efficient than bridges.
 
-A switch is a multi-port bridge with dedicated bandwidth per port. A switch maintains a full MAC address table for all ports and forwards traffic only to the destination port (unless it is flooding frames—more on the concept of flooding later on).&#x20;
+A switch is a multi-port bridge with dedicated bandwidth per port. A switch maintains a full MAC address table for all ports and forwards traffic only to the destination port (unless it is flooding frames—more on the concept of flooding later on). 
 
-A switch is a device that facilitates communication within a network. A router is a device that facilitates communication between different networks.&#x20;
+A switch is a device that facilitates communication within a network. A router is a device that facilitates communication between different networks. 
 
 Routers connect networks to the Internet. Routers provide traffic control points (security, filtering, redirecting) between networks. Routers sit on the boundary between networks, providing a logical location to apply security policies.
 
@@ -71,7 +71,7 @@ Routers create the hierarchy in networks and IP addresses.
 
 Routing is the process of moving data between networks. A router is a device which performs routing.
 
-Switching is the process of moving data within networks. A switch is a device which performs switching.&#x20;
+Switching is the process of moving data within networks. A switch is a device which performs switching. 
 
 ### Nodes and endpoints
 
@@ -89,7 +89,7 @@ For illustration, here are icons used in Wendell Odom’s (2020) CCNA 200-301 Of
 
 ### Cisco devices examples
 
-Enterprise computer networks typically consist of two types of networks: local area networks (LANs) and wide area networks (WANs). LANs typically connect devices on the same floor of a building. By comparison, WANs connect devices that are typically relatively far apart.&#x20;
+Enterprise computer networks typically consist of two types of networks: local area networks (LANs) and wide area networks (WANs). LANs typically connect devices on the same floor of a building. By comparison, WANs connect devices that are typically relatively far apart. 
 
 Switches provide connectivity to end hosts within the same LAN. Standard (Layer 2) switches do not connect to the Internet. Switches forward data within a LAN. Switches do not provide connectivity over the Internet/between LANs.
 
@@ -101,7 +101,7 @@ The following image shows some models of Cisco routers and switches. You can see
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/10/cisco-routers-switches.webp?w=1201" alt="cisco-routers-switches" height="598" width="1201"><figcaption><p>Cisco routers and switches (image courtesy of allbids.com.au)</p></figcaption></figure>
 
-Notice that switches have many more network interfaces (ports) than routers. This is typical. For example, the Catalyst Express 520 shows 24 network interfaces we can connect end hosts or servers to. Switches typically have many RJ-45 ports because switches give user devices a place to connect to the Ethernet LAN.&#x20;
+Notice that switches have many more network interfaces (ports) than routers. This is typical. For example, the Catalyst Express 520 shows 24 network interfaces we can connect end hosts or servers to. Switches typically have many RJ-45 ports because switches give user devices a place to connect to the Ethernet LAN. 
 
 Other Cisco switch models include Catalyst 9200 and Catalyst 3650. And other Cisco router models include ISR 1000, ISR 900, and ISR 4000.
 
@@ -109,17 +109,17 @@ Other Cisco switch models include Catalyst 9200 and Catalyst 3650. And other Cis
 
 Firewalls monitor and control network traffic based on configured rules. You explicitly configure which network traffic should be allowed into your network, and which should not.
 
-Firewalls can be placed inside the network or outside the network. Meaning, the firewall can filter traffic before it reaches the router or after it has passed through the router.&#x20;
+Firewalls can be placed inside the network or outside the network. Meaning, the firewall can filter traffic before it reaches the router or after it has passed through the router. 
 
 The ASA (Adaptive Security Appliance) is Cisco’s classic firewall. The following image shows the Cisco ASA 5500-X series firewall model.
 
-Although the ASA is Cisco’s classic firewall, modern ASAs include modern features of next generation firewalls, including things like IPS (intrusion prevention system).&#x20;
+Although the ASA is Cisco’s classic firewall, modern ASAs include modern features of next generation firewalls, including things like IPS (intrusion prevention system). 
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/10/asa5500-x-series-firewall.webp?w=959" alt="ASA5500-X-series-firewall" height="546" width="959"><figcaption><p>ASA 5500-X series firewall (image courtesy of cisco.com)</p></figcaption></figure>
 
 Firewalls are known as next-generation firewalls when they include more modern and advanced filtering capabilities.
 
-Another example of an enterprise grade next-generation firewall is the Cisco Firepower 2100 series.&#x20;
+Another example of an enterprise grade next-generation firewall is the Cisco Firepower 2100 series. 
 
 ASA 5500-X and Firepower 2100 are network firewalls, which are hardware devices that filter traffic between networks. However, there are also host-based firewalls.
 

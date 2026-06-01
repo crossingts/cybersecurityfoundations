@@ -80,13 +80,9 @@ Routing is the process of moving data between networks. A router is a device tha
 
 ### Nodes and endpoints
 
-The interconnection between various communication devices through different communication links can be defined as a network. The network is used to exchange, store, send, and retrieve data between network devices, also known as network nodes. (solarwinds.com)
+A network can be defined as the interconnection between various network devices. All devices connected to a network are called network nodes. This includes routers, switches, firewalls, servers, and client devices such as desktops and laptops.
 
-The interconnection between various communication devices through different communication links can be defined as a network. The network is used to exchange, store, send, and retrieve data between network devices, also known as network nodes. (solarwinds.com)
-
-So examples of network nodes would include routers, switches, firewalls, servers, and clients.
-
-Servers and clients are sometimes called end hosts and end points (or endpoints). An endpoint is a computing device that communicates back and forth with the network it is connected to. Examples of endpoints include desktops, laptops, smartphones, tablets, and servers.
+Among these, servers and clients are often referred to as end hosts or endpoints. An endpoint is a device that sits at the “edge” of the network—it originates or terminates communications, acting as a source or destination of data. Typical endpoints include desktop computers, laptops, smartphones, tablets, and servers. Intermediate nodes like routers and switches forward traffic between endpoints but are not themselves considered endpoints.
 
 ### Network devices icons
 
@@ -96,13 +92,11 @@ For illustration, here are icons used in Wendell Odom’s (2020) CCNA 200-301 Of
 
 ### Cisco devices examples
 
-Enterprise computer networks typically consist of two types of networks: local area networks (LANs) and wide area networks (WANs). LANs typically connect devices on the same floor of a building. By comparison, WANs connect devices that are typically relatively far apart. 
+Enterprise networks are typically composed of two main types: local area networks (LANs) and wide area networks (WANs). LANs connect devices in a limited physical space, such as the same floor of a building, while WANs connect networks across much greater distances.
 
-Switches provide connectivity to end hosts within the same LAN. Standard (Layer 2) switches do not connect to the Internet. Switches forward data within a LAN. Switches do not provide connectivity over the Internet/between LANs.
+Within a LAN, standard Layer 2 switches provide connectivity to end hosts within the same LAN and forward data locally. However, switches cannot route traffic to the Internet or between LANs on their own; they require a router to reach networks outside their local segment.
 
-Routers provide connectivity between LANs. Routers are used to send data over the Internet.
-
-Typically end devices connect to a switch and the switch connects to a router which connects to the Internet. In network diagrams, usually a cloud is used to represent the Internet.
+Routers connect different LANs together and forward data between them, including providing access to the Internet. In a typical design, end devices connect to a switch, the switch connects to a router, and the router links to the Internet. In network diagrams, usually a cloud is used to represent the Internet.
 
 The following image shows some models of Cisco routers and switches. You can see router models ISR 1841 and ISR 2921, and switch models Catalyst 3560 and Catalyst Express 520.
 

@@ -49,16 +49,18 @@ There are many types of network devices, such as access points, firewalls, IDS/I
 
 ### Repeaters, hubs, bridges, switches, and routers
 
-Repeaters regenerate signals, allowing devices to communicate across great distances by extending the physical reach of a network (e.g., allowing Ethernet to go beyond the standard 100m limit). Repeaters do not filter or interpret data, unlike hubs which broadcast traffic and switches which forward traffic. Repeaters are typically used in long-distance cabling (e.g., fiber optic repeaters).
+Repeaters regenerate signals, allowing devices to communicate across great distances by extending the physical reach of a network (e.g., allowing Ethernet to go beyond the standard 100m limit). 
 
-Connecting hosts directly to each other does not scale. Hubs connect multiple devices together, solving the scaling problem. Hubs are multi-port repeaters—hubs connect multiple hosts in a single collision domain. When a host sends a packet, the hub duplicates it and floods it out all ports (no MAC learning). Everybody receives everybody else’s data. However, hubs do not scale well due to collisions and wasted bandwidth.
+Repeaters regenerate signals without interpreting data. Hubs, which are multi-port repeaters, also do not interpret data but broadcast incoming signals out all ports. Switches, however, forward frames based on MAC addresses and thus do interpret frame headers. Repeaters are typically used in long-distance cabling (e.g., fiber optic repeaters).
 
-A bridge sits in between hub-connected hosts, connecting two hubs. Bridges only have two ports – each facing a different hub. Bridges learn which hosts are on which side of the bridge (which MAC addresses are on each side), which allows bridges to contain communication/channel packets to their relative networks (i.e., filter traffic). Bridges will forward packets if the destination is on the other segment. 
-Bridges reduce unnecessary broadcasts, improving network performance. 
+Hubs are multi-port repeaters—they connect multiple hosts in a single collision domain. When a host sends data, the hub repeats the signal out all other ports (no MAC learning). Everybody receives everybody else’s data. Connecting hosts directly to each other does not scale. Hubs partially address this scaling problem by connecting multiple devices together, but they introduce a new scaling challenge. This design leads to collisions and wasted bandwidth, so hubs do not scale well as the network grows.
 
-Bridges (and standard switches) forward broadcasts and do **not** reduce broadcast traffic. They segment collision domains, which reduces collisions, but the broadcast domain remains unchanged. This statement is incorrect at any technical level, and especially for CCNA-equivalent material.
+To overcome these scaling limitations, networks use bridges and, more commonly today, switches, which segment collision domains and allow multiple devices to communicate simultaneously without collisions.
 
-But bridges have been largely replaced by switches, which are much more efficient than bridges.
+- **Bridges** segment collision domains, reducing collisions and allowing simultaneous conversations on different segments, which improves scalability.
+- **Switches** take this much further: each port is its own collision domain (micro-segmentation), and with full-duplex operation, collisions are eliminated entirely. Switches also provide dedicated bandwidth per port and can forward multiple frames simultaneously, making them highly scalable.
+
+A bridge sits between hub-connected hosts, connecting two hub segments. Bridges only have two ports—each facing a different hub segment. Bridges learn which hosts are on which side (which MAC addresses are on each side), allowing them to filter traffic and keep frames local to the appropriate segment. Bridges will forward frames only if the destination is on the other segment. Bridges and standard switches both forward broadcasts. They both segment collision domains, which reduces collisions. Bridges have been largely replaced by switches, which are much more efficient.
 
 A switch is a multi-port bridge with dedicated bandwidth per port. A switch maintains a full MAC address table for all ports and forwards traffic only to the destination port (unless it is flooding frames—more on the concept of flooding later on). 
 
@@ -68,7 +70,7 @@ Routers connect networks to the Internet. Routers provide traffic control points
 
 Routers learn which networks they are attached to. The knowledge of each different network is a route. Routes are stored in a routing table. A routing table is all the networks a router knows about. A router uses the routing table to funnel traffic to the appropriate interface.
 
-Routers learn which networks they are attached to – meaning, routers have an interface assigned an IP address in every network they are attached to, and typically those interfaces act as a gateway for the connected networks. A gateway is a host’s way out of their local network.
+Routers have an interface assigned an IP address in every network they are attached to, and typically those interfaces act as a gateway for the connected networks. A gateway is a host’s way out of their local network.
 
 If a host in the sales team of a corporation wants to speak to a host in the marketing team, it’s going to use its gateway, which is its closest router IP address, which is then going to send a packet to the next router, to the next router, and finally to the host in the marketing team.
 

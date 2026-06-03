@@ -18,7 +18,7 @@ Hubs operate at the Physical layer (Layer 1) while switches operate at the Dat
 | **Security**             | Less secure (all devices see all traffic)                             | More secure (isolates traffic between ports)                       |
 | **Use Case**             | Obsolete (used in early networks)                                     | Modern standard (used in all current networks)                     |
 
-#### **What Can Switches Do That Hubs Cannot?**
+#### What can switches do that hubs cannot?
 
 1. **MAC Address Learning & Forwarding** – Switches maintain a **MAC address table** to send frames only to the correct port, while hubs blindly broadcast.
 2. **Full-Duplex Communication** – Switches allow simultaneous two-way communication (send & receive at the same time), whereas hubs operate in **half-duplex** (collisions occur).
@@ -30,7 +30,7 @@ Hubs operate at the Physical layer (Layer 1) while switches operate at the Dat
 
 Bridges were an early improvement over hubs but were later replaced by switches, which offer more ports, faster forwarding, and better scalability.
 
-### Repeaters vs Hubs vs Bridges vs Switches: Key Differences
+**Repeaters vs Hubs vs Bridges vs Switches: Key Differences**
 
 | Feature              | **Repeater (L1)**                                | **Hub (L1)**                                            | **Bridge (L2)**                                     | **Switch (L2, Advanced)**                                |
 | -------------------- | ------------------------------------------------ | ------------------------------------------------------- | --------------------------------------------------- | -------------------------------------------------------- |
@@ -44,7 +44,7 @@ Bridges were an early improvement over hubs but were later replaced by switches,
 | **Security**         | **None** (raw signal passthrough)                | **None** (all traffic visible to all devices)           | **Basic filtering** (isolates segments)             | **Better isolation** (per-port forwarding, VLAN support) |
 | **Use Case**         | **Extending cable runs** (e.g., Ethernet, fiber) | **Obsolete** (historical use)                           | **Legacy segmentation** (older networks)            | **Modern standard** (all Ethernet networks)              |
 
-#### **Key Notes**
+**Key Notes**
 
 1. **Repeaters** extend signals but **do nothing for traffic efficiency**.
 2. **Hubs** are just **multi-port repeaters**—they flood all traffic, creating congestion.

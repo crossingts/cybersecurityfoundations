@@ -2,21 +2,21 @@
 
 ### Hubs vs switches
 
-Hubs and switches are both networking devices that connect multiple devices in a LAN, but they operate very differently at the data link layer (Layer 2) of the OSI model. Switches are vastly superior to hubs in speed, efficiency, and security—and are considered "intelligent devices" when compared to hubs. Hubs are obsolete in modern networks due to their broadcast nature and shared bandwidth limitations.
+Hubs operate at the Physical layer (Layer 1) while switches operate at the Data Link layer (Layer 2) of the OSI model. Although both connect multiple devices in a LAN, they handle traffic very differently. Switches are vastly superior to hubs in speed, efficiency, and security—and are considered "intelligent devices" when compared to hubs. Hubs are obsolete in modern networks due to their broadcast nature and shared bandwidth limitations.
 
 **Hubs vs Switches: Key Differences**
 
-| Feature                  | Hub (Layer 1)                                                             | Switch (Layer 2)                                                       |
-| ------------------------ | ------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| **Function**             | **Multi-port repeater** (broadcasts to all ports)                         | **Multi-port bridge** (intelligent forwarding)                         |
-| **Traffic Handling**     | Broadcasts all incoming data to **all ports** (flooding)                  | Forwards traffic **only to the destination port** using MAC addresses  |
-| **Collision Domain**     | **Single collision domain** (all devices share bandwidth)                 | **Per-port collision domain** (isolates traffic, full-duplex possible) |
-| **Bandwidth Usage**      | **Shared bandwidth** (e.g., 10Mbps hub divides bandwidth among all ports) | **Dedicated bandwidth per port** (e.g., 100Mbps per port)              |
-| **MAC Address Learning** | **No** (does not track devices)                                           | **Yes** (maintains a MAC address table for forwarding decisions)       |
-| **Ports**                | **4–12 ports** (multi-port repeater)                                      | **4–48+ ports** (scalable)                                             |
-| **Performance**          | **Slower** (due to collisions and unnecessary traffic)                    | **Faster** (efficient forwarding, no unnecessary broadcasts)           |
-| **Security**             | **Less secure** (all devices see all traffic)                             | **More secure** (isolates traffic between ports)                       |
-| **Use Case**             | **Obsolete** (used in early networks)                                     | **Modern standard** (used in all current networks)                     |
+| Feature                  | Hub (Layer 1)                                                         | Switch (Layer 2)                                                   |
+| ------------------------ | --------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| **Function**             | Multi-port repeater (broadcasts to all ports)                         | Multi-port bridge (intelligent forwarding)                         |
+| **Traffic Handling**     | Repeats all incoming signals to every other port (no filtering)       | Forwards traffic only to the destination port using MAC addresses  |
+| **Collision Domain**     | Single collision domain (all devices share bandwidth)                 | Per-port collision domain (isolates traffic, full-duplex possible) |
+| **Bandwidth Usage**      | Shared bandwidth (e.g., 10Mbps hub divides bandwidth among all ports) | Dedicated bandwidth per port (e.g., 100Mbps per port)              |
+| **MAC Address Learning** | No (does not track devices)                                           | Yes (maintains a MAC address table for forwarding decisions)       |
+| **Ports**                | 4–12 ports (multi-port repeater)                                      | 4–48+ ports (scalable)                                             |
+| **Performance**          | Slower (due to collisions and unnecessary traffic)                    | Faster (efficient forwarding, no unnecessary broadcasts)           |
+| **Security**             | Less secure (all devices see all traffic)                             | More secure (isolates traffic between ports)                       |
+| **Use Case**             | Obsolete (used in early networks)                                     | Modern standard (used in all current networks)                     |
 
 #### **What Can Switches Do That Hubs Cannot?**
 

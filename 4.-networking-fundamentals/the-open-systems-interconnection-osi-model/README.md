@@ -122,8 +122,8 @@ Layer 4 is there to distinguish data streams. It’s going to take all the incom
 
 Layer 4’s addressing scheme involves three port ranges for [TCP (Transmission Control Protocol) and UDP (User Datagram Protocol)](https://itnetworkingskills.wordpress.com/2023/04/06/compare-tcp-udp/):
 
-- 0–1023: Well‑known ports that are assigned by the Internet Assigned Numbers Authority (IANA) and are used for common protocols, such as HTTP (port 80), HTTPS (port 443), and FTP (port 21).
-- 1024–49151: Registered ports. Registration is required to use these port numbers, although it’s not as strict as with the well-known port range.
+- 0–1023: Well‑known ports. These are assigned by the Internet Assigned Numbers Authority (IANA) and are used for common protocols, such as HTTP (port 80), HTTPS (port 443), and FTP (port 21).
+- 1024–49151: Registered ports. These are typically registered with IANA for a specific protocol, though in practice registration is not mandatory for use.
 - 49152–65535: Dynamic/private ports. Hosts use this range when selecting the random source port.
 
 Any port number that is not in one of these ranges is considered to be a dynamic port. Dynamic ports are used for applications that need to dynamically allocate ports, such as peer-to-peer file sharing applications.

@@ -16,6 +16,10 @@ description: >-
 
 This section discusses the [Open Systems Interconnection (OSI) model](https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/) layers and their role in data flow. Key concepts discussed in this section include the OSI model Physical layer, Data Link layer, Network layer, Transport layer, Session layer, Presentation layer, Application layer, and data encapsulation/de-encapsulation.
 
+This section unpacks the Open Systems Interconnection (OSI) model—a seven‑layer framework that standardises how data travels from one host to another. 
+We begin with the Physical layer and work our way up, examining the distinct role each layer plays: transporting raw bits, moving frames between adjacent devices, routing packets end to end, delivering data to the correct application, and finally presenting information to users. You will learn the specific addressing schemes used at Layer 2 (MAC addresses), Layer 3 (IP addresses), and Layer 4 (port numbers), and you will see how devices like switches and routers fit into the layered model. The section also walks through the encapsulation and de‑encapsulation process that wraps data in successive headers, clarifying why the lower four layers receive the most attention in networking while the top three are often grouped together. By the end, you will have a practical understanding of the OSI model that underpins all modern network communication.
+
+
 ## Topics covered in this section
 
 * **The Open Systems Interconnection (OSI) Model**

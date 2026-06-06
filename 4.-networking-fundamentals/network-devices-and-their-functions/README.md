@@ -13,7 +13,7 @@ description: >-
 * Compare the functions of repeaters, hubs, bridges, switches, and routers
 * Become familiar with major network devices and their role in network operations
 
-This discussion introduces foundational concepts in computer networking and explains the functions of key networking components and devices. Key concepts discussed in this section include hosts, IP addresses, networks, repeaters, hubs, bridges, switches, and routers.
+This section explores the building blocks of modern computer networks. The discussion begins by clarifying fundamental concepts—hosts, clients, servers, and IP addresses—and shows how these pieces come together to form networks and subnets. From there, the section defines network devices. A detailed comparison of repeaters, hubs, bridges, switches, and routers illustrates how each device handles traffic, overcomes scalability limits, and fits into a network hierarchy. The section then distinguishes between network nodes and endpoints, introduces the standard icons used in network diagrams, and examines real-world examples drawn from Cisco’s router and switch families. Finally, firewalls are covered—both network-based appliances and host-based software—as indispensable security devices that enforce traffic policies at the network’s edge and on individual endpoints.
 
 ## Topics covered in this section
 
@@ -29,7 +29,7 @@ This discussion introduces foundational concepts in computer networking and expl
 
 A host is any device that sends or receives traffic. It can be a client or a server. A client initiates a request for some data or a service. A server responds. A server is a computer that runs software specifically designed to listen for and respond to client requests.
 
-Every host must have an IP address to communicate on the Internet. IP stands for [Internet Protocol](https://itnetworkingskills.wordpress.com/2023/01/15/network-protocols-their-functions/). An IP (specifically, IPv4) address is comprised of 32 bits (4 bytes), represented as four octets. The value of each octet is represented in decimal numbers (e.g., 136.22.17.98). The smallest binary number you can get with 8 bits is zero; the largest is 255.
+Every host must have an IP address to communicate over an IP network (including the Internet). IP stands for [Internet Protocol](https://itnetworkingskills.wordpress.com/2023/01/15/network-protocols-their-functions/). An IP (specifically, IPv4) address is comprised of 32 bits (4 bytes), represented as four octets. The value of each octet is represented in decimal numbers (e.g., 136.22.17.98). The smallest value an octet can represent is 0 (binary 00000000) and the largest is 255 (binary 11111111).
 
 IP addresses are typically assigned in some sort of hierarchy. The breaking up of IP addresses into their different hierarchies is done through a process known as subnetting.
 
@@ -49,20 +49,20 @@ There are many types of network devices, such as access points, firewalls, IDS/I
 
 ### Repeaters, hubs, bridges, switches, and routers
 
-Repeaters regenerate signals, allowing devices to communicate across great distances by extending the physical reach of a network (e.g., allowing Ethernet to go beyond the standard 100m limit). 
+Repeaters regenerate signals, allowing devices to communicate across great distances by extending the physical reach of a network (e.g., allowing Ethernet to go beyond the standard 100m limit). Repeaters are typically used in long-distance cabling (e.g., fiber optic repeaters).
 
-Repeaters regenerate signals without interpreting data. Hubs, which are multi-port repeaters, also do not interpret data but broadcast incoming signals out all ports. Switches, however, forward frames based on MAC addresses and thus do interpret frame headers. Repeaters are typically used in long-distance cabling (e.g., fiber optic repeaters).
+Repeaters regenerate signals without interpreting data. Hubs, which are multi-port repeaters, also do not interpret data but broadcast incoming signals out all ports. Switches, however, forward frames based on MAC addresses and thus do interpret frame headers. 
 
-Hubs are multi-port repeaters—they connect multiple hosts in a single collision domain. When a host sends data, the hub repeats the signal out all other ports (no MAC learning). Everybody receives everybody else’s data. Connecting hosts directly to each other does not scale. Hubs partially address this scaling problem by connecting multiple devices together, but they introduce a new scaling challenge. This design leads to collisions and wasted bandwidth, so hubs do not scale well as the network grows.
+Hubs connect multiple hosts in a single collision domain. When a host sends data, the hub repeats the signal out all other ports (no MAC learning). Everybody receives everybody else’s data. Connecting hosts directly to each other does not scale. Hubs partially address this scaling problem by connecting multiple devices together, but they introduce a new scaling challenge. This design leads to collisions and wasted bandwidth, so hubs do not scale well as the network grows.
 
 To overcome these scaling limitations, networks use bridges and, more commonly today, switches, which segment collision domains and allow multiple devices to communicate simultaneously without collisions.
 
 - **Bridges** segment collision domains, reducing collisions and allowing simultaneous conversations on different segments, which improves scalability.
-- **Switches** take this much further: each port is its own collision domain (micro-segmentation), and with full-duplex operation, collisions are eliminated entirely. Switches also provide dedicated bandwidth per port and can forward multiple frames simultaneously, making them highly scalable.
+- **Switches** take this further: each port is its own collision domain (micro-segmentation), and with full-duplex operation, collisions are eliminated entirely. Switches also provide dedicated bandwidth per port and can forward multiple frames simultaneously, making them highly scalable.
 
 A bridge sits between hub-connected hosts, connecting two hub segments. Bridges only have two ports—each facing a different hub segment. Bridges learn which hosts are on which side, that is, which MAC addresses are on each side. A MAC (Media Access Control) address is a unique hardware identifier assigned to a network interface controller (NIC) by the manufacturer. It is typically a 48-bit address written as 12 hexadecimal digits (e.g., 00:1A:2B:3C:4D:5E), and is often called the burned-in address (BIA). This allows bridges to filter traffic and keep frames local to the appropriate segment.
 
-Bridges will forward frames only if the destination is on the other segment. Bridges and standard switches both forward broadcasts. They both segment collision domains, which reduces collisions. Bridges have been largely replaced by switches, which are much more efficient.
+Bridges will forward frames only if the destination is on the other segment. Bridges and switches both forward broadcasts. Switches, which are much more efficient, have largely replaced bridges.
 
 A switch is a multi-port bridge with dedicated bandwidth per port. A switch maintains a full MAC address table for all ports and forwards traffic only to the destination port (unless it is flooding frames—more on the concept of flooding later on). 
 
@@ -130,18 +130,17 @@ Host-based firewalls are software applications that filter traffic entering and 
 
 ### Key takeaways
 
-* A host is any device that sends or receives traffic:
-  * a client initiates a request for some data or a service, a server responds.
-* An IP address is the identity of each host.
-* A network is what transports traffic between hosts:
-  * a network is a logical grouping of hosts which require similar connectivity.
-  * networks can contain other networks called sub-networks or subnets.
-* Network devices:
-  * repeaters regenerate signals.
-  * hubs are multiport repeaters.
-  * bridges sit between hub-connected hosts.
-  * switches facilitate communication within a network.
-  * routers facilitate communication between networks.
+- A host is any device that sends or receives traffic. A client initiates a request; a server responds.
+- Every host on an IP network must have an IP address. IPv4 addresses are 32-bit values represented in dotted-decimal (e.g., 136.22.17.98).
+- A network is a logical grouping of hosts that share the same connectivity requirements and IP address space. Networks can be subdivided into smaller sub-networks (subnets).
+- Network devices mediate data transmission:
+    - Repeaters regenerate signals to extend a network’s physical reach.
+    - Hubs are multiport repeaters that create a single collision domain, broadcasting data to all ports.
+    - Bridges connect two network segments, learn MAC addresses, and forward frames only when necessary, reducing collisions.
+    - Switches are multiport bridges that provide dedicated collision domains per port and forward frames based on MAC addresses, enabling simultaneous communication within a network.
+    - Routers connect different networks, forward packets using IP addresses and routing tables, and serve as gateways.
+- All devices connected to a network are called network nodes. Endpoints (end hosts such as clients and servers) originate or terminate traffic, whereas intermediate nodes (switches, routers) forward it.
+- Firewalls monitor and control traffic based on configured security rules. They can be hardware appliances that filter traffic between networks (network firewalls) or software applications that protect individual hosts (host-based firewalls).
 
 ### References
 

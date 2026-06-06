@@ -28,9 +28,9 @@ This section unpacks the [Open Systems Interconnection (OSI) model](https://www.
 
 ### [The Open Systems Interconnection (OSI) Model](https://en.wikipedia.org/wiki/OSI_model)
 
-The purpose of networking is to allow two hosts to share data with one another. To share data, hosts must follow a set of rules. According to the [Open Systems Interconnection Reference Model](https://www.networkworld.com/article/3239677/the-osi-model-explained-and-how-to-easily-remember-its-7-layers.html), the rules of networking are divided into seven layers: Application, Presentation, Session, Transport, Network, Data Link, and Physical.&#x20;
+The purpose of networking is to allow two hosts to share data with one another. To share data, hosts must follow a set of rules. According to the [Open Systems Interconnection Reference Model](https://www.networkworld.com/article/3239677/the-osi-model-explained-and-how-to-easily-remember-its-7-layers.html), the rules of networking are divided into seven layers: Application, Presentation, Session, Transport, Network, Data Link, and Physical. 
 
-Remember the layers of the OSI model by remembering the mnemonic, All People Seem To Need Data Processing. Understanding the OSI model will help you build a strong network, troubleshoot problems, develop effective applications, and evaluate third-party products.&#x20;
+Remember the layers of the OSI model by remembering the mnemonic, All People Seem To Need Data Processing. Understanding the OSI model will help you build a strong network, troubleshoot problems, develop effective applications, and evaluate third-party products. 
 
 **Key Protocols Operating at Each Layer of the OSI Model**
 
@@ -50,7 +50,7 @@ Each layer of the OSI model serves a specific function that contributes to the o
 2. **Layer 3 (Network): IP Address** - Used for **end-to-end delivery** across an entire network path. It logically identifies the source and destination hosts.
 3. **Layer 4 (Transport): Port Number** - Used for **service-to-service delivery** to the correct application or service (e.g., web, email) on the destination host.
 
-There are various devices and protocols which operate at specific layers of the OSI model which serve in accomplishing each layer’s goal.&#x20;
+There are various devices and protocols which operate at specific layers of the OSI model which serve in accomplishing each layer’s goal. 
 
 **A brief explanation of the function of each layer**
 
@@ -196,7 +196,7 @@ The adage “all models are wrong, but some are useful” applies to networking.
 
 We’ve mentioned that networking devices operate at specific layers of the OSI model. For example, switches operate at Layer 2 and routers operate at Layer 3. What that means is that they only look into the datagram up to their respective layer. So, e.g., switches are only looking at the frame, at the Layer 2 header to make a decision. They’re not looking inside the data payload into the Layer 3 and Layer 4 headers.
 
-We’ve also discussed that there are various protocols which operate at specific layers. For instance the IP protocol is a Layer 3 protocol. TCP and UDP are Layer 4 protocols.&#x20;
+We’ve also discussed that there are various protocols which operate at specific layers. For instance the IP protocol is a Layer 3 protocol. TCP and UDP are Layer 4 protocols. 
 
 But there are exceptions.
 

@@ -6,7 +6,7 @@ description: >-
 
 # Host to host communication in networking
 
-## Learning objectives <a href="#learning-objectives" id="learning-objectives"></a>
+## Learning objectives
 
 * Understand how ARP resolves IP addresses to MAC addresses
 * Understand how hosts in the same network send and receive data

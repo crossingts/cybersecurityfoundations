@@ -45,7 +45,6 @@ Network devices are also known as network equipment or network hardware or netwo
 
 ![[network-devices-their-functions.webp]]
 
-
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/43ea5-network-devices-their-functions-1200x838px.webp?w=968" alt="network-devices-their-functions-1200x838px" height="675" width="968"><figcaption><p>Network devices examples (image courtesy of itrelease.com)</p></figcaption></figure>
 
 There are many types of network devices, such as access points, firewalls, IDS/IPS, routers, and switches.

@@ -6,7 +6,7 @@ description: >-
 
 # The Open Systems Interconnection (OSI) model
 
-## Learning objectives <a href="#learning-objectives" id="learning-objectives"></a>
+## Learning objectives
 
 * Understand what is the OSI model
 * List the layers of the OSI model and describe their functions

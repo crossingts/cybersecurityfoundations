@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4.-networking-fundamentals/network-devices-and-their-functions/README.md",
+                "file": "4.-networking-fundamentals/the-open-systems-interconnection-osi-model/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -183,9 +183,9 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
+    "4.-networking-fundamentals/network-devices-and-their-functions/README.md",
     "4.-networking-fundamentals/network-devices-and-their-functions/network-devices-and-their-functions-quiz.md",
     "4.-networking-fundamentals/network-devices-and-their-functions/network-devices-their-functions.webp",
-    "4.-networking-fundamentals/network-devices-and-their-functions/README.md",
     "4.-networking-fundamentals/network-devices-and-their-functions/repeaters-vs-hubs-vs-bridges-vs-switches.md",
     "4.-networking-fundamentals/network-devices-and-their-functions/lab-getting-started-with-cisco-packet-tracer.md",
     "4.-networking-fundamentals/cisco-ios-cli-and-basic-device-security/lab-getting-started-with-cisco-packet-tracer.md",

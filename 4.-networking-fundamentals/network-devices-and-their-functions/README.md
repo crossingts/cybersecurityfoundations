@@ -43,7 +43,7 @@ Network devices are components of electronic networks required for communication
 
 Network devices are also known as network equipment or network hardware or networking hardware because traditionally they were physical components. Today, many network devices are virtualized or software-based.
 
-![Alt text](network-devices-their-functions.webp)
+![Network devices examples (image courtesy of itrelease.com)](network-devices-their-functions.webp)
 
 ![[network-devices-their-functions.webp]]
 

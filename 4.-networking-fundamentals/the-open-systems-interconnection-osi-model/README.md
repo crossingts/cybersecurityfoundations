@@ -174,7 +174,7 @@ The process of data encapsulation and de-encapsulation: what’s happening when 
 
 **Sending/encapsulation**
 
-When a computer has data to send, it encapsulates it in a IP header which will include information like the Source and Destination IP addresses of the two “ends” of the communication. The IP Header and Data are then further encapsulated in a MAC address header, which will include information like the Source and Destination MAC address of the current “hop” in the path towards the final destination. (Ed Harmoush, February 26, 2019)
+When a computer has data to send, it first adds a Layer 4 header (such as a TCP header containing source and destination ports) to help the correct application receive the data. The result is then encapsulated in a Layer 3 IP header, which includes the source and destination IP addresses for end‑to‑end delivery. Finally, that packet is encapsulated in a Layer 2 MAC header, which contains the source and destination MAC addresses for the current hop.
 
 Suppose a computer application needs to send data to a server on a different network. What that host is going to go through is what’s known as the encapsulation process.
 
@@ -223,7 +223,7 @@ We’ve been talking about IP addresses and MAC addresses as independent functio
   * clients select random port for each connection – response traffic will arrive on this port.
 * Layers 5, 6, 7 – Session, Presentation, Application:
   * the distinction between these layers is somewhat vague.
-  * other networking models combines theses three layers into one.
+  * other networking models combine these three layers into one.
   * L1-L4 are the most important to understand how data flow through the Internet.
 * OSI data encapsulation/de-encapsulation:
   * how hosts communicate with each other using the OSI networking stack.

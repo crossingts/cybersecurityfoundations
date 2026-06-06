@@ -11,14 +11,10 @@
             "id": "1e65107a9a5d3b6c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "4.-networking-fundamentals/network-devices-and-their-functions/lab-getting-started-with-cisco-packet-tracer.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "lab-getting-started-with-cisco-packet-tracer"
+              "title": "New tab"
             }
           }
         ]
@@ -183,9 +179,10 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
+    "4.-networking-fundamentals/network-devices-and-their-functions/lab-getting-started-with-cisco-packet-tracer.md",
+    "4.-networking-fundamentals/cisco-ios-cli-and-basic-device-security/lab-getting-started-with-cisco-packet-tracer.md",
     "4.-networking-fundamentals/network-devices-and-their-functions/network-devices-and-their-functions-quiz.md",
     "4.-networking-fundamentals/network-devices-and-their-functions/README.md",
-    "4.-networking-fundamentals/network-devices-and-their-functions/lab-getting-started-with-cisco-packet-tracer.md",
     "4.-networking-fundamentals/the-open-systems-interconnection-osi-model/README.md",
     "1.-it-career-planning/it-career-paths/README.md",
     "4.-networking-fundamentals/network-devices-and-their-functions/repeaters-vs-hubs-vs-bridges-vs-switches.md",
@@ -208,7 +205,6 @@
     "4.-networking-fundamentals/chapter-4-review-questions.md",
     "5.-cryptography-and-wireless-security/introduction-cryptography-and-wireless-security.md",
     "7.-conclusion/glossary.md",
-    "7.-conclusion/cybersecurity-grc.md",
     "2.-introduction-to-cybersecurity/the-evolving-cybersecurity-threat-landscape",
     "LICENSE",
     "3.-cybersecurity-grc/the-information-security-compliance-audit",

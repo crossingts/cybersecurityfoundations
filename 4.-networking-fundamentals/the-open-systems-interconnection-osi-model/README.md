@@ -120,10 +120,11 @@ All that data will be destined to the computer’s Layer 3 header to accomplish 
 
 Layer 4 is there to distinguish data streams. It’s going to take all the incoming data and make sure that the right program receives the right data. Just like layers 3 and 2 each had an addressing scheme to perform their function, Layer 4 is also going to use its own addressing scheme to accomplish its goal of service to service delivery.
 
-Layer 4’s addressing scheme involves two sets of ports for [TCP (Transmission Control Protocol) and UDP (User Datagram Protocol)](https://itnetworkingskills.wordpress.com/2023/04/06/compare-tcp-udp/):
+Layer 4’s addressing scheme involves three port ranges for [TCP (Transmission Control Protocol) and UDP (User Datagram Protocol)](https://itnetworkingskills.wordpress.com/2023/04/06/compare-tcp-udp/):
 
-* 0-1023: these are well-known ports that are assigned by the Internet Assigned Numbers Authority (IANA) and are used for common protocols, such as HTTP (port 80), HTTPS (port 443), and FTP (port 21).
-* 1024-65535: these are registered ports that are also assigned by IANA, but they are available for general use.
+- 0–1023: Well‑known ports that are assigned by the Internet Assigned Numbers Authority (IANA) and are used for common protocols, such as HTTP (port 80), HTTPS (port 443), and FTP (port 21).
+- 1024–49151: Registered ports. Registration is required to use these port numbers, although it’s not as strict as with the well-known port range.
+- 49152–65535: Dynamic/private ports. Hosts use this range when selecting the random source port.
 
 Any port number that is not in one of these ranges is considered to be a dynamic port. Dynamic ports are used for applications that need to dynamically allocate ports, such as peer-to-peer file sharing applications.
 

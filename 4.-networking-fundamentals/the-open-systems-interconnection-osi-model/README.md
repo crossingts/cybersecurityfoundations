@@ -60,7 +60,7 @@ There are various devices and protocols which operate at specific layers of the 
 
 Computer data exist in the form of bits, 0’s and 1’s. The physical layer transports bits between hosts. Anything that contributes to moving bits from one host to another is a Layer 1 technology, e.g., Ethernet cable, serial cable, Wi-Fi, repeaters, and hubs.
 
-The actual format of the data on the “wire” can vary with each medium. In the case of Ethernet, bits are transferred in the form of electric pulses. In the case of Wifi, bits are transferred in the form of radio waves. In the case of Fiber, bits are transferred in the form of pulses of light. (Ed Harmoush, February 26, 2019)
+The physical form that data takes on the medium varies with the transmission medium itself. For Ethernet over copper cabling, bits travel as electrical pulses. Over Wi‑Fi, bits are transmitted using radio waves. With fiber optic cabling, bits are sent as pulses of light.
 
 More generally, the Physical layer:
 
@@ -229,8 +229,6 @@ We’ve been talking about IP addresses and MAC addresses as independent functio
   * how hosts communicate with each other using the OSI networking stack.
 
 ### References
-
-[Ed Harmoush. (February 26, 2019). OSI Model (PracNet)](https://www.practicalnetworking.net/series/packet-traveling/osi-model/)
 
 Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 1. Cisco Press.
 

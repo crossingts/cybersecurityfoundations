@@ -11,10 +11,14 @@
             "id": "1e65107a9a5d3b6c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "4.-networking-fundamentals/network-devices-and-their-functions/README.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "README"
             }
           }
         ]
@@ -179,13 +183,14 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
+    "4.-networking-fundamentals/network-devices-and-their-functions/network-devices-and-their-functions-quiz.md",
+    "4.-networking-fundamentals/network-devices-and-their-functions/network-devices-their-functions.webp",
+    "4.-networking-fundamentals/network-devices-and-their-functions/README.md",
+    "4.-networking-fundamentals/network-devices-and-their-functions/repeaters-vs-hubs-vs-bridges-vs-switches.md",
     "4.-networking-fundamentals/network-devices-and-their-functions/lab-getting-started-with-cisco-packet-tracer.md",
     "4.-networking-fundamentals/cisco-ios-cli-and-basic-device-security/lab-getting-started-with-cisco-packet-tracer.md",
-    "4.-networking-fundamentals/network-devices-and-their-functions/network-devices-and-their-functions-quiz.md",
-    "4.-networking-fundamentals/network-devices-and-their-functions/README.md",
     "4.-networking-fundamentals/the-open-systems-interconnection-osi-model/README.md",
     "1.-it-career-planning/it-career-paths/README.md",
-    "4.-networking-fundamentals/network-devices-and-their-functions/repeaters-vs-hubs-vs-bridges-vs-switches.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/gaining-access-attacking-a-system.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/scanning-and-enumeration/README.md",
     "6.-practical-foundations-in-ethical-hacking/phases-of-the-penetration-testing-process/README.md",
@@ -204,7 +209,6 @@
     "typing-www.google.com-into-a-web-browser.md",
     "4.-networking-fundamentals/chapter-4-review-questions.md",
     "5.-cryptography-and-wireless-security/introduction-cryptography-and-wireless-security.md",
-    "7.-conclusion/glossary.md",
     "2.-introduction-to-cybersecurity/the-evolving-cybersecurity-threat-landscape",
     "LICENSE",
     "3.-cybersecurity-grc/the-information-security-compliance-audit",

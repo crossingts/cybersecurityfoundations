@@ -1,7 +1,5 @@
 ---
-description: >-
-  This section describes the roles of the network protocols ARP, FTP, SMTP,
-  HTTP, SSL, TLS, and HTTPS  in data transmission over the Internet
+description: This section describes the roles of the network protocols ARP, FTP, SMTP, HTTP, SSL, TLS, and HTTPS in data transmission over the Internet
 ---
 
 # Network protocols and their functions
@@ -37,20 +35,20 @@ But let’s roll back our definition of network protocols to further clarify its
 
 **What is a protocol?**
 
-A protocol is a set of rules and messages that form an Internet standard.
+A protocol is a set of rules that govern communication.
 
 In computing, a protocol is a convention or standard that controls or enables the connection, communication, and data transfer between computing endpoints. In its simplest form, a protocol can be defined as the rules governing the syntax, semantics, and synchronization of communication. Protocols may be implemented by hardware, software, or a combination of the two. At the lowest level, a protocol defines the behavior of a hardware connection. (Common Protocols, 2023, January 10)
 
 While protocols can vary greatly in purpose and sophistication, most specify one or more of the following properties (Common Protocols, 2023, January 10):
 
-* Detection of the underlying physical connection (wired or wireless), or the existence of the other endpoint or node
-* Handshaking (dynamically setting parameters of a communications channel)
-* Negotiation of various connection characteristics
-* How to start and end a message
-* How to format a message
-* What to do with corrupted or improperly formatted messages (error correction)
-* How to detect unexpected loss of the connection, and what to do next
-* Termination of the session and or connection.
+* Detection of the underlying physical connection (wired or wireless), or the existence of the other endpoint or node.
+* Handshaking (dynamically setting parameters of a communications channel).
+* Negotiation of various connection characteristics.
+* How to start and end a message.
+* How to format a message.
+* What to do with corrupted or improperly formatted messages (error correction).
+* How to detect unexpected loss of the connection, and what to do next.
+* Termination of the session and/or connection.
 
 **What is an Internet protocol?**
 
@@ -67,24 +65,24 @@ The TCP/IP model (like the OSI model) is a formalized way of organizing and repr
 | TCP/IP               | OSI Model          | Protocols & Standards                                                                             |
 | -------------------- | ------------------ | ------------------------------------------------------------------------------------------------- |
 | Application Layer    | Application Layer  | DNS, DHCP, FTP, TFTP, HTTP, HTTPS, LDAP, NTP, POP3, RTP, RTSP, SSH, Telnet, SIP, SMTP, SNMP, MIME |
-| Application Layer    | Presentation Layer | JPEG, ASCII, EBDIC, MIDI, MPEG, PICT, TIFF. GIF                                                   |
+| Application Layer    | Presentation Layer | JPEG, ASCII, EBCDIC, MIDI, MPEG, PICT, TIFF, GIF                                                  |
 | Application Layer    | Session Layer      | NetBIOS, NFS, PAP, SCP, RPC, SQL, ZIP                                                             |
 | Transport Layer      | Transport Layer    | TCP, UDP, SPX                                                                                     |
 | Internet Layer       | Network Layer      | ICMP, IGMP, IPsec, IPv4, IPv6, IPX, RIP, OSPF                                                     |
 | Network Access Layer | Data Link Layer    | ARP, RARP, ATM, CDP, FDDI, Frame Relay, HDLC, MPLS, PPP, SLIP, STP, Token Ring                    |
-| Network Access Layer | Physical Layer     | Bluetooth, DSL, Hub, Ethernet II, IEEE 802.3, IEEE 802.11 (WiFi), ISDN                            |
+| Network Access Layer | Physical Layer     | Bluetooth, DSL, Ethernet II, IEEE 802.3, IEEE 802.11 (WiFi), ISDN                                 |
 
 **What is the Internet Protocol?**
 
 The Internet Protocol (IP) is the Internet layer (TCP/IP model) or network layer (OSI model) communications protocol in the Internet protocol suite for relaying datagrams across network boundaries. “Its routing function enables internetworking, and essentially establishes the Internet” (Internet Protocol, 2022, December 29).
 
-There are two main versions of IP: IPv4 and IPv6 (v equals version). IPv4 uses 32 bit addresses which limits the address space to 2 to the power of 32 unique IP addresses. This is equal to 4,294,967,296 IP addresses. IPv6 uses 128 bit addresses allowing for 2 to the power of 128 (about 3.4 x 10 to the power of 38) unique IP addresses. This is equal to 340 trillion trillion trillion IP addresses. The addressing architecture of IPv4 is defined in IETF publication RFC 791 (September 1981). IPv6 is defined in IETF publication RFC 4291 (July 2017). IPv4 is used by 99% of the networks, while IPv6 is used by less than 1% of the networks.
+There are two main versions of IP: IPv4 and IPv6 (v equals version). IPv4 uses 32 bit addresses which limits the address space to 2 to the power of 32 unique IP addresses. This is equal to 4,294,967,296 IP addresses. IPv6 uses 128 bit addresses allowing for 2 to the power of 128 (about 3.4 x 10 to the power of 38) unique IP addresses. This is equal to 340 trillion trillion trillion IP addresses. The addressing architecture of IPv4 is defined in IETF publication RFC 791 (September 1981). The IPv6 addressing architecture is defined in RFC 4291 (February 2006). IPv4 remains widely deployed, but IPv6 adoption continues to grow rapidly.
 
 ### The DHCP protocol
 
 Every host needs four items for Internet connectivity. Anytime a host connects to a network there are four parameters that need to be configured on this host to achieve Internet connectivity.
 
-**First**, an IP address. This serves as the the host identity on the Internet.
+**First**, an IP address. This serves as the host identity on the Internet.
 
 **Second**, a subnet mask. This will tell the host the size of its network. It will allow the host to determine if it’s trying to speak to something on its own network or to something on a foreign network. A subnet mask can look like this: /24. Or it can look like this: 255.255.255.0. Both of those are simply different ways of representing an identical subnet mask.
 
@@ -92,7 +90,7 @@ If a host only has an IP address and a subnet mask this will be sufficient to al
 
 **Third**, a default gateway (default router). If a host needs to speak to something on a foreign network, for instance the Internet, that host is going to need a router. Specifically, that host is going to need the router’s IP address configured as that host’s default gateway.
 
-With these three elements configured on a host, a host can speak through the router to the Internet to any server using its IP address. But most the time, an Internet user is browsing websites and trying to send emails. In order for a host to speak to domains, it has to convert domain names into IP addresses first.
+With these three elements configured on a host, a host can speak through the router to the Internet to any server using its IP address. But most of the time, an Internet user is browsing websites and trying to send emails. In order for a host to speak to domains, it has to convert domain names into IP addresses first.
 
 **Fourth**, a default DNS server. The fourth item that every host needs in order to achieve Internet connectivity is the IP address of a DNS server so that it can translate domain names to IP addresses, so that it can then communicate with other hosts using their domain names.
 
@@ -104,13 +102,13 @@ But hold on! Every time you connect to a new Wi-Fi network at the local coffee s
 
 Well, an important Internet protocol is working its magic behind the scenes, the **Dynamic Host Configuration Protocol (DHCP)**. DHCP allows a DHCP server to provide an IP address, a mask, a default gateway, and a DNS server for any client.
 
-Every time you connect to a new network your host will send a DHCP discover message to discover the DHCP server and then the DHCP server will provide these four things in response back to the client. The client then has everything it needs in order to speak to the Internet. That is how every time you connect to a new Wi-Fi network, your phone or laptop automatically acquires the information it needs in order to speak to the internet.
+Every time you connect to a new network your host will send a DHCP discover message to discover the DHCP server and then the DHCP server will provide these four things in response back to the client. The client then has everything it needs in order to speak to the Internet. That is how every time you connect to a new Wi-Fi network, your phone or laptop automatically acquires the information it needs in order to speak to the Internet.
 
 ### Network protocols ARP, FTP, SMTP, HTTP, SSL, TLS, and HTTPS
 
 We’ve discussed the **Address Resolution Protocol or ARP** earlier in this chapter, especially in section 3 [Host to host communication in networking](https://itnetworkingskills.wordpress.com/2023/01/01/host-host-communication-networking/) and section 5 [How routers facilitate communication between networks](https://itnetworkingskills.wordpress.com/2023/01/09/how-routers-facilitate-communication/).
 
-Recall, ARP is a L2 protocol used to map MAC addresses to IP addresses which allows two hosts to discover each other’s MAC address if all they know is their IP address. A client sends out an ARP request and a server, the receiving host, sends an ARP response.&#x20;
+Recall, ARP is a Layer 2 protocol used to map IP addresses to MAC addresses, which allows two hosts to discover each other’s MAC address if all they know is their IP address. A client sends out an ARP request and a server, the receiving host, sends an ARP response. 
 
 But what is the structure of an ARP request? Someone had to determine what constitutes an ARP request – what question to ask in an ARP request or what information to include in an ARP request or what to add as the destination MAC address in an ARP request. And what constitutes an ARP response? In short, what are the rules for writing ARP requests and ARP responses?
 
@@ -118,11 +116,11 @@ RFC 826 is what defines what makes an ARP conversation.
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/35f13-network-protocols-arp-ftp-smtp-http-ssl-tls-https-dns-dhcp.webp" alt="Network-Protocols-ARP-FTP-SMTP-HTTP-SSL-TLS-HTTPS-DNS-DHCP" height="507" width="1479"><figcaption><p>RFC 826 sets the rules of an ARP conversation (source: Ed Harmoush, PracNet: Network Protocols)</p></figcaption></figure>
 
-The RFC 826 are the engineering implementation rules for how to do ARP. Since these rules are published as an Internet standard, ARP can be implemented by many different vendors. Thus an HP server can speak to an Apple MacBook, and a Dell laptop can speak to a Samsung phone. The different vendors would simply follow the public open Internet standard for ARP.
+The RFC 826 is the engineering implementation rules for how to do ARP. Since these rules are published as an Internet standard, ARP can be implemented by many different vendors. Thus an HP server can speak to an Apple MacBook, and a Dell laptop can speak to a Samsung phone. The different vendors would simply follow the public open Internet standard for ARP.
 
 **FTP (File Transfer Protocol)** is an application layer protocol. It allows a client and a server to send and receive files from each other. The FTP conversation is made up of messages that look like this:
 
-<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/a96a7-network-protocols-ftp.webp" alt="Network-Protocols-FTP" height="480" width="1079"><figcaption><p>An RETR command stands for retrieve and ask (source: Ed Harmoush, PracNet: Network Protocols)</p></figcaption></figure>
+<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/a96a7-network-protocols-ftp.webp" alt="Network-Protocols-FTP" height="480" width="1079"><figcaption><p>The RETR command (short for retrieve) requests a file from the server (source: Ed Harmoush, PracNet: Network Protocols)</p></figcaption></figure>
 
 The client would send the RETR command for a particular file and this would prompt the server to respond with that file.
 
@@ -132,9 +130,9 @@ The **SMTP (Simple Mail Transfer Protocol)** is the protocol that email servers 
 
 HELO is a SMTP command sent by a client to an SMTP server. The command tells the server that the client wishes to initiate an e-mail transaction and is followed by the client’s domain name.
 
-The SMTP server will respond with a response code of 250, and now the client and the server can exchange emails with one another. HELO and 250 are simply some of the messages in the SMTP standard.&#x20;
+The SMTP server will respond with a response code of 250, and now the client and the server can exchange emails with one another. HELO and 250 are simply some of the messages in the SMTP standard. 
 
-**HTTP** (**Hyper Text Transfer Protocol**) is the protocol you’re using anytime you’re communicating with a web server.
+**HTTP** (**Hypertext Transfer Protocol**) is the protocol you’re using anytime you’re communicating with a web server.
 
 Web servers host many web sites written in HTML, which stands for Hypertext Markup Language, and those HTML pages are exchanged using HTTP. When you browse to site.com your client, your web browser, sends a GET request to the web server and the web server will respond with a 200 OK message and then provide the website you are asking for. The clients are usually web browsers, but they can come in many forms, such as search engine robots.
 
@@ -146,11 +144,11 @@ That process is known as **HTTPS (Hypertext Transfer Protocol Secure)**. That is
 
 ### The DNS protocol
 
-Recall in section 1 we said a server is essentially a computer that knows how to respond to specific requests – meaning, each of the servers we discussed earlier (FTP, SMTP, and Web) are really just computers that have FTP software installed or SMTP software installed or HTTP or SSL software installed, which means these clients and servers all follow the same rules of [host to host communication](https://itnetworkingskills.wordpress.com/2023/01/01/host-host-communication-networking/) that we covered in section 3. And one of the key elements of that is for a host to speak to another host it must know the other host’s IP address.&#x20;
+Recall in section 1 we said a server is essentially a computer that knows how to respond to specific requests – meaning, each of the servers we discussed earlier (FTP, SMTP, and Web) are really just computers that have FTP software installed or SMTP software installed or HTTP or SSL software installed, which means these clients and servers all follow the same rules of [host to host communication](https://itnetworkingskills.wordpress.com/2023/01/01/host-host-communication-networking/) that we covered in section 3. And one of the key elements of that is for a host to speak to another host it must know the other host’s IP address. 
 
 Client 9.1.1.11 in our previous illustration of the FTP conversation can speak to the FTP server because we have the IP address of the FTP Server. But how would our client speak to each of the other two servers (SMTP and Web)?
 
-If asked for your favorite websites you would probably give the domain names of these websites. And if asked for your email address you would give something that looks like john@email.com. You would not give an IP address.&#x20;
+If asked for your favorite websites you would probably give the domain names of these websites. And if asked for your email address you would give something that looks like john@email.com. You would not give an IP address. 
 
 The **DNS (Domain Name System)** is an application layer protocol that will use a DNS server to convert a domain name into an IP address. When you type a website into a browser it will first make a request to a DNS server asking for the IP address of the website you just typed into the browser. Then the DNS server will provide an IP address and this will allow your host to make a request to the actual web server IP address. Even though you never provided the website IP address your computer was able to figure it out automatically by using the DNS protocol.
 

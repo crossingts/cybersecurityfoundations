@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4.-networking-fundamentals/typing-www.google.com-into-a-web-browser/README.md",
+                "file": "4.-networking-fundamentals/network-protocols-and-their-functions/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -183,6 +183,7 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
+    "4.-networking-fundamentals/typing-www.google.com-into-a-web-browser/README.md",
     "4.-networking-fundamentals/network-protocols-and-their-functions/README.md",
     "4.-networking-fundamentals/host-to-host-communication-in-networking/README.md",
     "4.-networking-fundamentals/network-devices-and-their-functions/README.md",
@@ -209,7 +210,6 @@
     "network-devices-and-their-functions.md",
     "network-devices-and-their-functions 1.md",
     "typing-www.google.com-into-a-web-browser.md",
-    "4.-networking-fundamentals/chapter-4-review-questions.md",
     "2.-introduction-to-cybersecurity/the-evolving-cybersecurity-threat-landscape",
     "LICENSE",
     "3.-cybersecurity-grc/the-information-security-compliance-audit",

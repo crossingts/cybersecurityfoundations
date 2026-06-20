@@ -60,7 +60,7 @@ The Internet protocol suite is commonly known as the TCP/IP suite because the fo
 
 The TCP/IP model (like the OSI model) is a formalized way of organizing and representing the various protocols of the Internet protocol suite into logical groupings of layers based on the functions of the protocols in facilitating the movement of data on networks.
 
-#### Mapping of the TCP/IP model to the OSI Model
+**Mapping of the TCP/IP model to the OSI Model**
 
 | TCP/IP               | OSI Model          | Protocols & Standards                                                                             |
 | -------------------- | ------------------ | ------------------------------------------------------------------------------------------------- |

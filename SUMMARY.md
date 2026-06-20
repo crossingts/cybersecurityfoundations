@@ -69,6 +69,8 @@
   * [Network protocols and their functions — Quiz](4.-networking-fundamentals/network-protocols-and-their-functions/network-protocols-and-their-functions-quiz.md)
 * [Typing www.google.com into a web browser](4.-networking-fundamentals/typing-www.google.com-into-a-web-browser/README.md)
   * [Typing www.google.com into a web browser — Quiz](4.-networking-fundamentals/typing-www.google.com-into-a-web-browser/typing-www.google.com-into-a-web-browser-quiz.md)
+* [Network protocols in action](4.-networking-fundamentals/network-protocols-in-action/README.md)
+  * [Network protocols in action — Quiz](4.-networking-fundamentals/network-protocols-in-action/network-protocols-in-action-quiz.md)
 * [Cisco IOS CLI and basic device security](4.-networking-fundamentals/cisco-ios-cli-and-basic-device-security/README.md)
   * [Lab: Getting started with Cisco Packet Tracer](4.-networking-fundamentals/cisco-ios-cli-and-basic-device-security/lab-getting-started-with-cisco-packet-tracer.md)
   * [Lab: Basic device security](4.-networking-fundamentals/cisco-ios-cli-and-basic-device-security/lab-basic-device-security.md)

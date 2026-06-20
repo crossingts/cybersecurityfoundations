@@ -43,10 +43,7 @@ Network devices are components of electronic networks required for communication
 
 Network devices are also known as network equipment or network hardware or networking hardware because traditionally they were physical components. Today, many network devices are virtualized or software-based.
 
-<figure>
-  <img src="network-devices-their-functions.webp" alt="network devices">
-  <figcaption>Network devices examples (image courtesy of itrelease.com)</figcaption>
-</figure>
+<figure><img src="../../.gitbook/assets/network-devices-their-functions.webp" alt="network devices"><figcaption><p>Network devices examples (image courtesy of itrelease.com)</p></figcaption></figure>
 
 There are many types of network devices, such as access points, firewalls, IDS/IPS, routers, and switches.
 
@@ -54,22 +51,22 @@ There are many types of network devices, such as access points, firewalls, IDS/I
 
 Repeaters regenerate signals, allowing devices to communicate across great distances by extending the physical reach of a network (e.g., allowing Ethernet to go beyond the standard 100m limit). Repeaters are typically used in long-distance cabling (e.g., fiber optic repeaters).
 
-Repeaters regenerate signals without interpreting data. Hubs, which are multi-port repeaters, also do not interpret data but broadcast incoming signals out all ports. Switches, however, forward frames based on MAC addresses and thus do interpret frame headers. 
+Repeaters regenerate signals without interpreting data. Hubs, which are multi-port repeaters, also do not interpret data but broadcast incoming signals out all ports. Switches, however, forward frames based on MAC addresses and thus do interpret frame headers.
 
 Hubs connect multiple hosts in a single collision domain. When a host sends data, the hub repeats the signal out all other ports (no MAC learning). Everybody receives everybody else’s data. Connecting hosts directly to each other does not scale. Hubs partially address this scaling problem by connecting multiple devices together, but they introduce a new scaling challenge. This design leads to collisions and wasted bandwidth, so hubs do not scale well as the network grows.
 
 To overcome these scaling limitations, networks use bridges and, more commonly today, switches, which segment collision domains and allow multiple devices to communicate simultaneously without collisions.
 
-- **Bridges** segment collision domains, reducing collisions and allowing simultaneous conversations on different segments, which improves scalability.
-- **Switches** take this further: each port is its own collision domain (micro-segmentation), and with full-duplex operation, collisions are eliminated entirely. Switches also provide dedicated bandwidth per port and can forward multiple frames simultaneously, making them highly scalable.
+* **Bridges** segment collision domains, reducing collisions and allowing simultaneous conversations on different segments, which improves scalability.
+* **Switches** take this further: each port is its own collision domain (micro-segmentation), and with full-duplex operation, collisions are eliminated entirely. Switches also provide dedicated bandwidth per port and can forward multiple frames simultaneously, making them highly scalable.
 
 A bridge sits between hub-connected hosts, connecting two hub segments. Bridges only have two ports—each facing a different hub segment. Bridges learn which hosts are on which side, that is, which MAC addresses are on each side. A MAC (Media Access Control) address is a unique hardware identifier assigned to a network interface controller (NIC) by the manufacturer. It is typically a 48-bit address written as 12 hexadecimal digits (e.g., 00:1A:2B:3C:4D:5E), and is often called the burned-in address (BIA). This allows bridges to filter traffic and keep frames local to the appropriate segment.
 
 Bridges will forward frames only if the destination is on the other segment. Bridges and switches both forward broadcasts. Switches, which are much more efficient, have largely replaced bridges.
 
-A switch is a multi-port bridge with dedicated bandwidth per port. A switch maintains a full MAC address table for all ports and forwards traffic only to the destination port (unless it is flooding frames—more on the concept of flooding later on). 
+A switch is a multi-port bridge with dedicated bandwidth per port. A switch maintains a full MAC address table for all ports and forwards traffic only to the destination port (unless it is flooding frames—more on the concept of flooding later on).
 
-A switch is a device that facilitates communication within a network. A router is a device that facilitates communication between different networks. 
+A switch is a device that facilitates communication within a network. A router is a device that facilitates communication between different networks.
 
 Routers connect networks together, including providing access to the Internet. Routers provide traffic control points (security, filtering, redirecting) between networks. Routers sit on the boundary between networks, providing a logical location to apply security policies.
 
@@ -81,7 +78,7 @@ Routers have an interface assigned an IP address in every network they are attac
 
 If a host in the sales team of a corporation wants to speak to a host in the marketing team, it’s going to use its gateway, which is its closest router IP address, which is then going to send a packet to the next router, to the next router, and finally to the host in the marketing team.
 
-Routing is the process of moving data between networks. A router is a device that performs routing. Switching is the process of moving data within networks. A switch is a device that performs switching. 
+Routing is the process of moving data between networks. A router is a device that performs routing. Switching is the process of moving data within networks. A switch is a device that performs switching.
 
 ### Nodes and endpoints
 
@@ -107,7 +104,7 @@ The following image shows some models of Cisco routers and switches. You can see
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/10/cisco-routers-switches.webp?w=1201" alt="cisco-routers-switches" height="598" width="1201"><figcaption><p>Cisco routers and switches (image courtesy of allbids.com.au)</p></figcaption></figure>
 
-Notice that switches have many more network interfaces (ports) than routers. This is typical. For example, the Catalyst Express 520 shows 24 network interfaces we can connect end hosts or servers to. Switches typically have many RJ-45 ports because switches give user devices a place to connect to the Ethernet LAN. 
+Notice that switches have many more network interfaces (ports) than routers. This is typical. For example, the Catalyst Express 520 shows 24 network interfaces we can connect end hosts or servers to. Switches typically have many RJ-45 ports because switches give user devices a place to connect to the Ethernet LAN.
 
 Other Cisco switch models include Catalyst 9200 and Catalyst 3650. And other Cisco router models include ISR 1000, ISR 900, and ISR 4000.
 
@@ -115,7 +112,7 @@ Other Cisco switch models include Catalyst 9200 and Catalyst 3650. And other Cis
 
 Firewalls monitor and control network traffic based on configured rules. You explicitly configure which network traffic should be allowed into your network, and which should not.
 
-Firewalls can be placed inside the network or outside the network. Meaning, the firewall can filter traffic before it reaches the router or after it has passed through the router. 
+Firewalls can be placed inside the network or outside the network. Meaning, the firewall can filter traffic before it reaches the router or after it has passed through the router.
 
 The ASA (Adaptive Security Appliance) is Cisco’s classic firewall. The following image shows the Cisco ASA 5500-X series firewall model.
 
@@ -125,7 +122,7 @@ Although the ASA is Cisco’s classic firewall, modern ASAs include modern featu
 
 Firewalls are known as next-generation firewalls when they include more modern and advanced filtering capabilities.
 
-Another example of an enterprise grade next-generation firewall is the Cisco Firepower 2100 series. 
+Another example of an enterprise grade next-generation firewall is the Cisco Firepower 2100 series.
 
 ASA 5500-X and Firepower 2100 are network firewalls, which are hardware devices that filter traffic between networks. However, there are also host-based firewalls.
 
@@ -133,17 +130,17 @@ Host-based firewalls are software applications that filter traffic entering and 
 
 ### Key takeaways
 
-- A host is any device that sends or receives traffic. A client initiates a request; a server responds.
-- Every host on an IP network must have an IP address. IPv4 addresses are 32-bit values represented in dotted-decimal (e.g., 136.22.17.98).
-- A network is a logical grouping of hosts that share the same connectivity requirements and IP address space. Networks can be subdivided into smaller sub-networks (subnets).
-- Network devices mediate data transmission:
-    - Repeaters regenerate signals to extend a network’s physical reach.
-    - Hubs are multiport repeaters that create a single collision domain, broadcasting data to all ports.
-    - Bridges connect two network segments, learn MAC addresses, and forward frames only when necessary, reducing collisions.
-    - Switches are multiport bridges that provide dedicated collision domains per port and forward frames based on MAC addresses, enabling simultaneous communication within a network.
-    - Routers connect different networks, forward packets using IP addresses and routing tables, and serve as gateways.
-- All devices connected to a network are called network nodes. Endpoints (end hosts such as clients and servers) originate or terminate traffic, whereas intermediate nodes (switches, routers) forward it.
-- Firewalls monitor and control traffic based on configured security rules. They can be hardware appliances that filter traffic between networks (network firewalls) or software applications that protect individual hosts (host-based firewalls).
+* A host is any device that sends or receives traffic. A client initiates a request; a server responds.
+* Every host on an IP network must have an IP address. IPv4 addresses are 32-bit values represented in dotted-decimal (e.g., 136.22.17.98).
+* A network is a logical grouping of hosts that share the same connectivity requirements and IP address space. Networks can be subdivided into smaller sub-networks (subnets).
+* Network devices mediate data transmission:
+  * Repeaters regenerate signals to extend a network’s physical reach.
+  * Hubs are multiport repeaters that create a single collision domain, broadcasting data to all ports.
+  * Bridges connect two network segments, learn MAC addresses, and forward frames only when necessary, reducing collisions.
+  * Switches are multiport bridges that provide dedicated collision domains per port and forward frames based on MAC addresses, enabling simultaneous communication within a network.
+  * Routers connect different networks, forward packets using IP addresses and routing tables, and serve as gateways.
+* All devices connected to a network are called network nodes. Endpoints (end hosts such as clients and servers) originate or terminate traffic, whereas intermediate nodes (switches, routers) forward it.
+* Firewalls monitor and control traffic based on configured security rules. They can be hardware appliances that filter traffic between networks (network firewalls) or software applications that protect individual hosts (host-based firewalls).
 
 ### References
 

@@ -17,14 +17,15 @@ description: >-
 
 This section explains what are network protocols and how they enable communication across the Internet. You will learn how the TCP/IP model maps to the OSI model, how DHCP automatically configures a host with the four essential parameters for Internet connectivity (IP address, subnet mask, default gateway, and DNS server), and how DNS translates domain names into IP addresses. The roles of ARP, HTTP, and HTTPS are described, and you will see all of these protocols in action by tracing a web request from a browser to a web server and back. Along the way, the MAC address table, ARP table, and routing table are introduced as the three core structures that routers and switches use to forward data hop by hop.
 
-### Topics covered in this section
+## Topics covered in this section
 
-* What are network protocols?
-* Key application layer and support protocols
+- **What are network protocols?**
+- **Key application layer and support protocols**
+- **Typing www.google.com into a web browser**
 
-#### What are network protocols?
+### What are network protocols?
 
-First, let's define some key terms - What is a protocol? What are network protocols? And, what is an Internet protocol?
+First, let's define some key terms - What is a protocol? What are network protocols? And, what is the Internet protocol?
 
 **What is a protocol?**
 
@@ -49,13 +50,9 @@ Network protocols or networking protocols are rules that dictate how network dev
 
 For our present discussion, network protocols refer to Internet protocols within the TCP/IP and OSI models. The rest of this section focuses on the protocols that are essential to every web request: DHCP, DNS, ARP, HTTP, and HTTPS.
 
-**What is an Internet protocol?**
+**What is the Internet protocol?**
 
-There are thousands of Internet protocols and all of them contribute to some sort of functionality in the Internet ecosystem. For our purposes, an Internet protocol refers to a protocol within the Internet protocol suite.
-
-The Internet protocol suite is the set of communications protocols used for the Internet and other similar networks. It is comprised of a set of layers. Each layer “solves a set of problems involving the transmission of data, and provides a well-defined service to the upper layer protocols based on using services from some lower layers” (Common Protocols, 2023, January 10).
-
-The Internet protocol suite is commonly known as the TCP/IP suite because the foundational protocols in the suite are the Transmission Control Protocol and the Internet Protocol.
+The Internet protocol suite is the set of communications protocols spanning several layers. Each layer “solves a set of problems involving the transmission of data, and provides a well-defined service to the upper layer protocols based on using services from some lower layers” (Common Protocols, 2023, January 10). The Internet protocol suite is commonly known as the TCP/IP suite because the foundational protocols in the suite are the Transmission Control Protocol and the Internet Protocol.
 
 The TCP/IP model (like the OSI model) is a formalized way of organizing and representing the various protocols of the Internet protocol suite into logical groupings of layers based on the functions of the protocols in facilitating the movement of data on networks.
 
@@ -71,8 +68,6 @@ The TCP/IP model (like the OSI model) is a formalized way of organizing and repr
 | Network Access Layer | Data Link Layer    | ARP, RARP, ATM, CDP, FDDI, Frame Relay, HDLC, MPLS, PPP, SLIP, STP, Token Ring                    |
 | Network Access Layer | Physical Layer     | Bluetooth, DSL, Ethernet II, IEEE 802.3, IEEE 802.11 (WiFi), ISDN                                 |
 
-**What is the Internet Protocol?**
-
 The Internet Protocol (IP) is the principal protocol at the Internet layer (TCP/IP) or network layer (OSI). It relays datagrams across network boundaries, and its routing function essentially establishes the Internet.
 
 There are two main versions of IP:
@@ -80,9 +75,9 @@ There are two main versions of IP:
 * IPv4 uses 32 bit addresses which limits the address space to 2 to the power of 32 unique IP addresses. This is equal to 4,294,967,296 IP addresses. The addressing architecture of IPv4 is defined in IETF publication RFC 791 (September 1981).
 * IPv6 uses 128 bit addresses allowing for 2 to the power of 128 (about 3.4 x 10 to the power of 38) unique IP addresses. This is equal to 340 trillion trillion trillion IP addresses. The IPv6 addressing architecture is defined in RFC 4291 (February 2006). IPv4 remains widely deployed, but IPv6 adoption continues to grow rapidly.
 
-#### Key application layer and support protocols
+### Key application layer and support protocols
 
-Now that we have defined network protocols and seen how they fit into the TCP/IP and OSI models, we turn to the specific protocols that make everyday Internet use possible. The following subsections describe DHCP, which automatically configures a host; DNS, which translates domain names to IP addresses; HTTP and HTTPS, which deliver web pages; and ARP, which resolves MAC addresses for local delivery.
+Next, we turn to the specific protocols that make everyday Internet use possible. The following discussion describes DHCP, which automatically configures a host; DNS, which translates domain names to IP addresses; HTTP and HTTPS, which deliver web pages; and ARP, which resolves MAC addresses for local delivery.
 
 **The DHCP protocol**
 
@@ -140,9 +135,8 @@ The walkthrough that follows will show how hosts and routers use ARP to resolve 
 * R2 uses ARP to find Host B’s MAC address.
 * The switch automatically learns MAC to port mappings by watching the source MAC addresses in frames, building its MAC address table without any separate protocol.
 
-#### Typing [www.google.com](http://www.google.com) into a web browser
+### Typing www.google.com into a web browser
 
-#### The topology for our example
 
 Trace the journey of a web request (e.g., typing [www.google.com](https://www.google.com/)) using DNS, ARP, DHCP, HTTP/HTTPS, and the MAC address table, ARP table, and routing table
 
@@ -200,7 +194,7 @@ After receiving the DNS reply, Host A now knows the web server’s IP address (3
 
 The entire process—from typing the URL to seeing the page—happens in a fraction of a second, reusing the same ARP, MAC, and routing table entries many times.
 
-#### Key takeaways
+### Key takeaways
 
 * DHCP supplies the four essential parameters (IP address, subnet mask, default gateway, DNS server) automatically when a host joins a network.
 * DNS translates domain names into IP addresses. Every web visit begins with a DNS query, typically sent inside a UDP datagram.
@@ -211,7 +205,7 @@ The entire process—from typing the URL to seeing the page—happens in a fract
 * Layered communication means that IP provides end‑to‑end addressing, Ethernet and ARP handle hop‑by‑hop delivery, and TCP/UDP provide process‑to‑process delivery with ports.
 * Once you understand how the MAC address table, ARP table, and routing table interact in a small topology, you can trace packet delivery through networks of any size using the same logical steps.
 
-#### References
+### References
 
 [Common Protocols. (2023, January 10). Wikibooks, The Free Textbook Project. Retrieved 15:39, January 15, 2023 from https://en.wikibooks.org/wiki/Network\_Plus\_Certification/Technologies/Common\_Protocols](https://en.wikibooks.org/wiki/Network_Plus_Certification/Technologies/Common_Protocols)
 

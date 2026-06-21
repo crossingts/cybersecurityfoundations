@@ -8,14 +8,14 @@ description: >-
 
 ## Learning objectives
 
-* Understand what network protocols are
+* Understand what are network protocols
 * Understand how the TCP/IP model maps to the OSI model
 * List the four parameters every host needs for Internet connectivity and explain how DHCP provides them
 * Describe the roles of DNS, ARP, HTTP, SSL/TLS, and HTTPS in executing a web request
 * Explain how the MAC address table, the ARP table, and the routing table enable data to move through the Internet
-* Trace the journey of a web request (e.g., typing [www.google.com](https://www.google.com/)) using DNS, ARP, DHCP, HTTP/HTTPS, and the MAC address table, ARP table, and routing table
+* Trace the journey of a web request using DNS, ARP, DHCP, HTTP/HTTPS, and the MAC address table, ARP table, and routing table
 
-This section explains what network protocols are and how they enable communication across the Internet. You will learn how the TCP/IP model maps to the OSI model, how DHCP automatically configures a host with the four essential parameters for Internet connectivity, and how DNS translates domain names into IP addresses. The roles of ARP, HTTP, and HTTPS are described, and you will see all of these protocols in action by tracing a web request from a browser to a web server and back. Along the way, the MAC address table, ARP table, and routing table are introduced as the three core structures that routers and switches use to forward data hop by hop.
+This section explains what are network protocols and how they enable communication across the Internet. You will learn how the TCP/IP model maps to the OSI model, how DHCP automatically configures a host with the four essential parameters for Internet connectivity (IP address, subnet mask, default gateway, and DNS server), and how DNS translates domain names into IP addresses. The roles of ARP, HTTP, and HTTPS are described, and you will see all of these protocols in action by tracing a web request from a browser to a web server and back. Along the way, the MAC address table, ARP table, and routing table are introduced as the three core structures that routers and switches use to forward data hop by hop.
 
 ### Topics covered in this section
 
@@ -143,6 +143,8 @@ The walkthrough that follows will show how hosts and routers use ARP to resolve 
 #### Typing [www.google.com](http://www.google.com) into a web browser
 
 #### The topology for our example
+
+Trace the journey of a web request (e.g., typing [www.google.com](https://www.google.com/)) using DNS, ARP, DHCP, HTTP/HTTPS, and the MAC address table, ARP table, and routing table
 
 To understand exactly how the protocols work together, we will trace the steps involved in sending and receiving a web request across the sample network shown in Figure 1.
 

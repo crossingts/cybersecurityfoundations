@@ -24,7 +24,7 @@
 * List three key protocols that operate at the Application Layer (Layer 7) and state their purpose.
   * Answer: DNS: Translates human-readable domain names (e.g., example.com) into machine-readable IP addresses. HTTP: Defines how web browsers and web servers communicate and transfer web pages. DHCP: Automatically assigns IP addresses and other network configuration parameters to devices on a network.
 * Identify three addressing schemes used at Layers 2, 3, and 4 of the OSI model and state the purpose of each.
-  * Answer:&#x20;
+  * Answer:
     * Layer 2 (Data Link): MAC Address - Used for hop-to-hop delivery to physically identify the next immediate device on the local network segment.
     * Layer 3 (Network): IP Address - Used for end-to-end delivery to logically identify the source and destination hosts across an entire network path.
     * Layer 4 (Transport): Port Number - Used for service-to-service delivery to ensure data is delivered to the correct application or service on the destination host.
@@ -42,34 +42,21 @@
 * Where does a host store the IP-to-MAC address mappings it learns from ARP responses?
   * Answer: The host stores them in its ARP cache (also called an ARP table).
 
-### Network protocols and their functions
+### Network protocols in action
 
 * What is the fundamental purpose of a network protocol?
   * Answer: A network protocol is a set of rules that dictates how network devices should format, transmit, and receive data, enabling them to communicate effectively across networks regardless of their underlying infrastructure.
 * List the four parameters a host must have configured to achieve full Internet connectivity.
   * Answer: An IP address, a subnet mask, a default gateway (router) IP address, and the IP address of a DNS server.
-* Explain the role of the DHCP protocol in the context of a user connecting to a new Wi-Fi network.
-  * Answer: When a user connects to a new Wi-Fi network, their device (the DHCP client) automatically sends a DHCP discover message. A DHCP server on that network responds by providing the four necessary parameters (IP address, subnet mask, default gateway, DNS server), automatically configuring the host for Internet access without any manual input from the user.
-* Differentiate between the functions of DNS and ARP.
-  * Answer: DNS is an application-layer protocol that resolves a domain name (e.g., `example.com`) to an IP address. ARP is a link-layer protocol that resolves a known IP address on the local network to a MAC address.
-* What is the relationship between HTTP, SSL/TLS, and HTTPS?
-  * Answer: HTTP is the protocol for transferring web content. SSL and TLS are cryptographic protocols that create a secure, encrypted tunnel between a client and server. HTTPS is not a separate protocol but is the term for conducting an HTTP communication within that secure SSL/TLS tunnel.
-
-### Typing www.google.com into a web browser
-
 * What are the three fundamental tables used for data flow in a network, and what does each one map?
   * Answer:
     * MAC Address Table: Maps a switch port to a MAC address.
     * ARP Table: Maps an IP address to a MAC address.
     * Routing Table: Maps an IP network to a next-hop IP address.
-* Why must a host send its packet to its default gateway when communicating with a device on a foreign network?
-  * Answer: The host determines the destination IP is on a different network using its own IP and subnet mask. The host itself cannot deliver packets outside its local network, so it must forward the packet to the router (its default gateway), which is designed to route traffic between networks.
 * Describe the two main phases that occur when you type a URL into a web browser, according to the text.
-  * Answer: 1) DNS Resolution: The browser makes a request to a DNS server to resolve the domain name (e.g., `www.google.com`) into its corresponding IP address. 2) HTTP Request: The browser uses the returned IP address to send an HTTP request (e.g., a GET request) directly to the web server at that address.
-* What is the purpose of a broadcast MAC address (all F's), and what action does a switch take when it receives a frame with this destination address?
+  * Answer: 1) DNS Resolution: The browser makes a request to a DNS server to resolve the domain name (e.g., `https://www.google.com`) into its corresponding IP address. 2) HTTP Request: The browser uses the returned IP address to send an HTTP request (e.g., a GET request) directly to the web server at that address.
+* What is the purpose of a broadcast MAC address (all Fs), and what action does a switch take when it receives a frame with this destination address?
   * Answer: The broadcast MAC address (FF:FF:FF:FF:FF:FF) is used to send a frame to every device on the local network segment. When a switch receives a frame with this destination address, it performs flooding—it sends the frame out all of its ports except the one it was received on.
-* Once a packet arrives at the final router (e.g., R3 for host C), what two things must the router check to deliver the packet to the final destination host on its directly connected network?
-  * Answer: 1) Its routing table to confirm the destination IP address is on a directly connected network. 2) Its ARP table to find the MAC address associated with the destination host's IP address so it can build a new Layer 2 header for the final hop.
 
 ### Cisco IOS CLI and basic device security
 
@@ -91,7 +78,7 @@
 * After successfully configuring the command `ip address 10.0.5.1 255.255.255.128` on an interface and issuing `no shutdown`, which two specific routes will appear in the `show ip route` output? List them with their correct prefix lengths.
   * Answer: A Connected route to `10.0.5.0/25` (since 255.255.255.128 is a /25 mask). A Local route to `10.0.5.1/32`.
 * A new network technician sees a Local route (L) to 192.168.55.1/32 and a Connected route (C) to 192.168.55.0/24 in the routing table. They ask, "Why do I need the Local route if the Connected route already includes that IP address?" How would you explain the critical functional difference between these two routes to them?
-  * Answer: I would explain that the Connected route (`192.168.55.0/24`) is an instruction for forwarding traffic to other hosts on that network (e.g., `192.168.55.100`). The Local route (`192.168.55.1/32`) is an instruction for the router to accept and process traffic destined to its own interface IP.&#x20;
+  * Answer: I would explain that the Connected route (`192.168.55.0/24`) is an instruction for forwarding traffic to other hosts on that network (e.g., `192.168.55.100`). The Local route (`192.168.55.1/32`) is an instruction for the router to accept and process traffic destined to its own interface IP.
 * A router's routing table contains the following two routes:\
   \* `C 172.16.0.0/16 is directly connected, GigabitEthernet0/1`\
   \* `L 172.16.5.1/32 is directly connected, GigabitEthernet0/1`\
@@ -143,7 +130,7 @@
 ### The role of DNS within the network
 
 * What is the primary function of the Domain Name System (DNS), and why is it essential for human users?
-  * Answer: The primary function of DNS is to translate human-readable domain names (e.g., www.google.com) into machine-readable IP addresses (e.g., 172.217.0.142).&#x20;
+  * Answer: The primary function of DNS is to translate human-readable domain names (e.g., www.google.com) into machine-readable IP addresses (e.g., 172.217.0.142).
 * A Windows user can successfully ping `8.8.8.8` but cannot ping `google.com`. What is the most likely cause, and which command would you use on the Windows PC to investigate the configured resolver?
   * Answer: The most likely cause is a DNS resolution failure. The user's device cannot translate `google.com` into an IP address. To investigate, you would use the `ipconfig /all` command on the Windows PC to verify which DNS server it is configured to use.
 * What are the two primary purposes of the `ip host` and `ip name-server` commands when configuring a Cisco router to act as a DNS server for local clients?

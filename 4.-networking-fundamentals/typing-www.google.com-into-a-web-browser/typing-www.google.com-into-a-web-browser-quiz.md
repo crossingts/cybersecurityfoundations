@@ -1,8 +1,8 @@
 # Typing www.google.com into a web browser — Quiz
 
-### Typing www.google.com into a web browser
+### Network protocols in action
 
-#### 1. What is the primary purpose of the initial DNS request when you type `www.google.com` into a browser? (Choose one answer)
+#### 1. What is the primary purpose of the initial DNS request when you type `https://www.google.com` into a browser? (Choose one answer)
 
 a) To establish a secure connection to Google
 

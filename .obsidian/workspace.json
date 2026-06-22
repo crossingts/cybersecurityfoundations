@@ -11,14 +11,10 @@
             "id": "1e65107a9a5d3b6c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "4.-networking-fundamentals/typing-www.google.com-into-a-web-browser/typing-www.google.com-into-a-web-browser-quiz.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "typing-www.google.com-into-a-web-browser-quiz"
+              "title": "New tab"
             }
           }
         ]
@@ -183,6 +179,7 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
+    "4.-networking-fundamentals/typing-www.google.com-into-a-web-browser/typing-www.google.com-into-a-web-browser-quiz.md",
     "4.-networking-fundamentals/network-protocols-in-action/README.md",
     "4.-networking-fundamentals/network-protocols-and-their-functions/README.md",
     "4.-networking-fundamentals/network-protocols-and-their-functions/network-protocols-and-their-functions-quiz.md",
@@ -210,7 +207,6 @@
     "SUMMARY.md",
     "README.md",
     "cisco-ios-cli-and-basic-device-security.md",
-    "connected-and-local-routes.md",
     "2.-introduction-to-cybersecurity/the-evolving-cybersecurity-threat-landscape",
     "LICENSE",
     "3.-cybersecurity-grc/the-information-security-compliance-audit",

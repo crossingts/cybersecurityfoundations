@@ -21,7 +21,7 @@ This section explains what are network protocols and how they enable communicati
 
 - **What are network protocols?**
 - **Key application layer and support protocols**
-- **Typing www.google.com into a web browser**
+- **Typing https://www.google.com into a web browser**
 
 ### What are network protocols?
 
@@ -79,37 +79,23 @@ There are two main versions of IP:
 
 Next, we turn to the specific protocols that make everyday Internet use possible. The following discussion describes DHCP, which automatically configures a host; DNS, which translates domain names to IP addresses; HTTP and HTTPS, which deliver web pages; and ARP, which resolves MAC addresses for local delivery.
 
-**The DHCP protocol**
+**DHCP (Dynamic Host Configuration Protocol)**
 
-Every host needs four items for Internet connectivity. Anytime a host connects to a network there are four parameters that need to be configured on this host to achieve Internet connectivity.
+Four IP parameters must be configured on every host anytime it connects to a network. **First**, an IP address. This serves as the host identity on the Internet. **Second**, a subnet mask. This will tell the host the size of its local network. It will allow the host to determine if it’s trying to speak to something on its own network or to something on a foreign network. A subnet mask can look like this: /24 (CIDR notation). Or it can look like this: 255.255.255.0 (dotted-decimal notation). Both of those are simply different ways of representing an identical subnet mask. If a host only has an IP address and a subnet mask this will be sufficient to allow this host to speak to any other host on the same local network.
 
-**First**, an IP address. This serves as the host identity on the Internet.
-
-**Second**, a subnet mask. This will tell the host the size of its local network. It will allow the host to determine if it’s trying to speak to something on its own network or to something on a foreign network. A subnet mask can look like this: /24. Or it can look like this: 255.255.255.0. Both of those are simply different ways of representing an identical subnet mask.
-
-If a host only has an IP address and a subnet mask this will be sufficient to allow this host to speak to any other host on the same local network.
-
-**Third**, a default gateway (default router). If a host needs to speak to something on a foreign network, for instance the Internet, that host is going to need a router. Specifically, that host is going to need the router’s IP address configured as that host’s default gateway.
-
-With these three elements configured on a host, a host can speak through the router to the Internet to any server using its IP address. But most of the time, an Internet user is browsing websites and trying to send emails. In order for a host to speak to domains, it has to convert domain names into IP addresses first.
+**Third**, a default gateway (default router). If a host needs to speak to something on a foreign network, for instance the Internet, that host is going to need a router. Specifically, that host is going to need the router’s IP address configured as that host’s default gateway. With these three elements configured on a host, a host can speak through the router to the Internet to any server using its IP address. But most of the time, an Internet user is browsing websites and trying to send emails. In order for a host to speak to domains, it has to convert domain names into IP addresses first.
 
 **Fourth**, a default DNS server. The fourth item that every host needs in order to achieve Internet connectivity is the IP address of a DNS server so that it can translate domain names to IP addresses, so that it can then communicate with other hosts using their domain names.
 
-These four IP parameters must be configured on every host anytime it connects to a network.
-
 Recall, a host is anything that sends or receives traffic on the Internet, which means a host could be your laptop or your printer or your mobile phone. In all cases every time any of these devices connects to a new network these devices must be configured with these four items.
 
-Every time you connect to a new network your host will send a DHCP Discover message to discover the DHCP server and then the DHCP server will provide these four things in response back to the client. The client then has everything it needs in order to speak to the Internet. That is how every time you connect to a new Wi-Fi network, your phone or laptop automatically acquires the information it needs in order to speak to the Internet.
-
-These four parameters must be configured on every host each time it joins a network – whether the device is a laptop, smartphone, or printer. Yet when you connect to a new Wi‑Fi network, you do not have to manually enter them. That is because the Dynamic Host Configuration Protocol (DHCP) works behind the scenes.
-
-When a host connects to a network, it sends a DHCP Discover message. The DHCP server responds with an offer containing an IP address, subnet mask, default gateway, and DNS server address. The host automatically applies these settings and can then reach the Internet.
+Every time you connect to a new network your host will send a DHCP Discover message to discover the DHCP server and then the DHCP server will provide these four parameters in response back to the client. The client then has everything it needs in order to speak to the Internet. That is how every time you connect to a new Wi-Fi network, your phone or laptop automatically acquires the information it needs in order to speak to the Internet.
 
 **Domain Name System (DNS)**
 
-The DNS protocol is an application layer protocol that translates human‑readable domain names (e.g., [www.google.com](https://www.google.com/)) into IP addresses. Nearly every user interaction with the Internet begins with DNS.
+The DNS protocol is an application layer protocol that translates human‑readable domain names (e.g., https://www.google.com) into IP addresses. Nearly every user interaction with the Internet begins with DNS.
 
-To see DNS – and the other key protocols DHCP, ARP, HTTP, and HTTPS – in action, we will trace the classic interview question: "What happens when you type [www.google.com](https://www.google.com/) into a web browser?" The process relies on three tables that are fundamental to all network communication:
+To see DNS – and the other key protocols DHCP, ARP, HTTP, and HTTPS – in action, we will trace the classic interview question: "What happens when you type https://www.google.com into a web browser?" The process relies on three tables that are fundamental to all network communication:
 
 * MAC address table – on a switch, maps switch ports to MAC addresses.
 * ARP table – on a host or router, maps IP addresses to MAC addresses.
@@ -131,26 +117,24 @@ ARP is a Layer 2 protocol that maps an IP address to the corresponding MAC addre
 
 The walkthrough that follows will show how hosts and routers use ARP to resolve MAC addresses at each hop.
 
-* Host A uses ARP to find R1’s MAC address.
-* R2 uses ARP to find Host B’s MAC address.
-* The switch automatically learns MAC to port mappings by watching the source MAC addresses in frames, building its MAC address table without any separate protocol.
+* Host A will use ARP to find R1’s MAC address.
+* R2 will use ARP to find Host B’s MAC address.
+* The switch will automatically learn MAC-to-port mappings by watching the source MAC addresses in frames, building its MAC address table without any separate protocol.
 
-### Typing www.google.com into a web browser
+### Typing https://www.google.com into a web browser
 
+To understand how the key application layer and support protocols (DNS, ARP, DHCP, HTTP/HTTPS, and the MAC address table, ARP table, and routing table) work together, we will trace the steps involved in sending and receiving a web request (e.g., typing https://www.google.com) across the sample network shown in Figure 1.
 
-Trace the journey of a web request (e.g., typing [www.google.com](https://www.google.com/)) using DNS, ARP, DHCP, HTTP/HTTPS, and the MAC address table, ARP table, and routing table
-
-To understand exactly how the protocols work together, we will trace the steps involved in sending and receiving a web request across the sample network shown in Figure 1.
-
-<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/ed09f-type-google-into-web-browser-1.webp?w=1201" alt="Network topology with three hosts, three routers, and a switch" height="636" width="1201"><figcaption><p>Figure 1: Sample topology for tracing a web request. Host A is the client, Host B is a DNS server, and Host C is the web server for www.google.com. (Source: Ed Harmoush, PracNet)</p></figcaption></figure>
+<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/ed09f-type-google-into-web-browser-1.webp?w=1201" alt="Network topology with three hosts, three routers, and a switch" height="636" width="1201"><figcaption>Figure 1: Sample topology for tracing a web request. Host A is the client, Host B is a DNS server, and Host C is the web server for www.google.com. (Source: Ed Harmoush, PracNet)</figcaption></figure>
 
 The topology contains three hosts (A, B, C), three routers (R1, R2, R3), and one switch. All devices have IP addresses in their respective subnets. The switch only needs its port numbers (port 4 and port 5); its MAC and IP addresses are irrelevant because traffic is passing through it, not to it. The routing tables are pre‑configured with directly connected routes and default routes (0.0.0.0/0), while the ARP and MAC tables are initially empty and will be filled as frames traverse the network.
 
 #### Phase 1 & 2 – DNS query and response
 
-When you type [www.google.com](http://www.google.com) into a browser, the browser needs the web server’s IP address. It asks the operating system to perform a DNS lookup. The operating system constructs a DNS query and hands it to the network stack for delivery.
+When you type https://www.google.com into a browser, the browser needs the web server’s IP address. It asks the operating system to perform a DNS lookup. The operating system constructs a DNS query and hands it to the network stack for delivery.
 
-**Transport layer encapsulation**\
+**Transport layer encapsulation**
+
 Before any data is placed into an IP packet, it is wrapped in a Transport layer segment. The DNS query is carried inside a UDP datagram with destination port 53 (the standard DNS port). Later, after learning the web server’s IP address, the client will use TCP (ports 80 for HTTP or 443 for HTTPS), beginning with a three‑way handshake (SYN, SYN‑ACK, ACK) to establish a reliable connection.
 
 **Phase 1 – DNS query (Host A → Host B)**
@@ -171,13 +155,11 @@ Before any data is placed into an IP packet, it is wrapped in a Transport layer 
 
 **Phase 2 – DNS response (Host B → Host A)**
 
-Host B (DNS server) responds to host A (client/web browser).
+Now we will go through all the steps required to get this data payload back through the network from host B (DNS server) to host A (client/web browser). This phase will go much quicker than before because most of our tables have already been populated.
 
-Now we will go through all the steps required to get this data payload back through the network from host B to host A. This phase will go much quicker than before because most of our tables have already been populated.
+<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/32577-type-google-into-web-browser-2.webp?w=1201" alt="type-google-into-web-browser-2" height="631" width="1201"><figcaption>Figure 2: What happens when you type https://www.google.com into a browser? (source: Ed Harmoush, PracNet: How Data moves)</figcaption></figure>
 
-<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/32577-type-google-into-web-browser-2.webp?w=1201" alt="type-google-into-web-browser-2" height="631" width="1201"><figcaption><p>Figure 2: What happens when you type http://www.google.com into a browser? (source: Ed Harmoush, PracNet: How Data moves)</p></figcaption></figure>
-
-Most tables are now populated, so the return path is straightforward. Host B builds a packet (source 22.7.7.22, destination 11.8.8.11), sees that the destination is foreign, and uses its pre‑existing ARP entry for R2 to deliver the frame to the default gateway. R2 forwards the packet across the Internet to R1. R1 finds a directly connected route for 11.8.8.11, already has the ARP entry for a1a1, and delivers the frame via the switch to Host A. Host A extracts the DNS response and learns that [www.google.com](https://www.google.com/) resolves to the IP address of Host C (33.6.6.33).
+Most tables are now populated, so the return path is straightforward. Host B builds a packet (source 22.7.7.22, destination 11.8.8.11), sees that the destination is foreign, and uses its pre‑existing ARP entry for R2 to deliver the frame to the default gateway. R2 forwards the packet across the Internet to R1. R1 finds a directly connected route for 11.8.8.11, already has the ARP entry for a1a1, and delivers the frame via the switch to Host A. Host A extracts the DNS response and learns that https://www.google.com resolves to the IP address of Host C (33.6.6.33).
 
 #### Completing the web request: Phase 3 – HTTP GET
 
@@ -190,7 +172,7 @@ After receiving the DNS reply, Host A now knows the web server’s IP address (3
 5. Host C replies with its MAC address (c3c3). R3 updates its ARP table and encapsulates the packet in a frame destined to c3c3.
 6. Host C receives the frame, strips L2 and L3 headers, and processes the HTTP GET request.
 7. Response – Host C prepares the web page data, places it in an IP packet (source 33.6.6.33, destination 11.8.8.11), and sends it to its default gateway R3 (whose MAC it already knows). The packet travels back through the Internet, arrives at R1, and R1 forwards it directly to Host A using its existing ARP entry.
-8. Host A receives the response, strips the headers, and the browser renders [www.google.com](https://www.google.com/).
+8. Host A receives the response, strips the headers, and the browser renders https://www.google.com.
 
 The entire process—from typing the URL to seeing the page—happens in a fraction of a second, reusing the same ARP, MAC, and routing table entries many times.
 

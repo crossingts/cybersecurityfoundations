@@ -29,9 +29,7 @@ This chapter has two main goals. First, this chapter demystifies the underlying 
 
 [Host to host communication in networking](host-to-host-communication-in-networking/)
 
-Network protocols in action
-
-[Typing www.google.com into a web browser](https://dti-techs.gitbook.io/practical-foundations-in-cybersecurity/4.-networking-fundamentals/typing-www.google.com-into-a-web-browser)
+[Network protocols in action](network-protocols-in-action/)
 
 [Cisco IOS CLI and basic device security](cisco-ios-cli-and-basic-device-security/)
 

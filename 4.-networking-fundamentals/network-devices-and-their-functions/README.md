@@ -47,10 +47,6 @@ Network devices are also known as network equipment or network hardware or netwo
 
 There are many types of network devices, such as access points, firewalls, IDS/IPS, routers, and switches.
 
-Trying this:
-
-<figure><img src="network-devices-their-functions.webp" alt="network devices"><figcaption><p>Network devices examples (image courtesy of itrelease.com)</p></figcaption></figure>
-
 ### Repeaters, hubs, bridges, switches, and routers
 
 Repeaters regenerate signals, allowing devices to communicate across great distances by extending the physical reach of a network (e.g., allowing Ethernet to go beyond the standard 100m limit). Repeaters are typically used in long-distance cabling (e.g., fiber optic repeaters).
@@ -94,13 +90,7 @@ Among these, servers and clients are often referred to as end hosts or endpoints
 
 For illustration, here are the network device icons used in Wendell Odom’s (2020) CCNA 200-301 Official Cert Guide.
 
-Trying this:
-
 <figure><img src="network-icons-used-in-odom-2020-2.webp" alt="common network devices"><figcaption><p>Icons of common network devices/technologies used in network diagrams (Odom, 2020)</p></figcaption></figure>
-
-Original:
-
-<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/10/network-icons-used-in-odom-2020.webp?w=980" alt="common network devices" height="676" width="980"><figcaption><p>Icons of common network devices/technologies used in network diagrams (Odom, 2020)</p></figcaption></figure>
 
 ### Cisco devices examples
 

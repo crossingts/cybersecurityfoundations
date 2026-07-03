@@ -102,6 +102,10 @@ Routers connect different LANs together and forward data between them, including
 
 The following image shows some models of Cisco routers and switches. You can see router models ISR 1841 and ISR 2921, and switch models Catalyst 3560 and Catalyst Express 520.
 
+<figure><img src="cisco-routers-switches-3.webp" alt="cisco-routers-switches"><figcaption><p>Cisco routers and switches (image courtesy of allbids.com.au)</p></figcaption></figure>
+
+original:
+
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/10/cisco-routers-switches.webp?w=1201" alt="cisco-routers-switches" height="598" width="1201"><figcaption><p>Cisco routers and switches (image courtesy of allbids.com.au)</p></figcaption></figure>
 
 Notice that switches have many more network interfaces (ports) than routers. This is typical. For example, the Catalyst Express 520 shows 24 network interfaces we can connect end hosts or servers to. Switches typically have many RJ-45 ports because switches give user devices a place to connect to the Ethernet LAN.
@@ -117,6 +121,10 @@ Firewalls can be placed inside the network or outside the network. Meaning, the 
 The ASA (Adaptive Security Appliance) is Cisco’s classic firewall. The following image shows the Cisco ASA 5500-X series firewall model.
 
 Although the ASA is Cisco’s classic firewall, modern ASAs include modern features of next generation firewalls, including features such as an intrusion prevention system (IPS).
+
+<figure><img src="asa5500-x-series-firewall-4.webp" alt="ASA5500-X-series-firewall"><figcaption><p>ASA 5500-X series firewall (image courtesy of cisco.com)</p></figcaption></figure>
+
+original:
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/10/asa5500-x-series-firewall.webp?w=959" alt="ASA5500-X-series-firewall" height="546" width="959"><figcaption><p>ASA 5500-X series firewall (image courtesy of cisco.com)</p></figcaption></figure>
 

@@ -90,7 +90,7 @@ Among these, servers and clients are often referred to as end hosts or endpoints
 
 For illustration, here are the network device icons used in Wendell Odom’s (2020) CCNA 200-301 Official Cert Guide.
 
-<figure><img src="network-icons-used-in-odom-2020-2.webp" alt="common network devices"><figcaption><p>Icons of common network devices/technologies used in network diagrams (Odom, 2020, p. xxxi)</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/network-icons-used-in-odom-2020-2.webp" alt="common network devices"><figcaption><p>Icons of common network devices/technologies used in network diagrams (Odom, 2020, p. xxxi)</p></figcaption></figure>
 
 ### Cisco devices examples
 
@@ -102,7 +102,7 @@ Routers connect different LANs together and forward data between them, including
 
 The following image shows some models of Cisco routers and switches. You can see router models ISR 1841 and ISR 2921, and switch models Catalyst 3560 and Catalyst Express 520.
 
-<figure><img src="cisco-routers-switches-3.webp" alt="cisco-routers-switches"><figcaption><p>Cisco routers and switches (image courtesy of allbids.com.au)</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cisco-routers-switches-3.webp" alt="cisco-routers-switches"><figcaption><p>Cisco routers and switches (image courtesy of allbids.com.au)</p></figcaption></figure>
 
 Notice that switches have many more network interfaces (ports) than routers. This is typical. For example, the Catalyst Express 520 shows 24 network interfaces we can connect end hosts or servers to. Switches typically have many RJ-45 ports because switches give user devices a place to connect to the Ethernet LAN.
 
@@ -118,7 +118,7 @@ The ASA (Adaptive Security Appliance) is Cisco’s classic firewall. The followi
 
 Although the ASA is Cisco’s classic firewall, modern ASAs include modern features of next generation firewalls, including features such as an intrusion prevention system (IPS).
 
-<figure><img src="asa5500-x-series-firewall-4.webp" alt="ASA5500-X-series-firewall"><figcaption><p>ASA 5500-X series firewall (image courtesy of cisco.com)</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/asa5500-x-series-firewall-4.webp" alt="ASA5500-X-series-firewall"><figcaption><p>ASA 5500-X series firewall (image courtesy of cisco.com)</p></figcaption></figure>
 
 Firewalls are known as next-generation firewalls when they include more modern and advanced filtering capabilities.
 

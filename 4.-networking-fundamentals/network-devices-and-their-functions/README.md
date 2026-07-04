@@ -90,7 +90,7 @@ Among these, servers and clients are often referred to as end hosts or endpoints
 
 For illustration, here are the network device icons used in Wendell Odom’s (2020) CCNA 200-301 Official Cert Guide.
 
-<figure><img src="network-icons-used-in-odom-2020-2.webp" alt="common network devices"><figcaption><p>Icons of common network devices/technologies used in network diagrams (Odom, 2020)</p></figcaption></figure>
+<figure><img src="network-icons-used-in-odom-2020-2.webp" alt="common network devices"><figcaption><p>Icons of common network devices/technologies used in network diagrams (Odom, 2020, p. xxxi)</p></figcaption></figure>
 
 ### Cisco devices examples
 

@@ -69,10 +69,10 @@ Industry grade hashing algorithms have five key characteristics or properties. P
 * **Definition:** The hash function always produces an output (digest) of a fixed, predefined length, regardless of the size of the input message. The resulting digest cannot provide any clues about the original message, including its length. A digest should not increase in size as the length of the message increases.
 * **Why it matters:** This provides efficiency and predictability in protocols. It also prevents leakage of information about the input size.
 
-**5. The Avalanche Effect (A critical design mechanism)**
+**5. The Avalanche Effect (a critical design mechanism)**
 
 * **Definition:** A hashing algorithm is a series of calculations done iteratively. As a result, a small change to the input (e.g., flipping a single bit) produces a drastic change in the output, such that the new hash appears uncorrelated to the old hash.
-* **Why it matters:** This is not a standalone security property but the mechanism that makes the three properties above possible. It ensures the hash function's output is unpredictable and random-looking.
+* **Why it matters:** This is not a standalone security property but the mechanism that makes the three core security properties of cryptographic hash functions possible (one-wayness, second pre-image resistance, and collision resistance). It ensures the hash function's output is unpredictable and random-looking.
 
 **The Three Core Security Properties of Cryptographic Hash Functions (Hashing Algorithms)**
 

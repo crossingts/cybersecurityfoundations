@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5.-cryptography-and-wireless-security/hashing-algorithms-and-message-integrity/README.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/network-security-testing/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -183,6 +183,7 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
+    "5.-cryptography-and-wireless-security/hashing-algorithms-and-message-integrity/README.md",
     "4.-networking-fundamentals/network-devices-and-their-functions/README.md",
     "4.-networking-fundamentals/network-devices-and-their-functions/network-devices-and-their-functions-quiz.md",
     "4.-networking-fundamentals/network-devices-and-their-functions/asa5500-x-series-firewall-4.webp",

@@ -15,7 +15,7 @@
               "state": {
                 "file": "6.-practical-foundations-in-ethical-hacking/network-security-testing/README.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
               "title": "README"
@@ -181,7 +181,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "06ca7278ba5efd38",
+  "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
     "6.-practical-foundations-in-ethical-hacking/network-security-testing/README.md",

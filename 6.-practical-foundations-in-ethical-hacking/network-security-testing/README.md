@@ -105,9 +105,9 @@ Deep inspection involves analyzing not just Layer 3 (IP) and Layer 4 (TCP/UDP) h
 
 | **Feature**                  | **tcpdump (CLI)**                                                               | **Wireshark (GUI)**                                                                   |
 | ---------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| **Basic Inspection (L3-L4)** | ✔️ IPs, ports, TCP/UDP flags, packet size                                       | ✅ Same as tcpdump, but with color-coding                                              |
-| **Deep Inspection (L5-L7)**  | ❗ Limited (requires `-A`/`-X` flags, no automatic decoding)                     | ✅ Full protocol dissection (HTTP, DNS, TLS, etc.)                                     |
-| **Decryption Support**       | ❌ No built-in decryption                                                        | ✅ Supports TLS (with keys), WEP/WPA, etc.                                             |
+| **Basic Inspection (L3-L4)** | ✔️ IPs, ports, TCP/UDP flags, packet size                                       | ✔️ Same as tcpdump, but with color-coding                                             |
+| **Deep Inspection (L5-L7)**  | ❗ Limited (requires `-A`/`-X` flags, no automatic decoding)                     | ✔️ Full protocol dissection (HTTP, DNS, TLS, etc.)                                    |
+| **Decryption Support**       | ❌ No built-in decryption                                                        | ✔️ Supports TLS (with keys), WEP/WPA, etc.                                            |
 | **Filtering**                | ✅ BPF syntax (e.g., `host 1.1.1.1`)                                             | ✅ Advanced display + capture filters                                                  |
 | **Stream Reassembly**        | ❌ Manual (hard to track streams)                                                | ✅ Reconstructs HTTP, TCP, VoIP streams                                                |
 | **Expert Analysis**          | ❌ Minimal (manual interpretation)                                               | ✅ Warnings/errors (retransmissions, etc.)                                             |

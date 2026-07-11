@@ -14,7 +14,7 @@ description: >-
 * Become familiar with key protocols operating at each layer of the OSI model
 * Understand the addressing schemes of layers 2, 3, and 4
 
-This section unpacks the [Open Systems Interconnection (OSI) model](https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/)—a seven‑layer reference framework that standardizes how the flow of data in an IP network is described. We begin with the Physical layer and work our way up, examining the distinct role each layer plays: transporting raw bits, moving frames between adjacent devices, routing packets end to end, delivering data to the correct application, and finally presenting information to users. You will learn the specific addressing schemes used at Layer 2 (MAC addresses), Layer 3 (IP addresses), and Layer 4 (port numbers), and you will see how devices like switches and routers fit into the layered model. The section also walks through the encapsulation and de‑encapsulation process that wraps data in successive headers, clarifying why the lower four layers receive the most attention in networking while the top three are often grouped together. By the end, you will have a practical understanding of the OSI model that underpins all modern network communication.
+This section unpacks the [Open Systems Interconnection (OSI) model](https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/)—a seven‑layer reference framework that standardizes how the flow of data in a network is described. We begin with the Physical layer and work our way up, examining the distinct role each layer plays: transporting raw bits, moving frames between adjacent devices, routing packets end to end, delivering data to the correct application, and finally presenting information to users. You will learn the specific addressing schemes used at Layer 2 (MAC addresses), Layer 3 (IP addresses), and Layer 4 (port numbers), and you will see how devices like switches and routers fit into the layered model. The section also walks through the encapsulation and de‑encapsulation process that wraps data in successive headers, clarifying why the lower four layers receive the most attention in networking while the top three are often grouped together. By the end, you will have a practical understanding of the OSI model that underpins all modern network communication.
 
 ## Topics covered in this section
 
@@ -34,27 +34,35 @@ Remember the layers of the OSI model by remembering the mnemonic, All People See
 
 **Key Protocols Operating at Each Layer of the OSI Model**
 
-| OSI Model Layer        | Protocols & Standards                                                                             | Key Protocols/Standards and Their Functions                                                                                                                                                                                                                                                                                                  |
-| ---------------------- | ------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Application Layer**  | DNS, DHCP, FTP, TFTP, HTTP, HTTPS, LDAP, NTP, POP3, RTP, RTSP, SSH, Telnet, SIP, SMTP, SNMP, MIME | **DNS:** Translates human-readable domain names (e.g., [example.com](https://example.com/)) into machine-readable IP addresses.  <br>**DHCP:** Automatically assigns IP addresses and other network configuration parameters to devices.  <br>**HTTP:** Defines how web browsers and web servers communicate and transfer web pages.         |
-| **Presentation Layer** | JPEG, ASCII, EBCDIC, MIDI, MPEG, PICT, TIFF, GIF                                                  | **JPEG:** A standard method for compressing and encoding digital images.  <br>**ASCII:** A character encoding standard for representing text and control characters in computers.                                                                                                                                                            |
-| **Session Layer**      | NetBIOS, RPC, PPTP                                                                                | **NetBIOS:** Provides services for session establishment and name resolution on a local network.  <br>**RPC:** Enables a program to request a service from a program on a remote host, managing the session between them.  <br>**PPTP:** A tunneling protocol that creates a session for secure VPN connections over IP networks.            |
-| **Transport Layer**    | TCP, UDP, SPX                                                                                     | **TCP:** A connection-oriented protocol that provides reliable, ordered, and error-checked delivery of a data stream.  <br>**UDP:** A connectionless protocol that provides fast, but best-effort and unordered delivery of datagrams.                                                                                                       |
-| **Network Layer**      | ICMP, IGMP, IPsec, IPv4, IPv6, IPX, RIP, OSPF                                                     | **ICMP:** Used by network devices to send error messages and operational information (e.g., ping).  <br>**IPv4/IPv6:** Core protocols for addressing and routing packets across networks (IPv4 uses 32-bit addresses, IPv6 uses 128-bit).                                                                                                    |
-| **Data Link Layer**    | ARP, RARP, ATM, CDP, FDDI, Frame Relay, HDLC, MPLS, PPP, SLIP, STP, Token Ring                    | **ARP:** Discovers the MAC address associated with a known IP address on the local network.  <br>**MPLS:** A routing technique that directs data using path labels rather than network addresses for high-speed traffic engineering.  <br>**STP:** Prevents network loops in switched Ethernet networks by blocking redundant paths.         |
-| **Physical Layer**     | Bluetooth, DSL, Hub, Ethernet II, IEEE 802.3, IEEE 802.11 (WiFi), ISDN                            | **Bluetooth:** A wireless standard for short-range exchange of data between fixed and mobile devices.  <br>**IEEE 802.3 (Ethernet):** Defines the wiring and signaling standards for a wired LAN.  <br>**IEEE 802.11 (Wi-Fi):** Defines the media access control and physical layer specifications for wireless local area networks (WLANs). |
+| OSI Model Layer            | Protocols and Standards                                                                           | Key Protocols/Standards and Their Functions                                                                                                                                                                                                                                                                                                  |
+| -------------------------- | ------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Application Layer (7)**  | DNS, DHCP, FTP, TFTP, HTTP, HTTPS, LDAP, NTP, POP3, RTP, RTSP, SSH, Telnet, SIP, SMTP, SNMP, MIME | **DNS:** Translates human-readable domain names (e.g., example.com into machine-readable IP addresses.  <br>**DHCP:** Automatically assigns IP addresses and other network configuration parameters to devices.  <br>**HTTP:** Defines how web browsers and web servers communicate and transfer web pages.                                  |
+| **Presentation Layer (6)** | JPEG, ASCII, EBCDIC, MIDI, MPEG, PICT, TIFF, GIF                                                  | **JPEG:** A standard method for compressing and encoding digital images.  <br>**ASCII:** A character encoding standard for representing text and control characters in computers.                                                                                                                                                            |
+| **Session Layer (5)**      | NetBIOS, RPC, PPTP                                                                                | **NetBIOS:** Provides services for session establishment and name resolution on a local network.  <br>**RPC:** Enables a program to request a service from a program on a remote host, managing the session between them.  <br>**PPTP:** A tunneling protocol that creates a session for secure VPN connections over IP networks.            |
+| **Transport Layer (4)**    | TCP, UDP, SPX                                                                                     | **TCP:** A connection-oriented protocol that provides reliable, ordered, and error-checked delivery of a data stream.  <br>**UDP:** A connectionless protocol that provides fast, but best-effort and unordered delivery of datagrams.                                                                                                       |
+| **Network Layer (3)**      | ICMP, IGMP, IPsec, IPv4, IPv6, IPX, RIP, OSPF                                                     | **ICMP:** Used by network devices to send error messages and operational information (e.g., ping).  <br>**IPv4/IPv6:** Core protocols for addressing and routing packets across networks (IPv4 uses 32-bit addresses, IPv6 uses 128-bit).                                                                                                    |
+| **Data Link Layer (2)**    | ARP, RARP, ATM, CDP, FDDI, Frame Relay, HDLC, MPLS, PPP, SLIP, STP, Ethernet II, Token Ring       | **ARP:** Discovers the MAC address associated with a known IP address on the local network.  <br>**MPLS:** A routing technique that directs data using path labels rather than network addresses for high-speed traffic engineering.  <br>**STP:** Prevents network loops in switched Ethernet networks by blocking redundant paths.         |
+| **Physical Layer (1)**     | Bluetooth, DSL, IEEE 802.3, IEEE 802.11 (WiFi), ISDN                                              | **Bluetooth:** A wireless standard for short-range exchange of data between fixed and mobile devices.  <br>**IEEE 802.3 (Ethernet):** Defines the wiring and signaling standards for a wired LAN.  <br>**IEEE 802.11 (Wi-Fi):** Defines the media access control and physical layer specifications for wireless local area networks (WLANs). |
 
 Each layer of the OSI model serves a specific function that contributes to the overall goal of allowing two hosts to share data with one another. Each layer uses its own addressing scheme to accomplish its goal. The three addressing schemes used at Layers 2, 3, and 4 of the OSI model are:
 
 1. **Layer 2 (Data Link): MAC Address** - Used for **hop-to-hop delivery** on the same network segment. It physically identifies the next immediate device, like a router or switch.
-2. **Layer 3 (Network): IP Address** - Used for **end-to-end delivery** across an entire network path. It logically identifies the source and destination hosts.
-3. **Layer 4 (Transport): Port Number** - Used for **service-to-service delivery** to the correct application or service (e.g., web, email) on the destination host.
+2. **Layer 3 (Network): IP Address** - Used for **end to end delivery** across an entire network path. It logically identifies the source and destination hosts.
+3. **Layer 4 (Transport): Port Number** - Used for **service to service delivery** to the correct application or service (e.g., web, email) on the destination host.
 
-There are various devices and protocols which operate at specific layers of the OSI model which serve in accomplishing each layer’s goal. 
+There are various devices and protocols which operate at specific layers of the OSI model which serve in accomplishing each layer’s goal. The following discussion presents a brief explanation of the function of each layer.
 
-**A brief explanation of the function of each layer**
+**A Reference Chart of the OSI Model**
 
-<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/2d70c-open-systems-interconnection-ccna.webp" alt="open-systems-interconnection-osi-model-ccna" height="546" width="542"><figcaption><p>OSI Model Reference Chart (courtesy of Cisco, The Cisco Learning Network)</p></figcaption></figure>
+| OSI Layer                  | Function / Application Example                                                       | Core Devices & Protocols                                   | DoD Model Equivalent |
+| -------------------------- | ------------------------------------------------------------------------------------ | ---------------------------------------------------------- | -------------------- |
+| **Application Layer (7)**  | User interaction layer; generates or receives data for end-user applications         | User applications (e.g., SMTP, HTTP)                       | Application Layer    |
+| **Presentation Layer (6)** | Data formatting and translation; handles encryption/decryption                       | Data format standards (e.g., JPEG, ASCII, GIF)             | Application Layer    |
+| **Session Layer (5)**      | Establishes, manages, and terminates sessions between processes on different devices | Logical ports, session protocols (e.g., RPC, SQL, NetBIOS) | Application Layer    |
+| **Transport Layer (4)**    | Ensures end-to-end, reliable, ordered, and error-free data delivery                  | TCP, UDP, SPX                                              | Host to Host Layer   |
+| **Network Layer (3)**      | Controls packet routing and forwarding paths across the subnet                       | Routers, IP, IPX, ICMP                                     | Internet Layer       |
+| **Data Link Layer (2)**    | Provides error-free frame transfer between nodes over the physical layer             | Switches, Bridges, PPP, SLIP                               | Network Access Layer |
+| **Physical Layer (1)**     | Transmits and receives the unstructured raw bitstream over the physical medium       | Hubs, Cables, Repeaters                                    | Network Access Layer |
 
 ### Layer 1: Physical layer (the wire) – transporting bits
 
@@ -69,11 +77,13 @@ More generally, the Physical layer:
 
 ### Layer 2: Data Link layer – hop to hop delivery
 
-Layer 2 interacts with the wire – it puts bits on the wire and retrieves bits from the wire. Whatever the wire connects to on a PC is considered a Layer 2 item. So the **NIC (Network Interface Card)** which the wire is connected to on the computer is considered Layer 2. Switches and Wi-Fi access cards are also considered Layer 2 technologies.
+Layer 2 interacts with the wire – it puts bits on the wire and retrieves bits from the wire. More specifically, Layer 2 packages bits into frames and controls how they are placed onto and received from the physical medium.
 
-Layer 2 exists to move bits from one NIC to another, i.e., to accomplish hop to hop delivery. To accomplish this goal, Layer 2 uses an addressing scheme known as the **MAC (Media Access Control)** address. Every NIC has a unique MAC address which allows data to flow from one NIC to the next, i.e., from one hop to the next.
+Whatever the wire connects to on a PC is considered a Layer 2 item. So the **NIC (Network Interface Card)** which the wire is connected to on the computer is considered Layer 2. A NIC operates at both Layer 1 (signalling, physical connection) and Layer 2 (MAC address, framing). Switches and Wi-Fi access cards are also considered Layer 2 technologies.
 
-A MAC address is 6 bytes or 48 bits in length (1 byte = 8 bits = 1 octet). MAC addresses are written as a series of 12 hexadecimal characters. MAC addresses can be represented with dashes (Windows machines) or colons (Linux machines) separating 6 pairs of digits, e.g., 00-B0-D0-63-C2-26, or with dots separating three groups of four hexadecimal digits (Cisco machines), i.e., 9465.9C3B.8AE5.
+Layer 2 exists to move bits from one NIC to another, that is, to accomplish hop to hop delivery. To accomplish this goal, Layer 2 uses an addressing scheme known as the **MAC (Media Access Control)** address. Every NIC has a unique MAC address which allows data to flow from one NIC to the next, that is, from one hop to the next.
+
+A MAC address is 6 bytes or 48 bits in length (1 byte = 8 bits = 1 octet). MAC addresses are written as a series of 12 hexadecimal characters. MAC addresses can be represented with dashes (Windows machines) or colons (Linux machines) separating 6 pairs of digits, e.g., 00-B0-D0-63-C2-26, or with dots separating three groups of four hexadecimal digits (Cisco machines), that is, 9465.9C3B.8AE5.
 
 Often communication between hosts requires multiple hops. We need to jump across multiple routers to get to the target host. Each of those routers is connected to a wire using a NIC, therefore each of those NICs has its own MAC address.
 
@@ -88,9 +98,9 @@ More generally, the Data Link layer:
 
 ### Layer 3: Network layer – end to end delivery
 
-Layer 3 handles the end to end delivery of data, i.e., the flow of data from host to host across networks. To accomplish this goal, Layer 3 uses its own addressing scheme known as the IP address. End-to-end delivery involves logical addressing (like IP addresses), routing, and path determination to get data from a source host to a destination host across different networks.
+Layer 3 handles the end to end delivery of data—the flow of data from host to host across multiple networks. To accomplish this, the OSI model specifies a network layer addressing scheme called NSAP (Network Service Access Point) addresses. In practice, however, the Internet Protocol (IP) address has become the universal Layer 3 addressing method. For the remainder of this book, we will use IP addresses as our primary example.
 
-Routers are a Layer 3 technology because they aid in moving data from host to host across networks. Anything with an IP address can be considered to exist on Layer 3 of the OSI model.
+End to end delivery involves logical addressing (like IP addresses), routing, and path determination to get data from a source host to a destination host across different networks. Routers are a Layer 3 technology because they aid in moving data from host to host across networks. Anything with an IP address can be considered to exist on Layer 3 of the OSI model.
 
 _Why do we need both an IP address and a MAC address to move data on a network?_
 
@@ -126,7 +136,7 @@ Layer 4’s addressing scheme involves three port ranges for [TCP (Transmission 
 - 1024–49151: Registered ports. These are typically registered with IANA for a specific protocol, though in practice registration is not mandatory for use.
 - 49152–65535: Dynamic/private ports. Hosts use this range when selecting the random source port.
 
-Any port number that is not in one of these ranges is considered to be a dynamic port. Dynamic ports are used for applications that need to dynamically allocate ports, such as peer-to-peer file sharing applications.
+Dynamic ports are used for applications that need to dynamically allocate ports, such as peer-to-peer file sharing applications.
 
 TCP and UDP are both Layer 4 protocols whose function is to distinguish network streams from one another. TCP and UDP are two different strategies for accomplishing the goal of Layer 4. TCP favors reliability and UDP favors efficiency.
 
@@ -136,9 +146,9 @@ Here are some examples of how port sets are used in Layer 4:
 * A web server might use a port set to listen for connections on multiple ports. This would allow the web server to handle multiple types of traffic, such as HTTP and HTTPS, on the same host.
 * A load balancer might use a port set to distribute traffic across multiple servers. This would improve the performance of the servers by spreading the load evenly across them.
 
-Every program that’s expected to receive or send data on the wire is going to be associated with a particular port number. Then when data arrives on the wire it’s going to include a Layer 4 header in addition to the Layer 3 and the Layer 2 headers … that Layer 4 header will indicate which particular program should be receiving that data. And that’s what Layer 4 is going to use to make sure the right program receives the right 1’s and 0’s. (OSI Model Lesson 2, Part 2)
+Any program that sends or receives data over the network is associated with a particular port number. When a stream of data reaches the destination host, the incoming message carries a Layer 4 header along with the Layer 3 and Layer 2 headers. Inside that Layer 4 header, a destination port field tells the host exactly which application should get the data. This is how the Transport layer ensures that the correct program receives the correct set of 1s and 0s.
 
-Let’s take a closer look at this communication process. Suppose we have a client and three servers. Each piece of software on a computer is assigned a predefined port number which correlates to the underlying network application. bank.com is listening for a secure web request using https which is assigned TCP port 443. And the server for site.com is responding to general web requests using http which by default listens on TCP port 80. And a chat server is running IRC which runs on TCP port 6667.
+Let’s take a closer look at this communication process. Suppose we have a client and three servers. Each piece of software on a computer is assigned a predefined port number which correlates to the underlying network application. bank.com is listening for a secure web request using https, which listens on TCP port 443. And the server for site.com is responding to general web requests using http which by default listens on TCP port 80. And a chat server is running IRC which runs on TCP port 6667.
 
 A connection from our client to site.com would look like this: our client sends out a packet to the server of site.com. It includes a source port of 9999. That’s the port that the client randomly selected for this particular connection. The destination of this packet is the IP address of site.com, going to TCP port 80 which is the http application.
 
@@ -150,9 +160,11 @@ In each case a client selects a new random source port, and when the server resp
 
 More generally, the Transport layer:
 
-* Segments and reassembles data for communications between end hosts
-* Breaks large chunks of data into smaller segments that are more easily sent over the network and less likely to cause transmission problems
-* Provides host to host communication (end to end communication)
+* Segments and reassembles data for communications between end hosts.
+* Breaks large chunks of data into smaller segments that are more easily sent over the network and less likely to cause transmission problems.
+* Provides service to service (process to process) communication.
+
+The Transport layer provides service to service (application to application) communication, segmenting and reassembling data, and (for TCP) reliable delivery.
 
 ### Layers 5, 6, 7 – Session, Presentation, Application
 
@@ -166,7 +178,7 @@ Layer 7 (Application): human-computer interaction layer, where applications can 
 
 Back when the OSI model was originally conceived, each of these layers had a distinct function independent from the rest. However, currently the distinction between these layers is somewhat vague. Every application is free to implement the functions of layers 5, 6, and 7 as it chooses. Therefore often these three layers are simply considered as a single universal Application layer. In fact, there is another popular Internet communication model known as the TCP/IP model, which groups these three layers into one single encompassing layer.
 
-From a purely network engineering perspective, the distinction between layers 5, 6, and 7 is not particularly significant. The most critical layers to understand how data flow through the Internet are layers 1 through 4. The distinction would become more significant if you were involved in software engineering. Many network engineers simply refer to these layers as L5-7 or L5+ or L7. For now/here, we’re going to follow the TCP model’s lead and simply consider all three of these layers as the Application.
+From a purely network engineering perspective, the distinction between layers 5, 6, and 7 is not particularly significant. The most critical layers to understand how data flow through the Internet are layers 1 through 4. The distinction would become more significant if you were involved in software engineering. Many network engineers simply refer to these layers as L5-7 or L5+ or L7. Here, we will follow the TCP model’s lead and simply consider all three of these layers as the Application.
 
 ### Data encapsulation/de-encapsulation
 
@@ -217,8 +229,7 @@ We’ve been talking about IP addresses and MAC addresses as independent functio
 * Layer 4: Transport layer – service to service delivery:
   * distinguish data streams.
   * addressing scheme – ports – 0-65535, TCP or UDP.
-  * 0-65535 – TCP – favors reliability.
-  * 0-65535 – UDP – favors efficiency.
+  * TCP (favors reliability) and UDP (favors efficiency) both use port numbers 0–65535.
   * servers listen for requests to predefined ports.
   * clients select random port for each connection – response traffic will arrive on this port.
 * Layers 5, 6, 7 – Session, Presentation, Application:
@@ -230,8 +241,9 @@ We’ve been talking about IP addresses and MAC addresses as independent functio
 
 ### References
 
-Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 1. Cisco Press.
+Hayden, M. (2001). Sams teach yourself networking in 24 hours (2nd ed.). Sams Publishing. (pp.
+40-43)
 
-[OSI Model: A Practical Perspective – Networking Fundamentals – Lesson 2a](https://www.youtube.com/watch?v=LkolbURrtTs\&ab_channel=PracticalNetworking)
+Odom, W. (2020). CCNA 200-301 Official Cert Guide, Volume 1. Cisco Press.
 
 [OSI Model: A Practical Perspective – Part 2 – Networking Fundamentals – Lesson 2](https://www.youtube.com/watch?v=0aGqGKrRE0g\&ab_channel=PracticalNetworking)

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/network-security-testing/README.md",
+                "file": "4.-networking-fundamentals/the-open-systems-interconnection-osi-model/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -183,10 +183,12 @@
   },
   "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
-    "6.-practical-foundations-in-ethical-hacking/network-security-testing/README.md",
-    "5.-cryptography-and-wireless-security/hashing-algorithms-and-message-integrity/README.md",
+    "4.-networking-fundamentals/osi-model-layers-and-security-threats/README.md",
     "4.-networking-fundamentals/network-devices-and-their-functions/README.md",
+    "4.-networking-fundamentals/network-protocols-in-action/README.md",
+    "6.-practical-foundations-in-ethical-hacking/network-security-testing/README.md",
+    "conflict-files-obsidian-git.md",
+    "5.-cryptography-and-wireless-security/hashing-algorithms-and-message-integrity/README.md",
     "4.-networking-fundamentals/network-devices-and-their-functions/network-devices-and-their-functions-quiz.md",
     "4.-networking-fundamentals/network-devices-and-their-functions/asa5500-x-series-firewall-4.webp",
     "4.-networking-fundamentals/network-devices-and-their-functions/cisco-routers-switches-3.webp",
@@ -196,7 +198,6 @@
     "4.-networking-fundamentals/network-devices-and-their-functions/repeaters-vs-hubs-vs-bridges-vs-switches.md",
     "7.-conclusion/networking-fundamentals.md",
     "README.md",
-    "4.-networking-fundamentals/network-protocols-in-action/README.md",
     "4.-networking-fundamentals/network-protocols-in-action/network-protocols-in-action-quiz.md",
     "4.-networking-fundamentals/typing-www.google.com-into-a-web-browser/typing-www.google.com-into-a-web-browser-quiz.md",
     "4.-networking-fundamentals/network-protocols-and-their-functions/README.md",
@@ -214,7 +215,6 @@
     "6.-practical-foundations-in-ethical-hacking/common-attack-targets/README.md",
     "6.-practical-foundations-in-ethical-hacking/types-of-penetration-testing/README.md",
     "2.-introduction-to-cybersecurity/common-cyber-attacks/README.md",
-    "test_update.md",
     "2.-introduction-to-cybersecurity/the-evolving-cybersecurity-threat-landscape",
     "LICENSE",
     "3.-cybersecurity-grc/the-information-security-compliance-audit",

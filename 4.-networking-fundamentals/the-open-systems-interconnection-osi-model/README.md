@@ -46,7 +46,7 @@ Remember the layers of the OSI model by remembering the mnemonic, All People See
 
 Each layer of the OSI model serves a specific function that contributes to the overall goal of allowing two hosts to share data with one another. Each layer uses its own addressing scheme to accomplish its goal. The three addressing schemes used at Layers 2, 3, and 4 of the OSI model are:
 
-1. **Layer 2 (Data Link): MAC Address** - Used for **hop-to-hop delivery** on the same network segment. It physically identifies the next immediate device, like a router or switch.
+1. **Layer 2 (Data Link): MAC Address** - Used for **hop to hop delivery** on the same network segment. It physically identifies the next immediate device, like a router or switch.
 2. **Layer 3 (Network): IP Address** - Used for **end to end delivery** across an entire network path. It logically identifies the source and destination hosts.
 3. **Layer 4 (Transport): Port Number** - Used for **service to service delivery** to the correct application or service (e.g., web, email) on the destination host.
 
@@ -54,15 +54,15 @@ There are various devices and protocols which operate at specific layers of the 
 
 **A Reference Chart of the OSI Model**
 
-| OSI Layer                  | Function / Application Example                                                       | Core Devices & Protocols                                   | DoD Model Equivalent |
-| -------------------------- | ------------------------------------------------------------------------------------ | ---------------------------------------------------------- | -------------------- |
-| **Application Layer (7)**  | User interaction layer; generates or receives data for end-user applications         | User applications (e.g., SMTP, HTTP)                       | Application Layer    |
-| **Presentation Layer (6)** | Data formatting and translation; handles encryption/decryption                       | Data format standards (e.g., JPEG, ASCII, GIF)             | Application Layer    |
-| **Session Layer (5)**      | Establishes, manages, and terminates sessions between processes on different devices | Logical ports, session protocols (e.g., RPC, SQL, NetBIOS) | Application Layer    |
-| **Transport Layer (4)**    | Ensures end-to-end, reliable, ordered, and error-free data delivery                  | TCP, UDP, SPX                                              | Host to Host Layer   |
-| **Network Layer (3)**      | Controls packet routing and forwarding paths across the subnet                       | Routers, IP, IPX, ICMP                                     | Internet Layer       |
-| **Data Link Layer (2)**    | Provides error-free frame transfer between nodes over the physical layer             | Switches, Bridges, PPP, SLIP                               | Network Access Layer |
-| **Physical Layer (1)**     | Transmits and receives the unstructured raw bitstream over the physical medium       | Hubs, Cables, Repeaters                                    | Network Access Layer |
+| OSI Layer                  | Function/Application Example                                                                  | Core Devices and Protocols                                 | DoD Model Equivalent |
+| -------------------------- | --------------------------------------------------------------------------------------------- | ---------------------------------------------------------- | -------------------- |
+| **Application Layer (7)**  | User interaction layer; generates or receives data for end-user applications                  | User applications (e.g., SMTP, HTTP)                       | Application Layer    |
+| **Presentation Layer (6)** | Data formatting and translation; handles encryption/decryption                                | Data format standards (e.g., JPEG, ASCII, GIF)             | Application Layer    |
+| **Session Layer (5)**      | Establishes, manages, and terminates sessions between processes on different devices          | Logical ports, session protocols (e.g., RPC, SQL, NetBIOS) | Application Layer    |
+| **Transport Layer (4)**    | Provides service to service data transfer; TCP adds reliability, ordering, and error recovery | TCP, UDP, SPX                                              | Host to Host Layer   |
+| **Network Layer (3)**      | Controls packet routing and forwarding paths across the subnet                                | Routers, IP, IPX, ICMP                                     | Internet Layer       |
+| **Data Link Layer (2)**    | Provides error-free frame transfer between nodes over the physical layer                      | Switches, Bridges, PPP, SLIP                               | Network Access Layer |
+| **Physical Layer (1)**     | Transmits and receives the unstructured raw bitstream over the physical medium                | Hubs, Cables, Repeaters                                    | Network Access Layer |
 
 ### Layer 1: Physical layer (the wire) – transporting bits
 

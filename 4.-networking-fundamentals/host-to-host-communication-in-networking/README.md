@@ -20,31 +20,29 @@ This section explains what happens when one IP host sends data to another—whet
 * **Hosts connected directly to each other**
 * **Hosts connected through a router**
 
-### [Host to host communication in networking](https://www.learncisco.net/courses/icnd-1/building-a-network/host-to-host-communications.html)
+### Host to host communication in networking
 
 A host is a computer or other device connected to a computer network and which sends or receives traffic. In typical network traffic, two hosts in communication are often called client and server. The client initiates a request and is looking to acquire some data or a service. The server is the entity receiving the request and has the data or service that the client wants.
 
-A computer participating in networks that use the [Internet Protocol suite](https://itnetworkingskills.wordpress.com/2023/01/15/network-protocols-their-functions/) may also be called an IP host. Specifically, computers participating in the Internet are called Internet hosts. (Host, 2022)
+A computer participating in networks that use the [Internet Protocol suite](https://itnetworkingskills.wordpress.com/2023/01/15/network-protocols-their-functions/) may be called an IP host. A computer participating in the Internet may be called an Internet host. 
 
-Hosts run software and applications for the end user to interact with, and they also at some point need to put bits on a wire. As such, it is said that Hosts operate across all seven layers of the OSI model. (Ed Harmoush, April 12, 2020)
+Hosts perform both high-level application processing and low-level physical transmission of data. As a result, they interact with—and are said to operate across—all seven layers of the OSI model, from the user-facing application layer to the wire-level physical layer.
 
 This discussion will focus on host to host communication, explaining each step involved in the process. Two scenarios are considered:
 
-1\. Hosts connected directly to each other. Scenario 1: hosts communicating to another host in the same network. All the steps hosts take to communicate to other hosts on the same network regardless of how they are connected – whether host A is directly connected to host B or whether there is one switch or multiple switches in between.
+1\. Hosts connected directly to each other: hosts communicating with other hosts on the same network. All the steps hosts take to communicate with other hosts on the same network regardless of how they are connected – whether host A is directly connected to host B or whether there is one switch or multiple switches in between.
 
-2\. Hosts connected through a router. Scenario 2: hosts communicating to another host in a foreign network. What a host does to speak to any other host on a foreign network – whether what hosts are trying to speak to is on the other side of one router or multiple routers or on opposite sides of the Internet.
+2\. Hosts connected through a router: hosts communicating with other hosts on a foreign network. What a host does to speak to any other host on a foreign network – whether what hosts are trying to speak to is on the other side of one router or multiple routers or on opposite sides of the Internet.
 
 ### Hosts connected directly to each other
 
-Although it is rare to find situations where two hosts are connected directly to each other, understanding what happens if they were is crucial to understanding everything else that happens when multiple hosts are communicating through a switch or router. (Ed Harmoush, October 20, 2020)
+This section discusses everything hosts do to communicate with other hosts in the same network regardless of how they are connected. We will examine how two directly connected hosts, A and B, communicate. While directly connected hosts are uncommon in networks, understanding this simple case is essential. It establishes the foundational principles that apply whenever hosts communicate—whether through switches, routers, or across the Internet.
 
-This section discusses everything hosts do to communicate with other hosts in the same network regardless of how they are connected. We will examine how two directly connected hosts, A and B, communicate.
-
-Host A has some data it wants to send to host B. Host A and host B are directly connected to each other. The two hosts do not know whether they are directly connected or whether there are hubs or switches in between. Each host has a NIC and therefore a MAC address (for convenience, only the first four digits of the MAC addresses are shown). Both hosts are configured with an IP address and a subnet mask (255.255.255.0). A subnet mask identifies the size of particular network. This is done through the process of subnetting.
+Host A has some data it wants to send to host B. Host A and host B are directly connected to each other. The two hosts do not know whether they are directly connected or whether there are hubs or switches in between. Each host has a NIC and therefore a MAC address (for simplicity, MAC addresses are shown in abbreviated form, e.g., a2a2 represents a full 48-bit MAC address, such as a2a2:a2a2:a2a2). Both hosts are configured with an IP address and a subnet mask (255.255.255.0). A subnet mask identifies the size of particular network. This is done through the process of subnetting.
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/8499d-hosts-directly-connected.webp?w=1201" alt="hosts-directly-connected" height="218" width="1201"><figcaption><p>An illustration of direct host to host communication (source: Ed Harmoush, PracNet, Part 1)</p></figcaption></figure>
 
-Host A knows the IP address of Host B (`10.1.1.33`). Host A learned this address perhaps because a user typed a command like `ping SRVB` or perhaps because host B's IP address was resolved from a domain name by DNS. Next, Host A determines whether Host B is on its own local network or on a remote network. Host A makes this decision by calculating its own network ID and the network ID of the target host. Host A compares the result of applying its subnet mask to its own IP address with the result of applying the same subnet mask to the destination IP address. In other words, Host A compares the Network IDs. If the Network IDs are identical, Host B is on the same local network. Host A will then attempt to communicate with it directly (using ARP to find the MAC address). If the Network IDs are different, Host B is on a remote network, and Host A will forward the traffic to its default gateway.
+Host A knows the IP address of host B (`10.1.1.33`). Host A learned this address perhaps because a user typed a command like `ping SRVB` or perhaps because host B's IP address was resolved from a domain name by DNS. Next, host A determines whether host B is on its own local network or on a remote network. Host A makes this decision by calculating its own network ID and the network ID of the target host. Host A compares the result of applying its subnet mask to its own IP address with the result of applying the same subnet mask to the destination IP address. In other words, Host A compares the network IDs. If the network IDs are identical, host B is on the same local network. Host A will then attempt to communicate with it directly (using ARP to find the MAC address). If the network IDs are different, host B is on a remote network, and host A will forward the traffic to its default gateway.
 
 Host A can create a L3 header to attach to the data it wants to send to host B, that is, to accomplish end to end delivery. The L3 header will include the IP address of host A (the source) and the IP address of host B (the destination).
 
@@ -56,7 +54,7 @@ The ARP request includes a L2 header which is meant to take the ARP payload and 
 
 ARP mappings are stored in an ARP cache (ARP table). Every device which has an IP address has an ARP cache. Hosts A and B both have an IP address and therefore both have an ARP cache.
 
-Initially, host A’s ARP cache states that we’re trying to resolve the 10.1.1.33 IP address to a particular MAC address. Host B’s ARP cache is empty. When host A’s ARP request makes it across the wire to host B, host B’s ARP cache begins to populate an entry: the IP 10.1.1.22 maps to the MAC address a2a2. In the original ARP request host A provided its own MAC address.
+Initially, host A's ARP cache is empty (lacks an entry for 10.1.1.33). Host B's ARP cache is also initially empty. When host A’s ARP request makes it across the wire to host B, host B’s ARP cache begins to populate an entry: the IP 10.1.1.22 maps to the MAC address a2a2. In the original ARP request host A provided its own MAC address.
 
 Host B now sends back an ARP response which includes the mapping host A was trying to resolve, that is, the MAC address b3b3 associated with the IP address 10.1.1.33. The ARP response is sent unicast, meaning directly back to host A. Since host B knows the MAC address of host A, it can create a L2 header which will take the ARP response directly to host A.
 
@@ -92,7 +90,7 @@ When the ARP response arrives on host A, host A is able to populate its ARP cach
 
 In our example, host A wants to send some data to host C, so host A creates a L3 header with its IP address as the source IP address and host C’s IP address as the destination IP address. The ARP process is necessary to create L2 headers that encapsulate the L3 packet and move it from hop to hop to its final destination.
 
-Upon receiving the packet, the router will discard the L2 header. Now the router will add a new L2 header to deliver its payload to the next hop, whether that hop is directly to host C or is across multiple routers on the Internet.
+Upon receiving the packet, the router strips the L2 header, examines the L3 header to determine the next hop, and then encapsulates the packet with a new L2 header for the next segment of the journey. The router adds a new L2 header to deliver its payload to the next hop, whether that hop is directly to host C or is across multiple routers on the Internet.
 
 The ARP entry that host A resolved in order to get the packet to the router can be reused to speak to any host in foreign networks. Suppose our router is connected to the Internet and a terminal on the Internet is our new destination, host D with an IP address 10.8.8.55.
 
@@ -103,14 +101,12 @@ The first step any host takes when it’s trying to send data on a network is to
 ### Key takeaways
 
 - Every host begins with a local‑vs.‑remote decision. A host uses its IP address and subnet mask to calculate its own network ID and compares it to the destination’s network ID. If the IDs match, the target is on the same network; if they differ, the target is on a foreign network.
-- Same‑network communication relies on direct ARP resolution. When the destination is local, the host broadcasts an ARP request for the target’s MAC address, receives a unicast ARP reply, and populates its ARP cache. With both IP and MAC known, it can construct a complete Layer 2 frame and Layer 3 packet to deliver the data end‑to‑end.
-- Foreign‑network communication uses the default gateway. For any destination outside the local network, the host uses ARP to resolve the MAC address of its default gateway (router). The Layer 2 frame is then addressed to the router, while the Layer 3 packet retains the final destination’s IP address, allowing the router to forward the packet toward its ultimate goal.
+- Same‑network communication relies on direct ARP resolution. When the destination is local, the host broadcasts an ARP request for the target’s MAC address, receives a unicast ARP reply, and populates its ARP cache. With both IP and MAC known, it can construct a complete L2 frame and L3 packet to deliver the data end‑to‑end.
+- Foreign‑network communication uses the default gateway. For any destination outside the local network, the host uses ARP to resolve the MAC address of its default gateway (router). The L2 frame is then addressed to the router, while the L3 packet retains the final destination’s IP address, allowing the router to forward the packet toward its ultimate goal.
 - ARP entries are reusable. Once a host learns the MAC address of a local peer or its default gateway, that mapping stays in the ARP cache, eliminating the need for repeated ARP requests for subsequent transmissions.
 - The host’s steps are the same regardless of the in‑between devices. When two hosts are on the same network, the process is identical whether they are directly connected, or there are one or more switches or hubs between them. When the destination is on a foreign network, the process is identical whether the target is behind a single router or many routers across the Internet.
 
 ### References
-
-[Ed Harmoush. (October 20, 2020). Host to Host Communication. PracNet](https://www.practicalnetworking.net/series/packet-traveling/host-to-host/)
 
 [Everything Hosts do to speak on the Internet – Part 1 – Networking Fundamentals – Lesson 3 (PracNet, Part 1)](https://www.youtube.com/watch?v=gYN2qN11-wE)
 

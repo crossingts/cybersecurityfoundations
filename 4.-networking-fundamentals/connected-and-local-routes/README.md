@@ -53,7 +53,7 @@ Connected to R1 and R4 are two LANs. Each of these LANs could be a different off
 
 Now let’s look at the IP addresses each device will be using.
 
-For the LAN connected to R1, the network is 192.168.1.0/24 and R1’s G0/2 interface IP is 192.168.1.1 and PC1’s IP is 192.168.1.10.&#x20;
+For the LAN connected to R1, the network is 192.168.1.0/24 and R1’s G0/2 interface IP is 192.168.1.1 and PC1’s IP is 192.168.1.10.  
 
 The WAN connection between R1 and R2 is 192.168.12.0/24. R1 G0/1’s IP is 192.168.12.1 and R2 G0/0’s IP is 192.168.12.2.
 
@@ -61,9 +61,9 @@ The WAN connection between R1 and R3 is 192.168.13.0/24, with R1 G0/0 as 192.168
 
 The WAN connection between R2 and R4 is 192.168.24.0/24, with R2 G0/1 as 192.168.24.2 and R4 G0/0 as 192.168.24.4.
 
-The final WAN connection between R3 and R4 is 192.168.34.0/24, with R3 G0/1 as 192.168.34.3 and R4 G0/1 as 192.168.34.4.&#x20;
+The final WAN connection between R3 and R4 is 192.168.34.0/24, with R3 G0/1 as 192.168.34.3 and R4 G0/1 as 192.168.34.4.  
 
-Then, the LAN connected to R4’s G0/2 interface is 192.168.4.0/24, with R4 G0/2 as 192.168.4.4 and PC4 as 192.168.4.10.&#x20;
+Then, the LAN connected to R4’s G0/2 interface is 192.168.4.0/24, with R4 G0/2 as 192.168.4.4 and PC4 as 192.168.4.10.  
 
 Notice that all the router IP addresses are the same as their name. All of R1’s IP addresses are .1, R2’s IP addresses are .2, R3’s IP addresses are .3, and R4’s IP addresses are .4.
 
@@ -77,9 +77,9 @@ First we configured R1’s G0/0 interface with **ip address** 192.168.13.1 255.2
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/aa156-r1-pre-configurations-2.webp?w=1201" alt="R1-pre-configurations" height="390" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Routing Fundamentals (part 1) | Day 11)</p></figcaption></figure>
 
-Then we configured G0/1’s IP address. We can use the INTERFACE G0/1 command directly from G0/0 interface config mode, without returning to global config mode first.&#x20;
+Then we configured G0/1’s IP address. We can use the INTERFACE G0/1 command directly from G0/0 interface config mode, without returning to global config mode first.  
 
-We then configured G0/2.&#x20;
+We then configured G0/2.  
 
 To confirm, we used SHOW IP INTERFACE BRIEF, and you can see the IP addresses we just configured. The other routers’ IP addresses were configured too, though not shown here.
 
@@ -87,21 +87,21 @@ To confirm, we used SHOW IP INTERFACE BRIEF, and you can see the IP addresses we
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/12c62-what-is-routing.webp?w=1201" alt="What-is-routing" height="250" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Routing Fundamentals (part 1) | Day 11)</p></figcaption></figure>
 
-Let’s look at R1’s routing table. The command SHOW IP ROUTE displays the router’s routing table. Here is the output. There are two main sections to the output, the “Codes” at the top, and the actual routes at the bottom.&#x20;
+Let’s look at R1’s routing table. The command SHOW IP ROUTE displays the router’s routing table. Here is the output. There are two main sections to the output, the “Codes” at the top, and the actual routes at the bottom.  
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/af1a3-r1-show-ip-route-4.webp?w=1201" alt="R1-show-ip-route" height="412" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Routing Fundamentals (part 1) | Day 11)</p></figcaption></figure>
 
-The Codes legend in the output of SHOW IP ROUTE lists the different protocols which routers can use to learn routes, as well as the codes that represent the protocols in the routing table. Note the two codes highlighted in blue in the diagram. L, Local, and C, Connected.&#x20;
+The Codes legend in the output of SHOW IP ROUTE lists the different protocols which routers can use to learn routes, as well as the codes that represent the protocols in the routing table. Note the two codes highlighted in blue in the diagram. L, Local, and C, Connected.  
 
 The code L is used for routes to the actual IP address configured on the router’s interface, and these routes will have a /32 mask. If you look at the routes below in the above diagram, notice there are three routes with L highlighted in blue, one for each of R1’s interfaces. The code C is used for routes to the network the interface is connected to, with the actual netmask (subnet mask) configured on the interface. Notice there are also three routes with the C code in the output.
 
-Even though we haven’t configured any routes yet on R1, R1 already has six routes. When you configure an IP address on a router interface and enable it with the NO SHUTDOWN command, two routes per interface will be automatically added to the routing table, a Connected route, and a Local route.&#x20;
+Even though we haven’t configured any routes yet on R1, R1 already has six routes. When you configure an IP address on a router interface and enable it with the NO SHUTDOWN command, two routes per interface will be automatically added to the routing table, a Connected route, and a Local route.  
 
-Note, the statement “192.168.1.0/24 is variably subnetted, 2 subnets, 2 masks” means that in the routing table there are two routes to subnets that fit within the 192.168.1.0/24 Class C network, with two different subnet masks, those being /24 and /32. The other two similarly-worded lines mean the same thing for their respective networks.&#x20;
+Note, the statement “192.168.1.0/24 is variably subnetted, 2 subnets, 2 masks” means that in the routing table there are two routes to subnets that fit within the 192.168.1.0/24 Class C network, with two different subnet masks, those being /24 and /32. The other two similarly-worded lines mean the same thing for their respective networks.  
 
 ### [Connected and Local routes](https://www.flackbox.com/cisco-connected-and-local-routes)
 
-In the following CLI output, two routes are highlighted for R1’s G0/2 interface: one connected route to 192.168.1.0/24 and one local route to 192.168.1.1/32.&#x20;
+In the following CLI output, two routes are highlighted for R1’s G0/2 interface: one connected route to 192.168.1.0/24 and one local route to 192.168.1.1/32.  
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/378f2-connected-local-routes-5.webp?w=1201" alt="Connected-Local-routes" height="403" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Routing Fundamentals (part 1) | Day 11)</p></figcaption></figure>
 
@@ -109,31 +109,31 @@ First, let’s look at the connected route in more detail.
 
 \*A connected route is a route to the network the interface is connected to.
 
-\*R1 G0/2’s IP is 192.168.1.1/24. Because it’s a /24 address the first 24 bits, the first 3 octets, are the network portion of the address. The network portion is highlighted in red. The last octet is the host portion of the address, highlighted in blue.&#x20;
+\*R1 G0/2’s IP is 192.168.1.1/24. Because it’s a /24 address the first 24 bits, the first 3 octets, are the network portion of the address. The network portion is highlighted in red. The last octet is the host portion of the address, highlighted in blue.  
 
 \*When you change that host portion to all 0s, the result is 192.168.1.0/24, and notice that’s the destination of that connected route. It’s a route to that network. So, this provides a route to all hosts in that network, for example 192.168.1.10, .100, .232, etc., any address in that .0/24 range.
 
-\*Look back at the routing table, and notice that the connected route says “192.168.1.0/24 is directly connected, GigabitEthernet0/2”. So, R1 knows if it needs to send a packet to any host in that network, it should send it out of G0/2.&#x20;
+\*Look back at the routing table, and notice that the connected route says “192.168.1.0/24 is directly connected, GigabitEthernet0/2”. So, R1 knows if it needs to send a packet to any host in that network, it should send it out of G0/2.  
 
 Next, let’s look at the local route.
 
-\*A local route is a route to the exact IP address configured on the interface.&#x20;
+\*A local route is a route to the exact IP address configured on the interface.  
 
-\*A /32 netmask is used to specify the exact IP address of the interface. /32 means that all 32 bits are fixed, they cannot change.&#x20;
+\*A /32 netmask is used to specify the exact IP address of the interface. /32 means that all 32 bits are fixed, they cannot change.  
 
 \*Even though R1’s G0/2 is configured as 192.168.1.1/24, the local route is to .1/32, which specifies only that single address. With this route R1 knows: if I receive a packet for this IP address, it’s for me.
 
-/24 means that the netmask is 255.255.255.0. The first 24 bits of the netmask are all 1, so each octet is 255. These bits are fixed. However the last 8 bits are not fixed. They can be any number. So the route for 192.168.1.0/24 matches 192.168.1.0 to 192.168.1.255. That means that if R1 receives a packet with a destination in that range, it will send the packet out of the G0/2 interface.&#x20;
+/24 means that the netmask is 255.255.255.0. The first 24 bits of the netmask are all 1, so each octet is 255. These bits are fixed. However the last 8 bits are not fixed. They can be any number. So the route for 192.168.1.0/24 matches 192.168.1.0 to 192.168.1.255. That means that if R1 receives a packet with a destination in that range, it will send the packet out of the G0/2 interface.  
 
-A route **matches** a packet’s destination if the packet’s destination IP address is part of the network specified in the route.&#x20;
+A route **matches** a packet’s destination if the packet’s destination IP address is part of the network specified in the route.  
 
 Examples:
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/cd802-route-matching-example-6.webp?w=1201" alt="route-matching-example" height="568" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Routing Fundamentals (part 1) | Day 11)</p></figcaption></figure>
 
-A packet with a destination IP address of 192.168.1.2 is a match in the 192.168.1.0/24 network because 192.168.1.2 begins with 192.168.1. **Because it’s /24, the first 3 octets have to match**. So, R1 would send the packet out of G0/2. 192.168.1.7 would also match this route, so R1 would forward the packet out of G0/2. Ditto for 192.168.1.89.&#x20;
+A packet with a destination IP address of 192.168.1.2 is a match in the 192.168.1.0/24 network because 192.168.1.2 begins with 192.168.1. **Because it’s /24, the first 3 octets have to match**. So, R1 would send the packet out of G0/2. 192.168.1.7 would also match this route, so R1 would forward the packet out of G0/2. Ditto for 192.168.1.89.  
 
-A packet destined for 192.168.2.1, however, does not match. R1 cannot use this route, because the destination does not begin with 192.168.1. So R1 would either send the packet using a different route or drop the packet if there is no matching route.&#x20;
+A packet destined for 192.168.2.1, however, does not match. R1 cannot use this route, because the destination does not begin with 192.168.1. So R1 would either send the packet using a different route or drop the packet if there is no matching route.  
 
 The local route to 192.168.1.1/32 is simpler. Because it’s /32, all bits of the netmask are 1, so it’s 255.255.255.255. All the bits of the IP address are fixed. 192.168.1.1/32 matches only destination 192.168.1.1.
 
@@ -147,7 +147,7 @@ So which route will R1 use for a packet destined for 1.1? Will R1 send the packe
 
 The route to 192.168.1.0/24 includes 256 different IP addresses, from 192.168.1.0 to .255. On the other hand, the route to 1.1/32 includes only one IP address, 192.168.1.1. The .1/32 route is more specific than the .0/24 route. So when R1 receives a packet destined for 192.168.1.1, it will select the route to 1.1/32, i.e., R1 will receive the packet for itself, rather than forward it out of G0/2.
 
-Local routes tell the router: keep the packet, don’t forward it. This means R1 will de-encapsulate the packet and look at the contents inside, because the contents are addressed to R1 itself.&#x20;
+Local routes tell the router: keep the packet, don’t forward it. This means R1 will de-encapsulate the packet and look at the contents inside, because the contents are addressed to R1 itself.  
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/a8577-most-specific-route-8.webp?w=1201" alt="most-specific-route" height="400" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Routing Fundamentals (part 1) | Day 11)</p></figcaption></figure>
 
@@ -155,7 +155,7 @@ To summarize: the route that the router will use for the packet is **the most sp
 
 ### Route selection practice (1)
 
-Let’s look at a few examples to practice route selection.&#x20;
+Let’s look at a few examples to practice route selection.  
 
 R1 receives a packet destined for 192.168.1.1. Looking at R1’s routing table, which route will R1 select for this packet? And what will it do with the packet?
 
@@ -173,7 +173,7 @@ The most specific matching route, actually the only matching route for this pack
 
 ### Route selection practice (3)
 
-This packet has the destination IP 192.168.1.244. What will R1 do with this packet?&#x20;
+This packet has the destination IP 192.168.1.244. What will R1 do with this packet?  
 
 The only matching route is this one to 1.0/24, so R1 will use this route to forward the packet. It’s a connected route, so R1 will send the packet to the destination, which should be connected to that interface.
 
@@ -181,15 +181,15 @@ The only matching route is this one to 1.0/24, so R1 will use this route to forw
 
 ### Route selection practice (4)
 
-This packet is destined for 192.168.12.1. What will R1 do with this packet?&#x20;
+This packet is destined for 192.168.12.1. What will R1 do with this packet?  
 
-There are two matching routes, but the most specific one is this Local route for 192.168.12.1/32. So R1 will receive the packet for itself.&#x20;
+There are two matching routes, but the most specific one is this Local route for 192.168.12.1/32. So R1 will receive the packet for itself.  
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/074a7-route-selection-practice-13.webp?w=1201" alt="Route-selection-practice-13" height="610" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Routing Fundamentals (part 1) | Day 11)</p></figcaption></figure>
 
 ### Route selection practice (5)
 
-This packet is destined for 192.168.4.10. What will R1 do with this one?&#x20;
+This packet is destined for 192.168.4.10. What will R1 do with this one?  
 
 Because there are no matching routes in the routing table, R1 will have to drop this packet. If the router does not have a route to the packet’s destination, it will drop the packet.
 
@@ -197,43 +197,43 @@ Because there are no matching routes in the routing table, R1 will have to drop 
 
 ### Summary
 
-\*Routers store information about destinations they know in their routing table.&#x20;
+\*Routers store information about destinations they know in their routing table.  
 
 When routers receive packets, they look in the routing table to find the best route to forward the packet.
 
-\*Each route in the routing table is an instruction. The routing table is a set of instructions for the router, telling it how to forward packets.&#x20;
+\*Each route in the routing table is an instruction. The routing table is a set of instructions for the router, telling it how to forward packets.  
 
 A route tells the router, to reach destinations in network X, send the packet to next-hop Y, which is the next router in the path to the destination. To reach destination X, send packets to next-hop Y.
 
-A route tells the router, if the destination is directly connected (**Connected route**) to this router, send the packet directly to the destination. Or, if the destination is your own IP address (**Local route**), receive the packet for yourself.&#x20;
+A route tells the router, if the destination is directly connected (**Connected route**) to this router, send the packet directly to the destination. Or, if the destination is your own IP address (**Local route**), receive the packet for yourself.  
 
-\*When you configure an IP address on an interface and enable the interface, two routes are automatically added to the routing table.&#x20;
+\*When you configure an IP address on an interface and enable the interface, two routes are automatically added to the routing table.  
 
-\>The first is a **Connected route**, indicated with code C in the routing table. It is a route to the network connected to the interface.&#x20;
+\>The first is a **Connected route**, indicated with code C in the routing table. It is a route to the network connected to the interface.  
 
 –For example, if the interface’s IP is 192.168.1.1/24, the connected route will be to 1.0/24.
 
-–The Connected route tells the router: to send a packet to a destination in this network, send it out of the interface specified in the route.&#x20;
+–The Connected route tells the router: to send a packet to a destination in this network, send it out of the interface specified in the route.  
 
-\>The second kind of route is a **Local route**, indicated by code L in the routing table. It is a route to the exact IP address configured on the interface.&#x20;
+\>The second kind of route is a **Local route**, indicated by code L in the routing table. It is a route to the exact IP address configured on the interface.  
 
 –So, if the interface’s IP is 192.168.1.1/24, the local route will be to 1.1/32. A /32 netmask is used to specify just the one IP address.
 
 –This tells the router, packets to this destination are for you, and you should receive them for yourself and not forward them.
 
-\*Routes match destinations. A route matches a destination if the packet’s destination IP address is part of the network specified in the route.&#x20;
+\*Routes match destinations. A route matches a destination if the packet’s destination IP address is part of the network specified in the route.  
 
-–For example, a packet to 192.168.1.60 is matched by a route to 192.168.1.0/24, but not by a route to 192.168.0.0/24.&#x20;
+–For example, a packet to 192.168.1.60 is matched by a route to 192.168.1.0/24, but not by a route to 192.168.0.0/24.  
 
-\*If a router receives a packet and it does not have a route that matches the packet’s destination, it will drop the packet.&#x20;
+\*If a router receives a packet and it does not have a route that matches the packet’s destination, it will drop the packet.  
 
-–This is different from switches, which flood frames if they don’t have a MAC table entry for the destination.&#x20;
+–This is different from switches, which flood frames if they don’t have a MAC table entry for the destination.  
 
 \*If a router receives a packet and it has multiple routes that match the packet’s destination, it will use the most specific matching route to forward the packet.
 
 –The most specific matching route means the matching route with the longest prefix length.
 
-–This is different from switches, which look for an exact match in the MAC address table to forward frames. The frame’s destination MAC address must be the exact same as the entry in the MAC address table. There’s no concept of “most specific match” in switches.&#x20;
+–This is different from switches, which look for an exact match in the MAC address table to forward frames. The frame’s destination MAC address must be the exact same as the entry in the MAC address table. There’s no concept of “most specific match” in switches.  
 
 ### Command review
 

@@ -50,11 +50,11 @@ R1 and R2 are linked through a point-to-point connection. The 192.168.1.0/24 net
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/efa43-what-acls-1.webp?w=1201" alt="What-ACLs-How-ACLs-work" height="360" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Standard ACLs | Day 34)</p></figcaption></figure>
 
-The 192.168.2.0/24 network with PC3 and PC4 is connected to R1. The 10.0.1.0/24 network with SRV1 is connected to R2. And the 10.0.2.0/24 network with SRV2 is connected to R2.&#x20;
+The 192.168.2.0/24 network with PC3 and PC4 is connected to R1. The 10.0.1.0/24 network with SRV1 is connected to R2. And the 10.0.2.0/24 network with SRV2 is connected to R2.   
 
 ### How ACLs work
 
-ACLs are used to achieve a certain requirement. We need to be clear about the requirement before configuring ACLs on routers.&#x20;
+ACLs are used to achieve a certain requirement. We need to be clear about the requirement before configuring ACLs on routers.   
 
 Let’s build an ACL so we can see how it works.
 
@@ -70,7 +70,7 @@ Hosts in 192.168.1.0/24 can access the 10.0.1.0/24 network.
 
 Hosts in 192.168.2.0/24 cannot access the 10.0.1.0/24 network.
 
-How can we use ACLs to achieve this?&#x20;
+How can we use ACLs to achieve this?   
 
 ACLs are made up of an ordered sequence of **ACEs, access control entries.**
 
@@ -88,11 +88,11 @@ ACE 1 says if source IP equals 192.168.1.0/24, then permit the packet, let the r
 
 Standard numbered ACLs are configured globally on the router. However, configuring an ACL (deny and permit entries) in global config mode will not make the ACL take effect. After being created, the ACL must be applied to an interface.
 
-ACLs are applied either inbound or outbound.&#x20;
+ACLs are applied either inbound or outbound.   
 
-Let’s see how that works.&#x20;
+Let’s see how that works.   
 
-Let’s say we configured ACL 1 on R1. ACL 1 has been created, but it has not been applied yet. Let’s walk through some examples of applying ACL 1 to different interfaces in different directions.&#x20;
+Let’s say we configured ACL 1 on R1. ACL 1 has been created, but it has not been applied yet. Let’s walk through some examples of applying ACL 1 to different interfaces in different directions.   
 
 We will succeed or fail in meeting the requirement depending on which interface we apply the ACL to, and which direction we apply it in.
 
@@ -124,7 +124,7 @@ So R1 will deny traffic flow from 192.168.2.1 into its G0/2. R1 drops the traffi
 
 Once a router finds a match and takes an action, it stops checking the other entries in the ACL, so ACE 3 (permit all other traffic) is ignored.
 
-So, does this fulfill our requirements? Yes, but we are being too restrictive with this ACL configuration, by applying the ACL inbound on G0/2. Hosts in 192.168.2.0/24 are prevented from accessing the 10.0.1.0/24 subnet. Hosts in 192.168.2.0/24 are blocked from communicating with all other networks outside of their local LAN. PC3 and PC4  can communicate with each other, but that’s it.&#x20;
+So, does this fulfill our requirements? Yes, but we are being too restrictive with this ACL configuration, by applying the ACL inbound on G0/2. Hosts in 192.168.2.0/24 are prevented from accessing the 10.0.1.0/24 subnet. Hosts in 192.168.2.0/24 are blocked from communicating with all other networks outside of their local LAN. PC3 and PC4  can communicate with each other, but that’s it.   
 
 So this is not the best way to apply ACL 1. There are some other possibilities we could try, such as applying ACL 1 to R1’s G0/0 or R2’s G0/0.
 
@@ -132,9 +132,9 @@ That said, the best location to place ACL 1 is outbound on R2’s G0/1 interface
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/57437-how-acls-work-ping-5.webp?w=1201" alt="How-ACLs-work-ping" height="352" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Standard ACLs | Day 34)</p></figcaption></figure>
 
-If PC3 tries to ping SRV1, R2 will check the ACL before forwarding the packet out of its G0/1 interface. The first entry says if source IP = 192.168.1.0/24, then permit. This ACE does not apply. Next, R2 checks the next entry. If source IP = 192.168.2.0/24, then deny. The source is indeed in that subnet, so the packet will be denied exit from R2’s G0/1. So, that satisfies the second requirement, hosts in 192.168.2.0/24 cannot access 10.0.1.0/24.&#x20;
+If PC3 tries to ping SRV1, R2 will check the ACL before forwarding the packet out of its G0/1 interface. The first entry says if source IP = 192.168.1.0/24, then permit. This ACE does not apply. Next, R2 checks the next entry. If source IP = 192.168.2.0/24, then deny. The source is indeed in that subnet, so the packet will be denied exit from R2’s G0/1. So, that satisfies the second requirement, hosts in 192.168.2.0/24 cannot access 10.0.1.0/24.   
 
-What if PC1, in 192.168.1.0/24, tried to ping SRV1? Before forwarding the packet out of its G0/1 interface, R2 will check the ACL. If the source IP is in 192.168.1.0/24, then permit. The source is 192.168.1.1, so the packet is permitted and R2 forwards it to SRV1. Both requirements have been satisfied, and there is no effect on other traffic.&#x20;
+What if PC1, in 192.168.1.0/24, tried to ping SRV1? Before forwarding the packet out of its G0/1 interface, R2 will check the ACL. If the source IP is in 192.168.1.0/24, then permit. The source is 192.168.1.1, so the packet is permitted and R2 forwards it to SRV1. Both requirements have been satisfied, and there is no effect on other traffic.   
 
 **As a rule of thumb**, standard ACLs should be applied as close as possible to the destination. We are trying to control access to the 10.0.1.0/24 network, so that is the destination.
 
@@ -164,7 +164,7 @@ Now we have reversed entries 1 and 2 in ACL 2. Now if the same packet with a sou
 
 ### Implicit deny
 
-What happens if a packet does not match any of the entries in an ACL?&#x20;
+What happens if a packet does not match any of the entries in an ACL?   
 
 Here’s the same ACL, ACL 2, and the same router. This time the router receives a packet with source IP 10.0.0.1. Before forwarding the packet out of G0/0, the router checks the ACL. 10.0.0.1 does not match the first entry. And it does not match the second entry either. What happens? The router will discard the packet, it will not forward it, because of an implicit deny.
 
@@ -180,7 +180,7 @@ ACL 2:
 
 3: if source IP = any, then deny → implied
 
-This is true for all ACLs.&#x20;
+This is true for all ACLs.   
 
 To summarize this point, there is an implicit deny at the end of all ACLs. The implicit deny tells the router to deny all traffic that does not match any of the configured entries in the ACL.
 
@@ -210,9 +210,9 @@ Standard ACLs match traffic based only on the source IP address of the packet. T
 
 Numbered ACLs are identified with a number such as ACL 1, ACL 2, etc. There are also named ACLs.
 
-The type of ACL you have to learn for the CCNA is IP ACL. There are lots of different types of ACLs, and each have their own range of numbers that can be used.&#x20;
+The type of ACL you have to learn for the CCNA is IP ACL. There are lots of different types of ACLs, and each have their own range of numbers that can be used.   
 
-Standard ACLs can use 1 to 99 and 1300 to 1999. The ACL number has to be in one of these ranges. You cannot configure a standard ACL with the number 100, for example.&#x20;
+Standard ACLs can use 1 to 99 and 1300 to 1999. The ACL number has to be in one of these ranges. You cannot configure a standard ACL with the number 100, for example.   
 
 **ACL types and the number ranges that identify them**
 
@@ -241,7 +241,7 @@ The command syntax to configure a standard numbered ACL is:
 
 R(config)#**access-list** _number_ {**deny | permit**} _src-ip wildcard-mask_
 
-The ACL number must be in the range 1 to 99 or 1300 to 1999. Then we specify either deny or permit, and then the IP address and wildcard mask to match against.&#x20;
+The ACL number must be in the range 1 to 99 or 1300 to 1999. Then we specify either deny or permit, and then the IP address and wildcard mask to match against.   
 
 Feel free to review wildcard masks from the lesson on RIP & EIGRP: [RIP & EIGRP function and configuration](https://itnetworkingskills.wordpress.com/2023/04/22/rip-eigrp-function-configuration/)
 
@@ -251,7 +251,7 @@ Method 1:
 
 R1(config)#access-list 1 deny 1.1.1.1 0.0.0.0
 
-This denies 1.1.1.1/32, meaning only 1.1.1.1, a single host.&#x20;
+This denies 1.1.1.1/32, meaning only 1.1.1.1, a single host.   
 
 Method 2:
 
@@ -295,11 +295,11 @@ Notice that the router automatically converted DENY 1.1.1.1 0.0.0.0 to just DENY
 
 Note, while the show ip access-lists command only displays IP access lists, the show access-lists command displays all access lists, regardless of the protocol. This includes IP access lists, MAC address access lists, and others. For more detailed information about the IP access lists, use the show ip access-lists command.
 
-Notice that each entry is given a number indicating the order. We configured the DENY statement first, and it was assigned 10, then the PERMIT statement, and it was assigned 20. The order of the entries makes the ACL. If the PERMIT ANY entry was first, all traffic would be permitted and the DENY 1.1.1.1 entry would be useless. Modern routers should prevent you from doing configurations like that, but still you should be aware of how important the order is.&#x20;
+Notice that each entry is given a number indicating the order. We configured the DENY statement first, and it was assigned 10, then the PERMIT statement, and it was assigned 20. The order of the entries makes the ACL. If the PERMIT ANY entry was first, all traffic would be permitted and the DENY 1.1.1.1 entry would be useless. Modern routers should prevent you from doing configurations like that, but still you should be aware of how important the order is.   
 
 Notice the remark is not displayed in the SHOW ACCESS-LISTS command. It is only displayed in the config, using show running-config. We used SHOW RUNNING-CONFIG, followed by the pipe, and then INCLUDE ACCESS-LIST to only show lines in the config that include ACCESS-LIST.
 
-Remember, for the ACL configuration to take effect, we have to apply the ACL to an interface. Here is the command.&#x20;
+Remember, for the ACL configuration to take effect, we have to apply the ACL to an interface. Here is the command.   
 
 R(config-if)#**ip access-group** _number_ {**in | out**}
 
@@ -307,27 +307,27 @@ It’s ACCESS-GROUP, not ACCESS-LIST, then the ACL number, then IN or OUT.
 
 **Now let’s get into a real example of using these configurations.**
 
-Here’s the same network as before. We will specify some requirements and then use ACLs to restrict traffic to fulfill those requirements.&#x20;
+Here’s the same network as before. We will specify some requirements and then use ACLs to restrict traffic to fulfill those requirements.   
 
 We will configure standard numbered ACLs on R1 (the next section shows how to configure standard named ACLs, on R2).
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/06c96-acl-configuration-cli-12.webp?w=1201" alt="acl-configuration-cli" height="373" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Standard ACLs | Day 34)</p></figcaption></figure>
 
-Here are some requirements which we can achieve by configuring an ACL on R1:&#x20;
+Here are some requirements which we can achieve by configuring an ACL on R1:   
 
-PC1 can access 192.168.2.0/24, but other PCs in 192.168.1.0/24 cannot access 192.168.2.0/24.&#x20;
+PC1 can access 192.168.2.0/24, but other PCs in 192.168.1.0/24 cannot access 192.168.2.0/24.   
 
 Here’s how we configured and applied an ACL to fulfill these requirements.
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/d4e57-access-list-permit-cli-13.webp?w=1201" alt="access-list-permit-cli" height="357" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Standard ACLs | Day 34)</p></figcaption></figure>
 
-First we configured ACL 1 with an entry permitting 192.168.1.1/32, thus fullfling the first requirement of allowing PC1 to access 192.168.2.0/24. Then we configured an entry denying the 192.168.1.0/24 network access to 192.168.2.0/24, thus fulfilling the second requirement.&#x20;
+First we configured ACL 1 with an entry permitting 192.168.1.1/32, thus fullfling the first requirement of allowing PC1 to access 192.168.2.0/24. Then we configured an entry denying the 192.168.1.0/24 network access to 192.168.2.0/24, thus fulfilling the second requirement.   
 
-The order of these is very important. If we denied 192.168.1.0/24 first, PC1 would not be able to access 192.168.2.0/24, even if we put an entry permitting PC1 after the deny entry.&#x20;
+The order of these is very important. If we denied 192.168.1.0/24 first, PC1 would not be able to access 192.168.2.0/24, even if we put an entry permitting PC1 after the deny entry.   
 
-We then configured a permit any entry at the end. Remember there is an implicit deny hidden at the end of every ACL (if source IP = any, then deny). If we forget to permit any, the ACL will not only block PCs in the 192.168.1.0/24 network, it will block all other traffic.&#x20;
+We then configured a permit any entry at the end. Remember there is an implicit deny hidden at the end of every ACL (if source IP = any, then deny). If we forget to permit any, the ACL will not only block PCs in the 192.168.1.0/24 network, it will block all other traffic.   
 
-Finally we applied the ACL to R1’s G0/2 interface with IP ACCESS-GROUP 1 OUT.&#x20;
+Finally we applied the ACL to R1’s G0/2 interface with IP ACCESS-GROUP 1 OUT.   
 
 Why outbound on G0/2? We could have applied it inbound on G0/1. Recall, standard ACLs should be applied as close as possible to the destination. We are trying to control access to the 192.168.2.0/24 network, so that is the destination.
 
@@ -335,7 +335,7 @@ Now let’s see how that ACL will work. PC1 tries to ping PC3.
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/7d837-how-acl-work-example-14.webp?w=1201" alt="how-ACL-work-example" height="581" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Standard ACLs | Day 34)</p></figcaption></figure>
 
-R1 receives the ping on G0/1. R1 looks up the destination in its routing table, and sees it’s connected to the G0/2 interface. Before forwarding the ping out of G0/2, R1 checks ACL 1. ACL 1 is applied outbound on G0/2. The first entry, entry 10, says permit source IP 192.168.1.1. The ping’s source is PC1, 192.168.1.1, so that’s a match. R1 will take the action, which is to permit the packet. So R1 forwards the packet to PC3. PC3 will be able to reply because there is no ACL blocking the return path from PC3 to PC1.&#x20;
+R1 receives the ping on G0/1. R1 looks up the destination in its routing table, and sees it’s connected to the G0/2 interface. Before forwarding the ping out of G0/2, R1 checks ACL 1. ACL 1 is applied outbound on G0/2. The first entry, entry 10, says permit source IP 192.168.1.1. The ping’s source is PC1, 192.168.1.1, so that’s a match. R1 will take the action, which is to permit the packet. So R1 forwards the packet to PC3. PC3 will be able to reply because there is no ACL blocking the return path from PC3 to PC1.   
 
 What if PC2 tries to ping PC3? R1 receives the ping on G0/1. R1 checks the routing table and sees that it should forward the packet out of G0/2, but because ACL 1 is applied outbound on G0/2, R1 checks ACL 1 first. R1 checks the top entry first, permit 192.168.1.1/32. The source of the ping is 192.168.1.2, so no IP match. Then R1 checks the next entry, deny 192.168.1.0/24. PC2’s IP is in this subnet, so it matches this entry and R1 takes the action, which is to deny. The ping to PC3 will not go through.
 
@@ -345,13 +345,13 @@ Standard named ACLs are identified with a name rather than a number. We could, f
 
 Configure standard **named** ACLs from standard named ACL config mode, by configuring each entry within that config mode.
 
-Enter standard named ACL config mode from global config mode using the command IP ACCESS-LIST STANDARD, followed by the ACL name. Then configure the deny and permit entries.&#x20;
+Enter standard named ACL config mode from global config mode using the command IP ACCESS-LIST STANDARD, followed by the ACL name. Then configure the deny and permit entries.   
 
 R(config)#**ip access-list standard** _acl-name_
 
 R(config-std-nacl)#\[_entry-number_] {**deny | permit**} _src-ip wildcard-mask_
 
-You can manually specify an entry number before each entry. If you don’t, entries will be numbered 10, then 20, then 30, etc. Each entry’s number will be 10 more than the previous one, just like in the standard numbered ACLs.&#x20;
+You can manually specify an entry number before each entry. If you don’t, entries will be numbered 10, then 20, then 30, etc. Each entry’s number will be 10 more than the previous one, just like in the standard numbered ACLs.   
 
 Here is an example.
 
@@ -361,11 +361,11 @@ First, we entered the standard named ACL config mode from global config mode usi
 
 Then we configured a statement denying 1.1.1.1/32, as entry number 5.
 
-Then we configured a permit any entry, as entry number 10.&#x20;
+Then we configured a permit any entry, as entry number 10.   
 
-Then we configured a remark.&#x20;
+Then we configured a remark.   
 
-Then we moved to interface configuration mode, and applied the ACL using IP ACCESS-GROUP, ACL name, and then IN or OUT.&#x20;
+Then we moved to interface configuration mode, and applied the ACL using IP ACCESS-GROUP, ACL name, and then IN or OUT.   
 
 R(config-if)#**ip access-group** _name_ {**in | out**}
 
@@ -373,15 +373,15 @@ Let’s check with some show commands.
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/10ae4-ip-access-group-16.webp?w=1201" alt="ip-access-group" height="611" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Standard ACLs | Day 34)</p></figcaption></figure>
 
-We used SHOW ACCESS-LISTS. The ACL is shown, and you can see each entry with the entry numbers we manually configured.&#x20;
+We used SHOW ACCESS-LISTS. The ACL is shown, and you can see each entry with the entry numbers we manually configured.   
 
-Then we checked the running config. We used SECTION ACCESS-LIST to filter the output. This displays just the ACL section of the running config. But we can view the whole ACL. We can see each entry including the remark, although the entry numbers are not displayed in the config.&#x20;
+Then we checked the running config. We used SECTION ACCESS-LIST to filter the output. This displays just the ACL section of the running config. But we can view the whole ACL. We can see each entry including the remark, although the entry numbers are not displayed in the config.   
 
 Now let’s try configuring some standard named ACLs on R2.
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/d312e-standard-named-acls-network-17.webp?w=1201" alt="standard-named-acls-network" height="299" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Standard ACLs | Day 34)</p></figcaption></figure>
 
-Here are the requirements.&#x20;
+Here are the requirements.   
 
 Requirements:
 
@@ -391,31 +391,31 @@ Requirements:
 * PC1 can access 10.0.1.0/24
 * Other PCs in 192.168.1.0/24 cannot access 10.0.1.0/24
 
-We will need two ACLs to meet these requirements.&#x20;
+We will need two ACLs to meet these requirements.   
 
-1\) We will configure one ACL to control access to 10.0.2.0/24 and apply it outbound on R2’s G0/2.&#x20;
+1\) We will configure one ACL to control access to 10.0.2.0/24 and apply it outbound on R2’s G0/2.   
 
-2\) We will configure another ACL to control access to 10.0.1.0/24 and apply it outbound on R2’s G0/1.&#x20;
+2\) We will configure another ACL to control access to 10.0.1.0/24 and apply it outbound on R2’s G0/1.   
 
 Here’s how we can do that. The first ACL is named TO\_10.0.2.0/24. The second ACL is named TO\_10.0.1.0/24.
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/ce94f-cli-ip-access-list-18.webp" alt="cli-ip-access-list" height="618" width="965"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Standard ACLs | Day 34)</p></figcaption></figure>
 
-First, we entered the standard named ACL config mode from global config mode using the command IP ACCESS-LIST STANDARD TO\_10.0.2.0/24. Then we denied the 192.168.1.0/24 network, but permitted other traffic. Then we applied the configuration outbound on G0/2. PC1 and PC2 will be blocked from accessing SRV2, but PC3 and PC4 will not be blocked from accessing SRV2.&#x20;
+First, we entered the standard named ACL config mode from global config mode using the command IP ACCESS-LIST STANDARD TO\_10.0.2.0/24. Then we denied the 192.168.1.0/24 network, but permitted other traffic. Then we applied the configuration outbound on G0/2. PC1 and PC2 will be blocked from accessing SRV2, but PC3 and PC4 will not be blocked from accessing SRV2.   
 
 The second ACL is called TO\_10.0.1.0/24. First we denied PC3, 192.168.2.1. Then we permitted the rest of the PCs in PC3’s network, 192.168.2.0/24. Then we permitted PC1, but denied the other PCs in PC1’s network, 192.168.1.0/24. Then we permitted all other traffic. Finally we applied the ACL outbound on the G0/1 interface.
 
-Note, there are other ways to configure these ACLs that will work too.&#x20;
+Note, there are other ways to configure these ACLs that will work too.   
 
 Now let’s check those ACLs with SHOW IP ACCESS-LISTS.
 
-Do you notice something off about the TO\_10.0.1.0/24 ACL? Look at the sequence numbers. 30, then 10, then 20, then 40, then 50. The sequence numbers match the order in which we configured the entries, but their actual order in the ACL is different.&#x20;
+Do you notice something off about the TO\_10.0.1.0/24 ACL? Look at the sequence numbers. 30, then 10, then 20, then 40, then 50. The sequence numbers match the order in which we configured the entries, but their actual order in the ACL is different.   
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/a6bf5-show-ip-access-list-19.webp?w=1201" alt="show-ip-access-list" height="298" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Standard ACLs | Day 34)</p></figcaption></figure>
 
 The reason for this difference has to do with the internal operations of Cisco IOS and how ACLs are processed. The router may re-order the /32 entries to improve the efficiency of processing the ACL. This changed ordering does not affect the ACL.
 
-Let’s walk through one more example of an ACL being processed.&#x20;
+Let’s walk through one more example of an ACL being processed.   
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/ee82b-standard-acl-ping-20.webp?w=1201" alt="standard-acl-ping" height="312" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Standard ACLs | Day 34)</p></figcaption></figure>
 
@@ -425,7 +425,7 @@ The TO\_10.0.1.0/24 ACL is applied outbound on R2’s G0/1, so R2 will check the
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/c8fb5-show-ip-access-lists-21.webp?w=1116" alt="show-ip-access-lists" height="512" width="1116"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | Standard ACLs | Day 34)</p></figcaption></figure>
 
-The source IP only matches entry 40, because the source is in the 192.168.1.0/24 network. So R2 denies flow of the packet to SRV1.&#x20;
+The source IP only matches entry 40, because the source is in the 192.168.1.0/24 network. So R2 denies flow of the packet to SRV1.   
 
 ### Command review
 
@@ -437,7 +437,7 @@ The command syntax to configure a standard numbered ACL is:
 
 R(config)#**access-list** _number_ {**deny | permit**} _src-ip wildcard-mask_
 
-The ACL number must be in the range 1 to 99 or 1300 to 1999.&#x20;
+The ACL number must be in the range 1 to 99 or 1300 to 1999.   
 
 Configure a single entry in ACL 1 (**example**):
 
@@ -478,7 +478,7 @@ R#**show ip access-lists**\
 →to display only IP ACLs on the router
 
 R#**show running-config** | \[**include access-list**]\
-→to check a configured remark&#x20;
+→to check a configured remark   
 
 **2. Standard named ACLs**
 
@@ -492,7 +492,7 @@ R(config-std-nacl)#\[_entry-number_] {**deny | permit**} _src-ip wildcard-mask_
 R(config-std-nacl)#**remark** _remark_\
 →to configure a remark
 
-\>To apply the ACL to an interface:&#x20;
+\>To apply the ACL to an interface:   
 
 R(config-if)#**ip access-group** _name_ {**in | out**}
 
@@ -504,7 +504,7 @@ R#**show running-config** | \[**section access-list**]\
 ### Key takeaways
 
 * Standard ACLs filter traffic based solely on the source IP address.
-* Standard ACLs and extended ACLs each can be configured as numbered or named ACLs.&#x20;
+* Standard ACLs and extended ACLs each can be configured as numbered or named ACLs.   
 * ACLs are processed from the top down; the first matched entry determines the action (permit/deny).
 * Every ACL has an implicit **deny any** statement at the end, which blocks all traffic not explicitly permitted.
 * There are two main types of standard ACLs: numbered ACLs (e.g., 1-99) and named ACLs, which are more descriptive and easier to edit.
@@ -514,7 +514,7 @@ R#**show running-config** | \[**section access-list**]\
   * R1(config)#access-list 1 deny …
   * R1(config)#access-list 1 permit …
 * Standard named ACLs are configured from standard named ACL config mode.
-  * You use the IP ACCESS-LIST command to enter standard named ACL config mode, and then configure the entries.&#x20;
+  * You use the IP ACCESS-LIST command to enter standard named ACL config mode, and then configure the entries.   
     * R1(config)#ip access-list standard BLOCK\_BOB
     * R1(config-std-nacl)#permit …
     * R1(config-std-nacl)#deny …

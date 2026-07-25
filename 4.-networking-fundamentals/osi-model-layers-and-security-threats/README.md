@@ -51,7 +51,7 @@ The following tables lists risk scenarios and mitigation techniques for each OSI
 
 DNS Spoofing (or DNS Cache Poisoning) occurs when an attacker exploits vulnerabilities in the DNS system to inject fraudulent IP address mappings into a DNS server's cache. When a DNS server requests an IP address for a domain, the attacker sends a forged response before the legitimate one arrives. If the DNS server accepts the fake response, it stores the incorrect IP in its cache. Subsequent queries for that domain are answered with the poisoned entry, redirecting users to a malicious site (e.g., a phishing page) instead of the real one.
 
-**Mitigation**&#x20;
+**Mitigation**   
 
 DNS Spoofing is effectively mitigated by adopting a combination of modern security protocols, primarily **DNSSEC (DNS Security Extensions)** and encrypted DNS protocols like **DNS over HTTPS (DoH)** and **DNS over TLS (DoT)**. These technologies address the threat in complementary ways:
 
@@ -389,7 +389,7 @@ An ICMP Flood is a volumetric Denial-of-Service (DoS) attack that aims to overwh
 
 **IP Spoofing (L3)**
 
-IP Spoofing is a foundational attack for many DDoS techniques (e.g., SYN floods with spoofed IPs, NTP/DNS amplification). IP Spoofing is not an attack in itself but a technique used to enable other attacks. It involves forging the source IP address in a packet's header to conceal the identity of the sender, impersonate another system, or both. By using a falsified source address, the attacker can bypass IP-based authentication, launch reflection attacks, and evade detection.&#x20;
+IP Spoofing is a foundational attack for many DDoS techniques (e.g., SYN floods with spoofed IPs, NTP/DNS amplification). IP Spoofing is not an attack in itself but a technique used to enable other attacks. It involves forging the source IP address in a packet's header to conceal the identity of the sender, impersonate another system, or both. By using a falsified source address, the attacker can bypass IP-based authentication, launch reflection attacks, and evade detection.   
 
 **Example of IP Spoofing:**
 

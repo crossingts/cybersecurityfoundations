@@ -13,7 +13,7 @@ description: >-
 * Configuring a router as a DNS server
 * Configuring a router as a DNS client
 
-This section explains the [role of DNS within the network](https://its.umich.edu/enterprise/wifi-networks/dns-dhcp) and how to configure DNS in Cisco IOS. The [DNS (Domain Name System) protocol ](https://study-ccna.com/domain-name-system-dns/)makes it easy for humans to use the Internet by translating domain names into IP addresses. This means that we can type in a human-readable address like [http://www.google.com](http://www.google.com/) into a web browser instead of a complex IP address like 172.217.0.142.&#x20;
+This section explains the [role of DNS within the network](https://its.umich.edu/enterprise/wifi-networks/dns-dhcp) and how to configure DNS in Cisco IOS. The [DNS (Domain Name System) protocol ](https://study-ccna.com/domain-name-system-dns/)makes it easy for humans to use the Internet by translating domain names into IP addresses. This means that we can type in a human-readable address like [http://www.google.com](http://www.google.com/) into a web browser instead of a complex IP address like 172.217.0.142. 
 
 ## Topics covered in this section
 
@@ -41,13 +41,13 @@ We will use this network to demonstrate how DNS works.
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/09e39-dns-network-1.webp?w=1201" alt="dns-network" height="300" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | DNS | Day 38)</p></figcaption></figure>
 
-Three PCs are connected to R1 via SW1. R1 is connected to the Internet, and somewhere across the Internet is Google’s DNS server with the IP address 8.8.8.8.&#x20;
+Three PCs are connected to R1 via SW1. R1 is connected to the Internet, and somewhere across the Internet is Google’s DNS server with the IP address 8.8.8.8. 
 
 Let’s go on to PC1, a Windows PC, and check out some IP parameters in the OS.
 
 ### ip config /all (Windows)
 
-Here’s the CLI of PC1, the Windows command prompt. The command IPCONFIG /ALL was used to display various information for PC1.&#x20;
+Here’s the CLI of PC1, the Windows command prompt. The command IPCONFIG /ALL was used to display various information for PC1. 
 
 Remember this command. Topic 1.10 of the CCNA exam blueprint says you must be able to “Verify IP parameters for Client OS (Windows, Mac OS, Linux)”.
 
@@ -65,15 +65,15 @@ As we saw, PC1 is using Google’s DNS server at 8.8.8.8. Here’s the answer fr
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/c84fc-nslookup-dns-3.webp?w=1201" alt="nslookup-dns" height="541" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | DNS | Day 38)</p></figcaption></figure>
 
-PC1 pinged youtube.com by specifying the name. The OS automatically converted the domain name to an IP address. We do not need to use the NSLOOKUP command before sending the ping.&#x20;
+PC1 pinged youtube.com by specifying the name. The OS automatically converted the domain name to an IP address. We do not need to use the NSLOOKUP command before sending the ping. 
 
 Let’s look back at our example network and visualize how the NSLOOKUP command works. Again, the NSLOOKUP command tells the device to ask its DNS server for the IP address of the specified name.
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/09e39-dns-network-1.webp?w=1201" alt="dns-network" height="300" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | DNS | Day 38)</p></figcaption></figure>
 
-PC1 sends a DNS query message to its configured DNS server 8.8.8.8 asking for the IP address of youtube.com. And the DNS server replies, telling PC1 that the IP address is 172.217.25.110. In this case, R1 is not acting as a DNS server or client. It is just forwarding packets. So no DNS configuration is required on R1.&#x20;
+PC1 sends a DNS query message to its configured DNS server 8.8.8.8 asking for the IP address of youtube.com. And the DNS server replies, telling PC1 that the IP address is 172.217.25.110. In this case, R1 is not acting as a DNS server or client. It is just forwarding packets. So no DNS configuration is required on R1. 
 
-It is often not necessary to do any DNS configuration on routers. However, a Cisco router can act as a DNS server and client at the same time, as we will see shortly.&#x20;
+It is often not necessary to do any DNS configuration on routers. However, a Cisco router can act as a DNS server and client at the same time, as we will see shortly. 
 
 ### The ping
 
@@ -112,7 +112,7 @@ Here is a Wireshark capture of the traffic from the **nslookup** youtube.com com
 
 Under “Info” it says standard query, so this is a standard DNS query message, a request to the server. A DNS standard query is a request for information sent from a DNS client to a DNS server. Notice the part that says “A youtube.com’”. Notice the letter “A” before youtube.com. We will clarify this in a minute.
 
-The next message (second row) is from Google’s DNS server 8.8.8.8 to PC1, 192.168.0.101. Under Info it says standard query response. This is a response to PC1’s query. Notice the part that says “A youtube.com A 172.217.25.110”. Note, 172.217.25.110 is youtube.com’s IPv4 address.&#x20;
+The next message (second row) is from Google’s DNS server 8.8.8.8 to PC1, 192.168.0.101. Under Info it says standard query response. This is a response to PC1’s query. Notice the part that says “A youtube.com A 172.217.25.110”. Note, 172.217.25.110 is youtube.com’s IPv4 address. 
 
 The third message (third row) is again a standard query from 192.168.0.101 to 8.8.8.8. This time at the end of the Info field it says “AAAA youtube.com”. AAAA is called quadruple A.
 
@@ -120,13 +120,13 @@ The fourth message (fourth row) is a standard query response. Notice this time a
 
 What is meant by A and quadruple A? DNS ‘A’ records are used to map names to IPv4 addresses. DNS ‘AAAA’ records are used to map names to IPv6 addresses.
 
-In the first query message, PC1 asked the DNS server for the A record of youtube.com, so the DNS server responded with an IPv4 address. In the second query message, PC1 asked the DNS server for the quadruple A record of youtube.com, so the server responded with an IPv6 address.&#x20;
+In the first query message, PC1 asked the DNS server for the A record of youtube.com, so the DNS server responded with an IPv4 address. In the second query message, PC1 asked the DNS server for the quadruple A record of youtube.com, so the server responded with an IPv6 address. 
 
 Now let’s briefly look inside the first query.
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/c9abf-wireshark-capture-nslookup-6.webp?w=1201" alt="Wireshark-capture-nslookup" height="586" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | DNS | Day 38)</p></figcaption></figure>
 
-Note the L4 field. The DNS query is using UDP. DNS uses TCP and UDP. Standard DNS queries and responses typically use UDP. TCP is used for DNS messages larger than 512 bytes. In either case, UDP or TCP, the port number is 53.&#x20;
+Note the L4 field. The DNS query is using UDP. DNS uses TCP and UDP. Standard DNS queries and responses typically use UDP. TCP is used for DNS messages larger than 512 bytes. In either case, UDP or TCP, the port number is 53. 
 
 Finally, in the smaller box in the following diagram is the UDP query itself, asking for the A record of youtube.com.
 
@@ -142,13 +142,13 @@ Here’s the record for youtube.com. Notice the record type.
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/981c1-dns-cache-displaydns-8.webp?w=982" alt="DNS-cache-displaydns" height="675" width="982"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | DNS | Day 38)</p></figcaption></figure>
 
-We discussed A and quadruple A. A CNAME (pronounced “C name”) record, or Canonical Name record, is a type of DNS record that maps a domain name to another domain name.&#x20;
+We discussed A and quadruple A. A CNAME (pronounced “C name”) record, or Canonical Name record, is a type of DNS record that maps a domain name to another domain name. 
 
 Notice, the A record for the domain name youtube-ui.l.google.com matches the A record for the domain name youtube.com (the IPv4 address is 172.217.25.110).
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/baadf-dns-cache-displaydns-9.webp?w=978" alt="DNS-cache-displaydns" height="675" width="978"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | DNS | Day 38)</p></figcaption></figure>
 
-You can clear the DNS cache with the command IPCONFIG /FLUSHDNS.&#x20;
+You can clear the DNS cache with the command IPCONFIG /FLUSHDNS. 
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/d54f3-ipconfig-flushdns-10.webp?w=1201" alt="ipconfig-flushdns" height="406" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | DNS | Day 38)</p></figcaption></figure>
 
@@ -156,7 +156,7 @@ It says the DNS resolver cache successfully was flushed. Now when we use IPCONFI
 
 ### Host file
 
-In addition to a DNS cache, most devices have a “hosts” file which is a list of hosts and IP addresses.&#x20;
+In addition to a DNS cache, most devices have a “hosts” file which is a list of hosts and IP addresses. 
 
 In Windows PCs it is called hosts and it is in the C:\Windows\System32\drivers\etc folder.
 
@@ -166,9 +166,9 @@ In Windows the hosts file looks like this:
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/abace-windows-host-file-12.webp" alt="windows-Host file" height="677" width="951"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | DNS | Day 38)</p></figcaption></figure>
 
-By default there are no hosts listed. However, we added an entry on PC1 for R1 by typing the IP address, a space, and then the host name, R1.&#x20;
+By default there are no hosts listed. However, we added an entry on PC1 for R1 by typing the IP address, a space, and then the host name, R1. 
 
-We then returned to the command prompt and entered PING R1, and PC1 was able to ping R1 because it had an entry in its hosts file.&#x20;
+We then returned to the command prompt and entered PING R1, and PC1 was able to ping R1 because it had an entry in its hosts file. 
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/f577a-host-file-ping-13.webp?w=1144" alt="Host-file-ping" height="507" width="1144"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | DNS | Day 38)</p></figcaption></figure>
 
@@ -214,15 +214,15 @@ R1 has an entry for PC2, we just configured it using the IP HOST command. So R1 
 
 We added the YouTube server to the diagram. This time, we issued the command PING YOUTUBE.COM -N 1.
 
-Let’s walk through that process again.&#x20;
+Let’s walk through that process again. 
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/76446-configuring-router-dns-server-17.webp?w=1201" alt="Configuring-router-DNS-server" height="626" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | DNS | Day 38)</p></figcaption></figure>
 
-Before PC1 can send the ping, it has to know the IP address of youtube.com, so it sends a query to its DNS server, R1. However, R1 does not have an entry for youtube.com. What will R1 do? Remember we used the IP NAME-SERVER 8.8.8.8 command on R1, so R1 can send queries to Google’s DNS server. Google’s server replies, telling R1 the IP address of youtube.com. Now R1 is able to reply to PC1’s query, telling it the IP address of youtube.com. Finally PC1 is able to send the ping to YouTube, and YouTube sends the reply.&#x20;
+Before PC1 can send the ping, it has to know the IP address of youtube.com, so it sends a query to its DNS server, R1. However, R1 does not have an entry for youtube.com. What will R1 do? Remember we used the IP NAME-SERVER 8.8.8.8 command on R1, so R1 can send queries to Google’s DNS server. Google’s server replies, telling R1 the IP address of youtube.com. Now R1 is able to reply to PC1’s query, telling it the IP address of youtube.com. Finally PC1 is able to send the ping to YouTube, and YouTube sends the reply. 
 
 R1 acts as a DNS server for PC1. But if R1 does not have an entry for a record that PC1 requests, R1 acts as a DNS client and asks Google’s DNS server for the record.
 
-Use the command SHOW HOSTS to view the configured hosts, as well as the hosts learned and cached via DNS. The following output shows the cached entry for youtube.com that R1 learned from Google’s DNS server.&#x20;
+Use the command SHOW HOSTS to view the configured hosts, as well as the hosts learned and cached via DNS. The following output shows the cached entry for youtube.com that R1 learned from Google’s DNS server. 
 
 <figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/5bef7-show-hosts-dns-18.webp?w=1201" alt="show-hosts-dns" height="475" width="1201"><figcaption><p>Image courtesy of Jeremy’s IT Lab (Free CCNA | DNS | Day 38)</p></figcaption></figure>
 
@@ -240,11 +240,11 @@ Then we tried to ping youtube.com again and it worked. We have configured R1 as 
 
 The IP DOMAIN NAME command is an optional command you can use to configure the default domain name. In our example, jeremysitlab.com was specified as R1’s domain name. When applied, this command will be a default domain name for all hostnames without a specified domain name. For example, the command PING PC1 will become PING PC1.JEREMYSITLAB.COM.
 
-There is an older version of the IP DOMAIN NAME command, with a hyphen between DOMAIN and NAME.&#x20;
+There is an older version of the IP DOMAIN NAME command, with a hyphen between DOMAIN and NAME. 
 
 ### Command review
 
-**1. Windows command prompt**&#x20;
+**1. Windows command prompt** 
 
 C:\Users\user>**ipconfig /all**
 
@@ -292,7 +292,7 @@ R1(config)#ip domain lookup\
 →enable R1 to perform DNS queries (enabled by default)
 
 R(config)#**ip domain name** _domain-name_\
-→(optional) to configure the default domain name&#x20;
+→(optional) to configure the default domain name 
 
 R1(config)#ip domain name jeremysitlab.com
 

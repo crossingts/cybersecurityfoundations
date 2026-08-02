@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4.-networking-fundamentals/host-to-host-communication-in-networking/README.md",
+                "file": "6.-practical-foundations-in-ethical-hacking/setting-up-a-cybersecurity-lab/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -181,13 +181,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4cbe2b44801facb3",
+  "active": "1e65107a9a5d3b6c",
   "lastOpenFiles": [
+    "4.-networking-fundamentals/host-to-host-communication-in-networking/README.md",
     "4.-networking-fundamentals/host-to-host-communication-in-networking/Hosts-connected-through-router-3.png",
     "4.-networking-fundamentals/host-to-host-communication-in-networking/Hosts-connected-directly-2.png",
     "4.-networking-fundamentals/host-to-host-communication-in-networking/host-host-communication-1.png",
     "4.-networking-fundamentals/network-devices-and-their-functions/README.md",
-    "4.-networking-fundamentals/host-to-host-communication-in-networking/README.md",
     "4.-networking-fundamentals/the-role-of-dns-within-the-network/README.md",
     "4.-networking-fundamentals/the-open-systems-interconnection-osi-model/the-open-systems-interconnection-osi-model-quiz.md",
     "4.-networking-fundamentals/static-nat-configuration/README.md",

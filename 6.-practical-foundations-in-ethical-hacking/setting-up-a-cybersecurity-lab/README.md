@@ -210,12 +210,12 @@ nftables (firewall) + Suricata (IDS/IPS) + web server (Apache) + database server
 Cybersecurity virtual lab in VMware Fusion on M1 Mac:
 
 * [Lab design and configuring interfaces](https://drive.proton.me/urls/TM4PKAVGM4#48yHrBXTk0nA)
-* [Testing/troubleshooting network connectivity](https://drive.proton.me/urls/VRKY3A12FC#Vjc5DoAfwaHh)
+* [Configuring NAT rules and troubleshooting network connectivity](https://drive.proton.me/urls/VRKY3A12FC#Vjc5DoAfwaHh)
 * [Configuring nftables on the Debian firewall](https://drive.proton.me/urls/6CWHJ0269M#Se4xqwyz4UNv)
 * [Configuring Suricata on the Debian IDS/IPS](https://drive.proton.me/urls/NH9SG0ZZW4#QOf2lieJuOTS)
 * [Setting up Apache HTTP Server on Ubuntu](https://drive.proton.me/urls/9NJRE0HBNR#V6Lb057YQUeF)
 * [Setting up MySQL Server on Ubuntu](https://drive.proton.me/urls/XG01TWTEX0#R4dutVB8XUq5)
-* [Setting up Wazuh (SIEM/XDR) on Ubuntu server](https://drive.proton.me/urls/R74XWK7XSW#7x1OsbPmpCmr)
+* [Setting up Wazuh (SIEM/XDR) on Ubuntu](https://drive.proton.me/urls/R74XWK7XSW#7x1OsbPmpCmr)
 * Setting up Kali Linux for security testing
 
 #### Walk through/example 2 using Design Pipeline 2 (AMD64):

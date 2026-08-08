@@ -55,7 +55,7 @@ The Internet protocol suite is a layered set of communications protocols. Each l
 
 The TCP/IP model (like the OSI model) is a formalized way of organizing and representing the various protocols of the Internet protocol suite into logical groupings of layers based on the functions of the protocols in facilitating the movement of data on networks.
 
-**Mapping of the TCP/IP model to the OSI Model**
+**Mapping of the TCP/IP Model to the OSI Model**
 
 | TCP/IP               | OSI Model          | Protocols and Standards                                                                           |
 | -------------------- | ------------------ | ------------------------------------------------------------------------------------------------- |

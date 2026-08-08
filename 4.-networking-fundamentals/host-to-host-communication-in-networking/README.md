@@ -24,7 +24,7 @@ This section explains what happens when one IP host sends data to another—whet
 
 A host is a computer or other device connected to a computer network and which sends or receives traffic. In typical network traffic, two hosts in communication are often called client and server. The client initiates a request and is looking to acquire some data or a service. The server is the entity receiving the request and has the data or service that the client wants.
 
-A computer participating in networks that use the [Internet Protocol suite](https://itnetworkingskills.wordpress.com/2023/01/15/network-protocols-their-functions/) may be called an IP host. A computer participating in the Internet may be called an Internet host. 
+A computer participating in networks that use the Internet Protocol suite may be called an IP host. A computer participating in the Internet may be called an Internet host. 
 
 Hosts perform both high-level application processing and low-level physical transmission of data. As a result, they interact with—and are said to operate across—all seven layers of the OSI model, from the user-facing application layer to the wire-level physical layer.
 

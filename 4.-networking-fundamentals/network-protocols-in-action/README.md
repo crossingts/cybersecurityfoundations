@@ -25,20 +25,19 @@ This section explains what are network protocols and how they enable communicati
 
 ### What are network protocols?
 
-First, let's define some key terms - What is a protocol? What are network protocols? And, what is the Internet protocol?
+First, let's define some key terms - What is a protocol? What are network protocols? And, what is the Internet protocol suite?
 
 **What is a protocol?**
 
 A protocol is a set of rules that govern communication.
 
-In computing, a protocol is a convention or standard that controls or enables the connection, communication, and data transfer between computing endpoints. In its simplest form, a protocol can be defined as the rules governing the syntax, semantics, and synchronization of communication. Protocols may be implemented by hardware, software, or a combination of the two. At the lowest level, a protocol defines the behavior of a hardware connection. (Common Protocols, 2023, January 10)
+In computing, a protocol is a convention or standard that controls or enables the connection, communication, and data transfer between computing endpoints. In its simplest form, a protocol can be defined as the rules governing the syntax, semantics, and synchronization of communication. Protocols may be implemented by hardware, software, or a combination of the two. At the lowest level, a protocol defines the behavior of a hardware connection. (Common Protocols, 2023)
 
-While protocols can vary greatly in purpose and sophistication, most specify one or more of the following properties (Common Protocols, 2023, January 10):
+While protocols can vary greatly in purpose and sophistication, most specify one or more of the following properties (Common Protocols, 2023):
 
 * Detection of the underlying physical connection (wired or wireless), or the existence of the other endpoint or node.
 * Handshaking (dynamically setting parameters of a communications channel).
 * Negotiation of various connection characteristics.
-* How to start and end a message.
 * How to format a message.
 * What to do with corrupted or improperly formatted messages (error correction).
 * How to detect unexpected loss of the connection, and what to do next.
@@ -50,15 +49,15 @@ Network protocols or networking protocols are rules that dictate how network dev
 
 For our present discussion, network protocols refer to Internet protocols within the TCP/IP and OSI models. The rest of this section focuses on the protocols that are essential to every web request: DHCP, DNS, ARP, HTTP, and HTTPS.
 
-**What is the Internet protocol?**
+**What is the Internet protocol suite?**
 
-The Internet protocol suite is the set of communications protocols spanning several layers. Each layer “solves a set of problems involving the transmission of data, and provides a well-defined service to the upper layer protocols based on using services from some lower layers” (Common Protocols, 2023, January 10). The Internet protocol suite is commonly known as the TCP/IP suite because the foundational protocols in the suite are the Transmission Control Protocol and the Internet Protocol.
+The Internet protocol suite is a layered set of communications protocols. Each layer addresses a specific data‑transmission problem, provides a well‑defined service to the protocols in the layer above, and relies on services from the layers below. The Internet protocol suite is commonly known as the TCP/IP suite or the TCP/IP model because the foundational protocols in the suite are the Transmission Control Protocol and the Internet Protocol.
 
 The TCP/IP model (like the OSI model) is a formalized way of organizing and representing the various protocols of the Internet protocol suite into logical groupings of layers based on the functions of the protocols in facilitating the movement of data on networks.
 
 **Mapping of the TCP/IP model to the OSI Model**
 
-| TCP/IP               | OSI Model          | Protocols & Standards                                                                             |
+| TCP/IP               | OSI Model          | Protocols and Standards                                                                           |
 | -------------------- | ------------------ | ------------------------------------------------------------------------------------------------- |
 | Application Layer    | Application Layer  | DNS, DHCP, FTP, TFTP, HTTP, HTTPS, LDAP, NTP, POP3, RTP, RTSP, SSH, Telnet, SIP, SMTP, SNMP, MIME |
 | Application Layer    | Presentation Layer | JPEG, ASCII, EBCDIC, MIDI, MPEG, PICT, TIFF, GIF                                                  |
@@ -77,7 +76,7 @@ There are two main versions of IP:
 
 ### Key application layer and support protocols
 
-Next, we turn to the specific protocols that make everyday Internet use possible. The following discussion describes DHCP, which automatically configures a host; DNS, which translates domain names to IP addresses; HTTP and HTTPS, which deliver web pages; and ARP, which resolves MAC addresses for local delivery.
+Next, we turn to the specific protocols that make everyday Internet use possible. The following discussion describes DHCP, which automatically configures a host; DNS, which translates domain names to IP addresses; HTTP and HTTPS, which deliver web pages; and ARP, which resolves IP addresses to MAC addresses for local delivery.
 
 **DHCP (Dynamic Host Configuration Protocol)**
 
@@ -107,7 +106,9 @@ These tables are populated either in advance (routing table) or dynamically as t
 
 HTTP (Hypertext Transfer Protocol) is the application layer protocol for communicating with web servers. A web browser (client) sends a GET request for a specific resource, and the server responds with a status code (often 200 OK) and the requested content. Web pages, written in HTML, are exchanged using HTTP over TCP.
 
-<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/9640f-ssl-tls-protocols.webp" alt="HTTP request and response diagram" height="257" width="1144"><figcaption><p>HTTP governs the structure and language of the requests and responses that take place between clients and servers (source: Ed Harmoush, PracNet: Network Protocols)</p></figcaption></figure>
+<figure><img src="http-request-response.drawio.png" alt="Illustration of http request and response"><figcaption><p>HTTP defines the format of requests and responses exchanged between clients and servers</p></figcaption></figure>
+
+The diagram shows a client sending a GET request for `/index.html` to a server at IP address 203.200.200.100. The server, labeled “Web Server” and listening on `http://site.com` and `https://site.com`, processes the request and responds with the status code `200 OK`, meaning the file was found and delivered successfully. This simple exchange illustrates the request‑response structure that HTTP uses for all communication between clients and servers.
 
 SSL (Secure Sockets Layer) and TLS (Transport Layer Security) are cryptographic protocols that create a secure, encrypted tunnel between client and server. When HTTP runs inside an SSL/TLS tunnel, the result is HTTPS (HTTP Secure). HTTPS protects data confidentiality and integrity, and it is what allows you to browse the web, enter passwords, and send payment information securely.
 
@@ -118,18 +119,18 @@ ARP is a Layer 2 protocol that maps an IP address to the corresponding MAC addre
 The walkthrough that follows will show how hosts and routers use ARP to resolve MAC addresses at each hop.
 
 * Host A will use ARP to find R1’s MAC address.
-* R2 will use ARP to find Host B’s MAC address.
+* R2 will use ARP to find host B’s MAC address.
 * The switch will automatically learn MAC-to-port mappings by watching the source MAC addresses in frames, building its MAC address table without any separate protocol.
 
 ### Typing https://www.google.com into a web browser
 
-To understand how the key application layer and support protocols (DNS, ARP, DHCP, HTTP/HTTPS, and the MAC address table, ARP table, and routing table) work together, we will trace the steps involved in sending and receiving a web request (e.g., typing https://www.google.com) across the sample network shown in Figure 1.
+To understand how the key application layer and support protocols (DNS, ARP, DHCP, HTTP/HTTPS), MAC address table, ARP table, and routing table work together, we will trace the steps involved in sending and receiving a web request (e.g., typing https://www.google.com) across the following sample topology.
 
-<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/ed09f-type-google-into-web-browser-1.webp?w=1201" alt="Network topology with three hosts, three routers, and a switch" height="636" width="1201"><figcaption>Figure 1: Sample topology for tracing a web request. Host A is the client, Host B is a DNS server, and Host C is the web server for www.google.com. (Source: Ed Harmoush, PracNet)</figcaption></figure>
+<figure><img src="web-request-topology.drawio.png" alt="Sample topology for tracing a web request"><figcaption><p>Sample topology for tracing a web request. Host A is the client, host B is a DNS server, and host C is the web server for https://www.google.com</p></figcaption></figure>
+ 
+The topology contains three hosts (A, B, C), three routers (R1, R2, R3), and one switch. All devices have IP addresses in their respective subnets. The switch only needs its port numbers (port 4 and port 5); its MAC and IP addresses are irrelevant because traffic is passing through it, not to it. The routing tables are pre‑configured with directly connected (DC) routes and default routes (0.0.0.0/0), while the ARP and MAC tables are initially empty and will be filled as frames traverse the network.
 
-The topology contains three hosts (A, B, C), three routers (R1, R2, R3), and one switch. All devices have IP addresses in their respective subnets. The switch only needs its port numbers (port 4 and port 5); its MAC and IP addresses are irrelevant because traffic is passing through it, not to it. The routing tables are pre‑configured with directly connected routes and default routes (0.0.0.0/0), while the ARP and MAC tables are initially empty and will be filled as frames traverse the network.
-
-#### Phase 1 & 2 – DNS query and response
+#### Phases 1 and 2 – DNS query and response
 
 When you type https://www.google.com into a browser, the browser needs the web server’s IP address. It asks the operating system to perform a DNS lookup. The operating system constructs a DNS query and hands it to the network stack for delivery.
 
@@ -137,41 +138,41 @@ When you type https://www.google.com into a browser, the browser needs the web s
 
 Before any data is placed into an IP packet, it is wrapped in a Transport layer segment. The DNS query is carried inside a UDP datagram with destination port 53 (the standard DNS port). Later, after learning the web server’s IP address, the client will use TCP (ports 80 for HTTP or 443 for HTTPS), beginning with a three‑way handshake (SYN, SYN‑ACK, ACK) to establish a reliable connection.
 
-**Phase 1 – DNS query (Host A → Host B)**
+**Phase 1 – DNS query (host A → host B)**
 
 1. Host A builds an IP packet: source IP = 11.8.8.11, destination IP = 22.7.7.22 (DNS server).
 2. Host A checks that the destination is on a foreign network, so it must send the packet to its default gateway (R1, 11.8.8.1).
-3. Host A’s ARP table is empty. To learn R1’s MAC address, Host A sends an ARP request: a broadcast frame (destination MAC FFFF.FFFF.FFFF) asking “Who has 11.8.8.1? Tell 11.8.8.11.”
+3. Host A’s ARP table is empty. To learn R1’s MAC address, host A sends an ARP request: a broadcast frame (destination MAC FFFF.FFFF.FFFF) asking “Who has 11.8.8.1? Tell 11.8.8.11.”
 4. The switch receives the frame on port 4, learns that MAC address a1a1 is out port 4 (updating its MAC address table), and floods the broadcast out all other ports (port 5 to R1).
 5. R1 receives the ARP request, learns that 11.8.8.11 maps to MAC a1a1, and sends a unicast ARP reply with its own MAC address eee1.
-6. The switch sees this frame on port 5, learns that eee1 is out port 5, and forwards the unicast reply out port 4 to Host A.
+6. The switch sees this frame on port 5, learns that eee1 is out port 5, and forwards the unicast reply out port 4 to host A.
 7. Host A now has the ARP mapping (11.8.8.1 → eee1) and can build the Ethernet frame: source MAC a1a1, destination MAC eee1. The IP packet containing the DNS query is placed inside this frame.
 8. The switch forwards the frame out port 5 to R1.
 9. R1 strips the frame header, consults its routing table, and forwards the packet toward the Internet via its default route. The packet traverses multiple routers until it reaches R2.
-10. R2 sees that the destination IP (22.7.7.22) matches a directly connected network. It must resolve Host B’s MAC address, so it broadcasts an ARP request for 22.7.7.22.
+10. R2 sees that the destination IP (22.7.7.22) matches a directly connected network. It must resolve host B’s MAC address, so it broadcasts an ARP request for 22.7.7.22.
 11. Host B responds with a unicast ARP reply, allowing R2 to learn the MAC address b2b2.
-12. R2 encapsulates the packet in a frame with destination MAC b2b2 and delivers it directly to Host B.
+12. R2 encapsulates the packet in a frame with destination MAC b2b2 and delivers it directly to host B.
 13. Host B removes the L2 and L3 headers, processes the DNS query, and prepares a DNS response.
 
-**Phase 2 – DNS response (Host B → Host A)**
+**Phase 2 – DNS response (host B → host A)**
 
 Now we will go through all the steps required to get this data payload back through the network from host B (DNS server) to host A (client/web browser). This phase will go much quicker than before because most of our tables have already been populated.
 
-<figure><img src="https://itnetworkingskills.wordpress.com/wp-content/uploads/2024/05/32577-type-google-into-web-browser-2.webp?w=1201" alt="type-google-into-web-browser-2" height="631" width="1201"><figcaption>Figure 2: What happens when you type https://www.google.com into a browser? (source: Ed Harmoush, PracNet: How Data moves)</figcaption></figure>
+<figure><img src="web-request-process.drawio.png" alt="An illustration of what happens when you type https://www.google.com into a browser"><figcaption><p>What happens when you type https://www.google.com into a browser?</p></figcaption></figure>
 
-Most tables are now populated, so the return path is straightforward. Host B builds a packet (source 22.7.7.22, destination 11.8.8.11), sees that the destination is foreign, and uses its pre‑existing ARP entry for R2 to deliver the frame to the default gateway. R2 forwards the packet across the Internet to R1. R1 finds a directly connected route for 11.8.8.11, already has the ARP entry for a1a1, and delivers the frame via the switch to Host A. Host A extracts the DNS response and learns that https://www.google.com resolves to the IP address of Host C (33.6.6.33).
+Most tables are now populated, so the return path is straightforward. Host B builds a packet (source 22.7.7.22, destination 11.8.8.11), sees that the destination is foreign, and uses its pre‑existing ARP entry for R2 to deliver the frame to the default gateway. R2 forwards the packet across the Internet to R1. R1 finds a directly connected route for 11.8.8.11, already has the ARP entry for a1a1, and delivers the frame via the switch to host A. Host A extracts the DNS response and learns that https://www.google.com resolves to the IP address of host C (33.6.6.33).
 
 #### Completing the web request: Phase 3 – HTTP GET
 
-After receiving the DNS reply, Host A now knows the web server’s IP address (33.6.6.33) and can fetch the web page.
+After receiving the DNS reply, host A now knows the web server’s IP address (33.6.6.33) and can fetch the web page.
 
-1. Transport layer – Host A’s browser initiates a TCP three‑way handshake with Host C on port 80 (HTTP) or 443 (HTTPS). Once the connection is established, the HTTP GET request is placed inside a TCP segment.
-2. Sending the packet – Host A constructs an IP packet (source 11.8.8.11, destination 33.6.6.33). It determines the destination is foreign and uses its existing ARP entry for R1 to deliver the frame to the default gateway.
+1. Transport layer – host A’s browser initiates a TCP three‑way handshake with host C on port 80 (HTTP) or 443 (HTTPS). Once the connection is established, the HTTP GET request is placed inside a TCP segment.
+2. Sending the packet – host A constructs an IP packet (source 11.8.8.11, destination 33.6.6.33). It determines the destination is foreign and uses its existing ARP entry for R1 to deliver the frame to the default gateway.
 3. The frame reaches R1. R1 strips the L2 header, sees the destination matches its default route, and forwards the packet across the Internet.
 4. The packet arrives at R3, which has a directly connected route for 33.6.6.0/24. Because R3’s ARP table is initially empty, it broadcasts an ARP request for 33.6.6.33.
 5. Host C replies with its MAC address (c3c3). R3 updates its ARP table and encapsulates the packet in a frame destined to c3c3.
 6. Host C receives the frame, strips L2 and L3 headers, and processes the HTTP GET request.
-7. Response – Host C prepares the web page data, places it in an IP packet (source 33.6.6.33, destination 11.8.8.11), and sends it to its default gateway R3 (whose MAC it already knows). The packet travels back through the Internet, arrives at R1, and R1 forwards it directly to Host A using its existing ARP entry.
+7. Response – host C prepares the web page data, places it in an IP packet (source 33.6.6.33, destination 11.8.8.11), and sends it to its default gateway R3 (whose MAC it already knows). The packet travels back through the Internet, arrives at R1, and R1 forwards it directly to host A using its existing ARP entry.
 8. Host A receives the response, strips the headers, and the browser renders https://www.google.com.
 
 The entire process—from typing the URL to seeing the page—happens in a fraction of a second, reusing the same ARP, MAC, and routing table entries many times.

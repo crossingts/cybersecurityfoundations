@@ -172,7 +172,7 @@ After receiving the DNS reply, host A now knows the web server’s IP address (3
 
 <figure><img src="web-request-process.drawio.png" alt="An illustration of what happens when you type https://www.google.com into a browser"><figcaption><p>What happens when you type https://www.google.com into a browser?</p></figcaption></figure>
 
-6. Host C receives the frame, strips L2 and L3 headers, and processes the HTTP GET request.
+6. Host C receives the frame, strips the L2 and L3 headers, and processes the HTTP GET request.
 7. Response – host C prepares the web page data, places it in an IP packet (source 33.6.6.33, destination 11.8.8.11), and sends it to its default gateway R3 (whose MAC it already knows). The packet travels back through the Internet, arrives at R1, and R1 forwards it directly to host A using its existing ARP entry.
 8. Host A receives the response, strips the headers, and the browser renders https://www.google.com.
 

@@ -158,8 +158,6 @@ Before any data is placed into an IP packet, it is wrapped in a Transport layer 
 
 Now we will go through all the steps required to get this data payload back through the network from host B (DNS server) to host A (client/web browser). This phase will go much quicker than before because most of our tables have already been populated.
 
-<figure><img src="web-request-process.drawio.png" alt="An illustration of what happens when you type https://www.google.com into a browser"><figcaption><p>What happens when you type https://www.google.com into a browser?</p></figcaption></figure>
-
 Most tables are now populated, so the return path is straightforward. Host B builds a packet (source 22.7.7.22, destination 11.8.8.11), sees that the destination is foreign, and uses its pre‑existing ARP entry for R2 to deliver the frame to the default gateway. R2 forwards the packet across the Internet to R1. R1 finds a directly connected route for 11.8.8.11, already has the ARP entry for a1a1, and delivers the frame via the switch to host A. Host A extracts the DNS response and learns that https://www.google.com resolves to the IP address of host C (33.6.6.33).
 
 #### Completing the web request: Phase 3 – HTTP GET
@@ -171,6 +169,9 @@ After receiving the DNS reply, host A now knows the web server’s IP address (3
 3. The frame reaches R1. R1 strips the L2 header, sees the destination matches its default route, and forwards the packet across the Internet.
 4. The packet arrives at R3, which has a directly connected route for 33.6.6.0/24. Because R3’s ARP table is initially empty, it broadcasts an ARP request for 33.6.6.33.
 5. Host C replies with its MAC address (c3c3). R3 updates its ARP table and encapsulates the packet in a frame destined to c3c3.
+
+<figure><img src="web-request-process.drawio.png" alt="An illustration of what happens when you type https://www.google.com into a browser"><figcaption><p>What happens when you type https://www.google.com into a browser?</p></figcaption></figure>
+
 6. Host C receives the frame, strips L2 and L3 headers, and processes the HTTP GET request.
 7. Response – host C prepares the web page data, places it in an IP packet (source 33.6.6.33, destination 11.8.8.11), and sends it to its default gateway R3 (whose MAC it already knows). The packet travels back through the Internet, arrives at R1, and R1 forwards it directly to host A using its existing ARP entry.
 8. Host A receives the response, strips the headers, and the browser renders https://www.google.com.

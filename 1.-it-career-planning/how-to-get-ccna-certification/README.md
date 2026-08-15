@@ -32,7 +32,7 @@ This section offers advice on [how to get CCNA certification](https://www.course
 
 Cisco Certified Network Associate (CCNA) is a technical certification issued by Cisco for early-career networking professionals. Cisco technology provides enterprise router and networking solutions to nearly 40% of the world.
 
-CCNA (commonly, Cisco CCNA, the CCNA, and the Cisco CCNA) is the de facto starting point for a career in enterprise networking and IT. CCNA “proves you have what it takes to navigate the ever-changing landscape of IT.” CCNA “validates that you have the skills required to manage and optimize today’s most advanced networks.” CCNA verifies a mastery of “the essentials needed to launch a rewarding career as a networking professional” (Your career in networking begins with CCNA).
+CCNA (commonly, Cisco CCNA, the CCNA, and the Cisco CCNA) is the de facto starting point for a career in enterprise networking and IT. CCNA “proves you have what it takes to navigate the ever-changing landscape of IT.” CCNA “validates that you have the skills required to manage and optimize today’s most advanced networks.” CCNA verifies a mastery of “the essentials needed to launch a rewarding career as a networking professional” (Cisco.com).
 
 > Cisco Certified Network Associate (CCNA) … validates that candidates know how a network fundamentally operates. That knowledge aligns with what a networking professional would have learned in their first year on the job.
 >
@@ -192,5 +192,3 @@ A collection of live webinar recordings conducted on the Cisco Learning Network 
 [Exam Registration Information](https://www.cisco.com/c/en/us/training-events/training-certifications/exams/registration.html) (Cisco.com)
 
 [How to Study for Cisco CCNA Certification Exam – CCNA Study Tips](https://www.youtube.com/watch?v=gyszjNKMuDs) (ITProTV YouTube video)
-
-[Your career in networking begins with CCNA](https://www.cisco.com/site/us/en/learn/training-certifications/certifications/enterprise/ccna/index.html) (Cisco.com)

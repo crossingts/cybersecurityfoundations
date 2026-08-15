@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "1e65107a9a5d3b6c",
+            "id": "76a65d31379fe783",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4.-networking-fundamentals/network-protocols-in-action/README.md",
+                "file": "4.-networking-fundamentals/cisco-ios-cli-and-basic-device-security/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -183,10 +183,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1e65107a9a5d3b6c",
+  "active": "76a65d31379fe783",
   "lastOpenFiles": [
-    "4.-networking-fundamentals/host-to-host-communication-in-networking/README.md",
+    "4.-networking-fundamentals/cisco-ios-cli-and-basic-device-security/README.md",
+    "1.-it-career-planning/how-to-get-ccna-certification/README.md",
     "4.-networking-fundamentals/network-protocols-in-action/README.md",
+    "4.-networking-fundamentals/host-to-host-communication-in-networking/README.md",
     "4.-networking-fundamentals/network-protocols-in-action/web-request-process.drawio.png",
     "4.-networking-fundamentals/network-protocols-in-action/web-request-topology.drawio.png",
     "4.-networking-fundamentals/network-protocols-in-action/http-request-response.drawio.png",
@@ -205,7 +207,6 @@
     "4.-networking-fundamentals/connected-and-local-routes/README.md",
     "4.-networking-fundamentals/configuring-and-verifying-dhcp-client-and-relay/README.md",
     "4.-networking-fundamentals/comparing-tcp-to-udp/README.md",
-    "4.-networking-fundamentals/cisco-ios-cli-and-basic-device-security/README.md",
     "4.-networking-fundamentals/introduction-networking-fundamentals.md",
     "7.-conclusion/introduction-conclusion.md",
     "7.-conclusion/practical-foundations-in-ethical-hacking.md",

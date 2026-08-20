@@ -6,17 +6,13 @@ Packet Tracer is a network simulator. It does not run real network devices. It r
 
 Packet Tracer is free and easy to set up. To download Packet Tracer, first you need to create an account at Cisco Networking Academy.
 
-Go to [https://www.netacad.com](https://www.netacad.com) > Login > Sign up
+Go to https://www.netacad.com/resources/lab-downloads > Sign up and Login
 
-After you sign up and log in, go to [https://legacy.netacad.com/portal/node/488](https://legacy.netacad.com/portal/node/488)
-
-You should see the following download page.
+You should see the following download page. 
 
 <figure><img src="../../.gitbook/assets/image (19).png" alt="Cisco Packet Tracer Download Page"><figcaption></figcaption></figure>
 
-Scroll down to “Download” and choose the version compatible with your operating system. Windows, Ubuntu, or macOS.
-
-As you scroll down (just under the heading “Learn more on how to use Packet Tracer” you will see free short training courses for using Packet Tracer.
+You may find an updated download page. Choose and download the version compatible with your operating system, and follow the given installation steps. For more guidance, follow the [Cisco Packet Tracer Download and Installation Instructions](https://www.netacad.com/skillsforall/files/Cisco_Packet_Tracer_Download_and_Installation_Instructions.pdf).
 
 Consider taking a free course, e.g., Getting Started with Cisco Packet Tracer (2 hours). It is probably worth it since you will be using it from now on.
 

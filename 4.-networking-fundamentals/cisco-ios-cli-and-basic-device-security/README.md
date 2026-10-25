@@ -40,9 +40,9 @@ Welcome to the practical heart of network administration. In this section, we mo
 
 ### What is the Cisco IOS CLI?
 
-The Cisco IOS command-line interface (CLI) is the primary user interface used for configuring, monitoring, and maintaining Cisco devices. This user interface allows you to directly and simply execute Cisco IOS commands, whether using a router console or terminal, or using remote access methods. (cisco.com)
+The Cisco IOS command-line interface (CLI) is the primary user interface used for configuring, monitoring, and maintaining Cisco devices. This user interface allows you to directly and simply execute Cisco IOS commands, whether using a router console or terminal, or using remote access methods. (Cisco.com)
 
-Cisco IOS is the operating system used on Cisco devices. IOS stands for Internetwork Operating System. CLI is the interface used to configure Cisco devices like routers, switches, and firewalls. The CLI is often compared to the GUI or Graphical User Interface, which is not discussed here.
+Cisco IOS is the operating system used on Cisco devices. IOS stands for Internetwork Operating System. The CLI is the interface used to configure Cisco devices like routers, switches, and firewalls. The CLI is often compared to the GUI or Graphical User Interface, which is not discussed here.
 
 ### Connecting to a Cisco device via the console port
 

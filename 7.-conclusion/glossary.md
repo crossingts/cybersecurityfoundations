@@ -20,9 +20,9 @@ Cipher: An algorithm that performs encryption/decryption. Sometimes, the term cr
 
 **NIST Cybersecurity Framework (CSF)**: A set of voluntary guidelines developed by the U.S. National Institute of Standards and Technology (NIST) designed to help organizations assess and improve their ability to prevent, detect, and respond to cybersecurity risks. 
 
-**NIST Special Publication 800-37 Rev2** (Risk Management Framework for Information Systems and Organizations: A System Life Cycle Approach for Security and Privacy): A risk management framework for information systems developed by the Joint Task Force Transformation Initiative Working Group.
+**NIST SP 800-37 Rev2** (2018): Risk Management Framework for Information Systems and Organizations: A System Life Cycle Approach for Security and Privacy.
 
-**NIST SP 800-115:** A technical guide to information security testing and assessment by the National Institute of Standards and Technology (NIST).
+**NIST SP 800-115** (2008): A technical guide to information security testing and assessment by the National Institute of Standards and Technology (NIST).
 
 **PCI DSS:** The Payment Card Industry Data Security Standard ensures secure handling of credit card data.
 

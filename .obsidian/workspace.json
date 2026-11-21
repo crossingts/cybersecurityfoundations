@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6.-practical-foundations-in-ethical-hacking/common-attack-targets/README.md",
+                "file": "3.-cybersecurity-grc/the-grc-approach-to-cybersecurity-management/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -185,6 +185,7 @@
   },
   "active": "76a65d31379fe783",
   "lastOpenFiles": [
+    "6.-practical-foundations-in-ethical-hacking/common-attack-targets/README.md",
     "1.-it-career-planning/how-to-break-into-information-security/README.md",
     "1.-it-career-planning/the-grc-analyst-job-role/README.md",
     "1.-it-career-planning/the-grc-analyst-job-role/the-grc-analyst-job-role-quiz.md",
@@ -216,7 +217,6 @@
     "4.-networking-fundamentals/configuring-and-verifying-dhcp-client-and-relay/README.md",
     "4.-networking-fundamentals/comparing-tcp-to-udp/README.md",
     "4.-networking-fundamentals/introduction-networking-fundamentals.md",
-    "7.-conclusion/introduction-conclusion.md",
     "4.-networking-fundamentals/network-devices-and-their-functions/asa5500-x-series-firewall-4.webp",
     "4.-networking-fundamentals/network-devices-and-their-functions/cisco-routers-switches-3.webp",
     "4.-networking-fundamentals/network-devices-and-their-functions/network-icons-used-in-odom-2020-2.webp",

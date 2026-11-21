@@ -45,15 +45,15 @@ Governance answers the questions: "Who decides what? How do we ensure it happens
 
 **GRC Governance vs Management (Adapted From EDUCAUSE, 2022)**
 
-| GRC Governance                                                                                                            | GRC Management                                                           |
-| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| Governance: Doing the right thing                                                                                         | Management: Doing things right                                           |
-| Oversight: Ensures risk management has an effective review and implementation structure                                   | Implementation: Eensures that controls are implemented to mitigate risks |
-| Authorizes decision rights                                                                                                | Authorized to make decisions to mitigate risks                           |
-| Enact policy (setting a course)                                                                                           | Enforce policy (steering)                                                |
-| Accountability–specifies the accountability framework                                                                     | Responsibility                                                           |
-| Strategic planning: Ensures that security strategies are aligned with business objectives and consistent with regulations | Project planning: Recommends security strategies                         |
-| Resource allocation                                                                                                       | Resource utilization                                                     |
+| GRC Governance                                                                                                            | GRC Management                                                          |
+| ------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| Governance: Doing the right thing                                                                                         | Management: Doing things right                                          |
+| Oversight: Ensures risk management has an effective review and implementation structure                                   | Implementation: Ensures that controls are implemented to mitigate risks |
+| Authorizes decision rights                                                                                                | Authorized to make decisions to mitigate risks                          |
+| Enact policy (setting a course)                                                                                           | Enforce policy (steering)                                               |
+| Accountability–specifies the accountability framework                                                                     | Responsibility                                                          |
+| Strategic planning: Ensures that security strategies are aligned with business objectives and consistent with regulations | Project planning: Recommends security strategies                        |
+| Resource allocation                                                                                                       | Resource utilization                                                    |
 
 #### Governance aligned with NIST CSF 2.0
 
